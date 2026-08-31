@@ -4,6 +4,7 @@
    chuyển về chỉ là giao diện, không được dùng để mở khoá. */
 import { NextResponse } from 'next/server';
 import crypto from 'node:crypto';
+import type { Prisma } from '@prisma/client';
 import { prisma } from '@/lib/db';
 import { payos } from '@/lib/payos';
 import { sendMail, orderPaidEmail } from '@/lib/mail';
@@ -45,7 +46,7 @@ export async function POST(req: Request) {
     (order.userId ? await prisma.user.findUnique({ where: { id: order.userId } }) : null) ??
     (await prisma.user.findUnique({ where: { email: order.buyerEmail } }));
 
-  await prisma.$transaction(async (tx) => {
+  await prisma.$transaction(async (tx: Prisma.TransactionClient) => {
     await tx.order.update({
       where: { id: order.id },
       data: { status: 'PAID', paidAt: new Date(), userId: user?.id ?? order.userId },

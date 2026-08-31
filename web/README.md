@@ -138,6 +138,33 @@ bỏ file vào `public/previews/` rồi khai báo trong `PREVIEWS_EXTRA` ở
 
 ---
 
+## Deploy lên Vercel
+
+```bash
+npx vercel deploy          # bản xem trước
+npx vercel deploy --prod   # bản chính thức
+```
+
+Khai báo biến môi trường trong **Project → Settings → Environment Variables**
+trên Vercel (đúng các khoá trong `.env.example`). File `.env` cục bộ đã được
+`.vercelignore` chặn nên không đi kèm mã nguồn.
+
+Vài điểm đã xử lý sẵn, ghi lại để sau này khỏi mất công tìm:
+
+- `postinstall: prisma generate` — Vercel chỉ chạy `npm install` rồi build, nếu
+  không sinh client thì TypeScript báo `@prisma/client` thiếu `PrismaClient`.
+- `prisma.config.ts` chỉ khai báo `datasource` khi có `DATABASE_URL`, vì
+  `prisma generate` chạy lúc cài đặt — khi đó chưa chắc đã có biến này.
+- `src/lib/db.ts` khởi tạo client trễ, nên thiếu `DATABASE_URL` chỉ làm hỏng
+  route nào thật sự truy vấn, không sập cả trang.
+
+**Link xem trước không mở công khai được**: Vercel mặc định bật Deployment
+Protection, người ngoài mở sẽ bị chuyển sang trang đăng nhập. Muốn gửi link cho
+người khác thì tắt ở **Settings → Deployment Protection**, hoặc deploy bản
+chính thức bằng `--prod`.
+
+---
+
 ## Sau khi deploy
 
 1. Đặt `NEXT_PUBLIC_SITE_URL` thành tên miền thật.

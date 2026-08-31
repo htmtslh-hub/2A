@@ -1,0 +1,27 @@
+# Bản thiết kế gốc đã giải nén ra _src/ — không cần giữ file nén 135MB
+2A.zip
+
+# Media gốc rất nặng (~130MB). Bản đã nén nằm ở web/public/media và có commit,
+# nên clone về là chạy được ngay. Chỉ cần hai thư mục này khi muốn nén lại
+# (`npm run media`) — lúc đó giải nén 2A.zip ra là có.
+_src/uploads/
+_src/assets/
+
+# Ảnh chụp thử nghiệm trong quá trình thiết kế, không dùng đến
+_src/scraps/
+
+# Phụ thuộc và kết quả build
+node_modules/
+.next/
+out/
+build/
+
+# Biến môi trường
+.env
+.env.local
+.env*.local
+
+# Hệ điều hành / trình soạn thảo
+.DS_Store
+Thumbs.db
+*.log

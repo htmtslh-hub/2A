@@ -1,0 +1,155 @@
+// Lược đồ dữ liệu cho Agentic: tài khoản, đơn hàng, quyền tải và email thu được.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/* ===== Auth.js ===== */
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String? // null nếu chỉ đăng nhập bằng Google
+  createdAt     DateTime  @default(now())
+
+  accounts  Account[]
+  sessions  Session[]
+  orders    Order[]
+  purchases Purchase[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+/* ===== Bán hàng ===== */
+
+enum OrderStatus {
+  PENDING // đã tạo link thanh toán, chờ khách trả
+  PAID // PayOS đã báo thành công
+  CANCELLED
+  FAILED
+}
+
+/// Loại hàng: một giao diện lẻ, trọn bộ thư viện, hoặc gói thiết kế riêng.
+enum ProductKind {
+  TEMPLATE
+  BUNDLE
+  CUSTOM
+}
+
+model Order {
+  id String @id @default(cuid())
+
+  /// Mã số nguyên PayOS yêu cầu cho mỗi đơn (orderCode).
+  payosOrderCode BigInt      @unique
+  status         OrderStatus @default(PENDING)
+
+  kind ProductKind
+  /// Với TEMPLATE là id mẫu ('t1'…'t18'); với BUNDLE/CUSTOM để trống.
+  templateId String?
+
+  /// Số tiền VNĐ (PayOS chỉ nhận số nguyên đồng).
+  amount      Int
+  currency    String  @default("VND")
+  description String
+  /// Ngôn ngữ khách đang xem lúc đặt — dùng để gửi email đúng thứ tiếng.
+  lang        String  @default("vi")
+
+  buyerEmail String
+  buyerName  String?
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  checkoutUrl String?
+  paidAt      DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  purchases Purchase[]
+
+  @@index([buyerEmail])
+  @@index([status])
+}
+
+/// Quyền sở hữu đã mở khoá cho một người dùng.
+model Purchase {
+  id String @id @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  orderId String
+  order   Order  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  kind ProductKind
+  /// null nghĩa là trọn bộ — mở khoá mọi mẫu.
+  templateId String?
+
+  createdAt DateTime @default(now())
+
+  @@unique([userId, templateId, orderId])
+  @@index([userId])
+}
+
+/// Link tải dùng một lần, hết hạn theo thời gian.
+model DownloadToken {
+  id         String    @id @default(cuid())
+  token      String    @unique
+  userId     String
+  templateId String
+  expiresAt  DateTime
+  usedAt     DateTime?
+  createdAt  DateTime  @default(now())
+
+  @@index([userId])
+}
+
+/// Email thu từ form CTA (nhận mẫu miễn phí + mã giảm giá).
+model Lead {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  lang      String   @default("vi")
+  source    String   @default("cta")
+  createdAt DateTime @default(now())
+}

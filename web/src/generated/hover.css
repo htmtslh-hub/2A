@@ -1,0 +1,20 @@
+/* TỰ ĐỘNG SINH từ thuộc tính style-hover */
+.hv0:hover{ background: linear-gradient(180deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,.24) 100%) !important; }
+.hv1:hover{ border-color: #ffffff !important; color: #fffdfa !important; }
+.hv2:hover{ border-color: #ffffff !important; }
+.hv3:hover{ color: #ffffff !important; }
+.hv4:hover{ border-color: #ffffff !important; color: #ffffff !important; }
+.hv5:hover{ background: linear-gradient(180deg, rgba(255,255,255,.40) 0%, rgba(255,255,255,.24) 100%) !important; }
+.hv6:hover{ border-color: var(--acc-a50) !important; }
+.hv7:hover{ border-color: #ffffff !important; color: #ffffff !important; }
+.hv8:hover{ border-color: var(--acc-a55) !important; transform: translateY(-4px) !important; }
+.hv9:hover{ opacity: 1 !important; }
+.hv10:hover{ background: rgba(255,255,255,.11) !important; border-color: var(--acc-a55) !important; }
+.hv11:hover{ transform: translateY(-2px) !important; }
+.hv12:hover{ border-color: var(--acc-a55) !important; background: rgba(255,255,255,.05) !important; }
+.hv13:hover{ background: rgba(255,255,255,.055) !important; }
+.hv14:hover{ border-color: var(--hv14-border-color) !important; transform: translateY(-4px) !important; }
+.hv15:hover{ opacity: .88 !important; }
+.fc16:focus{ border-color: #ffffff !important; }
+.hv17:hover{ opacity: .9 !important; }
+.hv18:hover{ opacity: .75 !important; }

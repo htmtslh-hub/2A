@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&amp;family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=ZCOOL+XiaoWei&amp;family=Noto+Sans+SC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  :root{
+    --acc:#e83a34; --acc-hi:#f26a63; --acc-soft:#f79992;
+    --acc-a00:rgba(232,58,52,0); --acc-a08:rgba(232,58,52,.08); --acc-a14:rgba(232,58,52,.14);
+    --acc-a18:rgba(232,58,52,.18); --acc-a45:rgba(232,58,52,.45); --acc-a50:rgba(232,58,52,.5);
+    --acc-a55:rgba(255,106,31,.55);
+    /* gold = giá tiền & số thứ tự, chỉ trên nền trung tính; trên nền accent thì đảo về trắng */
+    --gold:#f0a63c;
+    --display:'Unbounded','Bricolage Grotesque','ZCOOL XiaoWei','Noto Sans SC',sans-serif;
+    --body:'Be Vietnam Pro','Noto Sans SC',system-ui,sans-serif;
+  }
+  *{ box-sizing: border-box; transition: color .55s ease, background-color .55s ease, border-color .55s ease, fill .55s ease; }
+  html, body { margin: 0; padding: 0; background: #16181c; color: #ffffff; font-family: var(--body); -webkit-font-smoothing: antialiased; }
+  a { color:#ffffff; text-decoration: none; }
+  a:hover { color:#ffffff; }
+  ::selection { background: var(--acc); color: #16181c; }
+  image-slot { --is-bg: #1a1c21; }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  @keyframes islandIn { from { opacity: 0; transform: translateY(-8px) scale(.96); } to { opacity: 1; transform: none; } }
+  @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 var(--acc-a50);} 70%{ box-shadow: 0 0 0 14px var(--acc-a00);} 100%{ box-shadow:0 0 0 0 var(--acc-a00);} }
+  @keyframes marquee { from { transform: translate3d(0,0,0);} to { transform: translate3d(-50%,0,0);} }
+  @keyframes sheen { 0% { transform: translateX(-160%) skewX(-18deg);} 55%,100% { transform: translateX(260%) skewX(-18deg);} }
+  @keyframes botBob { 0%,100% { transform: translateY(-3px) rotate(-3deg); } 50% { transform: translateY(4px) rotate(3deg); } }
+  @keyframes islandLed { to { transform: translate(-50%,-50%) rotate(360deg); } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes chaseRun { to { stroke-dashoffset:-100; } }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){ html { scroll-behavior:auto; } [data-reveal]{ opacity:1 !important; transform:none !important; filter:none !important; } }
+  @keyframes ledGlowPulse { 0%,100% { opacity:.6; } 50% { opacity:1; } }
+  @keyframes ledSparkle { 0% { filter:brightness(1.1) saturate(1.5); } 18% { filter:brightness(1.6) saturate(1.7); } 32% { filter:brightness(1) saturate(1.45); } 54% { filter:brightness(1.5) saturate(1.65); } 68% { filter:brightness(1.05) saturate(1.5); } 84% { filter:brightness(1.7) saturate(1.8); } 100% { filter:brightness(1.1) saturate(1.5); } }
+  @media (prefers-reduced-motion: reduce){ [data-reveal], [data-island], [data-marquee]{ animation-duration:.001ms !important; animation-iteration-count:1 !important; } }
+  /* Phát sáng nhẹ khi rê chuột lên mọi thành phần tương tác */
+  button, a[href], [role="button"], [data-tab-pill], [data-lang-pill], [data-filter-chip], [data-island-mini]{ transition: filter .3s cubic-bezier(.22,1,.36,1), text-shadow .3s ease, color .55s ease, background-color .55s ease, border-color .55s ease; }
+  button:hover, a[href]:hover, [role="button"]:hover, [data-island-mini]:hover{ filter: brightness(1.59) saturate(1.1); text-shadow: 0 0 11px rgba(255,255,255,.65), 0 0 26px rgba(255,255,255,.3); }
+  button:active, a[href]:active, [role="button"]:active{ filter: brightness(1.4) saturate(1.06); text-shadow: 0 0 8px rgba(255,255,255,.4); }
+  button:focus-visible, a[href]:focus-visible, [role="button"]:focus-visible{ outline:none; filter: brightness(1.64) saturate(1.12); text-shadow: 0 0 12px rgba(255,255,255,.75); }
+  @media (prefers-reduced-motion: reduce){ button, a[href], [role="button"]{ transition:none; } }
+  [data-hero-card], [data-hero-card]:hover, [data-hero-card]:active{ filter:none !important; text-shadow:none !important; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; color:#ffffff; background-color:#16181c; background-image:radial-gradient(120% 46% at 50% 0%, #21252d 0%, rgba(33,37,45,0) 62%), radial-gradient(78% 34% at 88% 22%, var(--acc-a08), transparent 66%), radial-gradient(86% 32% at 8% 48%, rgba(240,166,60,.055), transparent 64%), radial-gradient(80% 30% at 92% 72%, var(--acc-a08), transparent 66%), linear-gradient(180deg, rgba(18,19,23,0) 62%, #131418 100%); overflow-x:hidden;">
+
+  <div aria-hidden="true" style="position:fixed; top:0; left:0; right:0; height:2px; z-index:60; pointer-events:none;">
+    <div id="scroll-progress" style="height:100%; width:100%; transform:scaleX(0); transform-origin:0 50%; background:linear-gradient(90deg, rgba(255,255,255,.25) 0%, var(--acc) 55%, #ffffff 100%); box-shadow:0 0 12px -2px var(--acc);"></div>
+  </div>
+
+  <!-- ===== DYNAMIC ISLAND NAV ===== -->
+  <header style="position:fixed; top:32px; left:0; right:0; z-index:50; display:flex; justify-content:center; padding:0 16px; pointer-events:none;">
+    <div ref="{{ botRef }}" data-bot="" aria-hidden="true" style="position:absolute; left:50%; top:28px; transform:translate(-120px,44px); width:52px; height:52px; margin:-26px 0 0 -26px; pointer-events:none; will-change:transform; transition:transform 2.4s cubic-bezier(.42,0,.35,1);">
+      <div data-bot-flip="" style="width:100%; height:100%; transition:transform .22s ease;">
+      <div style="width:100%; height:100%; animation:botBob 2.8s ease-in-out infinite; filter:drop-shadow(0 6px 14px rgba(0,0,0,.45));">
+        <svg viewBox="0 0 100 100" style="width:100%; height:100%; display:block; overflow:visible;">
+          <ellipse cx="24" cy="62" rx="17" ry="8" transform="rotate(-24 24 62)" fill="#f2f5fb" stroke="#1b2a6b" stroke-width="4"></ellipse>
+          <ellipse cx="76" cy="58" rx="17" ry="8" transform="rotate(22 76 58)" fill="#f2f5fb" stroke="#1b2a6b" stroke-width="4"></ellipse>
+          <path d="M30 22 L26 8 L34 6 L38 20 Z" fill="#2fb8f5" stroke="#1b2a6b" stroke-width="4" stroke-linejoin="round"></path>
+          <path d="M70 22 L74 8 L66 6 L62 20 Z" fill="#2fb8f5" stroke="#1b2a6b" stroke-width="4" stroke-linejoin="round"></path>
+          <rect x="42" y="52" width="16" height="34" rx="8" fill="#f2f5fb" stroke="#1b2a6b" stroke-width="4"></rect>
+          <ellipse cx="50" cy="66" rx="27" ry="24" fill="#ffffff" stroke="#1b2a6b" stroke-width="4"></ellipse>
+          <path d="M38 62 h24 a12 12 0 0 1 -24 0 z" fill="#2fb8f5" stroke="#1b2a6b" stroke-width="4" stroke-linejoin="round"></path>
+          <ellipse cx="50" cy="36" rx="32" ry="28" fill="#ffffff" stroke="#1b2a6b" stroke-width="4"></ellipse>
+          <ellipse cx="50" cy="35" rx="23" ry="17" fill="#16267e" stroke="#1b2a6b" stroke-width="3"></ellipse>
+          <path d="M38 36 q4 -6 8 0" fill="none" stroke="#2fe0f5" stroke-width="4" stroke-linecap="round"></path>
+          <path d="M54 36 q4 -6 8 0" fill="none" stroke="#2fe0f5" stroke-width="4" stroke-linecap="round"></path>
+          <rect x="44" y="2" width="12" height="10" rx="5" fill="#ffffff" stroke="#1b2a6b" stroke-width="4"></rect>
+        </svg>
+      </div>
+      </div>
+    </div>
+    <div data-island="" onMouseEnter="{{ openIsland }}" onMouseLeave="{{ closeIsland }}" style="position:relative; isolation:isolate; pointer-events:auto; max-width:min(100%,980px); overflow:hidden; border-radius:34px; background:rgba(10,11,13,.82); border:1px solid rgba(255,255,255,.13); box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 18px 44px rgba(0,0,0,.5); animation:islandIn .5s cubic-bezier(.22,1,.36,1) both; transition:max-height .9s cubic-bezier(.19,1,.22,1), border-radius .8s cubic-bezier(.19,1,.22,1), box-shadow .8s ease;">
+      <span aria-hidden="true" style="position:absolute; inset:0; z-index:3; border-radius:inherit; padding:1.5px; overflow:hidden; pointer-events:none; -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite:exclude;">
+        <span style="position:absolute; top:50%; left:50%; width:130%; aspect-ratio:1; transform:translate(-50%,-50%); background:conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, var(--acc-a00) 300deg, var(--acc-a45) 340deg, var(--acc) 353deg, #ffffff 360deg); animation:islandLed 4.5s linear infinite;"></span>
+      </span>
+      <span aria-hidden="true" style="position:absolute; inset:0; z-index:0; border-radius:inherit; pointer-events:none; backdrop-filter:blur(26px) saturate(160%); -webkit-backdrop-filter:blur(26px) saturate(160%);"></span>
+      <div style="position:relative; z-index:2; display:flex; align-items:center;">
+      <div data-island-mini="" onClick="{{ toggleIsland }}" style="display:flex; align-items:center; gap:10px; height:56px; padding:0 20px; max-width:340px; overflow:hidden; white-space:nowrap; cursor:pointer; transition:max-width .95s cubic-bezier(.19,1,.22,1), opacity .5s cubic-bezier(.4,0,.2,1), padding .85s cubic-bezier(.19,1,.22,1);">
+        <span style="width:9px; height:9px; border-radius:50%; background:var(--acc); box-shadow:0 0 12px var(--acc-a55); display:inline-block; flex:none;"></span>
+        <span style="font-family:var(--display); font-weight:700; letter-spacing:.13em; font-size:13px; color:#ffffff;">AGENTIC</span>
+        <span style="width:4px; height:4px; border-radius:50%; background:rgba(236,238,241,.3); flex:none;"></span>
+        <span style="font-size:12px; font-weight:600; color:#ffffff; letter-spacing:.02em;">{{ activeTabLabel }}</span>
+      </div>
+      <div data-island-full="" style="display:flex; align-items:center; gap:6px; padding:7px 9px; height:56px; max-width:0; opacity:0; overflow:hidden; transition:max-width 1s cubic-bezier(.19,1,.22,1), opacity .6s cubic-bezier(.4,0,.2,1) .12s, padding .85s cubic-bezier(.19,1,.22,1);">
+        <button onClick="{{ goHome }}" aria-label="Agentic" style="display:flex; align-items:center; gap:9px; flex:none; padding:0 12px 0 8px; height:42px; border:none; background:transparent; cursor:pointer; color:#ffffff; font-family:inherit;">
+          <span style="width:11px; height:11px; border-radius:50%; background:var(--acc); box-shadow:0 0 12px var(--acc-a55); display:inline-block; flex:none;"></span>
+          <span style="font-family:var(--display); font-weight:700; letter-spacing:.13em; font-size:14px;">AGENTIC</span>
+        </button>
+        <span style="width:1px; height:22px; background:rgba(255,255,255,.14); flex:none;"></span>
+        <div data-island-tabs="" style="display:flex; align-items:center; gap:2px; min-width:0; overflow:hidden;">
+          <sc-for list="{{ tabs }}" as="tb" hint-placeholder-count="5">
+            <button onClick="{{ tb.onSelect }}" data-tab-pill="{{ tb.key }}" style="flex:none; padding:0 15px; height:42px; border:1px solid transparent; border-radius:100px; cursor:pointer; font-family:inherit; font-size:13px; font-weight:600; letter-spacing:.01em; white-space:nowrap; background:transparent; color:#ffffff; transition:background .32s cubic-bezier(.22,1,.36,1), color .28s ease, border-color .28s ease;">{{ tb.label }}</button>
+          </sc-for>
+        </div>
+        <div style="flex:1; min-width:4px;"></div>
+        <button onClick="{{ openAuth }}" style="flex:none; display:inline-flex; align-items:center; height:42px; padding:0 20px; border-radius:100px; font-family:inherit; font-size:13px; font-weight:700; letter-spacing:.02em; white-space:nowrap; cursor:pointer; background:linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%); border:1px solid rgba(255,255,255,.32); color:#fffdfa; box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -8px rgba(255,244,230,.5);" style-hover="background:linear-gradient(180deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,.24) 100%);">{{ t.navCta }}</button>
+        <button onClick="{{ toggleIsland }}" aria-label="Language" data-island-lang="" style="flex:none; display:inline-flex; align-items:center; justify-content:center; min-width:42px; height:42px; padding:0 13px; border:1px solid rgba(255,255,255,.2); border-radius:100px; background:rgba(255,255,255,.07); cursor:pointer; font-family:inherit; font-size:11px; font-weight:700; letter-spacing:.08em; color:#c8ced6;" style-hover="border-color:#ffffff; color:#fffdfa;">{{ langCode }}</button>
+        <button onClick="{{ toggleMenu }}" aria-label="Menu" data-island-burger="" style="flex:none; display:inline-flex; flex-direction:column; gap:5px; justify-content:center; align-items:center; width:42px; height:42px; border:1px solid rgba(255,255,255,.2); border-radius:50%; background:rgba(255,255,255,.07); cursor:pointer;" style-hover="border-color:#ffffff;">
+          <span style="width:15px; height:1.5px; background:#eceef1; display:block;"></span>
+          <span style="width:15px; height:1.5px; background:#eceef1; display:block;"></span>
+        </button>
+      </div>
+      </div>
+      <div data-island-row2="" style="padding:0 18px 14px; display:flex; align-items:center; flex-wrap:wrap; gap:14px; justify-content:space-between; border-top:1px solid rgba(255,255,255,.08); margin:0 9px;">
+        <span style="padding-top:12px; font-size:12px; color:#ffffff; letter-spacing:.04em;">{{ t.tagline }}</span>
+        <div style="padding-top:12px; display:flex; align-items:center; gap:12px;">
+          <a href="mailto:hello@agentic.vn" style="font-size:12px; color:#ffffff; letter-spacing:.03em;" style-hover="color:#ffffff;">hello@agentic.vn</a>
+          <div style="display:flex; align-items:center; gap:2px; padding:3px; border:1px solid rgba(236,238,241,.14); border-radius:100px; background:rgba(255,255,255,.06);">
+            <sc-for list="{{ langOptions }}" as="lg" hint-placeholder-count="3">
+              <button onClick="{{ lg.onSelect }}" aria-label="{{ lg.aria }}" data-lang-pill="{{ lg.code }}" style="padding:6px 12px; border:none; border-radius:100px; cursor:pointer; font-family:inherit; font-size:11px; font-weight:700; letter-spacing:.08em; transition:background .25s ease, color .25s ease;">{{ lg.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== FULLSCREEN MENU ===== -->
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav style="position:fixed; inset:0; z-index:60; display:flex; flex-direction:column; padding:26px clamp(20px,4vw,56px); animation:riseIn .35s ease both;">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <span style="font-family:var(--display); font-weight:700; letter-spacing:.14em; font-size:20px; display:flex; align-items:center; gap:10px;"><span style="width:12px;height:12px;border-radius:50%;background:var(--acc);"></span>AGENTIC</span>
+        <button onClick="{{ toggleMenu }}" aria-label="Close" style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(236,238,241,.28);background:transparent;color:#ffffff;font-size:22px;cursor:pointer;" style-hover="border-color:#ffffff;color:#ffffff;">×</button>
+      </div>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:clamp(4px,1.4vh,14px);">
+        <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="6">
+          <button onClick="{{ link.onSelect }}" style="text-align:left; background:transparent; border:none; cursor:pointer; padding:0; font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(30px,6.2vw,70px); line-height:1.1; color:#ffffff; display:flex; align-items:baseline; gap:18px;" style-hover="color:#ffffff;">
+            <span style="font-family:var(--body); font-size:14px; color:#ffffff; letter-spacing:.1em;">{{ link.no }}</span>{{ link.label }}
+          </button>
+        </sc-for>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:20px; justify-content:space-between; color:#ffffff; font-size:13px; letter-spacing:.04em; border-top:1px solid rgba(236,238,241,.12); padding-top:20px;">
+        <span>hello@agentic.vn</span>
+        <div style="display:flex; align-items:center; gap:2px; padding:4px; border:1px solid rgba(236,238,241,.16); border-radius:100px; background:rgba(255,255,255,.06);">
+          <sc-for list="{{ langOptions }}" as="lg" hint-placeholder-count="3">
+            <button onClick="{{ lg.onSelect }}" aria-label="{{ lg.aria }}" data-lang-pill="{{ lg.code }}" style="padding:8px 15px; border:none; border-radius:100px; cursor:pointer; font-family:inherit; font-size:12px; font-weight:700; letter-spacing:.08em; transition:background .25s ease, color .25s ease;">{{ lg.label }}</button>
+          </sc-for>
+        </div>
+        <span>{{ t.tagline }}</span>
+      </div>
+    </nav>
+  </sc-if>
+
+  <!-- ===== TAB: HOME — hero only ===== -->
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <section id="top" style="position:relative; z-index:5; min-height:100vh; padding:clamp(96px,14vh,150px) clamp(20px,4vw,56px) clamp(36px,5vh,56px);">
+    <div style="position:absolute; inset:0; overflow:hidden; z-index:0;">
+    <div id="hero-bg-wrap" style="position:absolute; top:-14%; left:-4%; right:-4%; bottom:-2%; z-index:0; will-change:transform;">
+      <sc-for list="{{ heroBgs }}" as="bg" hint-placeholder-count="5">
+        <video data-hero-bg="" poster="{{ bg.poster }}" muted="" loop="" playsinline="" preload="none" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform-origin:center; transition:opacity 1s ease, transform 1.6s cubic-bezier(.16,1,.3,1), filter 1.2s ease; will-change:opacity, transform, filter;"></video>
+      </sc-for>
+      <div style="position:absolute; inset:0; background:radial-gradient(90% 70% at 80% 30%, var(--acc-a14), transparent 62%); pointer-events:none;"></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,20,24,.82) 0%, rgba(18,20,24,.62) 34%, rgba(18,20,24,.74) 72%, rgba(18,20,24,.96) 100%); pointer-events: none; left: 3px; top: -17px"></div>
+      <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(18,20,24,.9) 0%, rgba(18,20,24,.72) 32%, rgba(18,20,24,.18) 60%, transparent 78%); pointer-events:none;"></div>
+      <div aria-hidden="true" style="position:absolute; left:0; right:0; bottom:0; height:26%; pointer-events:none; backdrop-filter:blur(22px) saturate(115%); -webkit-backdrop-filter:blur(22px) saturate(115%); mask-image:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 46%, #000 100%); -webkit-mask-image:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 46%, #000 100%);"></div>
+      <div aria-hidden="true" style="position:absolute; left:0; right:0; bottom:0; height:22%; pointer-events:none; background:linear-gradient(180deg, rgba(19,21,25,0) 0%, rgba(19,21,25,.55) 55%, rgba(19,21,25,.92) 100%);"></div>
+    </div>
+    </div>
+
+    <div aria-hidden="true" style="position:absolute; z-index:4; top:clamp(14px,1.5vw,26px); left:clamp(14px,1.5vw,26px); right:clamp(14px,1.5vw,26px); bottom:0; border-radius:clamp(20px,2vw,32px); border:1px solid rgba(236,238,241,.16); box-shadow:inset 0 1px 0 rgba(255,255,255,.14), inset 0 0 90px rgba(0,0,0,.34); pointer-events:none;">
+      <span style="position:absolute; top:-1px; left:-1px; width:46px; height:46px; border-top:2px solid var(--acc); border-left:2px solid var(--acc); border-top-left-radius:clamp(20px,2vw,32px);"></span>
+      <span style="position:absolute; top:-1px; right:-1px; width:46px; height:46px; border-top:2px solid var(--acc); border-right:2px solid var(--acc); border-top-right-radius:clamp(20px,2vw,32px);"></span>
+      <span style="position:absolute; bottom:-1px; left:-1px; width:46px; height:46px; border-bottom:2px solid var(--acc); border-left:2px solid var(--acc); border-bottom-left-radius:clamp(20px,2vw,32px);"></span>
+      <span style="position:absolute; bottom:-1px; right:-1px; width:46px; height:46px; border-bottom:2px solid var(--acc); border-right:2px solid var(--acc); border-bottom-right-radius:clamp(20px,2vw,32px);"></span>
+      <span style="position:absolute; top:-1px; left:50%; transform:translateX(-50%); width:clamp(90px,16vw,190px); height:2px; background:linear-gradient(90deg, transparent, var(--acc-soft), transparent);"></span>
+      <span style="position:absolute; bottom:26px; left:-1px; width:2px; height:clamp(50px,9vh,110px); background:linear-gradient(180deg, transparent, var(--acc-a55));"></span>
+      <span style="position:absolute; bottom:26px; right:-1px; width:2px; height:clamp(50px,9vh,110px); background:linear-gradient(180deg, transparent, var(--acc-a55));"></span>
+    </div>
+
+    <div style="position:relative; z-index:2; max-width:1440px; margin:0 auto; display:flex; flex-wrap:wrap; gap:40px; align-items:flex-end; min-height:calc(100vh - 200px);">
+      <div ref="{{ copyRef }}" style="flex:1 1 420px; min-width:min(100%,420px); animation:riseIn .7s ease both;">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:22px;">
+          <span style="width:40px; height:1px; background:var(--acc);"></span>
+          <span style="font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">{{ t.heroEyebrow }}</span>
+        </div>
+        <p style="margin:0 0 14px; font-size:clamp(15px,2vw,20px); font-weight:500; color:#ffffff; letter-spacing:.02em;">{{ activeKicker }}</p>
+        <h1 style="margin:0; padding-top:.06em; font-family:var(--display); font-weight:700; letter-spacing:-.018em; font-size:clamp(44px,8.2vw,108px); line-height:1.02; text-wrap:balance;">{{ activeTitle }}</h1>
+        <p style="max-width:440px; margin:26px 0 0; font-size:clamp(14px,1.4vw,16px); line-height:1.65; color:#ffffff;">{{ activeBlurb }}</p>
+        <div style="display:flex; align-items:center; gap:18px; margin-top:34px; flex-wrap:wrap;">
+          <button onClick="{{ goLibrary }}" style="display:inline-flex; align-items:center; gap:10px; padding:15px 28px; border-radius:16px; font-family:inherit; font-weight:700; font-size:14px; letter-spacing:.03em; cursor:pointer; background:linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%); border:1px solid rgba(255,255,255,.32); color:#fffdfa; box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -6px rgba(255,244,230,.55), 0 18px 40px rgba(52,42,34,.34);" style-hover="background:linear-gradient(180deg, rgba(255,255,255,.40) 0%, rgba(255,255,255,.24) 100%);">{{ t.heroCta1 }}</button>
+          <button onClick="{{ goProcess }}" style="display:inline-flex; align-items:center; gap:12px; background:transparent; border:none; cursor:pointer; font-family:inherit; color:#ffffff; font-size:14px; font-weight:600;">
+            <span style="width:52px; height:52px; border-radius:50%; border:1px solid rgba(236,238,241,.4); display:inline-flex; align-items:center; justify-content:center; animation:pulseRing 2.6s infinite; flex:none;">▶</span>
+            {{ t.heroCta2 }}
+          </button>
+        </div>
+      </div>
+
+      <div style="flex:1 1 480px; min-width:min(100%,320px); display:flex; flex-direction:column; gap:18px;">
+        <div data-herostrip="" style="display:flex; gap:10px; height:clamp(300px,42vh,420px); overflow:hidden;">
+          <sc-for list="{{ cards }}" as="item" hint-placeholder-count="5">
+            <div onClick="{{ item.onSelect }}" onMouseEnter="{{ item.onSelect }}" data-hero-card="" style="position:relative; min-width:0; border-radius:18px; overflow:hidden; cursor:pointer; transition:flex-basis .6s cubic-bezier(.22,1,.36,1); border:1px solid rgba(236,238,241,.12);" style-hover="border-color:var(--acc-a50);">
+              <video data-hero-cardvid="" poster="{{ item.poster }}" muted="" loop="" playsinline="" preload="none" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></video>
+              <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(18,20,24,0) 0%, rgba(18,20,24,0) 45%, rgba(18,20,24,.82) 100%); pointer-events:none;"></div>
+              <span style="position:absolute; top:12px; right:14px; font-family:var(--display); font-weight:700; font-size:20px; color:#ffffff; pointer-events:none;">{{ item.no }}</span>
+              <div style="position:absolute; left:0; right:0; bottom:0; padding:16px; pointer-events:none;">
+                <p style="margin:0 0 5px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#ffffff; white-space:nowrap;">{{ item.kicker }}</p>
+                <p style="margin:0; padding:.08em 0; font-family:var(--display); font-weight:700; letter-spacing:-.01em; font-size:clamp(16px,2.2vw,22px); text-transform:uppercase; line-height:1.2; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ item.title }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <div style="display:flex; gap:10px;">
+            <button onClick="{{ prev }}" aria-label="Prev" style="width:52px; height:52px; border-radius:50%; border:1px solid rgba(255,255,255,.28); background:linear-gradient(180deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.08) 100%); box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.7), inset 0 1px 0 rgba(255,255,255,.26), 0 10px 24px rgba(52,42,34,.26); color:#fffdfa; font-size:18px; cursor:pointer;" style-hover="border-color:#ffffff; color:#ffffff;">←</button>
+            <button onClick="{{ next }}" aria-label="Next" style="width:52px; height:52px; border-radius:50%; border:1px solid rgba(255,255,255,.28); background:linear-gradient(180deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.08) 100%); box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.7), inset 0 1px 0 rgba(255,255,255,.26), 0 10px 24px rgba(52,42,34,.26); color:#fffdfa; font-size:18px; cursor:pointer;" style-hover="border-color:#ffffff; color:#ffffff;">→</button>
+          </div>
+          <div style="font-family:var(--display); font-weight:700; font-size:clamp(40px,7vw,72px); line-height:.8; color:#ffffff;">
+            {{ indexLabel }}<span style="color:#ffffff; font-size:.42em; vertical-align:top;"> / {{ totalLabel }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME: product showcase (ảnh sản phẩm) -->
+  <section style="position:relative; margin-top:-90px; padding:clamp(48px,7vw,96px) clamp(20px,4vw,56px) clamp(64px,9vw,120px); overflow:hidden;">
+    
+    <div aria-hidden="true" style="position:absolute; top:-160px; left:0; right:0; height:340px; z-index:2; pointer-events:none; background:linear-gradient(180deg, rgba(19,21,25,0) 0%, rgba(19,21,25,.45) 34%, rgba(19,21,25,.72) 50%, rgba(19,21,25,.3) 76%, rgba(19,21,25,0) 100%);"><div aria-hidden="true" style="position: absolute; top: 177px; left: -6px; height: 200px; z-index: 3; pointer-events: none; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); mask-image: linear-gradient(180deg, #000 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,0) 100%)"></div></div>
+    <div aria-hidden="true" style="position:absolute; top:-10%; left:50%; transform:translateX(-50%); width:74%; height:56%; border-radius:50%; background:var(--acc-a14); filter:blur(140px); pointer-events:none;"></div>
+    <div style="position:relative; z-index:1; max-width:1280px; margin:0 auto;">
+      <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-end; justify-content:space-between; margin-bottom:clamp(24px,3vw,38px);">
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <span style="width:40px; height:1px; background:var(--acc);"></span>
+            <span style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">{{ homeThemeKicker }}</span>
+          </div>
+          <h2 style="margin:0; padding-top:.06em; font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(28px,3.6vw,46px); line-height:1.08; color:#ffffff;">{{ homeThemeTitle }}</h2>
+        </div>
+        <button onClick="{{ goLibrary }}" style="margin-top:28px; display:inline-flex; align-items:center; gap:10px; padding:13px 24px; border-radius:14px; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700; background:linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,.06) 100%); backdrop-filter:blur(22px) saturate(150%); -webkit-backdrop-filter:blur(22px) saturate(150%); border:1px solid rgba(255,255,255,.5); color:#fffdfa; box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.85), inset 0 1px 0 rgba(255,255,255,.45), 0 8px 26px -6px rgba(255,246,232,.5); position:relative; overflow:hidden;" style-hover="border-color:#ffffff; color:#ffffff;"><span data-sheen="" style="position:absolute; top:-20%; bottom:-20%; left:0; width:55%; mix-blend-mode:screen; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.9) 50%, rgba(255,255,255,0) 100%); pointer-events:none;"></span><span style="position:relative;">{{ t.tplAll }}</span></button>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:22px;">
+        <sc-for list="{{ homeTemplates }}" as="hp" hint-placeholder-count="6">
+          <div data-reveal="" onMouseEnter="{{ ledOn }}" onMouseLeave="{{ ledOff }}" style="position:relative; display:flex; flex-direction:column; border-radius:24px; overflow:hidden; background:linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%); border:1px solid rgba(236,238,241,.14); box-shadow:inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18); transition:border-color .3s ease, transform .3s ease, box-shadow .3s ease;" style-hover="border-color:var(--acc-a55); transform:translateY(-4px);">
+            <span data-led="" style="position:absolute; inset:0; z-index:6; border-radius:24px; padding:2px; opacity:0; overflow:hidden; pointer-events:none; transition:opacity .35s ease; -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite:exclude;">
+              <span data-led-spin="" style="position:absolute; top:50%; left:50%; width:200%; aspect-ratio:1; background:conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 236deg, var(--acc-a55) 296deg, var(--acc-soft) 336deg, #fffdfa 352deg, rgba(255,255,255,0) 360deg);"></span>
+            </span>
+            <div style="position:relative; aspect-ratio:16/11; overflow:hidden;">
+              <div data-scroller="" style="position:absolute; top:0; left:0; right:0; height:100%; transform:translateY(0); will-change:transform;">
+                <image-slot id="agentic-home-{{ hp.id }}" shape="rect" fit="cover" placeholder="Ảnh preview giao diện"></image-slot>
+              </div>
+              <span data-scrollbar="" aria-hidden="true" style="position:absolute; z-index:3; top:8px; right:6px; bottom:8px; width:3px; border-radius:3px; background:rgba(255,255,255,.28); opacity:0; transition:opacity .3s ease; pointer-events:none;"></span>
+              <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(18,20,24,.1) 0%, rgba(18,20,24,.65) 100%); pointer-events:none;"></div>
+              <span style="position:absolute; top:12px; left:12px; padding:6px 12px; border-radius:100px; background:rgba(255,255,255,.14); box-shadow:inset 0 1px 0 rgba(255,255,255,.24); font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#ffffff;">{{ hp.catLabel }}</span>
+              <sc-if value="{{ hp.badge }}" hint-placeholder-val="{{ false }}">
+                <span style="position:absolute; top:12px; right:12px; padding:6px 12px; border-radius:100px; background:var(--acc); color:#ffffff; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;">{{ hp.badge }}</span>
+              </sc-if>
+              <button onClick="{{ hp.onDetail }}" style="position:absolute; left:12px; right:12px; bottom:12px; display:flex; align-items:center; justify-content:center; padding:12px; border-radius:14px; cursor:pointer; font-family:inherit; background:linear-gradient(180deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,.18) 100%); border:1px solid rgba(255,255,255,.36); color:#fffdfa; box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.85), 0 8px 18px -6px rgba(255,244,230,.5); font-size:13px; font-weight:700; opacity:0; transition:opacity .28s ease;" style-hover="opacity:1;">{{ t.tplPreview }}</button>
+            </div>
+            <div style="padding:20px 22px 22px; display:flex; flex-direction:column; gap:10px; flex:1;">
+              <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px;">
+                <h3 style="margin:0; font-family:var(--display); font-weight:700; letter-spacing:-.01em; font-size:22px; line-height:1.15;">{{ hp.name }}</h3>
+                <span style="font-size:15px; font-weight:700; color:var(--gold); white-space:nowrap;">{{ hp.price }}</span>
+              </div>
+              <p style="margin:0; font-size:14px; line-height:1.55; color:#949ba4; flex:1;">{{ hp.desc }}</p>
+              <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:4px;">
+                <sc-for list="{{ hp.tags }}" as="tg" hint-placeholder-count="3">
+                  <span style="padding:5px 11px; border-radius:100px; border:1px solid rgba(236,238,241,.16); font-size:11px; color:#ffffff; letter-spacing:.04em;">{{ tg }}</span>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- ===== TAB: LIBRARY ===== -->
+  <sc-if value="{{ isLibrary }}" hint-placeholder-val="{{ false }}">
+  <div>
+  <div style="height:clamp(84px,10vh,108px);"></div>
+  <section style="padding:26px 0; overflow:hidden;">
+    <div style="display:flex; align-items:center; gap:clamp(28px,5vw,64px); width:max-content; animation:marquee 26s linear infinite;">
+      <sc-for list="{{ marqueeItems }}" as="m" hint-placeholder-count="16">
+        <span style="display:inline-flex; align-items:center; gap:clamp(28px,5vw,64px); font-family:var(--display); font-weight:700; letter-spacing:.04em; font-size:clamp(18px,2.2vw,28px); color:{{ m.color }}; white-space:nowrap;">
+          {{ m.label }}<span style="width:7px; height:7px; border-radius:50%; background:var(--acc); display:inline-block;"></span>
+        </span>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="templates" style="position:relative; padding:clamp(72px,10vw,130px) clamp(20px,4vw,56px); overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute; top:-8%; left:-6%; width:52%; height:62%; border-radius:50%; background:var(--acc-a18); filter:blur(120px); pointer-events:none;"></div>
+    <div aria-hidden="true" style="position:absolute; bottom:-14%; right:-8%; width:48%; height:58%; border-radius:50%; background:rgba(240,166,60,.13); filter:blur(130px); pointer-events:none;"></div>
+    <div style="position:relative; z-index:1; max-width:1280px; margin:0 auto;">
+      <div style="display:flex; flex-wrap:wrap; gap:24px; align-items:flex-end; justify-content:space-between; margin-bottom:clamp(30px,4vw,46px);">
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+            <span style="width:40px; height:1px; background:var(--acc);"></span>
+            <span style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">{{ t.tplLabel }}</span>
+          </div>
+          <h2 style="margin:0; font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(34px,5.5vw,72px); line-height:1.04; max-width:16ch;">{{ t.tplTitle }}</h2>
+        </div>
+        <p style="max-width:340px; margin:0; color:#949ba4; font-size:15px; line-height:1.6;">{{ t.tplIntro }}</p>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:clamp(24px,3vw,36px);">
+        <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+          <button onClick="{{ f.onSelect }}" data-filter-chip="{{ f.key }}" style="padding:10px 18px; border-radius:100px; cursor:pointer; font-family:inherit; font-size:13px; font-weight:600; letter-spacing:.02em; border-width:1px; border-style:solid; transition:all .22s ease;" style-hover="border-color:#ffffff;">{{ f.label }}</button>
+        </sc-for>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:22px;">
+        <sc-for list="{{ templates }}" as="tp" hint-placeholder-count="6">
+          <div data-reveal="" onMouseEnter="{{ ledOn }}" onMouseLeave="{{ ledOff }}" style="position:relative; display:flex; flex-direction:column; border-radius:24px; overflow:hidden; background:linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%); border:1px solid rgba(236,238,241,.14); box-shadow:inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18); transition:border-color .3s ease, transform .3s ease, box-shadow .3s ease;" style-hover="border-color:var(--acc-a55); transform:translateY(-4px);">
+            <span data-led="" style="position:absolute; inset:0; z-index:6; border-radius:24px; padding:2px; opacity:0; overflow:hidden; pointer-events:none; transition:opacity .35s ease; -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite:exclude;">
+              <span data-led-spin="" style="position:absolute; top:50%; left:50%; width:200%; aspect-ratio:1; background:conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 236deg, var(--acc-a55) 296deg, var(--acc-soft) 336deg, #fffdfa 352deg, rgba(255,255,255,0) 360deg);"></span>
+            </span>
+            <div style="position:relative; aspect-ratio:16/11; overflow:hidden;">
+              <div data-scroller="" style="position:absolute; top:0; left:0; right:0; height:100%; transform:translateY(0); will-change:transform;">
+                <image-slot id="agentic-tpl-{{ tp.id }}" shape="rect" fit="cover" placeholder="Ảnh preview giao diện"></image-slot>
+              </div>
+              <span data-scrollbar="" aria-hidden="true" style="position:absolute; z-index:3; top:8px; right:6px; bottom:8px; width:3px; border-radius:3px; background:rgba(255,255,255,.28); opacity:0; transition:opacity .3s ease; pointer-events:none;"></span>
+              <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(18,20,24,.1) 0%, rgba(18,20,24,.65) 100%); pointer-events:none;"></div>
+              <span style="position:absolute; top:12px; left:12px; padding:6px 12px; border-radius:100px; background:rgba(255,255,255,.14); box-shadow:inset 0 1px 0 rgba(255,255,255,.24); font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#ffffff;">{{ tp.catLabel }}</span>
+              <sc-if value="{{ tp.badge }}" hint-placeholder-val="{{ false }}">
+                <span style="position:absolute; top:12px; right:12px; padding:6px 12px; border-radius:100px; background:var(--acc); color:#ffffff; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;">{{ tp.badge }}</span>
+              </sc-if>
+              <button onClick="{{ tp.onDetail }}" style="position:absolute; left:12px; right:12px; bottom:12px; display:flex; align-items:center; justify-content:center; padding:12px; border-radius:14px; cursor:pointer; font-family:inherit; background:linear-gradient(180deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,.18) 100%); border:1px solid rgba(255,255,255,.36); color:#fffdfa; box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.85), 0 8px 18px -6px rgba(255,244,230,.5); font-size:13px; font-weight:700; opacity:0; transition:opacity .28s ease;" style-hover="opacity:1;">{{ t.tplPreview }}</button>
+            </div>
+            <div style="padding:20px 22px 22px; display:flex; flex-direction:column; gap:10px; flex:1;">
+              <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px;">
+                <h3 style="margin:0; font-family:var(--display); font-weight:700; letter-spacing:-.01em; font-size:22px; line-height:1.15;">{{ tp.name }}</h3>
+                <span style="font-size:15px; font-weight:700; color:var(--gold); white-space:nowrap;">{{ tp.price }}</span>
+              </div>
+              <p style="margin:0; font-size:14px; line-height:1.55; color:#949ba4; flex:1;">{{ tp.desc }}</p>
+              <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:4px;">
+                <sc-for list="{{ tp.tags }}" as="tg" hint-placeholder-count="3">
+                  <span style="padding:5px 11px; border-radius:100px; border:1px solid rgba(236,238,241,.16); font-size:11px; color:#ffffff; letter-spacing:.04em;">{{ tg }}</span>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:flex; justify-content:center; margin-top:clamp(30px,4vw,48px);">
+        <button onClick="{{ goPricing }}" style="display:inline-flex; align-items:center; gap:10px; padding:15px 28px; border-radius:16px; cursor:pointer; font-family:inherit; font-size:14px; font-weight:600; background:linear-gradient(180deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.09) 100%); border:1px solid rgba(255,255,255,.26); color:#fffdfa; box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.75), inset 0 1px 0 rgba(255,255,255,.28), 0 10px 22px -8px rgba(255,244,230,.45), 0 16px 34px rgba(52,42,34,.28);" style-hover="border-color:#ffffff; color:#ffffff;">{{ t.tplAll }}</button>
+      </div>
+    </div>
+  </section>
+  </div>
+  </sc-if>
+
+  <!-- ===== TAB: TEMPLATE DETAIL ===== -->
+  <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+  <div>
+  <div style="height:clamp(84px,10vh,108px);"></div>
+
+  <section style="position:relative; padding:clamp(28px,4vw,44px) clamp(20px,4vw,56px) clamp(44px,6vw,72px); overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute; top:-14%; right:-6%; width:56%; height:70%; border-radius:50%; background:var(--acc-a14); filter:blur(150px); pointer-events:none;"></div>
+    <div style="position:relative; z-index:1; max-width:1280px; margin:0 auto;">
+
+      <button onClick="{{ closeDetail }}" style="display:inline-flex; align-items:center; gap:9px; margin-bottom:clamp(22px,3vw,32px); padding:9px 16px 9px 12px; border-radius:100px; cursor:pointer; font-family:inherit; font-size:13px; font-weight:600; color:#ffffff; background:rgba(255,255,255,.06); border:1px solid rgba(236,238,241,.16); transition:background .25s ease, border-color .25s ease;" style-hover="background:rgba(255,255,255,.11); border-color:var(--acc-a55);">← {{ t.dBack }}</button>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(28px,4vw,52px); align-items:start;">
+
+        <div data-reveal="" style="position:relative; border-radius:26px; overflow:hidden; border:1px solid rgba(236,238,241,.16); box-shadow:inset 0 1px 0 rgba(255,255,255,.18), 0 30px 70px -30px rgba(0,0,0,.8);">
+          <div style="display:flex; align-items:center; gap:7px; padding:11px 14px; background:rgba(255,255,255,.06); border-bottom:1px solid rgba(236,238,241,.12);">
+            <span style="width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.22);"></span>
+            <span style="width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.22);"></span>
+            <span style="width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,.22);"></span>
+            <span style="margin-left:10px; padding:4px 14px; border-radius:100px; background:rgba(0,0,0,.3); font-size:11px; color:#949ba4; letter-spacing:.04em;">agentic.vn/{{ detail.id }}</span>
+          </div>
+          <div style="position:relative; aspect-ratio:16/11; overflow:hidden;">
+            <image-slot id="{{ detail.slotId }}" shape="rect" fit="cover" placeholder="Ảnh preview giao diện"></image-slot>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+            <span style="padding:6px 13px; border-radius:100px; background:rgba(255,255,255,.09); border:1px solid rgba(236,238,241,.14); font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#ffffff;">{{ detail.catLabel }}</span>
+            <sc-if value="{{ detail.badge }}" hint-placeholder-val="{{ false }}">
+              <span style="padding:6px 13px; border-radius:100px; background:var(--acc); color:#ffffff; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;">{{ detail.badge }}</span>
+            </sc-if>
+          </div>
+          <h1 style="margin:0 0 14px; padding-top:.06em; font-family:var(--display); font-weight:700; letter-spacing:-.025em; font-size:clamp(36px,5vw,60px); line-height:1.04;">{{ detail.name }}</h1>
+          <p style="margin:0 0 26px; font-size:clamp(15px,1.4vw,17px); line-height:1.65; color:#949ba4; max-width:46ch; text-wrap:pretty;">{{ detail.desc }}</p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:30px;">
+            <sc-for list="{{ detail.tags }}" as="tg" hint-placeholder-count="3">
+              <span style="padding:6px 13px; border-radius:100px; border:1px solid rgba(236,238,241,.16); font-size:12px; color:#ffffff; letter-spacing:.03em;">{{ tg }}</span>
+            </sc-for>
+          </div>
+
+          <div style="display:flex; align-items:baseline; gap:8px; margin-bottom:24px;">
+            <span style="font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(38px,4.4vw,52px); color:var(--gold);">{{ detail.price }}</span>
+            <span style="font-size:13px; color:#949ba4;">{{ t.pricingUnitOnce }}</span>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:12px;">
+            <button onClick="{{ goPricing }}" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:16px 30px; border-radius:16px; cursor:pointer; font-family:inherit; font-size:14px; font-weight:700; letter-spacing:.01em; color:#fffdfa; background:linear-gradient(180deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,.18) 100%); border:1px solid rgba(255,255,255,.4); box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.95), inset 0 1px 0 rgba(255,255,255,.38), 0 10px 22px -6px rgba(255,244,230,.6), 0 18px 40px rgba(52,42,34,.34); transition:transform .25s ease;" style-hover="transform:translateY(-2px);">{{ t.dBuy }} →</button>
+            <button onClick="{{ openAuth }}" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:16px 26px; border-radius:16px; cursor:pointer; font-family:inherit; font-size:14px; font-weight:600; color:#ffffff; background:transparent; border:1px solid rgba(236,238,241,.24); transition:border-color .25s ease, background .25s ease;" style-hover="border-color:var(--acc-a55); background:rgba(255,255,255,.05);">{{ t.dLive }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative; padding:clamp(44px,6vw,80px) clamp(20px,4vw,56px); overflow:hidden;">
+    <div style="position:relative; z-index:1; max-width:1280px; margin:0 auto;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:clamp(24px,3vw,36px);">
+        <span style="width:40px; height:1px; background:var(--acc);"></span>
+        <span style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">{{ t.dViews }}</span>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:center; gap:clamp(18px,3vw,34px);">
+        <sc-for list="{{ detail.views }}" as="v" hint-placeholder-count="3">
+          <div data-reveal="" style="flex:0 1 auto; width:{{ v.w }}; min-width:180px; display:flex; flex-direction:column; gap:12px;">
+            <div style="position:relative; aspect-ratio:{{ v.ratio }}; border-radius:18px; overflow:hidden; border:1px solid rgba(236,238,241,.16); background:rgba(255,255,255,.03); box-shadow:0 24px 60px -28px rgba(0,0,0,.85);">
+              <div style="position:absolute; top:0; left:0; width:100%; aspect-ratio:16/11;">
+                <image-slot id="{{ v.slotId }}" shape="rect" fit="cover" placeholder="Preview"></image-slot>
+              </div>
+            </div>
+            <span style="text-align:center; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#949ba4;">{{ v.name }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative; padding:clamp(44px,6vw,80px) clamp(20px,4vw,56px); overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute; top:0; left:-8%; width:52%; height:76%; border-radius:50%; background:var(--acc-a14); filter:blur(150px); pointer-events:none;"></div>
+    <div style="position:relative; z-index:1; max-width:1280px; margin:0 auto;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:clamp(24px,3vw,34px);">
+        <span style="width:40px; height:1px; background:var(--acc);"></span>
+        <span style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">{{ t.dSpecs }}</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1px; border-radius:24px; overflow:hidden; background:rgba(236,238,241,.12); border:1px solid rgba(236,238,241,.12);">
+        <sc-for list="{{ detail.specs }}" as="sp" hint-placeholder-count="6">
+          <div data-reveal="" style="background:#191b20; padding:clamp(22px,2.6vw,30px); display:flex; flex-direction:column; gap:8px;">
+            <span style="font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#949ba4;">{{ sp.k }}</span>
+            <span style="font-size:17px; font-weight:600; color:#ffffff;">{{ sp.v }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative; padding:clamp(44px,6vw,80px) clamp(20px,4vw,56px) clamp(64px,9vw,120px); overflow:hidden;">
+    <div style="position:relative; z-index:1; max-width:1280px; margin:0 auto;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:clamp(24px,3vw,34px);">
+        <span style="width:40px; height:1px; background:var(--acc);"></span>
+        <span style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">{{ t.dRelated }}</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px;">
+        <sc-for list="{{ detail.related }}" as="rp" hint-placeholder-count="3">
+          <div data-reveal="" onClick="{{ rp.onSelect }}" onMouseEnter="{{ ledOn }}" onMouseLeave="{{ ledOff }}" style="position:relative; display:flex; flex-direction:column; border-radius:24px; overflow:hidden; cursor:pointer; background:linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%); border:1px solid rgba(236,238,241,.14); box-shadow:inset 0 1px 0 rgba(255,255,255,.20); transition:border-color .3s ease, transform .3s ease;" style-hover="border-color:var(--acc-a55); transform:translateY(-4px);">
+            <span data-led="" style="position:absolute; inset:0; z-index:6; border-radius:24px; padding:2px; opacity:0; overflow:hidden; pointer-events:none; transition:opacity .35s ease; -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite:exclude;">
+              <span data-led-spin="" style="position:absolute; top:50%; left:50%; width:200%; aspect-ratio:1; background:conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 236deg, var(--acc-a55) 296deg, var(--acc-soft) 336deg, #fffdfa 352deg, rgba(255,255,255,0) 360deg);"></span>
+            </span>
+            <div style="position:relative; aspect-ratio:16/11; overflow:hidden;">
+              <div data-scroller="" style="position:absolute; top:0; left:0; right:0; height:100%; transform:translateY(0); will-change:transform;">
+                <image-slot id="agentic-tpl-{{ rp.id }}" shape="rect" fit="cover" placeholder="Ảnh preview giao diện"></image-slot>
+              </div>
+              <span data-scrollbar="" aria-hidden="true" style="position:absolute; z-index:3; top:8px; right:6px; bottom:8px; width:3px; border-radius:3px; background:rgba(255,255,255,.28); opacity:0; transition:opacity .3s ease; pointer-events:none;"></span>
+              <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(18,20,24,.1) 0%, rgba(18,20,24,.65) 100%); pointer-events:none;"></div>
+            </div>
+            <div style="padding:20px 22px 22px; display:flex; flex-direction:column; gap:8px;">
+              <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px;">
+                <h3 style="margin:0; font-family:var(--display); font-weight:700; letter-spacing:-.01em; font-size:20px; line-height:1.15;">{{ rp.name }}</h3>
+                <span style="font-size:15px; font-weight:700; color:var(--gold); white-space:nowrap;">{{ rp.price }}</span>
+              </div>
+              <span style="font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#949ba4;">{{ rp.catLabel }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  </div>
+  </sc-if>
+
+  <!-- ===== TAB: PROCESS ===== -->
+  <sc-if value="{{ isProcess }}" hint-placeholder-val="{{ false }}">
+  <div>
+  <div style="height:clamp(84px,10vh,108px);"></div>
+  <section id="how" style="padding:clamp(48px,7vw,110px) clamp(20px,4vw,56px);">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div style="display:flex; flex-wrap:wrap; gap:clamp(28px,5vw,64px); align-items:flex-end; justify-content:space-between; margin-bottom:clamp(36px,5vw,64px);">
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+            <span style="width:40px; height:1px; background:var(--acc);"></span>
+            <span style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">{{ t.howLabel }}</span>
+          </div>
+          <h2 style="margin:0; padding-top:.1em; font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(34px,5vw,64px); line-height:1.08; color:#ffffff; max-width:14ch;">{{ t.howTitle }}</h2>
+        </div>
+        <p style="max-width:340px; margin:0; color:#949ba4; font-size:15px; line-height:1.65;">{{ t.howIntro }}</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(20px,2.5vw,32px);">
+        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="3">
+          <div data-reveal="" style="display:flex; flex-direction:column; gap:12px; padding-top:22px; border-top:2px solid rgba(236,238,241,.28);">
+            <span style="font-family:var(--display); font-weight:700; font-size:clamp(34px,4vw,48px); line-height:1; color:var(--gold);">{{ st.no }}</span>
+            <h3 style="margin:0; padding-top:.04em; font-family:var(--display); font-weight:700; letter-spacing:-.01em; font-size:24px; line-height:1.15; color:#ffffff;">{{ st.title }}</h3>
+            <p style="margin:0; font-size:15px; line-height:1.65; color:#949ba4;">{{ st.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:24px; border-top:1px solid rgba(236,238,241,.13); margin-top:clamp(40px,5vw,64px); padding-top:30px;">
+        <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+          <div>
+            <div style="font-family:var(--display); font-weight:700; font-size:clamp(34px,4vw,52px); line-height:1; color:#ffffff;">{{ s.value }}</div>
+            <div style="font-size:13px; color:#ffffff; margin-top:6px; letter-spacing:.02em;">{{ s.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="included" style="position:relative; padding:clamp(56px,8vw,120px) clamp(20px,4vw,56px); overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute; top:12%; right:-10%; width:56%; height:70%; border-radius:50%; background:rgba(240,166,60,.12); filter:blur(140px); pointer-events:none;"></div>
+    <div style="position:relative; z-index:1; max-width:1200px; margin:0 auto;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+        <span style="width:40px; height:1px; background:var(--acc);"></span>
+        <span style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">{{ t.incLabel }}</span>
+      </div>
+      <h2 style="margin:0 0 clamp(36px,5vw,56px); font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(34px,5vw,64px); line-height:1.06; max-width:16ch;">{{ t.incTitle }}</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1px; border-radius:24px; overflow:hidden; background:linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%); border:1px solid rgba(236,238,241,.14); box-shadow:inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18);">
+        <sc-for list="{{ includes }}" as="inc" hint-placeholder-count="6">
+          <div data-reveal="" style="background:rgba(255,255,255,.012); padding:clamp(24px,3vw,34px); display:flex; flex-direction:column; gap:10px; transition:background .3s ease;" style-hover="background:rgba(255,255,255,.055);">
+            <span style="font-family:var(--display); font-weight:700; font-size:15px; color:var(--gold); letter-spacing:.1em;">{{ inc.no }}</span>
+            <h3 style="margin:0; font-size:19px; font-weight:700; line-height:1.25; color:#ffffff;">{{ inc.title }}</h3>
+            <p style="margin:0; font-size:14px; line-height:1.6; color:#949ba4;">{{ inc.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  </div>
+  </sc-if>
+
+  <!-- ===== TAB: PRICING ===== -->
+  <sc-if value="{{ isPricing }}" hint-placeholder-val="{{ false }}">
+  <div>
+  <div style="height:clamp(84px,10vh,108px);"></div>
+  <section id="pricing" style="position:relative; padding:clamp(48px,7vw,110px) clamp(20px,4vw,56px); overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute; top:6%; left:50%; transform:translateX(-50%); width:70%; height:66%; border-radius:50%; background:var(--acc-a18); filter:blur(140px); pointer-events:none;"></div>
+    <div style="position:relative; z-index:1; max-width:1200px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:clamp(36px,5vw,56px);">
+        <div style="display:inline-flex; align-items:center; gap:12px; margin-bottom:18px;">
+          <span style="width:40px; height:1px; background:var(--acc);"></span>
+          <span style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">{{ t.pricingLabel }}</span>
+          <span style="width:40px; height:1px; background:var(--acc);"></span>
+        </div>
+        <h2 style="margin:0 auto; font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(34px,5vw,64px); line-height:1.06; color:#ffffff; max-width:18ch;">{{ t.pricingTitle }}</h2>
+        <p style="margin:18px auto 0; max-width:520px; color:#949ba4; font-size:15px; line-height:1.65;">{{ t.pricingIntro }}</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; align-items:stretch;">
+        <sc-for list="{{ tiers }}" as="tr" hint-placeholder-count="3">
+          <div data-reveal="" onMouseEnter="{{ ledOn }}" onMouseLeave="{{ ledOff }}" style="position:relative; display:flex; flex-direction:column; padding:clamp(28px,3vw,40px); border-radius:24px; background:{{ tr.bg }}; color:{{ tr.fg }}; border:1px solid {{ tr.border }}; box-shadow:inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18); transition:border-color .3s ease, transform .3s ease;" style-hover="border-color:{{ tr.ledHover }}; transform:translateY(-4px);">
+            <span data-led="" style="position:absolute; inset:0; z-index:6; border-radius:24px; opacity:0; pointer-events:none; transition:opacity .4s ease;">
+              <span aria-hidden="true" style="position:absolute; inset:{{ tr.glowInset }}; border-radius:{{ tr.glowRadius }}; padding:{{ tr.glowPad }}; overflow:hidden; animation:ledGlowPulse 1.6s ease-in-out infinite; -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite:exclude;">
+                <span data-led-spin="" style="position:absolute; top:50%; left:50%; width:200%; aspect-ratio:1; background:{{ tr.ledGlow }}; filter:{{ tr.glowBlur }};"></span>
+              </span>
+              <span aria-hidden="true" style="position:absolute; inset:0; border-radius:24px; padding:{{ tr.coreW }}; overflow:hidden; -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite:exclude;">
+                <span data-led-spin="" style="position:absolute; top:50%; left:50%; width:200%; aspect-ratio:1; background:{{ tr.led }}; animation:ledSparkle .9s linear infinite;"></span>
+              </span>
+              <sc-if value="{{ tr.mixRing }}">
+                <span aria-hidden="true" style="position:absolute; inset:-3px; border-radius:27px; padding:4px; overflow:hidden; mix-blend-mode:screen; opacity:.85; animation:ledGlowPulse 2.3s ease-in-out infinite; -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite:exclude;">
+                  <span data-led-spin-rev="" style="position:absolute; top:50%; left:50%; width:200%; aspect-ratio:1; background:{{ tr.led2 }}; filter:blur(5px) saturate(1.8) brightness(1.4);"></span>
+                </span>
+                <span aria-hidden="true" style="position:absolute; inset:0; border-radius:24px; padding:.4px; overflow:hidden; mix-blend-mode:screen; -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite:exclude;">
+                  <span data-led-spin-rev="" style="position:absolute; top:50%; left:50%; width:200%; aspect-ratio:1; background:{{ tr.led2 }};"></span>
+                </span>
+              </sc-if>
+            </span>
+            <sc-if value="{{ tr.featured }}" hint-placeholder-val="{{ false }}">
+              <span style="align-self:flex-start; padding:6px 14px; border-radius:100px; background:var(--acc); color:#ffffff; font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin-bottom:18px;">{{ t.pricingPopular }}</span>
+            </sc-if>
+            <h3 style="margin:0 0 6px; padding-top:.06em; font-family:var(--display); font-weight:700; letter-spacing:-.01em; font-size:26px; line-height:1.1;">{{ tr.name }}</h3>
+            <p style="margin:0 0 20px; font-size:13px; opacity:.7; line-height:1.5;">{{ tr.note }}</p>
+            <div style="display:flex; align-items:baseline; gap:6px; margin-bottom:24px;">
+              <span style="font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(34px,4vw,46px); color:{{ tr.priceColor }};">{{ tr.price }}</span>
+              <span style="font-size:13px; opacity:.65;">{{ tr.unit }}</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:28px; flex:1;">
+              <sc-for list="{{ tr.features }}" as="f" hint-placeholder-count="4">
+                <div style="display:flex; gap:10px; align-items:flex-start; font-size:14px; line-height:1.45;">
+                  <span style="color:#ffffff; font-weight:700;">✓</span><span>{{ f }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <button onClick="{{ goCta }}" style="display:inline-flex; justify-content:center; padding:15px; border-radius:16px; cursor:pointer; font-family:inherit; font-weight:700; font-size:14px; border:1px solid {{ tr.btnBorder }}; background:{{ tr.btnBg }}; color:#fffdfa; box-shadow:{{ tr.btnShadow }};" style-hover="opacity:.88;">{{ tr.cta }}</button>
+          </div>
+        </sc-for>
+      </div>
+      <p style="margin:26px auto 0; text-align:center; font-size:13px; color:#616872;">{{ t.pricingNote }}</p>
+    </div>
+  </section>
+
+  <section style="position:relative; padding:clamp(56px,8vw,120px) clamp(20px,4vw,56px); overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute; top:0; left:-8%; width:54%; height:70%; border-radius:50%; background:var(--acc-a14); filter:blur(140px); pointer-events:none;"></div>
+    <div style="position:relative; z-index:1; max-width:1200px; margin:0 auto;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+        <span style="width:40px; height:1px; background:var(--acc);"></span>
+        <span style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">{{ t.loveLabel }}</span>
+      </div>
+      <h2 style="margin:0 0 clamp(32px,4vw,48px); font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(34px,5vw,64px); line-height:1.06; max-width:14ch;">{{ t.loveTitle }}</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;">
+        <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="3">
+          <div data-reveal="" style="display:flex; flex-direction:column; gap:18px; padding:clamp(24px,3vw,32px); border-radius:24px; background:linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%); border:1px solid rgba(236,238,241,.14); box-shadow:inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18);">
+            <span style="font-family:var(--display); font-weight:700; font-size:40px; line-height:.6; color:#ffffff;">“</span>
+            <p style="margin:0; font-size:16px; line-height:1.6; color:#ffffff; flex:1;">{{ q.text }}</p>
+            <div style="display:flex; align-items:center; gap:12px; padding-top:16px;">
+              <span style="width:38px; height:38px; border-radius:50%; background:#24272e; display:inline-flex; align-items:center; justify-content:center; font-weight:700; font-size:14px; color:#ffffff; flex:none;">{{ q.initial }}</span>
+              <div>
+                <div style="font-size:14px; font-weight:600;">{{ q.name }}</div>
+                <div style="font-size:12px; color:#ffffff;">{{ q.role }}</div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  </div>
+  </sc-if>
+
+  <!-- ===== TAB: FAQ ===== -->
+  <sc-if value="{{ isFaq }}" hint-placeholder-val="{{ false }}">
+  <div>
+  <div style="height:clamp(84px,10vh,108px);"></div>
+  <section id="faq" style="padding:clamp(48px,7vw,96px) clamp(20px,4vw,56px) clamp(72px,10vw,120px);">
+    <div style="max-width:900px; margin:0 auto;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+        <span style="width:40px; height:1px; background:var(--acc);"></span>
+        <span style="font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">{{ t.faqLabel }}</span>
+      </div>
+      <h2 style="margin:0 0 clamp(28px,4vw,44px); font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(32px,4.5vw,56px); line-height:1.08;">{{ t.faqTitle }}</h2>
+      <div style="display:flex; flex-direction:column;">
+        <sc-for list="{{ faqs }}" as="fq" hint-placeholder-count="5">
+          <div style="border-top:1px solid rgba(236,238,241,.13);">
+            <button onClick="{{ fq.onToggle }}" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px 0; background:transparent; border:none; cursor:pointer; text-align:left; font-family:inherit; color:#ffffff; font-size:clamp(16px,1.8vw,19px); font-weight:600; line-height:1.4;" style-hover="color:#ffffff;">
+              {{ fq.q }}
+              <span data-faq-icon="" style="flex:none; width:32px; height:32px; border-radius:50%; border:1px solid rgba(236,238,241,.28); display:inline-flex; align-items:center; justify-content:center; font-size:16px; color:#ffffff; transition:transform .3s ease;">+</span>
+            </button>
+            <div data-faq-panel="" style="overflow:hidden; transition:max-height .38s cubic-bezier(.22,1,.36,1), opacity .3s ease;">
+              <p style="margin:0; padding:0 0 26px; max-width:70ch; font-size:15px; line-height:1.7; color:#949ba4;">{{ fq.a }}</p>
+            </div>
+          </div>
+        </sc-for>
+        <div style="border-top:1px solid rgba(236,238,241,.13);"></div>
+      </div>
+    </div>
+  </section>
+  </div>
+  </sc-if>
+
+  <!-- ===== TAB: CTA ===== -->
+  <sc-if value="{{ isCta }}" hint-placeholder-val="{{ false }}">
+  <div>
+  <div style="height:clamp(84px,10vh,108px);"></div>
+  <section id="cta" style="padding:clamp(48px,7vw,96px) clamp(20px,4vw,56px) clamp(72px,10vw,120px);">
+    <div style="position:relative; max-width:1200px; margin:0 auto; border-radius:32px; border:1px solid rgba(236,238,241,.14); padding:clamp(40px,6vw,84px) clamp(24px,4vw,64px); text-align:center; overflow:hidden; background:linear-gradient(152deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.04) 50%, rgba(255,255,255,.025) 100%); box-shadow:inset 0 1px 0 rgba(255,255,255,.20);">
+      <div aria-hidden="true" style="position:absolute; inset:0; background:radial-gradient(120% 160% at 50% 0%, var(--acc-a18), transparent 62%); pointer-events:none;"></div>
+      <h2 style="position:relative; z-index:1; margin:0 auto 18px; font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:clamp(36px,6vw,84px); line-height:1.02; max-width:16ch;">{{ t.ctaTitle }}</h2>
+      <p style="position:relative; z-index:1; margin:0 auto 32px; max-width:520px; color:#949ba4; font-size:16px; line-height:1.65;">{{ t.ctaP }}</p>
+      <form onSubmit="{{ onSubmit }}" style="position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:12px; justify-content:center; max-width:520px; margin:0 auto;">
+        <input name="email" type="email" required="" placeholder="{{ t.formEmail }}" style="flex:1 1 240px; min-width:0; padding:16px 22px; border-radius:16px; border:1px solid rgba(255,255,255,.26); background:linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.12) 100%); box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.7), inset 0 1px 0 rgba(255,255,255,.3), 0 14px 30px rgba(52,42,34,.26); color:#ffffff; font-family:inherit; font-size:15px;">
+        <button type="submit" style="flex:0 0 auto; padding:16px 32px; border-radius:16px; font-weight:700; font-size:15px; cursor:pointer; font-family:inherit; background:linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%); border:1px solid rgba(255,255,255,.32); color:#fffdfa; box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -6px rgba(255,244,230,.55), 0 18px 40px rgba(52,42,34,.34);" style-hover="background:linear-gradient(180deg, rgba(255,255,255,.40) 0%, rgba(255,255,255,.24) 100%);">{{ submitLabel }}</button>
+      </form>
+      <p style="position:relative; z-index:1; margin:18px 0 0; font-size:13px; color:#616872;">{{ t.ctaNote }}</p>
+    </div>
+  </section>
+  </div>
+  </sc-if>
+
+  <!-- ===== FOOTER ===== -->
+  <sc-if value="{{ showFooter }}" hint-placeholder-val="{{ false }}">
+  <footer style="padding:clamp(40px,6vw,64px) clamp(20px,4vw,56px);">
+    <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:28px; align-items:center; justify-content:space-between;">
+      <span style="font-family:var(--display); font-weight:700; letter-spacing:.02em; font-size:clamp(40px,8vw,88px); line-height:.9;">AGENTIC</span>
+      <div style="display:flex; flex-wrap:wrap; gap:22px; font-size:13px; color:#ffffff; letter-spacing:.03em;">
+        <sc-for list="{{ footerLinks }}" as="fl" hint-placeholder-count="4">
+          <button onClick="{{ fl.onSelect }}" style="background:transparent; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; color:#ffffff; letter-spacing:.03em;" style-hover="color:#ffffff;">{{ fl.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="max-width:1200px; margin:28px auto 0; padding-top:20px; border-top:1px solid rgba(236,238,241,.08); display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; font-size:12px; color:#616872;">
+      <span>{{ t.copyright }}</span>
+      <a href="mailto:hello@agentic.vn" style="color:#616872;" style-hover="color:#ffffff;">hello@agentic.vn</a>
+    </div>
+  </footer>
+  </sc-if>
+
+</div>
+
+<sc-if value="{{ authOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeAuth }}" style="position:fixed; inset:0; z-index:9000; display:flex; align-items:flex-start; justify-content:center; overflow-y:auto; padding:24px; background:rgba(8,9,11,.72); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); animation:fadeIn .28s ease;">
+    <div onClick="{{ stopProp }}" style="position:relative; flex:none; margin:auto 0; width:100%; max-width:420px; padding:clamp(30px,4vw,40px); border-radius:26px; background:linear-gradient(152deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.05) 46%, rgba(255,255,255,.03) 100%); backdrop-filter:blur(34px) saturate(160%); -webkit-backdrop-filter:blur(34px) saturate(160%); border:1px solid rgba(236,238,241,.16); box-shadow:inset 0 1px 0 rgba(255,255,255,.22), inset 0 -1px 0 rgba(0,0,0,.2), 0 40px 90px -30px rgba(0,0,0,.9);">
+      <button onClick="{{ closeAuth }}" aria-label="{{ t.authClose }}" style="position:absolute; top:18px; right:18px; width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06); color:#c8ced6; font-size:15px; line-height:1; cursor:pointer; font-family:inherit;" style-hover="border-color:#ffffff; color:#ffffff;">✕</button>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <span style="width:34px; height:1px; background:var(--acc);"></span>
+        <span style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">AGENTIC</span>
+      </div>
+      <h3 style="margin:0 0 8px; font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:30px; line-height:1.1; color:#ffffff;">{{ t.authTitle }}</h3>
+      <p style="margin:0 0 26px; font-size:14px; line-height:1.6; color:#949ba4;">{{ t.authSub }}</p>
+      <form onSubmit="{{ onAuthSubmit }}" style="display:flex; flex-direction:column; gap:14px;">
+        <label style="display:flex; flex-direction:column; gap:7px; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:#949ba4;">{{ t.authEmail }}
+          <input type="email" required="required" placeholder="you@studio.com" style="width:100%; box-sizing:border-box; padding:14px 16px; border-radius:14px; border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.05); color:#ffffff; font-family:inherit; font-size:14px; letter-spacing:normal; text-transform:none; outline:none;" style-focus="border-color:#ffffff;" />
+        </label>
+        <label style="display:flex; flex-direction:column; gap:7px; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:#949ba4;">{{ t.authPass }}
+          <input type="password" required="required" placeholder="••••••••" style="width:100%; box-sizing:border-box; padding:14px 16px; border-radius:14px; border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.05); color:#ffffff; font-family:inherit; font-size:14px; letter-spacing:normal; text-transform:none; outline:none;" style-focus="border-color:#ffffff;" />
+        </label>
+        <div style="display:flex; justify-content:flex-end; margin-top:-2px;">
+          <button type="button" onClick="{{ closeAuth }}" style="padding:0; border:0; background:none; font-family:inherit; font-size:13px; color:#c8ced6; cursor:pointer;" style-hover="color:#ffffff;">{{ t.authForgot }}</button>
+        </div>
+        <button type="submit" style="display:inline-flex; justify-content:center; align-items:center; margin-top:4px; padding:15px; border-radius:16px; cursor:pointer; font-family:inherit; font-weight:700; font-size:14px; border:1px solid rgba(255,255,255,.4); background:linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%); color:#fffdfa; box-shadow:inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -8px rgba(255,244,230,.5);" style-hover="opacity:.9;">{{ authSubmitLabel }}</button>
+      </form>
+      <div style="display:flex; align-items:center; gap:14px; margin:22px 0;">
+        <span style="flex:1; height:1px; background:rgba(255,255,255,.12);"></span>
+        <span style="font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#616872;">{{ t.authOr }}</span>
+        <span style="flex:1; height:1px; background:rgba(255,255,255,.12);"></span>
+      </div>
+      <button style="width:100%; display:inline-flex; justify-content:center; align-items:center; gap:10px; padding:14px; border-radius:16px; cursor:pointer; font-family:inherit; font-weight:600; font-size:14px; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06); color:#ffffff;" style-hover="border-color:#ffffff;">{{ t.authGoogle }}</button>
+      <p style="margin:22px 0 0; text-align:center; font-size:13px; color:#949ba4;">{{ t.authNoAcc }} <button type="button" onClick="{{ goPricingFromAuth }}" style="padding:0; border:0; background:none; font-family:inherit; font-size:13px; color:#ffffff; font-weight:600; cursor:pointer;" style-hover="opacity:.75;">{{ t.authSignup }}</button></p>
+    </div>
+  </div>
+</sc-if></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;defaultTab&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;library&quot;,&quot;process&quot;,&quot;pricing&quot;,&quot;faq&quot;,&quot;cta&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Điều hướng&quot;},&quot;islandHoverExpand&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Điều hướng&quot;}}">
+const I18N = {
+  vi: {
+    navCta: 'Đăng nhập',
+    authTitle: 'Đăng nhập',
+    authSub: 'Truy cập thư viện giao diện và lịch sử mua hàng của bạn.',
+    authEmail: 'Email',
+    authPass: 'Mật khẩu',
+    authForgot: 'Quên mật khẩu?',
+    authSubmit: 'Đăng nhập',
+    authOr: 'hoặc',
+    authGoogle: 'Tiếp tục với Google',
+    authNoAcc: 'Chưa có tài khoản?',
+    authSignup: 'Tạo tài khoản',
+    authClose: 'Đóng',
+    tagline: 'Giao diện web cao cấp, dựng sẵn để bán',
+    heroEyebrow: 'Giao diện web · Bán sẵn',
+    heroCta1: 'Xem bộ giao diện →',
+    heroCta2: 'Cách hoạt động',
+    catAll: 'Tất cả',
+    tplLabel: 'Thư viện',
+    tplTitle: 'Giao diện dựng sẵn, mua là chạy',
+    tplIntro: 'Mỗi giao diện là một file hoàn chỉnh: layout, chuyển động, responsive và nội dung mẫu. Tải về, thay chữ, lên sóng.',
+    tplPreview: 'Xem chi tiết →',
+    dBack: 'Thư viện',
+    pricingUnitOnce: 'trả một lần, dùng vĩnh viễn',
+    dBuy: 'Mua giao diện này',
+    dLive: 'Xem bản demo',
+    dViews: 'Hiển thị trên mọi màn hình',
+    dViewNames: ['Desktop', 'Tablet', 'Mobile'],
+    dSpecs: 'Thông số kỹ thuật',
+    dSpecRows: [['Định dạng', 'HTML · CSS · JS'], ['Trang mẫu', '8 trang'], ['Responsive', '360px → 2560px'], ['Chuyển động', 'GSAP + CSS'], ['Giấy phép', 'Thương mại, không giới hạn'], ['Cập nhật', 'Trọn đời, miễn phí']],
+    dRelated: 'Giao diện tương tự',
+    tplAll: 'Xem toàn bộ 24 giao diện →',
+    howLabel: 'Quy trình',
+    howTitle: 'Từ chọn mẫu đến lên sóng trong một buổi chiều',
+    howIntro: 'Không cần thiết kế lại từ đầu, không cần thuê đội dev. Ba bước, và trang của bạn đã sống.',
+    incLabel: 'Bao gồm',
+    incTitle: 'Bạn nhận được gì trong mỗi giao diện',
+    pricingLabel: 'Bảng giá',
+    pricingTitle: 'Mua lẻ một mẫu hay lấy trọn thư viện',
+    pricingIntro: 'Thanh toán một lần, dùng vĩnh viễn. Bao gồm cả các bản cập nhật giao diện về sau.',
+    pricingPopular: 'Đáng tiền nhất',
+    pricingNote: 'Giá đã gồm giấy phép thương mại cho dự án khách hàng.',
+    loveLabel: 'Phản hồi',
+    loveTitle: 'Người dùng nói gì',
+    faqLabel: 'Câu hỏi',
+    faqTitle: 'Những điều thường được hỏi',
+    ctaTitle: 'Lấy giao diện, lên sóng tuần này',
+    ctaP: 'Để lại email để nhận link tải mẫu miễn phí và mã giảm 20% cho trọn bộ.',
+    ctaNote: 'Không spam. Hủy nhận bất cứ lúc nào.',
+    formEmail: 'Email của bạn',
+    formSubmit: 'Nhận mẫu miễn phí',
+    formSent: 'Đã gửi — kiểm tra email nhé!',
+    copyright: '© 2026 Agentic — Giao diện web cao cấp dựng sẵn.',
+    nav: ['Trang chủ', 'Thư viện', 'Quy trình', 'Bảng giá', 'Câu hỏi', 'Nhận mẫu'],
+    marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
+    services: [
+      { kicker: 'Người sáng lập · Agentic', title: 'Về Tôi', blurb: 'Tôi thiết kế và bán giao diện web cao cấp — những bộ template dựng sẵn, chuyển động mượt, sẵn sàng thương mại. Xem hành trình và cách tôi làm việc.' },
+      { kicker: 'Bán hàng · Chốt đơn', title: 'Agent Bán Hàng', blurb: 'Tư vấn sản phẩm, đề xuất gói phù hợp và dẫn khách đến bước thanh toán. Chủ động nhắc lại giỏ hàng và follow-up lead tự động.' },
+      { kicker: 'Vận hành nội bộ', title: 'Trợ Lý Nội Bộ', blurb: 'Tra cứu tài liệu, tổng hợp báo cáo, soạn thảo và trả lời quy trình cho nhân viên — kết nối trực tiếp vào dữ liệu công ty.' },
+      { kicker: 'Phân tích dữ liệu', title: 'Agent Phân Tích', blurb: 'Hỏi đáp bằng ngôn ngữ tự nhiên trên dữ liệu kinh doanh, tự sinh biểu đồ và phát hiện bất thường theo thời gian thực.' },
+      { kicker: 'Tùy chỉnh riêng', title: 'Agent Theo Yêu Cầu', blurb: 'Thiết kế agent chuyên biệt theo nghiệp vụ của bạn — tích hợp API nội bộ, quy trình phê duyệt và tự động hóa đầu-cuối.' },
+    ],
+    cats: { portfolio: 'Portfolio', saas: 'SaaS', agency: 'Agency', shop: 'Bán hàng', motion: '3D · Motion' },
+    templates: [
+      { name: 'Editorial One', desc: 'Portfolio dạng tạp chí, hero accordion và chuyển cảnh mượt cho nhiếp ảnh gia và studio.', tags: ['Hero accordion', 'Dark mode', 'CMS-ready'] },
+      { name: 'Northwind', desc: 'Landing SaaS đầy đủ: bảng giá, so sánh gói, testimonial và blog tích hợp.', tags: ['Pricing', 'Blog', 'Light + Dark'] },
+      { name: 'Studio Kern', desc: 'Trang agency với case study cuộn ngang, con trỏ tùy biến và trang liên hệ riêng.', tags: ['Case study', 'Cursor FX'] },
+      { name: 'Vault Shop', desc: 'Cửa hàng một sản phẩm, tối ưu cho chuyển đổi với checkout rút gọn.', tags: ['1-product', 'Fast checkout'] },
+      { name: 'Orbit 3D', desc: 'Hero WebGL xoay theo con trỏ, hiệu ứng scroll-parallax nhiều lớp.', tags: ['Three.js', 'WebGL', 'Parallax'] },
+      { name: 'Fold Journal', desc: 'Blog dài kỳ với typography chắc tay, mục lục dính và chế độ đọc.', tags: ['Typography', 'Reading mode'] },
+      { name: 'Mono Deck', desc: 'Trang giới thiệu sản phẩm dạng slide, cuộn từng khung toàn màn hình.', tags: ['Snap scroll', 'Full-bleed'] },
+      { name: 'Atlas Grid', desc: 'Thư mục dự án dạng lưới có lọc, hover phóng ảnh và trang chi tiết.', tags: ['Filter', 'Grid', 'Detail page'] },
+      { name: 'Signal', desc: 'Landing ra mắt sản phẩm với đếm ngược, thu email và social proof.', tags: ['Waitlist', 'Countdown'] },
+      { name: 'Prism Folio', desc: 'Portfolio lưới bất đối xứng, ảnh bìa đổi màu theo từng dự án.', tags: ['Asymmetric', 'Colour shift'] },
+      { name: 'Kiosk', desc: 'Cửa hàng nhiều danh mục với bộ lọc nhanh và giỏ hàng trượt bên.', tags: ['Multi-category', 'Slide cart'] },
+      { name: 'Beacon', desc: 'Landing cho công cụ B2B: bảng tính năng, tích hợp và trang khách hàng.', tags: ['Feature table', 'Integrations'] },
+      { name: 'Loom Studio', desc: 'Agency thiên về chuyển động, mỗi mục dịch vụ là một cảnh riêng.', tags: ['Scene scroll', 'Video hero'] },
+      { name: 'Drift', desc: 'Trang thương hiệu với vật thể 3D trôi chậm và con trỏ hút sáng.', tags: ['3D', 'Cursor light'] },
+      { name: 'Paper Press', desc: 'Portfolio kiểu ấn phẩm in, dàn cột chặt và ảnh tràn lề.', tags: ['Editorial', 'Grid'] },
+      { name: 'Ledger', desc: 'Dashboard SaaS demo: biểu đồ, bảng dữ liệu và trang tài khoản.', tags: ['Dashboard', 'Charts'] },
+      { name: 'Foundry', desc: 'Agency công nghiệp, phần quy trình dạng dòng thời gian dọc.', tags: ['Timeline', 'Case study'] },
+      { name: 'Nova Motion', desc: 'Showreel toàn màn hình, chuyển cảnh video liền mạch giữa các trang.', tags: ['Showreel', 'Page transition'] },
+    ],
+    steps: [
+      { title: 'Chọn giao diện', desc: 'Xem bản demo trực tiếp, đối chiếu với ngành hàng và phong cách thương hiệu của bạn.' },
+      { title: 'Tải & thay nội dung', desc: 'Nhận file hoàn chỉnh cùng hướng dẫn. Thay chữ, đổi ảnh, chỉnh màu thương hiệu.' },
+      { title: 'Xuất bản', desc: 'Deploy lên hosting bất kỳ. Responsive, tối ưu tốc độ và chuẩn SEO ngay từ đầu.' },
+    ],
+    stats: [
+      { value: '24', label: 'Giao diện trong thư viện' },
+      { value: '<1 ngày', label: 'Từ mua đến lên sóng' },
+      { value: '100%', label: 'Responsive mọi thiết bị' },
+      { value: '∞', label: 'Dùng lại không giới hạn' },
+    ],
+    includes: [
+      { title: 'File nguồn đầy đủ', desc: 'Mã HTML/CSS/JS sạch, chú thích rõ ràng, không phụ thuộc plugin lạ.' },
+      { title: 'Chuyển động dựng sẵn', desc: 'Scroll reveal, parallax, hover và chuyển cảnh đã tinh chỉnh sẵn từng khung.' },
+      { title: 'Responsive thật', desc: 'Kiểm thử trên desktop, tablet và mobile — không phải chỉ thu nhỏ layout.' },
+      { title: 'Nội dung mẫu', desc: 'Copywriting mẫu và ảnh placeholder để bạn thấy trang hoàn chỉnh ngay lập tức.' },
+      { title: 'Hướng dẫn tùy biến', desc: 'Tài liệu chỉ rõ chỗ đổi màu, font, nội dung mà không phá layout.' },
+      { title: 'Giấy phép thương mại', desc: 'Dùng cho dự án của bạn hoặc của khách hàng, không giới hạn số lần.' },
+    ],
+    tiers: [
+      { name: 'Một giao diện', note: 'Chọn đúng mẫu bạn cần.', price: '1.9tr', unit: '/mẫu', cta: 'Mua mẫu này', features: ['1 giao diện tự chọn', 'File nguồn đầy đủ', 'Hướng dẫn tùy biến', 'Cập nhật trọn đời', 'Giấy phép thương mại'] },
+      { name: 'Trọn bộ', note: 'Toàn bộ thư viện, một lần trả.', price: '9.9tr', unit: 'trả một lần', cta: 'Lấy trọn bộ', features: ['Tất cả 24 giao diện', 'Mẫu mới cập nhật miễn phí', 'Bộ component dùng chung', 'Ưu tiên hỗ trợ qua email', 'Giấy phép thương mại'] },
+      { name: 'Thiết kế riêng', note: 'Chúng tôi dựng theo thương hiệu bạn.', price: 'Liên hệ', unit: '', cta: 'Trao đổi dự án', features: ['Thiết kế từ đầu theo brand', 'Tối đa 8 trang', 'Hoàn thiện trong 3 tuần', 'Bàn giao kèm hướng dẫn', 'Hỗ trợ 60 ngày sau bàn giao'] },
+    ],
+    quotes: [
+      { text: 'Mua buổi sáng, chiều đã có trang bán hàng chạy thật. Chuyển động mượt hơn hẳn mấy template tôi từng dùng.', name: 'Minh Trí', role: 'Founder, Kalo Studio', initial: 'M' },
+      { text: 'Code sạch nên team dev của tôi ghép vào hệ thống chỉ trong hai ngày. Đáng giá hơn nhiều so với thuê thiết kế riêng.', name: 'Hà Phương', role: 'Product Lead, Vela', initial: 'H' },
+      { text: 'Tôi bán lại dịch vụ làm web cho khách và dùng chính thư viện này. Biên lợi nhuận tăng gấp đôi.', name: 'Duy Anh', role: 'Freelance Designer', initial: 'D' },
+    ],
+    faqs: [
+      { q: 'Tôi có cần biết code để dùng không?', a: 'Không bắt buộc. Bạn có thể thay chữ và ảnh trực tiếp trong file mà không cần biết lập trình. Nếu muốn chỉnh sâu về layout thì kiến thức HTML/CSS cơ bản sẽ giúp ích.' },
+      { q: 'Giao diện dùng được cho dự án của khách hàng chứ?', a: 'Được. Mọi gói đều kèm giấy phép thương mại, bạn có thể dùng cho dự án của mình hoặc bán lại dịch vụ cho khách hàng. Chỉ không được bán lại chính file giao diện.' },
+      { q: 'Có được cập nhật khi ra mẫu mới không?', a: 'Gói Trọn bộ nhận tất cả giao diện mới miễn phí trọn đời. Gói Một giao diện nhận các bản cập nhật của chính mẫu đã mua.' },
+      { q: 'Deploy lên đâu được?', a: 'Bất cứ đâu chạy được web tĩnh: Vercel, Netlify, Cloudflare Pages, hoặc hosting truyền thống. Không yêu cầu backend riêng.' },
+      { q: 'Nếu không phù hợp thì sao?', a: 'Hoàn tiền trong 14 ngày nếu giao diện không dùng được cho dự án của bạn — chỉ cần nhắn cho chúng tôi.' },
+    ],
+  },
+  en: {
+    navCta: 'Sign in',
+    authTitle: 'Sign in',
+    authSub: 'Access your template library and purchase history.',
+    authEmail: 'Email',
+    authPass: 'Password',
+    authForgot: 'Forgot password?',
+    authSubmit: 'Sign in',
+    authOr: 'or',
+    authGoogle: 'Continue with Google',
+    authNoAcc: 'No account yet?',
+    authSignup: 'Create account',
+    authClose: 'Close',
+    tagline: 'Premium website templates, built to ship',
+    heroEyebrow: 'Website templates · Ready to ship',
+    heroCta1: 'Browse the library →',
+    heroCta2: 'How it works',
+    catAll: 'All',
+    tplLabel: 'Library',
+    tplTitle: 'Templates that ship the day you buy',
+    tplIntro: 'Every template is a finished build: layout, motion, responsive rules and sample content. Download, swap the words, launch.',
+    tplPreview: 'View details →',
+    dBack: 'Library',
+    pricingUnitOnce: 'one-time, yours forever',
+    dBuy: 'Buy this template',
+    dLive: 'View live demo',
+    dViews: 'Looks right on every screen',
+    dViewNames: ['Desktop', 'Tablet', 'Mobile'],
+    dSpecs: 'Specifications',
+    dSpecRows: [['Format', 'HTML · CSS · JS'], ['Sample pages', '8 pages'], ['Responsive', '360px → 2560px'], ['Motion', 'GSAP + CSS'], ['Licence', 'Commercial, unlimited'], ['Updates', 'Free, forever']],
+    dRelated: 'Similar templates',
+    tplAll: 'See all 24 templates →',
+    howLabel: 'Process',
+    howTitle: 'From picking a template to live in one afternoon',
+    howIntro: 'No redesign from scratch, no dev team to hire. Three steps and your site is live.',
+    incLabel: 'Included',
+    incTitle: 'What comes with every template',
+    pricingLabel: 'Pricing',
+    pricingTitle: 'Buy one template or take the whole library',
+    pricingIntro: 'One payment, yours forever — future updates to your templates included.',
+    pricingPopular: 'Best value',
+    pricingNote: 'All prices include a commercial licence for client work.',
+    loveLabel: 'Feedback',
+    loveTitle: 'What buyers say',
+    faqLabel: 'FAQ',
+    faqTitle: 'Questions we get a lot',
+    ctaTitle: 'Grab a template, launch this week',
+    ctaP: 'Drop your email for a free sample template and 20% off the full library.',
+    ctaNote: 'No spam. Unsubscribe any time.',
+    formEmail: 'Your email',
+    formSubmit: 'Send my free template',
+    formSent: 'Sent — check your inbox!',
+    copyright: '© 2026 Agentic — Premium website templates, ready to ship.',
+    nav: ['Home', 'Library', 'Process', 'Pricing', 'FAQ', 'Free sample'],
+    marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
+    services: [
+      { kicker: 'Founder · Agentic', title: 'About Me', blurb: 'I design and sell premium website templates — finished builds with real motion, ready to ship commercially. See the journey and how I work.' },
+      { kicker: 'Sales · Conversion', title: 'Sales Agent', blurb: 'Advises on products, recommends the right package and guides buyers to checkout. Recovers carts and follows up on leads automatically.' },
+      { kicker: 'Internal operations', title: 'Internal Copilot', blurb: 'Searches documents, compiles reports, drafts replies and answers process questions for staff — wired straight into company data.' },
+      { kicker: 'Data analysis', title: 'Analytics Agent', blurb: 'Ask business data questions in plain language, get charts generated on the fly and anomalies flagged in real time.' },
+      { kicker: 'Fully bespoke', title: 'Custom Agent', blurb: 'A specialist agent shaped around your operations — internal APIs, approval flows and true end-to-end automation.' },
+    ],
+    cats: { portfolio: 'Portfolio', saas: 'SaaS', agency: 'Agency', shop: 'Commerce', motion: '3D · Motion' },
+    templates: [
+      { name: 'Editorial One', desc: 'A magazine-style portfolio with an accordion hero and smooth scene transitions for photographers and studios.', tags: ['Accordion hero', 'Dark mode', 'CMS-ready'] },
+      { name: 'Northwind', desc: 'A complete SaaS landing page: pricing, plan comparison, testimonials and a built-in blog.', tags: ['Pricing', 'Blog', 'Light + Dark'] },
+      { name: 'Studio Kern', desc: 'Agency site with horizontally scrolling case studies, a custom cursor and a dedicated contact page.', tags: ['Case study', 'Cursor FX'] },
+      { name: 'Vault Shop', desc: 'A single-product store tuned for conversion, with a stripped-back checkout flow.', tags: ['1-product', 'Fast checkout'] },
+      { name: 'Orbit 3D', desc: 'A WebGL hero that tracks the cursor, layered with multi-plane scroll parallax.', tags: ['Three.js', 'WebGL', 'Parallax'] },
+      { name: 'Fold Journal', desc: 'A long-form blog with confident typography, a sticky table of contents and reading mode.', tags: ['Typography', 'Reading mode'] },
+      { name: 'Mono Deck', desc: 'A slide-style product page that snaps through full-screen panels as you scroll.', tags: ['Snap scroll', 'Full-bleed'] },
+      { name: 'Atlas Grid', desc: 'A filterable project directory with zoom-on-hover thumbnails and detail pages.', tags: ['Filter', 'Grid', 'Detail page'] },
+      { name: 'Signal', desc: 'A product-launch landing page with countdown, email capture and social proof.', tags: ['Waitlist', 'Countdown'] },
+      { name: 'Prism Folio', desc: 'An asymmetric grid portfolio whose cover art shifts colour per project.', tags: ['Asymmetric', 'Colour shift'] },
+      { name: 'Kiosk', desc: 'A multi-category store with instant filters and a slide-in cart.', tags: ['Multi-category', 'Slide cart'] },
+      { name: 'Beacon', desc: 'A landing page for B2B tools: feature table, integrations and a customer page.', tags: ['Feature table', 'Integrations'] },
+      { name: 'Loom Studio', desc: 'A motion-led agency site where each service becomes its own scene.', tags: ['Scene scroll', 'Video hero'] },
+      { name: 'Drift', desc: 'A brand site with slow-drifting 3D objects and a light-attracting cursor.', tags: ['3D', 'Cursor light'] },
+      { name: 'Paper Press', desc: 'A print-inspired portfolio with tight columns and full-bleed plates.', tags: ['Editorial', 'Grid'] },
+      { name: 'Ledger', desc: 'A demo SaaS dashboard: charts, data tables and an account area.', tags: ['Dashboard', 'Charts'] },
+      { name: 'Foundry', desc: 'An industrial agency site with a vertical timeline for process.', tags: ['Timeline', 'Case study'] },
+      { name: 'Nova Motion', desc: 'A full-screen showreel with seamless video transitions between pages.', tags: ['Showreel', 'Page transition'] },
+    ],
+    steps: [
+      { title: 'Pick a template', desc: 'Walk the live demo and match it against your industry and brand style before you buy.' },
+      { title: 'Download & rewrite', desc: 'You get the finished files plus a guide. Swap the copy, drop in your images, set your brand colours.' },
+      { title: 'Publish', desc: 'Deploy anywhere. Responsive, speed-optimised and SEO-ready straight out of the box.' },
+    ],
+    stats: [
+      { value: '24', label: 'Templates in the library' },
+      { value: '<1 day', label: 'From purchase to live' },
+      { value: '100%', label: 'Responsive on every device' },
+      { value: '∞', label: 'Unlimited reuse' },
+    ],
+    includes: [
+      { title: 'Full source files', desc: 'Clean, commented HTML/CSS/JS with no strange plugin dependencies.' },
+      { title: 'Motion, already built', desc: 'Scroll reveals, parallax, hover states and transitions tuned frame by frame.' },
+      { title: 'Genuinely responsive', desc: 'Tested on desktop, tablet and mobile — not just a shrunken desktop layout.' },
+      { title: 'Sample content', desc: 'Sample copywriting and placeholder imagery so the page looks finished immediately.' },
+      { title: 'Customisation guide', desc: 'Documentation showing exactly where to change colour, type and copy without breaking layout.' },
+      { title: 'Commercial licence', desc: 'Use it on your own projects or client work, as many times as you like.' },
+    ],
+    tiers: [
+      { name: 'Single template', note: 'Just the one you need.', price: '$79', unit: '/template', cta: 'Buy this template', features: ['1 template of your choice', 'Full source files', 'Customisation guide', 'Lifetime updates', 'Commercial licence'] },
+      { name: 'Full library', note: 'Everything, one payment.', price: '$399', unit: 'one-time', cta: 'Get the library', features: ['All 24 templates', 'New releases free forever', 'Shared component kit', 'Priority email support', 'Commercial licence'] },
+      { name: 'Custom build', note: 'We build it around your brand.', price: 'Talk to us', unit: '', cta: 'Discuss a project', features: ['Designed from scratch for your brand', 'Up to 8 pages', 'Delivered in 3 weeks', 'Handover with documentation', '60 days post-launch support'] },
+    ],
+    quotes: [
+      { text: 'Bought it in the morning, had a real store running by the afternoon. The motion is far better than any template I have used.', name: 'Minh Tri', role: 'Founder, Kalo Studio', initial: 'M' },
+      { text: 'The code is clean enough that my dev team wired it into our stack in two days. Far better value than a bespoke design.', name: 'Ha Phuong', role: 'Product Lead, Vela', initial: 'H' },
+      { text: 'I resell web work to clients and build on this library. My margin has roughly doubled.', name: 'Duy Anh', role: 'Freelance designer', initial: 'D' },
+    ],
+    faqs: [
+      { q: 'Do I need to know how to code?', a: 'Not really. You can swap copy and images directly in the files without writing code. Basic HTML and CSS helps if you want to restructure the layout itself.' },
+      { q: 'Can I use these for client projects?', a: 'Yes. Every package includes a commercial licence, so you can use templates for your own work or client work. The only restriction is reselling the template file itself.' },
+      { q: 'Do I get new templates as they launch?', a: 'Full library buyers get every new template free, forever. Single-template buyers get updates to the template they purchased.' },
+      { q: 'Where can I deploy them?', a: 'Anywhere that serves static sites: Vercel, Netlify, Cloudflare Pages or traditional hosting. No dedicated backend required.' },
+      { q: 'What if it is not the right fit?', a: 'A 14-day refund if the template does not work for your project — just message us and we will sort it out.' },
+    ],
+  },
+  zh: {
+    navCta: '登录',
+    authTitle: '登录',
+    authSub: '访问你的模板库与购买记录。',
+    authEmail: '邮箱',
+    authPass: '密码',
+    authForgot: '忘记密码？',
+    authSubmit: '登录',
+    authOr: '或',
+    authGoogle: '使用 Google 继续',
+    authNoAcc: '还没有账号？',
+    authSignup: '创建账号',
+    authClose: '关闭',
+    tagline: '高端网站模板，买来即可上线',
+    heroEyebrow: '网站模板 · 即买即用',
+    heroCta1: '浏览模板库 →',
+    heroCta2: '查看流程',
+    catAll: '全部',
+    tplLabel: '模板库',
+    tplTitle: '买下当天就能上线的模板',
+    tplIntro: '每套模板都是完整成品：版式、动效、响应式与示例内容一应俱全。下载、替换文案、发布。',
+    tplPreview: '查看详情 →',
+    dBack: '模板库',
+    pricingUnitOnce: '一次付清，永久使用',
+    dBuy: '购买此模板',
+    dLive: '查看在线演示',
+    dViews: '适配每一种屏幕',
+    dViewNames: ['桌面端', '平板', '手机'],
+    dSpecs: '技术参数',
+    dSpecRows: [['格式', 'HTML · CSS · JS'], ['示例页面', '8 页'], ['响应式', '360px → 2560px'], ['动效', 'GSAP + CSS'], ['授权', '商用，不限次数'], ['更新', '终身免费']],
+    dRelated: '相似模板',
+    tplAll: '查看全部 24 套模板 →',
+    howLabel: '流程',
+    howTitle: '一个下午，从选模板到上线',
+    howIntro: '无需从零设计，也不必组建开发团队。三步之后，网站就已上线。',
+    incLabel: '包含内容',
+    incTitle: '每套模板都包含什么',
+    pricingLabel: '价格',
+    pricingTitle: '单套购买，或直接拿下整个模板库',
+    pricingIntro: '一次付费，永久使用，并包含后续版本更新。',
+    pricingPopular: '最超值',
+    pricingNote: '所有价格均含可用于客户项目的商用授权。',
+    loveLabel: '用户反馈',
+    loveTitle: '购买者怎么说',
+    faqLabel: '常见问题',
+    faqTitle: '大家常问的问题',
+    ctaTitle: '拿下模板，本周就上线',
+    ctaP: '留下邮箱，即可获取免费样板模板与全套 8 折优惠码。',
+    ctaNote: '绝无骚扰邮件，可随时退订。',
+    formEmail: '您的邮箱',
+    formSubmit: '领取免费模板',
+    formSent: '已发送，请查收邮箱！',
+    copyright: '© 2026 Agentic — 高端网站模板，即买即上线。',
+    nav: ['首页', '模板库', '流程', '价格', '常见问题', '免费样板'],
+    marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
+    services: [
+      { kicker: '创始人 · Agentic', title: '关于我', blurb: '我设计并销售高端网站模板——动效完整、可直接商用的成品站点。了解我的经历与工作方式。' },
+      { kicker: '销售 · 成交', title: '销售 Agent', blurb: '介绍产品、推荐合适套餐并引导客户完成付款，自动挽回购物车并持续跟进线索。' },
+      { kicker: '内部运营', title: '内部助理', blurb: '检索文档、汇总报告、起草内容并解答员工的流程问题，直接连接公司数据。' },
+      { kicker: '数据分析', title: '分析 Agent', blurb: '用自然语言查询经营数据，自动生成图表并实时发现异常。' },
+      { kicker: '定制开发', title: '定制 Agent', blurb: '围绕您的业务打造专属 Agent——对接内部 API、审批流程，实现端到端自动化。' },
+    ],
+    cats: { portfolio: '作品集', saas: 'SaaS', agency: '品牌机构', shop: '电商', motion: '3D · 动效' },
+    templates: [
+      { name: 'Editorial One', desc: '杂志风格作品集，手风琴式首屏与流畅转场，适合摄影师与工作室。', tags: ['手风琴首屏', '深色模式', '支持 CMS'] },
+      { name: 'Northwind', desc: '完整的 SaaS 落地页：价格表、套餐对比、用户评价与内置博客。', tags: ['价格表', '博客', '深浅双色'] },
+      { name: 'Studio Kern', desc: '品牌机构官网，横向滚动案例、自定义光标与独立联系页。', tags: ['案例展示', '光标特效'] },
+      { name: 'Vault Shop', desc: '单品商店，为转化率优化，结账流程极简。', tags: ['单品', '极速结账'] },
+      { name: 'Orbit 3D', desc: 'WebGL 首屏跟随光标转动，配合多层滚动视差。', tags: ['Three.js', 'WebGL', '视差'] },
+      { name: 'Fold Journal', desc: '长文博客，排版扎实，附吸顶目录与阅读模式。', tags: ['排版', '阅读模式'] },
+      { name: 'Mono Deck', desc: '幻灯片式产品页，滚动时逐屏吸附切换。', tags: ['吸附滚动', '整屏视觉'] },
+      { name: 'Atlas Grid', desc: '可筛选的项目目录，悬停放大缩略图并配详情页。', tags: ['筛选', '网格', '详情页'] },
+      { name: 'Signal', desc: '产品发布落地页，含倒计时、邮箱收集与口碑展示。', tags: ['候补名单', '倒计时'] },
+      { name: 'Prism Folio', desc: '非对称网格作品集，封面配色随项目切换。', tags: ['非对称', '配色切换'] },
+      { name: 'Kiosk', desc: '多品类商店，筛选即时生效，侧滑购物车。', tags: ['多品类', '侧滑购物车'] },
+      { name: 'Beacon', desc: 'B2B 工具落地页：功能对比表、集成列表与客户案例页。', tags: ['功能表', '集成'] },
+      { name: 'Loom Studio', desc: '动效主导的机构官网，每项服务都是独立场景。', tags: ['场景滚动', '视频首屏'] },
+      { name: 'Drift', desc: '品牌官网，3D 物体缓慢漂移，光标带光。', tags: ['3D', '光标光效'] },
+      { name: 'Paper Press', desc: '印刷感作品集，紧凑分栏与出血大图。', tags: ['编辑排版', '网格'] },
+      { name: 'Ledger', desc: 'SaaS 后台演示：图表、数据表与账户页。', tags: ['后台', '图表'] },
+      { name: 'Foundry', desc: '工业风机构官网，流程部分为纵向时间轴。', tags: ['时间轴', '案例展示'] },
+      { name: 'Nova Motion', desc: '整屏 showreel，页面间视频无缝转场。', tags: ['Showreel', '页面转场'] },
+    ],
+    steps: [
+      { title: '挑选模板', desc: '先浏览在线演示，对照您所在的行业与品牌调性再决定。' },
+      { title: '下载并替换内容', desc: '获得完整文件与使用指南。替换文案、更换图片、设定品牌色。' },
+      { title: '发布上线', desc: '可部署到任意平台。响应式、速度优化与 SEO 均已就绪。' },
+    ],
+    stats: [
+      { value: '24', label: '模板库中的模板数' },
+      { value: '<1 天', label: '从购买到上线' },
+      { value: '100%', label: '全设备响应式' },
+      { value: '∞', label: '不限次数重复使用' },
+    ],
+    includes: [
+      { title: '完整源文件', desc: '整洁且带注释的 HTML/CSS/JS，不依赖冷门插件。' },
+      { title: '动效已做好', desc: '滚动出现、视差、悬停与转场均已逐帧调校完成。' },
+      { title: '真正的响应式', desc: '在桌面、平板与手机上实测，而非简单缩小桌面版。' },
+      { title: '示例内容', desc: '附示例文案与占位图，页面开箱即呈现完整效果。' },
+      { title: '自定义指南', desc: '文档明确标出可改动的颜色、字体与文案，不会破坏版式。' },
+      { title: '商用授权', desc: '可用于自有项目或客户项目，使用次数不限。' },
+    ],
+    tiers: [
+      { name: '单套模板', note: '只买您需要的那一套。', price: '¥560', unit: '/套', cta: '购买此模板', features: ['任选 1 套模板', '完整源文件', '自定义指南', '终身更新', '商用授权'] },
+      { name: '整套模板库', note: '全部模板，一次付清。', price: '¥2,850', unit: '一次性', cta: '拿下整个模板库', features: ['全部 24 套模板', '新模板永久免费', '通用组件套件', '邮件优先支持', '商用授权'] },
+      { name: '定制开发', note: '依据您的品牌从零打造。', price: '联系我们', unit: '', cta: '沟通项目', features: ['依品牌全新设计', '最多 8 个页面', '3 周内交付', '交付附完整文档', '上线后 60 天支持'] },
+    ],
+    quotes: [
+      { text: '上午买的，下午店铺就真的跑起来了。动效比我用过的任何模板都好。', name: 'Minh Tri', role: 'Kalo Studio 创始人', initial: 'M' },
+      { text: '代码足够干净，我的开发团队两天就接入了现有系统，比定制设计划算太多。', name: 'Ha Phuong', role: 'Vela 产品负责人', initial: 'H' },
+      { text: '我给客户做网站服务时就用这套模板库，利润率大约翻了一倍。', name: 'Duy Anh', role: '自由设计师', initial: 'D' },
+    ],
+    faqs: [
+      { q: '需要会写代码吗？', a: '不需要。您可以直接在文件中替换文案与图片，无需编程。若想改动版式结构，掌握基础 HTML 与 CSS 会更顺手。' },
+      { q: '可以用于客户项目吗？', a: '可以。所有套餐均含商用授权，既能用于自有项目，也能用于客户项目。唯一限制是不得转售模板文件本身。' },
+      { q: '新模板上线后能获得吗？', a: '购买整套模板库的用户可永久免费获得所有新模板；单套购买者可获得所购模板的后续更新。' },
+      { q: '可以部署到哪里？', a: '任何支持静态站点的平台：Vercel、Netlify、Cloudflare Pages 或传统主机，无需单独的后端。' },
+      { q: '如果不合适怎么办？', a: '若模板不适用于您的项目，14 天内可退款——直接联系我们即可。' },
+    ],
+  },
+};
+
+const IMAGES = [
+  './uploads/Creating_cyber_character_idle_an..._202608060919.mp4',
+  './uploads/Character_idle_animation_creation_1080p_202608060916.mp4',
+  './uploads/Animate_artwork_with_idle_breathing_202608060918.mp4',
+  './uploads/Create_seamless_idle_animation_1080p_202608060919.mp4',
+  './uploads/Character_idle_animation_creation_1080p_202608060956.mp4',
+];
+const IDS = ['me', 'sales', 'ops', 'data', 'custom'];
+const POSTERS = ['./assets/card-me.jpeg', './assets/card-sales.jpg', './assets/card-ops.jpg', './assets/card-data.png', './assets/card-custom.jpg'];
+const TAB_KEYS = ['home', 'library', 'process', 'pricing', 'faq', 'cta'];
+const CAT_KEYS = ['portfolio', 'saas', 'agency', 'shop', 'motion'];
+const TPL_META = [
+  { id: 't1', cat: 'portfolio', price: '$79', badge: 'New' },
+  { id: 't2', cat: 'saas', price: '$79', badge: '' },
+  { id: 't3', cat: 'agency', price: '$89', badge: '' },
+  { id: 't4', cat: 'shop', price: '$69', badge: '' },
+  { id: 't5', cat: 'motion', price: '$99', badge: 'Hot' },
+  { id: 't6', cat: 'portfolio', price: '$59', badge: '' },
+  { id: 't7', cat: 'saas', price: '$79', badge: '' },
+  { id: 't8', cat: 'agency', price: '$69', badge: '' },
+  { id: 't9', cat: 'shop', price: '$59', badge: 'New' },
+  { id: 't10', cat: 'portfolio', price: '$69', badge: '' },
+  { id: 't11', cat: 'shop', price: '$79', badge: 'New' },
+  { id: 't12', cat: 'saas', price: '$89', badge: '' },
+  { id: 't13', cat: 'agency', price: '$79', badge: 'Hot' },
+  { id: 't14', cat: 'motion', price: '$99', badge: '' },
+  { id: 't15', cat: 'portfolio', price: '$59', badge: '' },
+  { id: 't16', cat: 'saas', price: '$69', badge: '' },
+  { id: 't17', cat: 'agency', price: '$89', badge: '' },
+  { id: 't18', cat: 'motion', price: '$109', badge: 'Hot' },
+];
+const THEME_SETS = [
+  [0, 5, 7],
+  [8, 3, 1],
+  [6, 1, 7],
+  [1, 4, 6],
+  [4, 2, 0],
+];
+const BTN_SOFT = 'inset 0 -1.5px 0 rgba(255,255,255,.7), inset 0 1px 0 rgba(255,255,255,.26), 0 14px 30px rgba(52,42,34,.26)';
+const BTN_GLOW = 'inset 0 -1.5px 0 rgba(255,255,255,.95), inset 0 1px 0 rgba(255,255,255,.38), 0 10px 22px -6px rgba(255,244,230,.6), 0 18px 40px rgba(52,42,34,.34)';
+const GLASS_SOFT = 'linear-gradient(180deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,.08) 100%)';
+const GLASS_STRONG = 'linear-gradient(180deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,.18) 100%)';
+const LED_PLATINUM = 'conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 337deg, #ffffff 340deg, #ffffff 357deg, rgba(255,255,255,0) 360deg)';
+const LED_VIOLET = 'conic-gradient(from 0deg, rgba(168,85,247,0) 0deg, rgba(168,85,247,0) 337deg, #c060ff 340deg, #c060ff 357deg, rgba(160,32,240,0) 360deg)';
+const LED_MIX = 'conic-gradient(from 0deg, #ffffff 0deg, #ffc400 45deg, #a020f0 100deg, #7ad4ff 150deg, #ffffff 200deg, #3ee08a 250deg, #ffc400 300deg, #a020f0 335deg, #ffffff 360deg)';
+const GLOW_PLATINUM = 'conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 322deg, rgba(255,90,70,.35) 334deg, rgba(255,185,70,.7) 344deg, rgba(255,255,255,.95) 355deg, rgba(255,255,255,0) 360deg)';
+const GLOW_VIOLET = 'conic-gradient(from 0deg, rgba(160,32,240,0) 0deg, rgba(160,32,240,0) 322deg, rgba(120,50,220,.35) 334deg, rgba(190,90,255,.7) 344deg, rgba(246,233,255,.95) 355deg, rgba(246,233,255,0) 360deg)';
+const RING_HALO = 'conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,106,31,.75) 42deg, rgba(255,255,255,.98) 74deg, rgba(196,110,255,.8) 110deg, rgba(255,255,255,0) 176deg, rgba(255,255,255,0) 196deg, rgba(196,110,255,.55) 244deg, rgba(255,255,255,.9) 282deg, rgba(255,106,31,.6) 316deg, rgba(255,255,255,0) 360deg)';
+const LED_MIX_B = 'conic-gradient(from 0deg, #3ee08a 0deg, #7ad4ff 70deg, #a020f0 130deg, #3ee08a 200deg, #ffc400 265deg, #7ad4ff 320deg, #3ee08a 360deg)';
+const TIER_STYLE = [
+  { bg: 'rgba(255,255,255,.062)', fg: '#ffffff', border: 'rgba(236,238,241,.12)', btnBg: GLASS_SOFT, btnBorder: 'rgba(255,255,255,.26)', btnShadow: BTN_SOFT, priceColor: 'var(--gold)', featured: false, led: LED_PLATINUM, ledGlow: GLOW_PLATINUM, ledHover: 'rgba(226,232,240,.6)', glowPad: '3px', glowBlur: 'blur(3px) saturate(1.7) brightness(1.5)', coreW: '.4px', glowInset: '-1.5px', glowRadius: '25.5px' },
+  { bg: 'rgba(255,106,31,.09)', fg: '#ffffff', border: 'var(--acc-a45)', btnBg: GLASS_STRONG, btnBorder: 'rgba(255,255,255,.4)', btnShadow: BTN_GLOW, priceColor: '#ffffff', featured: true, alwaysRing: true, ringGrad: RING_HALO, led: LED_VIOLET, ledGlow: GLOW_VIOLET, ledHover: 'rgba(168,85,247,.65)', glowPad: '3px', glowBlur: 'blur(3px) saturate(1.7) brightness(1.5)', coreW: '.4px', glowInset: '-1.5px', glowRadius: '25.5px' },
+  { bg: 'rgba(255,255,255,.062)', fg: '#ffffff', border: 'rgba(236,238,241,.12)', btnBg: GLASS_SOFT, btnBorder: 'rgba(255,255,255,.26)', btnShadow: BTN_SOFT, priceColor: 'var(--gold)', featured: false, led: LED_MIX, ledGlow: LED_MIX, ledHover: 'rgba(212,175,255,.55)', glowPad: '4px', glowBlur: 'blur(5px) saturate(1.9) brightness(1.5)', coreW: '.4px', led2: LED_MIX_B, mixRing: true, glowInset: '-3px', glowRadius: '27px' },
+];
+
+const ACCENTS = [
+  { rgb: '232,58,52', hi: '#f26a63', soft: '#f79992' },
+  { rgb: '86,178,239', hi: '#7fc6f5', soft: '#a9dbfa' },
+  { rgb: '245,192,55', hi: '#f8d072', soft: '#fbe0a3' },
+  { rgb: '61,186,116', hi: '#63cd90', soft: '#96e0b5' },
+  { rgb: '43,92,196', hi: '#5c86dd', soft: '#93aeeb' },
+];
+
+class Component extends DCLogic {
+  state = { active: 0, menuOpen: false, submitted: false, lang: 'vi', filter: 'all', openFaq: 0, tab: 'home', island: false, authOpen: false, authDone: false, detail: null };
+
+  copyRef = React.createRef();
+  botRef = React.createRef();
+
+  componentDidMount() {
+    const startTab = TAB_KEYS.indexOf(this.props.defaultTab) >= 0 ? this.props.defaultTab : 'home';
+    if (startTab !== 'home') this.setState({ tab: startTab });
+    try {
+      const saved = localStorage.getItem('agentic-lang');
+      if (saved && I18N[saved]) { this.setState({ lang: saved }); this.applyLang(saved); }
+      else this.applyLang('vi');
+    } catch (e) {}
+
+    setTimeout(() => this.startBot(), 400);
+
+    const EASE = 'cubic-bezier(.22,.72,.24,1)';
+    const FROM = {
+      up: 'translate3d(0,28px,0)',
+      left: 'translate3d(-34px,0,0)',
+      right: 'translate3d(34px,0,0)',
+      scale: 'translate3d(0,20px,0) scale(.955)',
+      fade: 'none',
+    };
+    const reveal = (el) => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.style.filter = 'none';
+      el.style.transitionDelay = '0s';
+    };
+    const supported = 'IntersectionObserver' in window;
+    if (supported) {
+      this._io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.dataset.revealDone = '1'; reveal(e.target); this._io.unobserve(e.target); }
+        });
+      }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
+    }
+
+    this._autoTag = () => {
+      document.querySelectorAll('section').forEach((sec) => {
+        if (sec.dataset.autoTagged === '1') return;
+        sec.dataset.autoTagged = '1';
+        const inner = sec.querySelector(':scope > div');
+        if (!inner) return;
+        [...inner.children].forEach((child, i) => {
+          if (child.hasAttribute('data-reveal') || child.getAttribute('aria-hidden') === 'true') return;
+          if (child.querySelector('[data-reveal]')) {
+            [...child.children].forEach((gc) => {
+              if (gc.hasAttribute('data-reveal') || gc.querySelector('[data-reveal]')) return;
+              gc.setAttribute('data-reveal', i === 0 ? 'left' : 'up');
+            });
+            return;
+          }
+          child.setAttribute('data-reveal', i === 0 ? 'left' : 'up');
+        });
+      });
+    };
+
+    this._bindReveal = () => {
+      this._autoTag();
+      if (this._tagGlows) this._tagGlows();
+      document.querySelectorAll('[data-reveal]').forEach((el) => {
+        if (el.dataset.revealDone === '1') return;
+        const kind = el.getAttribute('data-reveal') || 'up';
+        const sibs = [...el.parentElement.children].filter((c) => c.hasAttribute('data-reveal'));
+        const idx = Math.max(0, sibs.indexOf(el));
+        el.style.transition = 'opacity .78s ' + EASE + ', transform .78s ' + EASE + ', filter .78s ' + EASE;
+        el.style.transitionDelay = Math.min(idx * 0.07, 0.42) + 's';
+        el.style.willChange = 'opacity, transform';
+        const r = el.getBoundingClientRect();
+        const inView = r.top < (window.innerHeight || 0) * 0.92 && r.bottom > 0;
+        if (!supported || inView) { el.dataset.revealDone = '1'; reveal(el); return; }
+        el.style.opacity = '0';
+        el.style.transform = FROM[kind] || FROM.up;
+        el.style.filter = 'blur(6px)';
+        this._io.observe(el);
+      });
+    };
+    this.sync();
+    requestAnimationFrame(() => { this._bindReveal(); this.sync(); });
+    [60, 260, 700, 1500].forEach((ms) => setTimeout(() => { if (!this._touched) this.sync(); this._bindReveal(); }, ms));
+    if (!this._rebind) {
+      this._rebind = () => this._bindReveal();
+      window.addEventListener('scroll', this._rebind, { passive: true });
+      window.addEventListener('resize', this._rebind);
+    }
+
+    this._ticking = false;
+    const applyParallax = () => {
+      this._ticking = false;
+      const y = window.scrollY || window.pageYOffset || 0;
+      const vh = window.innerHeight || 1;
+      const hero = document.getElementById('hero-bg-wrap');
+      if (hero) hero.style.transform = 'translate3d(0,' + (Math.min(y, vh * 1.2) * 0.1).toFixed(1) + 'px,0)';
+
+      const bar = document.getElementById('scroll-progress');
+      if (bar) {
+        const max = Math.max(1, (document.documentElement.scrollHeight || 0) - vh);
+        bar.style.transform = 'scaleX(' + Math.min(1, y / max) + ')';
+      }
+
+      document.querySelectorAll('[data-glow]').forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) return;
+        const p = (r.top + r.height / 2 - vh / 2) / vh;
+        el.style.transform = (el.dataset.glowBase || '') + ' translate3d(0,' + (-p * 42).toFixed(1) + 'px,0)';
+      });
+    };
+    this._onScroll = () => {
+      if (this._ticking) return;
+      this._ticking = true;
+      requestAnimationFrame(applyParallax);
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+
+    this._tagGlows = () => {
+      document.querySelectorAll('section [aria-hidden="true"]').forEach((el) => {
+        if (el.dataset.glow || el.id === 'hero-bg-wrap') return;
+        const cs = getComputedStyle(el);
+        const m = /blur\((\d+(?:\.\d+)?)px\)/.exec(cs.filter || '');
+        if (!m || parseFloat(m[1]) < 60) return;
+        el.dataset.glow = '1';
+        el.dataset.glowBase = ((el.getAttribute('style') || '').indexOf('translateX(-50%)') > -1) ? 'translateX(-50%)' : '';
+        el.style.willChange = 'transform';
+        applyParallax();
+      });
+    };
+    this._syncMobile = () => {
+      const narrow = (document.documentElement.clientWidth || window.innerWidth) < 720;
+      document.querySelectorAll('[data-herostrip]').forEach((strip) => {
+        strip.style.overflowX = narrow ? 'auto' : 'hidden';
+        strip.style.scrollSnapType = narrow ? 'x mandatory' : '';
+        strip.style.scrollbarWidth = 'none';
+        strip.style.paddingBottom = narrow ? '2px' : '';
+        Array.prototype.forEach.call(strip.children, (c) => {
+          c.style.minWidth = narrow ? '72%' : '0';
+          c.style.scrollSnapAlign = narrow ? 'start' : '';
+        });
+      });
+    };
+    window.addEventListener('resize', () => { this._syncMobile(); this.sync(); });
+
+    this._syncPreviews = () => {
+      document.querySelectorAll('[data-scroller]').forEach((sc) => {
+        const slot = sc.querySelector('image-slot');
+        const filled = slot && slot.hasAttribute('data-filled');
+        sc.style.height = filled ? '182%' : '100%';
+      });
+    };
+    [80, 400, 900, 1800].forEach((ms) => setTimeout(() => { this._tagGlows(); this._syncPreviews(); this._syncMobile(); }, ms));
+    document.addEventListener('image-slot-change', () => this._syncPreviews());
+  }
+
+  bumpCopy() {
+    const el = this.copyRef.current;
+    if (!el) return;
+    el.style.animation = 'none';
+    void el.offsetWidth;
+    el.style.animation = 'riseIn .55s ease both';
+  }
+
+  playVid(el, i) {
+    el.muted = true;
+    el.loop = true;
+    if (!el._wired) {
+      el._wired = true;
+      el.addEventListener('ended', () => { el.currentTime = 0; el.play().catch(() => {}); });
+      el.addEventListener('canplay', () => {
+        if (this._last && this._last.active === i) el.play().catch(() => {});
+      });
+    }
+    if (!el.getAttribute('src')) {
+      el.setAttribute('preload', 'auto');
+      el.setAttribute('src', IMAGES[i]);
+    }
+    const p = el.play();
+    if (p && p.catch) p.catch(() => {});
+  }
+
+  sync(next) {
+    const st = Object.assign({}, this.state, next || {});
+    this._last = st;
+    const acc = ACCENTS[st.active] || ACCENTS[0];
+    const r = document.documentElement.style;
+    r.setProperty('--acc', 'rgb(' + acc.rgb + ')');
+    r.setProperty('--acc-hi', acc.hi);
+    r.setProperty('--acc-soft', acc.soft);
+    [['a00', 0], ['a08', .08], ['a14', .14], ['a18', .18], ['a45', .45], ['a50', .5], ['a55', .55]]
+      .forEach((p) => r.setProperty('--acc-' + p[0], 'rgba(' + acc.rgb + ',' + p[1] + ')'));
+
+    document.querySelectorAll('[data-sheen]').forEach((el) => {
+      if (el._sheenAnim || !el.animate) return;
+      el._sheenAnim = el.animate(
+        [
+          { transform: 'translateX(-170%) skewX(-18deg)' },
+          { transform: 'translateX(260%) skewX(-18deg)', offset: .55 },
+          { transform: 'translateX(260%) skewX(-18deg)' },
+        ],
+        { duration: 6000, iterations: Infinity, easing: 'cubic-bezier(.33,0,.25,1)' }
+      );
+    });
+
+    document.querySelectorAll('[data-led-spin]').forEach((el) => {
+      if (el._ledAnim || !el.animate) return;
+      el._ledAnim = el.animate(
+        [{ transform: 'translate(-50%,-50%) rotate(0deg)' }, { transform: 'translate(-50%,-50%) rotate(360deg)' }],
+        { duration: 1800, iterations: Infinity, easing: 'linear' }
+      );
+      try { el._ledAnim.startTime = 0; } catch (err) {}
+    });
+
+    document.querySelectorAll('[data-led-spin-rev]').forEach((el) => {
+      if (el._ledAnim || !el.animate) return;
+      el._ledAnim = el.animate(
+        [{ transform: 'translate(-50%,-50%) rotate(0deg)' }, { transform: 'translate(-50%,-50%) rotate(-360deg)' }],
+        { duration: 2900, iterations: Infinity, easing: 'linear' }
+      );
+      try { el._ledAnim.startTime = 0; } catch (err) {}
+    });
+
+    const island = document.querySelector('[data-island]');
+    if (island) {
+      const open = !!st.island;
+      island.style.maxHeight = open ? '128px' : '56px';
+      island.style.borderRadius = open ? '28px' : '100px';
+      const mini = island.querySelector('[data-island-mini]');
+      const full = island.querySelector('[data-island-full]');
+      const row2 = island.querySelector('[data-island-row2]');
+      if (mini) {
+        mini.style.maxWidth = open ? '0px' : '340px';
+        mini.style.opacity = open ? '0' : '1';
+        mini.style.padding = open ? '0' : '0 20px';
+      }
+      if (full) {
+        full.style.maxWidth = open ? '920px' : '0px';
+        full.style.opacity = open ? '1' : '0';
+        full.style.padding = open ? '7px 9px' : '7px 0';
+      }
+      if (row2) {
+        row2.style.transition = 'opacity .55s cubic-bezier(.4,0,.2,1) .18s, max-width 1s cubic-bezier(.19,1,.22,1)';
+        row2.style.overflow = 'hidden';
+        row2.style.opacity = open ? '1' : '0';
+        row2.style.maxWidth = open ? '920px' : '0px';
+      }
+      island.style.boxShadow = open
+        ? 'inset 0 1px 0 rgba(255,255,255,.2), 0 26px 60px rgba(0,0,0,.6)'
+        : 'inset 0 1px 0 rgba(255,255,255,.16), 0 18px 44px rgba(0,0,0,.5)';
+    }
+    document.querySelectorAll('[data-tab-pill]').forEach((el) => {
+      const on = el.getAttribute('data-tab-pill') === st.tab;
+      el.style.background = on ? 'linear-gradient(180deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.09) 100%)' : 'transparent';
+      el.style.borderColor = on ? 'rgba(255,255,255,.22)' : 'transparent';
+      el.style.color = on ? '#fffdfa' : '#9aa2ac';
+      el.style.boxShadow = on ? 'inset 0 -1px 0 rgba(255,255,255,.5), inset 0 1px 0 rgba(255,255,255,.24)' : 'none';
+    });
+
+    const narrowStrip = (document.documentElement.clientWidth || window.innerWidth) < 720;
+    document.querySelectorAll('[data-hero-card]').forEach((el, i) => {
+      el.style.flex = narrowStrip ? '0 0 auto' : (i === st.active ? '1 1 44%' : '1 1 14%');
+    });
+    document.querySelectorAll('[data-hero-bg]').forEach((el, i) => {
+      const on = i === st.active;
+      el.style.opacity = on ? '1' : '0';
+      el.style.transform = on ? 'scale(1)' : 'scale(1.18)';
+      el.style.filter = on ? 'blur(0px)' : 'blur(18px)';
+      el.muted = true;
+      if (on) this.playVid(el, i); else el.pause();
+    });
+    document.querySelectorAll('[data-hero-cardvid]').forEach((el, i) => {
+      el.muted = true;
+      if (i === st.active) this.playVid(el, i); else el.pause();
+    });
+    document.querySelectorAll('[data-lang-pill]').forEach((el) => {
+      const on = el.getAttribute('data-lang-pill') === st.lang;
+      el.style.background = on ? 'linear-gradient(180deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,.24) 100%)' : 'transparent';
+      el.style.boxShadow = on ? 'inset 0 -1.5px 0 rgba(255,255,255,.85), inset 0 1px 0 rgba(255,255,255,.35)' : 'none';
+      el.style.color = on ? '#fffdfa' : '#c8ced6';
+    });
+    document.querySelectorAll('[data-filter-chip]').forEach((el) => {
+      const on = el.getAttribute('data-filter-chip') === st.filter;
+      el.style.background = on ? 'linear-gradient(180deg, rgba(255,255,255,.32) 0%, rgba(255,255,255,.16) 100%)' : 'rgba(255,255,255,.05)';
+      el.style.boxShadow = on ? 'inset 0 -1.5px 0 rgba(255,255,255,.85), inset 0 1px 0 rgba(255,255,255,.3)' : 'none';
+      el.style.color = on ? '#fffdfa' : '#c8ced6';
+      el.style.borderColor = on ? 'rgba(255,255,255,.42)' : 'rgba(255,255,255,.2)';
+      el.style.borderRadius = '14px';
+    });
+    document.querySelectorAll('[data-faq-panel]').forEach((el, i) => {
+      const on = st.openFaq === i;
+      el.style.maxHeight = on ? '340px' : '0px';
+      el.style.opacity = on ? '1' : '0';
+    });
+    document.querySelectorAll('[data-faq-icon]').forEach((el, i) => {
+      el.style.transform = st.openFaq === i ? 'rotate(45deg)' : 'rotate(0deg)';
+    });
+  }
+
+  push(patch, extra) {
+    this._touched = true;
+    const next = Object.assign({}, this.state, patch);
+    this.sync(next);
+    this.setState(patch);
+    requestAnimationFrame(() => { this.sync(next); if (extra) extra(); });
+    setTimeout(() => this.sync(next), 80);
+  }
+
+  openDetail(id) {
+    this.push({ tab: 'detail', detail: id, menuOpen: false, island: false }, () => {
+      try { window.scrollTo({ top: 0, behavior: 'auto' }); } catch (e) { window.scrollTo(0, 0); }
+      if (this._bindReveal) this._bindReveal();
+    });
+    [80, 300, 800].forEach((ms) => setTimeout(() => {
+      if (this._bindReveal) this._bindReveal();
+      if (this._syncPreviews) this._syncPreviews();
+      this.sync();
+    }, ms));
+  }
+
+  goTab(key) {
+    if (this.state.tab === key && !this.state.menuOpen) return;
+    this.push({ tab: key, menuOpen: false, island: false, detail: null }, () => {
+      try { window.scrollTo({ top: 0, behavior: 'auto' }); } catch (e) { window.scrollTo(0, 0); }
+      if (this._bindReveal) this._bindReveal();
+      if (this._syncMobile) this._syncMobile();
+      if (key === 'home') this.bumpCopy();
+    });
+    [80, 300].forEach((ms) => setTimeout(() => { if (this._bindReveal) this._bindReveal(); this.sync(); }, ms));
+  }
+
+  applyLang(code) {
+    try { localStorage.setItem('agentic-lang', code); } catch (e) {}
+    document.documentElement.lang = { vi: 'vi', en: 'en', zh: 'zh-CN' }[code] || 'vi';
+  }
+
+  startBot(tries) {
+    const el = this.botRef.current || document.querySelector('[data-bot]');
+    if (!el) {
+      if ((tries || 0) < 40) setTimeout(() => this.startBot((tries || 0) + 1), 150);
+      return;
+    }
+    if (this._botTimer) clearInterval(this._botTimer);
+    let flip = 1;
+    const hop = () => {
+      const island = document.querySelector('[data-island]');
+      const w = island ? island.getBoundingClientRect().width : 320;
+      const rx = Math.min(w / 2 + 60, window.innerWidth / 2 - 40);
+      const x = (Math.random() * 2 - 1) * rx;
+      const edge = Math.abs(x) > rx * 0.55;
+      const y = edge ? -22 + Math.random() * 104 : (Math.random() < 0.5 ? -22 + Math.random() * 12 : 68 + Math.random() * 20);
+      const next = x < this._botX ? -1 : 1;
+      if (next !== flip) flip = next;
+      this._botX = x;
+      el.style.transitionDuration = (1.9 + Math.random() * 1.6).toFixed(2) + 's';
+      el.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)';
+      const fl = el.querySelector('[data-bot-flip]');
+      if (fl) fl.style.transform = 'scaleX(' + flip + ')';
+    };
+    this._botX = 0;
+    hop();
+    this._botTimer = setInterval(hop, 2600);
+  }
+
+  componentWillUnmount() {
+    if (this._botTimer) clearInterval(this._botTimer);
+    if (this._io) this._io.disconnect();
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._rebind) {
+      window.removeEventListener('scroll', this._rebind);
+      window.removeEventListener('resize', this._rebind);
+    }
+  }
+
+  renderVals() {
+    const lang = I18N[this.state.lang] ? this.state.lang : 'vi';
+    const t = I18N[lang];
+    const n = t.services.length;
+    const active = Math.min(this.state.active, n - 1);
+    const s = t.services[active];
+    const filter = this.state.filter;
+    const tab = this.state.tab;
+
+    const langOptions = [
+      { code: 'vi', label: 'VI', aria: 'Tiếng Việt' },
+      { code: 'en', label: 'EN', aria: 'English' },
+      { code: 'zh', label: '中', aria: '中文' },
+    ].map((o) => ({
+      code: o.code,
+      label: o.label,
+      aria: o.aria,
+      onSelect: () => {
+        this.applyLang(o.code);
+        this.push({ lang: o.code }, () => { this.bumpCopy(); if (this._bindReveal) this._bindReveal(); });
+      },
+    }));
+
+    const filters = [{ key: 'all', label: t.catAll }].concat(
+      CAT_KEYS.map((k) => ({ key: k, label: t.cats[k] }))
+    ).map((f) => ({
+      key: f.key,
+      label: f.label,
+      onSelect: () => this.push({ filter: f.key }, () => { if (this._bindReveal) this._bindReveal(); }),
+    }));
+
+    const templates = TPL_META
+      .map((m, i) => Object.assign({}, m, t.templates[i], {
+        catLabel: t.cats[m.cat],
+        badge: m.badge || '',
+      }))
+      .filter((m) => filter === 'all' || m.cat === filter)
+      .map((m) => Object.assign({}, m, { onDetail: () => this.openDetail(m.id) }));
+
+    const marqueeSet = t.marquee.map((label) => ({ label, color: '#eceef1' }));
+
+    const allTpl = TPL_META.map((m, i) => Object.assign({}, m, t.templates[i], {
+      catLabel: t.cats[m.cat], badge: m.badge || '', idx: i,
+    }));
+    const dIdx = allTpl.findIndex((m) => m.id === this.state.detail);
+    const d = dIdx >= 0 ? allTpl[dIdx] : null;
+    const detail = d ? Object.assign({}, d, {
+      slotId: 'agentic-tpl-' + d.id,
+      views: (t.dViewNames || []).map((n, i) => ({
+        name: n,
+        slotId: 'agentic-tpl-' + d.id,
+        w: ['100%', '62%', '30%'][i],
+        ratio: ['16/10', '3/4', '9/16'][i],
+      })),
+      specs: (t.dSpecRows || []).map((r) => ({ k: r[0], v: r[1] })),
+      related: allTpl.filter((m) => m.cat === d.cat && m.id !== d.id)
+        .concat(allTpl.filter((m) => m.cat !== d.cat && m.id !== d.id))
+        .slice(0, 3)
+        .map((m) => Object.assign({}, m, { onSelect: () => this.openDetail(m.id) })),
+    }) : null;
+
+    return {
+      t,
+      langOptions,
+      filters,
+      templates,
+      marqueeItems: marqueeSet.concat(marqueeSet),
+      tabs: TAB_KEYS.slice(0, 5).map((k, i) => ({ key: k, label: t.nav[i], onSelect: () => this.goTab(k) })),
+      detail,
+      isDetail: tab === 'detail' && !!detail,
+      closeDetail: () => this.goTab('library'),
+      isHome: tab === 'home',
+      isLibrary: tab === 'library',
+      isProcess: tab === 'process',
+      isPricing: tab === 'pricing',
+      isFaq: tab === 'faq',
+      isCta: tab === 'cta',
+      homeThemeTitle: s.title,
+      homeThemeKicker: s.kicker,
+      homeTemplates: (THEME_SETS[active] || THEME_SETS[0]).map((i) => Object.assign({}, TPL_META[i], t.templates[i], {
+        catLabel: t.cats[TPL_META[i].cat],
+        badge: TPL_META[i].badge || '',
+        onDetail: () => this.openDetail(TPL_META[i].id),
+      })),
+      showFooter: true,
+      goHome: () => this.goTab('home'),
+      goLibrary: () => this.goTab('library'),
+      goProcess: () => this.goTab('process'),
+      goPricing: () => this.goTab('pricing'),
+      goCta: () => this.goTab('cta'),
+      authOpen: this.state.authOpen,
+      authDone: this.state.authDone,
+      openAuth: () => this.setState({ authOpen: true, menuOpen: false }),
+      closeAuth: () => this.setState({ authOpen: false, authDone: false }),
+      goPricingFromAuth: () => { this.setState({ authOpen: false, authDone: false }); this.goTab('pricing'); },
+      stopProp: (e) => e.stopPropagation(),
+      onAuthSubmit: (e) => { e.preventDefault(); this.setState({ authDone: true }); },
+      authSubmitLabel: this.state.authDone ? '✓' : t.authSubmit,
+      botRef: this.botRef,
+      ledOn: (e) => {
+        const c = e.currentTarget;
+        const l = c.querySelector('[data-led]'); if (l) l.style.opacity = '1';
+        if (this._syncPreviews) this._syncPreviews();
+        const s = c.querySelector('[data-scroller]');
+        const slot = s && s.querySelector('image-slot');
+        if (s && slot && slot.hasAttribute('data-filled') && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          s.style.transition = 'transform 3.6s cubic-bezier(.33,0,.25,1)';
+          s.style.transform = 'translateY(-45%)';
+        }
+        const bar = c.querySelector('[data-scrollbar]'); if (bar && slot && slot.hasAttribute('data-filled')) bar.style.opacity = '1';
+      },
+      ledOff: (e) => {
+        const c = e.currentTarget;
+        const l = c.querySelector('[data-led]'); if (l) l.style.opacity = '0';
+        const s = c.querySelector('[data-scroller]');
+        if (s) { s.style.transition = 'transform 1s cubic-bezier(.22,1,.36,1)'; s.style.transform = 'translateY(0)'; }
+        const bar = c.querySelector('[data-scrollbar]'); if (bar) bar.style.opacity = '0';
+      },
+      langCode: { vi: 'VI', en: 'EN', zh: '中' }[lang] || 'VI',
+      activeTabLabel: (tab === 'detail' && detail) ? detail.name : t.nav[Math.max(0, TAB_KEYS.indexOf(tab))],
+      openIsland: () => { if (this.props.islandHoverExpand !== false) this.push({ island: true }); },
+      closeIsland: () => { if (this.props.islandHoverExpand !== false) this.push({ island: false }); },
+      toggleIsland: () => this.push({ island: !this.state.island }),
+      heroBgs: t.services.map((sv, i) => ({ id: IDS[i], poster: POSTERS[i] })),
+      cards: t.services.map((sv, i) => ({
+        id: IDS[i],
+        poster: POSTERS[i],
+        kicker: sv.kicker,
+        title: sv.title,
+        no: String(i + 1).padStart(2, '0'),
+        onSelect: () => { if (this.state.active === i) return; this.push({ active: i }, () => { this.bumpCopy(); if (this._bindReveal) this._bindReveal(); }); },
+      })),
+      activeKicker: s.kicker,
+      activeTitle: s.title,
+      activeBlurb: s.blurb,
+      indexLabel: String(active + 1).padStart(2, '0'),
+      totalLabel: String(n).padStart(2, '0'),
+      prev: () => this.push({ active: (active - 1 + n) % n }, () => this.bumpCopy()),
+      next: () => this.push({ active: (active + 1) % n }, () => this.bumpCopy()),
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState((st) => ({ menuOpen: !st.menuOpen })),
+      navLinks: t.nav.slice(0, 6).map((label, i) => ({
+        no: String(i + 1).padStart(2, '0'),
+        label,
+        onSelect: () => this.goTab(TAB_KEYS[i]),
+      })),
+      footerLinks: [1, 2, 3, 4].map((i) => ({ label: t.nav[i], onSelect: () => this.goTab(TAB_KEYS[i]) })),
+      steps: t.steps.map((st2, i) => ({ no: String(i + 1).padStart(2, '0'), title: st2.title, desc: st2.desc })),
+      stats: t.stats,
+      includes: t.includes.map((inc, i) => ({ no: String(i + 1).padStart(2, '0'), title: inc.title, desc: inc.desc })),
+      tiers: t.tiers.map((tr, i) => Object.assign({}, TIER_STYLE[i], tr)),
+      quotes: t.quotes,
+      faqs: t.faqs.map((f, i) => ({
+        q: f.q,
+        a: f.a,
+        onToggle: () => this.push({ openFaq: this.state.openFaq === i ? -1 : i }),
+      })),
+      submitLabel: this.state.submitted ? t.formSent : t.formSubmit,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>

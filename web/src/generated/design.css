@@ -1,0 +1,37 @@
+:root{
+    --acc:#e83a34; --acc-hi:#f26a63; --acc-soft:#f79992;
+    --acc-a00:rgba(232,58,52,0); --acc-a08:rgba(232,58,52,.08); --acc-a14:rgba(232,58,52,.14);
+    --acc-a18:rgba(232,58,52,.18); --acc-a45:rgba(232,58,52,.45); --acc-a50:rgba(232,58,52,.5);
+    --acc-a55:rgba(255,106,31,.55);
+    /* gold = giá tiền & số thứ tự, chỉ trên nền trung tính; trên nền accent thì đảo về trắng */
+    --gold:#f0a63c;
+    --display:'Unbounded','Bricolage Grotesque','ZCOOL XiaoWei','Noto Sans SC',sans-serif;
+    --body:'Be Vietnam Pro','Noto Sans SC',system-ui,sans-serif;
+  }
+  *{ box-sizing: border-box; transition: color .55s ease, background-color .55s ease, border-color .55s ease, fill .55s ease; }
+  html, body { margin: 0; padding: 0; background: #16181c; color: #ffffff; font-family: var(--body); -webkit-font-smoothing: antialiased; }
+  a { color:#ffffff; text-decoration: none; }
+  a:hover { color:#ffffff; }
+  ::selection { background: var(--acc); color: #16181c; }
+  image-slot { --is-bg: #1a1c21; }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  @keyframes islandIn { from { opacity: 0; transform: translateY(-8px) scale(.96); } to { opacity: 1; transform: none; } }
+  @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 var(--acc-a50);} 70%{ box-shadow: 0 0 0 14px var(--acc-a00);} 100%{ box-shadow:0 0 0 0 var(--acc-a00);} }
+  @keyframes marquee { from { transform: translate3d(0,0,0);} to { transform: translate3d(-50%,0,0);} }
+  @keyframes sheen { 0% { transform: translateX(-160%) skewX(-18deg);} 55%,100% { transform: translateX(260%) skewX(-18deg);} }
+  @keyframes botBob { 0%,100% { transform: translateY(-3px) rotate(-3deg); } 50% { transform: translateY(4px) rotate(3deg); } }
+  @keyframes islandLed { to { transform: translate(-50%,-50%) rotate(360deg); } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes chaseRun { to { stroke-dashoffset:-100; } }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){ html { scroll-behavior:auto; } [data-reveal]{ opacity:1 !important; transform:none !important; filter:none !important; } }
+  @keyframes ledGlowPulse { 0%,100% { opacity:.6; } 50% { opacity:1; } }
+  @keyframes ledSparkle { 0% { filter:brightness(1.1) saturate(1.5); } 18% { filter:brightness(1.6) saturate(1.7); } 32% { filter:brightness(1) saturate(1.45); } 54% { filter:brightness(1.5) saturate(1.65); } 68% { filter:brightness(1.05) saturate(1.5); } 84% { filter:brightness(1.7) saturate(1.8); } 100% { filter:brightness(1.1) saturate(1.5); } }
+  @media (prefers-reduced-motion: reduce){ [data-reveal], [data-island], [data-marquee]{ animation-duration:.001ms !important; animation-iteration-count:1 !important; } }
+  /* Phát sáng nhẹ khi rê chuột lên mọi thành phần tương tác */
+  button, a[href], [role="button"], [data-tab-pill], [data-lang-pill], [data-filter-chip], [data-island-mini]{ transition: filter .3s cubic-bezier(.22,1,.36,1), text-shadow .3s ease, color .55s ease, background-color .55s ease, border-color .55s ease; }
+  button:hover, a[href]:hover, [role="button"]:hover, [data-island-mini]:hover{ filter: brightness(1.59) saturate(1.1); text-shadow: 0 0 11px rgba(255,255,255,.65), 0 0 26px rgba(255,255,255,.3); }
+  button:active, a[href]:active, [role="button"]:active{ filter: brightness(1.4) saturate(1.06); text-shadow: 0 0 8px rgba(255,255,255,.4); }
+  button:focus-visible, a[href]:focus-visible, [role="button"]:focus-visible{ outline:none; filter: brightness(1.64) saturate(1.12); text-shadow: 0 0 12px rgba(255,255,255,.75); }
+  @media (prefers-reduced-motion: reduce){ button, a[href], [role="button"]{ transition:none; } }
+  [data-hero-card], [data-hero-card]:hover, [data-hero-card]:active{ filter:none !important; text-shadow:none !important; }

@@ -1,0 +1,10 @@
+/* CSS gốc trích từ bản thiết kế (không sửa tay — xem tools/convert.mjs) */
+@import '../generated/design.css';
+@import '../generated/hover.css';
+
+/* Font nạp qua next/font: ghi đè hai biến font của bản thiết kế bằng
+   biến CSS mà next/font sinh ra, giữ nguyên thứ tự dự phòng. */
+:root {
+  --display: var(--font-display), 'ZCOOL XiaoWei', 'Noto Sans SC', sans-serif;
+  --body: var(--font-body), 'Noto Sans SC', system-ui, sans-serif;
+}

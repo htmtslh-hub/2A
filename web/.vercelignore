@@ -1,0 +1,8 @@
+# Biến môi trường phải khai báo trong phần Environment Variables của Vercel,
+# không đi kèm mã nguồn. Không có dòng này thì `vercel deploy` tải cả .env lên.
+.env
+.env.*
+!.env.example
+
+# File giao diện bán cho khách — không đưa lên cùng mã nguồn
+private/templates/*.zip

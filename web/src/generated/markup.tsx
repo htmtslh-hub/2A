@@ -901,6 +901,13 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
               <p style={{ margin: "0 0 26px", fontSize: "14px", lineHeight: "1.6", color: "#949ba4" }}>
                 {vm.t.authSub}
               </p>
+              {(vm.authError) ? (
+                <>
+                  <p style={{ margin: "-16px 0 18px", fontSize: "13px", lineHeight: "1.5", color: "var(--acc)" }} role="alert">
+                    {vm.authError}
+                  </p>
+                </>
+              ) : null}
               <form style={{ display: "flex", flexDirection: "column", gap: "14px" }} onSubmit={vm.onAuthSubmit}>
                 <label style={{ display: "flex", flexDirection: "column", gap: "7px", fontSize: "12px", letterSpacing: ".06em", textTransform: "uppercase", color: "#949ba4" }}>
                   {vm.t.authEmail} 
@@ -931,7 +938,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
               </button>
               <p style={{ margin: "22px 0 0", textAlign: "center", fontSize: "13px", color: "#949ba4" }}>
                 {vm.t.authNoAcc} 
-                <button className="hv18" style={{ padding: "0", border: "0", background: "none", fontFamily: "inherit", fontSize: "13px", color: "#ffffff", fontWeight: "600", cursor: "pointer" }} type="button" onClick={vm.goPricingFromAuth}>
+                <button className="hv18" style={{ padding: "0", border: "0", background: "none", fontFamily: "inherit", fontSize: "13px", color: "#ffffff", fontWeight: "600", cursor: "pointer" }} type="button" onClick={vm.toggleAuthMode}>
                   {vm.t.authSignup}
                 </button>
               </p>

@@ -39,6 +39,22 @@ const REWIRE = [
     find: /(<button onClick=")\{\{ goCta \}\}("[^>]*>\s*\{\{ tr\.cta \}\})/,
     replace: '$1{{ tr.onCta }}$2',
   },
+  {
+    what: 'nút "Tạo tài khoản" trong modal đăng nhập',
+    // Bản thiết kế cho nút này nhảy sang bảng giá; giờ nó chuyển modal sang
+    // chế độ đăng ký.
+    find: /(\{\{ t\.authNoAcc \}\} <button type="button" onClick=")\{\{ goPricingFromAuth \}\}(")/,
+    replace: '$1{{ toggleAuthMode }}$2',
+  },
+  {
+    what: 'chỗ hiện lỗi trong modal đăng nhập',
+    // Thiết kế không có chỗ báo lỗi; chèn một dòng ngay dưới phần mô tả.
+    find: /(<p style="margin:0 0 26px; font-size:14px; line-height:1\.6; color:#949ba4;">\{\{ t\.authSub \}\}<\/p>)/,
+    replace:
+      '$1\n      <sc-if value="{{ authError }}">' +
+      '<p role="alert" style="margin:-16px 0 18px; font-size:13px; line-height:1.5; color:var(--acc);">{{ authError }}</p>' +
+      '</sc-if>',
+  },
 ];
 
 for (const r of REWIRE) {

@@ -2,6 +2,7 @@
    Giữ nguyên tên trường để markup sinh tự động dùng được không đổi. */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { RefObject } from 'react';
+import { REGISTER_STRINGS, NAV_ACCOUNT } from './i18n-extra';
 import {
   I18N,
   IDS,
@@ -27,6 +28,10 @@ export interface State {
   island: boolean;
   authOpen: boolean;
   authDone: boolean;
+  /** Modal đang ở chế độ đăng nhập hay tạo tài khoản. */
+  authMode: 'login' | 'register';
+  /** Lỗi hiện trong modal; null là không có. */
+  authError: string | null;
   detail: string | null;
 }
 
@@ -41,6 +46,8 @@ export const INITIAL_STATE: State = {
   island: false,
   authOpen: false,
   authDone: false,
+  authMode: 'login',
+  authError: null,
   detail: null,
 };
 
@@ -58,6 +65,10 @@ export interface Imperative {
   onEmailSubmit: (email: string, lang: LangCode) => void;
   /** Đăng nhập bằng email + mật khẩu. */
   onAuthLogin: (email: string, password: string) => void;
+  /** Tạo tài khoản rồi đăng nhập luôn. */
+  onAuthRegister: (email: string, password: string) => void;
+  /** Mở trang đơn hàng của tài khoản đang đăng nhập. */
+  goAccount: () => void;
   /** Bắt đầu thanh toán: mở PayOS, hoặc yêu cầu đăng nhập trước. */
   startCheckout: (kind: 'TEMPLATE' | 'BUNDLE', templateId?: string) => void;
 }
@@ -69,9 +80,33 @@ export interface Refs {
 
 export type View = Record<string, any>;
 
-export function buildView(state: State, refs: Refs, im: Imperative): View {
+export function buildView(
+  state: State,
+  refs: Refs,
+  im: Imperative,
+  ctx: { signedIn: boolean } = { signedIn: false }
+): View {
   const lang: LangCode = (I18N as any)[state.lang] ? state.lang : 'vi';
-  const t = (I18N as any)[lang];
+  const base = (I18N as any)[lang];
+
+  // Modal dùng chung một bộ markup cho cả đăng nhập lẫn đăng ký, nên đổi chữ
+  // ngay trong `t` thay vì phải sửa file markup sinh tự động.
+  const reg = REGISTER_STRINGS[lang];
+  const registering = state.authMode === 'register';
+  const t = {
+    ...base,
+    ...(registering
+      ? {
+          authTitle: reg.title,
+          authSub: reg.sub,
+          authSubmit: reg.submit,
+          authNoAcc: reg.noAcc,
+          authSignup: reg.signup,
+        }
+      : null),
+    // Đã đăng nhập thì nút ở thanh nav dẫn sang trang đơn hàng.
+    ...(ctx.signedIn ? { navCta: NAV_ACCOUNT[lang] } : null),
+  };
   const n = t.services.length;
   const active = Math.min(state.active, n - 1);
   const s = t.services[active];
@@ -209,8 +244,23 @@ export function buildView(state: State, refs: Refs, im: Imperative): View {
     goCta: () => goTab('cta'),
     authOpen: state.authOpen,
     authDone: state.authDone,
-    openAuth: () => im.setState({ authOpen: true, menuOpen: false }),
-    closeAuth: () => im.setState({ authOpen: false, authDone: false }),
+    openAuth: () => {
+      if (ctx.signedIn) {
+        im.setState({ menuOpen: false });
+        im.goAccount();
+        return;
+      }
+      im.setState({ authOpen: true, menuOpen: false, authMode: 'login', authError: null });
+    },
+    closeAuth: () =>
+      im.setState({ authOpen: false, authDone: false, authError: null, authMode: 'login' }),
+    authError: state.authError,
+    toggleAuthMode: () =>
+      im.setState({
+        authMode: registering ? 'login' : 'register',
+        authError: null,
+        authDone: false,
+      }),
     goPricingFromAuth: () => {
       im.setState({ authOpen: false, authDone: false });
       goTab('pricing');
@@ -221,8 +271,9 @@ export function buildView(state: State, refs: Refs, im: Imperative): View {
       const form = e.currentTarget as HTMLFormElement;
       const email = (form.querySelector('input[type="email"]') as HTMLInputElement | null)?.value ?? '';
       const pass = (form.querySelector('input[type="password"]') as HTMLInputElement | null)?.value ?? '';
-      im.onAuthLogin(email, pass);
-      im.setState({ authDone: true });
+      im.setState({ authError: null });
+      if (registering) im.onAuthRegister(email, pass);
+      else im.onAuthLogin(email, pass);
     },
     authSubmitLabel: state.authDone ? '✓' : t.authSubmit,
     botRef: refs.botRef,

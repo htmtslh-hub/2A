@@ -12,7 +12,9 @@ import {
   syncPreviews,
 } from '@/lib/sync';
 import { I18N, TAB_KEYS, type LangCode } from '@/generated/data';
+import { useRouter } from 'next/navigation';
 import { useSession, signIn } from 'next-auth/react';
+import { AUTH_ERRORS } from '@/lib/i18n-extra';
 
 const HTML_LANG: Record<string, string> = { vi: 'vi', en: 'en', zh: 'zh-CN' };
 
@@ -191,6 +193,7 @@ export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: stri
   }, [state]);
 
   const { data: session } = useSession();
+  const router = useRouter();
 
   /* --- form CTA: lưu email + gửi mẫu miễn phí --- */
   const onEmailSubmit = useCallback((email: string, lang: LangCode) => {
@@ -202,11 +205,49 @@ export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: stri
   }, []);
 
   /* --- đăng nhập bằng email + mật khẩu --- */
-  const onAuthLogin = useCallback((email: string, password: string) => {
-    signIn('credentials', { email, password, redirect: false }).then((res) => {
-      if (res?.error) setState({ authDone: false });
-    });
-  }, [setState]);
+  const onAuthLogin = useCallback(
+    (email: string, password: string) => {
+      const err = AUTH_ERRORS[state.lang];
+      signIn('credentials', { email, password, redirect: false })
+        .then((res) => {
+          if (res?.error) setState({ authDone: false, authError: err.badCredentials });
+          else setState({ authDone: true, authError: null, authOpen: false });
+        })
+        .catch(() => setState({ authDone: false, authError: err.network }));
+    },
+    [setState, state.lang]
+  );
+
+  /* --- tạo tài khoản rồi đăng nhập luôn --- */
+  const onAuthRegister = useCallback(
+    (email: string, password: string) => {
+      const err = AUTH_ERRORS[state.lang];
+      if (password.length < 8) {
+        setState({ authError: err.shortPassword });
+        return;
+      }
+      fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      })
+        .then(async (r) => {
+          if (r.ok) {
+            onAuthLogin(email, password);
+            return;
+          }
+          setState({
+            authError: r.status === 409 ? err.emailTaken : (await r.json()).error || err.generic,
+          });
+        })
+        .catch(() => setState({ authError: err.network }));
+    },
+    [setState, onAuthLogin, state.lang]
+  );
+
+  const goAccount = useCallback(() => {
+    router.push('/don-hang');
+  }, [router]);
 
   /* --- thanh toán: cần email nên phải đăng nhập trước --- */
   const startCheckout = useCallback(
@@ -252,16 +293,29 @@ export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: stri
       syncUrl,
       onEmailSubmit,
       onAuthLogin,
+      onAuthRegister,
+      goAccount,
       startCheckout,
     }),
-    [push, setState, bumpCopy, applyLang, syncUrl, onEmailSubmit, onAuthLogin, startCheckout]
+    [
+      push,
+      setState,
+      bumpCopy,
+      applyLang,
+      syncUrl,
+      onEmailSubmit,
+      onAuthLogin,
+      onAuthRegister,
+      goAccount,
+      startCheckout,
+    ]
   );
 
   const vm = useMemo(
     // Chỉ truyền bản thân ref object xuống, không đọc .current lúc render.
     // eslint-disable-next-line react-hooks/refs
-    () => buildView(state, { copyRef, botRef }, imperative),
-    [state, imperative]
+    () => buildView(state, { copyRef, botRef }, imperative, { signedIn: Boolean(session?.user) }),
+    [state, imperative, session]
   );
 
   return <AgenticMarkup vm={vm} />;

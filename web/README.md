@@ -2,7 +2,8 @@
 
 Dự án Next.js dựng từ bản thiết kế `2A.zip` (Claude Design canvas). Landing page
 ba ngôn ngữ (Việt / English / 中文) kèm thư viện giao diện, trang chi tiết từng
-mẫu, đăng nhập, thanh toán PayOS và form thu email.
+mẫu, đăng nhập, thanh toán hai cổng (PayOS cho khách Việt, Paddle cho khách
+quốc tế) và form thu email.
 
 ---
 
@@ -63,10 +64,15 @@ web/
     lib/
       view.ts                dựng dữ liệu cho giao diện (port của renderVals)
       sync.ts                hiệu ứng: reveal, parallax, LED, video nền
-      catalog.ts             bảng giá dùng để tính tiền
-      db.ts / mail.ts / payos.ts
+      catalog.ts             bảng giá, chọn cổng theo thị trường
+      fulfil.ts              xử lý chung sau khi đơn được trả tiền
+      payments/              adapter từng cổng: payos.ts, paddle.ts
+      i18n-extra.ts          chuỗi ngoài bản thiết kế (đăng ký, trang đơn hàng)
+      db.ts / mail.ts / previews.ts
     app/
-      api/                   register, lead, checkout, payos/webhook, download
+      api/                   register, lead, checkout, download,
+                             payos/webhook, paddle/webhook
+      don-hang/              trang đơn hàng của khách
       thanh-toan/            trang kết quả thanh toán
   private/templates/         file .zip giao cho khách (không commit)
 ```
@@ -97,30 +103,42 @@ npm run media
 | Cơ sở dữ liệu | https://neon.tech | `DATABASE_URL` |
 | Khoá phiên đăng nhập | `npx auth secret` | `AUTH_SECRET` |
 | Đăng nhập Google (tuỳ chọn) | Google Cloud Console | `AUTH_GOOGLE_ID`, `AUTH_GOOGLE_SECRET` |
-| Thanh toán | https://payos.vn | `PAYOS_CLIENT_ID`, `PAYOS_API_KEY`, `PAYOS_CHECKSUM_KEY` |
+| Thanh toán trong nước | https://payos.vn | `PAYOS_CLIENT_ID`, `PAYOS_API_KEY`, `PAYOS_CHECKSUM_KEY` |
+| Thanh toán quốc tế | https://vendors.paddle.com | `PADDLE_API_KEY`, `PADDLE_WEBHOOK_SECRET` |
 | Gửi email | https://resend.com | `RESEND_API_KEY`, `MAIL_FROM` |
 | Địa chỉ site | — | `NEXT_PUBLIC_SITE_URL` |
 
-Thiếu PayOS thì nút mua báo lỗi rõ ràng; thiếu Resend thì email chỉ ghi ra log.
-Phần còn lại của trang vẫn chạy bình thường.
+Thiếu cổng thanh toán thì nút mua báo lỗi rõ ràng; thiếu Resend thì email chỉ
+ghi ra log. Phần còn lại của trang vẫn chạy bình thường.
 
 ---
 
-## Bảng giá
+## Bảng giá và cổng thanh toán
 
-PayOS chỉ nhận VNĐ, nên tiền thu theo bảng giá tiếng Việt trong thiết kế:
+Hai thị trường, hai cổng — chọn tự động theo ngôn ngữ khách đang xem:
 
-- Một giao diện: **1.900.000₫**
-- Trọn bộ thư viện: **9.900.000₫**
-- Thiết kế riêng: liên hệ (không thanh toán tự động)
+| Khách | Ngôn ngữ | Cổng | Tiền | Một mẫu | Trọn bộ |
+|---|---|---|---|---|---|
+| Việt Nam | `vi` | PayOS (VietQR) | VNĐ | 1.900.000₫ | 9.900.000₫ |
+| Quốc tế | `en`, `zh` | Paddle (thẻ quốc tế) | USD | $79 | $399 |
 
-Sửa trong `src/lib/catalog.ts`. Muốn đặt giá riêng cho từng mẫu thì khai báo
-trong `TEMPLATE_PRICE_OVERRIDE`.
+Vì sao hai cổng: PayOS chạy trên mô hình A2A — tiền chuyển thẳng giữa hai tài
+khoản ngân hàng Việt Nam. Phí rất thấp nhưng khách nước ngoài không quét được
+mã VietQR và không trả được ngoại tệ. Paddle bù vào chỗ đó: họ đứng tên bán
+(merchant of record), tự tính và nộp thuế VAT/GST ở từng nước, rồi chuyển tiền
+về qua wire transfer hoặc Payoneer — nên không cần lập pháp nhân nước ngoài.
 
-Các mức `$59–$109` hiển thị trên thẻ ở thư viện là giá tham khảo cho khách quốc
-tế, hiện chưa dùng để tính tiền.
+Sửa giá trong `src/lib/catalog.ts`. Số tiền luôn tính bằng **đơn vị nhỏ nhất**
+của loại tiền: VNĐ là đồng (`1_900_000`), USD là cent (`7_900` = $79). Muốn đặt
+giá riêng cho từng mẫu thì khai trong `TEMPLATE_PRICE_OVERRIDE`.
 
----
+Thiếu khoá của cổng nào thì chỉ khách thuộc thị trường đó gặp lỗi, phần còn lại
+của trang vẫn chạy. Muốn ép một cổng cụ thể thì truyền `provider` vào
+`/api/checkout`.
+
+Thêm cổng thứ ba: viết một adapter trong `src/lib/payments/` theo interface
+`PaymentProviderAdapter`, rồi khai vào bảng trong `src/lib/payments/index.ts`.
+Phần ghi nhận thanh toán dùng chung ở `src/lib/fulfil.ts`, không phải viết lại.
 
 ## Giao file cho khách
 
@@ -168,9 +186,11 @@ chính thức bằng `--prod`.
 ## Sau khi deploy
 
 1. Đặt `NEXT_PUBLIC_SITE_URL` thành tên miền thật.
-2. Khai báo webhook PayOS trỏ tới `https://<tên-miền>/api/payos/webhook`.
-   Webhook là nguồn xác nhận thanh toán duy nhất — trang "thanh toán thành công"
-   chỉ là giao diện, không tự mở khoá file.
+2. Khai báo webhook cho cả hai cổng. Webhook là nguồn xác nhận thanh toán duy
+   nhất — trang "thanh toán thành công" chỉ là giao diện, không tự mở khoá file.
+   - PayOS → `https://<tên-miền>/api/payos/webhook`
+   - Paddle → `https://<tên-miền>/api/paddle/webhook` (bật sự kiện
+     `transaction.completed`)
 3. Thêm redirect URI của Google:
    `https://<tên-miền>/api/auth/callback/google`
 

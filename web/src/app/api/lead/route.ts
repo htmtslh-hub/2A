@@ -26,7 +26,7 @@ export async function POST(req: Request) {
   });
 
   const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  const mail = leadEmail(`${base}/api/download?free=1`);
+  const mail = leadEmail(`${base}/api/download?free=1`, parsed.data.lang);
 
   try {
     await sendMail({ to: email, ...mail });

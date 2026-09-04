@@ -65,9 +65,18 @@ model VerificationToken {
 
 enum OrderStatus {
   PENDING // đã tạo link thanh toán, chờ khách trả
-  PAID // PayOS đã báo thành công
+  PAID // cổng thanh toán đã báo thành công
   CANCELLED
   FAILED
+}
+
+/// Cổng thanh toán xử lý đơn.
+/// PAYOS  — khách Việt Nam, chuyển khoản VietQR, thu VNĐ.
+/// PADDLE — khách quốc tế, thẻ quốc tế, thu USD. Paddle đứng tên bán (merchant
+///          of record) nên tự lo thuế VAT/GST ở từng nước.
+enum PaymentProvider {
+  PAYOS
+  PADDLE
 }
 
 /// Loại hàng: một giao diện lẻ, trọn bộ thư viện, hoặc gói thiết kế riêng.
@@ -80,15 +89,20 @@ enum ProductKind {
 model Order {
   id String @id @default(cuid())
 
-  /// Mã số nguyên PayOS yêu cầu cho mỗi đơn (orderCode).
-  payosOrderCode BigInt      @unique
-  status         OrderStatus @default(PENDING)
+  provider PaymentProvider @default(PAYOS)
+  status   OrderStatus     @default(PENDING)
+
+  /// Mã số nguyên PayOS yêu cầu cho mỗi đơn (orderCode). Đơn Paddle để trống.
+  payosOrderCode BigInt? @unique
+  /// Id transaction bên Paddle (txn_…). Đơn PayOS để trống.
+  paddleTxnId    String? @unique
 
   kind ProductKind
   /// Với TEMPLATE là id mẫu ('t1'…'t18'); với BUNDLE/CUSTOM để trống.
   templateId String?
 
-  /// Số tiền VNĐ (PayOS chỉ nhận số nguyên đồng).
+  /// Số tiền tính theo đơn vị nhỏ nhất của loại tiền:
+  /// VND là đồng (1.900.000), USD là cent (7900 = $79).
   amount      Int
   currency    String  @default("VND")
   description String

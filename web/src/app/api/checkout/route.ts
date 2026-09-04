@@ -1,16 +1,21 @@
-/* Tạo đơn hàng + link thanh toán PayOS. */
+/* Tạo đơn hàng + link thanh toán.
+
+   Cổng nào là do thị trường quyết định: khách xem tiếng Việt trả VNĐ qua PayOS,
+   khách quốc tế trả USD qua Paddle. Khách vẫn ép được cổng khác bằng tham số
+   `provider` nếu sau này muốn cho chọn. */
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import { prisma } from '@/lib/db';
 import { auth } from '@/auth';
-import { payos, payosConfigured } from '@/lib/payos';
+import { adapterFor } from '@/lib/payments';
 import {
-  newOrderCode,
+  currencyForProvider,
   priceOf,
-  shortDescription,
+  productName,
+  providerForLang,
   templateExists,
-  templateName,
   type Lang,
+  type Provider,
 } from '@/lib/catalog';
 
 const schema = z.object({
@@ -19,16 +24,11 @@ const schema = z.object({
   email: z.string().email(),
   name: z.string().trim().max(120).optional(),
   lang: z.enum(['vi', 'en', 'zh']).default('vi'),
+  /** Bỏ trống thì tự chọn theo ngôn ngữ. */
+  provider: z.enum(['PAYOS', 'PADDLE']).optional(),
 });
 
 export async function POST(req: Request) {
-  if (!payosConfigured()) {
-    return NextResponse.json(
-      { error: 'Cổng thanh toán chưa được cấu hình. Xem hướng dẫn trong .env.example.' },
-      { status: 503 }
-    );
-  }
-
   const parsed = schema.safeParse(await req.json().catch(() => null));
   if (!parsed.success) {
     return NextResponse.json({ error: 'Dữ liệu đơn hàng không hợp lệ.' }, { status: 400 });
@@ -40,26 +40,34 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Không tìm thấy giao diện này.' }, { status: 400 });
   }
 
+  const provider: Provider = parsed.data.provider ?? providerForLang(lang as Lang);
+  const adapter = adapterFor(provider);
+
+  if (!adapter.configured()) {
+    const which = provider === 'PAYOS' ? 'PayOS' : 'Paddle';
+    return NextResponse.json(
+      { error: `Cổng thanh toán ${which} chưa được cấu hình. Xem hướng dẫn trong .env.example.` },
+      { status: 503 }
+    );
+  }
+
   const session = await auth();
   const userId = (session?.user as { id?: string } | undefined)?.id ?? null;
 
-  const amount = priceOf(kind, templateId);
-  const orderCode = newOrderCode();
-  const base = process.env.NEXT_PUBLIC_SITE_URL || new URL(req.url).origin;
+  const currency = currencyForProvider(provider);
+  const amount = priceOf(kind, currency, templateId);
+  const label = productName(kind, templateId ?? null, lang as Lang);
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || new URL(req.url).origin;
 
-  const productName =
-    kind === 'BUNDLE'
-      ? 'Trọn bộ thư viện'
-      : templateName(templateId!, lang as Lang);
-
-  // Lưu đơn trước khi gọi PayOS: webhook về mà chưa có đơn thì không đối soát được.
+  // Lưu đơn trước khi gọi cổng: webhook về mà chưa có đơn thì không đối soát được.
   const order = await prisma.order.create({
     data: {
-      payosOrderCode: BigInt(orderCode),
+      provider,
       kind,
       templateId: kind === 'TEMPLATE' ? templateId! : null,
       amount,
-      description: productName,
+      currency,
+      description: label,
       lang,
       buyerEmail: email.toLowerCase(),
       buyerName: name ?? null,
@@ -68,25 +76,33 @@ export async function POST(req: Request) {
   });
 
   try {
-    const link = await payos().paymentRequests.create({
-      orderCode,
+    const result = await adapter.createCheckout({
+      orderId: order.id,
+      kind,
+      templateId: order.templateId,
       amount,
-      description: shortDescription(kind, templateId),
-      returnUrl: `${base}/thanh-toan/thanh-cong?order=${orderCode}`,
-      cancelUrl: `${base}/thanh-toan/huy?order=${orderCode}`,
+      currency,
+      productName: label,
       buyerEmail: email,
       buyerName: name,
+      lang: lang as Lang,
+      baseUrl,
     });
 
     await prisma.order.update({
       where: { id: order.id },
-      data: { checkoutUrl: link.checkoutUrl },
+      data: {
+        checkoutUrl: result.checkoutUrl,
+        ...(provider === 'PAYOS'
+          ? { payosOrderCode: BigInt(result.reference) }
+          : { paddleTxnId: result.reference }),
+      },
     });
 
-    return NextResponse.json({ checkoutUrl: link.checkoutUrl, orderCode });
+    return NextResponse.json({ checkoutUrl: result.checkoutUrl, orderId: order.id, provider });
   } catch (err) {
     await prisma.order.update({ where: { id: order.id }, data: { status: 'FAILED' } });
-    console.error('[checkout] PayOS lỗi:', err);
+    console.error(`[checkout] ${provider} lỗi:`, err);
     return NextResponse.json(
       { error: 'Không tạo được link thanh toán. Vui lòng thử lại.' },
       { status: 502 }

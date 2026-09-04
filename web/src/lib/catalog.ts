@@ -1,19 +1,47 @@
 /* Bảng giá dùng cho thanh toán.
 
-   PayOS chỉ nhận VNĐ, nên giá tính tiền lấy theo bảng giá tiếng Việt trong
-   thiết kế (mục `tiers` của I18N.vi): 1.9tr cho một giao diện, 9.9tr cho trọn
-   bộ. Các mức $59–$109 hiển thị trên thẻ ở thư viện chỉ là giá tham khảo cho
-   khách quốc tế; muốn tính tiền riêng từng mẫu thì khai báo trong
-   TEMPLATE_PRICE_OVERRIDE bên dưới. */
+   Hai thị trường, hai cổng, hai loại tiền:
+   - Khách Việt Nam  -> PayOS,  thu VNĐ, giá theo mục `tiers` của I18N.vi
+   - Khách quốc tế   -> Paddle, thu USD, giá theo mục `tiers` của I18N.en
+
+   Số tiền luôn tính bằng ĐƠN VỊ NHỎ NHẤT của loại tiền:
+   VNĐ là đồng (1_900_000), USD là cent (7_900 = $79). Cả PayOS lẫn Paddle đều
+   nhận số nguyên theo quy ước này. */
 import { TPL_META, I18N } from '@/generated/data';
 
-export const PRICE_SINGLE_VND = 1_900_000;
-export const PRICE_BUNDLE_VND = 9_900_000;
-
-/** Giá riêng cho từng mẫu, nếu muốn khác giá chung. Ví dụ: { t18: 2_500_000 } */
-export const TEMPLATE_PRICE_OVERRIDE: Record<string, number> = {};
-
 export type Lang = 'vi' | 'en' | 'zh';
+export type Currency = 'VND' | 'USD';
+export type Provider = 'PAYOS' | 'PADDLE';
+export type Kind = 'TEMPLATE' | 'BUNDLE';
+
+/* ---------- giá ---------- */
+
+export const PRICE_VND = {
+  single: 1_900_000,
+  bundle: 9_900_000,
+};
+
+/** Cent. Khớp với bảng giá tiếng Anh trong thiết kế: $79 / $399. */
+export const PRICE_USD = {
+  single: 7_900,
+  bundle: 39_900,
+};
+
+/** Giá riêng cho từng mẫu nếu muốn khác giá chung. VD: { t18: { VND: 2_500_000, USD: 10_900 } } */
+export const TEMPLATE_PRICE_OVERRIDE: Record<string, Partial<Record<Currency, number>>> = {};
+
+/* ---------- chọn cổng theo thị trường ---------- */
+
+/** Khách xem tiếng Việt trả bằng VNĐ qua PayOS; còn lại trả USD qua Paddle. */
+export function providerForLang(lang: Lang): Provider {
+  return lang === 'vi' ? 'PAYOS' : 'PADDLE';
+}
+
+export function currencyForProvider(provider: Provider): Currency {
+  return provider === 'PAYOS' ? 'VND' : 'USD';
+}
+
+/* ---------- tra cứu ---------- */
 
 export function templateExists(id: string): boolean {
   return TPL_META.some((m: { id: string }) => m.id === id);
@@ -26,16 +54,33 @@ export function templateName(id: string, lang: Lang = 'vi'): string {
   return dict.templates[idx]?.name ?? id;
 }
 
-export function priceOf(kind: 'TEMPLATE' | 'BUNDLE', templateId?: string | null): number {
-  if (kind === 'BUNDLE') return PRICE_BUNDLE_VND;
-  if (templateId && TEMPLATE_PRICE_OVERRIDE[templateId]) {
-    return TEMPLATE_PRICE_OVERRIDE[templateId];
+export function priceOf(kind: Kind, currency: Currency, templateId?: string | null): number {
+  if (kind === 'TEMPLATE' && templateId) {
+    const override = TEMPLATE_PRICE_OVERRIDE[templateId]?.[currency];
+    if (override) return override;
   }
-  return PRICE_SINGLE_VND;
+  const table = currency === 'VND' ? PRICE_VND : PRICE_USD;
+  return kind === 'BUNDLE' ? table.bundle : table.single;
+}
+
+/** Hiển thị tiền cho người đọc, dùng trong email và trang đơn hàng. */
+export function formatMoney(amount: number, currency: Currency, lang: Lang = 'vi'): string {
+  if (currency === 'VND') return amount.toLocaleString('vi-VN') + '₫';
+  return new Intl.NumberFormat(lang === 'vi' ? 'vi-VN' : 'en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(amount / 100);
+}
+
+export function productName(kind: Kind, templateId: string | null | undefined, lang: Lang): string {
+  if (kind === 'BUNDLE') {
+    return { vi: 'Trọn bộ thư viện', en: 'Full library', zh: '全部模板库' }[lang];
+  }
+  return templateName(templateId ?? '', lang);
 }
 
 /** PayOS giới hạn `description` 25 ký tự (nội dung chuyển khoản). */
-export function shortDescription(kind: 'TEMPLATE' | 'BUNDLE', templateId?: string | null): string {
+export function shortDescription(kind: Kind, templateId?: string | null): string {
   const raw = kind === 'BUNDLE' ? 'Agentic tron bo' : `Agentic ${templateId ?? ''}`.trim();
   return raw.slice(0, 25);
 }

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { auth } from '@/auth';
 import { prisma } from '@/lib/db';
-import { templateName } from '@/lib/catalog';
+import { formatMoney, templateName, type Currency } from '@/lib/catalog';
 import { ORDERS_STRINGS } from '@/lib/i18n-extra';
 import { SignOutButton } from './actions';
 
@@ -161,7 +161,7 @@ export default async function Page() {
                       {t.boughtOn}{' '}
                       {new Intl.DateTimeFormat('vi-VN', { dateStyle: 'long' }).format(p.createdAt)}
                       {' · '}
-                      {p.order.amount.toLocaleString('vi-VN')}₫
+                      {formatMoney(p.order.amount, p.order.currency as Currency, 'vi')}
                     </p>
                   </div>
                   <a

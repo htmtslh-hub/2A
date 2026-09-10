@@ -60,7 +60,14 @@ VIDEOS.forEach((rel, i) => {
 /* Video nền cho điện thoại dọc.
    Màn hình dọc cắt video ngang còn một dải hẹp ở giữa rồi phóng to lên, nên
    bản 1280px ngang vừa nặng vừa mờ. Cắt sẵn khung 9:16 ở đúng độ phân giải
-   màn hình thì nét hơn hẳn mà file lại nhỏ hơn. */
+   màn hình thì nét hơn hẳn mà file lại nhỏ hơn.
+
+   VỊ TRÍ CẮT phải đặt tay. Khung 9:16 chỉ rộng 608 trên khung hình 1920, tức
+   chưa tới một phần ba, nên cắt đúng giữa là mất đầu hoặc mất tay nhân vật.
+   Các số dưới đây chọn bằng cách xuất khung hình ra xem từng cái một; nhân
+   vật trong mấy tranh này không đứng giữa. Đổi video thì phải xem lại. */
+const MOB_X = [468, 656, 656, 656, 748];
+
 console.log('== video nền cho điện thoại dọc ==');
 VIDEOS.forEach((rel, i) => {
   const src = resolve(SRC, rel);
@@ -71,7 +78,7 @@ VIDEOS.forEach((rel, i) => {
   }
   run([
     '-i', src,
-    '-vf', 'crop=ih*9/16:ih,scale=480:854',
+    '-vf', `crop=608:1080:${MOB_X[i]}:0,scale=480:854`,
     '-c:v', 'libx264',
     '-preset', 'slow',
     // Màn hình nhỏ giấu được nhiễu nén tốt hơn nhiều so với màn hình lớn;

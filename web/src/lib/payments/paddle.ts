@@ -158,18 +158,30 @@ export function readPaddleEvent(payload: {
   const data = (payload.data ?? {}) as Record<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   const totals = data.details?.totals ?? {};
 
-  // Lấy `subtotal`, KHÔNG lấy `grand_total`.
+  // Đối chiếu bằng ĐƠN GIÁ MÌNH GỬI LÊN, không dùng details.totals.
   //
-  // Paddle là merchant of record nên tự cộng thuế VAT/GST theo nước của khách:
-  // giá mình đặt $399 (39900) thì grand_total có thể là 44333 vì cộng 4433 tiền
-  // thuế. Phần thuế đó Paddle thu và nộp hộ, không phải doanh thu của mình.
-  // So grand_total với số tiền lưu trong đơn sẽ luôn lệch, khiến đơn đã trả
-  // tiền bị đánh dấu FAILED và khách không nhận được hàng.
+  // Paddle là merchant of record nên cách nó tách thuế phụ thuộc cấu hình tài
+  // khoản và nước của khách, khiến các trường trong totals không ổn định:
+  //   - đơn nháp, chưa biết nước khách:  subtotal 39900 + tax 4433 = 44333
+  //   - đơn thật, giá đã gồm thuế:       subtotal 33250 + tax 6650 = 39900
+  // Cùng một đơn $399 mà subtotal lúc 39900 lúc 33250, grand_total lúc 44333
+  // lúc 39900. Lấy trường nào trong đó cũng có lúc sai, và sai thì đơn đã trả
+  // tiền bị đánh dấu FAILED — khách mất tiền, không nhận được hàng.
+  //
+  // `items[].price.unit_price.amount` chính là con số mình gửi khi tạo
+  // transaction, nên luôn khớp với số tiền lưu trong đơn.
+  const items: any[] = Array.isArray(data.items) ? data.items : []; // eslint-disable-line @typescript-eslint/no-explicit-any
+  const itemsTotal = items.reduce(
+    (sum, it) => sum + Number(it?.price?.unit_price?.amount ?? 0) * Number(it?.quantity ?? 1),
+    0
+  );
+
   return {
     eventType: payload.event_type ?? '',
     txnId: String(data.id ?? ''),
     orderId: (data.custom_data?.orderId as string | undefined) ?? null,
-    amount: Number(totals.subtotal ?? 0),
+    // Dự phòng bằng `total` (số khách thật sự trả) nếu payload thiếu items.
+    amount: itemsTotal || Number(totals.total ?? totals.grand_total ?? 0),
     currency: (totals.currency_code ?? data.currency_code ?? 'USD') as Currency,
     // Paddle báo hoàn tất bằng transaction.completed / status 'completed'.
     paid: payload.event_type === 'transaction.completed' || data.status === 'completed',

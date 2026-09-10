@@ -138,6 +138,10 @@ export function verifyPaddleWebhook(rawBody: string, signatureHeader: string | n
   }
 
   // Chặn tấn công phát lại: bỏ qua webhook quá cũ.
+  //
+  // SDK chính thức của Paddle để cửa sổ 5 GIÂY, quá chặt với serverless —
+  // một lần khởi động nguội là đủ làm rớt webhook thật. Dùng 5 phút, vẫn chặn
+  // được phát lại và bằng mức Stripe đang dùng.
   const ageSeconds = Math.abs(Date.now() / 1000 - Number(ts));
   if (!Number.isFinite(ageSeconds) || ageSeconds > 60 * 5) {
     throw new Error('Webhook Paddle quá hạn');

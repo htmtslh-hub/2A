@@ -4,6 +4,7 @@ import './globals.css';
 import { COMPANY } from '@/lib/company';
 import Providers from './providers';
 import { readLang } from '@/lib/server-lang';
+import { HTML_LANG } from '@/lib/lang';
 
 // Chỉ nạp đúng những weight và bảng chữ trang thực sự dùng. Mỗi weight ×
 // mỗi subset là một file .woff2 riêng, nên thừa một dòng ở đây là thừa vài
@@ -50,7 +51,7 @@ export const viewport: Viewport = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   // Trình đọc màn hình chọn giọng theo thuộc tính này, nên nó phải đi theo
   // ngôn ngữ khách đang xem chứ không được để cứng tiếng Việt.
-  const lang = await readLang();
+  const lang = HTML_LANG[await readLang()];
   return (
     <html lang={lang} data-scroll-behavior="smooth" className={`${display.variable} ${body.variable}`}>
       <body>

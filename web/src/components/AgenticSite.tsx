@@ -14,10 +14,11 @@ import {
 import { I18N, TAB_KEYS, type LangCode } from '@/generated/data';
 import { useRouter } from 'next/navigation';
 import { useSession, signIn } from 'next-auth/react';
+import { HTML_LANG } from '@/lib/lang';
 import { AUTH_ERRORS, FORGOT_STRINGS } from '@/lib/i18n-extra';
 import Toast from './Toast';
 
-const HTML_LANG: Record<string, string> = { vi: 'vi', en: 'en', zh: 'zh-CN' };
+
 
 export default function AgenticSite({
   defaultTab = 'home',

@@ -26,3 +26,10 @@ export const portraitVideo = (src: string) => src.replace(/\.mp4$/, '-mob.mp4');
 export function heroVideo(src: string, w: number, h: number) {
   return w < 720 && h > w ? portraitVideo(src) : src;
 }
+
+/** Ảnh chờ của video nền, chọn theo khung nhìn.
+ *  Nó chỉ hiện trong khoảnh khắc trước khi video giải mã xong, nên trên
+ *  điện thoại không đáng tải bản 960px. */
+export function heroPoster(src: string, w: number, h: number) {
+  return w < 720 && h > w ? cardPoster(src) : bgPoster(src);
+}

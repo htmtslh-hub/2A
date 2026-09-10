@@ -2,7 +2,7 @@
    Giữ nguyên cách thao tác DOM để đảm bảo giao diện giống hệt bản thiết kế. */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ACCENTS, IMAGES, POSTERS } from '@/generated/data';
-import { bgPoster, cardVideo, heroVideo } from './media';
+import { cardVideo, heroPoster, heroVideo } from './media';
 import type { State } from './view';
 
 const $$ = (sel: string) => Array.from(document.querySelectorAll(sel));
@@ -160,7 +160,8 @@ export function syncDom(st: State) {
     el.style.transform = on ? 'scale(1)' : 'scale(1.18)';
     el.style.filter = on ? 'blur(0px)' : 'blur(18px)';
     el.muted = true;
-    if (on) playVid(el, heroVideo(IMAGES[i], vw, vh), () => i === st.active, bgPoster(POSTERS[i]));
+    if (on)
+      playVid(el, heroVideo(IMAGES[i], vw, vh), () => i === st.active, heroPoster(POSTERS[i], vw, vh));
     else el.pause();
   });
   $$('[data-hero-cardvid]').forEach((el: any, i) => {

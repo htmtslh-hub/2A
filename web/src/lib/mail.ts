@@ -135,3 +135,43 @@ export function orderPaidEmail(opts: {
     ),
   };
 }
+
+/* ---------- thư đặt lại mật khẩu ---------- */
+
+const RESET: Record<Lang, { subject: string; title: string; body: string[]; cta: string }> = {
+  vi: {
+    subject: 'Đặt lại mật khẩu Agentic',
+    title: 'Đặt lại mật khẩu',
+    body: [
+      'Bấm nút bên dưới để chọn mật khẩu mới. Link có hiệu lực trong 1 giờ và chỉ dùng được một lần.',
+      'Nếu bạn không yêu cầu điều này, cứ bỏ qua thư — mật khẩu hiện tại vẫn giữ nguyên.',
+    ],
+    cta: 'Đặt lại mật khẩu',
+  },
+  en: {
+    subject: 'Reset your Agentic password',
+    title: 'Reset your password',
+    body: [
+      'Click the button below to choose a new password. The link works for 1 hour and can only be used once.',
+      'If you did not request this, just ignore this email — your current password stays unchanged.',
+    ],
+    cta: 'Reset password',
+  },
+  zh: {
+    subject: '重置你的 Agentic 密码',
+    title: '重置密码',
+    body: [
+      '点击下方按钮设置新密码。链接 1 小时内有效，且只能使用一次。',
+      '如果这不是你本人操作，请忽略此邮件，你的密码不会有任何变化。',
+    ],
+    cta: '重置密码',
+  },
+};
+
+export function resetPasswordEmail(resetUrl: string, lang: Lang = 'vi') {
+  const t = RESET[lang] ?? RESET.vi;
+  return {
+    subject: t.subject,
+    html: shell(t.title, t.body.map(p).join('') + button(resetUrl, t.cta), lang),
+  };
+}

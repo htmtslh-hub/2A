@@ -2,7 +2,7 @@
    Giữ nguyên tên trường để markup sinh tự động dùng được không đổi. */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { RefObject } from 'react';
-import { REGISTER_STRINGS, NAV_ACCOUNT } from './i18n-extra';
+import { REGISTER_STRINGS, FORGOT_STRINGS, NAV_ACCOUNT } from './i18n-extra';
 import {
   I18N,
   IDS,
@@ -29,9 +29,11 @@ export interface State {
   authOpen: boolean;
   authDone: boolean;
   /** Modal đang ở chế độ đăng nhập hay tạo tài khoản. */
-  authMode: 'login' | 'register';
+  authMode: 'login' | 'register' | 'forgot';
   /** Lỗi hiện trong modal; null là không có. */
   authError: string | null;
+  /** Thông báo nổi ở góc màn hình; null là không hiện. */
+  toast: string | null;
   detail: string | null;
 }
 
@@ -48,6 +50,7 @@ export const INITIAL_STATE: State = {
   authDone: false,
   authMode: 'login',
   authError: null,
+  toast: null,
   detail: null,
 };
 
@@ -67,8 +70,12 @@ export interface Imperative {
   onAuthLogin: (email: string, password: string) => void;
   /** Tạo tài khoản rồi đăng nhập luôn. */
   onAuthRegister: (email: string, password: string) => void;
+  /** Gửi link đặt lại mật khẩu. */
+  onForgotPassword: (email: string) => void;
   /** Mở trang đơn hàng của tài khoản đang đăng nhập. */
   goAccount: () => void;
+  /** Đăng nhập bằng Google. */
+  onGoogleSignIn: () => void;
   /** Bắt đầu thanh toán: mở PayOS, hoặc yêu cầu đăng nhập trước. */
   startCheckout: (kind: 'TEMPLATE' | 'BUNDLE', templateId?: string) => void;
 }
@@ -84,24 +91,29 @@ export function buildView(
   state: State,
   refs: Refs,
   im: Imperative,
-  ctx: { signedIn: boolean } = { signedIn: false }
+  ctx: { signedIn: boolean; googleEnabled: boolean } = { signedIn: false, googleEnabled: false }
 ): View {
   const lang: LangCode = (I18N as any)[state.lang] ? state.lang : 'vi';
   const base = (I18N as any)[lang];
 
   // Modal dùng chung một bộ markup cho cả đăng nhập lẫn đăng ký, nên đổi chữ
   // ngay trong `t` thay vì phải sửa file markup sinh tự động.
-  const reg = REGISTER_STRINGS[lang];
   const registering = state.authMode === 'register';
+  const forgetting = state.authMode === 'forgot';
+  const modeStrings = registering
+    ? REGISTER_STRINGS[lang]
+    : forgetting
+      ? FORGOT_STRINGS[lang]
+      : null;
   const t = {
     ...base,
-    ...(registering
+    ...(modeStrings
       ? {
-          authTitle: reg.title,
-          authSub: reg.sub,
-          authSubmit: reg.submit,
-          authNoAcc: reg.noAcc,
-          authSignup: reg.signup,
+          authTitle: modeStrings.title,
+          authSub: modeStrings.sub,
+          authSubmit: modeStrings.submit,
+          authNoAcc: modeStrings.noAcc,
+          authSignup: modeStrings.signup,
         }
       : null),
     // Đã đăng nhập thì nút ở thanh nav dẫn sang trang đơn hàng.
@@ -255,9 +267,20 @@ export function buildView(
     closeAuth: () =>
       im.setState({ authOpen: false, authDone: false, authError: null, authMode: 'login' }),
     authError: state.authError,
+    // Chế độ quên mật khẩu chỉ cần email, nên giấu ô mật khẩu đi.
+    showPassword: !forgetting,
+    showForgotLink: state.authMode === 'login',
+    startForgot: () =>
+      im.setState({ authMode: 'forgot', authError: null, authDone: false }),
+    googleEnabled: ctx.googleEnabled,
+    onGoogleSignIn: () => im.onGoogleSignIn(),
+    toast: state.toast,
+    closeToast: () => im.setState({ toast: null }),
     toggleAuthMode: () =>
       im.setState({
-        authMode: registering ? 'login' : 'register',
+        // Từ 'forgot' hay 'register' đều quay về đăng nhập; từ đăng nhập thì
+        // sang đăng ký.
+        authMode: state.authMode === 'login' ? 'register' : 'login',
         authError: null,
         authDone: false,
       }),
@@ -272,7 +295,8 @@ export function buildView(
       const email = (form.querySelector('input[type="email"]') as HTMLInputElement | null)?.value ?? '';
       const pass = (form.querySelector('input[type="password"]') as HTMLInputElement | null)?.value ?? '';
       im.setState({ authError: null });
-      if (registering) im.onAuthRegister(email, pass);
+      if (forgetting) im.onForgotPassword(email);
+      else if (registering) im.onAuthRegister(email, pass);
       else im.onAuthLogin(email, pass);
     },
     authSubmitLabel: state.authDone ? '✓' : t.authSubmit,
@@ -384,7 +408,6 @@ export function buildView(
       const form = e.currentTarget as HTMLFormElement;
       const email = (form.querySelector('input[type="email"]') as HTMLInputElement | null)?.value ?? '';
       im.onEmailSubmit(email, lang);
-      im.setState({ submitted: true });
     },
   };
 }

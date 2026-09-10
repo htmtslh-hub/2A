@@ -36,6 +36,68 @@ export const REGISTER_STRINGS: Record<LangCode, AuthStrings> = {
   },
 };
 
+/** Chữ hiển thị khi modal ở chế độ quên mật khẩu. */
+export const FORGOT_STRINGS: Record<LangCode, AuthStrings & { sent: string }> = {
+  vi: {
+    title: 'Quên mật khẩu',
+    sub: 'Nhập email của bạn, chúng tôi sẽ gửi link đặt lại mật khẩu.',
+    submit: 'Gửi link đặt lại',
+    noAcc: 'Nhớ ra rồi?',
+    signup: 'Quay lại đăng nhập',
+    sent: 'Nếu email này có tài khoản, link đặt lại đã được gửi. Kiểm tra hộp thư nhé.',
+  },
+  en: {
+    title: 'Forgot password',
+    sub: 'Enter your email and we will send you a reset link.',
+    submit: 'Send reset link',
+    noAcc: 'Remembered it?',
+    signup: 'Back to sign in',
+    sent: 'If that email has an account, a reset link is on its way. Check your inbox.',
+  },
+  zh: {
+    title: '忘记密码',
+    sub: '输入你的邮箱，我们会发送重置密码的链接。',
+    submit: '发送重置链接',
+    noAcc: '想起来了？',
+    signup: '返回登录',
+    sent: '如果该邮箱已注册，重置链接已发送，请查收邮件。',
+  },
+};
+
+/** Trang đặt lại mật khẩu. */
+export const RESET_STRINGS: Record<LangCode, Record<string, string>> = {
+  vi: {
+    title: 'Đặt lại mật khẩu',
+    sub: 'Nhập mật khẩu mới cho tài khoản của bạn.',
+    password: 'Mật khẩu mới',
+    submit: 'Đổi mật khẩu',
+    done: 'Đã đổi mật khẩu. Bạn có thể đăng nhập ngay.',
+    goHome: 'Về trang chủ',
+    invalid: 'Link không hợp lệ hoặc đã hết hạn. Hãy yêu cầu link mới.',
+    tooShort: 'Mật khẩu cần tối thiểu 8 ký tự.',
+  },
+  en: {
+    title: 'Reset password',
+    sub: 'Choose a new password for your account.',
+    password: 'New password',
+    submit: 'Change password',
+    done: 'Password changed. You can sign in now.',
+    goHome: 'Back to home',
+    invalid: 'This link is invalid or has expired. Please request a new one.',
+    tooShort: 'Password must be at least 8 characters.',
+  },
+  zh: {
+    title: '重置密码',
+    sub: '为你的账号设置新密码。',
+    password: '新密码',
+    submit: '修改密码',
+    done: '密码已修改，现在可以登录了。',
+    goHome: '返回首页',
+    invalid: '链接无效或已过期，请重新申请。',
+    tooShort: '密码至少需要 8 个字符。',
+  },
+};
+
 /** Thông báo lỗi ở modal đăng nhập / đăng ký. */
 export const AUTH_ERRORS: Record<LangCode, Record<string, string>> = {
   vi: {

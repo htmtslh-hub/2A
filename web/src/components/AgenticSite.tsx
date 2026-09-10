@@ -14,7 +14,8 @@ import {
 import { I18N, TAB_KEYS, type LangCode } from '@/generated/data';
 import { useRouter } from 'next/navigation';
 import { useSession, signIn } from 'next-auth/react';
-import { AUTH_ERRORS } from '@/lib/i18n-extra';
+import { AUTH_ERRORS, FORGOT_STRINGS } from '@/lib/i18n-extra';
+import Toast from './Toast';
 
 const HTML_LANG: Record<string, string> = { vi: 'vi', en: 'en', zh: 'zh-CN' };
 
@@ -53,6 +54,9 @@ export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: stri
   const applyLang = useCallback((code: LangCode) => {
     try {
       localStorage.setItem('agentic-lang', code);
+      // Cookie để các trang dựng ở server (vd. /don-hang) biết ngôn ngữ —
+      // localStorage chỉ trình duyệt đọc được.
+      document.cookie = `agentic-lang=${code}; path=/; max-age=31536000; samesite=lax`;
     } catch {}
     document.documentElement.lang = HTML_LANG[code] || 'vi';
   }, []);
@@ -195,14 +199,47 @@ export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: stri
   const { data: session } = useSession();
   const router = useRouter();
 
-  /* --- form CTA: lưu email + gửi mẫu miễn phí --- */
-  const onEmailSubmit = useCallback((email: string, lang: LangCode) => {
-    fetch('/api/lead', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, lang }),
-    }).catch((err) => console.error('[lead]', err));
+  // Nút Google chỉ hiện khi server thật sự có provider đó. Auth.js chỉ đăng ký
+  // Google khi có AUTH_GOOGLE_ID/SECRET, nên đây là nguồn tin cậy duy nhất.
+  const [googleEnabled, setGoogleEnabled] = useState(false);
+  useEffect(() => {
+    let alive = true;
+    fetch('/api/auth/providers')
+      .then((r) => r.json())
+      .then((p) => {
+        if (alive && p && typeof p === 'object' && 'google' in p) setGoogleEnabled(true);
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
   }, []);
+
+  const onGoogleSignIn = useCallback(() => {
+    signIn('google', { callbackUrl: '/' });
+  }, []);
+
+  /* --- form CTA: lưu email + gửi mẫu miễn phí --- */
+  const onEmailSubmit = useCallback(
+    (email: string, lang: LangCode) => {
+      const err = AUTH_ERRORS[lang];
+      fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, lang }),
+      })
+        .then(async (r) => {
+          if (r.ok) {
+            setState({ submitted: true });
+            return;
+          }
+          const data = await r.json().catch(() => null);
+          setState({ toast: data?.error || err.generic });
+        })
+        .catch(() => setState({ toast: err.network }));
+    },
+    [setState]
+  );
 
   /* --- đăng nhập bằng email + mật khẩu --- */
   const onAuthLogin = useCallback(
@@ -245,6 +282,29 @@ export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: stri
     [setState, onAuthLogin, state.lang]
   );
 
+  /* --- gửi link đặt lại mật khẩu --- */
+  const onForgotPassword = useCallback(
+    (email: string) => {
+      const err = AUTH_ERRORS[state.lang];
+      fetch('/api/forgot-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, lang: state.lang }),
+      })
+        .then((r) => {
+          if (!r.ok) {
+            setState({ authError: err.generic });
+            return;
+          }
+          // Cố tình không nói email có tồn tại hay không, tránh lộ danh sách
+          // tài khoản. Đóng modal và báo bằng toast.
+          setState({ authOpen: false, authMode: 'login', toast: FORGOT_STRINGS[state.lang].sent });
+        })
+        .catch(() => setState({ authError: err.network }));
+    },
+    [setState, state.lang]
+  );
+
   const goAccount = useCallback(() => {
     router.push('/don-hang');
   }, [router]);
@@ -271,11 +331,11 @@ export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: stri
         .then((r) => r.json())
         .then((data) => {
           if (data.checkoutUrl) window.location.href = data.checkoutUrl;
-          else alert(data.error || 'Không tạo được link thanh toán.');
+          else setState({ toast: data.error || AUTH_ERRORS[state.lang].generic });
         })
         .catch((err) => {
           console.error('[checkout]', err);
-          alert('Không kết nối được cổng thanh toán.');
+          setState({ toast: AUTH_ERRORS[state.lang].network });
         });
     },
     [session, setState, state.lang]
@@ -294,7 +354,9 @@ export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: stri
       onEmailSubmit,
       onAuthLogin,
       onAuthRegister,
+      onForgotPassword,
       goAccount,
+      onGoogleSignIn,
       startCheckout,
     }),
     [
@@ -306,7 +368,9 @@ export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: stri
       onEmailSubmit,
       onAuthLogin,
       onAuthRegister,
+      onForgotPassword,
       goAccount,
+      onGoogleSignIn,
       startCheckout,
     ]
   );
@@ -314,9 +378,17 @@ export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: stri
   const vm = useMemo(
     // Chỉ truyền bản thân ref object xuống, không đọc .current lúc render.
     // eslint-disable-next-line react-hooks/refs
-    () => buildView(state, { copyRef, botRef }, imperative, { signedIn: Boolean(session?.user) }),
-    [state, imperative, session]
+    () => buildView(state, { copyRef, botRef }, imperative, {
+        signedIn: Boolean(session?.user),
+        googleEnabled,
+      }),
+    [state, imperative, session, googleEnabled]
   );
 
-  return <AgenticMarkup vm={vm} />;
+  return (
+    <>
+      <AgenticMarkup vm={vm} />
+      <Toast message={state.toast} onClose={() => setState({ toast: null })} />
+    </>
+  );
 }

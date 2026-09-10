@@ -19,10 +19,11 @@ model User {
   passwordHash  String? // null nếu chỉ đăng nhập bằng Google
   createdAt     DateTime  @default(now())
 
-  accounts  Account[]
-  sessions  Session[]
-  orders    Order[]
-  purchases Purchase[]
+  accounts       Account[]
+  sessions       Session[]
+  orders         Order[]
+  purchases      Purchase[]
+  resetTokens    PasswordResetToken[]
 }
 
 model Account {
@@ -155,6 +156,22 @@ model DownloadToken {
   expiresAt  DateTime
   usedAt     DateTime?
   createdAt  DateTime  @default(now())
+
+  @@index([userId])
+}
+
+/// Token đặt lại mật khẩu, dùng một lần và hết hạn sau 1 giờ.
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  /// Lưu bản băm SHA-256, không lưu token gốc: rò rỉ database cũng không
+  /// dùng được để chiếm tài khoản.
+  tokenHash String    @unique
+  userId    String
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
 }

@@ -47,6 +47,30 @@ const REWIRE = [
     replace: '$1{{ toggleAuthMode }}$2',
   },
   {
+    what: 'ô mật khẩu — ẩn khi modal ở chế độ quên mật khẩu',
+    find: /(<label [^>]*>\s*\{\{ t\.authPass \}\}[\s\S]*?<\/label>)/,
+    replace: '<sc-if value="{{ showPassword }}">$1</sc-if>',
+  },
+  {
+    what: 'link "Quên mật khẩu?" — gắn hành động thật, ẩn khi không cần',
+    // Bản thiết kế cho link này đóng modal, trông như đã xử lý mà thực ra không.
+    find: /(<div style="display:flex; justify-content:flex-end; margin-top:-2px;">\s*<button type="button" onClick=")\{\{ closeAuth \}\}("[\s\S]*?<\/div>)/,
+    replace: '<sc-if value="{{ showForgotLink }}">$1{{ startForgot }}$2</sc-if>',
+  },
+  {
+    what: 'nút "Tiếp tục với Google" — gắn hành động đăng nhập',
+    // Bản thiết kế để nút này trơ, không có onClick.
+    find: /(<button )(style="width:100%; display:inline-flex; justify-content:center; align-items:center; gap:10px; padding:14px;)/,
+    replace: '$1onClick="{{ onGoogleSignIn }}" $2',
+  },
+  {
+    what: 'khối đăng nhập Google — chỉ hiện khi đã cấu hình khoá',
+    // Gói cả dải phân cách "HOẶC" lẫn nút Google, để khi chưa bật Google thì
+    // không còn dấu vết thừa trong modal.
+    find: /(<div style="display:flex; align-items:center; gap:14px; margin:22px 0;">[\s\S]*?\{\{ t\.authGoogle \}\}[\s\S]*?<\/button>)/,
+    replace: '<sc-if value="{{ googleEnabled }}">$1</sc-if>',
+  },
+  {
     what: 'chỗ hiện lỗi trong modal đăng nhập',
     // Thiết kế không có chỗ báo lỗi; chèn một dòng ngay dưới phần mô tả.
     find: /(<p style="margin:0 0 26px; font-size:14px; line-height:1\.6; color:#949ba4;">\{\{ t\.authSub \}\}<\/p>)/,

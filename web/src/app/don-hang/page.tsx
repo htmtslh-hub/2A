@@ -1,13 +1,25 @@
 /* Trang "đơn hàng của tôi": liệt kê giao diện đã mua và cho tải lại. */
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { cookies } from 'next/headers';
 import { auth } from '@/auth';
 import { prisma } from '@/lib/db';
-import { formatMoney, templateName, type Currency } from '@/lib/catalog';
+import { formatMoney, templateName, type Currency, type Lang } from '@/lib/catalog';
 import { ORDERS_STRINGS } from '@/lib/i18n-extra';
 import { SignOutButton } from './actions';
 
-export const metadata: Metadata = { title: 'Đơn hàng của tôi — Agentic' };
+const DATE_LOCALE: Record<Lang, string> = { vi: 'vi-VN', en: 'en-US', zh: 'zh-CN' };
+
+/** Ngôn ngữ khách đang xem, do AgenticSite ghi vào cookie khi đổi ngôn ngữ. */
+async function readLang(): Promise<Lang> {
+  const v = (await cookies()).get('agentic-lang')?.value;
+  return v === 'en' || v === 'zh' ? v : 'vi';
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = ORDERS_STRINGS[await readLang()];
+  return { title: `${t.title} — Agentic` };
+}
 
 // Trang phụ thuộc phiên đăng nhập nên không được dựng sẵn.
 export const dynamic = 'force-dynamic';
@@ -49,9 +61,8 @@ const primaryBtn: React.CSSProperties = {
 };
 
 export default async function Page() {
-  // Trang chỉ có tiếng Việt vì ngôn ngữ được lưu ở trình duyệt, server không
-  // đọc được. Đổi sang ORDERS_STRINGS.en / .zh nếu sau này thêm i18n theo URL.
-  const t = ORDERS_STRINGS.vi;
+  const lang = await readLang();
+  const t = ORDERS_STRINGS[lang];
   const session = await auth();
   const userId = (session?.user as { id?: string } | undefined)?.id;
 
@@ -140,7 +151,7 @@ export default async function Page() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             {purchases.map((p) => {
               const isBundle = p.templateId === null;
-              const name = isBundle ? t.bundle : templateName(p.templateId!, 'vi');
+              const name = isBundle ? t.bundle : templateName(p.templateId!, lang);
               const note = isBundle ? t.bundleNote : p.order.description;
               return (
                 <div key={p.id} style={card}>
@@ -159,9 +170,9 @@ export default async function Page() {
                     <p style={{ margin: 0, fontSize: 13, color: '#949ba4' }}>{note}</p>
                     <p style={{ margin: '8px 0 0', fontSize: 12, color: '#6f767f' }}>
                       {t.boughtOn}{' '}
-                      {new Intl.DateTimeFormat('vi-VN', { dateStyle: 'long' }).format(p.createdAt)}
+                      {new Intl.DateTimeFormat(DATE_LOCALE[lang], { dateStyle: 'long' }).format(p.createdAt)}
                       {' · '}
-                      {formatMoney(p.order.amount, p.order.currency as Currency, 'vi')}
+                      {formatMoney(p.order.amount, p.order.currency as Currency, lang)}
                     </p>
                   </div>
                   <a

@@ -327,11 +327,18 @@ export function startBot(el: HTMLElement) {
     const rx = Math.min(w / 2 + 60, window.innerWidth / 2 - 40);
     const x = (Math.random() * 2 - 1) * rx;
     const edge = Math.abs(x) > rx * 0.55;
-    const y = edge
-      ? -22 + Math.random() * 104
-      : Math.random() < 0.5
-        ? -22 + Math.random() * 12
-        : 68 + Math.random() * 20;
+
+    // Màn hình hẹp không có chỗ trống hai bên thanh nav, nên nếu để robot bay
+    // xuống dải +68…+88 nó sẽ đè lên chữ của phần hero. Trên mobile giữ nó bám
+    // sát thanh nav; desktop vẫn bay rộng như thiết kế gốc.
+    const narrow = (document.documentElement.clientWidth || window.innerWidth) < 720;
+    const y = narrow
+      ? -26 + Math.random() * 30
+      : edge
+        ? -22 + Math.random() * 104
+        : Math.random() < 0.5
+          ? -22 + Math.random() * 12
+          : 68 + Math.random() * 20;
     const next = x < botX ? -1 : 1;
     if (next !== flip) flip = next;
     botX = x;

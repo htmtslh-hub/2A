@@ -913,29 +913,41 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                   {vm.t.authEmail} 
                   <input className="fc16" style={{ width: "100%", boxSizing: "border-box", padding: "14px 16px", borderRadius: "14px", border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.05)", color: "#ffffff", fontFamily: "inherit", fontSize: "14px", letterSpacing: "normal", textTransform: "none", outline: "none" }} type="email" required placeholder="you@studio.com" />
                 </label>
-                <label style={{ display: "flex", flexDirection: "column", gap: "7px", fontSize: "12px", letterSpacing: ".06em", textTransform: "uppercase", color: "#949ba4" }}>
-                  {vm.t.authPass} 
-                  <input className="fc16" style={{ width: "100%", boxSizing: "border-box", padding: "14px 16px", borderRadius: "14px", border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.05)", color: "#ffffff", fontFamily: "inherit", fontSize: "14px", letterSpacing: "normal", textTransform: "none", outline: "none" }} type="password" required placeholder="••••••••" />
-                </label>
-                <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "-2px" }}>
-                  <button className="hv3" style={{ padding: "0", border: "0", background: "none", fontFamily: "inherit", fontSize: "13px", color: "#c8ced6", cursor: "pointer" }} type="button" onClick={vm.closeAuth}>
-                    {vm.t.authForgot}
-                  </button>
-                </div>
+                {(vm.showPassword) ? (
+                  <>
+                    <label style={{ display: "flex", flexDirection: "column", gap: "7px", fontSize: "12px", letterSpacing: ".06em", textTransform: "uppercase", color: "#949ba4" }}>
+                      {vm.t.authPass} 
+                      <input className="fc16" style={{ width: "100%", boxSizing: "border-box", padding: "14px 16px", borderRadius: "14px", border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.05)", color: "#ffffff", fontFamily: "inherit", fontSize: "14px", letterSpacing: "normal", textTransform: "none", outline: "none" }} type="password" required placeholder="••••••••" />
+                    </label>
+                  </>
+                ) : null}
+                {(vm.showForgotLink) ? (
+                  <>
+                    <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "-2px" }}>
+                      <button className="hv3" style={{ padding: "0", border: "0", background: "none", fontFamily: "inherit", fontSize: "13px", color: "#c8ced6", cursor: "pointer" }} type="button" onClick={vm.startForgot}>
+                        {vm.t.authForgot}
+                      </button>
+                    </div>
+                  </>
+                ) : null}
                 <button className="hv17" style={{ display: "inline-flex", justifyContent: "center", alignItems: "center", marginTop: "4px", padding: "15px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontWeight: "700", fontSize: "14px", border: "1px solid rgba(255,255,255,.4)", background: "linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -8px rgba(255,244,230,.5)" }} type="submit">
                   {vm.authSubmitLabel}
                 </button>
               </form>
-              <div style={{ display: "flex", alignItems: "center", gap: "14px", margin: "22px 0" }}>
-                <span style={{ flex: "1", height: "1px", background: "rgba(255,255,255,.12)" }} />
-                <span style={{ fontSize: "11px", letterSpacing: ".14em", textTransform: "uppercase", color: "#616872" }}>
-                  {vm.t.authOr}
-                </span>
-                <span style={{ flex: "1", height: "1px", background: "rgba(255,255,255,.12)" }} />
-              </div>
-              <button className="hv2" style={{ width: "100%", display: "inline-flex", justifyContent: "center", alignItems: "center", gap: "10px", padding: "14px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontWeight: "600", fontSize: "14px", border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#ffffff" }}>
-                {vm.t.authGoogle}
-              </button>
+              {(vm.googleEnabled) ? (
+                <>
+                  <div style={{ display: "flex", alignItems: "center", gap: "14px", margin: "22px 0" }}>
+                    <span style={{ flex: "1", height: "1px", background: "rgba(255,255,255,.12)" }} />
+                    <span style={{ fontSize: "11px", letterSpacing: ".14em", textTransform: "uppercase", color: "#616872" }}>
+                      {vm.t.authOr}
+                    </span>
+                    <span style={{ flex: "1", height: "1px", background: "rgba(255,255,255,.12)" }} />
+                  </div>
+                  <button className="hv2" style={{ width: "100%", display: "inline-flex", justifyContent: "center", alignItems: "center", gap: "10px", padding: "14px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontWeight: "600", fontSize: "14px", border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#ffffff" }} onClick={vm.onGoogleSignIn}>
+                    {vm.t.authGoogle}
+                  </button>
+                </>
+              ) : null}
               <p style={{ margin: "22px 0 0", textAlign: "center", fontSize: "13px", color: "#949ba4" }}>
                 {vm.t.authNoAcc} 
                 <button className="hv18" style={{ padding: "0", border: "0", background: "none", fontFamily: "inherit", fontSize: "13px", color: "#ffffff", fontWeight: "600", cursor: "pointer" }} type="button" onClick={vm.toggleAuthMode}>

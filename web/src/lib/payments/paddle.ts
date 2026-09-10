@@ -76,13 +76,10 @@ export const paddleAdapter: PaymentProviderAdapter = {
       items: [{ quantity: 1, price, ...(productId ? { product_id: productId } : {}) }],
       // Gửi kèm id đơn của mình để webhook đối chiếu chắc chắn.
       custom_data: { orderId: input.orderId },
-      // Paddle ghép URL này với '?_ptxn=<id>' rồi trả về ở checkout.url.
-      // Đó phải là trang của mình có nhúng Paddle.js (Paddle không host sẵn
-      // trang thanh toán), và phải trùng với Default payment link khai trong
-      // dashboard, nếu không API từ chối tạo transaction.
-      checkout: {
-        url: `${input.baseUrl}/thanh-toan/paddle`,
-      },
+      // Cố tình KHÔNG gửi `checkout.url`: Paddle chỉ chấp nhận domain đã được
+      // duyệt, truyền tay vào sẽ bị từ chối (transaction_checkout_url_domain_
+      // is_not_approved). Bỏ trống thì Paddle tự lấy Default payment link của
+      // tài khoản — khai một lần trong dashboard, trỏ về /thanh-toan/paddle.
     };
 
     const body = await paddleFetch('/transactions', {
@@ -157,11 +154,18 @@ export function readPaddleEvent(payload: {
   const data = (payload.data ?? {}) as Record<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
   const totals = data.details?.totals ?? {};
 
+  // Lấy `subtotal`, KHÔNG lấy `grand_total`.
+  //
+  // Paddle là merchant of record nên tự cộng thuế VAT/GST theo nước của khách:
+  // giá mình đặt $399 (39900) thì grand_total có thể là 44333 vì cộng 4433 tiền
+  // thuế. Phần thuế đó Paddle thu và nộp hộ, không phải doanh thu của mình.
+  // So grand_total với số tiền lưu trong đơn sẽ luôn lệch, khiến đơn đã trả
+  // tiền bị đánh dấu FAILED và khách không nhận được hàng.
   return {
     eventType: payload.event_type ?? '',
     txnId: String(data.id ?? ''),
     orderId: (data.custom_data?.orderId as string | undefined) ?? null,
-    amount: Number(totals.grand_total ?? totals.total ?? 0),
+    amount: Number(totals.subtotal ?? 0),
     currency: (totals.currency_code ?? data.currency_code ?? 'USD') as Currency,
     // Paddle báo hoàn tất bằng transaction.completed / status 'completed'.
     paid: payload.event_type === 'transaction.completed' || data.status === 'completed',

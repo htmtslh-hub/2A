@@ -11,3 +11,18 @@ export const cardPoster = (src: string) => src.replace(/\.jpg$/, '-sm.webp');
 
 /** Poster 960px WebP cho video nền toàn màn hình. */
 export const bgPoster = (src: string) => src.replace(/\.jpg$/, '-bg.webp');
+
+/** Video nền đã cắt sẵn khung 9:16 cho điện thoại dọc. */
+export const portraitVideo = (src: string) => src.replace(/\.mp4$/, '-mob.mp4');
+
+/** Chọn video nền theo khung nhìn hiện tại.
+ *
+ *  Màn hình dọc hẹp áp object-fit:cover lên video ngang thì chỉ thấy một dải
+ *  hẹp ở giữa, lại còn bị phóng to — vừa nặng vừa mờ. Bản cắt sẵn 480x854
+ *  đúng bằng thứ màn hình hiển thị nên nét hơn mà file nhỏ hơn 40%.
+ *
+ *  Chỉ đổi khi vừa hẹp vừa dọc: máy tính bảng nằm ngang hay cửa sổ trình
+ *  duyệt hẹp vẫn phải dùng bản ngang, không thì khung hình bị cắt sai. */
+export function heroVideo(src: string, w: number, h: number) {
+  return w < 720 && h > w ? portraitVideo(src) : src;
+}

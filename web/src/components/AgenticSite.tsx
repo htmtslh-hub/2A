@@ -203,9 +203,16 @@ export default function AgenticSite({
       }
     });
     const t = window.setTimeout(() => syncDom(state), 80);
+
+    // Xoay ngang điện thoại thì video nền phải đổi sang bản cắt khác khung,
+    // mà việc chọn bản nằm trong syncDom nên phải chạy lại khi khung nhìn đổi.
+    const onResize = () => syncDom(state);
+    window.addEventListener('resize', onResize);
+
     return () => {
       cancelAnimationFrame(raf);
       clearTimeout(t);
+      window.removeEventListener('resize', onResize);
     };
   }, [state]);
 

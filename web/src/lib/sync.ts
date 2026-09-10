@@ -2,7 +2,7 @@
    Giữ nguyên cách thao tác DOM để đảm bảo giao diện giống hệt bản thiết kế. */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ACCENTS, IMAGES, POSTERS } from '@/generated/data';
-import { bgPoster, cardVideo } from './media';
+import { bgPoster, cardVideo, heroVideo } from './media';
 import type { State } from './view';
 
 const $$ = (sel: string) => Array.from(document.querySelectorAll(sel));
@@ -29,7 +29,9 @@ export function playVid(
       if (isActive()) el.play().catch(() => {});
     });
   }
-  if (!el.getAttribute('src')) {
+  // Đổi src khi bản cần dùng không còn khớp — xảy ra lúc xoay ngang điện
+  // thoại, vì bản dọc và bản ngang là hai file cắt khác khung.
+  if (el.getAttribute('src') !== src) {
     // Poster cũng gán lười: nếu để sẵn trong HTML thì cả năm ảnh nền đều tải
     // ngay lúc vào trang, trong khi chỉ một ảnh được nhìn thấy.
     if (poster && !el.getAttribute('poster')) el.setAttribute('poster', poster);
@@ -146,7 +148,9 @@ export function syncDom(st: State) {
   });
 
   /* --- dải thẻ hero + video nền --- */
-  const narrowStrip = (document.documentElement.clientWidth || window.innerWidth) < 720;
+  const vw = document.documentElement.clientWidth || window.innerWidth;
+  const vh = document.documentElement.clientHeight || window.innerHeight;
+  const narrowStrip = vw < 720;
   $$('[data-hero-card]').forEach((el: any, i) => {
     el.style.flex = narrowStrip ? '0 0 auto' : i === st.active ? '1 1 44%' : '1 1 14%';
   });
@@ -156,7 +160,7 @@ export function syncDom(st: State) {
     el.style.transform = on ? 'scale(1)' : 'scale(1.18)';
     el.style.filter = on ? 'blur(0px)' : 'blur(18px)';
     el.muted = true;
-    if (on) playVid(el, IMAGES[i], () => i === st.active, bgPoster(POSTERS[i]));
+    if (on) playVid(el, heroVideo(IMAGES[i], vw, vh), () => i === st.active, bgPoster(POSTERS[i]));
     else el.pause();
   });
   $$('[data-hero-cardvid]').forEach((el: any, i) => {

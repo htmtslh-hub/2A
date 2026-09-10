@@ -84,6 +84,34 @@ VIDEOS.forEach((rel, i) => {
   console.log(`  hero-${i + 1}-sm.mp4  -> ${mb(dst)}MB`);
 });
 
+/* Video nền cho điện thoại dọc.
+   Màn hình dọc cắt video ngang còn một dải hẹp ở giữa rồi phóng to lên, nên
+   bản 1280px ngang vừa nặng vừa mờ. Cắt sẵn khung 9:16 ở đúng độ phân giải
+   màn hình thì nét hơn hẳn mà file lại nhỏ hơn. */
+console.log('== video nền cho điện thoại dọc ==');
+VIDEOS.forEach((rel, i) => {
+  const src = resolve(SRC, rel);
+  const dst = resolve(OUT, `hero-${i + 1}-mob.mp4`);
+  if (!existsSync(src)) {
+    console.warn('  THIẾU:', rel);
+    return;
+  }
+  run([
+    '-i', src,
+    '-vf', 'crop=ih*9/16:ih,scale=480:854',
+    '-c:v', 'libx264',
+    '-preset', 'slow',
+    // Màn hình nhỏ giấu được nhiễu nén tốt hơn nhiều so với màn hình lớn;
+    // so ba mức 30/32/34 thì 32 không phân biệt được với 30 nhưng nhẹ hơn 25%.
+    '-crf', '32',
+    '-pix_fmt', 'yuv420p',
+    '-an',
+    '-movflags', '+faststart',
+    dst,
+  ]);
+  console.log(`  hero-${i + 1}-mob.mp4  -> ${kb(dst)}KB`);
+});
+
 console.log('== ảnh poster ==');
 POSTERS.forEach(([rel, name]) => {
   const src = resolve(SRC, rel);

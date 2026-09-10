@@ -47,6 +47,18 @@ const REWIRE = [
     replace: '$1{{ toggleAuthMode }}$2',
   },
   {
+    what: 'link pháp lý ở footer',
+    // Paddle bắt buộc Điều khoản / Bảo mật / Hoàn tiền phải truy cập được từ
+    // navigation. Thiết kế gốc chỉ có 4 link lặp lại tab, nên chèn thêm một
+    // hàng link nữa ngay sau đó.
+    find: /(<sc-for list="\{\{ footerLinks \}\}"[\s\S]*?<\/sc-for>)/,
+    replace:
+      '$1\n          <sc-for list="{{ legalLinks }}" as="lg2">' +
+      '<a href="{{ lg2.href }}" style="font-size:13px; color:#949ba4; letter-spacing:.03em;" ' +
+      'style-hover="color:#ffffff;">{{ lg2.label }}</a>' +
+      '</sc-for>',
+  },
+  {
     what: 'ô mật khẩu — ẩn khi modal ở chế độ quên mật khẩu',
     find: /(<label [^>]*>\s*\{\{ t\.authPass \}\}[\s\S]*?<\/label>)/,
     replace: '<sc-if value="{{ showPassword }}">$1</sc-if>',

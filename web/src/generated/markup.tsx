@@ -868,6 +868,11 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                           {fl.label}
                         </button>
                     ))}
+                  {(vm.legalLinks ?? []).map((lg2: any, lg2_i: number) => (
+                        <a key={lg2_i} className="hv3" style={{ fontSize: "13px", color: "#949ba4", letterSpacing: ".03em" }} href={lg2.href}>
+                          {lg2.label}
+                        </a>
+                    ))}
                 </div>
               </div>
               <div style={{ maxWidth: "1200px", margin: "28px auto 0", paddingTop: "20px", borderTop: "1px solid rgba(236,238,241,.08)", display: "flex", flexWrap: "wrap", gap: "16px", justifyContent: "space-between", fontSize: "12px", color: "#616872" }}>

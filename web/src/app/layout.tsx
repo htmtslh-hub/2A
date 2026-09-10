@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Unbounded, Be_Vietnam_Pro } from 'next/font/google';
 import './globals.css';
+import { COMPANY } from '@/lib/company';
 import Providers from './providers';
 
 const display = Unbounded({
@@ -18,6 +19,8 @@ const body = Be_Vietnam_Pro({
 });
 
 export const metadata: Metadata = {
+  // Cần metadataBase thì Next mới dựng được URL tuyệt đối cho ảnh OG.
+  metadataBase: new URL(COMPANY.siteUrl),
   title: 'Agentic — Giao diện web cao cấp, dựng sẵn để bán',
   description:
     'Thư viện giao diện web dựng sẵn: layout, chuyển động, responsive và nội dung mẫu. Tải về, thay chữ, lên sóng.',
@@ -26,6 +29,13 @@ export const metadata: Metadata = {
     description:
       'Mỗi giao diện là một file hoàn chỉnh. Mua một lần, dùng vĩnh viễn, kèm giấy phép thương mại.',
     type: 'website',
+    url: COMPANY.siteUrl,
+    siteName: COMPANY.brand,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Agentic — Giao diện web cao cấp, dựng sẵn để bán',
+    description: 'Tải về, thay chữ, lên sóng. Giấy phép thương mại không giới hạn.',
   },
 };
 

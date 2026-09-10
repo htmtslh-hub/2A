@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { RefObject } from 'react';
 import { REGISTER_STRINGS, FORGOT_STRINGS, NAV_ACCOUNT } from './i18n-extra';
+import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
 import {
   I18N,
   IDS,
@@ -371,6 +372,16 @@ export function buildView(
       label: t.nav[i],
       onSelect: () => goTab(TAB_KEYS[i] as TabKey),
     })),
+    // Paddle yêu cầu Điều khoản / Bảo mật / Hoàn tiền truy cập được từ
+    // navigation, nên các link này nằm cố định ở footer.
+    legalLinks: [
+      { href: PAGE_PATHS.about, label: PAGE_LABELS[lang].about },
+      { href: PAGE_PATHS.contact, label: PAGE_LABELS[lang].contact },
+      ...(['terms', 'privacy', 'refund', 'license'] as const).map((k) => ({
+        href: LEGAL_PATHS[k],
+        label: LEGAL_LABELS[lang][k],
+      })),
+    ],
     steps: t.steps.map((st2: any, i: number) => ({
       no: String(i + 1).padStart(2, '0'),
       title: st2.title,

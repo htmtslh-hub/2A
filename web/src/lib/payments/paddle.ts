@@ -76,8 +76,12 @@ export const paddleAdapter: PaymentProviderAdapter = {
       items: [{ quantity: 1, price, ...(productId ? { product_id: productId } : {}) }],
       // Gửi kèm id đơn của mình để webhook đối chiếu chắc chắn.
       custom_data: { orderId: input.orderId },
+      // Paddle ghép URL này với '?_ptxn=<id>' rồi trả về ở checkout.url.
+      // Đó phải là trang của mình có nhúng Paddle.js (Paddle không host sẵn
+      // trang thanh toán), và phải trùng với Default payment link khai trong
+      // dashboard, nếu không API từ chối tạo transaction.
       checkout: {
-        url: `${input.baseUrl}/thanh-toan/thanh-cong?order=${input.orderId}`,
+        url: `${input.baseUrl}/thanh-toan/paddle`,
       },
     };
 

@@ -92,6 +92,14 @@ const REWIRE = [
       '</sc-if>',
   },
   {
+    what: 'nút chính ở hero -> dẫn sang đặt dịch vụ khi đang xem thẻ agent',
+    // Bản thiết kế cho nút này luôn nhảy sang thư viện giao diện, kể cả khi
+    // khách đang xem thẻ "Agent Bán Hàng". Tức là hứa agent, giao template.
+    // Giờ nhãn và hành động đổi theo thẻ đang chọn.
+    find: /(<button onClick=")\{\{ goLibrary \}\}("[^>]*>)\{\{ t\.heroCta1 \}\}(<\/button>)/,
+    replace: '$1{{ heroCta }}$2{{ heroCtaLabel }}$3',
+  },
+  {
     what: 'dải nút chuyển tab -> landmark <nav>',
     // Người dùng trình đọc màn hình nhảy theo landmark. Thiết kế gốc để dải
     // tab trong một <div> trơn nên không nhảy tới được.

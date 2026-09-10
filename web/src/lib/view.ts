@@ -6,6 +6,7 @@ import { REGISTER_STRINGS, FORGOT_STRINGS, NAV_ACCOUNT } from './i18n-extra';
 import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
 import { COMPANY } from './company';
 import { bgPoster } from './media';
+import { HERO_SERVICE_CTA, SERVICE, SERVICE_PATH } from './service-content';
 import {
   I18N,
   IDS,
@@ -77,6 +78,8 @@ export interface Imperative {
   onForgotPassword: (email: string) => void;
   /** Mở trang đơn hàng của tài khoản đang đăng nhập. */
   goAccount: () => void;
+  /** Mở trang đặt làm agent, chọn sẵn loại khách vừa bấm. */
+  goService: (kind?: string) => void;
   /** Đăng nhập bằng Google. */
   onGoogleSignIn: () => void;
   /** Bắt đầu thanh toán: mở PayOS, hoặc yêu cầu đăng nhập trước. */
@@ -359,6 +362,11 @@ export function buildView(
       const bar = c.querySelector('[data-scrollbar]') as HTMLElement | null;
       if (bar) bar.style.opacity = '0';
     },
+    // Thẻ đầu ("Về Tôi") là giới thiệu người bán nên vẫn dẫn sang thư viện
+    // giao diện. Bốn thẻ sau là agent — hàng đặt làm, không tải về được —
+    // nên dẫn thẳng sang trang gửi yêu cầu, chọn sẵn đúng loại.
+    heroCtaLabel: active === 0 ? t.heroCta1 : HERO_SERVICE_CTA[lang],
+    heroCta: () => (active === 0 ? goTab('library') : im.goService(IDS[active])),
     langCode: ({ vi: 'VI', en: 'EN', zh: '中' } as Record<string, string>)[lang] || 'VI',
     activeTabLabel:
       tab === 'detail' && detail ? detail.name : t.nav[Math.max(0, TAB_KEYS.indexOf(tab))],
@@ -403,6 +411,7 @@ export function buildView(
     // Paddle yêu cầu Điều khoản / Bảo mật / Hoàn tiền truy cập được từ
     // navigation, nên các link này nằm cố định ở footer.
     legalLinks: [
+      { href: SERVICE_PATH, label: SERVICE[lang].navLabel },
       { href: PAGE_PATHS.about, label: PAGE_LABELS[lang].about },
       { href: PAGE_PATHS.contact, label: PAGE_LABELS[lang].contact },
       ...(['terms', 'privacy', 'refund', 'license'] as const).map((k) => ({
@@ -429,7 +438,9 @@ export function buildView(
       onCta: () => {
         if (i === 0) goTab('library');
         else if (i === 1) im.startCheckout('BUNDLE');
-        else goTab('cta');
+        // Gói "Thiết kế riêng — Liên hệ" là dịch vụ, trước đây chỉ nhảy
+        // xuống ô thu email chung chung.
+        else im.goService('custom');
       },
     })),
     quotes: t.quotes,

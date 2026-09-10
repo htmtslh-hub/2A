@@ -175,3 +175,74 @@ export function resetPasswordEmail(resetUrl: string, lang: Lang = 'vi') {
     html: shell(t.title, t.body.map(p).join('') + button(resetUrl, t.cta), lang),
   };
 }
+
+/* ---------- yêu cầu đặt làm agent ---------- */
+
+const ENQUIRY: Record<Lang, { subject: string; title: string; body: string[] }> = {
+  vi: {
+    subject: 'Đã nhận yêu cầu đặt làm agent',
+    title: 'Cảm ơn, tôi đã nhận được yêu cầu',
+    body: [
+      'Tôi sẽ đọc kỹ và trả lời bạn qua email này trong vòng 2 ngày làm việc.',
+      'Nếu trong lúc chờ bạn nghĩ ra thêm chi tiết nào, cứ trả lời thẳng vào thư này.',
+    ],
+  },
+  en: {
+    subject: 'Your agent request has been received',
+    title: 'Thank you — your request is in',
+    body: [
+      'I will read it properly and reply to this address within 2 working days.',
+      'If anything else comes to mind while you wait, just reply to this email.',
+    ],
+  },
+  zh: {
+    subject: '已收到您的智能体需求',
+    title: '感谢您，需求已收到',
+    body: ['我会仔细阅读，并在两个工作日内通过本邮箱回复您。', '等待期间若想到其他细节，直接回复此邮件即可。'],
+  },
+};
+
+/** Thư gửi khách: xác nhận đã nhận yêu cầu. */
+export function enquiryReceiptEmail(lang: Lang = 'vi') {
+  const t = ENQUIRY[lang] || ENQUIRY.vi;
+  return { subject: t.subject, html: shell(t.title, t.body.map(p).join(''), lang) };
+}
+
+/** Thư gửi chủ website: nội dung yêu cầu, để trả lời được ngay.
+ *  Luôn tiếng Việt vì người đọc là chủ site, không phải khách. */
+export function enquiryAlertEmail(d: {
+  kind: string;
+  name: string;
+  email: string;
+  phone?: string | null;
+  company?: string | null;
+  budget?: string | null;
+  message: string;
+  lang: string;
+}) {
+  const row = (k: string, v?: string | null) =>
+    v ? `<p style="margin:0 0 8px;font-size:14px;color:#c3c9d1"><b style="color:#fff">${k}:</b> ${esc(v)}</p>` : '';
+  const body =
+    row('Loại agent', d.kind) +
+    row('Tên', d.name) +
+    row('Email', d.email) +
+    row('Điện thoại', d.phone) +
+    row('Công ty', d.company) +
+    row('Ngân sách', d.budget) +
+    row('Ngôn ngữ khách xem', d.lang) +
+    `<p style="margin:18px 0 6px;font-size:14px;color:#fff"><b>Nội dung:</b></p>` +
+    `<p style="margin:0;padding:14px;border-radius:10px;background:#22262e;font-size:14px;line-height:1.6;color:#c3c9d1;white-space:pre-wrap">${esc(d.message)}</p>`;
+  return {
+    subject: `[Agentic] Yêu cầu ${d.kind} — ${d.name}`,
+    html: shell('Có yêu cầu đặt làm agent mới', body, 'vi'),
+  };
+}
+
+/** Nội dung do khách nhập, đi thẳng vào HTML thư nên phải thoát ký tự. */
+function esc(v: string) {
+  return v
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}

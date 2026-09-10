@@ -187,8 +187,8 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                       {vm.activeBlurb}
                     </p>
                     <div style={{ display: "flex", alignItems: "center", gap: "18px", marginTop: "34px", flexWrap: "wrap" }}>
-                      <button className="hv5" style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "15px 28px", borderRadius: "16px", fontFamily: "inherit", fontWeight: "700", fontSize: "14px", letterSpacing: ".03em", cursor: "pointer", background: "linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%)", border: "1px solid rgba(255,255,255,.32)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -6px rgba(255,244,230,.55), 0 18px 40px rgba(52,42,34,.34)" }} onClick={vm.goLibrary}>
-                        {vm.t.heroCta1}
+                      <button className="hv5" style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "15px 28px", borderRadius: "16px", fontFamily: "inherit", fontWeight: "700", fontSize: "14px", letterSpacing: ".03em", cursor: "pointer", background: "linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%)", border: "1px solid rgba(255,255,255,.32)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -6px rgba(255,244,230,.55), 0 18px 40px rgba(52,42,34,.34)" }} onClick={vm.heroCta}>
+                        {vm.heroCtaLabel}
                       </button>
                       <button style={{ display: "inline-flex", alignItems: "center", gap: "12px", background: "transparent", border: "none", cursor: "pointer", fontFamily: "inherit", color: "#ffffff", fontSize: "14px", fontWeight: "600" }} onClick={vm.goProcess}>
                         <span style={{ width: "52px", height: "52px", borderRadius: "50%", border: "1px solid rgba(236,238,241,.4)", display: "inline-flex", alignItems: "center", justifyContent: "center", animation: "pulseRing 2.6s infinite", flex: "none" }}>

@@ -184,3 +184,21 @@ model Lead {
   source    String   @default("cta")
   createdAt DateTime @default(now())
 }
+
+/// Yêu cầu đặt làm agent gửi từ trang /dich-vu.
+/// Khác Lead ở chỗ Lead chỉ là email đổi lấy mẫu miễn phí, còn đây là người
+/// hỏi mua dịch vụ — cần lưu đủ để gọi lại được.
+model ServiceEnquiry {
+  id        String   @id @default(cuid())
+  kind      String   // sales | ops | data | custom
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  budget    String?
+  message   String
+  lang      String   @default("vi")
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}

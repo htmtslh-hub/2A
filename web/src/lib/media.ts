@@ -1,35 +1,26 @@
-/* Mỗi ảnh và video có nhiều bản kích thước khác nhau, sinh bởi tools/media.mjs.
-   Chọn đúng bản cho từng chỗ hiển thị là khoản tiết kiệm lớn nhất của trang
-   chủ: thẻ trong dải hero chỉ rộng 240px (75px trên điện thoại) nên không có
-   lý do gì tải bản 1280px vào đó. */
+/* Mỗi ảnh và video có nhiều bản, sinh bởi tools/media.mjs. Chọn đúng bản cho
+   từng chỗ hiển thị.
 
-/** Video 480px cho thẻ nhỏ trong dải hero. */
-export const cardVideo = (src: string) => src.replace(/\.mp4$/, '-sm.mp4');
+   LƯU Ý khi thêm bản mới: thẻ trong dải hero là khung DỌC (301x376 khi mở
+   rộng). object-fit:cover lấy chiều nào thiếu làm chuẩn, nên với khung dọc
+   thì chiều cao quyết định chứ không phải chiều rộng. Đưa một file ngang
+   480x270 vào đó là bị phóng to 1,4 lần và mờ — đã mắc một lần rồi. */
 
-/** Poster 480px WebP cho thẻ nhỏ. */
-export const cardPoster = (src: string) => src.replace(/\.jpg$/, '-sm.webp');
-
-/** Poster 960px WebP cho video nền toàn màn hình. */
+/** Poster 960px WebP. Dùng cho cả video nền lẫn thẻ: cùng một file nên tải
+ *  một lần, và 960px đủ nét cho thẻ 301x376 kể cả trên màn hình Retina. */
 export const bgPoster = (src: string) => src.replace(/\.jpg$/, '-bg.webp');
 
 /** Video nền đã cắt sẵn khung 9:16 cho điện thoại dọc. */
 export const portraitVideo = (src: string) => src.replace(/\.mp4$/, '-mob.mp4');
 
-/** Chọn video nền theo khung nhìn hiện tại.
+/** Chọn video nền theo khung nhìn.
  *
  *  Màn hình dọc hẹp áp object-fit:cover lên video ngang thì chỉ thấy một dải
  *  hẹp ở giữa, lại còn bị phóng to — vừa nặng vừa mờ. Bản cắt sẵn 480x854
- *  đúng bằng thứ màn hình hiển thị nên nét hơn mà file nhỏ hơn 40%.
+ *  đúng bằng thứ màn hình hiển thị nên nét hơn mà file nhỏ hơn 60%.
  *
  *  Chỉ đổi khi vừa hẹp vừa dọc: máy tính bảng nằm ngang hay cửa sổ trình
  *  duyệt hẹp vẫn phải dùng bản ngang, không thì khung hình bị cắt sai. */
 export function heroVideo(src: string, w: number, h: number) {
   return w < 720 && h > w ? portraitVideo(src) : src;
-}
-
-/** Ảnh chờ của video nền, chọn theo khung nhìn.
- *  Nó chỉ hiện trong khoảnh khắc trước khi video giải mã xong, nên trên
- *  điện thoại không đáng tải bản 960px. */
-export function heroPoster(src: string, w: number, h: number) {
-  return w < 720 && h > w ? cardPoster(src) : bgPoster(src);
 }

@@ -57,33 +57,6 @@ VIDEOS.forEach((rel, i) => {
   console.log(`  hero-${i + 1}.mp4  ${mb(src)}MB -> ${mb(dst)}MB`);
 });
 
-/* Video cho thẻ nhỏ ở dải hero.
-   Thẻ rộng 240px trên desktop và 75px trên mobile, nên bản 1280px là thừa
-   gấp nhiều lần. Trước đây thẻ dùng chung file với video nền, mà vì là hai
-   thẻ <video> riêng nên trình duyệt tải cùng một file hai lượt — nửa dung
-   lượng trang chủ là bản sao. */
-console.log('== video thẻ (bản nhỏ) ==');
-VIDEOS.forEach((rel, i) => {
-  const src = resolve(SRC, rel);
-  const dst = resolve(OUT, `hero-${i + 1}-sm.mp4`);
-  if (!existsSync(src)) {
-    console.warn('  THIẾU:', rel);
-    return;
-  }
-  run([
-    '-i', src,
-    '-vf', "scale='min(480,iw)':-2",
-    '-c:v', 'libx264',
-    '-preset', 'slow',
-    '-crf', '32',
-    '-pix_fmt', 'yuv420p',
-    '-an',
-    '-movflags', '+faststart',
-    dst,
-  ]);
-  console.log(`  hero-${i + 1}-sm.mp4  -> ${mb(dst)}MB`);
-});
-
 /* Video nền cho điện thoại dọc.
    Màn hình dọc cắt video ngang còn một dải hẹp ở giữa rồi phóng to lên, nên
    bản 1280px ngang vừa nặng vừa mờ. Cắt sẵn khung 9:16 ở đúng độ phân giải
@@ -124,17 +97,13 @@ POSTERS.forEach(([rel, name]) => {
   console.log(`  ${name}  ${mb(src)}MB -> ${mb(dst)}MB`);
 });
 
-/* Poster bản nhỏ cho thẻ, và bản WebP cho nền.
-   WebP nhỏ hơn JPEG cùng chất lượng khoảng một phần ba. */
-console.log('== poster bản nhỏ + WebP ==');
+/* Poster dạng WebP, nhỏ hơn JPEG cùng chất lượng khoảng một phần ba.
+   Một bản 960px dùng chung cho cả video nền lẫn thẻ. */
+console.log('== poster WebP ==');
 POSTERS.forEach(([rel, name]) => {
   const src = resolve(SRC, rel);
   if (!existsSync(src)) return;
   const base = name.replace(/\.jpg$/, '');
-
-  const sm = resolve(OUT, `${base}-sm.webp`);
-  run(['-i', src, '-vf', "scale='min(480,iw)':-2", '-quality', '72', sm]);
-  console.log(`  ${base}-sm.webp   -> ${kb(sm)}KB`);
 
   const bg = resolve(OUT, `${base}-bg.webp`);
   run(['-i', src, '-vf', "scale='min(960,iw)':-2", '-quality', '76', bg]);

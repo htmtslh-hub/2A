@@ -5,7 +5,7 @@ import type { RefObject } from 'react';
 import { REGISTER_STRINGS, FORGOT_STRINGS, NAV_ACCOUNT } from './i18n-extra';
 import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
 import { COMPANY } from './company';
-import { cardPoster } from './media';
+import { bgPoster } from './media';
 import {
   I18N,
   IDS,
@@ -370,7 +370,7 @@ export function buildView(
     heroBgs: t.services.map((_sv: any, i: number) => ({ id: IDS[i], poster: undefined })),
     cards: t.services.map((sv: any, i: number) => ({
       id: IDS[i],
-      poster: cardPoster(POSTERS[i]),
+      poster: bgPoster(POSTERS[i]),
       kicker: sv.kicker,
       title: sv.title,
       no: String(i + 1).padStart(2, '0'),

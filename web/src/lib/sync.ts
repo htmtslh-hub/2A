@@ -2,7 +2,7 @@
    Giữ nguyên cách thao tác DOM để đảm bảo giao diện giống hệt bản thiết kế. */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ACCENTS, IMAGES, POSTERS } from '@/generated/data';
-import { cardVideo, heroPoster, heroVideo } from './media';
+import { bgPoster, heroVideo } from './media';
 import type { State } from './view';
 
 const $$ = (sel: string) => Array.from(document.querySelectorAll(sel));
@@ -161,12 +161,14 @@ export function syncDom(st: State) {
     el.style.filter = on ? 'blur(0px)' : 'blur(18px)';
     el.muted = true;
     if (on)
-      playVid(el, heroVideo(IMAGES[i], vw, vh), () => i === st.active, heroPoster(POSTERS[i], vw, vh));
+      playVid(el, heroVideo(IMAGES[i], vw, vh), () => i === st.active, bgPoster(POSTERS[i]));
     else el.pause();
   });
   $$('[data-hero-cardvid]').forEach((el: any, i) => {
     el.muted = true;
-    if (i === st.active) playVid(el, cardVideo(IMAGES[i]), () => i === st.active);
+    // Bản đầy đủ, không phải bản thu nhỏ: thẻ là khung dọc 301x376 nên file
+    // ngang 480x270 bị phóng to và mờ. Dùng chung file với video nền.
+    if (i === st.active) playVid(el, IMAGES[i], () => i === st.active);
     else el.pause();
   });
 

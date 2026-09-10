@@ -91,6 +91,63 @@ const REWIRE = [
       '<p role="alert" style="margin:-16px 0 18px; font-size:13px; line-height:1.5; color:var(--acc);">{{ authError }}</p>' +
       '</sc-if>',
   },
+  {
+    what: 'dải nút chuyển tab -> landmark <nav>',
+    // Người dùng trình đọc màn hình nhảy theo landmark. Thiết kế gốc để dải
+    // tab trong một <div> trơn nên không nhảy tới được.
+    find: /<div data-island-tabs=""([\s\S]*?)<\/div>/,
+    replace: '<nav aria-label="{{ t.navAria }}" data-island-tabs=""$1</nav>',
+  },
+  {
+    what: 'mở <main> trước khối nội dung + tiêu đề H1 thật cho trang',
+    // Thiết kế gốc không có landmark <main>, và H1 nhìn thấy được lại là tên
+    // danh mục đang chọn ("Về Tôi") chứ không phải thông điệp của trang —
+    // vừa hại SEO vừa khiến người dùng trình đọc màn hình mất phương hướng.
+    // Chèn một H1 ẩn mang đúng nội dung, giữ nguyên phần nhìn thấy.
+    find: /(<!-- ===== TAB: HOME)/,
+    replace: '<main><h1 class="sr-only">{{ pageH1 }}</h1>$1',
+  },
+  {
+    what: 'đóng </main> trước footer',
+    find: /(<!-- ===== FOOTER ===== -->)/,
+    replace: '</main>$1',
+  },
+  {
+    what: 'hạ H1 hero xuống <p> (H1 thật đã nằm ẩn ở đầu main)',
+    find: /<h1( style="margin:0; padding-top:\.06em;[^"]*">\{\{ activeTitle \}\})<\/h1>/,
+    replace: '<p$1</p>',
+  },
+  {
+    what: 'hạ H1 trang chi tiết xuống <p>',
+    find: /<h1( style="margin:0 0 14px;[^"]*">\{\{ detail\.name \}\})<\/h1>/,
+    replace: '<p$1</p>',
+  },
+];
+
+/* ---------- 2c. thay thế toàn cục ----------
+   Khác REWIRE ở chỗ đây là chuỗi thường và phải khớp đúng số lần đã biết.
+   Sai số lần thì dừng, để thiết kế đổi mà mình không biết là không lọt. */
+const GLOBAL_SUB = [
+  {
+    what: 'email liên hệ hiển thị trên giao diện',
+    // Thiết kế ghi cứng một địa chỉ không có thật. Trỏ về COMPANY.email để
+    // khách không gửi thư vào hư không.
+    from: 'hello@agentic.vn',
+    to: '{{ contactEmail }}',
+    times: 5,
+  },
+  {
+    what: 'màu chữ phụ quá tối (tương phản 3.16, chuẩn cần 4.5)',
+    from: '#616872',
+    to: '#868d97',
+    times: 5,
+  },
+  {
+    what: 'video nền là trang trí — giấu khỏi trình đọc màn hình',
+    from: '<video ',
+    to: '<video aria-hidden="true" ',
+    times: 2,
+  },
 ];
 
 for (const r of REWIRE) {
@@ -99,6 +156,14 @@ for (const r of REWIRE) {
   if (markupHtml === before) {
     throw new Error(`convert: không tìm thấy ${r.what} để nối vào thanh toán`);
   }
+}
+
+for (const g of GLOBAL_SUB) {
+  const n = markupHtml.split(g.from).length - 1;
+  if (n !== g.times) {
+    throw new Error(`convert: "${g.what}" — cần ${g.times} chỗ khớp "${g.from}", tìm thấy ${n}`);
+  }
+  markupHtml = markupHtml.split(g.from).join(g.to);
 }
 
 /* ---------- 3. tiện ích ---------- */

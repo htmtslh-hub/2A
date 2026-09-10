@@ -19,9 +19,19 @@ import Toast from './Toast';
 
 const HTML_LANG: Record<string, string> = { vi: 'vi', en: 'en', zh: 'zh-CN' };
 
-export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: string }) {
+export default function AgenticSite({
+  defaultTab = 'home',
+  initialLang = 'vi',
+}: {
+  defaultTab?: string;
+  /** Ngôn ngữ đọc từ cookie ở server. Dựng sẵn đúng ngôn ngữ ngay từ HTML
+   *  đầu tiên, thay vì dựng tiếng Việt rồi đổi sau khi mount — khách chọn
+   *  tiếng Anh sẽ không còn thấy chớp một nhịp tiếng Việt. */
+  initialLang?: LangCode;
+}) {
   const [state, setStateRaw] = useState<State>(() => ({
     ...INITIAL_STATE,
+    lang: initialLang,
     tab: (TAB_KEYS.includes(defaultTab) ? defaultTab : 'home') as State['tab'],
   }));
 
@@ -96,16 +106,18 @@ export default function AgenticSite({ defaultTab = 'home' }: { defaultTab?: stri
     try {
       const saved = localStorage.getItem('agentic-lang') as LangCode | null;
       if (saved && (I18N as Record<string, unknown>)[saved]) {
-        // Ngôn ngữ chỉ biết được ở trình duyệt; server luôn dựng bản 'vi' nên
-        // phải chỉnh lại sau khi mount, không thể đặt trong useState.
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setState({ lang: saved });
+        // Thường trùng với cookie server đã đọc. Chỉ lệch khi cookie bị chặn
+        // hoặc hết hạn, khi đó localStorage là nguồn đúng hơn.
+        if (saved !== initialLang) {
+          // eslint-disable-next-line react-hooks/set-state-in-effect
+          setState({ lang: saved });
+        }
         applyLang(saved);
         return;
       }
     } catch {}
-    applyLang('vi');
-  }, [applyLang, setState]);
+    applyLang(initialLang);
+  }, [applyLang, setState, initialLang]);
 
   /* --- observer cho hiệu ứng xuất hiện + lắng nghe cuộn/đổi kích thước --- */
   useEffect(() => {

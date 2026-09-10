@@ -1,13 +1,21 @@
 /* Port của sync() + hiệu ứng trong componentDidMount của Agentic.dc.html.
    Giữ nguyên cách thao tác DOM để đảm bảo giao diện giống hệt bản thiết kế. */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ACCENTS, IMAGES } from '@/generated/data';
+import { ACCENTS, IMAGES, POSTERS } from '@/generated/data';
+import { bgPoster, cardVideo } from './media';
 import type { State } from './view';
 
 const $$ = (sel: string) => Array.from(document.querySelectorAll(sel));
 
-/** Gán src lười cho video rồi phát. */
-export function playVid(el: HTMLVideoElement, i: number, isActive: () => boolean) {
+/** Gán src lười cho video rồi phát.
+ *  `src` truyền vào chứ không tra theo chỉ số, vì video nền dùng bản 1280px
+ *  còn thẻ nhỏ dùng bản 480px — hai file khác nhau cho cùng một cảnh. */
+export function playVid(
+  el: HTMLVideoElement,
+  src: string,
+  isActive: () => boolean,
+  poster?: string
+) {
   el.muted = true;
   el.loop = true;
   const any = el as any;
@@ -22,8 +30,11 @@ export function playVid(el: HTMLVideoElement, i: number, isActive: () => boolean
     });
   }
   if (!el.getAttribute('src')) {
+    // Poster cũng gán lười: nếu để sẵn trong HTML thì cả năm ảnh nền đều tải
+    // ngay lúc vào trang, trong khi chỉ một ảnh được nhìn thấy.
+    if (poster && !el.getAttribute('poster')) el.setAttribute('poster', poster);
     el.setAttribute('preload', 'auto');
-    el.setAttribute('src', IMAGES[i]);
+    el.setAttribute('src', src);
   }
   const p = el.play();
   if (p && p.catch) p.catch(() => {});
@@ -145,12 +156,12 @@ export function syncDom(st: State) {
     el.style.transform = on ? 'scale(1)' : 'scale(1.18)';
     el.style.filter = on ? 'blur(0px)' : 'blur(18px)';
     el.muted = true;
-    if (on) playVid(el, i, () => i === st.active);
+    if (on) playVid(el, IMAGES[i], () => i === st.active, bgPoster(POSTERS[i]));
     else el.pause();
   });
   $$('[data-hero-cardvid]').forEach((el: any, i) => {
     el.muted = true;
-    if (i === st.active) playVid(el, i, () => i === st.active);
+    if (i === st.active) playVid(el, cardVideo(IMAGES[i]), () => i === st.active);
     else el.pause();
   });
 

@@ -8,3 +8,30 @@
   --display: var(--font-display), 'ZCOOL XiaoWei', 'Noto Sans SC', sans-serif;
   --body: var(--font-body), 'Noto Sans SC', system-ui, sans-serif;
 }
+
+/* ── Trợ năng ───────────────────────────────────────────────────────────
+   Bản thiết kế gốc chỉ báo focus bằng brightness(1.64) và bỏ hẳn outline.
+   Đi bằng phím Tab thì gần như không thấy con trỏ đang ở đâu — lỗi WCAG
+   2.4.7. Ở đây trả lại một vòng viền thật.
+
+   outline-offset đẩy vòng viền ra ngoài phần tử, tức là nó nằm trên nền
+   tối của trang chứ không nằm trên nút, nên viền trắng luôn nổi kể cả với
+   những nút vốn đã sáng màu. */
+:where(a[href], button, input, textarea, select, summary, [tabindex]:not([tabindex='-1'])):focus-visible {
+  outline: 3px solid #ffffff !important;
+  outline-offset: 3px;
+}
+
+/* Chữ chỉ dành cho trình đọc màn hình: H1 thật của trang, nhãn landmark.
+   Không dùng display:none — như thế trình đọc màn hình cũng bỏ qua. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

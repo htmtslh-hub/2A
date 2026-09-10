@@ -4,6 +4,8 @@
 import type { RefObject } from 'react';
 import { REGISTER_STRINGS, FORGOT_STRINGS, NAV_ACCOUNT } from './i18n-extra';
 import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
+import { COMPANY } from './company';
+import { cardPoster } from './media';
 import {
   I18N,
   IDS,
@@ -88,6 +90,23 @@ export interface Refs {
 
 export type View = Record<string, any>;
 
+/* Chữ chỉ dành cho trình đọc màn hình và công cụ tìm kiếm — không hiện trên
+   giao diện nên không lấy từ bộ chữ của bản thiết kế. */
+const NAV_ARIA: Record<string, string> = {
+  vi: 'Điều hướng chính',
+  en: 'Main navigation',
+  zh: '主导航',
+};
+
+/** H1 thật của trang. Phần nhìn thấy ở hero là tên danh mục đang chọn nên
+ *  không dùng làm tiêu đề cấp một được — Google sẽ đọc trang chủ thành
+ *  "Về Tôi". H1 này ẩn về mặt hình ảnh nhưng vẫn là tiêu đề của tài liệu. */
+const PAGE_H1: Record<string, string> = {
+  vi: 'Agentic — giao diện web cao cấp dựng sẵn, kèm giấy phép thương mại',
+  en: 'Agentic — premium ready-made website templates with a commercial licence',
+  zh: 'Agentic — 高端预制网站模板，含商用授权',
+};
+
 export function buildView(
   state: State,
   refs: Refs,
@@ -108,6 +127,9 @@ export function buildView(
       : null;
   const t = {
     ...base,
+    // Nhãn cho landmark <nav> và H1 ẩn — chỉ trình đọc màn hình và công cụ
+    // tìm kiếm thấy, nên không nằm trong bộ chữ của bản thiết kế.
+    navAria: NAV_ARIA[lang],
     ...(modeStrings
       ? {
           authTitle: modeStrings.title,
@@ -222,6 +244,10 @@ export function buildView(
 
   return {
     t,
+    // Địa chỉ thật lấy từ company.ts; bản thiết kế ghi cứng một email không
+    // tồn tại nên convert.mjs thay mọi chỗ bằng biến này.
+    contactEmail: COMPANY.email,
+    pageH1: tab === 'detail' && detail ? `${detail.name} — ${COMPANY.brand}` : PAGE_H1[lang],
     langOptions,
     filters,
     templates,
@@ -339,10 +365,12 @@ export function buildView(
     openIsland: () => im.push({ island: true }),
     closeIsland: () => im.push({ island: false }),
     toggleIsland: () => im.push({ island: !state.island }),
-    heroBgs: t.services.map((_sv: any, i: number) => ({ id: IDS[i], poster: POSTERS[i] })),
+    // Poster của video nền để trống ở đây: sync.ts gán cho đúng ảnh đang
+    // hiện. Nếu khai sẵn thì trình duyệt tải cả 5 ảnh nền dù 4 ảnh vô hình.
+    heroBgs: t.services.map((_sv: any, i: number) => ({ id: IDS[i], poster: undefined })),
     cards: t.services.map((sv: any, i: number) => ({
       id: IDS[i],
-      poster: POSTERS[i],
+      poster: cardPoster(POSTERS[i]),
       kicker: sv.kicker,
       title: sv.title,
       no: String(i + 1).padStart(2, '0'),

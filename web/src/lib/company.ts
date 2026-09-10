@@ -16,13 +16,13 @@ export const COMPANY = {
    *  Là công ty  -> ghi đúng tên trên giấy đăng ký kinh doanh.
    *  Cá nhân kinh doanh -> ghi họ tên đầy đủ theo CCCD.
    *  Paddle bắt buộc phải thấy tên này trong Terms. */
-  legalName: 'Dinh Van Trien',
+  legalName: 'Đinh Văn Triển',
 
   /** TẠM — mã số thuế / mã số doanh nghiệp. Để trống nếu là cá nhân. */
   taxId: '',
 
   /** TẠM — địa chỉ đăng ký kinh doanh. */
-  address: 'Van Giang - Hung Yen',
+  address: 'Phi Liet - Van Giang - Hung Yen',
 
   country: 'Việt Nam',
 

@@ -3,6 +3,3 @@
 .env
 .env.*
 !.env.example
-
-# File giao diện bán cho khách — không đưa lên cùng mã nguồn
-private/templates/*.zip

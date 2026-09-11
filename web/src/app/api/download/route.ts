@@ -12,11 +12,14 @@ import { Readable } from 'node:stream';
 import path from 'node:path';
 import { prisma } from '@/lib/db';
 import { auth } from '@/auth';
+import { templateFile } from '@/lib/catalog';
 
 const TEMPLATE_DIR = path.join(process.cwd(), 'private', 'templates');
 
 function fileFor(templateId: string) {
-  return path.join(TEMPLATE_DIR, `${templateId}.zip`);
+  // Qua templateFile() vì mã trong danh mục và tên file đóng gói có thể khác
+  // nhau — xem TEMPLATE_FILE trong lib/catalog.
+  return path.join(TEMPLATE_DIR, `${templateFile(templateId)}.zip`);
 }
 
 function serve(templateId: string) {

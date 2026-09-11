@@ -42,5 +42,4 @@ yarn-error.log*
 next-env.d.ts
 
 # file giao diện bán cho khách — không commit
-private/templates/*.zip
 .neon

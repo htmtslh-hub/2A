@@ -43,6 +43,22 @@ export function currencyForProvider(provider: Provider): Currency {
 
 /* ---------- tra cứu ---------- */
 
+/** Mã mẫu trong danh mục (t1…t18) chưa trùng với tên file đã đóng gói.
+ *
+ *  /api/download tìm file theo `<mã>.zip`, nên nếu không khai ở đây thì
+ *  khách mua t3 sẽ nhận 404 dù trên đĩa đã có kinetiq.zip.
+ *
+ *  Ba mẫu đầu tiên chưa gắn vào ô nào trong danh mục vì tên và thứ tự 17
+ *  mẫu còn chờ chốt lại. Khi chốt xong, thêm dòng ở đây, ví dụ:
+ *      t3: 'kinetiq',
+ *  Mã không khai sẽ tìm file trùng tên chính nó. */
+export const TEMPLATE_FILE: Record<string, string> = {};
+
+/** Tên file (không đuôi) chứa mẫu này. */
+export function templateFile(id: string): string {
+  return TEMPLATE_FILE[id] ?? id;
+}
+
 export function templateExists(id: string): boolean {
   return TPL_META.some((m: { id: string }) => m.id === id);
 }

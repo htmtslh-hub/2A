@@ -43,7 +43,7 @@
         "serve",
         "-l",
         "4323",
-        "_design/build/kinetiq"
+        "_design/templates/kinetiq"
       ],
       "port": 4323
     }

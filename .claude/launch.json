@@ -34,6 +34,18 @@
         "web"
       ],
       "port": 3000
+    },
+    {
+      "name": "template-kinetiq",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "--yes",
+        "serve",
+        "-l",
+        "4323",
+        "_design/build/kinetiq"
+      ],
+      "port": 4323
     }
   ]
 }

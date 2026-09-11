@@ -1,0 +1,61 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "title": "Kinetiq — editorial / industrial",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 3060
+    },
+    {
+      "file": "DunePass.dc.html",
+      "title": "Dune Pass — warm travel",
+      "x": 1600,
+      "y": 0,
+      "w": 1440,
+      "h": 2570
+    },
+    {
+      "file": "Tidal.dc.html",
+      "title": "Tidal — ocean glass",
+      "x": 3200,
+      "y": 0,
+      "w": 1440,
+      "h": 2660
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-kinetiq",
+      "x": 0,
+      "y": -200,
+      "w": 460,
+      "text": "MẪU 1 — KINETIQ\nHướng editorial / brutalist nền sáng.\nArchivo Black, chữ hoa 116px, dải marquee, lưới thẻ 2x2.\nHợp danh mục: agency / product launch.\nẢnh hero hiện là hình vẽ vector trừu tượng — chỗ để thay bằng render 3D sản phẩm."
+    },
+    {
+      "id": "note-dunepass",
+      "x": 1600,
+      "y": -200,
+      "w": 460,
+      "text": "MẪU 2 — DUNE PASS\nHướng ấm terracotta, thẻ bo tròn nổi bóng mềm.\nInstrument Serif + Outfit, hero isometric vẽ bằng SVG.\nHợp danh mục: travel / booking / shop.\nBa thẻ nổi quanh hero là chỗ khoe tính năng đặt chỗ."
+    },
+    {
+      "id": "note-tidal",
+      "x": 3200,
+      "y": -200,
+      "w": 460,
+      "text": "MẪU 3 — TIDAL\nHướng tối, kính mờ, viền neon xanh-tím.\nSpace Grotesk + Manrope, tia sáng xuyên nước và bọt khí bằng SVG.\nHợp danh mục: saas / nonprofit / motion.\nCó một chỗ [YOUR PRICE] để trống, chờ điền giá thật."
+    },
+    {
+      "id": "note-chung",
+      "x": 0,
+      "y": 3160,
+      "w": 700,
+      "text": "GHI CHÚ CHUNG\n· Nội dung demo viết mới hoàn toàn, không lấy chữ hay thương hiệu từ ba ảnh tham chiếu — mình bán lại nên không được dính bản quyền của họ.\n· Chữ demo đang là tiếng Anh, theo thông lệ chợ template. Muốn đổi sang tiếng Việt thì nói.\n· Tất cả minh hoạ là SVG vẽ tay, không dùng ảnh ngoài, nên file nhẹ và đổi màu được.\n· Mới có bản desktop 1440px. Bản mobile làm sau khi chốt hướng."
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

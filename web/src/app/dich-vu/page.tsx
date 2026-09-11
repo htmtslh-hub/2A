@@ -112,9 +112,79 @@ export default async function Page({
       </ol>
 
       <h2
+        style={{
+          margin: '52px 0 10px',
+          fontFamily: 'var(--display)',
+          fontWeight: 700,
+          fontSize: 22,
+          letterSpacing: '-.015em',
+          color: '#fff',
+        }}
+      >
+        {doc.deliverTitle}
+      </h2>
+      <p style={{ margin: '0 0 24px', fontSize: 15, lineHeight: 1.7, color: '#a8afb8' }}>
+        {doc.deliverIntro}
+      </p>
+
+      {doc.deliverGroups.map((g) => (
+        <section
+          key={g.h}
+          style={{
+            marginBottom: 16,
+            padding: '22px 24px',
+            borderRadius: 18,
+            border: '1px solid rgba(236,238,241,.11)',
+            background: 'rgba(255,255,255,.025)',
+          }}
+        >
+          <h3
+            style={{
+              margin: '0 0 14px',
+              fontFamily: 'var(--display)',
+              fontWeight: 700,
+              fontSize: 16,
+              letterSpacing: '.01em',
+              color: '#fff',
+            }}
+          >
+            {g.h}
+          </h3>
+          <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: 11 }}>
+            {g.items.map((it, i) => (
+              <li key={i} style={{ display: 'flex', gap: 11, alignItems: 'flex-start' }}>
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  aria-hidden="true"
+                  style={{ flex: 'none', marginTop: 4 }}
+                >
+                  <path
+                    d="M3 9l3.6 3.6L14 5"
+                    stroke="#e83a34"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span
+                  style={{ fontSize: 14.5, lineHeight: 1.65, color: '#c3c9d1' }}
+                  // Nội dung là hằng số trong src/lib/service-content.ts, không
+                  // phải dữ liệu người dùng nhập, nên nhúng HTML ở đây an toàn.
+                  dangerouslySetInnerHTML={{ __html: it }}
+                />
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+
+      <h2
         id="gui-yeu-cau"
         style={{
-          margin: '0 0 10px',
+          margin: '52px 0 10px',
           fontFamily: 'var(--display)',
           fontWeight: 700,
           fontSize: 22,

@@ -30,6 +30,10 @@ export interface ServiceDoc {
   items: ServiceItem[];
   howTitle: string;
   how: { step: string; text: string }[];
+  /** Phần khách đọc kỹ nhất: rốt cuộc họ cầm về được cái gì. */
+  deliverTitle: string;
+  deliverIntro: string;
+  deliverGroups: { h: string; items: string[] }[];
   formTitle: string;
   formIntro: string;
   f: {
@@ -117,6 +121,36 @@ export const SERVICE: Record<LangCode, ServiceDoc> = {
       { step: '02', text: 'Trao đổi để chốt phạm vi, thời gian và chi phí. Miễn phí.' },
       { step: '03', text: 'Dựng bản chạy được đầu tiên để bạn dùng thử và góp ý.' },
       { step: '04', text: 'Hoàn thiện, triển khai và bàn giao kèm tài liệu.' },
+    ],
+    deliverTitle: 'Bạn nhận được gì',
+    deliverIntro:
+      'Ba nhóm dưới đây có trong mọi dự án, không phụ thuộc quy mô hay ngân sách.',
+    deliverGroups: [
+      {
+        h: 'Thứ chạy được',
+        items: [
+          'Agent hoạt động tại địa chỉ của bạn, đã nối vào dữ liệu thật chứ không phải dữ liệu mẫu.',
+          'Tài khoản quản trị để xem lại lịch sử hội thoại và sửa câu trả lời mẫu.',
+          'Bảng theo dõi: số lượt hỏi, chi phí phát sinh, và những câu agent trả lời sai.',
+        ],
+      },
+      {
+        h: 'Bàn giao',
+        items: [
+          'Toàn bộ mã nguồn của agent thuộc về bạn — giữ, sửa, mang đi đâu cũng được.',
+          'Văn bản ghi rõ agent làm được gì và <b>không</b> làm được gì. Phần sau quan trọng hơn phần trước.',
+          'Hướng dẫn tự cập nhật dữ liệu khi bảng giá hay sản phẩm thay đổi, không cần gọi tôi.',
+          'Muốn chuyển sang bên khác lúc nào cũng được, mang theo cả mã nguồn lẫn dữ liệu. Không khoá chân.',
+        ],
+      },
+      {
+        h: 'Điều kiện nói trước',
+        items: [
+          'Khoá API do bạn đứng tên và trả trực tiếp cho nhà cung cấp, không qua tôi. Bạn thấy hoá đơn thật và tự đặt hạn mức chi.',
+          'Có sự cố thì tôi phản hồi trong vòng 24 giờ.',
+          'Những thành phần dùng chung tôi viết sẵn từ trước dự án vẫn thuộc về tôi; bạn được dùng vĩnh viễn trong chính agent này.',
+        ],
+      },
     ],
     formTitle: 'Gửi yêu cầu',
     formIntro: 'Điền vào đây, tôi trả lời trong vòng 2 ngày làm việc.',
@@ -206,6 +240,35 @@ export const SERVICE: Record<LangCode, ServiceDoc> = {
       { step: '03', text: 'A first working version for you to try and react to.' },
       { step: '04', text: 'Finish, deploy and hand over with documentation.' },
     ],
+    deliverTitle: 'What you get',
+    deliverIntro: 'These three groups come with every project, whatever its size.',
+    deliverGroups: [
+      {
+        h: 'The working thing',
+        items: [
+          'An agent running at your own address, wired into your real data rather than a sample set.',
+          'An admin account for reading back conversations and correcting stock answers.',
+          'A dashboard: how many questions, what it cost, and which answers were wrong.',
+        ],
+      },
+      {
+        h: 'Handover',
+        items: [
+          'The agent’s source code is yours — keep it, change it, take it anywhere.',
+          'A document stating what the agent can and <b>cannot</b> do. The second half matters more than the first.',
+          'Instructions for updating the data yourself when prices or products change, without calling me.',
+          'You can move to another supplier whenever you like, taking the code and the data with you. No lock-in.',
+        ],
+      },
+      {
+        h: 'Stated up front',
+        items: [
+          'The API key is in your name and you pay the provider directly, not through me. You see the real bill and set your own spending cap.',
+          'If something breaks, I respond within 24 hours.',
+          'Shared components I wrote before your project remain mine; you get a perpetual right to use them inside this agent.',
+        ],
+      },
+    ],
     formTitle: 'Send a request',
     formIntro: 'Fill this in and I reply within 2 working days.',
     f: {
@@ -288,6 +351,35 @@ export const SERVICE: Record<LangCode, ServiceDoc> = {
       { step: '02', text: '沟通确定范围、周期与费用，此环节免费。' },
       { step: '03', text: '先做出可运行的初版供您试用并反馈。' },
       { step: '04', text: '完善、部署并附文档交付。' },
+    ],
+    deliverTitle: '您将获得什么',
+    deliverIntro: '以下三组内容每个项目都有，与规模和预算无关。',
+    deliverGroups: [
+      {
+        h: '可运行的成品',
+        items: [
+          '智能体运行在贵司自己的地址上，接入的是真实数据而非样例数据。',
+          '管理后台，可回看对话记录并修改标准答复。',
+          '数据面板：提问次数、产生的费用，以及回答有误的条目。',
+        ],
+      },
+      {
+        h: '交付内容',
+        items: [
+          '该智能体的源代码归贵司所有——可保留、可修改、可带走。',
+          '一份文档，写明智能体能做什么、<b>不能</b>做什么。后者比前者更重要。',
+          '数据自助更新指南，价格或产品变动时无需联系我。',
+          '随时可以更换服务方，源代码与数据一并带走，不做绑定。',
+        ],
+      },
+      {
+        h: '事先讲明',
+        items: [
+          'API 密钥以贵司名义申请，费用直接支付给服务商，不经我手。账单真实可见，额度由贵司自行设定。',
+          '出现故障时，我会在 24 小时内响应。',
+          '项目开始前我已写好的通用组件仍归我所有；贵司获得在本智能体内的永久使用权。',
+        ],
+      },
     ],
     formTitle: '提交需求',
     formIntro: '填写后，我会在两个工作日内回复。',

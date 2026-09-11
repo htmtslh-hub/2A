@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dune Pass — Small-group desert travel</title>
+<meta name="description" content="Four days across the oldest desert on earth. Small groups, local guides, and a night under a sky with no city in it.">
+
+<meta property="og:title" content="Dune Pass — Small-group desert travel">
+<meta property="og:description" content="Four days across the oldest desert on earth. Small groups, local guides, and a night under a sky with no city in it.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap site-header__inner">
+
+    <a class="logo" href="#" aria-label="Dune Pass — home">
+      <svg class="logo__mark" viewBox="0 0 30 30" aria-hidden="true" focusable="false">
+        <circle cx="15" cy="15" r="14" fill="var(--accent)"></circle>
+        <path d="M7 20c3-6 6-3 8-6s4-6 8-3" fill="none" stroke="var(--bg)" stroke-width="2.3" stroke-linecap="round"></path>
+        <circle cx="20" cy="10" r="2.6" fill="#f3b27a"></circle>
+      </svg>
+      <span class="logo__word">Dune Pass</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="site-nav__list">
+        <li><a href="#routes">Routes</a></li>
+        <li><a href="#routes">Lodges</a></li>
+        <li><a href="#book">Guides</a></li>
+        <li><a href="#book">Journal</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__end">
+      <a class="link-quiet" href="#book">Sign in</a>
+      <a class="btn btn--accent btn--sm" href="#book">Plan a trip</a>
+    </div>
+
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero__inner">
+
+    <div class="hero__copy">
+      <p class="pill">
+        <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.4" fill="none" stroke="currentColor" stroke-width="1.8"></circle><path d="M8 5v3.4l2.2 1.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
+        Season opens April
+      </p>
+
+      <h1 class="hero__title">Land of endless <em>horizons</em></h1>
+
+      <p class="hero__lede">
+        Four days across the oldest desert on earth. Small groups, local guides,
+        and a night under a sky with no city in it.
+      </p>
+
+      <form class="search" action="#routes">
+        <div class="search__field">
+          <label class="search__label" for="q-route">Route</label>
+          <select class="search__input" id="q-route" name="route">
+            <option>Namib crossing</option>
+            <option>Skeleton Coast</option>
+            <option>Kaokoland loop</option>
+          </select>
+        </div>
+        <span class="search__rule" aria-hidden="true"></span>
+        <div class="search__field">
+          <label class="search__label" for="q-when">When</label>
+          <input class="search__input" id="q-when" name="when" type="text" value="12 – 16 May">
+        </div>
+        <button class="search__go" type="submit">
+          <svg viewBox="0 0 19 19" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M12.6 12.6L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+          <span class="visually-hidden">Search routes</span>
+        </button>
+      </form>
+
+      <ul class="assurances">
+        <li>
+          <svg viewBox="0 0 17 17" aria-hidden="true" focusable="false"><path d="M8.5 2l1.9 3.9 4.3.6-3.1 3 .7 4.3-3.8-2-3.8 2 .7-4.3-3.1-3 4.3-.6z" fill="#b07419"></path></svg>
+          4.9 from 1,240 travellers
+        </li>
+        <li>
+          <svg viewBox="0 0 17 17" aria-hidden="true" focusable="false"><path d="M3 9l3.5 3.5L14 5" fill="none" stroke="#3f6a43" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          Free cancellation
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero__figure">
+      <!-- Replace this SVG with a photograph if you have one.
+           Keep the hero__figure wrapper so the cards keep their positions. -->
+      <svg class="diorama" viewBox="0 0 800 660" aria-hidden="true" focusable="false">
+        <defs>
+          <clipPath id="dpSlab"><path d="M400 128 L740 300 L400 472 L60 300 Z"></path></clipPath>
+          <linearGradient id="dpSand" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f0d2b0"></stop>
+            <stop offset="1" stop-color="#e3b78c"></stop>
+          </linearGradient>
+        </defs>
+
+        <ellipse cx="400" cy="520" rx="300" ry="58" fill="#e9d6c3"></ellipse>
+        <path d="M60 300 L400 472 L400 540 L60 368 Z" fill="#b8763f"></path>
+        <path d="M400 472 L740 300 L740 368 L400 540 Z" fill="#9c5f30"></path>
+        <path d="M400 128 L740 300 L400 472 L60 300 Z" fill="url(#dpSand)"></path>
+
+        <g clip-path="url(#dpSlab)">
+          <path d="M60 300 C180 236 268 262 352 300 C436 338 520 356 620 322 L740 300 L740 480 L60 480 Z" fill="#e6c096"></path>
+          <path d="M120 334 C230 292 300 314 380 348 C470 386 560 392 660 358 L740 340 L740 480 L60 480 Z" fill="#d9ab7c"></path>
+          <path d="M320 196 C384 172 430 188 466 214 L400 258 Z" fill="#f4dcbe"></path>
+
+          <path d="M198 318 C288 292 318 340 402 340 C486 340 534 300 616 288" fill="none" stroke="#cf9d78" stroke-width="26" stroke-linecap="round"></path>
+          <path d="M198 318 C288 292 318 340 402 340 C486 340 534 300 616 288" fill="none" stroke="#e2bd97" stroke-width="16" stroke-linecap="round" stroke-dasharray="2 22"></path>
+
+          <g stroke="#5d3a25" stroke-linecap="round" fill="none">
+            <path d="M236 268v-52" stroke-width="6"></path>
+            <path d="M236 232l-20-20M236 240l18-16M236 222l-10-18" stroke-width="4"></path>
+            <path d="M556 246v-44" stroke-width="5"></path>
+            <path d="M556 218l-16-14M556 226l16-12" stroke-width="3.4"></path>
+            <path d="M660 302v-38" stroke-width="5"></path>
+            <path d="M660 278l-14-12M660 284l14-10" stroke-width="3.2"></path>
+          </g>
+
+          <g fill="#b98a63">
+            <ellipse cx="300" cy="382" rx="17" ry="8"></ellipse>
+            <ellipse cx="470" cy="404" rx="13" ry="6"></ellipse>
+            <ellipse cx="180" cy="352" rx="11" ry="5"></ellipse>
+          </g>
+
+          <g>
+            <ellipse cx="404" cy="360" rx="52" ry="18" fill="#c08d63" opacity=".55"></ellipse>
+            <path d="M368 330 L404 312 L452 336 L416 354 Z" fill="#efe3d2"></path>
+            <path d="M368 330 L416 354 L416 380 L368 356 Z" fill="#cdbda8"></path>
+            <path d="M416 354 L452 336 L452 362 L416 380 Z" fill="#b6a48e"></path>
+            <path d="M382 322 L404 311 L426 322 L404 333 Z" fill="#6b7f6a"></path>
+            <path d="M382 306 L404 296 L424 306 L404 316 Z" fill="#4a5a49"></path>
+            <ellipse cx="384" cy="366" rx="9" ry="6" fill="#3a2b22"></ellipse>
+            <ellipse cx="436" cy="368" rx="9" ry="6" fill="#3a2b22"></ellipse>
+          </g>
+
+          <g>
+            <path d="M232 388v-36" stroke="#6b4a30" stroke-width="6" stroke-linecap="round"></path>
+            <path d="M198 346 L246 328 L276 342 L228 360 Z" fill="#8a5c39"></path>
+            <path d="M210 346 L250 336" stroke="#e5cdb2" stroke-width="4" stroke-linecap="round"></path>
+            <path d="M214 352 L242 346" stroke="#e5cdb2" stroke-width="3" stroke-linecap="round"></path>
+          </g>
+        </g>
+
+        <circle cx="170" cy="118" r="34" fill="#f0a94f"></circle>
+        <circle cx="170" cy="118" r="52" fill="#f0a94f" opacity=".18"></circle>
+      </svg>
+
+      <div class="float-card float-card--weather">
+        <div class="weather__now">
+          <svg class="weather__sun" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
+            <circle cx="17" cy="17" r="8" fill="#f0a94f"></circle>
+            <g stroke="#f0a94f" stroke-width="2.4" stroke-linecap="round"><path d="M17 2v4M17 28v4M2 17h4M28 17h4M6.5 6.5l2.8 2.8M24.7 24.7l2.8 2.8M27.5 6.5l-2.8 2.8M9.3 24.7l-2.8 2.8"></path></g>
+          </svg>
+          <div>
+            <p class="weather__deg">29&deg;</p>
+            <p class="weather__note">Clear, light wind</p>
+          </div>
+        </div>
+        <ul class="weather__hours">
+          <li><span>12:00</span><b>31&deg;</b></li>
+          <li><span>15:00</span><b>32&deg;</b></li>
+          <li><span>18:00</span><b>28&deg;</b></li>
+          <li><span>21:00</span><b>23&deg;</b></li>
+        </ul>
+      </div>
+
+      <div class="float-card float-card--ticket">
+        <div class="ticket__body">
+          <p class="ticket__kicker">Desert pass</p>
+          <p class="ticket__name">Namib crossing</p>
+          <p class="ticket__meta"><span>4 days</span><span>Max 8 people</span></p>
+        </div>
+        <div class="ticket__stub" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="float-card float-card--list">
+        <p class="mini-head">On this route <a href="#routes">See all</a></p>
+        <ul class="mini-list">
+          <li><span class="swatch swatch--sand"></span><span><b>Sossusvlei at sunrise</b><em>3–4 hrs</em></span></li>
+          <li><span class="swatch swatch--sage"></span><span><b>Skeleton Coast drive</b><em>4–6 hrs</em></span></li>
+          <li><span class="swatch swatch--clay"></span><span><b>Evening with Himba hosts</b><em>2–3 hrs</em></span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ ROUTES ============ -->
+<section class="section" id="routes">
+  <div class="wrap">
+
+    <div class="section__head" data-reveal>
+      <h2 class="section__title">Three ways across</h2>
+      <a class="btn btn--outline btn--sm" href="#book">
+        All 14 routes
+        <svg class="icon-arrow" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+
+    <ul class="routes">
+
+      <li class="route" data-reveal>
+        <div class="route__media route__media--sand">
+          <svg viewBox="0 0 400 200" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+            <path d="M0 148 C86 104 138 132 200 152 C262 172 330 166 400 140 V200 H0 Z" fill="#c98052"></path>
+            <path d="M0 176 C90 150 150 168 220 180 C290 192 340 188 400 174 V200 H0 Z" fill="#a9603a"></path>
+            <circle cx="318" cy="56" r="22" fill="#fbe0b8"></circle>
+          </svg>
+          <span class="badge">Most booked</span>
+        </div>
+        <div class="route__body">
+          <h3 class="route__name">Namib crossing</h3>
+          <p class="route__text">Dune 45 before dawn, the dry pans at noon, camp at the edge of the sand sea.</p>
+          <p class="route__foot">
+            <span class="price">$1,380</span>
+            <span class="price__unit">per person</span>
+            <a class="btn btn--dark btn--sm" href="#book">Details</a>
+          </p>
+        </div>
+      </li>
+
+      <li class="route" data-reveal>
+        <div class="route__media route__media--sage">
+          <svg viewBox="0 0 400 200" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+            <path d="M0 160 C70 128 130 150 200 158 C270 166 340 154 400 132 V200 H0 Z" fill="#7b9280"></path>
+            <path d="M0 182 C80 164 150 176 230 184 C300 190 350 186 400 178 V200 H0 Z" fill="#5f7565"></path>
+            <path d="M120 158V116M120 132l-14-12M120 140l14-11" fill="none" stroke="#4a5a4c" stroke-width="5" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <div class="route__body">
+          <h3 class="route__name">Skeleton Coast</h3>
+          <p class="route__text">Fog off the Atlantic, shipwrecks half-buried in sand, seal colonies you hear before you see.</p>
+          <p class="route__foot">
+            <span class="price">$1,640</span>
+            <span class="price__unit">per person</span>
+            <a class="btn btn--dark btn--sm" href="#book">Details</a>
+          </p>
+        </div>
+      </li>
+
+      <li class="route" data-reveal>
+        <div class="route__media route__media--clay">
+          <svg viewBox="0 0 400 200" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+            <path d="M0 150 C60 112 120 140 180 150 C250 162 330 144 400 120 V200 H0 Z" fill="#b06848"></path>
+            <path d="M0 178 C90 158 160 172 240 180 C310 186 360 182 400 172 V200 H0 Z" fill="#914f34"></path>
+            <circle cx="300" cy="62" r="18" fill="#f7d8bd"></circle>
+            <circle cx="262" cy="80" r="8" fill="#f7d8bd" opacity=".6"></circle>
+          </svg>
+        </div>
+        <div class="route__body">
+          <h3 class="route__name">Kaokoland loop</h3>
+          <p class="route__text">Seven days north, river crossings, and desert elephants that move between waterholes.</p>
+          <p class="route__foot">
+            <span class="price">$2,210</span>
+            <span class="price__unit">per person</span>
+            <a class="btn btn--dark btn--sm" href="#book">Details</a>
+          </p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- ============ WHEN TO GO ============ -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="season" data-reveal>
+      <div class="season__intro">
+        <h2 class="season__title">When to go</h2>
+        <p class="season__text">April to October is cooler and clear. The rest of the year is hotter, emptier and cheaper.</p>
+      </div>
+      <ul class="season__grid">
+        <li class="season__card"><span class="season__when">Apr – Jun</span><b>Cool mornings</b></li>
+        <li class="season__card"><span class="season__when">Jul – Aug</span><b>Clearest skies</b></li>
+        <li class="season__card"><span class="season__when">Sep – Oct</span><b>Wildlife at water</b></li>
+        <li class="season__card season__card--dark"><span class="season__when">Nov – Mar</span><b>Quiet and cheaper</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="section section--tight">
+  <div class="wrap">
+    <ul class="stats" data-reveal>
+      <li><span class="stat__num">14</span><span class="stat__label">Routes across the region</span></li>
+      <li><span class="stat__num">8</span><span class="stat__label">Travellers per group, maximum</span></li>
+      <li><span class="stat__num">1,240</span><span class="stat__label">Trips completed since 2019</span></li>
+      <li><span class="stat__num">100%</span><span class="stat__label">Guides from the communities we visit</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section section--tight" id="book">
+  <div class="wrap">
+    <div class="cta" data-reveal>
+      <svg class="cta__dunes" viewBox="0 0 620 360" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+        <path d="M0 250 C130 180 220 216 320 250 C420 284 520 268 620 226 V360 H0 Z" fill="#fbe0c6"></path>
+        <path d="M0 300 C140 258 240 282 340 300 C440 318 540 310 620 288 V360 H0 Z" fill="#f6cba4"></path>
+        <circle cx="500" cy="92" r="46" fill="#fbe0c6"></circle>
+      </svg>
+      <div class="cta__body">
+        <h2 class="cta__title">Hold a seat for the April crossing</h2>
+        <p class="cta__text">
+          Eight seats per departure, and the April group is half full. A deposit holds
+          your place and is refundable for thirty days.
+        </p>
+        <p class="btn-row">
+          <a class="btn btn--cream" href="mailto:hello@example.com">
+            Reserve a seat
+            <svg class="icon-arrow" viewBox="0 0 15 15" aria-hidden="true" focusable="false"><path d="M1 7.5h12M9 3.5l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </a>
+          <a class="btn btn--outline-light" href="mailto:hello@example.com">Talk to a guide</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <p class="logo logo--foot">
+          <svg class="logo__mark" viewBox="0 0 30 30" aria-hidden="true" focusable="false">
+            <circle cx="15" cy="15" r="14" fill="var(--accent)"></circle>
+            <path d="M7 20c3-6 6-3 8-6s4-6 8-3" fill="none" stroke="var(--bg)" stroke-width="2.3" stroke-linecap="round"></path>
+          </svg>
+          <span class="logo__word">Dune Pass</span>
+        </p>
+        <p class="site-footer__addr">Small-group desert travel.<br>Swakopmund, Namibia.</p>
+      </div>
+
+      <nav class="foot-nav" aria-label="Footer">
+        <div class="foot-nav__col">
+          <h2 class="foot-nav__head">Travel</h2>
+          <ul>
+            <li><a href="#routes">Routes</a></li>
+            <li><a href="#routes">Lodges</a></li>
+            <li><a href="#book">What to pack</a></li>
+          </ul>
+        </div>
+        <div class="foot-nav__col">
+          <h2 class="foot-nav__head">About</h2>
+          <ul>
+            <li><a href="#book">Our guides</a></li>
+            <li><a href="#book">Community fund</a></li>
+            <li><a href="#book">Journal</a></li>
+          </ul>
+        </div>
+        <div class="foot-nav__col">
+          <h2 class="foot-nav__head">Help</h2>
+          <ul>
+            <li><a href="#book">Booking terms</a></li>
+            <li><a href="#book">Insurance</a></li>
+            <li><a href="#book">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__bar">
+      <p>&copy; 2026 Dune Pass Travel</p>
+      <p class="site-footer__legal"><a href="#">Privacy</a> <a href="#">Terms</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

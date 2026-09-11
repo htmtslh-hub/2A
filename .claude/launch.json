@@ -46,6 +46,30 @@
         "_design/templates/kinetiq"
       ],
       "port": 4323
+    },
+    {
+      "name": "template-dune-pass",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "--yes",
+        "serve",
+        "-l",
+        "4324",
+        "_design/templates/dune-pass"
+      ],
+      "port": 4324
+    },
+    {
+      "name": "template-tidal",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "--yes",
+        "serve",
+        "-l",
+        "4325",
+        "_design/templates/tidal"
+      ],
+      "port": 4325
     }
   ]
 }

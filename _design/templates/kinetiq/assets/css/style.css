@@ -9,6 +9,10 @@
   /* --- brand --- */
   --accent:        #c84616;   /* trắng trên màu này đạt 4.83:1 — đừng làm nhạt hơn */
   --accent-ink:    #ffffff;
+  /* Khi màu nhấn dùng LÀM CHỮ trên nền sáng thì phải đậm hơn: nền nút chỉ
+     cần chữ trắng đọc được, còn chữ nhỏ thì chính nó phải đủ tương phản với
+     nền trang. Dùng --accent cho nền, --accent-text cho chữ và link. */
+  --accent-text: #b03e11;
 
   /* --- ink --- */
   --ink:           #131312;
@@ -65,7 +69,7 @@ img, svg { display: block; max-width: 100%; }
 ul { margin: 0; padding: 0; list-style: none; }
 
 a { color: var(--ink); text-decoration: none; transition: color .2s ease; }
-a:hover { color: var(--accent); }
+a:hover { color: var(--accent-text); }
 
 h1, h2, h3 { margin: 0; font-weight: 400; }
 
@@ -188,7 +192,7 @@ p { margin: 0; }
   text-transform: uppercase;
 }
 .site-nav__list a { color: var(--ink-soft); }
-.site-nav__list a:hover { color: var(--accent); }
+.site-nav__list a:hover { color: var(--accent-text); }
 
 .site-header__end {
   display: flex;

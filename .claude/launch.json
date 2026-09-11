@@ -70,6 +70,18 @@
         "_design/templates/tidal"
       ],
       "port": 4325
+    },
+    {
+      "name": "template-free-sample",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "--yes",
+        "serve",
+        "-l",
+        "4326",
+        "_design/templates/free-sample"
+      ],
+      "port": 4326
     }
   ]
 }

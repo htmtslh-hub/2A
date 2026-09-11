@@ -8,6 +8,7 @@ import { COMPANY } from './company';
 import { bgPoster } from './media';
 import { HERO_SERVICE_CTA, SERVICE, SERVICE_PATH } from './service-content';
 import { CASE_PATH, CASE_STUDY } from './case-study';
+import { REAL_TEMPLATES } from './real-templates';
 import {
   I18N,
   IDS,
@@ -149,6 +150,15 @@ export function buildView(
     // Đã đăng nhập thì nút ở thanh nav dẫn sang trang đơn hàng.
     ...(ctx.signedIn ? { navCta: NAV_ACCOUNT[lang] } : null),
   };
+  // Danh mục hiệu lực: ô nào đã có mẫu thật thì lấy tên, mô tả, thẻ và phân
+  // loại từ REAL_TEMPLATES; ô còn lại giữ nội dung lấp chỗ của bản thiết kế.
+  const tplMeta = TPL_META.map((m: any, i: number) => {
+    const real = REAL_TEMPLATES[m.id];
+    return real
+      ? { ...m, cat: real.cat, ...(real.copy[lang] ?? real.copy.vi) }
+      : { ...m, ...t.templates[i] };
+  });
+
   const n = t.services.length;
   const active = Math.min(state.active, n - 1);
   const s = t.services[active];
@@ -181,20 +191,15 @@ export function buildView(
       onSelect: () => im.push({ filter: f.key }, () => im.bindReveal()),
     }));
 
-  const templates = TPL_META.map((m: any, i: number) => ({
-    ...m,
-    ...t.templates[i],
-    catLabel: t.cats[m.cat],
-    badge: m.badge || '',
-  }))
+  const templates = tplMeta
+    .map((m: any) => ({ ...m, catLabel: t.cats[m.cat], badge: m.badge || '' }))
     .filter((m: any) => filter === 'all' || m.cat === filter)
     .map((m: any) => ({ ...m, onDetail: () => openDetail(m.id) }));
 
   const marqueeSet = t.marquee.map((label: string) => ({ label, color: '#eceef1' }));
 
-  const allTpl = TPL_META.map((m: any, i: number) => ({
+  const allTpl = tplMeta.map((m: any, i: number) => ({
     ...m,
-    ...t.templates[i],
     catLabel: t.cats[m.cat],
     badge: m.badge || '',
     idx: i,
@@ -276,11 +281,10 @@ export function buildView(
     homeThemeTitle: s.title,
     homeThemeKicker: s.kicker,
     homeTemplates: (THEME_SETS[active] || THEME_SETS[0]).map((i: number) => ({
-      ...TPL_META[i],
-      ...t.templates[i],
-      catLabel: t.cats[TPL_META[i].cat],
-      badge: TPL_META[i].badge || '',
-      onDetail: () => openDetail(TPL_META[i].id),
+      ...tplMeta[i],
+      catLabel: t.cats[tplMeta[i].cat],
+      badge: tplMeta[i].badge || '',
+      onDetail: () => openDetail(tplMeta[i].id),
     })),
     showFooter: true,
     goHome: () => goTab('home'),

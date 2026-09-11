@@ -8,6 +8,7 @@
    VNĐ là đồng (1_900_000), USD là cent (7_900 = $79). Cả PayOS lẫn Paddle đều
    nhận số nguyên theo quy ước này. */
 import { TPL_META, I18N } from '@/generated/data';
+import { REAL_TEMPLATES, templateSlug } from './real-templates';
 
 export type Lang = 'vi' | 'en' | 'zh';
 export type Currency = 'VND' | 'USD';
@@ -43,20 +44,11 @@ export function currencyForProvider(provider: Provider): Currency {
 
 /* ---------- tra cứu ---------- */
 
-/** Mã mẫu trong danh mục (t1…t18) chưa trùng với tên file đã đóng gói.
- *
- *  /api/download tìm file theo `<mã>.zip`, nên nếu không khai ở đây thì
- *  khách mua t3 sẽ nhận 404 dù trên đĩa đã có kinetiq.zip.
- *
- *  Ba mẫu đầu tiên chưa gắn vào ô nào trong danh mục vì tên và thứ tự 17
- *  mẫu còn chờ chốt lại. Khi chốt xong, thêm dòng ở đây, ví dụ:
- *      t3: 'kinetiq',
- *  Mã không khai sẽ tìm file trùng tên chính nó. */
-export const TEMPLATE_FILE: Record<string, string> = {};
-
-/** Tên file (không đuôi) chứa mẫu này. */
+/** Tên file .zip chứa mẫu này. Mã danh mục là t1…t18 còn file đóng gói đặt
+ *  theo tên mẫu (kinetiq.zip…), nên phải tra qua bảng REAL_TEMPLATES — cùng
+ *  bảng quyết định tên hiển thị và ảnh preview. */
 export function templateFile(id: string): string {
-  return TEMPLATE_FILE[id] ?? id;
+  return templateSlug(id);
 }
 
 export function templateExists(id: string): boolean {
@@ -64,6 +56,8 @@ export function templateExists(id: string): boolean {
 }
 
 export function templateName(id: string, lang: Lang = 'vi'): string {
+  const real = REAL_TEMPLATES[id];
+  if (real) return real.copy[lang]?.name ?? real.copy.vi.name;
   const idx = TPL_META.findIndex((m: { id: string }) => m.id === id);
   if (idx < 0) return id;
   const dict = I18N[lang] ?? I18N.vi;

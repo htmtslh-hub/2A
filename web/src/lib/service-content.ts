@@ -146,8 +146,9 @@ export const SERVICE: Record<LangCode, ServiceDoc> = {
       {
         h: 'Điều kiện nói trước',
         items: [
-          'Khoá API do bạn đứng tên và trả trực tiếp cho nhà cung cấp, không qua tôi. Bạn thấy hoá đơn thật và tự đặt hạn mức chi.',
-          'Có sự cố thì tôi phản hồi trong vòng 24 giờ.',
+          'Chi phí vận hành — khoá API và nơi chạy agent — đều đứng tên bạn và thanh toán trực tiếp với nhà cung cấp, không qua tôi. Bạn thấy hoá đơn thật và tự đặt hạn mức chi.',
+          'Bảo hành sửa lỗi miễn phí <b>một tháng</b> kể từ ngày bàn giao.',
+          'Có sự cố thì tôi phản hồi trong vòng <b>24 giờ làm việc</b> — không tính cuối tuần và ngày lễ.',
           'Những thành phần dùng chung tôi viết sẵn từ trước dự án vẫn thuộc về tôi; bạn được dùng vĩnh viễn trong chính agent này.',
         ],
       },
@@ -263,8 +264,9 @@ export const SERVICE: Record<LangCode, ServiceDoc> = {
       {
         h: 'Stated up front',
         items: [
-          'The API key is in your name and you pay the provider directly, not through me. You see the real bill and set your own spending cap.',
-          'If something breaks, I respond within 24 hours.',
+          'Running costs — the API key and wherever the agent runs — are in your name and paid straight to the provider, not through me. You see the real bill and set your own spending cap.',
+          'Bugs are fixed free for <b>one month</b> from handover.',
+          'If something breaks, I respond within <b>24 working hours</b> — weekends and public holidays not counted.',
           'Shared components I wrote before your project remain mine; you get a perpetual right to use them inside this agent.',
         ],
       },
@@ -375,8 +377,9 @@ export const SERVICE: Record<LangCode, ServiceDoc> = {
       {
         h: '事先讲明',
         items: [
-          'API 密钥以贵司名义申请，费用直接支付给服务商，不经我手。账单真实可见，额度由贵司自行设定。',
-          '出现故障时，我会在 24 小时内响应。',
+          '运行成本——API 密钥与智能体的运行环境——均以贵司名义申请，费用直接支付给服务商，不经我手。账单真实可见，额度由贵司自行设定。',
+          '交付之日起<b>一个月</b>内免费修复缺陷。',
+          '出现故障时，我会在 <b>24 个工作小时</b>内响应，周末与法定节假日不计入。',
           '项目开始前我已写好的通用组件仍归我所有；贵司获得在本智能体内的永久使用权。',
         ],
       },

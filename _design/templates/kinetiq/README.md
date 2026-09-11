@@ -19,7 +19,12 @@ npx serve .
 index.html              the page
 assets/css/style.css    all styling
 assets/js/main.js       mobile menu + reveal on scroll
+CUSTOMISE.md            where to change what, item by item
 ```
+
+**If you only read one file, read `CUSTOMISE.md`.** It lists every piece of
+text, every colour and every image in the template, and says exactly where
+each one lives. The rest of this file is background.
 
 ## Changing the colours
 

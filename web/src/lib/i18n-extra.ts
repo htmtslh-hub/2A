@@ -175,3 +175,28 @@ export const ORDERS_STRINGS = {
     goHome: '返回首页登录',
   },
 } satisfies Record<LangCode, Record<string, string>>;
+
+/** Câu trả lời cho FAQ "có cần biết code không".
+ *
+ *  Bản thiết kế viết "thay chữ và ảnh trực tiếp trong file mà không cần biết
+ *  lập trình". Đúng về kỹ thuật nhưng hứa hơi quá: một trang mẫu có khoảng
+ *  335 dòng, chữ cần sửa nằm rải ở hơn 20 chỗ, xen giữa gần 60 dòng SVG mà
+ *  khách không nên đụng. Người làm thiết kế thì bình thường, người không
+ *  rành kỹ thuật thì mở ra là nản.
+ *
+ *  Câu dưới đây nói đúng thứ mình thật sự giao: nội dung là văn bản thường,
+ *  và có sẵn danh sách chỉ rõ sửa chỗ nào. */
+export const FAQ_NO_CODE: Record<LangCode, { q: string; a: string }> = {
+  vi: {
+    q: 'Tôi có cần biết code để dùng không?',
+    a: 'Không cần, nếu chỉ đổi chữ, ảnh và màu. Mọi nội dung đều là văn bản thường trong file, và mỗi mẫu kèm một danh sách chỉ rõ chỗ nào sửa gì — tìm chữ nào, nằm ở đâu, có bao nhiêu chỗ. Muốn đổi bố cục hoặc thêm bớt phần thì cần biết HTML và CSS cơ bản.',
+  },
+  en: {
+    q: 'Do I need to know how to code?',
+    a: 'Not to change text, images and colours. Everything is plain text in the file, and every template ships with a checklist naming each thing you might want to change, what to search for and how many places it appears. Changing the layout, or adding and removing sections, does need basic HTML and CSS.',
+  },
+  zh: {
+    q: '需要会写代码吗？',
+    a: '若只是替换文案、图片和配色，则不需要。所有内容都是文件中的纯文本，每套模板都附一份清单，逐项说明改什么、搜索哪个词、共出现几处。若要调整版式或增删板块，则需要基础的 HTML 与 CSS。',
+  },
+};

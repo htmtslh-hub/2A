@@ -2,7 +2,7 @@
    Giữ nguyên tên trường để markup sinh tự động dùng được không đổi. */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { RefObject } from 'react';
-import { REGISTER_STRINGS, FORGOT_STRINGS, NAV_ACCOUNT } from './i18n-extra';
+import { REGISTER_STRINGS, FORGOT_STRINGS, NAV_ACCOUNT, FAQ_NO_CODE } from './i18n-extra';
 import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
 import { COMPANY } from './company';
 import { bgPoster } from './media';
@@ -134,6 +134,9 @@ export function buildView(
     // Nhãn cho landmark <nav> và H1 ẩn — chỉ trình đọc màn hình và công cụ
     // tìm kiếm thấy, nên không nằm trong bộ chữ của bản thiết kế.
     navAria: NAV_ARIA[lang],
+    // Câu FAQ đầu tiên hứa quá tay trong bản thiết kế — xem ghi chú ở
+    // FAQ_NO_CODE. Thay tại chỗ để không phải sửa file sinh tự động.
+    faqs: [FAQ_NO_CODE[lang], ...base.faqs.slice(1)],
     ...(modeStrings
       ? {
           authTitle: modeStrings.title,

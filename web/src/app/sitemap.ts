@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { COMPANY } from '@/lib/company';
 import { LEGAL_PATHS, PAGE_PATHS } from '@/lib/legal';
 import { SERVICE_PATH } from '@/lib/service-content';
+import { CASE_PATH } from '@/lib/case-study';
 import { TAB_KEYS, TPL_META } from '@/generated/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -35,16 +36,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Trang dịch vụ là đường vào của dòng doanh thu chính, xếp ưu tiên cao hơn
   // các trang tĩnh còn lại.
-  const service = {
-    url: `${base}${SERVICE_PATH}`,
+  const service = [SERVICE_PATH, CASE_PATH].map((p) => ({
+    url: `${base}${p}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.9,
-  };
+  }));
 
   return [
     { url: base, lastModified: now, changeFrequency: 'weekly', priority: 1 },
-    service,
+    ...service,
     ...tabs,
     ...templates,
     ...staticPages,

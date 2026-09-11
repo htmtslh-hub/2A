@@ -7,6 +7,7 @@ import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
 import { COMPANY } from './company';
 import { bgPoster } from './media';
 import { HERO_SERVICE_CTA, SERVICE, SERVICE_PATH } from './service-content';
+import { CASE_PATH, CASE_STUDY } from './case-study';
 import {
   I18N,
   IDS,
@@ -412,6 +413,7 @@ export function buildView(
     // navigation, nên các link này nằm cố định ở footer.
     legalLinks: [
       { href: SERVICE_PATH, label: SERVICE[lang].navLabel },
+      { href: CASE_PATH, label: CASE_STUDY[lang].navLabel },
       { href: PAGE_PATHS.about, label: PAGE_LABELS[lang].about },
       { href: PAGE_PATHS.contact, label: PAGE_LABELS[lang].contact },
       ...(['terms', 'privacy', 'refund', 'license'] as const).map((k) => ({

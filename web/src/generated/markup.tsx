@@ -217,8 +217,8 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                               </div>
                               {(item.locked) ? (
                                 <>
-                                  <div style={{ position: "absolute", inset: "0", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(10,11,13,.66)", cursor: "not-allowed" }} aria-hidden="true">
-                                    <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "46px", height: "46px", borderRadius: "50%", background: "rgba(255,255,255,.12)", border: "1px solid rgba(255,255,255,.3)" }}>
+                                  <div style={{ position: "absolute", inset: "0", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(10,11,13,.38)", cursor: "not-allowed" }} aria-hidden="true">
+                                    <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "46px", height: "46px", borderRadius: "50%", background: "rgba(12,13,16,.72)", border: "1px solid rgba(255,255,255,.42)", boxShadow: "0 6px 18px -6px rgba(0,0,0,.7)" }}>
                                       <svg width="19" height="19" viewBox="0 0 24 24" fill="none">
                                         <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" stroke="#ffffff" strokeWidth="1.7" />
                                         <path d="M8.2 10.5V7.4a3.8 3.8 0 0 1 7.6 0v3.1" stroke="#ffffff" strokeWidth="1.7" strokeLinecap="round" />

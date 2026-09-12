@@ -88,6 +88,11 @@ export interface Imperative {
   startCheckout: (kind: 'TEMPLATE' | 'BUNDLE', templateId?: string) => void;
 }
 
+/* Hai thẻ cuối trong dải hero — Agent Phân Tích và Agent Theo Yêu Cầu — chưa
+   làm xong nên khoá lại: hiện ổ khoá, bấm không vào được. Mở lại thì xoá số
+   tương ứng khỏi mảng này, không phải sửa chỗ nào khác. Đếm từ 0. */
+export const LOCKED_CARDS = [3, 4];
+
 export interface Refs {
   copyRef: RefObject<HTMLDivElement | null>;
   botRef: RefObject<HTMLDivElement | null>;
@@ -392,7 +397,11 @@ export function buildView(
       kicker: sv.kicker,
       title: sv.title,
       no: String(i + 1).padStart(2, '0'),
+      locked: LOCKED_CARDS.includes(i),
       onSelect: () => {
+        // Khoá ở hai lớp: lớp phủ chặn chuột, và chặn luôn ở đây phòng khi
+        // CSS không tải được. Bỏ một lớp là thẻ chưa làm xong lộ ra.
+        if (LOCKED_CARDS.includes(i)) return;
         if (state.active === i) return;
         im.push({ active: i }, () => {
           im.bumpCopy();

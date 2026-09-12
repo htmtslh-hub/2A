@@ -25,3 +25,8 @@ build/
 .DS_Store
 Thumbs.db
 *.log
+
+# File khoá tải từ Google Cloud Console. Chứa client secret — không được
+# commit. Giá trị thật nằm trong biến môi trường trên Vercel.
+client_secret_*.json
+*.apps.googleusercontent.com.json

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+    a { color: #b8342c; text-decoration: none; }
+    a:hover { color: #8f231d; }
+  </style>
+</helmet>
+
+<div style="width: 560px; height: 560px; box-sizing: border-box; padding: 34px 36px; background: #f2f1ee; color: #17181a; display: flex; flex-direction: column; gap: 22px;">
+
+  <div>
+    <p style="margin: 0 0 5px; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 22px;">Màu gốc</p>
+    <p style="margin: 0; font-size: 13px; color: #6b6a66;">Giữ nguyên sắc cầu vồng, chỉ bỏ nền đen</p>
+  </div>
+
+  <div style="display: flex; gap: 14px;">
+    <div style="display: flex; justify-content: center; align-items: center; flex-grow: 1; padding: 16px; background: #ffffff; border: 1px solid #dcdad5; border-radius: 16px;">
+      <img src="./chim-maugoc.png" alt="Chim màu gốc trên nền trắng" style="width: 150px; height: 150px;">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; flex-grow: 1; padding: 16px; background: #1c1c1e; border-radius: 16px;">
+      <img src="./chim-maugoc.png" alt="Chim màu gốc trên nền tối" style="width: 150px; height: 150px;">
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 9px 14px; background: #ffffff; border: 1px solid #d3d1cc; border-radius: 9px;">
+      <img src="./chim-maugoc.png" alt="" style="width: 16px; height: 16px; flex: none;">
+      <p style="margin: 0; font-size: 13px; color: #2c2b28;">Forge Zone — tab sáng</p>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; padding: 9px 14px; background: #1c1c1e; border: 1px solid #35353a; border-radius: 9px;">
+      <img src="./chim-maugoc.png" alt="" style="width: 16px; height: 16px; flex: none;">
+      <p style="margin: 0; font-size: 13px; color: #e8e8ea;">Forge Zone — tab tối</p>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 12px; padding: 13px 16px; background: #ffffff; border: 1px solid #dcdad5; border-radius: 12px; margin-top: auto;">
+    <div style="width: 3px; flex: none; border-radius: 2px; background: #9aa3ad;"></div>
+    <p style="margin: 0; font-size: 12.5px; line-height: 1.6; color: #4a4945; text-wrap: pretty;">Đẹp trên nền tối, gần như biến mất trên nền trắng — hình vốn là ánh sáng nhạt, bỏ nền đen đi thì không còn gì đỡ. Chỉ nên dùng nếu chấp nhận tab sáng nhìn mờ.</p>
+  </div>
+
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"$preview":{"width":560,"height":560}}'>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>

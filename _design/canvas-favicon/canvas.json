@@ -1,0 +1,11 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 880, "h": 560, "title": "Đỏ đặc nét — đề xuất" },
+    { "file": "LoRen.dc.html", "x": 980, "y": 0, "w": 560, "h": 560, "title": "Lò rèn" },
+    { "file": "MauGoc.dc.html", "x": 1640, "y": 0, "w": 560, "h": 560, "title": "Màu gốc" }
+  ],
+  "annotations": [
+    { "id": "ghi-chu", "x": 0, "y": -150, "w": 520, "text": "Dáng chim tách từ ảnh gốc, không vẽ lại.\nĐổi màu ở chip \"Màu\" phía trên artboard đầu tiên." }
+  ],
+  "launch": { "view": "canvas" }
+}

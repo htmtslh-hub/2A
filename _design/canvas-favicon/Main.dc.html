@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+    a { color: #b8342c; text-decoration: none; }
+    a:hover { color: #8f231d; }
+    .mk { -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-position: center; mask-position: center; }
+  </style>
+</helmet>
+
+<div style="width: 880px; height: 560px; box-sizing: border-box; padding: 36px 40px; background: #f2f1ee; color: #17181a; display: flex; flex-direction: column; gap: 26px;">
+
+  <div style="display: flex; align-items: baseline; gap: 14px;">
+    <p style="margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 26px; letter-spacing: -0.01em;">Biểu tượng Forge Zone</p>
+    <p style="margin: 0; font-size: 13px; color: #6b6a66;">nền trong suốt · một màu · đọc được trên tab sáng lẫn tối</p>
+  </div>
+
+  <div style="display: flex; gap: 34px; align-items: stretch;">
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 22px 26px; background: #ffffff; border: 1px solid #dcdad5; border-radius: 16px;">
+      <div class="mk" style="width: 168px; height: 168px; background: {{mau}}; -webkit-mask-image: url(./mask-chim.png); mask-image: url(./mask-chim.png);"></div>
+      <p style="margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 12px; letter-spacing: 0.08em; color: #6b6a66;">{{mau}}</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 16px; flex-grow: 1;">
+
+      <p style="margin: 0; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8883;">Thanh tab sáng</p>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 9px 14px; background: #ffffff; border: 1px solid #d3d1cc; border-radius: 9px; width: 330px;">
+        <div class="mk" style="width: 16px; height: 16px; flex: none; background: {{mau}}; -webkit-mask-image: url(./mask-chim.png); mask-image: url(./mask-chim.png);"></div>
+        <p style="margin: 0; font-size: 13px; color: #2c2b28; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Forge Zone — Giao diện web cao cấp</p>
+      </div>
+
+      <p style="margin: 0; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8883;">Thanh tab tối</p>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 9px 14px; background: #1c1c1e; border: 1px solid #35353a; border-radius: 9px; width: 330px;">
+        <div class="mk" style="width: 16px; height: 16px; flex: none; background: {{mau}}; -webkit-mask-image: url(./mask-chim.png); mask-image: url(./mask-chim.png);"></div>
+        <p style="margin: 0; font-size: 13px; color: #e8e8ea; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Forge Zone — Giao diện web cao cấp</p>
+      </div>
+
+      <div style="display: flex; gap: 22px; margin-top: 6px;">
+        <sc-for list="{{coSize}}" as="z" hint-placeholder-count="3">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 7px;">
+            <div style="display: flex; gap: 8px;">
+              <div style="display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; background: #ffffff; border: 1px solid #d3d1cc; border-radius: 8px;">
+                <div class="mk" style="width: {{z.px}}; height: {{z.px}}; background: {{mau}}; -webkit-mask-image: url(./mask-chim.png); mask-image: url(./mask-chim.png);"></div>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; background: #1c1c1e; border-radius: 8px;">
+                <div class="mk" style="width: {{z.px}}; height: {{z.px}}; background: {{mau}}; -webkit-mask-image: url(./mask-chim.png); mask-image: url(./mask-chim.png);"></div>
+              </div>
+            </div>
+            <p style="margin: 0; font-size: 11px; color: #8a8883;">{{z.nhan}}</p>
+          </div>
+        </sc-for>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 12px; padding: 14px 18px; background: #ffffff; border: 1px solid #dcdad5; border-radius: 12px;">
+    <div style="width: 3px; flex: none; border-radius: 2px; background: {{mau}};"></div>
+    <p style="margin: 0; font-size: 13px; line-height: 1.65; color: #4a4945; text-wrap: pretty;">Dáng chim lấy đúng từ ảnh gốc, chỉ bỏ nền đen và đổ về một màu đặc. Giữ màu cầu vồng gốc thì trên tab sáng gần như không thấy gì — xem artboard “Màu gốc”. Ở 16px mọi phương án đều chỉ còn là một vệt có dáng chim; muốn sắc nét ở cỡ đó thì cần một bản vẽ riêng, ít nét hơn.</p>
+  </div>
+
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"mau":{"editor":"color","default":"#e83a34","options":["#e83a34","#d9481f","#c2410c","#1f6feb"],"section":"Màu"},"$preview":{"width":880,"height":560}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      mau: this.props.mau ?? '#e83a34',
+      coSize: [
+        { px: '32px', nhan: '32px' },
+        { px: '24px', nhan: '24px' },
+        { px: '16px', nhan: '16px' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

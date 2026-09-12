@@ -372,12 +372,18 @@ export const IMAGES = [
   '/media/hero-5.mp4',
 ];
 export const IDS = ['me', 'sales', 'ops', 'data', 'custom'];
+/* Thứ tự phải khớp IMAGES ở trên, không khớp IDS.
+   Ảnh tĩnh và video được nạp vào bản thiết kế theo hai thứ tự khác nhau, nên
+   thẻ hiện ảnh của nhân vật này rồi chạy video của nhân vật khác. Trước đây
+   không ai thấy vì video đè lên ảnh ngay khi thẻ được chọn; chỉ lộ ra khi hai
+   thẻ cuối bị khoá nên video không bao giờ chạy.
+   Đã đối chiếu từng khung đầu video với từng ảnh, xếp lại cho đúng cặp. */
 export const POSTERS = [
-  '/media/card-me.jpg',
-  '/media/card-sales.jpg',
-  '/media/card-ops.jpg',
   '/media/card-data.jpg',
+  '/media/card-ops.jpg',
   '/media/card-custom.jpg',
+  '/media/card-sales.jpg',
+  '/media/card-me.jpg',
 ];
 export const TAB_KEYS = ['home', 'library', 'process', 'pricing', 'faq', 'cta'];
 export const CAT_KEYS = ['portfolio', 'saas', 'agency', 'shop', 'motion'];

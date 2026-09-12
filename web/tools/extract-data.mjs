@@ -28,10 +28,23 @@ block = block.replace(
     IDS_ORDER.map((_, i) => `  '/media/hero-${i + 1}.mp4',`).join('\n') +
     '\n];'
 );
+// POSTERS phải ĐỌC thứ tự thật trong bản thiết kế, không được suy ra từ
+// IDS_ORDER. Ảnh tĩnh và video được nạp vào thiết kế theo hai thứ tự khác
+// nhau, nên suy ra theo tên mã thì thẻ hiện ảnh nhân vật này rồi chạy video
+// nhân vật khác — lỗi này từng lọt vì video đè lên ảnh ngay khi thẻ được
+// chọn, chỉ lộ ra khi có thẻ bị khoá nên video không bao giờ chạy.
+const posterSrc = block.match(/export const POSTERS = \[([\s\S]*?)\];/);
+if (!posterSrc) throw new Error('không tìm thấy POSTERS trong bản thiết kế');
+const posterNames = [...posterSrc[1].matchAll(/card-([a-z0-9-]+)\.[a-z]+/gi)].map((m) => m[1]);
+if (posterNames.length !== IDS_ORDER.length) {
+  throw new Error(`POSTERS có ${posterNames.length} ảnh, cần ${IDS_ORDER.length}`);
+}
+const laDu = posterNames.filter((n) => !IDS_ORDER.includes(n));
+if (laDu.length) throw new Error(`POSTERS có tên lạ: ${laDu.join(', ')}`);
 block = block.replace(
   /export const POSTERS = \[[\s\S]*?\];/,
   'export const POSTERS = [\n' +
-    IDS_ORDER.map((id) => `  '/media/card-${id}.jpg',`).join('\n') +
+    posterNames.map((n) => `  '/media/card-${n}.jpg',`).join('\n') +
     '\n];'
 );
 

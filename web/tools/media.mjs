@@ -19,7 +19,8 @@ const VIDEOS = [
   'uploads/Character_idle_animation_creation_1080p_202608060956.mp4',
 ];
 
-// Thứ tự khớp POSTERS / IDS
+// Chỉ là bảng nguồn -> tên file đầu ra; thứ tự ở đây không quan trọng.
+// Thứ tự thẻ nào dùng ảnh nào nằm ở POSTERS trong _src/Agentic.dc.html.
 const POSTERS = [
   ['assets/card-me.jpeg', 'card-me.jpg'],
   ['assets/card-sales.jpg', 'card-sales.jpg'],

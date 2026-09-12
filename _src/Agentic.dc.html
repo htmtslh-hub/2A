@@ -1107,7 +1107,13 @@ const IMAGES = [
   './uploads/Character_idle_animation_creation_1080p_202608060956.mp4',
 ];
 const IDS = ['me', 'sales', 'ops', 'data', 'custom'];
-const POSTERS = ['./assets/card-me.jpeg', './assets/card-sales.jpg', './assets/card-ops.jpg', './assets/card-data.png', './assets/card-custom.jpg'];
+/* Thứ tự phải khớp IMAGES ở trên, không khớp IDS.
+   Ảnh tĩnh và video được nạp vào bản thiết kế theo hai thứ tự khác nhau, nên
+   thẻ hiện ảnh của nhân vật này rồi chạy video của nhân vật khác. Trước đây
+   không ai thấy vì video đè lên ảnh ngay khi thẻ được chọn; chỉ lộ ra khi hai
+   thẻ cuối bị khoá nên video không bao giờ chạy.
+   Đã đối chiếu từng khung đầu video với từng ảnh, xếp lại cho đúng cặp. */
+const POSTERS = ['./assets/card-data.png', './assets/card-ops.jpg', './assets/card-custom.jpg', './assets/card-sales.jpg', './assets/card-me.jpeg'];
 const TAB_KEYS = ['home', 'library', 'process', 'pricing', 'faq', 'cta'];
 const CAT_KEYS = ['portfolio', 'saas', 'agency', 'shop', 'motion'];
 const TPL_META = [

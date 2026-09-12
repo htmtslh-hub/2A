@@ -145,6 +145,14 @@ const GLOBAL_SUB = [
     times: 5,
   },
   {
+    what: 'thanh địa chỉ giả trong ảnh mô phỏng trình duyệt',
+    // Thiết kế ghi cứng tên miền cũ. Trỏ về COMPANY.siteUrl để sau này đổi
+    // tên miền thì chỉ sửa một chỗ.
+    from: 'agentic.vn/{{ detail.id }}',
+    to: '{{ siteHost }}/{{ detail.id }}',
+    times: 1,
+  },
+  {
     what: 'màu chữ phụ quá tối (tương phản 3.16, chuẩn cần 4.5)',
     from: '#616872',
     to: '#868d97',

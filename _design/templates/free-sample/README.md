@@ -60,4 +60,4 @@ template pack.
 
 The paid templates are full landing pages — several sections, responsive
 layouts, and a checklist naming every piece of text you might want to change.
-See [example.com](https://example.com).
+See [forgezone.store](https://forgezone.store).

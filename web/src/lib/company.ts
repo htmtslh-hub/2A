@@ -32,8 +32,10 @@ export const COMPANY = {
   /** TẠM — số điện thoại hỗ trợ. Để trống thì các trang tự ẩn dòng này. */
   phone: '',
 
-  /** Tên miền chính thức. Đổi khi anh mua tên miền riêng. */
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://web-htmtslh-hubs-projects.vercel.app',
+  /** Tên miền chính thức, mua ngày 12/09/2026.
+   *  Biến môi trường được ưu tiên để bản xem thử trên Vercel tự trỏ về chính
+   *  nó; khi không đặt biến thì rơi về tên miền thật. */
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://forgezone.store',
 
   /** Số ngày được hoàn tiền, phải khớp với FAQ trên trang chủ. */
   refundDays: 14,

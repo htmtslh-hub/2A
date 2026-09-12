@@ -435,7 +435,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                           <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "rgba(255,255,255,.22)" }} />
                           <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "rgba(255,255,255,.22)" }} />
                           <span style={{ marginLeft: "10px", padding: "4px 14px", borderRadius: "100px", background: "rgba(0,0,0,.3)", fontSize: "11px", color: "#949ba4", letterSpacing: ".04em" }}>
-                            agentic.vn/{vm.detail.id}
+                            {vm.siteHost}/{vm.detail.id}
                           </span>
                         </div>
                         <div style={{ position: "relative", aspectRatio: "16/11", overflow: "hidden" }}>

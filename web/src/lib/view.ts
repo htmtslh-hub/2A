@@ -259,6 +259,8 @@ export function buildView(
     // Địa chỉ thật lấy từ company.ts; bản thiết kế ghi cứng một email không
     // tồn tại nên convert.mjs thay mọi chỗ bằng biến này.
     contactEmail: COMPANY.email,
+    // Thanh địa chỉ giả trong ảnh mô phỏng trình duyệt ở trang chi tiết.
+    siteHost: COMPANY.siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, ''),
     pageH1: tab === 'detail' && detail ? `${detail.name} — ${COMPANY.brand}` : PAGE_H1[lang],
     langOptions,
     filters,

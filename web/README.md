@@ -185,11 +185,12 @@ chính thức bằng `--prod`.
 
 ## Sau khi deploy
 
-1. Đặt `NEXT_PUBLIC_SITE_URL` thành tên miền thật.
+1. Đặt `NEXT_PUBLIC_SITE_URL=https://forgezone.store` trong biến môi trường
+   Vercel (cả Production lẫn Preview).
 2. Khai báo webhook cho cả hai cổng. Webhook là nguồn xác nhận thanh toán duy
    nhất — trang "thanh toán thành công" chỉ là giao diện, không tự mở khoá file.
-   - PayOS → `https://<tên-miền>/api/payos/webhook`
-   - Paddle → `https://<tên-miền>/api/paddle/webhook` (bật sự kiện
+   - PayOS → `https://forgezone.store/api/payos/webhook`
+   - Paddle → `https://forgezone.store/api/paddle/webhook` (bật sự kiện
      `transaction.completed`)
 3. Thêm redirect URI của Google:
    `https://<tên-miền>/api/auth/callback/google`

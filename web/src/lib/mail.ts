@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 import type { Lang } from '@/lib/catalog';
 
 const KEY = process.env.RESEND_API_KEY;
-const FROM = process.env.MAIL_FROM || 'Agentic <hello@agentic.vn>';
+const FROM = process.env.MAIL_FROM || 'Agentic <hello@forgezone.store>';
 
 const resend = KEY ? new Resend(KEY) : null;
 
@@ -26,9 +26,9 @@ export async function sendMail(opts: { to: string; subject: string; html: string
 /* ---------- khung thư ---------- */
 
 const FOOTER: Record<Lang, string> = {
-  vi: 'Agentic — Giao diện web cao cấp dựng sẵn. Bạn nhận thư này vì đã đăng ký trên agentic.vn.',
-  en: 'Agentic — premium website templates. You are receiving this because you signed up at agentic.vn.',
-  zh: 'Agentic — 高端网站模板。你收到这封邮件是因为你在 agentic.vn 注册过。',
+  vi: 'Agentic — Giao diện web cao cấp dựng sẵn. Bạn nhận thư này vì đã đăng ký trên forgezone.store.',
+  en: 'Agentic — premium website templates. You are receiving this because you signed up at forgezone.store.',
+  zh: 'Agentic — 高端网站模板。你收到这封邮件是因为你在 forgezone.store 注册过。',
 };
 
 const shell = (title: string, body: string, lang: Lang) => `

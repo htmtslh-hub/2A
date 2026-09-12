@@ -10,7 +10,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import PaddleLoader from './loader';
 
-export const metadata: Metadata = { title: 'Thanh toán — Agentic' };
+export const metadata: Metadata = { title: 'Thanh toán — Forge Zone' };
 
 const TOKEN = process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN ?? '';
 
@@ -59,7 +59,7 @@ export default async function Page({
               display: 'inline-block',
             }}
           />
-          AGENTIC
+          FORGE ZONE
         </div>
 
         {!TOKEN ? (

@@ -1,4 +1,4 @@
-// Lược đồ dữ liệu cho Agentic: tài khoản, đơn hàng, quyền tải và email thu được.
+// Lược đồ dữ liệu cho Forge Zone: tài khoản, đơn hàng, quyền tải và email thu được.
 
 generator client {
   provider = "prisma-client-js"

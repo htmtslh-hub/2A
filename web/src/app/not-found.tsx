@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = { title: 'Không tìm thấy trang — Agentic' };
+export const metadata: Metadata = { title: 'Không tìm thấy trang — Forge Zone' };
 
 export default function NotFound() {
   return (
@@ -43,7 +43,7 @@ export default function NotFound() {
               display: 'inline-block',
             }}
           />
-          AGENTIC
+          FORGE ZONE
         </div>
 
         <p

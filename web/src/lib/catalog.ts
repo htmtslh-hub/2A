@@ -91,7 +91,7 @@ export function productName(kind: Kind, templateId: string | null | undefined, l
 
 /** PayOS giới hạn `description` 25 ký tự (nội dung chuyển khoản). */
 export function shortDescription(kind: Kind, templateId?: string | null): string {
-  const raw = kind === 'BUNDLE' ? 'Agentic tron bo' : `Agentic ${templateId ?? ''}`.trim();
+  const raw = kind === 'BUNDLE' ? 'Forge Zone tron bo' : `Forge Zone ${templateId ?? ''}`.trim();
   return raw.slice(0, 25);
 }
 

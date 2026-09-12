@@ -18,7 +18,7 @@ async function readLang(): Promise<Lang> {
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = ORDERS_STRINGS[await readLang()];
-  return { title: `${t.title} — Agentic` };
+  return { title: `${t.title} — Forge Zone` };
 }
 
 // Trang phụ thuộc phiên đăng nhập nên không được dựng sẵn.
@@ -119,7 +119,7 @@ export default async function Page() {
                 display: 'inline-block',
               }}
             />
-            AGENTIC
+            FORGE ZONE
           </Link>
           <SignOutButton label={t.signOut} />
         </header>

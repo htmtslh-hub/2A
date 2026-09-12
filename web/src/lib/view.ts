@@ -107,9 +107,9 @@ const NAV_ARIA: Record<string, string> = {
  *  không dùng làm tiêu đề cấp một được — Google sẽ đọc trang chủ thành
  *  "Về Tôi". H1 này ẩn về mặt hình ảnh nhưng vẫn là tiêu đề của tài liệu. */
 const PAGE_H1: Record<string, string> = {
-  vi: 'Agentic — giao diện web cao cấp dựng sẵn, kèm giấy phép thương mại',
-  en: 'Agentic — premium ready-made website templates with a commercial licence',
-  zh: 'Agentic — 高端预制网站模板，含商用授权',
+  vi: 'Forge Zone — giao diện web cao cấp dựng sẵn, kèm giấy phép thương mại',
+  en: 'Forge Zone — premium ready-made website templates with a commercial licence',
+  zh: 'Forge Zone — 高端预制网站模板，含商用授权',
 };
 
 export function buildView(

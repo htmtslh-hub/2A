@@ -10,7 +10,7 @@
 
 export const COMPANY = {
   /** Tên thương hiệu, dùng ở tiêu đề và nội dung chung. */
-  brand: 'Agentic',
+  brand: 'Forge Zone',
 
   /** TẠM — tên pháp nhân đầy đủ ghi trong Điều khoản.
    *  Là công ty  -> ghi đúng tên trên giấy đăng ký kinh doanh.

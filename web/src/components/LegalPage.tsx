@@ -71,7 +71,7 @@ export default function LegalPage({
               display: 'inline-block',
             }}
           />
-          AGENTIC
+          FORGE ZONE
         </Link>
 
         <h1

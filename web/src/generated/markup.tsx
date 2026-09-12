@@ -45,7 +45,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
               <div style={{ display: "flex", alignItems: "center", gap: "10px", height: "56px", padding: "0 20px", maxWidth: "340px", overflow: "hidden", whiteSpace: "nowrap", cursor: "pointer", transition: "max-width .95s cubic-bezier(.19,1,.22,1), opacity .5s cubic-bezier(.4,0,.2,1), padding .85s cubic-bezier(.19,1,.22,1)" }} data-island-mini="" onClick={vm.toggleIsland}>
                 <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "var(--acc)", boxShadow: "0 0 12px var(--acc-a55)", display: "inline-block", flex: "none" }} />
                 <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: ".13em", fontSize: "13px", color: "#ffffff" }}>
-                  AGENTIC
+                  FORGE ZONE
                 </span>
                 <span style={{ width: "4px", height: "4px", borderRadius: "50%", background: "rgba(236,238,241,.3)", flex: "none" }} />
                 <span style={{ fontSize: "12px", fontWeight: "600", color: "#ffffff", letterSpacing: ".02em" }}>
@@ -53,10 +53,10 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                 </span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "6px", padding: "7px 9px", height: "56px", maxWidth: "0", opacity: "0", overflow: "hidden", transition: "max-width 1s cubic-bezier(.19,1,.22,1), opacity .6s cubic-bezier(.4,0,.2,1) .12s, padding .85s cubic-bezier(.19,1,.22,1)" }} data-island-full="">
-                <button style={{ display: "flex", alignItems: "center", gap: "9px", flex: "none", padding: "0 12px 0 8px", height: "42px", border: "none", background: "transparent", cursor: "pointer", color: "#ffffff", fontFamily: "inherit" }} onClick={vm.goHome} aria-label="Agentic">
+                <button style={{ display: "flex", alignItems: "center", gap: "9px", flex: "none", padding: "0 12px 0 8px", height: "42px", border: "none", background: "transparent", cursor: "pointer", color: "#ffffff", fontFamily: "inherit" }} onClick={vm.goHome} aria-label="Forge Zone">
                   <span style={{ width: "11px", height: "11px", borderRadius: "50%", background: "var(--acc)", boxShadow: "0 0 12px var(--acc-a55)", display: "inline-block", flex: "none" }} />
                   <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: ".13em", fontSize: "14px" }}>
-                    AGENTIC
+                    FORGE ZONE
                   </span>
                 </button>
                 <span style={{ width: "1px", height: "22px", background: "rgba(255,255,255,.14)", flex: "none" }} />
@@ -106,7 +106,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: ".14em", fontSize: "20px", display: "flex", alignItems: "center", gap: "10px" }}>
                   <span style={{ width: "12px", height: "12px", borderRadius: "50%", background: "var(--acc)" }} />
-                  AGENTIC
+                  FORGE ZONE
                 </span>
                 <button className="hv4" style={{ width: "46px", height: "46px", borderRadius: "50%", border: "1px solid rgba(236,238,241,.28)", background: "transparent", color: "#ffffff", fontSize: "22px", cursor: "pointer" }} onClick={vm.toggleMenu} aria-label="Close">
                   ×
@@ -865,7 +865,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
             <footer style={{ padding: "clamp(40px,6vw,64px) clamp(20px,4vw,56px)" }}>
               <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", flexWrap: "wrap", gap: "28px", alignItems: "center", justifyContent: "space-between" }}>
                 <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: ".02em", fontSize: "clamp(40px,8vw,88px)", lineHeight: ".9" }}>
-                  AGENTIC
+                  FORGE ZONE
                 </span>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "22px", fontSize: "13px", color: "#ffffff", letterSpacing: ".03em" }}>
                   {(vm.footerLinks ?? []).map((fl: any, fl_i: number) => (
@@ -902,7 +902,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
               <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
                 <span style={{ width: "34px", height: "1px", background: "var(--acc)" }} />
                 <span style={{ fontSize: "11px", letterSpacing: ".24em", textTransform: "uppercase", color: "#ffffff" }}>
-                  AGENTIC
+                  FORGE ZONE
                 </span>
               </div>
               <h3 style={{ margin: "0 0 8px", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.02em", fontSize: "30px", lineHeight: "1.1", color: "#ffffff" }}>

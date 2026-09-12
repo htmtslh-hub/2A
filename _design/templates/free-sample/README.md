@@ -3,7 +3,7 @@
 A one-screen coming-soon page. Plain HTML and CSS — no build step, no
 framework, nothing to install.
 
-This is the free sample from the **Agentic** template library. Use it however
+This is the free sample from the **Forge Zone** template library. Use it however
 you like, including commercially.
 
 ## Getting started

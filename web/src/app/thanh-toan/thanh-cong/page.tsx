@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import PaymentResult from '../_result';
 
-export const metadata: Metadata = { title: 'Thanh toán thành công — Agentic' };
+export const metadata: Metadata = { title: 'Thanh toán thành công — Forge Zone' };
 
 export default async function Page({
   searchParams,

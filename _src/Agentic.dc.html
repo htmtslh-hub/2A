@@ -89,14 +89,14 @@
       <div style="position:relative; z-index:2; display:flex; align-items:center;">
       <div data-island-mini="" onClick="{{ toggleIsland }}" style="display:flex; align-items:center; gap:10px; height:56px; padding:0 20px; max-width:340px; overflow:hidden; white-space:nowrap; cursor:pointer; transition:max-width .95s cubic-bezier(.19,1,.22,1), opacity .5s cubic-bezier(.4,0,.2,1), padding .85s cubic-bezier(.19,1,.22,1);">
         <span style="width:9px; height:9px; border-radius:50%; background:var(--acc); box-shadow:0 0 12px var(--acc-a55); display:inline-block; flex:none;"></span>
-        <span style="font-family:var(--display); font-weight:700; letter-spacing:.13em; font-size:13px; color:#ffffff;">AGENTIC</span>
+        <span style="font-family:var(--display); font-weight:700; letter-spacing:.13em; font-size:13px; color:#ffffff;">FORGE ZONE</span>
         <span style="width:4px; height:4px; border-radius:50%; background:rgba(236,238,241,.3); flex:none;"></span>
         <span style="font-size:12px; font-weight:600; color:#ffffff; letter-spacing:.02em;">{{ activeTabLabel }}</span>
       </div>
       <div data-island-full="" style="display:flex; align-items:center; gap:6px; padding:7px 9px; height:56px; max-width:0; opacity:0; overflow:hidden; transition:max-width 1s cubic-bezier(.19,1,.22,1), opacity .6s cubic-bezier(.4,0,.2,1) .12s, padding .85s cubic-bezier(.19,1,.22,1);">
-        <button onClick="{{ goHome }}" aria-label="Agentic" style="display:flex; align-items:center; gap:9px; flex:none; padding:0 12px 0 8px; height:42px; border:none; background:transparent; cursor:pointer; color:#ffffff; font-family:inherit;">
+        <button onClick="{{ goHome }}" aria-label="Forge Zone" style="display:flex; align-items:center; gap:9px; flex:none; padding:0 12px 0 8px; height:42px; border:none; background:transparent; cursor:pointer; color:#ffffff; font-family:inherit;">
           <span style="width:11px; height:11px; border-radius:50%; background:var(--acc); box-shadow:0 0 12px var(--acc-a55); display:inline-block; flex:none;"></span>
-          <span style="font-family:var(--display); font-weight:700; letter-spacing:.13em; font-size:14px;">AGENTIC</span>
+          <span style="font-family:var(--display); font-weight:700; letter-spacing:.13em; font-size:14px;">FORGE ZONE</span>
         </button>
         <span style="width:1px; height:22px; background:rgba(255,255,255,.14); flex:none;"></span>
         <div data-island-tabs="" style="display:flex; align-items:center; gap:2px; min-width:0; overflow:hidden;">
@@ -131,7 +131,7 @@
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
     <nav style="position:fixed; inset:0; z-index:60; display:flex; flex-direction:column; padding:26px clamp(20px,4vw,56px); animation:riseIn .35s ease both;">
       <div style="display:flex; align-items:center; justify-content:space-between;">
-        <span style="font-family:var(--display); font-weight:700; letter-spacing:.14em; font-size:20px; display:flex; align-items:center; gap:10px;"><span style="width:12px;height:12px;border-radius:50%;background:var(--acc);"></span>AGENTIC</span>
+        <span style="font-family:var(--display); font-weight:700; letter-spacing:.14em; font-size:20px; display:flex; align-items:center; gap:10px;"><span style="width:12px;height:12px;border-radius:50%;background:var(--acc);"></span>FORGE ZONE</span>
         <button onClick="{{ toggleMenu }}" aria-label="Close" style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(236,238,241,.28);background:transparent;color:#ffffff;font-size:22px;cursor:pointer;" style-hover="border-color:#ffffff;color:#ffffff;">×</button>
       </div>
       <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:clamp(4px,1.4vh,14px);">
@@ -680,7 +680,7 @@
   <sc-if value="{{ showFooter }}" hint-placeholder-val="{{ false }}">
   <footer style="padding:clamp(40px,6vw,64px) clamp(20px,4vw,56px);">
     <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:28px; align-items:center; justify-content:space-between;">
-      <span style="font-family:var(--display); font-weight:700; letter-spacing:.02em; font-size:clamp(40px,8vw,88px); line-height:.9;">AGENTIC</span>
+      <span style="font-family:var(--display); font-weight:700; letter-spacing:.02em; font-size:clamp(40px,8vw,88px); line-height:.9;">FORGE ZONE</span>
       <div style="display:flex; flex-wrap:wrap; gap:22px; font-size:13px; color:#ffffff; letter-spacing:.03em;">
         <sc-for list="{{ footerLinks }}" as="fl" hint-placeholder-count="4">
           <button onClick="{{ fl.onSelect }}" style="background:transparent; border:none; padding:0; cursor:pointer; font-family:inherit; font-size:13px; color:#ffffff; letter-spacing:.03em;" style-hover="color:#ffffff;">{{ fl.label }}</button>
@@ -702,7 +702,7 @@
       <button onClick="{{ closeAuth }}" aria-label="{{ t.authClose }}" style="position:absolute; top:18px; right:18px; width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06); color:#c8ced6; font-size:15px; line-height:1; cursor:pointer; font-family:inherit;" style-hover="border-color:#ffffff; color:#ffffff;">✕</button>
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
         <span style="width:34px; height:1px; background:var(--acc);"></span>
-        <span style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">AGENTIC</span>
+        <span style="font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:#ffffff;">FORGE ZONE</span>
       </div>
       <h3 style="margin:0 0 8px; font-family:var(--display); font-weight:700; letter-spacing:-.02em; font-size:30px; line-height:1.1; color:#ffffff;">{{ t.authTitle }}</h3>
       <p style="margin:0 0 26px; font-size:14px; line-height:1.6; color:#949ba4;">{{ t.authSub }}</p>
@@ -782,11 +782,11 @@ const I18N = {
     formEmail: 'Email của bạn',
     formSubmit: 'Nhận mẫu miễn phí',
     formSent: 'Đã gửi — kiểm tra email nhé!',
-    copyright: '© 2026 Agentic — Giao diện web cao cấp dựng sẵn.',
+    copyright: '© 2026 Forge Zone — Giao diện web cao cấp dựng sẵn.',
     nav: ['Trang chủ', 'Thư viện', 'Quy trình', 'Bảng giá', 'Câu hỏi', 'Nhận mẫu'],
     marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
     services: [
-      { kicker: 'Người sáng lập · Agentic', title: 'Về Tôi', blurb: 'Tôi thiết kế và bán giao diện web cao cấp — những bộ template dựng sẵn, chuyển động mượt, sẵn sàng thương mại. Xem hành trình và cách tôi làm việc.' },
+      { kicker: 'Người sáng lập · Forge Zone', title: 'Về Tôi', blurb: 'Tôi thiết kế và bán giao diện web cao cấp — những bộ template dựng sẵn, chuyển động mượt, sẵn sàng thương mại. Xem hành trình và cách tôi làm việc.' },
       { kicker: 'Bán hàng · Chốt đơn', title: 'Agent Bán Hàng', blurb: 'Tư vấn sản phẩm, đề xuất gói phù hợp và dẫn khách đến bước thanh toán. Chủ động nhắc lại giỏ hàng và follow-up lead tự động.' },
       { kicker: 'Vận hành nội bộ', title: 'Trợ Lý Nội Bộ', blurb: 'Tra cứu tài liệu, tổng hợp báo cáo, soạn thảo và trả lời quy trình cho nhân viên — kết nối trực tiếp vào dữ liệu công ty.' },
       { kicker: 'Phân tích dữ liệu', title: 'Agent Phân Tích', blurb: 'Hỏi đáp bằng ngôn ngữ tự nhiên trên dữ liệu kinh doanh, tự sinh biểu đồ và phát hiện bất thường theo thời gian thực.' },
@@ -902,11 +902,11 @@ const I18N = {
     formEmail: 'Your email',
     formSubmit: 'Send my free template',
     formSent: 'Sent — check your inbox!',
-    copyright: '© 2026 Agentic — Premium website templates, ready to ship.',
+    copyright: '© 2026 Forge Zone — Premium website templates, ready to ship.',
     nav: ['Home', 'Library', 'Process', 'Pricing', 'FAQ', 'Free sample'],
     marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
     services: [
-      { kicker: 'Founder · Agentic', title: 'About Me', blurb: 'I design and sell premium website templates — finished builds with real motion, ready to ship commercially. See the journey and how I work.' },
+      { kicker: 'Founder · Forge Zone', title: 'About Me', blurb: 'I design and sell premium website templates — finished builds with real motion, ready to ship commercially. See the journey and how I work.' },
       { kicker: 'Sales · Conversion', title: 'Sales Agent', blurb: 'Advises on products, recommends the right package and guides buyers to checkout. Recovers carts and follows up on leads automatically.' },
       { kicker: 'Internal operations', title: 'Internal Copilot', blurb: 'Searches documents, compiles reports, drafts replies and answers process questions for staff — wired straight into company data.' },
       { kicker: 'Data analysis', title: 'Analytics Agent', blurb: 'Ask business data questions in plain language, get charts generated on the fly and anomalies flagged in real time.' },
@@ -1022,11 +1022,11 @@ const I18N = {
     formEmail: '您的邮箱',
     formSubmit: '领取免费模板',
     formSent: '已发送，请查收邮箱！',
-    copyright: '© 2026 Agentic — 高端网站模板，即买即上线。',
+    copyright: '© 2026 Forge Zone — 高端网站模板，即买即上线。',
     nav: ['首页', '模板库', '流程', '价格', '常见问题', '免费样板'],
     marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
     services: [
-      { kicker: '创始人 · Agentic', title: '关于我', blurb: '我设计并销售高端网站模板——动效完整、可直接商用的成品站点。了解我的经历与工作方式。' },
+      { kicker: '创始人 · Forge Zone', title: '关于我', blurb: '我设计并销售高端网站模板——动效完整、可直接商用的成品站点。了解我的经历与工作方式。' },
       { kicker: '销售 · 成交', title: '销售 Agent', blurb: '介绍产品、推荐合适套餐并引导客户完成付款，自动挽回购物车并持续跟进线索。' },
       { kicker: '内部运营', title: '内部助理', blurb: '检索文档、汇总报告、起草内容并解答员工的流程问题，直接连接公司数据。' },
       { kicker: '数据分析', title: '分析 Agent', blurb: '用自然语言查询经营数据，自动生成图表并实时发现异常。' },

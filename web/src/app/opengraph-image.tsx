@@ -5,7 +5,7 @@ import { COMPANY } from '@/lib/company';
 
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
-export const alt = 'Agentic — Giao diện web cao cấp, dựng sẵn để bán';
+export const alt = 'Forge Zone — Giao diện web cao cấp, dựng sẵn để bán';
 
 export default function Image() {
   return new ImageResponse(

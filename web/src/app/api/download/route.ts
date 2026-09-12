@@ -37,7 +37,7 @@ function serve(templateId: string) {
     headers: {
       'Content-Type': 'application/zip',
       'Content-Length': String(statSync(file).size),
-      'Content-Disposition': `attachment; filename="agentic-${templateId}.zip"`,
+      'Content-Disposition': `attachment; filename="forgezone-${templateId}.zip"`,
       'Cache-Control': 'private, no-store',
     },
   });

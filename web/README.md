@@ -1,4 +1,4 @@
-# Agentic — website bán giao diện web
+# Forge Zone — website bán giao diện web
 
 Dự án Next.js dựng từ bản thiết kế `2A.zip` (Claude Design canvas). Landing page
 ba ngôn ngữ (Việt / English / 中文) kèm thư viện giao diện, trang chi tiết từng

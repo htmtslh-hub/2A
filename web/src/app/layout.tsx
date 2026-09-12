@@ -26,11 +26,11 @@ const body = Be_Vietnam_Pro({
 export const metadata: Metadata = {
   // Cần metadataBase thì Next mới dựng được URL tuyệt đối cho ảnh OG.
   metadataBase: new URL(COMPANY.siteUrl),
-  title: 'Agentic — Giao diện web cao cấp, dựng sẵn để bán',
+  title: 'Forge Zone — Giao diện web cao cấp, dựng sẵn để bán',
   description:
     'Thư viện giao diện web dựng sẵn: layout, chuyển động, responsive và nội dung mẫu. Tải về, thay chữ, lên sóng.',
   openGraph: {
-    title: 'Agentic — Giao diện web cao cấp, dựng sẵn để bán',
+    title: 'Forge Zone — Giao diện web cao cấp, dựng sẵn để bán',
     description:
       'Mỗi giao diện là một file hoàn chỉnh. Mua một lần, dùng vĩnh viễn, kèm giấy phép thương mại.',
     type: 'website',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agentic — Giao diện web cao cấp, dựng sẵn để bán',
+    title: 'Forge Zone — Giao diện web cao cấp, dựng sẵn để bán',
     description: 'Tải về, thay chữ, lên sóng. Giấy phép thương mại không giới hạn.',
   },
 };

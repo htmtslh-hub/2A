@@ -69,7 +69,7 @@ export const paddleAdapter: PaymentProviderAdapter = {
     if (productId) {
       // gắn vào sản phẩm có sẵn trong catalog
     } else {
-      price.product = { name: 'Agentic — giao diện web', tax_category: 'standard' };
+      price.product = { name: 'Forge Zone — giao diện web', tax_category: 'standard' };
     }
 
     const payload = {

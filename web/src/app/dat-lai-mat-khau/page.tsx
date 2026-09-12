@@ -15,7 +15,7 @@ async function readLang(): Promise<Lang> {
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = RESET_STRINGS[await readLang()];
-  return { title: `${t.title} — Agentic` };
+  return { title: `${t.title} — Forge Zone` };
 }
 
 export default async function Page({
@@ -72,7 +72,7 @@ export default async function Page({
               display: 'inline-block',
             }}
           />
-          AGENTIC
+          FORGE ZONE
         </div>
 
         <h1

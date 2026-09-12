@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 import type { Lang } from '@/lib/catalog';
 
 const KEY = process.env.RESEND_API_KEY;
-const FROM = process.env.MAIL_FROM || 'Agentic <hello@forgezone.store>';
+const FROM = process.env.MAIL_FROM || 'Forge Zone <hello@forgezone.store>';
 
 const resend = KEY ? new Resend(KEY) : null;
 
@@ -26,15 +26,15 @@ export async function sendMail(opts: { to: string; subject: string; html: string
 /* ---------- khung thư ---------- */
 
 const FOOTER: Record<Lang, string> = {
-  vi: 'Agentic — Giao diện web cao cấp dựng sẵn. Bạn nhận thư này vì đã đăng ký trên forgezone.store.',
-  en: 'Agentic — premium website templates. You are receiving this because you signed up at forgezone.store.',
-  zh: 'Agentic — 高端网站模板。你收到这封邮件是因为你在 forgezone.store 注册过。',
+  vi: 'Forge Zone — Giao diện web cao cấp dựng sẵn. Bạn nhận thư này vì đã đăng ký trên forgezone.store.',
+  en: 'Forge Zone — premium website templates. You are receiving this because you signed up at forgezone.store.',
+  zh: 'Forge Zone — 高端网站模板。你收到这封邮件是因为你在 forgezone.store 注册过。',
 };
 
 const shell = (title: string, body: string, lang: Lang) => `
 <div style="background:#16181c;padding:32px 0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif">
   <div style="max-width:520px;margin:0 auto;background:#1b1e24;border:1px solid #2a2e36;border-radius:18px;padding:32px;color:#eceef1">
-    <div style="font-weight:800;letter-spacing:.14em;font-size:13px;color:#e83a34;margin-bottom:22px">AGENTIC</div>
+    <div style="font-weight:800;letter-spacing:.14em;font-size:13px;color:#e83a34;margin-bottom:22px">FORGE ZONE</div>
     <h1 style="margin:0 0 16px;font-size:22px;line-height:1.25;color:#fff">${title}</h1>
     ${body}
     <p style="margin:28px 0 0;font-size:12px;color:#8b929b">${FOOTER[lang]}</p>
@@ -51,29 +51,29 @@ const p = (text: string) =>
 
 const LEAD: Record<Lang, { subject: string; title: string; body: string[]; cta: string }> = {
   vi: {
-    subject: 'Mẫu miễn phí + mã giảm 20% từ Agentic',
+    subject: 'Mẫu miễn phí + mã giảm 20% từ Forge Zone',
     title: 'Mẫu miễn phí của bạn đây',
     body: [
       'Cảm ơn bạn đã quan tâm. Bấm nút bên dưới để tải mẫu miễn phí.',
-      'Dùng mã <b style="color:#f0a63c">AGENTIC20</b> để giảm 20% khi mua trọn bộ thư viện.',
+      'Dùng mã <b style="color:#f0a63c">FORGE20</b> để giảm 20% khi mua trọn bộ thư viện.',
     ],
     cta: 'Tải mẫu miễn phí',
   },
   en: {
-    subject: 'Your free template + 20% off from Agentic',
+    subject: 'Your free template + 20% off from Forge Zone',
     title: 'Here is your free template',
     body: [
       'Thanks for your interest. Hit the button below to download your free template.',
-      'Use code <b style="color:#f0a63c">AGENTIC20</b> for 20% off the full library.',
+      'Use code <b style="color:#f0a63c">FORGE20</b> for 20% off the full library.',
     ],
     cta: 'Download free template',
   },
   zh: {
-    subject: '你的免费模板 + Agentic 八折优惠',
+    subject: '你的免费模板 + Forge Zone 八折优惠',
     title: '这是你的免费模板',
     body: [
       '感谢关注。点击下方按钮即可下载免费模板。',
-      '使用优惠码 <b style="color:#f0a63c">AGENTIC20</b> 购买全套模板库可享 8 折。',
+      '使用优惠码 <b style="color:#f0a63c">FORGE20</b> 购买全套模板库可享 8 折。',
     ],
     cta: '下载免费模板',
   },
@@ -140,7 +140,7 @@ export function orderPaidEmail(opts: {
 
 const RESET: Record<Lang, { subject: string; title: string; body: string[]; cta: string }> = {
   vi: {
-    subject: 'Đặt lại mật khẩu Agentic',
+    subject: 'Đặt lại mật khẩu Forge Zone',
     title: 'Đặt lại mật khẩu',
     body: [
       'Bấm nút bên dưới để chọn mật khẩu mới. Link có hiệu lực trong 1 giờ và chỉ dùng được một lần.',
@@ -149,7 +149,7 @@ const RESET: Record<Lang, { subject: string; title: string; body: string[]; cta:
     cta: 'Đặt lại mật khẩu',
   },
   en: {
-    subject: 'Reset your Agentic password',
+    subject: 'Reset your Forge Zone password',
     title: 'Reset your password',
     body: [
       'Click the button below to choose a new password. The link works for 1 hour and can only be used once.',
@@ -158,7 +158,7 @@ const RESET: Record<Lang, { subject: string; title: string; body: string[]; cta:
     cta: 'Reset password',
   },
   zh: {
-    subject: '重置你的 Agentic 密码',
+    subject: '重置你的 Forge Zone 密码',
     title: '重置密码',
     body: [
       '点击下方按钮设置新密码。链接 1 小时内有效，且只能使用一次。',
@@ -233,7 +233,7 @@ export function enquiryAlertEmail(d: {
     `<p style="margin:18px 0 6px;font-size:14px;color:#fff"><b>Nội dung:</b></p>` +
     `<p style="margin:0;padding:14px;border-radius:10px;background:#22262e;font-size:14px;line-height:1.6;color:#c3c9d1;white-space:pre-wrap">${esc(d.message)}</p>`;
   return {
-    subject: `[Agentic] Yêu cầu ${d.kind} — ${d.name}`,
+    subject: `[Forge Zone] Yêu cầu ${d.kind} — ${d.name}`,
     html: shell('Có yêu cầu đặt làm agent mới', body, 'vi'),
   };
 }

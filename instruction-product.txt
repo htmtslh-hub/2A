@@ -1,6 +1,6 @@
 ================================================================================
 HƯỚNG DẪN ĐÓNG GÓI MỘT MẪU GIAO DIỆN ĐỂ BÁN
-Chuẩn dùng cho cửa hàng Agentic — viết để đưa cho AI khác làm theo
+Chuẩn dùng cho cửa hàng Forge Zone — viết để đưa cho AI khác làm theo
 ================================================================================
 
 Cập nhật: 12/09/2026

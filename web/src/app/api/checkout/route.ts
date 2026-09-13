@@ -8,6 +8,7 @@ import { z } from 'zod';
 import { prisma } from '@/lib/db';
 import { auth } from '@/auth';
 import { adapterFor } from '@/lib/payments';
+import { COMPANY } from '@/lib/company';
 import {
   currencyForProvider,
   priceOf,
@@ -17,6 +18,25 @@ import {
   type Lang,
   type Provider,
 } from '@/lib/catalog';
+
+const PADDLE_PAUSED: Record<Lang, string> = {
+  vi: `Thanh toán thẻ quốc tế đang tạm ngưng. Vui lòng liên hệ ${COMPANY.email} để mua.`,
+  en: `Card payments are temporarily unavailable. Please contact ${COMPANY.email} to purchase.`,
+  zh: `国际银行卡支付暂时不可用。如需购买，请联系 ${COMPANY.email}。`,
+};
+
+/** Hai URL có cùng tên miền không (coi www. là một). */
+function sameSite(a: string, b: string): boolean {
+  const host = (u: string) => {
+    try {
+      return new URL(u).hostname.replace(/^www\./, '');
+    } catch {
+      return null;
+    }
+  };
+  const ha = host(a);
+  return ha !== null && ha === host(b);
+}
 
 const schema = z.object({
   kind: z.enum(['TEMPLATE', 'BUNDLE']),
@@ -88,6 +108,22 @@ export async function POST(req: Request) {
       lang: lang as Lang,
       baseUrl,
     });
+
+    // Trang thanh toán Paddle phải nằm trên chính web này. Tài khoản Paddle
+    // dùng chung với Habit Mastery, và khi chưa đặt PADDLE_CHECKOUT_URL thì
+    // Paddle trả về Default payment link của tài khoản — đang là
+    // habit-mastery.com. Chuyển khách sang đó thì họ rơi vào trang đăng nhập
+    // của một sản phẩm khác, không có hộp thanh toán nào mở ra (đã thử thật
+    // ngày 13/09/2026). Thà báo tạm ngưng còn hơn đẩy khách đi lạc.
+    if (provider === 'PADDLE' && !sameSite(result.checkoutUrl, baseUrl)) {
+      console.error(
+        '[checkout] Paddle trả link ngoài web, đã chặn:',
+        result.checkoutUrl,
+        '— duyệt tên miền rồi đặt PADDLE_CHECKOUT_URL'
+      );
+      await prisma.order.update({ where: { id: order.id }, data: { status: 'FAILED' } });
+      return NextResponse.json({ error: PADDLE_PAUSED[lang as Lang] }, { status: 503 });
+    }
 
     await prisma.order.update({
       where: { id: order.id },

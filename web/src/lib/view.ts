@@ -15,6 +15,13 @@ import { bgPoster } from './media';
 import { SERVICE, SERVICE_SITE_URL } from './service-content';
 import { REAL_TEMPLATES } from './real-templates';
 import {
+  currencyForProvider,
+  formatMoney,
+  priceOf,
+  providerForLang,
+  type Lang,
+} from './catalog';
+import {
   I18N,
   IDS,
   POSTERS,
@@ -160,10 +167,21 @@ export function buildView(
   };
   // Danh mục hiệu lực: ô nào đã có mẫu thật thì lấy tên, mô tả, thẻ và phân
   // loại từ REAL_TEMPLATES; ô còn lại giữ nội dung lấp chỗ của bản thiết kế.
+  //
+  // Giá của mẫu thật lấy từ catalog, theo đúng loại tiền khách sẽ trả — cùng
+  // nguồn với số tiền gửi sang cổng thanh toán. Bản thiết kế ghi giá lấp chỗ
+  // cho từng ô ($69–$99), nên Dune Pass từng hiện $89 trong khi thanh toán thu
+  // $79, và khách xem tiếng Việt thấy giá đô dù trả bằng VNĐ.
+  const currency = currencyForProvider(providerForLang(lang as Lang));
   const tplMeta = TPL_META.map((m: any, i: number) => {
     const real = REAL_TEMPLATES[m.id];
     return real
-      ? { ...m, cat: real.cat, ...(real.copy[lang] ?? real.copy.vi) }
+      ? {
+          ...m,
+          cat: real.cat,
+          price: formatMoney(priceOf('TEMPLATE', currency, m.id), currency, lang as Lang),
+          ...(real.copy[lang] ?? real.copy.vi),
+        }
       : { ...m, ...t.templates[i] };
   });
 

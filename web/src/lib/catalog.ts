@@ -79,6 +79,8 @@ export function formatMoney(amount: number, currency: Currency, lang: Lang = 'vi
   return new Intl.NumberFormat(lang === 'vi' ? 'vi-VN' : 'en-US', {
     style: 'currency',
     currency: 'USD',
+    // Giá chẵn đô thì hiện "$79" như bảng giá, không phải "$79.00".
+    minimumFractionDigits: amount % 100 === 0 ? 0 : 2,
   }).format(amount / 100);
 }
 

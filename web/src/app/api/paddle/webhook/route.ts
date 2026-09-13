@@ -31,7 +31,15 @@ export async function POST(req: Request) {
     (event.txnId ? await prisma.order.findUnique({ where: { paddleTxnId: event.txnId } }) : null);
 
   if (!order) {
-    console.error('[paddle-webhook] không tìm thấy đơn', event.orderId, event.txnId);
+    // Tài khoản Paddle này dùng chung với dự án khác (Habit Mastery), nên
+    // webhook nhận cả giao dịch của bên đó. Mọi đơn của mình đều gửi kèm
+    // `custom_data.orderId`; thiếu nó thì là của dự án khác, không phải lỗi.
+    // Ghi ở mức log để lỗi thật (có orderId mà không thấy đơn) không bị chìm.
+    if (!event.orderId) {
+      console.log('[paddle-webhook] bỏ qua giao dịch của dự án khác:', event.txnId);
+    } else {
+      console.error('[paddle-webhook] không tìm thấy đơn', event.orderId, event.txnId);
+    }
     return NextResponse.json({ received: true });
   }
 

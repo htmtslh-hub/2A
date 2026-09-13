@@ -38,11 +38,16 @@ export async function fulfilOrder(
     (order.userId ? await prisma.user.findUnique({ where: { id: order.userId } }) : null) ??
     (await prisma.user.findUnique({ where: { email: order.buyerEmail } }));
 
-  await prisma.$transaction(async (tx: Prisma.TransactionClient) => {
-    await tx.order.update({
-      where: { id: order.id },
+  // Chốt đơn bằng một phép cập nhật có điều kiện, không dựa vào `order.status`
+  // đọc từ trước. Cổng gửi lại webhook khi phản hồi chậm, và hai lần gửi chạy
+  // song song đều thấy đơn chưa PAID — kiểm tra kiểu đọc-rồi-ghi sẽ cho cả hai
+  // đi tiếp: tạo trùng quyền sở hữu, gửi hai email, hai link tải.
+  const claimed = await prisma.$transaction(async (tx: Prisma.TransactionClient) => {
+    const { count } = await tx.order.updateMany({
+      where: { id: order.id, status: { not: 'PAID' } },
       data: { status: 'PAID', paidAt: new Date(), userId: user?.id ?? order.userId },
     });
+    if (count === 0) return false;
 
     if (user) {
       await tx.purchase.create({
@@ -54,7 +59,10 @@ export async function fulfilOrder(
         },
       });
     }
+    return true;
   });
+
+  if (!claimed) return 'already-paid';
 
   // Có tài khoản thì cấp link tải gắn với tài khoản đó; không thì dẫn về trang chủ.
   let downloadUrl = `${baseUrl}/?tab=pricing`;

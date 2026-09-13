@@ -8,6 +8,7 @@ import {
   NAV_ACCOUNT,
   FAQ_NO_CODE,
   HOME_SHOWCASE,
+  COMING_SOON,
 } from './i18n-extra';
 import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
 import { COMPANY } from './company';
@@ -182,7 +183,9 @@ export function buildView(
           price: formatMoney(priceOf('TEMPLATE', currency, m.id), currency, lang as Lang),
           ...(real.copy[lang] ?? real.copy.vi),
         }
-      : { ...m, ...t.templates[i] };
+      : // Ô lấp chỗ chưa có file để giao: không hiện giá hay nhãn "Mới/Hot"
+        // như thể đang bán, mà ghi rõ sắp ra mắt.
+        { ...m, ...t.templates[i], price: COMING_SOON[lang].label, badge: '' };
   });
 
   const n = t.services.length;
@@ -295,8 +298,12 @@ export function buildView(
     });
   }
 
+  // Trang chi tiết của ô lấp chỗ: nút mua ghi "Sắp ra mắt" và bỏ dòng "trả một
+  // lần, dùng vĩnh viễn" cạnh giá, vì chưa có gì để trả tiền.
+  const detailSoon = Boolean(d && !REAL_TEMPLATES[d.id]);
+
   return {
-    t,
+    t: detailSoon ? { ...t, pricingUnitOnce: '', dBuy: COMING_SOON[lang].label } : t,
     // Địa chỉ thật lấy từ company.ts; bản thiết kế ghi cứng một email không
     // tồn tại nên convert.mjs thay mọi chỗ bằng biến này.
     contactEmail: COMPANY.email,
@@ -501,7 +508,14 @@ export function buildView(
       onToggle: () => im.push({ openFaq: state.openFaq === i ? -1 : i }),
     })),
     buyDetail: () => {
-      if (state.detail) im.startCheckout('TEMPLATE', state.detail);
+      if (!state.detail) return;
+      // Ô lấp chỗ chưa có file để giao — không cho sang bước thanh toán.
+      // Máy chủ cũng chặn (templateExists), đây chỉ để báo khách cho rõ.
+      if (!REAL_TEMPLATES[state.detail]) {
+        im.setState({ toast: COMING_SOON[lang].toast });
+        return;
+      }
+      im.startCheckout('TEMPLATE', state.detail);
     },
     submitLabel: state.submitted ? t.formSent : t.formSubmit,
     onSubmit: (e: any) => {

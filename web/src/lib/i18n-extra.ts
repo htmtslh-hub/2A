@@ -123,6 +123,13 @@ export const AUTH_ERRORS: Record<LangCode, Record<string, string>> = {
   },
 };
 
+/** Ô mẫu chưa có sản phẩm thật: thay giá và nút mua, báo khi khách bấm mua. */
+export const COMING_SOON: Record<LangCode, { label: string; toast: string }> = {
+  vi: { label: 'Sắp ra mắt', toast: 'Mẫu này sắp ra mắt, hiện chưa mở bán.' },
+  en: { label: 'Coming soon', toast: 'This template is coming soon and is not on sale yet.' },
+  zh: { label: '即将上线', toast: '该模板即将上线，暂未开售。' },
+};
+
 /** Tiêu đề dải trưng bày mẫu ở trang chủ, ngay dưới hero. */
 export const HOME_SHOWCASE: Record<LangCode, { kicker: string; title: string }> = {
   vi: { kicker: 'Giao diện đang bán', title: 'Xem demo thật, mua là dùng được ngay' },

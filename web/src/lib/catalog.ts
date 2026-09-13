@@ -51,8 +51,12 @@ export function templateFile(id: string): string {
   return templateSlug(id);
 }
 
+/** Chỉ mẫu có sản phẩm thật (có file .zip để giao) mới mua được.
+ *
+ *  Trước đây nhận mọi mã trong TPL_META (t1–t18), nên 15 ô lấp chỗ của bản
+ *  thiết kế vẫn thanh toán được — khách trả tiền rồi tải về nhận 404. */
 export function templateExists(id: string): boolean {
-  return TPL_META.some((m: { id: string }) => m.id === id);
+  return Boolean(REAL_TEMPLATES[id]);
 }
 
 export function templateName(id: string, lang: Lang = 'vi'): string {

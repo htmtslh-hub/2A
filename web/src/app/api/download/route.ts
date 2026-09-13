@@ -12,7 +12,7 @@ import { Readable } from 'node:stream';
 import path from 'node:path';
 import { prisma } from '@/lib/db';
 import { auth } from '@/auth';
-import { templateFile } from '@/lib/catalog';
+import { templateExists, templateFile } from '@/lib/catalog';
 
 const TEMPLATE_DIR = path.join(process.cwd(), 'private', 'templates');
 
@@ -57,6 +57,11 @@ export async function GET(req: Request) {
   if (token) {
     const row = await prisma.downloadToken.findUnique({ where: { token } });
     if (!row) return NextResponse.json({ error: 'Link không hợp lệ.' }, { status: 404 });
+    // Link cũ cấp cho đơn trọn bộ trỏ tới 'bundle' — không có file đó. Đưa về
+    // trang đơn hàng, nơi mỗi mẫu trong trọn bộ có nút tải riêng.
+    if (row.templateId === 'bundle') {
+      return NextResponse.redirect(new URL('/don-hang', req.url));
+    }
     if (row.expiresAt < new Date()) {
       return NextResponse.json({ error: 'Link đã hết hạn.' }, { status: 410 });
     }
@@ -75,6 +80,11 @@ export async function GET(req: Request) {
   }
   if (!id) {
     return NextResponse.json({ error: 'Thiếu tham số id.' }, { status: 400 });
+  }
+  // Người mua trọn bộ được mở mọi mã, kể cả ô lấp chỗ chưa có file — chặn ở
+  // đây để họ nhận câu báo rõ ràng thay vì lỗi thiếu file.
+  if (!templateExists(id)) {
+    return NextResponse.json({ error: 'Không tìm thấy giao diện này.' }, { status: 404 });
   }
 
   // Mua trọn bộ (templateId = null) thì mở khoá mọi mẫu.

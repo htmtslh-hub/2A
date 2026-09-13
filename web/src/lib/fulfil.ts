@@ -68,13 +68,18 @@ export async function fulfilOrder(
 
   // Có tài khoản thì cấp link tải gắn với tài khoản đó; không thì dẫn về trang chủ.
   let downloadUrl = `${baseUrl}/?tab=pricing`;
-  if (user) {
+  if (user && order.kind === 'BUNDLE') {
+    // Trọn bộ không có một file chung: trang đơn hàng liệt kê từng mẫu với nút
+    // tải riêng. Trước đây cấp link tới 'bundle' — file không tồn tại, nên khách
+    // trả tiền trọn bộ xong bấm link trong email nhận 404.
+    downloadUrl = `${baseUrl}/don-hang`;
+  } else if (user) {
     const token = crypto.randomBytes(32).toString('hex');
     await prisma.downloadToken.create({
       data: {
         token,
         userId: user.id,
-        templateId: order.templateId ?? 'bundle',
+        templateId: order.templateId!,
         expiresAt: new Date(Date.now() + 7 * 24 * 3600 * 1000),
       },
     });

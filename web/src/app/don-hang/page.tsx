@@ -6,6 +6,7 @@ import { readLang } from '@/lib/server-lang';
 import { prisma } from '@/lib/db';
 import { formatMoney, templateName, type Currency, type Lang } from '@/lib/catalog';
 import { ORDERS_STRINGS } from '@/lib/i18n-extra';
+import { REAL_TEMPLATES } from '@/lib/real-templates';
 import { SignOutButton } from './actions';
 
 const DATE_LOCALE: Record<Lang, string> = { vi: 'vi-VN', en: 'en-US', zh: 'zh-CN' };
@@ -169,12 +170,21 @@ export default async function Page() {
                       {formatMoney(p.order.amount, p.order.currency as Currency, lang)}
                     </p>
                   </div>
-                  <a
-                    href={`/api/download?id=${isBundle ? 'bundle' : p.templateId}`}
-                    style={primaryBtn}
-                  >
-                    {t.download}
-                  </a>
+                  {isBundle ? (
+                    // Trọn bộ không có một file chung: mỗi mẫu thật một nút tải.
+                    // Trước đây nút trỏ tới 'bundle' — không có file đó, nên 404.
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'flex-end' }}>
+                      {Object.entries(REAL_TEMPLATES).map(([id, tpl]) => (
+                        <a key={id} href={`/api/download?id=${id}`} style={primaryBtn}>
+                          {t.download} {(tpl.copy[lang] ?? tpl.copy.vi).name}
+                        </a>
+                      ))}
+                    </div>
+                  ) : (
+                    <a href={`/api/download?id=${p.templateId}`} style={primaryBtn}>
+                      {t.download}
+                    </a>
+                  )}
                 </div>
               );
             })}

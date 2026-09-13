@@ -2,7 +2,13 @@
    Giữ nguyên tên trường để markup sinh tự động dùng được không đổi. */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { RefObject } from 'react';
-import { REGISTER_STRINGS, FORGOT_STRINGS, NAV_ACCOUNT, FAQ_NO_CODE } from './i18n-extra';
+import {
+  REGISTER_STRINGS,
+  FORGOT_STRINGS,
+  NAV_ACCOUNT,
+  FAQ_NO_CODE,
+  HOME_SHOWCASE,
+} from './i18n-extra';
 import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
 import { COMPANY } from './company';
 import { bgPoster } from './media';
@@ -166,13 +172,19 @@ export function buildView(
   const s = t.services[active];
   const { filter, tab } = state;
 
-  // Mỗi thẻ hero là một nhóm mẫu (cùng thứ tự CAT_KEYS). Dải mẫu dưới hero lấy
-  // đúng nhóm đang chọn; nhóm chưa đủ ba mẫu thì bù bằng mẫu nhóm khác.
+  // Mỗi thẻ hero là một nhóm mẫu (cùng thứ tự CAT_KEYS).
   const heroCat = CAT_KEYS[active] ?? CAT_KEYS[0];
-  const homeTpl = tplMeta
-    .filter((m: any) => m.cat === heroCat)
-    .concat(tplMeta.filter((m: any) => m.cat !== heroCat))
-    .slice(0, 3);
+
+  // Dải trưng bày ở trang chủ chỉ hiện mẫu THẬT — có ảnh, có demo, mua được.
+  // Trước đây nó lấy theo nhóm của thẻ hero, nên đa số lần hiện ba ô lấp chỗ
+  // với khung ảnh trống: trang trưng bày mà không có gì để xem. Mẫu cùng nhóm
+  // với thẻ đang chọn xếp lên đầu; chưa đủ ba mẫu thật thì bù bằng ô còn lại.
+  const isReal = (m: any) => Boolean(REAL_TEMPLATES[m.id]);
+  const homeTpl = [
+    ...tplMeta.filter((m: any) => isReal(m) && m.cat === heroCat),
+    ...tplMeta.filter((m: any) => isReal(m) && m.cat !== heroCat),
+    ...tplMeta.filter((m: any) => !isReal(m)),
+  ].slice(0, 3);
 
   const langOptions = (
     [
@@ -291,8 +303,10 @@ export function buildView(
     isPricing: tab === 'pricing',
     isFaq: tab === 'faq',
     isCta: tab === 'cta',
-    homeThemeTitle: s.title,
-    homeThemeKicker: s.kicker,
+    // Tiêu đề dải trưng bày. Bản thiết kế lặp lại đúng chữ của thẻ hero ngay
+    // phía trên; giờ dải này luôn là mẫu đang bán nên nói thẳng điều đó.
+    homeThemeTitle: HOME_SHOWCASE[lang].title,
+    homeThemeKicker: HOME_SHOWCASE[lang].kicker,
     homeTemplates: homeTpl.map((m: any) => ({
       ...m,
       catLabel: t.cats[m.cat],

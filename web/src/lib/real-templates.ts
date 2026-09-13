@@ -106,7 +106,14 @@ export function templateSlug(id: string): string {
   return REAL_TEMPLATES[id]?.slug ?? id;
 }
 
-/** Ảnh preview theo id ô trong markup ('agentic-tpl-t1' → '/previews/kinetiq.webp'). */
+/** Ảnh preview theo id ô trong markup ('agentic-tpl-t1' → '/previews/kinetiq.webp').
+ *
+ *  Mỗi mẫu có hai ô: 'agentic-tpl-*' ở thư viện và trang chi tiết,
+ *  'agentic-home-*' ở dải trưng bày trang chủ. Trước đây chỉ khai ô thư viện,
+ *  nên mẫu thật đưa lên trang chủ vẫn hiện khung ảnh trống. */
 export const REAL_TEMPLATE_PREVIEWS: Record<string, string> = Object.fromEntries(
-  Object.entries(REAL_TEMPLATES).map(([id, t]) => [`agentic-tpl-${id}`, `/previews/${t.slug}.webp`])
+  Object.entries(REAL_TEMPLATES).flatMap(([id, t]) => [
+    [`agentic-tpl-${id}`, `/previews/${t.slug}.webp`],
+    [`agentic-home-${id}`, `/previews/${t.slug}.webp`],
+  ])
 );

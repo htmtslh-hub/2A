@@ -123,6 +123,13 @@ export const AUTH_ERRORS: Record<LangCode, Record<string, string>> = {
   },
 };
 
+/** Tiêu đề dải trưng bày mẫu ở trang chủ, ngay dưới hero. */
+export const HOME_SHOWCASE: Record<LangCode, { kicker: string; title: string }> = {
+  vi: { kicker: 'Giao diện đang bán', title: 'Xem demo thật, mua là dùng được ngay' },
+  en: { kicker: 'Available now', title: 'Real templates with live demos, ready to use' },
+  zh: { kicker: '现已上架', title: '真实模板，在线演示，买了就能用' },
+};
+
 /** Nhãn nút ở thanh điều hướng khi đã đăng nhập. */
 export const NAV_ACCOUNT: Record<LangCode, string> = {
   vi: 'Đơn hàng',

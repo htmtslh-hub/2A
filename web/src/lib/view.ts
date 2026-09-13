@@ -6,8 +6,7 @@ import { REGISTER_STRINGS, FORGOT_STRINGS, NAV_ACCOUNT, FAQ_NO_CODE } from './i1
 import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
 import { COMPANY } from './company';
 import { bgPoster } from './media';
-import { HERO_SERVICE_CTA, SERVICE, SERVICE_PATH } from './service-content';
-import { CASE_PATH, CASE_STUDY } from './case-study';
+import { SERVICE, SERVICE_SITE_URL } from './service-content';
 import { REAL_TEMPLATES } from './real-templates';
 import {
   I18N,
@@ -16,7 +15,6 @@ import {
   TAB_KEYS,
   CAT_KEYS,
   TPL_META,
-  THEME_SETS,
   TIER_STYLE,
   type LangCode,
 } from '@/generated/data';
@@ -80,18 +78,17 @@ export interface Imperative {
   onForgotPassword: (email: string) => void;
   /** Mở trang đơn hàng của tài khoản đang đăng nhập. */
   goAccount: () => void;
-  /** Mở trang đặt làm agent, chọn sẵn loại khách vừa bấm. */
-  goService: (kind?: string) => void;
   /** Đăng nhập bằng Google. */
   onGoogleSignIn: () => void;
   /** Bắt đầu thanh toán: mở PayOS, hoặc yêu cầu đăng nhập trước. */
   startCheckout: (kind: 'TEMPLATE' | 'BUNDLE', templateId?: string) => void;
 }
 
-/* Hai thẻ cuối trong dải hero — Agent Phân Tích và Agent Theo Yêu Cầu — chưa
-   làm xong nên khoá lại: hiện ổ khoá, bấm không vào được. Mở lại thì xoá số
-   tương ứng khỏi mảng này, không phải sửa chỗ nào khác. Đếm từ 0. */
-export const LOCKED_CARDS = [3, 4];
+/* Thẻ nào trong dải hero chưa sẵn sàng thì khoá lại: hiện ổ khoá, bấm không
+   vào được. Thêm số thứ tự (đếm từ 0) vào mảng này là khoá, không phải sửa chỗ
+   nào khác. Năm thẻ hiện là năm nhóm mẫu đều đã có trong thư viện nên không
+   khoá thẻ nào. */
+export const LOCKED_CARDS: number[] = [];
 
 export interface Refs {
   copyRef: RefObject<HTMLDivElement | null>;
@@ -169,6 +166,14 @@ export function buildView(
   const s = t.services[active];
   const { filter, tab } = state;
 
+  // Mỗi thẻ hero là một nhóm mẫu (cùng thứ tự CAT_KEYS). Dải mẫu dưới hero lấy
+  // đúng nhóm đang chọn; nhóm chưa đủ ba mẫu thì bù bằng mẫu nhóm khác.
+  const heroCat = CAT_KEYS[active] ?? CAT_KEYS[0];
+  const homeTpl = tplMeta
+    .filter((m: any) => m.cat === heroCat)
+    .concat(tplMeta.filter((m: any) => m.cat !== heroCat))
+    .slice(0, 3);
+
   const langOptions = (
     [
       { code: 'vi', label: 'VI', aria: 'Tiếng Việt' },
@@ -244,10 +249,11 @@ export function buildView(
     });
   }
 
-  function goTab(key: TabKey) {
-    if (state.tab === key && !state.menuOpen) return;
+  /** `extra` đổi thêm state cùng lúc chuyển tab, vd. lọc sẵn nhóm mẫu. */
+  function goTab(key: TabKey, extra: Partial<State> = {}) {
+    if (state.tab === key && !state.menuOpen && Object.keys(extra).length === 0) return;
     im.syncUrl(key, null);
-    im.push({ tab: key, menuOpen: false, island: false, detail: null }, () => {
+    im.push({ tab: key, menuOpen: false, island: false, detail: null, ...extra }, () => {
       try {
         window.scrollTo({ top: 0, behavior: 'auto' });
       } catch {
@@ -287,11 +293,11 @@ export function buildView(
     isCta: tab === 'cta',
     homeThemeTitle: s.title,
     homeThemeKicker: s.kicker,
-    homeTemplates: (THEME_SETS[active] || THEME_SETS[0]).map((i: number) => ({
-      ...tplMeta[i],
-      catLabel: t.cats[tplMeta[i].cat],
-      badge: tplMeta[i].badge || '',
-      onDetail: () => openDetail(tplMeta[i].id),
+    homeTemplates: homeTpl.map((m: any) => ({
+      ...m,
+      catLabel: t.cats[m.cat],
+      badge: m.badge || '',
+      onDetail: () => openDetail(m.id),
     })),
     showFooter: true,
     goHome: () => goTab('home'),
@@ -377,11 +383,9 @@ export function buildView(
       const bar = c.querySelector('[data-scrollbar]') as HTMLElement | null;
       if (bar) bar.style.opacity = '0';
     },
-    // Thẻ đầu ("Về Tôi") là giới thiệu người bán nên vẫn dẫn sang thư viện
-    // giao diện. Bốn thẻ sau là agent — hàng đặt làm, không tải về được —
-    // nên dẫn thẳng sang trang gửi yêu cầu, chọn sẵn đúng loại.
-    heroCtaLabel: active === 0 ? t.heroCta1 : HERO_SERVICE_CTA[lang],
-    heroCta: () => (active === 0 ? goTab('library') : im.goService(IDS[active])),
+    // Nút chính mở thư viện đã lọc sẵn đúng nhóm mẫu của thẻ đang chọn.
+    heroCtaLabel: t.heroCta1,
+    heroCta: () => goTab('library', { filter: heroCat }),
     langCode: ({ vi: 'VI', en: 'EN', zh: '中' } as Record<string, string>)[lang] || 'VI',
     activeTabLabel:
       tab === 'detail' && detail ? detail.name : t.nav[Math.max(0, TAB_KEYS.indexOf(tab))],
@@ -430,8 +434,9 @@ export function buildView(
     // Paddle yêu cầu Điều khoản / Bảo mật / Hoàn tiền truy cập được từ
     // navigation, nên các link này nằm cố định ở footer.
     legalLinks: [
-      { href: SERVICE_PATH, label: SERVICE[lang].navLabel },
-      { href: CASE_PATH, label: CASE_STUDY[lang].navLabel },
+      // Dịch vụ làm web / AI agent nằm ở web riêng: Paddle không nhận bán dịch
+      // vụ trên tên miền bán template (bị từ chối duyệt ngày 13/09/2026).
+      { href: SERVICE_SITE_URL, label: SERVICE[lang].navLabel },
       { href: PAGE_PATHS.about, label: PAGE_LABELS[lang].about },
       { href: PAGE_PATHS.contact, label: PAGE_LABELS[lang].contact },
       ...(['terms', 'privacy', 'refund', 'license'] as const).map((k) => ({
@@ -450,18 +455,12 @@ export function buildView(
       title: inc.title,
       desc: inc.desc,
     })),
-    // Gói 0 = một giao diện (phải chọn mẫu trước), 1 = trọn bộ (mua ngay),
-    // 2 = thiết kế riêng (liên hệ, không thanh toán tự động).
+    // Gói 0 = một giao diện (phải chọn mẫu trước), 1 = trọn bộ (mua ngay).
+    // Gói "Thiết kế riêng" đã chuyển sang web dịch vụ riêng.
     tiers: t.tiers.map((tr: any, i: number) => ({
       ...TIER_STYLE[i],
       ...tr,
-      onCta: () => {
-        if (i === 0) goTab('library');
-        else if (i === 1) im.startCheckout('BUNDLE');
-        // Gói "Thiết kế riêng — Liên hệ" là dịch vụ, trước đây chỉ nhảy
-        // xuống ô thu email chung chung.
-        else im.goService('custom');
-      },
+      onCta: () => (i === 0 ? goTab('library') : im.startCheckout('BUNDLE')),
     })),
     quotes: t.quotes,
     faqs: t.faqs.map((f: any, i: number) => ({

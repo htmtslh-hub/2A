@@ -58,11 +58,11 @@ export const I18N = {
     nav: ['Trang chủ', 'Thư viện', 'Quy trình', 'Bảng giá', 'Câu hỏi', 'Nhận mẫu'],
     marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
     services: [
-      { kicker: 'Người sáng lập · Forge Zone', title: 'Về Tôi', blurb: 'Tôi thiết kế và bán giao diện web cao cấp — những bộ template dựng sẵn, chuyển động mượt, sẵn sàng thương mại. Xem hành trình và cách tôi làm việc.' },
-      { kicker: 'Bán hàng · Chốt đơn', title: 'Agent Bán Hàng', blurb: 'Tư vấn sản phẩm, đề xuất gói phù hợp và dẫn khách đến bước thanh toán. Chủ động nhắc lại giỏ hàng và follow-up lead tự động.' },
-      { kicker: 'Vận hành nội bộ', title: 'Trợ Lý Nội Bộ', blurb: 'Tra cứu tài liệu, tổng hợp báo cáo, soạn thảo và trả lời quy trình cho nhân viên — kết nối trực tiếp vào dữ liệu công ty.' },
-      { kicker: 'Phân tích dữ liệu', title: 'Agent Phân Tích', blurb: 'Hỏi đáp bằng ngôn ngữ tự nhiên trên dữ liệu kinh doanh, tự sinh biểu đồ và phát hiện bất thường theo thời gian thực.' },
-      { kicker: 'Tùy chỉnh riêng', title: 'Agent Theo Yêu Cầu', blurb: 'Thiết kế agent chuyên biệt theo nghiệp vụ của bạn — tích hợp API nội bộ, quy trình phê duyệt và tự động hóa đầu-cuối.' },
+      { kicker: 'Nhiếp ảnh · Studio · Cá nhân', title: 'Portfolio', blurb: 'Trang trưng bày tác phẩm cho nhiếp ảnh gia, studio và người làm sáng tạo — bố cục chắc tay, chuyển cảnh mượt, có sẵn nội dung mẫu.' },
+      { kicker: 'Phần mềm · Startup', title: 'SaaS', blurb: 'Landing cho sản phẩm phần mềm: bảng giá, so sánh gói, tính năng và cảm nhận khách hàng — đủ để ra mắt ngay.' },
+      { kicker: 'Agency · Thương hiệu', title: 'Agency', blurb: 'Trang cho agency và thương hiệu: case study, quy trình làm việc và trang liên hệ riêng, chuyển động dẫn mắt người xem.' },
+      { kicker: 'Cửa hàng · Bán hàng', title: 'Bán Hàng', blurb: 'Cửa hàng một hoặc nhiều sản phẩm, tối ưu chuyển đổi với giỏ hàng gọn và bước thanh toán rút ngắn.' },
+      { kicker: 'WebGL · Chuyển động', title: '3D · Motion', blurb: 'Hero 3D, parallax nhiều lớp và chuyển cảnh video — cho thương hiệu muốn gây ấn tượng ngay từ giây đầu tiên.' },
     ],
     cats: { portfolio: 'Portfolio', saas: 'SaaS', agency: 'Agency', shop: 'Bán hàng', motion: '3D · Motion' },
     templates: [
@@ -107,7 +107,6 @@ export const I18N = {
     tiers: [
       { name: 'Một giao diện', note: 'Chọn đúng mẫu bạn cần.', price: '1.9tr', unit: '/mẫu', cta: 'Mua mẫu này', features: ['1 giao diện tự chọn', 'File nguồn đầy đủ', 'Hướng dẫn tùy biến', 'Cập nhật trọn đời', 'Giấy phép thương mại'] },
       { name: 'Trọn bộ', note: 'Toàn bộ thư viện, một lần trả.', price: '9.9tr', unit: 'trả một lần', cta: 'Lấy trọn bộ', features: ['Tất cả 24 giao diện', 'Mẫu mới cập nhật miễn phí', 'Bộ component dùng chung', 'Ưu tiên hỗ trợ qua email', 'Giấy phép thương mại'] },
-      { name: 'Thiết kế riêng', note: 'Chúng tôi dựng theo thương hiệu bạn.', price: 'Liên hệ', unit: '', cta: 'Trao đổi dự án', features: ['Thiết kế từ đầu theo brand', 'Tối đa 8 trang', 'Hoàn thiện trong 3 tuần', 'Bàn giao kèm hướng dẫn', 'Hỗ trợ 60 ngày sau bàn giao'] },
     ],
     quotes: [
       { text: 'Mua buổi sáng, chiều đã có trang bán hàng chạy thật. Chuyển động mượt hơn hẳn mấy template tôi từng dùng.', name: 'Minh Trí', role: 'Founder, Kalo Studio', initial: 'M' },
@@ -178,11 +177,11 @@ export const I18N = {
     nav: ['Home', 'Library', 'Process', 'Pricing', 'FAQ', 'Free sample'],
     marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
     services: [
-      { kicker: 'Founder · Forge Zone', title: 'About Me', blurb: 'I design and sell premium website templates — finished builds with real motion, ready to ship commercially. See the journey and how I work.' },
-      { kicker: 'Sales · Conversion', title: 'Sales Agent', blurb: 'Advises on products, recommends the right package and guides buyers to checkout. Recovers carts and follows up on leads automatically.' },
-      { kicker: 'Internal operations', title: 'Internal Copilot', blurb: 'Searches documents, compiles reports, drafts replies and answers process questions for staff — wired straight into company data.' },
-      { kicker: 'Data analysis', title: 'Analytics Agent', blurb: 'Ask business data questions in plain language, get charts generated on the fly and anomalies flagged in real time.' },
-      { kicker: 'Fully bespoke', title: 'Custom Agent', blurb: 'A specialist agent shaped around your operations — internal APIs, approval flows and true end-to-end automation.' },
+      { kicker: 'Photographers · Studios', title: 'Portfolio', blurb: 'Showcase sites for photographers, studios and creatives — confident layouts, smooth transitions and sample content included.' },
+      { kicker: 'Software · Startups', title: 'SaaS', blurb: 'Launch pages for software products: pricing, plan comparison, features and testimonials — ready to go live.' },
+      { kicker: 'Agencies · Brands', title: 'Agency', blurb: 'Sites for agencies and brands: case studies, process sections and a dedicated contact page, with motion that guides the eye.' },
+      { kicker: 'Stores · Commerce', title: 'Commerce', blurb: 'Single- or multi-product stores built for conversion, with a slim cart and a shortened checkout.' },
+      { kicker: 'WebGL · Motion', title: '3D · Motion', blurb: '3D heroes, layered parallax and video transitions — for brands that want to make an impression in the first second.' },
     ],
     cats: { portfolio: 'Portfolio', saas: 'SaaS', agency: 'Agency', shop: 'Commerce', motion: '3D · Motion' },
     templates: [
@@ -227,7 +226,6 @@ export const I18N = {
     tiers: [
       { name: 'Single template', note: 'Just the one you need.', price: '$79', unit: '/template', cta: 'Buy this template', features: ['1 template of your choice', 'Full source files', 'Customisation guide', 'Lifetime updates', 'Commercial licence'] },
       { name: 'Full library', note: 'Everything, one payment.', price: '$399', unit: 'one-time', cta: 'Get the library', features: ['All 24 templates', 'New releases free forever', 'Shared component kit', 'Priority email support', 'Commercial licence'] },
-      { name: 'Custom build', note: 'We build it around your brand.', price: 'Talk to us', unit: '', cta: 'Discuss a project', features: ['Designed from scratch for your brand', 'Up to 8 pages', 'Delivered in 3 weeks', 'Handover with documentation', '60 days post-launch support'] },
     ],
     quotes: [
       { text: 'Bought it in the morning, had a real store running by the afternoon. The motion is far better than any template I have used.', name: 'Minh Tri', role: 'Founder, Kalo Studio', initial: 'M' },
@@ -298,11 +296,11 @@ export const I18N = {
     nav: ['首页', '模板库', '流程', '价格', '常见问题', '免费样板'],
     marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
     services: [
-      { kicker: '创始人 · Forge Zone', title: '关于我', blurb: '我设计并销售高端网站模板——动效完整、可直接商用的成品站点。了解我的经历与工作方式。' },
-      { kicker: '销售 · 成交', title: '销售 Agent', blurb: '介绍产品、推荐合适套餐并引导客户完成付款，自动挽回购物车并持续跟进线索。' },
-      { kicker: '内部运营', title: '内部助理', blurb: '检索文档、汇总报告、起草内容并解答员工的流程问题，直接连接公司数据。' },
-      { kicker: '数据分析', title: '分析 Agent', blurb: '用自然语言查询经营数据，自动生成图表并实时发现异常。' },
-      { kicker: '定制开发', title: '定制 Agent', blurb: '围绕您的业务打造专属 Agent——对接内部 API、审批流程，实现端到端自动化。' },
+      { kicker: '摄影 · 工作室', title: '作品集', blurb: '为摄影师、工作室与创作者打造的作品展示站——版式稳重、转场流畅，附示例内容。' },
+      { kicker: '软件 · 初创', title: 'SaaS', blurb: '软件产品落地页：价格表、套餐对比、功能与用户评价，即可上线发布。' },
+      { kicker: '机构 · 品牌', title: '品牌机构', blurb: '面向机构与品牌：案例展示、工作流程与独立联系页，动效引导视线。' },
+      { kicker: '店铺 · 电商', title: '电商', blurb: '单品或多品类店铺，精简购物车与快速结账，专为转化优化。' },
+      { kicker: 'WebGL · 动效', title: '3D · 动效', blurb: '3D 首屏、多层视差与视频转场——让品牌在第一秒就留下印象。' },
     ],
     cats: { portfolio: '作品集', saas: 'SaaS', agency: '品牌机构', shop: '电商', motion: '3D · 动效' },
     templates: [
@@ -347,7 +345,6 @@ export const I18N = {
     tiers: [
       { name: '单套模板', note: '只买您需要的那一套。', price: '¥560', unit: '/套', cta: '购买此模板', features: ['任选 1 套模板', '完整源文件', '自定义指南', '终身更新', '商用授权'] },
       { name: '整套模板库', note: '全部模板，一次付清。', price: '¥2,850', unit: '一次性', cta: '拿下整个模板库', features: ['全部 24 套模板', '新模板永久免费', '通用组件套件', '邮件优先支持', '商用授权'] },
-      { name: '定制开发', note: '依据您的品牌从零打造。', price: '联系我们', unit: '', cta: '沟通项目', features: ['依品牌全新设计', '最多 8 个页面', '3 周内交付', '交付附完整文档', '上线后 60 天支持'] },
     ],
     quotes: [
       { text: '上午买的，下午店铺就真的跑起来了。动效比我用过的任何模板都好。', name: 'Minh Tri', role: 'Kalo Studio 创始人', initial: 'M' },

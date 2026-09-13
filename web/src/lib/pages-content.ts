@@ -105,21 +105,14 @@ export const ABOUT: Record<LangCode, StaticPage> = {
 
 export const CONTACT: Record<LangCode, StaticPage> = {
   vi: {
-    title: 'Liên hệ',
-    intro: 'Có câu hỏi về sản phẩm, đơn hàng, hay muốn trao đổi một dự án riêng? Cứ viết cho chúng tôi.',
+    title: 'Hỗ trợ khách hàng',
+    intro: 'Có câu hỏi về sản phẩm hay đơn hàng? Cứ viết cho chúng tôi.',
     sections: [
       {
         h: 'Hỗ trợ khách hàng',
         p: [
           'Thắc mắc về đơn hàng, link tải, hoàn tiền hoặc lỗi kỹ thuật.',
           'Chúng tôi trả lời trong vòng <b>1–2 ngày làm việc</b>. Nếu là vấn đề về đơn hàng, gửi kèm email đã dùng khi mua và mã đơn để xử lý nhanh hơn.',
-        ],
-      },
-      {
-        h: 'Dự án thiết kế riêng',
-        p: [
-          'Muốn một trang dựng riêng theo thương hiệu của bạn, hãy mô tả ngắn gọn: ngành hàng, số trang cần có, thời hạn mong muốn và ngân sách dự kiến.',
-          'Chúng tôi phản hồi kèm đề xuất phạm vi công việc và báo giá.',
         ],
       },
       {
@@ -131,21 +124,14 @@ export const CONTACT: Record<LangCode, StaticPage> = {
     ],
   },
   en: {
-    title: 'Contact',
-    intro: 'Questions about a product or an order, or want to discuss a custom project? Just write to us.',
+    title: 'Customer support',
+    intro: 'Questions about a product or an order? Just write to us.',
     sections: [
       {
         h: 'Customer support',
         p: [
           'For questions about orders, download links, refunds or technical faults.',
           'We reply within <b>1–2 business days</b>. For order issues, include the email you bought with and your order reference so we can move faster.',
-        ],
-      },
-      {
-        h: 'Custom projects',
-        p: [
-          'If you want a site built around your own brand, tell us briefly: your industry, how many pages, your timeline and your rough budget.',
-          'We come back with a proposed scope and a quote.',
         ],
       },
       {
@@ -157,21 +143,14 @@ export const CONTACT: Record<LangCode, StaticPage> = {
     ],
   },
   zh: {
-    title: '联系我们',
-    intro: '对产品或订单有疑问，或想沟通定制项目？直接写信给我们。',
+    title: '客户支持',
+    intro: '对产品或订单有疑问？直接写信给我们。',
     sections: [
       {
         h: '客户支持',
         p: [
           '关于订单、下载链接、退款或技术故障的问题。',
           '我们会在 <b>1–2 个工作日</b>内回复。若是订单问题，请附上购买时使用的邮箱和订单编号，以便我们更快处理。',
-        ],
-      },
-      {
-        h: '定制项目',
-        p: [
-          '如果你希望围绕自己的品牌定制网站，请简要说明：所属行业、需要多少页面、期望的时间与大致预算。',
-          '我们会回复一份工作范围建议与报价。',
         ],
       },
       {

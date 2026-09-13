@@ -220,7 +220,6 @@ export const LEGAL_EN: LegalPack = {
           `Requests made more than ${C.refundDays} days after payment.`,
           'The product has already been used in a project that is publicly live.',
           'There is evidence of a licence breach, such as redistributing the files.',
-          '<b>Custom build</b> projects: these are commissioned work, with payment and cancellation terms agreed separately in each project contract.',
         ],
       },
       {

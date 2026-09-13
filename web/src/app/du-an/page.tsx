@@ -16,7 +16,13 @@ export default async function Page() {
   const doc = CASE_STUDY[lang];
 
   return (
-    <LegalPage lang={lang} title={doc.title} intro={doc.intro} showUpdated={false}>
+    <LegalPage
+      lang={lang}
+      title={doc.title}
+      intro={doc.intro}
+      showUpdated={false}
+      homeHref={COMPANY.siteUrl}
+    >
       <div
         style={{
           display: 'grid',

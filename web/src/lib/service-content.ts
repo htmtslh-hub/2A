@@ -9,6 +9,11 @@ import type { LangCode } from '@/generated/data';
 
 export const SERVICE_PATH = '/dich-vu';
 
+/** Web riêng của dịch vụ. Paddle từ chối duyệt forgezone.store (13/09/2026)
+ *  vì trên đó có bán dịch vụ làm web — Paddle chỉ nhận sản phẩm số. Nên dịch
+ *  vụ tách hẳn sang subdomain; src/proxy.ts chia đường dẫn theo tên miền. */
+export const SERVICE_SITE_URL = 'https://dichvu.forgezone.store';
+
 /** Khớp với IDS trong generated/data.ts, trừ 'me' (thẻ "Về Tôi"). */
 export const SERVICE_KINDS = ['sales', 'ops', 'data', 'custom'] as const;
 export type ServiceKind = (typeof SERVICE_KINDS)[number];
@@ -59,8 +64,8 @@ export interface ServiceDoc {
 
 export const SERVICE: Record<LangCode, ServiceDoc> = {
   vi: {
-    navLabel: 'Đặt làm agent',
-    title: 'Đặt làm AI agent',
+    navLabel: 'Liên hệ chúng tôi',
+    title: 'Liên hệ chúng tôi',
     intro:
       'Agent được thiết kế, dựng và triển khai theo nghiệp vụ của bạn. Bàn giao khi đã chạy thật trên hạ tầng, không phải một thư mục mã nguồn để bạn tự xoay xở.',
     notice:
@@ -178,8 +183,8 @@ export const SERVICE: Record<LangCode, ServiceDoc> = {
   },
 
   en: {
-    navLabel: 'Commission an agent',
-    title: 'Commission an AI agent',
+    navLabel: 'Contact us',
+    title: 'Contact us',
     intro:
       'An agent designed, built and deployed around how your business actually works. Handed over running on real infrastructure — not as a folder of source code for you to figure out.',
     notice:
@@ -296,8 +301,8 @@ export const SERVICE: Record<LangCode, ServiceDoc> = {
   },
 
   zh: {
-    navLabel: '定制智能体',
-    title: '定制 AI 智能体',
+    navLabel: '联系我们',
+    title: '联系我们',
     intro:
       '按贵司实际业务流程设计、开发并部署的智能体。交付时已在真实环境中运行，而不是给您一份源代码自行摸索。',
     notice: '这是定制服务，并非可下载的产品。每个项目都从一次沟通开始，先确定范围与报价。',
@@ -408,10 +413,3 @@ export const SERVICE: Record<LangCode, ServiceDoc> = {
   },
 };
 
-/** Nhãn nút chính ở hero khi khách đang xem một thẻ agent.
- *  Thẻ "Về Tôi" giữ nhãn cũ (dẫn sang thư viện giao diện). */
-export const HERO_SERVICE_CTA: Record<LangCode, string> = {
-  vi: 'Đặt làm agent này →',
-  en: 'Commission this agent →',
-  zh: '定制这个智能体 →',
-};

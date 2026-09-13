@@ -24,7 +24,13 @@ export default async function Page({
     : 'sales';
 
   return (
-    <LegalPage lang={lang} title={doc.title} intro={doc.intro} showUpdated={false}>
+    <LegalPage
+      lang={lang}
+      title={doc.title}
+      intro={doc.intro}
+      showUpdated={false}
+      homeHref={COMPANY.siteUrl}
+    >
       <p
         style={{
           margin: '0 0 44px',

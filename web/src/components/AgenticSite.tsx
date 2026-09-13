@@ -15,7 +15,6 @@ import { I18N, TAB_KEYS, type LangCode } from '@/generated/data';
 import { useRouter } from 'next/navigation';
 import { useSession, signIn } from 'next-auth/react';
 import { HTML_LANG } from '@/lib/lang';
-import { SERVICE_PATH } from '@/lib/service-content';
 import { AUTH_ERRORS, FORGOT_STRINGS } from '@/lib/i18n-extra';
 import Toast from './Toast';
 
@@ -335,13 +334,6 @@ export default function AgenticSite({
     router.push('/don-hang');
   }, [router]);
 
-  const goService = useCallback(
-    (kind?: string) => {
-      // Trang dịch vụ chọn sẵn đúng loại agent khách vừa bấm ở hero.
-      router.push(kind ? `${SERVICE_PATH}?loai=${encodeURIComponent(kind)}` : SERVICE_PATH);
-    },
-    [router]
-  );
 
   /* --- thanh toán: cần email nên phải đăng nhập trước --- */
   const startCheckout = useCallback(
@@ -390,7 +382,6 @@ export default function AgenticSite({
       onAuthRegister,
       onForgotPassword,
       goAccount,
-      goService,
       onGoogleSignIn,
       startCheckout,
     }),
@@ -405,7 +396,6 @@ export default function AgenticSite({
       onAuthRegister,
       onForgotPassword,
       goAccount,
-      goService,
       onGoogleSignIn,
       startCheckout,
     ]

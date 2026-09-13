@@ -26,8 +26,12 @@ export default function LegalPage({
   intro,
   sections,
   showUpdated = true,
+  homeHref = '/',
   children,
 }: {
+  /** Logo và link "Về trang chủ" dẫn về đâu. Trang ở web dịch vụ riêng truyền
+   *  địa chỉ cửa hàng chính, vì "/" ở đó lại là chính trang dịch vụ. */
+  homeHref?: string;
   lang: LangCode;
   title: string;
   intro?: string;
@@ -53,7 +57,7 @@ export default function LegalPage({
     >
       <div style={{ maxWidth: 720, margin: '0 auto' }}>
         <Link
-          href="/"
+          href={homeHref}
           style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -149,7 +153,7 @@ export default function LegalPage({
             borderTop: '1px solid rgba(236,238,241,.1)',
           }}
         >
-          <Link href="/" style={{ fontSize: 14, color: '#949ba4' }}>
+          <Link href={homeHref} style={{ fontSize: 14, color: '#949ba4' }}>
             ← {BACK_LABEL[lang]}
           </Link>
         </p>

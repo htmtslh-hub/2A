@@ -220,7 +220,6 @@ export const LEGAL_VI: LegalPack = {
           `Yêu cầu gửi sau ${C.refundDays} ngày kể từ ngày thanh toán.`,
           'Sản phẩm đã được dùng cho một dự án đã lên sóng công khai.',
           'Có dấu hiệu vi phạm giấy phép, ví dụ phân phối lại file.',
-          'Gói <b>Thiết kế riêng</b>: đây là dịch vụ làm theo yêu cầu, điều khoản thanh toán và huỷ được thoả thuận riêng trong hợp đồng của từng dự án.',
         ],
       },
       {

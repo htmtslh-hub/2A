@@ -36,9 +36,11 @@ export const LEGAL_LABELS: Record<LangCode, Record<LegalKey, string>> = {
 
 /** Nhãn cho hai trang nội dung, cũng nằm ở footer. */
 export const PAGE_LABELS: Record<LangCode, { about: string; contact: string }> = {
-  vi: { about: 'Về chúng tôi', contact: 'Liên hệ' },
-  en: { about: 'About', contact: 'Contact' },
-  zh: { about: '关于我们', contact: '联系我们' },
+  // "Liên hệ chúng tôi" dành cho web dịch vụ riêng (xem SERVICE.navLabel), nên
+  // trang này gọi là hỗ trợ để hai link ở footer không trùng tên.
+  vi: { about: 'Về chúng tôi', contact: 'Hỗ trợ' },
+  en: { about: 'About', contact: 'Support' },
+  zh: { about: '关于我们', contact: '客户支持' },
 };
 
 export const PAGE_PATHS = {

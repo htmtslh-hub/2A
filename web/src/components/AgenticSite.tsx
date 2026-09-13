@@ -119,9 +119,10 @@ export default function AgenticSite({
       }
     } catch {}
     // Chưa từng chọn thì KHÔNG ghi cookie hay localStorage — cookie phải là dấu
-    // hiệu khách đã tự chọn thứ tiếng. Ghi sẵn 'vi' ở đây thì ai vào trang chủ
-    // trước rồi mới bấm sang điều khoản (đúng đường người duyệt Paddle đi) sẽ
-    // bị khoá ở tiếng Việt. Xem readLegalLang().
+    // hiệu khách đã tự chọn thứ tiếng. Ghi sẵn ngôn ngữ đoán từ trình duyệt ở
+    // đây thì nó thành "đã chọn" vĩnh viễn, và trước kia khi mặc định còn là
+    // 'vi' thì người duyệt Paddle đi từ trang chủ sang điều khoản bị khoá ở
+    // tiếng Việt. Xem readLang().
     document.documentElement.lang = HTML_LANG[initialLang] || 'vi';
   }, [applyLang, setState, initialLang]);
 

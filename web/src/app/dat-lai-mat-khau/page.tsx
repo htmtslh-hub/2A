@@ -1,17 +1,11 @@
 /* Trang đặt lại mật khẩu, mở từ link trong email. */
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { cookies } from 'next/headers';
 import { RESET_STRINGS } from '@/lib/i18n-extra';
-import type { Lang } from '@/lib/catalog';
+import { readLang } from '@/lib/server-lang';
 import ResetForm from './form';
 
 export const dynamic = 'force-dynamic';
-
-async function readLang(): Promise<Lang> {
-  const v = (await cookies()).get('agentic-lang')?.value;
-  return v === 'en' || v === 'zh' ? v : 'vi';
-}
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = RESET_STRINGS[await readLang()];

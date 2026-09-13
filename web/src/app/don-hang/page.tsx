@@ -1,20 +1,14 @@
 /* Trang "đơn hàng của tôi": liệt kê giao diện đã mua và cho tải lại. */
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { cookies } from 'next/headers';
 import { auth } from '@/auth';
+import { readLang } from '@/lib/server-lang';
 import { prisma } from '@/lib/db';
 import { formatMoney, templateName, type Currency, type Lang } from '@/lib/catalog';
 import { ORDERS_STRINGS } from '@/lib/i18n-extra';
 import { SignOutButton } from './actions';
 
 const DATE_LOCALE: Record<Lang, string> = { vi: 'vi-VN', en: 'en-US', zh: 'zh-CN' };
-
-/** Ngôn ngữ khách đang xem, do AgenticSite ghi vào cookie khi đổi ngôn ngữ. */
-async function readLang(): Promise<Lang> {
-  const v = (await cookies()).get('agentic-lang')?.value;
-  return v === 'en' || v === 'zh' ? v : 'vi';
-}
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = ORDERS_STRINGS[await readLang()];

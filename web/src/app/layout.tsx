@@ -5,6 +5,7 @@ import { COMPANY } from '@/lib/company';
 import Providers from './providers';
 import { readLang } from '@/lib/server-lang';
 import { HTML_LANG } from '@/lib/lang';
+import type { LangCode } from '@/generated/data';
 
 // Chỉ nạp đúng những weight và bảng chữ trang thực sự dùng. Mỗi weight ×
 // mỗi subset là một file .woff2 riêng, nên thừa một dòng ở đây là thừa vài
@@ -23,26 +24,52 @@ const body = Be_Vietnam_Pro({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  // Cần metadataBase thì Next mới dựng được URL tuyệt đối cho ảnh OG.
-  metadataBase: new URL(COMPANY.siteUrl),
-  title: 'Forge Zone — Giao diện web cao cấp, dựng sẵn để bán',
-  description:
-    'Thư viện giao diện web dựng sẵn: layout, chuyển động, responsive và nội dung mẫu. Tải về, thay chữ, lên sóng.',
-  openGraph: {
+const META: Record<LangCode, { title: string; description: string; og: string; short: string }> = {
+  vi: {
     title: 'Forge Zone — Giao diện web cao cấp, dựng sẵn để bán',
     description:
-      'Mỗi giao diện là một file hoàn chỉnh. Mua một lần, dùng vĩnh viễn, kèm giấy phép thương mại.',
-    type: 'website',
-    url: COMPANY.siteUrl,
-    siteName: COMPANY.brand,
+      'Thư viện giao diện web dựng sẵn: layout, chuyển động, responsive và nội dung mẫu. Tải về, thay chữ, lên sóng.',
+    og: 'Mỗi giao diện là một file hoàn chỉnh. Mua một lần, dùng vĩnh viễn, kèm giấy phép thương mại.',
+    short: 'Tải về, thay chữ, lên sóng. Giấy phép thương mại không giới hạn.',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Forge Zone — Giao diện web cao cấp, dựng sẵn để bán',
-    description: 'Tải về, thay chữ, lên sóng. Giấy phép thương mại không giới hạn.',
+  en: {
+    title: 'Forge Zone — Premium ready-made website templates',
+    description:
+      'A library of ready-made website templates: layout, motion, responsive design and sample content. Download, change the words, go live.',
+    og: 'Each template is a complete file. Buy once, use forever, with a commercial licence.',
+    short: 'Download, change the words, go live. Unlimited commercial licence.',
+  },
+  zh: {
+    title: 'Forge Zone — 高端现成网站模板',
+    description: '现成网站模板库：布局、动效、响应式设计与示例内容。下载、替换文字，即可上线。',
+    og: '每个模板都是完整文件。一次购买，永久使用，附商业许可。',
+    short: '下载、替换文字，即可上线。无限商业许可。',
   },
 };
+
+// Theo ngôn ngữ khách đang xem. Để cứng tiếng Việt thì trang chủ đã hiện tiếng
+// Anh mà thẻ trình duyệt vẫn ghi tiếng Việt — người duyệt Paddle thấy ngay.
+export async function generateMetadata(): Promise<Metadata> {
+  const m = META[await readLang()];
+  return {
+    // Cần metadataBase thì Next mới dựng được URL tuyệt đối cho ảnh OG.
+    metadataBase: new URL(COMPANY.siteUrl),
+    title: m.title,
+    description: m.description,
+    openGraph: {
+      title: m.title,
+      description: m.og,
+      type: 'website',
+      url: COMPANY.siteUrl,
+      siteName: COMPANY.brand,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: m.title,
+      description: m.short,
+    },
+  };
+}
 
 export const viewport: Viewport = {
   themeColor: '#16181c',

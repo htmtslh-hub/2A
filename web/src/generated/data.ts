@@ -33,7 +33,7 @@ export const I18N = {
     dSpecs: 'Thông số kỹ thuật',
     dSpecRows: [['Định dạng', 'HTML · CSS · JS'], ['Trang mẫu', '8 trang'], ['Responsive', '360px → 2560px'], ['Chuyển động', 'GSAP + CSS'], ['Giấy phép', 'Thương mại, không giới hạn'], ['Cập nhật', 'Trọn đời, miễn phí']],
     dRelated: 'Giao diện tương tự',
-    tplAll: 'Xem toàn bộ 24 giao diện →',
+    tplAll: 'Xem toàn bộ giao diện →',
     howLabel: 'Quy trình',
     howTitle: 'Từ chọn mẫu đến lên sóng trong một buổi chiều',
     howIntro: 'Không cần thiết kế lại từ đầu, không cần thuê đội dev. Ba bước, và trang của bạn đã sống.',
@@ -91,7 +91,7 @@ export const I18N = {
       { title: 'Xuất bản', desc: 'Deploy lên hosting bất kỳ. Responsive, tối ưu tốc độ và chuẩn SEO ngay từ đầu.' },
     ],
     stats: [
-      { value: '24', label: 'Giao diện trong thư viện' },
+      { value: '1×', label: 'Trả một lần, dùng mãi' },
       { value: '<1 ngày', label: 'Từ mua đến lên sóng' },
       { value: '100%', label: 'Responsive mọi thiết bị' },
       { value: '∞', label: 'Dùng lại không giới hạn' },
@@ -106,7 +106,7 @@ export const I18N = {
     ],
     tiers: [
       { name: 'Một giao diện', note: 'Chọn đúng mẫu bạn cần.', price: '1.9tr', unit: '/mẫu', cta: 'Mua mẫu này', features: ['1 giao diện tự chọn', 'File nguồn đầy đủ', 'Hướng dẫn tùy biến', 'Cập nhật trọn đời', 'Giấy phép thương mại'] },
-      { name: 'Trọn bộ', note: 'Toàn bộ thư viện, một lần trả.', price: '9.9tr', unit: 'trả một lần', cta: 'Lấy trọn bộ', features: ['Tất cả 24 giao diện', 'Mẫu mới cập nhật miễn phí', 'Bộ component dùng chung', 'Ưu tiên hỗ trợ qua email', 'Giấy phép thương mại'] },
+      { name: 'Trọn bộ', note: 'Toàn bộ thư viện, một lần trả.', price: '9.9tr', unit: 'trả một lần', cta: 'Lấy trọn bộ', features: ['Tất cả giao diện', 'Mẫu mới cập nhật miễn phí', 'Bộ component dùng chung', 'Ưu tiên hỗ trợ qua email', 'Giấy phép thương mại'] },
     ],
     quotes: [
       { text: 'Mua buổi sáng, chiều đã có trang bán hàng chạy thật. Chuyển động mượt hơn hẳn mấy template tôi từng dùng.', name: 'Minh Trí', role: 'Founder, Kalo Studio', initial: 'M' },
@@ -152,7 +152,7 @@ export const I18N = {
     dSpecs: 'Specifications',
     dSpecRows: [['Format', 'HTML · CSS · JS'], ['Sample pages', '8 pages'], ['Responsive', '360px → 2560px'], ['Motion', 'GSAP + CSS'], ['Licence', 'Commercial, unlimited'], ['Updates', 'Free, forever']],
     dRelated: 'Similar templates',
-    tplAll: 'See all 24 templates →',
+    tplAll: 'See all templates →',
     howLabel: 'Process',
     howTitle: 'From picking a template to live in one afternoon',
     howIntro: 'No redesign from scratch, no dev team to hire. Three steps and your site is live.',
@@ -210,7 +210,7 @@ export const I18N = {
       { title: 'Publish', desc: 'Deploy anywhere. Responsive, speed-optimised and SEO-ready straight out of the box.' },
     ],
     stats: [
-      { value: '24', label: 'Templates in the library' },
+      { value: '1×', label: 'Pay once, keep forever' },
       { value: '<1 day', label: 'From purchase to live' },
       { value: '100%', label: 'Responsive on every device' },
       { value: '∞', label: 'Unlimited reuse' },
@@ -225,7 +225,7 @@ export const I18N = {
     ],
     tiers: [
       { name: 'Single template', note: 'Just the one you need.', price: '$79', unit: '/template', cta: 'Buy this template', features: ['1 template of your choice', 'Full source files', 'Customisation guide', 'Lifetime updates', 'Commercial licence'] },
-      { name: 'Full library', note: 'Everything, one payment.', price: '$399', unit: 'one-time', cta: 'Get the library', features: ['All 24 templates', 'New releases free forever', 'Shared component kit', 'Priority email support', 'Commercial licence'] },
+      { name: 'Full library', note: 'Everything, one payment.', price: '$399', unit: 'one-time', cta: 'Get the library', features: ['All templates', 'New releases free forever', 'Shared component kit', 'Priority email support', 'Commercial licence'] },
     ],
     quotes: [
       { text: 'Bought it in the morning, had a real store running by the afternoon. The motion is far better than any template I have used.', name: 'Minh Tri', role: 'Founder, Kalo Studio', initial: 'M' },
@@ -271,7 +271,7 @@ export const I18N = {
     dSpecs: '技术参数',
     dSpecRows: [['格式', 'HTML · CSS · JS'], ['示例页面', '8 页'], ['响应式', '360px → 2560px'], ['动效', 'GSAP + CSS'], ['授权', '商用，不限次数'], ['更新', '终身免费']],
     dRelated: '相似模板',
-    tplAll: '查看全部 24 套模板 →',
+    tplAll: '查看全部模板 →',
     howLabel: '流程',
     howTitle: '一个下午，从选模板到上线',
     howIntro: '无需从零设计，也不必组建开发团队。三步之后，网站就已上线。',
@@ -329,7 +329,7 @@ export const I18N = {
       { title: '发布上线', desc: '可部署到任意平台。响应式、速度优化与 SEO 均已就绪。' },
     ],
     stats: [
-      { value: '24', label: '模板库中的模板数' },
+      { value: '1 次', label: '一次付费，永久使用' },
       { value: '<1 天', label: '从购买到上线' },
       { value: '100%', label: '全设备响应式' },
       { value: '∞', label: '不限次数重复使用' },
@@ -344,7 +344,7 @@ export const I18N = {
     ],
     tiers: [
       { name: '单套模板', note: '只买您需要的那一套。', price: '¥560', unit: '/套', cta: '购买此模板', features: ['任选 1 套模板', '完整源文件', '自定义指南', '终身更新', '商用授权'] },
-      { name: '整套模板库', note: '全部模板，一次付清。', price: '¥2,850', unit: '一次性', cta: '拿下整个模板库', features: ['全部 24 套模板', '新模板永久免费', '通用组件套件', '邮件优先支持', '商用授权'] },
+      { name: '整套模板库', note: '全部模板，一次付清。', price: '¥2,850', unit: '一次性', cta: '拿下整个模板库', features: ['全部模板', '新模板永久免费', '通用组件套件', '邮件优先支持', '商用授权'] },
     ],
     quotes: [
       { text: '上午买的，下午店铺就真的跑起来了。动效比我用过的任何模板都好。', name: 'Minh Tri', role: 'Kalo Studio 创始人', initial: 'M' },

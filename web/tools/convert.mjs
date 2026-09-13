@@ -358,8 +358,18 @@ function emit(node, scope, indent) {
 
   if (node.nodeName === '#text') {
     if (!node.value.trim()) return '';
-    const jsx = textToJsx(node.value.replace(/\s+/g, ' '), scope);
-    return jsx ? pad + jsx + '\n' : '';
+    const jsx = textToJsx(node.value.replace(/\s+/g, ' ').trim(), scope);
+    if (!jsx) return '';
+    // JSX nuốt khoảng trắng ở đầu và cuối mỗi dòng. Chữ đứng sát một thẻ khác
+    // ("Chưa có tài khoản? <button>Tạo tài khoản</button>") mà sinh ra mỗi phần
+    // một dòng thì mất dấu cách giữa hai phần — web hiện "tài khoản?Tạo".
+    // Giữ lại bằng {" "} tường minh, đúng như trình duyệt hiển thị HTML gốc.
+    const sibs = node.parentNode?.childNodes ?? [];
+    const at = sibs.indexOf(node);
+    const isEl = (n) => Boolean(n) && n.nodeName !== '#text' && n.nodeName !== '#comment';
+    const lead = /^\s/.test(node.value) && isEl(sibs[at - 1]) ? '{" "}' : '';
+    const trail = /\s$/.test(node.value) && isEl(sibs[at + 1]) ? '{" "}' : '';
+    return pad + lead + jsx + trail + '\n';
   }
   if (node.nodeName === '#comment') {
     return pad + '{/*' + String(node.data).replace(/\*\//g, '* /') + '*/}\n';

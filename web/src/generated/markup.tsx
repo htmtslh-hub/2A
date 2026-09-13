@@ -102,7 +102,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
         {/* ===== FULLSCREEN MENU ===== */}
         {(vm.menuOpen) ? (
           <>
-            <nav style={{ position: "fixed", inset: "0", zIndex: "60", display: "flex", flexDirection: "column", padding: "26px clamp(20px,4vw,56px)", animation: "riseIn .35s ease both" }}>
+            <nav style={{ position: "fixed", inset: "0", zIndex: "70", display: "flex", flexDirection: "column", padding: "26px clamp(20px,4vw,56px)", backgroundColor: "#16181c", backgroundImage: "radial-gradient(120% 46% at 50% 0%, #21252d 0%, rgba(33,37,45,0) 62%)", overflowY: "auto", animation: "riseIn .35s ease both" }}>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: ".14em", fontSize: "20px", display: "flex", alignItems: "center", gap: "10px" }}>
                   <span style={{ width: "12px", height: "12px", borderRadius: "50%", background: "var(--acc)" }} />
@@ -118,7 +118,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                         <span style={{ fontFamily: "var(--body)", fontSize: "14px", color: "#ffffff", letterSpacing: ".1em" }}>
                           {link.no}
                         </span>
-                        {link.label} 
+                        {link.label}
                       </button>
                   ))}
               </div>
@@ -194,7 +194,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                         <span style={{ width: "52px", height: "52px", borderRadius: "50%", border: "1px solid rgba(236,238,241,.4)", display: "inline-flex", alignItems: "center", justifyContent: "center", animation: "pulseRing 2.6s infinite", flex: "none" }}>
                           ▶
                         </span>
-                         {vm.t.heroCta2} 
+                        {" "}{vm.t.heroCta2}
                       </button>
                     </div>
                   </div>
@@ -240,9 +240,9 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                         </button>
                       </div>
                       <div style={{ fontFamily: "var(--display)", fontWeight: "700", fontSize: "clamp(40px,7vw,72px)", lineHeight: ".8", color: "#ffffff" }}>
-                         {vm.indexLabel}
+                        {vm.indexLabel}
                         <span style={{ color: "#ffffff", fontSize: ".42em", verticalAlign: "top" }}>
-                           / {vm.totalLabel}
+                          / {vm.totalLabel}
                         </span>
                       </div>
                     </div>
@@ -337,7 +337,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                   <div style={{ display: "flex", alignItems: "center", gap: "clamp(28px,5vw,64px)", width: "max-content", animation: "marquee 26s linear infinite" }}>
                     {(vm.marqueeItems ?? []).map((m: any, m_i: number) => (
                           <span key={m_i} style={{ display: "inline-flex", alignItems: "center", gap: "clamp(28px,5vw,64px)", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: ".04em", fontSize: "clamp(18px,2.2vw,28px)", color: m.color, whiteSpace: "nowrap" }}>
-                             {m.label}
+                            {m.label}
                             <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "var(--acc)", display: "inline-block" }} />
                           </span>
                       ))}
@@ -480,11 +480,11 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                 </span>
                             ))}
                         </div>
-                        <div style={{ display: "flex", alignItems: "baseline", gap: "8px", marginBottom: "24px" }}>
-                          <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.02em", fontSize: "clamp(38px,4.4vw,52px)", color: "var(--gold)" }}>
+                        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", columnGap: "8px", rowGap: "2px", marginBottom: "24px" }}>
+                          <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.02em", fontSize: "clamp(34px,4.4vw,52px)", color: "var(--gold)", whiteSpace: "nowrap" }}>
                             {vm.detail.price}
                           </span>
-                          <span style={{ fontSize: "13px", color: "#949ba4" }}>
+                          <span style={{ fontSize: "13px", color: "#949ba4", whiteSpace: "nowrap" }}>
                             {vm.t.pricingUnitOnce}
                           </span>
                         </div>
@@ -823,7 +823,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                       {(vm.faqs ?? []).map((fq: any, fq_i: number) => (
                             <div key={fq_i} style={{ borderTop: "1px solid rgba(236,238,241,.13)" }}>
                               <button className="hv3" style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px", padding: "24px 0", background: "transparent", border: "none", cursor: "pointer", textAlign: "left", fontFamily: "inherit", color: "#ffffff", fontSize: "clamp(16px,1.8vw,19px)", fontWeight: "600", lineHeight: "1.4" }} onClick={fq.onToggle}>
-                                 {fq.q} 
+                                {fq.q}{" "}
                                 <span style={{ flex: "none", width: "32px", height: "32px", borderRadius: "50%", border: "1px solid rgba(236,238,241,.28)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: "16px", color: "#ffffff", transition: "transform .3s ease" }} data-faq-icon="">
                                   +
                                 </span>
@@ -932,13 +932,13 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
               ) : null}
               <form style={{ display: "flex", flexDirection: "column", gap: "14px" }} onSubmit={vm.onAuthSubmit}>
                 <label style={{ display: "flex", flexDirection: "column", gap: "7px", fontSize: "12px", letterSpacing: ".06em", textTransform: "uppercase", color: "#949ba4" }}>
-                  {vm.t.authEmail} 
+                  {vm.t.authEmail}{" "}
                   <input className="fc16" style={{ width: "100%", boxSizing: "border-box", padding: "14px 16px", borderRadius: "14px", border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.05)", color: "#ffffff", fontFamily: "inherit", fontSize: "14px", letterSpacing: "normal", textTransform: "none", outline: "none" }} type="email" required placeholder="you@studio.com" />
                 </label>
                 {(vm.showPassword) ? (
                   <>
                     <label style={{ display: "flex", flexDirection: "column", gap: "7px", fontSize: "12px", letterSpacing: ".06em", textTransform: "uppercase", color: "#949ba4" }}>
-                      {vm.t.authPass} 
+                      {vm.t.authPass}{" "}
                       <input className="fc16" style={{ width: "100%", boxSizing: "border-box", padding: "14px 16px", borderRadius: "14px", border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.05)", color: "#ffffff", fontFamily: "inherit", fontSize: "14px", letterSpacing: "normal", textTransform: "none", outline: "none" }} type="password" required placeholder="••••••••" />
                     </label>
                   </>
@@ -977,7 +977,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                 </>
               ) : null}
               <p style={{ margin: "22px 0 0", textAlign: "center", fontSize: "13px", color: "#949ba4" }}>
-                {vm.t.authNoAcc} 
+                {vm.t.authNoAcc}{" "}
                 <button className="hv18" style={{ padding: "0", border: "0", background: "none", fontFamily: "inherit", fontSize: "13px", color: "#ffffff", fontWeight: "600", cursor: "pointer" }} type="button" onClick={vm.toggleAuthMode}>
                   {vm.t.authSignup}
                 </button>

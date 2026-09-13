@@ -69,6 +69,7 @@ enum OrderStatus {
   PAID // cổng thanh toán đã báo thành công
   CANCELLED
   FAILED
+  REFUNDED // đã hoàn tiền hoặc bị chargeback — quyền tải đã bị thu lại
 }
 
 /// Cổng thanh toán xử lý đơn.

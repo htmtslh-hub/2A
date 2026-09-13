@@ -160,6 +160,46 @@ export function verifyPaddleWebhook(rawBody: string, signatureHeader: string | n
   return JSON.parse(rawBody);
 }
 
+/* ===== hoàn tiền =====
+
+   Paddle không báo hoàn tiền trên transaction mà tạo một adjustment riêng,
+   gửi qua adjustment.created / adjustment.updated. Adjustment KHÔNG mang
+   custom_data của giao dịch gốc, chỉ có transaction_id để lần ngược về đơn. */
+
+export interface PaddleAdjustmentEvent {
+  adjustmentId: string;
+  txnId: string;
+  /** Có phải thu lại quyền tải không. */
+  revoke: boolean;
+  /** action/type/status — để ghi log đối soát. */
+  note: string;
+}
+
+export function readPaddleAdjustment(payload: { data?: Record<string, unknown> }): PaddleAdjustmentEvent {
+  const data = (payload.data ?? {}) as Record<string, unknown>;
+  const action = String(data.action ?? '');
+  const status = String(data.status ?? '');
+  const type = String(data.type ?? '');
+
+  // Hoàn tiền ở live phải chờ Paddle duyệt: adjustment.created về với
+  // pending_approval, rồi adjustment.updated mới mang approved. Thu hồi ngay
+  // từ lúc tạo thì yêu cầu bị từ chối vẫn làm khách mất file.
+  //
+  // Chỉ thu hồi khi hoàn TOÀN BỘ: chính sách chỉ hứa hoàn đủ, hoàn một phần là
+  // thoả thuận riêng với khách và họ vẫn giữ sản phẩm.
+  const fullRefund = action === 'refund' && status === 'approved' && type !== 'partial';
+
+  // Chargeback: khách đòi tiền qua ngân hàng, tiền đã bị trừ, không qua duyệt.
+  const chargeback = action === 'chargeback';
+
+  return {
+    adjustmentId: String(data.id ?? ''),
+    txnId: String(data.transaction_id ?? ''),
+    revoke: fullRefund || chargeback,
+    note: `${action}/${type || '?'}/${status}`,
+  };
+}
+
 /** Rút những thông tin cần dùng từ payload webhook. */
 export function readPaddleEvent(payload: {
   event_type?: string;

@@ -17,7 +17,9 @@ export async function fulfilOrder(
   baseUrl: string
 ): Promise<FulfilResult> {
   // Cổng có thể gửi lại cùng một sự kiện — xử lý xong rồi thì thôi.
-  if (order.status === 'PAID') return 'already-paid';
+  // Đơn đã hoàn tiền cũng dừng ở đây: sau khi hoàn, giao dịch bên cổng vẫn ở
+  // trạng thái completed, một webhook báo lại không được mở khoá file lần nữa.
+  if (order.status === 'PAID' || order.status === 'REFUNDED') return 'already-paid';
 
   // Đối chiếu số tiền và loại tiền để chặn đơn bị sửa giá.
   if (reported.amount !== order.amount || reported.currency !== order.currency) {
@@ -44,7 +46,7 @@ export async function fulfilOrder(
   // đi tiếp: tạo trùng quyền sở hữu, gửi hai email, hai link tải.
   const claimed = await prisma.$transaction(async (tx: Prisma.TransactionClient) => {
     const { count } = await tx.order.updateMany({
-      where: { id: order.id, status: { not: 'PAID' } },
+      where: { id: order.id, status: { notIn: ['PAID', 'REFUNDED'] } },
       data: { status: 'PAID', paidAt: new Date(), userId: user?.id ?? order.userId },
     });
     if (count === 0) return false;
@@ -96,4 +98,37 @@ export async function fulfilOrder(
   }
 
   return 'ok';
+}
+
+/** Thu lại quyền tải khi đơn bị hoàn tiền hoặc bị khách đòi tiền qua ngân hàng.
+ *
+ *  'not-paid' nghĩa là đơn không ở trạng thái PAID — chưa từng giao, hoặc đã
+ *  thu hồi rồi (cổng báo một lần hoàn tiền bằng nhiều sự kiện). */
+export async function revokeOrder(order: Order): Promise<'ok' | 'not-paid'> {
+  return prisma.$transaction(async (tx: Prisma.TransactionClient) => {
+    const { count } = await tx.order.updateMany({
+      where: { id: order.id, status: 'PAID' },
+      data: { status: 'REFUNDED' },
+    });
+    if (count === 0) return 'not-paid';
+
+    // Quyền tải lại bằng tài khoản.
+    await tx.purchase.deleteMany({ where: { orderId: order.id } });
+
+    // Link tải trong email không gắn với đơn, chỉ gắn người mua + mẫu, nên cho
+    // hết hạn mọi link còn dùng được của cặp đó. Nếu khách còn đơn khác mua
+    // cùng mẫu thì vẫn tải lại được qua tài khoản, vì purchase của đơn kia còn.
+    if (order.userId) {
+      const now = new Date();
+      await tx.downloadToken.updateMany({
+        where: {
+          userId: order.userId,
+          templateId: order.templateId ?? 'bundle',
+          expiresAt: { gt: now },
+        },
+        data: { expiresAt: now },
+      });
+    }
+    return 'ok';
+  });
 }

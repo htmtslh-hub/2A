@@ -5,8 +5,38 @@
    lại — thứ tự khoá và khoảng trắng đổi là chữ ký sai ngay. */
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
-import { readPaddleEvent, verifyPaddleWebhook } from '@/lib/payments/paddle';
-import { fulfilOrder } from '@/lib/fulfil';
+import {
+  readPaddleAdjustment,
+  readPaddleEvent,
+  verifyPaddleWebhook,
+} from '@/lib/payments/paddle';
+import { fulfilOrder, revokeOrder } from '@/lib/fulfil';
+
+/** Hoàn tiền / chargeback -> thu lại quyền tải. */
+async function handleAdjustment(payload: { data?: Record<string, unknown> }) {
+  const adj = readPaddleAdjustment(payload);
+
+  if (!adj.revoke) {
+    console.log('[paddle-webhook] adjustment không cần thu hồi:', adj.adjustmentId, adj.note);
+    return NextResponse.json({ received: true });
+  }
+
+  const order = adj.txnId
+    ? await prisma.order.findUnique({ where: { paddleTxnId: adj.txnId } })
+    : null;
+
+  if (!order) {
+    // Adjustment không có custom_data nên không tách được bằng orderId như
+    // transaction. Không khớp đơn nào thì gần như chắc là của dự án dùng
+    // chung tài khoản Paddle.
+    console.log('[paddle-webhook] hoàn tiền không khớp đơn nào (có thể của dự án khác):', adj.txnId);
+    return NextResponse.json({ received: true });
+  }
+
+  const result = await revokeOrder(order);
+  console.log('[paddle-webhook] thu hồi đơn', order.id, adj.note, '->', result);
+  return NextResponse.json({ received: true });
+}
 
 export async function POST(req: Request) {
   const raw = await req.text();
@@ -17,6 +47,10 @@ export async function POST(req: Request) {
   } catch (err) {
     console.error('[paddle-webhook] xác thực thất bại:', err);
     return NextResponse.json({ error: 'chữ ký không hợp lệ' }, { status: 401 });
+  }
+
+  if (String(payload?.event_type ?? '').startsWith('adjustment.')) {
+    return handleAdjustment(payload);
   }
 
   const event = readPaddleEvent(payload);

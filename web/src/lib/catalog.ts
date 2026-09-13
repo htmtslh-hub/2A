@@ -89,10 +89,17 @@ export function productName(kind: Kind, templateId: string | null | undefined, l
   return templateName(templateId ?? '', lang);
 }
 
-/** PayOS giới hạn `description` 25 ký tự (nội dung chuyển khoản). */
+/** Nội dung chuyển khoản gửi PayOS (`description`).
+ *
+ *  Tối đa 9 ký tự: tài liệu PayOS ghi rõ tài khoản ngân hàng không liên kết qua
+ *  payOS chỉ nhận 9 ký tự, dài hơn thì không tạo được link — khách bấm mua là
+ *  lỗi. Bản cũ "Forge Zone tron bo" dài 18. VD: "FZ T5", "FZ TRONBO". */
 export function shortDescription(kind: Kind, templateId?: string | null): string {
-  const raw = kind === 'BUNDLE' ? 'Forge Zone tron bo' : `Forge Zone ${templateId ?? ''}`.trim();
-  return raw.slice(0, 25);
+  // Chỉ giữ chữ, số, khoảng trắng: ngân hàng hay tự bỏ ký tự đặc biệt khỏi nội
+  // dung chuyển khoản, khiến nội dung trên sao kê lệch với cái mình gửi.
+  const id = (templateId ?? '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  const raw = kind === 'BUNDLE' ? 'FZ TRONBO' : `FZ ${id}`.trim();
+  return raw.slice(0, 9);
 }
 
 /** orderCode của PayOS phải là số nguyên dương, duy nhất cho mỗi đơn. */

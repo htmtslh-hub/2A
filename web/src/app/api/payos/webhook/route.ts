@@ -20,6 +20,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'chữ ký không hợp lệ' }, { status: 401 });
   }
 
+  // Chữ ký đúng chưa có nghĩa là đã thu được tiền: PayOS báo thành công bằng
+  // mã '00' ở cả gói tin lẫn phần data. Mã khác thì không được giao hàng.
+  if (body.code !== '00' || data.code !== '00') {
+    console.log('[payos-webhook] bỏ qua, mã không phải thành công:', body.code, data.code, data.orderCode);
+    return NextResponse.json({ received: true });
+  }
+
   const order = await prisma.order.findUnique({
     where: { payosOrderCode: BigInt(data.orderCode) },
   });

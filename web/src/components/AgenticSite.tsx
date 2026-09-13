@@ -118,7 +118,11 @@ export default function AgenticSite({
         return;
       }
     } catch {}
-    applyLang(initialLang);
+    // Chưa từng chọn thì KHÔNG ghi cookie hay localStorage — cookie phải là dấu
+    // hiệu khách đã tự chọn thứ tiếng. Ghi sẵn 'vi' ở đây thì ai vào trang chủ
+    // trước rồi mới bấm sang điều khoản (đúng đường người duyệt Paddle đi) sẽ
+    // bị khoá ở tiếng Việt. Xem readLegalLang().
+    document.documentElement.lang = HTML_LANG[initialLang] || 'vi';
   }, [applyLang, setState, initialLang]);
 
   /* --- observer cho hiệu ứng xuất hiện + lắng nghe cuộn/đổi kích thước --- */

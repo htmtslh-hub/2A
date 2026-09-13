@@ -7,3 +7,14 @@ export async function readLang(): Promise<LangCode> {
   const v = (await cookies()).get('agentic-lang')?.value;
   return v === 'en' || v === 'zh' ? v : 'vi';
 }
+
+/** Ngôn ngữ cho trang pháp lý: khách chưa tự chọn thì hiện tiếng Anh.
+ *
+ *  Người duyệt tên miền của Paddle đọc tiếng Anh và vào không có cookie. Để
+ *  mặc định tiếng Việt thì điều khoản, bảo mật, hoàn tiền đều đọc không hiểu —
+ *  lý do trượt duyệt dễ tránh nhất. Cookie chỉ được ghi khi khách tự đổi ngôn
+ *  ngữ (xem AgenticSite), nên người đã chọn tiếng Việt vẫn thấy tiếng Việt. */
+export async function readLegalLang(): Promise<LangCode> {
+  const v = (await cookies()).get('agentic-lang')?.value;
+  return v === 'vi' || v === 'zh' ? v : 'en';
+}

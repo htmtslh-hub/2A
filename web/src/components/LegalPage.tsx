@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { COMPANY } from '@/lib/company';
 import type { LegalSection } from '@/lib/legal';
 import type { LangCode } from '@/generated/data';
+import { HTML_LANG } from '@/lib/lang';
 
 const BACK_LABEL: Record<LangCode, string> = {
   vi: 'Về trang chủ',
@@ -37,6 +38,9 @@ export default function LegalPage({
 }) {
   return (
     <main
+      // Layout đặt <html lang> theo cookie, nhưng trang pháp lý có thể hiện
+      // tiếng Anh khi chưa có cookie — khai lại để trình đọc màn hình đọc đúng.
+      lang={HTML_LANG[lang]}
       style={{
         minHeight: '100vh',
         padding: 'clamp(28px,5vw,64px) clamp(20px,4vw,56px) 96px',

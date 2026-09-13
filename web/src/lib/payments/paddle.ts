@@ -72,14 +72,24 @@ export const paddleAdapter: PaymentProviderAdapter = {
       price.product = { name: 'Forge Zone — giao diện web', tax_category: 'standard' };
     }
 
+    // Trang mở hộp thanh toán cho giao dịch này.
+    //
+    // Tài khoản Paddle dùng chung với dự án khác, mà mỗi tài khoản chỉ có MỘT
+    // Default payment link — trỏ nó về web nào thì khách của web kia bị đưa
+    // nhầm sang đó. Khai `checkout.url` riêng cho từng giao dịch thì hai dự án
+    // không phải tranh nhau cái link mặc định ấy.
+    //
+    // Chỉ gửi khi đã đặt PADDLE_CHECKOUT_URL, và chỉ đặt SAU KHI tên miền được
+    // duyệt trong Checkout > Website approval: domain chưa duyệt thì Paddle từ
+    // chối tạo giao dịch (transaction_checkout_url_domain_is_not_approved),
+    // tức là khách không mua được gì. Bỏ trống thì dùng link mặc định như cũ.
+    const checkoutUrl = process.env.PADDLE_CHECKOUT_URL;
+
     const payload = {
       items: [{ quantity: 1, price, ...(productId ? { product_id: productId } : {}) }],
       // Gửi kèm id đơn của mình để webhook đối chiếu chắc chắn.
       custom_data: { orderId: input.orderId },
-      // Cố tình KHÔNG gửi `checkout.url`: Paddle chỉ chấp nhận domain đã được
-      // duyệt, truyền tay vào sẽ bị từ chối (transaction_checkout_url_domain_
-      // is_not_approved). Bỏ trống thì Paddle tự lấy Default payment link của
-      // tài khoản — khai một lần trong dashboard, trỏ về /thanh-toan/paddle.
+      ...(checkoutUrl ? { checkout: { url: checkoutUrl } } : {}),
     };
 
     const body = await paddleFetch('/transactions', {

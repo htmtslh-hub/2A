@@ -98,11 +98,11 @@ export interface Imperative {
   startCheckout: (kind: 'TEMPLATE' | 'BUNDLE', templateId?: string) => void;
 }
 
-/* Thẻ nào trong dải hero chưa sẵn sàng thì khoá lại: hiện ổ khoá, bấm không
-   vào được. Thêm số thứ tự (đếm từ 0) vào mảng này là khoá, không phải sửa chỗ
-   nào khác. Năm thẻ hiện là năm nhóm mẫu đều đã có trong thư viện nên không
-   khoá thẻ nào. */
-export const LOCKED_CARDS: number[] = [];
+/* Thẻ nào trong dải hero chưa có hàng để bán thì khoá lại: hiện ổ khoá, bấm
+   không vào được, mũi tên chuyển thẻ cũng bỏ qua. Đếm từ 0.
+   Hiện chỉ thẻ 1 "Giao diện website" mở; thẻ 2 Agent, 3 Masterprompt, 4–5 sản
+   phẩm mới đều sắp ra mắt. Mở bán thì xoá số tương ứng khỏi mảng này. */
+export const LOCKED_CARDS: number[] = [1, 2, 3, 4];
 
 export interface Refs {
   copyRef: RefObject<HTMLDivElement | null>;
@@ -193,19 +193,21 @@ export function buildView(
   const s = t.services[active];
   const { filter, tab } = state;
 
-  // Mỗi thẻ hero là một nhóm mẫu (cùng thứ tự CAT_KEYS).
-  const heroCat = CAT_KEYS[active] ?? CAT_KEYS[0];
-
   // Dải trưng bày ở trang chủ chỉ hiện mẫu THẬT — có ảnh, có demo, mua được.
   // Trước đây nó lấy theo nhóm của thẻ hero, nên đa số lần hiện ba ô lấp chỗ
-  // với khung ảnh trống: trang trưng bày mà không có gì để xem. Mẫu cùng nhóm
-  // với thẻ đang chọn xếp lên đầu; chưa đủ ba mẫu thật thì bù bằng ô còn lại.
+  // với khung ảnh trống. Chưa đủ ba mẫu thật thì bù bằng ô còn lại.
   const isReal = (m: any) => Boolean(REAL_TEMPLATES[m.id]);
-  const homeTpl = [
-    ...tplMeta.filter((m: any) => isReal(m) && m.cat === heroCat),
-    ...tplMeta.filter((m: any) => isReal(m) && m.cat !== heroCat),
-    ...tplMeta.filter((m: any) => !isReal(m)),
-  ].slice(0, 3);
+  const homeTpl = [...tplMeta.filter(isReal), ...tplMeta.filter((m: any) => !isReal(m))].slice(0, 3);
+
+  /** Thẻ hero kế tiếp theo hướng `dir`, bỏ qua thẻ khoá. Không còn thẻ mở nào
+   *  khác thì đứng yên ở thẻ hiện tại. */
+  const stepCard = (dir: 1 | -1) => {
+    for (let k = 1; k < n; k++) {
+      const i = (((active + dir * k) % n) + n) % n;
+      if (!LOCKED_CARDS.includes(i)) return i;
+    }
+    return active;
+  };
 
   const langOptions = (
     [
@@ -422,9 +424,10 @@ export function buildView(
       const bar = c.querySelector('[data-scrollbar]') as HTMLElement | null;
       if (bar) bar.style.opacity = '0';
     },
-    // Nút chính mở thư viện đã lọc sẵn đúng nhóm mẫu của thẻ đang chọn.
+    // Chỉ thẻ "Giao diện website" mở được, nên nút chính luôn vào thư viện,
+    // bỏ bộ lọc cũ nếu khách đã chọn trước đó.
     heroCtaLabel: t.heroCta1,
-    heroCta: () => goTab('library', { filter: heroCat }),
+    heroCta: () => goTab('library', { filter: 'all' }),
     langCode: ({ vi: 'VI', en: 'EN', zh: '中' } as Record<string, string>)[lang] || 'VI',
     activeTabLabel:
       tab === 'detail' && detail ? detail.name : t.nav[Math.max(0, TAB_KEYS.indexOf(tab))],
@@ -457,8 +460,16 @@ export function buildView(
     activeBlurb: s.blurb,
     indexLabel: String(active + 1).padStart(2, '0'),
     totalLabel: String(n).padStart(2, '0'),
-    prev: () => im.push({ active: (active - 1 + n) % n }, () => im.bumpCopy()),
-    next: () => im.push({ active: (active + 1) % n }, () => im.bumpCopy()),
+    // Mũi tên bỏ qua thẻ khoá. Trước đây chúng đi qua cả thẻ khoá, đưa khách
+    // vào đúng nội dung mà việc khoá thẻ muốn giấu.
+    prev: () => {
+      const i = stepCard(-1);
+      if (i !== active) im.push({ active: i }, () => im.bumpCopy());
+    },
+    next: () => {
+      const i = stepCard(1);
+      if (i !== active) im.push({ active: i }, () => im.bumpCopy());
+    },
     menuOpen: state.menuOpen,
     toggleMenu: () => im.setState({ menuOpen: !state.menuOpen }),
     navLinks: t.nav.slice(0, 6).map((label: string, i: number) => ({

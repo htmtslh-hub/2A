@@ -17,6 +17,7 @@ import { useSession, signIn } from 'next-auth/react';
 import { HTML_LANG } from '@/lib/lang';
 import { AUTH_ERRORS, FORGOT_STRINGS } from '@/lib/i18n-extra';
 import Toast from './Toast';
+import NotifyModal from './NotifyModal';
 
 
 
@@ -334,6 +335,9 @@ export default function AgenticSite({
     router.push('/don-hang');
   }, [router]);
 
+  // Ổn định qua các lần render: NotifyModal gắn phím Esc theo hàm này.
+  const closeNotify = useCallback(() => setState({ notify: null }), [setState]);
+
 
   /* --- thanh toán: cần email nên phải đăng nhập trước --- */
   const startCheckout = useCallback(
@@ -415,6 +419,12 @@ export default function AgenticSite({
     <>
       <AgenticMarkup vm={vm} />
       <Toast message={state.toast} onClose={() => setState({ toast: null })} />
+      <NotifyModal
+        product={state.notify}
+        lang={state.lang}
+        onClose={closeNotify}
+        onDone={(message) => setState({ notify: null, toast: message })}
+      />
     </>
   );
 }

@@ -59,8 +59,8 @@ export const I18N = {
     marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
     services: [
       { kicker: 'Template dựng sẵn · Tải về', title: 'Giao Diện Website', blurb: 'Giao diện web cao cấp dựng sẵn: bố cục, chuyển động, responsive và nội dung mẫu đều đã xong. Xem demo thật, mua là tải về dùng ngay.' },
-      { kicker: 'Sắp ra mắt', title: 'Agent', blurb: 'Agent AI dựng sẵn cho từng việc cụ thể, mua về là dùng. Đang hoàn thiện, sắp mở bán.' },
-      { kicker: 'Sắp ra mắt', title: 'Masterprompt', blurb: 'Bộ prompt chuyên sâu viết sẵn cho từng tác vụ. Đang hoàn thiện, sắp mở bán.' },
+      { kicker: 'Sắp ra mắt', title: 'Agent', blurb: 'Agent AI dựng sẵn cho từng việc cụ thể, mua về là dùng ngay. Đang hoàn thiện — để lại email, chúng tôi báo bạn khi mở bán.' },
+      { kicker: 'Sắp ra mắt', title: 'Masterprompt', blurb: 'Bộ prompt chuyên sâu viết sẵn cho từng tác vụ, dán vào là chạy. Đang hoàn thiện — để lại email, chúng tôi báo bạn khi mở bán.' },
       { kicker: 'Sắp ra mắt', title: 'Sản Phẩm Mới', blurb: 'Một sản phẩm số mới đang được chuẩn bị.' },
       { kicker: 'Sắp ra mắt', title: 'Sản Phẩm Mới', blurb: 'Một sản phẩm số mới đang được chuẩn bị.' },
     ],
@@ -178,8 +178,8 @@ export const I18N = {
     marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
     services: [
       { kicker: 'Ready-made · Download', title: 'Website Templates', blurb: 'Premium ready-made website templates: layout, motion, responsive design and sample content already done. Try the live demo, buy it, download and use it straight away.' },
-      { kicker: 'Coming soon', title: 'Agents', blurb: 'Prebuilt AI agents for specific jobs, ready to use once you buy. In the works.' },
-      { kicker: 'Coming soon', title: 'Master Prompts', blurb: 'In-depth prompt packs written for specific tasks. In the works.' },
+      { kicker: 'Coming soon', title: 'Agents', blurb: 'Prebuilt AI agents for specific jobs, ready to use once you buy. In the works — leave your email and we will tell you when they launch.' },
+      { kicker: 'Coming soon', title: 'Master Prompts', blurb: 'In-depth prompt packs written for specific tasks, ready to paste and run. In the works — leave your email and we will tell you when they launch.' },
       { kicker: 'Coming soon', title: 'New Product', blurb: 'A new digital product is on the way.' },
       { kicker: 'Coming soon', title: 'New Product', blurb: 'A new digital product is on the way.' },
     ],
@@ -297,8 +297,8 @@ export const I18N = {
     marquee: ['Next.js', 'Framer Motion', 'Tailwind', 'React', 'GSAP', 'Three.js', 'Webflow', 'Responsive'],
     services: [
       { kicker: '现成模板 · 下载', title: '网站模板', blurb: '高端现成网站模板：版式、动效、响应式与示例内容均已完成。先看在线演示，购买后即可下载使用。' },
-      { kicker: '即将上线', title: '智能体', blurb: '面向具体工作的现成 AI 智能体，买来即用。正在完善中。' },
-      { kicker: '即将上线', title: '大师提示词', blurb: '为具体任务编写的深度提示词合集。正在完善中。' },
+      { kicker: '即将上线', title: '智能体', blurb: '面向具体工作的现成 AI 智能体，买来即用。正在完善中——留下邮箱，开售时通知你。' },
+      { kicker: '即将上线', title: '大师提示词', blurb: '为具体任务编写的深度提示词合集，粘贴即可使用。正在完善中——留下邮箱，开售时通知你。' },
       { kicker: '即将上线', title: '新产品', blurb: '新的数字产品正在筹备中。' },
       { kicker: '即将上线', title: '新产品', blurb: '新的数字产品正在筹备中。' },
     ],

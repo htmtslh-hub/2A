@@ -9,6 +9,8 @@ import {
   FAQ_NO_CODE,
   HOME_SHOWCASE,
   COMING_SOON,
+  NOTIFY,
+  type NotifyProduct,
 } from './i18n-extra';
 import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
 import { COMPANY } from './company';
@@ -53,6 +55,8 @@ export interface State {
   /** Thông báo nổi ở góc màn hình; null là không hiện. */
   toast: string | null;
   detail: string | null;
+  /** Hộp để lại email cho sản phẩm sắp ra mắt đang mở; null là đóng. */
+  notify: NotifyProduct | null;
 }
 
 export const INITIAL_STATE: State = {
@@ -70,6 +74,7 @@ export const INITIAL_STATE: State = {
   authError: null,
   toast: null,
   detail: null,
+  notify: null,
 };
 
 /** Các thao tác DOM mệnh lệnh mà view cần gọi (do AgenticSite cung cấp). */
@@ -100,9 +105,10 @@ export interface Imperative {
 
 /* Thẻ nào trong dải hero chưa có hàng để bán thì khoá lại: hiện ổ khoá, bấm
    không vào được, mũi tên chuyển thẻ cũng bỏ qua. Đếm từ 0.
-   Hiện chỉ thẻ 1 "Giao diện website" mở; thẻ 2 Agent, 3 Masterprompt, 4–5 sản
-   phẩm mới đều sắp ra mắt. Mở bán thì xoá số tương ứng khỏi mảng này. */
-export const LOCKED_CARDS: number[] = [1, 2, 3, 4];
+   Thẻ 1 Giao diện website, 2 Agent, 3 Masterprompt mở cho khách xem (2 và 3
+   chưa bán, nút chính thu email chờ). Thẻ 4–5 sản phẩm mới chưa có nội dung
+   nên khoá. Có nội dung thì xoá số tương ứng khỏi mảng này. */
+export const LOCKED_CARDS: number[] = [3, 4];
 
 export interface Refs {
   copyRef: RefObject<HTMLDivElement | null>;
@@ -424,10 +430,14 @@ export function buildView(
       const bar = c.querySelector('[data-scrollbar]') as HTMLElement | null;
       if (bar) bar.style.opacity = '0';
     },
-    // Chỉ thẻ "Giao diện website" mở được, nên nút chính luôn vào thư viện,
-    // bỏ bộ lọc cũ nếu khách đã chọn trước đó.
-    heroCtaLabel: t.heroCta1,
-    heroCta: () => goTab('library', { filter: 'all' }),
+    // Thẻ 1 dẫn vào thư viện (bỏ bộ lọc cũ nếu có). Thẻ 2 Agent và 3
+    // Masterprompt chưa có hàng: nút chính mở hộp để lại email chờ mở bán.
+    heroCtaLabel: active === 1 || active === 2 ? NOTIFY[lang].cta : t.heroCta1,
+    heroCta: () => {
+      if (active === 1) im.setState({ notify: 'agent' });
+      else if (active === 2) im.setState({ notify: 'masterprompt' });
+      else goTab('library', { filter: 'all' });
+    },
     langCode: ({ vi: 'VI', en: 'EN', zh: '中' } as Record<string, string>)[lang] || 'VI',
     activeTabLabel:
       tab === 'detail' && detail ? detail.name : t.nav[Math.max(0, TAB_KEYS.indexOf(tab))],

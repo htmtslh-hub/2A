@@ -123,6 +123,63 @@ export const AUTH_ERRORS: Record<LangCode, Record<string, string>> = {
   },
 };
 
+/** Dòng sản phẩm sắp ra mắt mà khách để lại email chờ (thẻ 2 và 3 ở hero). */
+export type NotifyProduct = 'agent' | 'masterprompt';
+
+/** Nút ở hero và hộp để lại email cho sản phẩm sắp ra mắt. */
+export const NOTIFY: Record<
+  LangCode,
+  {
+    cta: string;
+    title: Record<NotifyProduct, string>;
+    sub: string;
+    placeholder: string;
+    submit: string;
+    sending: string;
+    done: string;
+    invalid: string;
+    network: string;
+    close: string;
+  }
+> = {
+  vi: {
+    cta: 'Nhận thông báo khi ra mắt →',
+    title: { agent: 'Agent sắp ra mắt', masterprompt: 'Masterprompt sắp ra mắt' },
+    sub: 'Để lại email, chúng tôi báo bạn ngay khi mở bán. Không gửi gì khác.',
+    placeholder: 'ban@email.com',
+    submit: 'Báo tôi khi ra mắt',
+    sending: 'Đang gửi…',
+    done: 'Đã ghi nhận. Chúng tôi sẽ báo bạn khi mở bán.',
+    invalid: 'Email chưa đúng định dạng.',
+    network: 'Không gửi được, vui lòng thử lại.',
+    close: 'Đóng',
+  },
+  en: {
+    cta: 'Notify me at launch →',
+    title: { agent: 'Agents are coming soon', masterprompt: 'Master Prompts are coming soon' },
+    sub: 'Leave your email and we will let you know as soon as they go on sale. Nothing else.',
+    placeholder: 'you@email.com',
+    submit: 'Notify me',
+    sending: 'Sending…',
+    done: 'Thanks — we will let you know when it launches.',
+    invalid: 'Please enter a valid email.',
+    network: 'Could not send. Please try again.',
+    close: 'Close',
+  },
+  zh: {
+    cta: '上线时通知我 →',
+    title: { agent: '智能体即将上线', masterprompt: '大师提示词即将上线' },
+    sub: '留下邮箱，开售时我们第一时间通知你，不发送其他内容。',
+    placeholder: 'you@email.com',
+    submit: '上线时通知我',
+    sending: '提交中…',
+    done: '已记录，开售时会通知你。',
+    invalid: '邮箱格式不正确。',
+    network: '提交失败，请重试。',
+    close: '关闭',
+  },
+};
+
 /** Ô mẫu chưa có sản phẩm thật: thay giá và nút mua, báo khi khách bấm mua. */
 export const COMING_SOON: Record<LangCode, { label: string; toast: string }> = {
   vi: { label: 'Sắp ra mắt', toast: 'Mẫu này sắp ra mắt, hiện chưa mở bán.' },

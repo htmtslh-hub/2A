@@ -21,7 +21,7 @@ Counts are literal matches in the delivered files. Search with your editor's fin
 | `index.html` | `assets/images/aeris-blush.webp` | 3 | Blush render in the hero, story and collection. |
 | `index.html` | `assets/images/aeris-detail.webp` | 1 | Cushion close-up in the design section. |
 | `index.html` | `40 mm` | 3 | Driver size in the story and specs. Edit all hardware claims together. |
-| `index.html` | `?v=1.0.0` | 2 | Cache revision on the CSS and JS links. Raise it when you publish changes. |
+| `index.html` | `?v=1.3.0` | 2 | Cache revision on the CSS and JS links. Raise it when you publish changes. |
 | `index.html` | `League+Spartan` | 1 | Google Fonts request. Change it together with the two font tokens in style.css. |
 | `assets/js/main.js` | `'Pearl White', 'Midnight Navy', 'Blush Rose'` | 1 | Colour names written under the slider and announced to screen readers, in hero order. |
 | `assets/js/main.js` | `SLIDE_MS = 1150` | 1 | Clean-up delay after a colour change. Keep equal to --slide. |

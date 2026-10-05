@@ -24,28 +24,28 @@
   function each(list, fn) { Array.prototype.forEach.call(list, fn); }
 
   /* 0. Motion preference ------------------------------------------------
-     Order: ?motion=on|off in the address → the choice saved from it → the
-     operating system's reduced-motion setting. Blocked storage is fine. */
+     Order: ?motion=on|off in the address → the choice saved from it → default ON for demo showcase. */
   var MOTION_KEY = 'aeris-motion';
   var preference = null;
   try {
     var saved = localStorage.getItem(MOTION_KEY);
     if (saved === 'on' || saved === 'off') preference = saved === 'on';
-  } catch (err) { /* storage blocked: fall back to the system setting */ }
+  } catch (err) { /* storage blocked: fall back to default */ }
   try {
     var asked = new URLSearchParams(location.search).get('motion');
     if (asked === 'on' || asked === 'off') {
       preference = asked === 'on';
       try { localStorage.setItem(MOTION_KEY, asked); } catch (err) { /* the address still applies */ }
     } else if (asked === 'auto') {
-      preference = null; // forget the saved choice and follow the system again
+      preference = !reduce.matches;
       try { localStorage.removeItem(MOTION_KEY); } catch (err) { /* nothing saved */ }
     }
   } catch (err) { /* very old browsers: no URLSearchParams */ }
-  function motionAllowed() { return preference === null ? !reduce.matches : preference; }
-  // CSS reads these: .motion-on overrides a reduced-motion system, .motion-off forces calm.
-  root.classList.toggle('motion-on', preference === true);
-  root.classList.toggle('motion-off', preference === false);
+  function motionAllowed() { return preference === false ? false : true; }
+  // CSS reads these: .motion-on ensures transitions run for showcase, .motion-off forces calm.
+  var isMotionActive = motionAllowed();
+  root.classList.toggle('motion-on', isMotionActive);
+  root.classList.toggle('motion-off', !isMotionActive);
 
   /* 1. Mobile menu ------------------------------------------------------ */
   var nav = document.querySelector('.nav');

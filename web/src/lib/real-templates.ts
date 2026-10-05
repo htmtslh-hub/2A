@@ -105,7 +105,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     },
   },
   t5: {
-    slug: 'aeris', cat: 'shop', video: true,
+    slug: 'aeris', cat: 'shop', video: true, version: '1.3.0',
     copy: {
       vi: { name: 'Aeris', desc: 'Mẫu quảng bá tai nghe chụp tai nền pastel xanh–hồng: slider ba màu tự chuyển 6 giây (có nút tạm dừng) với chuyển cảnh trượt, mờ, dải sáng quét và vòng sóng âm theo màu, đổi số 01/02/03; chương âm thanh ghim theo cuộn, thiết kế, bộ sưu tập và thông số. Bốn ảnh sản phẩm tự tạo. CTA email; không kèm giỏ hàng hay thanh toán.', tags: ['Tai nghe', 'Chuyển cảnh', 'Ảnh tự tạo'] },
       en: { name: 'Aeris', desc: 'A pastel blue–pink over-ear headphone showcase: a self-advancing three-colourway slider (6 s, with a pause button) using sliding, blurred transitions with a light sweep and colour-matched sound-wave rings, 01/02/03 counters, a pinned scroll sound story, design, collection and specs. Four original product images. Email enquiry; no cart or checkout.', tags: ['Headphones', 'Transitions', 'Original imagery'] },

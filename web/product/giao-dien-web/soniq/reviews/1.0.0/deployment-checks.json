@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-05T13:27:10.689Z",
+  "version": "1.0.0",
+  "origin": "https://forgezone.store",
+  "resources": [
+    {
+      "path": "demos/soniq/index.html",
+      "status": 200,
+      "bytes": 9369,
+      "match": true
+    },
+    {
+      "path": "demos/soniq/assets/js/main.js",
+      "status": 200,
+      "bytes": 13242,
+      "match": true
+    },
+    {
+      "path": "demos/soniq/assets/css/style.css",
+      "status": 200,
+      "bytes": 17214,
+      "match": true
+    },
+    {
+      "path": "demos/soniq/assets/img/graphite.webp",
+      "status": 200,
+      "bytes": 278400,
+      "match": true
+    },
+    {
+      "path": "demos/soniq/assets/img/ivory.webp",
+      "status": 200,
+      "bytes": 233212,
+      "match": true
+    },
+    {
+      "path": "demos/soniq/assets/img/cobalt.webp",
+      "status": 200,
+      "bytes": 275374,
+      "match": true
+    },
+    {
+      "path": "previews/soniq.webp",
+      "status": 200,
+      "bytes": 70506,
+      "match": true
+    },
+    {
+      "path": "previews/soniq-mobile.webp",
+      "status": 200,
+      "bytes": 111656,
+      "match": true
+    },
+    {
+      "path": "previews/soniq-tablet.webp",
+      "status": 200,
+      "bytes": 89652,
+      "match": true
+    },
+    {
+      "path": "previews/soniq.mp4",
+      "status": 200,
+      "bytes": 492996,
+      "match": true
+    }
+  ],
+  "browsers": [
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "hover": true,
+      "edge": true,
+      "mid": 0.500129,
+      "wrap": true,
+      "wrapBack": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "hover": true,
+      "edge": true,
+      "mid": 0.400305,
+      "wrap": true,
+      "wrapBack": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "hover": true,
+      "edge": true,
+      "mid": 0.283869,
+      "wrap": true,
+      "wrapBack": true,
+      "noOverflow": true,
+      "errors": []
+    }
+  ],
+  "failures": [],
+  "home": {
+    "status": 200,
+    "soniq": true,
+    "oldName": false
+  },
+  "anonymousDownload": 401
+}

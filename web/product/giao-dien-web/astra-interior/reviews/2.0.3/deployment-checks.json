@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-05T12:43:03.630Z",
+  "version": "2.0.3",
+  "origin": "https://forgezone.store",
+  "resources": [
+    {
+      "path": "demos/astra-interior/index.html",
+      "status": 200,
+      "bytes": 8001,
+      "match": true
+    },
+    {
+      "path": "demos/astra-interior/assets/js/main.js",
+      "status": 200,
+      "bytes": 20711,
+      "match": true
+    },
+    {
+      "path": "demos/astra-interior/assets/css/style.css",
+      "status": 200,
+      "bytes": 15865,
+      "match": true
+    },
+    {
+      "path": "demos/astra-interior/assets/img/coffee.webp",
+      "status": 200,
+      "bytes": 202624,
+      "match": true
+    },
+    {
+      "path": "demos/astra-interior/assets/img/matcha.webp",
+      "status": 200,
+      "bytes": 241892,
+      "match": true
+    },
+    {
+      "path": "demos/astra-interior/assets/img/croissant.webp",
+      "status": 200,
+      "bytes": 362602,
+      "match": true
+    },
+    {
+      "path": "previews/astra-interior.webp",
+      "status": 200,
+      "bytes": 65932,
+      "match": true
+    },
+    {
+      "path": "previews/astra-interior-mobile.webp",
+      "status": 200,
+      "bytes": 102406,
+      "match": true
+    },
+    {
+      "path": "previews/astra-interior-tablet.webp",
+      "status": 200,
+      "bytes": 95872,
+      "match": true
+    },
+    {
+      "path": "previews/astra-interior.mp4",
+      "status": 200,
+      "bytes": 555843,
+      "match": true
+    }
+  ],
+  "browsers": [
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "hover": true,
+      "particles": 1,
+      "mid": 0.484172,
+      "wrap": true,
+      "wrapBack": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "hover": true,
+      "particles": 1,
+      "mid": 0.412265,
+      "wrap": true,
+      "wrapBack": true,
+      "noOverflow": true,
+      "errors": []
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "hover": true,
+      "particles": 1,
+      "mid": 0.202115,
+      "wrap": true,
+      "wrapBack": true,
+      "noOverflow": true,
+      "errors": []
+    }
+  ],
+  "failures": [],
+  "home": {
+    "status": 200,
+    "mellow": true,
+    "oldName": false
+  },
+  "anonymousDownload": 401
+}

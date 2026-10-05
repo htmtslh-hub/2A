@@ -1,249 +1,381 @@
-# Astra Interior — customisation guide
+# Mellow Coffee 2.0.0 - customisation guide
 
-This guide takes you from the downloaded ZIP to a website you can publish. Astra Interior is a code template, not a hosted no-code editor. Keep the original ZIP unchanged and work on a copy. Never give an AI tool passwords, API keys, payment details or private customer information.
+This guide takes you from the downloaded ZIP file to a website you can publish. Follow the steps in order the first time. Every prompt below is complete. Attach the latest full ZIP including assets/img/. Let AI ask for your information; you do not need to know selectors or code.
 
-## Step 1 - Extract and open the template
+## Before you begin
 
-Extract the full ZIP. Open the folder until `index.html` sits beside `assets`, `CUSTOMISE.md`, `README.md` and `LICENCE.txt`. Double-click `index.html` and scroll from the cinematic opening through the contact section.
+Prepare a computer, a modern browser, a text editor, and the ZIP file from your Forge Zone account. Keep the original ZIP unchanged. Never send passwords, API keys, payment details, or private customer data to an AI tool.
+
+Your template is a static website built with HTML, CSS, and JavaScript. It does not include a backend, payment processing, or a working form submission service unless the product page explicitly says so.
+
+## Step 1 - Unzip and open the template
+
+1. Download the ZIP file to a folder you can find easily.
+2. Extract the whole ZIP. On Windows choose **Extract All**. On macOS double-click the ZIP.
+3. Open the extracted folder until you see `index.html` beside the `assets` folder.
+4. Double-click `index.html`. If it opens in a text editor, use **Open with** and choose your browser.
+5. Scroll through the full page and try the menu and links before changing anything.
+6. Open `README.md` and `CUSTOMISE.md` in a text editor.
+
+Expected structure:
 
 ```text
-astra-interior/
+template-folder/
 ├── index.html
-├── assets/css/style.css
-├── assets/js/main.js
+├── assets/
+│   ├── css/style.css
+│   └── js/main.js
 ├── CUSTOMISE.md
 ├── README.md
 └── LICENCE.txt
 ```
 
-**Correct result:** the page opens at a `file:///` address, the image changes as you scroll, and all six files remain in place.
+**Correct result:** the demo layout, colours, and sample content are visible. A `file:///` address is normal because the page is opening on your computer.
 
-## Step 2 - Create a safe working copy
+If you only see plain text or a broken page, confirm that you extracted the complete ZIP and that `assets` is still next to `index.html`.
 
-Keep the downloaded ZIP as the clean original. Duplicate the extracted folder and name it `astra-working-copy`. Edit only this copy. Before large edits, duplicate it again as `astra-backup-01`. Keep UTF-8 encoding and do not rename the three code files or their folders.
+## Step 2 - Keep the original and make a working copy
 
-**Correct result:** you can return to a known-good version without undoing changes manually.
+1. Keep the downloaded ZIP as your clean original.
+2. Copy the extracted template folder and name the copy `website-working-copy`.
+3. Edit only the working copy. Do not rename `index.html`, `assets/css/style.css`, or `assets/js/main.js`.
+4. Before a major change, copy the working folder to a separate folder such as `website-backup-01`.
+5. Save files as UTF-8 and keep their real extension. Avoid names such as `index.html.txt`.
 
-## Step 3 - Prepare verified business information
+**Correct result:** you have an untouched original and a separate working copy. Save each change, then refresh the browser to see it.
 
-Collect your real brand name, public email, services, audience, project names, project locations, completion dates, studio location, preferred tone, legal image rights and the main action you want visitors to take. Decide whether the current fictional projects will be replaced by real work or clearly labelled concept work. Do not present fictional projects as commissions.
+## Step 3 - Prepare your business information
 
-**Correct result:** every claim and contact detail can be supported before publication.
+Collect the information below. You may give it directly to AI in plain language.
 
-## Step 4 - Start a safe AI editing session
+| Information | What to prepare |
+|---|---|
+| Brand name | The name shown in the header and browser tab |
+| Main activity | What you sell or provide |
+| Audience | The people you want to reach |
+| Main benefit | A specific reason to choose your business |
+| Products or services | Names, descriptions, and public prices if applicable |
+| Contact details | Public email, phone number, and address |
+| Main action | Email, phone call, booking page, or another real URL |
+| Language | English, Vietnamese, Chinese, or another language |
+| Brand assets | Logo, brand colours, and images you may legally use |
+| Evidence | Real statistics, testimonials, and certifications only |
 
-Attach all six files, or the complete working ZIP if your AI tool accepts ZIP files. Explain the CSS and JavaScript paths. A screenshot is useful for visual feedback but does not replace source files.
+It is fine to leave an item undecided while editing, but resolve it before publication. Do not present demo statistics or testimonials as your own.
 
-**Prompt 01 - Set up my editing assistant**
+## Step 4 - Start working with AI
+
+### Send the files
+
+In a chat tool, attach the working ZIP if the tool can read ZIP files. Otherwise attach `index.html`, `style.css`, `main.js`, `CUSTOMISE.md`, `README.md`, and `LICENCE.txt`. Explain that CSS is at `assets/css/style.css` and JavaScript is at `assets/js/main.js`.
+
+If the AI works directly in a folder, open or grant access to `website-working-copy`. Ask it to read the files before editing. A screenshot helps explain a visual problem, but it does not replace the source files.
+
+**Prompt 01 - Set up my website editing assistant**
 
 ```text
-I bought the Astra Interior static website template from Forge Zone. Read every
-file I attach: index.html, assets/css/style.css, assets/js/main.js,
-CUSTOMISE.md, README.md and LICENCE.txt. Tell me which files are present and
-which are missing. Do not edit yet. Summarise the sections, working links,
-fictional demo content and the 24-frame canvas sequence. Ask for my brand,
-services, projects, public contact details, language and main goal in small
-groups. Preserve plain HTML/CSS/JavaScript, relative paths, file:// support,
-the embedded sprite, responsive layout, keyboard access and reduced-motion
-mode. Do not add a framework, dependency, tracking, backend or invented facts.
-If you cannot edit files directly, return complete replacement files with exact
-paths and no ellipses. Do not publish anything. Begin by reading the files.
+I bought a static website template from Forge Zone and want to turn it into
+my own website. I am not a developer. Guide me in clear, small steps.
+
+First read every file I provide: index.html, assets/css/style.css,
+assets/js/main.js, CUSTOMISE.md, README.md, and LICENCE.txt. If I send CSS or
+JavaScript as separate files, use the paths above. Tell me which files you
+read and which are missing. Do not guess the contents of a missing file and
+do not edit anything yet.
+
+Summarise the current sections, working buttons, demo-only elements, and all
+sample information that I must replace. Then ask me for the missing business
+information in small groups: brand, services, contact details, language, and
+the website goal. Let me answer "not decided" when needed.
+
+Throughout this task:
+- Keep the current plain HTML, CSS, and JavaScript structure, relative paths,
+  the three local WebP images in assets/img/, and the ability to open index.html directly. Do not introduce a framework,
+  package manager, build process, or new dependency.
+- Preserve the template style unless I request a change. Keep responsive
+  behaviour, keyboard navigation, visible focus, readable text, and reduced
+  motion support.
+- Never invent facts, statistics, reviews, certifications, prices, addresses,
+  or business URLs.
+- Do not add tracking, a backend, payments, or hidden form submission.
+- If you can edit the folder, edit only the working copy. Otherwise return
+  complete replacement files and state the exact destination of each file.
+  Never use ellipses or say "keep the rest unchanged" inside file contents.
+- After every edit, list what changed, how I can view it, and what you tested.
+- Do not publish, overwrite a live site, or change domain settings.
+
+Begin by reading the files and asking for the first group of information.
 ```
 
-**Correct result:** the AI describes this template rather than guessing and asks for missing business information.
+**Correct result:** AI identifies the actual template files and asks for your information. If it suggests rebuilding with a framework, repeat the instruction to preserve the current structure.
 
-## Step 5 - Replace brand, content and destinations
+## Step 5 - Replace the brand, copy, and contact actions
 
-Work in small, reviewable passes. Refresh `index.html` after each pass and search again for old demo names.
+Give AI verified business information. If something is missing, ask it to remove the claim or mark it clearly for later review. Then use these prompts in the same conversation.
 
 **Prompt 02 - Personalise all website content**
 
 ```text
-Use the latest six Astra Interior files. If this is a new chat, ask me to send
-all files and run Prompt 01 first. Ask for my verified brand, offer, audience,
-main benefit, tone, studio location, public contact details, three projects and
-main visitor action. Then update the title, description, navigation, hero,
-studio copy, project copy, approach, services, contact section, footer, canvas
-accessible labels and email links. Remove unsupported claims instead of
-inventing them. Preserve the existing composition and frame sequence. Return
-complete changed files with exact paths and list every demo item still present.
+Use the latest website files in this conversation. Replace the demo brand and
+copy with the verified information below:
+
+Brand: ask me for this information before editing
+What we offer: ask me for this information before editing
+Audience: ask me for this information before editing
+Main benefit: ask me for this information before editing
+Tone: ask me for this information before editing
+Public contact details: ask me for this information before editing
+Main action: ask me for this information before editing
+Required language: ask me for this information before editing
+
+Before editing, list any information still missing and any demo claim that
+cannot be supported. Then update the page title, metadata, navigation, hero,
+sections, calls to action, contact details, footer, image alt text, and any
+accessible labels. Keep the existing layout and responsive behaviour. Remove
+unsupported statistics, testimonials, prices, certifications, and locations
+instead of inventing replacements. Return complete changed files and a list
+of every demo item you removed or still need me to confirm.
 ```
 
-**Prompt 03 - Audit every link and action**
+**Prompt 03 - Connect every button to the right destination**
 
 ```text
-Audit every anchor and button in the latest Astra Interior files. Make a table
-with visible label, current destination, desired destination and test result.
-Ask me for confirmed email, phone, booking URL or section destinations before
-editing. Use mailto:, tel:, secure https URLs or real section IDs. Do not use
-href="#", fake success states or a form without a submission service. Preserve
-mobile-menu keyboard behaviour. Return complete changed files and a click-test
-checklist for desktop and phone widths.
+Audit every button, text link, menu item, email link, phone link, and form in
+the latest files. Create a table with its visible label, current destination,
+whether it works, and the destination it should use.
+
+Use only these verified destinations:
+Primary action: ask me for this information before editing
+Secondary action: ask me for this information before editing
+Social links: ask me for this information before editing
+
+Then update the files. Use mailto: for email, tel: for phone, and secure https
+URLs for external pages. Keep internal section links working. If a form has no
+real submission service, label it as a demo or replace it with a working
+contact link. Do not simulate success. Return complete changed files and a
+short click-test checklist.
 ```
 
-**Prompt 04 - Translate the whole website**
+## Step 6 - Change colours, fonts, images, or sections when needed
+
+Make one type of visual change at a time and refresh the page after each one. Attach the latest files every time you start a new AI chat.
+
+**Prompt 04 - Apply my colours and fonts safely**
 
 ```text
-Translate all visitor-facing Astra Interior copy into the language I name.
-Ask for the language, regional style, formal or informal tone and any words that
-must remain unchanged. Update html lang, title, metadata, navigation, headings,
-body copy, buttons, footer, canvas labels and menu text. Keep code identifiers,
-paths and the embedded base64 sprite unchanged. Check long headings at 320px,
-375px, 820px and 1440px. Return complete changed files and flag phrases that
-need native-speaker or legal review.
+Read the latest HTML and CSS first. Apply this brand system while preserving
+the template layout and responsive behaviour:
+
+Primary colour: ask me for this information before editing
+Accent colour: ask me for this information before editing
+Background colour: ask me for this information before editing
+Text colour: ask me for this information before editing
+Heading font: ask me for this information before editing
+Body font: ask me for this information before editing
+
+Reuse existing CSS variables where possible. Check text contrast, buttons,
+links, focus states, hover states, borders, dark sections, and mobile views.
+Use sensible fallback fonts and do not add a paid font unless I confirm a
+licence. Return the complete CSS file, any required HTML changes, and note any
+colour pair that still needs review.
 ```
 
-**Prompt 05 - Replace project information safely**
+**Prompt 05 - Replace the logo or illustration with my image**
 
 ```text
-Replace Casa Lume, Rua Nova and Maré House with my real projects or clearly
-labelled concept studies. Ask for each project name, type, location, year,
-one-sentence description and publication permission. Do not imply a client
-commission without confirmation. Update the sequence chapters, project cards,
-canvas labels and metadata consistently. Keep the three canvas still frames
-unless I provide legally usable replacement imagery. Return complete changed
-files and a project-by-project verification list.
+I will attach the latest website files and my image. The image is intended for
+ask me for this information before editing and I have permission to use it.
+
+Inspect the current image container before editing. Tell me the recommended
+file name, format, dimensions, and exact folder. Then update the relevant HTML
+and CSS using a relative path. Preserve aspect ratio, prevent layout shift,
+write accurate alt text, and keep the result readable on desktop, tablet, and
+mobile. Do not crop important content without telling me. Return complete
+changed files and exact instructions for where I should place the image.
 ```
 
-## Step 6 - Adjust the visual system and motion
-
-Most visual tokens are at the top of `assets/css/style.css`. Keep strong text contrast. The 24-frame sprite is embedded inside the `src` of `#sequence-source` in `index.html`; do not format, truncate or partially copy that data URL.
-
-**Prompt 06 - Apply my brand colours**
+**Prompt 06 - Translate the whole website**
 
 ```text
-Apply my verified brand palette to Astra Interior. Ask for background, text,
-accent and supporting colours, or derive an accessible proposal from my logo.
-Edit only the colour tokens and necessary state styles in
-assets/css/style.css. Measure normal text, large text, focus outlines, buttons,
-header over the darkest and lightest frames, and link hover states. Keep the
-image sequence readable under the overlay. Return the complete CSS file, a
-token table and contrast ratios with any unresolved risk clearly stated.
+Translate every visitor-facing string in the latest website into ask me for this information before editing.
+This includes metadata, navigation, headings, paragraphs, buttons, labels,
+form messages, image alt text, accessibility labels, and footer text.
+
+Keep brand names, registered product names, email addresses, phone numbers,
+and URLs unchanged unless I provide replacements. Preserve HTML structure,
+class names, IDs, paths, and JavaScript behaviour. Adapt wording naturally
+rather than translating word by word. After editing, check for text overflow
+at 360 px and on desktop. Return complete changed files and list any phrase
+whose meaning needs my confirmation.
 ```
 
-**Prompt 07 - Change typography**
+**Prompt 07 - Add or remove a service or section**
 
 ```text
-Change Astra Interior typography using at most two font families. Ask whether I
-need free web fonts, system fonts or supplied licensed files. Keep readable
-fallbacks and font-display swap. Update the Google Fonts request and CSS tokens,
-then check hero, project names, navigation and email at 320px, 200% zoom and
-offline fallback. Do not claim a font licence without an official source.
-Return complete changed files and the official licence links I must keep.
-```
+Use the latest website files. I want to ask me for this information before editing this item or section:
+ask me for this information before editing.
 
-**Prompt 08 - Replace the 24-frame sequence**
-
-```text
-Help me replace Astra Interior's embedded sequence with 24 images I am allowed
-to use. First inspect assets/js/main.js and report the required 6-column by
-4-row sprite layout, frame order and current 640x360 cell size. Ask me to attach
-all 24 ordered frames and confirm image rights. Build one WebP sprite with the
-same grid, replace only the complete data URL in #sequence-source, and preserve
-the alt labels, scroll mapping, reduced-motion still and file:// support. Never
-return a truncated index.html. If the tool cannot safely return the complete
-large HTML file, stop and give me a local, reversible replacement procedure
-instead. Report final sprite dimensions, byte size and visual checks.
-```
-
-**Prompt 09 - Tune or reduce the scroll motion**
-
-```text
-Tune the Astra Interior sequence without adding a library. Ask whether I want
-slower, faster, shorter, longer or fully static behaviour. Preserve 24 discrete
-frames, IntersectionObserver activation, requestAnimationFrame rendering and
-prefers-reduced-motion. Do not add a scroll event listener. Check that chapter
-copy stays readable and does not overlap the header at 320px, 375px, 820px and
-1440px. Return complete changed files and explain the new progress ranges in
-plain language.
-```
-
-**Prompt 10 - Add, remove or reorder a section**
-
-```text
-Modify the section structure of the latest Astra Interior files. Ask which
-section I want to add, remove or reorder, its purpose, verified copy and desired
-navigation link. Keep one h1, logical heading levels, unique IDs, working skip
-link, mobile menu, reveal fallback and consistent spacing. Do not create fake
-forms, reviews, metrics or buttons. Return complete changed files and a new
-section order with every navigation destination checked.
+First identify the complete HTML block and any matching CSS or JavaScript.
+Explain the smallest safe change. Then edit without leaving empty wrappers,
+broken anchors, unused navigation links, or JavaScript errors. Keep spacing,
+visual hierarchy, responsive behaviour, keyboard access, and the pause control.
+If adding an item would make the layout uneven, adjust the existing grid
+rules instead of duplicating arbitrary styles. Return complete changed files
+and a checklist for desktop and mobile.
 ```
 
 ## Step 7 - Test before publishing
 
-Test the working copy in a fresh browser window at 1440×900, 820×1180, 375×812 and 320×740. Check the full scroll sequence, all links, menu open/close, Escape, Tab and Shift+Tab, visible focus, horizontal overflow, 200% zoom, reduced motion, blocked fonts and disabled JavaScript. With JavaScript disabled the imagery may be absent, but text, navigation, sections and contact links must remain usable.
+Test the website at a narrow phone width, a tablet width, and a wide desktop. Check navigation, all links, readable text, image loading, keyboard focus, and the pause control.
 
-**Prompt 11 - Run a release audit**
-
-```text
-Audit my latest Astra Interior working copy without publishing it. Test the
-extracted files through file:// and a local static server in the browsers you
-actually have. Check 1440x900, 820x1180, 375x812 and 320x740; menu behaviour;
-Escape focus return; all links; one h1; heading order; unique IDs; console and
-network errors; horizontal overflow; reduced motion; JavaScript disabled;
-blocked web fonts; 200% zoom; canvas rendering; and all 24 scroll frames. Report
-PASS, FAIL or NOT TESTED for each item. Include browser versions and exact
-evidence. Fix only failures I authorise and return complete changed files.
-```
-
-**Correct result:** there are no hidden failures, and untested items are labelled honestly instead of being assumed to pass.
-
-## Step 8 - Publish the complete folder
-
-Choose a static host, upload the contents of the working folder so `index.html` is at the site root, then open the public URL in a private browser window. Do not upload the untouched purchase ZIP publicly. Email links need no backend, but visitors must have an email application configured.
-
-**Prompt 12 - Prepare a publishing handoff**
+**Prompt 08 - Audit the final website**
 
 ```text
-Prepare my tested Astra Interior working copy for a static host, but do not log
-in, publish, change DNS or spend money. Confirm the six-file structure, relative
-paths, metadata, public contact destinations, licence notices and absence of
-secrets. Explain how to upload the folder to the host I name and how to verify
-the live URL, mobile menu, email links, fonts and 24-frame sequence. Return a
-deployment checklist, rollback steps and a list of anything still NOT TESTED.
+Audit the latest website files as a final pre-publication review. Do not make
+changes until you report the findings.
+
+Check: missing files and broken relative paths; leftover demo names, sample
+text, placeholder prices, fake reviews, and placeholder URLs; page title and
+description; heading order; alt text; labels; keyboard navigation and visible
+focus; colour contrast; menu and button behaviour; horizontal overflow at
+360 px; tablet and desktop layout; reduced motion; console errors; external
+links; mailto and tel links; and whether any form only pretends to submit.
+
+Group findings as Blocker, Should fix, or Optional. For each finding name the
+file and exact text or selector. After I approve the list, fix the Blocker and
+Should fix items, return complete changed files, and provide a manual test
+checklist. Do not publish the website.
 ```
 
-## Step 9 - Connect a domain only when ready
+## Step 8 - Publish by uploading the website folder
 
-Buy or use a domain through a provider you trust. Follow that provider's current DNS instructions, save existing records before changing them and wait for propagation. Do not send registrar passwords to AI. Keep the temporary hosting URL until the custom domain works with HTTPS.
+Choose a host that supports static websites. Upload the contents of the working folder so `index.html` is at the published root. Do not upload only the HTML file; the `assets` folder must travel with it.
 
-**Correct result:** both the live URL and custom domain load the same tested files securely.
+**Prompt 09 - Guide me through publishing**
+
+```text
+Guide me through publishing this static HTML/CSS/JavaScript website on
+ask me for this information before editing. I am not a developer. Use the provider's current screen
+labels only when you are sure of them; otherwise tell me what concept to look
+for instead of guessing.
+
+My website folder contains index.html and an assets folder. First ask what I
+can see in my hosting dashboard and whether I am uploading manually, using a
+Git repository, or using the provider's command line. Then give one small step
+at a time. Explain exactly which folder contents to upload, how to recognise a
+successful deployment, and how to find the public URL. Do not ask for my
+password, API key, recovery code, or payment details. Do not change domain
+settings until I request it. Finish with checks for the home page, CSS,
+JavaScript, images, links, mobile layout, and HTTPS.
+```
+
+**Correct result:** the public URL opens the same page as your local working copy, including CSS, JavaScript, and images.
+
+## Step 9 - Connect a custom domain if needed
+
+Publish successfully on the host's temporary URL first. Then connect your domain. DNS changes may take time, so keep the working deployment available while waiting.
+
+**Prompt 10 - Connect my domain using the real configuration**
+
+```text
+Help me connect my custom domain to the static website already published on
+ask me for this information before editing. My domain is managed at ask me for this information before editing.
+
+Do not invent DNS values. First ask me to copy the exact domain instructions
+shown by my hosting provider, including record type, name/host, target/value,
+and whether a www record is required. Ask me to hide account IDs or private
+tokens. Compare those instructions with the records I can see and explain one
+change at a time. Warn me before replacing an existing record and do not tell
+me to remove email-related MX or TXT records. After the change, show me how to
+verify the root domain, www version, HTTPS certificate, and redirect behaviour.
+```
 
 ## Step 10 - Update and recover safely
 
-For every update, download or copy the current live files, create a dated working copy, make one group of changes, rerun Step 7 and keep the previous release. If an update breaks the site, restore the previous complete folder. Never replace only half of a coordinated HTML/CSS/JS change.
+Keep one known-good backup for every published version. Make changes in a fresh working copy, test locally, and publish only the changed website files.
 
-**Correct result:** each published version can be rolled back without rebuilding from memory.
+**Prompt 11 - Update one part and preserve everything else**
 
-## Exact edit map for Astra Interior 1.0.0
+```text
+Read the latest published-source files I attach. Change only this item:
+ask me for this information before editing.
 
-Counts below are literal counts in the original release and must be recounted after any code edit.
+Preserve all other approved copy, links, layout, colours, responsive rules,
+accessibility behaviour, and file paths. Before editing, name the file and the
+smallest block that needs to change. After editing, return complete changed
+files, summarise the exact difference, and tell me how to test it locally.
+Do not publish or alter domain settings.
+```
 
-| Find | File | Original count | Replace with |
-|---|---|---:|---|
-| `Astra Atelier` | `index.html` | 7 | Your verified brand name |
-| `hello@astraatelier.example` | `index.html` | 4 | Your public email in visible text and mailto links |
-| `Spaces shaped` | `index.html` | 1 | Your concise hero promise |
-| `Casa Lume` | `index.html` | 3 | Project one name |
-| `Rua Nova` | `index.html` | 2 | Project two name |
-| `Maré House` | `index.html` | 2 | Project three name |
-| `Lisbon` | `index.html` | 3 | Your relevant studio or project location |
-| `2026` | `index.html` | 2 | Verified project years where appropriate |
-| `2025` | `index.html` | 1 | Verified project year where appropriate |
-| `--clay: #8b4d32;` | `assets/css/style.css` | 1 | Your accessible primary accent token |
-| `--sage: #5f6755;` | `assets/css/style.css` | 1 | Your accessible supporting colour token |
-| `data-stage="` | `index.html` | 4 | Do not change unless retuning sequence chapters |
-| `data-still="` | `index.html` | 3 | Frame indexes from 0 to 23 for project canvases |
+**Prompt 12 - Find and fix a website problem**
 
-Do not use find-and-replace inside the long `data:image/webp;base64,` value. Replace that value only as one complete generated asset through Prompt 08.
+```text
+Help me diagnose a problem in my static website. I will attach the latest
+files and provide:
+- What I expected: ask me for this information before editing
+- What happened: ask me for this information before editing
+- Where it happens: ask me for this information before editing
+- When it started: ask me for this information before editing
+- Any browser error: ask me for this information before editing
+
+Read the files before suggesting a fix. Identify the most likely cause and
+show the evidence in the code. Prefer the smallest fix and do not rewrite the
+site or add dependencies. Preserve the current design and responsive rules.
+Return complete changed files and give me a short test to confirm the problem
+is fixed. If the evidence is insufficient, ask for one specific screenshot,
+console message, or file instead of guessing.
+```
+
+## Quick troubleshooting
+
+| Problem | First check |
+|---|---|
+| Page has no styling | Confirm `assets/css/style.css` exists and the HTML path is unchanged |
+| Images do not appear | Check file name, extension, letter case, and relative path |
+| A button does nothing | Inspect its real `href` or JavaScript and remove demo behaviour |
+| Mobile layout is too wide | Look for fixed widths and test at 360 px |
+| Changes are not visible | Save the correct file and hard refresh the browser |
+| Published site shows 404 | Put `index.html` at the publish root and check host settings |
+| AI changed too much | Restore the backup and use Prompt 11 with a narrower request |
 
 ## Final checklist
 
-- All fictional names, locations, dates and email details are removed or clearly disclosed.
-- Every visible action leads to a real section, email address, phone number or confirmed URL.
-- The page has no horizontal overflow at all four test sizes.
-- Keyboard focus is visible and the mobile menu closes with Escape and restores focus.
-- Reduced motion shows one still hero; disabled JavaScript leaves content usable.
-- The 24 frames play in order and three project canvases render.
-- You own or license every replacement image, font, logo and piece of copy.
-- You kept the original ZIP, a tested working copy and a rollback copy.
+- [ ] The original ZIP and a known-good backup are stored safely.
+- [ ] All demo brands, copy, statistics, testimonials, prices, and URLs are replaced or removed.
+- [ ] The page title, description, contact details, links, and calls to action are correct.
+- [ ] Every image loads and has suitable alt text.
+- [ ] The site works at 360 px, tablet size, and desktop size without horizontal overflow.
+- [ ] Menu, buttons, keyboard focus, and the pause control work correctly.
+- [ ] No form pretends to submit and no unsupported feature is promised.
+- [ ] The public URL loads HTML, CSS, JavaScript, images, and HTTPS correctly.
+- [ ] The latest published source is backed up before the next change.
+
+## Exact edit map
+
+| File | Find literal | Count | Action |
+|---|---|---:|---|
+| `index.html` | `Mellow Coffee` | 4 | Replace consistently with verified content |
+| `index.html` | `hello@mellow.example` | 3 | Replace consistently with verified content |
+| `index.html` | `House espresso` | 1 | Replace consistently with verified content |
+| `index.html` | `Iced matcha` | 2 | Replace consistently with verified content |
+| `index.html` | `Butter croissant` | 1 | Replace consistently with verified content |
+| `assets/js/main.js` | `hello@mellow.example` | 1 | Replace consistently with verified content |
+| `assets/js/main.js` | `price: 450` | 1 | Replace consistently with verified content |
+| `assets/js/main.js` | `price: 600` | 1 | Replace consistently with verified content |
+| `assets/js/main.js` | `price: 380` | 1 | Replace consistently with verified content |
+| `assets/css/style.css` | `--accent: #f5c579;` | 1 | Replace consistently with verified content |
+| `assets/css/style.css` | `--font: 'Segoe UI', sans-serif;` | 1 | Replace consistently with verified content |
+
+## Mellow-specific behaviour
+
+Keep index.html, CSS, JS and all three images together. Hero slide order is coffee, matcha, croissant. Use the numbered controls, arrow buttons, keyboard arrows while the hero is focused, or swipe horizontally. AUTO delay is 6500 ms in schedule(); hover, keyboard focus and an offscreen hero suspend autoplay. The pause button applies to the current visit only. Motion always starts enabled, including when the OS requests reduced motion. Old saved motion-off settings are ignored. Finite requestAnimationFrame transitions handle rapid input and direct wrap in both directions without a JS library.
+
+Menu filters use data-category and data-filter. Product keys in data-product must match catalogue keys in main.js. Prices in main.js are integer cents: update the visible HTML prices at the same time. Bag quantities are stored under mellow-bag on this device. Empty bags hide the enquiry link. The email body contains selected quantities and a sample total; no payment, order submission, stock or delivery system is included. The .example address is deliberately non-operational and must be replaced in both HTML and JS before publishing.
+
+Three original AI-created WebP cutouts are local: assets/img/coffee.webp, matcha.webp and croissant.webp. Preserve their alpha channels and full subject boundaries. Replace width and height attributes with real asset dimensions. No web font, tracking or external dependency is loaded. With JavaScript disabled all products, contact links and navigation remain visible; enhancement controls are hidden.
+
+After any visual change, test 1440x900, 820x1180, 375x812 and 320x740, 200% zoom, offline, file://, disabled JS, keyboard focus, bag persistence, direct wrap, rapid clicks, and pause/resume. Test the actual browsers you intend to support. If something fails, restore the complete known-good folder before narrowing the change.
+
+Hover motion: move the mouse over the hero to shift and rotate the product, beans and seal at different depths. Menu product images and the story pastry lift, tilt and gently zoom with the pointer; leaving returns them smoothly to rest. Pause motion resets these effects. Touch retains swipe without pointer tilt. Tune depth, turn and zoom in hoverItem() calls in assets/js/main.js. Finite RAF easing works without CSS transitions.
+
+Antigravity-inspired hover: a dense field of small coloured dashes repels and curls around the mouse, then springs back to its resting positions. The palette combines amber, cream, blue, violet and soft coral. A subtle aura follows the pointer. The finite render loop stops after 1500ms without input; pause and hidden tabs reset the field. Touch does not trigger particles. Decorative layers are local and pointer-transparent. Tune particleColours, the 34px spacing, 230px influence radius and spring/damping in assets/js/main.js.

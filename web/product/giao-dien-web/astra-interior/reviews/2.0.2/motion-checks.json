@@ -1,0 +1,398 @@
+{
+  "edge": {
+    "version": "154.0.4258.53",
+    "viewports": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "images": true
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820,
+        "images": true
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "images": true
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "images": true
+      }
+    ],
+    "motion": [
+      {
+        "before": "0",
+        "step": -1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.440568,
+          "transform": "matrix(0.93956, -0.0920307, 0.0920307, 0.93956, -72.7262, 13.9858)"
+        },
+        "finite": true
+      },
+      {
+        "before": "2",
+        "step": 1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.434552,
+          "transform": "matrix(0.938865, 0.0929579, -0.0929579, 0.938865, 73.5082, 14.1362)"
+        },
+        "finite": true
+      },
+      {
+        "before": "0",
+        "step": 1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.477476,
+          "transform": "matrix(0.943809, 0.0863125, -0.0863125, 0.943809, 67.9281, 13.0631)"
+        },
+        "finite": true
+      },
+      {
+        "before": "1",
+        "step": 1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.430698,
+          "transform": "matrix(0.938418, 0.0935511, -0.0935511, 0.938418, 74.0092, 14.2325)"
+        },
+        "finite": true
+      },
+      {
+        "before": "2",
+        "step": -1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.42627,
+          "transform": "matrix(0.937905, -0.0942321, 0.0942321, 0.937905, -74.5849, 14.3432)"
+        },
+        "finite": true
+      },
+      {
+        "before": "1",
+        "step": -1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.465734,
+          "transform": "matrix(0.942461, -0.0881373, 0.0881373, 0.942461, -69.4546, 13.3566)"
+        },
+        "finite": true
+      }
+    ],
+    "cosmic": {
+      "opacity": 0.7,
+      "translate": "1050px 320px",
+      "pointer": "none"
+    },
+    "cosmicIdle": true,
+    "hover": {
+      "translate": "13.7222px -10.7556px",
+      "rotate": "1.84722deg",
+      "scale": "1.025"
+    },
+    "beans": [
+      "23.75px -13.5px",
+      "-18.4722px -1.94444px",
+      "29.0278px -14.9444px"
+    ],
+    "hoverOtherSide": "-22.3889px 2.38889px",
+    "hoverRest": true,
+    "menuHover": {
+      "translate": "1.61322px -7.97971px",
+      "scale": "1.065"
+    },
+    "cosmicPaused": true,
+    "hoverPaused": true,
+    "rapid": true,
+    "freshMotion": true,
+    "total": "$10.50",
+    "plusTotal": "$15.00",
+    "removeTotal": "$9.00",
+    "escape": true,
+    "persistent": "2",
+    "filter": 1,
+    "mobileExpanded": "true",
+    "mobileEscape": true,
+    "errors": [],
+    "noJS": {
+      "width": 320,
+      "scroll": 320,
+      "hero": "All we need\nis coffee.",
+      "images": true
+    }
+  },
+  "chromium": {
+    "version": "153.0.8010.12",
+    "viewports": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "images": true
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820,
+        "images": true
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "images": true
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "images": true
+      }
+    ],
+    "motion": [
+      {
+        "before": "0",
+        "step": -1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.411417,
+          "transform": "matrix(0.93618, -0.0965108, 0.0965108, 0.93618, -76.5158, 14.7146)"
+        },
+        "finite": true
+      },
+      {
+        "before": "2",
+        "step": 1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.405738,
+          "transform": "matrix(0.935519, 0.0973799, -0.0973799, 0.935519, 77.2541, 14.8566)"
+        },
+        "finite": true
+      },
+      {
+        "before": "0",
+        "step": 1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.39107,
+          "transform": "matrix(0.933808, 0.099619, -0.099619, 0.933808, 79.1609, 15.2233)"
+        },
+        "finite": true
+      },
+      {
+        "before": "1",
+        "step": 1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.389617,
+          "transform": "matrix(0.933639, 0.0998403, -0.0998403, 0.933639, 79.3497, 15.2596)"
+        },
+        "finite": true
+      },
+      {
+        "before": "2",
+        "step": -1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.364225,
+          "transform": "matrix(0.930663, -0.103696, 0.103696, 0.930663, -82.6507, 15.8944)"
+        },
+        "finite": true
+      },
+      {
+        "before": "1",
+        "step": -1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.3957,
+          "transform": "matrix(0.934349, -0.098913, 0.098913, 0.934349, -78.5589, 15.1075)"
+        },
+        "finite": true
+      }
+    ],
+    "cosmic": {
+      "opacity": 0.7,
+      "translate": "1050px 320px",
+      "pointer": "none"
+    },
+    "cosmicIdle": true,
+    "hover": {
+      "translate": "13.7222px -10.7556px",
+      "rotate": "1.84722deg",
+      "scale": "1.025"
+    },
+    "beans": [
+      "23.75px -13.5px",
+      "-18.4722px -1.94444px",
+      "29.0278px -14.9444px"
+    ],
+    "hoverOtherSide": "-22.3889px 2.38889px",
+    "hoverRest": true,
+    "menuHover": {
+      "translate": "1.61322px -7.97971px",
+      "scale": "1.065"
+    },
+    "cosmicPaused": true,
+    "hoverPaused": true,
+    "rapid": true,
+    "freshMotion": true,
+    "total": "$10.50",
+    "plusTotal": "$15.00",
+    "removeTotal": "$9.00",
+    "escape": true,
+    "persistent": "2",
+    "filter": 1,
+    "mobileExpanded": "true",
+    "mobileEscape": true,
+    "errors": [],
+    "noJS": {
+      "width": 320,
+      "scroll": 320,
+      "hero": "All we need\nis coffee.",
+      "images": true
+    }
+  },
+  "firefox": {
+    "version": "155.0",
+    "viewports": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "images": true
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820,
+        "images": true
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "images": true
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "images": true
+      }
+    ],
+    "motion": [
+      {
+        "before": "0",
+        "step": -1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.459922,
+          "transform": "matrix(0.941793, -0.0890386, 0.0890386, 0.941793, -70.2102, 13.502)"
+        },
+        "finite": true
+      },
+      {
+        "before": "2",
+        "step": 1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.427601,
+          "transform": "matrix(0.938059, 0.0940274, -0.0940274, 0.938059, 74.4118, 14.31)"
+        },
+        "finite": true
+      },
+      {
+        "before": "0",
+        "step": 1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.438003,
+          "transform": "matrix(0.939264, 0.0924261, -0.0924261, 0.939264, 73.0596, 14.0499)"
+        },
+        "finite": true
+      },
+      {
+        "before": "1",
+        "step": 1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.434497,
+          "transform": "matrix(0.938858, 0.0929663, -0.0929663, 0.938858, 73.5154, 14.1376)"
+        },
+        "finite": true
+      },
+      {
+        "before": "2",
+        "step": -1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.433068,
+          "transform": "matrix(0.938693, -0.0931864, 0.0931864, 0.938693, -73.7012, 14.1733)"
+        },
+        "finite": true
+      },
+      {
+        "before": "1",
+        "step": -1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.430367,
+          "transform": "matrix(0.93838, -0.093602, 0.093602, 0.93838, -74.0523, 14.2408)"
+        },
+        "finite": true
+      }
+    ],
+    "cosmic": {
+      "opacity": 0.7,
+      "translate": "1050px 320px",
+      "pointer": "none"
+    },
+    "cosmicIdle": true,
+    "hover": {
+      "translate": "13.7222px -10.7556px",
+      "rotate": "1.84722deg",
+      "scale": "1.025"
+    },
+    "beans": [
+      "23.75px -13.5px",
+      "-18.4722px -1.94444px",
+      "29.0278px -14.9444px"
+    ],
+    "hoverOtherSide": "-22.3889px 2.38889px",
+    "hoverRest": true,
+    "menuHover": {
+      "translate": "1.5852px -8.0153px",
+      "scale": "1.065"
+    },
+    "cosmicPaused": true,
+    "hoverPaused": true,
+    "rapid": true,
+    "freshMotion": true,
+    "total": "$10.50",
+    "plusTotal": "$15.00",
+    "removeTotal": "$9.00",
+    "escape": true,
+    "persistent": "2",
+    "filter": 1,
+    "mobileExpanded": "true",
+    "mobileEscape": true,
+    "errors": [],
+    "noJS": {
+      "width": 320,
+      "scroll": 320,
+      "hero": "All we need\nis coffee.",
+      "images": true
+    }
+  }
+}

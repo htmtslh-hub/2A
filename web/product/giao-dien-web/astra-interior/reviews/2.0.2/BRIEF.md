@@ -1,0 +1,2 @@
+# Mellow Coffee 2.0.2
+Ngày05/10/2026. Chủ sản phẩm chọn "Không gian vũ trụ: ánh sao, hạt sáng và quầng sáng theo chuột". Thực hiệncosmic hovertrênhero với ánhvànghổphách, giữhovervậtthể2.0.1 và cácflowmenu/bag. Không thêm thưviện hoặc ảnh, khôngđổi nền sangvũtrụtoànpage. ChỉsourceJS/CSS/docs,demo,ZIP,preview,t7revision vàQA. Motionmặcđịnhbật theoAGENTS; nútpause cleartrail. Tests vàngoạilệ trongQA.md.

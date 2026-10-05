@@ -1,48 +1,19 @@
-# Astra Interior
+# Mellow Coffee
 
-Version 1.0.0 · Forge Zone · WEB-MOTION-24
+Version 2.0.3. Static café and bakery storefront template by Forge Zone.
 
-Astra Interior is a one-page static website template for interior architecture, residential design and boutique hospitality studios. Its opening scene uses 24 rendered frames as a scroll-controlled visual sequence while the website copy remains live, selectable HTML above the image.
+Start with CUSTOMISE.md: ten steps, twelve copy-ready prompts and a counted edit map.
 
-Start with **CUSTOMISE.md**. It includes ten setup steps, twelve copy-ready AI prompts and a counted edit map for this product.
+Extract the complete ZIP and open index.html. No build, framework, account or server is required. All styles, scripts and three original generated WebP product cutouts are included locally. System font Segoe UI with sans-serif fallback; no network font dependency.
 
-## Open the template
+Works: three-scene directional hero, automatic browsing, numbered/arrow controls, keyboard arrows on the hero, touch swipe, pointer tilt, pause/resume, mobile navigation, menu filters, local device bag, quantities, total, and mailto enquiry. Default motion is always enabled; pause is for this visit only. Bag storage falls back to memory if localStorage is unavailable. No JS shows all menu items and contact/navigation links.
 
-Extract the ZIP, keep the folder structure intact and double-click `index.html`. No installation, account, framework or build step is required. The page also works from a normal static host.
+Not included: payment, inventory, online order submission, backend, hosting or deployment. Mellow Coffee, menu copy and USD prices are fictional demonstration content. hello@mellow.example is deliberately non-operational. Replace it in HTML and JS before publishing. An email enquiry opens a configured email application and does not automatically place or send an order.
 
-## Included
+Declared exceptions to WEB-STATIC-1: three local raster images in addition to six required files, expanded interaction/motion JS and a larger ZIP. Requested reference and replacement brief authorise the visual/interaction scope. No third-party JS, hotlink, base64, tracking or secret. Commercial policy remains in LICENCE.txt; the inherited licence has historical Astra wording and must be reviewed by the owner before commercial release of the replacement imagery.
 
-- One English HTML page.
-- One CSS file and one JavaScript file.
-- A 24-frame WebP sprite embedded in `index.html`.
-- Scroll-controlled canvas playback, three still project canvases, mobile navigation and reveal transitions.
-- CUSTOMISE.md, README.md and LICENCE.txt.
+Actual browser results are recorded in ../reviews/2.0.3/QA.md. Do not infer Safari or physical mobile testing from desktop emulation.
 
-There are exactly six delivered files. The visual sequence is embedded so buyers do not need to manage a separate image folder.
+Hover motion: move the mouse over the hero to shift and rotate the product, beans and seal at different depths. Menu product images and the story pastry lift, tilt and gently zoom with the pointer; leaving returns them smoothly to rest. Pause motion resets these effects. Touch retains swipe without pointer tilt. Tune depth, turn and zoom in hoverItem() calls in assets/js/main.js. Finite RAF easing works without CSS transitions.
 
-## What works
-
-Navigation, section links, email links, keyboard focus, mobile menu, Escape-to-close, reduced-motion mode and the 24-frame scroll sequence work without a server. Email links open the visitor's configured email application; they do not send a message automatically.
-
-## Not included
-
-No backend, CMS, form submission, booking, checkout, analytics, login or hosting is included. Project names and locations are fictional demonstration content. The frame sequence is presentation imagery, not evidence of completed client work.
-
-## Motion profile and declared exceptions
-
-This product follows Forge Zone's static-template structure but uses the owner-requested motion profile WEB-MOTION-24. Compared with WEB-STATIC-1, it intentionally embeds one raster sprite, adds canvas sequence logic beyond menu/reveal and exceeds the 20 KiB ZIP ceiling. These are product requirements, not accidental bloat. It remains dependency-free, readable, editable and file:// compatible.
-
-When reduced motion is enabled, the sequence becomes a still hero and the page removes non-essential transitions. With JavaScript disabled, the live hero copy, navigation, sections and contact links remain readable and usable; only the rendered imagery and mobile toggle enhancement are unavailable.
-
-## Demo content
-
-Astra Atelier, Casa Lume, Rua Nova and Maré House are fictional. Replace the brand, projects, locations, dates, copy and `hello@astraatelier.example` before publishing. The `.example` domain is deliberately non-operational.
-
-## Fonts and offline use
-
-DM Sans and Instrument Serif are optionally requested from Google Fonts with `display=swap`. System fallbacks keep the page readable offline, although line breaks may differ. The fonts are not bundled. See LICENCE.txt for official licence sources.
-
-## Browser scope
-
-The release report records the browsers and viewports actually tested. Safari, Edge and physical mobile devices are not claimed unless explicitly listed there. Internal checks are not an external accessibility certification.
-
+Antigravity-inspired hover: a dense field of small coloured dashes repels and curls around the mouse, then springs back to its resting positions. The palette combines amber, cream, blue, violet and soft coral. A subtle aura follows the pointer. The finite render loop stops after 1500ms without input; pause and hidden tabs reset the field. Touch does not trigger particles. Decorative layers are local and pointer-transparent. Tune particleColours, the 34px spacing, 230px influence radius and spring/damping in assets/js/main.js.

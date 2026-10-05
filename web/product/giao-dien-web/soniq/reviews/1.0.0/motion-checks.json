@@ -1,0 +1,311 @@
+{
+  "edge": {
+    "version": "154.0.4258.53",
+    "motion": [
+      {
+        "before": "0",
+        "step": -1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.482119,
+          "transform": "matrix(0.94264, -0.102646, 0.102646, 0.94264, -98.3974, 8.2861)"
+        },
+        "final": true
+      },
+      {
+        "before": "2",
+        "step": 1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.435649,
+          "transform": "matrix(0.936982, 0.111267, -0.111267, 0.936982, 107.227, 9.02961)"
+        },
+        "final": true
+      },
+      {
+        "before": "0",
+        "step": 1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.407446,
+          "transform": "matrix(0.933509, 0.116451, -0.116451, 0.933509, 112.585, 9.48087)"
+        },
+        "final": true
+      },
+      {
+        "before": "1",
+        "step": 1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.498375,
+          "transform": "matrix(0.9446, 0.0996066, -0.0996066, 0.9446, 95.3088, 8.026)"
+        },
+        "final": true
+      },
+      {
+        "before": "2",
+        "step": -1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.480317,
+          "transform": "matrix(0.942422, -0.102982, 0.102982, 0.942422, -98.7398, 8.31493)"
+        },
+        "final": true
+      },
+      {
+        "before": "1",
+        "step": -1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.505117,
+          "transform": "matrix(0.945411, -0.0983425, 0.0983425, 0.945411, -94.0278, 7.91813)"
+        },
+        "final": true
+      }
+    ],
+    "viewports": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "images": true
+      },
+      {
+        "width": 820,
+        "overflow": false,
+        "images": true
+      },
+      {
+        "width": 375,
+        "overflow": false,
+        "images": true
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "images": true
+      }
+    ],
+    "hover": {
+      "translate": "11.226px -7.37994px",
+      "rotate": "1.96455deg"
+    },
+    "hoverRest": true,
+    "rapid": true,
+    "currentColour": "Soniq One — Ivory",
+    "total": "$149.00",
+    "plusTotal": "$298.00",
+    "escape": true,
+    "persistence": "2",
+    "fresh": true,
+    "mobileOpen": true,
+    "mobileEscape": true,
+    "errors": [],
+    "pass": true
+  },
+  "chromium": {
+    "version": "153.0.8010.12",
+    "motion": [
+      {
+        "before": "0",
+        "step": -1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.260379,
+          "transform": "matrix(0.91495, -0.142876, 0.142876, 0.91495, -140.528, 11.8339)"
+        },
+        "final": true
+      },
+      {
+        "before": "2",
+        "step": 1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.154001,
+          "transform": "matrix(0.901068, 0.161348, -0.161348, 0.901068, 160.74, 13.536)"
+        },
+        "final": true
+      },
+      {
+        "before": "0",
+        "step": 1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.148789,
+          "transform": "matrix(0.900379, 0.162239, -0.162239, 0.900379, 161.73, 13.6194)"
+        },
+        "final": true
+      },
+      {
+        "before": "1",
+        "step": 1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.156598,
+          "transform": "matrix(0.901412, 0.160904, -0.160904, 0.901412, 160.246, 13.4944)"
+        },
+        "final": true
+      },
+      {
+        "before": "2",
+        "step": -1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.28098,
+          "transform": "matrix(0.917594, -0.139236, 0.139236, 0.917594, -136.614, 11.5043)"
+        },
+        "final": true
+      },
+      {
+        "before": "1",
+        "step": -1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.163617,
+          "transform": "matrix(0.902338, -0.159701, 0.159701, 0.902338, -158.913, 13.3821)"
+        },
+        "final": true
+      }
+    ],
+    "viewports": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "images": true
+      },
+      {
+        "width": 820,
+        "overflow": false,
+        "images": true
+      },
+      {
+        "width": 375,
+        "overflow": false,
+        "images": true
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "images": true
+      }
+    ],
+    "hover": {
+      "translate": "11.226px -7.37994px",
+      "rotate": "1.96455deg"
+    },
+    "hoverRest": true,
+    "rapid": true,
+    "currentColour": "Soniq One — Ivory",
+    "total": "$149.00",
+    "plusTotal": "$298.00",
+    "escape": true,
+    "persistence": "2",
+    "fresh": true,
+    "mobileOpen": true,
+    "mobileEscape": true,
+    "errors": [],
+    "pass": true
+  },
+  "firefox": {
+    "version": "155.0",
+    "motion": [
+      {
+        "before": "0",
+        "step": -1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.156746,
+          "transform": "matrix(0.901431, -0.160878, 0.160878, 0.901431, -160.218, 13.4921)"
+        },
+        "final": true
+      },
+      {
+        "before": "2",
+        "step": 1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.297085,
+          "transform": "matrix(0.919652, 0.136376, -0.136376, 0.919652, 133.554, 11.2466)"
+        },
+        "final": true
+      },
+      {
+        "before": "0",
+        "step": 1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.0501443,
+          "transform": "matrix(0.887165, 0.178856, -0.178856, 0.887165, 180.473, 15.1977)"
+        },
+        "final": true
+      },
+      {
+        "before": "1",
+        "step": 1,
+        "after": "2",
+        "mid": {
+          "opacity": 0.0508733,
+          "transform": "matrix(0.887264, 0.178735, -0.178735, 0.887264, 180.334, 15.186)"
+        },
+        "final": true
+      },
+      {
+        "before": "2",
+        "step": -1,
+        "after": "1",
+        "mid": {
+          "opacity": 0.260916,
+          "transform": "matrix(0.915019, -0.142781, 0.142781, 0.915019, -140.426, 11.8253)"
+        },
+        "final": true
+      },
+      {
+        "before": "1",
+        "step": -1,
+        "after": "0",
+        "mid": {
+          "opacity": 0.0585427,
+          "transform": "matrix(0.888302, -0.17746, 0.17746, 0.888302, -178.877, 15.0633)"
+        },
+        "final": true
+      }
+    ],
+    "viewports": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "images": true
+      },
+      {
+        "width": 820,
+        "overflow": false,
+        "images": true
+      },
+      {
+        "width": 375,
+        "overflow": false,
+        "images": true
+      },
+      {
+        "width": 320,
+        "overflow": false,
+        "images": true
+      }
+    ],
+    "hover": {
+      "translate": "11.226px -7.37994px",
+      "rotate": "1.96455deg"
+    },
+    "hoverRest": true,
+    "rapid": true,
+    "currentColour": "Soniq One — Ivory",
+    "total": "$149.00",
+    "plusTotal": "$298.00",
+    "escape": true,
+    "persistence": "2",
+    "fresh": true,
+    "mobileOpen": true,
+    "mobileEscape": true,
+    "errors": [],
+    "pass": true
+  }
+}

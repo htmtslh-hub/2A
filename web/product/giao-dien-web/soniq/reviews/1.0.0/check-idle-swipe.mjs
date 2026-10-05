@@ -1,0 +1,10 @@
+import {chromium} from '../../../../../../_design/.tooling/node_modules/playwright/index.mjs';
+import {writeFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+const b=await chromium.launch({channel:'msedge',headless:true});const p=await b.newPage({viewport:{width:1440,height:900}});
+await p.addInitScript(()=>{window.rafCalls=0;const original=requestAnimationFrame;window.requestAnimationFrame=fn=>original(t=>{window.rafCalls++;fn(t)})});
+await p.goto('http://127.0.0.1:4330/demos/soniq/');await p.waitForTimeout(1400);await p.mouse.move(1100,350);await p.waitForTimeout(700);
+const before=await p.evaluate(()=>window.rafCalls);await p.waitForTimeout(250);const after=await p.evaluate(()=>window.rafCalls);
+await p.locator('.hero').evaluate(e=>{e.dispatchEvent(new TouchEvent('touchstart',{touches:[new Touch({identifier:1,target:e,clientX:240,clientY:400})]}));e.dispatchEvent(new TouchEvent('touchend',{changedTouches:[new Touch({identifier:1,target:e,clientX:100,clientY:400})]}))});await p.waitForTimeout(1100);
+const swipe=await p.locator('[data-go="1"]').getAttribute('aria-pressed')==='true';
+const r={browser:b.version(),idleCallbacks:after-before,swipeSimulated:swipe,pass:after===before&&swipe};writeFileSync(resolve('web/product/giao-dien-web/soniq/reviews/1.0.0/idle-swipe.json'),JSON.stringify(r,null,2));console.log(r);await b.close();if(!r.pass)process.exitCode=1;

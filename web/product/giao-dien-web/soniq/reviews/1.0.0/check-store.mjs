@@ -1,0 +1,9 @@
+import {resolve} from 'node:path';
+import {writeFileSync} from 'node:fs';
+process.env.PLAYWRIGHT_BROWSERS_PATH=resolve('_design/.browsers');
+const {chromium}=await import('../../../../../../_design/.tooling/node_modules/playwright/index.mjs');
+const b=await chromium.launch({headless:true});const p=await b.newPage({viewport:{width:1440,height:900}});const errors=[];p.on('pageerror',e=>errors.push(e.message));
+await p.goto('http://127.0.0.1:4332/?mau=t10');await p.waitForTimeout(1500);
+const report=await p.evaluate(()=>({title:document.title,soniq:document.body.innerText.includes('Soniq'),assets:[...document.querySelectorAll('img,video,source')].map(e=>e.src).filter(v=>v.includes('soniq')),demo:[...document.querySelectorAll('a,iframe')].map(e=>e.href||e.src).filter(v=>v&&v.includes('/demos/soniq/'))}));
+const popupEvent=p.waitForEvent('popup');await p.getByRole('button',{name:'View live demo'}).click();const popup=await popupEvent;await popup.waitForLoadState('domcontentloaded');report.demoPopup=popup.url();await popup.close();report.guide=await p.getByRole('link',{name:'Template guide',exact:false}).getAttribute('href');
+await p.screenshot({path:resolve('web/product/giao-dien-web/soniq/reviews/1.0.0/screenshots/store-detail.png'),fullPage:true});await p.goto('http://127.0.0.1:4332/?tab=library');await p.waitForTimeout(1000);report.library=await p.evaluate(()=>document.body.innerText.includes('Soniq'));report.errors=errors;report.pass=report.soniq&&report.assets.length>0&&report.demoPopup.includes("/demos/soniq/index.html?v=1.0.0")&&report.guide.includes("soniq")&&report.library&&!errors.length;writeFileSync(resolve('web/product/giao-dien-web/soniq/reviews/1.0.0/store-checks.json'),JSON.stringify(report,null,2));console.log(report);await b.close();if(!report.pass)process.exitCode=1;

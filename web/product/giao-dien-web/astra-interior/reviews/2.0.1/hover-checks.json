@@ -1,0 +1,59 @@
+{
+  "edge": {
+    "version": "154.0.4258.53",
+    "hover": {
+      "translate": "13.7222px -10.7556px",
+      "rotate": "1.84722deg",
+      "scale": "1.025"
+    },
+    "rest": {
+      "translate": "0px",
+      "rotate": "0deg",
+      "scale": "1"
+    },
+    "pause": {
+      "translate": "0px",
+      "rotate": "0deg",
+      "scale": "1"
+    },
+    "pass": true
+  },
+  "chromium": {
+    "version": "153.0.8010.12",
+    "hover": {
+      "translate": "13.7222px -10.7556px",
+      "rotate": "1.84722deg",
+      "scale": "1.025"
+    },
+    "rest": {
+      "translate": "0px",
+      "rotate": "0deg",
+      "scale": "1"
+    },
+    "pause": {
+      "translate": "0px",
+      "rotate": "0deg",
+      "scale": "1"
+    },
+    "pass": true
+  },
+  "firefox": {
+    "version": "155.0",
+    "hover": {
+      "translate": "13.7222px -10.7556px",
+      "rotate": "1.84722deg",
+      "scale": "1.025"
+    },
+    "rest": {
+      "translate": "0px",
+      "rotate": "0deg",
+      "scale": "1"
+    },
+    "pause": {
+      "translate": "0px",
+      "rotate": "0deg",
+      "scale": "1"
+    },
+    "pass": true
+  }
+}

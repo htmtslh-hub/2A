@@ -1,0 +1,14 @@
+{
+  "title": "Forge Zone — Premium ready-made website templates",
+  "soniq": true,
+  "assets": [
+    "http://127.0.0.1:4332/previews/soniq.webp?v=1.0.0",
+    "http://127.0.0.1:4332/previews/soniq.mp4?v=1.0.0"
+  ],
+  "demo": [],
+  "demoPopup": "http://127.0.0.1:4332/demos/soniq/index.html?v=1.0.0",
+  "guide": "/huong-dan?template=soniq&view=template",
+  "library": true,
+  "errors": [],
+  "pass": true
+}

@@ -1,0 +1,2024 @@
+{
+  "slug": "soniq",
+  "version": "1.0.0",
+  "date": "2026-10-05T13:20:38.908Z",
+  "os": "win32",
+  "zipBytes": 807934,
+  "sha256": "995e257fe4ba4c8d8b59c5ceb5f638b445bd2fb30cb3ab77fcf346b97ffe80aa",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#main"
+          },
+          {
+            "label": "Soniq home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#main"
+          },
+          {
+            "label": "Design",
+            "href": "#design",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#design"
+          },
+          {
+            "label": "Specs",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#specs"
+          },
+          {
+            "label": "Collection",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#collection"
+          },
+          {
+            "label": "Support",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#support"
+          },
+          {
+            "label": "Explore the colours ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#collection"
+          },
+          {
+            "label": "Get into the details ↗",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#specs"
+          },
+          {
+            "label": "Email an enquiry ↗",
+            "href": "mailto:hello@soniq.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@soniq.example"
+          },
+          {
+            "label": "SONIQ.",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#main"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#main"
+          },
+          {
+            "label": "Email this bag ↗",
+            "href": "mailto:hello@soniq.example?subject=Soniq%20headphone%20enquiry&body=Hello!%20I%20would%20like%20to%20enquire%20about%3A%0A%0ASample%20total%3A%20%240.00%0APlease%20confirm%20availability%20and%20ordering%20details.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@soniq.example?subject=Soniq%20headphone%20enquiry&body=Hello!%20I%20would%20like%20to%20enquire%20about%3A%0A%0ASample%20total%3A%20%240.00%0APlease%20confirm%20availability%20and%20ordering%20details."
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 18.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "SQSONIQ",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              215,
+              45,
+              12
+            ],
+            "ratio": 4.92,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "SONIQ",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              166,
+              188,
+              241
+            ],
+            "ratio": 9.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Design",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              168,
+              189,
+              240
+            ],
+            "ratio": 9.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Specs",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              169,
+              189,
+              239
+            ],
+            "ratio": 9.65,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Collection",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              172,
+              188,
+              239
+            ],
+            "ratio": 9.63,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Support",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              173,
+              188,
+              238
+            ],
+            "ratio": 9.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "bag-toggle js-control",
+            "text": "Bag 0",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              189,
+              172,
+              222
+            ],
+            "ratio": 8.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              23,
+              21,
+              30
+            ],
+            "ratio": 18.07,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__count",
+            "text": "01 / 03",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              169,
+              188,
+              239
+            ],
+            "ratio": 9.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Turn your world up.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              164,
+              188,
+              240
+            ],
+            "ratio": 9.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "SOUND YOUCAN FEEL.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              172,
+              186,
+              237
+            ],
+            "ratio": 9.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__subtitle",
+            "text": "Wireless over-ear headphones.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              167,
+              187,
+              240
+            ],
+            "ratio": 9.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "buy-button js-control",
+            "text": "$149 Add to bag +",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              215,
+              45,
+              12
+            ],
+            "ratio": 4.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__small",
+            "text": "Less noise. More of your music.",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              170,
+              186,
+              239
+            ],
+            "ratio": 7.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Find your frequency",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              170,
+              186,
+              238
+            ],
+            "ratio": 9.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Graphite",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 18.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Ivory",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              232,
+              235,
+              250
+            ],
+            "ratio": 15.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Cobalt",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              234,
+              234,
+              248
+            ],
+            "ratio": 15.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "SONIQ ONE / GRAPHITE",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              188,
+              156,
+              215
+            ],
+            "ratio": 7.63,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "GRAPHITE",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              187,
+              156,
+              215
+            ],
+            "ratio": 7.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Big sound. A lighter kind of listening.M",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              188,
+              155,
+              214
+            ],
+            "ratio": 7.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-control",
+            "text": "Pause motion Ⅱ",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              187,
+              154,
+              213
+            ],
+            "ratio": 7.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "All ears. All day.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              225,
+              215,
+              237
+            ],
+            "ratio": 13.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Lose yourselfin the good stuff.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              225,
+              210,
+              235
+            ],
+            "ratio": 12.58,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "That first note. Your favourite chorus. ",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              226,
+              210,
+              235
+            ],
+            "ratio": 9.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Soft by design.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              226,
+              214,
+              237
+            ],
+            "ratio": 12.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Cushioned earcups and an adjustable head",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              226,
+              211,
+              235
+            ],
+            "ratio": 9.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Your own volume.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              226,
+              213,
+              237
+            ],
+            "ratio": 12.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "Get into the details ↗",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              227,
+              213,
+              236
+            ],
+            "ratio": 12.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Small details. Big difference.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              212,
+              200,
+              236
+            ],
+            "ratio": 11.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Built aroundyour listening.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              212,
+              200,
+              236
+            ],
+            "ratio": 11.42,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Illustrative specifications for this fic",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              212,
+              200,
+              236
+            ],
+            "ratio": 8.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Same sound. Your signature.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              233,
+              224,
+              241
+            ],
+            "ratio": 14.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Pick your side.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              234,
+              223,
+              240
+            ],
+            "ratio": 14.03,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Three colours. One daily companion.",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              235,
+              221,
+              238
+            ],
+            "ratio": 10.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Soniq One — Graphite",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              235,
+              224,
+              240
+            ],
+            "ratio": 14.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "$149",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              236,
+              224,
+              239
+            ],
+            "ratio": 14.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Quiet confidence. An everyday original.",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              235,
+              224,
+              240
+            ],
+            "ratio": 11.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Soniq One — Ivory",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              237,
+              224,
+              238
+            ],
+            "ratio": 14.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "$149",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              237,
+              223,
+              238
+            ],
+            "ratio": 14.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A softer shade. A fresh perspective.",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              237,
+              224,
+              238
+            ],
+            "ratio": 11.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Soniq One — Cobalt",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              237,
+              223,
+              237
+            ],
+            "ratio": 14.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "$149",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              238,
+              222,
+              237
+            ],
+            "ratio": 14.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A little louder. Even before you press p",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              237,
+              223,
+              238
+            ],
+            "ratio": 11.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "add-button js-control",
+            "text": "Add to bag +",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              238,
+              223,
+              237
+            ],
+            "ratio": 14.12,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "collection__note",
+            "text": "Fictional products and sample prices. Yo",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              236,
+              224,
+              239
+            ],
+            "ratio": 11.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Here when you need us.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              210,
+              186,
+              220
+            ],
+            "ratio": 10.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Let's talk sound.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              211,
+              186,
+              219
+            ],
+            "ratio": 10.16,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Add your favourite colour to the bag, th",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              183,
+              132,
+              202
+            ],
+            "ratio": 4.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "footer-brand",
+            "text": "SONIQ.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              214,
+              186,
+              217
+            ],
+            "ratio": 10.22,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A fictional audio brand. A real love of ",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              222,
+              186,
+              213
+            ],
+            "ratio": 10.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Back to top ↑",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              232,
+              187,
+              207
+            ],
+            "ratio": 10.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "←→01 / 03Turn your world up.SO",
+          "colour": "rgb(23, 21, 30)",
+          "width": "3px",
+          "ratio": 6.17
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#main"
+          },
+          {
+            "label": "Soniq home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#main"
+          },
+          {
+            "label": "Design",
+            "href": "#design",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#design"
+          },
+          {
+            "label": "Specs",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#specs"
+          },
+          {
+            "label": "Collection",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#collection"
+          },
+          {
+            "label": "Support",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#support"
+          },
+          {
+            "label": "Explore the colours ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#collection"
+          },
+          {
+            "label": "Get into the details ↗",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#specs"
+          },
+          {
+            "label": "Email an enquiry ↗",
+            "href": "mailto:hello@soniq.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@soniq.example"
+          },
+          {
+            "label": "SONIQ.",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#main"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/soniq/index.html#main"
+          },
+          {
+            "label": "Email this bag ↗",
+            "href": "mailto:hello@soniq.example?subject=Soniq%20headphone%20enquiry&body=Hello!%20I%20would%20like%20to%20enquire%20about%3A%0A%0ASample%20total%3A%20%240.00%0APlease%20confirm%20availability%20and%20ordering%20details.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@soniq.example?subject=Soniq%20headphone%20enquiry&body=Hello!%20I%20would%20like%20to%20enquire%20about%3A%0A%0ASample%20total%3A%20%240.00%0APlease%20confirm%20availability%20and%20ordering%20details."
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 18.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "SQSONIQ",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              215,
+              45,
+              12
+            ],
+            "ratio": 4.92,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "SONIQ",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              166,
+              188,
+              241
+            ],
+            "ratio": 9.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Design",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              168,
+              189,
+              240
+            ],
+            "ratio": 9.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Specs",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              171,
+              189,
+              240
+            ],
+            "ratio": 9.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Collection",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              172,
+              188,
+              239
+            ],
+            "ratio": 9.63,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Support",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              175,
+              188,
+              237
+            ],
+            "ratio": 9.67,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "bag-toggle js-control",
+            "text": "Bag 0",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              190,
+              171,
+              223
+            ],
+            "ratio": 8.67,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "bag-count",
+            "text": "0",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              191,
+              172,
+              223
+            ],
+            "ratio": 8.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              23,
+              21,
+              30
+            ],
+            "ratio": 18.07,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__count",
+            "text": "01 / 03",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              170,
+              188,
+              239
+            ],
+            "ratio": 9.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Turn your world up.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              166,
+              188,
+              240
+            ],
+            "ratio": 9.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "SOUND YOUCAN FEEL.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              175,
+              185,
+              236
+            ],
+            "ratio": 9.44,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__subtitle",
+            "text": "Wireless over-ear headphones.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              168,
+              187,
+              240
+            ],
+            "ratio": 9.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "buy-button js-control",
+            "text": "$149 Add to bag +",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              215,
+              45,
+              12
+            ],
+            "ratio": 4.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__small",
+            "text": "Less noise. More of your music.",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              172,
+              186,
+              237
+            ],
+            "ratio": 7.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Find your frequency",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              173,
+              185,
+              237
+            ],
+            "ratio": 9.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Ivory",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              233,
+              235,
+              250
+            ],
+            "ratio": 15.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Soniq One · $149",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              233,
+              235,
+              249
+            ],
+            "ratio": 15.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Cobalt",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              234,
+              234,
+              248
+            ],
+            "ratio": 15.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Soniq One · $149",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              234,
+              233,
+              248
+            ],
+            "ratio": 15.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "SONIQ ONE / GRAPHITE",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              188,
+              157,
+              215
+            ],
+            "ratio": 7.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "GRAPHITE",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              188,
+              156,
+              214
+            ],
+            "ratio": 7.63,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Big sound. A lighter kind of listening.M",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              188,
+              155,
+              214
+            ],
+            "ratio": 7.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-control",
+            "text": "Pause motion Ⅱ",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              188,
+              154,
+              214
+            ],
+            "ratio": 7.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "All ears. All day.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              225,
+              214,
+              237
+            ],
+            "ratio": 12.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Lose yourselfin the good stuff.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              226,
+              210,
+              235
+            ],
+            "ratio": 12.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "That first note. Your favourite chorus. ",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              226,
+              210,
+              235
+            ],
+            "ratio": 9.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Soft by design.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              226,
+              214,
+              237
+            ],
+            "ratio": 12.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Cushioned earcups and an adjustable head",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              226,
+              212,
+              235
+            ],
+            "ratio": 10,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Your own volume.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              226,
+              213,
+              237
+            ],
+            "ratio": 12.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "On-ear controls keep your soundtrack wit",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              226,
+              211,
+              235
+            ],
+            "ratio": 9.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "Get into the details ↗",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              227,
+              213,
+              236
+            ],
+            "ratio": 12.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Small details. Big difference.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              212,
+              200,
+              236
+            ],
+            "ratio": 11.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Built aroundyour listening.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              212,
+              200,
+              236
+            ],
+            "ratio": 11.42,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Illustrative specifications for this fic",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              212,
+              200,
+              236
+            ],
+            "ratio": 8.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Same sound. Your signature.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              233,
+              224,
+              241
+            ],
+            "ratio": 14.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Pick your side.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              235,
+              223,
+              239
+            ],
+            "ratio": 14.05,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Three colours. One daily companion.",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              235,
+              221,
+              238
+            ],
+            "ratio": 10.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Soniq One — Graphite",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              235,
+              224,
+              240
+            ],
+            "ratio": 14.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "$149",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              236,
+              224,
+              239
+            ],
+            "ratio": 14.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Quiet confidence. An everyday original.",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              235,
+              224,
+              240
+            ],
+            "ratio": 11.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "$149",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              237,
+              223,
+              238
+            ],
+            "ratio": 14.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A softer shade. A fresh perspective.",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              236,
+              224,
+              239
+            ],
+            "ratio": 11.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "$149",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              238,
+              222,
+              237
+            ],
+            "ratio": 14.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A little louder. Even before you press p",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              237,
+              223,
+              237
+            ],
+            "ratio": 11.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Here when you need us.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              211,
+              186,
+              220
+            ],
+            "ratio": 10.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Let's talk sound.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              210,
+              186,
+              220
+            ],
+            "ratio": 10.15,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Add your favourite colour to the bag, th",
+            "colour": "rgb(48, 40, 55)",
+            "background": [
+              183,
+              132,
+              202
+            ],
+            "ratio": 4.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "footer-brand",
+            "text": "SONIQ.",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              214,
+              186,
+              217
+            ],
+            "ratio": 10.22,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A fictional audio brand. A real love of ",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              221,
+              186,
+              213
+            ],
+            "ratio": 10.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Back to top ↑",
+            "colour": "rgb(23, 21, 30)",
+            "background": [
+              232,
+              187,
+              207
+            ],
+            "ratio": 10.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "←→01 / 03Turn your world up.SO",
+          "colour": "rgb(23, 21, 30)",
+          "width": "3px",
+          "ratio": 6.17
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "soniq/assets/css/style.css",
+    "soniq/assets/img/cobalt.webp",
+    "soniq/assets/img/graphite.webp",
+    "soniq/assets/img/ivory.webp",
+    "soniq/assets/js/main.js",
+    "soniq/CUSTOMISE.md",
+    "soniq/index.html",
+    "soniq/LICENCE.txt",
+    "soniq/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/cobalt.webp",
+    "assets/img/graphite.webp",
+    "assets/img/ivory.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

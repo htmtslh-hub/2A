@@ -1,0 +1,1103 @@
+{
+  "slug": "astra-interior",
+  "version": "2.0.0",
+  "date": "2026-10-05T08:14:30.714Z",
+  "os": "win32",
+  "zipBytes": 825988,
+  "sha256": "08434d1f88d695a36494bc153029680972bd0a040278e1e81609e1f080f8ada0",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#main"
+          },
+          {
+            "label": "Mellow Coffee home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#main"
+          },
+          {
+            "label": "Our menu",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#menu"
+          },
+          {
+            "label": "Our story",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#story"
+          },
+          {
+            "label": "Say hello ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#contact"
+          },
+          {
+            "label": "Explore the menu ↗",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#menu"
+          },
+          {
+            "label": "Come say hello ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#contact"
+          },
+          {
+            "label": "Let's talk coffee ↗",
+            "href": "mailto:hello@mellow.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@mellow.example"
+          },
+          {
+            "label": "mellow®",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#main"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#main"
+          },
+          {
+            "label": "Enquire about this bag ↗",
+            "href": "mailto:hello@mellow.example?subject=Mellow%20menu%20enquiry&body=Hello!%20I%20would%20like%20to%20enquire%20about%3A%0A%0ASample%20total%3A%20%240.00%0APlease%20confirm%20availability%20and%20collection%20details.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@mellow.example?subject=Mellow%20menu%20enquiry&body=Hello!%20I%20would%20like%20to%20enquire%20about%3A%0A%0ASample%20total%3A%20%240.00%0APlease%20confirm%20availability%20and%20collection%20details."
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 650,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(41, 23, 14)",
+            "background": [
+              255,
+              247,
+              233
+            ],
+            "ratio": 16.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "mellow®",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              37,
+              20,
+              10
+            ],
+            "ratio": 16.68,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__dot",
+            "text": "®",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              37,
+              20,
+              10
+            ],
+            "ratio": 16.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A little sip of happiness",
+            "colour": "rgb(245, 197, 121)",
+            "background": [
+              104,
+              57,
+              21
+            ],
+            "ratio": 6.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "All we needis coffee.",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              137,
+              78,
+              29
+            ],
+            "ratio": 6.22,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "coffee.",
+            "colour": "rgb(245, 197, 121)",
+            "background": [
+              106,
+              58,
+              21
+            ],
+            "ratio": 5.9,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Freshly roasted. Lovingly brewed.Your da",
+            "colour": "rgb(243, 229, 208)",
+            "background": [
+              84,
+              46,
+              16
+            ],
+            "ratio": 9.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore the menu ↗",
+            "colour": "rgb(40, 23, 7)",
+            "background": [
+              245,
+              197,
+              121
+            ],
+            "ratio": 10.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "01",
+            "colour": "rgb(245, 197, 121)",
+            "background": [
+              39,
+              22,
+              8
+            ],
+            "ratio": 10.91,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "02",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              41,
+              22,
+              8
+            ],
+            "ratio": 12.67,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "03",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              42,
+              23,
+              8
+            ],
+            "ratio": 12.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "arrow",
+            "text": "←",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              45,
+              24,
+              8
+            ],
+            "ratio": 12.33,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "arrow",
+            "text": "→",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              47,
+              25,
+              8
+            ],
+            "ratio": 12.16,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__caption",
+            "text": "Good things take a little pause.",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              74,
+              40,
+              14
+            ],
+            "ratio": 9.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-control",
+            "text": "Pause motion Ⅱ",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              79,
+              43,
+              15
+            ],
+            "ratio": 9.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Made for yourkind of day.",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              41,
+              23,
+              14
+            ],
+            "ratio": 16.13,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "kind of day.",
+            "colour": "rgb(245, 197, 121)",
+            "background": [
+              41,
+              23,
+              14
+            ],
+            "ratio": 10.75,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A bold start, a cool afternoon or someth",
+            "colour": "rgb(217, 201, 180)",
+            "background": [
+              41,
+              23,
+              14
+            ],
+            "ratio": 10.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "Coffee",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              41,
+              23,
+              14
+            ],
+            "ratio": 16.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "$4.50",
+            "colour": "rgb(245, 197, 121)",
+            "background": [
+              41,
+              23,
+              14
+            ],
+            "ratio": 10.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Your next goodday starts here.",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              73,
+              45,
+              24
+            ],
+            "ratio": 11.8,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Enquiries, catering and a friendly hello",
+            "colour": "rgb(217, 201, 180)",
+            "background": [
+              91,
+              57,
+              30
+            ],
+            "ratio": 6.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "coffee\nA little sip of happine",
+          "colour": "rgb(245, 197, 121)",
+          "width": "3px",
+          "ratio": 10.75
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#main"
+          },
+          {
+            "label": "Mellow Coffee home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#main"
+          },
+          {
+            "label": "Our menu",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#menu"
+          },
+          {
+            "label": "Our story",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#story"
+          },
+          {
+            "label": "Say hello ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#contact"
+          },
+          {
+            "label": "Explore the menu ↗",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#menu"
+          },
+          {
+            "label": "Come say hello ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#contact"
+          },
+          {
+            "label": "Let's talk coffee ↗",
+            "href": "mailto:hello@mellow.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@mellow.example"
+          },
+          {
+            "label": "mellow®",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#main"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astra-interior/index.html#main"
+          },
+          {
+            "label": "Enquire about this bag ↗",
+            "href": "mailto:hello@mellow.example?subject=Mellow%20menu%20enquiry&body=Hello!%20I%20would%20like%20to%20enquire%20about%3A%0A%0ASample%20total%3A%20%240.00%0APlease%20confirm%20availability%20and%20collection%20details.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@mellow.example?subject=Mellow%20menu%20enquiry&body=Hello!%20I%20would%20like%20to%20enquire%20about%3A%0A%0ASample%20total%3A%20%240.00%0APlease%20confirm%20availability%20and%20collection%20details."
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 650,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(41, 23, 14)",
+            "background": [
+              255,
+              247,
+              233
+            ],
+            "ratio": 16.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "mellow®",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              37,
+              20,
+              10
+            ],
+            "ratio": 16.68,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__dot",
+            "text": "®",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              37,
+              20,
+              10
+            ],
+            "ratio": 16.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A little sip of happiness",
+            "colour": "rgb(245, 197, 121)",
+            "background": [
+              104,
+              57,
+              21
+            ],
+            "ratio": 6.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "All we needis coffee.",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              137,
+              78,
+              29
+            ],
+            "ratio": 6.22,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "coffee.",
+            "colour": "rgb(245, 197, 121)",
+            "background": [
+              105,
+              58,
+              21
+            ],
+            "ratio": 5.93,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Freshly roasted. Lovingly brewed.Your da",
+            "colour": "rgb(243, 229, 208)",
+            "background": [
+              84,
+              46,
+              16
+            ],
+            "ratio": 9.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore the menu ↗",
+            "colour": "rgb(40, 23, 7)",
+            "background": [
+              245,
+              197,
+              121
+            ],
+            "ratio": 10.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "01",
+            "colour": "rgb(245, 197, 121)",
+            "background": [
+              39,
+              22,
+              7
+            ],
+            "ratio": 10.92,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "02",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              40,
+              22,
+              8
+            ],
+            "ratio": 12.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "03",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              42,
+              23,
+              8
+            ],
+            "ratio": 12.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "arrow",
+            "text": "←",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              45,
+              24,
+              8
+            ],
+            "ratio": 12.33,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "arrow",
+            "text": "→",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              47,
+              24,
+              8
+            ],
+            "ratio": 12.24,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__caption",
+            "text": "Good things take a little pause.",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              74,
+              40,
+              14
+            ],
+            "ratio": 9.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-control",
+            "text": "Pause motion Ⅱ",
+            "colour": "rgb(241, 217, 184)",
+            "background": [
+              79,
+              42,
+              15
+            ],
+            "ratio": 9.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Made for yourkind of day.",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              41,
+              23,
+              14
+            ],
+            "ratio": 16.13,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "kind of day.",
+            "colour": "rgb(245, 197, 121)",
+            "background": [
+              41,
+              23,
+              14
+            ],
+            "ratio": 10.75,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A bold start, a cool afternoon or someth",
+            "colour": "rgb(217, 201, 180)",
+            "background": [
+              41,
+              23,
+              14
+            ],
+            "ratio": 10.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "Coffee",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              41,
+              23,
+              14
+            ],
+            "ratio": 16.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "$4.50",
+            "colour": "rgb(245, 197, 121)",
+            "background": [
+              41,
+              23,
+              14
+            ],
+            "ratio": 10.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Your next goodday starts here.",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              74,
+              45,
+              24
+            ],
+            "ratio": 11.75,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Enquiries, catering and a friendly hello",
+            "colour": "rgb(217, 201, 180)",
+            "background": [
+              91,
+              57,
+              30
+            ],
+            "ratio": 6.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "coffee\nA little sip of happine",
+          "colour": "rgb(245, 197, 121)",
+          "width": "3px",
+          "ratio": 10.75
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "astra-interior/assets/css/style.css",
+    "astra-interior/assets/img/coffee.webp",
+    "astra-interior/assets/img/croissant.webp",
+    "astra-interior/assets/img/matcha.webp",
+    "astra-interior/assets/js/main.js",
+    "astra-interior/CUSTOMISE.md",
+    "astra-interior/index.html",
+    "astra-interior/LICENCE.txt",
+    "astra-interior/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/coffee.webp",
+    "assets/img/croissant.webp",
+    "assets/img/matcha.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

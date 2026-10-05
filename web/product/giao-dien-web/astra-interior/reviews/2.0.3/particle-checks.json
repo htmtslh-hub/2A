@@ -1,0 +1,29 @@
+[
+  {
+    "browser": "edge",
+    "version": "154.0.4258.53",
+    "particles": 1134,
+    "moved": 119,
+    "maxDisplacement": 64.14943505015329,
+    "reset": true,
+    "pass": true
+  },
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "particles": 1134,
+    "moved": 111,
+    "maxDisplacement": 64.70540514802545,
+    "reset": true,
+    "pass": true
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "particles": 1134,
+    "moved": 116,
+    "maxDisplacement": 65.24436900891041,
+    "reset": true,
+    "pass": true
+  }
+]

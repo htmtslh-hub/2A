@@ -37,6 +37,14 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t10: {
+    slug: 'soniq', cat: 'shop', video: true, version: '1.0.0',
+    copy: {
+      vi: { name: 'Soniq', desc: 'Giao diện bán tai nghe nền pastel xanh–tím–hồng: ba ảnh tai nghe tự tạo, chuyển màu có hướng, hover theo chuột, chọn màu và giỏ lưu trên thiết bị. Có thiết kế, thông số minh họa và FAQ. Liên hệ email; không kèm thanh toán hoặc tồn kho.', tags: ['Tai nghe', 'Pastel', 'Giỏ chọn màu'] },
+      en: { name: 'Soniq', desc: 'A blue–violet–pink headphone storefront with three original images, directional colour transitions, pointer hover, colour picks and a local device bag. Includes design, illustrative specifications and FAQ. Email enquiries; no payment or inventory backend.', tags: ['Headphones', 'Pastel', 'Colour picker'] },
+      zh: { name: 'Soniq', desc: '蓝紫粉渐变耳机店模板：三张原创产品图、方向转场、鼠标悬浮、配色选择与本地购物袋。包含设计、示例规格及常见问题。通过邮件咨询，不含支付或库存后端。', tags: ['耳机', '粉彩', '配色选择'] },
+    },
+  },
   t9: {
     slug: 'auralis', cat: 'shop', video: true, version: '1.2.4',
     copy: {
@@ -121,11 +129,11 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     },
   },
   t7: {
-    slug: 'astra-interior', cat: 'motion', video: true,
+    slug: 'astra-interior', cat: 'shop', video: true, version: '2.0.3',
     copy: {
-      vi: { name: 'Astra Interior', desc: 'Template portfolio điện ảnh cho studio nội thất và kiến trúc: 24 frame điều khiển theo cuộn, chữ HTML phủ theo từng chương, project, quy trình và CTA email. Không dùng video làm nền, không kèm backend.', tags: ['24-frame', 'Nội thất', 'Scroll sequence'] },
-      en: { name: 'Astra Interior', desc: 'A cinematic portfolio template for interior and architecture studios: a 24-frame scroll sequence with staged live HTML copy, projects, process and an email CTA. No background video or backend included.', tags: ['24-frame', 'Interiors', 'Scroll sequence'] },
-      zh: { name: 'Astra Interior', desc: '面向室内与建筑工作室的电影感作品集模板：24 帧滚动序列配合分段 HTML 文案，并包含项目、流程与邮件联系入口。不使用背景视频，不含后端。', tags: ['24 帧', '室内设计', '滚动序列'] },
+      vi: { name: 'Mellow Coffee', desc: 'Giao diện cà phê và bánh tông hổ phách: ba ảnh sản phẩm tự tạo, hero chuyển cảnh có hướng, vuốt và phím mũi tên, lọc thực đơn và giỏ món lưu trên thiết bị. Liên hệ email; chưa có thanh toán hoặc quản lý đơn hàng.', tags: ['Cà phê & bánh', 'Chuyển cảnh', 'Giỏ chọn món'] },
+      en: { name: 'Mellow Coffee', desc: 'An amber café and bakery storefront with three original product images, a directional hero, swipe and arrow controls, menu filters and a local device bag. Email enquiries; no checkout or order backend.', tags: ['Coffee & bakery', 'Motion', 'Local bag'] },
+      zh: { name: 'Mellow Coffee', desc: '琥珀色咖啡与烘焙店模板：三张原创产品图、方向转场首屏、滑动与方向键、菜单筛选及本地购物袋。通过邮件咨询，不含支付或订单后台。', tags: ['咖啡与烘焙', '动画转场', '本地购物袋'] },
     },
   },
   t8: {

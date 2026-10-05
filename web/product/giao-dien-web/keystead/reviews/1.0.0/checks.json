@@ -1,0 +1,1287 @@
+{
+  "slug": "keystead",
+  "version": "1.0.0",
+  "date": "2026-10-03T12:17:41.487Z",
+  "os": "win32",
+  "zipBytes": 416065,
+  "sha256": "c65f53fe807e575bca75bb34811341c8d19c744f982fff41faf7a47d37ec8724",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#main"
+          },
+          {
+            "label": "Keystead — home",
+            "href": "index.html",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html"
+          },
+          {
+            "label": "Apartments",
+            "href": "#apartments",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#apartments"
+          },
+          {
+            "label": "Houses",
+            "href": "#houses",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#houses"
+          },
+          {
+            "label": "Neighbourhoods",
+            "href": "#areas",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#areas"
+          },
+          {
+            "label": "How renting works",
+            "href": "#how",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#how"
+          },
+          {
+            "label": "Landlords",
+            "href": "#landlords",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#landlords"
+          },
+          {
+            "label": "Book a viewing",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#contact"
+          },
+          {
+            "label": "Start browsing",
+            "href": "#apartments",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#apartments"
+          },
+          {
+            "label": "Apartments3 listed",
+            "href": "#apartments",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#apartments"
+          },
+          {
+            "label": "Houses3 listed",
+            "href": "#houses",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#houses"
+          },
+          {
+            "label": "Neighbourhoods4 areas",
+            "href": "#areas",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#areas"
+          },
+          {
+            "label": "Lease terms6–24 months",
+            "href": "#how",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#how"
+          },
+          {
+            "label": "Book a viewing",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#contact"
+          },
+          {
+            "label": "Ask about this home: Skyline Two-Bed",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Skyline%20Two-Bed",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Skyline%20Two-Bed"
+          },
+          {
+            "label": "Ask about this home: Garden Square Flat",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Garden%20Square%20Flat",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Garden%20Square%20Flat"
+          },
+          {
+            "label": "Ask about this home: Quay Street Studio",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Quay%20Street%20Studio",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Quay%20Street%20Studio"
+          },
+          {
+            "label": "Ask about this home: Linden Row Townhouse",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Linden%20Row%20Townhouse",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Linden%20Row%20Townhouse"
+          },
+          {
+            "label": "Ask about this home: Hearth Lane House",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Hearth%20Lane%20House",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Hearth%20Lane%20House"
+          },
+          {
+            "label": "Ask about this home: Mill Loft House",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Mill%20Loft%20House",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Mill%20Loft%20House"
+          },
+          {
+            "label": "Talk to our lettings team",
+            "href": "mailto:hello@example.com?subject=Letting%20my%20property",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Letting%20my%20property"
+          },
+          {
+            "label": "Email to book a viewing",
+            "href": "mailto:hello@example.com?subject=Book%20a%20viewing",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Book%20a%20viewing"
+          },
+          {
+            "label": "hello@example.com",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Keystead — back to top",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#main"
+          },
+          {
+            "label": "Apartments",
+            "href": "#apartments",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#apartments"
+          },
+          {
+            "label": "Houses",
+            "href": "#houses",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#houses"
+          },
+          {
+            "label": "Neighbourhoods",
+            "href": "#areas",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#areas"
+          },
+          {
+            "label": "How renting works",
+            "href": "#how",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#how"
+          },
+          {
+            "label": "Landlords",
+            "href": "#landlords",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#landlords"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#contact"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 960,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              24,
+              39
+            ],
+            "ratio": 17.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "logo__text",
+            "text": "Keystead",
+            "colour": "rgb(17, 24, 39)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.74,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Apartments",
+            "colour": "rgb(17, 24, 39)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__pill",
+            "text": "6 homes open for viewing this month",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              33,
+              39,
+              54
+            ],
+            "ratio": 14.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__title",
+            "text": "Browse homes, apartments & rentals with ",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              87,
+              82,
+              83
+            ],
+            "ratio": 7.67,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__lede",
+            "text": "Keystead lets apartments and family hous",
+            "colour": "rgb(243, 244, 246)",
+            "background": [
+              61,
+              64,
+              77
+            ],
+            "ratio": 9.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--light",
+            "text": "Start browsing",
+            "colour": "rgb(17, 24, 39)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "3 listed",
+            "colour": "rgb(75, 85, 99)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Apartments ready this season",
+            "colour": "rgb(17, 24, 39)",
+            "background": [
+              246,
+              245,
+              243
+            ],
+            "ratio": 16.28,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__intro",
+            "text": "City-centre flats close to the river, th",
+            "colour": "rgb(75, 85, 99)",
+            "background": [
+              246,
+              245,
+              243
+            ],
+            "ratio": 6.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$2,150",
+            "colour": "rgb(154, 77, 11)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 6.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "listing__badge",
+            "text": "Available 1 November",
+            "colour": "rgb(154, 77, 11)",
+            "background": [
+              253,
+              241,
+              227
+            ],
+            "ratio": 5.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Houses & townhouses for families",
+            "colour": "rgb(17, 24, 39)",
+            "background": [
+              238,
+              236,
+              232
+            ],
+            "ratio": 15.04,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__intro",
+            "text": "More room, a garden or a loft, and quiet",
+            "colour": "rgb(75, 85, 99)",
+            "background": [
+              238,
+              236,
+              232
+            ],
+            "ratio": 6.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Riverside towers, the covered market and",
+            "colour": "rgb(55, 65, 81)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 10.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "band__title",
+            "text": "Letting a home in Northbank?",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              24,
+              39
+            ],
+            "ratio": 17.74,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "We photograph it, run the viewings, chec",
+            "colour": "rgb(229, 231, 235)",
+            "background": [
+              17,
+              24,
+              39
+            ],
+            "ratio": 14.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "contact__text",
+            "text": "Email us the homes you would like to see",
+            "colour": "rgb(55, 65, 81)",
+            "background": [
+              238,
+              236,
+              232
+            ],
+            "ratio": 8.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-footer__copy",
+            "text": "© 2026 Keystead Lettings. Homes, prices ",
+            "colour": "rgb(197, 202, 211)",
+            "background": [
+              17,
+              24,
+              39
+            ],
+            "ratio": 10.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Start browsing",
+          "colour": "rgb(147, 197, 253)",
+          "width": "3px",
+          "ratio": 7.4
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#main"
+          },
+          {
+            "label": "Keystead — home",
+            "href": "index.html",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html"
+          },
+          {
+            "label": "Apartments",
+            "href": "#apartments",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#apartments"
+          },
+          {
+            "label": "Houses",
+            "href": "#houses",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#houses"
+          },
+          {
+            "label": "Neighbourhoods",
+            "href": "#areas",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#areas"
+          },
+          {
+            "label": "How renting works",
+            "href": "#how",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#how"
+          },
+          {
+            "label": "Landlords",
+            "href": "#landlords",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#landlords"
+          },
+          {
+            "label": "Book a viewing",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#contact"
+          },
+          {
+            "label": "Start browsing",
+            "href": "#apartments",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#apartments"
+          },
+          {
+            "label": "Apartments3 listed",
+            "href": "#apartments",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#apartments"
+          },
+          {
+            "label": "Houses3 listed",
+            "href": "#houses",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#houses"
+          },
+          {
+            "label": "Neighbourhoods4 areas",
+            "href": "#areas",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#areas"
+          },
+          {
+            "label": "Lease terms6–24 months",
+            "href": "#how",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#how"
+          },
+          {
+            "label": "Book a viewing",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#contact"
+          },
+          {
+            "label": "Ask about this home: Skyline Two-Bed",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Skyline%20Two-Bed",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Skyline%20Two-Bed"
+          },
+          {
+            "label": "Ask about this home: Garden Square Flat",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Garden%20Square%20Flat",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Garden%20Square%20Flat"
+          },
+          {
+            "label": "Ask about this home: Quay Street Studio",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Quay%20Street%20Studio",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Quay%20Street%20Studio"
+          },
+          {
+            "label": "Ask about this home: Linden Row Townhouse",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Linden%20Row%20Townhouse",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Linden%20Row%20Townhouse"
+          },
+          {
+            "label": "Ask about this home: Hearth Lane House",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Hearth%20Lane%20House",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Hearth%20Lane%20House"
+          },
+          {
+            "label": "Ask about this home: Mill Loft House",
+            "href": "mailto:hello@example.com?subject=Viewing%3A%20Mill%20Loft%20House",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Viewing%3A%20Mill%20Loft%20House"
+          },
+          {
+            "label": "Talk to our lettings team",
+            "href": "mailto:hello@example.com?subject=Letting%20my%20property",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Letting%20my%20property"
+          },
+          {
+            "label": "Email to book a viewing",
+            "href": "mailto:hello@example.com?subject=Book%20a%20viewing",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Book%20a%20viewing"
+          },
+          {
+            "label": "hello@example.com",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Keystead — back to top",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#main"
+          },
+          {
+            "label": "Apartments",
+            "href": "#apartments",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#apartments"
+          },
+          {
+            "label": "Houses",
+            "href": "#houses",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#houses"
+          },
+          {
+            "label": "Neighbourhoods",
+            "href": "#areas",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#areas"
+          },
+          {
+            "label": "How renting works",
+            "href": "#how",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#how"
+          },
+          {
+            "label": "Landlords",
+            "href": "#landlords",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#landlords"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/keystead/index.html#contact"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 960,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              24,
+              39
+            ],
+            "ratio": 17.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "logo__text",
+            "text": "Keystead",
+            "colour": "rgb(17, 24, 39)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.74,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Apartments",
+            "colour": "rgb(17, 24, 39)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__pill",
+            "text": "6 homes open for viewing this month",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              34,
+              39,
+              54
+            ],
+            "ratio": 14.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__title",
+            "text": "Browse homes, apartments & rentals with ",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              96,
+              81,
+              68
+            ],
+            "ratio": 7.61,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__lede",
+            "text": "Keystead lets apartments and family hous",
+            "colour": "rgb(243, 244, 246)",
+            "background": [
+              62,
+              64,
+              79
+            ],
+            "ratio": 9.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--light",
+            "text": "Start browsing",
+            "colour": "rgb(17, 24, 39)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "3 listed",
+            "colour": "rgb(75, 85, 99)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Apartments ready this season",
+            "colour": "rgb(17, 24, 39)",
+            "background": [
+              246,
+              245,
+              243
+            ],
+            "ratio": 16.28,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__intro",
+            "text": "City-centre flats close to the river, th",
+            "colour": "rgb(75, 85, 99)",
+            "background": [
+              246,
+              245,
+              243
+            ],
+            "ratio": 6.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$2,150",
+            "colour": "rgb(154, 77, 11)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 6.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "listing__badge",
+            "text": "Available 1 November",
+            "colour": "rgb(154, 77, 11)",
+            "background": [
+              253,
+              241,
+              227
+            ],
+            "ratio": 5.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Houses & townhouses for families",
+            "colour": "rgb(17, 24, 39)",
+            "background": [
+              238,
+              236,
+              232
+            ],
+            "ratio": 15.04,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__intro",
+            "text": "More room, a garden or a loft, and quiet",
+            "colour": "rgb(75, 85, 99)",
+            "background": [
+              238,
+              236,
+              232
+            ],
+            "ratio": 6.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Riverside towers, the covered market and",
+            "colour": "rgb(55, 65, 81)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 10.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "band__title",
+            "text": "Letting a home in Northbank?",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              24,
+              39
+            ],
+            "ratio": 17.74,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "We photograph it, run the viewings, chec",
+            "colour": "rgb(229, 231, 235)",
+            "background": [
+              17,
+              24,
+              39
+            ],
+            "ratio": 14.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "contact__text",
+            "text": "Email us the homes you would like to see",
+            "colour": "rgb(55, 65, 81)",
+            "background": [
+              238,
+              236,
+              232
+            ],
+            "ratio": 8.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-footer__copy",
+            "text": "© 2026 Keystead Lettings. Homes, prices ",
+            "colour": "rgb(197, 202, 211)",
+            "background": [
+              17,
+              24,
+              39
+            ],
+            "ratio": 10.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Start browsing",
+          "colour": "rgb(147, 197, 253)",
+          "width": "3px",
+          "ratio": 7.4
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "keystead/assets/css/style.css",
+    "keystead/assets/img/apt-sash.webp",
+    "keystead/assets/img/apt-skyline.webp",
+    "keystead/assets/img/apt-studio.webp",
+    "keystead/assets/img/hero-street.webp",
+    "keystead/assets/img/house-garden.webp",
+    "keystead/assets/img/house-living.webp",
+    "keystead/assets/img/house-loft.webp",
+    "keystead/assets/js/main.js",
+    "keystead/CUSTOMISE.md",
+    "keystead/index.html",
+    "keystead/LICENCE.txt",
+    "keystead/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/apt-sash.webp",
+    "assets/img/apt-skyline.webp",
+    "assets/img/apt-studio.webp",
+    "assets/img/hero-street.webp",
+    "assets/img/house-garden.webp",
+    "assets/img/house-living.webp",
+    "assets/img/house-loft.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

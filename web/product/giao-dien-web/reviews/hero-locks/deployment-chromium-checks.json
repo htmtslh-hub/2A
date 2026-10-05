@@ -1,0 +1,668 @@
+{
+  "origin": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app",
+  "date": "2026-09-28T03:43:16.676Z",
+  "cases": [
+    {
+      "key": "chromium/vi/1440",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 1196.40625,
+            "y": 444.40625,
+            "width": 88.796875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 1295.203125,
+            "y": 444.40625,
+            "width": 88.796875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "key": "chromium/vi/820",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 577.109375,
+            "y": 484.796875,
+            "width": 100.046875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 687.15625,
+            "y": 484.796875,
+            "width": 100.046875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 820,
+        "clientWidth": 820
+      }
+    },
+    {
+      "key": "chromium/vi/375",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 19.5625,
+            "y": 582.65625,
+            "width": 241.1875,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 113.75,
+            "y": 582.65625,
+            "width": 241.1875,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 375,
+        "clientWidth": 375
+      }
+    },
+    {
+      "key": "chromium/vi/320",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 19.78125,
+            "y": 582.75,
+            "width": 201.59375,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 98.375,
+            "y": 582.75,
+            "width": 201.59375,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    },
+    {
+      "key": "chromium/en/1440",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 1196.40625,
+            "y": 444.40625,
+            "width": 88.796875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 1295.203125,
+            "y": 444.40625,
+            "width": 88.796875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "key": "chromium/en/820",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 577.109375,
+            "y": 507.890625,
+            "width": 100.046875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 687.15625,
+            "y": 507.890625,
+            "width": 100.046875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 820,
+        "clientWidth": 820
+      }
+    },
+    {
+      "key": "chromium/en/375",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 19.5625,
+            "y": 582.75,
+            "width": 241.1875,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 113.75,
+            "y": 582.75,
+            "width": 241.1875,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 375,
+        "clientWidth": 375
+      }
+    },
+    {
+      "key": "chromium/en/320",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 19.78125,
+            "y": 582.84375,
+            "width": 201.59375,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 98.375,
+            "y": 582.84375,
+            "width": 201.59375,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    },
+    {
+      "key": "chromium/zh/1440",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 1196.40625,
+            "y": 444.40625,
+            "width": 88.796875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 1295.203125,
+            "y": 444.40625,
+            "width": 88.796875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "key": "chromium/zh/820",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 577.109375,
+            "y": 491.796875,
+            "width": 100.046875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 687.15625,
+            "y": 491.796875,
+            "width": 100.046875,
+            "height": 420
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 820,
+        "clientWidth": 820
+      }
+    },
+    {
+      "key": "chromium/zh/375",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 19.5625,
+            "y": 463.6875,
+            "width": 241.1875,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 113.75,
+            "y": 463.6875,
+            "width": 241.1875,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 375,
+        "clientWidth": 375
+      }
+    },
+    {
+      "key": "chromium/zh/320",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 19.78125,
+            "y": 575.78125,
+            "width": 201.59375,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 98.375,
+            "y": 575.78125,
+            "width": 201.59375,
+            "height": 418
+          },
+          "media": {
+            "poster": "https://web-cv6wv05s4-htmtslh-hubs-projects.vercel.app/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    }
+  ],
+  "errors": [],
+  "failures": []
+}

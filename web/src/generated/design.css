@@ -25,8 +25,124 @@
   @keyframes chaseRun { to { stroke-dashoffset:-100; } }
   html { scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce){ html { scroll-behavior:auto; } [data-reveal]{ opacity:1 !important; transform:none !important; filter:none !important; } }
-  @keyframes ledGlowPulse { 0%,100% { opacity:.6; } 50% { opacity:1; } }
-  @keyframes ledSparkle { 0% { filter:brightness(1.1) saturate(1.5); } 18% { filter:brightness(1.6) saturate(1.7); } 32% { filter:brightness(1) saturate(1.45); } 54% { filter:brightness(1.5) saturate(1.65); } 68% { filter:brightness(1.05) saturate(1.5); } 84% { filter:brightness(1.7) saturate(1.8); } 100% { filter:brightness(1.1) saturate(1.5); } }
+  /*
+    VIỀN AVATAR TRONG VIDEO GỐC — viền kín, màu trượt quanh chu vi.
+    Màu:      --pricing-neon-magenta / -violet / -cyan / -white
+    Lõi:      --pricing-neon-core-width
+    Glow:     --pricing-neon-glow-width / -blur / -strength
+    Tốc độ:   --pricing-neon-speed (thời gian một vòng)
+  */
+  @property --pricing-neon-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  @keyframes pricingNeonOrbit {
+    from { --pricing-neon-angle: 0deg; }
+    to { --pricing-neon-angle: 360deg; }
+  }
+  @keyframes pricingNeonPulse {
+    0%,100% { filter: brightness(.96); }
+    50% { filter: brightness(1.12); }
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+    max-width: 742px;
+    margin: 0 auto;
+  }
+  @media (max-width: 767px) {
+    .pricing-grid {
+      grid-template-columns: minmax(0, 1fr);
+      max-width: 360px;
+    }
+  }
+  @media (max-width: 360px) {
+    .pricing-card {
+      --pricing-card-padding: 14px;
+      --pricing-card-feature-gap: 10px;
+      --pricing-card-feature-bottom: 22px;
+    }
+  }
+  .pricing-card {
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    min-width: 0;
+    --pricing-neon-magenta: #ed60ff;
+    --pricing-neon-violet: #a76bff;
+    --pricing-neon-cyan: #62f4ff;
+    --pricing-neon-white: #fffaff;
+    --pricing-neon-core-width: 1.7325px;
+    --pricing-neon-glow-width: 2px;
+    --pricing-neon-glow-blur: 1.75px;
+    --pricing-neon-glow-strength: .42;
+    --pricing-neon-speed: 1.8s;
+    isolation: isolate;
+  }
+  .pricing-card__neon {
+    position: absolute;
+    inset: -1px;
+    z-index: 3;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .4s cubic-bezier(.22,1,.36,1);
+  }
+  /* Blur the masked ring's parent so the glow can extend outside the edge. */
+  .pricing-card__neon-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: var(--pricing-neon-glow-strength);
+    filter: blur(var(--pricing-neon-glow-blur));
+    pointer-events: none;
+  }
+  .pricing-card__neon::before,
+  .pricing-card__neon-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    border-radius: inherit;
+    padding: var(--pricing-neon-core-width);
+    /* Use the animated angle HERE: do not cache this gradient on the card. */
+    background: conic-gradient(
+      from var(--pricing-neon-angle),
+      var(--pricing-neon-cyan) 0deg,
+      var(--pricing-neon-white) 48deg,
+      var(--pricing-neon-violet) 108deg,
+      var(--pricing-neon-magenta) 158deg,
+      var(--pricing-neon-white) 205deg,
+      var(--pricing-neon-cyan) 278deg,
+      var(--pricing-neon-cyan) 360deg
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    animation:
+      pricingNeonOrbit var(--pricing-neon-speed) linear infinite,
+      pricingNeonPulse 2.6s ease-in-out infinite;
+    animation-play-state: paused;
+    pointer-events: none;
+  }
+  .pricing-card__neon-glow::before {
+    padding: var(--pricing-neon-glow-width);
+  }
+  .pricing-card:hover > .pricing-card__neon,
+  .pricing-card:focus-within > .pricing-card__neon {
+    opacity: 1;
+  }
+  .pricing-card:hover > .pricing-card__neon::before,
+  .pricing-card:hover .pricing-card__neon-glow::before,
+  .pricing-card:focus-within > .pricing-card__neon::before,
+  .pricing-card:focus-within .pricing-card__neon-glow::before {
+    animation-play-state: running;
+  }
+  /* Requested exception: the pricing neon runs on hover/focus even with
+     reduced motion enabled. Other reduced-motion rules stay unchanged. */
   @media (prefers-reduced-motion: reduce){ [data-reveal], [data-island], [data-marquee]{ animation-duration:.001ms !important; animation-iteration-count:1 !important; } }
   /* Phát sáng nhẹ khi rê chuột lên mọi thành phần tương tác */
   button, a[href], [role="button"], [data-tab-pill], [data-lang-pill], [data-filter-chip], [data-island-mini]{ transition: filter .3s cubic-bezier(.22,1,.36,1), text-shadow .3s ease, color .55s ease, background-color .55s ease, border-color .55s ease; }

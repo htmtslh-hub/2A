@@ -1,0 +1,8 @@
+import {resolve} from 'node:path';
+import {writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+process.env.PLAYWRIGHT_BROWSERS_PATH=resolve('_design/.browsers');
+const {chromium}=await import('../../_design/.tooling/node_modules/playwright/index.mjs');
+const report={deployment:'dpl_5TyTZhTN4XMTUZm7X7MHHCfYrrvA',date:new Date().toISOString(),urls:[]};
+for(const path of ['/demos/vybe/','/demos/vybe/assets/css/style.css','/demos/vybe/assets/js/main.js','/demos/vybe/assets/img/edge.webp','/previews/vybe.webp','/demos/meridian/']){const r=await fetch('https://forgezone.store'+path);report.urls.push({path,status:r.status});}
+const b=await chromium.launch();const page=await b.newPage({viewport:{width:1440,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('https://forgezone.store/demos/vybe/?motion=on');await page.locator('[data-next]').click();await page.waitForTimeout(250);report.animation=await page.evaluate(()=>({running:document.getAnimations().filter(a=>a.playState==='running').length,triangles:document.querySelectorAll('.arrow-triangle').length}));await page.waitForTimeout(700);report.product=await page.locator('[data-name]').textContent();await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:resolve('web/product/giao-dien-web/vybe/reviews/1.0.0/deployed-vybe.png')});await page.goto('https://forgezone.store');report.catalog=await page.evaluate(()=>({vybe:document.body.innerText.includes('VYBE'),meridian:document.body.innerText.includes('Meridian')}));report.errors=errors;await b.close();writeFileSync('web/product/giao-dien-web/vybe/reviews/1.0.0/deployment-checks.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));

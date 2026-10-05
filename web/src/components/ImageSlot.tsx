@@ -3,37 +3,67 @@
    chưa có ảnh thì hiện khung placeholder giống bản thiết kế. */
 'use client';
 import { PREVIEWS } from '@/lib/previews';
+import { REAL_TEMPLATE_VIDEOS } from '@/lib/real-templates';
+import VideoPreview from './VideoPreview';
 
 export default function ImageSlot({
   id,
   fit = 'cover',
   placeholder = 'Ảnh preview giao diện',
+  presentation,
+  videoControls = false,
 }: {
   id?: string;
   shape?: string;
   fit?: string;
   placeholder?: string;
+  presentation?: 'stage';
+  videoControls?: boolean;
 }) {
   const src = id ? PREVIEWS[id] : undefined;
+
+  if (src && presentation === 'stage') {
+    return (
+      <span className="product-stage" data-image-slot="" data-filled="">
+        <span className="product-stage__ambient" style={{ backgroundImage: `url("${src}")` }} aria-hidden="true" />
+        <span className="product-stage__wash" aria-hidden="true" />
+        <span className="product-stage__frame">
+          {id && REAL_TEMPLATE_VIDEOS[id] ? (
+            <VideoPreview key={id} src={REAL_TEMPLATE_VIDEOS[id]} poster={src} fit={fit} label={placeholder} controls={videoControls} />
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={src} alt={placeholder} className="product-stage__image" />
+          )}
+        </span>
+      </span>
+    );
+  }
 
   if (src) {
     return (
       <span
         data-image-slot=""
         data-filled=""
+        data-video-preview={id && REAL_TEMPLATE_VIDEOS[id] ? '' : undefined}
         style={{ position: 'absolute', inset: 0, display: 'block', overflow: 'hidden' }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={src}
-          alt={placeholder}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: fit as React.CSSProperties['objectFit'],
-            display: 'block',
-          }}
-        />
+        {id && REAL_TEMPLATE_VIDEOS[id] ? (
+          <VideoPreview key={id} src={REAL_TEMPLATE_VIDEOS[id]} poster={src} fit={fit} label={placeholder} />
+        ) : (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={src}
+              alt={placeholder}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: fit as React.CSSProperties['objectFit'],
+                display: 'block',
+              }}
+            />
+          </>
+        )}
       </span>
     );
   }

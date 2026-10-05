@@ -1,0 +1,267 @@
+{
+  "testedAt": "2026-10-02T07:49:13.979Z",
+  "browsers": {
+    "chromium": "153.0.8010.12",
+    "firefox": "155.0"
+  },
+  "checks": [
+    {
+      "browser": "chromium",
+      "viewport": "1440x900",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Warm timber cabin interior with a sofa and a wide view over misty pine-covered hills"
+        },
+        {
+          "loaded": true,
+          "alt": "A timber boardwalk winding into a misty evergreen forest at dawn"
+        }
+      ],
+      "h1Count": 1,
+      "idsUnique": true,
+      "reducedMotionScroll": "auto",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "browser": "chromium",
+      "viewport": "820x1180",
+      "clientWidth": 820,
+      "scrollWidth": 820,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Warm timber cabin interior with a sofa and a wide view over misty pine-covered hills"
+        },
+        {
+          "loaded": true,
+          "alt": "A timber boardwalk winding into a misty evergreen forest at dawn"
+        }
+      ],
+      "h1Count": 1,
+      "idsUnique": true,
+      "reducedMotionScroll": "auto",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "browser": "chromium",
+      "viewport": "375x812",
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Warm timber cabin interior with a sofa and a wide view over misty pine-covered hills"
+        },
+        {
+          "loaded": true,
+          "alt": "A timber boardwalk winding into a misty evergreen forest at dawn"
+        }
+      ],
+      "h1Count": 1,
+      "idsUnique": true,
+      "reducedMotionScroll": "auto",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "browser": "chromium",
+      "viewport": "320x740",
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Warm timber cabin interior with a sofa and a wide view over misty pine-covered hills"
+        },
+        {
+          "loaded": true,
+          "alt": "A timber boardwalk winding into a misty evergreen forest at dawn"
+        }
+      ],
+      "h1Count": 1,
+      "idsUnique": true,
+      "reducedMotionScroll": "auto",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "browser": "chromium",
+      "viewport": "720x450",
+      "clientWidth": 720,
+      "scrollWidth": 720,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Warm timber cabin interior with a sofa and a wide view over misty pine-covered hills"
+        },
+        {
+          "loaded": true,
+          "alt": "A timber boardwalk winding into a misty evergreen forest at dawn"
+        }
+      ],
+      "h1Count": 1,
+      "idsUnique": true,
+      "reducedMotionScroll": "auto",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "browser": "firefox",
+      "viewport": "1440x900",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Warm timber cabin interior with a sofa and a wide view over misty pine-covered hills"
+        },
+        {
+          "loaded": true,
+          "alt": "A timber boardwalk winding into a misty evergreen forest at dawn"
+        }
+      ],
+      "h1Count": 1,
+      "idsUnique": true,
+      "reducedMotionScroll": "auto",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "browser": "firefox",
+      "viewport": "820x1180",
+      "clientWidth": 820,
+      "scrollWidth": 820,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Warm timber cabin interior with a sofa and a wide view over misty pine-covered hills"
+        },
+        {
+          "loaded": true,
+          "alt": "A timber boardwalk winding into a misty evergreen forest at dawn"
+        }
+      ],
+      "h1Count": 1,
+      "idsUnique": true,
+      "reducedMotionScroll": "auto",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "browser": "firefox",
+      "viewport": "375x812",
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Warm timber cabin interior with a sofa and a wide view over misty pine-covered hills"
+        },
+        {
+          "loaded": true,
+          "alt": "A timber boardwalk winding into a misty evergreen forest at dawn"
+        }
+      ],
+      "h1Count": 1,
+      "idsUnique": true,
+      "reducedMotionScroll": "auto",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "browser": "firefox",
+      "viewport": "320x740",
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Warm timber cabin interior with a sofa and a wide view over misty pine-covered hills"
+        },
+        {
+          "loaded": true,
+          "alt": "A timber boardwalk winding into a misty evergreen forest at dawn"
+        }
+      ],
+      "h1Count": 1,
+      "idsUnique": true,
+      "reducedMotionScroll": "auto",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "browser": "firefox",
+      "viewport": "720x450",
+      "clientWidth": 720,
+      "scrollWidth": 720,
+      "images": [
+        {
+          "loaded": true,
+          "alt": "Warm timber cabin interior with a sofa and a wide view over misty pine-covered hills"
+        },
+        {
+          "loaded": true,
+          "alt": "A timber boardwalk winding into a misty evergreen forest at dawn"
+        }
+      ],
+      "h1Count": 1,
+      "idsUnique": true,
+      "reducedMotionScroll": "auto",
+      "errors": [],
+      "failed": []
+    }
+  ],
+  "interactions": {
+    "chromiumMenu": {
+      "opened": "true",
+      "shown": true,
+      "closed": "false",
+      "focusReturned": true
+    },
+    "chromiumLink": {
+      "hash": "#setting",
+      "closed": "false"
+    },
+    "chromiumNoJs": {
+      "menuLinksVisible": true,
+      "inertToggleHidden": true,
+      "contentVisible": true
+    },
+    "chromiumHttp": {
+      "status": 200,
+      "images": [
+        true,
+        true
+      ],
+      "heroBackground": true
+    },
+    "firefoxMenu": {
+      "opened": "true",
+      "shown": true,
+      "closed": "false",
+      "focusReturned": true
+    },
+    "firefoxLink": {
+      "hash": "#setting",
+      "closed": "false"
+    },
+    "firefoxNoJs": {
+      "menuLinksVisible": true,
+      "inertToggleHidden": true,
+      "contentVisible": true
+    },
+    "firefoxHttp": {
+      "status": 200,
+      "images": [
+        true,
+        true
+      ],
+      "heroBackground": true
+    }
+  }
+}

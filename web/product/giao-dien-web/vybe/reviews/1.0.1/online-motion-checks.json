@@ -1,0 +1,14 @@
+{
+  "browser": "Coc Coc 152.0.7977.124",
+  "base": "https://forgezone.store",
+  "defaultReduced": "Enable motion",
+  "optIn": "Pause motion",
+  "animations": 2,
+  "savedOn": "Pause motion",
+  "afterSystemChange": "Pause motion",
+  "pauseMidway": 0,
+  "savedOff": "Enable motion",
+  "previousWrap": "05 / 05",
+  "nextWrap": "01 / 05",
+  "errors": []
+}

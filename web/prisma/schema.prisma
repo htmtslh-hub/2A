@@ -23,7 +23,21 @@ model User {
   sessions       Session[]
   orders         Order[]
   purchases      Purchase[]
+  savedTemplates SavedTemplate[]
   resetTokens    PasswordResetToken[]
+}
+
+/// Giao diện người dùng lưu để xem lại trong tài khoản.
+model SavedTemplate {
+  id         String   @id @default(cuid())
+  userId     String
+  templateId String
+  createdAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, templateId])
+  @@index([userId, createdAt])
 }
 
 model Account {
@@ -85,6 +99,7 @@ enum PaymentProvider {
 enum ProductKind {
   TEMPLATE
   BUNDLE
+  CART
   CUSTOM
 }
 
@@ -123,9 +138,22 @@ model Order {
   updatedAt   DateTime  @updatedAt
 
   purchases Purchase[]
+  items     OrderItem[]
 
   @@index([buyerEmail])
   @@index([status])
+}
+
+/// Một giao diện trong đơn thanh toán giỏ hàng; giá được chốt tại lúc tạo đơn.
+model OrderItem {
+  id         String @id @default(cuid())
+  orderId    String
+  templateId String
+  amount     Int
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@unique([orderId, templateId])
 }
 
 /// Quyền sở hữu đã mở khoá cho một người dùng.

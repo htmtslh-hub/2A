@@ -1,0 +1,78 @@
+{
+  "origin": "https://forgezone.store",
+  "cases": [
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "initial": {
+        "paused": true,
+        "time": 0,
+        "src": null,
+        "duration": null
+      },
+      "playing": {
+        "paused": false,
+        "time": 0.447107,
+        "src": "/previews/auralis.mp4?v=1.2.2",
+        "duration": 11.8
+      },
+      "hidden": {
+        "paused": true,
+        "time": 0.459009,
+        "src": "/previews/auralis.mp4?v=1.2.2",
+        "duration": 11.8
+      },
+      "returned": {
+        "paused": false,
+        "time": 1.447131,
+        "src": "/previews/auralis.mp4?v=1.2.2",
+        "duration": 11.8
+      },
+      "paused": {
+        "paused": true,
+        "time": 1.489308,
+        "src": "/previews/auralis.mp4?v=1.2.2",
+        "duration": 11.8
+      },
+      "href": "https://forgezone.store/demos/auralis/index.html?v=1.2.2"
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "initial": {
+        "paused": true,
+        "time": 0,
+        "src": null,
+        "duration": null
+      },
+      "playing": {
+        "paused": false,
+        "time": 0.939832,
+        "src": "/previews/auralis.mp4?v=1.2.2",
+        "duration": 11.8
+      },
+      "hidden": {
+        "paused": true,
+        "time": 0.955259,
+        "src": "/previews/auralis.mp4?v=1.2.2",
+        "duration": 11.8
+      },
+      "returned": {
+        "paused": false,
+        "time": 1.953071,
+        "src": "/previews/auralis.mp4?v=1.2.2",
+        "duration": 11.8
+      },
+      "paused": {
+        "paused": true,
+        "time": 1.988239,
+        "src": "/previews/auralis.mp4?v=1.2.2",
+        "duration": 11.8
+      },
+      "href": "https://forgezone.store/demos/auralis/index.html?v=1.2.2"
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "pass": true
+}

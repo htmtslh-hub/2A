@@ -1,0 +1,2408 @@
+{
+  "date": "2026-09-28T02:57:54.344Z",
+  "os": "win32",
+  "zipBytes": 19431,
+  "sha256": "e0a2f51daa69717a4848adaeb1bafd0a8c39f43bb9def757cf927b26e2c2bfd6",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 3044,
+          "viewportHeight": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 3585,
+          "viewportHeight": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 4729,
+          "viewportHeight": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 4731,
+          "viewportHeight": 740,
+          "smallTargets": []
+        }
+      ],
+      "fallbacks": {
+        "zoom200": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 7764
+        },
+        "reduced": true,
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 3044,
+          "visible": true,
+          "styled": true
+        },
+        "noJSAndFonts": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 4903,
+          "content": true,
+          "nav": true
+        },
+        "offlineFile": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 4681,
+          "visible": true
+        }
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "reverseTab": true,
+        "skipFocused": true,
+        "skipDestination": true,
+        "nextLink": {
+          "tag": "A",
+          "label": "Discuss your sourcing brief ↗"
+        }
+      },
+      "menu": {
+        "open": true,
+        "openDimensions": {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 4951
+        },
+        "escape": true,
+        "linkCloses": true,
+        "desktopReset": true,
+        "mobileReset": true
+      },
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "header": true,
+        "nav": true,
+        "main": true,
+        "footer": true,
+        "duplicateIds": [],
+        "headingJumps": [],
+        "svg": [
+          {
+            "name": "",
+            "role": null,
+            "hidden": "true",
+            "focusable": "false",
+            "viewBox": "0 0 36 36"
+          },
+          {
+            "name": "An isometric stack of blue and white cargo containers with route lines",
+            "role": "img",
+            "hidden": null,
+            "focusable": "false",
+            "viewBox": "0 0 660 650"
+          },
+          {
+            "name": "Home goods: two sculptural ceramic vases",
+            "role": "img",
+            "hidden": null,
+            "focusable": "false",
+            "viewBox": "0 0 380 290"
+          },
+          {
+            "name": "Packaging: folded blue and natural-colour cartons",
+            "role": "img",
+            "hidden": null,
+            "focusable": "false",
+            "viewBox": "0 0 380 290"
+          },
+          {
+            "name": "Textiles: folded fabric layers in neutral and blue tones",
+            "role": "img",
+            "hidden": null,
+            "focusable": "false",
+            "viewBox": "0 0 380 290"
+          }
+        ],
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 147.65625,
+              "height": 50.390625
+            },
+            "visible": true
+          },
+          {
+            "label": "Meridian home",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 157.609375,
+              "height": 46.1875
+            },
+            "visible": true
+          },
+          {
+            "label": "Our expertise",
+            "href": "#expertise",
+            "exists": true,
+            "rect": {
+              "width": 90.640625,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "The process",
+            "href": "#process",
+            "exists": true,
+            "rect": {
+              "width": 81.640625,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Product focus",
+            "href": "#products",
+            "exists": true,
+            "rect": {
+              "width": 93.90625,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Discuss your brief ↗",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 193.421875,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Discuss your sourcing brief ↗",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 262.71875,
+              "height": 54
+            },
+            "visible": true
+          },
+          {
+            "label": "Email your brief ↗",
+            "href": "mailto:hello@example.com",
+            "exists": true,
+            "rect": {
+              "width": 184.828125,
+              "height": 54
+            },
+            "visible": true
+          },
+          {
+            "label": "meridian.",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 637,
+              "height": 46.1875
+            },
+            "visible": true
+          },
+          {
+            "label": "hello@example.com",
+            "href": "mailto:hello@example.com",
+            "exists": true,
+            "rect": {
+              "width": 637,
+              "height": 44
+            },
+            "visible": true
+          }
+        ],
+        "requests": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap",
+          "assets/css/style.css",
+          "assets/js/main.js"
+        ]
+      },
+      "console": [],
+      "network": [],
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "foreground": "rgb(255, 255, 255)",
+            "background": [
+              33,
+              77,
+              176
+            ],
+            "ratio": 7.63,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "meridian.",
+            "foreground": "rgb(24, 40, 62)",
+            "background": [
+              247,
+              249,
+              252
+            ],
+            "ratio": 14.1,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "brand__dot",
+            "text": ".",
+            "foreground": "rgb(33, 77, 176)",
+            "background": [
+              247,
+              249,
+              252
+            ],
+            "ratio": 7.23,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Our expertise",
+            "foreground": "rgb(24, 40, 62)",
+            "background": [
+              247,
+              249,
+              252
+            ],
+            "ratio": 14.1,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Sourcing. Production. Export.",
+            "foreground": "rgb(33, 77, 176)",
+            "background": [
+              247,
+              249,
+              252
+            ],
+            "ratio": 7.23,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "hero__intro",
+            "text": "A clear route from product requirements to su",
+            "foreground": "rgb(82, 97, 118)",
+            "background": [
+              247,
+              249,
+              252
+            ],
+            "ratio": 5.98,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "The route we take together",
+            "foreground": "rgb(33, 77, 176)",
+            "background": [
+              234,
+              240,
+              248
+            ],
+            "ratio": 6.65,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Clarity beforecommitment.",
+            "foreground": "rgb(24, 40, 62)",
+            "background": [
+              234,
+              240,
+              248
+            ],
+            "ratio": 12.97,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Know what is being made, what comes next and ",
+            "foreground": "rgb(82, 97, 118)",
+            "background": [
+              234,
+              240,
+              248
+            ],
+            "ratio": 5.5,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Define the brief",
+            "foreground": "rgb(24, 40, 62)",
+            "background": [
+              234,
+              240,
+              248
+            ],
+            "ratio": 12.97,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Start with a conversation",
+            "foreground": "rgb(233, 240, 255)",
+            "background": [
+              33,
+              77,
+              176
+            ],
+            "ratio": 6.67,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "A product in mind?Let's map the route.",
+            "foreground": "rgb(255, 255, 255)",
+            "background": [
+              33,
+              77,
+              176
+            ],
+            "ratio": 7.63,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "button button--light",
+            "text": "Email your brief ↗",
+            "foreground": "rgb(33, 77, 176)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.63,
+            "threshold": 4.5,
+            "pass": true
+          }
+        ],
+        "focus": [
+          {
+            "element": "Discuss your sourcing brief ↗",
+            "colour": "rgb(24, 40, 62)",
+            "width": "3px",
+            "ratio": 14.1
+          }
+        ]
+      },
+      "hoverContrast": [
+        {
+          "selector": ".button",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "meridian.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__dot",
+              "text": ".",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our expertise",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Sourcing. Production. Export.",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "A clear route from product requirements to su",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 5.98,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "The route we take together",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 6.65,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Clarity beforecommitment.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "P",
+              "text": "Know what is being made, what comes next and ",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 5.5,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H3",
+              "text": "Define the brief",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Start with a conversation",
+              "foreground": "rgb(233, 240, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 6.67,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "A product in mind?Let's map the route.",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "button button--light",
+              "text": "Email your brief ↗",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Discuss your sourcing brief ↗",
+              "colour": "rgb(24, 40, 62)",
+              "width": "3px",
+              "ratio": 14.1
+            }
+          ]
+        },
+        {
+          "selector": ".site-nav a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "meridian.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__dot",
+              "text": ".",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our expertise",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "The process",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Discuss your brief ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                28,
+                67,
+                156
+              ],
+              "ratio": 9,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "A clear route from product requirements to su",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 5.98,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "The route we take together",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 6.65,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Clarity beforecommitment.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "P",
+              "text": "Know what is being made, what comes next and ",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 5.5,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H3",
+              "text": "Define the brief",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Start with a conversation",
+              "foreground": "rgb(233, 240, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 6.67,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "A product in mind?Let's map the route.",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "button button--light",
+              "text": "Email your brief ↗",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Discuss your sourcing brief ↗",
+              "colour": "rgb(24, 40, 62)",
+              "width": "3px",
+              "ratio": 14.1
+            }
+          ]
+        },
+        {
+          "selector": ".site-footer > a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "meridian.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__dot",
+              "text": ".",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our expertise",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Discuss your brief ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                32,
+                76,
+                173
+              ],
+              "ratio": 7.78,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Sourcing. Production. Export.",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "A clear route from product requirements to su",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 5.98,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "The route we take together",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 6.65,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Clarity beforecommitment.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "P",
+              "text": "Know what is being made, what comes next and ",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 5.5,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H3",
+              "text": "Define the brief",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Start with a conversation",
+              "foreground": "rgb(233, 240, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 6.67,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "A product in mind?Let's map the route.",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "button button--light",
+              "text": "Email your brief ↗",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Discuss your sourcing brief ↗",
+              "colour": "rgb(24, 40, 62)",
+              "width": "3px",
+              "ratio": 14.1
+            }
+          ]
+        },
+        {
+          "selector": ".contact a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "meridian.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__dot",
+              "text": ".",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our expertise",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Sourcing. Production. Export.",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "A clear route from product requirements to su",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 5.98,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "The route we take together",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 6.65,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Clarity beforecommitment.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "P",
+              "text": "Know what is being made, what comes next and ",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 5.5,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H3",
+              "text": "Define the brief",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Start with a conversation",
+              "foreground": "rgb(233, 240, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 6.67,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "A product in mind?Let's map the route.",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "button button--light",
+              "text": "Email your brief ↗",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Discuss your sourcing brief ↗",
+              "colour": "rgb(24, 40, 62)",
+              "width": "3px",
+              "ratio": 14.1
+            }
+          ]
+        }
+      ],
+      "axe": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 3044,
+          "viewportHeight": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 3585,
+          "viewportHeight": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 4730,
+          "viewportHeight": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 4731,
+          "viewportHeight": 740,
+          "smallTargets": []
+        }
+      ],
+      "fallbacks": {
+        "zoom200": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 7765
+        },
+        "reduced": true,
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 3044,
+          "visible": true,
+          "styled": true
+        },
+        "noJSAndFonts": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 4904,
+          "content": true,
+          "nav": true
+        },
+        "offlineFile": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 4682,
+          "visible": true
+        }
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "reverseTab": true,
+        "skipFocused": true,
+        "skipDestination": true,
+        "nextLink": {
+          "tag": "A",
+          "label": "Discuss your sourcing brief ↗"
+        }
+      },
+      "menu": {
+        "open": true,
+        "openDimensions": {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 4952
+        },
+        "escape": true,
+        "linkCloses": true,
+        "desktopReset": true,
+        "mobileReset": true
+      },
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "header": true,
+        "nav": true,
+        "main": true,
+        "footer": true,
+        "duplicateIds": [],
+        "headingJumps": [],
+        "svg": [
+          {
+            "name": "",
+            "role": null,
+            "hidden": "true",
+            "focusable": "false",
+            "viewBox": "0 0 36 36"
+          },
+          {
+            "name": "An isometric stack of blue and white cargo containers with route lines",
+            "role": "img",
+            "hidden": null,
+            "focusable": "false",
+            "viewBox": "0 0 660 650"
+          },
+          {
+            "name": "Home goods: two sculptural ceramic vases",
+            "role": "img",
+            "hidden": null,
+            "focusable": "false",
+            "viewBox": "0 0 380 290"
+          },
+          {
+            "name": "Packaging: folded blue and natural-colour cartons",
+            "role": "img",
+            "hidden": null,
+            "focusable": "false",
+            "viewBox": "0 0 380 290"
+          },
+          {
+            "name": "Textiles: folded fabric layers in neutral and blue tones",
+            "role": "img",
+            "hidden": null,
+            "focusable": "false",
+            "viewBox": "0 0 380 290"
+          }
+        ],
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 147.63333129882812,
+              "height": 50.40000915527344
+            },
+            "visible": true
+          },
+          {
+            "label": "Meridian home",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 157.56666564941406,
+              "height": 46.20001220703125
+            },
+            "visible": true
+          },
+          {
+            "label": "Our expertise",
+            "href": "#expertise",
+            "exists": true,
+            "rect": {
+              "width": 90.65000915527344,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "The process",
+            "href": "#process",
+            "exists": true,
+            "rect": {
+              "width": 81.63333129882812,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Product focus",
+            "href": "#products",
+            "exists": true,
+            "rect": {
+              "width": 93.91667175292969,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Discuss your brief ↗",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 193.71665954589844,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Discuss your sourcing brief ↗",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 263.01666259765625,
+              "height": 54
+            },
+            "visible": true
+          },
+          {
+            "label": "Email your brief ↗",
+            "href": "mailto:hello@example.com",
+            "exists": true,
+            "rect": {
+              "width": 185.10000610351562,
+              "height": 54
+            },
+            "visible": true
+          },
+          {
+            "label": "meridian.",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 637,
+              "height": 46.19999694824219
+            },
+            "visible": true
+          },
+          {
+            "label": "hello@example.com",
+            "href": "mailto:hello@example.com",
+            "exists": true,
+            "rect": {
+              "width": 637,
+              "height": 44
+            },
+            "visible": true
+          }
+        ],
+        "requests": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap",
+          "assets/css/style.css",
+          "assets/js/main.js"
+        ]
+      },
+      "console": [],
+      "network": [],
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "foreground": "rgb(255, 255, 255)",
+            "background": [
+              33,
+              77,
+              176
+            ],
+            "ratio": 7.63,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "meridian.",
+            "foreground": "rgb(24, 40, 62)",
+            "background": [
+              247,
+              249,
+              252
+            ],
+            "ratio": 14.1,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "brand__dot",
+            "text": ".",
+            "foreground": "rgb(33, 77, 176)",
+            "background": [
+              247,
+              249,
+              252
+            ],
+            "ratio": 7.23,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Our expertise",
+            "foreground": "rgb(24, 40, 62)",
+            "background": [
+              247,
+              249,
+              252
+            ],
+            "ratio": 14.1,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Sourcing. Production. Export.",
+            "foreground": "rgb(33, 77, 176)",
+            "background": [
+              247,
+              249,
+              252
+            ],
+            "ratio": 7.23,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "hero__intro",
+            "text": "A clear route from product requirements to su",
+            "foreground": "rgb(82, 97, 118)",
+            "background": [
+              247,
+              249,
+              252
+            ],
+            "ratio": 5.98,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "The route we take together",
+            "foreground": "rgb(33, 77, 176)",
+            "background": [
+              234,
+              240,
+              248
+            ],
+            "ratio": 6.65,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Clarity beforecommitment.",
+            "foreground": "rgb(24, 40, 62)",
+            "background": [
+              234,
+              240,
+              248
+            ],
+            "ratio": 12.97,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Know what is being made, what comes next and ",
+            "foreground": "rgb(82, 97, 118)",
+            "background": [
+              234,
+              240,
+              248
+            ],
+            "ratio": 5.5,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Define the brief",
+            "foreground": "rgb(24, 40, 62)",
+            "background": [
+              234,
+              240,
+              248
+            ],
+            "ratio": 12.97,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Start with a conversation",
+            "foreground": "rgb(233, 240, 255)",
+            "background": [
+              33,
+              77,
+              176
+            ],
+            "ratio": 6.67,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "A product in mind?Let's map the route.",
+            "foreground": "rgb(255, 255, 255)",
+            "background": [
+              33,
+              77,
+              176
+            ],
+            "ratio": 7.63,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "button button--light",
+            "text": "Email your brief ↗",
+            "foreground": "rgb(33, 77, 176)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.63,
+            "threshold": 4.5,
+            "pass": true
+          }
+        ],
+        "focus": [
+          {
+            "element": "Discuss your sourcing brief ↗",
+            "colour": "rgb(24, 40, 62)",
+            "width": "3px",
+            "ratio": 14.1
+          }
+        ]
+      },
+      "hoverContrast": [
+        {
+          "selector": ".button",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "meridian.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__dot",
+              "text": ".",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our expertise",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Sourcing. Production. Export.",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "A clear route from product requirements to su",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 5.98,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "The route we take together",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 6.65,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Clarity beforecommitment.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "P",
+              "text": "Know what is being made, what comes next and ",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 5.5,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H3",
+              "text": "Define the brief",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Start with a conversation",
+              "foreground": "rgb(233, 240, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 6.67,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "A product in mind?Let's map the route.",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "button button--light",
+              "text": "Email your brief ↗",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Discuss your sourcing brief ↗",
+              "colour": "rgb(24, 40, 62)",
+              "width": "3px",
+              "ratio": 14.1
+            }
+          ]
+        },
+        {
+          "selector": ".site-nav a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "meridian.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__dot",
+              "text": ".",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our expertise",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "The process",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Discuss your brief ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                28,
+                66,
+                156
+              ],
+              "ratio": 9.1,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "A clear route from product requirements to su",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 5.98,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "The route we take together",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 6.65,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Clarity beforecommitment.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "P",
+              "text": "Know what is being made, what comes next and ",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 5.5,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H3",
+              "text": "Define the brief",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Start with a conversation",
+              "foreground": "rgb(233, 240, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 6.67,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "A product in mind?Let's map the route.",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "button button--light",
+              "text": "Email your brief ↗",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Discuss your sourcing brief ↗",
+              "colour": "rgb(24, 40, 62)",
+              "width": "3px",
+              "ratio": 14.1
+            }
+          ]
+        },
+        {
+          "selector": ".site-footer > a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "meridian.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__dot",
+              "text": ".",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our expertise",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Discuss your brief ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                32,
+                76,
+                173
+              ],
+              "ratio": 7.78,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Sourcing. Production. Export.",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "A clear route from product requirements to su",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 5.98,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "The route we take together",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 6.65,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Clarity beforecommitment.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "P",
+              "text": "Know what is being made, what comes next and ",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 5.5,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H3",
+              "text": "Define the brief",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Start with a conversation",
+              "foreground": "rgb(233, 240, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 6.67,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "A product in mind?Let's map the route.",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "button button--light",
+              "text": "Email your brief ↗",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Discuss your sourcing brief ↗",
+              "colour": "rgb(24, 40, 62)",
+              "width": "3px",
+              "ratio": 14.1
+            }
+          ]
+        },
+        {
+          "selector": ".contact a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "meridian.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__dot",
+              "text": ".",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our expertise",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 14.1,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Sourcing. Production. Export.",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 7.23,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "A clear route from product requirements to su",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                247,
+                249,
+                252
+              ],
+              "ratio": 5.98,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "The route we take together",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 6.65,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Clarity beforecommitment.",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "P",
+              "text": "Know what is being made, what comes next and ",
+              "foreground": "rgb(82, 97, 118)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 5.5,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H3",
+              "text": "Define the brief",
+              "foreground": "rgb(24, 40, 62)",
+              "background": [
+                234,
+                240,
+                248
+              ],
+              "ratio": 12.97,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Start with a conversation",
+              "foreground": "rgb(233, 240, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 6.67,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "A product in mind?Let's map the route.",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                33,
+                77,
+                176
+              ],
+              "ratio": 7.63,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "button button--light",
+              "text": "Email your brief ↗",
+              "foreground": "rgb(33, 77, 176)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.63,
+              "threshold": 4.5,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Discuss your sourcing brief ↗",
+              "colour": "rgb(24, 40, 62)",
+              "width": "3px",
+              "ratio": 14.1
+            }
+          ]
+        }
+      ],
+      "axe": []
+    }
+  },
+  "errors": [],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unknownInputMarkers": [],
+    "countErrors": []
+  },
+  "media": {
+    "viewport": "1396x1048",
+    "poster": "698x524 WebP",
+    "durationApproxSeconds": 11,
+    "bytes": 574188,
+    "video": "/previews/meridian.mp4",
+    "source": "D:\\3. Dự án\\2A\\_design\\product-reviews\\meridian\\1.0.0\\recordings\\page@660a8edd1b092ad8f566fdf14740dc9e.webm"
+  }
+}

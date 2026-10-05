@@ -1,0 +1,1141 @@
+{
+  "slug": "solenne",
+  "version": "2.0.1",
+  "date": "2026-10-03T09:21:44.745Z",
+  "os": "win32",
+  "zipBytes": 380264,
+  "sha256": "fd2d6855277c69d35f2e714962f56743ac2976f99b52f56ac1bc17715ef3e8a1",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#main"
+          },
+          {
+            "label": "Solenne home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#main"
+          },
+          {
+            "label": "Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#main"
+          },
+          {
+            "label": "Collection",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#collection"
+          },
+          {
+            "label": "Ingredients",
+            "href": "#ingredients",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#ingredients"
+          },
+          {
+            "label": "Our story",
+            "href": "#philosophy",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#philosophy"
+          },
+          {
+            "label": "Journal",
+            "href": "#journal",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#journal"
+          },
+          {
+            "label": "Find your ritual ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#contact"
+          },
+          {
+            "label": "Explore skincare →",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#collection"
+          },
+          {
+            "label": "Our philosophy",
+            "href": "#philosophy",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#philosophy"
+          },
+          {
+            "label": "Find your ritual →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#contact"
+          },
+          {
+            "label": "Enquire about skincare ↗",
+            "href": "mailto:hello@example.com?subject=Solenne%20Glow%20Serum",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Solenne%20Glow%20Serum"
+          },
+          {
+            "label": "Enquire about skincare ↗",
+            "href": "mailto:hello@example.com?subject=Solenne%20Daily%20Cream",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Solenne%20Daily%20Cream"
+          },
+          {
+            "label": "Find your ritual →",
+            "href": "mailto:hello@example.com?subject=Find%20my%20Solenne%20ritual",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Find%20my%20Solenne%20ritual"
+          },
+          {
+            "label": "SOLENNE",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#main"
+          },
+          {
+            "label": "Our philosophy",
+            "href": "#philosophy",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#philosophy"
+          },
+          {
+            "label": "Contact us",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              48,
+              40,
+              32
+            ],
+            "ratio": 14.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "SOLENNECONSIDERED SKINCARE",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              251,
+              245,
+              239
+            ],
+            "ratio": 13.39,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "CONSIDERED SKINCARE",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              251,
+              245,
+              239
+            ],
+            "ratio": 13.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A little care. A little radiance.",
+            "colour": "rgb(148, 80, 61)",
+            "background": [
+              250,
+              244,
+              237
+            ],
+            "ratio": 5.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Glow beyondthe surface.",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              249,
+              242,
+              234
+            ],
+            "ratio": 13.05,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Glow",
+            "colour": "rgb(166, 94, 73)",
+            "background": [
+              250,
+              244,
+              238
+            ],
+            "ratio": 4.45,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Considered skincare. Gentle daily ritual",
+            "colour": "rgb(99, 86, 76)",
+            "background": [
+              250,
+              242,
+              235
+            ],
+            "ratio": 6.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore skincare →",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              166,
+              94,
+              73
+            ],
+            "ratio": 4.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button button--outline",
+            "text": "Our philosophy",
+            "colour": "rgb(148, 80, 61)",
+            "background": [
+              253,
+              248,
+              242
+            ],
+            "ratio": 5.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "Thoughtful ingredients",
+            "colour": "rgb(99, 86, 76)",
+            "background": [
+              251,
+              245,
+              239
+            ],
+            "ratio": 6.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "A fresh start",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              255,
+              250,
+              246
+            ],
+            "ratio": 13.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Make room for a little everyday radiance",
+            "colour": "rgb(99, 86, 76)",
+            "background": [
+              255,
+              250,
+              246
+            ],
+            "ratio": 6.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Real skin.A softer ritual.",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              255,
+              250,
+              246
+            ],
+            "ratio": 13.97,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "A softer ritual.",
+            "colour": "rgb(166, 94, 73)",
+            "background": [
+              255,
+              250,
+              246
+            ],
+            "ratio": 4.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Find your ritual →",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              166,
+              94,
+              73
+            ],
+            "ratio": 4.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "01 / THE FIRST LAYER",
+            "colour": "rgb(148, 80, 61)",
+            "background": [
+              251,
+              245,
+              239
+            ],
+            "ratio": 5.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01 — YOUR MORNING",
+            "colour": "rgb(148, 80, 61)",
+            "background": [
+              255,
+              250,
+              246
+            ],
+            "ratio": 5.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A conversation, just for you",
+            "colour": "rgb(148, 80, 61)",
+            "background": [
+              241,
+              226,
+              215
+            ],
+            "ratio": 4.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "A little glow.A little guidance.",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              241,
+              226,
+              215
+            ],
+            "ratio": 11.45,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Tell us what you are looking for. We wou",
+            "colour": "rgb(99, 86, 76)",
+            "background": [
+              241,
+              226,
+              215
+            ],
+            "ratio": 5.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore skincare →",
+          "colour": "rgb(166, 94, 73)",
+          "width": "3px",
+          "ratio": 4.01
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#main"
+          },
+          {
+            "label": "Solenne home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#main"
+          },
+          {
+            "label": "Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#main"
+          },
+          {
+            "label": "Collection",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#collection"
+          },
+          {
+            "label": "Ingredients",
+            "href": "#ingredients",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#ingredients"
+          },
+          {
+            "label": "Our story",
+            "href": "#philosophy",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#philosophy"
+          },
+          {
+            "label": "Journal",
+            "href": "#journal",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#journal"
+          },
+          {
+            "label": "Find your ritual ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#contact"
+          },
+          {
+            "label": "Explore skincare →",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#collection"
+          },
+          {
+            "label": "Our philosophy",
+            "href": "#philosophy",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#philosophy"
+          },
+          {
+            "label": "Find your ritual →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#contact"
+          },
+          {
+            "label": "Enquire about skincare ↗",
+            "href": "mailto:hello@example.com?subject=Solenne%20Glow%20Serum",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Solenne%20Glow%20Serum"
+          },
+          {
+            "label": "Enquire about skincare ↗",
+            "href": "mailto:hello@example.com?subject=Solenne%20Daily%20Cream",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Solenne%20Daily%20Cream"
+          },
+          {
+            "label": "Find your ritual →",
+            "href": "mailto:hello@example.com?subject=Find%20my%20Solenne%20ritual",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Find%20my%20Solenne%20ritual"
+          },
+          {
+            "label": "SOLENNE",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#main"
+          },
+          {
+            "label": "Our philosophy",
+            "href": "#philosophy",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#philosophy"
+          },
+          {
+            "label": "Contact us",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/solenne/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              48,
+              40,
+              32
+            ],
+            "ratio": 14.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "SOLENNECONSIDERED SKINCARE",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              251,
+              245,
+              239
+            ],
+            "ratio": 13.39,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "CONSIDERED SKINCARE",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              251,
+              245,
+              239
+            ],
+            "ratio": 13.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A little care. A little radiance.",
+            "colour": "rgb(148, 80, 61)",
+            "background": [
+              251,
+              244,
+              239
+            ],
+            "ratio": 5.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Glow beyondthe surface.",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              250,
+              242,
+              234
+            ],
+            "ratio": 13.07,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Glow",
+            "colour": "rgb(166, 94, 73)",
+            "background": [
+              251,
+              245,
+              239
+            ],
+            "ratio": 4.49,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Considered skincare. Gentle daily ritual",
+            "colour": "rgb(99, 86, 76)",
+            "background": [
+              250,
+              243,
+              237
+            ],
+            "ratio": 6.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore skincare →",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              166,
+              94,
+              73
+            ],
+            "ratio": 4.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button button--outline",
+            "text": "Our philosophy",
+            "colour": "rgb(148, 80, 61)",
+            "background": [
+              253,
+              248,
+              243
+            ],
+            "ratio": 5.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "Thoughtful ingredients",
+            "colour": "rgb(99, 86, 76)",
+            "background": [
+              251,
+              245,
+              239
+            ],
+            "ratio": 6.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "A fresh start",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              255,
+              250,
+              246
+            ],
+            "ratio": 13.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Make room for a little everyday radiance",
+            "colour": "rgb(99, 86, 76)",
+            "background": [
+              255,
+              250,
+              246
+            ],
+            "ratio": 6.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Real skin.A softer ritual.",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              255,
+              250,
+              246
+            ],
+            "ratio": 13.97,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "A softer ritual.",
+            "colour": "rgb(166, 94, 73)",
+            "background": [
+              255,
+              250,
+              246
+            ],
+            "ratio": 4.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Find your ritual →",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              166,
+              94,
+              73
+            ],
+            "ratio": 4.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "01 / THE FIRST LAYER",
+            "colour": "rgb(148, 80, 61)",
+            "background": [
+              251,
+              245,
+              239
+            ],
+            "ratio": 5.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01 — YOUR MORNING",
+            "colour": "rgb(148, 80, 61)",
+            "background": [
+              255,
+              250,
+              246
+            ],
+            "ratio": 5.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A conversation, just for you",
+            "colour": "rgb(148, 80, 61)",
+            "background": [
+              241,
+              226,
+              215
+            ],
+            "ratio": 4.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "A little glow.A little guidance.",
+            "colour": "rgb(48, 40, 32)",
+            "background": [
+              241,
+              226,
+              215
+            ],
+            "ratio": 11.45,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Tell us what you are looking for. We wou",
+            "colour": "rgb(99, 86, 76)",
+            "background": [
+              241,
+              226,
+              215
+            ],
+            "ratio": 5.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore skincare →",
+          "colour": "rgb(166, 94, 73)",
+          "width": "3px",
+          "ratio": 4.01
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "solenne/assets/css/style.css",
+    "solenne/assets/img/gift.webp",
+    "solenne/assets/img/hero.webp",
+    "solenne/assets/img/skin.webp",
+    "solenne/assets/js/main.js",
+    "solenne/CUSTOMISE.md",
+    "solenne/index.html",
+    "solenne/LICENCE.txt",
+    "solenne/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/gift.webp",
+    "assets/img/hero.webp",
+    "assets/img/skin.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

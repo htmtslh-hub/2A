@@ -8,7 +8,14 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       // Những đường dẫn chỉ có nghĩa với người đã đăng nhập hoặc đang thanh
       // toán — không có nội dung để lập chỉ mục, và không nên lộ ra tìm kiếm.
-      disallow: ['/api/', '/don-hang', '/dat-lai-mat-khau', '/thanh-toan/'],
+      disallow: [
+        '/api/',
+        '/don-hang',
+        '/dat-lai-mat-khau',
+        '/thanh-toan/',
+        '/dich-vu',
+        '/du-an',
+      ],
     },
     sitemap: `${COMPANY.siteUrl}/sitemap.xml`,
   };

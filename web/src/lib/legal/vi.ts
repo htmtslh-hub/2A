@@ -22,6 +22,7 @@ export const LEGAL_VI: LegalPack = {
         p: [
           'Chúng tôi bán giao diện web dựng sẵn dưới dạng sản phẩm số: mã nguồn HTML, CSS, JavaScript kèm nội dung mẫu và tài liệu hướng dẫn tuỳ biến.',
           'Sản phẩm được giao bằng đường tải về, không có hàng vật lý và không phát sinh phí vận chuyển.',
+          'Giá bán chỉ dành cho file template có sẵn. Đơn hàng không bao gồm thiết kế, lập trình, tư vấn hoặc cài đặt theo yêu cầu.',
           'Ảnh và nội dung minh hoạ trong bản demo chỉ nhằm trình bày bố cục, có thể không đi kèm trong file bàn giao nếu bị ràng buộc bản quyền của bên thứ ba.',
         ],
       },
@@ -244,7 +245,7 @@ export const LEGAL_VI: LegalPack = {
   license: {
     title: 'Giấy phép sử dụng',
     intro:
-      'Tóm gọn: bạn được dùng giao diện cho dự án của mình và của khách hàng, không giới hạn số lần. Điều duy nhất không được làm là bán lại chính file đó.',
+      'Tóm gọn: bạn được dùng giao diện để tạo website thương mại, không giới hạn số lần. Điều duy nhất không được làm là bán lại chính file đó.',
     sections: [
       {
         h: '1. Bạn nhận được gì',
@@ -257,7 +258,7 @@ export const LEGAL_VI: LegalPack = {
         h: '2. Bạn được làm',
         p: [
           'Dùng cho website của chính bạn hoặc của doanh nghiệp bạn.',
-          'Dùng cho dự án của khách hàng, và tính phí dịch vụ với khách hàng đó.',
+          'Dùng trong website hoàn chỉnh thuộc quyền quản lý của bạn hoặc khách hàng của bạn.',
           'Chỉnh sửa tuỳ ý: đổi bố cục, màu sắc, font, nội dung, viết thêm mã.',
           'Dùng lại cho nhiều dự án khác nhau, không giới hạn số lần.',
           'Dùng cho website có thu tiền: bán hàng, thu phí thành viên, quảng cáo.',

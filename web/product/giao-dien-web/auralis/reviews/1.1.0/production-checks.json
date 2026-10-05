@@ -1,0 +1,65 @@
+{
+  "origin": "https://forgezone.store",
+  "title": "Forge Zone — Premium ready-made website templates",
+  "auralisVisible": true,
+  "errors": [],
+  "assets": [
+    {
+      "path": "/demos/auralis/index.html",
+      "status": 200,
+      "bytes": 9523
+    },
+    {
+      "path": "/demos/auralis/assets/css/style.css",
+      "status": 200,
+      "bytes": 19959
+    },
+    {
+      "path": "/demos/auralis/assets/js/main.js",
+      "status": 200,
+      "bytes": 11144
+    },
+    {
+      "path": "/demos/auralis/assets/images/earbuds.webp",
+      "status": 200,
+      "bytes": 86356
+    },
+    {
+      "path": "/demos/auralis/assets/images/airbuds.webp",
+      "status": 200,
+      "bytes": 52792
+    },
+    {
+      "path": "/demos/auralis/assets/images/studiobuds.webp",
+      "status": 200,
+      "bytes": 106004
+    },
+    {
+      "path": "/demos/auralis/assets/images/charging-kit.webp",
+      "status": 200,
+      "bytes": 80064
+    },
+    {
+      "path": "/previews/auralis.webp",
+      "status": 200,
+      "bytes": 45820
+    },
+    {
+      "path": "/previews/auralis-tablet.webp",
+      "status": 200,
+      "bytes": 27870
+    },
+    {
+      "path": "/previews/auralis-mobile.webp",
+      "status": 200,
+      "bytes": 18538
+    },
+    {
+      "path": "/previews/auralis.mp4",
+      "status": 200,
+      "bytes": 557583
+    }
+  ],
+  "unauthenticatedDownloadStatus": 401,
+  "zipIncludedInDownloadTrace": true
+}

@@ -1,0 +1,62 @@
+{
+  "origin": "https://forgezone.store",
+  "routes": [
+    {
+      "path": "/demos/auralis/index.html?v=1.2.1&motion=on",
+      "status": 307,
+      "location": "/demos/auralis/index.html?v=1.2.3&motion=on",
+      "cache": "no-store, max-age=0",
+      "version": "1.2.3"
+    },
+    {
+      "path": "/demos/auralis?v=1.2.0&motion=off",
+      "status": 307,
+      "location": "/demos/auralis/index.html?v=1.2.3&motion=off",
+      "cache": "no-store, max-age=0",
+      "version": "1.2.3"
+    },
+    {
+      "path": "/demos/auralis",
+      "status": 307,
+      "location": "/demos/auralis/index.html?v=1.2.3",
+      "cache": "no-store, max-age=0",
+      "version": "1.2.3"
+    },
+    {
+      "path": "/demos/auralis/index.html?v=1.2.3&motion=on",
+      "status": 200,
+      "location": null,
+      "cache": "no-store, max-age=0",
+      "version": "1.2.3"
+    },
+    {
+      "path": "/demos/auralis/assets/js/main.js?v=1.2.1",
+      "status": 200,
+      "location": null,
+      "cache": "no-store, max-age=0",
+      "version": "1.2.3"
+    },
+    {
+      "path": "/demos/auralis/assets/css/style.css?v=1.2.1",
+      "status": 200,
+      "location": null,
+      "cache": "no-store, max-age=0",
+      "version": "1.2.3"
+    }
+  ],
+  "browser": {
+    "version": "152.0.7977.124",
+    "loaded": {
+      "url": "https://forgezone.store/demos/auralis/index.html?v=1.2.3&motion=on",
+      "scripts": [
+        "https://forgezone.store/demos/auralis/assets/js/main.js?v=1.2.3"
+      ],
+      "css": [
+        "https://forgezone.store/demos/auralis/assets/css/style.css?v=1.2.3"
+      ],
+      "motion": true
+    }
+  },
+  "failures": [],
+  "pass": true
+}

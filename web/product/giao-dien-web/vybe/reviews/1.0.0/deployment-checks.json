@@ -1,0 +1,40 @@
+{
+  "deployment": "dpl_5TyTZhTN4XMTUZm7X7MHHCfYrrvA",
+  "date": "2026-10-05T03:41:12.696Z",
+  "urls": [
+    {
+      "path": "/demos/vybe/",
+      "status": 200
+    },
+    {
+      "path": "/demos/vybe/assets/css/style.css",
+      "status": 200
+    },
+    {
+      "path": "/demos/vybe/assets/js/main.js",
+      "status": 200
+    },
+    {
+      "path": "/demos/vybe/assets/img/edge.webp",
+      "status": 200
+    },
+    {
+      "path": "/previews/vybe.webp",
+      "status": 200
+    },
+    {
+      "path": "/demos/meridian/",
+      "status": 404
+    }
+  ],
+  "animation": {
+    "running": 2,
+    "triangles": 2
+  },
+  "product": "Bloom Tee",
+  "catalog": {
+    "vybe": true,
+    "meridian": false
+  },
+  "errors": []
+}

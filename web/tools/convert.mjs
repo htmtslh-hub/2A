@@ -28,6 +28,16 @@ let markupHtml = raw.slice(bodyStart, bodyEnd);
    không khớp thì dừng, để không âm thầm mất nút mua khi thiết kế đổi. */
 const REWIRE = [
   {
+    what: 'hướng dẫn sản phẩm ngay sau các nút mua và xem trước',
+    find: /(\{\{ t\.dLive \}\}(?:\s*↗)?\s*<\/button>\s*<\/div>)/,
+    replace: '$1<div data-customer-guide=""></div>',
+  },
+  {
+    what: 'liên kết hướng dẫn trong menu mở rộng',
+    find: /(<sc-for list="\{\{ navLinks \}\}"[\s\S]*?<\/sc-for>)/,
+    replace: '$1<a href="{{ guideHref }}" style="font-size:16px; padding:16px 0; color:#f7b1ab;">{{ guideLabel }} →</a>',
+  },
+  {
     what: 'nút "Mua giao diện này" ở trang chi tiết',
     // <button onClick="{{ goPricing }}" …>{{ t.dBuy }}
     find: /(<button onClick=")\{\{ goPricing \}\}("[^>]*>\s*\{\{ t\.dBuy \}\})/,
@@ -151,15 +161,7 @@ const GLOBAL_SUB = [
     // khách không gửi thư vào hư không.
     from: 'hello@agentic.vn',
     to: '{{ contactEmail }}',
-    times: 5,
-  },
-  {
-    what: 'thanh địa chỉ giả trong ảnh mô phỏng trình duyệt',
-    // Thiết kế ghi cứng tên miền cũ. Trỏ về COMPANY.siteUrl để sau này đổi
-    // tên miền thì chỉ sửa một chỗ.
-    from: 'agentic.vn/{{ detail.id }}',
-    to: '{{ siteHost }}/{{ detail.id }}',
-    times: 1,
+    times: 3,
   },
   {
     what: 'màu chữ phụ quá tối (tương phản 3.16, chuẩn cần 4.5)',
@@ -421,6 +423,8 @@ function emit(node, scope, indent) {
   const isSlot = tag === 'image-slot';
   const name = isSlot ? 'ImageSlot' : tag;
   const attrParts = [];
+  // Detail previews need an explicit play control when autoplay is suppressed.
+  if (isSlot && a.id === '{{ detail.slotId }}') attrParts.push('videoControls');
   let className = null;
   let styleCss = null;      // nội dung thuộc tính style gốc
   const styleVars = [];     // biến CSS phục vụ hover/focus động
@@ -525,7 +529,10 @@ function emitWithKey(node, scope, indent, idxName) {
 
 /* ---------- 5. chạy ---------- */
 const frag = parseFragment(markupHtml);
-const jsxBody = frag.childNodes.map((n) => emit(n, new Set(), 3)).join('');
+let jsxBody = frag.childNodes.map((n) => emit(n, new Set(), 3)).join('');
+const guideSlot = '<div data-customer-guide="" />';
+if (jsxBody.split(guideSlot).length !== 2) throw new Error('Missing or duplicate customer guide slot');
+jsxBody = jsxBody.replace(guideSlot, '{vm.guideSlug ? <ProductHelp lang={vm.guideLang} slug={vm.guideSlug} /> : null}');
 
 const tsx =
   '/* TỰ ĐỘNG SINH từ _src/Agentic.dc.html — chạy `npm run convert` để tạo lại.\n' +
@@ -535,6 +542,7 @@ const tsx =
   "'use client';\n" +
   "import React from 'react';\n" +
   "import ImageSlot from '@/components/ImageSlot';\n" +
+  "import ProductHelp from '@/components/guide/ProductHelp';\n" +
   "import type { View } from '@/lib/view';\n" +
   '\n' +
   'export default function AgenticMarkup({ vm }: { vm: View }) {\n' +

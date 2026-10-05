@@ -1,0 +1,177 @@
+{
+  "url": "file:///D:/3.%20D%E1%BB%B1%20%C3%A1n/2A/skill/skill-morge/assets/demo.html",
+  "cases": [
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "transitions": [
+        {
+          "from": 0,
+          "to": 1,
+          "direction": 1,
+          "samples": 72
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "direction": 1,
+          "samples": 71
+        },
+        {
+          "from": 2,
+          "to": 0,
+          "direction": 1,
+          "samples": 73
+        },
+        {
+          "from": 0,
+          "to": 2,
+          "direction": -1,
+          "samples": 72
+        },
+        {
+          "from": 2,
+          "to": 1,
+          "direction": -1,
+          "samples": 73
+        },
+        {
+          "from": 1,
+          "to": 0,
+          "direction": -1,
+          "samples": 72
+        }
+      ],
+      "idleRafRequests": 0
+    },
+    {
+      "name": "responsive-820x1180",
+      "overflow": false,
+      "centerError": 0,
+      "minTarget": 49.1875,
+      "simulatedTouch": true,
+      "noJS": true
+    },
+    {
+      "name": "responsive-1180x820",
+      "overflow": false,
+      "centerError": 0,
+      "minTarget": 70.796875,
+      "simulatedTouch": true,
+      "noJS": true
+    },
+    {
+      "name": "responsive-375x812",
+      "overflow": false,
+      "centerError": 0,
+      "minTarget": 48,
+      "simulatedTouch": true,
+      "noJS": true
+    },
+    {
+      "name": "responsive-414x582",
+      "overflow": false,
+      "centerError": 0,
+      "minTarget": 48,
+      "simulatedTouch": true,
+      "noJS": true
+    },
+    {
+      "name": "responsive-667x375",
+      "overflow": false,
+      "centerError": 0,
+      "minTarget": 48,
+      "simulatedTouch": true,
+      "noJS": true
+    },
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "transitions": [
+        {
+          "from": 0,
+          "to": 1,
+          "direction": 1,
+          "samples": 72
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "direction": 1,
+          "samples": 73
+        },
+        {
+          "from": 2,
+          "to": 0,
+          "direction": 1,
+          "samples": 73
+        },
+        {
+          "from": 0,
+          "to": 2,
+          "direction": -1,
+          "samples": 72
+        },
+        {
+          "from": 2,
+          "to": 1,
+          "direction": -1,
+          "samples": 72
+        },
+        {
+          "from": 1,
+          "to": 0,
+          "direction": -1,
+          "samples": 72
+        }
+      ],
+      "idleRafRequests": 0
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "transitions": [
+        {
+          "from": 0,
+          "to": 1,
+          "direction": 1,
+          "samples": 73
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "direction": 1,
+          "samples": 72
+        },
+        {
+          "from": 2,
+          "to": 0,
+          "direction": 1,
+          "samples": 72
+        },
+        {
+          "from": 0,
+          "to": 2,
+          "direction": -1,
+          "samples": 73
+        },
+        {
+          "from": 2,
+          "to": 1,
+          "direction": -1,
+          "samples": 73
+        },
+        {
+          "from": 1,
+          "to": 0,
+          "direction": -1,
+          "samples": 73
+        }
+      ],
+      "idleRafRequests": 0
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "pass": true
+}

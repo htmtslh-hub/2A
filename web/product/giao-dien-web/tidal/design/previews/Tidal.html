@@ -1,0 +1,297 @@
+<!doctype html><html><head><meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap">
+  <style>
+    body { margin: 0; background: #050a1e; font-family: 'Manrope', 'Avenir Next', 'Segoe UI', sans-serif; }
+    a { color: #cfe0ff; text-decoration: none; }
+    a:hover { color: #35e0f0; }
+    .td-display { font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+    .td-glass { background: rgba(146,182,255,.07); border: 1px solid rgba(160,196,255,.16); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    @keyframes tdDrift { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-16px) rotate(-1.6deg); } }
+    @keyframes tdRise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+    @keyframes tdBubble { from { transform: translateY(0); opacity: .55; } to { transform: translateY(-150px); opacity: 0; } }
+    .td-rise { animation: tdRise .9s cubic-bezier(.22,1,.36,1) both; }
+    .td-drift { animation: tdDrift 8s ease-in-out infinite; }
+  </style>
+</head><body>
+
+
+<div style="position: relative; width: 1440px; color: #eaf2ff; overflow: hidden;
+     background:
+       radial-gradient(120% 70% at 78% 6%, rgba(53,224,240,.20) 0%, rgba(53,224,240,0) 58%),
+       radial-gradient(100% 66% at 12% 26%, rgba(123,92,255,.26) 0%, rgba(123,92,255,0) 62%),
+       radial-gradient(90% 50% at 50% 100%, rgba(23,63,140,.5) 0%, rgba(5,10,30,0) 70%),
+       linear-gradient(180deg, #060c24 0%, #0b1740 38%, #120e3c 72%, #070b22 100%);">
+
+  <!-- Ocean artwork behind the navigation and first hero section. -->
+  <div aria-hidden="true" style="position:absolute;inset:0 0 auto;height:790px;background:linear-gradient(90deg,rgba(3,12,35,.85),rgba(3,12,35,.68) 32%,rgba(3,12,35,.12) 61%,transparent 78%),url('../../source/assets/img/hero-ocean.webp') center / cover no-repeat;pointer-events:none;"></div>
+
+  <!-- ===== NAV ===== -->
+  <div style="position: relative; z-index: 5; display: flex; justify-content: center; padding: 26px 64px 0;">
+    <div class="td-glass" style="display: flex; align-items: center; gap: 36px; width: 100%; padding: 13px 14px 13px 24px; border-radius: 100px;">
+      <div style="display: flex; align-items: center; gap: 11px;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="13" stroke="#35e0f0" stroke-width="1.6"></circle>
+          <path d="M4 16c3-4 6 2 10-1s7 1 10-3" stroke="#35e0f0" stroke-width="2" stroke-linecap="round"></path>
+          <circle cx="14" cy="9" r="2.4" fill="#7b5cff"></circle>
+        </svg>
+        <span class="td-display" style="font-size: 19px; font-weight: 700; letter-spacing: -.01em;">Tidal</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 26px; font-size: 14px; font-weight: 500; color: #a9bfe6;">
+        <a href="#">Programmes</a>
+        <a href="#">Reefs</a>
+        <a href="#">Research</a>
+        <a href="#">Stories</a>
+      </div>
+      <div style="flex-grow: 1;"></div>
+      <a href="#" style="font-size: 14px; font-weight: 500; color: #a9bfe6;">Sign in</a>
+      <a href="#" style="display: inline-flex; align-items: center; gap: 9px; padding: 12px 24px; border-radius: 100px; background: linear-gradient(135deg, #35e0f0 0%, #7b5cff 100%); color: #05122c; font-size: 14px; font-weight: 700; box-shadow: 0 12px 30px -12px rgba(53,224,240,.8);">
+        Adopt a reef
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="#05122c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <div style="position: relative; z-index: 4; display: flex; align-items: center; gap: 20px; padding: 62px 64px 0;">
+
+    <div class="td-rise" style="width: 560px; flex: none;">
+      <div class="td-glass" style="display: inline-flex; align-items: center; gap: 9px; padding: 8px 18px 8px 10px; border-radius: 100px; font-size: 13px; font-weight: 600; color: #9fe9ff;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="#35e0f0" stroke-width="1.6"></circle><path d="M4.5 9c1.5-2 3 1 5-.5" stroke="#35e0f0" stroke-width="1.6" stroke-linecap="round"></path></svg>
+        1,204 reefs under care
+      </div>
+
+      <h1 class="td-display" style="margin: 24px 0 0; font-size: 82px; font-weight: 700; line-height: .98; letter-spacing: -.038em;">
+        Dive in.<br>Look closer.<br>
+        <span style="background: linear-gradient(100deg, #35e0f0 0%, #7b5cff 82%); -webkit-background-clip: text; background-clip: text; color: transparent;">Leave it better.</span>
+      </h1>
+
+      <p style="margin: 26px 0 0; font-size: 17px; line-height: 1.75; color: #eaf2ff; max-width: 470px; text-wrap: pretty;">
+        We map coral on twenty-six reefs, replant what we can, and publish every reading. Sponsor a plot and you get the same data our divers do — monthly, unedited.
+      </p>
+
+      <div style="display: flex; gap: 13px; margin-top: 36px;">
+        <a href="#" style="display: inline-flex; align-items: center; gap: 10px; padding: 17px 32px; border-radius: 16px; background: linear-gradient(135deg, #35e0f0 0%, #7b5cff 100%); color: #05122c; font-size: 15px; font-weight: 700; box-shadow: 0 18px 40px -16px rgba(83,150,255,.9);">
+          Sponsor a plot
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M1 7.5h12M9 3.5l4 4-4 4" stroke="#05122c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+        <a href="#" class="td-glass" style="display: inline-flex; align-items: center; gap: 11px; padding: 17px 30px; border-radius: 16px; color: #eaf2ff; font-size: 15px; font-weight: 600;">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="7.6" stroke="#9fe9ff" stroke-width="1.5"></circle><path d="M7 5.6l4.4 2.9L7 11.4z" fill="#9fe9ff"></path></svg>
+          Watch a dive
+        </a>
+      </div>
+    </div>
+
+    <!-- minh hoạ rùa biển -->
+    <div style="position: relative; flex-grow: 1; height: 620px;">
+      <!-- Turtle is now part of the hero ocean background. -->
+
+      <!-- thẻ số liệu nổi -->
+      <div class="td-glass td-drift" style="position: absolute; top: 40px; right: 6px; width: 218px; padding: 18px 20px; border-radius: 20px; animation-delay: 1.2s;">
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: #8ea8d4;">Reef 14 · today</div>
+        <div class="td-display" style="margin-top: 10px; font-size: 30px; font-weight: 700; color: #35e0f0;">26.4°C</div>
+        <div style="margin-top: 4px; font-size: 13px; color: #9fb3d8;">Water temperature, 8 m</div>
+        <div style="display: flex; gap: 4px; margin-top: 14px; align-items: flex-end; height: 34px;">
+          <div style="flex-grow: 1; height: 40%; border-radius: 3px; background: rgba(53,224,240,.35);"></div>
+          <div style="flex-grow: 1; height: 62%; border-radius: 3px; background: rgba(53,224,240,.45);"></div>
+          <div style="flex-grow: 1; height: 48%; border-radius: 3px; background: rgba(53,224,240,.4);"></div>
+          <div style="flex-grow: 1; height: 80%; border-radius: 3px; background: rgba(53,224,240,.6);"></div>
+          <div style="flex-grow: 1; height: 100%; border-radius: 3px; background: #35e0f0;"></div>
+          <div style="flex-grow: 1; height: 72%; border-radius: 3px; background: rgba(53,224,240,.5);"></div>
+        </div>
+      </div>
+
+      <div class="td-glass td-drift" style="position: absolute; bottom: 66px; left: 2px; width: 236px; padding: 16px 18px; border-radius: 20px; animation-delay: 2.4s;">
+        <div style="display: flex; align-items: center; gap: 11px;">
+          <div style="width: 38px; height: 38px; flex: none; border-radius: 12px; background: linear-gradient(135deg, #35e0f0, #7b5cff); display: flex; align-items: center; justify-content: center;">
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" aria-hidden="true"><path d="M9.5 16s-6.4-4-6.4-8.2A3.6 3.6 0 0 1 9.5 5.5a3.6 3.6 0 0 1 6.4 2.3C15.9 12 9.5 16 9.5 16z" fill="#05122c"></path></svg>
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <span class="td-display" style="font-size: 18px; font-weight: 700;">3,908</span>
+            <span style="font-size: 12.5px; color: #9fb3d8;">Corals replanted this year</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FEATURE PILLS ===== -->
+  <div style="position: relative; z-index: 4; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 46px 64px 0;">
+    <div class="td-glass" style="display: flex; align-items: center; gap: 14px; padding: 20px 24px; border-radius: 18px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex: none;"><path d="M12 3l2.6 5.6 6.1.8-4.4 4.3 1 6.1L12 17l-5.3 2.8 1-6.1-4.4-4.3 6.1-.8z" stroke="#35e0f0" stroke-width="1.7" stroke-linejoin="round"></path></svg>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 15px; font-weight: 600;">Every reading published</span>
+        <span style="font-size: 13px; color: #8ea8d4;">Raw data, no summaries</span>
+      </div>
+    </div>
+    <div class="td-glass" style="display: flex; align-items: center; gap: 14px; padding: 20px 24px; border-radius: 18px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex: none;"><path d="M12 21s-7-4.6-7-10a7 7 0 1 1 14 0c0 5.4-7 10-7 10z" stroke="#7b5cff" stroke-width="1.7" stroke-linejoin="round"></path><circle cx="12" cy="11" r="2.6" stroke="#7b5cff" stroke-width="1.7"></circle></svg>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 15px; font-weight: 600;">Twenty-six sites</span>
+        <span style="font-size: 13px; color: #8ea8d4;">Across four island groups</span>
+      </div>
+    </div>
+    <div class="td-glass" style="display: flex; align-items: center; gap: 14px; padding: 20px 24px; border-radius: 18px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="flex: none;"><path d="M4 13l5 5L20 7" stroke="#35e0f0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <div style="display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 15px; font-weight: 600;">Audited annually</span>
+        <span style="font-size: 13px; color: #8ea8d4;">Accounts open to sponsors</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PROGRAMMES ===== -->
+  <div style="position: relative; z-index: 4; padding: 96px 64px 0;">
+    <div style="display: flex; align-items: flex-end; gap: 30px;">
+      <div>
+        <div style="font-size: 12.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #35e0f0;">What we run</div>
+        <h2 class="td-display" style="margin: 14px 0 0; font-size: 54px; font-weight: 700; line-height: 1.02; letter-spacing: -.03em;">
+          Three programmes,<br>one shared record
+        </h2>
+      </div>
+      <div style="flex-grow: 1;"></div>
+      <p style="margin: 0 0 8px; width: 330px; font-size: 14.5px; line-height: 1.75; color: #8ea8d4;">
+        Sponsorship funds all three. You choose where yours goes, and you can move it at any time.
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 44px;">
+
+      <div class="td-glass" style="padding: 30px 28px 28px; border-radius: 26px;">
+        <div style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 17px; background: rgba(53,224,240,.14); border: 1px solid rgba(53,224,240,.3);">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M4 20c3-5 6 1 9-3s6 1 9-4" stroke="#35e0f0" stroke-width="2" stroke-linecap="round"></path><circle cx="13" cy="7" r="3" stroke="#35e0f0" stroke-width="2"></circle></svg>
+        </div>
+        <h3 class="td-display" style="margin: 22px 0 0; font-size: 23px; font-weight: 700; letter-spacing: -.015em;">Mapping</h3>
+        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.75; color: #9fb3d8;">
+          Divers photograph fixed transects every six weeks. The images become a coral-cover figure anyone can check against last season's.
+        </p>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 22px; padding-top: 20px; border-top: 1px solid rgba(160,196,255,.14);">
+          <span class="td-display" style="font-size: 24px; font-weight: 700; color: #35e0f0;">26</span>
+          <span style="font-size: 13px; color: #8ea8d4;">sites on the schedule</span>
+        </div>
+      </div>
+
+      <div class="td-glass" style="padding: 30px 28px 28px; border-radius: 26px;">
+        <div style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 17px; background: rgba(123,92,255,.16); border: 1px solid rgba(123,92,255,.34);">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 22v-9" stroke="#9b85ff" stroke-width="2" stroke-linecap="round"></path><path d="M13 13c0-5 4-8 8-8 0 5-3 8-8 8zM13 15c0-4-3-6-6-6 0 4 2 6 6 6z" stroke="#9b85ff" stroke-width="2" stroke-linejoin="round"></path></svg>
+        </div>
+        <h3 class="td-display" style="margin: 22px 0 0; font-size: 23px; font-weight: 700; letter-spacing: -.015em;">Replanting</h3>
+        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.75; color: #9fb3d8;">
+          Fragments grown on rope nurseries go back onto bare rock. Survival is counted at six and twelve months, and the failures are published too.
+        </p>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 22px; padding-top: 20px; border-top: 1px solid rgba(160,196,255,.14);">
+          <span class="td-display" style="font-size: 24px; font-weight: 700; color: #9b85ff;">71%</span>
+          <span style="font-size: 13px; color: #8ea8d4;">alive after twelve months</span>
+        </div>
+      </div>
+
+      <div class="td-glass" style="padding: 30px 28px 28px; border-radius: 26px;">
+        <div style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 17px; background: rgba(53,224,240,.14); border: 1px solid rgba(53,224,240,.3);">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M5 21V9l8-5 8 5v12" stroke="#35e0f0" stroke-width="2" stroke-linejoin="round"></path><path d="M10 21v-6h6v6" stroke="#35e0f0" stroke-width="2" stroke-linejoin="round"></path></svg>
+        </div>
+        <h3 class="td-display" style="margin: 22px 0 0; font-size: 23px; font-weight: 700; letter-spacing: -.015em;">Local crews</h3>
+        <p style="margin: 12px 0 0; font-size: 14.5px; line-height: 1.75; color: #9fb3d8;">
+          Every dive team is hired and trained from the nearest village. Nine of our twelve site leads started as boat crew.
+        </p>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 22px; padding-top: 20px; border-top: 1px solid rgba(160,196,255,.14);">
+          <span class="td-display" style="font-size: 24px; font-weight: 700; color: #35e0f0;">38</span>
+          <span style="font-size: 13px; color: #8ea8d4;">people on the payroll</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== IMPACT ===== -->
+  <div class="td-glass" style="position: relative; z-index: 4; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin: 76px 64px 0; padding: 40px 44px; border-radius: 28px;">
+    <div>
+      <div class="td-display" style="font-size: 46px; font-weight: 700; letter-spacing: -.03em; color: #35e0f0;">1,204</div>
+      <div style="margin-top: 8px; font-size: 13.5px; color: #8ea8d4;">Reef plots under care</div>
+    </div>
+    <div>
+      <div class="td-display" style="font-size: 46px; font-weight: 700; letter-spacing: -.03em; color: #35e0f0;">3,908</div>
+      <div style="margin-top: 8px; font-size: 13.5px; color: #8ea8d4;">Corals replanted this year</div>
+    </div>
+    <div>
+      <div class="td-display" style="font-size: 46px; font-weight: 700; letter-spacing: -.03em; color: #9b85ff;">71%</div>
+      <div style="margin-top: 8px; font-size: 13.5px; color: #8ea8d4;">Twelve-month survival rate</div>
+    </div>
+    <div>
+      <div class="td-display" style="font-size: 46px; font-weight: 700; letter-spacing: -.03em; color: #9b85ff;">100%</div>
+      <div style="margin-top: 8px; font-size: 13.5px; color: #8ea8d4;">Of readings published raw</div>
+    </div>
+  </div>
+
+  <!-- ===== CTA ===== -->
+  <div style="position: relative; z-index: 4; margin: 84px 64px 0; padding: 72px 56px; border-radius: 34px; overflow: hidden;
+       background: linear-gradient(120deg, rgba(53,224,240,.16) 0%, rgba(123,92,255,.24) 100%); border: 1px solid rgba(160,196,255,.2);">
+    <svg width="520" height="380" viewBox="0 0 520 380" fill="none" aria-hidden="true" style="position: absolute; right: -50px; bottom: -60px; opacity: .5;">
+      <circle cx="300" cy="190" r="150" stroke="#8fd9ff" stroke-width="1.4" opacity=".5"></circle>
+      <circle cx="300" cy="190" r="104" stroke="#8fd9ff" stroke-width="1.4" opacity=".35"></circle>
+      <path d="M40 300c48-40 96 16 150-24s108 12 160-36" stroke="#35e0f0" stroke-width="3" stroke-linecap="round" fill="none" opacity=".5"></path>
+      <circle cx="440" cy="86" r="10" fill="#9fe9ff" opacity=".5"></circle>
+      <circle cx="470" cy="140" r="6" fill="#9fe9ff" opacity=".4"></circle>
+    </svg>
+    <div style="position: relative; z-index: 2; max-width: 640px;">
+      <h2 class="td-display" style="margin: 0; font-size: 54px; font-weight: 700; line-height: 1.02; letter-spacing: -.032em;">
+        Put your name on<br>a square of reef
+      </h2>
+      <p style="margin: 20px 0 0; font-size: 16.5px; line-height: 1.75; color: #b7c9e8; max-width: 480px;">
+        Sponsorship starts at [YOUR PRICE] a month. You get the plot's coordinates, its photographs, and the numbers behind them — including the months it goes backwards.
+      </p>
+      <div style="display: flex; gap: 13px; margin-top: 34px;">
+        <a href="#" style="display: inline-flex; align-items: center; gap: 10px; padding: 17px 34px; border-radius: 16px; background: linear-gradient(135deg, #35e0f0 0%, #7b5cff 100%); color: #05122c; font-size: 15px; font-weight: 700; box-shadow: 0 18px 40px -16px rgba(83,150,255,.9);">
+          Adopt a reef
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M1 7.5h12M9 3.5l4 4-4 4" stroke="#05122c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+        <a href="#" class="td-glass" style="display: inline-flex; align-items: center; padding: 17px 32px; border-radius: 16px; color: #eaf2ff; font-size: 15px; font-weight: 600;">
+          Read the 2025 report
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div style="position: relative; z-index: 4; display: flex; align-items: flex-start; gap: 60px; padding: 72px 64px 30px;">
+    <div style="width: 300px; flex: none;">
+      <div style="display: flex; align-items: center; gap: 11px;">
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="13" stroke="#35e0f0" stroke-width="1.6"></circle>
+          <path d="M4 16c3-4 6 2 10-1s7 1 10-3" stroke="#35e0f0" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <span class="td-display" style="font-size: 19px; font-weight: 700;">Tidal</span>
+      </div>
+      <p style="margin: 16px 0 0; font-size: 13.5px; line-height: 1.75; color: #7e93bb;">
+        Coral monitoring and restoration.<br>Registered charity [YOUR NUMBER].
+      </p>
+    </div>
+    <div style="flex-grow: 1;"></div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 56px; font-size: 14px; line-height: 2.1;">
+      <div style="display: flex; flex-direction: column;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: #6d82ab;">Work</span>
+        <a href="#">Mapping</a>
+        <a href="#">Replanting</a>
+        <a href="#">Local crews</a>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: #6d82ab;">Data</span>
+        <a href="#">Live readings</a>
+        <a href="#">Annual report</a>
+        <a href="#">Methodology</a>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <span style="font-size: 11.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: #6d82ab;">Support</span>
+        <a href="#">Sponsor a plot</a>
+        <a href="#">Volunteer</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; z-index: 4; display: flex; align-items: center; gap: 24px; margin: 0 64px; padding: 22px 0 36px; border-top: 1px solid rgba(160,196,255,.14); font-size: 13px; color: #6d82ab;">
+    <span>© 2026 Tidal Reef Trust</span>
+    <div style="flex-grow: 1;"></div>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+
+</div>
+</body></html>

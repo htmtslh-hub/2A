@@ -1,0 +1,32 @@
+/* Component styles. Colors and typography belong to the host project. */
+[data-morge] { --morge-duration: 1050ms; }
+[data-morge] button { font: inherit; cursor: pointer; }
+[data-morge] :focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
+[data-morge-visual] { position: relative; touch-action: pan-y; }
+[data-morge-slide] { display: grid; place-items: center; }
+[data-morge-controls], [data-morge-motion] { display: none; }
+.morge-ready [data-morge-visual] { aspect-ratio: 5 / 3; overflow: hidden; }
+.morge-ready [data-morge-slide] {
+  position: absolute; inset: 0; margin: 0;
+  transition: transform var(--morge-duration) cubic-bezier(.22,.68,0,1), opacity calc(var(--morge-duration) * .72) ease;
+}
+.morge-ready [data-morge-slide] > * { max-width: 72%; max-height: 85%; }
+.morge-ready [data-morge-controls] {
+  display: grid; grid-template-columns: auto minmax(5rem, auto) auto;
+  gap: clamp(1rem, 3vw, 2.5rem); align-items: center; justify-content: center;
+  width: 100%; margin: 1.5rem auto; text-align: center;
+}
+[data-morge-prev], [data-morge-next] {
+  width: clamp(48px, 6vw, 72px); height: clamp(48px, 6vw, 72px);
+  border: 1px solid currentColor; border-radius: 50%; color: inherit; background: transparent;
+}
+.morge-ready [data-morge-motion] { display: inline-flex; }
+.morge-paused [data-morge-slide] { transition: none; }
+[data-morge-scene] { position: relative; padding: clamp(1.25rem, 5vw, 4rem); }
+.morge-motion [data-morge-story] { height: 300vh; position: relative; }
+.morge-motion .morge-stage { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+.morge-motion [data-morge-scene] { position: absolute; inset: 0; display: grid; align-content: center; }
+@media (max-width: 650px) {
+  .morge-ready [data-morge-controls] { gap: 1rem; }
+  [data-morge-scene] { padding: 1.25rem; }
+}

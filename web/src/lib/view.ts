@@ -1,22 +1,21 @@
 /* Port của renderVals() trong Agentic.dc.html sang React.
    Giữ nguyên tên trường để markup sinh tự động dùng được không đổi. */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { RefObject } from 'react';
+import { createElement, type MouseEvent, type RefObject } from 'react';
+import AccountNavContent from '@/components/AccountNavContent';
 import {
   REGISTER_STRINGS,
   FORGOT_STRINGS,
   NAV_ACCOUNT,
   FAQ_NO_CODE,
   HOME_SHOWCASE,
-  COMING_SOON,
-  NOTIFY,
-  type NotifyProduct,
 } from './i18n-extra';
 import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
 import { COMPANY } from './company';
 import { bgPoster } from './media';
-import { SERVICE, SERVICE_SITE_URL } from './service-content';
 import { REAL_TEMPLATES } from './real-templates';
+import { GUIDE_LABELS, guideHref } from './guide-links';
+import { HTML_LANG, langFromBrowser } from './lang';
 import {
   currencyForProvider,
   formatMoney,
@@ -29,7 +28,6 @@ import {
   IDS,
   POSTERS,
   TAB_KEYS,
-  CAT_KEYS,
   TPL_META,
   TIER_STYLE,
   type LangCode,
@@ -55,8 +53,6 @@ export interface State {
   /** Thông báo nổi ở góc màn hình; null là không hiện. */
   toast: string | null;
   detail: string | null;
-  /** Hộp để lại email cho sản phẩm sắp ra mắt đang mở; null là đóng. */
-  notify: NotifyProduct | null;
 }
 
 export const INITIAL_STATE: State = {
@@ -74,7 +70,6 @@ export const INITIAL_STATE: State = {
   authError: null,
   toast: null,
   detail: null,
-  notify: null,
 };
 
 /** Các thao tác DOM mệnh lệnh mà view cần gọi (do AgenticSite cung cấp). */
@@ -97,17 +92,15 @@ export interface Imperative {
   onForgotPassword: (email: string) => void;
   /** Mở trang đơn hàng của tài khoản đang đăng nhập. */
   goAccount: () => void;
+  toggleSaved: (templateId: string) => void;
+  addToCart: (templateId: string, origin?: { x: number; y: number }) => void;
   /** Đăng nhập bằng Google. */
   onGoogleSignIn: () => void;
   /** Bắt đầu thanh toán: mở PayOS, hoặc yêu cầu đăng nhập trước. */
   startCheckout: (kind: 'TEMPLATE' | 'BUNDLE', templateId?: string) => void;
 }
 
-/* Thẻ nào trong dải hero chưa có hàng để bán thì khoá lại: hiện ổ khoá, bấm
-   không vào được, mũi tên chuyển thẻ cũng bỏ qua. Đếm từ 0.
-   Thẻ 1 Giao diện website, 2 Agent, 3 Masterprompt mở cho khách xem (2 và 3
-   chưa bán, nút chính thu email chờ). Thẻ 4–5 sản phẩm mới chưa có nội dung
-   nên khoá. Có nội dung thì xoá số tương ứng khỏi mảng này. */
+/** Keep coming-soon hero cards 04–05 visible, but unavailable to select. */
 export const LOCKED_CARDS: number[] = [3, 4];
 
 export interface Refs {
@@ -134,11 +127,53 @@ const PAGE_H1: Record<string, string> = {
   zh: 'Forge Zone — 高端预制网站模板，含商用授权',
 };
 
+const PRODUCT_GROUP_COPY: Record<LangCode, {
+  labels: [string, string, string];
+  groupAria: string;
+  browse: [string, string, string];
+  titles: [string, string];
+  intros: [string, string];
+  pending: string;
+  empty: string;
+  slots: [[string, string], [string, string]];
+}> = {
+  vi: {
+    labels: ['Giao diện web', 'Skill / Prompt', 'Agent / Tool'],
+    groupAria: 'Nhóm sản phẩm',
+    browse: ['Xem toàn bộ giao diện →', 'Xem Skill / Prompt →', 'Xem Agent / Tool →'],
+    titles: ['Skill và Prompt', 'Agent và Tool'],
+    intros: ['Bộ sưu tập Skill/Prompt đang được chuẩn bị. Hai ô bên dưới dành cho các sản phẩm sẽ thêm sau.', 'Bộ sưu tập Agent/Tool đang được chuẩn bị. Hai ô bên dưới dành cho các sản phẩm sẽ thêm sau.'],
+    pending: 'ĐANG CHUẨN BỊ',
+    empty: 'Vị trí dành cho sản phẩm mới',
+    slots: [['Skill', 'Prompt'], ['Agent', 'Tool']],
+  },
+  en: {
+    labels: ['Web interfaces', 'Skill / Prompt', 'Agent / Tool'],
+    groupAria: 'Product groups',
+    browse: ['Explore web interfaces →', 'Explore Skill / Prompt →', 'Explore Agent / Tool →'],
+    titles: ['Skills and Prompts', 'Agents and Tools'],
+    intros: ['The Skill/Prompt collection is being prepared. These two spaces are reserved for future products.', 'The Agent/Tool collection is being prepared. These two spaces are reserved for future products.'],
+    pending: 'COMING SOON',
+    empty: 'Space for a future product',
+    slots: [['Skill', 'Prompt'], ['Agent', 'Tool']],
+  },
+  zh: {
+    labels: ['网页界面', '技能 / 提示词', '智能体 / 工具'],
+    groupAria: '产品分类',
+    browse: ['浏览全部网页界面 →', '浏览技能 / 提示词 →', '浏览智能体 / 工具 →'],
+    titles: ['技能与提示词', '智能体与工具'],
+    intros: ['技能与提示词系列正在准备中。下方两个位置留给未来的产品。', '智能体与工具系列正在准备中。下方两个位置留给未来的产品。'],
+    pending: '即将推出',
+    empty: '预留给未来产品的位置',
+    slots: [['技能', '提示词'], ['智能体', '工具']],
+  },
+};
+
 export function buildView(
   state: State,
   refs: Refs,
   im: Imperative,
-  ctx: { signedIn: boolean; googleEnabled: boolean } = { signedIn: false, googleEnabled: false }
+  ctx: { signedIn: boolean; authLoading: boolean; googleEnabled: boolean; savedIds: readonly string[]; saveCounts: Readonly<Record<string, number>>; cartIds: readonly string[]; accountName?: string; accountImage?: string | null } = { signedIn: false, authLoading: false, googleEnabled: false, savedIds: [], saveCounts: {}, cartIds: [] }
 ): View {
   const lang: LangCode = (I18N as any)[state.lang] ? state.lang : 'vi';
   const base = (I18N as any)[lang];
@@ -169,8 +204,8 @@ export function buildView(
           authSignup: modeStrings.signup,
         }
       : null),
-    // Đã đăng nhập thì nút ở thanh nav dẫn sang trang đơn hàng.
-    ...(ctx.signedIn ? { navCta: NAV_ACCOUNT[lang] } : null),
+    // Đã đăng nhập thì nút ở thanh nav dẫn sang trang tài khoản.
+    ...(ctx.signedIn ? { navCta: createElement(AccountNavContent, { name: ctx.accountName || NAV_ACCOUNT[lang], image: ctx.accountImage }) } : null),
   };
   // Danh mục hiệu lực: ô nào đã có mẫu thật thì lấy tên, mô tả, thẻ và phân
   // loại từ REAL_TEMPLATES; ô còn lại giữ nội dung lấp chỗ của bản thiết kế.
@@ -180,30 +215,77 @@ export function buildView(
   // cho từng ô ($69–$99), nên Dune Pass từng hiện $89 trong khi thanh toán thu
   // $79, và khách xem tiếng Việt thấy giá đô dù trả bằng VNĐ.
   const currency = currencyForProvider(providerForLang(lang as Lang));
-  const tplMeta = TPL_META.map((m: any, i: number) => {
+  const tplMeta = TPL_META.flatMap((m: any) => {
     const real = REAL_TEMPLATES[m.id];
     return real
-      ? {
+      ? [{
           ...m,
           cat: real.cat,
+          badge: real.video ? '' : m.badge,
           price: formatMoney(priceOf('TEMPLATE', currency, m.id), currency, lang as Lang),
           ...(real.copy[lang] ?? real.copy.vi),
-        }
-      : // Ô lấp chỗ chưa có file để giao: không hiện giá hay nhãn "Mới/Hot"
-        // như thể đang bán, mà ghi rõ sắp ra mắt.
-        { ...m, ...t.templates[i], price: COMING_SOON[lang].label, badge: '' };
+        }]
+      : [];
   });
+  const saveCopy = {
+    vi: { save: 'Lưu sản phẩm vào tài khoản', remove: 'Bỏ lưu sản phẩm', count: 'lượt lưu' },
+    en: { save: 'Save product to account', remove: 'Remove saved product', count: 'saves' },
+    zh: { save: '保存产品到账户', remove: '取消保存产品', count: '次收藏' },
+  }[lang];
+  const cartCopy = {
+    vi: { add: 'Thêm vào giỏ hàng', added: 'Đã trong giỏ' },
+    en: { add: 'Add to cart', added: 'In cart' },
+    zh: { add: '加入购物车', added: '已在购物车' },
+  }[lang];
+  const withSave = (m: any) => {
+    const saved = ctx.savedIds.includes(m.id);
+    const inCart = ctx.cartIds.includes(m.id);
+    const saveCount = ctx.saveCounts[m.id];
+    return {
+      ...m,
+      saved,
+      saveLabel: `${saved ? saveCopy.remove : saveCopy.save}${Number.isSafeInteger(saveCount) ? ` · ${saveCount} ${saveCopy.count}` : ''}`,
+      saveCount: Number.isSafeInteger(saveCount) ? saveCount : '…',
+      saveDisabled: ctx.authLoading,
+      cartLabel: inCart ? cartCopy.added : cartCopy.add,
+      inCart,
+      onCart: (event: MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const button = event.currentTarget;
+        const rect = button.getBoundingClientRect();
+        im.addToCart(m.id, {
+          x: event.detail ? event.clientX : rect.left + rect.width / 2,
+          y: event.detail ? event.clientY : rect.top + rect.height / 2,
+        });
+      },
+      onSave: (event: MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+        event.stopPropagation();
+        im.toggleSaved(m.id);
+      },
+    };
+  };
 
   const n = t.services.length;
   const active = Math.min(state.active, n - 1);
   const s = t.services[active];
   const { filter, tab } = state;
+  const groupCopy = PRODUCT_GROUP_COPY[lang];
+  const productGroup = Math.min(active, 2);
+  const showWebProducts = productGroup === 0;
+  const placeholderCards = showWebProducts ? [] : groupCopy.slots[productGroup - 1].map((type, i) => ({
+    no: String(i + 1).padStart(2, '0'),
+    type,
+    title: groupCopy.pending,
+    note: groupCopy.empty,
+    aria: `${type} ${i + 1}: ${groupCopy.empty}`,
+  }));
 
-  // Dải trưng bày ở trang chủ chỉ hiện mẫu THẬT — có ảnh, có demo, mua được.
-  // Trước đây nó lấy theo nhóm của thẻ hero, nên đa số lần hiện ba ô lấp chỗ
-  // với khung ảnh trống. Chưa đủ ba mẫu thật thì bù bằng ô còn lại.
-  const isReal = (m: any) => Boolean(REAL_TEMPLATES[m.id]);
-  const homeTpl = [...tplMeta.filter(isReal), ...tplMeta.filter((m: any) => !isReal(m))].slice(0, 3);
+  // Dải trưng bày ở trang chủ hiện toàn bộ mẫu THẬT — có ảnh, có demo, mua được.
+  // `tplMeta` đã loại các ô lấp chỗ chưa có file giao, nên không cần giới hạn
+  // số lượng hay lọc thêm ở đây.
+  const homeTpl = tplMeta;
 
   /** Thẻ hero kế tiếp theo hướng `dir`, bỏ qua thẻ khoá. Không còn thẻ mở nào
    *  khác thì đứng yên ở thẻ hiện tại. */
@@ -234,8 +316,25 @@ export function buildView(
     },
   }));
 
+  const autoLangOption = {
+    label: { vi: 'Tự động', en: 'Auto', zh: '自动' }[lang],
+    onSelect: () => {
+      try {
+        localStorage.removeItem('agentic-lang');
+        document.cookie = 'agentic-lang=; path=/; max-age=0; samesite=lax';
+      } catch {}
+      const detected = langFromBrowser(navigator.languages, navigator.language);
+      document.documentElement.lang = HTML_LANG[detected];
+      im.push({ lang: detected, menuOpen: false }, () => {
+        im.bumpCopy();
+        im.bindReveal();
+      });
+    },
+  };
+
+  const categoryKeys = Array.from(new Set(tplMeta.map((m: any) => m.cat))) as string[];
   const filters = [{ key: 'all', label: t.catAll }]
-    .concat(CAT_KEYS.map((k: string) => ({ key: k, label: t.cats[k] })))
+    .concat(categoryKeys.map((k: string) => ({ key: k, label: t.cats[k] })))
     .map((f) => ({
       key: f.key,
       label: f.label,
@@ -245,7 +344,7 @@ export function buildView(
   const templates = tplMeta
     .map((m: any) => ({ ...m, catLabel: t.cats[m.cat], badge: m.badge || '' }))
     .filter((m: any) => filter === 'all' || m.cat === filter)
-    .map((m: any) => ({ ...m, onDetail: () => openDetail(m.id) }));
+    .map((m: any) => withSave({ ...m, href: `?mau=${m.id}`, onDetail: (event: MouseEvent<HTMLAnchorElement>) => followTemplateLink(event, m.id) }));
 
   const marqueeSet = t.marquee.map((label: string) => ({ label, color: '#eceef1' }));
 
@@ -258,13 +357,23 @@ export function buildView(
 
   const dIdx = allTpl.findIndex((m: any) => m.id === state.detail);
   const d = dIdx >= 0 ? allTpl[dIdx] : null;
+  const demoPath = d ? `/demos/${REAL_TEMPLATES[d.id].slug}/index.html` : '';
+  const demoVersion = d ? REAL_TEMPLATES[d.id]?.version : undefined;
+  const demoUrl = demoPath + (demoVersion ? '?v=' + encodeURIComponent(demoVersion) : '');
   const detail = d
     ? {
         ...d,
+        demoUrl,
+        demoAddress: `${COMPANY.siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')}${demoPath.replace(/\/index\.html$/, '')}`,
+        demoTitle: `${d.name} — ${t.dLive}`,
+        openDemo: () => {
+          const popup = window.open(demoUrl, '_blank', 'noopener,noreferrer');
+          if (popup) popup.opener = null;
+        },
         slotId: 'agentic-tpl-' + d.id,
         views: (t.dViewNames || []).map((name: string, i: number) => ({
           name,
-          slotId: 'agentic-tpl-' + d.id,
+          slotId: REAL_TEMPLATES[d.id]?.video ? `agentic-view-${d.id}-${i}` : 'agentic-tpl-' + d.id,
           w: ['100%', '62%', '30%'][i],
           ratio: ['16/10', '3/4', '9/16'][i],
         })),
@@ -273,7 +382,7 @@ export function buildView(
           .filter((m: any) => m.cat === d.cat && m.id !== d.id)
           .concat(allTpl.filter((m: any) => m.cat !== d.cat && m.id !== d.id))
           .slice(0, 3)
-          .map((m: any) => ({ ...m, onSelect: () => openDetail(m.id) })),
+          .map((m: any) => withSave({ ...m, href: `?mau=${m.id}`, onSelect: (event: MouseEvent<HTMLAnchorElement>) => followTemplateLink(event, m.id) })),
       }
     : null;
 
@@ -288,6 +397,12 @@ export function buildView(
       im.bindReveal();
       im.syncPreviews();
     });
+  }
+
+  function followTemplateLink(event: MouseEvent<HTMLAnchorElement>, id: string) {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    openDetail(id);
   }
 
   /** `extra` đổi thêm state cùng lúc chuyển tab, vd. lọc sẵn nhóm mẫu. */
@@ -306,21 +421,36 @@ export function buildView(
     });
   }
 
-  // Trang chi tiết của ô lấp chỗ: nút mua ghi "Sắp ra mắt" và bỏ dòng "trả một
-  // lần, dùng vĩnh viễn" cạnh giá, vì chưa có gì để trả tiền.
-  const detailSoon = Boolean(d && !REAL_TEMPLATES[d.id]);
-
   return {
-    t: detailSoon ? { ...t, pricingUnitOnce: '', dBuy: COMING_SOON[lang].label } : t,
+    t,
+    guideLang: lang,
+    guideLabel: GUIDE_LABELS[lang].guide,
+    guideHref: guideHref(),
+    guideSlug: state.detail ? REAL_TEMPLATES[state.detail]?.slug : undefined,
     // Địa chỉ thật lấy từ company.ts; bản thiết kế ghi cứng một email không
     // tồn tại nên convert.mjs thay mọi chỗ bằng biến này.
     contactEmail: COMPANY.email,
-    // Thanh địa chỉ giả trong ảnh mô phỏng trình duyệt ở trang chi tiết.
-    siteHost: COMPANY.siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, ''),
     pageH1: tab === 'detail' && detail ? `${detail.name} — ${COMPANY.brand}` : PAGE_H1[lang],
     langOptions,
+    autoLangOption,
     filters,
     templates,
+    productGroupAria: groupCopy.groupAria,
+    productGroups: groupCopy.labels.map((label, i) => ({
+      key: ['web', 'skill-prompt', 'agent-tool'][i],
+      label,
+      selected: productGroup === i,
+      onSelect: () => im.push({ active: i, filter: 'all' }, () => {
+        im.bumpCopy();
+        im.bindReveal();
+      }),
+    })),
+    showWebProducts,
+    showProductPlaceholders: !showWebProducts,
+    placeholderCards,
+    libraryKicker: showWebProducts ? t.tplLabel : groupCopy.labels[productGroup],
+    libraryTitle: showWebProducts ? t.tplTitle : groupCopy.titles[productGroup - 1],
+    libraryIntro: showWebProducts ? t.tplIntro : groupCopy.intros[productGroup - 1],
     marqueeItems: marqueeSet.concat(marqueeSet),
     tabs: TAB_KEYS.slice(0, 5).map((k: string, i: number) => ({
       key: k,
@@ -338,13 +468,15 @@ export function buildView(
     isCta: tab === 'cta',
     // Tiêu đề dải trưng bày. Bản thiết kế lặp lại đúng chữ của thẻ hero ngay
     // phía trên; giờ dải này luôn là mẫu đang bán nên nói thẳng điều đó.
-    homeThemeTitle: HOME_SHOWCASE[lang].title,
-    homeThemeKicker: HOME_SHOWCASE[lang].kicker,
-    homeTemplates: homeTpl.map((m: any) => ({
+    homeThemeTitle: showWebProducts ? HOME_SHOWCASE[lang].title : groupCopy.titles[productGroup - 1],
+    homeThemeKicker: showWebProducts ? HOME_SHOWCASE[lang].kicker : groupCopy.labels[productGroup],
+    homeBrowseLabel: groupCopy.browse[productGroup],
+    homeTemplates: homeTpl.map((m: any) => withSave({
       ...m,
       catLabel: t.cats[m.cat],
       badge: m.badge || '',
-      onDetail: () => openDetail(m.id),
+      href: `?mau=${m.id}`,
+      onDetail: (event: MouseEvent<HTMLAnchorElement>) => followTemplateLink(event, m.id),
     })),
     showFooter: true,
     goHome: () => goTab('home'),
@@ -355,6 +487,7 @@ export function buildView(
     authOpen: state.authOpen,
     authDone: state.authDone,
     openAuth: () => {
+      if (ctx.authLoading) return;
       if (ctx.signedIn) {
         im.setState({ menuOpen: false });
         im.goAccount();
@@ -410,13 +543,14 @@ export function buildView(
       if (
         sc &&
         slot?.hasAttribute('data-filled') &&
+        !slot.hasAttribute('data-video-preview') &&
         !window.matchMedia('(prefers-reduced-motion: reduce)').matches
       ) {
         sc.style.transition = 'transform 3.6s cubic-bezier(.33,0,.25,1)';
         sc.style.transform = 'translateY(-45%)';
       }
       const bar = c.querySelector('[data-scrollbar]') as HTMLElement | null;
-      if (bar && slot?.hasAttribute('data-filled')) bar.style.opacity = '1';
+      if (bar && slot?.hasAttribute('data-filled') && !slot.hasAttribute('data-video-preview')) bar.style.opacity = '1';
     },
     ledOff: (e: any) => {
       const c = e.currentTarget as HTMLElement;
@@ -430,14 +564,9 @@ export function buildView(
       const bar = c.querySelector('[data-scrollbar]') as HTMLElement | null;
       if (bar) bar.style.opacity = '0';
     },
-    // Thẻ 1 dẫn vào thư viện (bỏ bộ lọc cũ nếu có). Thẻ 2 Agent và 3
-    // Masterprompt chưa có hàng: nút chính mở hộp để lại email chờ mở bán.
-    heroCtaLabel: active === 1 || active === 2 ? NOTIFY[lang].cta : t.heroCta1,
-    heroCta: () => {
-      if (active === 1) im.setState({ notify: 'agent' });
-      else if (active === 2) im.setState({ notify: 'masterprompt' });
-      else goTab('library', { filter: 'all' });
-    },
+    // The first three hero cards represent distinct product groups.
+    heroCtaLabel: groupCopy.browse[productGroup],
+    heroCta: () => goTab('library', { filter: 'all' }),
     langCode: ({ vi: 'VI', en: 'EN', zh: '中' } as Record<string, string>)[lang] || 'VI',
     activeTabLabel:
       tab === 'detail' && detail ? detail.name : t.nav[Math.max(0, TAB_KEYS.indexOf(tab))],
@@ -494,9 +623,7 @@ export function buildView(
     // Paddle yêu cầu Điều khoản / Bảo mật / Hoàn tiền truy cập được từ
     // navigation, nên các link này nằm cố định ở footer.
     legalLinks: [
-      // Dịch vụ làm web / AI agent nằm ở web riêng: Paddle không nhận bán dịch
-      // vụ trên tên miền bán template (bị từ chối duyệt ngày 13/09/2026).
-      { href: SERVICE_SITE_URL, label: SERVICE[lang].navLabel },
+      { href: guideHref(), label: GUIDE_LABELS[lang].guide },
       { href: PAGE_PATHS.about, label: PAGE_LABELS[lang].about },
       { href: PAGE_PATHS.contact, label: PAGE_LABELS[lang].contact },
       ...(['terms', 'privacy', 'refund', 'license'] as const).map((k) => ({
@@ -522,7 +649,6 @@ export function buildView(
       ...tr,
       onCta: () => (i === 0 ? goTab('library') : im.startCheckout('BUNDLE')),
     })),
-    quotes: t.quotes,
     faqs: t.faqs.map((f: any, i: number) => ({
       q: f.q,
       a: f.a,
@@ -530,14 +656,18 @@ export function buildView(
     })),
     buyDetail: () => {
       if (!state.detail) return;
-      // Ô lấp chỗ chưa có file để giao — không cho sang bước thanh toán.
-      // Máy chủ cũng chặn (templateExists), đây chỉ để báo khách cho rõ.
-      if (!REAL_TEMPLATES[state.detail]) {
-        im.setState({ toast: COMING_SOON[lang].toast });
-        return;
-      }
+      if (!REAL_TEMPLATES[state.detail]) return;
       im.startCheckout('TEMPLATE', state.detail);
     },
+    addDetailToCart: (event: MouseEvent<HTMLButtonElement>) => {
+      if (!state.detail) return;
+      const rect = event.currentTarget.getBoundingClientRect();
+      im.addToCart(state.detail, {
+        x: event.detail ? event.clientX : rect.left + rect.width / 2,
+        y: event.detail ? event.clientY : rect.top + rect.height / 2,
+      });
+    },
+    detailCartLabel: state.detail && ctx.cartIds.includes(state.detail) ? cartCopy.added : cartCopy.add,
     submitLabel: state.submitted ? t.formSent : t.formSubmit,
     onSubmit: (e: any) => {
       e.preventDefault();

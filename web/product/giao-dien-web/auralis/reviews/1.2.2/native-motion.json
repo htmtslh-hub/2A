@@ -1,0 +1,284 @@
+{
+  "url": "http://127.0.0.1:4331/demos/auralis/index.html?v=1.2.2",
+  "cases": [
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "width": 1440,
+      "height": 900,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": true,
+        "css": "/demos/auralis/assets/css/style.css?v=1.2.2",
+        "js": "/demos/auralis/assets/js/main.js?v=1.2.2",
+        "reduced": false
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "detail",
+          "kit": 0.276418,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.697833,
+          "next": 0.302167,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "width": 375,
+      "height": 812,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": true,
+        "css": "/demos/auralis/assets/css/style.css?v=1.2.2",
+        "js": "/demos/auralis/assets/js/main.js?v=1.2.2",
+        "reduced": false
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "detail",
+          "kit": 0.354914,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.658612,
+          "next": 0.341387,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "width": 414,
+      "height": 582,
+      "reduce": true,
+      "initial": {
+        "motion": false,
+        "controlVisible": true,
+        "css": "/demos/auralis/assets/css/style.css?v=1.2.2",
+        "js": "/demos/auralis/assets/js/main.js?v=1.2.2",
+        "reduced": true
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "detail",
+          "kit": 0.32525,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.659483,
+          "next": 0.340517,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "width": 1440,
+      "height": 900,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": true,
+        "css": "/demos/auralis/assets/css/style.css?v=1.2.2",
+        "js": "/demos/auralis/assets/js/main.js?v=1.2.2",
+        "reduced": false
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "detail",
+          "kit": 0.279896,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.65437,
+          "next": 0.34563,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "width": 375,
+      "height": 812,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": true,
+        "css": "/demos/auralis/assets/css/style.css?v=1.2.2",
+        "js": "/demos/auralis/assets/js/main.js?v=1.2.2",
+        "reduced": false
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "detail",
+          "kit": 0.318449,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.662115,
+          "next": 0.337885,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "width": 414,
+      "height": 582,
+      "reduce": true,
+      "initial": {
+        "motion": false,
+        "controlVisible": true,
+        "css": "/demos/auralis/assets/css/style.css?v=1.2.2",
+        "js": "/demos/auralis/assets/js/main.js?v=1.2.2",
+        "reduced": true
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "detail",
+          "kit": 0.325033,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.700684,
+          "next": 0.299316,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "pass": true
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "width": 1440,
+    "scroll": 1440,
+    "h1": 1
+  },
+  {
+    "width": 820,
+    "scroll": 820,
+    "h1": 1
+  },
+  {
+    "width": 375,
+    "scroll": 375,
+    "h1": 1
+  },
+  {
+    "width": 320,
+    "scroll": 320,
+    "h1": 1
+  },
+  {
+    "menu": "true"
+  },
+  {
+    "closed": "false"
+  }
+]

@@ -29,13 +29,13 @@ const shell: React.CSSProperties = {
 export default async function Page({
   searchParams,
 }: {
-  searchParams: Promise<{ _ptxn?: string }>;
+  searchParams: Promise<{ _ptxn?: string; order?: string }>;
 }) {
-  const { _ptxn } = await searchParams;
+  const { _ptxn, order } = await searchParams;
 
   return (
     <main style={shell}>
-      {TOKEN && _ptxn ? <PaddleLoader token={TOKEN} /> : null}
+      {TOKEN && _ptxn ? <PaddleLoader token={TOKEN} orderId={order} /> : null}
 
       <div style={{ maxWidth: 380 }}>
         <div

@@ -1,0 +1,14 @@
+{
+  "name": "Astra architectural scroll film",
+  "version": 1,
+  "width": 640,
+  "height": 360,
+  "frameCount": 120,
+  "previewFps": 15,
+  "durationSeconds": 8,
+  "framePattern": "astra_%04d.webp",
+  "firstFrame": "astra_0001.webp",
+  "lastFrame": "astra_0120.webp",
+  "recommendedScrollPixels": 6000,
+  "mapping": "frame = round(progress * (frameCount - 1))"
+}

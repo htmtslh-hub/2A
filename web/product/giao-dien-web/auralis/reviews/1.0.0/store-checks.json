@@ -1,0 +1,45 @@
+{
+  "origin": "http://localhost:3000",
+  "title": "Forge Zone — Premium ready-made website templates",
+  "auralisVisible": true,
+  "errors": [],
+  "assets": [
+    {
+      "path": "/demos/auralis/index.html",
+      "status": 200,
+      "bytes": 7511
+    },
+    {
+      "path": "/demos/auralis/assets/css/style.css",
+      "status": 200,
+      "bytes": 13697
+    },
+    {
+      "path": "/demos/auralis/assets/images/earbuds.webp",
+      "status": 200,
+      "bytes": 86356
+    },
+    {
+      "path": "/previews/auralis.webp",
+      "status": 200,
+      "bytes": 51086
+    },
+    {
+      "path": "/previews/auralis-tablet.webp",
+      "status": 200,
+      "bytes": 30858
+    },
+    {
+      "path": "/previews/auralis-mobile.webp",
+      "status": 200,
+      "bytes": 20618
+    },
+    {
+      "path": "/previews/auralis.mp4",
+      "status": 200,
+      "bytes": 412920
+    }
+  ],
+  "unauthenticatedDownloadStatus": 401,
+  "zipIncludedInDownloadTrace": true
+}

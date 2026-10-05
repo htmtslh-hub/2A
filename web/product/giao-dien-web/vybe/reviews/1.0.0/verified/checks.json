@@ -1,0 +1,1015 @@
+{
+  "slug": "vybe",
+  "version": "1.0.0",
+  "date": "2026-10-05T03:27:27.040Z",
+  "os": "win32",
+  "zipBytes": 746681,
+  "sha256": "52416129d6f63351ab195ee32fd38fd44f9af1ca25a3ccfeff4bc9a1e3373950",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#main"
+          },
+          {
+            "label": "Shop",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#collection"
+          },
+          {
+            "label": "Collections",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#collection"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#about"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#contact"
+          },
+          {
+            "label": "VYBE home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#main"
+          },
+          {
+            "label": "Explore the drop ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#collection"
+          },
+          {
+            "label": "Shop the drop ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#collection"
+          },
+          {
+            "label": "Find your expression ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#collection"
+          },
+          {
+            "label": "hello@example.com ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "VYBE®",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#main"
+          },
+          {
+            "label": "Enquire about these pieces ↗",
+            "href": "mailto:hello@example.com?subject=VYBE%20product%20enquiry&body=%0APlease%20confirm%20availability%20and%20final%20price.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=VYBE%20product%20enquiry&body=%0APlease%20confirm%20availability%20and%20final%20price."
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              36,
+              36,
+              35
+            ],
+            "ratio": 15.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Shop",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              255,
+              253,
+              250
+            ],
+            "ratio": 15.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "VYBE®",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              255,
+              253,
+              250
+            ],
+            "ratio": 15.3,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              255,
+              107,
+              107
+            ],
+            "ratio": 5.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Where art meetsyour everyday.",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              255,
+              107,
+              107
+            ],
+            "ratio": 5.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "pill",
+            "text": "Shop the drop ↗",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 15.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "edition",
+            "text": "DROP / 01",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              36,
+              89,
+              106
+            ],
+            "ratio": 7.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Ivory / geometric",
+            "colour": "rgb(86, 83, 79)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.65,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "YOUR CURRENT VYBE",
+            "colour": "rgb(86, 83, 79)",
+            "background": [
+              255,
+              253,
+              250
+            ],
+            "ratio": 7.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "Edge Hoodie",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              240,
+              238,
+              233
+            ],
+            "ratio": 13.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Great energy.",
+            "colour": "rgb(158, 39, 47)",
+            "background": [
+              255,
+              253,
+              250
+            ],
+            "ratio": 7.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "01",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              242,
+              223,
+              213
+            ],
+            "ratio": 12.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "02",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              239,
+              217,
+              225
+            ],
+            "ratio": 11.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "03",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              218,
+              220,
+              220
+            ],
+            "ratio": 11.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "04",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              213,
+              229,
+              217
+            ],
+            "ratio": 11.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "05",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              237,
+              232,
+              199
+            ],
+            "ratio": 12.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "NOT MADE TO BLEND IN.",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              238,
+              233,
+              222
+            ],
+            "ratio": 12.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "A canvas foryour kind of bold.",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              238,
+              233,
+              222
+            ],
+            "ratio": 12.83,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "your kind of bold.",
+            "colour": "rgb(158, 39, 47)",
+            "background": [
+              238,
+              233,
+              222
+            ],
+            "ratio": 6.23,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Shop the drop ↗",
+          "colour": "rgb(36, 36, 35)",
+          "width": "3px",
+          "ratio": 5.6
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#main"
+          },
+          {
+            "label": "Shop",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#collection"
+          },
+          {
+            "label": "Collections",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#collection"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#about"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#contact"
+          },
+          {
+            "label": "VYBE home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#main"
+          },
+          {
+            "label": "Explore the drop ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#collection"
+          },
+          {
+            "label": "Shop the drop ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#collection"
+          },
+          {
+            "label": "Find your expression ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#collection"
+          },
+          {
+            "label": "hello@example.com ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "VYBE®",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/vybe/index.html#main"
+          },
+          {
+            "label": "Enquire about these pieces ↗",
+            "href": "mailto:hello@example.com?subject=VYBE%20product%20enquiry&body=%0APlease%20confirm%20availability%20and%20final%20price.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=VYBE%20product%20enquiry&body=%0APlease%20confirm%20availability%20and%20final%20price."
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              36,
+              36,
+              35
+            ],
+            "ratio": 15.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Shop",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              255,
+              253,
+              250
+            ],
+            "ratio": 15.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "VYBE®",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              255,
+              253,
+              250
+            ],
+            "ratio": 15.3,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              255,
+              107,
+              107
+            ],
+            "ratio": 5.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Where art meetsyour everyday.",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              255,
+              107,
+              107
+            ],
+            "ratio": 5.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "pill",
+            "text": "Shop the drop ↗",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 15.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "edition",
+            "text": "DROP / 01",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              36,
+              89,
+              106
+            ],
+            "ratio": 7.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Ivory / geometric",
+            "colour": "rgb(86, 83, 79)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.65,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "YOUR CURRENT VYBE",
+            "colour": "rgb(86, 83, 79)",
+            "background": [
+              255,
+              253,
+              250
+            ],
+            "ratio": 7.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "Edge Hoodie",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              240,
+              238,
+              233
+            ],
+            "ratio": 13.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Great energy.",
+            "colour": "rgb(158, 39, 47)",
+            "background": [
+              255,
+              253,
+              250
+            ],
+            "ratio": 7.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "01",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              242,
+              223,
+              213
+            ],
+            "ratio": 12.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "02",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              239,
+              217,
+              225
+            ],
+            "ratio": 11.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "03",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              218,
+              220,
+              220
+            ],
+            "ratio": 11.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "04",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              213,
+              229,
+              217
+            ],
+            "ratio": 11.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-number",
+            "text": "05",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              237,
+              232,
+              199
+            ],
+            "ratio": 12.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "NOT MADE TO BLEND IN.",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              238,
+              233,
+              222
+            ],
+            "ratio": 12.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "A canvas foryour kind of bold.",
+            "colour": "rgb(36, 36, 35)",
+            "background": [
+              238,
+              233,
+              222
+            ],
+            "ratio": 12.83,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "your kind of bold.",
+            "colour": "rgb(158, 39, 47)",
+            "background": [
+              238,
+              233,
+              222
+            ],
+            "ratio": 6.23,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Shop the drop ↗",
+          "colour": "rgb(36, 36, 35)",
+          "width": "3px",
+          "ratio": 5.6
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "vybe/assets/css/style.css",
+    "vybe/assets/img/bloom.webp",
+    "vybe/assets/img/edge.webp",
+    "vybe/assets/img/noir.webp",
+    "vybe/assets/img/solar.webp",
+    "vybe/assets/img/wave.webp",
+    "vybe/assets/js/main.js",
+    "vybe/CUSTOMISE.md",
+    "vybe/index.html",
+    "vybe/LICENCE.txt",
+    "vybe/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/bloom.webp",
+    "assets/img/edge.webp",
+    "assets/img/noir.webp",
+    "assets/img/solar.webp",
+    "assets/img/wave.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

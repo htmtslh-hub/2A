@@ -74,7 +74,20 @@ web/
                              payos/webhook, paddle/webhook
       don-hang/              trang đơn hàng của khách
       thanh-toan/            trang kết quả thanh toán
-  private/templates/         file .zip giao cho khách (không commit)
+  product/
+    giao-dien-web/
+      <slug>/               thư mục riêng của từng sản phẩm
+        source/             mã nguồn giao diện
+        <slug>.zip          file giao cho khách
+        reviews/, design/   hồ sơ và thiết kế riêng (khi có)
+      docs/                 quy chuẩn và hướng dẫn sản phẩm
+      tools/                công cụ đóng gói và kiểm tra
+      reviews/              hồ sơ kiểm tra chung
+      design/               tài sản thiết kế dùng chung
+    skill-prompt/            sản phẩm skill và prompt
+    agent/                   sản phẩm agent
+    newsproduct 1/           nhóm sản phẩm tạm thời
+    newsproduct 2/           nhóm sản phẩm tạm thời
 ```
 
 ### Sinh lại mã từ thiết kế
@@ -142,9 +155,11 @@ Phần ghi nhận thanh toán dùng chung ở `src/lib/fulfil.ts`, không phải
 
 ## Giao file cho khách
 
-Đặt file `.zip` vào `private/templates/` theo tên `t1.zip` … `t18.zip`,
-`bundle.zip`, `free-sample.zip`. Thư mục này nằm ngoài `public/` nên không ai
-tải trực tiếp được; `/api/download` kiểm tra quyền sở hữu trước khi trả file.
+Đóng gói từ `product/giao-dien-web/<slug>/source/` bằng
+`node product/giao-dien-web/tools/dong-goi.mjs <slug>`. File tạo ra ở
+`product/giao-dien-web/<slug>/<slug>.zip`; mẫu miễn phí dùng
+`free-sample.zip`. Thư mục này nằm ngoài `public/` nên không ai tải trực tiếp
+được; `/api/download` kiểm tra quyền sở hữu trước khi trả file có phí.
 
 ---
 

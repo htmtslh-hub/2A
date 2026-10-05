@@ -1,0 +1,57 @@
+{
+  "browser": "Microsoft Edge 154.0.4258.53",
+  "date": "2026-10-03T14:02:54.757Z",
+  "widths": {
+    "320": {
+      "sw": 320,
+      "cw": 320,
+      "h1": 1,
+      "hiddenAfterScroll": 0,
+      "overflow": false,
+      "errors": [],
+      "menu": {
+        "open": "true",
+        "closed": "false",
+        "focusBack": true,
+        "swOpen": 320
+      }
+    },
+    "375": {
+      "sw": 375,
+      "cw": 375,
+      "h1": 1,
+      "hiddenAfterScroll": 0,
+      "overflow": false,
+      "errors": [],
+      "menu": {
+        "open": "true",
+        "closed": "false",
+        "focusBack": true,
+        "swOpen": 375
+      }
+    },
+    "820": {
+      "sw": 820,
+      "cw": 820,
+      "h1": 1,
+      "hiddenAfterScroll": 0,
+      "overflow": false,
+      "errors": [],
+      "menu": {
+        "open": "true",
+        "closed": "false",
+        "focusBack": true,
+        "swOpen": 820
+      }
+    },
+    "1440": {
+      "sw": 1440,
+      "cw": 1440,
+      "h1": 1,
+      "hiddenAfterScroll": 0,
+      "overflow": false,
+      "errors": [],
+      "menu": null
+    }
+  }
+}

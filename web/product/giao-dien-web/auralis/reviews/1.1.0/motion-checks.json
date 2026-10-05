@@ -1,0 +1,14 @@
+[
+  {
+    "active": "Only what you want to hear.",
+    "transform": "translate3d(0px, 0px, 0px) rotate(-6deg) scale(1)"
+  },
+  {
+    "active": "Feel every layer.",
+    "transform": "translate3d(14.1068px, -8.81678px, 0px) rotate(-3.6deg) scale(1.016)"
+  },
+  {
+    "active": "Stay in your own rhythm.",
+    "transform": "translate3d(22.8254px, -14.2658px, 0px) rotate(0deg) scale(0.9)"
+  }
+]

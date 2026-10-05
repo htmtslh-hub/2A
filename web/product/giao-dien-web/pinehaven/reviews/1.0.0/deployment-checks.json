@@ -1,0 +1,23 @@
+{
+  "deploymentId": "dpl_D36J1ue3wi4Ez9hQmS98PgQf1uv2",
+  "productionUrl": "https://forgezone.store",
+  "detailUrl": "https://forgezone.store/?mau=t8",
+  "observed": {
+    "libraryCardName": "Pinehaven",
+    "locales": {
+      "vi-VN": "Pinehaven · 1.900.000₫",
+      "en-US": "Pinehaven · $79",
+      "zh-CN": "Pinehaven · $79"
+    },
+    "libraryPreview": "/previews/pinehaven.webp",
+    "detailNavigation": "https://forgezone.store/?mau=t8",
+    "demoHtmlStatus": 200,
+    "demoCssStatus": 200,
+    "demoHeroImageStatus": 200,
+    "previewStatus": 200,
+    "mobileWidth": 375,
+    "mobileScrollWidth": 375,
+    "pageErrors": []
+  },
+  "notTested": ["paid checkout", "authenticated ZIP download after purchase"]
+}

@@ -35,3 +35,10 @@ export function langFromAcceptLanguage(header: string | null | undefined): LangC
   }
   return 'en';
 }
+
+/** Browser language list uses the same priority order as Accept-Language.
+ *  `language` covers browsers that do not expose `languages`. */
+export function langFromBrowser(languages: readonly string[] | undefined, language?: string): LangCode {
+  const preferences = languages?.length ? languages : language ? [language] : [];
+  return langFromAcceptLanguage(preferences.join(','));
+}

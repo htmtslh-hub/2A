@@ -1,0 +1,35 @@
+[
+  {
+    "width": 1440,
+    "scroll": 1440,
+    "images": true,
+    "h1": 1
+  },
+  {
+    "width": 820,
+    "scroll": 820,
+    "images": true,
+    "h1": 1
+  },
+  {
+    "width": 375,
+    "scroll": 375,
+    "images": true,
+    "h1": 1
+  },
+  {
+    "width": 320,
+    "scroll": 320,
+    "images": true,
+    "h1": 1
+  },
+  {
+    "menuOpen": "true"
+  },
+  {
+    "menuClosed": "false"
+  },
+  {
+    "nojsOverflow": false
+  }
+]

@@ -1,0 +1,893 @@
+{
+  "slug": "japan-trails",
+  "version": "1.0.1",
+  "date": "2026-10-03T13:47:07.510Z",
+  "os": "win32",
+  "zipBytes": 879268,
+  "sha256": "caf65c9af7b53fbda28fd461cb7a14e3e6744934fd20eaf4d9efd3340606b93f",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#main"
+          },
+          {
+            "label": "Japan Trails home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#home"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#home"
+          },
+          {
+            "label": "Journeys",
+            "href": "#journeys",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#journeys"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#about"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#contact"
+          },
+          {
+            "label": "Plan your journey ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#contact"
+          },
+          {
+            "label": "Explore Japan →",
+            "href": "#journeys",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#journeys"
+          },
+          {
+            "label": "01 / DISCOVERThe journeyFrom Fuji’s foothills to the old streets of Kyoto. Find your own rhythm.↗",
+            "href": "#journeys",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#journeys"
+          },
+          {
+            "label": "02 / WANDERThe placesAncient rooftops, mountain horizons and small moments worth keeping.↗",
+            "href": "#places",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#places"
+          },
+          {
+            "label": "03 / BEGINYour storyTell us what draws you here. Let’s imagine a journey around you.↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#contact"
+          },
+          {
+            "label": "Scroll to discover ↓",
+            "href": "#journeys",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#journeys"
+          },
+          {
+            "label": "Plan your journey ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#contact"
+          },
+          {
+            "label": "Plan your journey ↗",
+            "href": "mailto:hello@example.com?subject=My%20Japan%20journey",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=My%20Japan%20journey"
+          },
+          {
+            "label": "JAPAN TRAILS",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#home"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(16, 25, 29)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "JTJAPANTRAILS",
+            "colour": "rgb(242, 240, 233)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 15.62,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "JAPANTRAILS",
+            "colour": "rgb(242, 240, 233)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 15.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A journey beyond the ordinary",
+            "colour": "rgb(225, 195, 154)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 10.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Mountain mornings. Lantern-lit lanes. Th",
+            "colour": "rgb(224, 227, 224)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 13.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore Japan →",
+            "colour": "rgb(242, 240, 233)",
+            "background": [
+              45,
+              53,
+              56
+            ],
+            "ratio": 11.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card-index",
+            "text": "01 / DISCOVER",
+            "colour": "rgb(213, 220, 217)",
+            "background": [
+              19,
+              28,
+              31
+            ],
+            "ratio": 12.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "The journey",
+            "colour": "rgb(242, 240, 233)",
+            "background": [
+              19,
+              28,
+              31
+            ],
+            "ratio": 15.17,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "From Fuji’s foothills to the old streets",
+            "colour": "rgb(229, 231, 225)",
+            "background": [
+              19,
+              28,
+              31
+            ],
+            "ratio": 13.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "35°30′ N   138°45′ E",
+            "colour": "rgb(208, 215, 215)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 12.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "These sample journeys are starting point",
+            "colour": "rgb(192, 200, 202)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 10.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Listen to the street settle. Follow the ",
+            "colour": "rgb(215, 221, 223)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 12.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button--light",
+            "text": "Plan your journey ↗",
+            "colour": "rgb(16, 25, 29)",
+            "background": [
+              229,
+              222,
+              209
+            ],
+            "ratio": 13.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "JTJAPANTRAILS",
+          "colour": "rgb(225, 195, 154)",
+          "width": "3px",
+          "ratio": 10.58
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#main"
+          },
+          {
+            "label": "Japan Trails home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#home"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#home"
+          },
+          {
+            "label": "Journeys",
+            "href": "#journeys",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#journeys"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#about"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#contact"
+          },
+          {
+            "label": "Plan your journey ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#contact"
+          },
+          {
+            "label": "Explore Japan →",
+            "href": "#journeys",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#journeys"
+          },
+          {
+            "label": "01 / DISCOVERThe journeyFrom Fuji’s foothills to the old streets of Kyoto. Find your own rhythm.↗",
+            "href": "#journeys",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#journeys"
+          },
+          {
+            "label": "02 / WANDERThe placesAncient rooftops, mountain horizons and small moments worth keeping.↗",
+            "href": "#places",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#places"
+          },
+          {
+            "label": "03 / BEGINYour storyTell us what draws you here. Let’s imagine a journey around you.↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#contact"
+          },
+          {
+            "label": "Scroll to discover ↓",
+            "href": "#journeys",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#journeys"
+          },
+          {
+            "label": "Plan your journey ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#contact"
+          },
+          {
+            "label": "Plan your journey ↗",
+            "href": "mailto:hello@example.com?subject=My%20Japan%20journey",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=My%20Japan%20journey"
+          },
+          {
+            "label": "JAPAN TRAILS",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#home"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/japan-trails/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(16, 25, 29)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "JTJAPANTRAILS",
+            "colour": "rgb(242, 240, 233)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 15.62,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "JAPANTRAILS",
+            "colour": "rgb(242, 240, 233)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 15.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Journeys",
+            "colour": "rgb(225, 195, 154)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 10.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Mountain mornings. Lantern-lit lanes. Th",
+            "colour": "rgb(224, 227, 224)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 13.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore Japan →",
+            "colour": "rgb(242, 240, 233)",
+            "background": [
+              45,
+              53,
+              56
+            ],
+            "ratio": 11.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card-index",
+            "text": "01 / DISCOVER",
+            "colour": "rgb(213, 220, 217)",
+            "background": [
+              19,
+              28,
+              31
+            ],
+            "ratio": 12.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "The journey",
+            "colour": "rgb(242, 240, 233)",
+            "background": [
+              19,
+              28,
+              31
+            ],
+            "ratio": 15.17,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "From Fuji’s foothills to the old streets",
+            "colour": "rgb(229, 231, 225)",
+            "background": [
+              19,
+              28,
+              31
+            ],
+            "ratio": 13.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "35°30′ N   138°45′ E",
+            "colour": "rgb(208, 215, 215)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 12.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "These sample journeys are starting point",
+            "colour": "rgb(192, 200, 202)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 10.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Listen to the street settle. Follow the ",
+            "colour": "rgb(215, 221, 223)",
+            "background": [
+              16,
+              25,
+              29
+            ],
+            "ratio": 12.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button--light",
+            "text": "Plan your journey ↗",
+            "colour": "rgb(16, 25, 29)",
+            "background": [
+              229,
+              222,
+              209
+            ],
+            "ratio": 13.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "JTJAPANTRAILS",
+          "colour": "rgb(225, 195, 154)",
+          "width": "3px",
+          "ratio": 10.58
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "japan-trails/assets/css/style.css",
+    "japan-trails/assets/img/fuji.webp",
+    "japan-trails/assets/img/kyoto.webp",
+    "japan-trails/assets/js/main.js",
+    "japan-trails/CUSTOMISE.md",
+    "japan-trails/index.html",
+    "japan-trails/LICENCE.txt",
+    "japan-trails/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/fuji.webp",
+    "assets/img/kyoto.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

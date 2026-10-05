@@ -38,9 +38,18 @@ function sameSite(a: string, b: string): boolean {
   return ha !== null && ha === host(b);
 }
 
+/** Giữ transaction id của Paddle và gắn thêm mã đơn để trang checkout biết
+ *  phải chuyển khách về đơn nào sau khi thanh toán. */
+function paddleCheckoutUrlForOrder(checkoutUrl: string, orderId: string): string {
+  const url = new URL(checkoutUrl);
+  url.searchParams.set('order', orderId);
+  return url.toString();
+}
+
 const schema = z.object({
-  kind: z.enum(['TEMPLATE', 'BUNDLE']),
+  kind: z.enum(['TEMPLATE', 'BUNDLE', 'CART']),
   templateId: z.string().max(10).optional(),
+  templateIds: z.array(z.string().max(10)).min(1).max(20).optional(),
   email: z.string().email(),
   name: z.string().trim().max(120).optional(),
   lang: z.enum(['vi', 'en', 'zh']).default('vi'),
@@ -59,6 +68,16 @@ export async function POST(req: Request) {
   if (kind === 'TEMPLATE' && (!templateId || !templateExists(templateId))) {
     return NextResponse.json({ error: 'Không tìm thấy giao diện này.' }, { status: 400 });
   }
+  const templateIds = kind === 'CART' ? parsed.data.templateIds : undefined;
+  if (kind === 'CART' && (!templateIds || new Set(templateIds).size !== templateIds.length || !templateIds.every(templateExists))) {
+    return NextResponse.json({ error: 'Giỏ hàng không hợp lệ.' }, { status: 400 });
+  }
+
+  const session = await auth();
+  const userId = (session?.user as { id?: string } | undefined)?.id ?? null;
+  if (kind === 'CART' && (!userId || session?.user?.email?.toLowerCase() !== email.toLowerCase())) {
+    return NextResponse.json({ error: 'Vui lòng đăng nhập để thanh toán giỏ hàng.' }, { status: 401 });
+  }
 
   const provider: Provider = parsed.data.provider ?? providerForLang(lang as Lang);
   const adapter = adapterFor(provider);
@@ -71,12 +90,13 @@ export async function POST(req: Request) {
     );
   }
 
-  const session = await auth();
-  const userId = (session?.user as { id?: string } | undefined)?.id ?? null;
-
   const currency = currencyForProvider(provider);
-  const amount = priceOf(kind, currency, templateId);
-  const label = productName(kind, templateId ?? null, lang as Lang);
+  const amount = kind === 'CART'
+    ? templateIds!.reduce((sum, id) => sum + priceOf('TEMPLATE', currency, id), 0)
+    : priceOf(kind, currency, templateId);
+  const label = kind === 'CART'
+    ? ({ vi: `Giỏ hàng · ${templateIds!.length} giao diện`, en: `Cart · ${templateIds!.length} templates`, zh: `购物车 · ${templateIds!.length} 个模板` } as const)[lang]
+    : productName(kind, templateId ?? null, lang as Lang);
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || new URL(req.url).origin;
 
   // Lưu đơn trước khi gọi cổng: webhook về mà chưa có đơn thì không đối soát được.
@@ -92,6 +112,9 @@ export async function POST(req: Request) {
       buyerEmail: email.toLowerCase(),
       buyerName: name ?? null,
       userId,
+      ...(kind === 'CART' ? {
+        items: { create: templateIds!.map((id) => ({ templateId: id, amount: priceOf('TEMPLATE', currency, id) })) },
+      } : {}),
     },
   });
 
@@ -103,6 +126,7 @@ export async function POST(req: Request) {
       amount,
       currency,
       productName: label,
+      ...(kind === 'CART' ? { items: templateIds!.map((id) => ({ name: productName('TEMPLATE', id, lang as Lang), amount: priceOf('TEMPLATE', currency, id) })) } : {}),
       buyerEmail: email,
       buyerName: name,
       lang: lang as Lang,
@@ -125,17 +149,22 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: PADDLE_PAUSED[lang as Lang] }, { status: 503 });
     }
 
+    const checkoutUrl =
+      provider === 'PADDLE'
+        ? paddleCheckoutUrlForOrder(result.checkoutUrl, order.id)
+        : result.checkoutUrl;
+
     await prisma.order.update({
       where: { id: order.id },
       data: {
-        checkoutUrl: result.checkoutUrl,
+        checkoutUrl,
         ...(provider === 'PAYOS'
           ? { payosOrderCode: BigInt(result.reference) }
           : { paddleTxnId: result.reference }),
       },
     });
 
-    return NextResponse.json({ checkoutUrl: result.checkoutUrl, orderId: order.id, provider });
+    return NextResponse.json({ checkoutUrl, orderId: order.id, provider });
   } catch (err) {
     await prisma.order.update({ where: { id: order.id }, data: { status: 'FAILED' } });
     console.error(`[checkout] ${provider} lỗi:`, err);

@@ -107,11 +107,10 @@ export function syncDom(st: State) {
   const island = document.querySelector('[data-island]') as HTMLElement | null;
   if (island) {
     const open = !!st.island;
-    island.style.maxHeight = open ? '128px' : '56px';
-    island.style.borderRadius = open ? '28px' : '100px';
+    island.style.maxHeight = '56px';
+    island.style.borderRadius = '100px';
     const mini = island.querySelector('[data-island-mini]') as HTMLElement | null;
     const full = island.querySelector('[data-island-full]') as HTMLElement | null;
-    const row2 = island.querySelector('[data-island-row2]') as HTMLElement | null;
     if (mini) {
       mini.style.maxWidth = open ? '0px' : '340px';
       mini.style.opacity = open ? '0' : '1';
@@ -121,13 +120,6 @@ export function syncDom(st: State) {
       full.style.maxWidth = open ? '920px' : '0px';
       full.style.opacity = open ? '1' : '0';
       full.style.padding = open ? '7px 9px' : '7px 0';
-    }
-    if (row2) {
-      row2.style.transition =
-        'opacity .55s cubic-bezier(.4,0,.2,1) .18s, max-width 1s cubic-bezier(.19,1,.22,1)';
-      row2.style.overflow = 'hidden';
-      row2.style.opacity = open ? '1' : '0';
-      row2.style.maxWidth = open ? '920px' : '0px';
     }
     island.style.boxShadow = open
       ? 'inset 0 1px 0 rgba(255,255,255,.2), 0 26px 60px rgba(0,0,0,.6)'
@@ -331,7 +323,9 @@ export function syncPreviews() {
   $$('[data-scroller]').forEach((sc: any) => {
     const slot = sc.querySelector('[data-image-slot]');
     const filled = slot && slot.hasAttribute('data-filled');
-    sc.style.height = filled ? '182%' : '100%';
+    // Recorded previews already scroll inside the video; do not stretch them
+    // or run the older image-scrolling animation over the recording.
+    sc.style.height = filled && !slot.hasAttribute('data-video-preview') ? '182%' : '100%';
   });
 }
 

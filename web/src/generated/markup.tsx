@@ -5,6 +5,7 @@
 'use client';
 import React from 'react';
 import ImageSlot from '@/components/ImageSlot';
+import ProductHelp from '@/components/guide/ProductHelp';
 import type { View } from '@/lib/view';
 
 export default function AgenticMarkup({ vm }: { vm: View }) {
@@ -60,7 +61,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                   </span>
                 </button>
                 <span style={{ width: "1px", height: "22px", background: "rgba(255,255,255,.14)", flex: "none" }} />
-                <nav style={{ display: "flex", alignItems: "center", gap: "2px", minWidth: "0", overflow: "hidden" }} aria-label={vm.t.navAria} data-island-tabs="">
+                <nav style={{ display: "flex", alignItems: "center", gap: "2px", minWidth: "0", overflowX: "auto", overflowY: "hidden", scrollbarWidth: "none" }} aria-label={vm.t.navAria} data-island-tabs="">
                   {(vm.tabs ?? []).map((tb: any, tb_i: number) => (
                         <button key={tb_i} style={{ flex: "none", padding: "0 15px", height: "42px", border: "1px solid transparent", borderRadius: "100px", cursor: "pointer", fontFamily: "inherit", fontSize: "13px", fontWeight: "600", letterSpacing: ".01em", whiteSpace: "nowrap", background: "transparent", color: "#ffffff", transition: "background .32s cubic-bezier(.22,1,.36,1), color .28s ease, border-color .28s ease" }} onClick={tb.onSelect} data-tab-pill={tb.key}>
                           {tb.label}
@@ -71,30 +72,6 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                 <button className="hv0" style={{ flex: "none", display: "inline-flex", alignItems: "center", height: "42px", padding: "0 20px", borderRadius: "100px", fontFamily: "inherit", fontSize: "13px", fontWeight: "700", letterSpacing: ".02em", whiteSpace: "nowrap", cursor: "pointer", background: "linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%)", border: "1px solid rgba(255,255,255,.32)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -8px rgba(255,244,230,.5)" }} onClick={vm.openAuth}>
                   {vm.t.navCta}
                 </button>
-                <button className="hv1" style={{ flex: "none", display: "inline-flex", alignItems: "center", justifyContent: "center", minWidth: "42px", height: "42px", padding: "0 13px", border: "1px solid rgba(255,255,255,.2)", borderRadius: "100px", background: "rgba(255,255,255,.07)", cursor: "pointer", fontFamily: "inherit", fontSize: "11px", fontWeight: "700", letterSpacing: ".08em", color: "#c8ced6" }} onClick={vm.toggleIsland} aria-label="Language" data-island-lang="">
-                  {vm.langCode}
-                </button>
-                <button className="hv2" style={{ flex: "none", display: "inline-flex", flexDirection: "column", gap: "5px", justifyContent: "center", alignItems: "center", width: "42px", height: "42px", border: "1px solid rgba(255,255,255,.2)", borderRadius: "50%", background: "rgba(255,255,255,.07)", cursor: "pointer" }} onClick={vm.toggleMenu} aria-label="Menu" data-island-burger="">
-                  <span style={{ width: "15px", height: "1.5px", background: "#eceef1", display: "block" }} />
-                  <span style={{ width: "15px", height: "1.5px", background: "#eceef1", display: "block" }} />
-                </button>
-              </div>
-            </div>
-            <div style={{ padding: "0 18px 14px", display: "flex", alignItems: "center", flexWrap: "wrap", gap: "14px", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,.08)", margin: "0 9px" }} data-island-row2="">
-              <span style={{ paddingTop: "12px", fontSize: "12px", color: "#ffffff", letterSpacing: ".04em" }}>
-                {vm.t.tagline}
-              </span>
-              <div style={{ paddingTop: "12px", display: "flex", alignItems: "center", gap: "12px" }}>
-                <a className="hv3" style={{ fontSize: "12px", color: "#ffffff", letterSpacing: ".03em" }} href={`mailto:${vm.contactEmail}`}>
-                  {vm.contactEmail}
-                </a>
-                <div style={{ display: "flex", alignItems: "center", gap: "2px", padding: "3px", border: "1px solid rgba(236,238,241,.14)", borderRadius: "100px", background: "rgba(255,255,255,.06)" }}>
-                  {(vm.langOptions ?? []).map((lg: any, lg_i: number) => (
-                        <button key={lg_i} style={{ padding: "6px 12px", border: "none", borderRadius: "100px", cursor: "pointer", fontFamily: "inherit", fontSize: "11px", fontWeight: "700", letterSpacing: ".08em", transition: "background .25s ease, color .25s ease" }} onClick={lg.onSelect} aria-label={lg.aria} data-lang-pill={lg.code}>
-                          {lg.label}
-                        </button>
-                    ))}
-                </div>
               </div>
             </div>
           </div>
@@ -108,25 +85,31 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                   <span style={{ width: "12px", height: "12px", borderRadius: "50%", background: "var(--acc)" }} />
                   FORGE ZONE
                 </span>
-                <button className="hv4" style={{ width: "46px", height: "46px", borderRadius: "50%", border: "1px solid rgba(236,238,241,.28)", background: "transparent", color: "#ffffff", fontSize: "22px", cursor: "pointer" }} onClick={vm.toggleMenu} aria-label="Close">
+                <button className="hv1" style={{ width: "46px", height: "46px", borderRadius: "50%", border: "1px solid rgba(236,238,241,.28)", background: "transparent", color: "#ffffff", fontSize: "22px", cursor: "pointer" }} onClick={vm.toggleMenu} aria-label="Close">
                   ×
                 </button>
               </div>
               <div style={{ flex: "1", display: "flex", flexDirection: "column", justifyContent: "center", gap: "clamp(4px,1.4vh,14px)" }}>
                 {(vm.navLinks ?? []).map((link: any, link_i: number) => (
-                      <button key={link_i} className="hv3" style={{ textAlign: "left", background: "transparent", border: "none", cursor: "pointer", padding: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.02em", fontSize: "clamp(30px,6.2vw,70px)", lineHeight: "1.1", color: "#ffffff", display: "flex", alignItems: "baseline", gap: "18px" }} onClick={link.onSelect}>
+                      <button key={link_i} className="hv2" style={{ textAlign: "left", background: "transparent", border: "none", cursor: "pointer", padding: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.02em", fontSize: "clamp(30px,6.2vw,70px)", lineHeight: "1.1", color: "#ffffff", display: "flex", alignItems: "baseline", gap: "18px" }} onClick={link.onSelect}>
                         <span style={{ fontFamily: "var(--body)", fontSize: "14px", color: "#ffffff", letterSpacing: ".1em" }}>
                           {link.no}
                         </span>
                         {link.label}
                       </button>
                   ))}
+                <a style={{ fontSize: "16px", padding: "16px 0", color: "#f7b1ab" }} href={vm.guideHref}>
+                  {vm.guideLabel} →
+                </a>
               </div>
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "20px", justifyContent: "space-between", color: "#ffffff", fontSize: "13px", letterSpacing: ".04em", borderTop: "1px solid rgba(236,238,241,.12)", paddingTop: "20px" }}>
                 <span>
                   {vm.contactEmail}
                 </span>
                 <div style={{ display: "flex", alignItems: "center", gap: "2px", padding: "4px", border: "1px solid rgba(236,238,241,.16)", borderRadius: "100px", background: "rgba(255,255,255,.06)" }}>
+                  <button style={{ padding: "8px 12px", border: "none", borderRadius: "100px", cursor: "pointer", fontFamily: "inherit", fontSize: "12px", fontWeight: "700", color: "#ffffff", background: "rgba(255,255,255,.1)" }} onClick={vm.autoLangOption.onSelect}>
+                    {vm.autoLangOption.label}
+                  </button>
                   {(vm.langOptions ?? []).map((lg: any, lg_i: number) => (
                         <button key={lg_i} style={{ padding: "8px 15px", border: "none", borderRadius: "100px", cursor: "pointer", fontFamily: "inherit", fontSize: "12px", fontWeight: "700", letterSpacing: ".08em", transition: "background .25s ease, color .25s ease" }} onClick={lg.onSelect} aria-label={lg.aria} data-lang-pill={lg.code}>
                           {lg.label}
@@ -187,7 +170,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                       {vm.activeBlurb}
                     </p>
                     <div style={{ display: "flex", alignItems: "center", gap: "18px", marginTop: "34px", flexWrap: "wrap" }}>
-                      <button className="hv5" style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "15px 28px", borderRadius: "16px", fontFamily: "inherit", fontWeight: "700", fontSize: "14px", letterSpacing: ".03em", cursor: "pointer", background: "linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%)", border: "1px solid rgba(255,255,255,.32)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -6px rgba(255,244,230,.55), 0 18px 40px rgba(52,42,34,.34)" }} onClick={vm.heroCta}>
+                      <button className="hv3" style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "15px 28px", borderRadius: "16px", fontFamily: "inherit", fontWeight: "700", fontSize: "14px", letterSpacing: ".03em", cursor: "pointer", background: "linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%)", border: "1px solid rgba(255,255,255,.32)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -6px rgba(255,244,230,.55), 0 18px 40px rgba(52,42,34,.34)" }} onClick={vm.heroCta}>
                         {vm.heroCtaLabel}
                       </button>
                       <button style={{ display: "inline-flex", alignItems: "center", gap: "12px", background: "transparent", border: "none", cursor: "pointer", fontFamily: "inherit", color: "#ffffff", fontSize: "14px", fontWeight: "600" }} onClick={vm.goProcess}>
@@ -201,7 +184,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                   <div style={{ flex: "1 1 480px", minWidth: "min(100%,320px)", display: "flex", flexDirection: "column", gap: "18px" }}>
                     <div style={{ display: "flex", gap: "10px", height: "clamp(300px,42vh,420px)", overflow: "hidden" }} data-herostrip="">
                       {(vm.cards ?? []).map((item: any, item_i: number) => (
-                            <div key={item_i} className="hv6" style={{ position: "relative", minWidth: "0", borderRadius: "18px", overflow: "hidden", cursor: "pointer", transition: "flex-basis .6s cubic-bezier(.22,1,.36,1)", border: "1px solid rgba(236,238,241,.12)" }} onClick={item.onSelect} onMouseEnter={item.onSelect} data-hero-card="">
+                            <div key={item_i} className="hv4" style={{ position: "relative", minWidth: "0", borderRadius: "18px", overflow: "hidden", cursor: "pointer", transition: "flex-basis .6s cubic-bezier(.22,1,.36,1)", border: "1px solid rgba(236,238,241,.12)" }} onClick={item.onSelect} onMouseEnter={item.onSelect} data-hero-card="">
                               <video style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover" }} aria-hidden="true" data-hero-cardvid="" poster={item.poster} muted loop playsInline preload="none" />
                               <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(18,20,24,0) 0%, rgba(18,20,24,0) 45%, rgba(18,20,24,.82) 100%)", pointerEvents: "none" }} />
                               <span style={{ position: "absolute", top: "12px", right: "14px", fontFamily: "var(--display)", fontWeight: "700", fontSize: "20px", color: "#ffffff", pointerEvents: "none" }}>
@@ -232,10 +215,10 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                     </div>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                       <div style={{ display: "flex", gap: "10px" }}>
-                        <button className="hv7" style={{ width: "52px", height: "52px", borderRadius: "50%", border: "1px solid rgba(255,255,255,.28)", background: "linear-gradient(180deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.08) 100%)", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.7), inset 0 1px 0 rgba(255,255,255,.26), 0 10px 24px rgba(52,42,34,.26)", color: "#fffdfa", fontSize: "18px", cursor: "pointer" }} onClick={vm.prev} aria-label="Prev">
+                        <button className="hv5" style={{ width: "52px", height: "52px", borderRadius: "50%", border: "1px solid rgba(255,255,255,.28)", background: "linear-gradient(180deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.08) 100%)", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.7), inset 0 1px 0 rgba(255,255,255,.26), 0 10px 24px rgba(52,42,34,.26)", color: "#fffdfa", fontSize: "18px", cursor: "pointer" }} onClick={vm.prev} aria-label="Prev">
                           ←
                         </button>
-                        <button className="hv7" style={{ width: "52px", height: "52px", borderRadius: "50%", border: "1px solid rgba(255,255,255,.28)", background: "linear-gradient(180deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.08) 100%)", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.7), inset 0 1px 0 rgba(255,255,255,.26), 0 10px 24px rgba(52,42,34,.26)", color: "#fffdfa", fontSize: "18px", cursor: "pointer" }} onClick={vm.next} aria-label="Next">
+                        <button className="hv5" style={{ width: "52px", height: "52px", borderRadius: "50%", border: "1px solid rgba(255,255,255,.28)", background: "linear-gradient(180deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.08) 100%)", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.7), inset 0 1px 0 rgba(255,255,255,.26), 0 10px 24px rgba(52,42,34,.26)", color: "#fffdfa", fontSize: "18px", cursor: "pointer" }} onClick={vm.next} aria-label="Next">
                           →
                         </button>
                       </div>
@@ -268,62 +251,109 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                         {vm.homeThemeTitle}
                       </h2>
                     </div>
-                    <button className="hv7" style={{ marginTop: "28px", display: "inline-flex", alignItems: "center", gap: "10px", padding: "13px 24px", borderRadius: "14px", cursor: "pointer", fontFamily: "inherit", fontSize: "13px", fontWeight: "700", background: "linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,.06) 100%)", backdropFilter: "blur(22px) saturate(150%)", WebkitBackdropFilter: "blur(22px) saturate(150%)", border: "1px solid rgba(255,255,255,.5)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.85), inset 0 1px 0 rgba(255,255,255,.45), 0 8px 26px -6px rgba(255,246,232,.5)", position: "relative", overflow: "hidden" }} onClick={vm.goLibrary}>
+                    <button className="hv5" style={{ marginTop: "28px", display: "inline-flex", alignItems: "center", gap: "10px", padding: "13px 24px", borderRadius: "14px", cursor: "pointer", fontFamily: "inherit", fontSize: "13px", fontWeight: "700", background: "linear-gradient(180deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,.06) 100%)", backdropFilter: "blur(22px) saturate(150%)", WebkitBackdropFilter: "blur(22px) saturate(150%)", border: "1px solid rgba(255,255,255,.5)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.85), inset 0 1px 0 rgba(255,255,255,.45), 0 8px 26px -6px rgba(255,246,232,.5)", position: "relative", overflow: "hidden" }} onClick={vm.goLibrary}>
                       <span style={{ position: "absolute", top: "-20%", bottom: "-20%", left: "0", width: "55%", mixBlendMode: "screen", background: "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.9) 50%, rgba(255,255,255,0) 100%)", pointerEvents: "none" }} data-sheen="" />
                       <span style={{ position: "relative" }}>
-                        {vm.t.tplAll}
+                        {vm.homeBrowseLabel}
                       </span>
                     </button>
                   </div>
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))", gap: "22px" }}>
-                    {(vm.homeTemplates ?? []).map((hp: any, hp_i: number) => (
-                          <div key={hp_i} className="hv8" style={{ position: "relative", display: "flex", flexDirection: "column", borderRadius: "24px", overflow: "hidden", background: "linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%)", border: "1px solid rgba(236,238,241,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18)", transition: "border-color .3s ease, transform .3s ease, box-shadow .3s ease" }} data-reveal="" onMouseEnter={vm.ledOn} onMouseLeave={vm.ledOff}>
-                            <span style={{ position: "absolute", inset: "0", zIndex: "6", borderRadius: "24px", padding: "2px", opacity: "0", overflow: "hidden", pointerEvents: "none", transition: "opacity .35s ease", WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", maskComposite: "exclude" }} data-led="">
-                              <span style={{ position: "absolute", top: "50%", left: "50%", width: "200%", aspectRatio: "1", background: "conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 236deg, var(--acc-a55) 296deg, var(--acc-soft) 336deg, #fffdfa 352deg, rgba(255,255,255,0) 360deg)" }} data-led-spin="" />
-                            </span>
-                            <div style={{ position: "relative", aspectRatio: "16/11", overflow: "hidden" }}>
-                              <div style={{ position: "absolute", top: "0", left: "0", right: "0", height: "100%", transform: "translateY(0)", willChange: "transform" }} data-scroller="">
-                                <ImageSlot id={`agentic-home-${hp.id}`} shape="rect" fit="cover" placeholder="Ảnh preview giao diện" />
-                              </div>
-                              <span style={{ position: "absolute", zIndex: "3", top: "8px", right: "6px", bottom: "8px", width: "3px", borderRadius: "3px", background: "rgba(255,255,255,.28)", opacity: "0", transition: "opacity .3s ease", pointerEvents: "none" }} data-scrollbar="" aria-hidden="true" />
-                              <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(18,20,24,.1) 0%, rgba(18,20,24,.65) 100%)", pointerEvents: "none" }} />
-                              <span style={{ position: "absolute", top: "12px", left: "12px", padding: "6px 12px", borderRadius: "100px", background: "rgba(255,255,255,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.24)", fontSize: "11px", fontWeight: "600", letterSpacing: ".1em", textTransform: "uppercase", color: "#ffffff" }}>
-                                {hp.catLabel}
-                              </span>
-                              {(hp.badge) ? (
-                                <>
-                                  <span style={{ position: "absolute", top: "12px", right: "12px", padding: "6px 12px", borderRadius: "100px", background: "var(--acc)", color: "#ffffff", fontSize: "11px", fontWeight: "700", letterSpacing: ".08em", textTransform: "uppercase" }}>
-                                    {hp.badge}
+                  {(vm.showWebProducts) ? (
+                    <>
+                      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))", gap: "22px" }}>
+                        {(vm.homeTemplates ?? []).map((hp: any, hp_i: number) => (
+                              <div key={hp_i} className="product-card-wrap" style={{ position: "relative", minWidth: "0", display: "flex" }} onMouseEnter={vm.ledOn} onMouseLeave={vm.ledOff}>
+                                <a className="product-card hv6" style={{ position: "relative", display: "flex", flex: "1", flexDirection: "column", borderRadius: "24px", overflow: "hidden", background: "linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%)", border: "1px solid rgba(236,238,241,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18)", transition: "border-color .3s ease, transform .3s ease, box-shadow .3s ease" }} href={hp.href} onClick={hp.onDetail}>
+                                  <span style={{ position: "absolute", inset: "0", zIndex: "6", borderRadius: "24px", padding: "2px", opacity: "0", overflow: "hidden", pointerEvents: "none", transition: "opacity .35s ease", WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", maskComposite: "exclude" }} data-led="">
+                                    <span style={{ position: "absolute", top: "50%", left: "50%", width: "200%", aspectRatio: "1", background: "conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 236deg, var(--acc-a55) 296deg, var(--acc-soft) 336deg, #fffdfa 352deg, rgba(255,255,255,0) 360deg)" }} data-led-spin="" />
                                   </span>
-                                </>
-                              ) : null}
-                              <button className="hv9" style={{ position: "absolute", left: "12px", right: "12px", bottom: "12px", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px", borderRadius: "14px", cursor: "pointer", fontFamily: "inherit", background: "linear-gradient(180deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,.18) 100%)", border: "1px solid rgba(255,255,255,.36)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.85), 0 8px 18px -6px rgba(255,244,230,.5)", fontSize: "13px", fontWeight: "700", opacity: "0", transition: "opacity .28s ease" }} onClick={hp.onDetail}>
-                                {vm.t.tplPreview}
-                              </button>
-                            </div>
-                            <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", gap: "10px", flex: "1" }}>
-                              <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
-                                <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "22px", lineHeight: "1.15" }}>
-                                  {hp.name}
-                                </h3>
-                                <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap" }}>
-                                  {hp.price}
-                                </span>
-                              </div>
-                              <p style={{ margin: "0", fontSize: "14px", lineHeight: "1.55", color: "#949ba4", flex: "1" }}>
-                                {hp.desc}
-                              </p>
-                              <div style={{ display: "flex", flexWrap: "wrap", gap: "7px", marginTop: "4px" }}>
-                                {(hp.tags ?? []).map((tg: any, tg_i: number) => (
-                                      <span key={tg_i} style={{ padding: "5px 11px", borderRadius: "100px", border: "1px solid rgba(236,238,241,.16)", fontSize: "11px", color: "#ffffff", letterSpacing: ".04em" }}>
-                                        {tg}
+                                  <div style={{ position: "relative", aspectRatio: "16/11", overflow: "hidden" }}>
+                                    <ImageSlot id={`agentic-home-${hp.id}`} presentation="stage" shape="rect" fit="cover" placeholder="Ảnh preview giao diện" />
+                                    <span style={{ position: "absolute", top: "12px", left: "12px", padding: "6px 12px", borderRadius: "100px", background: "rgba(255,255,255,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.24)", fontSize: "11px", fontWeight: "600", letterSpacing: ".1em", textTransform: "uppercase", color: "#ffffff" }}>
+                                      {hp.catLabel}
+                                    </span>
+                                    {(hp.badge) ? (
+                                      <>
+                                        <span style={{ position: "absolute", top: "12px", right: "12px", padding: "6px 12px", borderRadius: "100px", background: "var(--acc)", color: "#ffffff", fontSize: "11px", fontWeight: "700", letterSpacing: ".08em", textTransform: "uppercase" }}>
+                                          {hp.badge}
+                                        </span>
+                                      </>
+                                    ) : null}
+                                  </div>
+                                  <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", gap: "10px", flex: "1" }}>
+                                    <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
+                                      <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "22px", lineHeight: "1.15" }}>
+                                        {hp.name}
+                                      </h3>
+                                      <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap" }}>
+                                        {hp.price}
                                       </span>
-                                  ))}
+                                    </div>
+                                    <p style={{ margin: "0", fontSize: "14px", lineHeight: "1.55", color: "#949ba4", flex: "1" }}>
+                                      {hp.desc}
+                                    </p>
+                                    <div style={{ display: "flex", flexWrap: "wrap", gap: "7px", marginTop: "4px" }}>
+                                      {(hp.tags ?? []).map((tg: any, tg_i: number) => (
+                                            <span key={tg_i} style={{ padding: "5px 11px", borderRadius: "100px", border: "1px solid rgba(236,238,241,.16)", fontSize: "11px", color: "#ffffff", letterSpacing: ".04em" }}>
+                                              {tg}
+                                            </span>
+                                        ))}
+                                    </div>
+                                  </div>
+                                </a>
+                                <div className="product-card-actions">
+                                  <button className="save-template-button" type="button" onClick={hp.onSave} disabled={hp.saveDisabled} aria-label={hp.saveLabel} aria-pressed={hp.saved} title={hp.saveLabel}>
+                                    <span className="save-heart" aria-hidden="true">
+                                      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z" />
+                                      </svg>
+                                    </span>
+                                    <span className="save-count" aria-hidden="true">
+                                      {hp.saveCount}
+                                    </span>
+                                  </button>
+                                  <button className="cart-template-button" type="button" onClick={hp.onCart} aria-label={hp.cartLabel} aria-pressed={hp.inCart}>
+                                    <svg className="cart-card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                      <path d="M3 4h2l2 12h12l2-9H6" />
+                                      <circle cx="9" cy="20" r="1" />
+                                      <circle cx="18" cy="20" r="1" />
+                                    </svg>
+                                  </button>
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                      ))}
-                  </div>
+                          ))}
+                      </div>
+                    </>
+                  ) : null}
+                  {(vm.showProductPlaceholders) ? (
+                    <>
+                      <div className="future-product-grid">
+                        {(vm.placeholderCards ?? []).map((ph: any, ph_i: number) => (
+                              <article key={ph_i} className="future-product-card" aria-label={ph.aria}>
+                                <div className="future-product-card__visual" aria-hidden="true">
+                                  <span className="future-product-card__plus">
+                                    +
+                                  </span>
+                                  <span className="future-product-card__index">
+                                    {ph.no}
+                                  </span>
+                                </div>
+                                <div className="future-product-card__body">
+                                  <span className="future-product-card__type">
+                                    {ph.type}
+                                  </span>
+                                  <h3>
+                                    {ph.title}
+                                  </h3>
+                                  <p>
+                                    {ph.note}
+                                  </p>
+                                </div>
+                              </article>
+                          ))}
+                      </div>
+                    </>
+                  ) : null}
                 </div>
               </section>
             </>
@@ -352,78 +382,132 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                         <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "18px" }}>
                           <span style={{ width: "40px", height: "1px", background: "var(--acc)" }} />
                           <span style={{ fontSize: "12px", letterSpacing: ".24em", textTransform: "uppercase", color: "#ffffff" }}>
-                            {vm.t.tplLabel}
+                            {vm.libraryKicker}
                           </span>
                         </div>
                         <h2 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.02em", fontSize: "clamp(34px,5.5vw,72px)", lineHeight: "1.04", maxWidth: "16ch" }}>
-                          {vm.t.tplTitle}
+                          {vm.libraryTitle}
                         </h2>
                       </div>
                       <p style={{ maxWidth: "340px", margin: "0", color: "#949ba4", fontSize: "15px", lineHeight: "1.6" }}>
-                        {vm.t.tplIntro}
+                        {vm.libraryIntro}
                       </p>
                     </div>
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "clamp(24px,3vw,36px)" }}>
-                      {(vm.filters ?? []).map((f: any, f_i: number) => (
-                            <button key={f_i} className="hv2" style={{ padding: "10px 18px", borderRadius: "100px", cursor: "pointer", fontFamily: "inherit", fontSize: "13px", fontWeight: "600", letterSpacing: ".02em", borderWidth: "1px", borderStyle: "solid", transition: "all .22s ease" }} onClick={f.onSelect} data-filter-chip={f.key}>
-                              {f.label}
+                    <div className="product-group-tabs" role="group" aria-label={vm.productGroupAria}>
+                      {(vm.productGroups ?? []).map((group: any, group_i: number) => (
+                            <button key={group_i} className="product-group-tab" type="button" data-product-group={group.key} onClick={group.onSelect} aria-pressed={group.selected}>
+                              {group.label}
                             </button>
                         ))}
                     </div>
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))", gap: "22px" }}>
-                      {(vm.templates ?? []).map((tp: any, tp_i: number) => (
-                            <div key={tp_i} className="hv8" style={{ position: "relative", display: "flex", flexDirection: "column", borderRadius: "24px", overflow: "hidden", background: "linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%)", border: "1px solid rgba(236,238,241,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18)", transition: "border-color .3s ease, transform .3s ease, box-shadow .3s ease" }} data-reveal="" onMouseEnter={vm.ledOn} onMouseLeave={vm.ledOff}>
-                              <span style={{ position: "absolute", inset: "0", zIndex: "6", borderRadius: "24px", padding: "2px", opacity: "0", overflow: "hidden", pointerEvents: "none", transition: "opacity .35s ease", WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", maskComposite: "exclude" }} data-led="">
-                                <span style={{ position: "absolute", top: "50%", left: "50%", width: "200%", aspectRatio: "1", background: "conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 236deg, var(--acc-a55) 296deg, var(--acc-soft) 336deg, #fffdfa 352deg, rgba(255,255,255,0) 360deg)" }} data-led-spin="" />
-                              </span>
-                              <div style={{ position: "relative", aspectRatio: "16/11", overflow: "hidden" }}>
-                                <div style={{ position: "absolute", top: "0", left: "0", right: "0", height: "100%", transform: "translateY(0)", willChange: "transform" }} data-scroller="">
-                                  <ImageSlot id={`agentic-tpl-${tp.id}`} shape="rect" fit="cover" placeholder="Ảnh preview giao diện" />
-                                </div>
-                                <span style={{ position: "absolute", zIndex: "3", top: "8px", right: "6px", bottom: "8px", width: "3px", borderRadius: "3px", background: "rgba(255,255,255,.28)", opacity: "0", transition: "opacity .3s ease", pointerEvents: "none" }} data-scrollbar="" aria-hidden="true" />
-                                <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(18,20,24,.1) 0%, rgba(18,20,24,.65) 100%)", pointerEvents: "none" }} />
-                                <span style={{ position: "absolute", top: "12px", left: "12px", padding: "6px 12px", borderRadius: "100px", background: "rgba(255,255,255,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.24)", fontSize: "11px", fontWeight: "600", letterSpacing: ".1em", textTransform: "uppercase", color: "#ffffff" }}>
-                                  {tp.catLabel}
-                                </span>
-                                {(tp.badge) ? (
-                                  <>
-                                    <span style={{ position: "absolute", top: "12px", right: "12px", padding: "6px 12px", borderRadius: "100px", background: "var(--acc)", color: "#ffffff", fontSize: "11px", fontWeight: "700", letterSpacing: ".08em", textTransform: "uppercase" }}>
-                                      {tp.badge}
-                                    </span>
-                                  </>
-                                ) : null}
-                                <button className="hv9" style={{ position: "absolute", left: "12px", right: "12px", bottom: "12px", display: "flex", alignItems: "center", justifyContent: "center", padding: "12px", borderRadius: "14px", cursor: "pointer", fontFamily: "inherit", background: "linear-gradient(180deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,.18) 100%)", border: "1px solid rgba(255,255,255,.36)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.85), 0 8px 18px -6px rgba(255,244,230,.5)", fontSize: "13px", fontWeight: "700", opacity: "0", transition: "opacity .28s ease" }} onClick={tp.onDetail}>
-                                  {vm.t.tplPreview}
+                    {(vm.showWebProducts) ? (
+                      <>
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "clamp(24px,3vw,36px)" }}>
+                          {(vm.filters ?? []).map((f: any, f_i: number) => (
+                                <button key={f_i} className="hv7" style={{ padding: "10px 18px", borderRadius: "100px", cursor: "pointer", fontFamily: "inherit", fontSize: "13px", fontWeight: "600", letterSpacing: ".02em", borderWidth: "1px", borderStyle: "solid", transition: "all .22s ease" }} onClick={f.onSelect} data-filter-chip={f.key}>
+                                  {f.label}
                                 </button>
-                              </div>
-                              <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", gap: "10px", flex: "1" }}>
-                                <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
-                                  <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "22px", lineHeight: "1.15" }}>
-                                    {tp.name}
-                                  </h3>
-                                  <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap" }}>
-                                    {tp.price}
-                                  </span>
-                                </div>
-                                <p style={{ margin: "0", fontSize: "14px", lineHeight: "1.55", color: "#949ba4", flex: "1" }}>
-                                  {tp.desc}
-                                </p>
-                                <div style={{ display: "flex", flexWrap: "wrap", gap: "7px", marginTop: "4px" }}>
-                                  {(tp.tags ?? []).map((tg: any, tg_i: number) => (
-                                        <span key={tg_i} style={{ padding: "5px 11px", borderRadius: "100px", border: "1px solid rgba(236,238,241,.16)", fontSize: "11px", color: "#ffffff", letterSpacing: ".04em" }}>
-                                          {tg}
+                            ))}
+                        </div>
+                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(300px,1fr))", gap: "22px" }}>
+                          {(vm.templates ?? []).map((tp: any, tp_i: number) => (
+                                <div key={tp_i} className="product-card-wrap" style={{ position: "relative", minWidth: "0", display: "flex" }} onMouseEnter={vm.ledOn} onMouseLeave={vm.ledOff}>
+                                  <a className="product-card hv6" style={{ position: "relative", display: "flex", flex: "1", flexDirection: "column", borderRadius: "24px", overflow: "hidden", background: "linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%)", border: "1px solid rgba(236,238,241,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18)", transition: "border-color .3s ease, transform .3s ease, box-shadow .3s ease" }} href={tp.href} onClick={tp.onDetail}>
+                                    <span style={{ position: "absolute", inset: "0", zIndex: "6", borderRadius: "24px", padding: "2px", opacity: "0", overflow: "hidden", pointerEvents: "none", transition: "opacity .35s ease", WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", maskComposite: "exclude" }} data-led="">
+                                      <span style={{ position: "absolute", top: "50%", left: "50%", width: "200%", aspectRatio: "1", background: "conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 236deg, var(--acc-a55) 296deg, var(--acc-soft) 336deg, #fffdfa 352deg, rgba(255,255,255,0) 360deg)" }} data-led-spin="" />
+                                    </span>
+                                    <div style={{ position: "relative", aspectRatio: "16/11", overflow: "hidden" }}>
+                                      <ImageSlot id={`agentic-tpl-${tp.id}`} presentation="stage" shape="rect" fit="cover" placeholder="Ảnh preview giao diện" />
+                                      <span style={{ position: "absolute", top: "12px", left: "12px", padding: "6px 12px", borderRadius: "100px", background: "rgba(255,255,255,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.24)", fontSize: "11px", fontWeight: "600", letterSpacing: ".1em", textTransform: "uppercase", color: "#ffffff" }}>
+                                        {tp.catLabel}
+                                      </span>
+                                      {(tp.badge) ? (
+                                        <>
+                                          <span style={{ position: "absolute", top: "12px", right: "12px", padding: "6px 12px", borderRadius: "100px", background: "var(--acc)", color: "#ffffff", fontSize: "11px", fontWeight: "700", letterSpacing: ".08em", textTransform: "uppercase" }}>
+                                            {tp.badge}
+                                          </span>
+                                        </>
+                                      ) : null}
+                                    </div>
+                                    <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", gap: "10px", flex: "1" }}>
+                                      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
+                                        <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "22px", lineHeight: "1.15" }}>
+                                          {tp.name}
+                                        </h3>
+                                        <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap" }}>
+                                          {tp.price}
                                         </span>
-                                    ))}
+                                      </div>
+                                      <p style={{ margin: "0", fontSize: "14px", lineHeight: "1.55", color: "#949ba4", flex: "1" }}>
+                                        {tp.desc}
+                                      </p>
+                                      <div style={{ display: "flex", flexWrap: "wrap", gap: "7px", marginTop: "4px" }}>
+                                        {(tp.tags ?? []).map((tg: any, tg_i: number) => (
+                                              <span key={tg_i} style={{ padding: "5px 11px", borderRadius: "100px", border: "1px solid rgba(236,238,241,.16)", fontSize: "11px", color: "#ffffff", letterSpacing: ".04em" }}>
+                                                {tg}
+                                              </span>
+                                          ))}
+                                      </div>
+                                    </div>
+                                  </a>
+                                  <div className="product-card-actions">
+                                    <button className="save-template-button" type="button" onClick={tp.onSave} disabled={tp.saveDisabled} aria-label={tp.saveLabel} aria-pressed={tp.saved} title={tp.saveLabel}>
+                                      <span className="save-heart" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z" />
+                                        </svg>
+                                      </span>
+                                      <span className="save-count" aria-hidden="true">
+                                        {tp.saveCount}
+                                      </span>
+                                    </button>
+                                    <button className="cart-template-button" type="button" onClick={tp.onCart} aria-label={tp.cartLabel} aria-pressed={tp.inCart}>
+                                      <svg className="cart-card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M3 4h2l2 12h12l2-9H6" />
+                                        <circle cx="9" cy="20" r="1" />
+                                        <circle cx="18" cy="20" r="1" />
+                                      </svg>
+                                    </button>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>
-                        ))}
-                    </div>
-                    <div style={{ display: "flex", justifyContent: "center", marginTop: "clamp(30px,4vw,48px)" }}>
-                      <button className="hv7" style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "15px 28px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontSize: "14px", fontWeight: "600", background: "linear-gradient(180deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.09) 100%)", border: "1px solid rgba(255,255,255,.26)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.75), inset 0 1px 0 rgba(255,255,255,.28), 0 10px 22px -8px rgba(255,244,230,.45), 0 16px 34px rgba(52,42,34,.28)" }} onClick={vm.goPricing}>
-                        {vm.t.tplAll}
-                      </button>
-                    </div>
+                            ))}
+                        </div>
+                        <div style={{ display: "flex", justifyContent: "center", marginTop: "clamp(30px,4vw,48px)" }}>
+                          <button className="hv5" style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "15px 28px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontSize: "14px", fontWeight: "600", background: "linear-gradient(180deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.09) 100%)", border: "1px solid rgba(255,255,255,.26)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.75), inset 0 1px 0 rgba(255,255,255,.28), 0 10px 22px -8px rgba(255,244,230,.45), 0 16px 34px rgba(52,42,34,.28)" }} onClick={vm.goPricing}>
+                            {vm.t.tplAll}
+                          </button>
+                        </div>
+                      </>
+                    ) : null}
+                    {(vm.showProductPlaceholders) ? (
+                      <>
+                        <div className="future-product-grid">
+                          {(vm.placeholderCards ?? []).map((ph: any, ph_i: number) => (
+                                <article key={ph_i} className="future-product-card" aria-label={ph.aria}>
+                                  <div className="future-product-card__visual" aria-hidden="true">
+                                    <span className="future-product-card__plus">
+                                      +
+                                    </span>
+                                    <span className="future-product-card__index">
+                                      {ph.no}
+                                    </span>
+                                  </div>
+                                  <div className="future-product-card__body">
+                                    <span className="future-product-card__type">
+                                      {ph.type}
+                                    </span>
+                                    <h3>
+                                      {ph.title}
+                                    </h3>
+                                    <p>
+                                      {ph.note}
+                                    </p>
+                                  </div>
+                                </article>
+                            ))}
+                        </div>
+                      </>
+                    ) : null}
                   </div>
                 </section>
               </div>
@@ -437,22 +521,12 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                 <section style={{ position: "relative", padding: "clamp(28px,4vw,44px) clamp(20px,4vw,56px) clamp(44px,6vw,72px)", overflow: "hidden" }}>
                   <div style={{ position: "absolute", top: "-14%", right: "-6%", width: "56%", height: "70%", borderRadius: "50%", background: "var(--acc-a14)", filter: "blur(150px)", pointerEvents: "none" }} aria-hidden="true" />
                   <div style={{ position: "relative", zIndex: "1", maxWidth: "1280px", margin: "0 auto" }}>
-                    <button className="hv10" style={{ display: "inline-flex", alignItems: "center", gap: "9px", marginBottom: "clamp(22px,3vw,32px)", padding: "9px 16px 9px 12px", borderRadius: "100px", cursor: "pointer", fontFamily: "inherit", fontSize: "13px", fontWeight: "600", color: "#ffffff", background: "rgba(255,255,255,.06)", border: "1px solid rgba(236,238,241,.16)", transition: "background .25s ease, border-color .25s ease" }} onClick={vm.closeDetail}>
+                    <button className="hv8" style={{ display: "inline-flex", alignItems: "center", gap: "9px", marginBottom: "clamp(22px,3vw,32px)", padding: "9px 16px 9px 12px", borderRadius: "100px", cursor: "pointer", fontFamily: "inherit", fontSize: "13px", fontWeight: "600", color: "#ffffff", background: "rgba(255,255,255,.06)", border: "1px solid rgba(236,238,241,.16)", transition: "background .25s ease, border-color .25s ease" }} onClick={vm.closeDetail}>
                       ← {vm.t.dBack}
                     </button>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: "clamp(28px,4vw,52px)", alignItems: "start" }}>
-                      <div style={{ position: "relative", borderRadius: "26px", overflow: "hidden", border: "1px solid rgba(236,238,241,.16)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.18), 0 30px 70px -30px rgba(0,0,0,.8)" }} data-reveal="">
-                        <div style={{ display: "flex", alignItems: "center", gap: "7px", padding: "11px 14px", background: "rgba(255,255,255,.06)", borderBottom: "1px solid rgba(236,238,241,.12)" }}>
-                          <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "rgba(255,255,255,.22)" }} />
-                          <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "rgba(255,255,255,.22)" }} />
-                          <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "rgba(255,255,255,.22)" }} />
-                          <span style={{ marginLeft: "10px", padding: "4px 14px", borderRadius: "100px", background: "rgba(0,0,0,.3)", fontSize: "11px", color: "#949ba4", letterSpacing: ".04em" }}>
-                            {vm.siteHost}/{vm.detail.id}
-                          </span>
-                        </div>
-                        <div style={{ position: "relative", aspectRatio: "16/11", overflow: "hidden" }}>
-                          <ImageSlot id={vm.detail.slotId} shape="rect" fit="cover" placeholder="Ảnh preview giao diện" />
-                        </div>
+                      <div style={{ position: "relative", aspectRatio: "16/11", borderRadius: "26px", overflow: "hidden", border: "1px solid rgba(236,238,241,.16)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.18), 0 30px 70px -30px rgba(0,0,0,.8)" }} data-reveal="">
+                        <ImageSlot id={vm.detail.slotId} presentation="stage" videoControls shape="rect" fit="cover" placeholder={vm.detail.demoTitle} />
                       </div>
                       <div style={{ display: "flex", flexDirection: "column" }}>
                         <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
@@ -489,38 +563,18 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                           </span>
                         </div>
                         <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
-                          <button className="hv11" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px", padding: "16px 30px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontSize: "14px", fontWeight: "700", letterSpacing: ".01em", color: "#fffdfa", background: "linear-gradient(180deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,.18) 100%)", border: "1px solid rgba(255,255,255,.4)", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.95), inset 0 1px 0 rgba(255,255,255,.38), 0 10px 22px -6px rgba(255,244,230,.6), 0 18px 40px rgba(52,42,34,.34)", transition: "transform .25s ease" }} onClick={vm.buyDetail}>
+                          <button className="hv9" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px", padding: "16px 30px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontSize: "14px", fontWeight: "700", letterSpacing: ".01em", color: "#fffdfa", background: "linear-gradient(180deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,.18) 100%)", border: "1px solid rgba(255,255,255,.4)", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.95), inset 0 1px 0 rgba(255,255,255,.38), 0 10px 22px -6px rgba(255,244,230,.6), 0 18px 40px rgba(52,42,34,.34)", transition: "transform .25s ease" }} onClick={vm.buyDetail}>
                             {vm.t.dBuy} →
                           </button>
-                          <button className="hv12" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px", padding: "16px 26px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontSize: "14px", fontWeight: "600", color: "#ffffff", background: "transparent", border: "1px solid rgba(236,238,241,.24)", transition: "border-color .25s ease, background .25s ease" }} onClick={vm.openAuth}>
-                            {vm.t.dLive}
+                          <button className="cart-detail-button" type="button" onClick={vm.addDetailToCart}>
+                            {vm.detailCartLabel}
+                          </button>
+                          <button className="hv10" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px", padding: "16px 26px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontSize: "14px", fontWeight: "600", color: "#ffffff", background: "transparent", border: "1px solid rgba(236,238,241,.24)", transition: "border-color .25s ease, background .25s ease" }} onClick={vm.detail.openDemo}>
+                            {vm.t.dLive} ↗
                           </button>
                         </div>
+                        {vm.guideSlug ? <ProductHelp lang={vm.guideLang} slug={vm.guideSlug} /> : null}
                       </div>
-                    </div>
-                  </div>
-                </section>
-                <section style={{ position: "relative", padding: "clamp(44px,6vw,80px) clamp(20px,4vw,56px)", overflow: "hidden" }}>
-                  <div style={{ position: "relative", zIndex: "1", maxWidth: "1280px", margin: "0 auto" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "clamp(24px,3vw,36px)" }}>
-                      <span style={{ width: "40px", height: "1px", background: "var(--acc)" }} />
-                      <span style={{ fontSize: "12px", letterSpacing: ".24em", textTransform: "uppercase", color: "#ffffff" }}>
-                        {vm.t.dViews}
-                      </span>
-                    </div>
-                    <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "center", gap: "clamp(18px,3vw,34px)" }}>
-                      {(vm.detail.views ?? []).map((v: any, v_i: number) => (
-                            <div key={v_i} style={{ flex: "0 1 auto", width: v.w, minWidth: "180px", display: "flex", flexDirection: "column", gap: "12px" }} data-reveal="">
-                              <div style={{ position: "relative", aspectRatio: v.ratio, borderRadius: "18px", overflow: "hidden", border: "1px solid rgba(236,238,241,.16)", background: "rgba(255,255,255,.03)", boxShadow: "0 24px 60px -28px rgba(0,0,0,.85)" }}>
-                                <div style={{ position: "absolute", top: "0", left: "0", width: "100%", aspectRatio: "16/11" }}>
-                                  <ImageSlot id={v.slotId} shape="rect" fit="cover" placeholder="Preview" />
-                                </div>
-                              </div>
-                              <span style={{ textAlign: "center", fontSize: "12px", letterSpacing: ".14em", textTransform: "uppercase", color: "#949ba4" }}>
-                                {v.name}
-                              </span>
-                            </div>
-                        ))}
                     </div>
                   </div>
                 </section>
@@ -557,29 +611,46 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                     </div>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "22px" }}>
                       {(vm.detail.related ?? []).map((rp: any, rp_i: number) => (
-                            <div key={rp_i} className="hv8" style={{ position: "relative", display: "flex", flexDirection: "column", borderRadius: "24px", overflow: "hidden", cursor: "pointer", background: "linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%)", border: "1px solid rgba(236,238,241,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.20)", transition: "border-color .3s ease, transform .3s ease" }} data-reveal="" onClick={rp.onSelect} onMouseEnter={vm.ledOn} onMouseLeave={vm.ledOff}>
-                              <span style={{ position: "absolute", inset: "0", zIndex: "6", borderRadius: "24px", padding: "2px", opacity: "0", overflow: "hidden", pointerEvents: "none", transition: "opacity .35s ease", WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", maskComposite: "exclude" }} data-led="">
-                                <span style={{ position: "absolute", top: "50%", left: "50%", width: "200%", aspectRatio: "1", background: "conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 236deg, var(--acc-a55) 296deg, var(--acc-soft) 336deg, #fffdfa 352deg, rgba(255,255,255,0) 360deg)" }} data-led-spin="" />
-                              </span>
-                              <div style={{ position: "relative", aspectRatio: "16/11", overflow: "hidden" }}>
-                                <div style={{ position: "absolute", top: "0", left: "0", right: "0", height: "100%", transform: "translateY(0)", willChange: "transform" }} data-scroller="">
-                                  <ImageSlot id={`agentic-tpl-${rp.id}`} shape="rect" fit="cover" placeholder="Ảnh preview giao diện" />
+                            <div key={rp_i} className="product-card-wrap" style={{ position: "relative", minWidth: "0", display: "flex" }} onMouseEnter={vm.ledOn} onMouseLeave={vm.ledOff}>
+                              <a className="product-card hv6" style={{ position: "relative", display: "flex", flex: "1", flexDirection: "column", borderRadius: "24px", overflow: "hidden", cursor: "pointer", background: "linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%)", border: "1px solid rgba(236,238,241,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.20)", transition: "border-color .3s ease, transform .3s ease" }} href={rp.href} onClick={rp.onSelect}>
+                                <span style={{ position: "absolute", inset: "0", zIndex: "6", borderRadius: "24px", padding: "2px", opacity: "0", overflow: "hidden", pointerEvents: "none", transition: "opacity .35s ease", WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", maskComposite: "exclude" }} data-led="">
+                                  <span style={{ position: "absolute", top: "50%", left: "50%", width: "200%", aspectRatio: "1", background: "conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0) 236deg, var(--acc-a55) 296deg, var(--acc-soft) 336deg, #fffdfa 352deg, rgba(255,255,255,0) 360deg)" }} data-led-spin="" />
+                                </span>
+                                <div style={{ position: "relative", aspectRatio: "16/11", overflow: "hidden" }}>
+                                  <ImageSlot id={`agentic-tpl-${rp.id}`} presentation="stage" shape="rect" fit="cover" placeholder="Ảnh preview giao diện" />
                                 </div>
-                                <span style={{ position: "absolute", zIndex: "3", top: "8px", right: "6px", bottom: "8px", width: "3px", borderRadius: "3px", background: "rgba(255,255,255,.28)", opacity: "0", transition: "opacity .3s ease", pointerEvents: "none" }} data-scrollbar="" aria-hidden="true" />
-                                <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(18,20,24,.1) 0%, rgba(18,20,24,.65) 100%)", pointerEvents: "none" }} />
-                              </div>
-                              <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                                <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
-                                  <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "20px", lineHeight: "1.15" }}>
-                                    {rp.name}
-                                  </h3>
-                                  <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap" }}>
-                                    {rp.price}
+                                <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                                  <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
+                                    <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "20px", lineHeight: "1.15" }}>
+                                      {rp.name}
+                                    </h3>
+                                    <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap" }}>
+                                      {rp.price}
+                                    </span>
+                                  </div>
+                                  <span style={{ fontSize: "11px", letterSpacing: ".12em", textTransform: "uppercase", color: "#949ba4" }}>
+                                    {rp.catLabel}
                                   </span>
                                 </div>
-                                <span style={{ fontSize: "11px", letterSpacing: ".12em", textTransform: "uppercase", color: "#949ba4" }}>
-                                  {rp.catLabel}
-                                </span>
+                              </a>
+                              <div className="product-card-actions">
+                                <button className="save-template-button" type="button" onClick={rp.onSave} disabled={rp.saveDisabled} aria-label={rp.saveLabel} aria-pressed={rp.saved} title={rp.saveLabel}>
+                                  <span className="save-heart" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z" />
+                                    </svg>
+                                  </span>
+                                  <span className="save-count" aria-hidden="true">
+                                    {rp.saveCount}
+                                  </span>
+                                </button>
+                                <button className="cart-template-button" type="button" onClick={rp.onCart} aria-label={rp.cartLabel} aria-pressed={rp.inCart}>
+                                  <svg className="cart-card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M3 4h2l2 12h12l2-9H6" />
+                                    <circle cx="9" cy="20" r="1" />
+                                    <circle cx="18" cy="20" r="1" />
+                                  </svg>
+                                </button>
                               </div>
                             </div>
                         ))}
@@ -655,7 +726,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                     </h2>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "1px", borderRadius: "24px", overflow: "hidden", background: "linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%)", border: "1px solid rgba(236,238,241,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18)" }}>
                       {(vm.includes ?? []).map((inc: any, inc_i: number) => (
-                            <div key={inc_i} className="hv13" style={{ background: "rgba(255,255,255,.012)", padding: "clamp(24px,3vw,34px)", display: "flex", flexDirection: "column", gap: "10px", transition: "background .3s ease" }} data-reveal="">
+                            <div key={inc_i} className="hv11" style={{ background: "rgba(255,255,255,.012)", padding: "clamp(24px,3vw,34px)", display: "flex", flexDirection: "column", gap: "10px", transition: "background .3s ease" }} data-reveal="">
                               <span style={{ fontFamily: "var(--display)", fontWeight: "700", fontSize: "15px", color: "var(--gold)", letterSpacing: ".1em" }}>
                                 {inc.no}
                               </span>
@@ -696,26 +767,11 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                         {vm.t.pricingIntro}
                       </p>
                     </div>
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: "22px", alignItems: "stretch" }}>
+                    <div className="pricing-grid">
                       {(vm.tiers ?? []).map((tr: any, tr_i: number) => (
-                            <div key={tr_i} className="hv14" style={{ position: "relative", display: "flex", flexDirection: "column", padding: "clamp(28px,3vw,40px)", borderRadius: "24px", background: tr.bg, color: tr.fg, border: `1px solid ${tr.border}`, boxShadow: "inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18)", transition: "border-color .3s ease, transform .3s ease", "--hv14-border-color": tr.ledHover } as React.CSSProperties} data-reveal="" onMouseEnter={vm.ledOn} onMouseLeave={vm.ledOff}>
-                              <span style={{ position: "absolute", inset: "0", zIndex: "6", borderRadius: "24px", opacity: "0", pointerEvents: "none", transition: "opacity .4s ease" }} data-led="">
-                                <span style={{ position: "absolute", inset: tr.glowInset, borderRadius: tr.glowRadius, padding: tr.glowPad, overflow: "hidden", animation: "ledGlowPulse 1.6s ease-in-out infinite", WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", maskComposite: "exclude" }} aria-hidden="true">
-                                  <span style={{ position: "absolute", top: "50%", left: "50%", width: "200%", aspectRatio: "1", background: tr.ledGlow, filter: tr.glowBlur }} data-led-spin="" />
-                                </span>
-                                <span style={{ position: "absolute", inset: "0", borderRadius: "24px", padding: tr.coreW, overflow: "hidden", WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", maskComposite: "exclude" }} aria-hidden="true">
-                                  <span style={{ position: "absolute", top: "50%", left: "50%", width: "200%", aspectRatio: "1", background: tr.led, animation: "ledSparkle .9s linear infinite" }} data-led-spin="" />
-                                </span>
-                                {(tr.mixRing) ? (
-                                  <>
-                                    <span style={{ position: "absolute", inset: "-3px", borderRadius: "27px", padding: "4px", overflow: "hidden", mixBlendMode: "screen", opacity: ".85", animation: "ledGlowPulse 2.3s ease-in-out infinite", WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", maskComposite: "exclude" }} aria-hidden="true">
-                                      <span style={{ position: "absolute", top: "50%", left: "50%", width: "200%", aspectRatio: "1", background: tr.led2, filter: "blur(5px) saturate(1.8) brightness(1.4)" }} data-led-spin-rev="" />
-                                    </span>
-                                    <span style={{ position: "absolute", inset: "0", borderRadius: "24px", padding: ".4px", overflow: "hidden", mixBlendMode: "screen", WebkitMask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", WebkitMaskComposite: "xor", mask: "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)", maskComposite: "exclude" }} aria-hidden="true">
-                                      <span style={{ position: "absolute", top: "50%", left: "50%", width: "200%", aspectRatio: "1", background: tr.led2 }} data-led-spin-rev="" />
-                                    </span>
-                                  </>
-                                ) : null}
+                            <div key={tr_i} className="pricing-card hv12" style={{ position: "relative", display: "flex", flexDirection: "column", padding: "var(--pricing-card-padding,clamp(18px,3vw,40px))", borderRadius: "24px", background: tr.bg, color: tr.fg, border: `1px solid ${tr.border}`, boxShadow: "inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18)", transition: "border-color .3s ease, transform .3s ease", "--hv12-border-color": tr.border } as React.CSSProperties} data-reveal="">
+                              <span className="pricing-card__neon" aria-hidden="true">
+                                <span className="pricing-card__neon-glow" />
                               </span>
                               {(tr.featured) ? (
                                 <>
@@ -738,7 +794,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                   {tr.unit}
                                 </span>
                               </div>
-                              <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "28px", flex: "1" }}>
+                              <div style={{ display: "flex", flexDirection: "column", gap: "var(--pricing-card-feature-gap,12px)", marginBottom: "var(--pricing-card-feature-bottom,28px)", flex: "1" }}>
                                 {(tr.features ?? []).map((f: any, f_i: number) => (
                                       <div key={f_i} style={{ display: "flex", gap: "10px", alignItems: "flex-start", fontSize: "14px", lineHeight: "1.45" }}>
                                         <span style={{ color: "#ffffff", fontWeight: "700" }}>
@@ -750,7 +806,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                       </div>
                                   ))}
                               </div>
-                              <button className="hv15" style={{ display: "inline-flex", justifyContent: "center", padding: "15px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontWeight: "700", fontSize: "14px", border: `1px solid ${tr.btnBorder}`, background: tr.btnBg, color: "#fffdfa", boxShadow: tr.btnShadow }} onClick={tr.onCta}>
+                              <button className="hv13" style={{ display: "inline-flex", justifyContent: "center", padding: "15px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontWeight: "700", fontSize: "14px", border: `1px solid ${tr.btnBorder}`, background: tr.btnBg, color: "#fffdfa", boxShadow: tr.btnShadow }} onClick={tr.onCta}>
                                 {tr.cta}
                               </button>
                             </div>
@@ -759,45 +815,6 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                     <p style={{ margin: "26px auto 0", textAlign: "center", fontSize: "13px", color: "#868d97" }}>
                       {vm.t.pricingNote}
                     </p>
-                  </div>
-                </section>
-                <section style={{ position: "relative", padding: "clamp(56px,8vw,120px) clamp(20px,4vw,56px)", overflow: "hidden" }}>
-                  <div style={{ position: "absolute", top: "0", left: "-8%", width: "54%", height: "70%", borderRadius: "50%", background: "var(--acc-a14)", filter: "blur(140px)", pointerEvents: "none" }} aria-hidden="true" />
-                  <div style={{ position: "relative", zIndex: "1", maxWidth: "1200px", margin: "0 auto" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "18px" }}>
-                      <span style={{ width: "40px", height: "1px", background: "var(--acc)" }} />
-                      <span style={{ fontSize: "12px", letterSpacing: ".24em", textTransform: "uppercase", color: "#ffffff" }}>
-                        {vm.t.loveLabel}
-                      </span>
-                    </div>
-                    <h2 style={{ margin: "0 0 clamp(32px,4vw,48px)", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.02em", fontSize: "clamp(34px,5vw,64px)", lineHeight: "1.06", maxWidth: "14ch" }}>
-                      {vm.t.loveTitle}
-                    </h2>
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "20px" }}>
-                      {(vm.quotes ?? []).map((q: any, q_i: number) => (
-                            <div key={q_i} style={{ display: "flex", flexDirection: "column", gap: "18px", padding: "clamp(24px,3vw,32px)", borderRadius: "24px", background: "linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%)", border: "1px solid rgba(236,238,241,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18)" }} data-reveal="">
-                              <span style={{ fontFamily: "var(--display)", fontWeight: "700", fontSize: "40px", lineHeight: ".6", color: "#ffffff" }}>
-                                “
-                              </span>
-                              <p style={{ margin: "0", fontSize: "16px", lineHeight: "1.6", color: "#ffffff", flex: "1" }}>
-                                {q.text}
-                              </p>
-                              <div style={{ display: "flex", alignItems: "center", gap: "12px", paddingTop: "16px" }}>
-                                <span style={{ width: "38px", height: "38px", borderRadius: "50%", background: "#24272e", display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: "700", fontSize: "14px", color: "#ffffff", flex: "none" }}>
-                                  {q.initial}
-                                </span>
-                                <div>
-                                  <div style={{ fontSize: "14px", fontWeight: "600" }}>
-                                    {q.name}
-                                  </div>
-                                  <div style={{ fontSize: "12px", color: "#ffffff" }}>
-                                    {q.role}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                        ))}
-                    </div>
                   </div>
                 </section>
               </div>
@@ -822,7 +839,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                     <div style={{ display: "flex", flexDirection: "column" }}>
                       {(vm.faqs ?? []).map((fq: any, fq_i: number) => (
                             <div key={fq_i} style={{ borderTop: "1px solid rgba(236,238,241,.13)" }}>
-                              <button className="hv3" style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px", padding: "24px 0", background: "transparent", border: "none", cursor: "pointer", textAlign: "left", fontFamily: "inherit", color: "#ffffff", fontSize: "clamp(16px,1.8vw,19px)", fontWeight: "600", lineHeight: "1.4" }} onClick={fq.onToggle}>
+                              <button className="hv2" style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px", padding: "24px 0", background: "transparent", border: "none", cursor: "pointer", textAlign: "left", fontFamily: "inherit", color: "#ffffff", fontSize: "clamp(16px,1.8vw,19px)", fontWeight: "600", lineHeight: "1.4" }} onClick={fq.onToggle}>
                                 {fq.q}{" "}
                                 <span style={{ flex: "none", width: "32px", height: "32px", borderRadius: "50%", border: "1px solid rgba(236,238,241,.28)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: "16px", color: "#ffffff", transition: "transform .3s ease" }} data-faq-icon="">
                                   +
@@ -858,7 +875,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                     </p>
                     <form style={{ position: "relative", zIndex: "1", display: "flex", flexWrap: "wrap", gap: "12px", justifyContent: "center", maxWidth: "520px", margin: "0 auto" }} onSubmit={vm.onSubmit}>
                       <input style={{ flex: "1 1 240px", minWidth: "0", padding: "16px 22px", borderRadius: "16px", border: "1px solid rgba(255,255,255,.26)", background: "linear-gradient(180deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.12) 100%)", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.7), inset 0 1px 0 rgba(255,255,255,.3), 0 14px 30px rgba(52,42,34,.26)", color: "#ffffff", fontFamily: "inherit", fontSize: "15px" }} name="email" type="email" required placeholder={vm.t.formEmail} />
-                      <button className="hv5" style={{ flex: "0 0 auto", padding: "16px 32px", borderRadius: "16px", fontWeight: "700", fontSize: "15px", cursor: "pointer", fontFamily: "inherit", background: "linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%)", border: "1px solid rgba(255,255,255,.32)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -6px rgba(255,244,230,.55), 0 18px 40px rgba(52,42,34,.34)" }} type="submit">
+                      <button className="hv3" style={{ flex: "0 0 auto", padding: "16px 32px", borderRadius: "16px", fontWeight: "700", fontSize: "15px", cursor: "pointer", fontFamily: "inherit", background: "linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%)", border: "1px solid rgba(255,255,255,.32)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -6px rgba(255,244,230,.55), 0 18px 40px rgba(52,42,34,.34)" }} type="submit">
                         {vm.submitLabel}
                       </button>
                     </form>
@@ -881,12 +898,12 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                 </span>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "22px", fontSize: "13px", color: "#ffffff", letterSpacing: ".03em" }}>
                   {(vm.footerLinks ?? []).map((fl: any, fl_i: number) => (
-                        <button key={fl_i} className="hv3" style={{ background: "transparent", border: "none", padding: "0", cursor: "pointer", fontFamily: "inherit", fontSize: "13px", color: "#ffffff", letterSpacing: ".03em" }} onClick={fl.onSelect}>
+                        <button key={fl_i} className="hv2" style={{ background: "transparent", border: "none", padding: "0", cursor: "pointer", fontFamily: "inherit", fontSize: "13px", color: "#ffffff", letterSpacing: ".03em" }} onClick={fl.onSelect}>
                           {fl.label}
                         </button>
                     ))}
                   {(vm.legalLinks ?? []).map((lg2: any, lg2_i: number) => (
-                        <a key={lg2_i} className="hv3" style={{ fontSize: "13px", color: "#949ba4", letterSpacing: ".03em" }} href={lg2.href}>
+                        <a key={lg2_i} className="hv2" style={{ fontSize: "13px", color: "#949ba4", letterSpacing: ".03em" }} href={lg2.href}>
                           {lg2.label}
                         </a>
                     ))}
@@ -896,7 +913,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                 <span>
                   {vm.t.copyright}
                 </span>
-                <a className="hv3" style={{ color: "#868d97" }} href={`mailto:${vm.contactEmail}`}>
+                <a className="hv2" style={{ color: "#868d97" }} href={`mailto:${vm.contactEmail}`}>
                   {vm.contactEmail}
                 </a>
               </div>
@@ -908,7 +925,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
         <>
           <div style={{ position: "fixed", inset: "0", zIndex: "9000", display: "flex", alignItems: "flex-start", justifyContent: "center", overflowY: "auto", padding: "24px", background: "rgba(8,9,11,.72)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", animation: "fadeIn .28s ease" }} onClick={vm.closeAuth}>
             <div style={{ position: "relative", flex: "none", margin: "auto 0", width: "100%", maxWidth: "420px", padding: "clamp(30px,4vw,40px)", borderRadius: "26px", background: "linear-gradient(152deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.05) 46%, rgba(255,255,255,.03) 100%)", backdropFilter: "blur(34px) saturate(160%)", WebkitBackdropFilter: "blur(34px) saturate(160%)", border: "1px solid rgba(236,238,241,.16)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.22), inset 0 -1px 0 rgba(0,0,0,.2), 0 40px 90px -30px rgba(0,0,0,.9)" }} onClick={vm.stopProp}>
-              <button className="hv7" style={{ position: "absolute", top: "18px", right: "18px", width: "32px", height: "32px", display: "inline-flex", alignItems: "center", justifyContent: "center", borderRadius: "50%", border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#c8ced6", fontSize: "15px", lineHeight: "1", cursor: "pointer", fontFamily: "inherit" }} onClick={vm.closeAuth} aria-label={vm.t.authClose}>
+              <button className="hv5" style={{ position: "absolute", top: "18px", right: "18px", width: "32px", height: "32px", display: "inline-flex", alignItems: "center", justifyContent: "center", borderRadius: "50%", border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#c8ced6", fontSize: "15px", lineHeight: "1", cursor: "pointer", fontFamily: "inherit" }} onClick={vm.closeAuth} aria-label={vm.t.authClose}>
                 ✕
               </button>
               <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
@@ -933,26 +950,26 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
               <form style={{ display: "flex", flexDirection: "column", gap: "14px" }} onSubmit={vm.onAuthSubmit}>
                 <label style={{ display: "flex", flexDirection: "column", gap: "7px", fontSize: "12px", letterSpacing: ".06em", textTransform: "uppercase", color: "#949ba4" }}>
                   {vm.t.authEmail}{" "}
-                  <input className="fc16" style={{ width: "100%", boxSizing: "border-box", padding: "14px 16px", borderRadius: "14px", border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.05)", color: "#ffffff", fontFamily: "inherit", fontSize: "14px", letterSpacing: "normal", textTransform: "none", outline: "none" }} type="email" required placeholder="you@studio.com" />
+                  <input className="fc14" style={{ width: "100%", boxSizing: "border-box", padding: "14px 16px", borderRadius: "14px", border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.05)", color: "#ffffff", fontFamily: "inherit", fontSize: "14px", letterSpacing: "normal", textTransform: "none", outline: "none" }} type="email" required placeholder="you@studio.com" />
                 </label>
                 {(vm.showPassword) ? (
                   <>
                     <label style={{ display: "flex", flexDirection: "column", gap: "7px", fontSize: "12px", letterSpacing: ".06em", textTransform: "uppercase", color: "#949ba4" }}>
                       {vm.t.authPass}{" "}
-                      <input className="fc16" style={{ width: "100%", boxSizing: "border-box", padding: "14px 16px", borderRadius: "14px", border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.05)", color: "#ffffff", fontFamily: "inherit", fontSize: "14px", letterSpacing: "normal", textTransform: "none", outline: "none" }} type="password" required placeholder="••••••••" />
+                      <input className="fc14" style={{ width: "100%", boxSizing: "border-box", padding: "14px 16px", borderRadius: "14px", border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.05)", color: "#ffffff", fontFamily: "inherit", fontSize: "14px", letterSpacing: "normal", textTransform: "none", outline: "none" }} type="password" required placeholder="••••••••" />
                     </label>
                   </>
                 ) : null}
                 {(vm.showForgotLink) ? (
                   <>
                     <div style={{ display: "flex", justifyContent: "flex-end", marginTop: "-2px" }}>
-                      <button className="hv3" style={{ padding: "0", border: "0", background: "none", fontFamily: "inherit", fontSize: "13px", color: "#c8ced6", cursor: "pointer" }} type="button" onClick={vm.startForgot}>
+                      <button className="hv2" style={{ padding: "0", border: "0", background: "none", fontFamily: "inherit", fontSize: "13px", color: "#c8ced6", cursor: "pointer" }} type="button" onClick={vm.startForgot}>
                         {vm.t.authForgot}
                       </button>
                     </div>
                   </>
                 ) : null}
-                <button className="hv17" style={{ display: "inline-flex", justifyContent: "center", alignItems: "center", marginTop: "4px", padding: "15px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontWeight: "700", fontSize: "14px", border: "1px solid rgba(255,255,255,.4)", background: "linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -8px rgba(255,244,230,.5)" }} type="submit">
+                <button className="hv15" style={{ display: "inline-flex", justifyContent: "center", alignItems: "center", marginTop: "4px", padding: "15px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontWeight: "700", fontSize: "14px", border: "1px solid rgba(255,255,255,.4)", background: "linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,.16) 100%)", color: "#fffdfa", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.9), inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -8px rgba(255,244,230,.5)" }} type="submit">
                   {vm.authSubmitLabel}
                 </button>
               </form>
@@ -965,7 +982,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                     </span>
                     <span style={{ flex: "1", height: "1px", background: "rgba(255,255,255,.12)" }} />
                   </div>
-                  <button className="hv2" style={{ width: "100%", display: "inline-flex", justifyContent: "center", alignItems: "center", gap: "10px", padding: "14px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontWeight: "600", fontSize: "14px", border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#ffffff" }} type="button" onClick={vm.onGoogleSignIn}>
+                  <button className="hv7" style={{ width: "100%", display: "inline-flex", justifyContent: "center", alignItems: "center", gap: "10px", padding: "14px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontWeight: "600", fontSize: "14px", border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#ffffff" }} type="button" onClick={vm.onGoogleSignIn}>
                     <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
                       <path fill="#4285F4" d="M17.64 9.2045c0-.6381-.0573-1.2518-.1636-1.8409H9v3.4814h4.8436c-.2086 1.125-.8427 2.0782-1.7959 2.7164v2.2581h2.9087c1.7018-1.5668 2.6836-3.874 2.6836-6.615z" />
                       <path fill="#34A853" d="M9 18c2.43 0 4.4673-.806 5.9564-2.1805l-2.9087-2.2581c-.8059.54-1.8368.8591-3.0477.8591-2.344 0-4.3282-1.5831-5.036-3.7104H.9574v2.3318C2.4382 15.9832 5.4818 18 9 18z" />
@@ -978,7 +995,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
               ) : null}
               <p style={{ margin: "22px 0 0", textAlign: "center", fontSize: "13px", color: "#949ba4" }}>
                 {vm.t.authNoAcc}{" "}
-                <button className="hv18" style={{ padding: "0", border: "0", background: "none", fontFamily: "inherit", fontSize: "13px", color: "#ffffff", fontWeight: "600", cursor: "pointer" }} type="button" onClick={vm.toggleAuthMode}>
+                <button className="hv16" style={{ padding: "0", border: "0", background: "none", fontFamily: "inherit", fontSize: "13px", color: "#ffffff", fontWeight: "600", cursor: "pointer" }} type="button" onClick={vm.toggleAuthMode}>
                   {vm.t.authSignup}
                 </button>
               </p>

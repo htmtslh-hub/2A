@@ -9,7 +9,9 @@
     "lint": "eslint",
     "convert": "node tools/convert.mjs && node tools/extract-data.mjs && node tools/extract-slots.mjs",
     "media": "node tools/media.mjs",
+    "demos:sync": "node tools/sync-demos.mjs",
     "typecheck": "tsc --noEmit",
+    "guide:sync": "node tools/sync-customer-guide.mjs",
     "postinstall": "prisma generate"
   },
   "dependencies": {

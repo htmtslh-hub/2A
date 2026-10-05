@@ -1,0 +1,78 @@
+{
+  "origin": "http://localhost:3002",
+  "cases": [
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "initial": {
+        "paused": true,
+        "time": 0,
+        "src": null,
+        "duration": null
+      },
+      "playing": {
+        "paused": false,
+        "time": 0.983693,
+        "src": "/previews/auralis.mp4?v=1.2.1",
+        "duration": 15
+      },
+      "hidden": {
+        "paused": true,
+        "time": 1.01436,
+        "src": "/previews/auralis.mp4?v=1.2.1",
+        "duration": 15
+      },
+      "returned": {
+        "paused": false,
+        "time": 2.024378,
+        "src": "/previews/auralis.mp4?v=1.2.1",
+        "duration": 15
+      },
+      "paused": {
+        "paused": true,
+        "time": 2.075812,
+        "src": "/previews/auralis.mp4?v=1.2.1",
+        "duration": 15
+      },
+      "href": "http://localhost:3002/demos/auralis/index.html?v=1.2.1"
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "initial": {
+        "paused": true,
+        "time": 0,
+        "src": null,
+        "duration": null
+      },
+      "playing": {
+        "paused": false,
+        "time": 1.013689,
+        "src": "/previews/auralis.mp4?v=1.2.1",
+        "duration": 15
+      },
+      "hidden": {
+        "paused": true,
+        "time": 1.042488,
+        "src": "/previews/auralis.mp4?v=1.2.1",
+        "duration": 15
+      },
+      "returned": {
+        "paused": false,
+        "time": 2.048367,
+        "src": "/previews/auralis.mp4?v=1.2.1",
+        "duration": 15
+      },
+      "paused": {
+        "paused": true,
+        "time": 2.077828,
+        "src": "/previews/auralis.mp4?v=1.2.1",
+        "duration": 15
+      },
+      "href": "http://localhost:3002/demos/auralis/index.html?v=1.2.1"
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "pass": true
+}

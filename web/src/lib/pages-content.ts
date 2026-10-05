@@ -15,13 +15,13 @@ export const ABOUT: Record<LangCode, StaticPage> = {
   vi: {
     title: 'Về chúng tôi',
     intro:
-      'Chúng tôi làm giao diện web dựng sẵn — những bộ template hoàn chỉnh, chuyển động mượt, sẵn sàng dùng cho dự án thương mại.',
+      'Forge Zone bán template website dựng sẵn dưới dạng file số tải về. Mỗi sản phẩm có demo, file nguồn, tài liệu và giấy phép sử dụng.',
     sections: [
       {
         h: 'Chúng tôi làm gì',
         p: [
           'Mỗi giao diện là một bản dựng hoàn chỉnh chứ không phải bản phác thảo: bố cục, chuyển động, quy tắc responsive và nội dung mẫu đều đã xong. Bạn tải về, thay chữ và ảnh, rồi đưa lên hosting.',
-          'Chúng tôi tin rằng một trang web tốt không cần bắt đầu từ con số không mỗi lần. Phần lớn thời gian của một dự án web bị tiêu vào những thứ đã được giải quyết hàng nghìn lần — chúng tôi giải sẵn phần đó.',
+          'Thanh toán trên forgezone.store chỉ mua file template có sẵn. Đơn hàng không bao gồm thiết kế, lập trình, tư vấn hoặc cài đặt theo yêu cầu.',
         ],
       },
       {
@@ -29,7 +29,14 @@ export const ABOUT: Record<LangCode, StaticPage> = {
         p: [
           'Mỗi mẫu được thiết kế trước trên canvas, sau đó chuyển thành mã nguồn qua quy trình tự động của chúng tôi. Nhờ vậy bản chạy thật giống hệt bản thiết kế, không bị "dịch sai" như khi chuyển tay.',
           'Chúng tôi kiểm thử trên desktop, tablet và điện thoại thật — không chỉ thu nhỏ cửa sổ trình duyệt rồi coi là xong.',
-          'Mã nguồn viết sạch, có chú thích, không phụ thuộc plugin lạ. Đội kỹ thuật của bạn đọc được và ghép vào hệ thống sẵn có.',
+          'Mã nguồn viết sạch, có chú thích và không phụ thuộc plugin lạ. Bạn có thể chỉnh sửa và tự lưu trữ trên nền tảng phù hợp.',
+        ],
+      },
+      {
+        h: 'Sản phẩm và giao hàng',
+        p: [
+          'Danh mục hiện có sáu sản phẩm tải về: Kinetiq, Tidal, Keystead, Solenne, Aeris và VYBE. Chúng tôi chỉ hiển thị những mẫu đã có file giao thực tế.',
+          'Mỗi file ZIP gồm website HTML/CSS/JS hoàn chỉnh, README, hướng dẫn CUSTOMISE và giấy phép. Hệ thống tự mở quyền tải trong tài khoản sau khi thanh toán thành công.',
         ],
       },
       {
@@ -45,13 +52,13 @@ export const ABOUT: Record<LangCode, StaticPage> = {
   en: {
     title: 'About us',
     intro:
-      'We build ready-made website templates — finished designs with real motion, made to ship on commercial projects.',
+      'Forge Zone sells ready-made website templates as downloadable digital files. Each product has a demo, source package, documentation and licence.',
     sections: [
       {
         h: 'What we do',
         p: [
           'Every template is a finished build rather than a mockup: layout, motion, responsive rules and sample content are all done. You download it, swap the words and images, and put it live.',
-          'We think a good website should not have to start from nothing every time. Most of a web project goes into problems that have been solved a thousand times already — we solve that part in advance.',
+          'A payment on forgezone.store buys an existing template package only. Orders do not include custom design, development, consulting or installation.',
         ],
       },
       {
@@ -59,7 +66,14 @@ export const ABOUT: Record<LangCode, StaticPage> = {
         p: [
           'Each template is designed on a canvas first, then turned into source code through our own automated pipeline. That means what ships looks exactly like what was designed, without the drift that hand-translation introduces.',
           'We test on real desktops, tablets and phones — not by shrinking a browser window and calling it responsive.',
-          'The code is clean, commented and free of unusual plugin dependencies. Your developers can read it and wire it into what you already run.',
+          'The code is clean, commented and free of unusual plugin dependencies. You can edit it and host it independently on a compatible platform.',
+        ],
+      },
+      {
+        h: 'Products and delivery',
+        p: [
+          'The current catalogue has six downloadable products: Kinetiq, Tidal, Keystead, Solenne, Aeris and VYBE. We show only templates that have a real delivery package.',
+          'Each ZIP contains a complete HTML/CSS/JS website, README, CUSTOMISE guide and licence. Successful payment automatically unlocks the download in the customer account.',
         ],
       },
       {
@@ -74,13 +88,13 @@ export const ABOUT: Record<LangCode, StaticPage> = {
   },
   zh: {
     title: '关于我们',
-    intro: '我们制作预先做好的网站模板——完成度高、动效真实、可直接用于商业项目。',
+    intro: 'Forge Zone 销售可下载的现成网站模板。每个产品均包含演示、源文件、文档和使用许可。',
     sections: [
       {
         h: '我们做什么',
         p: [
           '每套模板都是成品而非草稿：版式、动效、响应式规则和示例内容都已完成。你只需下载、替换文字与图片，然后上线。',
-          '我们认为好网站不必每次都从零开始。一个网站项目的大部分时间都花在早已被解决过上千次的问题上——这部分我们提前替你解决。',
+          '在 forgezone.store 付款只购买现有模板文件，不包含定制设计、开发、咨询或安装。',
         ],
       },
       {
@@ -88,7 +102,14 @@ export const ABOUT: Record<LangCode, StaticPage> = {
         p: [
           '每套模板先在画布上完成设计，再通过我们自建的自动化流程转成源代码。因此上线效果与设计稿完全一致，不会出现手工转换造成的偏差。',
           '我们在真实的桌面端、平板和手机上测试，而不是把浏览器窗口缩小就算响应式。',
-          '代码整洁、有注释，不依赖冷门插件。你的开发团队看得懂，也能接入现有系统。',
+          '代码整洁、有注释，不依赖冷门插件，可自行修改并托管到兼容平台。',
+        ],
+      },
+      {
+        h: '产品与交付',
+        p: [
+          '目前目录中有六个可下载产品：Kinetiq、Tidal、Keystead、Solenne、Aeris 和 VYBE。我们只展示已有真实交付文件的模板。',
+          '每个 ZIP 包含完整的 HTML/CSS/JS 网站、README、CUSTOMISE 指南和许可。付款成功后，系统会自动在客户账户中开放下载。',
         ],
       },
       {

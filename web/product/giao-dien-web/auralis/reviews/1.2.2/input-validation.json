@@ -1,0 +1,13 @@
+{
+  "interruptedAt": 32,
+  "afterInterruption": 32,
+  "interruptionStops": true,
+  "idleStart": 48,
+  "idleEnd": 48,
+  "idleStops": true,
+  "keyed": {
+    "y": 1393,
+    "scene": "kit"
+  },
+  "pass": true
+}

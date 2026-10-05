@@ -11,13 +11,16 @@ import {
   syncMobile,
   syncPreviews,
 } from '@/lib/sync';
-import { I18N, TAB_KEYS, type LangCode } from '@/generated/data';
+import { TAB_KEYS, type LangCode } from '@/generated/data';
 import { useRouter } from 'next/navigation';
 import { useSession, signIn } from 'next-auth/react';
-import { HTML_LANG } from '@/lib/lang';
+import { HTML_LANG, langFromBrowser } from '@/lib/lang';
 import { AUTH_ERRORS, FORGOT_STRINGS } from '@/lib/i18n-extra';
 import Toast from './Toast';
-import NotifyModal from './NotifyModal';
+import CartDrawer from './CartDrawer';
+import { REAL_TEMPLATES } from '@/lib/real-templates';
+import { CART_KEY, PENDING_CART_KEY, OPEN_CART_AFTER_LOGIN_KEY } from '@/lib/cart-storage';
+import { flyProductToCart } from '@/lib/cart-flight';
 
 
 
@@ -26,7 +29,7 @@ export default function AgenticSite({
   initialLang = 'vi',
 }: {
   defaultTab?: string;
-  /** Ngôn ngữ đọc từ cookie ở server. Dựng sẵn đúng ngôn ngữ ngay từ HTML
+  /** Ngôn ngữ đọc từ cookie hoặc Accept-Language ở server. Dựng sẵn đúng ngôn ngữ ngay từ HTML
    *  đầu tiên, thay vì dựng tiếng Việt rồi đổi sau khi mount — khách chọn
    *  tiếng Anh sẽ không còn thấy chớp một nhịp tiếng Việt. */
   initialLang?: LangCode;
@@ -36,6 +39,9 @@ export default function AgenticSite({
     lang: initialLang,
     tab: (TAB_KEYS.includes(defaultTab) ? defaultTab : 'home') as State['tab'],
   }));
+  const [cartPulse, setCartPulse] = useState(0);
+  const [pendingCartIds, setPendingCartIds] = useState<string[]>([]);
+  const pendingCartIdsRef = useRef(new Set<string>());
 
   const copyRef = useRef<HTMLDivElement | null>(null);
   const botRef = useRef<HTMLDivElement | null>(null);
@@ -64,13 +70,7 @@ export default function AgenticSite({
   }, []);
 
   const applyLang = useCallback((code: LangCode) => {
-    try {
-      localStorage.setItem('agentic-lang', code);
-      // Cookie để các trang dựng ở server (vd. /don-hang) biết ngôn ngữ —
-      // localStorage chỉ trình duyệt đọc được.
-      document.cookie = `agentic-lang=${code}; path=/; max-age=31536000; samesite=lax`;
-    } catch {}
-    document.documentElement.lang = HTML_LANG[code] || 'vi';
+    document.documentElement.lang = HTML_LANG[code] || 'en';
   }, []);
 
   /* --- đồng bộ tab với URL: chia sẻ được link, quay lại được bằng nút Back --- */
@@ -92,6 +92,13 @@ export default function AgenticSite({
     return () => window.removeEventListener('popstate', readUrl);
   }, [setState]);
 
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get('login') === '1') {
+      const timer = window.setTimeout(() => setState({ authOpen: true, authMode: 'login', authError: null }), 0);
+      return () => window.clearTimeout(timer);
+    }
+  }, [setState]);
+
   // URL chỉ được ghi khi người dùng chuyển tab. Nếu ghi trong effect theo state
   // thì lần chạy đầu (state còn là 'home') sẽ xoá mất query của link chia sẻ —
   // và Strict Mode chạy effect hai lần khiến lần đọc thứ hai không còn gì để đọc.
@@ -103,28 +110,19 @@ export default function AgenticSite({
     window.history.pushState(null, '', qs ? '?' + qs : window.location.pathname);
   }, []);
 
-  /* --- khôi phục ngôn ngữ đã lưu --- */
+  /* --- ngôn ngữ theo trình duyệt/hệ thống --- */
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem('agentic-lang') as LangCode | null;
-      if (saved && (I18N as Record<string, unknown>)[saved]) {
-        // Thường trùng với cookie server đã đọc. Chỉ lệch khi cookie bị chặn
-        // hoặc hết hạn, khi đó localStorage là nguồn đúng hơn.
-        if (saved !== initialLang) {
-          // eslint-disable-next-line react-hooks/set-state-in-effect
-          setState({ lang: saved });
-        }
-        applyLang(saved);
-        return;
-      }
-    } catch {}
-    // Chưa từng chọn thì KHÔNG ghi cookie hay localStorage — cookie phải là dấu
-    // hiệu khách đã tự chọn thứ tiếng. Ghi sẵn ngôn ngữ đoán từ trình duyệt ở
-    // đây thì nó thành "đã chọn" vĩnh viễn, và trước kia khi mặc định còn là
-    // 'vi' thì người duyệt Paddle đi từ trang chủ sang điều khoản bị khoá ở
-    // tiếng Việt. Xem readLang().
-    document.documentElement.lang = HTML_LANG[initialLang] || 'vi';
-  }, [applyLang, setState, initialLang]);
+    const syncBrowserLanguage = () => {
+      const detected = navigator.languages?.length || navigator.language
+        ? langFromBrowser(navigator.languages, navigator.language)
+        : initialLang;
+      setStateRaw((prev) => prev.lang === detected ? prev : { ...prev, lang: detected });
+      document.documentElement.lang = HTML_LANG[detected];
+    };
+    window.addEventListener('languagechange', syncBrowserLanguage);
+    syncBrowserLanguage();
+    return () => window.removeEventListener('languagechange', syncBrowserLanguage);
+  }, [initialLang]);
 
   /* --- observer cho hiệu ứng xuất hiện + lắng nghe cuộn/đổi kích thước --- */
   useEffect(() => {
@@ -222,8 +220,195 @@ export default function AgenticSite({
     };
   }, [state]);
 
-  const { data: session } = useSession();
+  const { data: session, status: sessionStatus } = useSession();
   const router = useRouter();
+  const [savedIds, setSavedIds] = useState<string[]>([]);
+  const [saveCounts, setSaveCounts] = useState<Record<string, number>>({});
+  const [cartIds, setCartIds] = useState<string[]>([]);
+  const [cartReady, setCartReady] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
+  const [cartBusy, setCartBusy] = useState(false);
+  const [cartError, setCartError] = useState('');
+  const [profile, setProfile] = useState<{ name: string; image: string | null } | null>(null);
+  const savingIds = useRef(new Set<string>());
+  const countMutationAt = useRef(new Map<string, number>());
+
+  useEffect(() => {
+    let active = true;
+    let inFlight = false;
+    const refreshCounts = async () => {
+      if (inFlight) return;
+      inFlight = true;
+      const startedAt = performance.now();
+      try {
+        const response = await fetch('/api/saved-templates/counts', { cache: 'no-store' });
+        if (!response.ok) return;
+        const data = await response.json();
+        if (!active || !data.counts || typeof data.counts !== 'object') return;
+        setSaveCounts((previous) => {
+          const next = { ...previous };
+          for (const id of Object.keys(REAL_TEMPLATES)) {
+            const count = data.counts[id];
+            if (Number.isSafeInteger(count) && count >= 0 && !savingIds.current.has(id) && (countMutationAt.current.get(id) ?? 0) <= startedAt) {
+              next[id] = count;
+            }
+          }
+          return next;
+        });
+      } catch {
+        // Keep the last known counts until the next refresh.
+      } finally {
+        inFlight = false;
+      }
+    };
+    const onFocus = () => { void refreshCounts(); };
+    const onVisibility = () => { if (document.visibilityState === 'visible') void refreshCounts(); };
+    void refreshCounts();
+    const timer = window.setInterval(() => {
+      if (document.visibilityState === 'visible') void refreshCounts();
+    }, 5000);
+    window.addEventListener('focus', onFocus);
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => {
+      active = false;
+      window.clearInterval(timer);
+      window.removeEventListener('focus', onFocus);
+      document.removeEventListener('visibilitychange', onVisibility);
+    };
+  }, []);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      try {
+        const stored = JSON.parse(localStorage.getItem(CART_KEY) || '[]');
+        if (Array.isArray(stored)) setCartIds([...new Set(stored.filter((id): id is string => typeof id === 'string' && Boolean(REAL_TEMPLATES[id])))].slice(0, 20));
+      } catch {}
+      setCartReady(true);
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (cartReady) {
+      try { localStorage.setItem(CART_KEY, JSON.stringify(cartIds)); } catch {}
+    }
+  }, [cartIds, cartReady]);
+
+  useEffect(() => {
+    if (session?.user && localStorage.getItem(OPEN_CART_AFTER_LOGIN_KEY) === '1') {
+      localStorage.removeItem(OPEN_CART_AFTER_LOGIN_KEY);
+      const timer = window.setTimeout(() => setCartOpen(true), 0);
+      return () => window.clearTimeout(timer);
+    }
+  }, [session?.user]);
+
+  const addToCart = useCallback((id: string, origin?: { x: number; y: number }) => {
+    const template = REAL_TEMPLATES[id];
+    if (!template || pendingCartIdsRef.current.has(id)) return;
+    const isNew = !cartIds.includes(id);
+    if (isNew) {
+      pendingCartIdsRef.current.add(id);
+      setPendingCartIds([...pendingCartIdsRef.current]);
+      setCartIds((ids) => ids.includes(id) ? ids : [...ids, id]);
+    }
+    setCartError('');
+    flyProductToCart(origin, template.slug, () => {
+      if (isNew) {
+        if (!pendingCartIdsRef.current.delete(id)) return;
+        setPendingCartIds([...pendingCartIdsRef.current]);
+      }
+      setCartPulse((pulse) => pulse + 1);
+    });
+  }, [cartIds]);
+
+  const removeFromCart = useCallback((id: string) => {
+    if (pendingCartIdsRef.current.delete(id)) setPendingCartIds([...pendingCartIdsRef.current]);
+    setCartIds((ids) => ids.filter((entry) => entry !== id));
+    setCartError('');
+  }, []);
+
+  const checkoutCart = useCallback(() => {
+    if (cartBusy || !cartIds.length) return;
+    const email = session?.user?.email;
+    if (!email) {
+      try { localStorage.setItem(OPEN_CART_AFTER_LOGIN_KEY, '1'); } catch {}
+      setCartOpen(false);
+      setState({ authOpen: true, authMode: 'login', authError: null });
+      return;
+    }
+    setCartBusy(true);
+    setCartError('');
+    fetch('/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ kind: 'CART', templateIds: cartIds, email, name: profile?.name || session?.user?.name || undefined, lang: state.lang }),
+    }).then(async (response) => {
+      const data = await response.json();
+      if (!response.ok || !data.checkoutUrl) throw new Error(data.error || AUTH_ERRORS[state.lang].generic);
+      try { localStorage.setItem(PENDING_CART_KEY, JSON.stringify({ orderId: data.orderId, ids: cartIds })); } catch {}
+      window.location.href = data.checkoutUrl;
+    }).catch((error) => setCartError(error instanceof Error ? error.message : AUTH_ERRORS[state.lang].network))
+      .finally(() => setCartBusy(false));
+  }, [cartBusy, cartIds, session, profile, state.lang, setState]);
+
+  useEffect(() => {
+    if (!session?.user) return;
+    let alive = true;
+    fetch('/api/profile', { cache: 'no-store' })
+      .then((r) => r.ok ? r.json() : Promise.reject(new Error('profile')))
+      .then((data) => { if (alive) setProfile({ name: data.name, image: data.image }); })
+      .catch(() => {});
+    return () => { alive = false; };
+  }, [session?.user]);
+
+  useEffect(() => {
+    if (!session?.user) return;
+    let alive = true;
+    fetch('/api/saved-templates', { cache: 'no-store' })
+      .then((r) => r.ok ? r.json() : Promise.reject(new Error('saved templates')))
+      .then((data) => { if (alive && Array.isArray(data.ids)) setSavedIds(data.ids); })
+      .catch(() => {});
+    return () => { alive = false; };
+  }, [session?.user]);
+
+  const toggleSaved = useCallback((templateId: string) => {
+    if (sessionStatus === 'loading') return;
+    if (!session?.user) {
+      setState({ authOpen: true, authMode: 'login', authError: null });
+      return;
+    }
+    if (savingIds.current.has(templateId)) return;
+    savingIds.current.add(templateId);
+    const wasSaved = savedIds.includes(templateId);
+    countMutationAt.current.set(templateId, performance.now());
+    setSavedIds((ids) => wasSaved ? ids.filter((id) => id !== templateId) : [...ids, templateId]);
+    setSaveCounts((counts) => {
+      if (!Number.isSafeInteger(counts[templateId])) return counts;
+      return { ...counts, [templateId]: Math.max(0, counts[templateId] + (wasSaved ? -1 : 1)) };
+    });
+    fetch('/api/saved-templates', {
+      method: wasSaved ? 'DELETE' : 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ templateId }),
+    }).then(async (response) => {
+      if (!response.ok) throw new Error('save failed');
+      const data = await response.json();
+      countMutationAt.current.set(templateId, performance.now());
+      if (Number.isSafeInteger(data.count) && data.count >= 0) {
+        setSaveCounts((counts) => ({ ...counts, [templateId]: data.count }));
+      }
+    })
+      .catch(() => {
+        countMutationAt.current.set(templateId, performance.now());
+        setSavedIds((ids) => wasSaved ? [...ids, templateId] : ids.filter((id) => id !== templateId));
+        setSaveCounts((counts) => {
+          if (!Number.isSafeInteger(counts[templateId])) return counts;
+          return { ...counts, [templateId]: Math.max(0, counts[templateId] + (wasSaved ? 1 : -1)) };
+        });
+        setState({ toast: AUTH_ERRORS[state.lang].network });
+      })
+      .finally(() => savingIds.current.delete(templateId));
+  }, [session?.user, sessionStatus, savedIds, setState, state.lang]);
 
   // Nút Google chỉ hiện khi server thật sự có provider đó. Auth.js chỉ đăng ký
   // Google khi có AUTH_GOOGLE_ID/SECRET, nên đây là nguồn tin cậy duy nhất.
@@ -274,11 +459,14 @@ export default function AgenticSite({
       signIn('credentials', { email, password, redirect: false })
         .then((res) => {
           if (res?.error) setState({ authDone: false, authError: err.badCredentials });
-          else setState({ authDone: true, authError: null, authOpen: false });
+          else {
+            setState({ authDone: true, authError: null, authOpen: false });
+            if (new URLSearchParams(window.location.search).get('next') === 'account') router.push('/tai-khoan');
+          }
         })
         .catch(() => setState({ authDone: false, authError: err.network }));
     },
-    [setState, state.lang]
+    [setState, state.lang, router]
   );
 
   /* --- tạo tài khoản rồi đăng nhập luôn --- */
@@ -332,11 +520,9 @@ export default function AgenticSite({
   );
 
   const goAccount = useCallback(() => {
-    router.push('/don-hang');
+    router.push('/tai-khoan');
   }, [router]);
 
-  // Ổn định qua các lần render: NotifyModal gắn phím Esc theo hàm này.
-  const closeNotify = useCallback(() => setState({ notify: null }), [setState]);
 
 
   /* --- thanh toán: cần email nên phải đăng nhập trước --- */
@@ -386,8 +572,10 @@ export default function AgenticSite({
       onAuthRegister,
       onForgotPassword,
       goAccount,
+      toggleSaved,
       onGoogleSignIn,
       startCheckout,
+      addToCart,
     }),
     [
       push,
@@ -400,8 +588,10 @@ export default function AgenticSite({
       onAuthRegister,
       onForgotPassword,
       goAccount,
+      toggleSaved,
       onGoogleSignIn,
       startCheckout,
+      addToCart,
     ]
   );
 
@@ -410,21 +600,22 @@ export default function AgenticSite({
     // eslint-disable-next-line react-hooks/refs
     () => buildView(state, { copyRef, botRef }, imperative, {
         signedIn: Boolean(session?.user),
+        authLoading: sessionStatus === 'loading',
         googleEnabled,
+        savedIds,
+        saveCounts,
+        cartIds,
+        accountName: profile?.name || session?.user?.name || session?.user?.email?.split('@')[0],
+        accountImage: profile?.image || session?.user?.image,
       }),
-    [state, imperative, session, googleEnabled]
+    [state, imperative, session, sessionStatus, googleEnabled, savedIds, saveCounts, cartIds, profile]
   );
 
   return (
     <>
       <AgenticMarkup vm={vm} />
+      <CartDrawer ids={cartIds} count={cartIds.filter((id) => !pendingCartIds.includes(id)).length} lang={state.lang} open={cartOpen} busy={cartBusy} error={cartError} pulse={cartPulse} onOpen={() => setCartOpen(true)} onClose={() => setCartOpen(false)} onRemove={removeFromCart} onCheckout={checkoutCart} />
       <Toast message={state.toast} onClose={() => setState({ toast: null })} />
-      <NotifyModal
-        product={state.notify}
-        lang={state.lang}
-        onClose={closeNotify}
-        onDone={(message) => setState({ notify: null, toast: message })}
-      />
     </>
   );
 }

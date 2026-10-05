@@ -43,19 +43,19 @@
         "serve",
         "-l",
         "4323",
-        "_design/templates/kinetiq"
+        "web/product/giao-dien-web/source/kinetiq"
       ],
       "port": 4323
     },
     {
-      "name": "template-dune-pass",
+      "name": "template-keystead",
       "runtimeExecutable": "npx",
       "runtimeArgs": [
         "--yes",
         "serve",
         "-l",
         "4324",
-        "_design/templates/dune-pass"
+        "web/product/giao-dien-web/keystead/source"
       ],
       "port": 4324
     },
@@ -67,7 +67,7 @@
         "serve",
         "-l",
         "4325",
-        "_design/templates/tidal"
+        "web/product/giao-dien-web/source/tidal"
       ],
       "port": 4325
     },
@@ -79,7 +79,7 @@
         "serve",
         "-l",
         "4326",
-        "_design/templates/free-sample"
+        "web/product/giao-dien-web/source/free-sample"
       ],
       "port": 4326
     }

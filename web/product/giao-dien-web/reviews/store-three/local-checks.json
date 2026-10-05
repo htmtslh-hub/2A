@@ -1,0 +1,312 @@
+{
+  "origin": "http://127.0.0.1:3007",
+  "date": "2026-09-28T03:01:22.495Z",
+  "languages": {
+    "vi": {
+      "cards": [
+        {
+          "id": "t4",
+          "name": "Solenne",
+          "priceMatched": true
+        },
+        {
+          "id": "t5",
+          "name": "Forma",
+          "priceMatched": true
+        },
+        {
+          "id": "t6",
+          "name": "Meridian",
+          "priceMatched": true
+        }
+      ],
+      "details": [
+        {
+          "id": "t4",
+          "name": "Solenne",
+          "guideLink": true
+        },
+        {
+          "id": "t5",
+          "name": "Forma",
+          "guideLink": true
+        },
+        {
+          "id": "t6",
+          "name": "Meridian",
+          "guideLink": true
+        }
+      ],
+      "home": [
+        "Solenne",
+        "Forma",
+        "Meridian"
+      ],
+      "guide": true,
+      "videos": [
+        {
+          "src": "/previews/solenne.mp4",
+          "width": 1396,
+          "height": 1048,
+          "muted": true,
+          "paused": false,
+          "preload": "none",
+          "currentTime": 1.174336,
+          "parentHeight": "100%",
+          "pausePassed": true,
+          "hoverTransform": "translateY(0px)"
+        },
+        {
+          "src": "/previews/forma.mp4",
+          "width": 1396,
+          "height": 1048,
+          "muted": true,
+          "paused": false,
+          "preload": "none",
+          "currentTime": 0.426005,
+          "parentHeight": "100%",
+          "pausePassed": true,
+          "hoverTransform": "translateY(0px)"
+        },
+        {
+          "src": "/previews/meridian.mp4",
+          "width": 1396,
+          "height": 1048,
+          "muted": true,
+          "paused": false,
+          "preload": "none",
+          "currentTime": 3.065182,
+          "parentHeight": "100%",
+          "pausePassed": true,
+          "hoverTransform": "translateY(0px)"
+        }
+      ]
+    },
+    "en": {
+      "cards": [
+        {
+          "id": "t4",
+          "name": "Solenne",
+          "priceMatched": true
+        },
+        {
+          "id": "t5",
+          "name": "Forma",
+          "priceMatched": true
+        },
+        {
+          "id": "t6",
+          "name": "Meridian",
+          "priceMatched": true
+        }
+      ],
+      "details": [
+        {
+          "id": "t4",
+          "name": "Solenne",
+          "guideLink": true
+        },
+        {
+          "id": "t5",
+          "name": "Forma",
+          "guideLink": true
+        },
+        {
+          "id": "t6",
+          "name": "Meridian",
+          "guideLink": true
+        }
+      ],
+      "home": [
+        "Solenne",
+        "Forma",
+        "Meridian"
+      ],
+      "guide": true,
+      "videos": [
+        {
+          "src": "/previews/solenne.mp4",
+          "width": 1396,
+          "height": 1048,
+          "muted": true,
+          "paused": false,
+          "preload": "none",
+          "currentTime": 1.156333,
+          "parentHeight": "100%",
+          "pausePassed": true,
+          "hoverTransform": "translateY(0px)"
+        },
+        {
+          "src": "/previews/forma.mp4",
+          "width": 1396,
+          "height": 1048,
+          "muted": true,
+          "paused": false,
+          "preload": "none",
+          "currentTime": 0.427108,
+          "parentHeight": "100%",
+          "pausePassed": true,
+          "hoverTransform": "translateY(0px)"
+        },
+        {
+          "src": "/previews/meridian.mp4",
+          "width": 1396,
+          "height": 1048,
+          "muted": true,
+          "paused": false,
+          "preload": "none",
+          "currentTime": 3.128497,
+          "parentHeight": "100%",
+          "pausePassed": true,
+          "hoverTransform": "translateY(0px)"
+        }
+      ]
+    },
+    "zh": {
+      "cards": [
+        {
+          "id": "t4",
+          "name": "Solenne",
+          "priceMatched": true
+        },
+        {
+          "id": "t5",
+          "name": "Forma",
+          "priceMatched": true
+        },
+        {
+          "id": "t6",
+          "name": "Meridian",
+          "priceMatched": true
+        }
+      ],
+      "details": [
+        {
+          "id": "t4",
+          "name": "Solenne",
+          "guideLink": true
+        },
+        {
+          "id": "t5",
+          "name": "Forma",
+          "guideLink": true
+        },
+        {
+          "id": "t6",
+          "name": "Meridian",
+          "guideLink": true
+        }
+      ],
+      "home": [
+        "Solenne",
+        "Forma",
+        "Meridian"
+      ],
+      "guide": true,
+      "videos": [
+        {
+          "src": "/previews/solenne.mp4",
+          "width": 1396,
+          "height": 1048,
+          "muted": true,
+          "paused": false,
+          "preload": "none",
+          "currentTime": 1.170093,
+          "parentHeight": "100%",
+          "pausePassed": true,
+          "hoverTransform": "translateY(0px)"
+        },
+        {
+          "src": "/previews/forma.mp4",
+          "width": 1396,
+          "height": 1048,
+          "muted": true,
+          "paused": false,
+          "preload": "none",
+          "currentTime": 0.432523,
+          "parentHeight": "100%",
+          "pausePassed": true,
+          "hoverTransform": "translateY(0px)"
+        },
+        {
+          "src": "/previews/meridian.mp4",
+          "width": 1396,
+          "height": 1048,
+          "muted": true,
+          "paused": false,
+          "preload": "none",
+          "currentTime": 3.158676,
+          "parentHeight": "100%",
+          "pausePassed": true,
+          "hoverTransform": "translateY(0px)"
+        }
+      ]
+    }
+  },
+  "media": [
+    {
+      "slug": "solenne",
+      "extension": "webp",
+      "status": 200,
+      "bytes": 21912,
+      "contentType": "image/webp"
+    },
+    {
+      "slug": "solenne",
+      "extension": "mp4",
+      "status": 200,
+      "bytes": 478267,
+      "contentType": "video/mp4"
+    },
+    {
+      "slug": "forma",
+      "extension": "webp",
+      "status": 200,
+      "bytes": 17308,
+      "contentType": "image/webp"
+    },
+    {
+      "slug": "forma",
+      "extension": "mp4",
+      "status": 200,
+      "bytes": 398711,
+      "contentType": "video/mp4"
+    },
+    {
+      "slug": "meridian",
+      "extension": "webp",
+      "status": 200,
+      "bytes": 25142,
+      "contentType": "image/webp"
+    },
+    {
+      "slug": "meridian",
+      "extension": "mp4",
+      "status": 200,
+      "bytes": 574188,
+      "contentType": "video/mp4"
+    }
+  ],
+  "anonymousDownloads": [
+    {
+      "id": "t4",
+      "status": 401
+    },
+    {
+      "id": "t5",
+      "status": 401
+    },
+    {
+      "id": "t6",
+      "status": 401
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "reducedMotion": true,
+  "mobileWidth": {
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  "authorisedDownload": "NOT TESTED: no authenticated purchaser account supplied. No purchase or payment was simulated."
+}

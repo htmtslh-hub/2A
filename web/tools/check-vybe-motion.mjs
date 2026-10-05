@@ -1,0 +1,13 @@
+import {resolve} from 'node:path';
+import {writeFileSync,mkdirSync} from 'node:fs';
+process.env.PLAYWRIGHT_BROWSERS_PATH=resolve('_design/.browsers');
+const {chromium}=await import('../../_design/.tooling/node_modules/playwright/index.mjs');
+const b=await chromium.launch({executablePath:'C:/Program Files/CocCoc/Browser/Application/browser.exe',headless:true});
+const root='web/product/giao-dien-web/vybe/reviews/1.0.1';mkdirSync(root,{recursive:true});
+const base=process.argv[2]||'http://127.0.0.1:4173';
+const p=await b.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'});const errors=[];p.on('pageerror',e=>errors.push(e.message));
+const r={browser:'Coc Coc '+b.version(),base};
+await p.goto(base+'/demos/vybe/');r.defaultReduced=await p.locator('.motion-toggle').textContent();
+await p.goto(base+'/demos/vybe/?motion=on');r.optIn=await p.locator('.motion-toggle').textContent();await p.locator('[data-next]').click();await p.waitForTimeout(180);r.animations=await p.evaluate(()=>document.getAnimations().filter(a=>a.playState==='running').length);await p.waitForTimeout(900);
+await p.goto(base+'/demos/vybe/');r.savedOn=await p.locator('.motion-toggle').textContent();await p.emulateMedia({reducedMotion:'no-preference'});await p.emulateMedia({reducedMotion:'reduce'});r.afterSystemChange=await p.locator('.motion-toggle').textContent();await p.locator('[data-prev]').click();await p.waitForTimeout(120);await p.locator('.motion-toggle').click();r.pauseMidway=await p.evaluate(()=>document.getAnimations().filter(a=>a.playState==='running').length);await p.reload();r.savedOff=await p.locator('.motion-toggle').textContent();await p.goto(base+'/demos/vybe/?motion=on');await p.locator('[data-prev]').click();await p.waitForTimeout(900);r.previousWrap=await p.locator('[data-counter]').textContent();await p.locator('[data-next]').click();await p.waitForTimeout(900);r.nextWrap=await p.locator('[data-counter]').textContent();await p.evaluate(()=>scrollTo(0,0));await p.screenshot({path:resolve(root,base.startsWith('https:')?'online-coccoc.png':'local-coccoc.png')});r.errors=errors;console.log(JSON.stringify(r,null,2));writeFileSync(resolve(root,base.startsWith('https:')?'online-motion-checks.json':'local-motion-checks.json'),JSON.stringify(r,null,2));await b.close();
+if(r.defaultReduced!=='Enable motion'||r.animations!==2||r.savedOn!=='Pause motion'||r.afterSystemChange!=='Pause motion'||r.pauseMidway!==0||r.savedOff!=='Enable motion'||errors.length)process.exitCode=1;

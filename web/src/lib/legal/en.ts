@@ -22,6 +22,7 @@ export const LEGAL_EN: LegalPack = {
         p: [
           'We sell pre-built website templates as digital products: HTML, CSS and JavaScript source files with sample content and a customisation guide.',
           'Products are delivered by download. There is no physical item and no shipping cost.',
+          'The price covers an existing template package only. An order does not include custom design, development, consulting or installation.',
           'Imagery and copy shown in the live demos illustrate the layout and may not be included in the delivered files where third-party rights apply.',
         ],
       },
@@ -244,7 +245,7 @@ export const LEGAL_EN: LegalPack = {
   license: {
     title: 'Licence Terms',
     intro:
-      'The short version: use the templates on your own and your clients’ projects as often as you like. The one thing you cannot do is resell the files themselves.',
+      'The short version: use the templates to create commercial websites as often as you like. The one thing you cannot do is resell the files themselves.',
     sections: [
       {
         h: '1. What you get',
@@ -257,7 +258,7 @@ export const LEGAL_EN: LegalPack = {
         h: '2. You may',
         p: [
           'Use it for your own website or your company’s.',
-          'Use it for client projects and charge those clients for your work.',
+          'Use it in completed websites owned or managed by you or your clients.',
           'Modify anything: layout, colours, type, content, additional code.',
           'Reuse it across as many separate projects as you like.',
           'Use it on sites that make money: shops, memberships, advertising.',

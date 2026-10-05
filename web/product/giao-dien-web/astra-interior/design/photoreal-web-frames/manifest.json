@@ -1,0 +1,15 @@
+{
+  "name": "Astra photoreal architectural scroll film",
+  "version": 2,
+  "renderer": "Blender Cycles",
+  "width": 640,
+  "height": 360,
+  "frameCount": 120,
+  "previewFps": 15,
+  "durationSeconds": 8,
+  "framePattern": "astra_photo_%04d.webp",
+  "firstFrame": "astra_photo_0001.webp",
+  "lastFrame": "astra_photo_0120.webp",
+  "recommendedScrollPixels": 6000,
+  "mapping": "frame = round(progress * (frameCount - 1))"
+}

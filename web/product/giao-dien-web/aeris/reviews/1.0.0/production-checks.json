@@ -1,0 +1,96 @@
+{
+  "origin": "https://forgezone.store",
+  "date": "2026-10-05T03:17:56.868Z",
+  "assets": [
+    {
+      "path": "/demos/aeris/index.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/demos/aeris/assets/css/style.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/demos/aeris/assets/js/main.js",
+      "status": 200,
+      "type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "/demos/aeris/assets/images/aeris-pearl.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/demos/aeris/assets/images/aeris-midnight.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/demos/aeris/assets/images/aeris-blush.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/demos/aeris/assets/images/aeris-detail.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/previews/aeris.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/previews/aeris-tablet.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/previews/aeris-mobile.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/previews/aeris.mp4",
+      "status": 200,
+      "type": "video/mp4"
+    }
+  ],
+  "pages": [
+    {
+      "lang": "vi",
+      "url": "https://forgezone.store/?mau=t5",
+      "hasAeris": true,
+      "hasForma": false,
+      "imgs": [
+        "/previews/aeris.webp"
+      ]
+    },
+    {
+      "lang": "en",
+      "url": "https://forgezone.store/?mau=t5",
+      "hasAeris": true,
+      "hasForma": false,
+      "imgs": [
+        "/previews/aeris.webp"
+      ]
+    },
+    {
+      "lang": "zh",
+      "url": "https://forgezone.store/?mau=t5",
+      "hasAeris": true,
+      "hasForma": false,
+      "imgs": [
+        "/previews/aeris.webp"
+      ]
+    }
+  ],
+  "errors": [],
+  "failures": [
+    "vi: ảnh tablet/mobile của Aeris",
+    "en: ảnh tablet/mobile của Aeris",
+    "zh: ảnh tablet/mobile của Aeris"
+  ]
+}

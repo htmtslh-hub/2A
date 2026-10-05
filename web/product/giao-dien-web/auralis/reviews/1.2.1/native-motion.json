@@ -1,0 +1,284 @@
+{
+  "url": "http://127.0.0.1:4331/demos/auralis/index.html?v=1.2.1",
+  "cases": [
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "width": 1440,
+      "height": 900,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": true,
+        "css": "assets/css/style.css?v=1.2.1",
+        "js": "assets/js/main.js?v=1.2.1",
+        "reduced": false
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.500579,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0.499421,
+          "next": 0.500579,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "width": 375,
+      "height": 812,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": true,
+        "css": "assets/css/style.css?v=1.2.1",
+        "js": "assets/js/main.js?v=1.2.1",
+        "reduced": false
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "detail",
+          "kit": 0.498566,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.502835,
+          "next": 0.497165,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "width": 414,
+      "height": 582,
+      "reduce": true,
+      "initial": {
+        "motion": false,
+        "controlVisible": true,
+        "css": "assets/css/style.css?v=1.2.1",
+        "js": "assets/js/main.js?v=1.2.1",
+        "reduced": true
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.500505,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.503239,
+          "next": 0.496761,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "width": 1440,
+      "height": 900,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": true,
+        "css": "assets/css/style.css?v=1.2.1",
+        "js": "assets/js/main.js?v=1.2.1",
+        "reduced": false
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.500579,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0.499421,
+          "next": 0.500579,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "width": 375,
+      "height": 812,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": true,
+        "css": "assets/css/style.css?v=1.2.1",
+        "js": "assets/js/main.js?v=1.2.1",
+        "reduced": false
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "detail",
+          "kit": 0.498566,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.502835,
+          "next": 0.497165,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "width": 414,
+      "height": 582,
+      "reduce": true,
+      "initial": {
+        "motion": false,
+        "controlVisible": true,
+        "css": "assets/css/style.css?v=1.2.1",
+        "js": "assets/js/main.js?v=1.2.1",
+        "reduced": true
+      },
+      "scenes": [
+        {
+          "scene": "detail",
+          "kit": 0,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.500505,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 1,
+          "next": 0,
+          "overflow": false
+        },
+        {
+          "scene": "kit",
+          "kit": 0.503239,
+          "next": 0.496761,
+          "overflow": false
+        },
+        {
+          "scene": "next",
+          "kit": 0,
+          "next": 1,
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "pass": true
+}

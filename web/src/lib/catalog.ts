@@ -7,7 +7,6 @@
    Số tiền luôn tính bằng ĐƠN VỊ NHỎ NHẤT của loại tiền:
    VNĐ là đồng (1_900_000), USD là cent (7_900 = $79). Cả PayOS lẫn Paddle đều
    nhận số nguyên theo quy ước này. */
-import { TPL_META, I18N } from '@/generated/data';
 import { REAL_TEMPLATES, templateSlug } from './real-templates';
 
 export type Lang = 'vi' | 'en' | 'zh';
@@ -62,10 +61,7 @@ export function templateExists(id: string): boolean {
 export function templateName(id: string, lang: Lang = 'vi'): string {
   const real = REAL_TEMPLATES[id];
   if (real) return real.copy[lang]?.name ?? real.copy.vi.name;
-  const idx = TPL_META.findIndex((m: { id: string }) => m.id === id);
-  if (idx < 0) return id;
-  const dict = I18N[lang] ?? I18N.vi;
-  return dict.templates[idx]?.name ?? id;
+  return id;
 }
 
 export function priceOf(kind: Kind, currency: Currency, templateId?: string | null): number {
@@ -100,11 +96,11 @@ export function productName(kind: Kind, templateId: string | null | undefined, l
  *  Tối đa 9 ký tự: tài liệu PayOS ghi rõ tài khoản ngân hàng không liên kết qua
  *  payOS chỉ nhận 9 ký tự, dài hơn thì không tạo được link — khách bấm mua là
  *  lỗi. Bản cũ "Forge Zone tron bo" dài 18. VD: "FZ T5", "FZ TRONBO". */
-export function shortDescription(kind: Kind, templateId?: string | null): string {
+export function shortDescription(kind: Kind | 'CART', templateId?: string | null): string {
   // Chỉ giữ chữ, số, khoảng trắng: ngân hàng hay tự bỏ ký tự đặc biệt khỏi nội
   // dung chuyển khoản, khiến nội dung trên sao kê lệch với cái mình gửi.
   const id = (templateId ?? '').toUpperCase().replace(/[^A-Z0-9]/g, '');
-  const raw = kind === 'BUNDLE' ? 'FZ TRONBO' : `FZ ${id}`.trim();
+  const raw = kind === 'BUNDLE' ? 'FZ TRONBO' : kind === 'CART' ? 'FZ GIOHANG' : `FZ ${id}`.trim();
   return raw.slice(0, 9);
 }
 

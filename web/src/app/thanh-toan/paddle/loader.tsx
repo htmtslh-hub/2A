@@ -8,12 +8,16 @@ declare global {
   interface Window {
     Paddle?: {
       Environment: { set: (env: string) => void };
-      Initialize: (opts: { token: string }) => void;
+      Initialize: (opts: {
+        token: string;
+        checkout?: { settings: { successUrl: string } };
+        eventCallback?: (event: { name?: string }) => void;
+      }) => void;
     };
   }
 }
 
-export default function PaddleLoader({ token }: { token: string }) {
+export default function PaddleLoader({ token, orderId }: { token: string; orderId?: string }) {
   return (
     <Script
       src="https://cdn.paddle.com/paddle/v2/paddle.js"
@@ -22,7 +26,20 @@ export default function PaddleLoader({ token }: { token: string }) {
         // Token sandbox bắt đầu bằng 'test_' — suy ra môi trường từ token để
         // khỏi phải thêm một biến cấu hình nữa.
         if (token.startsWith('test_')) window.Paddle.Environment.set('sandbox');
-        window.Paddle.Initialize({ token });
+
+        const successUrl = orderId
+          ? `${window.location.origin}/thanh-toan/thanh-cong?order=${encodeURIComponent(orderId)}`
+          : null;
+
+        window.Paddle.Initialize({
+          token,
+          ...(successUrl ? { checkout: { settings: { successUrl } } } : {}),
+          eventCallback: (event) => {
+            if (event.name === 'checkout.completed' && successUrl) {
+              window.location.assign(successUrl);
+            }
+          },
+        });
       }}
     />
   );

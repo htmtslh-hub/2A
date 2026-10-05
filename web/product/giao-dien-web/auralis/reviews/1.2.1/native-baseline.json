@@ -1,0 +1,44 @@
+[
+  {
+    "name": "edge",
+    "version": "154.0.4258.53",
+    "initial": {
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "motion": "js-ready reveal-ready motion-ready",
+      "reduced": false,
+      "height": 900,
+      "width": 1440,
+      "font": "16px",
+      "toggleVisible": false,
+      "button": "Pause transitions"
+    },
+    "afterClick": {
+      "motion": "js-ready reveal-ready motion-ready",
+      "scene": "detail",
+      "y": 864,
+      "detailOpacity": "1"
+    },
+    "errors": []
+  },
+  {
+    "name": "coccoc",
+    "version": "152.0.7977.124",
+    "initial": {
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "motion": "js-ready reveal-ready motion-ready",
+      "reduced": false,
+      "height": 900,
+      "width": 1440,
+      "font": "16px",
+      "toggleVisible": false,
+      "button": "Pause transitions"
+    },
+    "afterClick": {
+      "motion": "js-ready reveal-ready motion-ready",
+      "scene": "detail",
+      "y": 864,
+      "detailOpacity": "1"
+    },
+    "errors": []
+  }
+]

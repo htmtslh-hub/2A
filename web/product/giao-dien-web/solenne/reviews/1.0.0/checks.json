@@ -1,0 +1,2206 @@
+{
+  "date": "2026-09-28T02:56:09.360Z",
+  "os": "win32",
+  "zipBytes": 18560,
+  "sha256": "4bbbc2f333abd4797009839576e3aa76ecc6bb0f7baf25de27495f2461e1d53d",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 2753,
+          "viewportHeight": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 3804,
+          "viewportHeight": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 3764,
+          "viewportHeight": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 3750,
+          "viewportHeight": 740,
+          "smallTargets": []
+        }
+      ],
+      "fallbacks": {
+        "zoom200": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 7182
+        },
+        "reduced": true,
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 2753,
+          "visible": true,
+          "styled": true
+        },
+        "noJSAndFonts": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 3942,
+          "content": true,
+          "nav": true
+        },
+        "offlineFile": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 3724,
+          "visible": true
+        }
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "reverseTab": true,
+        "skipFocused": true,
+        "skipDestination": true,
+        "nextLink": {
+          "tag": "A",
+          "label": "Find your ritual ↗"
+        }
+      },
+      "menu": {
+        "open": true,
+        "openDimensions": {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 3982
+        },
+        "escape": true,
+        "linkCloses": true,
+        "desktopReset": true,
+        "mobileReset": true
+      },
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "header": true,
+        "nav": true,
+        "main": true,
+        "footer": true,
+        "duplicateIds": [],
+        "headingJumps": [],
+        "svg": [
+          {
+            "name": "",
+            "role": null,
+            "hidden": "true",
+            "focusable": "false",
+            "viewBox": "0 0 32 32"
+          },
+          {
+            "name": "Sculptural botanical leaves framing a skincare bottle on a stone pedestal",
+            "role": "img",
+            "hidden": null,
+            "focusable": "false",
+            "viewBox": "0 0 640 650"
+          },
+          {
+            "name": "",
+            "role": null,
+            "hidden": "true",
+            "focusable": "false",
+            "viewBox": "0 0 560 380"
+          }
+        ],
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 147.65625,
+              "height": 50.390625
+            },
+            "visible": true
+          },
+          {
+            "label": "Solenne home",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 156.3125,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Our rituals",
+            "href": "#rituals",
+            "exists": true,
+            "rect": {
+              "width": 70.015625,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Our approach",
+            "href": "#approach",
+            "exists": true,
+            "rect": {
+              "width": 90.53125,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Your visit",
+            "href": "#visit",
+            "exists": true,
+            "rect": {
+              "width": 60.90625,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Enquire about a visit ↗",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 209.71875,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Find your ritual ↗",
+            "href": "#rituals",
+            "exists": true,
+            "rect": {
+              "width": 188.890625,
+              "height": 54
+            },
+            "visible": true
+          },
+          {
+            "label": "Enquire about a visit for The Reset",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 270.390625,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Enquire about a visit for The Restore",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 270.390625,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Enquire about a visit for The Conversation",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 270.390625,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Email the studio ↗",
+            "href": "mailto:hello@example.com",
+            "exists": true,
+            "rect": {
+              "width": 197.75,
+              "height": 54
+            },
+            "visible": true
+          },
+          {
+            "label": "solenne.",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 566,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "hello@example.com",
+            "href": "mailto:hello@example.com",
+            "exists": true,
+            "rect": {
+              "width": 566,
+              "height": 44
+            },
+            "visible": true
+          }
+        ],
+        "requests": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap",
+          "assets/css/style.css",
+          "assets/js/main.js"
+        ]
+      },
+      "console": [],
+      "network": [],
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "foreground": "rgb(248, 245, 248)",
+            "background": [
+              48,
+              39,
+              56
+            ],
+            "ratio": 13.18,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "solenne.",
+            "foreground": "rgb(48, 39, 56)",
+            "background": [
+              248,
+              245,
+              248
+            ],
+            "ratio": 13.18,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "brand__point",
+            "text": ".",
+            "foreground": "rgb(109, 70, 125)",
+            "background": [
+              248,
+              245,
+              248
+            ],
+            "ratio": 6.88,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Our rituals",
+            "foreground": "rgb(48, 39, 56)",
+            "background": [
+              248,
+              245,
+              248
+            ],
+            "ratio": 13.18,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "button button--small",
+            "text": "Enquire about a visit ↗",
+            "foreground": "rgb(255, 255, 255)",
+            "background": [
+              109,
+              70,
+              125
+            ],
+            "ratio": 7.44,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A considered skin studio",
+            "foreground": "rgb(103, 64, 115)",
+            "background": [
+              248,
+              245,
+              248
+            ],
+            "ratio": 7.59,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "hero__intro",
+            "text": "Gentle treatments. Thoughtful guidance. A lit",
+            "foreground": "rgb(96, 86, 101)",
+            "background": [
+              248,
+              245,
+              248
+            ],
+            "ratio": 6.43,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Your next little pause",
+            "foreground": "rgb(96, 86, 101)",
+            "background": [
+              238,
+              231,
+              240
+            ],
+            "ratio": 5.74,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Let's make timefor your skin.",
+            "foreground": "rgb(48, 39, 56)",
+            "background": [
+              238,
+              231,
+              240
+            ],
+            "ratio": 11.76,
+            "threshold": 3,
+            "pass": true
+          }
+        ],
+        "focus": [
+          {
+            "element": "Find your ritual ↗",
+            "colour": "rgb(48, 39, 56)",
+            "width": "3px",
+            "ratio": 13.18
+          }
+        ]
+      },
+      "hoverContrast": [
+        {
+          "selector": ".button",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(248, 245, 248)",
+              "background": [
+                48,
+                39,
+                56
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "solenne.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__point",
+              "text": ".",
+              "foreground": "rgb(109, 70, 125)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.88,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our rituals",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Enquire about a visit ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                109,
+                70,
+                125
+              ],
+              "ratio": 7.44,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "A considered skin studio",
+              "foreground": "rgb(103, 64, 115)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 7.59,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "Gentle treatments. Thoughtful guidance. A lit",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.43,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Your next little pause",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 5.74,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Let's make timefor your skin.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 11.76,
+              "threshold": 3,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Find your ritual ↗",
+              "colour": "rgb(48, 39, 56)",
+              "width": "3px",
+              "ratio": 13.18
+            }
+          ]
+        },
+        {
+          "selector": ".site-nav a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(248, 245, 248)",
+              "background": [
+                48,
+                39,
+                56
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "solenne.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__point",
+              "text": ".",
+              "foreground": "rgb(109, 70, 125)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.88,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our rituals",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Enquire about a visit ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                100,
+                62,
+                114
+              ],
+              "ratio": 8.49,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "A considered skin studio",
+              "foreground": "rgb(103, 64, 115)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 7.59,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "Gentle treatments. Thoughtful guidance. A lit",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.43,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button",
+              "text": "Find your ritual ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                109,
+                70,
+                125
+              ],
+              "ratio": 7.44,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Your next little pause",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 5.74,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Let's make timefor your skin.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 11.76,
+              "threshold": 3,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Find your ritual ↗",
+              "colour": "rgb(48, 39, 56)",
+              "width": "3px",
+              "ratio": 13.18
+            }
+          ]
+        },
+        {
+          "selector": ".site-footer > a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(248, 245, 248)",
+              "background": [
+                48,
+                39,
+                56
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "solenne.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__point",
+              "text": ".",
+              "foreground": "rgb(109, 70, 125)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.88,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our rituals",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Enquire about a visit ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                108,
+                69,
+                124
+              ],
+              "ratio": 7.55,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "A considered skin studio",
+              "foreground": "rgb(103, 64, 115)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 7.59,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "Gentle treatments. Thoughtful guidance. A lit",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.43,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button",
+              "text": "Find your ritual ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                109,
+                70,
+                125
+              ],
+              "ratio": 7.44,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Your next little pause",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 5.74,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Let's make timefor your skin.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 11.76,
+              "threshold": 3,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Find your ritual ↗",
+              "colour": "rgb(48, 39, 56)",
+              "width": "3px",
+              "ratio": 13.18
+            }
+          ]
+        },
+        {
+          "selector": ".contact a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(248, 245, 248)",
+              "background": [
+                48,
+                39,
+                56
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "solenne.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__point",
+              "text": ".",
+              "foreground": "rgb(109, 70, 125)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.88,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our rituals",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Enquire about a visit ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                109,
+                70,
+                125
+              ],
+              "ratio": 7.44,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "A considered skin studio",
+              "foreground": "rgb(103, 64, 115)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 7.59,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "Gentle treatments. Thoughtful guidance. A lit",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.43,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Your next little pause",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 5.74,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Let's make timefor your skin.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 11.76,
+              "threshold": 3,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Find your ritual ↗",
+              "colour": "rgb(48, 39, 56)",
+              "width": "3px",
+              "ratio": 13.18
+            }
+          ]
+        },
+        {
+          "selector": ".ritual a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(248, 245, 248)",
+              "background": [
+                48,
+                39,
+                56
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "solenne.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__point",
+              "text": ".",
+              "foreground": "rgb(109, 70, 125)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.88,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our rituals",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Enquire about a visit ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                109,
+                70,
+                125
+              ],
+              "ratio": 7.44,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "A considered skin studio",
+              "foreground": "rgb(103, 64, 115)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 7.59,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "Gentle treatments. Thoughtful guidance. A lit",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.43,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Your next little pause",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 5.74,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Let's make timefor your skin.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 11.76,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "button",
+              "text": "Email the studio ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                104,
+                66,
+                119
+              ],
+              "ratio": 7.97,
+              "threshold": 4.5,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Find your ritual ↗",
+              "colour": "rgb(48, 39, 56)",
+              "width": "3px",
+              "ratio": 13.18
+            }
+          ]
+        }
+      ],
+      "axe": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 2753,
+          "viewportHeight": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 3805,
+          "viewportHeight": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 3764,
+          "viewportHeight": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 3750,
+          "viewportHeight": 740,
+          "smallTargets": []
+        }
+      ],
+      "fallbacks": {
+        "zoom200": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 7182
+        },
+        "reduced": true,
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 2753,
+          "visible": true,
+          "styled": true
+        },
+        "noJSAndFonts": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 3942,
+          "content": true,
+          "nav": true
+        },
+        "offlineFile": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 3724,
+          "visible": true
+        }
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "reverseTab": true,
+        "skipFocused": true,
+        "skipDestination": true,
+        "nextLink": {
+          "tag": "A",
+          "label": "Find your ritual ↗"
+        }
+      },
+      "menu": {
+        "open": true,
+        "openDimensions": {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 3982
+        },
+        "escape": true,
+        "linkCloses": true,
+        "desktopReset": true,
+        "mobileReset": true
+      },
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "header": true,
+        "nav": true,
+        "main": true,
+        "footer": true,
+        "duplicateIds": [],
+        "headingJumps": [],
+        "svg": [
+          {
+            "name": "",
+            "role": null,
+            "hidden": "true",
+            "focusable": "false",
+            "viewBox": "0 0 32 32"
+          },
+          {
+            "name": "Sculptural botanical leaves framing a skincare bottle on a stone pedestal",
+            "role": "img",
+            "hidden": null,
+            "focusable": "false",
+            "viewBox": "0 0 640 650"
+          },
+          {
+            "name": "",
+            "role": null,
+            "hidden": "true",
+            "focusable": "false",
+            "viewBox": "0 0 560 380"
+          }
+        ],
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 147.63333129882812,
+              "height": 50.40000915527344
+            },
+            "visible": true
+          },
+          {
+            "label": "Solenne home",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 156.28334045410156,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Our rituals",
+            "href": "#rituals",
+            "exists": true,
+            "rect": {
+              "width": 70.01666259765625,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Our approach",
+            "href": "#approach",
+            "exists": true,
+            "rect": {
+              "width": 90.55000305175781,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Your visit",
+            "href": "#visit",
+            "exists": true,
+            "rect": {
+              "width": 60.90000915527344,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Enquire about a visit ↗",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 209.98333740234375,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Find your ritual ↗",
+            "href": "#rituals",
+            "exists": true,
+            "rect": {
+              "width": 189.23333740234375,
+              "height": 54
+            },
+            "visible": true
+          },
+          {
+            "label": "Enquire about a visit for The Reset",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 270.3833312988281,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Enquire about a visit for The Restore",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 270.3833312988281,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Enquire about a visit for The Conversation",
+            "href": "#contact",
+            "exists": true,
+            "rect": {
+              "width": 270.3833312988281,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "Email the studio ↗",
+            "href": "mailto:hello@example.com",
+            "exists": true,
+            "rect": {
+              "width": 198.06666564941406,
+              "height": 54
+            },
+            "visible": true
+          },
+          {
+            "label": "solenne.",
+            "href": "#main",
+            "exists": true,
+            "rect": {
+              "width": 566,
+              "height": 44
+            },
+            "visible": true
+          },
+          {
+            "label": "hello@example.com",
+            "href": "mailto:hello@example.com",
+            "exists": true,
+            "rect": {
+              "width": 566,
+              "height": 44
+            },
+            "visible": true
+          }
+        ],
+        "requests": [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+          "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap",
+          "assets/css/style.css",
+          "assets/js/main.js"
+        ]
+      },
+      "console": [],
+      "network": [],
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "foreground": "rgb(248, 245, 248)",
+            "background": [
+              48,
+              39,
+              56
+            ],
+            "ratio": 13.18,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "solenne.",
+            "foreground": "rgb(48, 39, 56)",
+            "background": [
+              248,
+              245,
+              248
+            ],
+            "ratio": 13.18,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "brand__point",
+            "text": ".",
+            "foreground": "rgb(109, 70, 125)",
+            "background": [
+              248,
+              245,
+              248
+            ],
+            "ratio": 6.88,
+            "threshold": 3,
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Our rituals",
+            "foreground": "rgb(48, 39, 56)",
+            "background": [
+              248,
+              245,
+              248
+            ],
+            "ratio": 13.18,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "button button--small",
+            "text": "Enquire about a visit ↗",
+            "foreground": "rgb(255, 255, 255)",
+            "background": [
+              109,
+              70,
+              125
+            ],
+            "ratio": 7.44,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A considered skin studio",
+            "foreground": "rgb(103, 64, 115)",
+            "background": [
+              248,
+              245,
+              248
+            ],
+            "ratio": 7.59,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "hero__intro",
+            "text": "Gentle treatments. Thoughtful guidance. A lit",
+            "foreground": "rgb(96, 86, 101)",
+            "background": [
+              248,
+              245,
+              248
+            ],
+            "ratio": 6.43,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Your next little pause",
+            "foreground": "rgb(96, 86, 101)",
+            "background": [
+              238,
+              231,
+              240
+            ],
+            "ratio": 5.74,
+            "threshold": 4.5,
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Let's make timefor your skin.",
+            "foreground": "rgb(48, 39, 56)",
+            "background": [
+              238,
+              231,
+              240
+            ],
+            "ratio": 11.76,
+            "threshold": 3,
+            "pass": true
+          }
+        ],
+        "focus": [
+          {
+            "element": "Find your ritual ↗",
+            "colour": "rgb(48, 39, 56)",
+            "width": "3px",
+            "ratio": 13.18
+          }
+        ]
+      },
+      "hoverContrast": [
+        {
+          "selector": ".button",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(248, 245, 248)",
+              "background": [
+                48,
+                39,
+                56
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "solenne.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__point",
+              "text": ".",
+              "foreground": "rgb(109, 70, 125)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.88,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our rituals",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Enquire about a visit ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                109,
+                70,
+                125
+              ],
+              "ratio": 7.44,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "A considered skin studio",
+              "foreground": "rgb(103, 64, 115)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 7.59,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "Gentle treatments. Thoughtful guidance. A lit",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.43,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Your next little pause",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 5.74,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Let's make timefor your skin.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 11.76,
+              "threshold": 3,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Find your ritual ↗",
+              "colour": "rgb(48, 39, 56)",
+              "width": "3px",
+              "ratio": 13.18
+            }
+          ]
+        },
+        {
+          "selector": ".site-nav a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(248, 245, 248)",
+              "background": [
+                48,
+                39,
+                56
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "solenne.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__point",
+              "text": ".",
+              "foreground": "rgb(109, 70, 125)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.88,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our rituals",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Enquire about a visit ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                95,
+                58,
+                108
+              ],
+              "ratio": 9.1,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "A considered skin studio",
+              "foreground": "rgb(103, 64, 115)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 7.59,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "Gentle treatments. Thoughtful guidance. A lit",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.43,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button",
+              "text": "Find your ritual ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                109,
+                70,
+                125
+              ],
+              "ratio": 7.44,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Your next little pause",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 5.74,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Let's make timefor your skin.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 11.76,
+              "threshold": 3,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Find your ritual ↗",
+              "colour": "rgb(48, 39, 56)",
+              "width": "3px",
+              "ratio": 13.18
+            }
+          ]
+        },
+        {
+          "selector": ".site-footer > a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(248, 245, 248)",
+              "background": [
+                48,
+                39,
+                56
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "solenne.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__point",
+              "text": ".",
+              "foreground": "rgb(109, 70, 125)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.88,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our rituals",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Enquire about a visit ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                107,
+                68,
+                123
+              ],
+              "ratio": 7.67,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "A considered skin studio",
+              "foreground": "rgb(103, 64, 115)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 7.59,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "Gentle treatments. Thoughtful guidance. A lit",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.43,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button",
+              "text": "Find your ritual ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                109,
+                70,
+                125
+              ],
+              "ratio": 7.44,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Your next little pause",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 5.74,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Let's make timefor your skin.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 11.76,
+              "threshold": 3,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Find your ritual ↗",
+              "colour": "rgb(48, 39, 56)",
+              "width": "3px",
+              "ratio": 13.18
+            }
+          ]
+        },
+        {
+          "selector": ".contact a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(248, 245, 248)",
+              "background": [
+                48,
+                39,
+                56
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "solenne.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__point",
+              "text": ".",
+              "foreground": "rgb(109, 70, 125)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.88,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our rituals",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Enquire about a visit ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                109,
+                70,
+                125
+              ],
+              "ratio": 7.44,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "A considered skin studio",
+              "foreground": "rgb(103, 64, 115)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 7.59,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "Gentle treatments. Thoughtful guidance. A lit",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.43,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Your next little pause",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 5.74,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Let's make timefor your skin.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 11.76,
+              "threshold": 3,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Find your ritual ↗",
+              "colour": "rgb(48, 39, 56)",
+              "width": "3px",
+              "ratio": 13.18
+            }
+          ]
+        },
+        {
+          "selector": ".ritual a",
+          "pairs": [
+            {
+              "element": "skip-link",
+              "text": "Skip to content",
+              "foreground": "rgb(248, 245, 248)",
+              "background": [
+                48,
+                39,
+                56
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "brand",
+              "text": "solenne.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "brand__point",
+              "text": ".",
+              "foreground": "rgb(109, 70, 125)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.88,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "A",
+              "text": "Our rituals",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 13.18,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "button button--small",
+              "text": "Enquire about a visit ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                109,
+                70,
+                125
+              ],
+              "ratio": 7.44,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "A considered skin studio",
+              "foreground": "rgb(103, 64, 115)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 7.59,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "hero__intro",
+              "text": "Gentle treatments. Thoughtful guidance. A lit",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                248,
+                245,
+                248
+              ],
+              "ratio": 6.43,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "eyebrow",
+              "text": "Your next little pause",
+              "foreground": "rgb(96, 86, 101)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 5.74,
+              "threshold": 4.5,
+              "pass": true
+            },
+            {
+              "element": "H2",
+              "text": "Let's make timefor your skin.",
+              "foreground": "rgb(48, 39, 56)",
+              "background": [
+                238,
+                231,
+                240
+              ],
+              "ratio": 11.76,
+              "threshold": 3,
+              "pass": true
+            },
+            {
+              "element": "button",
+              "text": "Email the studio ↗",
+              "foreground": "rgb(255, 255, 255)",
+              "background": [
+                96,
+                58,
+                109
+              ],
+              "ratio": 9.04,
+              "threshold": 4.5,
+              "pass": true
+            }
+          ],
+          "focus": [
+            {
+              "element": "Find your ritual ↗",
+              "colour": "rgb(48, 39, 56)",
+              "width": "3px",
+              "ratio": 13.18
+            }
+          ]
+        }
+      ],
+      "axe": []
+    }
+  },
+  "errors": [],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unknownInputMarkers": [],
+    "countErrors": []
+  },
+  "media": {
+    "viewport": "1396x1048",
+    "poster": "698x524 WebP",
+    "durationApproxSeconds": 11,
+    "bytes": 478267,
+    "video": "/previews/solenne.mp4",
+    "source": "D:\\3. Dự án\\2A\\_design\\product-reviews\\solenne\\1.0.0\\recordings\\page@7190a0bcda71bba1f1b6e6679f88ead3.webm"
+  }
+}

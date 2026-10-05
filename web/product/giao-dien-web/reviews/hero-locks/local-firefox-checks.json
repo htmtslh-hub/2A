@@ -1,0 +1,668 @@
+{
+  "origin": "http://127.0.0.1:3007",
+  "date": "2026-09-28T03:42:46.222Z",
+  "cases": [
+    {
+      "key": "firefox/vi/1440",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 1196.4000244140625,
+            "y": 444.3999938964844,
+            "width": 88.800048828125,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 1295.199951171875,
+            "y": 444.3999938964844,
+            "width": 88.800048828125,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "key": "firefox/vi/820",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 577.1166381835938,
+            "y": 484.8333435058594,
+            "width": 100.0333251953125,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 687.1500244140625,
+            "y": 484.8333435058594,
+            "width": 100.04998779296875,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 820,
+        "clientWidth": 820
+      }
+    },
+    {
+      "key": "firefox/vi/375",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 20,
+            "y": 290.70001220703125,
+            "width": 241.20001220703125,
+            "height": 418
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 113.80000305175781,
+            "y": 290.70001220703125,
+            "width": 241.1999969482422,
+            "height": 418
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 375,
+        "clientWidth": 375
+      }
+    },
+    {
+      "key": "firefox/vi/320",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 20,
+            "y": 290.79998779296875,
+            "width": 201.60000610351562,
+            "height": 418
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nSẮP RA MẮT\n\nSẢN PHẨM MỚI",
+          "bounds": {
+            "x": 98.4000015258789,
+            "y": 290.79998779296875,
+            "width": 201.5999984741211,
+            "height": 418
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    },
+    {
+      "key": "firefox/en/1440",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 1196.4000244140625,
+            "y": 444.3999938964844,
+            "width": 88.800048828125,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 1295.199951171875,
+            "y": 444.3999938964844,
+            "width": 88.800048828125,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "key": "firefox/en/820",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 577.1166381835938,
+            "y": 507.9333190917969,
+            "width": 100.0333251953125,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 687.1500244140625,
+            "y": 507.9333190917969,
+            "width": 100.04998779296875,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 820,
+        "clientWidth": 820
+      }
+    },
+    {
+      "key": "firefox/en/375",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 20,
+            "y": 290.79998779296875,
+            "width": 241.20001220703125,
+            "height": 418
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 113.80000305175781,
+            "y": 290.79998779296875,
+            "width": 241.1999969482422,
+            "height": 418
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 375,
+        "clientWidth": 375
+      }
+    },
+    {
+      "key": "firefox/en/320",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 20,
+            "y": 290.8999938964844,
+            "width": 201.60000610351562,
+            "height": 418.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\nCOMING SOON\n\nNEW PRODUCT",
+          "bounds": {
+            "x": 98.4000015258789,
+            "y": 290.8999938964844,
+            "width": 201.5999984741211,
+            "height": 418.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    },
+    {
+      "key": "firefox/zh/1440",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 1196.4000244140625,
+            "y": 444.3999938964844,
+            "width": 88.800048828125,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 1295.199951171875,
+            "y": 444.3999938964844,
+            "width": 88.800048828125,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    {
+      "key": "firefox/zh/820",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 577.1166381835938,
+            "y": 491.8333435058594,
+            "width": 100.0333251953125,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 687.1500244140625,
+            "y": 491.8333435058594,
+            "width": 100.04998779296875,
+            "height": 420.0000305175781
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 820,
+        "clientWidth": 820
+      }
+    },
+    {
+      "key": "firefox/zh/375",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 20,
+            "y": 463.7166748046875,
+            "width": 241.20001220703125,
+            "height": 418
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 113.80000305175781,
+            "y": 463.7166748046875,
+            "width": 241.1999969482422,
+            "height": 418
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 375,
+        "clientWidth": 375
+      }
+    },
+    {
+      "key": "firefox/zh/320",
+      "count": 5,
+      "locks": [
+        {
+          "number": 4,
+          "text": "04\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 20,
+            "y": 575.816650390625,
+            "width": 201.60000610351562,
+            "height": 418
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-sales-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        },
+        {
+          "number": 5,
+          "text": "05\n\n即将上线\n\n新产品",
+          "bounds": {
+            "x": 98.4000015258789,
+            "y": 575.816650390625,
+            "width": 201.5999984741211,
+            "height": 418
+          },
+          "media": {
+            "poster": "http://127.0.0.1:3007/media/card-me-bg.webp",
+            "src": null,
+            "paused": true
+          },
+          "posterStatus": 200
+        }
+      ],
+      "next": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "prev": [
+        2,
+        1,
+        0
+      ],
+      "pageWidth": {
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    }
+  ],
+  "errors": [],
+  "failures": []
+}

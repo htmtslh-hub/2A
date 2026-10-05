@@ -1,0 +1,592 @@
+/* ==========================================================================
+   KEYSTEAD — rental listings template
+   Plain CSS, no build step. Colours, fonts and spacing live in :root.
+   Sections: base, buttons, header, hero, browse bar, promises, listings,
+   neighbourhoods, steps, landlord band, contact, footer, reveal, responsive.
+   ========================================================================== */
+
+:root {
+  /* Colours */
+  --ink: #111827;          /* headings, dark buttons, footer background */
+  --text: #374151;         /* body text */
+  --muted: #4b5563;        /* secondary text */
+  --bg: #f6f5f3;           /* page background */
+  --surface: #ffffff;      /* cards and bars */
+  --line: #e5e7eb;         /* borders */
+  --accent: #9a4d0b;       /* prices and small highlights (5.9:1 on white) */
+  --accent-soft: #fdf1e3;  /* "Available" badge background */
+  --hero-fallback: #243041;/* shown behind the hero text if the photo is missing */
+
+  /* Type */
+  --font: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+
+  /* Layout */
+  --wrap: 1180px;
+  --pad: clamp(16px, 4vw, 32px);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --shadow: 0 18px 40px -24px rgba(17, 24, 39, .35);
+}
+
+/* ---- base -------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+h1, h2, h3 { color: var(--ink); line-height: 1.2; margin: 0; }
+
+p { margin: 0; }
+
+a { color: inherit; }
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+main:focus { outline: none; }
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -80px;
+  z-index: 20;
+  padding: 12px 18px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus { top: 12px; }
+
+/* ---- buttons ----------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color .2s, color .2s;
+}
+
+.btn--dark { background: var(--ink); color: #fff; }
+.btn--dark:hover { background: #374151; }
+
+.btn--light { background: #fff; color: var(--ink); }
+.btn--light:hover { background: #e5e7eb; }
+
+/* ---- header ------------------------------------------------------------ */
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 76px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.logo__mark { width: 30px; height: 30px; }
+
+.logo__text { font-size: 22px; font-weight: 700; letter-spacing: -.02em; }
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-nav a:not(.btn) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: 999px;
+}
+
+.site-nav a:not(.btn):hover { background: #f3f4f6; }
+
+.site-nav__cta { margin-left: 8px; }
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font: 600 15px var(--font);
+  cursor: pointer;
+}
+
+.nav-toggle svg { width: 20px; height: 20px; }
+
+/* ---- hero -------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--hero-fallback);
+  color: #fff;
+}
+
+.hero__img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+/* Dark overlay keeps the white text readable on any part of the photo. */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 60% 55% at 50% 42%, rgba(12, 17, 28, .55), rgba(12, 17, 28, 0) 75%),
+    linear-gradient(180deg, rgba(12, 17, 28, .55) 0%, rgba(12, 17, 28, .38) 45%, rgba(12, 17, 28, .72) 100%);
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: clamp(72px, 10vw, 128px);
+  padding-bottom: clamp(112px, 12vw, 150px);
+}
+
+.hero__pill {
+  padding: 6px 16px;
+  border: 1px solid rgba(255, 255, 255, .45);
+  border-radius: 999px;
+  background: rgba(12, 17, 28, .55);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero__title {
+  max-width: 15ch;
+  margin-top: 22px;
+  color: #fff;
+  font-size: clamp(36px, 5.6vw, 64px);
+  letter-spacing: -.03em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, .35);
+}
+
+.hero__lede {
+  max-width: 56ch;
+  margin: 20px 0 30px;
+  font-size: 18px;
+  color: #f3f4f6;
+}
+
+/* ---- browse bar (links, overlaps the bottom of the hero) --------------- */
+
+.browse {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  align-items: center;
+  gap: 6px;
+  margin-top: -52px;
+  padding: 10px;
+  background: var(--surface);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+}
+
+.browse__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 60px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.browse__item:hover { background: #f3f4f6; }
+
+.browse__item svg { flex: none; width: 24px; height: 24px; }
+
+.browse__item strong { display: block; font-size: 15px; line-height: 1.3; }
+
+.browse__item small { display: block; font-size: 14px; color: var(--muted); }
+
+.browse__cta { min-height: 56px; padding-inline: 30px; }
+
+/* ---- promises ---------------------------------------------------------- */
+
+.promises {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.promise {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.promise__icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+}
+
+.promise__icon svg { width: 22px; height: 22px; }
+
+.promise__title { font-size: 16px; }
+
+.promise p { font-size: 14px; color: var(--muted); }
+
+/* ---- sections ---------------------------------------------------------- */
+
+.section { padding-block: clamp(56px, 8vw, 96px); }
+
+.section--alt { background: #eeece8; }
+
+.section__head {
+  max-width: 640px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.section__title { font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -.02em; }
+
+.section__intro { margin-top: 12px; color: var(--muted); }
+
+/* ---- listings ---------------------------------------------------------- */
+
+.listings {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.listing {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.listing__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #d1d5db; /* placeholder colour while the photo loads */
+}
+
+.listing__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px 20px;
+}
+
+.listing__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+
+.listing__title { font-size: 19px; }
+
+.listing__price { font-size: 14px; color: var(--muted); }
+
+.listing__price strong { font-size: 18px; color: var(--accent); }
+
+.listing__meta { font-size: 14px; color: var(--muted); }
+
+.listing__badge {
+  align-self: flex-start;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.listing__link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 44px;
+  margin-top: auto;
+  font-weight: 700;
+  color: var(--ink);
+  text-underline-offset: 4px;
+}
+
+.listing__link:hover { color: var(--accent); }
+
+/* ---- neighbourhoods ---------------------------------------------------- */
+
+.areas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.area {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.area__name { font-size: 19px; }
+
+.area p { font-size: 15px; }
+
+.area__count {
+  margin-top: auto;
+  padding-top: 8px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ---- steps ------------------------------------------------------------- */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  padding: 26px;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.step__num { font-size: 15px; font-weight: 700; color: var(--accent); }
+
+.step__title { margin: 8px 0 10px; font-size: 21px; }
+
+/* ---- landlord band ----------------------------------------------------- */
+
+.band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px 40px;
+  padding: clamp(28px, 4vw, 48px);
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: #e5e7eb;
+}
+
+.band__title { margin-bottom: 10px; color: #fff; font-size: clamp(24px, 3vw, 32px); }
+
+.band p { max-width: 60ch; }
+
+/* ---- contact ----------------------------------------------------------- */
+
+.contact {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact__text { max-width: 52ch; margin: 14px 0 26px; }
+
+.contact__details {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 26px;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.contact__details dt { font-size: 14px; font-weight: 700; color: var(--muted); }
+
+.contact__details dd { margin: 2px 0 0; color: var(--ink); }
+
+.contact__details a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+/* ---- footer ------------------------------------------------------------ */
+
+.site-footer {
+  background: var(--ink);
+  color: #d1d5db;
+  padding-block: 40px;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+}
+
+.logo--footer { color: #fff; }
+
+.site-footer__nav { display: flex; flex-wrap: wrap; gap: 4px 8px; }
+
+.site-footer__nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 8px;
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.site-footer__nav a:hover { color: #fff; text-decoration: underline; }
+
+.site-footer__copy { flex-basis: 100%; font-size: 14px; color: #c5cad3; }
+
+/* Light focus ring on the dark hero, landlord band and footer. */
+.hero :focus-visible,
+.band :focus-visible,
+.site-footer :focus-visible { outline-color: #93c5fd; }
+
+/* ---- reveal on scroll (only when JavaScript is running) ---------------- */
+
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.js [data-reveal].is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .btn { transition: none; }
+}
+
+/* ---- responsive -------------------------------------------------------- */
+
+@media (max-width: 1080px) {
+  .browse { grid-template-columns: repeat(2, minmax(0, 1fr)); border-radius: var(--radius); }
+  .browse__item { border-radius: var(--radius-sm); }
+  .browse__cta { grid-column: 1 / -1; }
+  .promises, .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 960px) {
+  .nav-toggle { display: inline-flex; }
+
+  .site-header__inner { flex-wrap: wrap; }
+
+  .site-nav {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 16px;
+  }
+
+  .site-nav a:not(.btn) { padding: 0 8px; }
+
+  .site-nav__cta { margin: 8px 0 0; }
+
+  /* Hidden only after JavaScript has started, so the links stay usable without it. */
+  .js .site-nav { display: none; }
+  .js .site-nav.is-open { display: flex; }
+
+  .listings, .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact { grid-template-columns: 1fr; }
+  .band { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+  .browse { grid-template-columns: 1fr; margin-top: -40px; }
+  .promises, .areas, .listings, .steps { grid-template-columns: 1fr; }
+  .hero__lede { font-size: 17px; }
+  .btn { white-space: normal; text-align: center; }
+}

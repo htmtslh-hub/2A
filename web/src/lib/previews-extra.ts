@@ -8,7 +8,7 @@ import { REAL_TEMPLATE_PREVIEWS } from './real-templates';
  *  Không liệt kê tay ở đây: ảnh suy thẳng từ bảng REAL_TEMPLATES, cùng nguồn
  *  với tên hiển thị và file tải về. Một bảng nên không lệch được.
  *
- *  Chụp lại ảnh:  node _design/anh-preview.mjs [tên mẫu] */
+ *  Chụp lại ảnh:  node web/product/giao-dien-web/tools/anh-preview.mjs [tên mẫu] */
 export const PREVIEWS_EXTRA: Record<string, string> = {
   ...REAL_TEMPLATE_PREVIEWS,
 };

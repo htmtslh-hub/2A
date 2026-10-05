@@ -1,0 +1,4 @@
+interface:
+  display_name: "skill-morge"
+  short_description: "Chuyển sản phẩm và chuyển cảnh theo cuộn"
+  default_prompt: "Dùng $skill-morge để thêm animation chuyển sản phẩm và chuyển cảnh, tối ưu cho điện thoại, tablet và desktop."

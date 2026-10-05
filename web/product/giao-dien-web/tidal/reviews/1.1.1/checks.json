@@ -1,0 +1,2560 @@
+{
+  "slug": "tidal",
+  "version": "1.1.1",
+  "date": "2026-10-03T13:14:58.428Z",
+  "os": "win32",
+  "zipBytes": 258257,
+  "sha256": "832d26167a182040ab79bca489d504f23d2144659675fd0b7d4e73c39ff76da8",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#main"
+          },
+          {
+            "label": "Tidal — home",
+            "href": "index.html",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html"
+          },
+          {
+            "label": "Programmes",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Reefs",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Research",
+            "href": "#impact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#impact"
+          },
+          {
+            "label": "Stories",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "Contact",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "Adopt a reef",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "Sponsor a plot",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "See the programmes",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Adopt a reef",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Ask for our annual report",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Mapping",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Replanting",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Local crews",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Live readings",
+            "href": "#impact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#impact"
+          },
+          {
+            "label": "Annual report",
+            "href": "#impact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#impact"
+          },
+          {
+            "label": "Methodology",
+            "href": "#impact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#impact"
+          },
+          {
+            "label": "Sponsor a plot",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "Volunteer",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "Contact",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "hello@example.com",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 960,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(5, 18, 44)",
+            "background": [
+              53,
+              224,
+              240
+            ],
+            "ratio": 11.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "logo__word",
+            "text": "Tidal",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              12,
+              25,
+              53
+            ],
+            "ratio": 15.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Programmes",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              12,
+              26,
+              54
+            ],
+            "ratio": 7.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Research",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              12,
+              26,
+              55
+            ],
+            "ratio": 7.14,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Stories",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              12,
+              27,
+              56
+            ],
+            "ratio": 7.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "link-quiet",
+            "text": "Contact",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              22,
+              63,
+              92
+            ],
+            "ratio": 6.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--grad btn--sm",
+            "text": "Adopt a reef",
+            "colour": "rgb(5, 18, 44)",
+            "background": [
+              117,
+              141,
+              252
+            ],
+            "ratio": 6.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "pill glass",
+            "text": "1,204 reefs under care",
+            "colour": "rgb(159, 233, 255)",
+            "background": [
+              4,
+              17,
+              45
+            ],
+            "ratio": 13.87,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__title",
+            "text": "Dive in.Look closer.Leave it better.",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              18,
+              66,
+              93
+            ],
+            "ratio": 9.5,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "grad-text",
+            "text": "Leave it better.",
+            "colour": "gradient text",
+            "background": [
+              17,
+              73,
+              104
+            ],
+            "ratio": 3.3,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__lede",
+            "text": "We map coral on twenty-six reefs, replan",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              15,
+              40,
+              67
+            ],
+            "ratio": 13.27,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--grad",
+            "text": "Sponsor a plot",
+            "colour": "rgb(5, 18, 44)",
+            "background": [
+              116,
+              142,
+              251
+            ],
+            "ratio": 6.2,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--glass glass",
+            "text": "See the programmes",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              5,
+              20,
+              47
+            ],
+            "ratio": 16.25,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "card-kicker",
+            "text": "Reef 14 · today",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              5,
+              36,
+              68
+            ],
+            "ratio": 6.48,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "temp",
+            "text": "26.4°C",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              27,
+              43,
+              67
+            ],
+            "ratio": 8.87,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "card-note",
+            "text": "Water temperature, 8 m",
+            "colour": "rgb(159, 179, 216)",
+            "background": [
+              37,
+              46,
+              67
+            ],
+            "ratio": 6.39,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "planted__num",
+            "text": "3,908",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              4,
+              23,
+              53
+            ],
+            "ratio": 15.81,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "planted__label",
+            "text": "Corals replanted this year",
+            "colour": "rgb(159, 179, 216)",
+            "background": [
+              7,
+              27,
+              56
+            ],
+            "ratio": 8.11,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "B",
+            "text": "Every reading published",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              44,
+              49,
+              114
+            ],
+            "ratio": 10.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Raw data, no summaries",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              43,
+              48,
+              113
+            ],
+            "ratio": 4.93,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "B",
+            "text": "Twenty-six sites",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              34,
+              48,
+              101
+            ],
+            "ratio": 11.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Across four island groups",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              34,
+              47,
+              101
+            ],
+            "ratio": 5.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "B",
+            "text": "Audited annually",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              23,
+              48,
+              86
+            ],
+            "ratio": 11.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Accounts open to sponsors",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              23,
+              48,
+              86
+            ],
+            "ratio": 5.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "What we run",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              33,
+              37,
+              100
+            ],
+            "ratio": 8.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Three programmes,one shared record",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              31,
+              36,
+              98
+            ],
+            "ratio": 12.54,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section__note",
+            "text": "Sponsorship funds all three. You choose ",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              14,
+              30,
+              70
+            ],
+            "ratio": 6.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__title",
+            "text": "Mapping",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              34,
+              39,
+              97
+            ],
+            "ratio": 12.18,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__text",
+            "text": "Divers photograph fixed transects every ",
+            "colour": "rgb(159, 179, 216)",
+            "background": [
+              33,
+              39,
+              95
+            ],
+            "ratio": 6.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__stat",
+            "text": "26 sites on the schedule",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              31,
+              36,
+              90
+            ],
+            "ratio": 5.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--cyan",
+            "text": "26",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              31,
+              36,
+              90
+            ],
+            "ratio": 8.96,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__title",
+            "text": "Replanting",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              30,
+              37,
+              90
+            ],
+            "ratio": 12.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__text",
+            "text": "Fragments grown on rope nurseries go bac",
+            "colour": "rgb(159, 179, 216)",
+            "background": [
+              29,
+              36,
+              87
+            ],
+            "ratio": 6.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__stat",
+            "text": "71% alive after twelve months",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              35,
+              39,
+              88
+            ],
+            "ratio": 5.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--violet",
+            "text": "71%",
+            "colour": "rgb(155, 133, 255)",
+            "background": [
+              36,
+              40,
+              89
+            ],
+            "ratio": 4.72,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__title",
+            "text": "Local crews",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              22,
+              31,
+              76
+            ],
+            "ratio": 13.97,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__text",
+            "text": "Every dive team is hired and trained fro",
+            "colour": "rgb(159, 179, 216)",
+            "background": [
+              23,
+              31,
+              76
+            ],
+            "ratio": 7.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__stat",
+            "text": "38 people on the payroll",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              23,
+              30,
+              75
+            ],
+            "ratio": 6.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--cyan",
+            "text": "38",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              23,
+              30,
+              75
+            ],
+            "ratio": 9.87,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--cyan num--lg",
+            "text": "1,204",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              27,
+              30,
+              80
+            ],
+            "ratio": 9.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "impact__label",
+            "text": "Reef plots under care",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              26,
+              28,
+              77
+            ],
+            "ratio": 6.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--cyan num--lg",
+            "text": "3,908",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              26,
+              29,
+              77
+            ],
+            "ratio": 9.85,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "impact__label",
+            "text": "Corals replanted this year",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              25,
+              27,
+              74
+            ],
+            "ratio": 6.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--violet num--lg",
+            "text": "71%",
+            "colour": "rgb(155, 133, 255)",
+            "background": [
+              24,
+              28,
+              74
+            ],
+            "ratio": 5.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "impact__label",
+            "text": "Twelve-month survival rate",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              24,
+              27,
+              74
+            ],
+            "ratio": 6.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "cta__title",
+            "text": "Put your name ona square of reef",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              31,
+              50,
+              101
+            ],
+            "ratio": 10.95,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "cta__text",
+            "text": "Sponsorship starts at [YOUR PRICE] a mon",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              32,
+              51,
+              103
+            ],
+            "ratio": 7.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--grad",
+            "text": "Adopt a reef",
+            "colour": "rgb(5, 18, 44)",
+            "background": [
+              115,
+              144,
+              251
+            ],
+            "ratio": 6.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--glass glass",
+            "text": "Ask for our annual report",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              40,
+              61,
+              116
+            ],
+            "ratio": 9.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "logo__word",
+            "text": "Tidal",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              14,
+              22,
+              62
+            ],
+            "ratio": 15.5,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "site-footer__addr",
+            "text": "Coral monitoring and restoration.Registe",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              14,
+              25,
+              67
+            ],
+            "ratio": 5.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "foot-nav__head",
+            "text": "Work",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              16,
+              29,
+              74
+            ],
+            "ratio": 5.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Mapping",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              15,
+              29,
+              75
+            ],
+            "ratio": 9.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Replanting",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              15,
+              30,
+              76
+            ],
+            "ratio": 9.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "foot-nav__head",
+            "text": "Data",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              15,
+              26,
+              69
+            ],
+            "ratio": 5.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Live readings",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              15,
+              26,
+              69
+            ],
+            "ratio": 9.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Methodology",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              14,
+              27,
+              69
+            ],
+            "ratio": 9.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "foot-nav__head",
+            "text": "Support",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              14,
+              22,
+              63
+            ],
+            "ratio": 5.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Sponsor a plot",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              14,
+              22,
+              62
+            ],
+            "ratio": 10.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Volunteer",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              14,
+              23,
+              62
+            ],
+            "ratio": 10.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Contact",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              13,
+              23,
+              62
+            ],
+            "ratio": 10.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "© 2026 Tidal Reef Trust",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              12,
+              25,
+              62
+            ],
+            "ratio": 5.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "hello@example.com",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              12,
+              24,
+              61
+            ],
+            "ratio": 5.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Sponsor a plot",
+          "colour": "rgb(53, 224, 240)",
+          "width": "3px",
+          "ratio": 10.61
+        },
+        "overImageNeedsManualCheck": [
+          "1,204 reefs under care",
+          "Dive in.Look closer.Leave it better.",
+          "Leave it better.",
+          "We map coral on twenty-six reefs, replan",
+          "Sponsor a plot",
+          "See the programmes",
+          "Reef 14 · today",
+          "26.4°C",
+          "Water temperature, 8 m",
+          "3,908",
+          "Corals replanted this year"
+        ]
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".link-quiet",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#main"
+          },
+          {
+            "label": "Tidal — home",
+            "href": "index.html",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html"
+          },
+          {
+            "label": "Programmes",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Reefs",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Research",
+            "href": "#impact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#impact"
+          },
+          {
+            "label": "Stories",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "Contact",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "Adopt a reef",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "Sponsor a plot",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "See the programmes",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Adopt a reef",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Ask for our annual report",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Mapping",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Replanting",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Local crews",
+            "href": "#programmes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#programmes"
+          },
+          {
+            "label": "Live readings",
+            "href": "#impact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#impact"
+          },
+          {
+            "label": "Annual report",
+            "href": "#impact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#impact"
+          },
+          {
+            "label": "Methodology",
+            "href": "#impact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#impact"
+          },
+          {
+            "label": "Sponsor a plot",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "Volunteer",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "Contact",
+            "href": "#sponsor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/tidal/index.html#sponsor"
+          },
+          {
+            "label": "hello@example.com",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 960,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(5, 18, 44)",
+            "background": [
+              53,
+              224,
+              240
+            ],
+            "ratio": 11.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "logo__word",
+            "text": "Tidal",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              12,
+              25,
+              53
+            ],
+            "ratio": 15.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Programmes",
+            "colour": "rgb(79, 208, 232)",
+            "background": [
+              12,
+              26,
+              54
+            ],
+            "ratio": 9.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Reefs",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              12,
+              26,
+              54
+            ],
+            "ratio": 7.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Research",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              12,
+              27,
+              56
+            ],
+            "ratio": 7.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "link-quiet",
+            "text": "Contact",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              57,
+              72,
+              94
+            ],
+            "ratio": 5.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--grad btn--sm",
+            "text": "Adopt a reef",
+            "colour": "rgb(5, 18, 44)",
+            "background": [
+              117,
+              141,
+              251
+            ],
+            "ratio": 6.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "pill glass",
+            "text": "1,204 reefs under care",
+            "colour": "rgb(159, 233, 255)",
+            "background": [
+              4,
+              17,
+              45
+            ],
+            "ratio": 13.87,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__title",
+            "text": "Dive in.Look closer.Leave it better.",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              25,
+              65,
+              90
+            ],
+            "ratio": 9.58,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "grad-text",
+            "text": "Leave it better.",
+            "colour": "gradient text",
+            "background": [
+              21,
+              73,
+              96
+            ],
+            "ratio": 3.34,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__lede",
+            "text": "We map coral on twenty-six reefs, replan",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              23,
+              40,
+              52
+            ],
+            "ratio": 13.42,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--grad",
+            "text": "Sponsor a plot",
+            "colour": "rgb(5, 18, 44)",
+            "background": [
+              116,
+              142,
+              251
+            ],
+            "ratio": 6.2,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--glass glass",
+            "text": "See the programmes",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              6,
+              20,
+              47
+            ],
+            "ratio": 16.23,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "card-kicker",
+            "text": "Reef 14 · today",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              7,
+              37,
+              69
+            ],
+            "ratio": 6.4,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "temp",
+            "text": "26.4°C",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              40,
+              51,
+              74
+            ],
+            "ratio": 7.86,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "card-note",
+            "text": "Water temperature, 8 m",
+            "colour": "rgb(159, 179, 216)",
+            "background": [
+              40,
+              51,
+              74
+            ],
+            "ratio": 5.96,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "planted__num",
+            "text": "3,908",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              6,
+              25,
+              55
+            ],
+            "ratio": 15.51,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "planted__label",
+            "text": "Corals replanted this year",
+            "colour": "rgb(159, 179, 216)",
+            "background": [
+              11,
+              32,
+              59
+            ],
+            "ratio": 7.72,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "B",
+            "text": "Every reading published",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              45,
+              51,
+              116
+            ],
+            "ratio": 10.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Raw data, no summaries",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              43,
+              49,
+              114
+            ],
+            "ratio": 4.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "B",
+            "text": "Twenty-six sites",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              34,
+              49,
+              102
+            ],
+            "ratio": 10.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Across four island groups",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              35,
+              48,
+              102
+            ],
+            "ratio": 5.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "B",
+            "text": "Audited annually",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              24,
+              50,
+              87
+            ],
+            "ratio": 11.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Accounts open to sponsors",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              23,
+              48,
+              87
+            ],
+            "ratio": 5.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "What we run",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              32,
+              36,
+              99
+            ],
+            "ratio": 8.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Three programmes,one shared record",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              31,
+              36,
+              99
+            ],
+            "ratio": 12.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section__note",
+            "text": "Sponsorship funds all three. You choose ",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              14,
+              29,
+              70
+            ],
+            "ratio": 6.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__title",
+            "text": "Mapping",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              35,
+              39,
+              98
+            ],
+            "ratio": 12.12,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__text",
+            "text": "Divers photograph fixed transects every ",
+            "colour": "rgb(159, 179, 216)",
+            "background": [
+              34,
+              39,
+              96
+            ],
+            "ratio": 6.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__stat",
+            "text": "26 sites on the schedule",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              31,
+              37,
+              90
+            ],
+            "ratio": 5.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--cyan",
+            "text": "26",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              31,
+              37,
+              90
+            ],
+            "ratio": 8.89,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__title",
+            "text": "Replanting",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              30,
+              37,
+              90
+            ],
+            "ratio": 12.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__text",
+            "text": "Fragments grown on rope nurseries go bac",
+            "colour": "rgb(159, 179, 216)",
+            "background": [
+              30,
+              36,
+              88
+            ],
+            "ratio": 6.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__stat",
+            "text": "71% alive after twelve months",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              27,
+              34,
+              84
+            ],
+            "ratio": 6.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--violet",
+            "text": "71%",
+            "colour": "rgb(155, 133, 255)",
+            "background": [
+              27,
+              34,
+              84
+            ],
+            "ratio": 5.13,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__title",
+            "text": "Local crews",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              22,
+              31,
+              76
+            ],
+            "ratio": 13.97,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__text",
+            "text": "Every dive team is hired and trained fro",
+            "colour": "rgb(159, 179, 216)",
+            "background": [
+              23,
+              31,
+              76
+            ],
+            "ratio": 7.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "programme__stat",
+            "text": "38 people on the payroll",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              23,
+              30,
+              75
+            ],
+            "ratio": 6.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--cyan",
+            "text": "38",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              23,
+              30,
+              75
+            ],
+            "ratio": 9.87,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--cyan num--lg",
+            "text": "1,204",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              28,
+              31,
+              80
+            ],
+            "ratio": 9.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "impact__label",
+            "text": "Reef plots under care",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              26,
+              28,
+              77
+            ],
+            "ratio": 6.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--cyan num--lg",
+            "text": "3,908",
+            "colour": "rgb(53, 224, 240)",
+            "background": [
+              26,
+              29,
+              77
+            ],
+            "ratio": 9.85,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "impact__label",
+            "text": "Corals replanted this year",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              24,
+              27,
+              75
+            ],
+            "ratio": 6.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "num num--violet num--lg",
+            "text": "71%",
+            "colour": "rgb(155, 133, 255)",
+            "background": [
+              24,
+              28,
+              74
+            ],
+            "ratio": 5.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "impact__label",
+            "text": "Twelve-month survival rate",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              24,
+              27,
+              74
+            ],
+            "ratio": 6.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "impact__label",
+            "text": "Of readings published raw",
+            "colour": "rgb(142, 168, 212)",
+            "background": [
+              25,
+              27,
+              74
+            ],
+            "ratio": 6.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "cta__title",
+            "text": "Put your name ona square of reef",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              30,
+              53,
+              100
+            ],
+            "ratio": 10.66,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "cta__text",
+            "text": "Sponsorship starts at [YOUR PRICE] a mon",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              33,
+              53,
+              105
+            ],
+            "ratio": 7.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--grad",
+            "text": "Adopt a reef",
+            "colour": "rgb(5, 18, 44)",
+            "background": [
+              116,
+              143,
+              251
+            ],
+            "ratio": 6.26,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--glass glass",
+            "text": "Ask for our annual report",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              38,
+              65,
+              116
+            ],
+            "ratio": 8.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "logo__word",
+            "text": "Tidal",
+            "colour": "rgb(234, 242, 255)",
+            "background": [
+              14,
+              21,
+              62
+            ],
+            "ratio": 15.59,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "site-footer__addr",
+            "text": "Coral monitoring and restoration.Registe",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              15,
+              25,
+              67
+            ],
+            "ratio": 5.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "foot-nav__head",
+            "text": "Work",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              15,
+              28,
+              74
+            ],
+            "ratio": 5.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Mapping",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              15,
+              29,
+              75
+            ],
+            "ratio": 9.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Replanting",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              15,
+              30,
+              75
+            ],
+            "ratio": 9.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Local crews",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              15,
+              30,
+              76
+            ],
+            "ratio": 9.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "foot-nav__head",
+            "text": "Data",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              15,
+              25,
+              68
+            ],
+            "ratio": 5.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Live readings",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              15,
+              26,
+              69
+            ],
+            "ratio": 9.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Annual report",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              14,
+              26,
+              69
+            ],
+            "ratio": 10.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Methodology",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              15,
+              27,
+              69
+            ],
+            "ratio": 9.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "foot-nav__head",
+            "text": "Support",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              13,
+              22,
+              62
+            ],
+            "ratio": 5.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Sponsor a plot",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              13,
+              22,
+              62
+            ],
+            "ratio": 10.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Volunteer",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              13,
+              23,
+              62
+            ],
+            "ratio": 10.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Contact",
+            "colour": "rgb(183, 201, 232)",
+            "background": [
+              13,
+              23,
+              61
+            ],
+            "ratio": 10.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "© 2026 Tidal Reef Trust",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              12,
+              25,
+              62
+            ],
+            "ratio": 5.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "hello@example.com",
+            "colour": "rgb(126, 147, 187)",
+            "background": [
+              13,
+              24,
+              61
+            ],
+            "ratio": 5.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Sponsor a plot",
+          "colour": "rgb(53, 224, 240)",
+          "width": "3px",
+          "ratio": 10.61
+        },
+        "overImageNeedsManualCheck": [
+          "1,204 reefs under care",
+          "Dive in.Look closer.Leave it better.",
+          "Leave it better.",
+          "We map coral on twenty-six reefs, replan",
+          "Sponsor a plot",
+          "See the programmes",
+          "Reef 14 · today",
+          "26.4°C",
+          "Water temperature, 8 m",
+          "3,908",
+          "Corals replanted this year"
+        ]
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".link-quiet",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "tidal/assets/css/style.css",
+    "tidal/assets/img/hero-ocean.webp",
+    "tidal/assets/js/main.js",
+    "tidal/CUSTOMISE.md",
+    "tidal/index.html",
+    "tidal/LICENCE.txt",
+    "tidal/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/hero-ocean.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

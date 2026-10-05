@@ -196,10 +196,36 @@ export const HOME_SHOWCASE: Record<LangCode, { kicker: string; title: string }> 
 
 /** Nhãn nút ở thanh điều hướng khi đã đăng nhập. */
 export const NAV_ACCOUNT: Record<LangCode, string> = {
-  vi: 'Đơn hàng',
-  en: 'My orders',
-  zh: '我的订单',
+  vi: 'Tài khoản',
+  en: 'Account',
+  zh: '账户',
 };
+
+export interface InstallGuideStrings {
+  title: string;
+  intro: string;
+  includedTitle: string;
+  included: string[];
+  stepsTitle: string;
+  steps: { title: string; body: string }[];
+  help: string;
+}
+
+export interface OrdersStrings {
+  title: string;
+  intro: string;
+  empty: string;
+  emptyCta: string;
+  download: string;
+  bundle: string;
+  bundleNote: string;
+  boughtOn: string;
+  back: string;
+  signOut: string;
+  needLogin: string;
+  goHome: string;
+  install: InstallGuideStrings;
+}
 
 /** Trang đơn hàng. */
 export const ORDERS_STRINGS = {
@@ -216,6 +242,49 @@ export const ORDERS_STRINGS = {
     signOut: 'Đăng xuất',
     needLogin: 'Bạn cần đăng nhập để xem đơn hàng.',
     goHome: 'Về trang chủ để đăng nhập',
+    install: {
+      title: 'Hướng dẫn cài đặt giao diện',
+      intro:
+        'Mỗi giao diện là một website tĩnh hoàn chỉnh. Sau khi tải về, bạn chỉ cần giải nén, mở thử, thay nội dung và đưa thư mục đã chỉnh lên hosting.',
+      includedTitle: 'Trong file tải về có',
+      included: [
+        'index.html — trang web chính',
+        'assets/css/style.css — màu sắc, font chữ, bố cục',
+        'assets/js/main.js — menu mobile và hiệu ứng cuộn',
+        'CUSTOMISE.md — danh sách vị trí cần sửa chữ, ảnh và màu',
+        'LICENCE.txt — giấy phép sử dụng thương mại',
+      ],
+      stepsTitle: 'Các bước thực hiện',
+      steps: [
+        {
+          title: 'Tải file .zip',
+          body:
+            'Bấm nút tải bên trên. Nếu bạn mua trọn bộ, tải từng mẫu bạn muốn dùng rồi chọn một mẫu để chỉnh trước.',
+        },
+        {
+          title: 'Giải nén file',
+          body:
+            'Chuột phải vào file .zip và chọn giải nén. Giữ nguyên cấu trúc thư mục, đặc biệt là thư mục assets.',
+        },
+        {
+          title: 'Mở thử giao diện',
+          body:
+            'Mở file index.html bằng trình duyệt. Nếu muốn có địa chỉ xem thử nội bộ, mở terminal trong thư mục mẫu và chạy npx serve .',
+        },
+        {
+          title: 'Thay nội dung thương hiệu',
+          body:
+            'Mở CUSTOMISE.md trước. File này chỉ rõ cần tìm chữ nào, đổi ảnh ở đâu, và màu thương hiệu nằm trong biến CSS nào.',
+        },
+        {
+          title: 'Đưa website lên mạng',
+          body:
+            'Upload toàn bộ thư mục đã giải nén lên hosting tĩnh như Vercel, Netlify, Cloudflare Pages hoặc hosting cPanel. File index.html phải nằm ở thư mục gốc được public.',
+        },
+      ],
+      help:
+        'Nếu mở trang bị thiếu ảnh hoặc mất style, thường là do upload thiếu thư mục assets hoặc đổi sai đường dẫn file.',
+    },
   },
   en: {
     title: 'My orders',
@@ -230,6 +299,49 @@ export const ORDERS_STRINGS = {
     signOut: 'Sign out',
     needLogin: 'Please sign in to see your orders.',
     goHome: 'Go home to sign in',
+    install: {
+      title: 'Template setup guide',
+      intro:
+        'Each template is a complete static website. After downloading it, unzip the package, open it locally, customise the content, then upload the edited folder to your hosting.',
+      includedTitle: 'What is included',
+      included: [
+        'index.html — the main page',
+        'assets/css/style.css — colours, fonts and layout',
+        'assets/js/main.js — mobile menu and scroll effects',
+        'CUSTOMISE.md — the checklist for text, images and colours',
+        'LICENCE.txt — the commercial licence',
+      ],
+      stepsTitle: 'Setup steps',
+      steps: [
+        {
+          title: 'Download the .zip file',
+          body:
+            'Use the download button above. If you bought the full library, download the templates you want and start customising one at a time.',
+        },
+        {
+          title: 'Unzip the package',
+          body:
+            'Extract the .zip file and keep the folder structure intact, especially the assets folder.',
+        },
+        {
+          title: 'Preview the template',
+          body:
+            'Open index.html in your browser. For a local preview URL, open a terminal in the template folder and run npx serve .',
+        },
+        {
+          title: 'Customise your brand content',
+          body:
+            'Read CUSTOMISE.md first. It shows what to search for, where to replace images, and which CSS variables control the brand colours.',
+        },
+        {
+          title: 'Publish the website',
+          body:
+            'Upload the extracted folder to static hosting such as Vercel, Netlify, Cloudflare Pages or cPanel hosting. index.html must be in the public root folder.',
+        },
+      ],
+      help:
+        'If the page opens without images or styling, the assets folder was usually not uploaded or a file path was changed incorrectly.',
+    },
   },
   zh: {
     title: '我的订单',
@@ -244,8 +356,51 @@ export const ORDERS_STRINGS = {
     signOut: '退出登录',
     needLogin: '请先登录后查看订单。',
     goHome: '返回首页登录',
+    install: {
+      title: '模板安装指南',
+      intro:
+        '每套模板都是完整的静态网站。下载后解压、在本地打开预览、替换品牌内容，再把修改后的文件夹上传到主机即可。',
+      includedTitle: '下载文件包含',
+      included: [
+        'index.html — 主页面',
+        'assets/css/style.css — 颜色、字体与布局',
+        'assets/js/main.js — 移动菜单与滚动效果',
+        'CUSTOMISE.md — 文案、图片与颜色修改清单',
+        'LICENCE.txt — 商用授权',
+      ],
+      stepsTitle: '安装步骤',
+      steps: [
+        {
+          title: '下载 .zip 文件',
+          body:
+            '点击上方下载按钮。如果购买的是整套模板库，可先下载需要使用的模板，逐个修改。',
+        },
+        {
+          title: '解压文件',
+          body:
+            '解压 .zip 文件，并保持原有目录结构，尤其不要移动 assets 文件夹。',
+        },
+        {
+          title: '本地预览模板',
+          body:
+            '用浏览器打开 index.html。若需要本地预览地址，可在模板文件夹中打开终端并运行 npx serve .',
+        },
+        {
+          title: '替换品牌内容',
+          body:
+            '先阅读 CUSTOMISE.md。它会说明搜索哪些文字、在哪里替换图片，以及哪些 CSS 变量控制品牌颜色。',
+        },
+        {
+          title: '发布网站',
+          body:
+            '将解压后的整个文件夹上传到 Vercel、Netlify、Cloudflare Pages 或 cPanel 等静态主机。index.html 需要位于公开根目录。',
+        },
+      ],
+      help:
+        '如果页面打开后缺少图片或样式，通常是 assets 文件夹没有上传完整，或文件路径被改错。',
+    },
   },
-} satisfies Record<LangCode, Record<string, string>>;
+} satisfies Record<LangCode, OrdersStrings>;
 
 /** Câu trả lời cho FAQ "có cần biết code không".
  *

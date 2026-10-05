@@ -1,0 +1,55 @@
+AURALIS — LICENCE TERMS
+=========================
+
+The short version: use this template for your own and your clients' projects.
+Do not resell or redistribute the template files themselves.
+
+1. WHAT YOU GET
+---------------
+A perpetual, non-exclusive, worldwide commercial licence. There is nothing to
+renew; the same template may also be sold to other customers.
+
+2. WHAT YOU MAY DO
+------------------
+- Use it on an unlimited number of your own commercial or personal projects.
+- Use it in projects you build for clients and charge for that work.
+- Modify the layout, code, colours, copy and included artwork for those sites.
+- Deploy completed sites anywhere without attribution.
+
+3. WHAT YOU MAY NOT DO
+----------------------
+- Resell, sub-license or give away the template files, modified or not.
+- Publish the files in another marketplace, template bundle or public code
+  repository.
+- Build a product whose main value is the template itself, such as a website
+  builder, theme shop or starter-kit collection.
+
+4. DEMO CONTENT AND IMAGES
+--------------------------
+Auralis, EvoBuds One, StudioBuds Pro, AirBuds Lite, the price, specifications and all business copy are
+fictional demonstration content. Replace them before publishing a real audio
+business. The bundled AI-generated product renders depict imaginary earbuds and a case;
+do not imply it photographs verified hardware. The included generated images
+are covered by this template licence for use in completed websites, but may
+not be redistributed as standalone stock imagery or a separate image pack.
+
+5. FONTS
+--------
+No font files or network fonts are bundled or loaded. The page uses locally
+available system sans-serif fonts through CSS fallbacks. Their appearance
+can vary by operating system.
+
+6. OWNERSHIP
+------------
+Copyright © 2026 Đinh Văn Triển (Forge Zone).
+Copyright in the template design, generated assets and source code remains
+with the author. This licence grants use, not ownership. If section 3 is
+breached, the licence ends and the template files must be deleted.
+
+7. NO WARRANTY
+--------------
+The template is provided as is. The tested browsers and viewports are listed
+in the release review. Suitability for every purpose or browser is not
+guaranteed. No warranty is provided for later AI customisation.
+
+Questions about permitted use: contact Forge Zone.

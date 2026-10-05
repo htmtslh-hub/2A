@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>skill-morge · Animation demo</title>
+  <link rel="stylesheet" href="morge.css">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: auto; }
+    body { margin: 0; color: #24213c; background: #faf9f5; font-family: system-ui, sans-serif; line-height: 1.55; }
+    header, .demo-carousel, footer { width: min(100% - 2.5rem, 1000px); margin: auto; }
+    header { padding: 2rem 0 1rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; justify-content: space-between; }
+    header p { margin: 0; font-size: .9rem; }
+    h1 { font-size: clamp(2rem, 6vw, 4rem); line-height: 1.08; letter-spacing: -.04em; margin: 1rem 0; }
+    h2 { font-size: clamp(1.8rem, 4vw, 3.5rem); line-height: 1.15; margin: .5rem 0; }
+    button { padding: .8rem 1rem; border: 1px solid #7f789a; border-radius: 999px; color: inherit; background: transparent; }
+    .demo-carousel { padding: 2rem 0; text-align: center; }
+    .demo-carousel > p { max-width: 46rem; margin-inline: auto; }
+    .demo-object { width: min(28rem, 75vw); max-width: 100%; height: auto; overflow: visible; }
+    [data-morge-slide] { margin: 1rem 0; }
+    .demo-caption { min-height: 1.55em; font-weight: 600; }
+    .morge-stage { background: #eae5f3; }
+    [data-morge-scene] { min-height: 60vh; text-align: center; justify-items: center; }
+    [data-morge-scene]:nth-child(2) { background: #e2ebe6; }
+    [data-morge-scene]:nth-child(3) { background: #f4e5d4; }
+    [data-morge-scene] p { max-width: 34rem; margin: .7rem 0 1.5rem; }
+    .scene-object { width: clamp(90px, 17vw, 180px); aspect-ratio: 1; border-radius: 30%; background: #8271b3; transform: rotate(-12deg); margin-bottom: 1.5rem; box-shadow: inset 12px 10px 0 #ffffff55; }
+    .scene-object--kit { background: #648a76; border-radius: 22% 22% 40% 40%; }
+    .scene-object--next { background: #b27845; border-radius: 50%; }
+    footer { padding: 4rem 0; }
+    @media (max-height: 650px) { .scene-object { width: 90px; margin-bottom: .5rem; } [data-morge-scene] p { margin-bottom: .8rem; } }
+  </style>
+  <script src="morge.js" defer></script><script src="demo.js" defer></script>
+</head>
+<body>
+<main data-morge>
+  <header><strong>skill-morge</strong><p>Mẫu độc lập, chạy offline.</p><button type="button" data-morge-motion aria-pressed="false">Bật animation</button></header>
+  <section class="demo-carousel" aria-label="Chuyển sản phẩm">
+    <p>01 / CHUYỂN SẢN PHẨM</p><h1>Mỗi lượt, một hướng.</h1>
+    <p>Bấm hai mũi tên, dùng phím trái/phải hoặc vuốt ngang. Lượt cuối → đầu đi thẳng, hình cũ thoát sang phía đối diện hình mới.</p>
+    <div data-morge-visual>
+      <figure data-morge-slide aria-label="Mẫu Violet">
+        <svg class="demo-object" viewBox="0 0 440 300" role="img" aria-label="Tai nghe minh họa màu tím"><g fill="#8773b8" stroke="#514472" stroke-width="4"><rect x="75" y="105" width="290" height="170" rx="75"/><rect x="104" y="22" width="65" height="150" rx="32" transform="rotate(-18 136 97)"/><rect x="270" y="22" width="65" height="150" rx="32" transform="rotate(18 302 97)"/></g><path d="M100 180H340" stroke="#e4dcee" stroke-width="4"/><circle cx="220" cy="233" r="5" fill="#f5edf9"/></svg>
+      </figure>
+      <figure data-morge-slide aria-label="Mẫu Graphite">
+        <svg class="demo-object" viewBox="0 0 440 300" role="img" aria-label="Tai nghe minh họa màu xám"><g fill="#626875" stroke="#343a48" stroke-width="4"><rect x="75" y="105" width="290" height="170" rx="75"/><rect x="104" y="22" width="65" height="150" rx="32" transform="rotate(-18 136 97)"/><rect x="270" y="22" width="65" height="150" rx="32" transform="rotate(18 302 97)"/></g><path d="M100 180H340" stroke="#cbd0d7" stroke-width="4"/><circle cx="220" cy="233" r="5" fill="#f5edf9"/></svg>
+      </figure>
+      <figure data-morge-slide aria-label="Mẫu Pearl">
+        <svg class="demo-object" viewBox="0 0 440 300" role="img" aria-label="Tai nghe minh họa màu trắng"><g fill="#e3dece" stroke="#9e9787" stroke-width="4"><rect x="75" y="105" width="290" height="170" rx="75"/><rect x="104" y="22" width="65" height="150" rx="32" transform="rotate(-18 136 97)"/><rect x="270" y="22" width="65" height="150" rx="32" transform="rotate(18 302 97)"/></g><path d="M100 180H340" stroke="#aaa292" stroke-width="4"/><circle cx="220" cy="233" r="5" fill="#6e6584"/></svg>
+      </figure>
+    </div>
+    <div data-morge-controls role="group" aria-label="Chọn sản phẩm"><button type="button" data-morge-prev aria-label="Sản phẩm trước">←</button><span data-morge-count aria-live="polite" aria-atomic="true">01 / 03</span><button type="button" data-morge-next aria-label="Sản phẩm tiếp theo">→</button></div>
+    <p class="demo-caption" data-demo-caption>Mẫu minh họa: Violet, Graphite và Pearl.</p>
+  </section>
+  <section data-morge-story aria-label="Chuyển cảnh theo cuộn"><div class="morge-stage">
+    <article data-morge-scene><div class="scene-object" aria-hidden="true"></div><span>02 / SCROLL STORY</span><h2>Khám phá sản phẩm.</h2><p>Cuộn để chuyển cảnh. Hình và nội dung cùng chạy trên một timeline.</p><button type="button" data-morge-scene-to="1">Xem bộ phụ kiện →</button></article>
+    <article data-morge-scene><div class="scene-object scene-object--kit" aria-hidden="true"></div><span>03 / CHUYỂN NGANG</span><h2>Trọn bộ trải nghiệm.</h2><p>Cảnh trước rời trái, phụ kiện vào từ phải. Cuộn ngược để quay lại.</p><button type="button" data-morge-scene-to="2">Đến cảnh tiếp theo ↓</button></article>
+    <article data-morge-scene><div class="scene-object scene-object--next" aria-hidden="true"></div><span>04 / CHUYỂN DỌC</span><h2>Một góc nhìn mới.</h2><p>Cảnh cũ rời lên, cảnh mới vào từ dưới. Tạm dừng để xem nội dung tĩnh.</p><button type="button" data-morge-scene-to="0">Quay về cảnh đầu ↑</button></article>
+  </div></section>
+  <footer><strong>Chạy được khi không có JavaScript.</strong><p>Vector được vẽ riêng để minh họa. Thay bằng sản phẩm, nội dung và chức năng bán hàng của dự án thật.</p></footer>
+</main>
+</body>
+</html>

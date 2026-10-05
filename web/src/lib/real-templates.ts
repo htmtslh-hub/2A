@@ -9,9 +9,9 @@
    rồi tải về mẫu khác.
 
    Thêm mẫu mới:
-     1. Dựng mã nguồn ở  _design/templates/<slug>/
-     2. Đóng gói          node _design/dong-goi.mjs <slug>
-     3. Chụp ảnh          node _design/anh-preview.mjs <slug>
+     1. Dựng mã nguồn ở  web/product/giao-dien-web/<slug>/source/
+     2. Đóng gói          node web/product/giao-dien-web/tools/dong-goi.mjs <slug>
+     3. Chụp ảnh          node web/product/giao-dien-web/tools/anh-preview.mjs <slug>
      4. Thêm một mục vào bảng dưới đây. Xong.
 
    Đổi thứ tự hiển thị = đổi mã ô (t1, t2, …). Ô nào không khai ở đây thì giữ
@@ -25,36 +25,34 @@ export interface TemplateCopy {
 }
 
 export interface RealTemplate {
-  /** Tên thư mục trong _design/templates, tên file .zip và tên ảnh .webp. */
+  /** Tên thư mục sản phẩm trong product/giao-dien-web, tên file .zip và tên ảnh .webp. */
   slug: string;
-  /** Một trong các khoá của CAT_KEYS: portfolio | saas | agency | shop | motion. */
+  /** Một trong các khoá của CAT_KEYS: portfolio | saas | business | shop | motion. */
   cat: string;
+  /** Video quay từ chính mẫu giao, chỉ dùng tại cửa hàng. */
+  video?: boolean;
+  /** Revision for refreshing public demo and preview assets. */
+  version?: string;
   copy: Record<LangCode, TemplateCopy>;
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
-  t1: {
-    slug: 'kinetiq',
-    cat: 'agency',
+  t9: {
+    slug: 'auralis', cat: 'shop', video: true, version: '1.2.4',
     copy: {
-      vi: {
-        name: 'Kinetiq',
-        desc: 'Trang giới thiệu kiểu tạp chí cho công ty kỹ thuật và sản xuất: chữ tiêu đề rất lớn, dải chữ chạy ngang, lưới sản phẩm hai cột.',
-        tags: ['Editorial', 'Dải chữ chạy', 'Thẻ tối'],
-      },
-      en: {
-        name: 'Kinetiq',
-        desc: 'An editorial landing page for engineering and manufacturing: outsize headline type, a scrolling strip, a two-column product grid.',
-        tags: ['Editorial', 'Marquee', 'Dark card'],
-      },
-      zh: {
-        name: 'Kinetiq',
-        desc: '面向工程与制造企业的杂志风格落地页：超大标题字、横向滚动条、双栏产品网格。',
-        tags: ['杂志风', '滚动条', '深色卡片'],
-      },
+      vi: { name: 'Auralis', desc: 'Mẫu tai nghe nền sáng tím–cyan: carousel ba sản phẩm trượt đổi mẫu, thu nhỏ và làm mờ mẫu bên cạnh; giữ khung và chuyển cả ảnh lẫn chữ từ hero sang chi tiết, hộp sạc rồi tai nghe trắng theo cuộn. Có nút bật chuyển cảnh khi giảm chuyển động. Bốn ảnh tự tạo. CTA email; không kèm giỏ hàng hay thanh toán tai nghe.', tags: ['Tai nghe', 'Scroll animation', 'Ảnh tự tạo'] },
+      en: { name: 'Auralis', desc: 'A violet–cyan earbud showcase with a three-model sliding carousel, blurred neighboring products, continuous pinned transitions through details, the charging kit and white earbuds. Includes a reduced-motion opt-in control. Four original local assets. Email enquiry; no earbud cart or checkout.', tags: ['Audio', 'Scroll animation', 'Original imagery'] },
+      zh: { name: 'Auralis', desc: '浅紫青耳机展示模板：三个型号滑动切换、相邻产品缩小模糊、在同一固定画面随滚动连续切换详情、充电盒与白色耳机场景，文字与图片同步移动。支持减少动态时手动开启动画。四张原创图片。通过邮件咨询，不含耳机购物车或支付。', tags: ['耳机', '滚动动画', '原创图片'] },
     },
   },
-
+  t1: {
+    slug: 'japan-trails', cat: 'business',
+    copy: {
+      vi: { name: 'Japan Trails', desc: 'Giao diện du lịch Nhật Bản phong cách điện ảnh: ảnh Phú Sĩ và chùa lúc bình minh, thẻ kính mờ, hành trình và phố Kyoto. CTA liên hệ qua email.', tags: ['Du lịch Nhật Bản', 'Cinematic', 'Kính mờ'] },
+      en: { name: 'Japan Trails', desc: 'A cinematic Japan travel template with Fuji sunrise photography, frosted-glass cards, journey ideas, Kyoto imagery and an email enquiry.', tags: ['Japan travel', 'Cinematic', 'Frosted glass'] },
+      zh: { name: 'Japan Trails', desc: '电影感日本旅游模板：富士山日出照片、磨砂玻璃卡片、行程灵感、京都街景与邮件咨询入口。', tags: ['日本旅行', '电影感', '磨砂玻璃'] },
+    },
+  },
   t2: {
     slug: 'tidal',
     cat: 'saas',
@@ -78,24 +76,64 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   },
 
   t3: {
-    slug: 'dune-pass',
+    slug: 'keystead',
     cat: 'shop',
     copy: {
       vi: {
-        name: 'Dune Pass',
-        desc: 'Trang đặt tour tông ấm: hero minh hoạ isometric, thẻ nổi quanh hình, thanh tìm chuyến và lưới hành trình.',
-        tags: ['Đặt chỗ', 'Isometric', 'Chữ có chân'],
+        name: 'Keystead',
+        desc: 'Trang cho thuê nhà và căn hộ: hero ảnh phố lúc hoàng hôn, thanh duyệt nhanh dẫn tới từng mục, sáu tin nhà có ảnh, giá và ngày trống, khu vực, quy trình thuê và CTA đặt lịch xem qua email. Không có tìm kiếm hay cơ sở dữ liệu thật.',
+        tags: ['Bất động sản', 'Cho thuê', 'Ảnh gốc'],
       },
       en: {
-        name: 'Dune Pass',
-        desc: 'A warm travel-booking page: an isometric hero, cards floating over it, a trip search bar and a route grid.',
-        tags: ['Booking', 'Isometric', 'Serif'],
+        name: 'Keystead',
+        desc: 'A homes and rentals page: a dusk street-photo hero, a browse bar linking to each section, six photo listing cards with rent and availability, neighbourhoods, a renting guide and an email viewing CTA. No live search or listings database.',
+        tags: ['Real estate', 'Rentals', 'Original imagery'],
       },
       zh: {
-        name: 'Dune Pass',
-        desc: '暖色调的旅行预订页面：等距插画主视觉、悬浮卡片、行程搜索栏与线路网格。',
-        tags: ['预订', '等距插画', '衬线字'],
+        name: 'Keystead',
+        desc: '房屋与公寓租赁页面：黄昏街景首屏、链接到各版块的快速浏览栏、六个带照片、租金和入住日期的房源卡片、街区介绍、租房流程以及邮件预约看房入口。不含实时搜索或房源数据库。',
+        tags: ['房地产', '租赁', '原创图片'],
       },
+    },
+  },
+  t4: {
+    slug: 'solenne', cat: 'business',
+    copy: {
+      vi: { name: 'Solenne', desc: 'Giao diện skincare cao cấp tông kem và hồng đất: ảnh sản phẩm gốc, hero editorial, bộ sưu tập, câu chuyện chăm sóc da và CTA email.', tags: ['Skincare', 'Editorial', 'Ảnh sản phẩm'] },
+      en: { name: 'Solenne', desc: 'A premium ivory and rose skincare landing page with original product photography, an editorial hero, collection, care story and email enquiry.', tags: ['Skincare', 'Editorial', 'Product photography'] },
+      zh: { name: 'Solenne', desc: '奶油白与玫瑰色的高端护肤页面，包含原创产品图片、杂志风首屏、产品系列、护理理念与邮件联系。', tags: ['护肤', '杂志风', '产品摄影'] },
+    },
+  },
+  t5: {
+    slug: 'aeris', cat: 'shop', video: true,
+    copy: {
+      vi: { name: 'Aeris', desc: 'Mẫu quảng bá tai nghe chụp tai nền pastel xanh–hồng: slider ba màu tự chuyển 6 giây (có nút tạm dừng) với chuyển cảnh trượt, mờ, dải sáng quét và vòng sóng âm theo màu, đổi số 01/02/03; chương âm thanh ghim theo cuộn, thiết kế, bộ sưu tập và thông số. Bốn ảnh sản phẩm tự tạo. CTA email; không kèm giỏ hàng hay thanh toán.', tags: ['Tai nghe', 'Chuyển cảnh', 'Ảnh tự tạo'] },
+      en: { name: 'Aeris', desc: 'A pastel blue–pink over-ear headphone showcase: a self-advancing three-colourway slider (6 s, with a pause button) using sliding, blurred transitions with a light sweep and colour-matched sound-wave rings, 01/02/03 counters, a pinned scroll sound story, design, collection and specs. Four original product images. Email enquiry; no cart or checkout.', tags: ['Headphones', 'Transitions', 'Original imagery'] },
+      zh: { name: 'Aeris', desc: '粉蓝渐变头戴式耳机展示模板：三种配色每 6 秒自动轮播（可暂停），带滑动模糊过渡与 01/02/03 编号；随滚动固定的声音章节、设计、系列与规格。四张原创产品图。通过邮件咨询，不含购物车或支付。', tags: ['耳机', '转场动画', '原创图片'] },
+    },
+  },
+  t6: {
+    slug: 'vybe', cat: 'shop', video: false,
+    copy: {
+      vi: { name: 'VYBE', desc: 'Giao diện bán áo streetwear theo phong cách coral: 5 ảnh người mẫu tự tạo, đổi sản phẩm Morge có hướng, chọn size và giỏ hàng lưu trên thiết bị. Liên hệ qua email; chưa kết nối thanh toán hoặc tồn kho.', tags: ['Streetwear', 'Morge', '5 mẫu áo'] },
+      en: { name: 'VYBE', desc: 'A coral streetwear storefront with five original generated model images, directional Morge product transitions, sizes and a local device bag. Email enquiries; no payment or inventory backend.', tags: ['Streetwear', 'Morge', '5 pieces'] },
+      zh: { name: 'VYBE', desc: '珊瑚色街头服饰模板：五张原创生成模特图片、Morge 方向转场、尺码选择与本地购物袋。通过邮件咨询，不含支付或库存后端。', tags: ['街头服饰', 'Morge', '5款服饰'] },
+    },
+  },
+  t7: {
+    slug: 'astra-interior', cat: 'motion', video: true,
+    copy: {
+      vi: { name: 'Astra Interior', desc: 'Template portfolio điện ảnh cho studio nội thất và kiến trúc: 24 frame điều khiển theo cuộn, chữ HTML phủ theo từng chương, project, quy trình và CTA email. Không dùng video làm nền, không kèm backend.', tags: ['24-frame', 'Nội thất', 'Scroll sequence'] },
+      en: { name: 'Astra Interior', desc: 'A cinematic portfolio template for interior and architecture studios: a 24-frame scroll sequence with staged live HTML copy, projects, process and an email CTA. No background video or backend included.', tags: ['24-frame', 'Interiors', 'Scroll sequence'] },
+      zh: { name: 'Astra Interior', desc: '面向室内与建筑工作室的电影感作品集模板：24 帧滚动序列配合分段 HTML 文案，并包含项目、流程与邮件联系入口。不使用背景视频，不含后端。', tags: ['24 帧', '室内设计', '滚动序列'] },
+    },
+  },
+  t8: {
+    slug: 'pinehaven', cat: 'business',
+    copy: {
+      vi: { name: 'Pinehaven', desc: 'Giao diện nghỉ dưỡng cabin giữa rừng sương: ảnh gốc tự tạo, tiêu đề lớn, thẻ lưu trú nổi và các mục giới thiệu cabin, khung cảnh, trải nghiệm. CTA dẫn đến liên hệ; không có hệ thống đặt phòng.', tags: ['Cabin retreat', 'Ảnh gốc', 'Nghỉ dưỡng'] },
+      en: { name: 'Pinehaven', desc: 'A misty forest cabin retreat page with original generated photography, oversized type, a floating stay card and cabin, setting and experience sections. Enquiry CTA; no booking system.', tags: ['Cabin retreat', 'Original imagery', 'Travel'] },
+      zh: { name: 'Pinehaven', desc: '森林雾景木屋度假网站模板：原创生成摄影、大标题、悬浮住宿卡片，以及木屋、环境和体验介绍。通过联系入口咨询，不含预订系统。', tags: ['森林木屋', '原创图片', '度假'] },
     },
   },
 };
@@ -113,7 +151,19 @@ export function templateSlug(id: string): string {
  *  nên mẫu thật đưa lên trang chủ vẫn hiện khung ảnh trống. */
 export const REAL_TEMPLATE_PREVIEWS: Record<string, string> = Object.fromEntries(
   Object.entries(REAL_TEMPLATES).flatMap(([id, t]) => [
-    [`agentic-tpl-${id}`, `/previews/${t.slug}.webp`],
-    [`agentic-home-${id}`, `/previews/${t.slug}.webp`],
+    [`agentic-tpl-${id}`, `/previews/${t.slug}.webp${t.version ? '?v=' + t.version : ''}`],
+    [`agentic-home-${id}`, `/previews/${t.slug}.webp${t.version ? '?v=' + t.version : ''}`],
+    ...(t.video ? [
+      [`agentic-view-${id}-0`, `/previews/${t.slug}.webp${t.version ? '?v=' + t.version : ''}`],
+      [`agentic-view-${id}-1`, `/previews/${t.slug}-tablet.webp${t.version ? '?v=' + t.version : ''}`],
+      [`agentic-view-${id}-2`, `/previews/${t.slug}-mobile.webp${t.version ? '?v=' + t.version : ''}`],
+    ] : []),
+  ])
+);
+
+export const REAL_TEMPLATE_VIDEOS: Record<string, string> = Object.fromEntries(
+  Object.entries(REAL_TEMPLATES).filter(([, t]) => t.video).flatMap(([id, t]) => [
+    [`agentic-tpl-${id}`, `/previews/${t.slug}.mp4${t.version ? '?v=' + t.version : ''}`],
+    [`agentic-home-${id}`, `/previews/${t.slug}.mp4${t.version ? '?v=' + t.version : ''}`],
   ])
 );

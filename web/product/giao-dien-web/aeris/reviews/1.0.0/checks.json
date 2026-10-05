@@ -1,0 +1,1003 @@
+{
+  "slug": "aeris",
+  "version": "1.0.0",
+  "date": "2026-10-05T03:55:02.663Z",
+  "os": "win32",
+  "zipBytes": 169849,
+  "sha256": "ace56f1a499446f7838865cf095484ab3776ef3df191a35065a5811594d78b23",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#main"
+          },
+          {
+            "label": "Aeris home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#top"
+          },
+          {
+            "label": "Headphones",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#collection"
+          },
+          {
+            "label": "Sound",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#sound"
+          },
+          {
+            "label": "Design",
+            "href": "#design",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#design"
+          },
+          {
+            "label": "Specs",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#specs"
+          },
+          {
+            "label": "Enquire",
+            "href": "#enquire",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#enquire"
+          },
+          {
+            "label": "Explore all three colours",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#collection"
+          },
+          {
+            "label": "Scroll ↓",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#sound"
+          },
+          {
+            "label": "Enquire about Pearl White ↗",
+            "href": "mailto:hello@aeris.example?subject=Aeris%20One%20Pearl%20White%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aeris.example?subject=Aeris%20One%20Pearl%20White%20enquiry"
+          },
+          {
+            "label": "Enquire about Midnight Navy ↗",
+            "href": "mailto:hello@aeris.example?subject=Aeris%20One%20Midnight%20Navy%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aeris.example?subject=Aeris%20One%20Midnight%20Navy%20enquiry"
+          },
+          {
+            "label": "Enquire about Blush Rose ↗",
+            "href": "mailto:hello@aeris.example?subject=Aeris%20One%20Blush%20Rose%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aeris.example?subject=Aeris%20One%20Blush%20Rose%20enquiry"
+          },
+          {
+            "label": "Email the Aeris team ↗",
+            "href": "mailto:hello@aeris.example?subject=Aeris%20One%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aeris.example?subject=Aeris%20One%20enquiry"
+          },
+          {
+            "label": "aeris",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#top"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#top"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              31,
+              47,
+              74
+            ],
+            "ratio": 13.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Headphones",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 12.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "An Exquisite Audio",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 12.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "slide__model",
+            "text": "Aeris One · Pearl White",
+            "colour": "rgb(61, 80, 176)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 6.54,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "· Pearl White",
+            "colour": "rgb(86, 99, 122)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 5.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Forty-millimetre drivers tuned for warm ",
+            "colour": "rgb(69, 83, 106)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 7.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "01 — The sound",
+            "colour": "rgb(61, 80, 176)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 6.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "FIGCAPTION",
+            "text": "Protein-leather cushion · brushed steel ",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              243,
+              243,
+              242
+            ],
+            "ratio": 12.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "card__title",
+            "text": "Pearl White",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 13.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card__text",
+            "text": "Soft white shell, light grey cushions an",
+            "colour": "rgb(69, 83, 106)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Illustrative price",
+            "colour": "rgb(86, 99, 122)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 6.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card__link",
+            "text": "Enquire about Pearl White ↗",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 13.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow eyebrow--light",
+            "text": "Aeris One",
+            "colour": "rgb(216, 222, 255)",
+            "background": [
+              31,
+              47,
+              74
+            ],
+            "ratio": 10.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Hear it for yourself.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              31,
+              47,
+              74
+            ],
+            "ratio": 13.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Ask about availability, colours or a lis",
+            "colour": "rgb(228, 232, 255)",
+            "background": [
+              31,
+              47,
+              74
+            ],
+            "ratio": 11.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Email the Aeris team ↗",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              205,
+              214,
+              255
+            ],
+            "ratio": 9.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "enquire__note",
+            "text": "Concept showcase · email enquiry only. N",
+            "colour": "rgb(201, 208, 238)",
+            "background": [
+              47,
+              60,
+              86
+            ],
+            "ratio": 7.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "",
+          "colour": "rgb(31, 47, 74)",
+          "width": "3px",
+          "ratio": 12.43
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#main"
+          },
+          {
+            "label": "Aeris home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#top"
+          },
+          {
+            "label": "Headphones",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#collection"
+          },
+          {
+            "label": "Sound",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#sound"
+          },
+          {
+            "label": "Design",
+            "href": "#design",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#design"
+          },
+          {
+            "label": "Specs",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#specs"
+          },
+          {
+            "label": "Enquire",
+            "href": "#enquire",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#enquire"
+          },
+          {
+            "label": "Explore all three colours",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#collection"
+          },
+          {
+            "label": "Scroll ↓",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#sound"
+          },
+          {
+            "label": "Enquire about Pearl White ↗",
+            "href": "mailto:hello@aeris.example?subject=Aeris%20One%20Pearl%20White%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aeris.example?subject=Aeris%20One%20Pearl%20White%20enquiry"
+          },
+          {
+            "label": "Enquire about Midnight Navy ↗",
+            "href": "mailto:hello@aeris.example?subject=Aeris%20One%20Midnight%20Navy%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aeris.example?subject=Aeris%20One%20Midnight%20Navy%20enquiry"
+          },
+          {
+            "label": "Enquire about Blush Rose ↗",
+            "href": "mailto:hello@aeris.example?subject=Aeris%20One%20Blush%20Rose%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aeris.example?subject=Aeris%20One%20Blush%20Rose%20enquiry"
+          },
+          {
+            "label": "Email the Aeris team ↗",
+            "href": "mailto:hello@aeris.example?subject=Aeris%20One%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aeris.example?subject=Aeris%20One%20enquiry"
+          },
+          {
+            "label": "aeris",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#top"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aeris/index.html#top"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              31,
+              47,
+              74
+            ],
+            "ratio": 13.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Headphones",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 12.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "An Exquisite Audio",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 12.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "slide__model",
+            "text": "Aeris One · Pearl White",
+            "colour": "rgb(61, 80, 176)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 6.54,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "· Pearl White",
+            "colour": "rgb(86, 99, 122)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 5.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Forty-millimetre drivers tuned for warm ",
+            "colour": "rgb(69, 83, 106)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 7.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "01 — The sound",
+            "colour": "rgb(61, 80, 176)",
+            "background": [
+              245,
+              246,
+              250
+            ],
+            "ratio": 6.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "FIGCAPTION",
+            "text": "Protein-leather cushion · brushed steel ",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              243,
+              243,
+              242
+            ],
+            "ratio": 12.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "card__title",
+            "text": "Pearl White",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 13.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card__text",
+            "text": "Soft white shell, light grey cushions an",
+            "colour": "rgb(69, 83, 106)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Illustrative price",
+            "colour": "rgb(86, 99, 122)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 6.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card__link",
+            "text": "Enquire about Pearl White ↗",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 13.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow eyebrow--light",
+            "text": "Aeris One",
+            "colour": "rgb(216, 222, 255)",
+            "background": [
+              31,
+              47,
+              74
+            ],
+            "ratio": 10.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Hear it for yourself.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              31,
+              47,
+              74
+            ],
+            "ratio": 13.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Ask about availability, colours or a lis",
+            "colour": "rgb(228, 232, 255)",
+            "background": [
+              31,
+              47,
+              74
+            ],
+            "ratio": 11.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Email the Aeris team ↗",
+            "colour": "rgb(31, 47, 74)",
+            "background": [
+              205,
+              214,
+              255
+            ],
+            "ratio": 9.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "enquire__note",
+            "text": "Concept showcase · email enquiry only. N",
+            "colour": "rgb(201, 208, 238)",
+            "background": [
+              48,
+              60,
+              86
+            ],
+            "ratio": 7.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "",
+          "colour": "rgb(31, 47, 74)",
+          "width": "3px",
+          "ratio": 12.43
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "aeris/assets/css/style.css",
+    "aeris/assets/images/aeris-blush.webp",
+    "aeris/assets/images/aeris-detail.webp",
+    "aeris/assets/images/aeris-midnight.webp",
+    "aeris/assets/images/aeris-pearl.webp",
+    "aeris/assets/js/main.js",
+    "aeris/CUSTOMISE.md",
+    "aeris/index.html",
+    "aeris/LICENCE.txt",
+    "aeris/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/images/aeris-blush.webp",
+    "assets/images/aeris-detail.webp",
+    "assets/images/aeris-midnight.webp",
+    "assets/images/aeris-pearl.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

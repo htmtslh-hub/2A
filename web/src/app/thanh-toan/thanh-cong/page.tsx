@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { prisma } from '@/lib/db';
 import { COMPANY } from '@/lib/company';
 import PaymentResult from '../_result';
+import PendingPaymentRefresh from './pending-payment-refresh';
+import ClearPaidCart from './clear-paid-cart';
 
 export const metadata: Metadata = { title: 'Thanh toán — Forge Zone' };
 
@@ -25,13 +27,13 @@ export default async function Page({
 
   if (row?.status === 'PAID') {
     return (
-      <PaymentResult
+      <><ClearPaidCart orderId={order!} /><PaymentResult
         tone="ok"
         title="Cảm ơn bạn!"
-        body="Chúng tôi đã nhận được thanh toán. Link tải giao diện đã được gửi tới email của bạn — kiểm tra cả hộp thư rác nếu chưa thấy."
+        body="Chúng tôi đã nhận được thanh toán. Link tải giao diện đã được gửi tới email của bạn — bạn cũng có thể vào Đơn hàng để tải lại và xem hướng dẫn cài đặt."
         orderCode={order}
         cta={{ href: '/don-hang', label: 'Xem đơn hàng' }}
-      />
+      /></>
     );
   }
 
@@ -48,12 +50,15 @@ export default async function Page({
   }
 
   return (
-    <PaymentResult
-      tone="ok"
-      title="Đang xác nhận thanh toán"
-      body={`Ngân hàng thường báo về trong vài giây đến vài phút. Khi nhận được, link tải sẽ được gửi tới email của bạn. Nếu đã chuyển khoản mà sau 15 phút chưa thấy email, hãy gửi mã đơn bên dưới tới ${COMPANY.email}.`}
-      orderCode={order}
-      cta={{ href: '/', label: 'Về trang chủ' }}
-    />
+    <>
+      {order ? <PendingPaymentRefresh /> : null}
+      <PaymentResult
+        tone="ok"
+        title="Đang xác nhận thanh toán"
+        body={`Trang sẽ tự cập nhật khi cổng thanh toán xác nhận. Khi nhận được, link tải sẽ được gửi tới email của bạn. Nếu sau 15 phút chưa thấy email, hãy gửi mã đơn bên dưới tới ${COMPANY.email}.`}
+        orderCode={order}
+        cta={{ href: '/', label: 'Về trang chủ' }}
+      />
+    </>
   );
 }

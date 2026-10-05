@@ -1,0 +1,510 @@
+{
+  "cases": [
+    {
+      "width": 1440,
+      "height": 900,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": false
+      },
+      "samples": [
+        {
+          "p": 0,
+          "scene": "intro",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "kitTransform": "translate3d(1296px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 855px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.3,
+          "scene": "detail",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "kitTransform": "translate3d(1296px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 855px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.46,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 0.500579,
+          "nextOpacity": 0,
+          "heroOpacity": 0.499421,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "kitTransform": "translate3d(647.25px, 0px, 0px) scale(0.910104)",
+          "nextTransform": "translate3d(0px, 855px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.62,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 1,
+          "nextOpacity": 0,
+          "heroOpacity": 0,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "kitTransform": "translate3d(0px, 0px, 0px) scale(1)",
+          "nextTransform": "translate3d(0px, 855px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.81,
+          "scene": "next",
+          "motion": true,
+          "kitOpacity": 0.499421,
+          "nextOpacity": 0.500579,
+          "heroOpacity": 0,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "kitTransform": "translate3d(0px, -360.417px, 0px) scale(0.939931)",
+          "nextTransform": "translate3d(0px, 427.005px, 0px) scale(0.940069)"
+        },
+        {
+          "p": 0.96,
+          "scene": "next",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 1,
+          "heroOpacity": 0,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "kitTransform": "translate3d(0px, -720px, 0px) scale(0.88)",
+          "nextTransform": "translate3d(0px, 0px, 0px) scale(1)"
+        }
+      ],
+      "paused": false
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": false
+      },
+      "samples": [
+        {
+          "p": 0,
+          "scene": "intro",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "kitTransform": "translate3d(738px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 1121px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.3,
+          "scene": "detail",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "kitTransform": "translate3d(738px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 1121px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.46,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 0.500088,
+          "nextOpacity": 0,
+          "heroOpacity": 0.499912,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "kitTransform": "translate3d(368.935px, 0px, 0px) scale(0.910016)",
+          "nextTransform": "translate3d(0px, 1121px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.62,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 1,
+          "nextOpacity": 0,
+          "heroOpacity": 0,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "kitTransform": "translate3d(0px, 0px, 0px) scale(1)",
+          "nextTransform": "translate3d(0px, 1121px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.81,
+          "scene": "next",
+          "motion": true,
+          "kitOpacity": 0.499029,
+          "nextOpacity": 0.500971,
+          "heroOpacity": 0,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "kitTransform": "translate3d(0px, -472.917px, 0px) scale(0.939883)",
+          "nextTransform": "translate3d(0px, 559.411px, 0px) scale(0.940117)"
+        },
+        {
+          "p": 0.96,
+          "scene": "next",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 1,
+          "heroOpacity": 0,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "kitTransform": "translate3d(0px, -944px, 0px) scale(0.88)",
+          "nextTransform": "translate3d(0px, 0px, 0px) scale(1)"
+        }
+      ],
+      "paused": false
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": false
+      },
+      "samples": [
+        {
+          "p": 0,
+          "scene": "intro",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "kitTransform": "translate3d(337.5px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 771.4px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.3,
+          "scene": "detail",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "kitTransform": "translate3d(337.5px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 771.4px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.46,
+          "scene": "detail",
+          "motion": true,
+          "kitOpacity": 0.498566,
+          "nextOpacity": 0,
+          "heroOpacity": 0.501434,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "kitTransform": "translate3d(169.234px, 0px, 0px) scale(0.909742)",
+          "nextTransform": "translate3d(0px, 771.4px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.62,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 1,
+          "nextOpacity": 0,
+          "heroOpacity": 0,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "kitTransform": "translate3d(0px, 0px, 0px) scale(1)",
+          "nextTransform": "translate3d(0px, 771.4px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.81,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 0.502835,
+          "nextOpacity": 0.497165,
+          "heroOpacity": 0,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "kitTransform": "translate3d(0px, -322.959px, 0px) scale(0.94034)",
+          "nextTransform": "translate3d(0px, 387.887px, 0px) scale(0.93966)"
+        },
+        {
+          "p": 0.96,
+          "scene": "next",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 1,
+          "heroOpacity": 0,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "kitTransform": "translate3d(0px, -649.6px, 0px) scale(0.88)",
+          "nextTransform": "translate3d(0px, 0px, 0px) scale(1)"
+        }
+      ],
+      "paused": false
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": false
+      },
+      "samples": [
+        {
+          "p": 0,
+          "scene": "intro",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "kitTransform": "translate3d(288px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 703px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.3,
+          "scene": "detail",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "kitTransform": "translate3d(288px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 703px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.46,
+          "scene": "detail",
+          "motion": true,
+          "kitOpacity": 0.498355,
+          "nextOpacity": 0,
+          "heroOpacity": 0.501645,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "kitTransform": "translate3d(144.474px, 0px, 0px) scale(0.909704)",
+          "nextTransform": "translate3d(0px, 703px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.62,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 1,
+          "nextOpacity": 0,
+          "heroOpacity": 0,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "kitTransform": "translate3d(0px, 0px, 0px) scale(1)",
+          "nextTransform": "translate3d(0px, 703px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.81,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 0.500941,
+          "nextOpacity": 0.499059,
+          "heroOpacity": 0,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "kitTransform": "translate3d(0px, -295.443px, 0px) scale(0.940113)",
+          "nextTransform": "translate3d(0px, 352.162px, 0px) scale(0.939887)"
+        },
+        {
+          "p": 0.96,
+          "scene": "next",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 1,
+          "heroOpacity": 0,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "kitTransform": "translate3d(0px, -592px, 0px) scale(0.88)",
+          "nextTransform": "translate3d(0px, 0px, 0px) scale(1)"
+        }
+      ],
+      "paused": false
+    },
+    {
+      "width": 414,
+      "height": 582,
+      "reduce": true,
+      "initial": {
+        "motion": false,
+        "controlVisible": true
+      },
+      "samples": [
+        {
+          "p": 0,
+          "scene": "intro",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 414,
+          "clientWidth": 414,
+          "kitTransform": "translate3d(372.6px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 552.9px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.3,
+          "scene": "detail",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 414,
+          "clientWidth": 414,
+          "kitTransform": "translate3d(372.6px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 552.9px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.46,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 0.500505,
+          "nextOpacity": 0,
+          "heroOpacity": 0.499495,
+          "scrollWidth": 414,
+          "clientWidth": 414,
+          "kitTransform": "translate3d(186.112px, 0px, 0px) scale(0.910091)",
+          "nextTransform": "translate3d(0px, 552.9px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.62,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 1,
+          "nextOpacity": 0,
+          "heroOpacity": 0,
+          "scrollWidth": 414,
+          "clientWidth": 414,
+          "kitTransform": "translate3d(0px, 0px, 0px) scale(1)",
+          "nextTransform": "translate3d(0px, 552.9px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.81,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 0.503239,
+          "nextOpacity": 0.496761,
+          "heroOpacity": 0,
+          "scrollWidth": 414,
+          "clientWidth": 414,
+          "kitTransform": "translate3d(0px, -231.292px, 0px) scale(0.940389)",
+          "nextTransform": "translate3d(0px, 278.241px, 0px) scale(0.939611)"
+        },
+        {
+          "p": 0.96,
+          "scene": "next",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 1,
+          "heroOpacity": 0,
+          "scrollWidth": 414,
+          "clientWidth": 414,
+          "kitTransform": "translate3d(0px, -465.6px, 0px) scale(0.88)",
+          "nextTransform": "translate3d(0px, 0px, 0px) scale(1)"
+        }
+      ],
+      "paused": true
+    },
+    {
+      "width": 720,
+      "height": 450,
+      "reduce": false,
+      "initial": {
+        "motion": true,
+        "controlVisible": false
+      },
+      "samples": [
+        {
+          "p": 0,
+          "scene": "intro",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 720,
+          "clientWidth": 720,
+          "kitTransform": "translate3d(648px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 427.5px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.3,
+          "scene": "detail",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 0,
+          "heroOpacity": 1,
+          "scrollWidth": 720,
+          "clientWidth": 720,
+          "kitTransform": "translate3d(648px, 0px, 0px) scale(0.82)",
+          "nextTransform": "translate3d(0px, 427.5px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.46,
+          "scene": "detail",
+          "motion": true,
+          "kitOpacity": 0.497685,
+          "nextOpacity": 0,
+          "heroOpacity": 0.502315,
+          "scrollWidth": 720,
+          "clientWidth": 720,
+          "kitTransform": "translate3d(325.5px, 0px, 0px) scale(0.909583)",
+          "nextTransform": "translate3d(0px, 427.5px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.62,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 1,
+          "nextOpacity": 0,
+          "heroOpacity": 0,
+          "scrollWidth": 720,
+          "clientWidth": 720,
+          "kitTransform": "translate3d(0px, 0px, 0px) scale(1)",
+          "nextTransform": "translate3d(0px, 427.5px, 0px) scale(0.88)"
+        },
+        {
+          "p": 0.81,
+          "scene": "kit",
+          "motion": true,
+          "kitOpacity": 0.502315,
+          "nextOpacity": 0.497685,
+          "heroOpacity": 0,
+          "scrollWidth": 720,
+          "clientWidth": 720,
+          "kitTransform": "translate3d(0px, -179.167px, 0px) scale(0.940278)",
+          "nextTransform": "translate3d(0px, 214.74px, 0px) scale(0.939722)"
+        },
+        {
+          "p": 0.96,
+          "scene": "next",
+          "motion": true,
+          "kitOpacity": 0,
+          "nextOpacity": 1,
+          "heroOpacity": 0,
+          "scrollWidth": 720,
+          "clientWidth": 720,
+          "kitTransform": "translate3d(0px, -360px, 0px) scale(0.88)",
+          "nextTransform": "translate3d(0px, 0px, 0px) scale(1)"
+        }
+      ],
+      "paused": false
+    }
+  ],
+  "errors": [],
+  "pass": true
+}

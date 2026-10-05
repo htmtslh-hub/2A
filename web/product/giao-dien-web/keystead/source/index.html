@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keystead — Homes and apartments to rent in Northbank</title>
+  <meta name="description" content="Keystead lets apartments and family houses across four Northbank neighbourhoods. Browse six homes open for viewing this month and book a viewing by email.">
+  <meta property="og:title" content="Keystead — Homes and apartments to rent in Northbank">
+  <meta property="og:description" content="Browse six homes open for viewing this month and book a viewing by email.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="logo" href="index.html" aria-label="Keystead — home">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M16 3 3 13v16h10v-9h6v9h10V13Z" fill="currentColor"/>
+          <circle cx="16" cy="14" r="2.6" fill="#fff"/>
+        </svg>
+        <span class="logo__text">Keystead</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#apartments">Apartments</a>
+        <a href="#houses">Houses</a>
+        <a href="#areas">Neighbourhoods</a>
+        <a href="#how">How renting works</a>
+        <a href="#landlords">Landlords</a>
+        <a class="btn btn--dark site-nav__cta" href="#contact">Book a viewing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ===== Hero: photo, headline and the browse bar ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero__img" src="assets/img/hero-street.webp" width="1376" height="768" alt="" fetchpriority="high">
+      <div class="wrap hero__inner">
+        <p class="hero__pill">6 homes open for viewing this month</p>
+        <h1 class="hero__title" id="hero-title">Browse homes, apartments &amp; rentals with ease</h1>
+        <p class="hero__lede">Keystead lets apartments and family houses across four Northbank neighbourhoods. Every listing has been visited by our team, and every viewing is with a local agent.</p>
+        <a class="btn btn--light" href="#apartments">Start browsing</a>
+      </div>
+    </section>
+
+    <!-- Browse bar: plain links to the sections below. It is not a search form. -->
+    <div class="wrap">
+      <nav class="browse" aria-label="Browse homes">
+        <a class="browse__item" href="#apartments">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 21V4h10v17M15 9h4v12M3 21h18M8 8h4M8 12h4M8 16h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><strong>Apartments</strong><small>3 listed</small></span>
+        </a>
+        <a class="browse__item" href="#houses">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11 12 4l9 7M5 10v11h14V10M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><strong>Houses</strong><small>3 listed</small></span>
+        </a>
+        <a class="browse__item" href="#areas">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          <span><strong>Neighbourhoods</strong><small>4 areas</small></span>
+        </a>
+        <a class="browse__item" href="#how">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span><strong>Lease terms</strong><small>6–24 months</small></span>
+        </a>
+        <a class="btn btn--dark browse__cta" href="#contact">Book a viewing</a>
+      </nav>
+    </div>
+
+    <!-- ===== Promises ===== -->
+    <section class="wrap promises" aria-label="Why rent with Keystead">
+      <div class="promise" data-reveal>
+        <span class="promise__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 10h16M9 3v4M15 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <div><h2 class="promise__title">Same-week viewings</h2><p>Weekdays and Saturdays</p></div>
+      </div>
+      <div class="promise" data-reveal>
+        <span class="promise__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><h2 class="promise__title">Every home visited</h2><p>Photos match the rooms</p></div>
+      </div>
+      <div class="promise" data-reveal>
+        <span class="promise__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 12h5M10 16h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <div><h2 class="promise__title">Flexible leases</h2><p>From 6 to 24 months</p></div>
+      </div>
+      <div class="promise" data-reveal>
+        <span class="promise__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <div><h2 class="promise__title">One local agent</h2><p>From viewing to keys</p></div>
+      </div>
+    </section>
+
+    <!-- ===== Listings: apartments ===== -->
+    <section class="section" id="apartments" aria-labelledby="apartments-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title" id="apartments-title">Apartments ready this season</h2>
+          <p class="section__intro">City-centre flats close to the river, the tram and the Northbank market.</p>
+        </div>
+        <div class="listings">
+          <article class="listing" data-reveal>
+            <img class="listing__img" src="assets/img/apt-skyline.webp" width="800" height="600" loading="lazy" alt="Bright bedroom with a floor-to-ceiling window over the city skyline">
+            <div class="listing__body">
+              <div class="listing__top">
+                <h3 class="listing__title">Skyline Two-Bed</h3>
+                <p class="listing__price"><strong>$2,150</strong> / month</p>
+              </div>
+              <p class="listing__meta">Northbank · 2 bed · 1 bath · 68 m²</p>
+              <p class="listing__badge">Available 1 November</p>
+              <a class="listing__link" href="mailto:hello@example.com?subject=Viewing%3A%20Skyline%20Two-Bed" aria-label="Ask about this home: Skyline Two-Bed">Ask about this home</a>
+            </div>
+          </article>
+          <article class="listing" data-reveal>
+            <img class="listing__img" src="assets/img/apt-sash.webp" width="800" height="600" loading="lazy" alt="Bedroom with tall sash windows, gold curtains and a herringbone floor">
+            <div class="listing__body">
+              <div class="listing__top">
+                <h3 class="listing__title">Garden Square Flat</h3>
+                <p class="listing__price"><strong>$1,680</strong> / month</p>
+              </div>
+              <p class="listing__meta">Old Mill Quarter · 1 bed · 1 bath · 52 m²</p>
+              <p class="listing__badge">Available now</p>
+              <a class="listing__link" href="mailto:hello@example.com?subject=Viewing%3A%20Garden%20Square%20Flat" aria-label="Ask about this home: Garden Square Flat">Ask about this home</a>
+            </div>
+          </article>
+          <article class="listing" data-reveal>
+            <img class="listing__img" src="assets/img/apt-studio.webp" width="800" height="600" loading="lazy" alt="Compact studio with a double bed, a desk by the window and a small kitchen">
+            <div class="listing__body">
+              <div class="listing__top">
+                <h3 class="listing__title">Quay Street Studio</h3>
+                <p class="listing__price"><strong>$1,190</strong> / month</p>
+              </div>
+              <p class="listing__meta">Riverside · Studio · 1 bath · 34 m²</p>
+              <p class="listing__badge">Available 15 November</p>
+              <a class="listing__link" href="mailto:hello@example.com?subject=Viewing%3A%20Quay%20Street%20Studio" aria-label="Ask about this home: Quay Street Studio">Ask about this home</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Listings: houses ===== -->
+    <section class="section section--alt" id="houses" aria-labelledby="houses-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title" id="houses-title">Houses &amp; townhouses for families</h2>
+          <p class="section__intro">More room, a garden or a loft, and quiet streets near good schools.</p>
+        </div>
+        <div class="listings">
+          <article class="listing" data-reveal>
+            <img class="listing__img" src="assets/img/house-garden.webp" width="800" height="600" loading="lazy" alt="Sage-green bedroom with a wooden bed and a large window onto the garden">
+            <div class="listing__body">
+              <div class="listing__top">
+                <h3 class="listing__title">Linden Row Townhouse</h3>
+                <p class="listing__price"><strong>$3,400</strong> / month</p>
+              </div>
+              <p class="listing__meta">Westfield · 3 bed · 2 bath · 118 m²</p>
+              <p class="listing__badge">Available 1 December</p>
+              <a class="listing__link" href="mailto:hello@example.com?subject=Viewing%3A%20Linden%20Row%20Townhouse" aria-label="Ask about this home: Linden Row Townhouse">Ask about this home</a>
+            </div>
+          </article>
+          <article class="listing" data-reveal>
+            <img class="listing__img" src="assets/img/house-living.webp" width="800" height="600" loading="lazy" alt="Living room with a fireplace, grey armchairs and tall windows onto a courtyard">
+            <div class="listing__body">
+              <div class="listing__top">
+                <h3 class="listing__title">Hearth Lane House</h3>
+                <p class="listing__price"><strong>$3,750</strong> / month</p>
+              </div>
+              <p class="listing__meta">Westfield · 3 bed · 2 bath · 132 m²</p>
+              <p class="listing__badge">Available now</p>
+              <a class="listing__link" href="mailto:hello@example.com?subject=Viewing%3A%20Hearth%20Lane%20House" aria-label="Ask about this home: Hearth Lane House">Ask about this home</a>
+            </div>
+          </article>
+          <article class="listing" data-reveal>
+            <img class="listing__img" src="assets/img/house-loft.webp" width="800" height="600" loading="lazy" alt="High-ceilinged loft bedroom with exposed beams, a mezzanine and arched windows">
+            <div class="listing__body">
+              <div class="listing__top">
+                <h3 class="listing__title">Mill Loft House</h3>
+                <p class="listing__price"><strong>$3,100</strong> / month</p>
+              </div>
+              <p class="listing__meta">Old Mill Quarter · 2 bed · 2 bath · 104 m²</p>
+              <p class="listing__badge">Available 15 December</p>
+              <a class="listing__link" href="mailto:hello@example.com?subject=Viewing%3A%20Mill%20Loft%20House" aria-label="Ask about this home: Mill Loft House">Ask about this home</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Neighbourhoods ===== -->
+    <section class="section" id="areas" aria-labelledby="areas-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title" id="areas-title">Four neighbourhoods we know street by street</h2>
+          <p class="section__intro">Our agents live and work here, so they can tell you about noise, parking and the walk to the tram.</p>
+        </div>
+        <ul class="areas">
+          <li class="area" data-reveal>
+            <h3 class="area__name">Northbank</h3>
+            <p>Riverside towers, the covered market and ten minutes to the business district.</p>
+            <p class="area__count">1 home listed</p>
+          </li>
+          <li class="area" data-reveal>
+            <h3 class="area__name">Old Mill Quarter</h3>
+            <p>Converted mills, independent cafés and the canal towpath.</p>
+            <p class="area__count">2 homes listed</p>
+          </li>
+          <li class="area" data-reveal>
+            <h3 class="area__name">Riverside</h3>
+            <p>Compact flats by the ferry stop, ideal for a first place of your own.</p>
+            <p class="area__count">1 home listed</p>
+          </li>
+          <li class="area" data-reveal>
+            <h3 class="area__name">Westfield</h3>
+            <p>Tree-lined streets, family houses with gardens and two primary schools.</p>
+            <p class="area__count">2 homes listed</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== How renting works ===== -->
+    <section class="section section--alt" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title" id="how-title">How renting with Keystead works</h2>
+          <p class="section__intro">Three steps, one agent and no surprises in the paperwork.</p>
+        </div>
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title">Shortlist</h3>
+            <p>Pick the homes you like and send us their names. We reply with viewing times within one working day.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__title">View</h3>
+            <p>Meet your agent at the door for a 20-minute viewing, on a weekday or a Saturday.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__title">Apply and move in</h3>
+            <p>Leases run from 6 to 24 months. Rent, deposit and any fees are confirmed in writing before you apply.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Landlords ===== -->
+    <section class="section" id="landlords" aria-labelledby="landlords-title">
+      <div class="wrap">
+        <div class="band" data-reveal>
+          <div>
+            <h2 class="band__title" id="landlords-title">Letting a home in Northbank?</h2>
+            <p>We photograph it, run the viewings, check references and hand over the keys. Tell us about your property and we will call you back.</p>
+          </div>
+          <a class="btn btn--light" href="mailto:hello@example.com?subject=Letting%20my%20property">Talk to our lettings team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact">
+        <div>
+          <h2 class="section__title" id="contact-title">Book a viewing</h2>
+          <p class="contact__text">Email us the homes you would like to see and two times that suit you. Your email app opens with a new message; nothing is sent until you press send.</p>
+          <a class="btn btn--dark" href="mailto:hello@example.com?subject=Book%20a%20viewing">Email to book a viewing</a>
+        </div>
+        <dl class="contact__details">
+          <div><dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+          <div><dt>Office</dt><dd>14 Quay Street, Riverside</dd></div>
+          <div><dt>Opening hours</dt><dd>Monday to Saturday, 9:00–18:00</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <a class="logo logo--footer" href="#main" aria-label="Keystead — back to top">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M16 3 3 13v16h10v-9h6v9h10V13Z" fill="currentColor"/>
+          <circle cx="16" cy="14" r="2.6" fill="#111827"/>
+        </svg>
+        <span class="logo__text">Keystead</span>
+      </a>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <a href="#apartments">Apartments</a>
+        <a href="#houses">Houses</a>
+        <a href="#areas">Neighbourhoods</a>
+        <a href="#how">How renting works</a>
+        <a href="#landlords">Landlords</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="site-footer__copy">© 2026 Keystead Lettings. Homes, prices and neighbourhoods on this page are sample content.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1057 @@
+{
+  "slug": "auralis",
+  "version": "1.1.0",
+  "date": "2026-10-04T01:57:34.201Z",
+  "os": "win32",
+  "zipBytes": 343130,
+  "sha256": "dd341cdf5b61a9cabfb2cc6b8c71c838d0fde93e01ac3c51194bfc059d5e8596",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#main"
+          },
+          {
+            "label": "Auralis home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#top"
+          },
+          {
+            "label": "The sound",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#sound"
+          },
+          {
+            "label": "The design",
+            "href": "#design",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#design"
+          },
+          {
+            "label": "Tech specs",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#specs"
+          },
+          {
+            "label": "Explore EvoBuds ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#collection"
+          },
+          {
+            "label": "Discover the experience ↗",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#sound"
+          },
+          {
+            "label": "Explore the sound ↗",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#sound"
+          },
+          {
+            "label": "Scroll to explore ↓",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#sound"
+          },
+          {
+            "label": "Get into the details ↗",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#specs"
+          },
+          {
+            "label": "Enquire about EvoBuds ↗",
+            "href": "mailto:hello@auralis.example?subject=EvoBuds%20One%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@auralis.example?subject=EvoBuds%20One%20enquiry"
+          },
+          {
+            "label": "auralis®",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#top"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#top"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "aauralis®",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              250,
+              251,
+              252
+            ],
+            "ratio": 15.64,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__dot",
+            "text": "®",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              250,
+              251,
+              252
+            ],
+            "ratio": 15.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "Meet EvoBuds One. Immersive wireless sou",
+            "colour": "rgb(87, 87, 98)",
+            "background": [
+              250,
+              251,
+              252
+            ],
+            "ratio": 6.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "01 / A CLOSER LISTEN",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              248,
+              248,
+              252
+            ],
+            "ratio": 15.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Small form.Full feeling.",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              248,
+              248,
+              252
+            ],
+            "ratio": 15.3,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Your favourite track has more to give. F",
+            "colour": "rgb(87, 87, 98)",
+            "background": [
+              248,
+              248,
+              252
+            ],
+            "ratio": 6.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "design__label",
+            "text": "PEARL × VIOLET",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              239,
+              237,
+              247
+            ],
+            "ratio": 13.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01",
+            "colour": "rgb(87, 55, 159)",
+            "background": [
+              250,
+              251,
+              252
+            ],
+            "ratio": 8.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "03 / THE FINER DETAILS",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              241,
+              242,
+              245
+            ],
+            "ratio": 14.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Good things.Small package.",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              241,
+              242,
+              245
+            ],
+            "ratio": 14.47,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "specs__disclaimer",
+            "text": "Concept product. Specifications and pric",
+            "colour": "rgb(87, 87, 98)",
+            "background": [
+              241,
+              242,
+              245
+            ],
+            "ratio": 6.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "YOUR NEXT FAVOURITE THING",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              237,
+              242,
+              250
+            ],
+            "ratio": 14.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "EvoBuds One®",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              234,
+              235,
+              248
+            ],
+            "ratio": 13.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "®",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              241,
+              245,
+              250
+            ],
+            "ratio": 14.8,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Turn down the noise.Turn up everything e",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              232,
+              230,
+              247
+            ],
+            "ratio": 13.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "collection__price",
+            "text": "$149 Illustrative price",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              231,
+              229,
+              246
+            ],
+            "ratio": 13.07,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Illustrative price",
+            "colour": "rgb(87, 87, 98)",
+            "background": [
+              232,
+              231,
+              247
+            ],
+            "ratio": 5.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Enquire about EvoBuds ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              32,
+              32,
+              38
+            ],
+            "ratio": 16.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "collection__notice",
+            "text": "Concept showcase · email enquiry only.No",
+            "colour": "rgb(87, 87, 98)",
+            "background": [
+              237,
+              241,
+              249
+            ],
+            "ratio": 6.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Discover the experience ↗",
+          "colour": "rgb(87, 55, 159)",
+          "width": "3px",
+          "ratio": 8.27
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#main"
+          },
+          {
+            "label": "Auralis home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#top"
+          },
+          {
+            "label": "The sound",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#sound"
+          },
+          {
+            "label": "The design",
+            "href": "#design",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#design"
+          },
+          {
+            "label": "Tech specs",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#specs"
+          },
+          {
+            "label": "Explore EvoBuds ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#collection"
+          },
+          {
+            "label": "Discover the experience ↗",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#sound"
+          },
+          {
+            "label": "Explore the sound ↗",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#sound"
+          },
+          {
+            "label": "Scroll to explore ↓",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#sound"
+          },
+          {
+            "label": "Get into the details ↗",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#specs"
+          },
+          {
+            "label": "Enquire about EvoBuds ↗",
+            "href": "mailto:hello@auralis.example?subject=EvoBuds%20One%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@auralis.example?subject=EvoBuds%20One%20enquiry"
+          },
+          {
+            "label": "auralis®",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#top"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/auralis/index.html#top"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "aauralis®",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              250,
+              251,
+              252
+            ],
+            "ratio": 15.64,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__dot",
+            "text": "®",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              250,
+              251,
+              252
+            ],
+            "ratio": 15.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "Meet EvoBuds One. Immersive wireless sou",
+            "colour": "rgb(87, 87, 98)",
+            "background": [
+              250,
+              251,
+              252
+            ],
+            "ratio": 6.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "01 / A CLOSER LISTEN",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              248,
+              248,
+              252
+            ],
+            "ratio": 15.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Small form.Full feeling.",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              248,
+              248,
+              252
+            ],
+            "ratio": 15.3,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Your favourite track has more to give. F",
+            "colour": "rgb(87, 87, 98)",
+            "background": [
+              248,
+              248,
+              252
+            ],
+            "ratio": 6.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "design__label",
+            "text": "PEARL × VIOLET",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              239,
+              237,
+              247
+            ],
+            "ratio": 13.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01",
+            "colour": "rgb(87, 55, 159)",
+            "background": [
+              250,
+              251,
+              252
+            ],
+            "ratio": 8.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "03 / THE FINER DETAILS",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              241,
+              242,
+              245
+            ],
+            "ratio": 14.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Good things.Small package.",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              241,
+              242,
+              245
+            ],
+            "ratio": 14.47,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "specs__disclaimer",
+            "text": "Concept product. Specifications and pric",
+            "colour": "rgb(87, 87, 98)",
+            "background": [
+              241,
+              242,
+              245
+            ],
+            "ratio": 6.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "YOUR NEXT FAVOURITE THING",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              238,
+              242,
+              250
+            ],
+            "ratio": 14.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "EvoBuds One®",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              234,
+              235,
+              248
+            ],
+            "ratio": 13.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "®",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              241,
+              245,
+              250
+            ],
+            "ratio": 14.8,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Turn down the noise.Turn up everything e",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              232,
+              230,
+              247
+            ],
+            "ratio": 13.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "collection__price",
+            "text": "$149 Illustrative price",
+            "colour": "rgb(32, 32, 38)",
+            "background": [
+              231,
+              229,
+              247
+            ],
+            "ratio": 13.08,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Illustrative price",
+            "colour": "rgb(87, 87, 98)",
+            "background": [
+              232,
+              231,
+              247
+            ],
+            "ratio": 5.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Enquire about EvoBuds ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              32,
+              32,
+              38
+            ],
+            "ratio": 16.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "collection__notice",
+            "text": "Concept showcase · email enquiry only.No",
+            "colour": "rgb(87, 87, 98)",
+            "background": [
+              237,
+              241,
+              249
+            ],
+            "ratio": 6.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Discover the experience ↗",
+          "colour": "rgb(87, 55, 159)",
+          "width": "3px",
+          "ratio": 8.27
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "auralis/assets/css/style.css",
+    "auralis/assets/images/airbuds.webp",
+    "auralis/assets/images/charging-kit.webp",
+    "auralis/assets/images/earbuds.webp",
+    "auralis/assets/images/studiobuds.webp",
+    "auralis/assets/js/main.js",
+    "auralis/CUSTOMISE.md",
+    "auralis/index.html",
+    "auralis/LICENCE.txt",
+    "auralis/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/images/airbuds.webp",
+    "assets/images/charging-kit.webp",
+    "assets/images/earbuds.webp",
+    "assets/images/studiobuds.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

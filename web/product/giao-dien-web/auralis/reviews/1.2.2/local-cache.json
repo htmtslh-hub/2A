@@ -1,0 +1,62 @@
+{
+  "origin": "http://127.0.0.1:4333",
+  "routes": [
+    {
+      "path": "/demos/auralis/index.html?v=1.2.1&motion=on",
+      "status": 307,
+      "location": "/demos/auralis/index.html?v=1.2.2&motion=on",
+      "cache": null,
+      "version": null
+    },
+    {
+      "path": "/demos/auralis?v=1.2.0&motion=off",
+      "status": 307,
+      "location": "/demos/auralis/index.html?v=1.2.2&motion=off",
+      "cache": null,
+      "version": null
+    },
+    {
+      "path": "/demos/auralis",
+      "status": 307,
+      "location": "/demos/auralis/index.html?v=1.2.2",
+      "cache": null,
+      "version": null
+    },
+    {
+      "path": "/demos/auralis/index.html?v=1.2.2&motion=on",
+      "status": 200,
+      "location": null,
+      "cache": "no-store, max-age=0",
+      "version": "1.2.2"
+    },
+    {
+      "path": "/demos/auralis/assets/js/main.js?v=1.2.1",
+      "status": 200,
+      "location": null,
+      "cache": "no-store, max-age=0",
+      "version": "1.2.2"
+    },
+    {
+      "path": "/demos/auralis/assets/css/style.css?v=1.2.1",
+      "status": 200,
+      "location": null,
+      "cache": "no-store, max-age=0",
+      "version": "1.2.2"
+    }
+  ],
+  "browser": {
+    "version": "152.0.7977.124",
+    "loaded": {
+      "url": "http://127.0.0.1:4333/demos/auralis/index.html?v=1.2.2&motion=on",
+      "scripts": [
+        "http://127.0.0.1:4333/demos/auralis/assets/js/main.js?v=1.2.2"
+      ],
+      "css": [
+        "http://127.0.0.1:4333/demos/auralis/assets/css/style.css?v=1.2.2"
+      ],
+      "motion": true
+    }
+  },
+  "failures": [],
+  "pass": true
+}

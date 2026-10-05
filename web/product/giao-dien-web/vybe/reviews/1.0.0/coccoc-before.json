@@ -1,0 +1,96 @@
+{
+  "version": "152.0.7977.124",
+  "results": [
+    {
+      "initial": {
+        "url": "https://forgezone.store/demos/vybe",
+        "reduce": false,
+        "button": "Pause motion",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36"
+      },
+      "during": {
+        "running": [
+          {
+            "state": "running",
+            "time": 201.1220000006113
+          },
+          {
+            "state": "running",
+            "time": 201.1220000006113
+          }
+        ],
+        "slides": [
+          {
+            "opacity": "0.25692",
+            "transform": "matrix(0.895969, 0, 0, 0.895969, -349.611, 0)"
+          },
+          {
+            "opacity": "0.74308",
+            "transform": "matrix(0.96917, 0, 0, 0.96917, 120.878, 0)"
+          },
+          {
+            "opacity": "0",
+            "transform": "matrix(0.88, 0, 0, 0.88, 470.488, 0)"
+          },
+          {
+            "opacity": "0",
+            "transform": "matrix(0.88, 0, 0, 0.88, 470.488, 0)"
+          },
+          {
+            "opacity": "0",
+            "transform": "matrix(0.88, 0, 0, 0.88, 470.488, 0)"
+          }
+        ]
+      },
+      "after": "Bloom Tee"
+    },
+    {
+      "initial": {
+        "url": "https://forgezone.store/demos/vybe?motion=on",
+        "reduce": false,
+        "button": "Pause motion",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36"
+      },
+      "during": {
+        "running": [
+          {
+            "state": "running",
+            "time": 149.50900000056765
+          },
+          {
+            "state": "running",
+            "time": 149.50900000056765
+          },
+          {
+            "state": "running",
+            "time": 149.50900000056765
+          }
+        ],
+        "slides": [
+          {
+            "opacity": "0.37993",
+            "transform": "matrix(0.91319, 0, 0, 0.91319, -291.736, 0)"
+          },
+          {
+            "opacity": "0.62007",
+            "transform": "matrix(0.954408, 0, 0, 0.954408, 178.753, 0)"
+          },
+          {
+            "opacity": "0",
+            "transform": "matrix(0.88, 0, 0, 0.88, 470.488, 0)"
+          },
+          {
+            "opacity": "0",
+            "transform": "matrix(0.88, 0, 0, 0.88, 470.488, 0)"
+          },
+          {
+            "opacity": "0",
+            "transform": "matrix(0.88, 0, 0, 0.88, 470.488, 0)"
+          }
+        ]
+      },
+      "after": "Bloom Tee"
+    }
+  ],
+  "errors": []
+}

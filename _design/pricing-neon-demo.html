@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hai thẻ giá — viền neon theo video avatar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Unbounded:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --acc: #e83a34;
+      --acc-a45: rgba(232,58,52,.45);
+      --gold: #f0a63c;
+      --display: 'Unbounded', sans-serif;
+      --body: 'Be Vietnam Pro', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      background: #16181c;
+      color: #fff;
+      font-family: var(--body);
+      -webkit-font-smoothing: antialiased;
+    }
+    #pricing {
+      position: relative;
+      padding: clamp(48px,7vw,110px) clamp(20px,4vw,56px);
+      overflow: hidden;
+    }
+    .ambient {
+      position: absolute;
+      top: 6%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      height: 66%;
+      border-radius: 50%;
+      background: rgba(232,58,52,.18);
+      filter: blur(140px);
+      pointer-events: none;
+    }
+    .pricing-layout { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; align-items: stretch; max-width: 742px; margin: 0 auto; }
+    @media (max-width: 767px) {
+      .pricing-grid { grid-template-columns: minmax(0,1fr); max-width: 360px; }
+    }
+    @media (max-width: 360px) {
+      .pricing-card { --pricing-card-padding: 14px; --pricing-card-feature-gap: 10px; --pricing-card-feature-bottom: 22px; }
+    }
+    .pricing-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      aspect-ratio: 9 / 16;
+      width: 100%;
+      min-width: 0;
+      padding: var(--pricing-card-padding,clamp(18px,3vw,40px));
+      border-radius: 24px;
+      background: rgba(255,255,255,.062);
+      color: #fff;
+      border: 1px solid rgba(236,238,241,.12);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18);
+    }
+    .pricing-card--bundle { background: rgba(255,106,31,.09); border-color: var(--acc-a45); }
+    .badge {
+      align-self: flex-start;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: var(--acc);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    h3 {
+      margin: 0 0 6px;
+      padding-top: .06em;
+      font-family: var(--display);
+      font-weight: 700;
+      letter-spacing: -.01em;
+      font-size: 26px;
+      line-height: 1.1;
+    }
+    .description { margin: 0 0 20px; font-size: 13px; opacity: .7; line-height: 1.5; }
+    .price { display: flex; align-items: baseline; gap: 6px; margin-bottom: 24px; }
+    .price strong { font-family: var(--display); font-weight: 700; letter-spacing: -.02em; font-size: clamp(34px,4vw,46px); color: var(--gold); }
+    .pricing-card--bundle .price strong { color: #fff; }
+    .price span { font-size: 13px; opacity: .65; }
+    .features { display: flex; flex-direction: column; gap: var(--pricing-card-feature-gap,12px); margin: 0 0 var(--pricing-card-feature-bottom,28px); padding: 0; list-style: none; flex: 1; }
+    .features li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.45; }
+    .features .check { font-weight: 700; }
+    .buy {
+      display: inline-flex;
+      justify-content: center;
+      padding: 15px;
+      border-radius: 16px;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid rgba(255,255,255,.26);
+      background: linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.08));
+      color: #fffdfa;
+      box-shadow: inset 0 -1.5px 0 rgba(255,255,255,.7), inset 0 1px 0 rgba(255,255,255,.26), 0 14px 30px rgba(52,42,34,.26);
+    }
+    .pricing-card--bundle .buy {
+      border-color: rgba(255,255,255,.4);
+      background: linear-gradient(180deg,rgba(255,255,255,.34),rgba(255,255,255,.18));
+      box-shadow: inset 0 -1.5px 0 rgba(255,255,255,.95), inset 0 1px 0 rgba(255,255,255,.38), 0 10px 22px -6px rgba(255,244,230,.6), 0 18px 40px rgba(52,42,34,.34);
+    }
+    .buy:hover { opacity: .88; }
+    .buy:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+    .pricing-note { margin: 26px auto 0; text-align: center; font-size: 13px; color: #868d97; }
+  /*
+    VIỀN AVATAR TRONG VIDEO GỐC — viền kín, màu trượt quanh chu vi.
+    Màu:      --pricing-neon-magenta / -violet / -cyan / -white
+    Lõi:      --pricing-neon-core-width
+    Glow:     --pricing-neon-glow-width / -blur / -strength
+    Tốc độ:   --pricing-neon-speed (thời gian một vòng)
+  */
+  @property --pricing-neon-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  @keyframes pricingNeonOrbit {
+    from { --pricing-neon-angle: 0deg; }
+    to { --pricing-neon-angle: 360deg; }
+  }
+  @keyframes pricingNeonPulse {
+    0%,100% { filter: brightness(.96); }
+    50% { filter: brightness(1.12); }
+  }
+  .pricing-card {
+    --pricing-neon-magenta: #ed60ff;
+    --pricing-neon-violet: #a76bff;
+    --pricing-neon-cyan: #62f4ff;
+    --pricing-neon-white: #fffaff;
+    --pricing-neon-core-width: 1.7325px;
+    --pricing-neon-glow-width: 2px;
+    --pricing-neon-glow-blur: 1.75px;
+    --pricing-neon-glow-strength: .42;
+    --pricing-neon-speed: 1.8s;
+    isolation: isolate;
+  }
+  .pricing-card__neon {
+    position: absolute;
+    inset: -1px;
+    z-index: 3;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .4s cubic-bezier(.22,1,.36,1);
+  }
+  /* Blur the masked ring's parent so the glow can extend outside the edge. */
+  .pricing-card__neon-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: var(--pricing-neon-glow-strength);
+    filter: blur(var(--pricing-neon-glow-blur));
+    pointer-events: none;
+  }
+  .pricing-card__neon::before,
+  .pricing-card__neon-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    border-radius: inherit;
+    padding: var(--pricing-neon-core-width);
+    /* Use the animated angle HERE: do not cache this gradient on the card. */
+    background: conic-gradient(
+      from var(--pricing-neon-angle),
+      var(--pricing-neon-cyan) 0deg,
+      var(--pricing-neon-white) 48deg,
+      var(--pricing-neon-violet) 108deg,
+      var(--pricing-neon-magenta) 158deg,
+      var(--pricing-neon-white) 205deg,
+      var(--pricing-neon-cyan) 278deg,
+      var(--pricing-neon-cyan) 360deg
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    animation:
+      pricingNeonOrbit var(--pricing-neon-speed) linear infinite,
+      pricingNeonPulse 2.6s ease-in-out infinite;
+    animation-play-state: paused;
+    pointer-events: none;
+  }
+  .pricing-card__neon-glow::before {
+    padding: var(--pricing-neon-glow-width);
+  }
+  .pricing-card:hover > .pricing-card__neon,
+  .pricing-card:focus-within > .pricing-card__neon {
+    opacity: 1;
+  }
+  .pricing-card:hover > .pricing-card__neon::before,
+  .pricing-card:hover .pricing-card__neon-glow::before,
+  .pricing-card:focus-within > .pricing-card__neon::before,
+  .pricing-card:focus-within .pricing-card__neon-glow::before {
+    animation-play-state: running;
+  }
+  /* Requested exception: pricing neon still runs on hover/focus when the
+     browser reports reduced motion. No preview query or JavaScript needed. */
+  </style>
+</head>
+<body>
+  <main id="pricing" aria-label="Bảng giá">
+    <div class="ambient" aria-hidden="true"></div>
+    <div class="pricing-layout">
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <span class="pricing-card__neon" aria-hidden="true">
+            <span class="pricing-card__neon-glow"></span>
+          </span>
+          <h3>Một giao diện</h3>
+          <p class="description">Chọn đúng mẫu bạn cần.</p>
+          <div class="price"><strong>1.9tr</strong><span>/mẫu</span></div>
+          <ul class="features">
+            <li><span class="check" aria-hidden="true">✓</span><span>1 giao diện tự chọn</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>File nguồn đầy đủ</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>Hướng dẫn tùy biến</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>Cập nhật trọn đời</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>Giấy phép thương mại</span></li>
+          </ul>
+          <button class="buy" type="button">Mua mẫu này</button>
+        </article>
+        <article class="pricing-card pricing-card--bundle">
+          <span class="pricing-card__neon" aria-hidden="true">
+            <span class="pricing-card__neon-glow"></span>
+          </span>
+          <span class="badge">Đáng tiền nhất</span>
+          <h3>Trọn bộ</h3>
+          <p class="description">Toàn bộ thư viện, một lần trả.</p>
+          <div class="price"><strong>9.9tr</strong><span>trả một lần</span></div>
+          <ul class="features">
+            <li><span class="check" aria-hidden="true">✓</span><span>Tất cả giao diện</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>Mẫu mới cập nhật miễn phí</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>File nguồn và tài liệu từng mẫu</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>Tải lại từ tài khoản</span></li>
+            <li><span class="check" aria-hidden="true">✓</span><span>Giấy phép thương mại</span></li>
+          </ul>
+          <button class="buy" type="button">Lấy trọn bộ</button>
+        </article>
+      </div>
+      <p class="pricing-note">Giá chỉ áp dụng cho file template tải về; không bao gồm thiết kế, lập trình hoặc cài đặt theo yêu cầu.</p>
+    </div>
+  </main>
+  <!-- Animation is CSS-only and starts only on hover or focus-within. -->
+</body>
+</html>

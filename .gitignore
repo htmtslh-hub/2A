@@ -30,3 +30,26 @@ Thumbs.db
 # commit. Giá trị thật nằm trong biến môi trường trên Vercel.
 client_secret_*.json
 *.apps.googleusercontent.com.json
+
+# Công cụ QA và trình duyệt phục vụ quay preview, không phải mã sản phẩm
+_design/.tooling/
+_design/.browsers/
+_design/.qa-extracted/
+web/product/giao-dien-web/reviews/**/recordings/
+web/product/giao-dien-web/tools/.anh-tam/
+
+# Local reference captures/downloads; shipped sources live under web/product/.
+/_design/aeris-reference/
+/_design/headphone-reference/
+/_design/pricing-neon-reference/
+# Temporary render/QA media; retain text reports and final public previews.
+/web/product/giao-dien-web/**/screenshots/
+/web/product/giao-dien-web/**/recordings/
+/web/product/giao-dien-web/**/design/video-analysis/
+/web/product/giao-dien-web/**/reviews/**/*.png
+/web/product/giao-dien-web/**/reviews/**/*.webp
+/web/product/giao-dien-web/**/reviews/**/*.mp4
+/web/product/giao-dien-web/**/reviews/**/*.webm
+*.blend1
+# Domain report email attachments are not project source.
+/google.com!*.zip

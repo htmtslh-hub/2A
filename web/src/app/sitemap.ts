@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { COMPANY } from '@/lib/company';
 import { LEGAL_PATHS, PAGE_PATHS } from '@/lib/legal';
-import { TAB_KEYS, TPL_META } from '@/generated/data';
+import { TAB_KEYS } from '@/generated/data';
+import { REAL_TEMPLATES } from '@/lib/real-templates';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = COMPANY.siteUrl.replace(/\/$/, '');
@@ -16,14 +17,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const templates = TPL_META.map((m: { id: string }) => ({
-    url: `${base}/?mau=${m.id}`,
+  const templates = Object.keys(REAL_TEMPLATES).map((id) => ({
+    url: `${base}/?mau=${id}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }));
 
-  const staticPages = [PAGE_PATHS.about, PAGE_PATHS.contact, ...Object.values(LEGAL_PATHS)].map(
+  const staticPages = ['/huong-dan', PAGE_PATHS.about, PAGE_PATHS.contact, ...Object.values(LEGAL_PATHS)].map(
     (p) => ({
       url: `${base}${p}`,
       lastModified: now,

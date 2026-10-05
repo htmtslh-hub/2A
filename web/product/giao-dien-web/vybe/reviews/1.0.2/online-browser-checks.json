@@ -1,0 +1,98 @@
+[
+  {
+    "name": "coccoc",
+    "version": "152.0.7977.124",
+    "base": "https://forgezone.store",
+    "defaultEnabled": true,
+    "frame1": {
+      "transform": "matrix(0.93729, 0, 0, 0.93729, 245.927, 0)",
+      "opacity": 0.477418,
+      "running": "running"
+    },
+    "frame2": {
+      "transform": "matrix(0.978938, 0, 0, 0.978938, 82.5983, 0)",
+      "opacity": 0.824483,
+      "running": "running"
+    },
+    "visiblyMoving": true,
+    "settled": {
+      "visible": 1,
+      "state": "idle"
+    },
+    "pause": "idle",
+    "reloadEnabled": true,
+    "previousWrap": "05 / 05",
+    "nextWrap": "01 / 05",
+    "rapid": {
+      "visible": 1,
+      "state": "idle"
+    },
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "edge",
+    "version": "154.0.4258.53",
+    "base": "https://forgezone.store",
+    "defaultEnabled": true,
+    "frame1": {
+      "transform": "matrix(0.933632, 0, 0, 0.933632, 260.274, 0)",
+      "opacity": 0.446932,
+      "running": "running"
+    },
+    "frame2": {
+      "transform": "matrix(0.977181, 0, 0, 0.977181, 89.49, 0)",
+      "opacity": 0.809838,
+      "running": "running"
+    },
+    "visiblyMoving": true,
+    "settled": {
+      "visible": 1,
+      "state": "idle"
+    },
+    "pause": "idle",
+    "reloadEnabled": true,
+    "previousWrap": "05 / 05",
+    "nextWrap": "01 / 05",
+    "rapid": {
+      "visible": 1,
+      "state": "idle"
+    },
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "errors": []
+  }
+]

@@ -1,0 +1,335 @@
+{
+  "url": "file:///D:/3.%20D%E1%BB%B1%20%C3%A1n/2A/web/product/giao-dien-web/auralis/source/index.html",
+  "carousel": [
+    {
+      "selected": "1",
+      "model": "STUDIOBUDS PRO / GRAPHITE EDITION",
+      "detail": "StudioBuds Pro®",
+      "previewBlur": [
+        "blur(10px)",
+        "blur(5px)"
+      ]
+    },
+    {
+      "selected": "2",
+      "model": "AIRBUDS LITE / PEARL EDITION",
+      "detail": "AirBuds Lite®",
+      "previewBlur": [
+        "blur(5px)",
+        "blur(10px)"
+      ]
+    },
+    {
+      "selected": "0",
+      "model": "EVOBUDS ONE / VIOLET EDITION",
+      "detail": "EvoBuds One®",
+      "previewBlur": [
+        "blur(5px)",
+        "blur(10px)"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "width": 1440,
+      "height": 900,
+      "index": 0,
+      "actorCenter": 979.1875,
+      "transform": "translate3d(0px, calc(-50% + 0px), 0px) rotate(0deg) scale(1)",
+      "detailOpacity": 0,
+      "detailBounds": {
+        "top": 240.5390625,
+        "bottom": 659.4609375
+      },
+      "copyHidden": false,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "index": 1,
+      "actorCenter": 599.7622985839844,
+      "transform": "translate3d(-379.425px, calc(-50% + 0px), 0px) rotate(4.90213deg) scale(0.897872)",
+      "detailOpacity": 0.352,
+      "detailBounds": {
+        "top": 240.5390625,
+        "bottom": 659.4609375
+      },
+      "copyHidden": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "index": 2,
+      "actorCenter": 359.98745918273926,
+      "transform": "translate3d(-619.2px, calc(-50% + 0px), 0px) rotate(8deg) scale(0.833333)",
+      "detailOpacity": 1,
+      "detailBounds": {
+        "top": 240.5390625,
+        "bottom": 659.4609375
+      },
+      "copyHidden": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "type": "story",
+      "index": 0,
+      "activeImage": "assets/images/earbuds.webp",
+      "visibleFrames": 1,
+      "activeChapter": "0"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "type": "story",
+      "index": 1,
+      "activeImage": "assets/images/studiobuds.webp",
+      "visibleFrames": 1,
+      "activeChapter": "1"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "type": "story",
+      "index": 2,
+      "activeImage": "assets/images/charging-kit.webp",
+      "visibleFrames": 1,
+      "activeChapter": "2"
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "index": 0,
+      "actorCenter": 557.59375,
+      "transform": "translate3d(0px, calc(-50% + 0px), 0px) rotate(0deg) scale(1)",
+      "detailOpacity": 0,
+      "detailBounds": {
+        "top": 389.6796875,
+        "bottom": 790.3203125
+      },
+      "copyHidden": false,
+      "overflow": false
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "index": 1,
+      "actorCenter": 341.53218841552734,
+      "transform": "translate3d(-216.062px, calc(-50% + 0px), 0px) rotate(4.90213deg) scale(0.897872)",
+      "detailOpacity": 0.352,
+      "detailBounds": {
+        "top": 389.6796875,
+        "bottom": 790.3203125
+      },
+      "copyHidden": true,
+      "overflow": false
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "index": 2,
+      "actorCenter": 204.9937400817871,
+      "transform": "translate3d(-352.6px, calc(-50% + 0px), 0px) rotate(8deg) scale(0.833333)",
+      "detailOpacity": 1,
+      "detailBounds": {
+        "top": 389.6796875,
+        "bottom": 790.3203125
+      },
+      "copyHidden": true,
+      "overflow": false
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "type": "story",
+      "index": 0,
+      "activeImage": "assets/images/earbuds.webp",
+      "visibleFrames": 1,
+      "activeChapter": "0"
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "type": "story",
+      "index": 1,
+      "activeImage": "assets/images/studiobuds.webp",
+      "visibleFrames": 1,
+      "activeChapter": "1"
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "type": "story",
+      "index": 2,
+      "activeImage": "assets/images/charging-kit.webp",
+      "visibleFrames": 1,
+      "activeChapter": "2"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "index": 0,
+      "actorCenter": 187.5,
+      "transform": "translate3d(0px, calc(-50% + 0px), 0px) rotate(0deg) scale(1)",
+      "detailOpacity": 0,
+      "detailBounds": {
+        "top": 108.265625,
+        "bottom": 382.40625
+      },
+      "copyHidden": false,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "index": 1,
+      "actorCenter": 159.9240083694458,
+      "transform": "translate3d(-27.576px, calc(-50% + 29.8556px), 0px) rotate(4.9024deg) scale(0.852928)",
+      "detailOpacity": 0.352085,
+      "detailBounds": {
+        "top": 95.75514221191406,
+        "bottom": 369.89576721191406
+      },
+      "copyHidden": true,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "index": 2,
+      "actorCenter": 142.50001335144043,
+      "transform": "translate3d(-45px, calc(-50% + 48.72px), 0px) rotate(8deg) scale(0.76)",
+      "detailOpacity": 1,
+      "detailBounds": {
+        "top": 73.078125,
+        "bottom": 347.21875
+      },
+      "copyHidden": true,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "type": "story",
+      "index": 0,
+      "activeImage": "assets/images/earbuds.webp",
+      "visibleFrames": 1,
+      "activeChapter": "0"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "type": "story",
+      "index": 1,
+      "activeImage": "assets/images/studiobuds.webp",
+      "visibleFrames": 1,
+      "activeChapter": "1"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "type": "story",
+      "index": 2,
+      "activeImage": "assets/images/charging-kit.webp",
+      "visibleFrames": 1,
+      "activeChapter": "2"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "index": 0,
+      "actorCenter": 160,
+      "transform": "translate3d(0px, calc(-50% + 0px), 0px) rotate(0deg) scale(1)",
+      "detailOpacity": 0,
+      "detailBounds": {
+        "top": 101.78125,
+        "bottom": 398.3125
+      },
+      "copyHidden": false,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "index": 1,
+      "actorCenter": 136.48637628555298,
+      "transform": "translate3d(-23.5136px, calc(-50% + 27.1876px), 0px) rotate(4.89867deg) scale(0.85304)",
+      "detailOpacity": 0.350878,
+      "detailBounds": {
+        "top": 89.31303405761719,
+        "bottom": 385.8442840576172
+      },
+      "copyHidden": true,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "index": 2,
+      "actorCenter": 121.60000228881836,
+      "transform": "translate3d(-38.4px, calc(-50% + 44.4px), 0px) rotate(8deg) scale(0.76)",
+      "detailOpacity": 1,
+      "detailBounds": {
+        "top": 66.59375,
+        "bottom": 363.125
+      },
+      "copyHidden": true,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "type": "story",
+      "index": 0,
+      "activeImage": "assets/images/earbuds.webp",
+      "visibleFrames": 1,
+      "activeChapter": "0"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "type": "story",
+      "index": 1,
+      "activeImage": "assets/images/studiobuds.webp",
+      "visibleFrames": 1,
+      "activeChapter": "1"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "type": "story",
+      "index": 2,
+      "activeImage": "assets/images/charging-kit.webp",
+      "visibleFrames": 1,
+      "activeChapter": "2"
+    }
+  ],
+  "errors": [],
+  "keyboard": {
+    "selected": "2",
+    "model": "AIRBUDS LITE / PEARL EDITION",
+    "detail": "AirBuds Lite®",
+    "previewBlur": [
+      "blur(5px)",
+      "blur(10px)"
+    ]
+  },
+  "swipe": {
+    "selected": "1",
+    "model": "STUDIOBUDS PRO / GRAPHITE EDITION",
+    "detail": "StudioBuds Pro®",
+    "previewBlur": [
+      "blur(10px)",
+      "blur(5px)"
+    ]
+  },
+  "reduced": {
+    "pinning": false,
+    "transition": "0s",
+    "selected": "2"
+  },
+  "pass": true
+}

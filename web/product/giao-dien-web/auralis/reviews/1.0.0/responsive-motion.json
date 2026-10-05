@@ -1,0 +1,155 @@
+[
+  {
+    "width": 820,
+    "height": 1180,
+    "index": 0,
+    "chapter": "Only what you want to hear.",
+    "visibleChapters": 1,
+    "stage": [
+      {
+        "top": 421.84991455078125,
+        "bottom": 758.1500854492188
+      },
+      {
+        "top": 331.90625,
+        "bottom": 848.09375
+      }
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "index": 1,
+    "chapter": "Feel every layer.",
+    "visibleChapters": 1,
+    "stage": [
+      {
+        "top": 423.9088134765625,
+        "bottom": 738.4999389648438
+      },
+      {
+        "top": 331.90625,
+        "bottom": 848.09375
+      }
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "index": 2,
+    "chapter": "Stay in your own rhythm.",
+    "visibleChapters": 1,
+    "stage": [
+      {
+        "top": 379.0571594238281,
+        "bottom": 765.7384643554688
+      },
+      {
+        "top": 331.90625,
+        "bottom": 848.09375
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "index": 0,
+    "chapter": "Only what you want to hear.",
+    "visibleChapters": 1,
+    "stage": [
+      {
+        "top": 515.6282348632812,
+        "bottom": 677.6842651367188
+      },
+      {
+        "top": 103.125,
+        "bottom": 525.078125
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "index": 1,
+    "chapter": "Feel every layer.",
+    "visibleChapters": 1,
+    "stage": [
+      {
+        "top": 513.9021606445312,
+        "bottom": 661.4317016601562
+      },
+      {
+        "top": 102.9375,
+        "bottom": 524.890625
+      }
+    ]
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "index": 2,
+    "chapter": "Stay in your own rhythm.",
+    "visibleChapters": 1,
+    "stage": [
+      {
+        "top": 484.61083984375,
+        "bottom": 673.1121215820312
+      },
+      {
+        "top": 102.9375,
+        "bottom": 524.890625
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "index": 0,
+    "chapter": "Only what you want to hear.",
+    "visibleChapters": 1,
+    "stage": [
+      {
+        "top": 504.46917724609375,
+        "bottom": 639.2495727539062
+      },
+      {
+        "top": 67.3125,
+        "bottom": 511.65625
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "index": 1,
+    "chapter": "Feel every layer.",
+    "visibleChapters": 1,
+    "stage": [
+      {
+        "top": 501.5638732910156,
+        "bottom": 624.204833984375
+      },
+      {
+        "top": 67.125,
+        "bottom": 511.46875
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "index": 2,
+    "chapter": "Stay in your own rhythm.",
+    "visibleChapters": 1,
+    "stage": [
+      {
+        "top": 475.6971130371094,
+        "bottom": 632.4461059570312
+      },
+      {
+        "top": 67.125,
+        "bottom": 511.46875
+      }
+    ]
+  }
+]

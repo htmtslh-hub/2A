@@ -4,7 +4,7 @@
    - ?token=…  link dùng một lần gửi qua email sau khi thanh toán
    - đã đăng nhập + ?id=t5  tải lại mẫu đã mua bất cứ lúc nào
 
-   File thật đặt trong thư mục private/templates/ (ngoài public/ để không ai tải
+   File thật đặt trong thư mục product/giao-dien-web/<slug>/ (ngoài public/ để không ai tải
    trực tiếp được). Chưa có file thì trả 404 kèm lời nhắc. */
 import { NextResponse } from 'next/server';
 import { createReadStream, existsSync, statSync } from 'node:fs';
@@ -14,12 +14,13 @@ import { prisma } from '@/lib/db';
 import { auth } from '@/auth';
 import { templateExists, templateFile } from '@/lib/catalog';
 
-const TEMPLATE_DIR = path.join(process.cwd(), 'private', 'templates');
+const TEMPLATE_DIR = path.join(process.cwd(), 'product', 'giao-dien-web');
 
 function fileFor(templateId: string) {
   // Qua templateFile() vì mã trong danh mục và tên file đóng gói có thể khác
   // nhau — xem TEMPLATE_FILE trong lib/catalog.
-  return path.join(TEMPLATE_DIR, `${templateFile(templateId)}.zip`);
+  const slug = templateFile(templateId);
+  return path.join(TEMPLATE_DIR, slug, `${slug}.zip`);
 }
 
 function serve(templateId: string) {
@@ -27,7 +28,7 @@ function serve(templateId: string) {
   if (!existsSync(file)) {
     return NextResponse.json(
       {
-        error: `Chưa có file cho "${templateId}". Đặt file tại private/templates/${templateId}.zip`,
+        error: `Chưa có file cho "${templateId}". Đặt file tại product/giao-dien-web/${templateFile(templateId)}/${templateFile(templateId)}.zip`,
       },
       { status: 404 }
     );

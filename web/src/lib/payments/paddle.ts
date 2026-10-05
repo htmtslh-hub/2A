@@ -55,22 +55,25 @@ export const paddleAdapter: PaymentProviderAdapter = {
     // thì đặt PADDLE_PRODUCT_ID để gắn doanh thu vào đúng sản phẩm đó.
     const productId = process.env.PADDLE_PRODUCT_ID;
 
-    const price: Record<string, unknown> = {
-      name: input.productName,
-      description: input.productName,
-      tax_mode: 'account_setting',
-      unit_price: {
-        // Paddle nhận đơn vị nhỏ nhất, dạng chuỗi.
-        amount: String(input.amount),
-        currency_code: input.currency,
-      },
-    };
-
-    if (productId) {
-      // gắn vào sản phẩm có sẵn trong catalog
-    } else {
-      price.product = { name: 'Forge Zone — giao diện web', tax_category: 'standard' };
-    }
+    const items = (input.items?.length ? input.items : [{ name: input.productName, amount: input.amount }]).map((item) => {
+      const price: Record<string, unknown> = {
+        name: item.name,
+        description: item.name,
+        tax_mode: 'account_setting',
+        unit_price: {
+          // Paddle nhận đơn vị nhỏ nhất, dạng chuỗi.
+          amount: String(item.amount),
+          currency_code: input.currency,
+        },
+      };
+      if (productId) {
+        // Non-catalog price gắn vào sản phẩm có sẵn bằng product_id nằm trong price.
+        price.product_id = productId;
+      } else {
+        price.product = { name: item.name, tax_category: 'standard' };
+      }
+      return { quantity: 1, price };
+    });
 
     // Trang mở hộp thanh toán cho giao dịch này.
     //
@@ -86,7 +89,7 @@ export const paddleAdapter: PaymentProviderAdapter = {
     const checkoutUrl = process.env.PADDLE_CHECKOUT_URL;
 
     const payload = {
-      items: [{ quantity: 1, price, ...(productId ? { product_id: productId } : {}) }],
+      items,
       // Gửi kèm id đơn của mình để webhook đối chiếu chắc chắn.
       custom_data: { orderId: input.orderId },
       ...(checkoutUrl ? { checkout: { url: checkoutUrl } } : {}),

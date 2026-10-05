@@ -1,0 +1,68 @@
+TIDAL — LICENCE TERMS
+=====================
+
+The short version: use this template on your own and your clients' projects as
+often as you like. The one thing you cannot do is resell the files themselves.
+
+
+1. WHAT YOU GET
+---------------
+A perpetual, non-exclusive, worldwide commercial licence.
+
+Perpetual means there is nothing to renew and it does not expire.
+Non-exclusive means the same template continues to be sold to others.
+
+
+2. WHAT YOU MAY DO
+------------------
+- Use it on an unlimited number of your own projects, commercial or personal.
+- Use it on projects you build for clients, and charge for that work.
+- Modify it freely — layout, colours, code, anything.
+- Deploy it anywhere, with no attribution required.
+
+
+3. WHAT YOU MAY NOT DO
+----------------------
+- Resell, sub-license or give away the template files, modified or not.
+- Publish them on another marketplace, in another template bundle, or in a
+  public repository.
+- Use them to build a product whose main value is the template itself
+  (a website builder, a theme shop, a starter-kit collection).
+
+
+4. DEMO CONTENT AND IMAGES
+--------------------------
+The company name, copy and figures in this template are made up. They are there
+to show the layout. Replace them before publishing.
+
+The inline SVG icons are covered by this licence. The bundled hero image
+(assets/img/hero-ocean.webp) is AI-generated and depicts an imagined scene; do
+not present it as a photograph of a real place or event. It is covered by this
+template licence for use in completed websites, but may not be redistributed
+as standalone stock imagery or a separate image pack. Any photograph or font
+you add is your own responsibility.
+
+
+5. FONTS
+--------
+Space Grotesk and Manrope are loaded from Google Fonts and are licensed
+under the SIL Open Font License, not by this licence.
+
+
+6. OWNERSHIP
+------------
+Copyright in the design and source code remains with the author. This licence
+grants you the right to use it, not ownership of it.
+
+If you breach section 3 the licence ends, and you must stop using the template
+and delete your copies.
+
+
+7. NO WARRANTY
+--------------
+The template is provided as is. It has been tested in current Chromium and
+Firefox; other browsers have not been separately tested. It cannot be
+guaranteed to suit every purpose or every browser.
+
+
+Questions about what is and is not allowed: just ask. The answer is usually yes.

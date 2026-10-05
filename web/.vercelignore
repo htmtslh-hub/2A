@@ -3,3 +3,18 @@
 .env
 .env.*
 !.env.example
+
+# Tài sản thử nghiệm của hướng homepage cũ; sản phẩm thương mại dùng
+# public/previews và public/demos/astra-interior.
+public/cinematic/
+# Chỉ ZIP trong product cần hiện diện ở môi trường chạy để /api/download đọc.
+product/giao-dien-web/*/source/
+product/giao-dien-web/docs/
+product/giao-dien-web/tools/
+product/giao-dien-web/*/reviews/
+product/giao-dien-web/reviews/
+product/giao-dien-web/*/design/
+product/giao-dien-web/design/
+
+# Retired templates are internal backups, never delivery assets.
+product/retired/

@@ -7,13 +7,15 @@ import type { Currency, Kind, Lang } from '@/lib/catalog';
 export interface CreateCheckoutInput {
   /** Id đơn trong database của mình — dùng để đối chiếu khi webhook về. */
   orderId: string;
-  kind: Kind;
+  kind: Kind | 'CART';
   templateId: string | null;
   /** Đơn vị nhỏ nhất của loại tiền: VNĐ là đồng, USD là cent. */
   amount: number;
   currency: Currency;
   /** Tên hàng hiển thị cho khách. */
   productName: string;
+  /** Các dòng hàng trong giỏ; Paddle hiển thị từng giao diện, PayOS thu tổng. */
+  items?: { name: string; amount: number }[];
   buyerEmail: string;
   buyerName?: string | null;
   lang: Lang;

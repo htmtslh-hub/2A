@@ -1,0 +1,270 @@
+{
+  "generatedAt": "2026-09-30T09:52:19.977Z",
+  "root": "D:\\3. Dự án\\2A\\_design\\.qa-astra-final2\\astra-interior",
+  "httpUrl": "http://127.0.0.1:4173/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "1440x900": {
+          "initial": {
+            "lang": "en",
+            "h1": 1,
+            "landmarks": true,
+            "duplicateIds": [],
+            "headingJumps": [],
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "sourceReady": true,
+            "canvasReady": true,
+            "brokenInternalLinks": [],
+            "badLinks": []
+          },
+          "smallTargets": [],
+          "sequenceScrollTarget": 1612.8000000000002,
+          "frame": "14"
+        },
+        "820x1180": {
+          "initial": {
+            "lang": "en",
+            "h1": 1,
+            "landmarks": true,
+            "duplicateIds": [],
+            "headingJumps": [],
+            "scrollWidth": 820,
+            "clientWidth": 820,
+            "sourceReady": true,
+            "canvasReady": true,
+            "brokenInternalLinks": [],
+            "badLinks": []
+          },
+          "smallTargets": [],
+          "sequenceScrollTarget": 2114.5600000000004,
+          "frame": "14",
+          "menu": {
+            "open": "true",
+            "menuVisible": true,
+            "closed": "false",
+            "focused": true
+          }
+        },
+        "375x812": {
+          "initial": {
+            "lang": "en",
+            "h1": 1,
+            "landmarks": true,
+            "duplicateIds": [],
+            "headingJumps": [],
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "sourceReady": true,
+            "canvasReady": true,
+            "brokenInternalLinks": [],
+            "badLinks": []
+          },
+          "smallTargets": [],
+          "sequenceScrollTarget": 1454.88,
+          "frame": "14",
+          "menu": {
+            "open": "true",
+            "menuVisible": true,
+            "closed": "false",
+            "focused": true
+          }
+        },
+        "320x740": {
+          "initial": {
+            "lang": "en",
+            "h1": 1,
+            "landmarks": true,
+            "duplicateIds": [],
+            "headingJumps": [],
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "sourceReady": true,
+            "canvasReady": true,
+            "brokenInternalLinks": [],
+            "badLinks": []
+          },
+          "smallTargets": [],
+          "sequenceScrollTarget": 1326.0800000000002,
+          "frame": "14",
+          "menu": {
+            "open": "true",
+            "menuVisible": true,
+            "closed": "false",
+            "focused": true
+          }
+        }
+      },
+      "consoleErrors": [],
+      "requestFailures": [],
+      "axe": [],
+      "reducedMotion": {
+        "sequenceHeight": 812,
+        "frame": "01",
+        "heroVisible": "1"
+      },
+      "noJavaScript": {
+        "navVisible": true,
+        "heroTextVisible": "1",
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "bodyText": 1823
+      },
+      "fileProtocol": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": true,
+        "duplicateIds": [],
+        "headingJumps": [],
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "sourceReady": true,
+        "canvasReady": true,
+        "brokenInternalLinks": [],
+        "badLinks": []
+      },
+      "keyboard": {
+        "skipFocused": true,
+        "mainFocused": true
+      },
+      "zoom200": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "1440x900": {
+          "initial": {
+            "lang": "en",
+            "h1": 1,
+            "landmarks": true,
+            "duplicateIds": [],
+            "headingJumps": [],
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "sourceReady": true,
+            "canvasReady": true,
+            "brokenInternalLinks": [],
+            "badLinks": []
+          },
+          "smallTargets": [],
+          "sequenceScrollTarget": 1612.8000000000002,
+          "frame": "14"
+        },
+        "820x1180": {
+          "initial": {
+            "lang": "en",
+            "h1": 1,
+            "landmarks": true,
+            "duplicateIds": [],
+            "headingJumps": [],
+            "scrollWidth": 820,
+            "clientWidth": 820,
+            "sourceReady": true,
+            "canvasReady": true,
+            "brokenInternalLinks": [],
+            "badLinks": []
+          },
+          "smallTargets": [],
+          "sequenceScrollTarget": 2114.5600000000004,
+          "frame": "14",
+          "menu": {
+            "open": "true",
+            "menuVisible": true,
+            "closed": "false",
+            "focused": true
+          }
+        },
+        "375x812": {
+          "initial": {
+            "lang": "en",
+            "h1": 1,
+            "landmarks": true,
+            "duplicateIds": [],
+            "headingJumps": [],
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "sourceReady": true,
+            "canvasReady": true,
+            "brokenInternalLinks": [],
+            "badLinks": []
+          },
+          "smallTargets": [],
+          "sequenceScrollTarget": 1454.88,
+          "frame": "14",
+          "menu": {
+            "open": "true",
+            "menuVisible": true,
+            "closed": "false",
+            "focused": true
+          }
+        },
+        "320x740": {
+          "initial": {
+            "lang": "en",
+            "h1": 1,
+            "landmarks": true,
+            "duplicateIds": [],
+            "headingJumps": [],
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "sourceReady": true,
+            "canvasReady": true,
+            "brokenInternalLinks": [],
+            "badLinks": []
+          },
+          "smallTargets": [],
+          "sequenceScrollTarget": 1326.0800000000002,
+          "frame": "14",
+          "menu": {
+            "open": "true",
+            "menuVisible": true,
+            "closed": "false",
+            "focused": true
+          }
+        }
+      },
+      "consoleErrors": [],
+      "requestFailures": [],
+      "axe": [],
+      "reducedMotion": {
+        "sequenceHeight": 812,
+        "frame": "01",
+        "heroVisible": "1"
+      },
+      "noJavaScript": {
+        "navVisible": true,
+        "heroTextVisible": "1",
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "bodyText": 1823
+      },
+      "fileProtocol": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": true,
+        "duplicateIds": [],
+        "headingJumps": [],
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "sourceReady": true,
+        "canvasReady": true,
+        "brokenInternalLinks": [],
+        "badLinks": []
+      },
+      "keyboard": {
+        "skipFocused": true,
+        "mainFocused": true
+      },
+      "zoom200": {
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      }
+    }
+  },
+  "failures": []
+}

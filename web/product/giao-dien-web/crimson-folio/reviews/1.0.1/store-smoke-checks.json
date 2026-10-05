@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "localBytesMatch": null
+  },
+  {
+    "path": "/demos/aeris/assets/css/style.css",
+    "status": 200,
+    "localBytesMatch": true
+  },
+  {
+    "path": "/demos/soniq/assets/js/main.js",
+    "status": 200,
+    "localBytesMatch": true
+  },
+  {
+    "path": "/demos/astra-interior/assets/css/style.css",
+    "status": 200,
+    "localBytesMatch": true
+  }
+]

@@ -114,3 +114,33 @@ không có xác thực thành công trước khi phiên kết thúc. GitHub khô
 deployment/check-run cho commit mới; production demo vẫn HTTP404.
 Trạng thái deploy: CHỜ XÁC THỰC, không gọi là READY, chưa chạy online checker.
 Chưa tắt máy vì chuỗi công việc deploy/xác minh chưa hoàn tất.
+
+## Production xác minh thành công
+
+Ngày 05/10/2026, giờ Asia/Saigon. Mục này thay thế trạng thái CHỜ XÁC THỰC
+ở trên; các ghi chép đó là lịch sử trước lần đăng nhập thành công.
+Trình duyệt trong ứng dụng xác thực tài khoản htmtslh-hub cho Vercel CLI.
+Project hiện có htmtslh-hubs-projects/web được liên kết, không tạo project mới.
+Hai lượt tải đầu lỗi mạng fetch failed; lượt thứ ba tải đủ và hoàn thành build.
+Vercel chạy npm run build, TypeScript và tạo trang thành công.
+
+Production READY: dpl_2FT7ctHMQD82C68S3pFWYB3L2fxb.
+URL deployment: https://web-rmmwruiqy-htmtslh-hubs-projects.vercel.app.
+Alias: https://forgezone.store.
+Demo: https://forgezone.store/demos/crimson-folio/index.html?v=1.0.1.
+Nguồn deployment ở commit 6be3cbf. Thay đổi .vercelignore chỉ loại scratch
+và crimson-folio.zip cũ khỏi upload; không tác động gói sản phẩm khác.
+
+check-deployment.cjs PASS: cả 5 tài nguyên HTML/CSS/JS/2 WebP trả HTTP200
+và SHA-256 khớp file public trên máy; không dựa vào build để suy ra asset đúng.
+deployment-checks.json ghi Edge 154.0.4258.53 và Cốc Cốc 152.0.7977.124,
+4 viewport 1440/820/375/320, ảnh đủ, không overflow, menu đóng đúng, URL ngắn
+hoạt động, motion có midframe dưới reduced-motion và kết thúc opacity 1,
+không pageerror. screenshots/deployed-* là bằng chứng từ production.
+Trình duyệt trong ứng dụng cũng mở được demo đúng nội dung.
+
+store-smoke-checks.json: trang chủ HTTP200; CSS Aeris, JS Soniq và CSS
+Mellow Coffee trả HTTP200, khớp byte nguồn public hiện tại.
+Chưa chạy lại toàn bộ nghiệp vụ cửa hàng hoặc luồng mua/tải có đăng nhập.
+Không đưa Crimson Folio vào catalog bán hàng hoặc giao ZIP cũ.
+Các điều kiện thương mại Q08/Q10/Q11 vẫn chưa đạt; demo online đã deploy.

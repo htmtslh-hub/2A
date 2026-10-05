@@ -1,0 +1,144 @@
+{
+  "origin": "https://forgezone.store",
+  "date": "2026-10-05T15:39:18.275Z",
+  "resources": [
+    {
+      "item": "index.html",
+      "status": 200,
+      "match": true,
+      "sha256": "194fe72361f20887252c1df35a3553f988ea9147ce96c3c650da847516ffeb30"
+    },
+    {
+      "item": "assets/css/style.css",
+      "status": 200,
+      "match": true,
+      "sha256": "45be486012afec8f4742de6a883e452036338c598eeb6e628df8eeeeedeb5438"
+    },
+    {
+      "item": "assets/js/main.js",
+      "status": 200,
+      "match": true,
+      "sha256": "93e43013e6b65040f3940b2a6bf26902c00713e7feee38b53df284d6f74b5742"
+    },
+    {
+      "item": "assets/img/mira-portrait.webp",
+      "status": 200,
+      "match": true,
+      "sha256": "6a90384184a77b5a7c3160447735dfec36798fabf6f05c2832db3f2950de6720"
+    },
+    {
+      "item": "assets/img/mira-avatar.webp",
+      "status": 200,
+      "match": true,
+      "sha256": "425207e0f49d946e84ffea33e67f25cc3b169a5122f913a838e6a88e0cbdef79"
+    }
+  ],
+  "browsers": [
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "client": 1440,
+          "scroll": 1440,
+          "images": true
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "client": 820,
+          "scroll": 820,
+          "images": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "client": 375,
+          "scroll": 375,
+          "images": true
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "client": 320,
+          "scroll": 320,
+          "images": true
+        }
+      ],
+      "errors": [],
+      "motion": [
+        {
+          "opacity": "0.779351",
+          "transform": "matrix(1, 0, 0, 1, 0, 7.5651)"
+        },
+        {
+          "opacity": "0.878258",
+          "transform": "matrix(1, 0, 0, 1, 0, 4.174)"
+        },
+        {
+          "opacity": "0.945553",
+          "transform": "matrix(1, 0, 0, 1, 0, 1.86676)"
+        },
+        {
+          "opacity": "0.983472",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.566686)"
+        }
+      ]
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "client": 1440,
+          "scroll": 1440,
+          "images": true
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "client": 820,
+          "scroll": 820,
+          "images": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "client": 375,
+          "scroll": 375,
+          "images": true
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "client": 320,
+          "scroll": 320,
+          "images": true
+        }
+      ],
+      "errors": [],
+      "motion": [
+        {
+          "opacity": "0.787529",
+          "transform": "matrix(1, 0, 0, 1, 0, 7.2847)"
+        },
+        {
+          "opacity": "0.883836",
+          "transform": "matrix(1, 0, 0, 1, 0, 3.98276)"
+        },
+        {
+          "opacity": "0.948799",
+          "transform": "matrix(1, 0, 0, 1, 0, 1.75545)"
+        },
+        {
+          "opacity": "0.98185",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.622286)"
+        }
+      ]
+    }
+  ]
+}

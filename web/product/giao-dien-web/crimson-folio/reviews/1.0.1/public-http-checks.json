@@ -1,0 +1,35 @@
+[
+  {
+    "route": "/demos/crimson-folio",
+    "state": {
+      "images": true,
+      "time": 1791213818935.1,
+      "overflow": false,
+      "hash": "#about",
+      "sameDocument": true
+    },
+    "errors": []
+  },
+  {
+    "route": "/demos/crimson-folio/",
+    "state": {
+      "images": true,
+      "time": 1791213820115.5,
+      "overflow": false,
+      "hash": "#about",
+      "sameDocument": true
+    },
+    "errors": []
+  },
+  {
+    "route": "/demos/crimson-folio/index.html",
+    "state": {
+      "images": true,
+      "time": 1791213821297.5,
+      "overflow": false,
+      "hash": "#about",
+      "sameDocument": true
+    },
+    "errors": []
+  }
+]

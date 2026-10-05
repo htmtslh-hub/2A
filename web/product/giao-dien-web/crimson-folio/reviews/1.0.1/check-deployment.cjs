@@ -27,6 +27,9 @@ const assert=(value,message)=>{if(!value)throw new Error(message)};
     for(const [width,height] of [[1440,900],[820,1180],[375,812],[320,740]]){
       await page.setViewportSize({width,height});
       await page.goto(origin+'/demos/crimson-folio/index.html?v=1.0.1');
+      for(const img of await page.locator('img').all()){
+        await img.scrollIntoViewIfNeeded();await img.evaluate(i=>i.decode());
+      }
       const screen=await page.evaluate(()=>({client:innerWidth,scroll:document.documentElement.scrollWidth,images:[...document.images].every(i=>i.complete&&i.naturalWidth>0)}));
       assert(screen.client===screen.scroll&&screen.images,'Live layout/images');
       if(width<650){await page.locator('.menu-toggle').click();await page.locator('.navigation a[href="#about"]').click();assert(await page.locator('.menu-toggle').getAttribute('aria-expanded')==='false','Live menu');}

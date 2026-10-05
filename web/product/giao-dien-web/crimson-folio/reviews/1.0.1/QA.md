@@ -104,3 +104,13 @@ Soniq/Mellow Coffee. Chỉ bổ sung Crimson Folio source, report và public dem
 Không sửa catalog, config Next, backend hay sản phẩm khác.
 Vercel CLI lúc đầu đăng xuất; phiên device login được yêu cầu qua trình duyệt.
 Chưa xác nhận deploy trong báo cáo này; xem deployment-checks.json khi có.
+
+Push origin/master thành công, commit nguồn 2a658f4. Public demo được kiểm
+qua HTTP cục bộ: URL ngắn, URL slash và index.html đều tải đủ assets,
+menu đóng khi chọn anchor và không điều hướng sang document mới;
+public-http-checks.json ghi bằng chứng.
+Vercel CLI 62.2.0 whoami báo Logged out. Device login đã được yêu cầu nhưng
+không có xác thực thành công trước khi phiên kết thúc. GitHub không có
+deployment/check-run cho commit mới; production demo vẫn HTTP404.
+Trạng thái deploy: CHỜ XÁC THỰC, không gọi là READY, chưa chạy online checker.
+Chưa tắt máy vì chuỗi công việc deploy/xác minh chưa hoàn tất.

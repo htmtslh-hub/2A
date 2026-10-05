@@ -1,0 +1,167 @@
+{
+  "axe": [
+    {
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "width": 820,
+      "violations": []
+    },
+    {
+      "width": 375,
+      "violations": []
+    },
+    {
+      "width": 320,
+      "violations": []
+    }
+  ],
+  "contrast": [
+    {
+      "width": 1440,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 1440,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 1440,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 1440,
+      "target": "hero__designer-title",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 1440,
+      "target": "hero__designer-title",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 820,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 820,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 820,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 820,
+      "target": "hero__designer-title",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 820,
+      "target": "hero__designer-title",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 375,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 375,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 375,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 375,
+      "target": "hero__designer-title",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 375,
+      "target": "hero__designer-title",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 320,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 7.18,
+      "required": 3
+    },
+    {
+      "width": 320,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 320,
+      "target": "hero__discipline",
+      "minimumOverEntireTextBox": 5.87,
+      "required": 3
+    },
+    {
+      "width": 320,
+      "target": "hero__designer-title",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    },
+    {
+      "width": 320,
+      "target": "hero__designer-title",
+      "minimumOverEntireTextBox": 8.74,
+      "required": 3
+    }
+  ],
+  "fontIssues": [
+    {
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "width": 820,
+      "issues": []
+    },
+    {
+      "width": 375,
+      "issues": []
+    },
+    {
+      "width": 320,
+      "issues": []
+    }
+  ],
+  "headingClips": [],
+  "imagesUnchanged": true,
+  "missingImages": {
+    "nav": true,
+    "email": "hello@example.com ↗",
+    "width": 320
+  }
+}

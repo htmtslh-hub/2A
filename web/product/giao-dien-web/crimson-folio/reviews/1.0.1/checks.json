@@ -1,0 +1,509 @@
+[
+  {
+    "browser": "chrome",
+    "version": "154.0.8037.93",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "width": 1440,
+        "client": 1440,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      },
+      {
+        "viewport": [
+          820,
+          1180
+        ],
+        "width": 820,
+        "client": 820,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      },
+      {
+        "viewport": [
+          375,
+          812
+        ],
+        "width": 375,
+        "client": 375,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      },
+      {
+        "viewport": [
+          320,
+          740
+        ],
+        "width": 320,
+        "client": 320,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      }
+    ],
+    "errors": [],
+    "motion": [
+      {
+        "reducedMotion": "reduce",
+        "staleOff": true,
+        "samples": [
+          {
+            "opacity": "0.787803",
+            "transform": "matrix(1, 0, 0, 1, 0, 7.27532)"
+          },
+          {
+            "opacity": "0.894733",
+            "transform": "matrix(1, 0, 0, 1, 0, 3.60916)"
+          },
+          {
+            "opacity": "0.951965",
+            "transform": "matrix(1, 0, 0, 1, 0, 1.64691)"
+          },
+          {
+            "opacity": "0.9849",
+            "transform": "matrix(1, 0, 0, 1, 0, 0.517714)"
+          }
+        ],
+        "final": {
+          "opacity": "1",
+          "transform": "none"
+        }
+      },
+      {
+        "reducedMotion": "no-preference",
+        "staleOff": true,
+        "samples": [
+          {
+            "opacity": "0.779492",
+            "transform": "matrix(1, 0, 0, 1, 0, 7.56029)"
+          },
+          {
+            "opacity": "0.889507",
+            "transform": "matrix(1, 0, 0, 1, 0, 3.78834)"
+          },
+          {
+            "opacity": "0.952016",
+            "transform": "matrix(1, 0, 0, 1, 0, 1.64517)"
+          },
+          {
+            "opacity": "0.986332",
+            "transform": "matrix(1, 0, 0, 1, 0, 0.468628)"
+          }
+        ],
+        "final": {
+          "opacity": "1",
+          "transform": "none"
+        }
+      }
+    ]
+  },
+  {
+    "browser": "edge",
+    "version": "154.0.4258.53",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "width": 1440,
+        "client": 1440,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      },
+      {
+        "viewport": [
+          820,
+          1180
+        ],
+        "width": 820,
+        "client": 820,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      },
+      {
+        "viewport": [
+          375,
+          812
+        ],
+        "width": 375,
+        "client": 375,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      },
+      {
+        "viewport": [
+          320,
+          740
+        ],
+        "width": 320,
+        "client": 320,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      }
+    ],
+    "errors": [],
+    "motion": [
+      {
+        "reducedMotion": "reduce",
+        "staleOff": true,
+        "samples": [
+          {
+            "opacity": "0.779492",
+            "transform": "matrix(1, 0, 0, 1, 0, 7.56029)"
+          },
+          {
+            "opacity": "0.884111",
+            "transform": "matrix(1, 0, 0, 1, 0, 3.97335)"
+          },
+          {
+            "opacity": "0.952016",
+            "transform": "matrix(1, 0, 0, 1, 0, 1.64517)"
+          },
+          {
+            "opacity": "0.986332",
+            "transform": "matrix(1, 0, 0, 1, 0, 0.468628)"
+          }
+        ],
+        "final": {
+          "opacity": "1",
+          "transform": "none"
+        }
+      },
+      {
+        "reducedMotion": "no-preference",
+        "staleOff": true,
+        "samples": [
+          {
+            "opacity": "0.804054",
+            "transform": "matrix(1, 0, 0, 1, 0, 6.71816)"
+          },
+          {
+            "opacity": "0.899875",
+            "transform": "matrix(1, 0, 0, 1, 0, 3.43287)"
+          },
+          {
+            "opacity": "0.963324",
+            "transform": "matrix(1, 0, 0, 1, 0, 1.25748)"
+          },
+          {
+            "opacity": "0.989936",
+            "transform": "matrix(1, 0, 0, 1, 0, 0.345059)"
+          }
+        ],
+        "final": {
+          "opacity": "1",
+          "transform": "none"
+        }
+      }
+    ]
+  },
+  {
+    "browser": "coccoc",
+    "version": "152.0.7977.124",
+    "views": [
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "width": 1440,
+        "client": 1440,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      },
+      {
+        "viewport": [
+          820,
+          1180
+        ],
+        "width": 820,
+        "client": 820,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      },
+      {
+        "viewport": [
+          375,
+          812
+        ],
+        "width": 375,
+        "client": 375,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      },
+      {
+        "viewport": [
+          320,
+          740
+        ],
+        "width": 320,
+        "client": 320,
+        "images": [
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-avatar.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/img/mira-portrait.webp",
+            "loaded": true
+          }
+        ],
+        "invisible": 0,
+        "h1": 1,
+        "duplicateIds": [],
+        "badLinks": 0,
+        "interaction": "PASS"
+      }
+    ],
+    "errors": [],
+    "motion": [
+      {
+        "reducedMotion": "reduce",
+        "staleOff": true,
+        "samples": [
+          {
+            "opacity": "0.779492",
+            "transform": "matrix(1, 0, 0, 1, 0, 7.56029)"
+          },
+          {
+            "opacity": "0.894733",
+            "transform": "matrix(1, 0, 0, 1, 0, 3.60916)"
+          },
+          {
+            "opacity": "0.955046",
+            "transform": "matrix(1, 0, 0, 1, 0, 1.54128)"
+          },
+          {
+            "opacity": "0.987608",
+            "transform": "matrix(1, 0, 0, 1, 0, 0.424861)"
+          }
+        ],
+        "final": {
+          "opacity": "1",
+          "transform": "none"
+        }
+      },
+      {
+        "reducedMotion": "no-preference",
+        "staleOff": true,
+        "samples": [
+          {
+            "opacity": "0.779632",
+            "transform": "matrix(1, 0, 0, 1, 0, 7.55548)"
+          },
+          {
+            "opacity": "0.878447",
+            "transform": "matrix(1, 0, 0, 1, 0, 4.16753)"
+          },
+          {
+            "opacity": "0.952066",
+            "transform": "matrix(1, 0, 0, 1, 0, 1.64343)"
+          },
+          {
+            "opacity": "0.984947",
+            "transform": "matrix(1, 0, 0, 1, 0, 0.516105)"
+          }
+        ],
+        "final": {
+          "opacity": "1",
+          "transform": "none"
+        }
+      }
+    ]
+  }
+]

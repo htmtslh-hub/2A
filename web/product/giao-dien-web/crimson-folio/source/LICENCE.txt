@@ -1,0 +1,31 @@
+Crimson Folio - commercial template licence draft
+
+1. Permission
+A perpetual, non-exclusive commercial licence to the template code.
+
+2. Allowed use
+Use the template code in unlimited personal and client websites, modify it
+and publish the resulting websites without attribution.
+
+3. Restrictions
+Do not resell the original template files, list them on another marketplace
+or include them in a competing template collection.
+
+4. Demo content
+Mira Arden and all project names, concepts and descriptions are fictional.
+They do not represent real customer commissions. Replace the sample identity
+and contact email before publication. Image licensing terms remain pending
+the product owner's wording; this draft does not grant image use rights.
+
+5. Fonts
+Only system font stacks are referenced. No font files are bundled or downloaded.
+Use fonts licensed for your device or substitute your own licensed fonts.
+
+6. Ownership
+Copyright owner: [PRODUCT OWNER TO COMPLETE]. Ownership remains with the
+author; this is permission to use the template code, not transfer ownership.
+
+7. Warranty
+Provided as-is, without warranty. Test your customised version before publishing.
+
+Questions about permitted use? Please ask the product owner.

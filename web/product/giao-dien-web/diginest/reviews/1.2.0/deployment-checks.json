@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-06T06:53:40.080Z",
+  "origin": "https://forgezone.store",
+  "url": "https://forgezone.store/demos/diginest/index.html?v=1.2.0",
+  "assets": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "f8432381a2a9ea537635b03d43faa0baa6ce68d93ced2b309313b5b11c94a487",
+      "normalisedSha256": "20cb6699b29f22dded85814257c1a474e6c6c7883a63830808413bbb73ec4c56",
+      "bytes": 17683,
+      "comparison": "Equal after CRLF/LF normalisation for Git Windows checkout"
+    },
+    {
+      "file": "assets/css/style.css",
+      "status": 200,
+      "sha256": "ccc1792f310a0ac1c14b80a31636020f2703f503a604b727cd0d6ada191e49f9",
+      "normalisedSha256": "74c02f582c3b59414a9798eef5ab2a62345a02150a755fd97f26213a8a4bc6db",
+      "bytes": 28391,
+      "comparison": "Equal after CRLF/LF normalisation for Git Windows checkout"
+    },
+    {
+      "file": "assets/js/main.js",
+      "status": 200,
+      "sha256": "7f93c97f7a7c2daa7834bd0d448e85ae569e60f55b7c0a14464307e3811a308c",
+      "normalisedSha256": "e88357c8ae5a7737c32dba3ade3d984c09ab0992314a23e0cd3fb00159951375",
+      "bytes": 17890,
+      "comparison": "Equal after CRLF/LF normalisation for Git Windows checkout"
+    },
+    {
+      "file": "assets/img/hero-desk.webp",
+      "status": 200,
+      "sha256": "1cf8847c8240e4077cc4714f7c5652aba4644361a04b6c94390f868f6bb910b2",
+      "normalisedSha256": "1cf8847c8240e4077cc4714f7c5652aba4644361a04b6c94390f868f6bb910b2",
+      "bytes": 115548,
+      "comparison": "Exact binary bytes"
+    },
+    {
+      "file": "assets/img/entertainment.webp",
+      "status": 200,
+      "sha256": "0acd892468890b537caf1f7467c6f8ee0ccb1efbd26746dafceca15360844e13",
+      "normalisedSha256": "0acd892468890b537caf1f7467c6f8ee0ccb1efbd26746dafceca15360844e13",
+      "bytes": 95578,
+      "comparison": "Exact binary bytes"
+    },
+    {
+      "file": "assets/img/products.webp",
+      "status": 200,
+      "sha256": "103a6ecd6b28e026aa34e53597bd699a0c4bae9a1b6fe55527fa90a7db1ede61",
+      "normalisedSha256": "103a6ecd6b28e026aa34e53597bd699a0c4bae9a1b6fe55527fa90a7db1ede61",
+      "bytes": 202148,
+      "comparison": "Exact binary bytes"
+    }
+  ],
+  "browsers": [
+    {
+      "browser": "Chromium",
+      "version": "153.0.8010.12",
+      "status": "PASS",
+      "scope": "375px live HTTP: flying card, drawer middle frame, Escape, exact totals, persistence, demo review, filter motion, hover, overflow",
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "155.0",
+      "status": "PASS",
+      "scope": "375px live HTTP: flying card, drawer middle frame, Escape, exact totals, persistence, demo review, filter motion, hover, overflow",
+      "errors": []
+    },
+    {
+      "browser": "Edge",
+      "version": "154.0.4258.62",
+      "status": "PASS",
+      "scope": "375px live HTTP: flying card, drawer middle frame, Escape, exact totals, persistence, demo review, filter motion, hover, overflow",
+      "errors": []
+    },
+    {
+      "browser": "CocCoc",
+      "version": "152.0.7977.124",
+      "status": "PASS",
+      "scope": "375px live HTTP: flying card, drawer middle frame, Escape, exact totals, persistence, demo review, filter motion, hover, overflow",
+      "errors": []
+    }
+  ],
+  "storeHomeStatus": 200,
+  "sourceCommit": "9011a41",
+  "checkout": "Demo only; no real payment/order submission",
+  "catalog": "Not added for commercial sale"
+}

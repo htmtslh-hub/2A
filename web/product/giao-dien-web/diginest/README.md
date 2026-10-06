@@ -11,3 +11,11 @@ User brief: replace the deleted Aurora product with the tech ecommerce reference
 Approved scope exceptions from WEB-STATIC-1: W01 extra local image files; W03 generated raster photography; W05 local search, filtering and functional persistent cart explicitly required by ecommerce brief; W06 image-containing ZIP exceeds the static SVG limit. Other safeguards apply. Checkout remains a labelled review demo because no real gateway/backend was requested or supplied.
 
 Assumptions: fictional DigiNest branding, English content to match reference, six sample products and USD prices, sample $5.99 shipping below $99. No real ratings, reviews, financing claims or account system.
+
+## Production demo
+
+Deployed 2026-10-06 by the user's explicit request to the existing Forge Zone Vercel project. URL: https://forgezone.store/demos/diginest/index.html?v=1.2.0
+
+Source commit: 9011a41. Vercel deployment: dpl_CgLWyVX2HsKsZZRmcjic6eB8KzHq. Built from a clean Git archive of that commit; unrelated untracked NovaTrend files were excluded. Production build and TypeScript passed. Live assets and mobile cart/motion checked on Chromium, Firefox, Edge and Cốc Cốc; evidence in reviews/1.2.0/deployment-checks.json. Text asset comparison normalises Windows Git CRLF/LF; binary image hashes match exactly.
+
+This publishes the concept demo only; checkout remains a review demo and the product has not been added for commercial sale in the catalog.

@@ -19,7 +19,7 @@ Giao diện và giỏ hàng hoàn thành trong phạm vi yêu cầu. Kiểm tra 
 | Q09 | PASS | Không console/network errors ở các lượt ghi; đã cuộn và thao tác qua Playwright; ba ảnh tổng 413274 bytes, rAF hữu hạn tối đa 1090ms cho thẻ bay/pulse; không vòng lặp liên tục hoặc scroll listener |
 | Q10 | FAIL trước phát hành thương mại | Docs 10 bước/12 prompt và edit-map đúng; không font tải ngoài. Copyright owner và quyền ảnh raster chưa được cung cấp; đã ghi rõ trong LICENCE.txt |
 | Q11 | PASS theo ngoại lệ W06 | ZIP 439377 bytes, đọc lại khớp source; kiểm tra bản giải nén HTTP/file://. SHA-256 dưới đây |
-| Q12 | N/A | Không được giao tích hợp vào Forge Zone/deploy/thanh toán hay luồng tải sau mua |
+| Q12 | PASS trong phạm vi demo deploy mới | Người dùng đã yêu cầu push/deploy sau nghiệm thu. Public demo trên Forge Zone đã kiểm tra; không thêm catalog bán hàng, không giao thanh toán hoặc luồng tải sau mua |
 | Q13 | PASS | D01–D08 dưới đây; đã xem screenshots của trang và giỏ |
 
 ## Thiết kế
@@ -87,3 +87,11 @@ Chủ sản phẩm đồng ý ba ưu tiên: hover sản phẩm, filter danh mụ
 | CocCoc | 152.0.7977.124 | PASS 1440/820/375/320: frame drawer vào/ra, backdrop, filter hai chiều, hover vào/ra, cleanup, Escape/focus, số lượng giữ đúng; đổi nhanh và CSS/WAAPI disabled |
 
 Bằng chứng hiện tại: motion-checks.json; ảnh screenshots/*-drawer-in.png đã nhìn. checks.json kiểm tra chính ZIP 1.2.0 trên Chromium/Firefox, không failure. Bằng chứng giỏ/flight của 1.1.0 được dẫn như baseline; kiểm tra hiện tại bổ sung số lượng khi thao tác mở/đóng. Không carousel nên last/first wrap N/A. Safari/iPhone thật chưa thử. Q10 bản quyền và ảnh raster vẫn cần chủ sản phẩm hoàn thiện trước phát hành thương mại.
+
+## Deploy production — 06/10/2026
+
+Theo yêu cầu mới của chủ sản phẩm: push GitHub và deploy. Source commit 9011a41 trên master, https://github.com/htmtslh-hub/2A. Vercel READY: dpl_CgLWyVX2HsKsZZRmcjic6eB8KzHq, https://web-k10msq94w-htmtslh-hubs-projects.vercel.app; domain https://forgezone.store.
+
+Demo: https://forgezone.store/demos/diginest/index.html?v=1.2.0. Deploy từ git archive sạch, chỉ commit DigiNest và public demo; NovaTrend đang untracked không đưa vào deploy. Không thay biến môi trường, database, payment hoặc catalog chung. Next production build/TypeScript thành công; trang chủ trả 200 (smoke HTTP, không phải kiểm toán tất cả tính năng của cửa hàng).
+
+deployment-checks.json: 6 tài nguyên trả 200, ảnh khớp byte; HTML/CSS/JS khớp nội dung sau chuẩn hoá CRLF/LF vì Git Windows export. Chromium 153.0.8010.12, Firefox 155.0, Edge 154.0.4258.62, Cốc Cốc 152.0.7977.124 thực: 375px online không tràn; flight, drawer frame giữa, Escape/focus, $55.98 cho một speaker và $99.98 cho hai speaker, persistence, review demo, filter và hover PASS. Không page error; đã xem ảnh deployed trong screenshots/. Không biến checkout demo thành thanh toán thật.

@@ -94,4 +94,12 @@ Theo yêu cầu mới của chủ sản phẩm: push GitHub và deploy. Source c
 
 Demo: https://forgezone.store/demos/diginest/index.html?v=1.2.0. Deploy từ git archive sạch, chỉ commit DigiNest và public demo; NovaTrend đang untracked không đưa vào deploy. Không thay biến môi trường, database, payment hoặc catalog chung. Next production build/TypeScript thành công; trang chủ trả 200 (smoke HTTP, không phải kiểm toán tất cả tính năng của cửa hàng).
 
+## Bổ sung sản phẩm vào thư viện — yêu cầu đính chính của chủ sản phẩm
+
+Sau deploy demo, người dùng xác nhận đây là sản phẩm giao diện web của Forge Zone. Đã đăng DigiNest ở ô chưa dùng t11, cat shop, version 1.2.0 trong REAL_TEMPLATES; thêm hướng dẫn vi/en/zh theo slug và preview 698×524 chụp từ source bằng anh-preview.mjs. Không thay mẫu khác, không đổi giá chung, database hoặc cổng thanh toán. templateFile(t11) suy ra diginest.zip; source và ZIP đã có. Không đổi licence hoặc nhận diện chủ sở hữu còn thiếu.
+
+Source commit a3f3724; Vercel dpl_9dmF7EvYpfDqDJFjgA48yfnRzg1Q READY, alias forgezone.store. Trang sản phẩm: https://forgezone.store/?mau=t11. npm run typecheck và ESLint hai bảng dữ liệu PASS, production build PASS.
+
+catalog-checks.json: Chromium desktop 1440 ở vi-VN/en-US/zh-CN và Firefox mobile 375 PASS: thẻ DigiNest trong library, ảnh khớp hash và tải được, trang chi tiết, popup demo đúng version và giỏ template chứa t11. Không page error, không tràn ngang. Đã nhìn screenshot trang sản phẩm. API download?id=t11 chưa đăng nhập trả 401 đúng kiểm soát quyền. Luồng tải sau thanh toán NOT TESTED vì chưa thực hiện mua hoặc tạo quyền; không tuyên bố đã tải thật sau mua. Giỏ thiết bị trong demo là chức năng thuộc mã mẫu; giỏ Forge Zone bán gói giao diện, dùng cơ chế hiện có.
+
 deployment-checks.json: 6 tài nguyên trả 200, ảnh khớp byte; HTML/CSS/JS khớp nội dung sau chuẩn hoá CRLF/LF vì Git Windows export. Chromium 153.0.8010.12, Firefox 155.0, Edge 154.0.4258.62, Cốc Cốc 152.0.7977.124 thực: 375px online không tràn; flight, drawer frame giữa, Escape/focus, $55.98 cho một speaker và $99.98 cho hai speaker, persistence, review demo, filter và hover PASS. Không page error; đã xem ảnh deployed trong screenshots/. Không biến checkout demo thành thanh toán thật.

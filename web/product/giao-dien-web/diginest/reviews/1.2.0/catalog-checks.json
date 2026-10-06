@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-06T06:59:56.546Z",
+  "sourceCommit": "a3f3724",
+  "deployment": "dpl_9dmF7EvYpfDqDJFjgA48yfnRzg1Q",
+  "url": "https://forgezone.store/?mau=t11",
+  "previewStatus": 200,
+  "unauthorisedDownload": 401,
+  "cases": [
+    {
+      "locale": "vi-VN",
+      "width": 1440,
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "product": "t11 DigiNest",
+      "libraryCard": "PASS",
+      "preview": "PASS",
+      "detail": "PASS",
+      "demoLink": "PASS",
+      "templateCart": "PASS",
+      "errors": []
+    },
+    {
+      "locale": "en-US",
+      "width": 1440,
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "product": "t11 DigiNest",
+      "libraryCard": "PASS",
+      "preview": "PASS",
+      "detail": "PASS",
+      "demoLink": "PASS",
+      "templateCart": "PASS",
+      "errors": []
+    },
+    {
+      "locale": "zh-CN",
+      "width": 1440,
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "product": "t11 DigiNest",
+      "libraryCard": "PASS",
+      "preview": "PASS",
+      "detail": "PASS",
+      "demoLink": "PASS",
+      "templateCart": "PASS",
+      "errors": []
+    },
+    {
+      "locale": "vi-VN",
+      "width": 375,
+      "browser": "firefox",
+      "version": "155.0",
+      "product": "t11 DigiNest",
+      "libraryCard": "PASS",
+      "preview": "PASS",
+      "detail": "PASS",
+      "demoLink": "PASS",
+      "templateCart": "PASS",
+      "errors": []
+    }
+  ],
+  "paidDownload": "NOT TESTED: no payment made or entitlement created. Existing t11 -> diginest.zip mapping and output tracing verified by code; production build passed."
+}

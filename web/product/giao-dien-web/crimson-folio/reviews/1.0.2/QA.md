@@ -96,3 +96,34 @@ CSS khổ <360px cho grid chứa Crimson, .vercelignore cho ZIP Crimson.
 Đối chiếu dữ liệu: toàn bộ 12 catalog records trước đó giữ nguyên; chỉ thêm t13.
 Build/TypeScript thành công. npm ci báo 13 lỗ hổng dependency có sẵn;
 không nâng dependency ứng dụng ngoài phạm vi. Không phải chứng nhận bảo mật.
+
+## Production đã xác minh
+
+Commit triển khai: 6dd1a98, đã push origin/master sau 7a1f4e0 của chủ sản phẩm.
+Vercel project hiện có htmtslh-hubs-projects/web; không tạo project mới.
+Production READY: dpl_CeCzEwr1v7QYyCCmf8yGXeZpZYRR.
+Deployment: https://web-q6a3x0swl-htmtslh-hubs-projects.vercel.app.
+Alias: https://forgezone.store.
+Sản phẩm: https://forgezone.store/?mau=t13.
+Thư viện: https://forgezone.store/?tab=library.
+Demo: https://forgezone.store/demos/crimson-folio/index.html?v=1.0.2.
+
+store-online.json PASS: 13 thẻ thật, DigiNest/NovaTrend vẫn hiện, thẻ Crimson
+ở trang chủ/thư viện đúng tên/ảnh/URL; link dùng Enter được; giỏ nhận t13.
+Việt/Anh/Trung ở desktop, riêng tiếng Việt thêm 820/375/320; không cắt khung
+ảnh hoặc khối chữ detail. Hướng dẫn riêng đúng nội dung; sáu tài nguyên
+HTML/CSS/JS/hai ảnh/preview trả HTTP200, SHA-256 khớp file public trên máy.
+Đã nhìn ảnh card và detail mobile production, không chỉ dựa trên build.
+Production anonymous /api/download?id=t13 trả 401 như yêu cầu.
+
+demo-online.json PASS: Edge 154.0.4258.53/Cốc Cốc 152.0.7977.124,
+bốn viewport, ảnh đủ, menu đóng đúng; có midframe dưới reduced-motion và
+localStorage motion=off cũ, kết thúc opacity=1. Không pageerror.
+Vercel build/TypeScript thành công; /api/download file trace gồm ZIP Crimson.
+API deployment files xác nhận ZIP được upload với uid/SHA-1
+289408ba3a7f4f89ea387a07d67daeb51b81ecdd, khớp SHA-1 file ZIP cục bộ.
+Đây là bằng chứng upload/file trace, không thay cho tải bằng tài khoản đã mua.
+
+Giao diện sản phẩm đã online theo yêu cầu. Q12 mua/tải có quyền vẫn NOT TESTED;
+không tuyên bố nghiệm thu thương mại đầy đủ hoặc đã thử giao dịch thanh toán.
+Không sửa database/quyền mua, không ảnh hưởng dữ liệu tài khoản để kiểm thử.

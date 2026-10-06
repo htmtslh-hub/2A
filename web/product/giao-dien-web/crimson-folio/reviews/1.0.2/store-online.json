@@ -1,0 +1,100 @@
+{
+  "base": "https://forgezone.store",
+  "date": "2026-10-06T14:19:28.039Z",
+  "views": [
+    {
+      "lang": "vi",
+      "width": 1440,
+      "height": 900,
+      "client": 1440,
+      "scroll": 1440,
+      "detail": "PASS",
+      "demo": "https://forgezone.store/demos/crimson-folio/index.html?v=1.0.2"
+    },
+    {
+      "lang": "vi",
+      "width": 820,
+      "height": 1180,
+      "client": 820,
+      "scroll": 820,
+      "detail": "PASS",
+      "demo": "https://forgezone.store/demos/crimson-folio/index.html?v=1.0.2"
+    },
+    {
+      "lang": "vi",
+      "width": 375,
+      "height": 812,
+      "client": 375,
+      "scroll": 375,
+      "detail": "PASS",
+      "demo": "https://forgezone.store/demos/crimson-folio/index.html?v=1.0.2"
+    },
+    {
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 320,
+      "scroll": 320,
+      "detail": "PASS",
+      "demo": "https://forgezone.store/demos/crimson-folio/index.html?v=1.0.2"
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "height": 900,
+      "client": 1440,
+      "scroll": 1440,
+      "detail": "PASS",
+      "demo": "https://forgezone.store/demos/crimson-folio/index.html?v=1.0.2"
+    },
+    {
+      "lang": "zh",
+      "width": 1440,
+      "height": 900,
+      "client": 1440,
+      "scroll": 1440,
+      "detail": "PASS",
+      "demo": "https://forgezone.store/demos/crimson-folio/index.html?v=1.0.2"
+    }
+  ],
+  "assets": [
+    {
+      "path": "/previews/crimson-folio.webp",
+      "status": 200,
+      "sha256": "d97bf19f28c6cd7451f54ed43cc64bebe12533d3bcc26b9044e5984e1ed1785b"
+    },
+    {
+      "path": "/demos/crimson-folio/index.html",
+      "status": 200,
+      "sha256": "f59b8c7e8ea98f4a66a58aab4f429297c09945f94bd6d7b0fbdce4fdeff1206d"
+    },
+    {
+      "path": "/demos/crimson-folio/assets/css/style.css",
+      "status": 200,
+      "sha256": "b6698a917970b5268f014bafa623001e09fadd454ffbfa42b4165ff49dc31f49"
+    },
+    {
+      "path": "/demos/crimson-folio/assets/js/main.js",
+      "status": 200,
+      "sha256": "93e43013e6b65040f3940b2a6bf26902c00713e7feee38b53df284d6f74b5742"
+    },
+    {
+      "path": "/demos/crimson-folio/assets/img/mira-avatar.webp",
+      "status": 200,
+      "sha256": "425207e0f49d946e84ffea33e67f25cc3b169a5122f913a838e6a88e0cbdef79"
+    },
+    {
+      "path": "/demos/crimson-folio/assets/img/mira-portrait.webp",
+      "status": 200,
+      "sha256": "6a90384184a77b5a7c3160447735dfec36798fabf6f05c2832db3f2950de6720"
+    }
+  ],
+  "errors": [],
+  "browser": {
+    "name": "Edge",
+    "version": "154.0.4258.53"
+  },
+  "anonymousDownload": 401,
+  "authorizedDownload": "NOT TESTED: no purchase entitlement created",
+  "result": "PASS"
+}

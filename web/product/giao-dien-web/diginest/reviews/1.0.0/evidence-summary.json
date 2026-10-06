@@ -1,0 +1,232 @@
+[
+  {
+    "name": "chromium",
+    "minText": 4.74,
+    "focus": {
+      "element": "Shop All Categories",
+      "colour": "rgb(255, 209, 146)",
+      "width": "3px",
+      "ratio": 11.05
+    },
+    "overImage": [
+      {
+        "text": "GOOD TECH. GREAT POSSIBILITIES.",
+        "ratio": 10.72
+      },
+      {
+        "text": "Build YourDigital World",
+        "ratio": 15.19
+      },
+      {
+        "text": "Digital World",
+        "ratio": 6.72
+      },
+      {
+        "text": "Everything you need to work,play, create",
+        "ratio": 13.09
+      },
+      {
+        "text": "Shop All Categories",
+        "ratio": 6.17
+      },
+      {
+        "text": "Explore Deals",
+        "ratio": 14.7
+      },
+      {
+        "text": "Free Shipping",
+        "ratio": 15.05
+      },
+      {
+        "text": "On orders over $99",
+        "ratio": 11.95
+      },
+      {
+        "text": "30-Day Returns",
+        "ratio": 15.01
+      },
+      {
+        "text": "Room to change your mind",
+        "ratio": 12.02
+      },
+      {
+        "text": "Thoughtful Selection",
+        "ratio": 4.74
+      },
+      {
+        "text": "Tech for your everyday",
+        "ratio": 4.77
+      },
+      {
+        "text": "MAKE ROOM FOR MORE",
+        "ratio": 9.5
+      },
+      {
+        "text": "EntertainmentUnleashed",
+        "ratio": 11.94
+      },
+      {
+        "text": "Premium tech for movies,music and beyond",
+        "ratio": 10.53
+      }
+    ],
+    "axe": [],
+    "console": [],
+    "network": [],
+    "viewports": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "height": 900,
+        "smallTargets": []
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820,
+        "height": 1180,
+        "smallTargets": []
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "height": 812,
+        "smallTargets": []
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "height": 740,
+        "smallTargets": []
+      }
+    ],
+    "menu": {
+      "breakpoint": 850,
+      "ariaControls": true,
+      "open": true,
+      "openNoOverflow": true,
+      "escapeClosesAndFocuses": true,
+      "linkCloses": true,
+      "resetOnDesktop": true,
+      "closedBackOnMobile": true
+    }
+  },
+  {
+    "name": "firefox",
+    "minText": 4.63,
+    "focus": {
+      "element": "Shop All Categories",
+      "colour": "rgb(255, 209, 146)",
+      "width": "3px",
+      "ratio": 11.05
+    },
+    "overImage": [
+      {
+        "text": "GOOD TECH. GREAT POSSIBILITIES.",
+        "ratio": 10.72
+      },
+      {
+        "text": "Build YourDigital World",
+        "ratio": 15.36
+      },
+      {
+        "text": "Digital World",
+        "ratio": 6.72
+      },
+      {
+        "text": "Everything you need to work,play, create",
+        "ratio": 13.09
+      },
+      {
+        "text": "Shop All Categories",
+        "ratio": 6.17
+      },
+      {
+        "text": "Explore Deals",
+        "ratio": 14.7
+      },
+      {
+        "text": "Free Shipping",
+        "ratio": 15.05
+      },
+      {
+        "text": "On orders over $99",
+        "ratio": 11.95
+      },
+      {
+        "text": "30-Day Returns",
+        "ratio": 14.95
+      },
+      {
+        "text": "Room to change your mind",
+        "ratio": 12.03
+      },
+      {
+        "text": "Thoughtful Selection",
+        "ratio": 4.63
+      },
+      {
+        "text": "Tech for your everyday",
+        "ratio": 4.84
+      },
+      {
+        "text": "MAKE ROOM FOR MORE",
+        "ratio": 9.37
+      },
+      {
+        "text": "EntertainmentUnleashed",
+        "ratio": 11.8
+      },
+      {
+        "text": "Premium tech for movies,music and beyond",
+        "ratio": 10.41
+      }
+    ],
+    "axe": [],
+    "console": [],
+    "network": [],
+    "viewports": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "height": 900,
+        "smallTargets": []
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820,
+        "height": 1180,
+        "smallTargets": []
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "height": 812,
+        "smallTargets": []
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "height": 740,
+        "smallTargets": []
+      }
+    ],
+    "menu": {
+      "breakpoint": 850,
+      "ariaControls": true,
+      "open": true,
+      "openNoOverflow": true,
+      "escapeClosesAndFocuses": true,
+      "linkCloses": true,
+      "resetOnDesktop": true,
+      "closedBackOnMobile": true
+    }
+  }
+]

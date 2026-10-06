@@ -1,0 +1,14 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {resolve} from 'node:path';
+const base=resolve('web/product/giao-dien-web/diginest/reviews');
+const r=JSON.parse(await readFile(base+'/1.2.0/checks.json','utf8'));
+if(r.failures.length)throw new Error(r.failures.join('\n'));
+const motion=JSON.parse(await readFile(base+'/1.2.0/motion-checks.json','utf8'));
+let qa=await readFile(base+'/1.1.0/QA.md','utf8');
+qa=qa.replace('DigiNest 1.1.0','DigiNest 1.2.0').replaceAll('438187',String(r.zipBytes)).replaceAll('8db172ce8fddea322a76f9c96000e448d1f30c6b10cba8108ac9fa28c73415c3',r.sha256).replaceAll('flight-checks.json','../1.1.0/flight-checks.json').replaceAll('cart-checks.json','../1.1.0/cart-checks.json (baseline)');
+qa+='\n## Phạm vi cập nhật 1.2.0\n\nChủ sản phẩm đồng ý ba ưu tiên: hover sản phẩm, filter danh mục, và ngăn giỏ. Chỉ sửa CSS/JS, README/CUSTOMISE, root README, ZIP và hồ sơ DigiNest. Flight 1.1.0 được giữ. Drawer mở/đóng 340ms cùng fade backdrop; vẫn modal tới lúc đóng xong và trả focus. Hover/focus 200ms nâng 5px, ảnh scale 1.045. Filter 320ms dùng vị trí trước/sau và fade sản phẩm mới, cập nhật hidden/data ngay. Tất cả rAF hữu hạn, huỷ sequence cũ khi đổi nhanh, hoạt động khi CSS animation/WAAPI bị vô hiệu hoá và reduced-motion hoặc trạng thái motion=off cũ. Không thay điều khoản licence.\n\n';
+qa+='| Browser | Phiên bản | Bằng chứng |\n|---|---|---|\n'+motion.map(m=>`| ${m.browser} | ${m.version} | PASS 1440/820/375/320: frame drawer vào/ra, backdrop, filter hai chiều, hover vào/ra, cleanup, Escape/focus, số lượng giữ đúng; đổi nhanh và CSS/WAAPI disabled |`).join('\n')+'\n';
+qa+='\nBằng chứng hiện tại: motion-checks.json; ảnh screenshots/*-drawer-in.png đã nhìn. checks.json kiểm tra chính ZIP 1.2.0 trên Chromium/Firefox, không failure. Bằng chứng giỏ/flight của 1.1.0 được dẫn như baseline; kiểm tra hiện tại bổ sung số lượng khi thao tác mở/đóng. Không carousel nên last/first wrap N/A. Safari/iPhone thật chưa thử. Q10 bản quyền và ảnh raster vẫn cần chủ sản phẩm hoàn thiện trước phát hành thương mại.\n';
+await writeFile(base+'/1.2.0/QA.md',qa);
+await writeFile(base+'/1.2.0/evidence-summary.json',JSON.stringify(Object.entries(r.browsers).map(([browser,c])=>({browser,menu:c.menu,axe:c.axe,console:c.console,network:c.network,focus:c.contrast.focus})),null,2));
+console.log(JSON.stringify({failures:r.failures,bytes:r.zipBytes,sha256:r.sha256,motionBrowsers:motion.map(m=>m.browser)},null,2));

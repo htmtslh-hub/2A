@@ -1,0 +1,15 @@
+import {readFile,writeFile,copyFile} from 'node:fs/promises';
+import {resolve} from 'node:path';
+const base=resolve('web/product/giao-dien-web/diginest/reviews');
+const report=JSON.parse(await readFile(base+'/1.1.0/checks.json','utf8'));
+if(report.failures.length)throw new Error(report.failures.join('\n'));
+const flight=JSON.parse(await readFile(base+'/1.1.0/flight-checks.json','utf8'));
+await writeFile(base+'/1.1.0/evidence-summary.json',JSON.stringify(Object.entries(report.browsers).map(([browser,c])=>({browser,menu:c.menu,focus:c.contrast.focus,minTextContrast:Math.min(...c.contrast.pairs.filter(p=>p.threshold===4.5).map(p=>p.ratio)),axe:c.axe,console:c.console,network:c.network})),null,2));
+await copyFile(base+'/1.0.0/cart-checks.json',base+'/1.1.0/cart-checks.json');
+let qa=await readFile(base+'/1.0.0/QA.md','utf8');
+qa=qa.replace('DigiNest 1.0.0','DigiNest 1.1.0').replaceAll('436822',String(report.zipBytes)).replaceAll('9028bc3382efeb802e72acaa94c20b162b37ff72e1ef16e55882a1ff3bf0de1d',report.sha256).replace('không vòng rAF/scroll listener','rAF hữu hạn tối đa 1090ms cho thẻ bay/pulse; không vòng lặp liên tục hoặc scroll listener').replace('Không có animation liên tục hoặc chuyển cảnh quan trọng; các kiểm tra wrap/frame motion N/A.','Không có animation liên tục hoặc carousel; wrap hai chiều N/A. Chuyển động thẻ bay đã đo frame giữa, thu nhỏ, đích giỏ, cleanup và bấm nhanh trên bốn browser, xem flight-checks.json.').replace('desktop-browser-checks.json','../1.0.0/desktop-browser-checks.json').replace('cart-accessibility.json','../1.0.0/cart-accessibility.json');
+qa+='\n## Phạm vi cập nhật 1.1.0\n\nTheo yêu cầu: một thẻ ảnh/tên/giá bay vào giỏ khi thêm sản phẩm hoặc bundle, theo đường cong 850ms; giỏ nảy 240ms. Sticky header giữ đích trong viewport. Tạm dừng/huỷ flight cũ khi bấm mới hoặc mở cart, không ảnh hưởng dữ liệu số lượng. Thẻ pointer-events:none, aria-hidden; không lấy focus. rAF chạy mặc định kể cả reduced-motion và motion=off lưu cũ; hoạt động khi CSS animation và WAAPI bị vô hiệu hoá. Đã nhìn ảnh giữa chuyển động ở mobile.\n\n';
+qa+='| Browser | Phiên bản | Kết quả |\n|---|---|---|\n'+flight.map(r=>`| ${r.browser} | ${r.version} | PASS: frame giữa ở 1440/820/375/320, cleanup, 8 click nhanh, mở cart giữa flight, bundle, noCSS/WAAPI/reduced-motion |`).join('\n')+'\n';
+qa+='\nKiểm tra giỏ hồi quy Chromium/Firefox: cart-checks.json. Kiểm tra tổng thể bản ZIP giải nén: checks.json (0 failure). Kiểm tra Edge/Cốc Cốc bổ sung chỉ tập trung animation/cart; không gọi đó là kiểm toán đầy đủ cả trang. Quyền ảnh/bản quyền Q10 giữ trạng thái chưa phát hành thương mại của bản trước. Không sửa tài sản hoặc sản phẩm khác.\n';
+await writeFile(base+'/1.1.0/QA.md',qa);
+console.log(JSON.stringify({failures:report.failures,zip:report.zipBytes,sha256:report.sha256,browsers:flight.map(r=>r.browser)},null,2));

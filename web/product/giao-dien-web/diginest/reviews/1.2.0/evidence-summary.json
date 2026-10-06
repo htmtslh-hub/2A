@@ -1,0 +1,46 @@
+[
+  {
+    "browser": "chromium",
+    "menu": {
+      "breakpoint": 850,
+      "ariaControls": true,
+      "open": true,
+      "openNoOverflow": true,
+      "escapeClosesAndFocuses": true,
+      "linkCloses": true,
+      "resetOnDesktop": true,
+      "closedBackOnMobile": true
+    },
+    "axe": [],
+    "console": [],
+    "network": [],
+    "focus": {
+      "element": "Shop All Categories",
+      "colour": "rgb(255, 209, 146)",
+      "width": "3px",
+      "ratio": 11.05
+    }
+  },
+  {
+    "browser": "firefox",
+    "menu": {
+      "breakpoint": 850,
+      "ariaControls": true,
+      "open": true,
+      "openNoOverflow": true,
+      "escapeClosesAndFocuses": true,
+      "linkCloses": true,
+      "resetOnDesktop": true,
+      "closedBackOnMobile": true
+    },
+    "axe": [],
+    "console": [],
+    "network": [],
+    "focus": {
+      "element": "Shop All Categories",
+      "colour": "rgb(255, 209, 146)",
+      "width": "3px",
+      "ratio": 11.05
+    }
+  }
+]

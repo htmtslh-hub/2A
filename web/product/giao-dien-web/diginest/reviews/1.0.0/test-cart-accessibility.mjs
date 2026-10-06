@@ -1,0 +1,16 @@
+import {resolve} from 'node:path';
+import {writeFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+process.env.PLAYWRIGHT_BROWSERS_PATH=resolve('_design/.browsers');
+const {chromium}=await import('../../../../../../_design/.tooling/node_modules/playwright/index.mjs');
+const {default:AxeBuilder}=await import('../../../../../../_design/.tooling/node_modules/@axe-core/playwright/dist/index.mjs');
+const browser=await chromium.launch();const context=await browser.newContext({viewport:{width:320,height:740}});const page=await context.newPage();
+await page.goto('http://127.0.0.1:4350');await page.locator('[data-add="wave"]').click();await page.locator('.cart-toggle').click();
+const violations=(await new AxeBuilder({page}).analyze()).violations;
+await page.locator('#close-cart').focus();await page.keyboard.press('Shift+Tab');
+assert.equal(await page.evaluate(()=>document.activeElement===document.body || document.activeElement.closest('#cart')!==null),true);
+await page.keyboard.press('Shift+Tab');assert.equal(await page.evaluate(()=>document.activeElement.closest('#cart')!==null),true);
+await page.evaluate(()=>localStorage.setItem('diginest-cart-v1','{"wave":99}'));await page.reload();await page.locator('.cart-toggle').click();assert.equal(await page.locator('[data-action="plus"]').isDisabled(),true);assert.equal(await page.locator('#total').textContent(),'$12,869.01');
+await page.screenshot({path:resolve('web/product/giao-dien-web/diginest/reviews/1.0.0/screenshots/cart-320.png')});
+await writeFile(resolve('web/product/giao-dien-web/diginest/reviews/1.0.0/cart-accessibility.json'),JSON.stringify({violations,focusTrap:'PASS',maxQuantity:'PASS'},null,2));
+console.log(JSON.stringify({violations,focusTrap:'PASS',maxQuantity:'PASS'},null,2));await browser.close();assert.deepEqual(violations,[]);

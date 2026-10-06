@@ -1,0 +1,2087 @@
+{
+  "slug": "diginest",
+  "version": "1.2.0",
+  "date": "2026-10-06T06:45:49.144Z",
+  "os": "win32",
+  "zipBytes": 439377,
+  "sha256": "e175312bdc9f5057e074b5c32f8ae6dd62f14f1e8488d093d042280b010ceabe",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#main"
+          },
+          {
+            "label": "DigiNest home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#top"
+          },
+          {
+            "label": "Shop by workspace",
+            "href": "#workspaces",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#workspaces"
+          },
+          {
+            "label": "Bestsellers",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Explore deals",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#offers"
+          },
+          {
+            "label": "Shop All Categories",
+            "href": "#workspaces",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#workspaces"
+          },
+          {
+            "label": "Explore Deals",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#offers"
+          },
+          {
+            "label": "View all",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Work From Home",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Creative Studio",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Student Space",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Minimal Desk",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Pro Setup",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Explore Entertainment",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Mobile Devices",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Smart Home",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Gaming Gear",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Audio",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Accessories",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Cameras",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "View all",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Tech, Made SimpleFind your everyday setupRead the guide",
+            "href": "#guide",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#guide"
+          },
+          {
+            "label": "Easy DeliveryFree on orders $99+Shipping details",
+            "href": "#shipping",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#shipping"
+          },
+          {
+            "label": "Room to DecideExplore our sample policyReturns information",
+            "href": "#returns",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#returns"
+          },
+          {
+            "label": "Clear CheckoutReview before you commitHow this demo works",
+            "href": "#demo-info",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#demo-info"
+          },
+          {
+            "label": "DIGINEST",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#top"
+          },
+          {
+            "label": "Workspaces",
+            "href": "#workspaces",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#workspaces"
+          },
+          {
+            "label": "All products",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Bundles",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#offers"
+          },
+          {
+            "label": "Delivery information",
+            "href": "#shipping",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#shipping"
+          },
+          {
+            "label": "Returns",
+            "href": "#returns",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#returns"
+          },
+          {
+            "label": "Shopping guide",
+            "href": "#guide",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#guide"
+          },
+          {
+            "label": "About DigiNest",
+            "href": "#demo-info",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#demo-info"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 850,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 14.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Free shipping on orders $99+",
+            "colour": "rgb(255, 208, 149)",
+            "background": [
+              0,
+              69,
+              70
+            ],
+            "ratio": 7.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "DIGINEST",
+            "colour": "rgb(255, 246, 230)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 14.63,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "NEST",
+            "colour": "rgb(255, 135, 8)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 6.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Shop by workspace",
+            "colour": "rgb(255, 246, 230)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 14.63,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(0, 40, 43)",
+            "background": [
+              255,
+              135,
+              8
+            ],
+            "ratio": 6.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "GOOD TECH. GREAT POSSIBILITIES.",
+            "colour": "rgb(193, 214, 203)",
+            "background": [
+              0,
+              36,
+              40
+            ],
+            "ratio": 10.72,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Build YourDigital World",
+            "colour": "rgb(255, 247, 231)",
+            "background": [
+              1,
+              37,
+              41
+            ],
+            "ratio": 15.19,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Digital World",
+            "colour": "rgb(255, 135, 8)",
+            "background": [
+              1,
+              37,
+              41
+            ],
+            "ratio": 6.72,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero-intro",
+            "text": "Everything you need to work,play, create",
+            "colour": "rgb(227, 233, 223)",
+            "background": [
+              1,
+              37,
+              41
+            ],
+            "ratio": 13.09,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button button-orange",
+            "text": "Shop All Categories",
+            "colour": "rgb(24, 43, 38)",
+            "background": [
+              255,
+              135,
+              8
+            ],
+            "ratio": 6.17,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button button-outline",
+            "text": "Explore Deals",
+            "colour": "rgb(255, 247, 231)",
+            "background": [
+              3,
+              40,
+              42
+            ],
+            "ratio": 14.7,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Free Shipping",
+            "colour": "rgb(255, 247, 231)",
+            "background": [
+              0,
+              38,
+              41
+            ],
+            "ratio": 15.05,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "On orders over $99",
+            "colour": "rgb(215, 225, 215)",
+            "background": [
+              0,
+              38,
+              41
+            ],
+            "ratio": 11.95,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "30-Day Returns",
+            "colour": "rgb(255, 247, 231)",
+            "background": [
+              4,
+              38,
+              40
+            ],
+            "ratio": 15.01,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Room to change your mind",
+            "colour": "rgb(215, 225, 215)",
+            "background": [
+              7,
+              37,
+              38
+            ],
+            "ratio": 12.02,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Thoughtful Selection",
+            "colour": "rgb(255, 247, 231)",
+            "background": [
+              138,
+              105,
+              55
+            ],
+            "ratio": 4.74,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Tech for your everyday",
+            "colour": "rgb(215, 225, 215)",
+            "background": [
+              129,
+              84,
+              65
+            ],
+            "ratio": 4.77,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "MADE FOR YOUR EVERYDAY",
+            "colour": "rgb(91, 102, 91)",
+            "background": [
+              255,
+              245,
+              230
+            ],
+            "ratio": 5.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Shop By Workspace",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              245,
+              230
+            ],
+            "ratio": 13.53,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "View all",
+            "colour": "rgb(22, 78, 69)",
+            "background": [
+              255,
+              245,
+              230
+            ],
+            "ratio": 8.8,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Work From Home",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              248,
+              236
+            ],
+            "ratio": 13.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "MAKE ROOM FOR MORE",
+            "colour": "rgb(214, 226, 212)",
+            "background": [
+              4,
+              57,
+              58
+            ],
+            "ratio": 9.5,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "EntertainmentUnleashed",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              3,
+              57,
+              59
+            ],
+            "ratio": 11.94,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Premium tech for movies,music and beyond",
+            "colour": "rgb(231, 235, 225)",
+            "background": [
+              2,
+              57,
+              58
+            ],
+            "ratio": 10.53,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "BETTER TOGETHER",
+            "colour": "rgb(102, 100, 80)",
+            "background": [
+              243,
+              230,
+              208
+            ],
+            "ratio": 4.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Bundle Builders",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              243,
+              230,
+              208
+            ],
+            "ratio": 11.85,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "More tech. More value.Your soundtrack, e",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              243,
+              230,
+              208
+            ],
+            "ratio": 11.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "Add audio duo · $179.98",
+            "colour": "rgb(22, 78, 69)",
+            "background": [
+              243,
+              230,
+              208
+            ],
+            "ratio": 7.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "category",
+            "text": "Mobile Devices",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              245,
+              230
+            ],
+            "ratio": 13.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "pill",
+            "text": "New",
+            "colour": "rgb(37, 74, 50)",
+            "background": [
+              220,
+              235,
+              217
+            ],
+            "ratio": 8.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "TechWave Pro",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              249,
+              237
+            ],
+            "ratio": 13.93,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Wireless headphones",
+            "colour": "rgb(83, 96, 90)",
+            "background": [
+              255,
+              249,
+              237
+            ],
+            "ratio": 6.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "catalog-note",
+            "text": "Concept store · sample products and pric",
+            "colour": "rgb(83, 96, 90)",
+            "background": [
+              255,
+              245,
+              230
+            ],
+            "ratio": 6.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Tech, Made Simple",
+            "colour": "rgb(255, 244, 221)",
+            "background": [
+              0,
+              58,
+              58
+            ],
+            "ratio": 11.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Find your everyday setup",
+            "colour": "rgb(226, 231, 214)",
+            "background": [
+              0,
+              58,
+              58
+            ],
+            "ratio": 9.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Stay Ahead in Tech",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              235,
+              207
+            ],
+            "ratio": 12.55,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A little inspiration for your next upgra",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              235,
+              207
+            ],
+            "ratio": 12.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button-orange",
+            "text": "Subscribe",
+            "colour": "rgb(24, 43, 38)",
+            "background": [
+              255,
+              135,
+              8
+            ],
+            "ratio": 6.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Demo only — newsletter signup is not con",
+            "colour": "rgb(93, 97, 80)",
+            "background": [
+              255,
+              235,
+              207
+            ],
+            "ratio": 5.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "DIGINEST",
+            "colour": "rgb(230, 234, 222)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 12.84,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Good tech. Great possibilities.",
+            "colour": "rgb(187, 207, 196)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 9.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Shop",
+            "colour": "rgb(230, 234, 222)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 12.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "© 2026 DigiNest · Concept storefront",
+            "colour": "rgb(185, 201, 192)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 9.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Shop All Categories",
+          "colour": "rgb(255, 209, 146)",
+          "width": "3px",
+          "ratio": 11.05
+        },
+        "overImageNeedsManualCheck": [
+          "GOOD TECH. GREAT POSSIBILITIES.",
+          "Build YourDigital World",
+          "Digital World",
+          "Everything you need to work,play, create",
+          "Shop All Categories",
+          "Explore Deals",
+          "Free Shipping",
+          "On orders over $99",
+          "30-Day Returns",
+          "Room to change your mind",
+          "Thoughtful Selection",
+          "Tech for your everyday",
+          "MAKE ROOM FOR MORE",
+          "EntertainmentUnleashed",
+          "Premium tech for movies,music and beyond"
+        ]
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#main"
+          },
+          {
+            "label": "DigiNest home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#top"
+          },
+          {
+            "label": "Shop by workspace",
+            "href": "#workspaces",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#workspaces"
+          },
+          {
+            "label": "Bestsellers",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Explore deals",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#offers"
+          },
+          {
+            "label": "Shop All Categories",
+            "href": "#workspaces",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#workspaces"
+          },
+          {
+            "label": "Explore Deals",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#offers"
+          },
+          {
+            "label": "View all",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Work From Home",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Creative Studio",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Student Space",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Minimal Desk",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Pro Setup",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Explore Entertainment",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Mobile Devices",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Smart Home",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Gaming Gear",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Audio",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Accessories",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Cameras",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "View all",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Tech, Made SimpleFind your everyday setupRead the guide",
+            "href": "#guide",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#guide"
+          },
+          {
+            "label": "Easy DeliveryFree on orders $99+Shipping details",
+            "href": "#shipping",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#shipping"
+          },
+          {
+            "label": "Room to DecideExplore our sample policyReturns information",
+            "href": "#returns",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#returns"
+          },
+          {
+            "label": "Clear CheckoutReview before you commitHow this demo works",
+            "href": "#demo-info",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#demo-info"
+          },
+          {
+            "label": "DIGINEST",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#top"
+          },
+          {
+            "label": "Workspaces",
+            "href": "#workspaces",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#workspaces"
+          },
+          {
+            "label": "All products",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#products"
+          },
+          {
+            "label": "Bundles",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#offers"
+          },
+          {
+            "label": "Delivery information",
+            "href": "#shipping",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#shipping"
+          },
+          {
+            "label": "Returns",
+            "href": "#returns",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#returns"
+          },
+          {
+            "label": "Shopping guide",
+            "href": "#guide",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#guide"
+          },
+          {
+            "label": "About DigiNest",
+            "href": "#demo-info",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/diginest/index.html#demo-info"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 850,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 14.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Free shipping on orders $99+",
+            "colour": "rgb(255, 208, 149)",
+            "background": [
+              0,
+              69,
+              70
+            ],
+            "ratio": 7.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "DIGINEST",
+            "colour": "rgb(255, 246, 230)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 14.63,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "NEST",
+            "colour": "rgb(255, 135, 8)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 6.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Shop by workspace",
+            "colour": "rgb(255, 246, 230)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 14.63,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(0, 40, 43)",
+            "background": [
+              255,
+              135,
+              8
+            ],
+            "ratio": 6.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "GOOD TECH. GREAT POSSIBILITIES.",
+            "colour": "rgb(193, 214, 203)",
+            "background": [
+              0,
+              36,
+              40
+            ],
+            "ratio": 10.72,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Build YourDigital World",
+            "colour": "rgb(255, 247, 231)",
+            "background": [
+              0,
+              36,
+              40
+            ],
+            "ratio": 15.36,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Digital World",
+            "colour": "rgb(255, 135, 8)",
+            "background": [
+              1,
+              37,
+              41
+            ],
+            "ratio": 6.72,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero-intro",
+            "text": "Everything you need to work,play, create",
+            "colour": "rgb(227, 233, 223)",
+            "background": [
+              1,
+              37,
+              41
+            ],
+            "ratio": 13.09,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button button-orange",
+            "text": "Shop All Categories",
+            "colour": "rgb(24, 43, 38)",
+            "background": [
+              255,
+              135,
+              8
+            ],
+            "ratio": 6.17,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button button-outline",
+            "text": "Explore Deals",
+            "colour": "rgb(255, 247, 231)",
+            "background": [
+              3,
+              40,
+              42
+            ],
+            "ratio": 14.7,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Free Shipping",
+            "colour": "rgb(255, 247, 231)",
+            "background": [
+              0,
+              38,
+              41
+            ],
+            "ratio": 15.05,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "On orders over $99",
+            "colour": "rgb(215, 225, 215)",
+            "background": [
+              0,
+              38,
+              41
+            ],
+            "ratio": 11.95,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "30-Day Returns",
+            "colour": "rgb(255, 247, 231)",
+            "background": [
+              7,
+              38,
+              41
+            ],
+            "ratio": 14.95,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Room to change your mind",
+            "colour": "rgb(215, 225, 215)",
+            "background": [
+              6,
+              37,
+              38
+            ],
+            "ratio": 12.03,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Thoughtful Selection",
+            "colour": "rgb(255, 247, 231)",
+            "background": [
+              141,
+              106,
+              57
+            ],
+            "ratio": 4.63,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Tech for your everyday",
+            "colour": "rgb(215, 225, 215)",
+            "background": [
+              108,
+              90,
+              86
+            ],
+            "ratio": 4.84,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "MADE FOR YOUR EVERYDAY",
+            "colour": "rgb(91, 102, 91)",
+            "background": [
+              255,
+              245,
+              230
+            ],
+            "ratio": 5.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Shop By Workspace",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              245,
+              230
+            ],
+            "ratio": 13.53,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "View all",
+            "colour": "rgb(22, 78, 69)",
+            "background": [
+              255,
+              245,
+              230
+            ],
+            "ratio": 8.8,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Work From Home",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              248,
+              236
+            ],
+            "ratio": 13.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "MAKE ROOM FOR MORE",
+            "colour": "rgb(214, 226, 212)",
+            "background": [
+              4,
+              58,
+              59
+            ],
+            "ratio": 9.37,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "EntertainmentUnleashed",
+            "colour": "rgb(255, 247, 233)",
+            "background": [
+              3,
+              58,
+              59
+            ],
+            "ratio": 11.8,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Premium tech for movies,music and beyond",
+            "colour": "rgb(231, 235, 225)",
+            "background": [
+              2,
+              58,
+              58
+            ],
+            "ratio": 10.41,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "BETTER TOGETHER",
+            "colour": "rgb(102, 100, 80)",
+            "background": [
+              243,
+              230,
+              208
+            ],
+            "ratio": 4.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Bundle Builders",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              243,
+              230,
+              208
+            ],
+            "ratio": 11.85,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "More tech. More value.Your soundtrack, e",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              243,
+              230,
+              208
+            ],
+            "ratio": 11.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "Add audio duo · $179.98",
+            "colour": "rgb(22, 78, 69)",
+            "background": [
+              243,
+              230,
+              208
+            ],
+            "ratio": 7.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "category",
+            "text": "Mobile Devices",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              245,
+              230
+            ],
+            "ratio": 13.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "pill",
+            "text": "New",
+            "colour": "rgb(37, 74, 50)",
+            "background": [
+              220,
+              235,
+              217
+            ],
+            "ratio": 8.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "TechWave Pro",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              249,
+              237
+            ],
+            "ratio": 13.93,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Wireless headphones",
+            "colour": "rgb(83, 96, 90)",
+            "background": [
+              255,
+              249,
+              237
+            ],
+            "ratio": 6.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "catalog-note",
+            "text": "Concept store · sample products and pric",
+            "colour": "rgb(83, 96, 90)",
+            "background": [
+              255,
+              245,
+              230
+            ],
+            "ratio": 6.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Tech, Made Simple",
+            "colour": "rgb(255, 244, 221)",
+            "background": [
+              0,
+              58,
+              58
+            ],
+            "ratio": 11.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Find your everyday setup",
+            "colour": "rgb(226, 231, 214)",
+            "background": [
+              0,
+              58,
+              58
+            ],
+            "ratio": 9.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Stay Ahead in Tech",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              235,
+              207
+            ],
+            "ratio": 12.55,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A little inspiration for your next upgra",
+            "colour": "rgb(18, 45, 44)",
+            "background": [
+              255,
+              235,
+              207
+            ],
+            "ratio": 12.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button-orange",
+            "text": "Subscribe",
+            "colour": "rgb(24, 43, 38)",
+            "background": [
+              255,
+              135,
+              8
+            ],
+            "ratio": 6.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Demo only — newsletter signup is not con",
+            "colour": "rgb(93, 97, 80)",
+            "background": [
+              255,
+              235,
+              207
+            ],
+            "ratio": 5.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "DIGINEST",
+            "colour": "rgb(230, 234, 222)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 12.84,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Good tech. Great possibilities.",
+            "colour": "rgb(187, 207, 196)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 9.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Shop",
+            "colour": "rgb(230, 234, 222)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 12.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "© 2026 DigiNest · Concept storefront",
+            "colour": "rgb(185, 201, 192)",
+            "background": [
+              0,
+              40,
+              43
+            ],
+            "ratio": 9.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Shop All Categories",
+          "colour": "rgb(255, 209, 146)",
+          "width": "3px",
+          "ratio": 11.05
+        },
+        "overImageNeedsManualCheck": [
+          "GOOD TECH. GREAT POSSIBILITIES.",
+          "Build YourDigital World",
+          "Digital World",
+          "Everything you need to work,play, create",
+          "Shop All Categories",
+          "Explore Deals",
+          "Free Shipping",
+          "On orders over $99",
+          "30-Day Returns",
+          "Room to change your mind",
+          "Thoughtful Selection",
+          "Tech for your everyday",
+          "MAKE ROOM FOR MORE",
+          "EntertainmentUnleashed",
+          "Premium tech for movies,music and beyond"
+        ]
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "diginest/assets/css/style.css",
+    "diginest/assets/img/entertainment.webp",
+    "diginest/assets/img/hero-desk.webp",
+    "diginest/assets/img/products.webp",
+    "diginest/assets/js/main.js",
+    "diginest/CUSTOMISE.md",
+    "diginest/index.html",
+    "diginest/LICENCE.txt",
+    "diginest/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/entertainment.webp",
+    "assets/img/hero-desk.webp",
+    "assets/img/products.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

@@ -1,0 +1,24 @@
+DigiNest licence
+
+1. Permission
+The intended template licence is perpetual, commercial and non-exclusive, subject to the product owner completing the ownership and raster asset terms below before sale.
+
+2. Permitted use
+Use the licensed template in unlimited projects, including client projects, and modify it freely. Attribution is not required.
+
+3. Restrictions
+Do not resell the template files themselves, list them on another marketplace or include them in a competing template collection.
+
+4. Demo content
+DigiNest and the product names, prices and policies are fictional demonstration content. Replace them before publication. The three images were generated for this concept. They are not verified merchandise photographs. Commercial raster-image terms remain pending the product owner's approval; this document does not independently grant those rights.
+
+5. Fonts
+This template uses local system fonts only (Segoe UI, Arial and sans-serif fallback). No font file is distributed or fetched. The user's installed fonts remain covered by their own system licences.
+
+6. Ownership
+Copyright owner: OWNER TO BE CONFIRMED BY PRODUCT OWNER. Copyright remains with the author; a template licence grants use, not ownership. Complete this owner field before commercial release.
+
+7. No warranty
+Provided as is without warranty. The user is responsible for verifying content, integrations and suitability. No payment, stock or order service is included.
+
+If you are unsure whether a use is allowed, ask. The answer is usually yes.

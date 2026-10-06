@@ -1,0 +1,206 @@
+[
+  {
+    "browser": "Chromium",
+    "version": "153.0.8010.12",
+    "viewports": [
+      {
+        "width": 1440,
+        "incoming": {
+          "transform": "translateX(29.8393%)",
+          "backdrop": "0.5612858203064087"
+        },
+        "rearrange": "translate(181.089px, -17.6481px)",
+        "appear": "0.650464",
+        "status": "PASS"
+      },
+      {
+        "width": 820,
+        "incoming": {
+          "transform": "translateX(30.9158%)",
+          "backdrop": "0.5526737859041838"
+        },
+        "rearrange": "translate(0px, 98.1252px)",
+        "appear": "0.722608",
+        "status": "PASS"
+      },
+      {
+        "width": 375,
+        "incoming": {
+          "transform": "translateX(25.2154%)",
+          "backdrop": "0.598276698723985"
+        },
+        "rearrange": "translate(56.2825px, 78.3493px)",
+        "appear": "0.715299",
+        "status": "PASS"
+      },
+      {
+        "width": 320,
+        "incoming": {
+          "transform": "translateX(31.199%)",
+          "backdrop": "0.550407722043558"
+        },
+        "rearrange": "translate(40.0212px, 58.4863px)",
+        "appear": "0.727291",
+        "status": "PASS"
+      }
+    ],
+    "rapidOppositeActions": "PASS",
+    "cssWAAPIDisabled": "PASS",
+    "reducedMotionLegacyOff": "PASS animation enabled",
+    "cartData": "PASS quantities preserved",
+    "errors": []
+  },
+  {
+    "browser": "Firefox",
+    "version": "155.0",
+    "viewports": [
+      {
+        "width": 1440,
+        "incoming": {
+          "transform": "translateX(28.7573%)",
+          "backdrop": "0.5699416980482803"
+        },
+        "rearrange": "translate(243.761px, -23.7554px)",
+        "appear": "0.679223",
+        "status": "PASS"
+      },
+      {
+        "width": 820,
+        "incoming": {
+          "transform": "translateX(27.4998%)",
+          "backdrop": "0.5800016297374312"
+        },
+        "rearrange": "translate(0px, 75.8684px)",
+        "appear": "0.658849",
+        "status": "PASS"
+      },
+      {
+        "width": 375,
+        "incoming": {
+          "transform": "translateX(23.8871%)",
+          "backdrop": "0.6089031245117851"
+        },
+        "rearrange": "translate(48.6137px)",
+        "appear": "0.678184",
+        "status": "PASS"
+      },
+      {
+        "width": 320,
+        "incoming": {
+          "transform": "translateX(31.3291%)",
+          "backdrop": "0.5493672136232852"
+        },
+        "rearrange": "translate(42.5918px)",
+        "appear": "0.71948",
+        "status": "PASS"
+      }
+    ],
+    "rapidOppositeActions": "PASS",
+    "cssWAAPIDisabled": "PASS",
+    "reducedMotionLegacyOff": "PASS animation enabled",
+    "cartData": "PASS quantities preserved",
+    "errors": []
+  },
+  {
+    "browser": "Edge",
+    "version": "154.0.4258.62",
+    "viewports": [
+      {
+        "width": 1440,
+        "incoming": {
+          "transform": "translateX(32.8089%)",
+          "backdrop": "0.5375287273584961"
+        },
+        "rearrange": "translate(181.347px, -17.6733px)",
+        "appear": "0.724415",
+        "status": "PASS"
+      },
+      {
+        "width": 820,
+        "incoming": {
+          "transform": "translateX(30.8755%)",
+          "backdrop": "0.5529963852635864"
+        },
+        "rearrange": "translate(0px, 68.7316px)",
+        "appear": "0.738245",
+        "status": "PASS"
+      },
+      {
+        "width": 375,
+        "incoming": {
+          "transform": "translateX(32.725%)",
+          "backdrop": "0.5381997230359169"
+        },
+        "rearrange": "translate(41.5025px, 57.7745px)",
+        "appear": "0.744469",
+        "status": "PASS"
+      },
+      {
+        "width": 320,
+        "incoming": {
+          "transform": "translateX(30.0367%)",
+          "backdrop": "0.5597063315035259"
+        },
+        "rearrange": "translate(39.6238px, 57.9056px)",
+        "appear": "0.691438",
+        "status": "PASS"
+      }
+    ],
+    "rapidOppositeActions": "PASS",
+    "cssWAAPIDisabled": "PASS",
+    "reducedMotionLegacyOff": "PASS animation enabled",
+    "cartData": "PASS quantities preserved",
+    "errors": []
+  },
+  {
+    "browser": "CocCoc",
+    "version": "152.0.7977.124",
+    "viewports": [
+      {
+        "width": 1440,
+        "incoming": {
+          "transform": "translateX(32.516%)",
+          "backdrop": "0.539872206971071"
+        },
+        "rearrange": "translate(198.113px, -19.3072px)",
+        "appear": "0.675215",
+        "status": "PASS"
+      },
+      {
+        "width": 820,
+        "incoming": {
+          "transform": "translateX(38.6203%)",
+          "backdrop": "0.49103793657364075"
+        },
+        "rearrange": "translate(0px, 68.1099px)",
+        "appear": "0.71493",
+        "status": "PASS"
+      },
+      {
+        "width": 375,
+        "incoming": {
+          "transform": "translateX(32.725%)",
+          "backdrop": "0.5381997230434094"
+        },
+        "rearrange": "translate(39.9813px, 55.6568px)",
+        "appear": "0.702201",
+        "status": "PASS"
+      },
+      {
+        "width": 320,
+        "incoming": {
+          "transform": "translateX(30.7547%)",
+          "backdrop": "0.5539624999976038"
+        },
+        "rearrange": "translate(37.1861px, 54.3432px)",
+        "appear": "0.749918",
+        "status": "PASS"
+      }
+    ],
+    "rapidOppositeActions": "PASS",
+    "cssWAAPIDisabled": "PASS",
+    "reducedMotionLegacyOff": "PASS animation enabled",
+    "cartData": "PASS quantities preserved",
+    "errors": []
+  }
+]

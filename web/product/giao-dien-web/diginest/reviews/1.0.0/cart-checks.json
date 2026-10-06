@@ -1,0 +1,22 @@
+[
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "cart": "PASS: add, quantity, remove, threshold, persistence, bundle, demo review, Escape/focus",
+    "filters": "PASS",
+    "invalidStorage": "PASS",
+    "noJS": "PASS",
+    "responsive": "PASS: 1440,820,375,320",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "cart": "PASS: add, quantity, remove, threshold, persistence, bundle, demo review, Escape/focus",
+    "filters": "PASS",
+    "invalidStorage": "PASS",
+    "noJS": "PASS",
+    "responsive": "PASS: 1440,820,375,320",
+    "errors": []
+  }
+]

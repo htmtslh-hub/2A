@@ -1,0 +1,20 @@
+[
+  {
+    "browser": "Edge",
+    "version": "154.0.4258.62",
+    "status": "PASS",
+    "scope": "375px cart, add, quantities, persistence, cross-tab synchronisation, menu, Escape, reduced-motion setting",
+    "errors": []
+  },
+  {
+    "browser": "CocCoc",
+    "version": "152.0.7977.124",
+    "status": "PASS",
+    "scope": "375px cart, add, quantities, persistence, cross-tab synchronisation, menu, Escape, reduced-motion setting",
+    "errors": []
+  },
+  {
+    "browser": "Chromium",
+    "storageDenied": "PASS: cart remains functional"
+  }
+]

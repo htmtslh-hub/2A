@@ -1,0 +1,46 @@
+{
+  "entries": [
+    {
+      "name": "crimson-folio/CUSTOMISE.md",
+      "bytes": 20286,
+      "packedBytes": 7772
+    },
+    {
+      "name": "crimson-folio/index.html",
+      "bytes": 33381,
+      "packedBytes": 7427
+    },
+    {
+      "name": "crimson-folio/LICENCE.txt",
+      "bytes": 1329,
+      "packedBytes": 683
+    },
+    {
+      "name": "crimson-folio/README.md",
+      "bytes": 2767,
+      "packedBytes": 1462
+    },
+    {
+      "name": "crimson-folio/assets/css/style.css",
+      "bytes": 16008,
+      "packedBytes": 3770
+    },
+    {
+      "name": "crimson-folio/assets/img/mira-avatar.webp",
+      "bytes": 22936,
+      "packedBytes": 22878
+    },
+    {
+      "name": "crimson-folio/assets/img/mira-portrait.webp",
+      "bytes": 46942,
+      "packedBytes": 46883
+    },
+    {
+      "name": "crimson-folio/assets/js/main.js",
+      "bytes": 2104,
+      "packedBytes": 800
+    }
+  ],
+  "estimatedZipBytes": 92799,
+  "approval": "Owner accepted eight files and 128 KiB on 2026-10-06; see QA.md"
+}

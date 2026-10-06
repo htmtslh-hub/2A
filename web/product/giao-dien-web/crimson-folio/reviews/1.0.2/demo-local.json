@@ -1,0 +1,139 @@
+{
+  "origin": "http://127.0.0.1:3007",
+  "date": "2026-10-06T14:15:07.783Z",
+  "resources": [
+    {
+      "item": "index.html",
+      "status": 200,
+      "sha256": "f59b8c7e8ea98f4a66a58aab4f429297c09945f94bd6d7b0fbdce4fdeff1206d"
+    },
+    {
+      "item": "assets/css/style.css",
+      "status": 200,
+      "sha256": "b6698a917970b5268f014bafa623001e09fadd454ffbfa42b4165ff49dc31f49"
+    },
+    {
+      "item": "assets/js/main.js",
+      "status": 200,
+      "sha256": "93e43013e6b65040f3940b2a6bf26902c00713e7feee38b53df284d6f74b5742"
+    },
+    {
+      "item": "assets/img/mira-portrait.webp",
+      "status": 200,
+      "sha256": "6a90384184a77b5a7c3160447735dfec36798fabf6f05c2832db3f2950de6720"
+    },
+    {
+      "item": "assets/img/mira-avatar.webp",
+      "status": 200,
+      "sha256": "425207e0f49d946e84ffea33e67f25cc3b169a5122f913a838e6a88e0cbdef79"
+    }
+  ],
+  "browsers": [
+    {
+      "name": "edge",
+      "version": "154.0.4258.53",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "client": 1440,
+          "scroll": 1440,
+          "images": true
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "client": 820,
+          "scroll": 820,
+          "images": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "client": 375,
+          "scroll": 375,
+          "images": true
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "client": 320,
+          "scroll": 320,
+          "images": true
+        }
+      ],
+      "errors": [],
+      "motion": [
+        {
+          "opacity": "0.78794",
+          "transform": "matrix(1, 0, 0, 1, 0, 7.27063)"
+        },
+        {
+          "opacity": "0.884111",
+          "transform": "matrix(1, 0, 0, 1, 0, 3.97335)"
+        },
+        {
+          "opacity": "0.945663",
+          "transform": "matrix(1, 0, 0, 1, 0, 1.86297)"
+        },
+        {
+          "opacity": "0.981956",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.618652)"
+        }
+      ]
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "client": 1440,
+          "scroll": 1440,
+          "images": true
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "client": 820,
+          "scroll": 820,
+          "images": true
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "client": 375,
+          "scroll": 375,
+          "images": true
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "client": 320,
+          "scroll": 320,
+          "images": true
+        }
+      ],
+      "errors": [],
+      "motion": [
+        {
+          "opacity": "0.779492",
+          "transform": "matrix(1, 0, 0, 1, 0, 7.56029)"
+        },
+        {
+          "opacity": "0.88933",
+          "transform": "matrix(1, 0, 0, 1, 0, 3.79441)"
+        },
+        {
+          "opacity": "0.951965",
+          "transform": "matrix(1, 0, 0, 1, 0, 1.64691)"
+        },
+        {
+          "opacity": "0.984923",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.516909)"
+        }
+      ]
+    }
+  ]
+}

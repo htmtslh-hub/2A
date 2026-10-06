@@ -1,0 +1,820 @@
+{
+  "slug": "crimson-folio",
+  "version": "1.0.2",
+  "date": "2026-10-06T14:00:31.953Z",
+  "os": "win32",
+  "zipBytes": 92806,
+  "sha256": "7bb1efacc1d0166fd2fad463f3a9636a41480feb326109fdf8ffe64f62f1b802",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "151.0.7922.34",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 19,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#main"
+          },
+          {
+            "label": "MIRA ARDENIndependent designer",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#main"
+          },
+          {
+            "label": "Selected work",
+            "href": "#work",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#work"
+          },
+          {
+            "label": "About me",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#about"
+          },
+          {
+            "label": "Let's talk ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#contact"
+          },
+          {
+            "label": "Selected work ↘",
+            "href": "#work",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#work"
+          },
+          {
+            "label": "Let's make it happen ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#contact"
+          },
+          {
+            "label": "hello@example.com ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Start a project",
+            "href": "mailto:hello@example.com?subject=New%20project",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=New%20project"
+          },
+          {
+            "label": "Share a brief",
+            "href": "mailto:hello@example.com?subject=Design%20brief",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Design%20brief"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 650,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(33, 4, 6)",
+            "background": [
+              255,
+              241,
+              211
+            ],
+            "ratio": 17.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "wordmark",
+            "text": "MIRA ARDENIndependent designer",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              33,
+              4,
+              6
+            ],
+            "ratio": 17.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Independent designer",
+            "colour": "rgb(223, 195, 181)",
+            "background": [
+              33,
+              4,
+              6
+            ],
+            "ratio": 11.63,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "UX",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              135,
+              20,
+              30
+            ],
+            "ratio": 8.74,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__brand-tag",
+            "text": "MIRA ARDEN",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              135,
+              20,
+              30
+            ],
+            "ratio": 8.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__outline-letters",
+            "text": "GN",
+            "colour": "rgba(0, 0, 0, 0)",
+            "background": [
+              135,
+              20,
+              30
+            ],
+            "ratio": 1,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": false
+          },
+          {
+            "element": "P",
+            "text": "Web & identity.Made for you.",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              71,
+              9,
+              15
+            ],
+            "ratio": 14.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "serif-title serif-title--italic",
+            "text": "Who am I?",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              71,
+              9,
+              15
+            ],
+            "ratio": 14.29,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "step-badge",
+            "text": "01",
+            "colour": "rgb(71, 9, 15)",
+            "background": [
+              255,
+              241,
+              211
+            ],
+            "ratio": 14.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Audience, ambition and a clear starting ",
+            "colour": "rgb(223, 195, 181)",
+            "background": [
+              71,
+              9,
+              15
+            ],
+            "ratio": 9.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "serif-title",
+            "text": "Selected work",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              33,
+              4,
+              6
+            ],
+            "ratio": 17.31,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "serif-title",
+            "text": "Collaboration",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              163,
+              36,
+              53
+            ],
+            "ratio": 6.56,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Start a project",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              163,
+              36,
+              53
+            ],
+            "ratio": 6.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Selected work ↘",
+          "colour": "rgb(255, 241, 211)",
+          "width": "3px",
+          "ratio": 8.74
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "153.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 19,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#main"
+          },
+          {
+            "label": "MIRA ARDENIndependent designer",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#main"
+          },
+          {
+            "label": "Selected work",
+            "href": "#work",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#work"
+          },
+          {
+            "label": "About me",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#about"
+          },
+          {
+            "label": "Let's talk ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#contact"
+          },
+          {
+            "label": "Selected work ↘",
+            "href": "#work",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#work"
+          },
+          {
+            "label": "Let's make it happen ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#contact"
+          },
+          {
+            "label": "hello@example.com ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Start a project",
+            "href": "mailto:hello@example.com?subject=New%20project",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=New%20project"
+          },
+          {
+            "label": "Share a brief",
+            "href": "mailto:hello@example.com?subject=Design%20brief",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Design%20brief"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/crimson-folio/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 650,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(33, 4, 6)",
+            "background": [
+              255,
+              241,
+              211
+            ],
+            "ratio": 17.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "wordmark",
+            "text": "MIRA ARDENIndependent designer",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              33,
+              4,
+              6
+            ],
+            "ratio": 17.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Independent designer",
+            "colour": "rgb(223, 195, 181)",
+            "background": [
+              33,
+              4,
+              6
+            ],
+            "ratio": 11.63,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "UX",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              135,
+              20,
+              30
+            ],
+            "ratio": 8.74,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__brand-tag",
+            "text": "MIRA ARDEN",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              135,
+              20,
+              30
+            ],
+            "ratio": 8.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__outline-letters",
+            "text": "GN",
+            "colour": "rgba(0, 0, 0, 0)",
+            "background": [
+              135,
+              20,
+              30
+            ],
+            "ratio": 1,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": false
+          },
+          {
+            "element": "P",
+            "text": "Web & identity.Made for you.",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              71,
+              9,
+              15
+            ],
+            "ratio": 14.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "serif-title serif-title--italic",
+            "text": "Who am I?",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              71,
+              9,
+              15
+            ],
+            "ratio": 14.29,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "step-badge",
+            "text": "01",
+            "colour": "rgb(71, 9, 15)",
+            "background": [
+              255,
+              241,
+              211
+            ],
+            "ratio": 14.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Audience, ambition and a clear starting ",
+            "colour": "rgb(223, 195, 181)",
+            "background": [
+              71,
+              9,
+              15
+            ],
+            "ratio": 9.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "serif-title",
+            "text": "Selected work",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              33,
+              4,
+              6
+            ],
+            "ratio": 17.31,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "serif-title",
+            "text": "Collaboration",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              163,
+              36,
+              53
+            ],
+            "ratio": 6.56,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Start a project",
+            "colour": "rgb(255, 241, 211)",
+            "background": [
+              163,
+              36,
+              53
+            ],
+            "ratio": 6.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Selected work ↘",
+          "colour": "rgb(255, 241, 211)",
+          "width": "3px",
+          "ratio": 8.74
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "crimson-folio/assets/css/style.css",
+    "crimson-folio/assets/img/mira-avatar.webp",
+    "crimson-folio/assets/img/mira-portrait.webp",
+    "crimson-folio/assets/js/main.js",
+    "crimson-folio/CUSTOMISE.md",
+    "crimson-folio/index.html",
+    "crimson-folio/LICENCE.txt",
+    "crimson-folio/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/mira-avatar.webp",
+    "assets/img/mira-portrait.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q05/chromium: 19 SVG thiếu aria-hidden/tên hoặc viewBox",
+    "Q06/chromium: tương phản thấp [{\"element\":\"hero__outline-letters\",\"text\":\"GN\",\"colour\":\"rgba(0, 0, 0, 0)\",\"background\":[135,20,30],\"ratio\":1,\"threshold\":3,\"overImage\":false,\"method\":\"css\",\"pass\":false}]",
+    "Q05/firefox: 19 SVG thiếu aria-hidden/tên hoặc viewBox",
+    "Q06/firefox: tương phản thấp [{\"element\":\"hero__outline-letters\",\"text\":\"GN\",\"colour\":\"rgba(0, 0, 0, 0)\",\"background\":[135,20,30],\"ratio\":1,\"threshold\":3,\"overImage\":false,\"method\":\"css\",\"pass\":false}]"
+  ]
+}

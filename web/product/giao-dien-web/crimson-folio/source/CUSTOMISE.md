@@ -1,6 +1,6 @@
 # Crimson Folio - customisation guide
 
-This guide takes you from the downloaded ZIP file to a website you can publish. Follow the steps in order the first time. Every AI prompt below is complete: copy it, attach the requested files, and replace the information in square brackets.
+This guide takes you from the downloaded ZIP file to a website you can publish. Follow the steps in order the first time. Copy a prompt and attach your current files. The assistant asks for missing business information; you do not need to fill in code selectors or technical placeholders.
 
 ## Before you begin
 
@@ -117,17 +117,10 @@ Give AI verified business information. If something is missing, ask it to remove
 **Prompt 02 - Personalise all website content**
 
 ```text
-Use the latest website files in this conversation. Replace the demo brand and
-copy with the verified information below:
-
-Brand: [BRAND NAME]
-What we offer: [PRODUCTS OR SERVICES]
-Audience: [TARGET AUDIENCE]
-Main benefit: [VERIFIED BENEFIT]
-Tone: [FOR EXAMPLE: CLEAR, WARM, PROFESSIONAL]
-Public contact details: [EMAIL, PHONE, ADDRESS OR "NOT PUBLIC"]
-Main action: [WHAT THE VISITOR SHOULD DO]
-Required language: [LANGUAGE]
+Read my current Crimson Folio files. Ask me for my brand, services, audience,
+verified benefit, tone, public contact details, main action and language in
+small groups. Wait for my answers before replacing the demo copy. Let me
+leave information undecided and identify what must be resolved before publishing.
 
 Before editing, list any information still missing and any demo claim that
 cannot be supported. Then update the page title, metadata, navigation, hero,
@@ -145,10 +138,11 @@ Audit every button, text link, menu item, email link, phone link, and form in
 the latest files. Create a table with its visible label, current destination,
 whether it works, and the destination it should use.
 
-Use only these verified destinations:
-Primary action: [EMAIL, PHONE, BOOKING URL OR OTHER REAL URL]
-Secondary action: [REAL URL OR "REMOVE"]
-Social links: [REAL URLS OR "REMOVE"]
+Ask me for the primary destination, optional secondary destination and any
+social links. Use only destinations I confirm; let me remove unused actions.
+Ask whether I want regenerated email QR codes or to remove both QR links.
+Regenerate and scan both QR codes if their email changes; editing href alone
+does not change the encoded destination.
 
 Then update the files. Use mailto: for email, tel: for phone, and secure https
 URLs for external pages. Keep internal section links working. If a form has no
@@ -164,15 +158,10 @@ Make one type of visual change at a time and refresh the page after each one. At
 **Prompt 04 - Apply my colours and fonts safely**
 
 ```text
-Read the latest HTML and CSS first. Apply this brand system while preserving
-the template layout and responsive behaviour:
-
-Primary colour: [HEX OR RGB]
-Accent colour: [HEX OR RGB]
-Background colour: [HEX OR RGB]
-Text colour: [HEX OR RGB]
-Heading font: [FONT NAME OR "KEEP CURRENT"]
-Body font: [FONT NAME OR "KEEP CURRENT"]
+Read my current Crimson Folio HTML and CSS. Ask me for my brand colours and
+font preferences in ordinary language. If I have no colour values, propose
+a small palette for me to approve before editing. Keep current system fonts
+unless I request a change. Preserve the layout and responsive behaviour.
 
 Reuse existing CSS variables where possible. Check text contrast, buttons,
 links, focus states, hover states, borders, dark sections, and mobile views.
@@ -184,8 +173,9 @@ colour pair that still needs review.
 **Prompt 05 - Replace the logo or illustration with my image**
 
 ```text
-I will attach the latest website files and my image. The image is intended for
-[LOGO / HERO / SECTION NAME] and I have permission to use it.
+I am attaching my current Crimson Folio files and an image I may use. Ask
+whether it should replace the hero/contact portrait, about avatar or another
+illustration. Wait for my answer before editing.
 
 Inspect the current image container before editing. Tell me the recommended
 file name, format, dimensions, and exact folder. Then update the relevant HTML
@@ -198,7 +188,8 @@ changed files and exact instructions for where I should place the image.
 **Prompt 06 - Translate the whole website**
 
 ```text
-Translate every visitor-facing string in the latest website into [LANGUAGE].
+Ask which language I want, then translate every visitor-facing string in my
+current Crimson Folio files after I answer.
 This includes metadata, navigation, headings, paragraphs, buttons, labels,
 form messages, image alt text, accessibility labels, and footer text.
 
@@ -213,8 +204,8 @@ whose meaning needs my confirmation.
 **Prompt 07 - Add or remove a service or section**
 
 ```text
-Use the latest website files. I want to [ADD / REMOVE] this item or section:
-[DESCRIBE THE SERVICE OR SECTION AND PROVIDE VERIFIED CONTENT].
+Read my current Crimson Folio files. Ask which service, project or section
+I want to add or remove and ask for verified content. Wait for my answer.
 
 First identify the complete HTML block and any matching CSS or JavaScript.
 Explain the smallest safe change. Then edit without leaving empty wrappers,
@@ -255,8 +246,8 @@ Choose a host that supports static websites. Upload the contents of the working 
 **Prompt 09 - Guide me through publishing**
 
 ```text
-Guide me through publishing this static HTML/CSS/JavaScript website on
-[HOSTING PROVIDER]. I am not a developer. Use the provider's current screen
+Ask which hosting provider I want to use, then guide me through publishing
+my static Crimson Folio website. I am not a developer. Use the provider's current screen
 labels only when you are sure of them; otherwise tell me what concept to look
 for instead of guessing.
 
@@ -279,8 +270,8 @@ Publish successfully on the host's temporary URL first. Then connect your domain
 **Prompt 10 - Connect my domain using the real configuration**
 
 ```text
-Help me connect my custom domain to the static website already published on
-[HOSTING PROVIDER]. My domain is managed at [DOMAIN OR DNS PROVIDER].
+Ask for my hosting provider, current public URL and domain/DNS provider.
+Then help me connect my domain to the published static Crimson Folio website.
 
 Do not invent DNS values. First ask me to copy the exact domain instructions
 shown by my hosting provider, including record type, name/host, target/value,
@@ -298,8 +289,8 @@ Keep one known-good backup for every published version. Make changes in a fresh 
 **Prompt 11 - Update one part and preserve everything else**
 
 ```text
-Read the latest published-source files I attach. Change only this item:
-[DESCRIBE THE EXACT UPDATE].
+Read my current Crimson Folio files. Ask what exact update I want and wait
+for my answer before editing. Change only the confirmed item.
 
 Preserve all other approved copy, links, layout, colours, responsive rules,
 accessibility behaviour, and file paths. Before editing, name the file and the
@@ -311,13 +302,9 @@ Do not publish or alter domain settings.
 **Prompt 12 - Find and fix a website problem**
 
 ```text
-Help me diagnose a problem in my static website. I will attach the latest
-files and provide:
-- What I expected: [EXPECTED RESULT]
-- What happened: [ACTUAL RESULT]
-- Where it happens: [PAGE, SECTION, DEVICE, BROWSER]
-- When it started: [LAST CHANGE]
-- Any browser error: [EXACT ERROR OR "NONE SEEN"]
+Help me diagnose a problem in my current Crimson Folio files. Ask what I
+expected, what happened, the affected section/device/browser, when it started
+and any error message. Ask these in small groups and wait for my answers.
 
 Read the files before suggesting a fix. Identify the most likely cause and
 show the evidence in the code. Prefer the smallest fix and do not rewrite the
@@ -373,4 +360,4 @@ Colours: assets/css/style.css, :root. Main background --bg; panels --surface; he
 
 Hero crop and layering: .hero__portrait controls position, size and rotation; .hero__designer-title controls the cream heading; .hero__outline-letters controls its outline. Recheck the face and the text at all breakpoints after replacing the portrait. Contact crop is controlled by .contact__circle-mask img.
 
-Motion defaults on, even under prefers-reduced-motion, per the product owner. No looping animation is used. Do not add a global motion-off rule. There are no verified testimonials, statistics or client claims. Replace the demo email and regenerate the QR codes before publication. Image assets are supplied; their commercial licensing terms remain pending in LICENCE.txt.
+Motion defaults on, even under prefers-reduced-motion, per the product owner. No looping animation is used. Do not add a global motion-off rule. There are no verified testimonials, statistics or client claims. Replace the demo email and regenerate the QR codes before publication. Image assets are included for use and modification in personal and client websites; see LICENCE.txt for restrictions.

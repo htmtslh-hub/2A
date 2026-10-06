@@ -221,7 +221,7 @@ export function buildView(
       ? [{
           ...m,
           cat: real.cat,
-          badge: real.video ? '' : m.badge,
+          badge: real.badge ?? (real.video ? '' : m.badge),
           price: formatMoney(priceOf('TEMPLATE', currency, m.id), currency, lang as Lang),
           ...(real.copy[lang] ?? real.copy.vi),
         }]
@@ -377,7 +377,7 @@ export function buildView(
           w: ['100%', '62%', '30%'][i],
           ratio: ['16/10', '3/4', '9/16'][i],
         })),
-        specs: (t.dSpecRows || []).map((r: string[]) => ({ k: r[0], v: r[1] })),
+        specs: (REAL_TEMPLATES[d.id].specs?.[lang] ?? t.dSpecRows ?? []).map((r: string[]) => ({ k: r[0], v: r[1] })),
         related: allTpl
           .filter((m: any) => m.cat === d.cat && m.id !== d.id)
           .concat(allTpl.filter((m: any) => m.cat !== d.cat && m.id !== d.id))

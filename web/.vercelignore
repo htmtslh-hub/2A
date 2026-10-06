@@ -19,6 +19,5 @@ product/giao-dien-web/design/
 # Retired templates are internal backups, never delivery assets.
 product/retired/
 
-# Crimson Folio is a public demo pending commercial package approval.
+# Crimson Folio scratch files are private working material.
 product/giao-dien-web/crimson-folio/scratch/
-product/giao-dien-web/crimson-folio/crimson-folio.zip

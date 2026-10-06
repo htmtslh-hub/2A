@@ -185,3 +185,13 @@
 /* Preserve the complete Solenne preview inside the shared product frame. */
 .product-stage__frame:has(.product-stage__image[src*="/solenne.webp"]) { background: #fbf5ef; }
 .product-stage__image[src*="/solenne.webp"] { object-fit: contain; object-position: center; }
+
+/* The generated fixed grid minimum otherwise clips Crimson's detail on 320px. */
+@media (max-width: 359px) {
+  div[style*="minmax(320px"]:has(.product-stage__image[src*="/crimson-folio.webp"]) {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  div[style*="minmax(300px"]:has(> .product-card-wrap > a[href="?mau=t13"]) {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}

@@ -1,0 +1,5 @@
+source/*.html text eol=lf
+source/*.md text eol=lf
+source/*.txt text eol=lf
+source/assets/css/*.css text eol=lf
+source/assets/js/*.js text eol=lf

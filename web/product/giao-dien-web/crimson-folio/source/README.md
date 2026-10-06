@@ -1,6 +1,6 @@
 # Crimson Folio
 
-An editorial portfolio for an independent UX/UI designer. Version 1.0.1.
+An editorial portfolio for an independent UX/UI designer. Version 1.0.2.
 
 ## Getting started
 
@@ -38,14 +38,17 @@ visible without JavaScript. System font fallback makes the site independent
 of font downloads. Browser verification is recorded in the internal QA report;
 this revision was checked through file:// on installed Chrome, Edge and
 Coc Coc at 1440, 820, 375 and 320 CSS pixels, including offline and no-JS.
-Firefox, Safari and physical devices have not been verified. Desktop 200%
-reflow was simulated with a 720 CSS-pixel viewport.
+The packaged revision was additionally tested on Chromium 151.0.7922.34 and
+Firefox 153.0 on Windows through file:// and HTTP at these four widths.
+Safari and physical devices have not been verified. Desktop 200% reflow was
+simulated with a 720 CSS-pixel viewport, rather than actual browser zoom.
 
-This source revision is for visual review, not a commercial release. The
-existing crimson-folio.zip contains the previous version. A replacement ZIP
-is pending approval of the larger image package size and final image rights.
+The package contains eight files: the six core files and two local WebP
+images. The product owner approved this product-specific exception and a
+128 KiB package limit on 6 October 2026.
 
 ## Licence
 
-Read LICENCE.txt. Copyright owner and image rights must be finalised by
-the product owner before selling this package.
+Read LICENCE.txt. Copyright owner: Văn Triển. The included images may be
+used and modified in personal and client websites; standalone resale of
+the images and redistribution of the template package are prohibited.

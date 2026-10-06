@@ -37,6 +37,14 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t12: {
+    slug: 'novatrend', cat: 'shop', version: '1.0.0',
+    copy: {
+      vi: { name: 'NovaTrend', desc: 'Giao diện thương mại điện tử hiện đại đa ngành: hero thời trang cao cấp, danh mục sản phẩm, flash sale đếm ngược, bộ sưu tập mùa hè, giỏ hàng popup trượt, tìm kiếm sản phẩm và newsletter. Đầy đủ animation cuộn trang, chuyển cảnh mượt mà và hiệu ứng hover tinh tế.', tags: ['E-Commerce', 'Thời trang', 'Giỏ hàng', 'Animation'] },
+      en: { name: 'NovaTrend', desc: 'A modern multi-category lifestyle e-commerce storefront: editorial fashion hero, category carousel, flash sale countdown, summer collection banner, persistent slide-in cart, real-time product search and newsletter. Fully equipped with scroll animations, smooth transitions and micro-interactions.', tags: ['E-Commerce', 'Fashion', 'Cart', 'Animation'] },
+      zh: { name: 'NovaTrend', desc: '现代多品类生活方式电商商店模板：杂志风时尚首屏、品类轮播、倒计时限时秒杀、夏季系列横幅、持久化滑动购物车、实时商品搜索与邮件订阅。具备完整的滚动渐显动画、丝滑转场与悬浮交互效果。', tags: ['电子商务', '时尚', '购物车', '动画'] },
+    },
+  },
   t11: {
     slug: 'diginest', cat: 'shop', version: '1.2.0',
     copy: {

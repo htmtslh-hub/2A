@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-06T07:18:49.325Z",
+  "origin": "https://forgezone.store",
+  "demoUrl": "https://forgezone.store/demos/novatrend/index.html",
+  "previewUrl": "https://forgezone.store/previews/novatrend.webp",
+  "storeCatalogUrl": "https://forgezone.store/?mau=t12",
+  "assets": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "8ce150f388e514b8c058ce48d0aa2796f2145bcdfea3685e8379afbcdb6b4549",
+      "normalisedSha256": "8ce150f388e514b8c058ce48d0aa2796f2145bcdfea3685e8379afbcdb6b4549",
+      "bytes": 54046,
+      "comparison": "Equal after CRLF/LF normalisation"
+    },
+    {
+      "file": "assets/css/style.css",
+      "status": 200,
+      "sha256": "ae2aa3486ffecf9f5798b9877331d473dcac89d7e7ba271a41055a053f6a3a62",
+      "normalisedSha256": "ae2aa3486ffecf9f5798b9877331d473dcac89d7e7ba271a41055a053f6a3a62",
+      "bytes": 50462,
+      "comparison": "Equal after CRLF/LF normalisation"
+    },
+    {
+      "file": "assets/js/main.js",
+      "status": 200,
+      "sha256": "094d1a9ed6a8e08dc92bf9f6dd1d4cf780f6d0938fabbebb5e4fa60780a80494",
+      "normalisedSha256": "094d1a9ed6a8e08dc92bf9f6dd1d4cf780f6d0938fabbebb5e4fa60780a80494",
+      "bytes": 31039,
+      "comparison": "Equal after CRLF/LF normalisation"
+    },
+    {
+      "file": "assets/img/hero-model.webp",
+      "status": 200,
+      "sha256": "5f3a077dd266e1163dfb4f34c8cb48fe2fdea02e106695bcbf4d7ec747b1d0f9",
+      "normalisedSha256": "5f3a077dd266e1163dfb4f34c8cb48fe2fdea02e106695bcbf4d7ec747b1d0f9",
+      "bytes": 50910,
+      "comparison": "Exact binary bytes match"
+    },
+    {
+      "file": "assets/img/cat-fashion.webp",
+      "status": 200,
+      "sha256": "6f9f991a9b81c2145f0470d75dfc86a0ab5de6432c874427b4163eb0e3ae293e",
+      "normalisedSha256": "6f9f991a9b81c2145f0470d75dfc86a0ab5de6432c874427b4163eb0e3ae293e",
+      "bytes": 17216,
+      "comparison": "Exact binary bytes match"
+    },
+    {
+      "file": "assets/img/prod-sneaker.webp",
+      "status": 200,
+      "sha256": "2bf3dad2207a5da78fdbb1e2b8a3ba22ad5f8dacd926015f1616a03688d551f4",
+      "normalisedSha256": "2bf3dad2207a5da78fdbb1e2b8a3ba22ad5f8dacd926015f1616a03688d551f4",
+      "bytes": 12070,
+      "comparison": "Exact binary bytes match"
+    },
+    {
+      "file": "assets/img/banner-summer.webp",
+      "status": 200,
+      "sha256": "ab84f05f08a411143d28b739f466ba6e603aacf8cd9ec583a42e55ed6366e1fa",
+      "normalisedSha256": "ab84f05f08a411143d28b739f466ba6e603aacf8cd9ec583a42e55ed6366e1fa",
+      "bytes": 38256,
+      "comparison": "Exact binary bytes match"
+    }
+  ],
+  "browsers": [
+    {
+      "browser": "Chromium",
+      "version": "153.0.8010.12",
+      "status": "PASS",
+      "scope": "375px live HTTP: search dialog Escape, add to cart, drawer open/close, category filter badge, zero overflow, zero errors",
+      "errors": []
+    },
+    {
+      "browser": "Firefox",
+      "version": "155.0",
+      "status": "PASS",
+      "scope": "375px live HTTP: search dialog Escape, add to cart, drawer open/close, category filter badge, zero overflow, zero errors",
+      "errors": []
+    },
+    {
+      "browser": "Edge",
+      "version": "154.0.4258.62",
+      "status": "PASS",
+      "scope": "375px live HTTP: search dialog Escape, add to cart, drawer open/close, category filter badge, zero overflow, zero errors",
+      "errors": []
+    },
+    {
+      "browser": "CocCoc",
+      "version": "152.0.7977.124",
+      "status": "PASS",
+      "scope": "375px live HTTP: search dialog Escape, add to cart, drawer open/close, category filter badge, zero overflow, zero errors",
+      "errors": []
+    }
+  ],
+  "storeCases": [
+    {
+      "locale": "vi-VN",
+      "width": 1440,
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "product": "t12 NovaTrend",
+      "libraryCard": "PASS",
+      "preview": "PASS",
+      "detail": "PASS",
+      "demoLink": "PASS",
+      "templateCart": "PASS",
+      "errors": []
+    },
+    {
+      "locale": "en-US",
+      "width": 1440,
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "product": "t12 NovaTrend",
+      "libraryCard": "PASS",
+      "preview": "PASS",
+      "detail": "PASS",
+      "demoLink": "PASS",
+      "templateCart": "PASS",
+      "errors": []
+    },
+    {
+      "locale": "zh-CN",
+      "width": 1440,
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "product": "t12 NovaTrend",
+      "libraryCard": "PASS",
+      "preview": "PASS",
+      "detail": "PASS",
+      "demoLink": "PASS",
+      "templateCart": "PASS",
+      "errors": []
+    },
+    {
+      "locale": "vi-VN",
+      "width": 375,
+      "browser": "firefox",
+      "version": "155.0",
+      "product": "t12 NovaTrend",
+      "libraryCard": "PASS",
+      "preview": "PASS",
+      "detail": "PASS",
+      "demoLink": "PASS",
+      "templateCart": "PASS",
+      "errors": []
+    }
+  ],
+  "storeHomeStatus": 200,
+  "unauthorisedDownloadStatus": 401,
+  "summary": "All deployed assets match local source. Live demo verified across 4 browsers. Storefront catalog t12 integration verified across 4 locales/viewports with 0 errors."
+}

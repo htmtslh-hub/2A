@@ -37,6 +37,14 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t11: {
+    slug: 'diginest', cat: 'shop', version: '1.2.0',
+    copy: {
+      vi: { name: 'DigiNest', desc: 'Giao diện cửa hàng công nghệ tông xanh teal–kem–cam, ảnh tự tạo, nhóm workspace và sáu sản phẩm mẫu. Có tìm kiếm, lọc danh mục, giỏ lưu trên thiết bị, thẻ bay vào giỏ, ngăn giỏ trượt và hover sản phẩm. HTML/CSS/JS thuần; checkout xem lại đơn demo, không kèm backend thanh toán hay tồn kho.', tags: ['Cửa hàng công nghệ', 'Giỏ hàng', 'Animation'] },
+      en: { name: 'DigiNest', desc: 'A teal, cream and orange technology store template with original imagery, workspace collections and six sample products. Includes search, category filters, a persistent local cart, flying product cards, an animated drawer and hover motion. Plain HTML/CSS/JS; review-only demo checkout, no payment or inventory backend.', tags: ['Technology store', 'Local cart', 'Animation'] },
+      zh: { name: 'DigiNest', desc: '青绿、奶油与橙色的科技商店模板，包含原创图片、工作空间分类和六款示例产品。支持搜索、分类筛选、本地持久购物车、商品飞入购物车、滑动抽屉及悬浮动画。纯 HTML/CSS/JS；结算仅预览订单，不含支付或库存后端。', tags: ['科技商店', '本地购物车', '动画'] },
+    },
+  },
   t10: {
     slug: 'soniq', cat: 'shop', video: true, version: '1.0.0',
     copy: {

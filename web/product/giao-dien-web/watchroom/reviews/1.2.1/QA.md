@@ -23,3 +23,5 @@ ZIP 476346 bytes, nine files, SHA-256
 `cb9b79fadf9845f320f809b0e5c257e3fc2988b8ada7965602dfbc88ef3cc3d2`.
 Packaging reads back all source bytes. Public demo uses hosted asset paths;
 source/ZIP remains portable. Preview regenerated.
+
+Production: Vercel deployment dpl_97SiJcVkRc7LB7fUAD9StG5m3xAD is READY and aliased to https://forgezone.store. Online scoped tests at /demos/watchroom/?v=1.2.1 passed in Edge and Coc Coc; see online-rings.json. GitHub implementation commit: 7a3d11b.

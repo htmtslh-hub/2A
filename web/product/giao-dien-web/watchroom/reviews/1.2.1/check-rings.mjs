@@ -7,11 +7,13 @@ const { chromium } = await import('../../../../../../_design/.tooling/node_modul
 const out = resolve('web/product/giao-dien-web/watchroom/reviews/1.2.1');
 mkdirSync(out + '/screenshots', { recursive: true });
 const report = {};
+const online = process.argv[2];
 for (const [name, executablePath] of [['edge','C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'],['coccoc','C:/Program Files/CocCoc/Browser/Application/browser.exe']]) {
   const browser = await chromium.launch({ headless: true, executablePath });
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
   const errors = []; page.on('pageerror', e => errors.push(e.message));
-  await page.goto(pathToFileURL(resolve('web/product/giao-dien-web/watchroom/source/index.html')).href);
+  await page.goto(online || pathToFileURL(resolve('web/product/giao-dien-web/watchroom/source/index.html')).href);
+  await page.waitForFunction(() => document.documentElement.classList.contains('js'));
   assert.equal(await page.locator('.depth-ring').count(), 4);
   const sample = () => page.locator('.depth-ring').evaluateAll(nodes => nodes.map(e => ({ transform: getComputedStyle(e).transform, state: e.getAnimations().map(a => a.playState) })));
   const first = await sample(); await page.waitForTimeout(1000); const mid = await sample();
@@ -23,7 +25,7 @@ for (const [name, executablePath] of [['edge','C:/Program Files (x86)/Microsoft/
     assert.equal(size.width,size.scrollWidth); sizes.push(size);
   }
   await page.setViewportSize({ width:1440,height:900 });
-  await page.screenshot({ path:out + '/screenshots/' + name + '-rings.png' });
+  await page.screenshot({ path:out + '/screenshots/' + name + (online ? '-online' : '') + '-rings.png' });
   await page.locator('.motion-toggle').click(); await page.waitForTimeout(200);
   const paused = await sample(); assert(paused.every(e => e.state.every(s => s === 'paused')));
   await page.waitForTimeout(300); assert.deepEqual(await sample(),paused);
@@ -38,4 +40,4 @@ for (const [name, executablePath] of [['edge','C:/Program Files (x86)/Microsoft/
   report[name] = { version:browser.version(), first, mid, paused, sizes, pulse, errors };
   await browser.close(); console.log(name + ' PASS');
 }
-writeFileSync(out + '/rings.json',JSON.stringify(report,null,2));
+writeFileSync(out + (online ? '/online-rings.json' : '/rings.json'),JSON.stringify(report,null,2));

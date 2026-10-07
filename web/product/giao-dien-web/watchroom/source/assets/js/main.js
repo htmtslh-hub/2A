@@ -53,6 +53,7 @@
       const pulse = Math.sin(t * Math.PI);
       light.style.setProperty('--glow-opacity', String(.45 + pulse * .5));
       light.style.setProperty('--glow-scale', String(.88 + pulse * .24));
+      $('.stage__rings').style.setProperty('--ring-pulse', String(1 + pulse * .035));
       if (t < 1 && !paused) lightFrame = requestAnimationFrame(frame);
       else lightFrame = 0;
     };

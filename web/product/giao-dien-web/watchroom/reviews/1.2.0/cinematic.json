@@ -1,0 +1,2066 @@
+{
+  "chromium": {
+    "version": "153.0.8010.12",
+    "errors": [],
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "loaded": true
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "loaded": true
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "loaded": true
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "loaded": true
+      }
+    ],
+    "transitions": [
+      {
+        "step": -1,
+        "old": 0,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.716173,
+              "x": 152.858,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 152.858,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.283827,
+              "x": -385.702,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 2,
+        "expected": 0,
+        "mid": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.294383,
+              "x": 380.017,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": -158.543,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.705617,
+              "x": -158.543,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 0,
+        "expected": 1,
+        "mid": {
+          "title": "ONYX GMT",
+          "tone": "1",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.713873,
+              "x": -154.097,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0.286127,
+              "x": 384.463,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": -154.097,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "ONYX GMT",
+          "tone": "1",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 1,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": -153.683,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0.71464,
+              "x": -153.683,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.28536,
+              "x": 384.877,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 2,
+        "expected": 0,
+        "mid": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.285689,
+              "x": 384.7,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": -153.86,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.714311,
+              "x": -153.86,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": -1,
+        "old": 0,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.717813,
+              "x": 151.975,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 151.975,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.282187,
+              "x": -386.585,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      }
+    ],
+    "rapid": {
+      "title": "ONYX GMT",
+      "tone": "1",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "1",
+          "opacity": 1,
+          "x": 0,
+          "active": true,
+          "visible": "visible",
+          "aria": "false"
+        },
+        {
+          "index": "2",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        }
+      ]
+    },
+    "pause": {
+      "title": "SOLARIS 38",
+      "tone": "2",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "1",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "2",
+          "opacity": 1,
+          "x": 0,
+          "active": true,
+          "visible": "visible",
+          "aria": "false"
+        }
+      ]
+    },
+    "lightStates": [
+      "paused",
+      "paused"
+    ],
+    "fallbackMid": {
+      "title": "QUANTUM ADG",
+      "tone": "0",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0.30794,
+          "x": 372.716,
+          "active": false,
+          "visible": "visible",
+          "aria": "false"
+        },
+        {
+          "index": "1",
+          "opacity": 0,
+          "x": -165.844,
+          "active": false,
+          "visible": "visible",
+          "aria": "true"
+        },
+        {
+          "index": "2",
+          "opacity": 0.69206,
+          "x": -165.844,
+          "active": true,
+          "visible": "visible",
+          "aria": "true"
+        }
+      ]
+    },
+    "scrollTransform": "translateY(-16.277px) scale(1.03005) rotate(2.25373deg)",
+    "saved": 1,
+    "women": 1,
+    "noJS": true
+  },
+  "firefox": {
+    "version": "155.0",
+    "errors": [],
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "loaded": true
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "loaded": true
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "loaded": true
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "loaded": true
+      }
+    ],
+    "transitions": [
+      {
+        "step": -1,
+        "old": 0,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.766027,
+              "x": 126.00900268554688,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 126.00900268554688,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.233973,
+              "x": -412.5509948730469,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 2,
+        "expected": 0,
+        "mid": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.203265,
+              "x": 429.0899963378906,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": -109.47000122070312,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.796735,
+              "x": -109.47000122070312,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 0,
+        "expected": 1,
+        "mid": {
+          "title": "ONYX GMT",
+          "tone": "1",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.784121,
+              "x": -116.26399993896484,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0.215879,
+              "x": 422.2959899902344,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": -116.26399993896484,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "ONYX GMT",
+          "tone": "1",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 1,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": -105.19000244140625,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0.804683,
+              "x": -105.19000244140625,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.195317,
+              "x": 433.3699951171875,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 2,
+        "expected": 0,
+        "mid": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.254741,
+              "x": 401.36700439453125,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": -137.1929931640625,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.745259,
+              "x": -137.1929931640625,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": -1,
+        "old": 0,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.80851,
+              "x": 103.12899780273438,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 103.12899780273438,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.19149,
+              "x": -435.4309997558594,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      }
+    ],
+    "rapid": {
+      "title": "ONYX GMT",
+      "tone": "1",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "1",
+          "opacity": 1,
+          "x": 0,
+          "active": true,
+          "visible": "visible",
+          "aria": "false"
+        },
+        {
+          "index": "2",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        }
+      ]
+    },
+    "pause": {
+      "title": "SOLARIS 38",
+      "tone": "2",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "1",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "2",
+          "opacity": 1,
+          "x": 0,
+          "active": true,
+          "visible": "visible",
+          "aria": "false"
+        }
+      ]
+    },
+    "lightStates": [
+      "paused",
+      "paused"
+    ],
+    "fallbackMid": {
+      "title": "QUANTUM ADG",
+      "tone": "0",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0.26955,
+          "x": 393.3909912109375,
+          "active": false,
+          "visible": "visible",
+          "aria": "false"
+        },
+        {
+          "index": "1",
+          "opacity": 0,
+          "x": -145.16900634765625,
+          "active": false,
+          "visible": "visible",
+          "aria": "true"
+        },
+        {
+          "index": "2",
+          "opacity": 0.73045,
+          "x": -145.16900634765625,
+          "active": true,
+          "visible": "visible",
+          "aria": "true"
+        }
+      ]
+    },
+    "scrollTransform": "translateY(-16.2769px) scale(1.03005) rotate(2.25372deg)",
+    "saved": 1,
+    "women": 1,
+    "noJS": true
+  },
+  "edge": {
+    "version": "154.0.4258.62",
+    "errors": [],
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "loaded": true
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "loaded": true
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "loaded": true
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "loaded": true
+      }
+    ],
+    "transitions": [
+      {
+        "step": -1,
+        "old": 0,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.693958,
+              "x": 164.822,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 164.822,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.306042,
+              "x": -373.738,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 2,
+        "expected": 0,
+        "mid": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.286676,
+              "x": 384.168,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": -154.392,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.713324,
+              "x": -154.392,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 0,
+        "expected": 1,
+        "mid": {
+          "title": "ONYX GMT",
+          "tone": "1",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.736857,
+              "x": -141.718,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0.263143,
+              "x": 396.842,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": -141.718,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "ONYX GMT",
+          "tone": "1",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 1,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": -143.8,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0.732992,
+              "x": -143.8,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.267008,
+              "x": 394.76,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 2,
+        "expected": 0,
+        "mid": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.315675,
+              "x": 368.55,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": -170.01,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.684325,
+              "x": -170.01,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": -1,
+        "old": 0,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.708817,
+              "x": 156.82,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 156.82,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.291183,
+              "x": -381.74,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      }
+    ],
+    "rapid": {
+      "title": "ONYX GMT",
+      "tone": "1",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "1",
+          "opacity": 1,
+          "x": 0,
+          "active": true,
+          "visible": "visible",
+          "aria": "false"
+        },
+        {
+          "index": "2",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        }
+      ]
+    },
+    "pause": {
+      "title": "SOLARIS 38",
+      "tone": "2",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "1",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "2",
+          "opacity": 1,
+          "x": 0,
+          "active": true,
+          "visible": "visible",
+          "aria": "false"
+        }
+      ]
+    },
+    "lightStates": [
+      "paused",
+      "paused"
+    ],
+    "fallbackMid": {
+      "title": "QUANTUM ADG",
+      "tone": "0",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0.305261,
+          "x": 374.159,
+          "active": false,
+          "visible": "visible",
+          "aria": "false"
+        },
+        {
+          "index": "1",
+          "opacity": 0,
+          "x": -164.401,
+          "active": false,
+          "visible": "visible",
+          "aria": "true"
+        },
+        {
+          "index": "2",
+          "opacity": 0.694739,
+          "x": -164.401,
+          "active": true,
+          "visible": "visible",
+          "aria": "true"
+        }
+      ]
+    },
+    "scrollTransform": "translateY(-16.277px) scale(1.03005) rotate(2.25373deg)",
+    "saved": 1,
+    "women": 1,
+    "noJS": true
+  },
+  "coccoc": {
+    "version": "152.0.7977.124",
+    "errors": [],
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "loaded": true
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "loaded": true
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "loaded": true
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "loaded": true
+      }
+    ],
+    "transitions": [
+      {
+        "step": -1,
+        "old": 0,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.697079,
+              "x": 163.141,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 163.141,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.302922,
+              "x": -375.419,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 2,
+        "expected": 0,
+        "mid": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.302365,
+              "x": 375.718,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": -162.842,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.697635,
+              "x": -162.842,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 0,
+        "expected": 1,
+        "mid": {
+          "title": "ONYX GMT",
+          "tone": "1",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.694962,
+              "x": -164.281,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0.305038,
+              "x": 374.279,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": -164.281,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "ONYX GMT",
+          "tone": "1",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 1,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": -162.602,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0.69808,
+              "x": -162.602,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.30192,
+              "x": 375.958,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "old": 2,
+        "expected": 0,
+        "mid": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.304035,
+              "x": 374.819,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": -163.741,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.695965,
+              "x": -163.741,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            }
+          ]
+        },
+        "final": {
+          "title": "QUANTUM ADG",
+          "tone": "0",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            }
+          ]
+        }
+      },
+      {
+        "step": -1,
+        "old": 0,
+        "expected": 2,
+        "mid": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0.699302,
+              "x": 161.944,
+              "active": true,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 161.944,
+              "active": false,
+              "visible": "visible",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 0.300698,
+              "x": -376.616,
+              "active": false,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        },
+        "final": {
+          "title": "SOLARIS 38",
+          "tone": "2",
+          "images": [
+            {
+              "index": "0",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "1",
+              "opacity": 0,
+              "x": 0,
+              "active": false,
+              "visible": "hidden",
+              "aria": "true"
+            },
+            {
+              "index": "2",
+              "opacity": 1,
+              "x": 0,
+              "active": true,
+              "visible": "visible",
+              "aria": "false"
+            }
+          ]
+        }
+      }
+    ],
+    "rapid": {
+      "title": "ONYX GMT",
+      "tone": "1",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "1",
+          "opacity": 1,
+          "x": 0,
+          "active": true,
+          "visible": "visible",
+          "aria": "false"
+        },
+        {
+          "index": "2",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        }
+      ]
+    },
+    "pause": {
+      "title": "SOLARIS 38",
+      "tone": "2",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "1",
+          "opacity": 0,
+          "x": 0,
+          "active": false,
+          "visible": "hidden",
+          "aria": "true"
+        },
+        {
+          "index": "2",
+          "opacity": 1,
+          "x": 0,
+          "active": true,
+          "visible": "visible",
+          "aria": "false"
+        }
+      ]
+    },
+    "lightStates": [
+      "paused",
+      "paused"
+    ],
+    "fallbackMid": {
+      "title": "QUANTUM ADG",
+      "tone": "0",
+      "images": [
+        {
+          "index": "0",
+          "opacity": 0.303589,
+          "x": 375.059,
+          "active": false,
+          "visible": "visible",
+          "aria": "false"
+        },
+        {
+          "index": "1",
+          "opacity": 0,
+          "x": -163.501,
+          "active": false,
+          "visible": "visible",
+          "aria": "true"
+        },
+        {
+          "index": "2",
+          "opacity": 0.696411,
+          "x": -163.501,
+          "active": true,
+          "visible": "visible",
+          "aria": "true"
+        }
+      ]
+    },
+    "scrollTransform": "translateY(-16.277px) scale(1.03005) rotate(2.25373deg)",
+    "saved": 1,
+    "women": 1,
+    "noJS": true
+  }
+}

@@ -622,15 +622,47 @@
      Hero Carousel Dots Interaction
      ========================================================================== */
   const heroDots = document.querySelectorAll('.hero__dot');
-  heroDots.forEach((dot, idx) => {
-    dot.addEventListener('click', () => {
-      heroDots.forEach(d => {
-        d.classList.remove('hero__dot--active');
-        d.setAttribute('aria-selected', 'false');
+  const heroModels = document.querySelectorAll('.hero__model-img');
+  let heroIndex = 0;
+  let heroFrame = 0;
+  function showLookbook(index) {
+    if (index === heroIndex || !heroModels[index]) return;
+    const direction = index > heroIndex ? 1 : -1;
+    heroIndex = index;
+    cancelAnimationFrame(heroFrame);
+    // Capture current values so repeated clicks reverse smoothly, with one finite RAF.
+    const starts = Array.from(heroModels, model => Number(getComputedStyle(model).opacity));
+    heroDots.forEach((dot, i) => {
+      dot.classList.toggle('hero__dot--active', i === index);
+      dot.setAttribute('aria-pressed', String(i === index));
+    });
+    heroModels.forEach((model, i) => {
+      model.classList.toggle('hero__model-img--active', i === index);
+      model.setAttribute('aria-hidden', String(i !== index));
+    });
+    const started = performance.now();
+    function frame(now) {
+      const progress = Math.min(1, (now - started) / 620);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      heroModels.forEach((model, i) => {
+        const target = i === index ? 1 : 0;
+        const opacity = starts[i] + (target - starts[i]) * eased;
+        model.style.opacity = String(opacity);
+        model.style.transform = `translateX(${(1 - opacity) * 22 * (i === index ? direction : -direction)}px)`;
       });
-      dot.classList.add('hero__dot--active');
-      dot.setAttribute('aria-selected', 'true');
-      showToast(`Showing Featured Lookbook #${idx + 1}`, 'info');
+      if (progress < 1) heroFrame = requestAnimationFrame(frame);
+      else heroModels.forEach(model => model.style.transform = '');
+    }
+    heroFrame = requestAnimationFrame(frame);
+  }
+  heroDots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => showLookbook(idx));
+    dot.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const next = event.key === 'Home' ? 0 : event.key === 'End' ? heroDots.length - 1 : (heroIndex + (event.key === 'ArrowRight' ? 1 : -1) + heroDots.length) % heroDots.length;
+      showLookbook(next);
+      heroDots[next].focus();
     });
   });
 

@@ -362,18 +362,18 @@ Product names, USD prices, and image paths can be updated in both `index.html` a
 - Storage keys: `novatrend-cart-v1` and `novatrend-wishlist-v1`.
 
 Images are in `assets/img/` in modern WebP format:
-- `hero-model.webp`: Hero lookbook model
+- `hero-fashion.webp` and `hero-casual.webp`: transparent hero lookbook models. Keep alpha transparency; the orange backdrop and floating product cards are separate HTML/CSS layers. Both images use a 900×1350 canvas. The two hero buttons switch images with a finite 620ms animation and support Left/Right/Home/End keys.
 - `cat-*.webp`: Category thumbnail cards
 - `prod-*.webp`: Product catalog images
 - `banner-*.webp`: Promotional banners
 
 ## Exact edit map
 
-Counts are literal and case-sensitive in version 1.0.0.
+Counts are literal and case-sensitive in version 1.1.0.
 
 | File | Search literally | Count | What to do |
 |---|---|---:|---|
-| `index.html` | `NovaTrend` | 6 | Brand name in title, header, and footer |
+| `index.html` | `NovaTrend` | 5 | Brand name in metadata, home label, and footer |
 | `index.html` | `Discover Products You'll Love` | 2 | Hero headline and aria-label |
 | `index.html` | `Free Worldwide Shipping Over $50` | 1 | Top announcement bar promotion |
 | `index.html` | `Up To 70% Off` | 2 | Flash sale promotional banner headings |

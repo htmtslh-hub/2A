@@ -1,0 +1,161 @@
+{
+  "results": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "overflow": false
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "overflow": false
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false
+        }
+      ],
+      "middle": [
+        0.848237,
+        0.151763
+      ],
+      "fallback": [
+        0.36287,
+        0.63713
+      ],
+      "rapidClicks": "PASS",
+      "keyboardBothWraps": "PASS",
+      "searchAndCart": "PASS",
+      "noJS": "PASS",
+      "errors": []
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "overflow": false
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "overflow": false
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false
+        }
+      ],
+      "middle": [
+        0.666815,
+        0.333185
+      ],
+      "fallback": [
+        0.394504,
+        0.605496
+      ],
+      "rapidClicks": "PASS",
+      "keyboardBothWraps": "PASS",
+      "searchAndCart": "PASS",
+      "noJS": "PASS",
+      "errors": []
+    },
+    {
+      "name": "edge",
+      "version": "154.0.4258.62",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "overflow": false
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "overflow": false
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false
+        }
+      ],
+      "middle": [
+        0.670292,
+        0.329708
+      ],
+      "fallback": [
+        0.39492,
+        0.60508
+      ],
+      "rapidClicks": "PASS",
+      "keyboardBothWraps": "PASS",
+      "searchAndCart": "PASS",
+      "noJS": "PASS",
+      "errors": []
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "overflow": false
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "overflow": false
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false
+        }
+      ],
+      "middle": [
+        0.736867,
+        0.263133
+      ],
+      "fallback": [
+        0.391799,
+        0.608201
+      ],
+      "rapidClicks": "PASS",
+      "keyboardBothWraps": "PASS",
+      "searchAndCart": "PASS",
+      "noJS": "PASS",
+      "errors": []
+    }
+  ],
+  "assets": []
+}

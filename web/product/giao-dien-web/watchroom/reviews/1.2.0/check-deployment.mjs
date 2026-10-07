@@ -24,10 +24,21 @@ for (const [name, options] of [
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
   const errors = []; page.on('pageerror', e => errors.push(e.message));
   await page.goto(base + '/demos/watchroom/?v=1.2.0');
-  await page.locator('[data-step="1"]').click();
-  await page.waitForTimeout(450);
-  const mid = await page.locator('[data-watch="1"]').evaluate(e => ({ opacity: +e.style.opacity, transform: e.style.transform }));
-  assert(mid.opacity > 0 && mid.opacity < 1);
+  await page.waitForFunction(() => document.documentElement.classList.contains('js'));
+  const mid = await page.evaluate(() => new Promise(resolve => {
+    const samples = [];
+    const start = performance.now();
+    document.querySelector('[data-step="1"]').click();
+    function sample(now) {
+      const e = document.querySelector('[data-watch="1"]');
+      samples.push({ elapsed: now - start, opacity: +e.style.opacity, transform: e.style.transform });
+      if (now - start < 650) requestAnimationFrame(sample);
+      else resolve(samples);
+    }
+    requestAnimationFrame(sample);
+  }));
+  if (!mid.some(frame => frame.opacity > 0 && frame.opacity < 1)) console.log(name, errors, mid, await page.locator('h1').textContent());
+  assert(mid.some(frame => frame.opacity > 0 && frame.opacity < 1), name + ' intermediate frames');
   await page.waitForTimeout(1100);
   const title = await page.locator('h1').textContent(); assert.equal(title, 'ONYX GMT');
   await page.locator('.motion-toggle').click();

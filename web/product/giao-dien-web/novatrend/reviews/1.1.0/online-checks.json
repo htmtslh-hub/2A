@@ -1,0 +1,187 @@
+{
+  "results": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "overflow": false
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "overflow": false
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false
+        }
+      ],
+      "middle": [
+        0.912673,
+        0.087327
+      ],
+      "fallback": [
+        0.344057,
+        0.655943
+      ],
+      "rapidClicks": "PASS",
+      "keyboardBothWraps": "PASS",
+      "searchAndCart": "PASS",
+      "noJS": "PASS",
+      "errors": []
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "overflow": false
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "overflow": false
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false
+        }
+      ],
+      "middle": [
+        0.771665,
+        0.228335
+      ],
+      "fallback": [
+        0.37462,
+        0.62538
+      ],
+      "rapidClicks": "PASS",
+      "keyboardBothWraps": "PASS",
+      "searchAndCart": "PASS",
+      "noJS": "PASS",
+      "errors": []
+    },
+    {
+      "name": "edge",
+      "version": "154.0.4258.62",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "overflow": false
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "overflow": false
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false
+        }
+      ],
+      "middle": [
+        0.627151,
+        0.372849
+      ],
+      "fallback": [
+        0.394227,
+        0.605773
+      ],
+      "rapidClicks": "PASS",
+      "keyboardBothWraps": "PASS",
+      "searchAndCart": "PASS",
+      "noJS": "PASS",
+      "errors": []
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "overflow": false
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "overflow": false
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "overflow": false
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "overflow": false
+        }
+      ],
+      "middle": [
+        0.78238,
+        0.21762
+      ],
+      "fallback": [
+        0.405245,
+        0.594755
+      ],
+      "rapidClicks": "PASS",
+      "keyboardBothWraps": "PASS",
+      "searchAndCart": "PASS",
+      "noJS": "PASS",
+      "errors": []
+    }
+  ],
+  "assets": [
+    {
+      "file": "index.html",
+      "bytes": 54384,
+      "sha256": "2617abbffda5eb1ae3ca594fe690efebc3c4e4f73cc10625008fd406eb91cc9f"
+    },
+    {
+      "file": "assets/css/style.css",
+      "bytes": 51233,
+      "sha256": "5cf4d29836948c244d787973c34204f60471298b15c4496a181318ddedfd9664"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 32675,
+      "sha256": "35ac4fdee75ba8d413a38441cc2fdea622cfd365b718e0d6cd04bb0bbe5623e3"
+    },
+    {
+      "file": "assets/img/hero-fashion.webp",
+      "bytes": 135438,
+      "sha256": "efd68085d227320448f122789056440a6bd1a79a2e47a0ee573aa70295391f4b"
+    },
+    {
+      "file": "assets/img/hero-casual.webp",
+      "bytes": 95030,
+      "sha256": "e21bf38b3e221e4aac723832964e39a8d3eec105363199c7dcea128cfddbc091"
+    }
+  ]
+}

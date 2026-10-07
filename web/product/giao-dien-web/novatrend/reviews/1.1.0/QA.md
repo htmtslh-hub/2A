@@ -23,9 +23,12 @@ Ngoại lệ W01/W03/W05/W06 sẵn có tiếp tục áp dụng; yêu cầu mới
 | Q06 | PASS phần hero bằng nhìn ảnh | Chữ thẻ vẫn có nền trắng độc lập; nhân vật không làm nền của nội dung chữ |
 | Q07, Q08, Q09 | PASS phần hero | No JS, file://, CSS-disabled fallback, four browsers; finite RAF, zero runtime errors |
 | Q10 | CHƯA NGHIỆM THU TOÀN BỘ | Hướng dẫn ảnh cập nhật; quyền ảnh/copyright cần chủ sản phẩm xác nhận như licence hiện tại |
-| Q12 | Chờ kiểm tra online | Demo/preview/ZIP đồng bộ; chưa thử luồng tải sau thanh toán mới |
+| Q12 | PASS phần demo; tải trả tiền NOT TESTED | Demo/preview/ZIP đồng bộ; chưa thử luồng tải sau thanh toán mới |
 | Q13 / D01–D08 | PASS phần thay ảnh | D01/D03/D04/D06/D08 nội dung giữ nguyên; D02/D05 nhân vật tách lớp và mobile không che mặt; D07 không bổ sung claim mới |
 
 Không dùng kết quả sửa ảnh để chứng nhận lại toàn bộ template. Hồ sơ 1.0.0 có một số mô tả không khớp nguồn hiện tại (ví dụ điều khoản MIT và số byte ảnh); không kế thừa các tuyên bố đó. Các tính năng/nội dung cũ ngoài phần hero không được sửa trong nhiệm vụ này. Safari, tài khoản thanh toán thực, quyền phát hành thương mại: NOT TESTED/chờ xác nhận.
 
 Preview 23564 byte. `dong-goi.mjs novatrend --ngoai-le` đọc lại khớp toàn bộ source. Bộ kiểm tra chung `checks.json` chạy trên ZIP 570399 byte trước lần bổ sung README cuối (layout/ảnh/JS cùng byte): Chromium và Firefox hoàn thành, chỉ phát hiện một lỗi số đếm tên thương hiệu Q10 (ghi 6 nhưng thực tế 5). Đã sửa thành 5 và kiểm tra lại số đếm trên tài liệu cuối. Đây là chỉnh tài liệu, không thay đổi mã đã thử. Byte/hash ZIP cuối ghi trong `package.json` của hồ sơ này.
+
+## Production
+GitHub implementation commit: `a1984c0`, pushed origin/master. Vercel `dpl_88p29f913VDk8rrfvTPSg6vSH5Vw` READY, alias https://forgezone.store, Next build/TypeScript PASS. Online demo https://forgezone.store/demos/novatrend/index.html?v=1.1.0: same scoped checks PASS in Chromium, Firefox, Edge and Cốc Cốc, see `online-checks.json`. HTML/CSS/JS hashes match after LF/CRLF normalization; both WebP match exact bytes. Screenshot Edge mobile online visually inspected. Preview, catalog t12, admin and Watchroom HTTP 200 smoke checks (not a full regression test). No database operation performed.

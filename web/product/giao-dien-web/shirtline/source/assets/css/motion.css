@@ -1,0 +1,22 @@
+/* Permanent product images follow an oval. JS owns their transforms. */
+.hero-stage .shirt-orbit { position: relative; isolation: isolate; width: 100%; height: 520px; overflow: hidden; perspective: 1100px; touch-action: pan-y; }
+.hero-stage .shirt-orbit img { position: absolute; left: 50%; top: 50%; width: 66%; height: 86%; object-fit: contain; transform-origin: center; animation: none !important; transition: none !important; pointer-events: none; }
+.hero-stage .hero-index, .hero-stage .hero-caption, .hero-stage .hero-controls, .hero-stage .hero-switch, .hero-stage .next-preview { z-index: 110; }
+.hero-stage .hero-switch { top: auto; bottom: 105px; }
+.hero-stage .hero-controls { align-items: center; gap: 0; }
+.hero-stage .dot { width: 44px; height: 44px; border: 0; border-radius: 0; padding: 0; position: relative; background: none !important; }
+.hero-stage .dot::after { content: ''; position: absolute; width: 7px; height: 7px; border: 1px solid var(--theme-accent); border-radius: 50%; top: 18px; left: 18px; }
+.hero-stage .dot.active::after { background: var(--theme-accent); }
+.hero-stage .dot.active { background: none !important; }
+.hero-stage .orbit-pause { width: 44px; height: 44px; padding: 0; border: 0; background: none; color: var(--theme-ink); cursor: pointer; font-size: 16px; }
+.hero-stage button:focus-visible { outline: 2px solid var(--theme-accent); outline-offset: 3px; }
+.hero-stage .shirt-orbit img { filter: drop-shadow(0 12px 12px rgba(15,25,35,.16)); }
+.shirt-orbit .shirt-ground-shadow { position: absolute; left: 50%; top: 50%; width: 38%; height: 30px; border-radius: 50%; background: radial-gradient(ellipse,rgba(12,22,30,.64) 0%,rgba(12,22,30,.30) 38%,transparent 74%); filter: blur(5px); pointer-events: none; z-index: 0; }
+.hero-stage::after { display: none; }
+@media (max-width: 760px) {
+  .hero-stage .shirt-orbit { height: 390px; }
+  .hero-stage .hero-switch { top: auto; bottom: 100px; }
+  .hero-stage .hero-switch button { width: 44px; height: 44px; }
+  .hero-stage .hero-caption { left: 0; bottom: 60px; }
+  .hero-stage .hero-controls { bottom: 12px !important; }
+}

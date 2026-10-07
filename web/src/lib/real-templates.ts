@@ -39,6 +39,14 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t15: {
+    slug: 'shirtline', cat: 'shop', version: '1.1.3',
+    copy: {
+      vi: { name: 'Shirtline', desc: 'Showroom năm mẫu áo sơ mi với vòng quay phối cảnh, bóng mềm dưới áo, nền đổi màu theo sản phẩm và preview mẫu kế tiếp. Ảnh tự tạo, bộ sưu tập và túi hàng liên hệ email; không kèm thanh toán.', tags: ['Áo sơ mi', 'Showroom', 'Vòng quay sản phẩm'] },
+      en: { name: 'Shirtline', desc: 'A five-shirt showroom with an orbiting product carousel, soft floor shadows, product-tinted backgrounds and a next-look preview. Original imagery, collection cards and an email enquiry bag; no payment backend.', tags: ['Shirts', 'Showroom', 'Product carousel'] },
+      zh: { name: 'Shirtline', desc: '五款衬衫展厅，包含环形产品轮播、柔和地面阴影、随产品变化的背景色和下一款预览。原创图片、系列卡片和邮件咨询购物袋；不含支付后台。', tags: ['衬衫', '展厅', '环形轮播'] },
+    },
+  },
   t13: {
     slug: 'crimson-folio', cat: 'portfolio', version: '1.0.2',
     badge: '',

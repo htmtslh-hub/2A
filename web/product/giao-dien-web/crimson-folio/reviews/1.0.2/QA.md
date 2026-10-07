@@ -16,9 +16,9 @@ website cá nhân/khách hàng, không bán lại ảnh như tài sản riêng.
 
 ## Gói cuối
 
-crimson-folio.zip: 92799 byte, tám file, đọc lại khớp source.
-SHA-256: 01ce707948864c432e438691b049465ce69e6067418e772e83a82a670bb59267.
-mira-portrait.webp: 46942 byte; mira-avatar.webp: 22936 byte.
+crimson-folio.zip: 108080 byte, tám file, đọc lại khớp source.
+SHA-256: c30ac5b775a860c57281367363f3b1cff358b82ac2485c5d03077d9279ef8d49.
+mira-portrait.webp: 62338 byte; mira-avatar.webp: 22936 byte.
 Giữ nguyên byte ảnh gốc. Không font mạng, API, secret hoặc thư viện JS.
 Gói cũ lưu ở ../1.0.1/before-crimson-folio.zip, không giao cho khách.
 Chuẩn hóa LF cho sáu file nguồn và .gitattributes riêng để Git trên Windows

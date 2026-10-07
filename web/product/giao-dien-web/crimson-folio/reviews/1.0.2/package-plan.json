@@ -22,8 +22,8 @@
     },
     {
       "name": "crimson-folio/assets/css/style.css",
-      "bytes": 16008,
-      "packedBytes": 3770
+      "bytes": 15969,
+      "packedBytes": 3767
     },
     {
       "name": "crimson-folio/assets/img/mira-avatar.webp",
@@ -32,8 +32,8 @@
     },
     {
       "name": "crimson-folio/assets/img/mira-portrait.webp",
-      "bytes": 46942,
-      "packedBytes": 46883
+      "bytes": 62338,
+      "packedBytes": 62167
     },
     {
       "name": "crimson-folio/assets/js/main.js",
@@ -41,6 +41,6 @@
       "packedBytes": 800
     }
   ],
-  "estimatedZipBytes": 92799,
+  "estimatedZipBytes": 108080,
   "approval": "Owner accepted eight files and 128 KiB on 2026-10-06; see QA.md"
 }

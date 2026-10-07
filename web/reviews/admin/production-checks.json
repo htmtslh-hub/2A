@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-06T12:44:58.767Z",
+  "url": "https://forgezone.store/admin",
+  "accounts": 1,
+  "orders": 7,
+  "tracking": true,
+  "anonymousDenied": true,
+  "readOnlyAccountAndOrderChecks": true,
+  "browsers": [
+    {
+      "browser": "Edge",
+      "version": "154.0.4258.62",
+      "width": 1440,
+      "result": "PASS",
+      "checks": "Authorized page/API, live storefront pageview appears without reload, account dialog/Escape, responsive layout, current production resources, no runtime errors"
+    },
+    {
+      "browser": "CocCoc",
+      "version": "152.0.7977.124",
+      "width": 375,
+      "result": "PASS",
+      "checks": "Authorized page/API, live storefront pageview appears without reload, account dialog/Escape, responsive layout, current production resources, no runtime errors"
+    }
+  ]
+}

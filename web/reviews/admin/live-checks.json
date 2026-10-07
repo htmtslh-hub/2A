@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-07T01:05:32.011Z",
+  "environment": "Isolated loopback PGlite fixtures only",
+  "results": [
+    {
+      "browser": "Edge",
+      "version": "154.0.4258.62",
+      "result": "PASS",
+      "checks": "Traffic, cross-client user changes and external order status visible within 5s; filters retained; stale data on transient error; offline/hidden/modal pause; resume; revoked access clears data and stops polling"
+    },
+    {
+      "browser": "CocCoc",
+      "version": "152.0.7977.124",
+      "result": "PASS",
+      "checks": "Traffic, cross-client user changes and external order status visible within 5s; filters retained; stale data on transient error; offline/hidden/modal pause; resume; revoked access clears data and stops polling"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ export default function robots(): MetadataRoute.Robots {
       // toán — không có nội dung để lập chỉ mục, và không nên lộ ra tìm kiếm.
       disallow: [
         '/api/',
+        '/admin',
         '/don-hang',
         '/dat-lai-mat-khau',
         '/thanh-toan/',

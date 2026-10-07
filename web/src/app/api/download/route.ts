@@ -58,6 +58,8 @@ export async function GET(req: Request) {
   if (token) {
     const row = await prisma.downloadToken.findUnique({ where: { token } });
     if (!row) return NextResponse.json({ error: 'Link không hợp lệ.' }, { status: 404 });
+    const owner = await prisma.user.findUnique({ where: { id: row.userId }, select: { suspendedAt: true } });
+    if (!owner || owner.suspendedAt) return NextResponse.json({ error: 'Tài khoản không được phép tải.' }, { status: 403 });
     // Link cũ cấp cho đơn trọn bộ trỏ tới 'bundle' — không có file đó. Đưa về
     // trang đơn hàng, nơi mỗi mẫu trong trọn bộ có nút tải riêng.
     if (row.templateId === 'bundle') {

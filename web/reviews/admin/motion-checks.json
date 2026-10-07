@@ -1,0 +1,113 @@
+{
+  "checkedAt": "2026-10-07T01:06:09.365Z",
+  "results": [
+    {
+      "browser": "Chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "reducedMotion": true,
+      "cssAndWaapiDisabled": true,
+      "lineFrames": 13,
+      "firstOffset": 560.326,
+      "lastOffset": 317.239,
+      "nav": {
+        "original": "translate(0px, 0px)",
+        "middle": "translate(62.6094px, 0px)",
+        "end": "translate(106px, 0px)"
+      },
+      "openFrame": {
+        "opacity": 0.713272,
+        "transform": "translateY(6.88147px) scale(0.991398)",
+        "backdrop": 0.5135558550949035
+      },
+      "closeFrame": {
+        "open": true,
+        "opacity": 0.251674,
+        "backdrop": 0.18120542314764448
+      },
+      "result": "PASS",
+      "checks": "Chart/count midframes, nav movement, modal in/out/backdrop/focus, rapid first-last-first, finite cleanup, chart period, pause and fresh-visit reset"
+    },
+    {
+      "browser": "Firefox",
+      "version": "155.0",
+      "width": 820,
+      "reducedMotion": true,
+      "cssAndWaapiDisabled": true,
+      "lineFrames": 11,
+      "firstOffset": 560.324,
+      "lastOffset": 318.936,
+      "nav": {
+        "original": "translate(0px)",
+        "middle": "translate(0px, 38.0519px)",
+        "end": "translate(0px, 54px)"
+      },
+      "openFrame": {
+        "opacity": 0.739371,
+        "transform": "translateY(6.2551px) scale(0.992181)",
+        "backdrop": 0.5323471210582366
+      },
+      "closeFrame": {
+        "open": true,
+        "opacity": 0.182811,
+        "backdrop": 0.13162380635089302
+      },
+      "result": "PASS",
+      "checks": "Chart/count midframes, nav movement, modal in/out/backdrop/focus, rapid first-last-first, finite cleanup, chart period, pause and fresh-visit reset"
+    },
+    {
+      "browser": "Edge",
+      "version": "154.0.4258.62",
+      "width": 1440,
+      "reducedMotion": true,
+      "cssAndWaapiDisabled": true,
+      "lineFrames": 25,
+      "firstOffset": 1160.16,
+      "lastOffset": 607.662,
+      "nav": {
+        "original": "translate(0px, 0px)",
+        "middle": "translate(0px, 32.8656px)",
+        "end": "translate(0px, 54px)"
+      },
+      "openFrame": {
+        "opacity": 0.804888,
+        "transform": "translateY(4.68269px) scale(0.994147)",
+        "backdrop": 0.5795193599997011
+      },
+      "closeFrame": {
+        "open": true,
+        "opacity": 0.200202,
+        "backdrop": 0.1441451699998435
+      },
+      "result": "PASS",
+      "checks": "Chart/count midframes, nav movement, modal in/out/backdrop/focus, rapid first-last-first, finite cleanup, chart period, pause and fresh-visit reset"
+    },
+    {
+      "browser": "CocCoc",
+      "version": "152.0.7977.124",
+      "width": 320,
+      "reducedMotion": true,
+      "cssAndWaapiDisabled": true,
+      "lineFrames": 13,
+      "firstOffset": 1051.17,
+      "lastOffset": 327.065,
+      "nav": {
+        "original": "translate(0px, 0px)",
+        "middle": "translate(74.7728px, 0px)",
+        "end": "translate(96px, 0px)"
+      },
+      "openFrame": {
+        "opacity": 0.739659,
+        "transform": "translateY(6.24819px) scale(0.99219)",
+        "backdrop": 0.532554415023649
+      },
+      "closeFrame": {
+        "open": true,
+        "opacity": 0.190561,
+        "backdrop": 0.13720362031539957
+      },
+      "result": "PASS",
+      "checks": "Chart/count midframes, nav movement, modal in/out/backdrop/focus, rapid first-last-first, finite cleanup, chart period, pause and fresh-visit reset"
+    }
+  ]
+}

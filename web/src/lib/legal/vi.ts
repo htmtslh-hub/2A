@@ -119,6 +119,7 @@ export const LEGAL_VI: LegalPack = {
           '<b>Khi bạn mua hàng:</b> email, tên, thông tin đơn hàng và trạng thái thanh toán. <b>Chúng tôi không nhận và không lưu số thẻ của bạn</b> — toàn bộ thông tin thanh toán do cổng thanh toán xử lý trực tiếp.',
           '<b>Khi bạn để lại email nhận mẫu miễn phí:</b> địa chỉ email và ngôn ngữ bạn đang xem.',
           '<b>Khi bạn truy cập website:</b> nhật ký kỹ thuật thông thường của máy chủ như địa chỉ IP, loại trình duyệt và thời điểm truy cập.',
+          '<b>Thống kê truy cập khi được bật:</b> đường dẫn trang công khai đã bỏ tham số nhạy cảm, tên miền nguồn truy cập, nhóm kích thước màn hình và thời điểm xem. Mã phiên ngẫu nhiên được giữ trong sessionStorage của tab, không gắn với tài khoản. Hệ thống thống kê không lưu IP, email hoặc URL nguồn đầy đủ; không ghi nhận trang tài khoản, thanh toán hoặc quản trị và tôn trọng Do Not Track / Global Privacy Control.',
         ],
       },
       {

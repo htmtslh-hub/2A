@@ -10,6 +10,7 @@ import { SignOutButton } from '@/app/don-hang/actions';
 import { RemoveSavedButton } from './remove-saved-button';
 import ProfileEditor from './profile-editor';
 import styles from './account.module.css';
+import { isAdminEmail } from '@/lib/admin-access';
 
 export const dynamic = 'force-dynamic';
 
@@ -84,7 +85,7 @@ export default async function AccountPage() {
     <div className={styles.container}>
       <header className={styles.topbar}>
         <Link href="/" className={styles.brand}><span className={styles.dot} />FORGE ZONE</Link>
-        <div className={styles.topActions}><Link href="/" className={styles.quietLink}>← {t.back}</Link><SignOutButton label={t.signOut} /></div>
+        <div className={styles.topActions}>{isAdminEmail(user.email) && <Link href="/admin" className={styles.quietLink}>Admin ↗</Link>}<Link href="/" className={styles.quietLink}>← {t.back}</Link><SignOutButton label={t.signOut} /></div>
       </header>
 
       <section className={styles.hero}>

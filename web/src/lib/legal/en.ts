@@ -119,6 +119,7 @@ export const LEGAL_EN: LegalPack = {
           '<b>When you buy:</b> email, name, order details and payment status. <b>We never receive or store your card details</b> — those go directly to the payment provider.',
           '<b>When you request the free sample:</b> your email address and the language you were browsing in.',
           '<b>When you visit:</b> standard server logs such as IP address, browser type and time of request.',
+          '<b>Traffic statistics, when enabled:</b> public page paths with sensitive query parameters removed, referring hostnames, screen-size groups and view timestamps. A random per-tab session ID is held in sessionStorage and is not linked to an account. The statistics system stores no IP addresses, emails or full referrer URLs, excludes account, payment and admin pages, and respects Do Not Track / Global Privacy Control.',
         ],
       },
       {

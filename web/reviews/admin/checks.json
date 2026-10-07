@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-07T01:03:59.237Z",
+  "environment": "Isolated PGlite PostgreSQL, production Next build, test fixtures only",
+  "checks": [
+    {
+      "name": "Anonymous GET/PATCH denied",
+      "result": "PASS"
+    },
+    {
+      "name": "Real SQL summary, independent currencies, zero-filled chart",
+      "result": "PASS"
+    },
+    {
+      "name": "BigInt payment reference serialized without precision loss",
+      "result": "PASS"
+    },
+    {
+      "name": "Overview axe accessibility",
+      "result": "PASS"
+    },
+    {
+      "name": "Account pagination and server search",
+      "result": "PASS"
+    },
+    {
+      "name": "Account edit persisted and audited",
+      "result": "PASS"
+    },
+    {
+      "name": "CSRF, self-admin lock, invalid mutation rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "Normal account denied admin, ordinary profile preserved",
+      "result": "PASS"
+    },
+    {
+      "name": "Lock revokes old JWT/token, retains orders/purchases",
+      "result": "PASS"
+    },
+    {
+      "name": "Unlock restores login and existing purchased ZIP download",
+      "result": "PASS"
+    },
+    {
+      "name": "Order provider/status filters, notes and immutable payment state",
+      "result": "PASS"
+    },
+    {
+      "name": "Mutation audit log visible",
+      "result": "PASS"
+    },
+    {
+      "name": "Telemetry deduplication, query redaction, private-route exclusion, DNT/CSRF",
+      "result": "PASS"
+    },
+    {
+      "name": "Storefront tracker integration and client-side DNT exclusion",
+      "result": "PASS"
+    },
+    {
+      "name": "Telemetry per-session burst bound",
+      "result": "PASS"
+    },
+    {
+      "name": "Failure/retry state",
+      "result": "PASS"
+    },
+    {
+      "name": "Chromium 153.0.8010.12 375px: navigation, modal focus, filters, layout, axe",
+      "result": "PASS"
+    },
+    {
+      "name": "Firefox 155.0 820px: navigation, modal focus, filters, layout, axe",
+      "result": "PASS"
+    },
+    {
+      "name": "Edge 154.0.4258.62 1440px: navigation, modal focus, filters, layout, axe",
+      "result": "PASS"
+    },
+    {
+      "name": "CocCoc 152.0.7977.124 320px: navigation, modal focus, filters, layout, axe",
+      "result": "PASS"
+    },
+    {
+      "name": "No client runtime errors",
+      "result": "PASS"
+    }
+  ]
+}

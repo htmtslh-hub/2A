@@ -3,6 +3,7 @@
 .env
 .env.*
 !.env.example
+.vercel/
 
 # Tài sản thử nghiệm của hướng homepage cũ; sản phẩm thương mại dùng
 # public/previews và public/demos/astra-interior.

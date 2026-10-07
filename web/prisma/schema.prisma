@@ -18,6 +18,8 @@ model User {
   image         String?
   passwordHash  String? // null nếu chỉ đăng nhập bằng Google
   createdAt     DateTime  @default(now())
+  suspendedAt   DateTime?
+  sessionVersion Int      @default(0)
 
   accounts       Account[]
   sessions       Session[]
@@ -123,6 +125,7 @@ model Order {
   amount      Int
   currency    String  @default("VND")
   description String
+  adminNote   String    @default("")
   /// Ngôn ngữ khách đang xem lúc đặt — dùng để gửi email đúng thứ tiếng.
   lang        String  @default("vi")
 
@@ -227,6 +230,31 @@ model ServiceEnquiry {
   budget    String?
   message   String
   lang      String   @default("vi")
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+/// Anonymous per-tab traffic. No IP, email, full referrer or user relation.
+model PageView {
+  id        String   @id
+  sessionId String
+  path      String
+  referrer  String
+  device    String
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([sessionId, createdAt])
+}
+
+/// Immutable operational history; target IDs are preserved after deletion.
+model AdminAuditLog {
+  id        String   @id @default(cuid())
+  actorId   String
+  action    String
+  targetId  String
+  detail    String
   createdAt DateTime @default(now())
 
   @@index([createdAt])

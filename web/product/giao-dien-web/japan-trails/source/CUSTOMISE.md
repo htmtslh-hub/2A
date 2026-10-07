@@ -1,7 +1,3 @@
-## Hero character asset
-
-`assets/img/model-samurai.png` is a transparent 1024×1536 AI-generated cutout. It contains only the styled character and sword; the original screenshot background, controls and text were removed. Replace this file only with an image you have permission to use and keep an alpha channel. The model is layered over `fuji.webp` by `.hero__model` in `assets/css/style.css`; adjust `right`, `bottom` and `height` there if the pose changes.
-
 # Japan Trails — your website, step by step
 
 This guide takes you from the downloaded ZIP file to a website you can publish. Follow the steps in order the first time. Every AI prompt below is complete: copy it, attach the requested files, and answer the AI’s questions in plain language. You do not need to fill in code, selectors or technical settings.

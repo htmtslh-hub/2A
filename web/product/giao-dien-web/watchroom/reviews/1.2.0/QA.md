@@ -25,3 +25,11 @@ W01/W03/W06: sáu file lõi + ba WebP cục bộ; không còn hồ sơ sáu file
 Đã xem screenshot desktop/mobile và frame giữa chuyển cảnh. Desktop full-page lúc reveal chưa chạy ở vùng dưới không dùng làm bằng chứng section trắng; các section được xác nhận sau khi cuộn trong kiểm tra tổng thể. Safari/thiết bị cảm ứng thật và Q12 mua/tải sau thanh toán NOT TESTED, vì không thuộc demo này.
 
 ZIP: 475865 byte; SHA-256 `dffae9a44644c615055f011fe4ec5e7d4faf6b247bf3c925a18952dd13b59606`. Gói đóng lại sau aria-label, đọc lại chín file và so khớp source. Demo HTML/CSS/JS và preview đồng bộ. Không deploy từ checkout chứa thay đổi admin chưa commit.
+
+## Production
+
+Đã push GitHub master: `1b05f14` thêm Watchroom, `25d9e6e` sửa đường dẫn tài nguyên hosted. Vercel production READY: `dpl_39YPFDFsXTx2JJo6gNmN92ux9Doz`, URL https://web-d80t9yild-htmtslh-hubs-projects.vercel.app , alias https://forgezone.store . Build Next.js 16.3.3 và TypeScript thành công.
+
+Bản deploy đầu phát hiện Vercel canonical redirect `/demos/watchroom/` → `/demos/watchroom`, làm asset tương đối sai thư mục. Đã sửa riêng demo qua sync-demo.mjs và deploy lại; source/ZIP giữ portable file://. `check-deployment.mjs`/`deployment.json` PASS trên domain thật: sáu tài nguyên HTML/CSS/JS/WebP có SHA-256 khớp demo local; đo frame trung gian carousel, model cuối ONYX GMT, Pause và mobile 375px trên Chromium 153.0.8010.12, Edge 154.0.4258.62, Cốc Cốc 152.0.7977.124; pageerror rỗng. Trang chủ, Crimson Folio, DigiNest và preview Watchroom trả HTTP 200 (đây là kiểm tra smoke, không phải kiểm toán lại toàn bộ sản phẩm khác).
+
+Báo cáo tự động tổng thể cuối còn sáu cờ theo chuẩn cũ: menu toggle không tồn tại (link luôn hiện) và motion reduced/5s (owner override). Axe không có violation trên Chromium/Firefox, console/network rỗng, không có lỗi số đếm tài liệu và sourceMatchesExtracted=true. Không quảng cáo đạt toàn bộ WEB-STATIC-1 hoặc đã thử Safari/Q12.

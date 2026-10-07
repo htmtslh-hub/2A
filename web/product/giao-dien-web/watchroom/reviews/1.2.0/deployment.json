@@ -1,0 +1,497 @@
+{
+  "base": "https://forgezone.store",
+  "date": "2026-10-07T00:53:02.506Z",
+  "resources": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "65a2d791246270d2f182400d8208ef84986f2263b1f1835d57c09d77e400bc4b"
+    },
+    {
+      "file": "assets/css/style.css",
+      "status": 200,
+      "sha256": "09680bde4af0158f00b54246ad230b3751925002c202a0228da8d162e9220bf8"
+    },
+    {
+      "file": "assets/js/main.js",
+      "status": 200,
+      "sha256": "eadc5f1b9da377870813bbc7cc34bd1e5e4986ca87687c413300fba5714a60e0"
+    },
+    {
+      "file": "assets/img/quantum-adg.webp",
+      "status": 200,
+      "sha256": "ec5c805f9bc7e035dfd70715266c32cb5191f2a4873d94e6dd44b6149d8c292a"
+    },
+    {
+      "file": "assets/img/onyx-gmt.webp",
+      "status": 200,
+      "sha256": "dbbcd73abacf0ff236c8767fbaa013c36517610ab38c6dd4556230a07ce85d85"
+    },
+    {
+      "file": "assets/img/solaris-38.webp",
+      "status": 200,
+      "sha256": "5a78e14b49ce82729018a340acfec9298985170c6b8a50df365bec2f41edf7b7"
+    },
+    {
+      "file": "/",
+      "status": 200
+    },
+    {
+      "file": "/demos/crimson-folio/",
+      "status": 200
+    },
+    {
+      "file": "/demos/diginest/",
+      "status": 200
+    },
+    {
+      "file": "/previews/watchroom.webp",
+      "status": 200
+    }
+  ],
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "mid": [
+        {
+          "elapsed": 4.800000000023374,
+          "opacity": 0.0000291425,
+          "transform": "translateX(538.544px) rotate(5.9993deg) scale(0.780006)"
+        },
+        {
+          "elapsed": 54.70000000002324,
+          "opacity": 0.00539787,
+          "transform": "translateX(535.653px) rotate(5.87045deg) scale(0.781188)"
+        },
+        {
+          "elapsed": 88.10000000002333,
+          "opacity": 0.0139204,
+          "transform": "translateX(531.063px) rotate(5.66591deg) scale(0.783062)"
+        },
+        {
+          "elapsed": 154.70000000002324,
+          "opacity": 0.0416912,
+          "transform": "translateX(516.107px) rotate(4.99941deg) scale(0.789172)"
+        },
+        {
+          "elapsed": 188.0000000000232,
+          "opacity": 0.0605054,
+          "transform": "translateX(505.974px) rotate(4.54787deg) scale(0.793311)"
+        },
+        {
+          "elapsed": 238.10000000002333,
+          "opacity": 0.0943605,
+          "transform": "translateX(487.741px) rotate(3.73535deg) scale(0.800759)"
+        },
+        {
+          "elapsed": 271.4000000000233,
+          "opacity": 0.120219,
+          "transform": "translateX(473.815px) rotate(3.11474deg) scale(0.806448)"
+        },
+        {
+          "elapsed": 321.4000000000233,
+          "opacity": 0.163511,
+          "transform": "translateX(450.5px) rotate(2.07574deg) scale(0.815972)"
+        },
+        {
+          "elapsed": 354.70000000002324,
+          "opacity": 0.194985,
+          "transform": "translateX(433.549px) rotate(1.32035deg) scale(0.822897)"
+        },
+        {
+          "elapsed": 404.70000000002324,
+          "opacity": 0.245643,
+          "transform": "translateX(406.267px) rotate(0.104569deg) scale(0.834041)"
+        },
+        {
+          "elapsed": 421.4000000000233,
+          "opacity": 0.263357,
+          "transform": "translateX(396.726px) rotate(-0.32058deg) scale(0.837939)"
+        },
+        {
+          "elapsed": 454.70000000002324,
+          "opacity": 0.299698,
+          "transform": "translateX(377.155px) rotate(-1.19276deg) scale(0.845934)"
+        },
+        {
+          "elapsed": 471.3000000000234,
+          "opacity": 0.318264,
+          "transform": "translateX(367.156px) rotate(-1.63833deg) scale(0.850018)"
+        },
+        {
+          "elapsed": 504.70000000002346,
+          "opacity": 0.356383,
+          "transform": "translateX(346.626px) rotate(-2.55319deg) scale(0.858404)"
+        },
+        {
+          "elapsed": 521.4000000000233,
+          "opacity": 0.375769,
+          "transform": "translateX(336.186px) rotate(-3.01845deg) scale(0.862669)"
+        },
+        {
+          "elapsed": 554.7000000000235,
+          "opacity": 0.41493,
+          "transform": "translateX(315.096px) rotate(-3.95831deg) scale(0.871285)"
+        },
+        {
+          "elapsed": 571.4000000000233,
+          "opacity": 0.434766,
+          "transform": "translateX(304.413px) rotate(-4.43438deg) scale(0.875648)"
+        },
+        {
+          "elapsed": 604.7000000000235,
+          "opacity": 0.47457,
+          "transform": "translateX(282.976px) rotate(-5.38967deg) scale(0.884405)"
+        },
+        {
+          "elapsed": 621.4000000000233,
+          "opacity": 0.4946,
+          "transform": "translateX(272.188px) rotate(-5.8704deg) scale(0.888812)"
+        },
+        {
+          "elapsed": 654.7000000000235,
+          "opacity": 0.534536,
+          "transform": "translateX(250.681px) rotate(-6.82885deg) scale(0.897598)"
+        }
+      ],
+      "title": "ONYX GMT",
+      "width": {
+        "client": 375,
+        "scroll": 375
+      },
+      "errors": []
+    },
+    "edge": {
+      "version": "154.0.4258.62",
+      "mid": [
+        {
+          "elapsed": 86.20000000002324,
+          "opacity": 0.0134263,
+          "transform": "translateX(531.329px) rotate(5.67777deg) scale(0.782954)"
+        },
+        {
+          "elapsed": 102.80000000002326,
+          "opacity": 0.018961,
+          "transform": "translateX(528.348px) rotate(5.54494deg) scale(0.784171)"
+        },
+        {
+          "elapsed": 119.5000000000233,
+          "opacity": 0.0254222,
+          "transform": "translateX(524.869px) rotate(5.38987deg) scale(0.785593)"
+        },
+        {
+          "elapsed": 136.20000000002324,
+          "opacity": 0.0327506,
+          "transform": "translateX(520.922px) rotate(5.21399deg) scale(0.787205)"
+        },
+        {
+          "elapsed": 152.90000000002328,
+          "opacity": 0.0409175,
+          "transform": "translateX(516.523px) rotate(5.01798deg) scale(0.789002)"
+        },
+        {
+          "elapsed": 169.5000000000232,
+          "opacity": 0.0498384,
+          "transform": "translateX(511.719px) rotate(4.80388deg) scale(0.790964)"
+        },
+        {
+          "elapsed": 186.20000000002324,
+          "opacity": 0.0595921,
+          "transform": "translateX(506.466px) rotate(4.56979deg) scale(0.79311)"
+        },
+        {
+          "elapsed": 202.80000000002337,
+          "opacity": 0.0700336,
+          "transform": "translateX(500.843px) rotate(4.31919deg) scale(0.795407)"
+        },
+        {
+          "elapsed": 220.20000000002324,
+          "opacity": 0.0817462,
+          "transform": "translateX(494.535px) rotate(4.03809deg) scale(0.797984)"
+        },
+        {
+          "elapsed": 236.10000000002333,
+          "opacity": 0.0931093,
+          "transform": "translateX(488.415px) rotate(3.76538deg) scale(0.800484)"
+        },
+        {
+          "elapsed": 253.30000000002337,
+          "opacity": 0.106082,
+          "transform": "translateX(481.428px) rotate(3.45403deg) scale(0.803338)"
+        },
+        {
+          "elapsed": 270.3000000000234,
+          "opacity": 0.119569,
+          "transform": "translateX(474.165px) rotate(3.13035deg) scale(0.806305)"
+        },
+        {
+          "elapsed": 286.70000000002324,
+          "opacity": 0.133178,
+          "transform": "translateX(466.836px) rotate(2.80373deg) scale(0.809299)"
+        },
+        {
+          "elapsed": 302.8000000000234,
+          "opacity": 0.147083,
+          "transform": "translateX(459.347px) rotate(2.47001deg) scale(0.812358)"
+        },
+        {
+          "elapsed": 319.60000000002333,
+          "opacity": 0.16214,
+          "transform": "translateX(451.238px) rotate(2.10863deg) scale(0.815671)"
+        },
+        {
+          "elapsed": 336.70000000002324,
+          "opacity": 0.178011,
+          "transform": "translateX(442.69px) rotate(1.72773deg) scale(0.819162)"
+        },
+        {
+          "elapsed": 353.10000000002333,
+          "opacity": 0.19372,
+          "transform": "translateX(434.23px) rotate(1.35071deg) scale(0.822619)"
+        },
+        {
+          "elapsed": 369.60000000002333,
+          "opacity": 0.20998,
+          "transform": "translateX(425.473px) rotate(0.960483deg) scale(0.826196)"
+        },
+        {
+          "elapsed": 386.10000000002333,
+          "opacity": 0.226667,
+          "transform": "translateX(416.486px) rotate(0.55998deg) scale(0.829867)"
+        },
+        {
+          "elapsed": 402.9000000000233,
+          "opacity": 0.24407,
+          "transform": "translateX(407.114px) rotate(0.142321deg) scale(0.833695)"
+        },
+        {
+          "elapsed": 419.60000000002333,
+          "opacity": 0.261752,
+          "transform": "translateX(397.591px) rotate(-0.282039deg) scale(0.837585)"
+        },
+        {
+          "elapsed": 436.20000000002324,
+          "opacity": 0.279677,
+          "transform": "translateX(387.937px) rotate(-0.712255deg) scale(0.841529)"
+        },
+        {
+          "elapsed": 453.0000000000232,
+          "opacity": 0.298145,
+          "transform": "translateX(377.991px) rotate(-1.15549deg) scale(0.845592)"
+        },
+        {
+          "elapsed": 469.5000000000232,
+          "opacity": 0.316575,
+          "transform": "translateX(368.065px) rotate(-1.5978deg) scale(0.849647)"
+        },
+        {
+          "elapsed": 486.3000000000234,
+          "opacity": 0.335608,
+          "transform": "translateX(357.815px) rotate(-2.05459deg) scale(0.853834)"
+        },
+        {
+          "elapsed": 502.9000000000233,
+          "opacity": 0.354652,
+          "transform": "translateX(347.559px) rotate(-2.51164deg) scale(0.858023)"
+        },
+        {
+          "elapsed": 519.6000000000233,
+          "opacity": 0.37402,
+          "transform": "translateX(337.128px) rotate(-2.97647deg) scale(0.862284)"
+        },
+        {
+          "elapsed": 536.2000000000232,
+          "opacity": 0.393452,
+          "transform": "translateX(326.663px) rotate(-3.44284deg) scale(0.866559)"
+        },
+        {
+          "elapsed": 553.0000000000232,
+          "opacity": 0.413272,
+          "transform": "translateX(315.988px) rotate(-3.91852deg) scale(0.87092)"
+        },
+        {
+          "elapsed": 569.6000000000233,
+          "opacity": 0.43298,
+          "transform": "translateX(305.374px) rotate(-4.39152deg) scale(0.875256)"
+        },
+        {
+          "elapsed": 586.3000000000234,
+          "opacity": 0.452902,
+          "transform": "translateX(294.645px) rotate(-4.86965deg) scale(0.879638)"
+        },
+        {
+          "elapsed": 603.2000000000232,
+          "opacity": 0.473132,
+          "transform": "translateX(283.75px) rotate(-5.35516deg) scale(0.884089)"
+        },
+        {
+          "elapsed": 619.6000000000233,
+          "opacity": 0.4928,
+          "transform": "translateX(273.158px) rotate(-5.82721deg) scale(0.888416)"
+        },
+        {
+          "elapsed": 636.6000000000233,
+          "opacity": 0.513199,
+          "transform": "translateX(262.172px) rotate(-6.31677deg) scale(0.892904)"
+        },
+        {
+          "elapsed": 653.5000000000232,
+          "opacity": 0.533458,
+          "transform": "translateX(251.261px) rotate(-6.80299deg) scale(0.897361)"
+        }
+      ],
+      "title": "ONYX GMT",
+      "width": {
+        "client": 375,
+        "scroll": 375
+      },
+      "errors": []
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "mid": [
+        {
+          "elapsed": 135.79999999995334,
+          "opacity": 0.032334,
+          "transform": "translateX(521.146px) rotate(5.22398deg) scale(0.787113)"
+        },
+        {
+          "elapsed": 151.79999999995334,
+          "opacity": 0.0400995,
+          "transform": "translateX(516.964px) rotate(5.03761deg) scale(0.788822)"
+        },
+        {
+          "elapsed": 201.79999999995334,
+          "opacity": 0.0690602,
+          "transform": "translateX(501.367px) rotate(4.34255deg) scale(0.795193)"
+        },
+        {
+          "elapsed": 218.39999999995348,
+          "opacity": 0.080154,
+          "transform": "translateX(495.392px) rotate(4.0763deg) scale(0.797634)"
+        },
+        {
+          "elapsed": 285.19999999995343,
+          "opacity": 0.131488,
+          "transform": "translateX(467.746px) rotate(2.84429deg) scale(0.808927)"
+        },
+        {
+          "elapsed": 301.69999999995343,
+          "opacity": 0.145678,
+          "transform": "translateX(460.104px) rotate(2.50374deg) scale(0.812049)"
+        },
+        {
+          "elapsed": 318.3999999999535,
+          "opacity": 0.160592,
+          "transform": "translateX(452.072px) rotate(2.14579deg) scale(0.81533)"
+        },
+        {
+          "elapsed": 334.9999999999534,
+          "opacity": 0.17594,
+          "transform": "translateX(443.806px) rotate(1.77745deg) scale(0.818707)"
+        },
+        {
+          "elapsed": 351.69999999995343,
+          "opacity": 0.191877,
+          "transform": "translateX(435.223px) rotate(1.39495deg) scale(0.822213)"
+        },
+        {
+          "elapsed": 368.4999999999534,
+          "opacity": 0.208384,
+          "transform": "translateX(426.333px) rotate(0.998784deg) scale(0.825844)"
+        },
+        {
+          "elapsed": 385.0999999999535,
+          "opacity": 0.225133,
+          "transform": "translateX(417.312px) rotate(0.596797deg) scale(0.829529)"
+        },
+        {
+          "elapsed": 401.79999999995334,
+          "opacity": 0.242395,
+          "transform": "translateX(408.015px) rotate(0.182509deg) scale(0.833327)"
+        },
+        {
+          "elapsed": 418.3999999999535,
+          "opacity": 0.259935,
+          "transform": "translateX(398.569px) rotate(-0.238442deg) scale(0.837186)"
+        },
+        {
+          "elapsed": 435.0999999999535,
+          "opacity": 0.277935,
+          "transform": "translateX(388.875px) rotate(-0.670442deg) scale(0.841146)"
+        },
+        {
+          "elapsed": 451.69999999995343,
+          "opacity": 0.296152,
+          "transform": "translateX(379.065px) rotate(-1.10764deg) scale(0.845153)"
+        },
+        {
+          "elapsed": 469.0999999999535,
+          "opacity": 0.315563,
+          "transform": "translateX(368.611px) rotate(-1.57351deg) scale(0.849424)"
+        },
+        {
+          "elapsed": 485.0999999999535,
+          "opacity": 0.33367,
+          "transform": "translateX(358.858px) rotate(-2.00809deg) scale(0.853408)"
+        },
+        {
+          "elapsed": 501.69999999995343,
+          "opacity": 0.352691,
+          "transform": "translateX(348.615px) rotate(-2.46459deg) scale(0.857592)"
+        },
+        {
+          "elapsed": 518.4999999999534,
+          "opacity": 0.372156,
+          "transform": "translateX(338.132px) rotate(-2.93174deg) scale(0.861874)"
+        },
+        {
+          "elapsed": 534.9999999999534,
+          "opacity": 0.391454,
+          "transform": "translateX(327.738px) rotate(-3.3949deg) scale(0.86612)"
+        },
+        {
+          "elapsed": 551.6999999999534,
+          "opacity": 0.411142,
+          "transform": "translateX(317.136px) rotate(-3.8674deg) scale(0.870451)"
+        },
+        {
+          "elapsed": 568.2999999999533,
+          "opacity": 0.430838,
+          "transform": "translateX(306.528px) rotate(-4.34011deg) scale(0.874784)"
+        },
+        {
+          "elapsed": 585.0999999999535,
+          "opacity": 0.450871,
+          "transform": "translateX(295.739px) rotate(-4.82089deg) scale(0.879192)"
+        },
+        {
+          "elapsed": 601.6999999999534,
+          "opacity": 0.470735,
+          "transform": "translateX(285.041px) rotate(-5.29764deg) scale(0.883562)"
+        },
+        {
+          "elapsed": 618.3999999999533,
+          "opacity": 0.49076,
+          "transform": "translateX(274.256px) rotate(-5.77825deg) scale(0.887967)"
+        },
+        {
+          "elapsed": 635.0999999999535,
+          "opacity": 0.510799,
+          "transform": "translateX(263.464px) rotate(-6.25918deg) scale(0.892376)"
+        },
+        {
+          "elapsed": 651.7999999999533,
+          "opacity": 0.530823,
+          "transform": "translateX(252.68px) rotate(-6.73974deg) scale(0.896781)"
+        }
+      ],
+      "title": "ONYX GMT",
+      "width": {
+        "client": 375,
+        "scroll": 375
+      },
+      "errors": []
+    }
+  }
+}

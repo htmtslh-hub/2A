@@ -16,7 +16,21 @@ no migration or account/order mutations were performed on production. The
 Vercel CLI pull redacts all production environment values, so blank values in
 that pulled file do not prove missing configuration. Reapplied the existing
 owner allowlist and analytics switch through Vercel, without adding an identity.
-Runtime authorization and tracking will be verified after this release.
+Production deployment `dpl_3ErqUgGJtRZoG6k2RDPLPFM3bvtK` is READY and aliased
+to https://forgezone.store, with source commit `2e3da24`. Cloud build/TypeScript
+passed. Updated `production-checks.json` confirms installed Edge 154.0.4258.62
+at 1440px and Cốc Cốc 152.0.7977.124 at 375px: authorized admin/page/API reads,
+anonymous denial, profile access, automatic live pageview updates, modal/Escape,
+responsive layout and zero client runtime errors. The short-lived owner test
+session was server-signed; live Google OAuth was not exercised. No production
+account/order mutations or fixture imports were performed. The runtime confirms
+administrator configuration and tracking are active.
+
+Watchroom production regression was also rerun against this release checkout's
+exact deployed bytes (Git uses CRLF in this checkout): asset SHA-256 checks,
+carousel intermediate frames, Pause, model pairing and mobile on Chromium,
+Edge and Cốc Cốc. Its text matches the prior source after line ending
+normalization. Other product demo URLs and the storefront remain HTTP 200.
 
 Verified 6 October 2026. The complete production Next.js build was exercised
 against an in-memory, isolated PostgreSQL-compatible PGlite database using all

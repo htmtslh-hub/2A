@@ -1,21 +1,21 @@
 {
   "base": "https://forgezone.store",
-  "date": "2026-10-07T00:53:02.506Z",
+  "date": "2026-10-07T01:08:23.442Z",
   "resources": [
     {
       "file": "index.html",
       "status": 200,
-      "sha256": "65a2d791246270d2f182400d8208ef84986f2263b1f1835d57c09d77e400bc4b"
+      "sha256": "9aa562b1c773c4fa7549e1aedf9c83bcdae30cf057e2bf5e94f285d0282cc72e"
     },
     {
       "file": "assets/css/style.css",
       "status": 200,
-      "sha256": "09680bde4af0158f00b54246ad230b3751925002c202a0228da8d162e9220bf8"
+      "sha256": "0502b8b8956236da01e2a4b0443c069a518d96fbb61bd12cc7baa067bf155937"
     },
     {
       "file": "assets/js/main.js",
       "status": 200,
-      "sha256": "eadc5f1b9da377870813bbc7cc34bd1e5e4986ca87687c413300fba5714a60e0"
+      "sha256": "7f025d997acd725d61b9cf9d7727a40a5315798fbf044bf1284767b76c410720"
     },
     {
       "file": "assets/img/quantum-adg.webp",
@@ -54,104 +54,99 @@
       "version": "153.0.8010.12",
       "mid": [
         {
-          "elapsed": 4.800000000023374,
-          "opacity": 0.0000291425,
-          "transform": "translateX(538.544px) rotate(5.9993deg) scale(0.780006)"
+          "elapsed": -4.2000000001862645,
+          "opacity": 0.00004435,
+          "transform": "translateX(538.536px) rotate(5.99894deg) scale(0.78001)"
         },
         {
-          "elapsed": 54.70000000002324,
-          "opacity": 0.00539787,
-          "transform": "translateX(535.653px) rotate(5.87045deg) scale(0.781188)"
+          "elapsed": 45.69999999981337,
+          "opacity": 0.00381136,
+          "transform": "translateX(536.507px) rotate(5.90853deg) scale(0.780839)"
         },
         {
-          "elapsed": 88.10000000002333,
-          "opacity": 0.0139204,
-          "transform": "translateX(531.063px) rotate(5.66591deg) scale(0.783062)"
+          "elapsed": 79.09999999981392,
+          "opacity": 0.0113362,
+          "transform": "translateX(532.455px) rotate(5.72793deg) scale(0.782494)"
         },
         {
-          "elapsed": 154.70000000002324,
-          "opacity": 0.0416912,
-          "transform": "translateX(516.107px) rotate(4.99941deg) scale(0.789172)"
+          "elapsed": 112.3999999998141,
+          "opacity": 0.0225676,
+          "transform": "translateX(526.406px) rotate(5.45838deg) scale(0.784965)"
         },
         {
-          "elapsed": 188.0000000000232,
-          "opacity": 0.0605054,
-          "transform": "translateX(505.974px) rotate(4.54787deg) scale(0.793311)"
+          "elapsed": 145.69999999981337,
+          "opacity": 0.0372954,
+          "transform": "translateX(518.474px) rotate(5.10491deg) scale(0.788205)"
         },
         {
-          "elapsed": 238.10000000002333,
-          "opacity": 0.0943605,
-          "transform": "translateX(487.741px) rotate(3.73535deg) scale(0.800759)"
+          "elapsed": 179.099999999813,
+          "opacity": 0.0553516,
+          "transform": "translateX(508.75px) rotate(4.67156deg) scale(0.792177)"
         },
         {
-          "elapsed": 271.4000000000233,
-          "opacity": 0.120219,
-          "transform": "translateX(473.815px) rotate(3.11474deg) scale(0.806448)"
+          "elapsed": 212.3999999998141,
+          "opacity": 0.0764005,
+          "transform": "translateX(497.414px) rotate(4.16639deg) scale(0.796808)"
         },
         {
-          "elapsed": 321.4000000000233,
-          "opacity": 0.163511,
-          "transform": "translateX(450.5px) rotate(2.07574deg) scale(0.815972)"
+          "elapsed": 245.79999999981374,
+          "opacity": 0.10034,
+          "transform": "translateX(484.521px) rotate(3.59183deg) scale(0.802075)"
         },
         {
-          "elapsed": 354.70000000002324,
-          "opacity": 0.194985,
-          "transform": "translateX(433.549px) rotate(1.32035deg) scale(0.822897)"
+          "elapsed": 278.99999999981446,
+          "opacity": 0.126717,
+          "transform": "translateX(470.315px) rotate(2.95879deg) scale(0.807878)"
         },
         {
-          "elapsed": 404.70000000002324,
-          "opacity": 0.245643,
-          "transform": "translateX(406.267px) rotate(0.104569deg) scale(0.834041)"
+          "elapsed": 329.099999999813,
+          "opacity": 0.170892,
+          "transform": "translateX(446.525px) rotate(1.8986deg) scale(0.817596)"
         },
         {
-          "elapsed": 421.4000000000233,
-          "opacity": 0.263357,
-          "transform": "translateX(396.726px) rotate(-0.32058deg) scale(0.837939)"
+          "elapsed": 362.3999999998141,
+          "opacity": 0.202831,
+          "transform": "translateX(429.324px) rotate(1.13207deg) scale(0.824623)"
         },
         {
-          "elapsed": 454.70000000002324,
-          "opacity": 0.299698,
-          "transform": "translateX(377.155px) rotate(-1.19276deg) scale(0.845934)"
+          "elapsed": 395.6999999998134,
+          "opacity": 0.236563,
+          "transform": "translateX(411.157px) rotate(0.322494deg) scale(0.832044)"
         },
         {
-          "elapsed": 471.3000000000234,
-          "opacity": 0.318264,
-          "transform": "translateX(367.156px) rotate(-1.63833deg) scale(0.850018)"
+          "elapsed": 462.3999999998141,
+          "opacity": 0.308611,
+          "transform": "translateX(372.354px) rotate(-1.40666deg) scale(0.847894)"
         },
         {
-          "elapsed": 504.70000000002346,
-          "opacity": 0.356383,
-          "transform": "translateX(346.626px) rotate(-2.55319deg) scale(0.858404)"
+          "elapsed": 512.3999999998141,
+          "opacity": 0.365645,
+          "transform": "translateX(341.638px) rotate(-2.77549deg) scale(0.860442)"
         },
         {
-          "elapsed": 521.4000000000233,
-          "opacity": 0.375769,
-          "transform": "translateX(336.186px) rotate(-3.01845deg) scale(0.862669)"
+          "elapsed": 545.6999999998134,
+          "opacity": 0.404642,
+          "transform": "translateX(320.636px) rotate(-3.71142deg) scale(0.869021)"
         },
         {
-          "elapsed": 554.7000000000235,
-          "opacity": 0.41493,
-          "transform": "translateX(315.096px) rotate(-3.95831deg) scale(0.871285)"
+          "elapsed": 562.3999999998141,
+          "opacity": 0.424418,
+          "transform": "translateX(309.985px) rotate(-4.18604deg) scale(0.873372)"
         },
         {
-          "elapsed": 571.4000000000233,
-          "opacity": 0.434766,
-          "transform": "translateX(304.413px) rotate(-4.43438deg) scale(0.875648)"
+          "elapsed": 595.6999999998134,
+          "opacity": 0.464147,
+          "transform": "translateX(288.589px) rotate(-5.13954deg) scale(0.882112)"
         },
         {
-          "elapsed": 604.7000000000235,
-          "opacity": 0.47457,
-          "transform": "translateX(282.976px) rotate(-5.38967deg) scale(0.884405)"
+          "elapsed": 629.099999999813,
+          "opacity": 0.5042,
+          "transform": "translateX(267.018px) rotate(-6.1008deg) scale(0.890924)"
         },
         {
-          "elapsed": 621.4000000000233,
-          "opacity": 0.4946,
-          "transform": "translateX(272.188px) rotate(-5.8704deg) scale(0.888812)"
-        },
-        {
-          "elapsed": 654.7000000000235,
-          "opacity": 0.534536,
-          "transform": "translateX(250.681px) rotate(-6.82885deg) scale(0.897598)"
+          "elapsed": 662.3999999998141,
+          "opacity": 0.544109,
+          "transform": "translateX(245.525px) rotate(-7.05862deg) scale(0.899704)"
         }
       ],
       "title": "ONYX GMT",
@@ -165,179 +160,339 @@
       "version": "154.0.4258.62",
       "mid": [
         {
-          "elapsed": 86.20000000002324,
-          "opacity": 0.0134263,
-          "transform": "translateX(531.329px) rotate(5.67777deg) scale(0.782954)"
+          "elapsed": 26.5,
+          "opacity": 0.00127016,
+          "transform": "translateX(537.876px) rotate(5.96952deg) scale(0.780279)"
         },
         {
-          "elapsed": 102.80000000002326,
-          "opacity": 0.018961,
-          "transform": "translateX(528.348px) rotate(5.54494deg) scale(0.784171)"
+          "elapsed": 93.20000000000005,
+          "opacity": 0.0156505,
+          "transform": "translateX(530.131px) rotate(5.62439deg) scale(0.783443)"
         },
         {
-          "elapsed": 119.5000000000233,
-          "opacity": 0.0254222,
-          "transform": "translateX(524.869px) rotate(5.38987deg) scale(0.785593)"
+          "elapsed": 101.5,
+          "opacity": 0.0184953,
+          "transform": "translateX(528.599px) rotate(5.55611deg) scale(0.784069)"
         },
         {
-          "elapsed": 136.20000000002324,
-          "opacity": 0.0327506,
-          "transform": "translateX(520.922px) rotate(5.21399deg) scale(0.787205)"
+          "elapsed": 118.29999999999995,
+          "opacity": 0.0249287,
+          "transform": "translateX(525.134px) rotate(5.40171deg) scale(0.785484)"
         },
         {
-          "elapsed": 152.90000000002328,
-          "opacity": 0.0409175,
-          "transform": "translateX(516.523px) rotate(5.01798deg) scale(0.789002)"
+          "elapsed": 134.79999999999995,
+          "opacity": 0.0321036,
+          "transform": "translateX(521.27px) rotate(5.22951deg) scale(0.787063)"
         },
         {
-          "elapsed": 169.5000000000232,
-          "opacity": 0.0498384,
-          "transform": "translateX(511.719px) rotate(4.80388deg) scale(0.790964)"
+          "elapsed": 143.20000000000005,
+          "opacity": 0.0360734,
+          "transform": "translateX(519.132px) rotate(5.13424deg) scale(0.787936)"
         },
         {
-          "elapsed": 186.20000000002324,
-          "opacity": 0.0595921,
-          "transform": "translateX(506.466px) rotate(4.56979deg) scale(0.79311)"
+          "elapsed": 151.5,
+          "opacity": 0.0402014,
+          "transform": "translateX(516.909px) rotate(5.03517deg) scale(0.788844)"
         },
         {
-          "elapsed": 202.80000000002337,
-          "opacity": 0.0700336,
-          "transform": "translateX(500.843px) rotate(4.31919deg) scale(0.795407)"
+          "elapsed": 159.89999999999998,
+          "opacity": 0.0445834,
+          "transform": "translateX(514.549px) rotate(4.93deg) scale(0.789808)"
         },
         {
-          "elapsed": 220.20000000002324,
-          "opacity": 0.0817462,
-          "transform": "translateX(494.535px) rotate(4.03809deg) scale(0.797984)"
+          "elapsed": 168.20000000000005,
+          "opacity": 0.0491115,
+          "transform": "translateX(512.111px) rotate(4.82132deg) scale(0.790805)"
         },
         {
-          "elapsed": 236.10000000002333,
-          "opacity": 0.0931093,
-          "transform": "translateX(488.415px) rotate(3.76538deg) scale(0.800484)"
+          "elapsed": 176.60000000000002,
+          "opacity": 0.0538913,
+          "transform": "translateX(509.536px) rotate(4.70661deg) scale(0.791856)"
         },
         {
-          "elapsed": 253.30000000002337,
-          "opacity": 0.106082,
-          "transform": "translateX(481.428px) rotate(3.45403deg) scale(0.803338)"
+          "elapsed": 184.89999999999998,
+          "opacity": 0.0588054,
+          "transform": "translateX(506.89px) rotate(4.58867deg) scale(0.792937)"
         },
         {
-          "elapsed": 270.3000000000234,
-          "opacity": 0.119569,
-          "transform": "translateX(474.165px) rotate(3.13035deg) scale(0.806305)"
+          "elapsed": 193.20000000000005,
+          "opacity": 0.063906,
+          "transform": "translateX(504.143px) rotate(4.46626deg) scale(0.794059)"
         },
         {
-          "elapsed": 286.70000000002324,
-          "opacity": 0.133178,
-          "transform": "translateX(466.836px) rotate(2.80373deg) scale(0.809299)"
+          "elapsed": 201.5,
+          "opacity": 0.0691897,
+          "transform": "translateX(501.297px) rotate(4.33945deg) scale(0.795222)"
         },
         {
-          "elapsed": 302.8000000000234,
-          "opacity": 0.147083,
-          "transform": "translateX(459.347px) rotate(2.47001deg) scale(0.812358)"
+          "elapsed": 209.89999999999998,
+          "opacity": 0.0747197,
+          "transform": "translateX(498.319px) rotate(4.20673deg) scale(0.796438)"
         },
         {
-          "elapsed": 319.60000000002333,
-          "opacity": 0.16214,
-          "transform": "translateX(451.238px) rotate(2.10863deg) scale(0.815671)"
+          "elapsed": 218.20000000000005,
+          "opacity": 0.080361,
+          "transform": "translateX(495.281px) rotate(4.07134deg) scale(0.797679)"
         },
         {
-          "elapsed": 336.70000000002324,
-          "opacity": 0.178011,
-          "transform": "translateX(442.69px) rotate(1.72773deg) scale(0.819162)"
+          "elapsed": 226.5,
+          "opacity": 0.0861746,
+          "transform": "translateX(492.15px) rotate(3.93181deg) scale(0.798958)"
         },
         {
-          "elapsed": 353.10000000002333,
-          "opacity": 0.19372,
-          "transform": "translateX(434.23px) rotate(1.35071deg) scale(0.822619)"
+          "elapsed": 234.89999999999998,
+          "opacity": 0.0922303,
+          "transform": "translateX(488.888px) rotate(3.78647deg) scale(0.800291)"
         },
         {
-          "elapsed": 369.60000000002333,
-          "opacity": 0.20998,
-          "transform": "translateX(425.473px) rotate(0.960483deg) scale(0.826196)"
+          "elapsed": 243.29999999999995,
+          "opacity": 0.0984554,
+          "transform": "translateX(485.536px) rotate(3.63707deg) scale(0.80166)"
         },
         {
-          "elapsed": 386.10000000002333,
-          "opacity": 0.226667,
-          "transform": "translateX(416.486px) rotate(0.55998deg) scale(0.829867)"
+          "elapsed": 251.60000000000002,
+          "opacity": 0.104769,
+          "transform": "translateX(482.136px) rotate(3.48554deg) scale(0.803049)"
         },
         {
-          "elapsed": 402.9000000000233,
-          "opacity": 0.24407,
-          "transform": "translateX(407.114px) rotate(0.142321deg) scale(0.833695)"
+          "elapsed": 259.9,
+          "opacity": 0.111241,
+          "transform": "translateX(478.65px) rotate(3.33021deg) scale(0.804473)"
         },
         {
-          "elapsed": 419.60000000002333,
-          "opacity": 0.261752,
-          "transform": "translateX(397.591px) rotate(-0.282039deg) scale(0.837585)"
+          "elapsed": 268.20000000000005,
+          "opacity": 0.117868,
+          "transform": "translateX(475.081px) rotate(3.17117deg) scale(0.805931)"
         },
         {
-          "elapsed": 436.20000000002324,
-          "opacity": 0.279677,
-          "transform": "translateX(387.937px) rotate(-0.712255deg) scale(0.841529)"
+          "elapsed": 277.29999999999995,
+          "opacity": 0.125307,
+          "transform": "translateX(471.074px) rotate(2.99262deg) scale(0.807568)"
         },
         {
-          "elapsed": 453.0000000000232,
-          "opacity": 0.298145,
-          "transform": "translateX(377.991px) rotate(-1.15549deg) scale(0.845592)"
+          "elapsed": 284.9,
+          "opacity": 0.131656,
+          "transform": "translateX(467.655px) rotate(2.84025deg) scale(0.808964)"
         },
         {
-          "elapsed": 469.5000000000232,
-          "opacity": 0.316575,
-          "transform": "translateX(368.065px) rotate(-1.5978deg) scale(0.849647)"
+          "elapsed": 293.20000000000005,
+          "opacity": 0.138728,
+          "transform": "translateX(463.847px) rotate(2.67052deg) scale(0.81052)"
         },
         {
-          "elapsed": 486.3000000000234,
-          "opacity": 0.335608,
-          "transform": "translateX(357.815px) rotate(-2.05459deg) scale(0.853834)"
+          "elapsed": 301.5,
+          "opacity": 0.145941,
+          "transform": "translateX(459.962px) rotate(2.49742deg) scale(0.812107)"
         },
         {
-          "elapsed": 502.9000000000233,
-          "opacity": 0.354652,
-          "transform": "translateX(347.559px) rotate(-2.51164deg) scale(0.858023)"
+          "elapsed": 309.9000000000001,
+          "opacity": 0.15338,
+          "transform": "translateX(455.956px) rotate(2.31888deg) scale(0.813744)"
         },
         {
-          "elapsed": 519.6000000000233,
-          "opacity": 0.37402,
-          "transform": "translateX(337.128px) rotate(-2.97647deg) scale(0.862284)"
+          "elapsed": 318.20000000000005,
+          "opacity": 0.160865,
+          "transform": "translateX(451.925px) rotate(2.13924deg) scale(0.81539)"
         },
         {
-          "elapsed": 536.2000000000232,
-          "opacity": 0.393452,
-          "transform": "translateX(326.663px) rotate(-3.44284deg) scale(0.866559)"
+          "elapsed": 326.5999999999999,
+          "opacity": 0.168572,
+          "transform": "translateX(447.774px) rotate(1.95426deg) scale(0.817086)"
         },
         {
-          "elapsed": 553.0000000000232,
-          "opacity": 0.413272,
-          "transform": "translateX(315.988px) rotate(-3.91852deg) scale(0.87092)"
+          "elapsed": 334.9000000000001,
+          "opacity": 0.176316,
+          "transform": "translateX(443.603px) rotate(1.76843deg) scale(0.818789)"
         },
         {
-          "elapsed": 569.6000000000233,
-          "opacity": 0.43298,
-          "transform": "translateX(305.374px) rotate(-4.39152deg) scale(0.875256)"
+          "elapsed": 343.20000000000005,
+          "opacity": 0.184182,
+          "transform": "translateX(439.367px) rotate(1.57964deg) scale(0.82052)"
         },
         {
-          "elapsed": 586.3000000000234,
-          "opacity": 0.452902,
-          "transform": "translateX(294.645px) rotate(-4.86965deg) scale(0.879638)"
+          "elapsed": 351.5999999999999,
+          "opacity": 0.192265,
+          "transform": "translateX(435.014px) rotate(1.38565deg) scale(0.822298)"
         },
         {
-          "elapsed": 603.2000000000232,
-          "opacity": 0.473132,
-          "transform": "translateX(283.75px) rotate(-5.35516deg) scale(0.884089)"
+          "elapsed": 359.9000000000001,
+          "opacity": 0.200368,
+          "transform": "translateX(430.65px) rotate(1.19118deg) scale(0.824081)"
         },
         {
-          "elapsed": 619.6000000000233,
-          "opacity": 0.4928,
-          "transform": "translateX(273.158px) rotate(-5.82721deg) scale(0.888416)"
+          "elapsed": 368.20000000000005,
+          "opacity": 0.208583,
+          "transform": "translateX(426.225px) rotate(0.994002deg) scale(0.825888)"
         },
         {
-          "elapsed": 636.6000000000233,
-          "opacity": 0.513199,
-          "transform": "translateX(262.172px) rotate(-6.31677deg) scale(0.892904)"
+          "elapsed": 376.5999999999999,
+          "opacity": 0.217009,
+          "transform": "translateX(421.688px) rotate(0.79179deg) scale(0.827742)"
         },
         {
-          "elapsed": 653.5000000000232,
-          "opacity": 0.533458,
-          "transform": "translateX(251.261px) rotate(-6.80299deg) scale(0.897361)"
+          "elapsed": 384.9000000000001,
+          "opacity": 0.22544,
+          "transform": "translateX(417.147px) rotate(0.58944deg) scale(0.829597)"
+        },
+        {
+          "elapsed": 393.20000000000005,
+          "opacity": 0.233973,
+          "transform": "translateX(412.551px) rotate(0.384645deg) scale(0.831474)"
+        },
+        {
+          "elapsed": 401.5,
+          "opacity": 0.242605,
+          "transform": "translateX(407.903px) rotate(0.17749deg) scale(0.833373)"
+        },
+        {
+          "elapsed": 409.9000000000001,
+          "opacity": 0.251437,
+          "transform": "translateX(403.146px) rotate(-0.0344789deg) scale(0.835316)"
+        },
+        {
+          "elapsed": 418.20000000000005,
+          "opacity": 0.260255,
+          "transform": "translateX(398.397px) rotate(-0.246129deg) scale(0.837256)"
+        },
+        {
+          "elapsed": 426.5999999999999,
+          "opacity": 0.26927,
+          "transform": "translateX(393.542px) rotate(-0.462474deg) scale(0.839239)"
+        },
+        {
+          "elapsed": 434.9000000000001,
+          "opacity": 0.278262,
+          "transform": "translateX(388.699px) rotate(-0.678277deg) scale(0.841218)"
+        },
+        {
+          "elapsed": 443.20000000000005,
+          "opacity": 0.287334,
+          "transform": "translateX(383.813px) rotate(-0.896017deg) scale(0.843213)"
+        },
+        {
+          "elapsed": 451.5999999999999,
+          "opacity": 0.296594,
+          "transform": "translateX(378.826px) rotate(-1.11827deg) scale(0.845251)"
+        },
+        {
+          "elapsed": 459.9000000000001,
+          "opacity": 0.305819,
+          "transform": "translateX(373.858px) rotate(-1.33965deg) scale(0.84728)"
+        },
+        {
+          "elapsed": 468.20000000000005,
+          "opacity": 0.315113,
+          "transform": "translateX(368.853px) rotate(-1.56272deg) scale(0.849325)"
+        },
+        {
+          "elapsed": 476.5999999999999,
+          "opacity": 0.324587,
+          "transform": "translateX(363.75px) rotate(-1.7901deg) scale(0.851409)"
+        },
+        {
+          "elapsed": 484.9000000000001,
+          "opacity": 0.334012,
+          "transform": "translateX(358.674px) rotate(-2.01629deg) scale(0.853483)"
+        },
+        {
+          "elapsed": 493.29999999999995,
+          "opacity": 0.343611,
+          "transform": "translateX(353.505px) rotate(-2.24667deg) scale(0.855594)"
+        },
+        {
+          "elapsed": 501.5,
+          "opacity": 0.353037,
+          "transform": "translateX(348.428px) rotate(-2.47289deg) scale(0.857668)"
+        },
+        {
+          "elapsed": 509.79999999999995,
+          "opacity": 0.36263,
+          "transform": "translateX(343.262px) rotate(-2.70312deg) scale(0.859779)"
+        },
+        {
+          "elapsed": 518.2,
+          "opacity": 0.372389,
+          "transform": "translateX(338.006px) rotate(-2.93733deg) scale(0.861925)"
+        },
+        {
+          "elapsed": 526.5,
+          "opacity": 0.382077,
+          "transform": "translateX(332.789px) rotate(-3.16984deg) scale(0.864057)"
+        },
+        {
+          "elapsed": 534.9000000000001,
+          "opacity": 0.391924,
+          "transform": "translateX(327.485px) rotate(-3.40618deg) scale(0.866223)"
+        },
+        {
+          "elapsed": 543.2,
+          "opacity": 0.401693,
+          "transform": "translateX(322.224px) rotate(-3.64063deg) scale(0.868372)"
+        },
+        {
+          "elapsed": 551.5999999999999,
+          "opacity": 0.411615,
+          "transform": "translateX(316.881px) rotate(-3.87876deg) scale(0.870555)"
+        },
+        {
+          "elapsed": 559.9000000000001,
+          "opacity": 0.42145,
+          "transform": "translateX(311.584px) rotate(-4.11481deg) scale(0.872719)"
+        },
+        {
+          "elapsed": 568.2,
+          "opacity": 0.431314,
+          "transform": "translateX(306.272px) rotate(-4.35153deg) scale(0.874889)"
+        },
+        {
+          "elapsed": 576.5,
+          "opacity": 0.441201,
+          "transform": "translateX(300.947px) rotate(-4.58883deg) scale(0.877064)"
+        },
+        {
+          "elapsed": 584.9000000000001,
+          "opacity": 0.451229,
+          "transform": "translateX(295.546px) rotate(-4.8295deg) scale(0.87927)"
+        },
+        {
+          "elapsed": 596.2,
+          "opacity": 0.464746,
+          "transform": "translateX(288.266px) rotate(-5.1539deg) scale(0.882244)"
+        },
+        {
+          "elapsed": 601.5,
+          "opacity": 0.471094,
+          "transform": "translateX(284.847px) rotate(-5.30626deg) scale(0.883641)"
+        },
+        {
+          "elapsed": 609.9000000000001,
+          "opacity": 0.481164,
+          "transform": "translateX(279.424px) rotate(-5.54794deg) scale(0.885856)"
+        },
+        {
+          "elapsed": 618.2,
+          "opacity": 0.49112,
+          "transform": "translateX(274.062px) rotate(-5.78689deg) scale(0.888046)"
+        },
+        {
+          "elapsed": 626.5999999999999,
+          "opacity": 0.5012,
+          "transform": "translateX(268.634px) rotate(-6.0288deg) scale(0.890264)"
+        },
+        {
+          "elapsed": 634.8,
+          "opacity": 0.511039,
+          "transform": "translateX(263.335px) rotate(-6.26494deg) scale(0.892429)"
+        },
+        {
+          "elapsed": 643.2,
+          "opacity": 0.521114,
+          "transform": "translateX(257.909px) rotate(-6.50675deg) scale(0.894645)"
+        },
+        {
+          "elapsed": 652.4000000000001,
+          "opacity": 0.53214,
+          "transform": "translateX(251.971px) rotate(-6.77137deg) scale(0.897071)"
         }
       ],
       "title": "ONYX GMT",
@@ -351,139 +506,359 @@
       "version": "152.0.7977.124",
       "mid": [
         {
-          "elapsed": 135.79999999995334,
-          "opacity": 0.032334,
-          "transform": "translateX(521.146px) rotate(5.22398deg) scale(0.787113)"
+          "elapsed": 42.99999999986028,
+          "opacity": 0.00338939,
+          "transform": "translateX(536.735px) rotate(5.91865deg) scale(0.780746)"
         },
         {
-          "elapsed": 151.79999999995334,
-          "opacity": 0.0400995,
-          "transform": "translateX(516.964px) rotate(5.03761deg) scale(0.788822)"
+          "elapsed": 51.399999999860256,
+          "opacity": 0.00483932,
+          "transform": "translateX(535.954px) rotate(5.88386deg) scale(0.781065)"
         },
         {
-          "elapsed": 201.79999999995334,
-          "opacity": 0.0690602,
-          "transform": "translateX(501.367px) rotate(4.34255deg) scale(0.795193)"
+          "elapsed": 59.699999999860324,
+          "opacity": 0.00651645,
+          "transform": "translateX(535.05px) rotate(5.84361deg) scale(0.781434)"
         },
         {
-          "elapsed": 218.39999999995348,
-          "opacity": 0.080154,
-          "transform": "translateX(495.392px) rotate(4.0763deg) scale(0.797634)"
+          "elapsed": 68.0999999998603,
+          "opacity": 0.00845761,
+          "transform": "translateX(534.005px) rotate(5.79702deg) scale(0.781861)"
         },
         {
-          "elapsed": 285.19999999995343,
-          "opacity": 0.131488,
-          "transform": "translateX(467.746px) rotate(2.84429deg) scale(0.808927)"
+          "elapsed": 101.5999999998603,
+          "opacity": 0.0185666,
+          "transform": "translateX(528.561px) rotate(5.5544deg) scale(0.784085)"
         },
         {
-          "elapsed": 301.69999999995343,
-          "opacity": 0.145678,
-          "transform": "translateX(460.104px) rotate(2.50374deg) scale(0.812049)"
+          "elapsed": 109.5999999998603,
+          "opacity": 0.0215236,
+          "transform": "translateX(526.968px) rotate(5.48343deg) scale(0.784735)"
         },
         {
-          "elapsed": 318.3999999999535,
-          "opacity": 0.160592,
-          "transform": "translateX(452.072px) rotate(2.14579deg) scale(0.81533)"
+          "elapsed": 117.99999999986028,
+          "opacity": 0.0248468,
+          "transform": "translateX(525.178px) rotate(5.40368deg) scale(0.785466)"
         },
         {
-          "elapsed": 334.9999999999534,
-          "opacity": 0.17594,
-          "transform": "translateX(443.806px) rotate(1.77745deg) scale(0.818707)"
+          "elapsed": 126.29999999986035,
+          "opacity": 0.0283466,
+          "transform": "translateX(523.294px) rotate(5.31968deg) scale(0.786236)"
         },
         {
-          "elapsed": 351.69999999995343,
-          "opacity": 0.191877,
-          "transform": "translateX(435.223px) rotate(1.39495deg) scale(0.822213)"
+          "elapsed": 134.5999999998603,
+          "opacity": 0.0320576,
+          "transform": "translateX(521.295px) rotate(5.23062deg) scale(0.787053)"
         },
         {
-          "elapsed": 368.4999999999534,
-          "opacity": 0.208384,
-          "transform": "translateX(426.333px) rotate(0.998784deg) scale(0.825844)"
+          "elapsed": 143.0999999998603,
+          "opacity": 0.0360734,
+          "transform": "translateX(519.132px) rotate(5.13424deg) scale(0.787936)"
         },
         {
-          "elapsed": 385.0999999999535,
-          "opacity": 0.225133,
-          "transform": "translateX(417.312px) rotate(0.596797deg) scale(0.829529)"
+          "elapsed": 151.29999999986035,
+          "opacity": 0.0401504,
+          "transform": "translateX(516.937px) rotate(5.03639deg) scale(0.788833)"
         },
         {
-          "elapsed": 401.79999999995334,
-          "opacity": 0.242395,
-          "transform": "translateX(408.015px) rotate(0.182509deg) scale(0.833327)"
+          "elapsed": 159.69999999986032,
+          "opacity": 0.04453,
+          "transform": "translateX(514.578px) rotate(4.93128deg) scale(0.789797)"
         },
         {
-          "elapsed": 418.3999999999535,
-          "opacity": 0.259935,
-          "transform": "translateX(398.569px) rotate(-0.238442deg) scale(0.837186)"
+          "elapsed": 168.0999999998603,
+          "opacity": 0.0491115,
+          "transform": "translateX(512.111px) rotate(4.82132deg) scale(0.790805)"
         },
         {
-          "elapsed": 435.0999999999535,
-          "opacity": 0.277935,
-          "transform": "translateX(388.875px) rotate(-0.670442deg) scale(0.841146)"
+          "elapsed": 176.39999999986026,
+          "opacity": 0.0538332,
+          "transform": "translateX(509.568px) rotate(4.708deg) scale(0.791843)"
         },
         {
-          "elapsed": 451.69999999995343,
-          "opacity": 0.296152,
-          "transform": "translateX(379.065px) rotate(-1.10764deg) scale(0.845153)"
+          "elapsed": 184.69999999986032,
+          "opacity": 0.0587451,
+          "transform": "translateX(506.922px) rotate(4.59012deg) scale(0.792924)"
         },
         {
-          "elapsed": 469.0999999999535,
-          "opacity": 0.315563,
-          "transform": "translateX(368.611px) rotate(-1.57351deg) scale(0.849424)"
+          "elapsed": 193.0999999998603,
+          "opacity": 0.063906,
+          "transform": "translateX(504.143px) rotate(4.46626deg) scale(0.794059)"
         },
         {
-          "elapsed": 485.0999999999535,
-          "opacity": 0.33367,
-          "transform": "translateX(358.858px) rotate(-2.00809deg) scale(0.853408)"
+          "elapsed": 201.49999999986028,
+          "opacity": 0.0692544,
+          "transform": "translateX(501.262px) rotate(4.33789deg) scale(0.795236)"
         },
         {
-          "elapsed": 501.69999999995343,
-          "opacity": 0.352691,
-          "transform": "translateX(348.615px) rotate(-2.46459deg) scale(0.857592)"
+          "elapsed": 209.69999999986032,
+          "opacity": 0.0746528,
+          "transform": "translateX(498.355px) rotate(4.20833deg) scale(0.796424)"
         },
         {
-          "elapsed": 518.4999999999534,
-          "opacity": 0.372156,
-          "transform": "translateX(338.132px) rotate(-2.93174deg) scale(0.861874)"
+          "elapsed": 218.69999999986032,
+          "opacity": 0.0807755,
+          "transform": "translateX(495.058px) rotate(4.06139deg) scale(0.797771)"
         },
         {
-          "elapsed": 534.9999999999534,
-          "opacity": 0.391454,
-          "transform": "translateX(327.738px) rotate(-3.3949deg) scale(0.86612)"
+          "elapsed": 226.39999999986026,
+          "opacity": 0.0861746,
+          "transform": "translateX(492.15px) rotate(3.93181deg) scale(0.798958)"
         },
         {
-          "elapsed": 551.6999999999534,
-          "opacity": 0.411142,
-          "transform": "translateX(317.136px) rotate(-3.8674deg) scale(0.870451)"
+          "elapsed": 234.79999999986035,
+          "opacity": 0.0922303,
+          "transform": "translateX(488.888px) rotate(3.78647deg) scale(0.800291)"
         },
         {
-          "elapsed": 568.2999999999533,
-          "opacity": 0.430838,
-          "transform": "translateX(306.528px) rotate(-4.34011deg) scale(0.874784)"
+          "elapsed": 243.0999999998603,
+          "opacity": 0.0983803,
+          "transform": "translateX(485.576px) rotate(3.63887deg) scale(0.801644)"
         },
         {
-          "elapsed": 585.0999999999535,
-          "opacity": 0.450871,
-          "transform": "translateX(295.739px) rotate(-4.82089deg) scale(0.879192)"
+          "elapsed": 251.39999999986026,
+          "opacity": 0.104692,
+          "transform": "translateX(482.177px) rotate(3.48739deg) scale(0.803032)"
         },
         {
-          "elapsed": 601.6999999999534,
-          "opacity": 0.470735,
-          "transform": "translateX(285.041px) rotate(-5.29764deg) scale(0.883562)"
+          "elapsed": 259.6999999998603,
+          "opacity": 0.111162,
+          "transform": "translateX(478.692px) rotate(3.3321deg) scale(0.804456)"
         },
         {
-          "elapsed": 618.3999999999533,
-          "opacity": 0.49076,
-          "transform": "translateX(274.256px) rotate(-5.77825deg) scale(0.887967)"
+          "elapsed": 268.0999999998603,
+          "opacity": 0.117868,
+          "transform": "translateX(475.081px) rotate(3.17117deg) scale(0.805931)"
         },
         {
-          "elapsed": 635.0999999999535,
-          "opacity": 0.510799,
-          "transform": "translateX(263.464px) rotate(-6.25918deg) scale(0.892376)"
+          "elapsed": 276.4999999998604,
+          "opacity": 0.124729,
+          "transform": "translateX(471.386px) rotate(3.00651deg) scale(0.80744)"
         },
         {
-          "elapsed": 651.7999999999533,
-          "opacity": 0.530823,
-          "transform": "translateX(252.68px) rotate(-6.73974deg) scale(0.896781)"
+          "elapsed": 284.79999999986035,
+          "opacity": 0.131656,
+          "transform": "translateX(467.655px) rotate(2.84025deg) scale(0.808964)"
+        },
+        {
+          "elapsed": 292.9999999998604,
+          "opacity": 0.138642,
+          "transform": "translateX(463.893px) rotate(2.67259deg) scale(0.810501)"
+        },
+        {
+          "elapsed": 301.39999999986026,
+          "opacity": 0.145941,
+          "transform": "translateX(459.962px) rotate(2.49742deg) scale(0.812107)"
+        },
+        {
+          "elapsed": 309.79999999986035,
+          "opacity": 0.15338,
+          "transform": "translateX(455.956px) rotate(2.31888deg) scale(0.813744)"
+        },
+        {
+          "elapsed": 317.9999999998604,
+          "opacity": 0.160774,
+          "transform": "translateX(451.974px) rotate(2.14143deg) scale(0.81537)"
+        },
+        {
+          "elapsed": 326.5999999998603,
+          "opacity": 0.168665,
+          "transform": "translateX(447.724px) rotate(1.95204deg) scale(0.817106)"
+        },
+        {
+          "elapsed": 334.6999999998602,
+          "opacity": 0.176222,
+          "transform": "translateX(443.654px) rotate(1.77068deg) scale(0.818769)"
+        },
+        {
+          "elapsed": 343.0999999998603,
+          "opacity": 0.184182,
+          "transform": "translateX(439.367px) rotate(1.57964deg) scale(0.82052)"
+        },
+        {
+          "elapsed": 351.79999999986035,
+          "opacity": 0.192555,
+          "transform": "translateX(434.857px) rotate(1.37867deg) scale(0.822362)"
+        },
+        {
+          "elapsed": 359.6999999998602,
+          "opacity": 0.200269,
+          "transform": "translateX(430.703px) rotate(1.19354deg) scale(0.824059)"
+        },
+        {
+          "elapsed": 368.0999999998603,
+          "opacity": 0.208583,
+          "transform": "translateX(426.225px) rotate(0.994002deg) scale(0.825888)"
+        },
+        {
+          "elapsed": 376.39999999986026,
+          "opacity": 0.216908,
+          "transform": "translateX(421.742px) rotate(0.794212deg) scale(0.82772)"
+        },
+        {
+          "elapsed": 384.79999999986035,
+          "opacity": 0.22544,
+          "transform": "translateX(417.147px) rotate(0.58944deg) scale(0.829597)"
+        },
+        {
+          "elapsed": 393.0999999998603,
+          "opacity": 0.233973,
+          "transform": "translateX(412.551px) rotate(0.384645deg) scale(0.831474)"
+        },
+        {
+          "elapsed": 401.39999999986026,
+          "opacity": 0.242605,
+          "transform": "translateX(407.903px) rotate(0.17749deg) scale(0.833373)"
+        },
+        {
+          "elapsed": 409.6999999998602,
+          "opacity": 0.251331,
+          "transform": "translateX(403.203px) rotate(-0.0319421deg) scale(0.835293)"
+        },
+        {
+          "elapsed": 417.9999999998604,
+          "opacity": 0.260149,
+          "transform": "translateX(398.454px) rotate(-0.243566deg) scale(0.837233)"
+        },
+        {
+          "elapsed": 426.29999999986035,
+          "opacity": 0.269054,
+          "transform": "translateX(393.658px) rotate(-0.457298deg) scale(0.839192)"
+        },
+        {
+          "elapsed": 434.6999999998602,
+          "opacity": 0.278153,
+          "transform": "translateX(388.758px) rotate(-0.675665deg) scale(0.841194)"
+        },
+        {
+          "elapsed": 443.0999999998603,
+          "opacity": 0.287334,
+          "transform": "translateX(383.813px) rotate(-0.896017deg) scale(0.843213)"
+        },
+        {
+          "elapsed": 451.4999999998604,
+          "opacity": 0.296594,
+          "transform": "translateX(378.826px) rotate(-1.11827deg) scale(0.845251)"
+        },
+        {
+          "elapsed": 459.79999999986035,
+          "opacity": 0.305819,
+          "transform": "translateX(373.858px) rotate(-1.33965deg) scale(0.84728)"
+        },
+        {
+          "elapsed": 468.1999999998602,
+          "opacity": 0.315226,
+          "transform": "translateX(368.792px) rotate(-1.56541deg) scale(0.84935)"
+        },
+        {
+          "elapsed": 476.4999999998604,
+          "opacity": 0.324587,
+          "transform": "translateX(363.75px) rotate(-1.7901deg) scale(0.851409)"
+        },
+        {
+          "elapsed": 484.79999999986035,
+          "opacity": 0.334012,
+          "transform": "translateX(358.674px) rotate(-2.01629deg) scale(0.853483)"
+        },
+        {
+          "elapsed": 492.9999999998604,
+          "opacity": 0.343382,
+          "transform": "translateX(353.628px) rotate(-2.24117deg) scale(0.855544)"
+        },
+        {
+          "elapsed": 501.39999999986026,
+          "opacity": 0.353037,
+          "transform": "translateX(348.428px) rotate(-2.47289deg) scale(0.857668)"
+        },
+        {
+          "elapsed": 509.79999999986035,
+          "opacity": 0.362746,
+          "transform": "translateX(343.2px) rotate(-2.7059deg) scale(0.859804)"
+        },
+        {
+          "elapsed": 517.9999999998604,
+          "opacity": 0.372272,
+          "transform": "translateX(338.069px) rotate(-2.93453deg) scale(0.8619)"
+        },
+        {
+          "elapsed": 526.4999999998604,
+          "opacity": 0.382194,
+          "transform": "translateX(332.726px) rotate(-3.17265deg) scale(0.864083)"
+        },
+        {
+          "elapsed": 534.7999999998603,
+          "opacity": 0.391924,
+          "transform": "translateX(327.485px) rotate(-3.40618deg) scale(0.866223)"
+        },
+        {
+          "elapsed": 543.1999999998602,
+          "opacity": 0.401811,
+          "transform": "translateX(322.161px) rotate(-3.64346deg) scale(0.868398)"
+        },
+        {
+          "elapsed": 551.3999999998603,
+          "opacity": 0.411497,
+          "transform": "translateX(316.944px) rotate(-3.87592deg) scale(0.870529)"
+        },
+        {
+          "elapsed": 559.6999999998602,
+          "opacity": 0.421332,
+          "transform": "translateX(311.648px) rotate(-4.11196deg) scale(0.872693)"
+        },
+        {
+          "elapsed": 568.0999999998603,
+          "opacity": 0.431314,
+          "transform": "translateX(306.272px) rotate(-4.35153deg) scale(0.874889)"
+        },
+        {
+          "elapsed": 576.3999999998603,
+          "opacity": 0.441201,
+          "transform": "translateX(300.947px) rotate(-4.58883deg) scale(0.877064)"
+        },
+        {
+          "elapsed": 584.6999999998602,
+          "opacity": 0.45111,
+          "transform": "translateX(295.61px) rotate(-4.82663deg) scale(0.879244)"
+        },
+        {
+          "elapsed": 592.9999999998604,
+          "opacity": 0.461035,
+          "transform": "translateX(290.265px) rotate(-5.06484deg) scale(0.881428)"
+        },
+        {
+          "elapsed": 601.3999999998603,
+          "opacity": 0.471094,
+          "transform": "translateX(284.847px) rotate(-5.30626deg) scale(0.883641)"
+        },
+        {
+          "elapsed": 609.6999999998602,
+          "opacity": 0.481044,
+          "transform": "translateX(279.489px) rotate(-5.54506deg) scale(0.88583)"
+        },
+        {
+          "elapsed": 618.0999999998603,
+          "opacity": 0.49112,
+          "transform": "translateX(274.062px) rotate(-5.78689deg) scale(0.888046)"
+        },
+        {
+          "elapsed": 626.2999999998603,
+          "opacity": 0.50096,
+          "transform": "translateX(268.763px) rotate(-6.02304deg) scale(0.890211)"
+        },
+        {
+          "elapsed": 634.8999999998603,
+          "opacity": 0.511279,
+          "transform": "translateX(263.206px) rotate(-6.2707deg) scale(0.892481)"
+        },
+        {
+          "elapsed": 642.9999999998604,
+          "opacity": 0.520995,
+          "transform": "translateX(257.973px) rotate(-6.50387deg) scale(0.894619)"
+        },
+        {
+          "elapsed": 651.3999999998603,
+          "opacity": 0.531062,
+          "transform": "translateX(252.551px) rotate(-6.74549deg) scale(0.896834)"
         }
       ],
       "title": "ONYX GMT",

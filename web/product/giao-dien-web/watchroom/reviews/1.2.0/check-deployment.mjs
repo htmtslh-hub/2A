@@ -5,13 +5,14 @@ import assert from 'node:assert/strict';
 process.env.PLAYWRIGHT_BROWSERS_PATH = resolve('_design/.browsers');
 const { chromium } = await import('../../../../../../_design/.tooling/node_modules/playwright/index.mjs');
 const base = process.argv[2] || 'https://forgezone.store';
+const releaseRoot = process.argv[3] || '.';
 const result = { base, date: new Date().toISOString(), resources: [], browsers: {} };
 const hash = data => createHash('sha256').update(data).digest('hex');
 for (const file of ['index.html','assets/css/style.css','assets/js/main.js','assets/img/quantum-adg.webp','assets/img/onyx-gmt.webp','assets/img/solaris-38.webp']) {
   const response = await fetch(base + '/demos/watchroom/' + file + '?v=1.2.0');
   assert.equal(response.status, 200);
   const onlineHash = hash(Buffer.from(await response.arrayBuffer()));
-  const localHash = hash(readFileSync(resolve('web/public/demos/watchroom/' + file)));
+  const localHash = hash(readFileSync(resolve(releaseRoot, 'web/public/demos/watchroom/' + file)));
   assert.equal(onlineHash, localHash, file + ' served version');
   result.resources.push({ file, status: response.status, sha256: onlineHash });
 }

@@ -22,3 +22,11 @@ Ngoại lệ theo yêu cầu mới nhất: W01/W03/W05/W06 của WEB-STATIC-1 v�
 rules animation ngày 05/10/2026: mặc định bật, người xem chủ động tạm dừng.
 Đây là nền đang phát triển, chưa nghiệm thu để bán; không tự mở rộng thành
 landing page, bịa thương hiệu/diện tích/giá nhà hoặc cấp quyền bán lại video.
+
+## Scope correction — 8 October 2026
+The owner clarified that this belongs to the 2A website-template product catalog,
+and explicitly requested finishing integration, Git push and production deploy.
+Scope now includes apartment-flow, its public demo/preview, t18 catalog metadata,
+and the small preview-only purchasing gates shared by store cards/checkout.
+Other templates, database data and credentials remain outside the change.
+Commercial licence is not drafted by the agent; this release is a public preview.

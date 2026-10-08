@@ -40,7 +40,9 @@ Replace this demo disclosure and connect confirmed contact information before re
 
 This is a working presentation, not an approved commercial release.
 Legal distribution terms, full customer prompts, store integration and release QA
-remain pending. No publishing or store catalog changes are included.
+remain pending. The 2A catalog includes this as a preview-only product (t18).
+Public demo: https://forgezone.store/demos/apartment-flow/index.html
+Purchases and paid downloads are disabled until commercial release is approved.
 Actual test evidence and limitations live in ../reviews/0.1.0/QA.md.
 
 Technique reference: https://github.com/oso95/scroll-world/blob/main/skills/scroll-world/references/scrub-engine.js

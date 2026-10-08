@@ -134,3 +134,14 @@ web; manifest ghi provenance. Chỉ thư mục sản phẩm apartment-flow đư�
 ánh xạ vị trí cuộn, không phải phát theo thời gian. Cache ảnh giới hạn quanh
 13 frame; trình duyệt vẫn có cache tài nguyên riêng. Chưa kiểm tra chống giảm motion
 trên hệ điều hành hoặc trạng thái motion off cũ bằng các trình duyệt thực.
+
+## 2A integration verification — 8 October 2026
+Scope: public preview-only release of t18, not a commercial ZIP release.
+Demo and preview are synchronized from the existing source/rendered screenshot.
+No licence terms are invented. No order, account or database mutation is needed.
+The previous standalone deployment was the wrong publication destination;
+canonical product/detail/demo URLs are on forgezone.store.
+- Local production Next.js build and TypeScript: PASS (27 routes, including admin/auth/traffic).
+- Catalog regression: PASS; t18 cannot checkout, every existing real product remains purchasable, slug and vi/en/zh metadata match.
+- In-app browser local detail: PASS; Apartment Flow image/specs/demo button rendered, no purchase/cart controls for t18. Existing related products retain cart controls.
+- Current mobile, Firefox and full commercial Q01–Q13 checks remain NOT TESTED; preview release only.

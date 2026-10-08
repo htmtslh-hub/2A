@@ -312,13 +312,13 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                       {hp.saveCount}
                                     </span>
                                   </button>
-                                  <button className="cart-template-button" type="button" onClick={hp.onCart} aria-label={hp.cartLabel} aria-pressed={hp.inCart}>
+                                  {!hp.previewOnly && (<button className="cart-template-button" type="button" onClick={hp.onCart} aria-label={hp.cartLabel} aria-pressed={hp.inCart}>
                                     <svg className="cart-card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                                       <path d="M3 4h2l2 12h12l2-9H6" />
                                       <circle cx="9" cy="20" r="1" />
                                       <circle cx="18" cy="20" r="1" />
                                     </svg>
-                                  </button>
+                                  </button>)}
                                 </div>
                               </div>
                           ))}
@@ -461,13 +461,13 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                         {tp.saveCount}
                                       </span>
                                     </button>
-                                    <button className="cart-template-button" type="button" onClick={tp.onCart} aria-label={tp.cartLabel} aria-pressed={tp.inCart}>
+                                    {!tp.previewOnly && (<button className="cart-template-button" type="button" onClick={tp.onCart} aria-label={tp.cartLabel} aria-pressed={tp.inCart}>
                                       <svg className="cart-card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                                         <path d="M3 4h2l2 12h12l2-9H6" />
                                         <circle cx="9" cy="20" r="1" />
                                         <circle cx="18" cy="20" r="1" />
                                       </svg>
-                                    </button>
+                                    </button>)}
                                   </div>
                                 </div>
                             ))}
@@ -559,16 +559,16 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                             {vm.detail.price}
                           </span>
                           <span style={{ fontSize: "13px", color: "#949ba4", whiteSpace: "nowrap" }}>
-                            {vm.t.pricingUnitOnce}
+                            {vm.detail.previewOnly ? '' : vm.t.pricingUnitOnce}
                           </span>
                         </div>
                         <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
-                          <button className="hv9" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px", padding: "16px 30px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontSize: "14px", fontWeight: "700", letterSpacing: ".01em", color: "#fffdfa", background: "linear-gradient(180deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,.18) 100%)", border: "1px solid rgba(255,255,255,.4)", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.95), inset 0 1px 0 rgba(255,255,255,.38), 0 10px 22px -6px rgba(255,244,230,.6), 0 18px 40px rgba(52,42,34,.34)", transition: "transform .25s ease" }} onClick={vm.buyDetail}>
+                          {!vm.detail.previewOnly && (<button className="hv9" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px", padding: "16px 30px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontSize: "14px", fontWeight: "700", letterSpacing: ".01em", color: "#fffdfa", background: "linear-gradient(180deg, rgba(255,255,255,.34) 0%, rgba(255,255,255,.18) 100%)", border: "1px solid rgba(255,255,255,.4)", boxShadow: "inset 0 -1.5px 0 rgba(255,255,255,.95), inset 0 1px 0 rgba(255,255,255,.38), 0 10px 22px -6px rgba(255,244,230,.6), 0 18px 40px rgba(52,42,34,.34)", transition: "transform .25s ease" }} onClick={vm.buyDetail}>
                             {vm.t.dBuy} →
-                          </button>
-                          <button className="cart-detail-button" type="button" onClick={vm.addDetailToCart}>
+                          </button>)}
+                          {!vm.detail.previewOnly && (<button className="cart-detail-button" type="button" onClick={vm.addDetailToCart}>
                             {vm.detailCartLabel}
-                          </button>
+                          </button>)}
                           <button className="hv10" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px", padding: "16px 26px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontSize: "14px", fontWeight: "600", color: "#ffffff", background: "transparent", border: "1px solid rgba(236,238,241,.24)", transition: "border-color .25s ease, background .25s ease" }} onClick={vm.detail.openDemo}>
                             {vm.t.dLive} ↗
                           </button>
@@ -644,13 +644,13 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                     {rp.saveCount}
                                   </span>
                                 </button>
-                                <button className="cart-template-button" type="button" onClick={rp.onCart} aria-label={rp.cartLabel} aria-pressed={rp.inCart}>
+                                {!rp.previewOnly && (<button className="cart-template-button" type="button" onClick={rp.onCart} aria-label={rp.cartLabel} aria-pressed={rp.inCart}>
                                   <svg className="cart-card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                                     <path d="M3 4h2l2 12h12l2-9H6" />
                                     <circle cx="9" cy="20" r="1" />
                                     <circle cx="18" cy="20" r="1" />
                                   </svg>
-                                </button>
+                                </button>)}
                               </div>
                             </div>
                         ))}

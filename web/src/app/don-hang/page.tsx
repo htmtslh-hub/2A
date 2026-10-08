@@ -293,7 +293,7 @@ export default async function Page() {
                     // Trọn bộ không có một file chung: mỗi mẫu thật một nút tải.
                     // Trước đây nút trỏ tới 'bundle' — không có file đó, nên 404.
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'flex-end' }}>
-                      {Object.entries(REAL_TEMPLATES).map(([id, tpl]) => (
+                      {Object.entries(REAL_TEMPLATES).filter(([, tpl]) => !tpl.previewOnly).map(([id, tpl]) => (
                         <div key={id} className={guideStyles.orderLinks}>
                           <a href={`/api/download?id=${id}`} style={primaryBtn}>
                             {t.download} {(tpl.copy[lang] ?? tpl.copy.vi).name}

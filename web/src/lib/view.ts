@@ -221,8 +221,9 @@ export function buildView(
       ? [{
           ...m,
           cat: real.cat,
+          previewOnly: Boolean(real.previewOnly),
           badge: real.badge ?? (real.video ? '' : m.badge),
-          price: formatMoney(priceOf('TEMPLATE', currency, m.id), currency, lang as Lang),
+          price: real.previewOnly ? { vi: 'Bản xem trước', en: 'Preview', zh: '预览' }[lang] : formatMoney(priceOf('TEMPLATE', currency, m.id), currency, lang as Lang),
           ...(real.copy[lang] ?? real.copy.vi),
         }]
       : [];
@@ -426,7 +427,7 @@ export function buildView(
     guideLang: lang,
     guideLabel: GUIDE_LABELS[lang].guide,
     guideHref: guideHref(),
-    guideSlug: state.detail ? REAL_TEMPLATES[state.detail]?.slug : undefined,
+    guideSlug: state.detail && !REAL_TEMPLATES[state.detail]?.previewOnly ? REAL_TEMPLATES[state.detail]?.slug : undefined,
     // Địa chỉ thật lấy từ company.ts; bản thiết kế ghi cứng một email không
     // tồn tại nên convert.mjs thay mọi chỗ bằng biến này.
     contactEmail: COMPANY.email,
@@ -656,7 +657,7 @@ export function buildView(
     })),
     buyDetail: () => {
       if (!state.detail) return;
-      if (!REAL_TEMPLATES[state.detail]) return;
+      if (!REAL_TEMPLATES[state.detail] || REAL_TEMPLATES[state.detail].previewOnly) return;
       im.startCheckout('TEMPLATE', state.detail);
     },
     addDetailToCart: (event: MouseEvent<HTMLButtonElement>) => {

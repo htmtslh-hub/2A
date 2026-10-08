@@ -145,3 +145,9 @@ canonical product/detail/demo URLs are on forgezone.store.
 - Catalog regression: PASS; t18 cannot checkout, every existing real product remains purchasable, slug and vi/en/zh metadata match.
 - In-app browser local detail: PASS; Apartment Flow image/specs/demo button rendered, no purchase/cart controls for t18. Existing related products retain cart controls.
 - Current mobile, Firefox and full commercial Q01–Q13 checks remain NOT TESTED; preview release only.
+- Scoped ESLint: PASS. Cloud build/TypeScript: PASS.
+- Production deployment dpl_EL9c9hnnC8Ap6FP91YT1h7uhistV is READY on forgezone.store.
+- Online SHA-256 checks: PASS for all 243 demo files (240 frames + HTML/CSS/JS).
+- Production browser: detail, scroll frame 81, contact chapter, dialog, Escape/focus return, return frame 1: PASS; demo warning/error logs empty.
+- Store and existing Shirtline/NovaTrend/Crimson Folio demo HTTP smoke checks: PASS.
+- Full commercial qualification remains pending; canonical release is preview-only.

@@ -1,0 +1,15 @@
+{
+  "deployment": "dpl_5eoacyhqHpnNP1eYM6dDrY4bGoJ2",
+  "commit": "c5be44a",
+  "demoFiles": 243,
+  "allMatch": true,
+  "mismatches": [],
+  "statuses": {
+    "/?mau=t18": 200,
+    "/demos/shirtline/index.html": 200,
+    "/demos/novatrend/index.html": 200,
+    "/demos/crimson-folio/index.html": 200,
+    "/api/download?id=t18": 401,
+    "/product/giao-dien-web/apartment-flow/apartment-flow.zip": 404
+  }
+}

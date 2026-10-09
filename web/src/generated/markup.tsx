@@ -44,23 +44,11 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
             <span style={{ position: "absolute", inset: "0", zIndex: "0", borderRadius: "inherit", pointerEvents: "none", backdropFilter: "blur(26px) saturate(160%)", WebkitBackdropFilter: "blur(26px) saturate(160%)" }} aria-hidden="true" />
             <div style={{ position: "relative", zIndex: "2", display: "flex", alignItems: "center" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px", height: "56px", padding: "0 20px", maxWidth: "340px", overflow: "hidden", whiteSpace: "nowrap", cursor: "pointer", transition: "max-width .95s cubic-bezier(.19,1,.22,1), opacity .5s cubic-bezier(.4,0,.2,1), padding .85s cubic-bezier(.19,1,.22,1)" }} data-island-mini="" onClick={vm.toggleIsland}>
-                <img style={{ width: "26px", height: "40px", objectFit: "contain", display: "block", flex: "none" }} src={vm.brandLogoSrc} alt="" width="26" height="40" data-forge-logo="" />
-                <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: ".13em", fontSize: "13px", color: "#ffffff" }}>
-                  FORGE ZONE
-                </span>
-                <span style={{ width: "4px", height: "4px", borderRadius: "50%", background: "rgba(236,238,241,.3)", flex: "none" }} />
                 <span style={{ fontSize: "12px", fontWeight: "600", color: "#ffffff", letterSpacing: ".02em" }}>
                   {vm.activeTabLabel}
                 </span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "6px", padding: "7px 9px", height: "56px", maxWidth: "0", opacity: "0", overflow: "hidden", transition: "max-width 1s cubic-bezier(.19,1,.22,1), opacity .6s cubic-bezier(.4,0,.2,1) .12s, padding .85s cubic-bezier(.19,1,.22,1)" }} data-island-full="">
-                <button style={{ display: "flex", alignItems: "center", gap: "9px", flex: "none", padding: "0 12px 0 8px", height: "42px", border: "none", background: "transparent", cursor: "pointer", color: "#ffffff", fontFamily: "inherit" }} onClick={vm.goHome} aria-label="Forge Zone">
-                  <img style={{ width: "26px", height: "40px", objectFit: "contain", display: "block", flex: "none" }} src={vm.brandLogoSrc} alt="" width="26" height="40" data-forge-logo="" />
-                  <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: ".13em", fontSize: "14px" }}>
-                    FORGE ZONE
-                  </span>
-                </button>
-                <span style={{ width: "1px", height: "22px", background: "rgba(255,255,255,.14)", flex: "none" }} />
                 <nav style={{ display: "flex", alignItems: "center", gap: "2px", minWidth: "0", overflowX: "auto", overflowY: "hidden", scrollbarWidth: "none" }} aria-label={vm.t.navAria} data-island-tabs="">
                   {(vm.tabs ?? []).map((tb: any, tb_i: number) => (
                         <button key={tb_i} style={{ flex: "none", padding: "0 15px", height: "42px", border: "1px solid transparent", borderRadius: "100px", cursor: "pointer", fontFamily: "inherit", fontSize: "13px", fontWeight: "600", letterSpacing: ".01em", whiteSpace: "nowrap", background: "transparent", color: "#ffffff", transition: "background .32s cubic-bezier(.22,1,.36,1), color .28s ease, border-color .28s ease" }} onClick={tb.onSelect} data-tab-pill={tb.key}>
@@ -130,7 +118,8 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
           {/* ===== TAB: HOME — hero only ===== */}
           {(vm.isHome) ? (
             <>
-              <section style={{ position: "relative", zIndex: "5", minHeight: "100vh", padding: "clamp(96px,14vh,150px) clamp(20px,4vw,56px) clamp(36px,5vh,56px)" }} id="top">
+              <section className="forge-hero" style={{ position: "relative", zIndex: "5", minHeight: "100vh", padding: "clamp(96px,14vh,150px) clamp(20px,4vw,56px) clamp(36px,5vh,56px)" }} id="top">
+                <button className="forge-hero-brand" onClick={vm.goHome} aria-label="Forge Zone"><img src={vm.brandLogoSrc} alt="" width="32" height="48" data-forge-logo="" /><span>FORGE ZONE</span></button>
                 <div style={{ position: "absolute", inset: "0", overflow: "hidden", zIndex: "0" }}>
                   <div style={{ position: "absolute", top: "-14%", left: "-4%", right: "-4%", bottom: "-2%", zIndex: "0", willChange: "transform" }} id="hero-bg-wrap">
                     {(vm.heroBgs ?? []).map((bg: any, bg_i: number) => (

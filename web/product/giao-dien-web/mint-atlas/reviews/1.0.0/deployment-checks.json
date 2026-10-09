@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-09T08:11:28.098Z",
+  "base": "https://forgezone.store",
+  "browser": "Microsoft Edge",
+  "locales": [
+    {
+      "locale": "vi-VN",
+      "lang": "vi",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "preview": true
+    },
+    {
+      "locale": "en-US",
+      "lang": "en",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "preview": true
+    },
+    {
+      "locale": "zh-CN",
+      "lang": "zh-CN",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "preview": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "demos/mint-atlas/index.html",
+      "status": 200,
+      "bytes": 9211,
+      "sha256": "e925e21737f95b211079f1bc8bc02b6332c3a524b5447f12ddaca110288ebcdd"
+    },
+    {
+      "path": "demos/mint-atlas/assets/css/style.css",
+      "status": 200,
+      "bytes": 12129,
+      "sha256": "ca0626df2fc20ef661c68ef0ea0a1f69c0e08edacf094e482de76edead44a4c6"
+    },
+    {
+      "path": "demos/mint-atlas/assets/js/main.js",
+      "status": 200,
+      "bytes": 1072,
+      "sha256": "bc5a00bbd4dd31e351598c21de3408563c5c446ed2c2f0e54014636af5cd8df2"
+    },
+    {
+      "path": "demos/mint-atlas/assets/img/mira.webp",
+      "status": 200,
+      "bytes": 172562,
+      "sha256": "9e02b8284add0831fccc4874ead962fdf9fd9e203e8aafaab93198999e0916ef"
+    },
+    {
+      "path": "demos/mint-atlas/assets/img/glasshouse.webp",
+      "status": 200,
+      "bytes": 163364,
+      "sha256": "6a3e370bb3dcd8e17ef10906b23591424ae7f901cdb9d3c950d3d03babda6981"
+    },
+    {
+      "path": "demos/mint-atlas/assets/img/starlight.webp",
+      "status": 200,
+      "bytes": 166250,
+      "sha256": "b186fd47729534d701001928eaf28b2743088a3f4c9af9707fca968a39fe88b8"
+    },
+    {
+      "path": "previews/mint-atlas.webp",
+      "status": 200,
+      "bytes": 53370,
+      "sha256": "f425b69dcc4e70ad83df7d43b94152f8129bd2fb1535913aa15ddf91bc15e666"
+    }
+  ],
+  "tests": [
+    "download requires authentication:401",
+    "commercial ZIP not publicly exposed:404",
+    "purchase entry opens sign-in gate; no order submitted",
+    "live mobile demo ability and overflow"
+  ],
+  "errors": [],
+  "version": "155.0.4283.45",
+  "failures": []
+}

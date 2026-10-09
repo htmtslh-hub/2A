@@ -47,3 +47,6 @@ Motion: finite300ms gallery hover. Edge measured intermediate CSS transform150ms
 Commands: dong-goi.mjs mint-atlas --ngoai-le; check-template.mjs mint-atlas --version1.0.0 --ngoai-le --outrelease; verify-interactions.mjs. Local preview4350 serves matching publicdemo; public contains only HTML/CSS/JS/art, no customer ZIP/docs. Preview698×524 is downsampled from final rendered Edge1396×1047. Existing unrelated dirty files untouched.
 Commercial store integration is now in scope per owner request. Q12 store listing/guide/asset/private-download checks PASS locally; real paid transaction remains NOT TESTED. See RELEASE.md and store-checks.json. Source ZIP unchanged.
 
+
+Q12 commercial integration/deployment checks PASS within scope: live product t16, three locale guides, private ZIP401/404 and sign-in entry gate, assets exact hashes. Paid-order fulfilment still NOT TESTED. Deployment evidence deployment-checks.json and RELEASE.md. Existing17 catalogue entries unchanged; three representative existing public assets200.
+

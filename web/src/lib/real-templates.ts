@@ -25,10 +25,12 @@ export interface TemplateCopy {
 }
 
 export interface RealTemplate {
-  /** Tên thư mục sản phẩm trong product/giao-dien-web, tên file .zip và tên ảnh .webp. */
+  /** Tên thư mục sản phẩm trong product/, tên file .zip và tên ảnh .webp. */
   slug: string;
   /** Một trong các khoá của CAT_KEYS: portfolio | saas | business | shop | motion. */
   cat: string;
+  /** Nhóm sản phẩm: 'web' | 'skill-prompt' | 'agent'. Mặc định: 'web'. */
+  group?: 'web' | 'skill-prompt' | 'agent';
   /** Video quay từ chính mẫu giao, chỉ dùng tại cửa hàng. */
   video?: boolean;
   /** Revision for refreshing public demo and preview assets. */
@@ -73,6 +75,52 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       vi: { name: 'Shirtline', desc: 'Showroom năm mẫu áo sơ mi với vòng quay phối cảnh, bóng mềm dưới áo, nền đổi màu theo sản phẩm và preview mẫu kế tiếp. Ảnh tự tạo, bộ sưu tập và túi hàng liên hệ email; không kèm thanh toán.', tags: ['Áo sơ mi', 'Showroom', 'Vòng quay sản phẩm'] },
       en: { name: 'Shirtline', desc: 'A five-shirt showroom with an orbiting product carousel, soft floor shadows, product-tinted backgrounds and a next-look preview. Original imagery, collection cards and an email enquiry bag; no payment backend.', tags: ['Shirts', 'Showroom', 'Product carousel'] },
       zh: { name: 'Shirtline', desc: '五款衬衫展厅，包含环形产品轮播、柔和地面阴影、随产品变化的背景色和下一款预览。原创图片、系列卡片和邮件咨询购物袋；不含支付后台。', tags: ['衬衫', '展厅', '环形轮播'] },
+    },
+  },
+  t14: {
+    slug: 'lingoglass', cat: 'motion', group: 'agent', version: '1.0.1', badge: 'Hot',
+    specs: {
+      vi: [
+        ['Định dạng', 'Electron 33 · React 18 · TypeScript'],
+        ['Nền tảng', 'Windows 10/11 · macOS'],
+        ['Giao diện', 'Glassmorphism · Floating Island · Waveform'],
+        ['Học tập', 'Smart A-B Repeat · 1-Touch Dict · Shadowing'],
+        ['Bảo mật', 'Bản quyền L3 (Ed25519) · Atomic Write Rollback'],
+        ['Trong gói', 'Bộ cài chạy ngay + Mã nguồn + Tài liệu hướng dẫn'],
+      ],
+      en: [
+        ['Format', 'Electron 33 · React 18 · TypeScript'],
+        ['Platform', 'Windows 10/11 · macOS'],
+        ['Interface', 'Glassmorphism · Floating Island · Waveform'],
+        ['Learning', 'Smart A-B Repeat · 1-Touch Dict · Shadowing'],
+        ['Security', 'Anti-Piracy L3 (Ed25519) · Atomic Write Rollback'],
+        ['Package', 'Ready-to-run app + Source code + Documentation'],
+      ],
+      zh: [
+        ['格式', 'Electron 33 · React 18 · TypeScript'],
+        ['平台', 'Windows 10/11 · macOS'],
+        ['界面', '毛玻璃 · 悬浮控制岛 · 音频波形'],
+        ['学习', '智能 A-B 复读 · 单击查词 · 跟读模式'],
+        ['安全', 'L3 授权体系 (Ed25519) · 原子写入故障回滚'],
+        ['文件包', '开箱即用程序 + 完整源码 + 开发与使用文档'],
+      ],
+    },
+    copy: {
+      vi: {
+        name: 'LingoGlass Player',
+        desc: 'Trình phát đa phương tiện cao cấp hỗ trợ học ngoại ngữ chuyên sâu qua video & podcast. Giao diện Glassmorphism tinh tế, chế độ lặp câu Snap-to-Sentence (phím R), tra từ điển 1-chạm, làm mờ tiếng Việt, luyện nói Shadowing kèm ghi âm đối chiếu. Tích hợp bản quyền chống crack Ed25519 và bảo toàn dữ liệu an toàn.',
+        tags: ['Desktop App', 'Học ngoại ngữ', 'Glass UI', 'A-B Repeat'],
+      },
+      en: {
+        name: 'LingoGlass Player',
+        desc: 'A premium cross-platform media player designed for immersive language learning through videos & podcasts. Sleek Glassmorphism UI, Snap-to-Sentence repetition (key R), 1-touch interactive dictionary, blurred subtitles, and Shadowing mode with voice comparison. Built-in Ed25519 anti-piracy and atomic persistent storage.',
+        tags: ['Desktop App', 'Language Learning', 'Glass UI', 'A-B Repeat'],
+      },
+      zh: {
+        name: 'LingoGlass 播放器',
+        desc: '专为沉浸式外语学习打造的高级跨平台媒体播放器。精致毛玻璃界面、Snap-to-Sentence 单句智能复读（R键）、单击即查词典、遮盖母语字幕、跟读对比录音模式。内置 Ed25519 防破解授权与原子化安全数据存储。',
+        tags: ['桌面客户端', '外语学习', '毛玻璃', 'A-B复读'],
+      },
     },
   },
   t13: {

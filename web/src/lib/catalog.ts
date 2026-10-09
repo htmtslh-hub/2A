@@ -28,7 +28,9 @@ export const PRICE_USD = {
 };
 
 /** Giá riêng cho từng mẫu nếu muốn khác giá chung. VD: { t18: { VND: 2_500_000, USD: 10_900 } } */
-export const TEMPLATE_PRICE_OVERRIDE: Record<string, Partial<Record<Currency, number>>> = {};
+export const TEMPLATE_PRICE_OVERRIDE: Record<string, Partial<Record<Currency, number>>> = {
+  t14: { VND: 2_400_000, USD: 9_900 },
+};
 
 /* ---------- chọn cổng theo thị trường ---------- */
 

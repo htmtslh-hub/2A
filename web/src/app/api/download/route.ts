@@ -20,6 +20,8 @@ function fileFor(templateId: string) {
   // Qua templateFile() vì mã trong danh mục và tên file đóng gói có thể khác
   // nhau — xem TEMPLATE_FILE trong lib/catalog.
   const slug = templateFile(templateId);
+  const agentPath = path.join(process.cwd(), 'product', 'agent', slug, `${slug}.zip`);
+  if (existsSync(agentPath)) return agentPath;
   return path.join(TEMPLATE_DIR, slug, `${slug}.zip`);
 }
 

@@ -44,7 +44,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
             <span style={{ position: "absolute", inset: "0", zIndex: "0", borderRadius: "inherit", pointerEvents: "none", backdropFilter: "blur(26px) saturate(160%)", WebkitBackdropFilter: "blur(26px) saturate(160%)" }} aria-hidden="true" />
             <div style={{ position: "relative", zIndex: "2", display: "flex", alignItems: "center" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px", height: "56px", padding: "0 20px", maxWidth: "340px", overflow: "hidden", whiteSpace: "nowrap", cursor: "pointer", transition: "max-width .95s cubic-bezier(.19,1,.22,1), opacity .5s cubic-bezier(.4,0,.2,1), padding .85s cubic-bezier(.19,1,.22,1)" }} data-island-mini="" onClick={vm.toggleIsland}>
-                <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "var(--acc)", boxShadow: "0 0 12px var(--acc-a55)", display: "inline-block", flex: "none" }} />
+                <img style={{ width: "26px", height: "40px", objectFit: "contain", display: "block", flex: "none" }} src={vm.brandLogoSrc} alt="" width="26" height="40" data-forge-logo="" />
                 <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: ".13em", fontSize: "13px", color: "#ffffff" }}>
                   FORGE ZONE
                 </span>
@@ -55,7 +55,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "6px", padding: "7px 9px", height: "56px", maxWidth: "0", opacity: "0", overflow: "hidden", transition: "max-width 1s cubic-bezier(.19,1,.22,1), opacity .6s cubic-bezier(.4,0,.2,1) .12s, padding .85s cubic-bezier(.19,1,.22,1)" }} data-island-full="">
                 <button style={{ display: "flex", alignItems: "center", gap: "9px", flex: "none", padding: "0 12px 0 8px", height: "42px", border: "none", background: "transparent", cursor: "pointer", color: "#ffffff", fontFamily: "inherit" }} onClick={vm.goHome} aria-label="Forge Zone">
-                  <span style={{ width: "11px", height: "11px", borderRadius: "50%", background: "var(--acc)", boxShadow: "0 0 12px var(--acc-a55)", display: "inline-block", flex: "none" }} />
+                  <img style={{ width: "26px", height: "40px", objectFit: "contain", display: "block", flex: "none" }} src={vm.brandLogoSrc} alt="" width="26" height="40" data-forge-logo="" />
                   <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: ".13em", fontSize: "14px" }}>
                     FORGE ZONE
                   </span>

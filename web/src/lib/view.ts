@@ -425,6 +425,7 @@ export function buildView(
   }
 
   return {
+    brandLogoSrc: '/brand/forge-zone/' + ['web', 'skill-prompt', 'agent-tool', 'new-product-1', 'new-product-2'][active] + '.webp',
     t,
     guideLang: lang,
     guideLabel: GUIDE_LABELS[lang].guide,

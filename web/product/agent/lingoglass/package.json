@@ -1,0 +1,82 @@
+{
+  "name": "lingoglass-player",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Cross-platform Language Learning Media Player with Glass UI, Smart A-B Repeat, and Shadowing",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "npx tsx src/utils/srtParser.test.ts && npx tsx src/utils/translationService.test.ts && npx tsx src/utils/shortcutManager.test.ts && node tests/license.test.cjs && node tests/persistence.test.cjs && node tests/mediaProtocol.test.cjs && node tests/navigationAndSeeking.test.cjs",
+    "issue-license": "node scripts/issue-license.cjs",
+    "preview": "vite preview",
+    "electron": "electron .",
+    "electron:dev": "concurrently -k \"vite\" \"wait-on tcp:5173 && electron . --dev\"",
+    "electron:build": "npm run build && electron-builder"
+  },
+  "author": "LingoGlass Software",
+  "build": {
+    "appId": "com.lingoglass.player",
+    "productName": "LingoGlass",
+    "copyright": "Copyright © 2026 LingoGlass Software",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "electron/ai_subtitle_engine.py"
+    ],
+    "icon": "build/icon.ico",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "LingoGlass Player",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "runAfterFinish": true
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.education"
+    }
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.4"
+  },
+  "devDependencies": {
+    "@rollup/wasm-node": "^4.28.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "wait-on": "^8.0.1"
+  }
+}

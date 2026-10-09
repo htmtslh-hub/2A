@@ -1,0 +1,494 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF7F2;
+    color: #1E1E24;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer utilities {
+  /* Electron Window Drag Regions */
+  .app-drag {
+    -webkit-app-region: drag;
+  }
+  .app-no-drag {
+    -webkit-app-region: no-drag;
+  }
+
+  /* Retro Neo-Minimalism Design System (Deezer Retro Pop Aesthetic) */
+  .retro-window {
+    background: #FAF7F2;
+    border: 2px solid #1E1E24;
+    box-shadow: 6px 6px 0px #1E1E24;
+    border-radius: 1.25rem;
+  }
+
+  .retro-card {
+    background: #FFFDF9;
+    border: 2px solid #1E1E24;
+    box-shadow: 4px 4px 0px #1E1E24;
+    border-radius: 1.25rem;
+  }
+
+  .retro-card-subtle {
+    background: #FAF7F2;
+    border: 1.5px solid #1E1E24;
+    box-shadow: 2px 2px 0px #1E1E24;
+    border-radius: 1rem;
+  }
+
+  .retro-btn {
+    background: #FFFFFF;
+    color: #1E1E24;
+    border: 1.5px solid #1E1E24;
+    box-shadow: 2px 2px 0px #1E1E24;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+
+  .retro-btn:hover {
+    background: #FCE7F3;
+    color: #BE185D;
+  }
+
+  .retro-btn:active {
+    transform: translate(1.5px, 1.5px);
+    box-shadow: 0.5px 0.5px 0px #1E1E24;
+  }
+
+  .retro-btn-pink {
+    background: #FCE7F3;
+    color: #BE185D;
+    border: 1.5px solid #1E1E24;
+    box-shadow: 2px 2px 0px #1E1E24;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+
+  .retro-btn-pink:hover {
+    background: #FBCFE8;
+  }
+
+  .retro-btn-pink:active {
+    transform: translate(1.5px, 1.5px);
+    box-shadow: 0.5px 0.5px 0px #1E1E24;
+  }
+
+  .retro-btn-dark {
+    background: #1E1E24;
+    color: #FFFFFF;
+    border: 1.5px solid #1E1E24;
+    box-shadow: 2px 2px 0px #1E1E24;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+
+  .retro-btn-dark:hover {
+    background: #000000;
+  }
+
+  .retro-btn-dark:active {
+    transform: translate(1.5px, 1.5px);
+    box-shadow: 0.5px 0.5px 0px #1E1E24;
+  }
+
+  .retro-round-btn {
+    width: 2.35rem;
+    height: 2.35rem;
+    border-radius: 9999px;
+    background: #FFFFFF;
+    border: 1.5px solid #1E1E24;
+    box-shadow: 2px 2px 0px #1E1E24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1E1E24;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+
+  .retro-round-btn:hover {
+    background: #FCE7F3;
+    color: #BE185D;
+    transform: translateY(-1px);
+  }
+
+  .retro-round-btn:active {
+    transform: translate(1.5px, 1.5px);
+    box-shadow: 0.5px 0.5px 0px #1E1E24;
+  }
+
+  /* Seamless Aliases for Legacy Component Compatibility */
+  .spatial-card {
+    background: #FFFDF9;
+    border: 2px solid #1E1E24;
+    box-shadow: 4px 4px 0px #1E1E24;
+    border-radius: 1.25rem;
+    color: #1E1E24;
+  }
+
+  .spatial-card-subtle {
+    background: #FAF7F2;
+    border: 1.5px solid #1E1E24;
+    box-shadow: 2px 2px 0px #1E1E24;
+    border-radius: 1rem;
+    color: #1E1E24;
+  }
+
+  .spatial-pill-active {
+    background: #1E1E24 !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    border: 1.5px solid #1E1E24 !important;
+    box-shadow: 2px 2px 0px #1E1E24 !important;
+  }
+
+  .spatial-pill-inactive {
+    background: #FFFFFF;
+    color: #52525B;
+    border: 1.5px solid rgba(30, 30, 36, 0.25);
+    transition: all 0.15s ease;
+  }
+
+  .spatial-pill-inactive:hover {
+    background: #FCE7F3;
+    color: #BE185D;
+    border-color: #1E1E24;
+  }
+
+  .spatial-round-btn {
+    width: 2.35rem;
+    height: 2.35rem;
+    border-radius: 9999px;
+    background: #FFFFFF;
+    border: 1.5px solid #1E1E24;
+    box-shadow: 2px 2px 0px #1E1E24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1E1E24;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+
+  .spatial-round-btn:hover {
+    background: #FCE7F3;
+    color: #BE185D;
+  }
+
+  .spatial-round-btn:active {
+    transform: translate(1.5px, 1.5px);
+    box-shadow: 0.5px 0.5px 0px #1E1E24;
+  }
+
+  .cly-card {
+    background: #FFFDF9;
+    border: 2px solid #1E1E24;
+    box-shadow: 4px 4px 0px #1E1E24;
+    border-radius: 1.25rem;
+  }
+
+  .cly-card-subtle {
+    background: #FAF7F2;
+    border: 1.5px solid #1E1E24;
+    box-shadow: 2px 2px 0px #1E1E24;
+    border-radius: 1rem;
+  }
+
+  .glass-panel {
+    background: #FFFDF9;
+    border: 2px solid #1E1E24;
+    box-shadow: 4px 4px 0px #1E1E24;
+  }
+
+  .glass-button {
+    background: #FFFFFF;
+    color: #1E1E24;
+    border: 1.5px solid #1E1E24;
+    box-shadow: 2px 2px 0px #1E1E24;
+    border-radius: 9999px;
+    transition: all 0.15s ease;
+  }
+
+  .glass-button:hover {
+    background: #FCE7F3;
+    color: #BE185D;
+  }
+
+  .glass-button:active {
+    transform: translate(1.5px, 1.5px);
+    box-shadow: 0.5px 0.5px 0px #1E1E24;
+  }
+
+  .cly-ai-orb {
+    background: #FCE7F3;
+    color: #BE185D;
+    border: 2px solid #1E1E24;
+    box-shadow: 3px 3px 0px #1E1E24;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .cly-ai-orb:hover {
+    background: #FBCFE8;
+    transform: scale(1.05);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #FAF7F2;
+    border-radius: 9999px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #D4D4D8;
+    border: 1px solid #1E1E24;
+    border-radius: 9999px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #BE185D;
+  }
+}
+
+/* ========================================================
+   MULTI-THEME DESIGN SYSTEM:
+   1. Pink (Hồng Retro / Deezer Pop - Mặc định)
+   2. Black (Đen / Obsidian Dark Mode)
+   3. White (Trắng / Clean Minimalist)
+   4. Yellow-Black (Vàng Đen / Bumblebee Neobrutalism)
+   ======================================================== */
+
+:root,
+[data-theme="pink"] {
+  --dot-min: #FCD34D;
+  --dot-max: #86EFAC;
+  --dot-close: #F472B6;
+  --theme-bg-canvas: #FCEFEF;
+  --theme-bg-container: #FAF7F2;
+  --theme-bg-paper: #FFFDF9;
+  --theme-border: #1E1E24;
+  --theme-ink: #1E1E24;
+  --theme-shadow: #1E1E24;
+  --theme-accent: #BE185D;
+  --theme-accent-bg: #FCE7F3;
+}
+
+[data-theme="black"] {
+  --dot-min: #F59E0B;
+  --dot-max: #10B981;
+  --dot-close: #EF4444;
+  --theme-bg-canvas: #090A0F;
+  --theme-bg-container: #12141C;
+  --theme-bg-paper: #1A1D28;
+  --theme-border: #383D54;
+  --theme-ink: #F4F4F8;
+  --theme-shadow: #050508;
+  --theme-accent: #60A5FA;
+  --theme-accent-bg: #222A3E;
+}
+
+/* Black Theme Overrides */
+[data-theme="black"] {
+  background-color: #090A0F !important;
+  color: #F4F4F8 !important;
+}
+[data-theme="black"] .bg-\[\#FCEFEF\] { background-color: #090A0F !important; }
+[data-theme="black"] .bg-\[\#FAF7F2\] { background-color: #12141C !important; }
+[data-theme="black"] .bg-\[\#FFFDF9\] { background-color: #1A1D28 !important; }
+[data-theme="black"] .bg-white { background-color: #1F2332 !important; }
+[data-theme="black"] .border-\[\#1E1E24\] { border-color: #383D54 !important; }
+[data-theme="black"] .border-\[\#1E1E24\]\/10 { border-color: rgba(244, 244, 248, 0.12) !important; }
+[data-theme="black"] .border-\[\#1E1E24\]\/20 { border-color: rgba(244, 244, 248, 0.2) !important; }
+[data-theme="black"] .border-\[\#1E1E24\]\/30 { border-color: rgba(244, 244, 248, 0.3) !important; }
+[data-theme="black"] .text-\[\#1E1E24\] { color: #F4F4F8 !important; }
+[data-theme="black"] .text-\[\#1E1E24\]\/40 { color: rgba(244, 244, 248, 0.4) !important; }
+[data-theme="black"] .text-\[\#1E1E24\]\/60 { color: rgba(244, 244, 248, 0.6) !important; }
+[data-theme="black"] .text-\[\#1E1E24\]\/70 { color: rgba(244, 244, 248, 0.7) !important; }
+[data-theme="black"] .text-\[\#1E1E24\]\/80 { color: rgba(244, 244, 248, 0.8) !important; }
+[data-theme="black"] .text-\[\#1E1E24\]\/90 { color: rgba(244, 244, 248, 0.9) !important; }
+[data-theme="black"] .text-\[\#52525B\] { color: #9499B0 !important; }
+[data-theme="black"] .text-\[\#71717A\] { color: #9499B0 !important; }
+[data-theme="black"] .bg-\[\#FCE7F3\] { background-color: #242A3D !important; }
+[data-theme="black"] .text-\[\#BE185D\] { color: #93C5FD !important; }
+[data-theme="black"] .hover\:bg-\[\#FCE7F3\]:hover { background-color: #2D3852 !important; }
+[data-theme="black"] .hover\:bg-\[\#FAF7F2\]:hover { background-color: #1A1D28 !important; }
+[data-theme="black"] .retro-window {
+  background: #12141C !important;
+  border-color: #383D54 !important;
+  box-shadow: 6px 6px 0px #050508 !important;
+}
+[data-theme="black"] .retro-card {
+  background: #1A1D28 !important;
+  border-color: #383D54 !important;
+  box-shadow: 4px 4px 0px #050508 !important;
+}
+[data-theme="black"] .retro-card-subtle {
+  background: #141722 !important;
+  border-color: #383D54 !important;
+  box-shadow: 2px 2px 0px #050508 !important;
+}
+[data-theme="black"] .retro-btn {
+  background: #1F2332 !important;
+  color: #F4F4F8 !important;
+  border-color: #383D54 !important;
+  box-shadow: 2px 2px 0px #050508 !important;
+}
+[data-theme="black"] .retro-btn:hover {
+  background: #2D3852 !important;
+  color: #93C5FD !important;
+}
+[data-theme="black"] .retro-btn-pink {
+  background: #242A3D !important;
+  color: #93C5FD !important;
+  border-color: #383D54 !important;
+  box-shadow: 2px 2px 0px #050508 !important;
+}
+[data-theme="black"] [class*="shadow-\["][class*="\#1E1E24\]"] {
+  box-shadow: 2px 2px 0px #050508 !important;
+}
+
+[data-theme="white"] {
+  --dot-min: #64748B;
+  --dot-max: #94A3B8;
+  --dot-close: #334155;
+  --theme-bg-canvas: #E2E8F0;
+  --theme-bg-container: #FFFFFF;
+  --theme-bg-paper: #F8FAFC;
+  --theme-border: #0F172A;
+  --theme-ink: #0F172A;
+  --theme-shadow: #0F172A;
+  --theme-accent: #0F172A;
+  --theme-accent-bg: #E2E8F0;
+}
+
+/* White Theme Overrides */
+[data-theme="white"] {
+  background-color: #E2E8F0 !important;
+  color: #0F172A !important;
+}
+[data-theme="white"] .bg-\[\#FCEFEF\] { background-color: #E2E8F0 !important; }
+[data-theme="white"] .bg-\[\#FAF7F2\] { background-color: #FFFFFF !important; }
+[data-theme="white"] .bg-\[\#FFFDF9\] { background-color: #F8FAFC !important; }
+[data-theme="white"] .bg-white { background-color: #FFFFFF !important; }
+[data-theme="white"] .border-\[\#1E1E24\] { border-color: #0F172A !important; }
+[data-theme="white"] .text-\[\#1E1E24\] { color: #0F172A !important; }
+[data-theme="white"] .bg-\[\#FCE7F3\] { background-color: #E2E8F0 !important; }
+[data-theme="white"] .text-\[\#BE185D\] { color: #0F172A !important; }
+[data-theme="white"] .hover\:bg-\[\#FCE7F3\]:hover { background-color: #CBD5E1 !important; }
+[data-theme="white"] .hover\:bg-\[\#FAF7F2\]:hover { background-color: #F1F5F9 !important; }
+[data-theme="white"] .retro-window {
+  background: #FFFFFF !important;
+  border-color: #0F172A !important;
+  box-shadow: 6px 6px 0px #0F172A !important;
+}
+[data-theme="white"] .retro-card {
+  background: #F8FAFC !important;
+  border-color: #0F172A !important;
+  box-shadow: 4px 4px 0px #0F172A !important;
+}
+[data-theme="white"] .retro-card-subtle {
+  background: #F1F5F9 !important;
+  border-color: #0F172A !important;
+  box-shadow: 2px 2px 0px #0F172A !important;
+}
+[data-theme="white"] .retro-btn {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #0F172A !important;
+  box-shadow: 2px 2px 0px #0F172A !important;
+}
+[data-theme="white"] .retro-btn:hover {
+  background: #E2E8F0 !important;
+  color: #0F172A !important;
+}
+[data-theme="white"] .retro-btn-pink {
+  background: #E2E8F0 !important;
+  color: #0F172A !important;
+  border-color: #0F172A !important;
+  box-shadow: 2px 2px 0px #0F172A !important;
+}
+[data-theme="white"] [class*="shadow-\["][class*="\#1E1E24\]"] {
+  box-shadow: 2px 2px 0px #0F172A !important;
+}
+
+[data-theme="yellow-black"] {
+  --dot-min: #EAB308;
+  --dot-max: #FFFFFF;
+  --dot-close: #000000;
+  --theme-bg-canvas: #FACC15;
+  --theme-bg-container: #FFFBEB;
+  --theme-bg-paper: #FFFFFF;
+  --theme-border: #000000;
+  --theme-ink: #000000;
+  --theme-shadow: #000000;
+  --theme-accent: #000000;
+  --theme-accent-bg: #FDE047;
+}
+
+/* Yellow-Black Theme Overrides */
+[data-theme="yellow-black"] {
+  background-color: #FACC15 !important;
+  color: #000000 !important;
+}
+[data-theme="yellow-black"] .bg-\[\#FCEFEF\] { background-color: #FACC15 !important; }
+[data-theme="yellow-black"] .bg-\[\#FAF7F2\] { background-color: #FFFBEB !important; }
+[data-theme="yellow-black"] .bg-\[\#FFFDF9\] { background-color: #FFFFFF !important; }
+[data-theme="yellow-black"] .bg-white { background-color: #FFFFFF !important; }
+[data-theme="yellow-black"] .border-\[\#1E1E24\] { border-color: #000000 !important; }
+[data-theme="yellow-black"] .text-\[\#1E1E24\] { color: #000000 !important; }
+[data-theme="yellow-black"] .bg-\[\#FCE7F3\] { background-color: #FDE047 !important; }
+[data-theme="yellow-black"] .text-\[\#BE185D\] { color: #000000 !important; }
+[data-theme="yellow-black"] .hover\:bg-\[\#FCE7F3\]:hover { background-color: #FACC15 !important; }
+[data-theme="yellow-black"] .hover\:bg-\[\#FAF7F2\]:hover { background-color: #FEF08A !important; }
+[data-theme="yellow-black"] .retro-window {
+  background: #FFFBEB !important;
+  border-color: #000000 !important;
+  box-shadow: 6px 6px 0px #000000 !important;
+}
+[data-theme="yellow-black"] .retro-card {
+  background: #FFFFFF !important;
+  border-color: #000000 !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+}
+[data-theme="yellow-black"] .retro-card-subtle {
+  background: #FEF9C3 !important;
+  border-color: #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+[data-theme="yellow-black"] .retro-btn {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+[data-theme="yellow-black"] .retro-btn:hover {
+  background: #FDE047 !important;
+  color: #000000 !important;
+}
+[data-theme="yellow-black"] .retro-btn-pink {
+  background: #FDE047 !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+[data-theme="yellow-black"] [class*="shadow-\["][class*="\#1E1E24\]"] {
+  box-shadow: 2px 2px 0px #000000 !important;
+}

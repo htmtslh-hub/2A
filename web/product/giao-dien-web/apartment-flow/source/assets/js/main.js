@@ -26,9 +26,22 @@
   let animation = 0;
   let rendering = false;
   let running = true;
+  let paused = false;
   let dirty = true;
   const controls = root.querySelector('.apartment__controls');
   controls.hidden = false;
+  const pauseButton = document.querySelector('.apartment__pause');
+  pauseButton.hidden = false;
+  pauseButton.addEventListener('click', () => {
+    paused = !paused;
+    pauseButton.setAttribute('aria-pressed', String(paused));
+    pauseButton.setAttribute('aria-label', paused ? 'Tiếp tục chuyển cảnh' : 'Tạm dừng chuyển cảnh');
+    pauseButton.querySelector('span').textContent = paused ? '▶' : 'Ⅱ';
+    cancelAnimationFrame(animation);
+    animation = 0;
+    lastTime = 0;
+    if (!paused) { dirty = true; read(); }
+  });
   const panels = [...root.querySelectorAll('.story-panel')];
   const chapterLinks = [...document.querySelectorAll('[data-chapter]')];
   const chapterNames = ['Cửa vào', 'Phòng khách & bếp', 'Phòng ngủ', 'Kết nối'];
@@ -153,7 +166,7 @@
     wanted = low;
     try {
       const picture = await image(low);
-      if (!running) return;
+      if (!running || paused) return;
       // Paint the resolved sample, then coalesce straight to the latest position.
       // Discarding every intermediate decode would freeze during fast scrolling.
       // One actual source frame per paint. Blending moving edges creates blur/ghosting.
@@ -182,7 +195,7 @@
   }
   function tick(now) {
     animation = 0;
-    if (!running || document.hidden) return;
+    if (!running || paused || document.hidden) return;
     const elapsed = Math.min(50, Math.max(1, now - (lastTime || now - 16.67)));
     lastTime = now;
     const eased = (target - position) * (1 - Math.exp(-elapsed / DAMPING_MS));
@@ -195,7 +208,7 @@
     else lastTime = 0; // Finite loop: stop when the camera settles.
   }
   function wake() {
-    if (running && !animation && !document.hidden) animation = requestAnimationFrame(tick);
+    if (running && !paused && !animation && !document.hidden) animation = requestAnimationFrame(tick);
   }
   function read() {
     const distance = Math.max(1, root.offsetHeight - stage.offsetHeight);

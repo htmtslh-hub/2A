@@ -1,0 +1,322 @@
+{
+  "base": "http://127.0.0.1:8772/",
+  "date": "2026-10-08T13:23:45.700Z",
+  "browsers": [
+    {
+      "name": "Chromium",
+      "version": "153.0.8010.12",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 4
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 73
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 154
+            }
+          ],
+          "reverseIntermediateFrame": 238,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 4
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 76
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 154
+            }
+          ],
+          "reverseIntermediateFrame": 238,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 4
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 73
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 154
+            }
+          ],
+          "reverseIntermediateFrame": 238,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 4
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 73
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 154
+            }
+          ],
+          "reverseIntermediateFrame": 238,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "Firefox",
+      "version": "155.0",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 4
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 73
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 154
+            }
+          ],
+          "reverseIntermediateFrame": 237,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 7
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 74
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 155
+            }
+          ],
+          "reverseIntermediateFrame": 237,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 3
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 74
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 155
+            }
+          ],
+          "reverseIntermediateFrame": 237,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 4
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 74
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 155
+            }
+          ],
+          "reverseIntermediateFrame": 238,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "Edge",
+      "version": "154.0.4258.62",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 6
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 73
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 156
+            }
+          ],
+          "reverseIntermediateFrame": 238,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 4
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 76
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 155
+            }
+          ],
+          "reverseIntermediateFrame": 238,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "CocCoc",
+      "version": "152.0.7977.124",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 4
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 73
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 156
+            }
+          ],
+          "reverseIntermediateFrame": 238,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "chapters": [
+            {
+              "scene": 1,
+              "intermediateFrame": 4
+            },
+            {
+              "scene": 2,
+              "intermediateFrame": 76
+            },
+            {
+              "scene": 3,
+              "intermediateFrame": 154
+            }
+          ],
+          "reverseIntermediateFrame": 238,
+          "pauseResume": true,
+          "dialogEscapeFocus": true,
+          "rapidInput": true,
+          "motionDefaultsOn": true,
+          "errors": []
+        }
+      ],
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,16 +1,19 @@
-# Apartment Flow
+# Apartment Flow 1.0.0
 
-Bản giới thiệu căn hộ phong cách glass, tên demo Lumière Residence, phiên bản
-đang phát triển 0.1.0. Mã ở `source/`; bốn chặng nội dung, nav và dialog tư vấn
-đã có. Tích hợp danh mục 2A tại ô t18 dưới dạng bản xem trước, chưa mở bán.
-Demo: https://forgezone.store/demos/apartment-flow/index.html
-Chi tiết: https://forgezone.store/?mau=t18
-Nền gồm 240 frame WebP 1920×1080 từ video Google Flow do người dùng yêu cầu tạo.
-Xem `source/README.md`, `source/CUSTOMISE.md` và `reviews/0.1.0/QA.md`.
+Sản phẩm giao diện web 2A / Forge Zone, mã t18. Trang giới thiệu căn hộ glass,
+240 frame 1920x1080 và camera theo cuộn, bốn chương, pause/resume và dialog demo.
+Mã nguồn ở source/; gói bàn giao apartment-flow.zip. 247 file gồm bảy file chính
+và 240 WebP, hướng dẫn tiếng Anh 10 bước / 12 prompt, licence bảy mục và MIT notice.
+Demo và preview đồng bộ từ nguồn. ZIP ở ngoài public/, route /api/download?id=t18
+chỉ phục vụ sau kiểm tra tài khoản/quyền mua theo cơ chế hiện có của 2A.
 
-Tái xuất frame: `python tools/extract-frames.py <video.mp4>` từ thư mục sản phẩm.
-Yêu cầu Python, OpenCV và Pillow chỉ cho công cụ xuất ảnh; website không có thư viện.
+Trang sản phẩm: https://forgezone.store/?mau=t18
+Demo: https://forgezone.store/demos/apartment-flow/index.html?v=1.0.0
+Triển khai dự án Vercel web từ thư mục web/, không tạo site riêng cho sản phẩm.
 
-Deploy dùng dự án Vercel `web` của Forge Zone từ thư mục `web/` trong checkout
-đã đồng bộ origin/master. Không dùng dự án apartment-flow độc lập để phát hành 2A.
-Giấy phép thương mại, gói ZIP và nghiệm thu thương mại đầy đủ còn chờ.
+Hồ sơ nghiệm thu phiên bản này ở reviews/1.0.0/. Không dùng QA bản 0.1.0 làm
+bằng chứng phát hành 1.0.0. Các ngoại lệ file/ảnh/JS/dung lượng được ghi theo brief.
+Công cụ tools/ không nằm trong ZIP khách hàng. Repack:
+node web/product/giao-dien-web/tools/dong-goi.mjs apartment-flow --ngoai-le
+
+Nội dung và thương hiệu căn hộ là minh họa AI, không có dữ liệu bất động sản thật.

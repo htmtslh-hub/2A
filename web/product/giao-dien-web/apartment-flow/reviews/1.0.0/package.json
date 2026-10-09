@@ -1,0 +1,11 @@
+{
+  "file": "apartment-flow.zip",
+  "bytes": 11353075,
+  "sha256": "824a6d421d10f1274de42c64ef98a42b0f9b6926581f4455b72ba86e677eda60",
+  "files": 247,
+  "sourceBytesMatch": true,
+  "zipCRC": "PASS",
+  "steps": 10,
+  "prompts": 12,
+  "note": "README now includes actual tested versions; HTML/CSS/JS/frame bytes unchanged from release/checks.json and features/checks.json"
+}

@@ -1,0 +1,37 @@
+Apartment Flow — commercial template licence
+
+1. Permission
+A perpetual, non-exclusive commercial licence to the template code and the
+240 included WebP frames. The third-party code notice below remains applicable.
+
+2. Allowed use
+Use and modify the template code and included frames in unlimited personal
+and client websites, and publish the resulting websites without attribution
+to Forge Zone. Retain THIRD-PARTY-NOTICES.txt with redistributed code.
+
+3. Restrictions
+Do not resell the original template files, list them on another marketplace
+or include them in a competing template collection. Do not resell the included
+frames as standalone assets.
+
+4. Demo content
+Lumière Residence is a fictional demo identity. The apartment frames are
+AI-generated illustrations, not evidence of an actual property or its condition.
+Replace sample identity, copy and contact information before publishing for a
+real business. Verify all property claims; no booking or payment system is included.
+
+5. Fonts
+Only local system font stacks are referenced: Segoe UI, system-ui, Cambria,
+Times New Roman and Georgia. No font files are bundled or downloaded.
+Use fonts licensed for your device or substitute your own licensed fonts.
+
+6. Ownership
+Copyright owner: Văn Triển. Ownership remains with the author; this is
+permission to use the template code and included frames, not transfer ownership.
+The Scroll World technique/code is subject to its MIT notice in
+THIRD-PARTY-NOTICES.txt; this licence does not override that notice.
+
+7. Warranty
+Provided as-is, without warranty. Test your customised version before publishing.
+
+Questions about permitted use? Please ask the product owner.

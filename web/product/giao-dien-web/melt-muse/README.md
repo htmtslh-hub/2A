@@ -10,4 +10,4 @@ Sản phẩm portfolio thời trang mới theo ảnh tham chiếu ngày 09/10/20
 - Demo tĩnh cục bộ: `web/public/demos/melt-muse/`.
 - Preview chụp từ mã: `web/public/previews/melt-muse.webp`, 698×524.
 
-Kiểm tra kỹ thuật đã PASS trên Chromium, Firefox và Microsoft Edge qua Playwright trên Windows. Không có backend, form gửi dữ liệu hay thanh toán. Chưa đăng catalog, chưa triển khai công khai. Licence là bản nháp chờ chủ sản phẩm chốt chủ thể bản quyền và điều khoản ảnh trước khi đưa lên bán.
+Kiểm tra kỹ thuật đã PASS trên Chromium, Firefox và Microsoft Edge qua Playwright trên Windows. Không có backend, form gửi dữ liệu hay thanh toán. Demo đã triển khai tại https://forgezone.store/demos/melt-muse/index.html theo yêu cầu push/deploy ngày 09/10/2026; xem hồ sơ DEPLOYMENT.md. Chưa đăng catalog bán hàng. Licence là bản nháp chờ chủ sản phẩm chốt chủ thể bản quyền và điều khoản ảnh trước khi đưa lên bán.

@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-09T02:02:53.063Z",
+  "base": "https://forgezone.store",
+  "deployedCommit": "4f57913",
+  "assets": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "matches": true,
+      "expectedSha256": "0b87925ce49bd9120a3014e05c9ca43899a986da916e2b440535c5b189c30fca",
+      "actualSha256": "0b87925ce49bd9120a3014e05c9ca43899a986da916e2b440535c5b189c30fca"
+    },
+    {
+      "file": "assets/css/style.css",
+      "status": 200,
+      "matches": true,
+      "expectedSha256": "bd2729570960161a9bdf4c4ac074018e41c4adfb1516a04073ab2387e1a29a3e",
+      "actualSha256": "bd2729570960161a9bdf4c4ac074018e41c4adfb1516a04073ab2387e1a29a3e"
+    },
+    {
+      "file": "assets/js/main.js",
+      "status": 200,
+      "matches": true,
+      "expectedSha256": "6df2c8e250d656a146436f702985cea3f954cbb473a1fc82384ed215e9ed4e88",
+      "actualSha256": "6df2c8e250d656a146436f702985cea3f954cbb473a1fc82384ed215e9ed4e88"
+    },
+    {
+      "file": "assets/img/soft-focus.webp",
+      "status": 200,
+      "matches": true,
+      "expectedSha256": "91a04b3d0233afe38f58ab7e30a8fd48d57d3e2a12bc229e28a783cbf96bac1a",
+      "actualSha256": "91a04b3d0233afe38f58ab7e30a8fd48d57d3e2a12bc229e28a783cbf96bac1a"
+    },
+    {
+      "file": "assets/img/damn-right.webp",
+      "status": 200,
+      "matches": true,
+      "expectedSha256": "4451b1a82e1d33816d8fa5428cfe52894565e52bd00c3ddd081d545854d9018b",
+      "actualSha256": "4451b1a82e1d33816d8fa5428cfe52894565e52bd00c3ddd081d545854d9018b"
+    },
+    {
+      "file": "assets/img/heart-pose.webp",
+      "status": 200,
+      "matches": true,
+      "expectedSha256": "522a4ca9b187c9fb7f9cb1477e03f04e9bf4313fc31332aa1f5b2f46a08110e7",
+      "actualSha256": "522a4ca9b187c9fb7f9cb1477e03f04e9bf4313fc31332aa1f5b2f46a08110e7"
+    }
+  ],
+  "smoke": [
+    {
+      "path": "/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/admin",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/api/admin",
+      "status": 403,
+      "location": null
+    },
+    {
+      "path": "/dich-vu",
+      "status": 410,
+      "location": null
+    },
+    {
+      "path": "/tai-khoan",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/demos/apartment-flow/index.html",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/demos/shirtline/index.html",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/demos/watchroom/index.html",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/demos/novatrend/index.html",
+      "status": 200,
+      "location": null
+    },
+    {
+      "path": "/previews/melt-muse.webp",
+      "status": 200,
+      "location": null
+    }
+  ],
+  "browsers": [
+    {
+      "name": "Microsoft Edge",
+      "version": "155.0.4283.45",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "images": true,
+      "title": "Melt Muse — fashion, portraits & personal stories",
+      "status": 200
+    },
+    {
+      "name": "Microsoft Edge",
+      "version": "155.0.4283.45",
+      "width": 375,
+      "scrollWidth": 375,
+      "images": true,
+      "title": "Melt Muse — fashion, portraits & personal stories",
+      "status": 200,
+      "menu": true,
+      "escape": true
+    }
+  ],
+  "failures": [],
+  "errors": []
+}

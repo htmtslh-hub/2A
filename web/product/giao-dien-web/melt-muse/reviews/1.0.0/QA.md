@@ -1,5 +1,7 @@
 # Melt Muse — QA 1.0.0
 
+Cập nhật sau yêu cầu push/deploy: demo đã online ngày09/10/2026. Xem `DEPLOYMENT.md` và `production-checks.json` cho trạng thái publication hiện tại; các dòng “chưa deploy” phía dưới mô tả phạm vi kiểm tra local trước yêu cầu đó. Chưa đăng bán/catalog và chưa tự đổi licence.
+
 Ngày: 09/10/2026. Chuẩn: product-standards 1.2 / WEB-STATIC-1 + ngoại lệ ảnh riêng theo brief. Kết quả: **bản review hoàn tất về mã và kiểm tra kỹ thuật; chưa phát hành thương mại** vì licence còn chủ thể bản quyền/điều khoản ảnh cần chủ sản phẩm chốt. Không tuyên bố đạt nguyên hồ sơ sáu file / 20.480 byte.
 
 ## Phạm vi và giả định

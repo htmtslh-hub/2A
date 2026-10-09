@@ -43,6 +43,19 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t16: {
+    slug: 'mint-atlas', cat: 'portfolio', version: '1.0.0', badge: '',
+    specs: {
+      vi: [['Định dạng', 'HTML · CSS · JS thuần'], ['Trong gói', '6 file chính + 3 ảnh WebP original'], ['Thiết kế', 'Xanh bạc hà · Nhân vật nổi khỏi banner'], ['Tương tác', 'Kỹ năng mở rộng · Xem artwork · Menu mobile'], ['Tài liệu', '10 bước · 12 prompt AI · Giấy phép thương mại'], ['Nội dung', 'Nhân vật và chỉ số hư cấu; không backend']],
+      en: [['Format', 'Plain HTML · CSS · JS'], ['Package', '6 core files + 3 original WebP images'], ['Design', 'Mint palette · Layered character hero'], ['Interactions', 'Expandable abilities · Full artwork · Mobile menu'], ['Documentation', '10 steps · 12 AI prompts · Commercial licence'], ['Content', 'Fictional character and scores; no backend']],
+      zh: [['格式', '纯 HTML · CSS · JS'], ['文件包', '6 个核心文件 + 3 张原创 WebP 图片'], ['设计', '薄荷绿 · 突出边框的角色首屏'], ['交互', '可展开技能 · 完整插画 · 移动菜单'], ['文档', '10 个步骤 · 12 个 AI 提示词 · 商业许可'], ['内容', '虚构角色与数值；不含后端']],
+    },
+    copy: {
+      vi: { name: 'Mint Atlas', desc: 'Giao diện hồ sơ nhân vật anime xanh bạc hà với nhân vật original nổi khỏi banner, ba kỹ năng mở rộng, bảng chỉ số và thư viện artwork nhà kính/đêm sao. Ba ảnh AI WebP cục bộ, HTML/CSS/JS dễ sửa, hướng dẫn 10 bước và 12 prompt AI, giấy phép dùng website thương mại. Nhân vật và chỉ số hư cấu; không kèm backend, đăng nhập hoặc game service.', tags: ['Hồ sơ nhân vật', 'Anime original', 'Artwork'] },
+      en: { name: 'Mint Atlas', desc: 'A mint-and-slate anime character dossier with an original explorer rising above the hero, three expandable abilities, concept statistics and glasshouse/starlight artwork. Three local AI WebP images, editable HTML/CSS/JS, ten setup steps, twelve AI prompts and a commercial website licence. Fictional character and scores; no backend, accounts or game services.', tags: ['Character dossier', 'Original anime', 'Artwork'] },
+      zh: { name: 'Mint Atlas', desc: '薄荷绿与深灰配色的动漫角色档案：突出首屏边框的原创探险者、三个可展开技能、概念属性图表及温室/星夜插画。包含三张本地 AI WebP 图片、可编辑的 HTML/CSS/JS、十个设置步骤、十二个 AI 提示词和商业网站许可。角色与数值为虚构内容，不含后端、账号或游戏服务。', tags: ['角色档案', '原创动漫', '插画'] },
+    },
+  },
   t17: {
     slug: 'melt-muse', cat: 'portfolio', version: '1.1.0', badge: '',
     specs: {

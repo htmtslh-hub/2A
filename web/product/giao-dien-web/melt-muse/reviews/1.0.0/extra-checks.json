@@ -1,0 +1,211 @@
+{
+  "browser": "Microsoft Edge",
+  "version": "154.0.4258.62",
+  "date": "2026-10-09T01:24:53.631Z",
+  "viewports": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "images": [
+        {
+          "src": "assets/img/soft-focus.webp",
+          "loaded": true
+        },
+        {
+          "src": "assets/img/damn-right.webp",
+          "loaded": true
+        },
+        {
+          "src": "assets/img/heart-pose.webp",
+          "loaded": true
+        }
+      ],
+      "headings": [
+        "MELTMUSE",
+        "A little soft. A little bold.",
+        "Soft focus",
+        "THE SOFT SIDE",
+        "A note from the studio",
+        "Damn right.",
+        "What we can make together",
+        "Portraits",
+        "Personal stories",
+        "Creative direction",
+        "Let's make it personal."
+      ],
+      "links": [
+        "#main",
+        "#top",
+        "#edit",
+        "#story",
+        "#contact",
+        "#contact",
+        "#edit",
+        "#story",
+        "#contact",
+        "#contact",
+        "mailto:hello@example.com",
+        "#top"
+      ]
+    },
+    {
+      "width": 820,
+      "scrollWidth": 820,
+      "images": [
+        {
+          "src": "assets/img/soft-focus.webp",
+          "loaded": true
+        },
+        {
+          "src": "assets/img/damn-right.webp",
+          "loaded": true
+        },
+        {
+          "src": "assets/img/heart-pose.webp",
+          "loaded": true
+        }
+      ],
+      "headings": [
+        "MELTMUSE",
+        "A little soft. A little bold.",
+        "Soft focus",
+        "THE SOFT SIDE",
+        "A note from the studio",
+        "Damn right.",
+        "What we can make together",
+        "Portraits",
+        "Personal stories",
+        "Creative direction",
+        "Let's make it personal."
+      ],
+      "links": [
+        "#main",
+        "#top",
+        "#edit",
+        "#story",
+        "#contact",
+        "#contact",
+        "#edit",
+        "#story",
+        "#contact",
+        "#contact",
+        "mailto:hello@example.com",
+        "#top"
+      ],
+      "menuOpens": true,
+      "escapeCloses": true,
+      "focusReturns": true
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "images": [
+        {
+          "src": "assets/img/soft-focus.webp",
+          "loaded": true
+        },
+        {
+          "src": "assets/img/damn-right.webp",
+          "loaded": true
+        },
+        {
+          "src": "assets/img/heart-pose.webp",
+          "loaded": true
+        }
+      ],
+      "headings": [
+        "MELTMUSE",
+        "A little soft. A little bold.",
+        "Soft focus",
+        "THE SOFT SIDE",
+        "A note from the studio",
+        "Damn right.",
+        "What we can make together",
+        "Portraits",
+        "Personal stories",
+        "Creative direction",
+        "Let's make it personal."
+      ],
+      "links": [
+        "#main",
+        "#top",
+        "#edit",
+        "#story",
+        "#contact",
+        "#contact",
+        "#edit",
+        "#story",
+        "#contact",
+        "#contact",
+        "mailto:hello@example.com",
+        "#top"
+      ],
+      "menuOpens": true,
+      "escapeCloses": true,
+      "focusReturns": true
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "images": [
+        {
+          "src": "assets/img/soft-focus.webp",
+          "loaded": true
+        },
+        {
+          "src": "assets/img/damn-right.webp",
+          "loaded": true
+        },
+        {
+          "src": "assets/img/heart-pose.webp",
+          "loaded": true
+        }
+      ],
+      "headings": [
+        "MELTMUSE",
+        "A little soft. A little bold.",
+        "Soft focus",
+        "THE SOFT SIDE",
+        "A note from the studio",
+        "Damn right.",
+        "What we can make together",
+        "Portraits",
+        "Personal stories",
+        "Creative direction",
+        "Let's make it personal."
+      ],
+      "links": [
+        "#main",
+        "#top",
+        "#edit",
+        "#story",
+        "#contact",
+        "#contact",
+        "#edit",
+        "#story",
+        "#contact",
+        "#contact",
+        "mailto:hello@example.com",
+        "#top"
+      ],
+      "menuOpens": true,
+      "escapeCloses": true,
+      "focusReturns": true
+    }
+  ],
+  "errors": [],
+  "motion": {
+    "reducedPreference": true,
+    "before": "matrix(1, 0, 0, 1, 0, 12)",
+    "during": "matrix(1, 0, 0, 1, 0, 2.04059)",
+    "after": "matrix(1, 0, 0, 1, 0, 0)",
+    "running": 0
+  },
+  "missingImages": {
+    "width": 320,
+    "scrollWidth": 320,
+    "content": true,
+    "contact": "mailto:hello@example.com"
+  },
+  "failures": []
+}

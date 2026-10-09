@@ -1,0 +1,27 @@
+{
+  "assets": [
+    {
+      "path": "css\\style.css",
+      "matches": true
+    },
+    {
+      "path": "img\\damn-right.webp",
+      "matches": true
+    },
+    {
+      "path": "img\\heart-pose.webp",
+      "matches": true
+    },
+    {
+      "path": "img\\soft-focus.webp",
+      "matches": true
+    },
+    {
+      "path": "js\\main.js",
+      "matches": true
+    }
+  ],
+  "htmlMatches": true,
+  "zipBytes": 161264,
+  "sha256": "cb5ac1c8599816331e4f496e86f354630a2e593104044f0ca12f52efbeb7c122"
+}

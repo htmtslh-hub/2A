@@ -156,4 +156,4 @@
 .forge-hero-brand { position:absolute; z-index:5; top:40px; left:clamp(32px,4vw,56px); display:flex; align-items:center; gap:12px; padding:0; border:0; background:transparent; color:#fff; cursor:pointer; font-family:var(--display); font-weight:700; font-size:18px; letter-spacing:.13em; white-space:nowrap; }
 .forge-hero-brand img { width:32px; height:48px; object-fit:contain; flex:none; }
 .forge-hero-brand:focus-visible { outline:2px solid #fff; outline-offset:6px; border-radius:4px; }
-@media (max-width:1199px) { .forge-hero { padding-top:180px !important; } .forge-hero-brand { top:108px; left:32px; gap:10px; font-size:16px; } .forge-hero-brand img { width:26px; height:40px; } }
+@media (max-width:1399px) { .forge-hero { padding-top:180px !important; } .forge-hero-brand { top:108px; left:32px; gap:10px; font-size:16px; } .forge-hero-brand img { width:26px; height:40px; } }

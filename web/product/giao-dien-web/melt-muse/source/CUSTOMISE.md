@@ -1,6 +1,6 @@
 # Customise Melt Muse
 
-This is a static creative portfolio. There is no backend, form service or payment system. The original photographs are generated demo assets: confirm their use terms before commercial publication. Preserve HTML/CSS/JS and relative paths. You edit source files; this is not a no-code website builder.
+This is a static creative portfolio. There is no backend, form service or payment system. The three included photographs are AI-generated assets licensed for your finished websites; see LICENCE.txt. Preserve HTML/CSS/JS and relative paths. You edit source files; this is not a no-code website builder.
 
 ## Edit map
 
@@ -162,7 +162,7 @@ Do not publish.
 
 ## Step 8 - Publish the whole folder
 
-Choose a static host. Upload the working folder contents, with `index.html` at the public root and `assets/` beside it. Never upload just HTML. Confirm licence and image-use terms before commercial publication. Correct result: the public URL matches your locally checked page, with HTTPS and all assets.
+Choose a static host. Upload the working folder contents, with `index.html` at the public root and `assets/` beside it. Never upload just HTML. Read LICENCE.txt and verify rights for any replacement images before publication. Correct result: the public URL matches your locally checked page, with HTTPS and all assets.
 
 **Prompt 09 - Guide me through hosting**
 

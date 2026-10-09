@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-09T02:41:49.791Z",
+  "deployment": "dpl_GQQt2JZQN5bcpxgQNmF2pT9EenJs",
+  "smoke": [
+    {
+      "path": "/",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "path": "/?mau=t17",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "path": "/api/download?id=t17",
+      "status": 401,
+      "expected": 401
+    },
+    {
+      "path": "/product/giao-dien-web/melt-muse/melt-muse.zip",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/demos/melt-muse/index.html?v=1.1.0",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "path": "/previews/melt-muse.webp?v=1.1.0",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "path": "/admin",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "path": "/api/admin",
+      "status": 403,
+      "expected": 403
+    },
+    {
+      "path": "/tai-khoan",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "path": "/dich-vu",
+      "status": 410,
+      "expected": 410
+    },
+    {
+      "path": "/demos/apartment-flow/index.html",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "path": "/demos/shirtline/index.html",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "path": "/demos/watchroom/index.html",
+      "status": 200,
+      "expected": 200
+    }
+  ],
+  "store": [
+    {
+      "locale": "vi-VN",
+      "lang": "vi",
+      "images": [
+        {
+          "src": "https://forgezone.store/previews/melt-muse.webp?v=1.1.0",
+          "loaded": true
+        }
+      ],
+      "buy": true,
+      "cart": true,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "errors": []
+    },
+    {
+      "locale": "en-US",
+      "lang": "en",
+      "images": [
+        {
+          "src": "https://forgezone.store/previews/melt-muse.webp?v=1.1.0",
+          "loaded": true
+        }
+      ],
+      "buy": true,
+      "cart": true,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "errors": [],
+      "cartAdded": "In cart",
+      "mobile": {
+        "width": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "locale": "zh-CN",
+      "lang": "zh-CN",
+      "images": [
+        {
+          "src": "https://forgezone.store/previews/melt-muse.webp?v=1.1.0",
+          "loaded": true
+        }
+      ],
+      "buy": true,
+      "cart": true,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "errors": []
+    }
+  ],
+  "failures": [],
+  "browser": {
+    "name": "Microsoft Edge",
+    "version": "155.0.4283.45"
+  },
+  "homeCard": {
+    "text": "PORTFOLIO\nMelt Muse\n$79\n\nA fashion and creative studio portfolio with oversized typography, a red heart note, hand-drawn details and tilted portrait collages. Three local AI WebP images, mobile navigation, finite entrance motion and email contact. Includes editable source, a commercial licence, ten setup steps and twelve AI prompts. No backend or form submission.\n\nPortfolio\nFashion\nEditorial",
+    "href": "?mau=t17"
+  }
+}

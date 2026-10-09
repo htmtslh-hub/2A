@@ -1,25 +1,27 @@
-MELT MUSE — DRAFT LICENCE TERMS
+MELT MUSE — COMMERCIAL LICENCE
 ==============================
 
 1. WHAT YOU GET
 A perpetual, non-exclusive, worldwide commercial licence to the template code
-upon authorised commercial release. This review package is awaiting the
-product owner's confirmation of copyright identity and photograph terms.
+and the three included AI-generated WebP images. Third-party fonts remain
+subject to their own licences below.
 
 2. WHAT YOU MAY DO
 Use the template on unlimited personal, commercial and client projects.
-Modify the layout, colours and code. No attribution is required for the code.
+Modify the layout, colours, code and included images. Publish finished websites
+without attribution to Forge Zone, and deliver customised files to your clients.
 
 3. WHAT YOU MAY NOT DO
 Resell, sublicense or distribute the template files as a competing template,
 publish them on another marketplace, or include them in a template bundle.
+Do not sell or redistribute the included images as standalone stock assets.
 
 4. DEMO CONTENT
 The studio name, copy and portfolio stories are fictional and must be replaced
 before publication. The three photographs are AI-generated demo assets, not
-photographs of clients. The product owner must confirm their distribution and
-site-use terms before commercial release. This draft does not invent or extend
-rights for those photographs. Inline decorative SVG is part of the code.
+photographs of clients or endorsements. You may retain or replace them on your
+finished websites under this licence. Replace the example contact address.
+Inline decorative SVG is part of the code. No backend or form service is included.
 
 5. FONTS
 Archivo and Archivo Black are optional Google Fonts dependencies, each under
@@ -31,7 +33,7 @@ System fallback fonts are supplied by the visitor's operating system.
 
 6. OWNERSHIP
 Copyright remains with the author. This licence grants use, not ownership.
-Copyright owner: [COPYRIGHT OWNER TO BE CONFIRMED BY PRODUCT OWNER].
+Copyright owner: Văn Triển.
 
 7. NO WARRANTY
 Provided as is. Browser results apply only to the versions actually tested;

@@ -1,4 +1,4 @@
-# Melt Muse 1.0.0
+# Melt Muse 1.1.0
 
 A playful editorial portfolio for fashion photographers, creative studios and personal style journals. Paper white, muted gray, cherry red, hand-drawn details and overlapping portrait frames.
 
@@ -10,13 +10,13 @@ Read **CUSTOMISE.md** for the edit map, ten setup steps and twelve complete AI p
 
 - `index.html`, `assets/css/style.css`, `assets/js/main.js`.
 - `CUSTOMISE.md`, `README.md`, `LICENCE.txt`.
-- Three local WebP photographs in `assets/img/`, generated for this demo. They are additional files under the owner's image request exception.
+- Three local AI-generated WebP photographs in `assets/img/`, licensed for use on your personal, commercial and client websites.
 
 ## Working behavior
 
 Section navigation, keyboard skip link, mobile menu, Escape-to-close, back-to-top, email contact and brief entrance transitions. All important content and links remain visible without JavaScript. There is no backend, shopping cart, booking service, form submission or analytics. The email link opens the visitor's email application; it does not send an email automatically.
 
-The studio name and stories are fictional. The people in the photographs are generated subjects, not named clients or testimonials. Replace `hello@example.com` and all demo content before publishing. Confirm image-use terms with the product owner before commercial release; see LICENCE.txt.
+The studio name and stories are fictional. The people in the photographs are generated subjects, not named clients or testimonials. Replace `hello@example.com` and all demo content before publishing. The included images may be used on your finished websites; do not resell them as standalone stock assets. See LICENCE.txt.
 
 ## Fonts and motion
 
@@ -30,4 +30,8 @@ Colors and font stacks are at the start of `assets/css/style.css`. Images are lo
 
 ## Validation
 
-This is a review package, not a claim of complete cross-browser certification. See the accompanying internal QA report for exact browser versions and checks performed. Safari and the paid store download flow require separate verification. Commercial image terms and copyright owner must be confirmed before release.
+The extracted template was tested on Windows with Chromium 153.0.8010.12, Firefox 155.0 and Microsoft Edge 155.0.4283.45 at 1440, 820, 375 and 320px widths. Navigation, keyboard focus, offline font fallbacks and direct file opening were checked. Safari and Cốc Cốc have not been tested. This is not a cross-browser or accessibility certification.
+
+## Licence
+
+LICENCE.txt permits unlimited personal, commercial and client websites using the code and three included images. Redistribution as a competing template or standalone stock assets is prohibited. Font licences are listed separately.

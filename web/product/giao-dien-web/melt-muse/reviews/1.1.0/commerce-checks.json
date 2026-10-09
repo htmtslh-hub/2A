@@ -1,0 +1,19 @@
+{
+  "method": "Actual download handler with isolated auth/purchase fixtures; no database reads or writes",
+  "anonymous": 401,
+  "unowned": 403,
+  "owned": 200,
+  "bundle": 200,
+  "bytes": 161597,
+  "sha256": "5f5877e6fce4db7a055b542625ccb6b719804b8e9ef75aaaca704ba135fade8a",
+  "catalogLanguages": [
+    "vi",
+    "en",
+    "zh"
+  ],
+  "priceVND": 1900000,
+  "priceUSD": 7900,
+  "tracing": true,
+  "livePaidCheckout": "NOT TESTED",
+  "liveEntitledDownload": "NOT TESTED"
+}

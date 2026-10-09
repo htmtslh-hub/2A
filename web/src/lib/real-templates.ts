@@ -41,6 +41,19 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t17: {
+    slug: 'melt-muse', cat: 'portfolio', version: '1.1.0', badge: '',
+    specs: {
+      vi: [['Định dạng', 'HTML · CSS · JS thuần'], ['Trong gói', '6 file chính + 3 ảnh WebP'], ['Thiết kế', 'Editorial · Trắng xám · Đỏ cherry'], ['Tài liệu', '10 bước · 12 prompt AI'], ['Giấy phép', 'Website cá nhân, thương mại và khách hàng'], ['Liên hệ', 'Email; không backend hoặc gửi form']],
+      en: [['Format', 'Plain HTML · CSS · JS'], ['Package', '6 core files + 3 WebP images'], ['Design', 'Editorial · Paper white · Cherry red'], ['Documentation', '10 steps · 12 AI prompts'], ['Licence', 'Personal, commercial and client websites'], ['Contact', 'Email; no backend or form submission']],
+      zh: [['格式', '纯 HTML · CSS · JS'], ['文件包', '6 个核心文件 + 3 张 WebP 图片'], ['设计', '杂志风 · 纸白色 · 樱桃红'], ['文档', '10 个步骤 · 12 个 AI 提示词'], ['授权', '个人、商业与客户网站'], ['联系', '邮件；不含后端或表单提交']],
+    },
+    copy: {
+      vi: { name: 'Melt Muse', desc: 'Portfolio thời trang và studio sáng tạo với chữ lớn, thẻ tim đỏ, nét vẽ tay và collage chân dung nghiêng. Ba ảnh AI WebP cục bộ, menu mobile, hiệu ứng hiện dần hữu hạn và liên hệ email. Kèm mã nguồn dễ sửa, giấy phép thương mại, 10 bước hướng dẫn và 12 prompt AI. Không kèm backend hay gửi form.', tags: ['Portfolio', 'Thời trang', 'Editorial'] },
+      en: { name: 'Melt Muse', desc: 'A fashion and creative studio portfolio with oversized typography, a red heart note, hand-drawn details and tilted portrait collages. Three local AI WebP images, mobile navigation, finite entrance motion and email contact. Includes editable source, a commercial licence, ten setup steps and twelve AI prompts. No backend or form submission.', tags: ['Portfolio', 'Fashion', 'Editorial'] },
+      zh: { name: 'Melt Muse', desc: '时尚与创意工作室作品集，包含大字排版、红心卡片、手绘细节和倾斜肖像拼贴。三张本地 AI WebP 图片、移动导航、有限时长渐显动画与邮件联系。附可编辑源码、商业许可、十个设置步骤和十二个 AI 提示词。不含后端或表单提交。', tags: ['作品集', '时尚', '杂志风'] },
+    },
+  },
   t18: {
     slug: 'apartment-flow', cat: 'business', version: '1.0.0', badge: '',
     specs: {

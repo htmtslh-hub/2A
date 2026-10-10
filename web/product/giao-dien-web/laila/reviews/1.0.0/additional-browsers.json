@@ -1,0 +1,203 @@
+{
+  "results": [
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "url": "file:///D:/3.%20D%E1%BB%B1%20%C3%A1n/2A/_design/.qa-extracted/laila/index.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "geometry": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "portraitLoaded": true
+          },
+          "menu": null,
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "geometry": {
+            "scrollWidth": 820,
+            "clientWidth": 820,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "geometry": {
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "geometry": {
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        }
+      ],
+      "motion": [
+        {
+          "opacity": "0.364797",
+          "transform": "matrix(1, 0, 0, 1, 0, 18.6326)"
+        },
+        {
+          "opacity": "0.861223",
+          "transform": "matrix(1, 0, 0, 1, 0, 4.07079)"
+        },
+        {
+          "opacity": "0.997949",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.0601595)"
+        },
+        {
+          "opacity": "1",
+          "transform": "none"
+        }
+      ],
+      "errors": [],
+      "missingPortrait": {
+        "headingVisible": true,
+        "contactVisible": true,
+        "overflow": false
+      }
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "url": "file:///D:/3.%20D%E1%BB%B1%20%C3%A1n/2A/_design/.qa-extracted/laila/index.html",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "geometry": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "portraitLoaded": true
+          },
+          "menu": null,
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "geometry": {
+            "scrollWidth": 820,
+            "clientWidth": 820,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "geometry": {
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "geometry": {
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        }
+      ],
+      "motion": [
+        {
+          "opacity": "0.308643",
+          "transform": "matrix(1, 0, 0, 1, 0, 20.2798)"
+        },
+        {
+          "opacity": "0.818026",
+          "transform": "matrix(1, 0, 0, 1, 0, 5.3379)"
+        },
+        {
+          "opacity": "0.994548",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.15991)"
+        },
+        {
+          "opacity": "1",
+          "transform": "none"
+        }
+      ],
+      "errors": [],
+      "missingPortrait": {
+        "headingVisible": true,
+        "contactVisible": true,
+        "overflow": false
+      }
+    }
+  ],
+  "bad": []
+}

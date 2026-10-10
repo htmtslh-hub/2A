@@ -1,0 +1,991 @@
+{
+  "slug": "laila",
+  "version": "1.0.0",
+  "date": "2026-10-10T12:40:18.710Z",
+  "os": "win32",
+  "zipBytes": 254591,
+  "sha256": "809c2e0edcf1286d4102c94d3bb474ebff969c1297b47dbb32bd7dfd2897cc69",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#main"
+          },
+          {
+            "label": "LAILA",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#home"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#home"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#about"
+          },
+          {
+            "label": "Learning",
+            "href": "#learning",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#learning"
+          },
+          {
+            "label": "Skills",
+            "href": "#skills",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#skills"
+          },
+          {
+            "label": "Projects",
+            "href": "#projects",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#projects"
+          },
+          {
+            "label": "Hire me ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#contact"
+          },
+          {
+            "label": "Explore my work ↗",
+            "href": "#projects",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#projects"
+          },
+          {
+            "label": "View résumé ↓",
+            "href": "#education",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#education"
+          },
+          {
+            "label": "My creative toolkit ↗",
+            "href": "#skills",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#skills"
+          },
+          {
+            "label": "Write an email ↗",
+            "href": "mailto:hello@example.com?subject=Let%27s%20create%20something",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Let%27s%20create%20something"
+          },
+          {
+            "label": "LAILA",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              16,
+              24,
+              43
+            ],
+            "ratio": 16.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "LAILA",
+            "colour": "rgb(74, 19, 48)",
+            "background": [
+              255,
+              182,
+              205
+            ],
+            "ratio": 8.99,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Home",
+            "colour": "rgb(74, 19, 48)",
+            "background": [
+              255,
+              182,
+              205
+            ],
+            "ratio": 8.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hire",
+            "text": "Hire me\n       \n        ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              148,
+              19,
+              71
+            ],
+            "ratio": 8.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "CREATIVE DEVELOPER",
+            "colour": "rgb(190, 194, 209)",
+            "background": [
+              16,
+              24,
+              43
+            ],
+            "ratio": 9.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Hi, I'm Laila",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              16,
+              24,
+              43
+            ],
+            "ratio": 16.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__role",
+            "text": "A little code.\n       \n       A lot of c",
+            "colour": "rgb(255, 145, 187)",
+            "background": [
+              16,
+              24,
+              43
+            ],
+            "ratio": 8.44,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore my work\n        \n         ↗",
+            "colour": "rgb(38, 12, 25)",
+            "background": [
+              245,
+              57,
+              137
+            ],
+            "ratio": 5.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "⌘\n      \n      Frontend",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              57,
+              32,
+              59
+            ],
+            "ratio": 13.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "◇\n      \n      Interface design",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              75,
+              31,
+              63
+            ],
+            "ratio": 12.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "≈\n      \n      Motion",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              89,
+              30,
+              65
+            ],
+            "ratio": 11.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "{ }\n      \n      Creative code",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              106,
+              29,
+              69
+            ],
+            "ratio": 10.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Designer at heart.\n        \n        Deve",
+            "colour": "rgb(255, 145, 187)",
+            "background": [
+              16,
+              24,
+              43
+            ],
+            "ratio": 8.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "My approach",
+            "colour": "rgb(255, 145, 187)",
+            "background": [
+              28,
+              38,
+              59
+            ],
+            "ratio": 7.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Start with the story. Build around the p",
+            "colour": "rgb(190, 194, 209)",
+            "background": [
+              28,
+              38,
+              59
+            ],
+            "ratio": 8.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Accessible interfaces\n         \n        ",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              28,
+              38,
+              59
+            ],
+            "ratio": 14.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "LAILA",
+            "colour": "rgb(104, 37, 62)",
+            "background": [
+              255,
+              209,
+              220
+            ],
+            "ratio": 8.01,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Made with care, code & a little pink.",
+            "colour": "rgb(104, 37, 62)",
+            "background": [
+              255,
+              209,
+              220
+            ],
+            "ratio": 8.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "LAILA",
+          "colour": "rgb(112, 19, 53)",
+          "width": "3px",
+          "ratio": 6.99
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#main"
+          },
+          {
+            "label": "LAILA",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#home"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#home"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#about"
+          },
+          {
+            "label": "Learning",
+            "href": "#learning",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#learning"
+          },
+          {
+            "label": "Skills",
+            "href": "#skills",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#skills"
+          },
+          {
+            "label": "Projects",
+            "href": "#projects",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#projects"
+          },
+          {
+            "label": "Hire me ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#contact"
+          },
+          {
+            "label": "Explore my work ↗",
+            "href": "#projects",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#projects"
+          },
+          {
+            "label": "View résumé ↓",
+            "href": "#education",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#education"
+          },
+          {
+            "label": "My creative toolkit ↗",
+            "href": "#skills",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#skills"
+          },
+          {
+            "label": "Write an email ↗",
+            "href": "mailto:hello@example.com?subject=Let%27s%20create%20something",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Let%27s%20create%20something"
+          },
+          {
+            "label": "LAILA",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/laila/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              16,
+              24,
+              43
+            ],
+            "ratio": 16.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "LAILA",
+            "colour": "rgb(74, 19, 48)",
+            "background": [
+              255,
+              182,
+              205
+            ],
+            "ratio": 8.99,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Home",
+            "colour": "rgb(74, 19, 48)",
+            "background": [
+              255,
+              182,
+              205
+            ],
+            "ratio": 8.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hire",
+            "text": "Hire me\n       \n        ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              148,
+              19,
+              71
+            ],
+            "ratio": 8.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "CREATIVE DEVELOPER",
+            "colour": "rgb(190, 194, 209)",
+            "background": [
+              16,
+              24,
+              43
+            ],
+            "ratio": 9.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Hi, I'm Laila",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              16,
+              24,
+              43
+            ],
+            "ratio": 16.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__role",
+            "text": "A little code.\n       \n       A lot of c",
+            "colour": "rgb(255, 145, 187)",
+            "background": [
+              16,
+              24,
+              43
+            ],
+            "ratio": 8.44,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore my work\n        \n         ↗",
+            "colour": "rgb(38, 12, 25)",
+            "background": [
+              245,
+              57,
+              137
+            ],
+            "ratio": 5.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "⌘\n      \n      Frontend",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              57,
+              31,
+              59
+            ],
+            "ratio": 13.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "◇\n      \n      Interface design",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              75,
+              30,
+              62
+            ],
+            "ratio": 12.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "≈\n      \n      Motion",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              87,
+              30,
+              65
+            ],
+            "ratio": 11.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "{ }\n      \n      Creative code",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              104,
+              29,
+              68
+            ],
+            "ratio": 10.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Designer at heart.\n        \n        Deve",
+            "colour": "rgb(255, 145, 187)",
+            "background": [
+              16,
+              24,
+              43
+            ],
+            "ratio": 8.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "My approach",
+            "colour": "rgb(255, 145, 187)",
+            "background": [
+              28,
+              38,
+              59
+            ],
+            "ratio": 7.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Start with the story. Build around the p",
+            "colour": "rgb(190, 194, 209)",
+            "background": [
+              28,
+              38,
+              59
+            ],
+            "ratio": 8.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Accessible interfaces\n         \n        ",
+            "colour": "rgb(255, 244, 248)",
+            "background": [
+              28,
+              38,
+              59
+            ],
+            "ratio": 14.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "LAILA",
+            "colour": "rgb(104, 37, 62)",
+            "background": [
+              255,
+              209,
+              220
+            ],
+            "ratio": 8.01,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Made with care, code & a little pink.",
+            "colour": "rgb(104, 37, 62)",
+            "background": [
+              255,
+              209,
+              220
+            ],
+            "ratio": 8.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "LAILA",
+          "colour": "rgb(112, 19, 53)",
+          "width": "3px",
+          "ratio": 6.99
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "laila/assets/css/style.css",
+    "laila/assets/img/portrait.webp",
+    "laila/assets/js/main.js",
+    "laila/CUSTOMISE.md",
+    "laila/index.html",
+    "laila/LICENCE.txt",
+    "laila/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/portrait.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

@@ -215,7 +215,14 @@ export function buildView(
   // cho từng ô ($69–$99), nên Dune Pass từng hiện $89 trong khi thanh toán thu
   // $79, và khách xem tiếng Việt thấy giá đô dù trả bằng VNĐ.
   const currency = currencyForProvider(providerForLang(lang as Lang));
-  const tplMeta = TPL_META.flatMap((m: any) => {
+  // Keep generated slots intact; append newly registered catalog products.
+  const catalogSlots = [
+    ...TPL_META,
+    ...Object.keys(REAL_TEMPLATES)
+      .filter(id => !TPL_META.some(slot => slot.id === id))
+      .map(id => ({ id, cat: REAL_TEMPLATES[id].cat, price: '', badge: '' })),
+  ];
+  const tplMeta = catalogSlots.flatMap((m: any) => {
     const real = REAL_TEMPLATES[m.id];
     return real
       ? [{

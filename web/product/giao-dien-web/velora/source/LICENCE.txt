@@ -1,0 +1,35 @@
+VELORA - LICENCE TERMS
+
+1. WHAT YOU GET
+A perpetual, non-exclusive, worldwide commercial licence to use this template.
+
+2. WHAT YOU MAY DO
+Use it in unlimited personal, commercial and client projects. Modify freely,
+deploy anywhere and charge for your client work. Attribution is not required.
+
+3. WHAT YOU MAY NOT DO
+Do not resell, sublicense or give away the template files, modified or not.
+Do not publish them on another marketplace, in a template bundle or a public
+repository, or use them in a product whose main value is the template itself.
+
+4. DEMO CONTENT
+Brand, models, copy and prices are fictional. Replace them before publishing.
+Original inline SVG illustrations are covered by this licence. Any photographs
+or other assets you add remain your responsibility. Reference video is excluded.
+
+5. FONTS
+The template refers to installed system fonts and distributes no font files.
+System font use is subject to the operating system's applicable licence.
+No external font licence or font redistribution permission is granted here.
+
+6. OWNERSHIP
+Copyright remains with the author. This licence grants use, not ownership.
+Copyright holder: Forge Zone.
+If you breach section 3 the licence ends and you must stop using the template
+and delete your copies.
+
+7. NO WARRANTY
+Provided as is. Browser testing is described in the product's verification
+record. Compatibility with every purpose, device or browser is not guaranteed.
+
+Questions about what is and is not allowed: just ask. The answer is usually yes.

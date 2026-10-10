@@ -43,6 +43,20 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t19: {
+    slug: 'velora', cat: 'shop', version: '1.2.1',
+    specs: {
+      vi: [['Định dạng', 'HTML · CSS · JS thuần'], ['Trong gói', '6 file · SVG nội tuyến'], ['Sản phẩm', '3 mẫu xe · 6 màu khung'], ['Tương tác', 'Carousel · Chi tiết · Cấu hình riêng từng xe'], ['Tài liệu', '10 bước · 12 prompt AI · Giấy phép thương mại'], ['Liên hệ', 'Email; không thanh toán hoặc tồn kho']],
+      en: [['Format', 'Plain HTML · CSS · JS'], ['Package', '6 files · Inline SVG'], ['Products', '3 bikes · 6 frame finishes'], ['Interactions', 'Carousel · Details · Per-bike configuration'], ['Documentation', '10 steps · 12 AI prompts · Commercial licence'], ['Contact', 'Email; no checkout or inventory']],
+      zh: [['格式', '纯 HTML · CSS · JS'], ['文件包', '6 个文件 · 内联 SVG'], ['产品', '3 款车辆 · 6 种车架配色'], ['交互', '轮播 · 详情 · 每辆车独立配置'], ['文档', '10 个步骤 · 12 个 AI 提示词 · 商业许可'], ['联系', '邮件；不含支付或库存']],
+    },
+    copy: {
+      vi: { name: 'Velora', desc: 'Showroom xe đạp gấp với carousel chuyển hai chiều, chuyển cảnh xem chi tiết cùng xe, thông số theo mẫu và sáu màu khung. Tùy chọn bánh, yên, tay lái được giữ riêng từng xe; liên hệ email theo cấu hình. HTML/CSS/JS thuần, SVG tự vẽ; không kèm giỏ hàng, thanh toán hoặc tồn kho.', tags: ['Xe đạp', 'Chuyển sản phẩm', '6 màu khung'] },
+      en: { name: 'Velora', desc: 'A folding-bike showroom with a directional carousel, continuous bike-to-detail transitions, model specifications and six frame finishes. Wheel, saddle and handlebar choices stay with each bike; email enquiries include the configuration. Plain HTML/CSS/JS and original inline SVG; no cart, checkout or inventory backend.', tags: ['Bicycles', 'Product transitions', '6 finishes'] },
+      zh: { name: 'Velora', desc: '折叠自行车展厅：双向轮播、同一车辆连贯切换到详情、型号规格和六种车架配色。车轮、坐垫与车把配置按车辆保留，邮件咨询包含当前配置。纯 HTML/CSS/JS 与原创内联 SVG；不含购物车、支付或库存后端。', tags: ['自行车', '产品转场', '6种配色'] },
+    },
+  },
+
   t16: {
     slug: 'mint-atlas', cat: 'portfolio', version: '1.0.0', badge: '',
     specs: {

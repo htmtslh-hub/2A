@@ -74,3 +74,8 @@ specs/setup/email, không thêm claim kinh doanh. Store specs mô tả đúng g�
 
 Tất cả suite failures []; không kết luận toàn bộ browser/thiết bị đã thử.
 Q12 giao dịch thật chưa thử như trên; yêu cầu đưa lên web đã được thực hiện.
+
+Local store dùng môi trường không có DATABASE_URL/AUTH_SECRET nên log backend
+báo thiếu cấu hình cho các request nền auth/counts. Store-local chỉ xác nhận
+render/catalog/preview/responsive, không xác nhận backend local. Production
+có cấu hình, session/download denial và ba ngôn ngữ đã kiểm tra riêng ở trên.

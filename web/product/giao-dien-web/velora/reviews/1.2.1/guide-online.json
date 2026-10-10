@@ -1,0 +1,17 @@
+[
+  {
+    "lang": "vi",
+    "status": 200,
+    "content": true
+  },
+  {
+    "lang": "en",
+    "status": 200,
+    "content": true
+  },
+  {
+    "lang": "zh",
+    "status": 200,
+    "content": true
+  }
+]

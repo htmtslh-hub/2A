@@ -7,6 +7,7 @@ for(const locale of ['vi-VN','en-US','zh-CN']){
  const context=await browser.newContext({locale,viewport:{width:1440,height:1000}});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(base+'/?mau=t19');await page.waitForTimeout(1400);
  const detail=await page.evaluate(()=>({text:document.body.innerText,images:[...document.images].filter(i=>i.src.includes('velora')).map(i=>({src:i.src,ok:i.complete&&i.naturalWidth>0})),links:[...document.querySelectorAll('a[href]')].map(a=>a.getAttribute('href')),width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));
  if(!detail.text.includes('Velora')||!detail.text.includes('HTML')||!detail.images.length||detail.images.some(i=>!i.ok)||detail.scroll>detail.width)report.failures.push(locale+': detail');
+ for(let y=0;y<await page.evaluate(()=>document.body.scrollHeight);y+=700){await page.evaluate(y=>scrollTo(0,y),y);await page.waitForTimeout(100);}await page.evaluate(()=>scrollTo(0,0));await page.waitForTimeout(600);
  await page.screenshot({path:resolve(out,locale+'-detail.png'),fullPage:true});await page.goto(base+'/?tab=library');await page.waitForTimeout(900);
  const links=await page.locator('a[href="?mau=t19"]').count();if(!links)report.failures.push(locale+': library card');
  report.cases.push({locale,detailImages:detail.images,libraryLinks:links,errors});if(errors.length)report.failures.push(locale+': runtime '+errors.join());

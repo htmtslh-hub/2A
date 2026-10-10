@@ -24,7 +24,7 @@ Source khớp toàn bộ byte với bản giải nén. Bảy file: index.html, a
 | Q09 Kỹ thuật | PASS | Không console/network lỗi ở bản đầy đủ, cuộn và thao tác qua Playwright; finite 620ms reveal, unobserve một lần, không animation còn chạy sau 5s. Không font mạng/API/tracking |
 | Q10 Tài liệu/quyền | PASS | final/checks.json: 10 bước, 12 prompt, 0 placeholder trong prompt, 0 countErrors. Đọc các prompt và đối chiếu input/task/output/missing data; thử đúng file/path trên bản giải nén, chưa thử với AI khác. Font hệ thống, không phân phối font |
 | Q11 Gói cuối | PASS theo ngoại lệ | dong-goi.mjs --ngoai-le và check-template.mjs --ngoai-le --out final; byte/hash ở trên và final/checks.json |
-| Q12 Cửa hàng | CHỜ KIỂM TRA ONLINE | t20 portfolio, catalog/guide vi/en/zh, preview thật 698×524, ZIP private. Kiểm tra online bổ sung sau deploy. Luồng thanh toán thật không nằm trong thao tác thử |
+| Q12 Cửa hàng | PASS trong phạm vi phát hành | t20 portfolio, catalog/guide vi/en/zh, preview thật 698×524, ZIP private; store-online/checks.json và resources-online.json không có lỗi. deployment.json xác nhận ZIP cloud khớp SHA-1 của bản giao. Anonymous 401, owner chưa mua 403, URL ZIP trực tiếp 404. Thanh toán thật và tải bằng quyền mua thực NOT TESTED, không tạo purchase/token/thanh toán để thử |
 | Q13 Thiết kế | PASS | D01–D08 phía dưới, screenshot đã nhìn và lỗi tablet đã sửa trước bản final |
 
 Đo màu ví dụ: chữ body #fff4f8 trên #10182b 16.46:1; muted #bec2d1 9.96:1; accent #ff91bb 8.44:1; nav #4a1330 trên #ffb6cd 8.99:1; Hire me trắng trên #941347 8.59:1; footer #68253e trên nền hồng 8.01:1. Vùng gradient dưới tech labels được lấy pixel, tỷ lệ 10.43–12.48:1. Chữ nằm cạnh chân dung, mặt/tóc/trang phục không chứa body text; desktop/tablet/mobile đã xem ảnh. Viền focus nav dùng hồng đậm, panel dùng trắng, footer dùng đậm theo nền.
@@ -58,4 +58,14 @@ Edge và Cốc Cốc, reducedMotion=reduce, localStorage motion=off, CSS animati
 
 Chỉ thêm Laila, demo/preview và hai entry catalog/guide. Bản triển khai dùng checkout có baseline production Velora, không mang các chỉnh sửa category/admin/product khác chưa phát hành ở workspace chính. Local production build của cửa hàng đã qua compile/TypeScript. Bằng chứng store-local tách riêng; thiếu biến môi trường database trong server local không được coi là chứng minh hệ thống tài khoản hoạt động.
 
-Trạng thái trước deploy: ĐẠT THEO NGOẠI LỆ W01/W03/W06 cho gói; cửa hàng chờ kiểm tra online. Không thay đổi điều khoản cửa hàng, database, thanh toán hoặc quyền mua.
+## Kết quả production
+
+Đã deploy source commit 811767a lên Vercel, deployment `dpl_G15CVVyHVsWdjtf6xikkZNmA1Tpv`, production `https://web-9vogsgn6o-htmtslh-hubs-projects.vercel.app`, alias `https://forgezone.store`. Product `/?mau=t20`; demo `/demos/laila/index.html?v=1.0.0`. Build production trên Vercel và local đều qua compile/TypeScript.
+
+- resources-online.json: HTML, CSS, JS, portrait, CUSTOMISE, README và preview status200, byte/hash khớp local. Trang chủ, t20, guide, admin và các demo Velora/Watchroom/Mint Atlas/Melt Muse/Apartment Flow status200.
+- store-online/checks.json: product detail, library card, preview tải được, không overflow desktop/mobile, không pageerror trong vi-VN/en-US/zh-CN. Đã nhìn screenshot trang sản phẩm Việt.
+- online-browsers.json: Edge 155.0.4283.45 và Cốc Cốc 152.0.7977.124, bốn khổ màn hình; menu/details/learning và axe đều qua, không pageerror. Frame RAF có chuyển động khi OS reduce, saved off, CSS/WAAPI không hoạt động; kết thúc opacity1/transformnone. Bản online đúng URL version1.0.0.
+- deployment.json: source ZIP cloud uid SHA-1 `c88a672bb506257431ba21194ebb3286e495fc5f` khớp local, ZIP nằm trong source deployment; file tracing local của /api/download chứa đúng laila.zip.
+- download-online.json: đọc User/Purchase để xác định owner không có quyền mua t20; session120s dùng riêng cho kiểm tra đọc, route trả403 đúng. Không ghi database, không log token/email/khóa. Anonymous401 và trực tiếp ZIP404. Không khẳng định đã thử tải bằng quyền mua thật hoặc thanh toán end-to-end.
+
+Trạng thái: ĐẠT THEO NGOẠI LỆ W01/W03/W06 cho gói và phạm vi deploy/hiển thị/tài nguyên/quyền chặn. Thanh toán thật và tải sau mua vẫn NOT TESTED. Không thay đổi điều khoản cửa hàng, database, thanh toán hoặc quyền mua.

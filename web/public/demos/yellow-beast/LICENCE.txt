@@ -1,0 +1,66 @@
+THE YELLOW BEAST — LICENCE TERMS
+=================================
+
+The short version: use this template on your own and your clients' projects as
+often as you like. You may not resell or redistribute the template files.
+
+
+1. WHAT YOU GET
+---------------
+A perpetual, non-exclusive, worldwide commercial licence.
+
+Perpetual means there is nothing to renew and it does not expire.
+Non-exclusive means the same template continues to be sold to others.
+
+
+2. WHAT YOU MAY DO
+------------------
+- Use it on an unlimited number of your own commercial or personal projects.
+- Use it for client projects and charge for your work.
+- Modify the layout, colours, copy, embedded imagery and code.
+- Deploy it anywhere, with no attribution required.
+
+
+3. WHAT YOU MAY NOT DO
+----------------------
+- Resell, sub-license or give away the template files, modified or not.
+- Publish them on another marketplace, in another template bundle or in a
+  public repository.
+- Use them to build a product whose main value is this template itself,
+  including a theme shop, website builder or starter-kit collection.
+
+
+4. DEMO CONTENT
+---------------
+The Yellow Beast, model names, specifications, telemetry figures and demo copy
+are provided for presentation purposes and must be verified or replaced with
+your own brand information prior to commercial publication. Supplied WebP images
+in assets/img/ are provided under approved product scope exception. Any third-party
+trademark, crest, badge, or external asset added is the user's responsibility.
+
+
+5. FONTS
+--------
+Plus Jakarta Sans and Syne are licensed under the SIL Open Font License 1.1 via
+Google Fonts, with system sans-serif fallback stacks. No font files are bundled
+in the package.
+
+
+6. OWNERSHIP
+------------
+Copyright © 2026 Đinh Văn Triển (Forge Zone).
+Copyright in the design, source code and supplied layout remains with the author.
+This licence grants usage rights, not ownership.
+
+If you breach section 3, the licence ends and you must stop using the template
+and delete your copies.
+
+
+7. NO WARRANTY
+--------------
+The template is provided as is. It cannot be guaranteed to suit every purpose,
+browser, hosting service or AI customisation. The release report identifies the
+environments that were actually tested.
+
+Questions about permitted use are welcome before you publish or distribute a
+project based on the template.

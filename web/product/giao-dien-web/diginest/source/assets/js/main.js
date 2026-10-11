@@ -1,7 +1,7 @@
 (() => {
   'use strict';
-  const FREE_SHIPPING = 9900;
-  const SHIPPING = 599;
+  const FREE_SHIPPING = window.ForgeShopConfig.freeShippingAt;
+  const SHIPPING = window.ForgeShopConfig.shippingCents;
   const STORAGE_KEY = 'diginest-cart-v1';
   const money = cents => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(cents / 100);
   const cards = [...document.querySelectorAll('.product')];
@@ -388,4 +388,14 @@
     motionJobs.clear();
   });
   syncMenu(); render();
+
+  // Portable COD checkout reads this cart's canonical product data.
+  window.ForgeCommerce?.register({
+    items: () => Object.entries(cart).filter(([id, quantity]) => catalog.has(id) && Number.isInteger(quantity) && quantity > 0 && quantity <= 99).map(([id, quantity]) => ({ ...catalog.get(id), key: id, quantity })),
+    quantity: (id, quantity) => { if (!catalog.has(id)) return; if (quantity) cart[id] = quantity; else delete cart[id]; save(); resetReview(); render(); },
+    clear: () => { cart = {}; save(); resetReview(); render(); }
+  });
+
+  const codAction = document.querySelector("#checkout");
+  if (codAction) codAction.textContent = 'Delivery & payment';
 })();

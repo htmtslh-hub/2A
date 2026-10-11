@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "Skill frontmatter validator passed",
+    "Metadata and local reference links passed",
+    "Visual diagnostics: identical, changed, mismatched dimensions and overwrite protection passed; no automatic acceptance",
+    "Actual Pinterest video: automatic 12 frames at 720x540, focused 5 frames and overwrite protection passed",
+    "ZIP integrity and byte-identical installed skill passed"
+  ],
+  "archive": "D:\\3. Dự án\\2A\\skill\\forgeframe.zip",
+  "bytes": 83371,
+  "sha256": "9cf2422abc4184a83d44cdc536e3b6bfd12627d9c282eb45046ca624117900f5",
+  "installed": "C:\\Users\\Lenovo\\.codex\\skills\\forgeframe",
+  "scope": "Workflow and helpers only; no product publication in this task"
+}

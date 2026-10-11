@@ -1,0 +1,1260 @@
+{
+  "slug": "watchroom",
+  "version": "1.2.0",
+  "date": "2026-10-07T00:47:53.537Z",
+  "os": "win32",
+  "zipBytes": 475865,
+  "sha256": "dffae9a44644c615055f011fe4ec5e7d4faf6b247bf3c925a18952dd13b59606",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#main"
+          },
+          {
+            "label": "Watchroom home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#main"
+          },
+          {
+            "label": "ALL",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#collection"
+          },
+          {
+            "label": "WOMEN",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#collection"
+          },
+          {
+            "label": "MEN",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#collection"
+          },
+          {
+            "label": "Search the collection",
+            "href": "#search",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#search"
+          },
+          {
+            "label": "DISCOVER THE DETAILS ↗",
+            "href": "#craft",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#craft"
+          },
+          {
+            "label": "ENQUIRE ↗",
+            "href": "mailto:hello@watchroom.example?subject=Enquiry%20about%20Quantum%20ADG",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@watchroom.example?subject=Enquiry%20about%20Quantum%20ADG"
+          },
+          {
+            "label": "Enquire about this watch ↗",
+            "href": "mailto:hello@watchroom.example?subject=Enquiry%20about%20QUANTUM%20ADG",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@watchroom.example?subject=Enquiry%20about%20QUANTUM%20ADG"
+          },
+          {
+            "label": "Enquire about this watch ↗",
+            "href": "mailto:hello@watchroom.example?subject=Enquiry%20about%20ONYX%20GMT",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@watchroom.example?subject=Enquiry%20about%20ONYX%20GMT"
+          },
+          {
+            "label": "Enquire about this watch ↗",
+            "href": "mailto:hello@watchroom.example?subject=Enquiry%20about%20SOLARIS%2038",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@watchroom.example?subject=Enquiry%20about%20SOLARIS%2038"
+          },
+          {
+            "label": "CONTACT THE SHOWROOM",
+            "href": "mailto:hello@watchroom.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@watchroom.example"
+          },
+          {
+            "label": "WATCHROOM",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#main"
+          },
+          {
+            "label": "BACK TO TOP ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": null
+      },
+      "keyboard": {
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 20
+        },
+        "motionAfter5s": [
+          "center-breathe",
+          "center-drift"
+        ],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(6, 10, 12)",
+            "background": [
+              145,
+              209,
+              226
+            ],
+            "ratio": 11.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "WATCHROOM",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              26,
+              70,
+              83
+            ],
+            "ratio": 9.14,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "is-selected",
+            "text": "ALL",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              24,
+              62,
+              74
+            ],
+            "ratio": 10.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "WOMEN",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              22,
+              57,
+              67
+            ],
+            "ratio": 11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "MEN",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              19,
+              49,
+              59
+            ],
+            "ratio": 12.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "THE ART OF TIME",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              20,
+              52,
+              62
+            ],
+            "ratio": 11.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__model-code",
+            "text": "WR — 001 / CHRONOGRAPH",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              19,
+              47,
+              55
+            ],
+            "ratio": 7.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "QUANTUM ADG",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              18,
+              44,
+              51
+            ],
+            "ratio": 13.04,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "A sculptural chronograph. Midnight blue ",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              13,
+              31,
+              36
+            ],
+            "ratio": 9.14,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__price",
+            "text": "899 €",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              11,
+              21,
+              25
+            ],
+            "ratio": 16.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "DISCOVER THE DETAILS ↗",
+            "colour": "rgb(6, 10, 12)",
+            "background": [
+              145,
+              209,
+              226
+            ],
+            "ratio": 11.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "NEXT EXPRESSION",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              19,
+              32,
+              35
+            ],
+            "ratio": 9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "ONYX GMT",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              12,
+              19,
+              22
+            ],
+            "ratio": 16.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__finish",
+            "text": "ROSE GOLD / MIDNIGHT BLUE",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 10.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "icon-button",
+            "text": "‹",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 17.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__count",
+            "text": "01 / 03",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 17.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "rail-link js-control",
+            "text": "DESIRED",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              7,
+              14,
+              16
+            ],
+            "ratio": 17.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button current-enquiry",
+            "text": "ENQUIRE ↗",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              18,
+              22,
+              24
+            ],
+            "ratio": 16.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "reveal",
+            "text": "Time, in a different light.",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 17.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "details-section__intro reveal",
+            "text": "A watch is more than its face. Explore t",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 10.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "collection__results",
+            "text": "3 watches",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 17.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "QUANTUM ADG",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              18,
+              29,
+              34
+            ],
+            "ratio": 15.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Rose gold / Midnight blue899 €",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              18,
+              28,
+              31
+            ],
+            "ratio": 9.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "product__link",
+            "text": "Enquire about this watch ↗",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              17,
+              24,
+              27
+            ],
+            "ratio": 15.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "ONYX GMT",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              18,
+              28,
+              31
+            ],
+            "ratio": 15.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "DISCOVER THE DETAILS ↗",
+          "colour": "rgb(145, 209, 226)",
+          "width": "3px",
+          "ratio": 11.76
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#main"
+          },
+          {
+            "label": "Watchroom home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#main"
+          },
+          {
+            "label": "ALL",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#collection"
+          },
+          {
+            "label": "WOMEN",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#collection"
+          },
+          {
+            "label": "MEN",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#collection"
+          },
+          {
+            "label": "Search the collection",
+            "href": "#search",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#search"
+          },
+          {
+            "label": "DISCOVER THE DETAILS ↗",
+            "href": "#craft",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#craft"
+          },
+          {
+            "label": "ENQUIRE ↗",
+            "href": "mailto:hello@watchroom.example?subject=Enquiry%20about%20Quantum%20ADG",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@watchroom.example?subject=Enquiry%20about%20Quantum%20ADG"
+          },
+          {
+            "label": "Enquire about this watch ↗",
+            "href": "mailto:hello@watchroom.example?subject=Enquiry%20about%20QUANTUM%20ADG",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@watchroom.example?subject=Enquiry%20about%20QUANTUM%20ADG"
+          },
+          {
+            "label": "Enquire about this watch ↗",
+            "href": "mailto:hello@watchroom.example?subject=Enquiry%20about%20ONYX%20GMT",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@watchroom.example?subject=Enquiry%20about%20ONYX%20GMT"
+          },
+          {
+            "label": "Enquire about this watch ↗",
+            "href": "mailto:hello@watchroom.example?subject=Enquiry%20about%20SOLARIS%2038",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@watchroom.example?subject=Enquiry%20about%20SOLARIS%2038"
+          },
+          {
+            "label": "CONTACT THE SHOWROOM",
+            "href": "mailto:hello@watchroom.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@watchroom.example"
+          },
+          {
+            "label": "WATCHROOM",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#main"
+          },
+          {
+            "label": "BACK TO TOP ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/watchroom/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": null
+      },
+      "keyboard": {
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 20
+        },
+        "motionAfter5s": [
+          "center-breathe",
+          "center-drift"
+        ],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(6, 10, 12)",
+            "background": [
+              145,
+              209,
+              226
+            ],
+            "ratio": 11.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "WATCHROOM",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              26,
+              70,
+              83
+            ],
+            "ratio": 9.14,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "is-selected",
+            "text": "ALL",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              23,
+              62,
+              73
+            ],
+            "ratio": 10.26,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "WOMEN",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              22,
+              57,
+              68
+            ],
+            "ratio": 10.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "MEN",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              20,
+              50,
+              58
+            ],
+            "ratio": 12.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "THE ART OF TIME",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              21,
+              53,
+              62
+            ],
+            "ratio": 11.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__model-code",
+            "text": "WR — 001 / CHRONOGRAPH",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              19,
+              47,
+              56
+            ],
+            "ratio": 7.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "QUANTUM ADG",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              18,
+              44,
+              52
+            ],
+            "ratio": 13.03,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "A sculptural chronograph. Midnight blue ",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              14,
+              31,
+              37
+            ],
+            "ratio": 9.12,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__price",
+            "text": "899 €",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              10,
+              22,
+              26
+            ],
+            "ratio": 16.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "DISCOVER THE DETAILS ↗",
+            "colour": "rgb(6, 10, 12)",
+            "background": [
+              145,
+              209,
+              226
+            ],
+            "ratio": 11.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "NEXT EXPRESSION",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              19,
+              31,
+              36
+            ],
+            "ratio": 9.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "ONYX GMT",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              10,
+              18,
+              21
+            ],
+            "ratio": 16.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__finish",
+            "text": "ROSE GOLD / MIDNIGHT BLUE",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 10.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "icon-button",
+            "text": "‹",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 17.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__count",
+            "text": "01 / 03",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 17.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "rail-link js-control",
+            "text": "DESIRED",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              7,
+              13,
+              16
+            ],
+            "ratio": 17.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button current-enquiry",
+            "text": "ENQUIRE ↗",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              18,
+              22,
+              24
+            ],
+            "ratio": 16.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "reveal",
+            "text": "Time, in a different light.",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 17.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "details-section__intro reveal",
+            "text": "A watch is more than its face. Explore t",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 10.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "collection__results",
+            "text": "3 watches",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              6,
+              10,
+              12
+            ],
+            "ratio": 17.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "QUANTUM ADG",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              18,
+              30,
+              34
+            ],
+            "ratio": 15.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Rose gold / Midnight blue899 €",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              18,
+              27,
+              31
+            ],
+            "ratio": 9.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "product__link",
+            "text": "Enquire about this watch ↗",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              17,
+              24,
+              27
+            ],
+            "ratio": 15.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "ONYX GMT",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              18,
+              27,
+              31
+            ],
+            "ratio": 15.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Brushed steel / Onyx black749 €",
+            "colour": "rgb(182, 192, 196)",
+            "background": [
+              17,
+              28,
+              32
+            ],
+            "ratio": 9.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "SOLARIS 38",
+            "colour": "rgb(242, 242, 237)",
+            "background": [
+              17,
+              28,
+              32
+            ],
+            "ratio": 15.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "DISCOVER THE DETAILS ↗",
+          "colour": "rgb(145, 209, 226)",
+          "width": "3px",
+          "ratio": 11.76
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "watchroom/assets/css/style.css",
+    "watchroom/assets/img/onyx-gmt.webp",
+    "watchroom/assets/img/quantum-adg.webp",
+    "watchroom/assets/img/solaris-38.webp",
+    "watchroom/assets/js/main.js",
+    "watchroom/CUSTOMISE.md",
+    "watchroom/index.html",
+    "watchroom/LICENCE.txt",
+    "watchroom/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/onyx-gmt.webp",
+    "assets/img/quantum-adg.webp",
+    "assets/img/solaris-38.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q03/chromium: không tìm thấy nút menu mobile",
+    "Q07/chromium: giảm chuyển động {\"allVisible\":true,\"runningAnimations\":20}",
+    "Q07/chromium: chuyển động còn chạy sau 5 giây center-breathe,center-drift",
+    "Q03/firefox: không tìm thấy nút menu mobile",
+    "Q07/firefox: giảm chuyển động {\"allVisible\":true,\"runningAnimations\":20}",
+    "Q07/firefox: chuyển động còn chạy sau 5 giây center-breathe,center-drift"
+  ]
+}

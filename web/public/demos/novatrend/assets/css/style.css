@@ -654,7 +654,7 @@ ul, ol {
 .hero__visual-stage {
   position: relative;
   width: 100%;
-  max-width: 520px;
+  max-width: 440px;
   margin: 0 auto;
 }
 
@@ -664,21 +664,35 @@ ul, ol {
   right: 5%;
   width: 82%;
   height: 82%;
-  background: radial-gradient(circle, rgba(255, 110, 64, 0.45) 0%, rgba(255, 87, 34, 0.15) 50%, rgba(255, 255, 255, 0) 75%);
+  background: radial-gradient(circle at 35% 30%, #ffe1c7 0%, #ffb390 32%, #ff7e54 61%, #f56b40 78%, #ffd4b6 100%);
   border-radius: var(--radius-full);
-  filter: blur(40px);
+  box-shadow: inset 0 12px 24px #fff6, 0 24px 50px #ff572226;
+  transform: rotate(-18deg);
   z-index: 0;
   pointer-events: none;
 }
 
-.hero__model-img {
+.hero__models {
   position: relative;
+  aspect-ratio: 2 / 3;
+  z-index: 1;
+}
+
+.hero__model-img {
+  position: absolute;
+  inset: 0;
   z-index: 1;
   width: 100%;
-  height: auto;
-  border-radius: var(--radius-xl);
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  opacity: 0;
   filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.06));
 }
+
+.hero__model-img--active { opacity: 1; }
+.hero__dots { visibility: hidden; }
+.js .hero__dots { visibility: visible; }
 
 /* Floating Badges around Model */
 .floating-badge {
@@ -2419,6 +2433,21 @@ ul, ol {
 
 /* Smartphone (max 560px) */
 @media (max-width: 560px) {
+  /* Keep both faces unobstructed on phones; cards remain independent layers. */
+  .hero__visual-stage {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.625rem;
+  }
+  .hero__models { grid-column: 1 / -1; }
+  .hero__backdrop { height: 65%; }
+  .hero__visual-stage .floating-badge {
+    position: relative;
+    inset: auto;
+    min-width: 0;
+    gap: 0.4rem;
+  }
+  .hero__visual-stage .floating-badge__title { white-space: normal; }
   .container {
     padding-left: 0.875rem;
     padding-right: 0.875rem;

@@ -1,0 +1,242 @@
+{
+  "chromium": {
+    "version": "153.0.8010.12",
+    "errors": [],
+    "screens": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    ],
+    "frames": [
+      {
+        "transform": "translateX(110.963px) translateZ(-120.21px) rotateY(25.8914deg) rotateZ(7.39754deg)",
+        "opacity": "0.075307"
+      },
+      {
+        "title": "SOLARIS 38"
+      },
+      {
+        "transform": "translateX(-110.923px) translateZ(-120.167px) rotateY(-25.8821deg) rotateZ(-7.39489deg)",
+        "opacity": "0.0756388"
+      },
+      {
+        "title": "QUANTUM ADG"
+      },
+      {
+        "transform": "translateX(-111.258px) translateZ(-120.53px) rotateY(-25.9602deg) rotateZ(-7.4172deg)",
+        "opacity": "0.0728498"
+      },
+      {
+        "title": "ONYX GMT"
+      },
+      {
+        "transform": "translateX(-107.909px) translateZ(-116.902px) rotateY(-25.1788deg) rotateZ(-7.19395deg)",
+        "opacity": "0.100756"
+      },
+      {
+        "title": "SOLARIS 38"
+      },
+      {
+        "transform": "translateX(-111.277px) translateZ(-120.551px) rotateY(-25.9647deg) rotateZ(-7.4185deg)",
+        "opacity": "0.0726879"
+      },
+      {
+        "title": "QUANTUM ADG"
+      },
+      {
+        "transform": "translateX(110.723px) translateZ(-119.949px) rotateY(25.8353deg) rotateZ(7.3815deg)",
+        "opacity": "0.0773121"
+      },
+      {
+        "title": "SOLARIS 38"
+      }
+    ],
+    "rapidFinal": {
+      "transform": "",
+      "opacity": ""
+    },
+    "savedCount": 1,
+    "dialogClosed": true,
+    "emptySearch": true,
+    "womenCount": 1,
+    "pause": "true",
+    "reloadPause": "false"
+  },
+  "edge": {
+    "version": "154.0.4258.62",
+    "errors": [],
+    "screens": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    ],
+    "frames": [
+      {
+        "transform": "translateX(114.208px) translateZ(-123.726px) rotateY(26.6486deg) rotateZ(7.6139deg)",
+        "opacity": "0.048263"
+      },
+      {
+        "title": "SOLARIS 38"
+      },
+      {
+        "transform": "translateX(-110.883px) translateZ(-120.124px) rotateY(-25.8728deg) rotateZ(-7.39223deg)",
+        "opacity": "0.0759715"
+      },
+      {
+        "title": "QUANTUM ADG"
+      },
+      {
+        "transform": "translateX(-108.642px) translateZ(-117.696px) rotateY(-25.3498deg) rotateZ(-7.24281deg)",
+        "opacity": "0.094649"
+      },
+      {
+        "title": "ONYX GMT"
+      },
+      {
+        "transform": "translateX(-111.565px) translateZ(-120.863px) rotateY(-26.0319deg) rotateZ(-7.43769deg)",
+        "opacity": "0.0702883"
+      },
+      {
+        "title": "SOLARIS 38"
+      },
+      {
+        "transform": "translateX(-109.189px) translateZ(-118.288px) rotateY(-25.4774deg) rotateZ(-7.27924deg)",
+        "opacity": "0.0900945"
+      },
+      {
+        "title": "QUANTUM ADG"
+      },
+      {
+        "transform": "translateX(109.054px) translateZ(-118.142px) rotateY(25.4459deg) rotateZ(7.27025deg)",
+        "opacity": "0.0912191"
+      },
+      {
+        "title": "SOLARIS 38"
+      }
+    ],
+    "rapidFinal": {
+      "transform": "",
+      "opacity": ""
+    },
+    "savedCount": 1,
+    "dialogClosed": true,
+    "emptySearch": true,
+    "womenCount": 1,
+    "pause": "true",
+    "reloadPause": "false"
+  },
+  "coccoc": {
+    "version": "152.0.7977.124",
+    "errors": [],
+    "screens": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    ],
+    "frames": [
+      {
+        "transform": "translateX(108.479px) translateZ(-117.519px) rotateY(25.3118deg) rotateZ(7.23195deg)",
+        "opacity": "0.0960057"
+      },
+      {
+        "title": "SOLARIS 38"
+      },
+      {
+        "transform": "translateX(-109.121px) translateZ(-118.215px) rotateY(-25.4616deg) rotateZ(-7.27476deg)",
+        "opacity": "0.0906556"
+      },
+      {
+        "title": "QUANTUM ADG"
+      },
+      {
+        "transform": "translateX(-108.895px) translateZ(-117.969px) rotateY(-25.4088deg) rotateZ(-7.25966deg)",
+        "opacity": "0.0925429"
+      },
+      {
+        "title": "ONYX GMT"
+      },
+      {
+        "transform": "translateX(-109.256px) translateZ(-118.36px) rotateY(-25.493deg) rotateZ(-7.28371deg)",
+        "opacity": "0.0895356"
+      },
+      {
+        "title": "SOLARIS 38"
+      },
+      {
+        "transform": "translateX(-108.711px) translateZ(-117.771px) rotateY(-25.366deg) rotateZ(-7.24743deg)",
+        "opacity": "0.0940714"
+      },
+      {
+        "title": "QUANTUM ADG"
+      },
+      {
+        "transform": "translateX(109.389px) translateZ(-118.505px) rotateY(25.5241deg) rotateZ(7.2926deg)",
+        "opacity": "0.0884249"
+      },
+      {
+        "title": "SOLARIS 38"
+      }
+    ],
+    "rapidFinal": {
+      "transform": "",
+      "opacity": ""
+    },
+    "savedCount": 1,
+    "dialogClosed": true,
+    "emptySearch": true,
+    "womenCount": 1,
+    "pause": "true",
+    "reloadPause": "false"
+  }
+}

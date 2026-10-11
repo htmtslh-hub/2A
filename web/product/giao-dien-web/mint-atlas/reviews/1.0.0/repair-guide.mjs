@@ -1,0 +1,15 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+const p='web/product/giao-dien-web/mint-atlas/source/CUSTOMISE.md';
+const current=readFileSync(p,'utf8');
+const fence=String.fromCharCode(96).repeat(3);
+const broken=new RegExp(String.fromCharCode(96)+'\text\\r?\\n([\\s\\S]*?)'+fence,'g');
+const blocks=[...current.matchAll(broken)].map(m=>m[1].trim()).slice(0,12);
+if(blocks.length!==12||!blocks[0].startsWith('I bought'))throw new Error('Wrong prompt extraction '+blocks.length);
+const original=readFileSync('web/product/giao-dien-web/docs/customer-guide.en.md','utf8');
+let body=original.slice(original.indexOf('## Before you begin')).replaceAll('template-folder/','mint-atlas/');
+let index=0;
+const pattern=new RegExp('(\\*\\*Prompt \\d{2}[^]*?'+fence+'text\\r?\\n)[^]*?'+fence,'g');
+body=body.replace(pattern,(_,head)=>head+blocks[index++]+'\n'+fence);
+if(index!==12)throw new Error('Wrong replacement count '+index);
+writeFileSync(p,current.slice(0,current.indexOf('## Before you begin'))+body);
+console.log('Repaired twelve complete prompts; schema preserved.');

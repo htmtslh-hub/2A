@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createElement, type MouseEvent, type RefObject } from 'react';
 import AccountNavContent from '@/components/AccountNavContent';
+import { MEMBERSHIP_COPY } from './membership-copy';
 import {
   REGISTER_STRINGS,
   FORGOT_STRINGS,
@@ -14,6 +15,7 @@ import { LEGAL_LABELS, LEGAL_PATHS, PAGE_LABELS, PAGE_PATHS } from './legal';
 import { COMPANY } from './company';
 import { bgPoster } from './media';
 import { REAL_TEMPLATES } from './real-templates';
+import { WEB_CATEGORY_KEYS, WEB_CATEGORY_LABELS, TEMPLATE_CATEGORIES, EMPTY_CATEGORY_COPY } from './template-categories';
 import { GUIDE_LABELS, guideHref } from './guide-links';
 import { HTML_LANG, langFromBrowser } from './lang';
 import {
@@ -97,7 +99,7 @@ export interface Imperative {
   /** Đăng nhập bằng Google. */
   onGoogleSignIn: () => void;
   /** Bắt đầu thanh toán: mở PayOS, hoặc yêu cầu đăng nhập trước. */
-  startCheckout: (kind: 'TEMPLATE' | 'BUNDLE', templateId?: string) => void;
+  startCheckout: (kind: 'TEMPLATE' | 'PRO' | 'ULTRA', templateId?: string) => void;
 }
 
 /** Keep coming-soon hero cards 04–05 visible, but unavailable to select. */
@@ -142,7 +144,7 @@ const PRODUCT_GROUP_COPY: Record<LangCode, {
     groupAria: 'Nhóm sản phẩm',
     browse: ['Xem toàn bộ giao diện →', 'Xem Skill / Prompt →', 'Xem Agent / Tool →'],
     titles: ['Skill và Prompt', 'Agent và Tool'],
-    intros: ['Bộ sưu tập Skill/Prompt đang được chuẩn bị. Hai ô bên dưới dành cho các sản phẩm sẽ thêm sau.', 'Bộ sưu tập Agent/Tool đang được chuẩn bị. Hai ô bên dưới dành cho các sản phẩm sẽ thêm sau.'],
+    intros: ['Bộ sưu tập Skill/Prompt đang được chuẩn bị. Hai ô bên dưới dành cho các sản phẩm sẽ thêm sau.', 'Ứng dụng và công cụ hỗ trợ học tập, làm việc. Khám phá LingoGlass Player bên dưới.'],
     pending: 'ĐANG CHUẨN BỊ',
     empty: 'Vị trí dành cho sản phẩm mới',
     slots: [['Skill', 'Prompt'], ['Agent', 'Tool']],
@@ -152,7 +154,7 @@ const PRODUCT_GROUP_COPY: Record<LangCode, {
     groupAria: 'Product groups',
     browse: ['Explore web interfaces →', 'Explore Skill / Prompt →', 'Explore Agent / Tool →'],
     titles: ['Skills and Prompts', 'Agents and Tools'],
-    intros: ['The Skill/Prompt collection is being prepared. These two spaces are reserved for future products.', 'The Agent/Tool collection is being prepared. These two spaces are reserved for future products.'],
+    intros: ['The Skill/Prompt collection is being prepared. These two spaces are reserved for future products.', 'Apps and tools for learning and productivity. Explore LingoGlass Player below.'],
     pending: 'COMING SOON',
     empty: 'Space for a future product',
     slots: [['Skill', 'Prompt'], ['Agent', 'Tool']],
@@ -162,7 +164,7 @@ const PRODUCT_GROUP_COPY: Record<LangCode, {
     groupAria: '产品分类',
     browse: ['浏览全部网页界面 →', '浏览技能 / 提示词 →', '浏览智能体 / 工具 →'],
     titles: ['技能与提示词', '智能体与工具'],
-    intros: ['技能与提示词系列正在准备中。下方两个位置留给未来的产品。', '智能体与工具系列正在准备中。下方两个位置留给未来的产品。'],
+    intros: ['技能与提示词系列正在准备中。下方两个位置留给未来的产品。', '用于学习和工作的应用与工具。探索下方的 LingoGlass 播放器。'],
     pending: '即将推出',
     empty: '预留给未来产品的位置',
     slots: [['技能', '提示词'], ['智能体', '工具']],
@@ -189,12 +191,18 @@ export function buildView(
       : null;
   const t = {
     ...base,
+    services: base.services.map((service: any, i: number) => i === 2 ? { ...service, blurb: PRODUCT_GROUP_COPY[lang].intros[1] } : service),
+    pricingTitle: MEMBERSHIP_COPY[lang].pricingTitle,
+    pricingIntro: MEMBERSHIP_COPY[lang].pricingIntro,
+    pricingNote: MEMBERSHIP_COPY[lang].pricingNote,
+    cats: WEB_CATEGORY_LABELS[lang],
     // Nhãn cho landmark <nav> và H1 ẩn — chỉ trình đọc màn hình và công cụ
     // tìm kiếm thấy, nên không nằm trong bộ chữ của bản thiết kế.
     navAria: NAV_ARIA[lang],
     // Câu FAQ đầu tiên hứa quá tay trong bản thiết kế — xem ghi chú ở
     // FAQ_NO_CODE. Thay tại chỗ để không phải sửa file sinh tự động.
-    faqs: [FAQ_NO_CODE[lang], ...base.faqs.slice(1)],
+    faqs: base.faqs.map((faq: any, i: number) => i === 0 ? FAQ_NO_CODE[lang] : i === 2 ? { q: faq.q, a: MEMBERSHIP_COPY[lang].plans.map(plan => `${plan.name}: ${plan.note}`).join(' ') + ' ' + MEMBERSHIP_COPY[lang].policy } : faq),
+    ctaP: MEMBERSHIP_COPY[lang].lead,
     ...(modeStrings
       ? {
           authTitle: modeStrings.title,
@@ -215,12 +223,20 @@ export function buildView(
   // cho từng ô ($69–$99), nên Dune Pass từng hiện $89 trong khi thanh toán thu
   // $79, và khách xem tiếng Việt thấy giá đô dù trả bằng VNĐ.
   const currency = currencyForProvider(providerForLang(lang as Lang));
-  const tplMeta = TPL_META.flatMap((m: any) => {
+  // Keep generated slots intact; append newly registered catalog products.
+  const catalogSlots = [
+    ...TPL_META,
+    ...Object.keys(REAL_TEMPLATES)
+      .filter(id => !TPL_META.some(slot => slot.id === id))
+      .map(id => ({ id, cat: REAL_TEMPLATES[id].cat, price: '', badge: '' })),
+  ];
+  const tplMeta = catalogSlots.flatMap((m: any) => {
     const real = REAL_TEMPLATES[m.id];
     return real
       ? [{
           ...m,
           cat: real.cat,
+          group: real.group ?? 'web',
           badge: real.video ? '' : m.badge,
           price: formatMoney(priceOf('TEMPLATE', currency, m.id), currency, lang as Lang),
           ...(real.copy[lang] ?? real.copy.vi),
@@ -273,8 +289,10 @@ export function buildView(
   const { filter, tab } = state;
   const groupCopy = PRODUCT_GROUP_COPY[lang];
   const productGroup = Math.min(active, 2);
-  const showWebProducts = productGroup === 0;
-  const placeholderCards = showWebProducts ? [] : groupCopy.slots[productGroup - 1].map((type, i) => ({
+  const currentGroupKey = (['web', 'skill-prompt', 'agent'] as const)[productGroup];
+  const currentGroupProducts = tplMeta.filter((m: any) => m.group === currentGroupKey);
+  const showWebProducts = currentGroupProducts.length > 0;
+  const placeholderCards = showWebProducts ? [] : (groupCopy.slots[productGroup - 1] ?? []).map((type, i) => ({
     no: String(i + 1).padStart(2, '0'),
     type,
     title: groupCopy.pending,
@@ -285,7 +303,7 @@ export function buildView(
   // Dải trưng bày ở trang chủ hiện toàn bộ mẫu THẬT — có ảnh, có demo, mua được.
   // `tplMeta` đã loại các ô lấp chỗ chưa có file giao, nên không cần giới hạn
   // số lượng hay lọc thêm ở đây.
-  const homeTpl = tplMeta;
+  const homeTpl = currentGroupProducts;
 
   /** Thẻ hero kế tiếp theo hướng `dir`, bỏ qua thẻ khoá. Không còn thẻ mở nào
    *  khác thì đứng yên ở thẻ hiện tại. */
@@ -332,19 +350,24 @@ export function buildView(
     },
   };
 
-  const categoryKeys = Array.from(new Set(tplMeta.map((m: any) => m.cat))) as string[];
   const filters = [{ key: 'all', label: t.catAll }]
-    .concat(categoryKeys.map((k: string) => ({ key: k, label: t.cats[k] })))
+    .concat(WEB_CATEGORY_KEYS.map((k) => ({ key: k, label: t.cats[k] })))
     .map((f) => ({
       key: f.key,
       label: f.label,
+      selected: filter === f.key,
       onSelect: () => im.push({ filter: f.key }, () => im.bindReveal()),
     }));
 
-  const templates = tplMeta
+  const templates = currentGroupProducts
     .map((m: any) => ({ ...m, catLabel: t.cats[m.cat], badge: m.badge || '' }))
     .filter((m: any) => filter === 'all' || m.cat === filter)
     .map((m: any) => withSave({ ...m, href: `?mau=${m.id}`, onDetail: (event: MouseEvent<HTMLAnchorElement>) => followTemplateLink(event, m.id) }));
+
+  const previewTemplates = [
+    { name: 'Crimson Folio', cat: TEMPLATE_CATEGORIES['crimson-folio'], href: '/demos/crimson-folio/index.html?v=1.0.1', note: { vi: 'Bản xem trước · chưa mở bán', en: 'Preview · not available for purchase', zh: '预览 · 尚未发售' }[lang] },
+    { name: 'Starter', cat: TEMPLATE_CATEGORIES['free-sample'], href: '/api/download?free=1', note: { vi: 'Mẫu miễn phí', en: 'Free sample', zh: '免费示例' }[lang] },
+  ].filter((m) => productGroup === 0 && (filter === 'all' || m.cat === filter)).map((m) => ({ ...m, catLabel: t.cats[m.cat] }));
 
   const marqueeSet = t.marquee.map((label: string) => ({ label, color: '#eceef1' }));
 
@@ -377,7 +400,7 @@ export function buildView(
           w: ['100%', '62%', '30%'][i],
           ratio: ['16/10', '3/4', '9/16'][i],
         })),
-        specs: (t.dSpecRows || []).map((r: string[]) => ({ k: r[0], v: r[1] })),
+        specs: (REAL_TEMPLATES[d.id]?.group === 'agent' ? REAL_TEMPLATES[d.id].specs?.[lang] ?? [] : t.dSpecRows ?? []).map((r: string[]) => ({ k: r[0], v: r[1] })),
         related: allTpl
           .filter((m: any) => m.cat === d.cat && m.id !== d.id)
           .concat(allTpl.filter((m: any) => m.cat !== d.cat && m.id !== d.id))
@@ -422,6 +445,7 @@ export function buildView(
   }
 
   return {
+    brandLogoSrc: '/brand/forge-zone/' + ['web', 'skill-prompt', 'agent-tool', 'new-product-1', 'new-product-2'][active] + '.webp',
     t,
     guideLang: lang,
     guideLabel: GUIDE_LABELS[lang].guide,
@@ -435,6 +459,9 @@ export function buildView(
     autoLangOption,
     filters,
     templates,
+    emptyCategory: EMPTY_CATEGORY_COPY[lang],
+    categoryEmpty: templates.length === 0 && previewTemplates.length === 0,
+    previewTemplates,
     productGroupAria: groupCopy.groupAria,
     productGroups: groupCopy.labels.map((label, i) => ({
       key: ['web', 'skill-prompt', 'agent-tool'][i],
@@ -448,9 +475,9 @@ export function buildView(
     showWebProducts,
     showProductPlaceholders: !showWebProducts,
     placeholderCards,
-    libraryKicker: showWebProducts ? t.tplLabel : groupCopy.labels[productGroup],
-    libraryTitle: showWebProducts ? t.tplTitle : groupCopy.titles[productGroup - 1],
-    libraryIntro: showWebProducts ? t.tplIntro : groupCopy.intros[productGroup - 1],
+    libraryKicker: productGroup === 0 ? t.tplLabel : groupCopy.labels[productGroup],
+    libraryTitle: productGroup === 0 ? t.tplTitle : groupCopy.titles[productGroup - 1],
+    libraryIntro: productGroup === 0 ? t.tplIntro : groupCopy.intros[productGroup - 1],
     marqueeItems: marqueeSet.concat(marqueeSet),
     tabs: TAB_KEYS.slice(0, 5).map((k: string, i: number) => ({
       key: k,
@@ -468,8 +495,8 @@ export function buildView(
     isCta: tab === 'cta',
     // Tiêu đề dải trưng bày. Bản thiết kế lặp lại đúng chữ của thẻ hero ngay
     // phía trên; giờ dải này luôn là mẫu đang bán nên nói thẳng điều đó.
-    homeThemeTitle: showWebProducts ? HOME_SHOWCASE[lang].title : groupCopy.titles[productGroup - 1],
-    homeThemeKicker: showWebProducts ? HOME_SHOWCASE[lang].kicker : groupCopy.labels[productGroup],
+    homeThemeTitle: productGroup === 0 ? HOME_SHOWCASE[lang].title : groupCopy.titles[productGroup - 1],
+    homeThemeKicker: productGroup === 0 ? HOME_SHOWCASE[lang].kicker : groupCopy.labels[productGroup],
     homeBrowseLabel: groupCopy.browse[productGroup],
     homeTemplates: homeTpl.map((m: any) => withSave({
       ...m,
@@ -642,12 +669,13 @@ export function buildView(
       title: inc.title,
       desc: inc.desc,
     })),
-    // Gói 0 = một giao diện (phải chọn mẫu trước), 1 = trọn bộ (mua ngay).
-    // Gói "Thiết kế riêng" đã chuyển sang web dịch vụ riêng.
-    tiers: t.tiers.map((tr: any, i: number) => ({
+    // Hai gói nâng cấp tài khoản; mua lẻ vẫn ở thư viện và giỏ hàng.
+    tiers: MEMBERSHIP_COPY[lang].plans.map((tr, i) => ({
       ...TIER_STYLE[i],
       ...tr,
-      onCta: () => (i === 0 ? goTab('library') : im.startCheckout('BUNDLE')),
+      featured: i === 1,
+      price: formatMoney(priceOf(i === 0 ? 'PRO' : 'ULTRA', 'USD'), 'USD', lang as Lang),
+      onCta: () => im.startCheckout(i === 0 ? 'PRO' : 'ULTRA'),
     })),
     faqs: t.faqs.map((f: any, i: number) => ({
       q: f.q,

@@ -526,13 +526,16 @@ export default function AgenticSite({
 
 
   /* --- thanh toán: cần email nên phải đăng nhập trước --- */
+  const checkoutPending = useRef(false);
   const startCheckout = useCallback(
-    (kind: 'TEMPLATE' | 'BUNDLE', templateId?: string) => {
+    (kind: 'TEMPLATE' | 'PRO' | 'ULTRA', templateId?: string) => {
       const email = session?.user?.email;
       if (!email) {
         setState({ authOpen: true });
         return;
       }
+      if (checkoutPending.current) return;
+      checkoutPending.current = true;
       fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -552,7 +555,8 @@ export default function AgenticSite({
         .catch((err) => {
           console.error('[checkout]', err);
           setState({ toast: AUTH_ERRORS[state.lang].network });
-        });
+        })
+        .finally(() => { checkoutPending.current = false; });
     },
     [session, setState, state.lang]
   );

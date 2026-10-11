@@ -1,0 +1,306 @@
+[
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "width": 1440,
+    "height": 900,
+    "geometry": {
+      "scroll": 1440,
+      "client": 1440,
+      "h1": 1,
+      "images": true
+    },
+    "menu": "desktop",
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "width": 820,
+    "height": 1180,
+    "geometry": {
+      "scroll": 820,
+      "client": 820,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "width": 375,
+    "height": 812,
+    "geometry": {
+      "scroll": 375,
+      "client": 375,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "width": 320,
+    "height": 740,
+    "geometry": {
+      "scroll": 320,
+      "client": 320,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "noJS": true
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "width": 1440,
+    "height": 900,
+    "geometry": {
+      "scroll": 1440,
+      "client": 1440,
+      "h1": 1,
+      "images": true
+    },
+    "menu": "desktop",
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "width": 820,
+    "height": 1180,
+    "geometry": {
+      "scroll": 820,
+      "client": 820,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "width": 375,
+    "height": 812,
+    "geometry": {
+      "scroll": 375,
+      "client": 375,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "width": 320,
+    "height": 740,
+    "geometry": {
+      "scroll": 320,
+      "client": 320,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "noJS": true
+  },
+  {
+    "browser": "edge",
+    "version": "155.0.4283.45",
+    "width": 1440,
+    "height": 900,
+    "geometry": {
+      "scroll": 1440,
+      "client": 1440,
+      "h1": 1,
+      "images": true
+    },
+    "menu": "desktop",
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "edge",
+    "version": "155.0.4283.45",
+    "width": 820,
+    "height": 1180,
+    "geometry": {
+      "scroll": 820,
+      "client": 820,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "edge",
+    "version": "155.0.4283.45",
+    "width": 375,
+    "height": 812,
+    "geometry": {
+      "scroll": 375,
+      "client": 375,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "edge",
+    "version": "155.0.4283.45",
+    "width": 320,
+    "height": 740,
+    "geometry": {
+      "scroll": 320,
+      "client": 320,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "edge",
+    "noJS": true
+  },
+  {
+    "browser": "coccoc",
+    "version": "152.0.7977.124",
+    "width": 1440,
+    "height": 900,
+    "geometry": {
+      "scroll": 1440,
+      "client": 1440,
+      "h1": 1,
+      "images": true
+    },
+    "menu": "desktop",
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "coccoc",
+    "version": "152.0.7977.124",
+    "width": 820,
+    "height": 1180,
+    "geometry": {
+      "scroll": 820,
+      "client": 820,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "coccoc",
+    "version": "152.0.7977.124",
+    "width": 375,
+    "height": 812,
+    "geometry": {
+      "scroll": 375,
+      "client": 375,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "coccoc",
+    "version": "152.0.7977.124",
+    "width": 320,
+    "height": 740,
+    "geometry": {
+      "scroll": 320,
+      "client": 320,
+      "h1": 1,
+      "images": true
+    },
+    "menu": {
+      "open": "true",
+      "closed": "false",
+      "linkClose": "false"
+    },
+    "detailOpen": true,
+    "errors": []
+  },
+  {
+    "browser": "coccoc",
+    "noJS": true
+  }
+]

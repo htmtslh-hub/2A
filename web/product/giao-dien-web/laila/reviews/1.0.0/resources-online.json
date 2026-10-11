@@ -1,0 +1,99 @@
+{
+  "base": "https://forgezone.store",
+  "date": "2026-10-10T12:47:15.853Z",
+  "resources": [
+    {
+      "path": "/demos/laila/index.html",
+      "status": 200,
+      "bytes": 18193,
+      "sha256": "c725dbcc636501901dddc03127a5dd8e14977ac6e6be9fc36c059477eeada92d",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/laila/assets/css/style.css",
+      "status": 200,
+      "bytes": 18730,
+      "sha256": "64ffd082e5dd86b91ec3d44155628de3df66761a13b73952e4351900e89a9506",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/laila/assets/js/main.js",
+      "status": 200,
+      "bytes": 2495,
+      "sha256": "1ac4eb08ca19005033c8c58cc4bac811b9208aacb7af6fafb886b0ccc1d5e10a",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/laila/assets/img/portrait.webp",
+      "status": 200,
+      "bytes": 237380,
+      "sha256": "06d31d082def19adb8e78b02cd366d7f53058620a903502d7fa3dc8f82960eb7",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/laila/CUSTOMISE.md",
+      "status": 200,
+      "bytes": 14451,
+      "sha256": "e5c80e291e403da9688e140e01e69434f5bbd4b502919fc7f46ec64aad4585d1",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/laila/README.md",
+      "status": 200,
+      "bytes": 3478,
+      "sha256": "6c8a65a6f643977244463c1402470d187d1e3a2b736c45d3de112f5e4e4771ef",
+      "matchesLocal": true
+    },
+    {
+      "path": "/previews/laila.webp",
+      "status": 200,
+      "bytes": 32384,
+      "sha256": "dfa07a6c476f901055c7bd4ebd2199e55c38c6962f19c099dd3f6917c57a8f9f",
+      "matchesLocal": true
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/?mau=t20",
+      "status": 200
+    },
+    {
+      "path": "/huong-dan?template=laila&view=template",
+      "status": 200
+    },
+    {
+      "path": "/admin",
+      "status": 200
+    },
+    {
+      "path": "/?mau=t19",
+      "status": 200
+    },
+    {
+      "path": "/demos/velora/index.html?v=1.2.1",
+      "status": 200
+    },
+    {
+      "path": "/demos/watchroom/index.html",
+      "status": 200
+    },
+    {
+      "path": "/demos/mint-atlas/index.html",
+      "status": 200
+    },
+    {
+      "path": "/demos/melt-muse/index.html",
+      "status": 200
+    },
+    {
+      "path": "/demos/apartment-flow/index.html",
+      "status": 200
+    }
+  ],
+  "failures": [],
+  "anonymousDownload": 401,
+  "directZip": 404,
+  "guideContainsProduct": true
+}

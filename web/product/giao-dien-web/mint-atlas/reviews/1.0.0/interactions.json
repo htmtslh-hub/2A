@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-09T07:28:48.599Z",
+  "browser": "Microsoft Edge",
+  "sizes": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "images": true
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "images": true
+    },
+    {
+      "width": 820,
+      "scrollWidth": 820,
+      "images": true
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "images": true
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "images": true
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "images": true
+    }
+  ],
+  "tests": [
+    "native ability open/close",
+    "hero story anchor",
+    "full local artwork and browser Back",
+    "finite hover active with reduced preference",
+    "missing images keeps title/contact",
+    "offline file noJS navigation/native abilities"
+  ],
+  "errors": [],
+  "version": "155.0.4283.45",
+  "failures": []
+}

@@ -1,0 +1,1 @@
+Forge Zone — logo búa rèn. Original generated emblem inspired by reference palette: petrol teal enamel, gold trim, silver hammer striking faces. Transparent PNG with Forge Zone wordmark. Design asset only.

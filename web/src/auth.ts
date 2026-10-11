@@ -26,7 +26,7 @@ const providers: Provider[] = [
       const { email, password } = parsed.data;
       const user = await prisma.user.findUnique({ where: { email: email.toLowerCase() } });
       // Tài khoản tạo qua Google chưa đặt mật khẩu -> không cho đăng nhập lối này.
-      if (!user?.passwordHash) return null;
+      if (!user?.passwordHash || user.suspendedAt) return null;
 
       const ok = await bcrypt.compare(password, user.passwordHash);
       if (!ok) return null;
@@ -55,8 +55,23 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   pages: { signIn: '/' },
   providers,
   callbacks: {
+    async signIn({ user }) {
+      if (!user.email) return false;
+      const stored = await prisma.user.findUnique({ where: { email: user.email.toLowerCase() }, select: { suspendedAt: true } });
+      return !stored?.suspendedAt;
+    },
     async jwt({ token, user }) {
       if (user?.id) token.uid = user.id;
+      if (token.uid) {
+        const stored = await prisma.user.findUnique({ where: { id: token.uid as string }, select: { suspendedAt: true, sessionVersion: true } });
+        // Returning null invalidates the old JWT instead of leaving the browser
+        // with an apparently authenticated but unusable session.
+        if (!stored || stored.suspendedAt) return null;
+        if (user) token.sessionVersion = stored.sessionVersion;
+        // A lock increments the generation. Unlocking must not revive JWTs
+        // from before the lock; only a fresh successful login gets the new one.
+        if ((token.sessionVersion ?? 0) !== stored.sessionVersion) return null;
+      }
       return token;
     },
     async session({ session, token }) {

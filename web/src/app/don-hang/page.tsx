@@ -10,6 +10,8 @@ import { REAL_TEMPLATES } from '@/lib/real-templates';
 import { GUIDE_LABELS, guideHref } from '@/lib/guide-links';
 import guideStyles from '@/components/guide/guide.module.css';
 import { SignOutButton } from './actions';
+import { membershipState } from '@/lib/memberships';
+import { MEMBERSHIP_COPY } from '@/lib/membership-copy';
 
 const DATE_LOCALE: Record<Lang, string> = { vi: 'vi-VN', en: 'en-US', zh: 'zh-CN' };
 
@@ -195,6 +197,8 @@ export default async function Page() {
     orderBy: { createdAt: 'desc' },
     include: { order: { include: { items: true } } },
   });
+  const membership = await membershipState(userId);
+  const m = MEMBERSHIP_COPY[lang];
 
   return (
     <main style={shell}>
@@ -254,7 +258,18 @@ export default async function Page() {
         </p>
         <p style={{ margin: '0 0 32px', fontSize: 13, color: '#6f767f' }}>{session?.user?.email}</p>
 
-        {purchases.length === 0 ? (
+        {membership.active && <section style={{ marginBottom: 28 }}>
+          <h2>{membership.active.plan === 'ULTRA' ? 'Ultra' : 'Pro'} · {m.download}</h2>
+          <p>{m.until}: {new Intl.DateTimeFormat(DATE_LOCALE[lang], { dateStyle: 'long', timeStyle: 'short' }).format(membership.active.expiresAt)}</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>{Object.entries(REAL_TEMPLATES).map(([id, tpl]) => <div key={id} style={card}>
+            <strong>{tpl.copy[lang].name}</strong><div className={guideStyles.orderLinks}>
+              <a href={`/api/download?id=${id}`} style={primaryBtn}>{t.download}</a>
+              <Link href={guideHref(tpl.slug, 'template')} className={guideStyles.orderStart}>{GUIDE_LABELS[lang].start}</Link>
+            </div>
+          </div>)}</div><p>{m.policy}</p>
+        </section>}
+
+        {purchases.length === 0 && membership.active ? null : purchases.length === 0 ? (
           <div style={{ ...card, flexDirection: 'column', alignItems: 'flex-start', gap: 18 }}>
             <p style={{ margin: 0, fontSize: 15, color: '#c3c9d1' }}>{t.empty}</p>
             <Link href="/?tab=library" style={primaryBtn}>
@@ -316,7 +331,7 @@ export default async function Page() {
           </div>
         )}
 
-        {purchases.length > 0 ? <InstallGuide guide={t.install} /> : null}
+        {purchases.length > 0 || membership.active ? <InstallGuide guide={t.install} /> : null}
 
         <p style={{ marginTop: 36 }}>
           <Link href="/" style={{ fontSize: 13, color: '#949ba4' }}>

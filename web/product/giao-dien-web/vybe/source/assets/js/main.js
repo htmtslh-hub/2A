@@ -105,4 +105,14 @@
   window.addEventListener('storage',e=>{if(e.key==='vybe-bag'){const value=read('vybe-bag',[]);if(Array.isArray(value)){bag=value.filter(x=>products.some(p=>p.id===x.id)&&['S','M','L','XL'].includes(x.size)&&Number.isInteger(x.quantity)&&x.quantity>0&&x.quantity<100);renderBag();}}});
   window.addEventListener('pagehide',()=>{stopAnimations();clearTimeout(toastTimer);},{once:true});
   renderBag();
+
+  // Portable COD checkout reads this cart's canonical product data.
+  window.ForgeCommerce?.register({
+    items: () => bag.map(item => { const p = products.find(p => p.id === item.id); return { id: p.id, key: item.id + ':' + item.size, name: p.name, price: Math.round(p.price * 100), variant: 'Size ' + item.size, quantity: item.quantity }; }),
+    quantity: (key, quantity) => { const index = bag.findIndex(item => item.id + ':' + item.size === key); if (index < 0) return; if (quantity) bag[index].quantity = quantity; else bag.splice(index, 1); save('vybe-bag', bag); renderBag(); },
+    clear: () => { bag = []; save('vybe-bag', bag); renderBag(); }
+  });
+
+  const codAction = document.querySelector("[data-enquire]");
+  if (codAction) codAction.textContent = 'Delivery & payment';
 })();

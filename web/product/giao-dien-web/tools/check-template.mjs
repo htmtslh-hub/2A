@@ -126,8 +126,9 @@ const server = createServer((req, res) => {
   try { const body = readFileSync(file); res.writeHead(200, { 'Content-Type': TYPES[extname(file)] ?? 'application/octet-stream' }); res.end(body); }
   catch { res.writeHead(404).end(); }
 });
-await new Promise(done => server.listen(4328, '127.0.0.1', done));
-const URL_HTTP = `http://127.0.0.1:4328/${slug}/index.html`;
+// Allow isolated checks alongside an existing preview server; default stays compatible.
+await new Promise(done => server.listen(Number(process.env.TEMPLATE_QA_PORT ?? 4328), '127.0.0.1', done));
+const URL_HTTP = `http://127.0.0.1:${server.address().port}/${slug}/index.html`;
 
 const dims = page => page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth, clientWidth: document.documentElement.clientWidth }));
 const allVisible = page => page.evaluate(() => [...document.querySelectorAll('[data-reveal]')].every(el => Number(getComputedStyle(el).opacity) > .99));

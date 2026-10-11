@@ -1,0 +1,1551 @@
+{
+  "slug": "mint-atlas",
+  "version": "1.0.0",
+  "date": "2026-10-09T07:24:50.765Z",
+  "os": "win32",
+  "zipBytes": 520307,
+  "sha256": "734222456b3078920ebc147dd001758eecc872241aeae382192375bd03347158",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#main"
+          },
+          {
+            "label": "Mint Atlas home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#top"
+          },
+          {
+            "label": "Read Mira Vale's profile",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#story"
+          },
+          {
+            "label": "Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#main"
+          },
+          {
+            "label": "Overview",
+            "href": "#overview",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#overview"
+          },
+          {
+            "label": "Artwork",
+            "href": "#artwork",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#artwork"
+          },
+          {
+            "label": "Email the creator",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Read story",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#story"
+          },
+          {
+            "label": "Statistics",
+            "href": "#statistics",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#statistics"
+          },
+          {
+            "label": "Lore",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#story"
+          },
+          {
+            "label": "Read character lore",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#story"
+          },
+          {
+            "label": "View full Glasshouse artwork",
+            "href": "assets/img/glasshouse.webp",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/assets/img/glasshouse.webp"
+          },
+          {
+            "label": "View full Starlight artwork",
+            "href": "assets/img/starlight.webp",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/assets/img/starlight.webp"
+          },
+          {
+            "label": "Mint Atlas",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#top"
+          },
+          {
+            "label": "Back to top",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": [
+            {
+              "text": "Lore",
+              "width": 30,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": [
+            {
+              "text": "Lore",
+              "width": 30,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": [
+            {
+              "text": "Lore",
+              "width": 30,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": [
+            {
+              "text": "Lore",
+              "width": 30,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              247,
+              255,
+              255
+            ],
+            "ratio": 11.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "MINT ATLAS",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              214,
+              236,
+              238
+            ],
+            "ratio": 9.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "ATLAS",
+            "colour": "rgb(22, 107, 113)",
+            "background": [
+              214,
+              236,
+              238
+            ],
+            "ratio": 5.06,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "THE QUIET FRONTIER / CHARACTER 01",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              127,
+              169,
+              175
+            ],
+            "ratio": 4.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Mira Vale",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              127,
+              170,
+              175
+            ],
+            "ratio": 4.58,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__intro",
+            "text": "A quiet observer.A fearless explorer.",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              128,
+              170,
+              176
+            ],
+            "ratio": 4.59,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "Drawn to forgotten places and lingering ",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              129,
+              171,
+              176
+            ],
+            "ratio": 4.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "rank",
+            "text": "S",
+            "colour": "rgb(255, 211, 149)",
+            "background": [
+              48,
+              70,
+              77
+            ],
+            "ratio": 7.11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Rank",
+            "colour": "rgb(247, 255, 255)",
+            "background": [
+              48,
+              70,
+              77
+            ],
+            "ratio": 9.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "read-link",
+            "text": "Read story",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              95,
+              126,
+              128
+            ],
+            "ratio": 2.65,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": false
+          },
+          {
+            "element": "section-bar",
+            "text": "Abilities",
+            "colour": "rgb(247, 255, 255)",
+            "background": [
+              48,
+              70,
+              77
+            ],
+            "ratio": 9.82,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Echo Step",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              216,
+              239,
+              237
+            ],
+            "ratio": 9.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Movement",
+            "colour": "rgb(55, 83, 90)",
+            "background": [
+              216,
+              239,
+              237
+            ],
+            "ratio": 6.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A swift, silent step that leaves only st",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              216,
+              239,
+              237
+            ],
+            "ratio": 9.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-note",
+            "text": "Choose an ability to discover more.",
+            "colour": "rgb(55, 83, 90)",
+            "background": [
+              180,
+              215,
+              221
+            ],
+            "ratio": 5.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "book-title",
+            "text": "The QuietFrontier",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              247,
+              255,
+              255
+            ],
+            "ratio": 11.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Statistics",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              247,
+              255,
+              255
+            ],
+            "ratio": 11.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "visually-hidden",
+            "text": "Character statistics",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              247,
+              255,
+              255
+            ],
+            "ratio": 11.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "80",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              190,
+              218,
+              218
+            ],
+            "ratio": 7.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "AGI",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              193,
+              222,
+              218
+            ],
+            "ratio": 8.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "92",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              191,
+              219,
+              218
+            ],
+            "ratio": 7.95,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "FOC",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              194,
+              224,
+              217
+            ],
+            "ratio": 8.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "RES",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              195,
+              225,
+              217
+            ],
+            "ratio": 8.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "75",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              194,
+              223,
+              217
+            ],
+            "ratio": 8.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "RNG",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              196,
+              227,
+              217
+            ],
+            "ratio": 8.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "chart-note",
+            "text": "Character concept · Scores / 100",
+            "colour": "rgb(55, 83, 90)",
+            "background": [
+              247,
+              255,
+              255
+            ],
+            "ratio": 8.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-note",
+            "text": "Original worlds. A different point of vi",
+            "colour": "rgb(55, 83, 90)",
+            "background": [
+              179,
+              215,
+              220
+            ],
+            "ratio": 5.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "FIELD NOTES / MIRA VALE",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              174,
+              212,
+              217
+            ],
+            "ratio": 7.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Finding wonderin the quiet.",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              171,
+              209,
+              216
+            ],
+            "ratio": 7.11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Mira travels where few dare to go, drawn",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              173,
+              211,
+              217
+            ],
+            "ratio": 7.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Guided by curiosity and quiet resolve, s",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              171,
+              210,
+              216
+            ],
+            "ratio": 7.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "demo-note",
+            "text": "An original fictional character and worl",
+            "colour": "rgb(55, 83, 90)",
+            "background": [
+              169,
+              208,
+              215
+            ],
+            "ratio": 4.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Mint Atlas",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              165,
+              206,
+              213
+            ],
+            "ratio": 6.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Read story",
+          "colour": "rgb(20, 46, 53)",
+          "width": "3px",
+          "ratio": 8.32
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            [
+              ".read-link"
+            ]
+          ]
+        }
+      ],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#main"
+          },
+          {
+            "label": "Mint Atlas home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#top"
+          },
+          {
+            "label": "Read Mira Vale's profile",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#story"
+          },
+          {
+            "label": "Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#main"
+          },
+          {
+            "label": "Overview",
+            "href": "#overview",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#overview"
+          },
+          {
+            "label": "Artwork",
+            "href": "#artwork",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#artwork"
+          },
+          {
+            "label": "Email the creator",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Read story",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#story"
+          },
+          {
+            "label": "Statistics",
+            "href": "#statistics",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#statistics"
+          },
+          {
+            "label": "Lore",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#story"
+          },
+          {
+            "label": "Read character lore",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#story"
+          },
+          {
+            "label": "View full Glasshouse artwork",
+            "href": "assets/img/glasshouse.webp",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/assets/img/glasshouse.webp"
+          },
+          {
+            "label": "View full Starlight artwork",
+            "href": "assets/img/starlight.webp",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/assets/img/starlight.webp"
+          },
+          {
+            "label": "Mint Atlas",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#top"
+          },
+          {
+            "label": "Back to top",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/mint-atlas/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": [
+            {
+              "text": "Lore",
+              "width": 30,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": [
+            {
+              "text": "Lore",
+              "width": 30,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": [
+            {
+              "text": "Lore",
+              "width": 30,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": [
+            {
+              "text": "Lore",
+              "width": 30,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              247,
+              255,
+              255
+            ],
+            "ratio": 11.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "MINT ATLAS",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              215,
+              237,
+              239
+            ],
+            "ratio": 9.55,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "ATLAS",
+            "colour": "rgb(22, 107, 113)",
+            "background": [
+              215,
+              237,
+              239
+            ],
+            "ratio": 5.11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "THE QUIET FRONTIER / CHARACTER 01",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              127,
+              169,
+              175
+            ],
+            "ratio": 4.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Mira Vale",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              128,
+              170,
+              175
+            ],
+            "ratio": 4.59,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__intro",
+            "text": "A quiet observer.A fearless explorer.",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              128,
+              170,
+              176
+            ],
+            "ratio": 4.59,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "Drawn to forgotten places and lingering ",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              129,
+              171,
+              176
+            ],
+            "ratio": 4.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "rank",
+            "text": "S",
+            "colour": "rgb(255, 211, 149)",
+            "background": [
+              48,
+              70,
+              77
+            ],
+            "ratio": 7.11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Rank",
+            "colour": "rgb(247, 255, 255)",
+            "background": [
+              48,
+              70,
+              77
+            ],
+            "ratio": 9.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "read-link",
+            "text": "Read story",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              137,
+              178,
+              174
+            ],
+            "ratio": 5.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-bar",
+            "text": "Abilities",
+            "colour": "rgb(247, 255, 255)",
+            "background": [
+              48,
+              70,
+              77
+            ],
+            "ratio": 9.82,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Echo Step",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              216,
+              239,
+              237
+            ],
+            "ratio": 9.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Movement",
+            "colour": "rgb(55, 83, 90)",
+            "background": [
+              216,
+              239,
+              237
+            ],
+            "ratio": 6.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A swift, silent step that leaves only st",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              216,
+              239,
+              237
+            ],
+            "ratio": 9.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-note",
+            "text": "Choose an ability to discover more.",
+            "colour": "rgb(55, 83, 90)",
+            "background": [
+              181,
+              216,
+              221
+            ],
+            "ratio": 5.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "book-title",
+            "text": "The QuietFrontier",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              247,
+              255,
+              255
+            ],
+            "ratio": 11.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "visually-hidden",
+            "text": "Character statistics",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              247,
+              255,
+              255
+            ],
+            "ratio": 11.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "80",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              191,
+              218,
+              219
+            ],
+            "ratio": 7.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "AGI",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              193,
+              222,
+              218
+            ],
+            "ratio": 8.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "92",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              191,
+              219,
+              218
+            ],
+            "ratio": 7.95,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "FOC",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              194,
+              224,
+              218
+            ],
+            "ratio": 8.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "RES",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              196,
+              226,
+              217
+            ],
+            "ratio": 8.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "75",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              194,
+              223,
+              218
+            ],
+            "ratio": 8.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "RNG",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              197,
+              227,
+              217
+            ],
+            "ratio": 8.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "chart-note",
+            "text": "Character concept · Scores / 100",
+            "colour": "rgb(55, 83, 90)",
+            "background": [
+              247,
+              255,
+              255
+            ],
+            "ratio": 8.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-note",
+            "text": "Original worlds. A different point of vi",
+            "colour": "rgb(55, 83, 90)",
+            "background": [
+              180,
+              215,
+              221
+            ],
+            "ratio": 5.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "FIELD NOTES / MIRA VALE",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              174,
+              212,
+              218
+            ],
+            "ratio": 7.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Finding wonderin the quiet.",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              171,
+              210,
+              216
+            ],
+            "ratio": 7.17,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Mira travels where few dare to go, drawn",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              173,
+              211,
+              217
+            ],
+            "ratio": 7.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Guided by curiosity and quiet resolve, s",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              171,
+              210,
+              216
+            ],
+            "ratio": 7.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "demo-note",
+            "text": "An original fictional character and worl",
+            "colour": "rgb(55, 83, 90)",
+            "background": [
+              169,
+              209,
+              215
+            ],
+            "ratio": 5.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Mint Atlas",
+            "colour": "rgb(37, 60, 67)",
+            "background": [
+              165,
+              206,
+              213
+            ],
+            "ratio": 6.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Read story",
+          "colour": "rgb(20, 46, 53)",
+          "width": "3px",
+          "ratio": 8.32
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            [
+              ".read-link"
+            ]
+          ]
+        }
+      ],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "mint-atlas/assets/css/style.css",
+    "mint-atlas/assets/img/glasshouse.webp",
+    "mint-atlas/assets/img/mira.webp",
+    "mint-atlas/assets/img/starlight.webp",
+    "mint-atlas/assets/js/main.js",
+    "mint-atlas/CUSTOMISE.md",
+    "mint-atlas/index.html",
+    "mint-atlas/LICENCE.txt",
+    "mint-atlas/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/glasshouse.webp",
+    "assets/img/mira.webp",
+    "assets/img/starlight.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [
+      "[BRAND NAME]",
+      "[LANGUAGE]",
+      "[HEX OR RGB]",
+      "[HEX OR RGB]",
+      "[HEX OR RGB]",
+      "[HEX OR RGB]",
+      "[FONT NAME OR \"KEEP CURRENT\"]",
+      "[FONT NAME OR \"KEEP CURRENT\"]",
+      "[LANGUAGE]",
+      "[DESCRIBE THE SERVICE OR SECTION AND PROVIDE VERIFIED CONTENT]",
+      "[HOSTING PROVIDER]",
+      "[HOSTING PROVIDER]",
+      "[DESCRIBE THE EXACT UPDATE]"
+    ],
+    "countErrors": []
+  },
+  "failures": [
+    "Q10: prompt còn ô bắt khách tự điền [BRAND NAME], [LANGUAGE], [HEX OR RGB], [HEX OR RGB], [HEX OR RGB], [HEX OR RGB], [FONT NAME OR \"KEEP CURRENT\"], [FONT NAME OR \"KEEP CURRENT\"], [LANGUAGE], [DESCRIBE THE SERVICE OR SECTION AND PROVIDE VERIFIED CONTENT], [HOSTING PROVIDER], [HOSTING PROVIDER], [DESCRIBE THE EXACT UPDATE]",
+    "Q02/chromium/1440: vùng chạm < 44px [{\"text\":\"Lore\",\"width\":30,\"height\":44,\"inline\":false}]",
+    "Q02/chromium/820: vùng chạm < 44px [{\"text\":\"Lore\",\"width\":30,\"height\":44,\"inline\":false}]",
+    "Q02/chromium/375: vùng chạm < 44px [{\"text\":\"Lore\",\"width\":30,\"height\":44,\"inline\":false}]",
+    "Q02/chromium/320: vùng chạm < 44px [{\"text\":\"Lore\",\"width\":30,\"height\":44,\"inline\":false}]",
+    "Q06/chromium: tương phản thấp [{\"element\":\"read-link\",\"text\":\"Read story\",\"colour\":\"rgb(37, 60, 67)\",\"background\":[95,126,128],\"ratio\":2.65,\"threshold\":4.5,\"overImage\":false,\"method\":\"pixels\",\"pass\":false}]",
+    "Q05/chromium: axe [{\"id\":\"color-contrast\",\"impact\":\"serious\",\"nodes\":[[\".read-link\"]]}]",
+    "Q02/firefox/1440: vùng chạm < 44px [{\"text\":\"Lore\",\"width\":30,\"height\":44,\"inline\":false}]",
+    "Q02/firefox/820: vùng chạm < 44px [{\"text\":\"Lore\",\"width\":30,\"height\":44,\"inline\":false}]",
+    "Q02/firefox/375: vùng chạm < 44px [{\"text\":\"Lore\",\"width\":30,\"height\":44,\"inline\":false}]",
+    "Q02/firefox/320: vùng chạm < 44px [{\"text\":\"Lore\",\"width\":30,\"height\":44,\"inline\":false}]",
+    "Q05/firefox: axe [{\"id\":\"color-contrast\",\"impact\":\"serious\",\"nodes\":[[\".read-link\"]]}]"
+  ]
+}

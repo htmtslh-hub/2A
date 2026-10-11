@@ -1,14 +1,13 @@
 /* Tạo đơn hàng + link thanh toán.
 
-   Cổng nào là do thị trường quyết định: khách xem tiếng Việt trả VNĐ qua PayOS,
-   khách quốc tế trả USD qua Paddle. Khách vẫn ép được cổng khác bằng tham số
-   `provider` nếu sau này muốn cho chọn. */
+   New purchases are USD-only through Paddle in every display language. */
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import { prisma } from '@/lib/db';
 import { auth } from '@/auth';
 import { adapterFor } from '@/lib/payments';
 import { COMPANY } from '@/lib/company';
+import { isMembershipPlan } from '@/lib/membership-policy';
 import {
   currencyForProvider,
   priceOf,
@@ -47,14 +46,13 @@ function paddleCheckoutUrlForOrder(checkoutUrl: string, orderId: string): string
 }
 
 const schema = z.object({
-  kind: z.enum(['TEMPLATE', 'BUNDLE', 'CART']),
+  kind: z.enum(['TEMPLATE', 'CART', 'PRO', 'ULTRA']),
   templateId: z.string().max(10).optional(),
   templateIds: z.array(z.string().max(10)).min(1).max(20).optional(),
   email: z.string().email(),
   name: z.string().trim().max(120).optional(),
   lang: z.enum(['vi', 'en', 'zh']).default('vi'),
-  /** Bỏ trống thì tự chọn theo ngôn ngữ. */
-  provider: z.enum(['PAYOS', 'PADDLE']).optional(),
+  provider: z.literal('PADDLE').optional(),
 });
 
 export async function POST(req: Request) {
@@ -75,8 +73,12 @@ export async function POST(req: Request) {
 
   const session = await auth();
   const userId = (session?.user as { id?: string } | undefined)?.id ?? null;
-  if (kind === 'CART' && (!userId || session?.user?.email?.toLowerCase() !== email.toLowerCase())) {
-    return NextResponse.json({ error: 'Vui lòng đăng nhập để thanh toán giỏ hàng.' }, { status: 401 });
+  if ((kind === 'CART' || isMembershipPlan(kind)) && (!userId || session?.user?.email?.toLowerCase() !== email.toLowerCase())) {
+    return NextResponse.json({ error: 'Vui lòng đăng nhập đúng tài khoản để thanh toán.' }, { status: 401 });
+  }
+  if (isMembershipPlan(kind)) {
+    const buyer = await prisma.user.findUnique({ where: { id: userId! }, select: { suspendedAt: true } });
+    if (!buyer || buyer.suspendedAt) return NextResponse.json({ error: 'Tài khoản không được phép nâng cấp.' }, { status: 403 });
   }
 
   const provider: Provider = parsed.data.provider ?? providerForLang(lang as Lang);

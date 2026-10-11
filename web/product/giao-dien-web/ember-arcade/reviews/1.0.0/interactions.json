@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-09T06:34:58.142Z",
+  "browser": "Microsoft Edge",
+  "sizes": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "images": true
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "images": true
+    },
+    {
+      "width": 820,
+      "scrollWidth": 820,
+      "images": true
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "images": true
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "images": true
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "images": true
+    }
+  ],
+  "errors": [],
+  "tests": [
+    "search,title,tags,empty,Escape",
+    "favourites save/reload/remove",
+    "feature notes/hash",
+    "native notes close",
+    "slash shortcut",
+    "blocked storage fallback",
+    "missing images content/navigation",
+    "file:// offline noJS native notes"
+  ],
+  "version": "155.0.4283.45",
+  "failures": []
+}

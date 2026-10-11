@@ -1,0 +1,153 @@
+:root{
+    --acc:#e83a34; --acc-hi:#f26a63; --acc-soft:#f79992;
+    --acc-a00:rgba(232,58,52,0); --acc-a08:rgba(232,58,52,.08); --acc-a14:rgba(232,58,52,.14);
+    --acc-a18:rgba(232,58,52,.18); --acc-a45:rgba(232,58,52,.45); --acc-a50:rgba(232,58,52,.5);
+    --acc-a55:rgba(255,106,31,.55);
+    /* gold = giá tiền & số thứ tự, chỉ trên nền trung tính; trên nền accent thì đảo về trắng */
+    --gold:#f0a63c;
+    --display:'Unbounded','Bricolage Grotesque','ZCOOL XiaoWei','Noto Sans SC',sans-serif;
+    --body:'Be Vietnam Pro','Noto Sans SC',system-ui,sans-serif;
+  }
+  *{ box-sizing: border-box; transition: color .55s ease, background-color .55s ease, border-color .55s ease, fill .55s ease; }
+  html, body { margin: 0; padding: 0; background: #16181c; color: #ffffff; font-family: var(--body); -webkit-font-smoothing: antialiased; }
+  a { color:#ffffff; text-decoration: none; }
+  a:hover { color:#ffffff; }
+  ::selection { background: var(--acc); color: #16181c; }
+  image-slot { --is-bg: #1a1c21; }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  @keyframes islandIn { from { opacity: 0; transform: translateY(-8px) scale(.96); } to { opacity: 1; transform: none; } }
+  @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 var(--acc-a50);} 70%{ box-shadow: 0 0 0 14px var(--acc-a00);} 100%{ box-shadow:0 0 0 0 var(--acc-a00);} }
+  @keyframes marquee { from { transform: translate3d(0,0,0);} to { transform: translate3d(-50%,0,0);} }
+  @keyframes sheen { 0% { transform: translateX(-160%) skewX(-18deg);} 55%,100% { transform: translateX(260%) skewX(-18deg);} }
+  @keyframes botBob { 0%,100% { transform: translateY(-3px) rotate(-3deg); } 50% { transform: translateY(4px) rotate(3deg); } }
+  @keyframes islandLed { to { transform: translate(-50%,-50%) rotate(360deg); } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes chaseRun { to { stroke-dashoffset:-100; } }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){ html { scroll-behavior:auto; } [data-reveal]{ opacity:1 !important; transform:none !important; filter:none !important; } }
+  /*
+    VIỀN AVATAR TRONG VIDEO GỐC — viền kín, màu trượt quanh chu vi.
+    Màu:      --pricing-neon-magenta / -violet / -cyan / -white
+    Lõi:      --pricing-neon-core-width
+    Glow:     --pricing-neon-glow-width / -blur / -strength
+    Tốc độ:   --pricing-neon-speed (thời gian một vòng)
+  */
+  @property --pricing-neon-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  @keyframes pricingNeonOrbit {
+    from { --pricing-neon-angle: 0deg; }
+    to { --pricing-neon-angle: 360deg; }
+  }
+  @keyframes pricingNeonPulse {
+    0%,100% { filter: brightness(.96); }
+    50% { filter: brightness(1.12); }
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+    max-width: 742px;
+    margin: 0 auto;
+  }
+  @media (max-width: 767px) {
+    .pricing-grid {
+      grid-template-columns: minmax(0, 1fr);
+      max-width: 360px;
+    }
+  }
+  @media (max-width: 360px) {
+    .pricing-card {
+      --pricing-card-padding: 14px;
+      --pricing-card-feature-gap: 10px;
+      --pricing-card-feature-bottom: 22px;
+    }
+  }
+  .pricing-card {
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    min-width: 0;
+    --pricing-neon-magenta: #ed60ff;
+    --pricing-neon-violet: #a76bff;
+    --pricing-neon-cyan: #62f4ff;
+    --pricing-neon-white: #fffaff;
+    --pricing-neon-core-width: 1.7325px;
+    --pricing-neon-glow-width: 2px;
+    --pricing-neon-glow-blur: 1.75px;
+    --pricing-neon-glow-strength: .42;
+    --pricing-neon-speed: 1.8s;
+    isolation: isolate;
+  }
+  .pricing-card__neon {
+    position: absolute;
+    inset: -1px;
+    z-index: 3;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .4s cubic-bezier(.22,1,.36,1);
+  }
+  /* Blur the masked ring's parent so the glow can extend outside the edge. */
+  .pricing-card__neon-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: var(--pricing-neon-glow-strength);
+    filter: blur(var(--pricing-neon-glow-blur));
+    pointer-events: none;
+  }
+  .pricing-card__neon::before,
+  .pricing-card__neon-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    border-radius: inherit;
+    padding: var(--pricing-neon-core-width);
+    /* Use the animated angle HERE: do not cache this gradient on the card. */
+    background: conic-gradient(
+      from var(--pricing-neon-angle),
+      var(--pricing-neon-cyan) 0deg,
+      var(--pricing-neon-white) 48deg,
+      var(--pricing-neon-violet) 108deg,
+      var(--pricing-neon-magenta) 158deg,
+      var(--pricing-neon-white) 205deg,
+      var(--pricing-neon-cyan) 278deg,
+      var(--pricing-neon-cyan) 360deg
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    animation:
+      pricingNeonOrbit var(--pricing-neon-speed) linear infinite,
+      pricingNeonPulse 2.6s ease-in-out infinite;
+    animation-play-state: paused;
+    pointer-events: none;
+  }
+  .pricing-card__neon-glow::before {
+    padding: var(--pricing-neon-glow-width);
+  }
+  .pricing-card:hover > .pricing-card__neon,
+  .pricing-card:focus-within > .pricing-card__neon {
+    opacity: 1;
+  }
+  .pricing-card:hover > .pricing-card__neon::before,
+  .pricing-card:hover .pricing-card__neon-glow::before,
+  .pricing-card:focus-within > .pricing-card__neon::before,
+  .pricing-card:focus-within .pricing-card__neon-glow::before {
+    animation-play-state: running;
+  }
+  /* Requested exception: the pricing neon runs on hover/focus even with
+     reduced motion enabled. Other reduced-motion rules stay unchanged. */
+  @media (prefers-reduced-motion: reduce){ [data-reveal], [data-island], [data-marquee]{ animation-duration:.001ms !important; animation-iteration-count:1 !important; } }
+  /* Phát sáng nhẹ khi rê chuột lên mọi thành phần tương tác */
+  button, a[href], [role="button"], [data-tab-pill], [data-lang-pill], [data-filter-chip], [data-island-mini]{ transition: filter .3s cubic-bezier(.22,1,.36,1), text-shadow .3s ease, color .55s ease, background-color .55s ease, border-color .55s ease; }
+  button:hover, a[href]:hover, [role="button"]:hover, [data-island-mini]:hover{ filter: brightness(1.59) saturate(1.1); text-shadow: 0 0 11px rgba(255,255,255,.65), 0 0 26px rgba(255,255,255,.3); }
+  button:active, a[href]:active, [role="button"]:active{ filter: brightness(1.4) saturate(1.06); text-shadow: 0 0 8px rgba(255,255,255,.4); }
+  button:focus-visible, a[href]:focus-visible, [role="button"]:focus-visible{ outline:none; filter: brightness(1.64) saturate(1.12); text-shadow: 0 0 12px rgba(255,255,255,.75); }
+  @media (prefers-reduced-motion: reduce){ button, a[href], [role="button"]{ transition:none; } }
+  [data-hero-card], [data-hero-card]:hover, [data-hero-card]:active{ filter:none !important; text-shadow:none !important; }

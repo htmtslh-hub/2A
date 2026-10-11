@@ -1,0 +1,727 @@
+{
+  "slug": "melt-muse",
+  "version": "1.0.0",
+  "date": "2026-10-09T01:22:43.921Z",
+  "os": "win32",
+  "zipBytes": 161265,
+  "sha256": "4638aed92b64b46b2c35b17514e43dc7658c1b484be204442ed02dd15c785cb5",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#main"
+          },
+          {
+            "label": "Melt Muse home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#top"
+          },
+          {
+            "label": "The edit",
+            "href": "#edit",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#edit"
+          },
+          {
+            "label": "My story",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#story"
+          },
+          {
+            "label": "Let's talk ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#contact"
+          },
+          {
+            "label": "Say hello ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#contact"
+          },
+          {
+            "label": "Explore the edit ↗",
+            "href": "#edit",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#edit"
+          },
+          {
+            "label": "View story",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#story"
+          },
+          {
+            "label": "Say hello",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#contact"
+          },
+          {
+            "label": "Start a conversation ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#contact"
+          },
+          {
+            "label": "Email the studio ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Back to top",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#top"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(23, 23, 22)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "Melt MuseA little studio. A lot of feeli",
+            "colour": "rgb(23, 23, 22)",
+            "background": [
+              252,
+              252,
+              250
+            ],
+            "ratio": 17.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "A little studio. A lot of feeling.",
+            "colour": "rgb(23, 23, 22)",
+            "background": [
+              252,
+              252,
+              250
+            ],
+            "ratio": 17.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "Independent minds. Personal style.",
+            "colour": "rgb(81, 81, 78)",
+            "background": [
+              252,
+              252,
+              250
+            ],
+            "ratio": 7.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button--red",
+            "text": "Explore the edit ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              181,
+              36,
+              44
+            ],
+            "ratio": 6.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "A note from the studio",
+            "colour": "rgb(23, 23, 22)",
+            "background": [
+              238,
+              238,
+              235
+            ],
+            "ratio": 15.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Made for artists, daydreamers and people",
+            "colour": "rgb(81, 81, 78)",
+            "background": [
+              238,
+              238,
+              235
+            ],
+            "ratio": 6.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Damn right.",
+            "colour": "rgb(23, 23, 22)",
+            "background": [
+              238,
+              238,
+              235
+            ],
+            "ratio": 15.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "story__subtitle",
+            "text": "Your kind of beautiful.",
+            "colour": "rgb(149, 28, 37)",
+            "background": [
+              238,
+              238,
+              235
+            ],
+            "ratio": 7.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore the edit ↗",
+          "colour": "rgb(23, 23, 22)",
+          "width": "3px",
+          "ratio": 17.46
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#main"
+          },
+          {
+            "label": "Melt Muse home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#top"
+          },
+          {
+            "label": "The edit",
+            "href": "#edit",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#edit"
+          },
+          {
+            "label": "My story",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#story"
+          },
+          {
+            "label": "Let's talk ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#contact"
+          },
+          {
+            "label": "Say hello ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#contact"
+          },
+          {
+            "label": "Explore the edit ↗",
+            "href": "#edit",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#edit"
+          },
+          {
+            "label": "View story",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#story"
+          },
+          {
+            "label": "Say hello",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#contact"
+          },
+          {
+            "label": "Start a conversation ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#contact"
+          },
+          {
+            "label": "Email the studio ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Back to top",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/melt-muse/index.html#top"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(23, 23, 22)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "Melt MuseA little studio. A lot of feeli",
+            "colour": "rgb(23, 23, 22)",
+            "background": [
+              252,
+              252,
+              250
+            ],
+            "ratio": 17.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "A little studio. A lot of feeling.",
+            "colour": "rgb(23, 23, 22)",
+            "background": [
+              252,
+              252,
+              250
+            ],
+            "ratio": 17.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "Independent minds. Personal style.",
+            "colour": "rgb(81, 81, 78)",
+            "background": [
+              252,
+              252,
+              250
+            ],
+            "ratio": 7.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button--red",
+            "text": "Explore the edit ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              181,
+              36,
+              44
+            ],
+            "ratio": 6.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "A note from the studio",
+            "colour": "rgb(23, 23, 22)",
+            "background": [
+              238,
+              238,
+              235
+            ],
+            "ratio": 15.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Made for artists, daydreamers and people",
+            "colour": "rgb(81, 81, 78)",
+            "background": [
+              238,
+              238,
+              235
+            ],
+            "ratio": 6.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Damn right.",
+            "colour": "rgb(23, 23, 22)",
+            "background": [
+              238,
+              238,
+              235
+            ],
+            "ratio": 15.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "story__subtitle",
+            "text": "Your kind of beautiful.",
+            "colour": "rgb(149, 28, 37)",
+            "background": [
+              238,
+              238,
+              235
+            ],
+            "ratio": 7.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore the edit ↗",
+          "colour": "rgb(23, 23, 22)",
+          "width": "3px",
+          "ratio": 17.46
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "melt-muse/assets/css/style.css",
+    "melt-muse/assets/img/damn-right.webp",
+    "melt-muse/assets/img/heart-pose.webp",
+    "melt-muse/assets/img/soft-focus.webp",
+    "melt-muse/assets/js/main.js",
+    "melt-muse/CUSTOMISE.md",
+    "melt-muse/index.html",
+    "melt-muse/LICENCE.txt",
+    "melt-muse/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/damn-right.webp",
+    "assets/img/heart-pose.webp",
+    "assets/img/soft-focus.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

@@ -1,0 +1,1704 @@
+{
+  "slug": "ember-arcade",
+  "version": "1.1.0",
+  "date": "2026-10-09T06:47:43.276Z",
+  "os": "win32",
+  "zipBytes": 587583,
+  "sha256": "4e8f77abbd5341e921bf24801979ce34a0424337b5539b1272d9fe37b792f564",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#main"
+          },
+          {
+            "label": "Ember Arcade home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#top"
+          },
+          {
+            "label": "Dashboard",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#main"
+          },
+          {
+            "label": "Game library",
+            "href": "#library",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#library"
+          },
+          {
+            "label": "Playtime statistics",
+            "href": "#statistics",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#statistics"
+          },
+          {
+            "label": "Recent activity",
+            "href": "#activity",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#activity"
+          },
+          {
+            "label": "Demo friends",
+            "href": "#friends",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#friends"
+          },
+          {
+            "label": "About this demo",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Email the studio",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "EMBERARCADEEmber Arcade",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#top"
+          },
+          {
+            "label": "View recent activity",
+            "href": "#activity",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#activity"
+          },
+          {
+            "label": "Alex, demo profile",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Explore game",
+            "href": "#game-rift",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#game-rift"
+          },
+          {
+            "label": "MoonboundA world worth getting lost in",
+            "href": "#game-moon",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#game-moon"
+          },
+          {
+            "label": "AshfallAdventure · Story rich",
+            "href": "#game-ash",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#game-ash"
+          },
+          {
+            "label": "Rift RunnerExplore the frontier",
+            "href": "#game-rift",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#game-rift"
+          },
+          {
+            "label": "Read about Moonbound",
+            "href": "#moon-info",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#moon-info"
+          },
+          {
+            "label": "Read about Ashfall",
+            "href": "#ash-info",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#ash-info"
+          },
+          {
+            "label": "Demo data",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "View Rift Runner information",
+            "href": "#game-rift",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#game-rift"
+          },
+          {
+            "label": "Back to top",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#top"
+          },
+          {
+            "label": "Alex, demo profile",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Mika, fictional friend",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Jules, fictional friend",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Rae, fictional friend",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Theo, fictional friend",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Nora, fictional friend",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "About demo friends",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 730,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(46, 19, 24)",
+            "background": [
+              255,
+              233,
+              205
+            ],
+            "ratio": 14.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Dashboard",
+            "colour": "rgb(255, 182, 167)",
+            "background": [
+              98,
+              43,
+              50
+            ],
+            "ratio": 6.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Library",
+            "colour": "rgb(237, 208, 205)",
+            "background": [
+              46,
+              19,
+              24
+            ],
+            "ratio": 11.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Contact",
+            "colour": "rgb(237, 208, 205)",
+            "background": [
+              89,
+              37,
+              45
+            ],
+            "ratio": 8.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "header-brand",
+            "text": "EMBERARCADEEmber Arcade",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              101,
+              44,
+              52
+            ],
+            "ratio": 9.79,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "ARCADE",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              101,
+              44,
+              52
+            ],
+            "ratio": 9.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "visually-hidden",
+            "text": "Search the demo game library",
+            "colour": "rgb(237, 208, 205)",
+            "background": [
+              76,
+              32,
+              40
+            ],
+            "ratio": 9.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "ACTION / EXPLORATION / HIGH STAKES",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              130,
+              53,
+              41
+            ],
+            "ratio": 7.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Rift Runner",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              137,
+              50,
+              50
+            ],
+            "ratio": 7.49,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Runner",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              140,
+              53,
+              48
+            ],
+            "ratio": 7.21,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Your next adventurestarts here.",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              123,
+              55,
+              44
+            ],
+            "ratio": 7.93,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button button--cream",
+            "text": "Explore game",
+            "colour": "rgb(46, 19, 24)",
+            "background": [
+              255,
+              233,
+              205
+            ],
+            "ratio": 14.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__label",
+            "text": "Original world · Demo library",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              106,
+              57,
+              49
+            ],
+            "ratio": 8.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Moonbound",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              68,
+              50,
+              47
+            ],
+            "ratio": 11.03,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "A world worth getting lost in",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              94,
+              78,
+              71
+            ],
+            "ratio": 7.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Ashfall",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              66,
+              38,
+              29
+            ],
+            "ratio": 12.59,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Adventure · Story rich",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              96,
+              54,
+              44
+            ],
+            "ratio": 9.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Rift Runner",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              65,
+              42,
+              39
+            ],
+            "ratio": 12.13,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Explore the frontier",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              97,
+              54,
+              42
+            ],
+            "ratio": 9.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "subtle",
+            "text": "Made for your next escape",
+            "colour": "rgb(237, 208, 205)",
+            "background": [
+              101,
+              44,
+              52
+            ],
+            "ratio": 7.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "genre",
+            "text": "Exploration",
+            "colour": "rgb(255, 233, 205)",
+            "background": [
+              32,
+              18,
+              21
+            ],
+            "ratio": 15.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Moonbound",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              67,
+              62,
+              66
+            ],
+            "ratio": 9.58,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Follow the moon.Find your own way.",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              38,
+              25,
+              24
+            ],
+            "ratio": 15.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Ashfall",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              98,
+              61,
+              44
+            ],
+            "ratio": 8.65,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Some storiesare written in fire.",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              52,
+              32,
+              28
+            ],
+            "ratio": 14.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Rift Runner",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              61,
+              25,
+              31
+            ],
+            "ratio": 14.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Last explored yesterday",
+            "colour": "rgb(237, 208, 205)",
+            "background": [
+              61,
+              25,
+              31
+            ],
+            "ratio": 10.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "32.5h",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              46,
+              19,
+              24
+            ],
+            "ratio": 15.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "avatar avatar--alex",
+            "text": "AL",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              227,
+              215,
+              191
+            ],
+            "ratio": 11.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "MI",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              180,
+              160,
+              233
+            ],
+            "ratio": 7.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "JU",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              244,
+              177,
+              139
+            ],
+            "ratio": 8.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "RA",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              156,
+              216,
+              181
+            ],
+            "ratio": 9.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "TH",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              244,
+              212,
+              134
+            ],
+            "ratio": 11.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "NO",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              239,
+              157,
+              175
+            ],
+            "ratio": 7.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore game",
+          "colour": "rgb(255, 233, 205)",
+          "width": "3px",
+          "ratio": 4.64
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#main"
+          },
+          {
+            "label": "Ember Arcade home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#top"
+          },
+          {
+            "label": "Dashboard",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#main"
+          },
+          {
+            "label": "Game library",
+            "href": "#library",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#library"
+          },
+          {
+            "label": "Playtime statistics",
+            "href": "#statistics",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#statistics"
+          },
+          {
+            "label": "Recent activity",
+            "href": "#activity",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#activity"
+          },
+          {
+            "label": "Demo friends",
+            "href": "#friends",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#friends"
+          },
+          {
+            "label": "About this demo",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Email the studio",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "EMBERARCADEEmber Arcade",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#top"
+          },
+          {
+            "label": "View recent activity",
+            "href": "#activity",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#activity"
+          },
+          {
+            "label": "Alex, demo profile",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Explore game",
+            "href": "#game-rift",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#game-rift"
+          },
+          {
+            "label": "MoonboundA world worth getting lost in",
+            "href": "#game-moon",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#game-moon"
+          },
+          {
+            "label": "AshfallAdventure · Story rich",
+            "href": "#game-ash",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#game-ash"
+          },
+          {
+            "label": "Rift RunnerExplore the frontier",
+            "href": "#game-rift",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#game-rift"
+          },
+          {
+            "label": "Read about Moonbound",
+            "href": "#moon-info",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#moon-info"
+          },
+          {
+            "label": "Read about Ashfall",
+            "href": "#ash-info",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#ash-info"
+          },
+          {
+            "label": "Demo data",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "View Rift Runner information",
+            "href": "#game-rift",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#game-rift"
+          },
+          {
+            "label": "Back to top",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#top"
+          },
+          {
+            "label": "Alex, demo profile",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Mika, fictional friend",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Jules, fictional friend",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Rae, fictional friend",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Theo, fictional friend",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "Nora, fictional friend",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          },
+          {
+            "label": "About demo friends",
+            "href": "#customise",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/ember-arcade/index.html#customise"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 730,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(46, 19, 24)",
+            "background": [
+              255,
+              233,
+              205
+            ],
+            "ratio": 14.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Dashboard",
+            "colour": "rgb(255, 182, 167)",
+            "background": [
+              98,
+              43,
+              50
+            ],
+            "ratio": 6.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Library",
+            "colour": "rgb(237, 208, 205)",
+            "background": [
+              46,
+              19,
+              24
+            ],
+            "ratio": 11.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Contact",
+            "colour": "rgb(237, 208, 205)",
+            "background": [
+              89,
+              37,
+              45
+            ],
+            "ratio": 8.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "header-brand",
+            "text": "EMBERARCADEEmber Arcade",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              101,
+              44,
+              52
+            ],
+            "ratio": 9.79,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "ARCADE",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              101,
+              44,
+              52
+            ],
+            "ratio": 9.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "visually-hidden",
+            "text": "Search the demo game library",
+            "colour": "rgb(237, 208, 205)",
+            "background": [
+              76,
+              32,
+              40
+            ],
+            "ratio": 9.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "ACTION / EXPLORATION / HIGH STAKES",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              130,
+              54,
+              42
+            ],
+            "ratio": 7.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Rift Runner",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              128,
+              53,
+              54
+            ],
+            "ratio": 7.75,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Runner",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              140,
+              54,
+              48
+            ],
+            "ratio": 7.16,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Your next adventurestarts here.",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              126,
+              55,
+              45
+            ],
+            "ratio": 7.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button button--cream",
+            "text": "Explore game",
+            "colour": "rgb(46, 19, 24)",
+            "background": [
+              255,
+              233,
+              205
+            ],
+            "ratio": 14.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__label",
+            "text": "Original world · Demo library",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              103,
+              58,
+              60
+            ],
+            "ratio": 8.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Moonbound",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              69,
+              51,
+              50
+            ],
+            "ratio": 10.85,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "A world worth getting lost in",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              103,
+              78,
+              64
+            ],
+            "ratio": 7.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Ashfall",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              68,
+              38,
+              31
+            ],
+            "ratio": 12.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Adventure · Story rich",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              97,
+              55,
+              39
+            ],
+            "ratio": 9.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Rift Runner",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              68,
+              41,
+              37
+            ],
+            "ratio": 12.09,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Explore the frontier",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              102,
+              56,
+              43
+            ],
+            "ratio": 8.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "subtle",
+            "text": "Made for your next escape",
+            "colour": "rgb(237, 208, 205)",
+            "background": [
+              101,
+              44,
+              52
+            ],
+            "ratio": 7.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "genre",
+            "text": "Exploration",
+            "colour": "rgb(255, 233, 205)",
+            "background": [
+              32,
+              18,
+              21
+            ],
+            "ratio": 15.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Moonbound",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              70,
+              65,
+              69
+            ],
+            "ratio": 9.14,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Follow the moon.Find your own way.",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              37,
+              26,
+              22
+            ],
+            "ratio": 15.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Ashfall",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              99,
+              63,
+              45
+            ],
+            "ratio": 8.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Some storiesare written in fire.",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              54,
+              33,
+              30
+            ],
+            "ratio": 13.8,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Rift Runner",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              61,
+              25,
+              31
+            ],
+            "ratio": 14.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Last explored yesterday",
+            "colour": "rgb(237, 208, 205)",
+            "background": [
+              61,
+              25,
+              31
+            ],
+            "ratio": 10.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "32.5h",
+            "colour": "rgb(255, 243, 231)",
+            "background": [
+              46,
+              19,
+              24
+            ],
+            "ratio": 15.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "avatar avatar--alex",
+            "text": "AL",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              227,
+              215,
+              191
+            ],
+            "ratio": 11.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "MI",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              180,
+              160,
+              233
+            ],
+            "ratio": 7.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "JU",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              244,
+              177,
+              139
+            ],
+            "ratio": 8.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "RA",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              156,
+              216,
+              181
+            ],
+            "ratio": 9.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "TH",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              244,
+              212,
+              134
+            ],
+            "ratio": 11.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "NO",
+            "colour": "rgb(53, 24, 31)",
+            "background": [
+              239,
+              157,
+              175
+            ],
+            "ratio": 7.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore game",
+          "colour": "rgb(255, 233, 205)",
+          "width": "3px",
+          "ratio": 4.64
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "ember-arcade/assets/css/style.css",
+    "ember-arcade/assets/img/ash.webp",
+    "ember-arcade/assets/img/moon.webp",
+    "ember-arcade/assets/img/rift.webp",
+    "ember-arcade/assets/js/main.js",
+    "ember-arcade/CUSTOMISE.md",
+    "ember-arcade/index.html",
+    "ember-arcade/LICENCE.txt",
+    "ember-arcade/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/ash.webp",
+    "assets/img/moon.webp",
+    "assets/img/rift.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q07/chromium: tràn khi zoom 200% {\"width\":720,\"scrollWidth\":730,\"clientWidth\":720}",
+    "Q07/firefox: tràn khi zoom 200% {\"width\":720,\"scrollWidth\":730,\"clientWidth\":720}"
+  ]
+}

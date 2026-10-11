@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-11T07:51:00.547Z",
+  "mockOnly": true,
+  "results": [
+    {
+      "name": "shirtline checkout responsive and accessibility",
+      "status": "PASS"
+    },
+    {
+      "name": "novatrend checkout responsive and accessibility",
+      "status": "PASS"
+    },
+    {
+      "name": "diginest checkout responsive and accessibility",
+      "status": "PASS"
+    },
+    {
+      "name": "soniq checkout responsive and accessibility",
+      "status": "PASS"
+    },
+    {
+      "name": "astra-interior checkout responsive and accessibility",
+      "status": "PASS"
+    },
+    {
+      "name": "vybe checkout responsive and accessibility",
+      "status": "PASS"
+    },
+    {
+      "name": "solenne checkout responsive and accessibility",
+      "status": "PASS"
+    },
+    {
+      "name": "auralis checkout responsive and accessibility",
+      "status": "PASS"
+    },
+    {
+      "name": "aeris checkout responsive and accessibility",
+      "status": "PASS"
+    },
+    {
+      "name": "watchroom checkout responsive and accessibility",
+      "status": "PASS"
+    },
+    {
+      "name": "velora checkout responsive and accessibility",
+      "status": "PASS"
+    },
+    {
+      "name": "malformed and forged persisted carts",
+      "status": "PASS"
+    },
+    {
+      "name": "blocked localStorage retains in-memory bag",
+      "status": "PASS"
+    },
+    {
+      "name": "file protocol offline bag and preview",
+      "status": "PASS"
+    },
+    {
+      "name": "quantity keyboard focus, remove and shipping thresholds",
+      "status": "PASS"
+    },
+    {
+      "name": "shirt sizes persist as separate lines",
+      "status": "PASS"
+    },
+    {
+      "name": "shirtline mobile menu opens, escapes, selects and resizes",
+      "status": "PASS"
+    },
+    {
+      "name": "network, invalid acknowledgement, duplicate submits, timeout and privacy",
+      "status": "PASS"
+    },
+    {
+      "name": "unsafe online redirect rejected and bag preserved",
+      "status": "PASS"
+    }
+  ]
+}

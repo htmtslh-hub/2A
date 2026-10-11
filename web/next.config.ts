@@ -50,7 +50,7 @@ const nextConfig: NextConfig = {
      không có file nào — khách trả tiền xong bấm link tải là 404.
      Dòng dưới bắt Next mang theo cả thư mục. */
   outputFileTracingIncludes: {
-    '/api/download': ['./product/giao-dien-web/*/*.zip'],
+    '/api/download': ['./product/giao-dien-web/*/*.zip', './product/agent/lingoglass/lingoglass.zip'],
   },
 };
 

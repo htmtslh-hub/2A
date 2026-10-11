@@ -1,18 +1,18 @@
 /* Bảng giá dùng cho thanh toán.
 
-   Hai thị trường, hai cổng, hai loại tiền:
-   - Khách Việt Nam  -> PayOS,  thu VNĐ, giá theo mục `tiers` của I18N.vi
-   - Khách quốc tế   -> Paddle, thu USD, giá theo mục `tiers` của I18N.en
+   New purchases use Paddle and USD in every display language.
+   VND/PayOS definitions remain for historical orders and webhook reconciliation.
 
    Số tiền luôn tính bằng ĐƠN VỊ NHỎ NHẤT của loại tiền:
-   VNĐ là đồng (1_900_000), USD là cent (7_900 = $79). Cả PayOS lẫn Paddle đều
+   VNĐ là đồng, USD là cent (2_000 = $20). Cả PayOS lẫn Paddle đều
    nhận số nguyên theo quy ước này. */
 import { REAL_TEMPLATES, templateSlug } from './real-templates';
+import { isMembershipPlan, MEMBERSHIP_PRICES } from './membership-policy';
 
 export type Lang = 'vi' | 'en' | 'zh';
 export type Currency = 'VND' | 'USD';
 export type Provider = 'PAYOS' | 'PADDLE';
-export type Kind = 'TEMPLATE' | 'BUNDLE';
+export type Kind = 'TEMPLATE' | 'BUNDLE' | 'PRO' | 'ULTRA';
 
 /* ---------- giá ---------- */
 
@@ -21,9 +21,9 @@ export const PRICE_VND = {
   bundle: 9_900_000,
 };
 
-/** Cent. Khớp với bảng giá tiếng Anh trong thiết kế: $79 / $399. */
+/** Cent. All individual templates share the $20 price. */
 export const PRICE_USD = {
-  single: 7_900,
+  single: 2_000,
   bundle: 39_900,
 };
 
@@ -32,9 +32,9 @@ export const TEMPLATE_PRICE_OVERRIDE: Record<string, Partial<Record<Currency, nu
 
 /* ---------- chọn cổng theo thị trường ---------- */
 
-/** Khách xem tiếng Việt trả bằng VNĐ qua PayOS; còn lại trả USD qua Paddle. */
-export function providerForLang(lang: Lang): Provider {
-  return lang === 'vi' ? 'PAYOS' : 'PADDLE';
+/** Display language does not change the payment currency. */
+export function providerForLang(_lang: Lang): Provider {
+  return 'PADDLE';
 }
 
 export function currencyForProvider(provider: Provider): Currency {
@@ -65,6 +65,10 @@ export function templateName(id: string, lang: Lang = 'vi'): string {
 }
 
 export function priceOf(kind: Kind, currency: Currency, templateId?: string | null): number {
+  if (isMembershipPlan(kind)) {
+    if (currency !== 'USD') throw new Error('Account upgrades are USD-only.');
+    return MEMBERSHIP_PRICES[kind];
+  }
   if (kind === 'TEMPLATE' && templateId) {
     const override = TEMPLATE_PRICE_OVERRIDE[templateId]?.[currency];
     if (override) return override;
@@ -79,12 +83,14 @@ export function formatMoney(amount: number, currency: Currency, lang: Lang = 'vi
   return new Intl.NumberFormat(lang === 'vi' ? 'vi-VN' : 'en-US', {
     style: 'currency',
     currency: 'USD',
-    // Giá chẵn đô thì hiện "$79" như bảng giá, không phải "$79.00".
+    // Giá chẵn đô thì hiện "$20", không phải "$20.00".
     minimumFractionDigits: amount % 100 === 0 ? 0 : 2,
   }).format(amount / 100);
 }
 
 export function productName(kind: Kind, templateId: string | null | undefined, lang: Lang): string {
+  if (kind === 'PRO') return { vi: 'Nâng cấp Pro · 1 tháng', en: 'Pro upgrade · 1 month', zh: 'Pro 升级 · 1个月' }[lang];
+  if (kind === 'ULTRA') return { vi: 'Nâng cấp Ultra · 1 năm', en: 'Ultra upgrade · 1 year', zh: 'Ultra 升级 · 1年' }[lang];
   if (kind === 'BUNDLE') {
     return { vi: 'Trọn bộ thư viện', en: 'Full library', zh: '全部模板库' }[lang];
   }

@@ -22,9 +22,10 @@ function realClient(): PrismaClient {
   }
 
   const client = new PrismaClient({ adapter: new PrismaPg({ connectionString }) });
-  // Trong dev, Next.js nạp lại module liên tục; giữ một instance để không mở
-  // hàng loạt connection pool.
-  if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = client;
+  // The lazy Proxy calls realClient for every property, so production must
+  // also reuse its instance. A dashboard reads several models per request;
+  // allocating a fresh pg pool for each one exhausts database connections.
+  globalForPrisma.prisma = client;
   return client;
 }
 

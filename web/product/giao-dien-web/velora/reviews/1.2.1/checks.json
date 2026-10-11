@@ -1,0 +1,747 @@
+{
+  "slug": "velora",
+  "version": "1.2.1",
+  "date": "2026-10-10T00:58:55.610Z",
+  "os": "win32",
+  "zipBytes": 20439,
+  "sha256": "c39ce685c2c24a4d5aa772f53022b5b9cb34abead16f41d6a8fb04b4d2fea6f1",
+  "exception": false,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#main"
+          },
+          {
+            "label": "Velora home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#main"
+          },
+          {
+            "label": "Bikes",
+            "href": "#configure",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#configure"
+          },
+          {
+            "label": "The details",
+            "href": "#details",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#details"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#contact"
+          },
+          {
+            "label": "Find your ride ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#collection"
+          },
+          {
+            "label": "Ask about Metro →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#contact"
+          },
+          {
+            "label": "Ask about Onyx →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#contact"
+          },
+          {
+            "label": "Ask about Loop →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#contact"
+          },
+          {
+            "label": "Enquire about this bike ↗",
+            "href": "mailto:hello@example.com?subject=Velora%20Metro%20enquiry&body=I%20would%20like%20to%20ask%20about%3A%20Metro%20%2F%20Chalk%20%2F%20Three-spoke%20%2F%20Slim%20%2F%20Flat.%20Sample%20displayed%20price%3A%20%242%2C850",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Velora%20Metro%20enquiry&body=I%20would%20like%20to%20ask%20about%3A%20Metro%20%2F%20Chalk%20%2F%20Three-spoke%20%2F%20Slim%20%2F%20Flat.%20Sample%20displayed%20price%3A%20%242%2C850"
+          },
+          {
+            "label": "Explore Metro",
+            "href": "#configure",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#configure"
+          },
+          {
+            "label": "Explore Onyx",
+            "href": "#configure",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#configure"
+          },
+          {
+            "label": "Explore Loop",
+            "href": "#configure",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#configure"
+          },
+          {
+            "label": "Email the showroom ↗",
+            "href": "mailto:hello@example.com?subject=Velora%20bike%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Velora%20bike%20enquiry"
+          },
+          {
+            "label": "velora",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 760,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(37, 39, 51)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 14.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "v.velora",
+            "colour": "rgb(37, 39, 51)",
+            "background": [
+              254,
+              254,
+              254
+            ],
+            "ratio": 14.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Bikes",
+            "colour": "rgb(37, 39, 51)",
+            "background": [
+              254,
+              254,
+              254
+            ],
+            "ratio": 14.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A different way to move through the city",
+            "colour": "rgb(94, 96, 108)",
+            "background": [
+              254,
+              254,
+              254
+            ],
+            "ratio": 6.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Metro",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              69,
+              73,
+              104
+            ],
+            "ratio": 8.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A little more freedom, every day.",
+            "colour": "rgb(226, 228, 239)",
+            "background": [
+              69,
+              73,
+              104
+            ],
+            "ratio": 6.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "View bike ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              206,
+              62,
+              77
+            ],
+            "ratio": 4.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Find a ride that feels like you.",
+            "colour": "rgb(94, 96, 108)",
+            "background": [
+              242,
+              243,
+              245
+            ],
+            "ratio": 5.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Let's talk bicycles.",
+            "colour": "rgb(37, 39, 51)",
+            "background": [
+              242,
+              243,
+              245
+            ],
+            "ratio": 13.35,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "VELORA",
+          "colour": "rgb(206, 62, 77)",
+          "width": "3px",
+          "ratio": 4.71
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#main"
+          },
+          {
+            "label": "Velora home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#main"
+          },
+          {
+            "label": "Bikes",
+            "href": "#configure",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#configure"
+          },
+          {
+            "label": "The details",
+            "href": "#details",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#details"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#contact"
+          },
+          {
+            "label": "Find your ride ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#collection"
+          },
+          {
+            "label": "Ask about Metro →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#contact"
+          },
+          {
+            "label": "Ask about Onyx →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#contact"
+          },
+          {
+            "label": "Ask about Loop →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#contact"
+          },
+          {
+            "label": "Enquire about this bike ↗",
+            "href": "mailto:hello@example.com?subject=Velora%20Metro%20enquiry&body=I%20would%20like%20to%20ask%20about%3A%20Metro%20%2F%20Chalk%20%2F%20Three-spoke%20%2F%20Slim%20%2F%20Flat.%20Sample%20displayed%20price%3A%20%242%2C850",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Velora%20Metro%20enquiry&body=I%20would%20like%20to%20ask%20about%3A%20Metro%20%2F%20Chalk%20%2F%20Three-spoke%20%2F%20Slim%20%2F%20Flat.%20Sample%20displayed%20price%3A%20%242%2C850"
+          },
+          {
+            "label": "Explore Metro",
+            "href": "#configure",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#configure"
+          },
+          {
+            "label": "Explore Onyx",
+            "href": "#configure",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#configure"
+          },
+          {
+            "label": "Explore Loop",
+            "href": "#configure",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#configure"
+          },
+          {
+            "label": "Email the showroom ↗",
+            "href": "mailto:hello@example.com?subject=Velora%20bike%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Velora%20bike%20enquiry"
+          },
+          {
+            "label": "velora",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/velora/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 760,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(37, 39, 51)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 14.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "v.velora",
+            "colour": "rgb(37, 39, 51)",
+            "background": [
+              254,
+              254,
+              254
+            ],
+            "ratio": 14.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Bikes",
+            "colour": "rgb(37, 39, 51)",
+            "background": [
+              254,
+              254,
+              254
+            ],
+            "ratio": 14.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A different way to move through the city",
+            "colour": "rgb(94, 96, 108)",
+            "background": [
+              254,
+              254,
+              254
+            ],
+            "ratio": 6.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Metro",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              69,
+              73,
+              104
+            ],
+            "ratio": 8.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A little more freedom, every day.",
+            "colour": "rgb(226, 228, 239)",
+            "background": [
+              69,
+              73,
+              104
+            ],
+            "ratio": 6.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "View bike ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              206,
+              62,
+              77
+            ],
+            "ratio": 4.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Find a ride that feels like you.",
+            "colour": "rgb(94, 96, 108)",
+            "background": [
+              242,
+              243,
+              245
+            ],
+            "ratio": 5.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Let's talk bicycles.",
+            "colour": "rgb(37, 39, 51)",
+            "background": [
+              242,
+              243,
+              245
+            ],
+            "ratio": 13.35,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "VELORA",
+          "colour": "rgb(206, 62, 77)",
+          "width": "3px",
+          "ratio": 4.71
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "velora/assets/css/style.css",
+    "velora/assets/js/main.js",
+    "velora/CUSTOMISE.md",
+    "velora/index.html",
+    "velora/LICENCE.txt",
+    "velora/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

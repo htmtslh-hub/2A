@@ -1,0 +1,40 @@
+{
+  "base": "http://127.0.0.1:4341",
+  "version": "153.0.8010.12",
+  "cases": [
+    {
+      "locale": "vi-VN",
+      "detailImages": [
+        {
+          "src": "http://127.0.0.1:4341/previews/velora.webp?v=1.2.1",
+          "ok": true
+        }
+      ],
+      "libraryLinks": 1,
+      "errors": []
+    },
+    {
+      "locale": "en-US",
+      "detailImages": [
+        {
+          "src": "http://127.0.0.1:4341/previews/velora.webp?v=1.2.1",
+          "ok": true
+        }
+      ],
+      "libraryLinks": 1,
+      "errors": []
+    },
+    {
+      "locale": "zh-CN",
+      "detailImages": [
+        {
+          "src": "http://127.0.0.1:4341/previews/velora.webp?v=1.2.1",
+          "ok": true
+        }
+      ],
+      "libraryLinks": 1,
+      "errors": []
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,40 @@
+{
+  "base": "https://forgezone.store",
+  "version": "153.0.8010.12",
+  "cases": [
+    {
+      "locale": "vi-VN",
+      "detailImages": [
+        {
+          "src": "https://forgezone.store/previews/laila.webp?v=1.0.0",
+          "ok": true
+        }
+      ],
+      "libraryLinks": 1,
+      "errors": []
+    },
+    {
+      "locale": "en-US",
+      "detailImages": [
+        {
+          "src": "https://forgezone.store/previews/laila.webp?v=1.0.0",
+          "ok": true
+        }
+      ],
+      "libraryLinks": 1,
+      "errors": []
+    },
+    {
+      "locale": "zh-CN",
+      "detailImages": [
+        {
+          "src": "https://forgezone.store/previews/laila.webp?v=1.0.0",
+          "ok": true
+        }
+      ],
+      "libraryLinks": 1,
+      "errors": []
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "ForgeFrame"
+  short_description: "Từ ảnh/video tới web, kiểm tra rồi push và deploy"
+  default_prompt: "Dùng $forgeframe tạo sản phẩm web từ ảnh/video đính kèm, kiểm độ giống trên 95%, animation và scroll trước khi đóng gói, push và deploy vào dự án đã cấu hình."
+policy:
+  allow_implicit_invocation: true

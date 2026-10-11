@@ -1,0 +1,15 @@
+{
+  "scope": "Only Music App additions; existing pending five-category mapping kept, music classified entertainment locally; production legacy category SaaS unchanged.",
+  "evidence": [
+    {
+      "file": "web/src/lib/real-templates.ts",
+      "priorSha256": "c38fec7edd44dabad2cd39a6a46f6a758a9bbd966ddb1d4bc304e9be0770de28",
+      "preservedExistingContent": true
+    },
+    {
+      "file": "web/src/lib/template-guides.ts",
+      "priorSha256": "1c783c09795ab9681323e62a5b4d485cb4ebf93bd2debb13eb88538f8f02af39",
+      "preservedExistingContent": true
+    }
+  ]
+}

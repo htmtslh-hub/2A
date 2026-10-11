@@ -6,6 +6,8 @@ import Providers from './providers';
 import { readLang } from '@/lib/server-lang';
 import { HTML_LANG } from '@/lib/lang';
 import type { LangCode } from '@/generated/data';
+import { Suspense } from 'react';
+import TrafficTracker from '@/components/TrafficTracker';
 
 // Chỉ nạp đúng những weight và bảng chữ trang thực sự dùng. Mỗi weight ×
 // mỗi subset là một file .woff2 riêng, nên thừa một dòng ở đây là thừa vài
@@ -83,6 +85,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang={lang} data-scroll-behavior="smooth" className={`${display.variable} ${body.variable}`}>
       <body>
         <Providers>{children}</Providers>
+        {process.env.ANALYTICS_ENABLED === 'true' && <Suspense fallback={null}><TrafficTracker /></Suspense>}
       </body>
     </html>
   );

@@ -1,0 +1,546 @@
+{
+  "chromium": {
+    "version": "153.0.8010.12",
+    "errors": [],
+    "frames": [
+      {
+        "before": {
+          "opacity": "0.450346",
+          "transform": "matrix(0.880166, 0, 0, 0.880166, 0, 0)"
+        },
+        "after": {
+          "opacity": "0.350094",
+          "transform": "matrix(0.97817, -0.207808, 0.207808, 0.97817, -24.3353, 18.2525)"
+        },
+        "states": [
+          "running",
+          "running"
+        ],
+        "fallbackOpacity": ""
+      },
+      {
+        "before": {
+          "opacity": "0.704104",
+          "transform": "matrix(1.00197, 0, 0, 1.00197, 0, 0)"
+        },
+        "after": {
+          "opacity": "0.422167",
+          "transform": "matrix(0.991874, -0.127223, 0.127223, 0.991874, -14.4643, 11.6719)"
+        },
+        "states": [
+          "running",
+          "running"
+        ],
+        "fallbackOpacity": ""
+      }
+    ],
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "paused": {
+      "before": {
+        "opacity": "0.72457",
+        "transform": "matrix(1.01179, 0, 0, 1.01179, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.429234",
+        "transform": "matrix(0.992862, -0.119267, 0.119267, 0.992862, -13.4964, 11.0266)"
+      },
+      "states": [
+        "paused",
+        "paused"
+      ],
+      "fallbackOpacity": ""
+    },
+    "pausedLater": {
+      "before": {
+        "opacity": "0.72457",
+        "transform": "matrix(1.01179, 0, 0, 1.01179, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.429234",
+        "transform": "matrix(0.992862, -0.119267, 0.119267, 0.992862, -13.4964, 11.0266)"
+      },
+      "states": [
+        "paused",
+        "paused"
+      ],
+      "fallbackOpacity": ""
+    },
+    "resumed": {
+      "before": {
+        "opacity": "0.72457",
+        "transform": "matrix(1.01179, 0, 0, 1.01179, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.429234",
+        "transform": "matrix(0.992862, -0.119267, 0.119267, 0.992862, -13.4964, 11.0266)"
+      },
+      "states": [
+        "running",
+        "running"
+      ],
+      "fallbackOpacity": ""
+    },
+    "carousel": "ONYX GMT",
+    "fallbackStart": {
+      "before": {
+        "opacity": "0.65",
+        "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": ""
+    },
+    "fallbackMid": {
+      "before": {
+        "opacity": "0.760061",
+        "transform": "matrix(1.02883, 0, 0, 1.02883, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": "0.7600606980376958"
+    },
+    "fallbackEnd": {
+      "before": {
+        "opacity": "0.45",
+        "transform": "matrix(0.88, 0, 0, 0.88, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": "0.45000000000000007"
+    }
+  },
+  "firefox": {
+    "version": "155.0",
+    "errors": [],
+    "frames": [
+      {
+        "before": {
+          "opacity": "0.467749",
+          "transform": "matrix(0.88852, 0, 0, 0.88852, 0, 0)"
+        },
+        "after": {
+          "opacity": "0.354728",
+          "transform": "matrix(0.979249, -0.202662, 0.202662, 0.979249, -23.7011, 17.8298)"
+        },
+        "states": [
+          "running",
+          "running"
+        ],
+        "fallbackOpacity": ""
+      },
+      {
+        "before": {
+          "opacity": "0.798972",
+          "transform": "matrix(1.04751, 0, 0, 1.04751, 0, 0)"
+        },
+        "after": {
+          "opacity": "0.458697",
+          "transform": "matrix(0.996293, -0.0860204, 0.0860204, 0.996293, -9.46141, 8.33666)"
+        },
+        "states": [
+          "running",
+          "running"
+        ],
+        "fallbackOpacity": ""
+      }
+    ],
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "paused": {
+      "before": {
+        "opacity": "0.862846",
+        "transform": "matrix(1.07817, 0, 0, 1.07817, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.492091",
+        "transform": "matrix(0.998837, -0.0482236, 0.0482236, 0.998837, -4.88769, 5.28752)"
+      },
+      "states": [
+        "paused",
+        "paused"
+      ],
+      "fallbackOpacity": ""
+    },
+    "pausedLater": {
+      "before": {
+        "opacity": "0.865048",
+        "transform": "matrix(1.07922, 0, 0, 1.07922, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.493476",
+        "transform": "matrix(0.998911, -0.0466544, 0.0466544, 0.998911, -4.69804, 5.16108)"
+      },
+      "states": [
+        "paused",
+        "paused"
+      ],
+      "fallbackOpacity": ""
+    },
+    "resumed": {
+      "before": {
+        "opacity": "0.865092",
+        "transform": "matrix(1.07924, 0, 0, 1.07924, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.493495",
+        "transform": "matrix(0.998912, -0.046633, 0.046633, 0.998912, -4.69545, 5.15936)"
+      },
+      "states": [
+        "running",
+        "running"
+      ],
+      "fallbackOpacity": ""
+    },
+    "carousel": "ONYX GMT",
+    "fallbackStart": {
+      "before": {
+        "opacity": "0.65",
+        "transform": "matrix(0.94, 0, 0, 0.94, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": ""
+    },
+    "fallbackMid": {
+      "before": {
+        "opacity": "0.756019",
+        "transform": "matrix(1.02689, 0, 0, 1.02689, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": "0.7560189312519556"
+    },
+    "fallbackEnd": {
+      "before": {
+        "opacity": "0.45",
+        "transform": "matrix(0.88, 0, 0, 0.88, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": "0.45000000000000007"
+    }
+  },
+  "edge": {
+    "version": "154.0.4258.62",
+    "errors": [],
+    "frames": [
+      {
+        "before": {
+          "opacity": "0.45",
+          "transform": "matrix(0.88, 0, 0, 0.88, 0, 0)"
+        },
+        "after": {
+          "opacity": "0.35",
+          "transform": "matrix(0.978148, -0.207912, 0.207912, 0.978148, -24.3481, 18.2611)"
+        },
+        "states": [
+          "running",
+          "running"
+        ],
+        "fallbackOpacity": ""
+      },
+      {
+        "before": {
+          "opacity": "0.691812",
+          "transform": "matrix(0.99607, 0, 0, 0.99607, 0, 0)"
+        },
+        "after": {
+          "opacity": "0.41808",
+          "transform": "matrix(0.991274, -0.131821, 0.131821, 0.991274, -15.0241, 12.0451)"
+        },
+        "states": [
+          "running",
+          "running"
+        ],
+        "fallbackOpacity": ""
+      }
+    ],
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "paused": {
+      "before": {
+        "opacity": "0.7205",
+        "transform": "matrix(1.00984, 0, 0, 1.00984, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.4278",
+        "transform": "matrix(0.992667, -0.120882, 0.120882, 0.992667, -13.6928, 11.1575)"
+      },
+      "states": [
+        "paused",
+        "paused"
+      ],
+      "fallbackOpacity": ""
+    },
+    "pausedLater": {
+      "before": {
+        "opacity": "0.72865",
+        "transform": "matrix(1.01375, 0, 0, 1.01375, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.430686",
+        "transform": "matrix(0.993057, -0.117631, 0.117631, 0.993057, -13.2975, 10.894)"
+      },
+      "states": [
+        "paused",
+        "paused"
+      ],
+      "fallbackOpacity": ""
+    },
+    "resumed": {
+      "before": {
+        "opacity": "0.72865",
+        "transform": "matrix(1.01375, 0, 0, 1.01375, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.430686",
+        "transform": "matrix(0.993057, -0.117631, 0.117631, 0.993057, -13.2975, 10.894)"
+      },
+      "states": [
+        "running",
+        "running"
+      ],
+      "fallbackOpacity": ""
+    },
+    "carousel": "ONYX GMT",
+    "fallbackStart": {
+      "before": {
+        "opacity": "0.451734",
+        "transform": "matrix(0.880832, 0, 0, 0.880832, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": "0.45173441746534193"
+    },
+    "fallbackMid": {
+      "before": {
+        "opacity": "0.764279",
+        "transform": "matrix(1.03085, 0, 0, 1.03085, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": "0.7642785633148288"
+    },
+    "fallbackEnd": {
+      "before": {
+        "opacity": "0.45",
+        "transform": "matrix(0.88, 0, 0, 0.88, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": "0.45000000000000007"
+    }
+  },
+  "coccoc": {
+    "version": "152.0.7977.124",
+    "errors": [],
+    "frames": [
+      {
+        "before": {
+          "opacity": "0.45",
+          "transform": "matrix(0.88, 0, 0, 0.88, 0, 0)"
+        },
+        "after": {
+          "opacity": "0.35",
+          "transform": "matrix(0.978148, -0.207912, 0.207912, 0.978148, -24.3481, 18.2611)"
+        },
+        "states": [
+          "running",
+          "running"
+        ],
+        "fallbackOpacity": ""
+      },
+      {
+        "before": {
+          "opacity": "0.667313",
+          "transform": "matrix(0.98431, 0, 0, 0.98431, 0, 0)"
+        },
+        "after": {
+          "opacity": "0.410237",
+          "transform": "matrix(0.990062, -0.140635, 0.140635, 0.990062, -16.0981, 12.7611)"
+        },
+        "states": [
+          "running",
+          "running"
+        ],
+        "fallbackOpacity": ""
+      }
+    ],
+    "sizes": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "paused": {
+      "before": {
+        "opacity": "0.732711",
+        "transform": "matrix(1.0157, 0, 0, 1.0157, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.432147",
+        "transform": "matrix(0.993251, -0.115985, 0.115985, 0.993251, -13.0975, 10.7606)"
+      },
+      "states": [
+        "paused",
+        "paused"
+      ],
+      "fallbackOpacity": ""
+    },
+    "pausedLater": {
+      "before": {
+        "opacity": "0.732711",
+        "transform": "matrix(1.0157, 0, 0, 1.0157, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.432147",
+        "transform": "matrix(0.993251, -0.115985, 0.115985, 0.993251, -13.0975, 10.7606)"
+      },
+      "states": [
+        "paused",
+        "paused"
+      ],
+      "fallbackOpacity": ""
+    },
+    "resumed": {
+      "before": {
+        "opacity": "0.732711",
+        "transform": "matrix(1.0157, 0, 0, 1.0157, 0, 0)"
+      },
+      "after": {
+        "opacity": "0.432147",
+        "transform": "matrix(0.993251, -0.115985, 0.115985, 0.993251, -13.0975, 10.7606)"
+      },
+      "states": [
+        "running",
+        "running"
+      ],
+      "fallbackOpacity": ""
+    },
+    "carousel": "ONYX GMT",
+    "fallbackStart": {
+      "before": {
+        "opacity": "0.451014",
+        "transform": "matrix(0.880487, 0, 0, 0.880487, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": "0.45101447193363947"
+    },
+    "fallbackMid": {
+      "before": {
+        "opacity": "0.759521",
+        "transform": "matrix(1.02857, 0, 0, 1.02857, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": "0.7595212745570001"
+    },
+    "fallbackEnd": {
+      "before": {
+        "opacity": "0.45",
+        "transform": "matrix(0.88, 0, 0, 0.88, 0, 0)"
+      },
+      "after": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "states": [],
+      "fallbackOpacity": "0.45000000000000007"
+    }
+  }
+}

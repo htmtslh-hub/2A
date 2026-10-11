@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-<head><base href="/demos/novatrend/">
+<head>
+<base href="/demos/novatrend/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NovaTrend — Discover Products You'll Love | Modern Lifestyle Store</title>
@@ -11,8 +12,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=1.2.0">
+  <script src="assets/js/shop-config.js?v=1.2.0" defer></script>
+<script src="assets/js/commerce.js?v=1.2.0" defer></script>
+<script src="assets/js/main.js?v=1.2.0" defer></script>
+<link rel="stylesheet" href="assets/css/commerce.css?v=1.2.0">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -151,8 +155,11 @@
             <!-- Background Glow & Shape -->
             <div class="hero__backdrop" aria-hidden="true"></div>
 
-            <!-- Hero Model Image -->
-            <img src="assets/img/hero-model.webp" alt="NovaTrend model wearing white crewneck sweatshirt" class="hero__model-img" width="1000" height="1333" loading="eager">
+            <!-- Transparent lookbook cutouts; scenery and product badges stay separate. -->
+            <div class="hero__models" id="hero-models" aria-live="polite">
+              <img src="assets/img/hero-fashion.webp" alt="Fashion model wearing a black asymmetric top and taupe draped skirt" class="hero__model-img hero__model-img--active" width="900" height="1350" loading="eager">
+              <img src="assets/img/hero-casual.webp" alt="Smiling model wearing a white sweatshirt and black trousers" class="hero__model-img" width="900" height="1350" loading="eager" aria-hidden="true">
+            </div>
 
             <!-- Floating Product Card 1: Air Max 270 (Top Left) -->
             <div class="floating-badge floating-badge--top-left" data-floating-id="sneaker">
@@ -192,10 +199,9 @@
           </div>
 
           <!-- Hero Carousel Dot Indicators -->
-          <div class="hero__dots" role="tablist" aria-label="Hero slides">
-            <button type="button" class="hero__dot hero__dot--active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-            <button type="button" class="hero__dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-            <button type="button" class="hero__dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+          <div class="hero__dots" role="group" aria-label="Choose a lookbook">
+            <button type="button" class="hero__dot hero__dot--active" aria-pressed="true" aria-controls="hero-models" aria-label="Show fashion look"></button>
+            <button type="button" class="hero__dot" aria-pressed="false" aria-controls="hero-models" aria-label="Show casual look"></button>
           </div>
         </div>
       </div>
@@ -845,7 +851,7 @@
         <strong id="cart-total-val">$0.00</strong>
       </div>
       <button type="button" class="btn btn--primary btn--full" id="checkout-btn">
-        <span>Proceed to Checkout</span>
+        <span>Delivery & payment</span>
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
       </button>
       <small class="drawer__note">Taxes calculated at simulated checkout.</small>

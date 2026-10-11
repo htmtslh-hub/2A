@@ -209,4 +209,14 @@
     try { var data = JSON.parse(event.newValue || '{}'); bag = {}; Object.keys(catalogue).forEach(function (key) { if (Number.isInteger(data[key]) && data[key] > 0) bag[key] = Math.min(99, data[key]); }); updateBag(); } catch (error) { /* Ignore malformed entries. */ }
   });
   updateBag();
+
+  // Portable COD checkout reads this cart's canonical product data.
+  window.ForgeCommerce?.register({
+    items: () => Object.keys(bag).filter(id => catalogue[id] && Number.isInteger(bag[id]) && bag[id] > 0 && bag[id] <= 99).map(id => ({ id, key: id, ...catalogue[id], quantity: bag[id] })),
+    quantity: (id, quantity) => { if (!catalogue[id]) return; if (quantity) bag[id] = quantity; else delete bag[id]; updateBag(); },
+    clear: () => { bag = {}; updateBag(); }
+  });
+
+  const codAction = document.querySelector(".bag__enquiry");
+  if (codAction) codAction.textContent = 'Delivery & payment';
 }());

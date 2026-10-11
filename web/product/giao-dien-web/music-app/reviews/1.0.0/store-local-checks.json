@@ -1,0 +1,1174 @@
+{
+  "base": "http://127.0.0.1:5134",
+  "checkedAt": "2026-10-11T01:07:07.843Z",
+  "views": [
+    {
+      "locale": "vi-VN",
+      "name": "home",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "Nghiên cứuMusic App1.900.000₫Giao diện âm nhạc retro nền kem, coral và cobalt: playlist, a"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "vi-VN",
+      "name": "library",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "Nghiên cứuMusic App1.900.000₫Giao diện âm nhạc retro nền kem, coral và cobalt: playlist, a"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "vi-VN",
+      "name": "detail",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "Hướng dẫn sử dụng →"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "Hướng dẫn riêng của mẫu →"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "vi-VN",
+      "name": "guide",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "#noi-dung",
+          "label": "Đến nội dung hướng dẫn"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01Giải nén và mở mẫu"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02Giữ bản gốc và tạo bản làm việc"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03Chuẩn bị thông tin doanh nghiệp"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04Bắt đầu làm việc với AI"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05Thay thương hiệu, nội dung và nút liên hệ"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06Đổi màu, font, ảnh và bố cục khi cần"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07Kiểm tra trước khi đưa lên mạng"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08Xuất bản bằng cách tải thư mục lên hosting"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09Gắn tên miền riêng nếu cần"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10Cập nhật và khôi phục"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "Bảng xử lý nhanh"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "Checklist cuối cùng của bạn"
+        },
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "Từng bước"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "12 prompt AI"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "Theo mẫu của bạn"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01Giải nén và mở mẫu"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02Giữ bản gốc và tạo bản làm việc"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03Chuẩn bị thông tin doanh nghiệp"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04Bắt đầu làm việc với AI"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05Thay thương hiệu, nội dung và nút liên hệ"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06Đổi màu, font, ảnh và bố cục khi cần"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07Kiểm tra trước khi đưa lên mạng"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08Xuất bản bằng cách tải thư mục lên hosting"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09Gắn tên miền riêng nếu cần"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10Cập nhật và khôi phục"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "Bảng xử lý nhanh"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "Checklist cuối cùng của bạn"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "Bắt đầu từ giải nén"
+        },
+        {
+          "href": "/?mau=t21",
+          "label": "Xem sản phẩm"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "chọn prompt thay nội dung, ảnh hoặc màu sắc →"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "vi-VN",
+      "name": "home",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "Nghiên cứuMusic App1.900.000₫Giao diện âm nhạc retro nền kem, coral và cobalt: playlist, a"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "vi-VN",
+      "name": "library",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "Nghiên cứuMusic App1.900.000₫Giao diện âm nhạc retro nền kem, coral và cobalt: playlist, a"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "vi-VN",
+      "name": "detail",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "Hướng dẫn sử dụng →"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "Hướng dẫn riêng của mẫu →"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "vi-VN",
+      "name": "guide",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "#noi-dung",
+          "label": "Đến nội dung hướng dẫn"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01Giải nén và mở mẫu"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02Giữ bản gốc và tạo bản làm việc"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03Chuẩn bị thông tin doanh nghiệp"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04Bắt đầu làm việc với AI"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05Thay thương hiệu, nội dung và nút liên hệ"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06Đổi màu, font, ảnh và bố cục khi cần"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07Kiểm tra trước khi đưa lên mạng"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08Xuất bản bằng cách tải thư mục lên hosting"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09Gắn tên miền riêng nếu cần"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10Cập nhật và khôi phục"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "Bảng xử lý nhanh"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "Checklist cuối cùng của bạn"
+        },
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "Từng bước"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "12 prompt AI"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "Theo mẫu của bạn"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01Giải nén và mở mẫu"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02Giữ bản gốc và tạo bản làm việc"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03Chuẩn bị thông tin doanh nghiệp"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04Bắt đầu làm việc với AI"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05Thay thương hiệu, nội dung và nút liên hệ"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06Đổi màu, font, ảnh và bố cục khi cần"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07Kiểm tra trước khi đưa lên mạng"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08Xuất bản bằng cách tải thư mục lên hosting"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09Gắn tên miền riêng nếu cần"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10Cập nhật và khôi phục"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "Bảng xử lý nhanh"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "Checklist cuối cùng của bạn"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "Bắt đầu từ giải nén"
+        },
+        {
+          "href": "/?mau=t21",
+          "label": "Xem sản phẩm"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "chọn prompt thay nội dung, ảnh hoặc màu sắc →"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "en-US",
+      "name": "home",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "ResearchMusic App$79A cream, coral and cobalt retro music interface with playlist, album, "
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "en-US",
+      "name": "library",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "ResearchMusic App$79A cream, coral and cobalt retro music interface with playlist, album, "
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "en-US",
+      "name": "detail",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "User guide →"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "Template guide →"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "en-US",
+      "name": "guide",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "#noi-dung",
+          "label": "Skip to guide content"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01Unzip and open the template"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02Keep the original and make a working copy"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03Prepare your business information"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04Start working with AI"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05Replace the brand, copy, and contact actions"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06Change colours, fonts, images, or sections when needed"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07Test before publishing"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08Publish by uploading the website folder"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09Connect a custom domain if needed"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10Update and recover safely"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "Quick troubleshooting"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "Final checklist"
+        },
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "Step by step"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "12 AI prompts"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "Your template"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01Unzip and open the template"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02Keep the original and make a working copy"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03Prepare your business information"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04Start working with AI"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05Replace the brand, copy, and contact actions"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06Change colours, fonts, images, or sections when needed"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07Test before publishing"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08Publish by uploading the website folder"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09Connect a custom domain if needed"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10Update and recover safely"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "Quick troubleshooting"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "Final checklist"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "Start with unzipping"
+        },
+        {
+          "href": "/?mau=t21",
+          "label": "View product"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "choose a prompt for copy, images, or colours →"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "en-US",
+      "name": "home",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "ResearchMusic App$79A cream, coral and cobalt retro music interface with playlist, album, "
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "en-US",
+      "name": "library",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "ResearchMusic App$79A cream, coral and cobalt retro music interface with playlist, album, "
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "en-US",
+      "name": "detail",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "User guide →"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "Template guide →"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "en-US",
+      "name": "guide",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "#noi-dung",
+          "label": "Skip to guide content"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01Unzip and open the template"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02Keep the original and make a working copy"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03Prepare your business information"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04Start working with AI"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05Replace the brand, copy, and contact actions"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06Change colours, fonts, images, or sections when needed"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07Test before publishing"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08Publish by uploading the website folder"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09Connect a custom domain if needed"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10Update and recover safely"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "Quick troubleshooting"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "Final checklist"
+        },
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "Step by step"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "12 AI prompts"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "Your template"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01Unzip and open the template"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02Keep the original and make a working copy"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03Prepare your business information"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04Start working with AI"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05Replace the brand, copy, and contact actions"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06Change colours, fonts, images, or sections when needed"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07Test before publishing"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08Publish by uploading the website folder"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09Connect a custom domain if needed"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10Update and recover safely"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "Quick troubleshooting"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "Final checklist"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "Start with unzipping"
+        },
+        {
+          "href": "/?mau=t21",
+          "label": "View product"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "choose a prompt for copy, images, or colours →"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "zh-CN",
+      "name": "home",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "研究Music App$79奶油白、珊瑚色与钴蓝复古音乐界面，包含播放列表、专辑、艺人、播放器与音乐库。五张原创生成图片、3:09 原创示例音频、本地搜索及会话收藏与关注。有限滚动"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "zh-CN",
+      "name": "library",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "研究Music App$79奶油白、珊瑚色与钴蓝复古音乐界面，包含播放列表、专辑、艺人、播放器与音乐库。五张原创生成图片、3:09 原创示例音频、本地搜索及会话收藏与关注。有限滚动"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "zh-CN",
+      "name": "detail",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "使用指南 →"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "模板指南 →"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "zh-CN",
+      "name": "guide",
+      "status": 200,
+      "ok": true,
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "broken": [],
+      "links": [
+        {
+          "href": "#noi-dung",
+          "label": "跳到指南内容"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01解压并打开模板"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02保留原版并创建工作副本"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03准备企业信息"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04开始与 AI 协作"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05替换品牌、文案和联系按钮"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06按需修改颜色、字体、图片或区块"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07发布前检查"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08上传网站文件夹并发布"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09按需连接自定义域名"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10安全更新和恢复"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "快速排查表"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "最终检查清单"
+        },
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "分步指南"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "12 条 AI 提示词"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "你的模板"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01解压并打开模板"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02保留原版并创建工作副本"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03准备企业信息"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04开始与 AI 协作"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05替换品牌、文案和联系按钮"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06按需修改颜色、字体、图片或区块"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07发布前检查"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08上传网站文件夹并发布"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09按需连接自定义域名"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10安全更新和恢复"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "快速排查表"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "最终检查清单"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "从解压开始"
+        },
+        {
+          "href": "/?mau=t21",
+          "label": "查看商品"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "选择用于文案、图片或颜色的提示词 →"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "zh-CN",
+      "name": "home",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "研究Music App$79奶油白、珊瑚色与钴蓝复古音乐界面，包含播放列表、专辑、艺人、播放器与音乐库。五张原创生成图片、3:09 原创示例音频、本地搜索及会话收藏与关注。有限滚动"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "zh-CN",
+      "name": "library",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "?mau=t21",
+          "label": "研究Music App$79奶油白、珊瑚色与钴蓝复古音乐界面，包含播放列表、专辑、艺人、播放器与音乐库。五张原创生成图片、3:09 原创示例音频、本地搜索及会话收藏与关注。有限滚动"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "zh-CN",
+      "name": "detail",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "使用指南 →"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "模板指南 →"
+        }
+      ],
+      "runtime": []
+    },
+    {
+      "locale": "zh-CN",
+      "name": "guide",
+      "status": 200,
+      "ok": true,
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "broken": [],
+      "links": [
+        {
+          "href": "#noi-dung",
+          "label": "跳到指南内容"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01解压并打开模板"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02保留原版并创建工作副本"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03准备企业信息"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04开始与 AI 协作"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05替换品牌、文案和联系按钮"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06按需修改颜色、字体、图片或区块"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07发布前检查"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08上传网站文件夹并发布"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09按需连接自定义域名"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10安全更新和恢复"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "快速排查表"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "最终检查清单"
+        },
+        {
+          "href": "/huong-dan?template=music-app",
+          "label": "分步指南"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "12 条 AI 提示词"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=template",
+          "label": "你的模板"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "01解压并打开模板"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-2",
+          "label": "02保留原版并创建工作副本"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-3",
+          "label": "03准备企业信息"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-4",
+          "label": "04开始与 AI 协作"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-5",
+          "label": "05替换品牌、文案和联系按钮"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-6",
+          "label": "06按需修改颜色、字体、图片或区块"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-7",
+          "label": "07发布前检查"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-8",
+          "label": "08上传网站文件夹并发布"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-9",
+          "label": "09按需连接自定义域名"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-10",
+          "label": "10安全更新和恢复"
+        },
+        {
+          "href": "/huong-dan?template=music-app#xu-ly-loi",
+          "label": "快速排查表"
+        },
+        {
+          "href": "/huong-dan?template=music-app#checklist",
+          "label": "最终检查清单"
+        },
+        {
+          "href": "/huong-dan?template=music-app#buoc-1",
+          "label": "从解压开始"
+        },
+        {
+          "href": "/?mau=t21",
+          "label": "查看商品"
+        },
+        {
+          "href": "/huong-dan?template=music-app&view=prompts",
+          "label": "选择用于文案、图片或颜色的提示词 →"
+        }
+      ],
+      "runtime": []
+    }
+  ],
+  "failures": [],
+  "/demos/laila/": {
+    "status": 308
+  },
+  "/demos/velora/": {
+    "status": 308
+  },
+  "/admin": {
+    "status": 200
+  },
+  "/api/download?id=t21": {
+    "status": 401
+  },
+  "/product/giao-dien-web/music-app/music-app.zip": {
+    "status": 404
+  }
+}

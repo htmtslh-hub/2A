@@ -10,6 +10,9 @@ import { SignOutButton } from '@/app/don-hang/actions';
 import { RemoveSavedButton } from './remove-saved-button';
 import ProfileEditor from './profile-editor';
 import styles from './account.module.css';
+import { isAdminEmail } from '@/lib/admin-access';
+import { membershipState } from '@/lib/memberships';
+import { MEMBERSHIP_COPY } from '@/lib/membership-copy';
 
 export const dynamic = 'force-dynamic';
 
@@ -67,15 +70,20 @@ export default async function AccountPage() {
     </div></main>;
   }
 
-  const [user, purchases, savedItems] = await Promise.all([
+  const [user, purchases, savedItems, membership] = await Promise.all([
     prisma.user.findUnique({ where: { id: userId }, select: { name: true, email: true, image: true, createdAt: true } }),
     prisma.purchase.findMany({ where: { userId }, orderBy: { createdAt: 'desc' }, select: { id: true, templateId: true, createdAt: true } }),
     prisma.savedTemplate.findMany({ where: { userId }, orderBy: { createdAt: 'desc' }, select: { id: true, templateId: true, createdAt: true } }),
+    membershipState(userId),
   ]);
   if (!user) return <main className={styles.shell}><div className={styles.loginPrompt}><h1>{t.loginTitle}</h1><Link className={styles.primary} href="/?login=1&next=account">{t.login}</Link></div></main>;
 
   const formatDate = (date: Date) => new Intl.DateTimeFormat(dateLocale[lang], { dateStyle: 'medium' }).format(date);
+  const m = MEMBERSHIP_COPY[lang];
+  const plan = membership.active ?? membership.latest;
+  const formatTerm = (date: Date) => new Intl.DateTimeFormat(dateLocale[lang], { dateStyle: 'medium', timeStyle: 'short' }).format(date);
   const activity = [
+    ...membership.periods.map(period => ({ id: `membership-${period.id}`, type: t.bought, name: `${period.plan === 'ULTRA' ? 'Ultra' : 'Pro'} · ${m.title}`, date: period.createdAt })),
     ...purchases.map((p) => ({ id: `purchase-${p.id}`, type: t.bought, name: p.templateId ? templateName(p.templateId, lang) : t.bundle, date: p.createdAt })),
     ...savedItems.filter((item) => REAL_TEMPLATES[item.templateId]).map((item) => ({ id: `saved-${item.id}`, type: t.savedAction, name: REAL_TEMPLATES[item.templateId].copy[lang].name, date: item.createdAt })),
   ].sort((a, b) => b.date.getTime() - a.date.getTime()).slice(0, 6);
@@ -84,12 +92,22 @@ export default async function AccountPage() {
     <div className={styles.container}>
       <header className={styles.topbar}>
         <Link href="/" className={styles.brand}><span className={styles.dot} />FORGE ZONE</Link>
-        <div className={styles.topActions}><Link href="/" className={styles.quietLink}>← {t.back}</Link><SignOutButton label={t.signOut} /></div>
+        <div className={styles.topActions}>{isAdminEmail(user.email) && <Link href="/admin" className={styles.quietLink}>Admin ↗</Link>}<Link href="/" className={styles.quietLink}>← {t.back}</Link><SignOutButton label={t.signOut} /></div>
       </header>
 
       <section className={styles.hero}>
         <div><span className={styles.eyebrow}>ACCOUNT / 01</span><h1>{t.title}</h1><p>{t.intro}</p></div>
         <ProfileEditor initialName={user.name || user.email.split('@')[0]} initialImage={user.image} email={user.email} lang={lang} />
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionHead}><h2>{m.title}</h2><Link className={styles.textLink} href="/?tab=pricing">{m.upgrade} ↗</Link></div>
+        <div className={styles.purchase}>
+          <div className={styles.purchaseInfo}><div><strong>{plan ? plan.plan === 'ULTRA' ? 'Ultra' : 'Pro' : m.free}</strong><span>{membership.active ? m.active : plan ? plan.startsAt > new Date() ? m.scheduled : m.expired : m.empty}</span>{plan && <span>{m.starts}: {formatTerm(plan.startsAt)} · {m.until}: {formatTerm(plan.expiresAt)}</span>}</div></div>
+          {membership.active && <Link className={styles.smallButton} href="/don-hang">{m.download} ↗</Link>}
+        </div>
+        {membership.periods.filter(period => period.startsAt > new Date() && period.id !== plan?.id).map(period => <p key={period.id}>{m.scheduled}: {period.plan} · {m.starts}: {formatTerm(period.startsAt)} · {m.until}: {formatTerm(period.expiresAt)}</p>)}
+        <p>{m.policy}</p><p>{m.renewal}</p>
       </section>
 
       <div className={styles.stats}>

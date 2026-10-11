@@ -13,6 +13,8 @@ import path from 'node:path';
 import { prisma } from '@/lib/db';
 import { auth } from '@/auth';
 import { templateExists, templateFile } from '@/lib/catalog';
+import { REAL_TEMPLATES } from '@/lib/real-templates';
+import { hasProductAccess } from '@/lib/memberships';
 
 const TEMPLATE_DIR = path.join(process.cwd(), 'product', 'giao-dien-web');
 
@@ -20,6 +22,7 @@ function fileFor(templateId: string) {
   // Qua templateFile() vì mã trong danh mục và tên file đóng gói có thể khác
   // nhau — xem TEMPLATE_FILE trong lib/catalog.
   const slug = templateFile(templateId);
+  if (REAL_TEMPLATES[templateId]?.group === 'agent') return path.join(process.cwd(), 'product', 'agent', slug, `${slug}.zip`);
   return path.join(TEMPLATE_DIR, slug, `${slug}.zip`);
 }
 
@@ -28,7 +31,7 @@ function serve(templateId: string) {
   if (!existsSync(file)) {
     return NextResponse.json(
       {
-        error: `Chưa có file cho "${templateId}". Đặt file tại product/giao-dien-web/${templateFile(templateId)}/${templateFile(templateId)}.zip`,
+        error: `Chưa có file bàn giao cho "${templateId}". Vui lòng liên hệ để được hỗ trợ.`,
       },
       { status: 404 }
     );
@@ -58,6 +61,8 @@ export async function GET(req: Request) {
   if (token) {
     const row = await prisma.downloadToken.findUnique({ where: { token } });
     if (!row) return NextResponse.json({ error: 'Link không hợp lệ.' }, { status: 404 });
+    const owner = await prisma.user.findUnique({ where: { id: row.userId }, select: { suspendedAt: true } });
+    if (!owner || owner.suspendedAt) return NextResponse.json({ error: 'Tài khoản không được phép tải.' }, { status: 403 });
     // Link cũ cấp cho đơn trọn bộ trỏ tới 'bundle' — không có file đó. Đưa về
     // trang đơn hàng, nơi mỗi mẫu trong trọn bộ có nút tải riêng.
     if (row.templateId === 'bundle') {
@@ -89,11 +94,9 @@ export async function GET(req: Request) {
   }
 
   // Mua trọn bộ (templateId = null) thì mở khoá mọi mẫu.
-  const owned = await prisma.purchase.findFirst({
-    where: { userId, OR: [{ templateId: id }, { templateId: null }] },
-  });
+  const owned = await hasProductAccess(userId, id);
   if (!owned) {
-    return NextResponse.json({ error: 'Bạn chưa mua giao diện này.' }, { status: 403 });
+    return NextResponse.json({ error: 'Bạn cần mua sản phẩm hoặc có gói Pro/Ultra còn hiệu lực để tải.' }, { status: 403 });
   }
 
   return serve(id);

@@ -7,6 +7,7 @@ import type { Order, Prisma } from '@prisma/client';
 import { prisma } from '@/lib/db';
 import { sendMail, orderPaidEmail } from '@/lib/mail';
 import { formatMoney, productName, type Currency, type Lang } from '@/lib/catalog';
+import { isMembershipPlan, membershipExpiry } from '@/lib/membership-policy';
 
 /** Kết quả để route webhook biết trả gì về cho cổng thanh toán. */
 export type FulfilResult = 'ok' | 'already-paid' | 'amount-mismatch';
@@ -46,6 +47,7 @@ export async function fulfilOrder(
     console.error('[fulfil] đơn giỏ hàng không có sản phẩm:', order.id);
     return 'amount-mismatch';
   }
+  if (isMembershipPlan(order.kind) && !user) throw new Error('Paid account upgrade has no eligible account.');
 
   // Chốt đơn bằng một phép cập nhật có điều kiện, không dựa vào `order.status`
   // đọc từ trước. Cổng gửi lại webhook khi phản hồi chậm, và hai lần gửi chạy
@@ -58,7 +60,20 @@ export async function fulfilOrder(
     });
     if (count === 0) return false;
 
-    if (user && order.kind === 'CART') {
+    if (user && isMembershipPlan(order.kind)) {
+      // Serialise concurrent renewals for the same user, without affecting unrelated accounts.
+      await tx.$queryRaw`SELECT "id" FROM "User" WHERE "id" = ${user.id} FOR UPDATE`;
+      const now = new Date();
+      const previous = await tx.membership.findFirst({
+        where: { userId: user.id, plan: order.kind, expiresAt: { gt: now }, order: { status: 'PAID' } },
+        orderBy: { expiresAt: 'desc' },
+      });
+      const startsAt = previous?.expiresAt ?? now;
+      await tx.membership.create({ data: {
+        userId: user.id, orderId: order.id, plan: order.kind,
+        startsAt, expiresAt: membershipExpiry(startsAt, order.kind),
+      } });
+    } else if (user && order.kind === 'CART') {
       await tx.purchase.createMany({
         data: items.map((item) => ({ userId: user.id, orderId: order.id, kind: 'TEMPLATE', templateId: item.templateId })),
       });
@@ -79,7 +94,9 @@ export async function fulfilOrder(
 
   // Có tài khoản thì cấp link tải gắn với tài khoản đó; không thì dẫn về trang chủ.
   let downloadUrl = `${baseUrl}/?tab=pricing`;
-  if (user && (order.kind === 'BUNDLE' || order.kind === 'CART')) {
+  if (user && isMembershipPlan(order.kind)) {
+    downloadUrl = `${baseUrl}/tai-khoan`;
+  } else if (user && (order.kind === 'BUNDLE' || order.kind === 'CART')) {
     // Trọn bộ không có một file chung: trang đơn hàng liệt kê từng mẫu với nút
     // tải riêng. Trước đây cấp link tới 'bundle' — file không tồn tại, nên khách
     // trả tiền trọn bộ xong bấm link trong email nhận 404.
@@ -102,9 +119,10 @@ export async function fulfilOrder(
     await sendMail({
       to: order.buyerEmail,
       ...orderPaidEmail({
-        productName: order.kind === 'CART' ? items.map((item) => productName('TEMPLATE', item.templateId, lang)).join(', ') : productName(order.kind as 'TEMPLATE' | 'BUNDLE', order.templateId, lang),
+        productName: order.kind === 'CART' ? items.map((item) => productName('TEMPLATE', item.templateId, lang)).join(', ') : productName(order.kind as 'TEMPLATE' | 'BUNDLE' | 'PRO' | 'ULTRA', order.templateId, lang),
         amountLabel: formatMoney(order.amount, order.currency as Currency, lang),
         downloadUrl,
+        membership: isMembershipPlan(order.kind),
         lang,
       }),
     });
@@ -133,11 +151,12 @@ export async function revokeOrder(order: Order): Promise<'ok' | 'not-paid'> {
 
     // Quyền tải lại bằng tài khoản.
     await tx.purchase.deleteMany({ where: { orderId: order.id } });
+    await tx.membership.deleteMany({ where: { orderId: order.id } });
 
     // Link tải trong email không gắn với đơn, chỉ gắn người mua + mẫu, nên cho
     // hết hạn mọi link còn dùng được của cặp đó. Nếu khách còn đơn khác mua
     // cùng mẫu thì vẫn tải lại được qua tài khoản, vì purchase của đơn kia còn.
-    if (order.userId && order.kind !== 'BUNDLE') {
+    if (order.userId && order.kind !== 'BUNDLE' && !isMembershipPlan(order.kind)) {
       const now = new Date();
       await tx.downloadToken.updateMany({
         where: {

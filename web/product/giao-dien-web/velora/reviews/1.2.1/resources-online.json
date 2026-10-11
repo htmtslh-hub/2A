@@ -1,0 +1,70 @@
+{
+  "base": "https://forgezone.store",
+  "date": "2026-10-10T07:03:58.178Z",
+  "resources": [
+    {
+      "path": "/demos/velora/index.html",
+      "status": 200,
+      "sha256": "5cddb6e5884ecdd45ed2bb2df599ba5a8d5149e56fc6758bcc390af5e5892bae",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/velora/assets/css/style.css",
+      "status": 200,
+      "sha256": "b2db4af4c92fd6bd3c4875046d5154b7180e5b1834f917db71bb70176753400c",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/velora/assets/js/main.js",
+      "status": 200,
+      "sha256": "e4c04d82f8088e007b2f0e3c533d11af6327f067ba1f4fa46c3c256e3e911e72",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/velora/CUSTOMISE.md",
+      "status": 200,
+      "sha256": "1eb2d476cff4c8cff048c6bc34efcaefdebf0ae75873e844b4a30156c59313ce",
+      "matchesLocal": true
+    },
+    {
+      "path": "/previews/velora.webp",
+      "status": 200,
+      "sha256": "503d48a09b893c5aeed75092435f891178b265b6ec14bf06483c2889ede621b5",
+      "matchesLocal": true
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/?mau=t19",
+      "status": 200
+    },
+    {
+      "path": "/huong-dan?template=velora&view=template",
+      "status": 200
+    },
+    {
+      "path": "/admin",
+      "status": 200
+    },
+    {
+      "path": "/demos/watchroom/index.html",
+      "status": 200
+    },
+    {
+      "path": "/demos/mint-atlas/index.html",
+      "status": 200
+    },
+    {
+      "path": "/demos/melt-muse/index.html",
+      "status": 200
+    },
+    {
+      "path": "/demos/apartment-flow/index.html",
+      "status": 200
+    }
+  ],
+  "failures": [],
+  "anonymousDownload": 401
+}

@@ -36,17 +36,18 @@ export const LEGAL_EN: LegalPack = {
       {
         h: '4. Orders and payment',
         p: [
-          'The price shown on the pricing page at the time you order is the price that applies. Customers in Vietnam pay in VND; international customers pay in USD.',
-          'For international orders, <b>Paddle.com Market Ltd</b> is the merchant of record and is responsible for collecting and remitting VAT/GST in your country. Your invoice and card statement will show Paddle.',
-          'For orders inside Vietnam, payment is processed by PayOS via bank transfer.',
+          'The price shown at the time you order applies. All new purchases are paid in USD, regardless of display language. Applicable taxes are shown at checkout.',
+          '<b>Paddle.com Market Ltd</b> is the merchant of record and is responsible for collecting and remitting VAT/GST in your country. Your invoice and card statement will show Paddle.',
           'An order is complete only once we receive confirmation of successful payment from the payment provider.',
+          'Pro costs USD 99 for one month of full-library access; Ultra costs USD 299 for one year. These are one-time account upgrades with no automatic renewal. Terms use calendar months/years from confirmed payment, clamping month-end dates to the last valid day.',
+          'Renewing the same plan extends your purchased term. A different plan starts on payment, with no credit or transfer of remaining time.',
         ],
       },
       {
         h: '5. Delivery',
         p: [
           'As soon as payment succeeds, access is unlocked in your account and a download link is emailed to the address you registered.',
-          'The emailed link is valid for 7 days. After that you can re-download from your account at any time, with no limit on the number of downloads.',
+          'For individual purchases, the emailed link lasts 7 days and account downloads remain available. Pro/Ultra allow unlimited downloads during the plan term; downloads stop at expiry. Downloaded files remain usable under their licence.',
           'If nothing arrives within 30 minutes, please check your spam folder and then contact us.',
         ],
       },
@@ -119,6 +120,7 @@ export const LEGAL_EN: LegalPack = {
           '<b>When you buy:</b> email, name, order details and payment status. <b>We never receive or store your card details</b> — those go directly to the payment provider.',
           '<b>When you request the free sample:</b> your email address and the language you were browsing in.',
           '<b>When you visit:</b> standard server logs such as IP address, browser type and time of request.',
+          '<b>Traffic statistics, when enabled:</b> public page paths with sensitive query parameters removed, referring hostnames, screen-size groups and view timestamps. A random per-tab session ID is held in sessionStorage and is not linked to an account. The statistics system stores no IP addresses, emails or full referrer URLs, excludes account, payment and admin pages, and respects Do Not Track / Global Privacy Control.',
         ],
       },
       {
@@ -276,10 +278,11 @@ export const LEGAL_EN: LegalPack = {
         ],
       },
       {
-        h: '4. Single template vs full library',
+        h: '4. Individual purchases and account upgrades',
         p: [
           '<b>Single template</b> — the licence covers the one template you bought, across unlimited projects.',
-          '<b>Full library</b> — the licence covers every template in the library, including ones released later, on the same terms.',
+          '<b>Pro/Ultra</b> — download every product, including new releases, during your term. The licence covers downloaded files and remains valid after expiry. Expired plans no longer grant new downloads or re-downloads.',
+          '<b>Previously purchased full-library bundles</b> retain their download rights and licence under the original purchase terms, including future templates.',
         ],
       },
       {

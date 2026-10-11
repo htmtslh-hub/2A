@@ -51,29 +51,29 @@ const p = (text: string) =>
 
 const LEAD: Record<Lang, { subject: string; title: string; body: string[]; cta: string }> = {
   vi: {
-    subject: 'Mẫu miễn phí + mã giảm 20% từ Forge Zone',
+    subject: 'Mẫu miễn phí từ Forge Zone',
     title: 'Mẫu miễn phí của bạn đây',
     body: [
       'Cảm ơn bạn đã quan tâm. Bấm nút bên dưới để tải mẫu miễn phí.',
-      'Dùng mã <b style="color:#f0a63c">FORGE20</b> để giảm 20% khi mua trọn bộ thư viện.',
+      'Mua lẻ mỗi sản phẩm 20 USD hoặc nâng cấp tài khoản Pro 99 USD/1 tháng, Ultra 299 USD/1 năm. Thanh toán một lần, không tự gia hạn.',
     ],
     cta: 'Tải mẫu miễn phí',
   },
   en: {
-    subject: 'Your free template + 20% off from Forge Zone',
+    subject: 'Your free template from Forge Zone',
     title: 'Here is your free template',
     body: [
       'Thanks for your interest. Hit the button below to download your free template.',
-      'Use code <b style="color:#f0a63c">FORGE20</b> for 20% off the full library.',
+      'Individual products cost USD 20. Upgrade to Pro for USD 99/1 month or Ultra for USD 299/1 year. One payment, no automatic renewal.',
     ],
     cta: 'Download free template',
   },
   zh: {
-    subject: '你的免费模板 + Forge Zone 八折优惠',
+    subject: '你的 Forge Zone 免费模板',
     title: '这是你的免费模板',
     body: [
       '感谢关注。点击下方按钮即可下载免费模板。',
-      '使用优惠码 <b style="color:#f0a63c">FORGE20</b> 购买全套模板库可享 8 折。',
+      '单件产品 20 美元；Pro 一个月 99 美元，Ultra 一年 299 美元。一次付款，不自动续费。',
     ],
     cta: '下载免费模板',
   },
@@ -121,16 +121,22 @@ export function orderPaidEmail(opts: {
   amountLabel: string;
   downloadUrl: string;
   lang?: Lang;
+  membership?: boolean;
 }) {
   const lang = opts.lang ?? 'vi';
   const t = PAID[lang] ?? PAID.vi;
+  const membershipCopy = {
+    vi: { body: 'Gói tài khoản đã được kích hoạt. Xem thời hạn và tải sản phẩm trong tài khoản. Thanh toán một lần, không tự gia hạn; file đã tải vẫn dùng theo giấy phép sau khi hết hạn.', cta: 'Xem gói tài khoản' },
+    en: { body: 'Your account plan is activated. View its term and download products from your account. One payment, no automatic renewal; downloaded files remain usable under their licence after expiry.', cta: 'View account plan' },
+    zh: { body: '账号套餐已激活。请在账号中查看有效期和下载产品。一次付款，不自动续费；到期后已下载文件仍可按许可使用。', cta: '查看账号套餐' },
+  }[lang];
   return {
     subject: t.subject(opts.productName),
     html: shell(
       t.title,
       p(t.line1(opts.productName, opts.amountLabel)) +
-        p(t.line2) +
-        button(opts.downloadUrl, t.cta),
+        p(opts.membership ? membershipCopy.body : t.line2) +
+        button(opts.downloadUrl, opts.membership ? membershipCopy.cta : t.cta),
       lang
     ),
   };

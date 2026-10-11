@@ -1,0 +1,11 @@
+{
+  "deployment": "dpl_3o7tF3VXo3We8XE6LrhBh8vX9t3K",
+  "releaseCommit": "18375466339026ae41aeff469b80aa4df8ca5012",
+  "baseline": "fa5476a6e359137d3c47301a9c75ff71c9a41bf5",
+  "url": "https://forgezone.store/?mau=t19",
+  "demo": "https://forgezone.store/demos/velora/index.html?v=1.2.1",
+  "zipBytes": 20438,
+  "sha256": "f90b6f5ff520867d570f3b793067b1f86634f08ed72d0394df4eb4f33d17ba61",
+  "sourceZipSHA1": "8fe91c902c88c86a0a6f9b852e40e3d7e0b20f0e",
+  "paidDownloadTest": "anonymous401, ownerWithoutEntitlement403, entitled/payment NOT TESTED"
+}

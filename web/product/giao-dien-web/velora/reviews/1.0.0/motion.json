@@ -1,0 +1,152 @@
+{
+  "chromium": {
+    "version": "153.0.8010.12",
+    "cases": [
+      {
+        "reducedMotion": "no-preference",
+        "oldMotionOff": true,
+        "intermediateFrames": 26,
+        "starts": [
+          {
+            "t": 170,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 178.5,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 196.29999999993015,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 213,
+            "opacity": "1",
+            "transform": "none"
+          }
+        ],
+        "final": {
+          "t": 1813.5999999999767,
+          "opacity": "1",
+          "transform": "none"
+        },
+        "pass": true
+      },
+      {
+        "reducedMotion": "reduce",
+        "oldMotionOff": true,
+        "intermediateFrames": 26,
+        "starts": [
+          {
+            "t": 21.599999999976717,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 92,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 93.90000000002328,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 109.09999999997672,
+            "opacity": "1",
+            "transform": "none"
+          }
+        ],
+        "final": {
+          "t": 1813,
+          "opacity": "1",
+          "transform": "none"
+        },
+        "pass": true
+      }
+    ],
+    "fallback": {
+      "opacity": "1",
+      "inlineStyle": ""
+    }
+  },
+  "msedge": {
+    "version": "155.0.4283.45",
+    "cases": [
+      {
+        "reducedMotion": "no-preference",
+        "oldMotionOff": true,
+        "intermediateFrames": 21,
+        "starts": [
+          {
+            "t": 134.89999999990687,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 185.39999999990687,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 187.59999999997672,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 196,
+            "opacity": "1",
+            "transform": "none"
+          }
+        ],
+        "final": {
+          "t": 1804.0999999999767,
+          "opacity": "1",
+          "transform": "none"
+        },
+        "pass": true
+      },
+      {
+        "reducedMotion": "reduce",
+        "oldMotionOff": true,
+        "intermediateFrames": 11,
+        "starts": [
+          {
+            "t": 71.80000000004657,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 76.59999999997672,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 100,
+            "opacity": "1",
+            "transform": "none"
+          },
+          {
+            "t": 142,
+            "opacity": "1",
+            "transform": "none"
+          }
+        ],
+        "final": {
+          "t": 1817.7000000000698,
+          "opacity": "1",
+          "transform": "none"
+        },
+        "pass": true
+      }
+    ],
+    "fallback": {
+      "opacity": "1",
+      "inlineStyle": ""
+    }
+  }
+}

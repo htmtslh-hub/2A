@@ -1,0 +1,2338 @@
+{
+  "slug": "shirtline",
+  "version": "1.1.0",
+  "date": "2026-10-07T13:47:40.783Z",
+  "os": "win32",
+  "zipBytes": 510197,
+  "sha256": "f62dac6b6f61bc9db3b0607aa6b80c19608eace97e07b33dcd4b390fef4b533f",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": false,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "SL SHIRTLINE",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shirtline/index.html#top"
+          },
+          {
+            "label": "Collection",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shirtline/index.html#collection"
+          },
+          {
+            "label": "Our story",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shirtline/index.html#story"
+          },
+          {
+            "label": "Contact",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Explore the edit ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shirtline/index.html#collection"
+          },
+          {
+            "label": "hello@example.com ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Enquire to order ↗",
+            "href": "mailto:hello@example.com?subject=Shirtline%20order",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Shirtline%20order"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": [
+            {
+              "text": "Collection",
+              "width": 84,
+              "height": 12,
+              "inline": false
+            },
+            {
+              "text": "Our story",
+              "width": 77,
+              "height": 12,
+              "inline": false
+            },
+            {
+              "text": "Contact",
+              "width": 62,
+              "height": 12,
+              "inline": false
+            },
+            {
+              "text": "Open bag",
+              "width": 33,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Show Noir Oxford",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Cabernet Camp",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Linen Sand",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Olive Utility",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show White Mandarin",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": [
+            {
+              "text": "Collection",
+              "width": 84,
+              "height": 12,
+              "inline": false
+            },
+            {
+              "text": "Our story",
+              "width": 77,
+              "height": 12,
+              "inline": false
+            },
+            {
+              "text": "Contact",
+              "width": 62,
+              "height": 12,
+              "inline": false
+            },
+            {
+              "text": "Open bag",
+              "width": 33,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Show Noir Oxford",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Cabernet Camp",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Linen Sand",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Olive Utility",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show White Mandarin",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": [
+            {
+              "text": "Open bag",
+              "width": 33,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Open menu",
+              "width": 23,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Show Noir Oxford",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Cabernet Camp",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Linen Sand",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Olive Utility",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show White Mandarin",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": [
+            {
+              "text": "Open bag",
+              "width": 33,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Open menu",
+              "width": 23,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Show Noir Oxford",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Cabernet Camp",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Linen Sand",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Olive Utility",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show White Mandarin",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        }
+      ],
+      "menu": {
+        "breakpoint": null
+      },
+      "keyboard": {
+        "skipVisible": false,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 1
+        },
+        "motionAfter5s": [
+          "nextProgress"
+        ],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": false
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "brand",
+            "text": "SL SHIRTLINE",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              35,
+              36,
+              31
+            ],
+            "ratio": 12.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "active",
+            "text": "Collection",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              31,
+              32,
+              28
+            ],
+            "ratio": 13.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Our story",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              31,
+              32,
+              28
+            ],
+            "ratio": 6.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Contact",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              30,
+              31,
+              27
+            ],
+            "ratio": 6.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "↗ 0",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              27,
+              28,
+              25
+            ],
+            "ratio": 6.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "SS / 26 — SHIRT STUDY",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              34,
+              35,
+              30
+            ],
+            "ratio": 6.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Wear theeverydaybetter.",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              34,
+              35,
+              30
+            ],
+            "ratio": 13.53,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "everyday",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              33,
+              34,
+              30
+            ],
+            "ratio": 13.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "lede",
+            "text": "Quietly precise shirts designed for long",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              51,
+              24,
+              32
+            ],
+            "ratio": 6.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore the edit ↗",
+            "colour": "rgb(23, 24, 22)",
+            "background": [
+              244,
+              202,
+              212
+            ],
+            "ratio": 12.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              34,
+              17,
+              23
+            ],
+            "ratio": 7.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "05",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              37,
+              18,
+              23
+            ],
+            "ratio": 7.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "NOIR OXFORD",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              43,
+              20,
+              27
+            ],
+            "ratio": 14.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              33,
+              17,
+              21
+            ],
+            "ratio": 15.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "NEXT LOOK",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              32,
+              16,
+              21
+            ],
+            "ratio": 7.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "CABERNET CAMP",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              32,
+              16,
+              21
+            ],
+            "ratio": 15.67,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "orbit-pause",
+            "text": "Ⅱ",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              82,
+              59,
+              66
+            ],
+            "ratio": 8.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "FORM / FUNCTION / FEEL",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              49,
+              23,
+              30
+            ],
+            "ratio": 6.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "FORM / FUNCTION / FEEL",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              43,
+              20,
+              27
+            ],
+            "ratio": 7.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "FORM / FUNCTION / FEEL",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              36,
+              18,
+              23
+            ],
+            "ratio": 7.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "THE EDIT / 05 SHIRTS",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              47,
+              22,
+              29
+            ],
+            "ratio": 6.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Five ways tomove through the day.",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              43,
+              20,
+              27
+            ],
+            "ratio": 14.74,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "move through",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              42,
+              20,
+              27
+            ],
+            "ratio": 14.79,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              62,
+              34,
+              41
+            ],
+            "ratio": 5.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Noir Oxford",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              44,
+              21,
+              27
+            ],
+            "ratio": 14.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Washed cotton / charcoal",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              44,
+              21,
+              27
+            ],
+            "ratio": 7.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$148",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              39,
+              19,
+              25
+            ],
+            "ratio": 15.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "add",
+            "text": "+",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              39,
+              19,
+              25
+            ],
+            "ratio": 14.12,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "02",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              61,
+              34,
+              41
+            ],
+            "ratio": 5.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Cabernet Camp",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              39,
+              19,
+              24
+            ],
+            "ratio": 15.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Matte Tencel / burgundy",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              38,
+              19,
+              24
+            ],
+            "ratio": 7.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$142",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              34,
+              17,
+              22
+            ],
+            "ratio": 15.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "add",
+            "text": "+",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              34,
+              17,
+              22
+            ],
+            "ratio": 14.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "03",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              60,
+              33,
+              40
+            ],
+            "ratio": 5.93,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Linen Sand",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              33,
+              17,
+              22
+            ],
+            "ratio": 15.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "European linen / oat",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              33,
+              17,
+              21
+            ],
+            "ratio": 7.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$156",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              31,
+              16,
+              20
+            ],
+            "ratio": 15.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "add",
+            "text": "+",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              31,
+              16,
+              20
+            ],
+            "ratio": 14.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "04",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              58,
+              48,
+              38
+            ],
+            "ratio": 5.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Olive Utility",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              41,
+              33,
+              24
+            ],
+            "ratio": 13.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Cotton twill / olive",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              40,
+              33,
+              24
+            ],
+            "ratio": 6.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$164",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              37,
+              30,
+              22
+            ],
+            "ratio": 14.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "add",
+            "text": "+",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              37,
+              30,
+              22
+            ],
+            "ratio": 13.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "05",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              57,
+              48,
+              37
+            ],
+            "ratio": 5.26,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "White Mandarin",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              36,
+              30,
+              22
+            ],
+            "ratio": 14.12,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Textured cotton / white",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              36,
+              30,
+              22
+            ],
+            "ratio": 6.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$152",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              33,
+              27,
+              20
+            ],
+            "ratio": 14.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "add",
+            "text": "+",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              33,
+              27,
+              20
+            ],
+            "ratio": 13.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "THE SHIRTLINE STANDARD",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              39,
+              32,
+              23
+            ],
+            "ratio": 6.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Nothing extra.Everything considered.",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              39,
+              31,
+              23
+            ],
+            "ratio": 13.87,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Everything considered.",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              38,
+              31,
+              23
+            ],
+            "ratio": 13.92,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "We work with natural fabrics, relaxed pr",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              33,
+              27,
+              20
+            ],
+            "ratio": 7.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "© 2026 Shirtline Studio",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              38,
+              31,
+              22
+            ],
+            "ratio": 6.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "hello@example.com ↗",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              33,
+              27,
+              20
+            ],
+            "ratio": 6.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore the edit ↗",
+          "colour": "rgb(16, 16, 16)",
+          "width": "1px",
+          "ratio": 1.07
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [
+        {
+          "id": "aria-hidden-focus",
+          "impact": "serious",
+          "nodes": [
+            [
+              "#bag-panel"
+            ]
+          ]
+        }
+      ],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": false,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "SL SHIRTLINE",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shirtline/index.html#top"
+          },
+          {
+            "label": "Collection",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shirtline/index.html#collection"
+          },
+          {
+            "label": "Our story",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shirtline/index.html#story"
+          },
+          {
+            "label": "Contact",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Explore the edit ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shirtline/index.html#collection"
+          },
+          {
+            "label": "hello@example.com ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Enquire to order ↗",
+            "href": "mailto:hello@example.com?subject=Shirtline%20order",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com?subject=Shirtline%20order"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": [
+            {
+              "text": "Collection",
+              "width": 83,
+              "height": 13,
+              "inline": false
+            },
+            {
+              "text": "Our story",
+              "width": 77,
+              "height": 13,
+              "inline": false
+            },
+            {
+              "text": "Contact",
+              "width": 62,
+              "height": 13,
+              "inline": false
+            },
+            {
+              "text": "Open bag",
+              "width": 29,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Show Noir Oxford",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Cabernet Camp",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Linen Sand",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Olive Utility",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show White Mandarin",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": [
+            {
+              "text": "Collection",
+              "width": 83,
+              "height": 13,
+              "inline": false
+            },
+            {
+              "text": "Our story",
+              "width": 77,
+              "height": 13,
+              "inline": false
+            },
+            {
+              "text": "Contact",
+              "width": 62,
+              "height": 13,
+              "inline": false
+            },
+            {
+              "text": "Open bag",
+              "width": 29,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Show Noir Oxford",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Cabernet Camp",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Linen Sand",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Olive Utility",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show White Mandarin",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": [
+            {
+              "text": "Open bag",
+              "width": 29,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Open menu",
+              "width": 19,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Show Noir Oxford",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Cabernet Camp",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Linen Sand",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Olive Utility",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show White Mandarin",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": [
+            {
+              "text": "Open bag",
+              "width": 29,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Open menu",
+              "width": 19,
+              "height": 17,
+              "inline": false
+            },
+            {
+              "text": "Show Noir Oxford",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Cabernet Camp",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Linen Sand",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show Olive Utility",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            },
+            {
+              "text": "Show White Mandarin",
+              "width": 28,
+              "height": 44,
+              "inline": false
+            }
+          ]
+        }
+      ],
+      "menu": {
+        "breakpoint": null
+      },
+      "keyboard": {
+        "skipVisible": false,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 1
+        },
+        "motionAfter5s": [
+          "background-color",
+          "background-color",
+          "color",
+          "color",
+          "color",
+          "color",
+          "background-color",
+          "color",
+          "color",
+          "border-top-color",
+          "border-right-color",
+          "border-bottom-color",
+          "border-left-color",
+          "background-color",
+          "color",
+          "color",
+          "background-color",
+          "color",
+          "background-color",
+          "color",
+          "background-color",
+          "color",
+          "background-color",
+          "color",
+          "background-color",
+          "color",
+          "color",
+          "color",
+          "color",
+          "color",
+          "background-color"
+        ],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": false
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "brand",
+            "text": "SL SHIRTLINE",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              34,
+              35,
+              31
+            ],
+            "ratio": 12.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "active",
+            "text": "Collection",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              31,
+              32,
+              28
+            ],
+            "ratio": 13.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Our story",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              30,
+              31,
+              28
+            ],
+            "ratio": 6.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Contact",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              30,
+              31,
+              27
+            ],
+            "ratio": 6.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "↗ 0",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              27,
+              28,
+              25
+            ],
+            "ratio": 6.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "SS / 26 — SHIRT STUDY",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              34,
+              35,
+              30
+            ],
+            "ratio": 6.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Wear theeverydaybetter.",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              33,
+              34,
+              30
+            ],
+            "ratio": 13.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "lede",
+            "text": "Quietly precise shirts designed for long",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              33,
+              34,
+              29
+            ],
+            "ratio": 6.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore the edit ↗",
+            "colour": "rgb(23, 24, 22)",
+            "background": [
+              237,
+              233,
+              223
+            ],
+            "ratio": 14.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              25,
+              26,
+              23
+            ],
+            "ratio": 7.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "05",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              26,
+              27,
+              24
+            ],
+            "ratio": 7.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "NOIR OXFORD",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              42,
+              20,
+              26
+            ],
+            "ratio": 14.8,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              33,
+              17,
+              21
+            ],
+            "ratio": 15.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "NEXT LOOK",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              32,
+              16,
+              21
+            ],
+            "ratio": 7.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "CABERNET CAMP",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              32,
+              16,
+              21
+            ],
+            "ratio": 15.67,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "orbit-pause",
+            "text": "Ⅱ",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              35,
+              17,
+              22
+            ],
+            "ratio": 15.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "FORM / FUNCTION / FEEL",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              49,
+              22,
+              30
+            ],
+            "ratio": 6.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "FORM / FUNCTION / FEEL",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              42,
+              20,
+              26
+            ],
+            "ratio": 7.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "FORM / FUNCTION / FEEL",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              36,
+              18,
+              23
+            ],
+            "ratio": 7.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "THE EDIT / 05 SHIRTS",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              47,
+              22,
+              29
+            ],
+            "ratio": 6.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Five ways tomove through the day.",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              43,
+              20,
+              27
+            ],
+            "ratio": 14.74,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "move through",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              42,
+              20,
+              26
+            ],
+            "ratio": 14.8,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Five distinct silhouettes and fabrics. C",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              36,
+              18,
+              23
+            ],
+            "ratio": 7.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              62,
+              33,
+              41
+            ],
+            "ratio": 5.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Noir Oxford",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              44,
+              21,
+              27
+            ],
+            "ratio": 14.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Washed cotton / charcoal",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              43,
+              20,
+              27
+            ],
+            "ratio": 7.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$148",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              39,
+              19,
+              24
+            ],
+            "ratio": 15.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "add",
+            "text": "+",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              39,
+              19,
+              24
+            ],
+            "ratio": 14.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "02",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              61,
+              33,
+              41
+            ],
+            "ratio": 5.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Cabernet Camp",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              38,
+              19,
+              24
+            ],
+            "ratio": 15.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Matte Tencel / burgundy",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              38,
+              19,
+              24
+            ],
+            "ratio": 7.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$142",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              34,
+              17,
+              22
+            ],
+            "ratio": 15.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "add",
+            "text": "+",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              33,
+              17,
+              21
+            ],
+            "ratio": 14.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "03",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              60,
+              32,
+              40
+            ],
+            "ratio": 5.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "European linen / oat",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              33,
+              17,
+              21
+            ],
+            "ratio": 7.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$156",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              31,
+              16,
+              20
+            ],
+            "ratio": 15.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "add",
+            "text": "+",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              31,
+              16,
+              20
+            ],
+            "ratio": 14.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Olive Utility",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              40,
+              19,
+              25
+            ],
+            "ratio": 15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Cotton twill / olive",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              40,
+              19,
+              25
+            ],
+            "ratio": 7.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$164",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              36,
+              18,
+              23
+            ],
+            "ratio": 15.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "add",
+            "text": "+",
+            "colour": "rgb(233, 230, 223)",
+            "background": [
+              35,
+              18,
+              22
+            ],
+            "ratio": 14.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Textured cotton / white",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              35,
+              17,
+              22
+            ],
+            "ratio": 7.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Nothing extra.Everything considered.",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              38,
+              18,
+              24
+            ],
+            "ratio": 15.19,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Everything considered.",
+            "colour": "rgb(240, 237, 230)",
+            "background": [
+              37,
+              18,
+              24
+            ],
+            "ratio": 15.24,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "We work with natural fabrics, relaxed pr",
+            "colour": "rgb(170, 167, 158)",
+            "background": [
+              31,
+              16,
+              20
+            ],
+            "ratio": 7.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "hello@example.com ↗",
+            "colour": "rgb(168, 165, 158)",
+            "background": [
+              31,
+              16,
+              20
+            ],
+            "ratio": 7.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore the edit ↗",
+          "colour": "rgb(23, 24, 22)",
+          "width": "1px",
+          "ratio": 1
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [
+        {
+          "id": "aria-hidden-focus",
+          "impact": "serious",
+          "nodes": [
+            [
+              "#bag-panel"
+            ]
+          ]
+        }
+      ],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "shirtline/assets/css/autoplay.css",
+    "shirtline/assets/css/controls.css",
+    "shirtline/assets/css/motion.css",
+    "shirtline/assets/css/style.css",
+    "shirtline/assets/css/theme.css",
+    "shirtline/assets/img/shirt-cabernet.webp",
+    "shirtline/assets/img/shirt-linen.webp",
+    "shirtline/assets/img/shirt-noir.webp",
+    "shirtline/assets/img/shirt-olive.webp",
+    "shirtline/assets/img/shirt-white.webp",
+    "shirtline/assets/js/main.js",
+    "shirtline/CUSTOMISE.md",
+    "shirtline/index.html",
+    "shirtline/LICENCE.txt",
+    "shirtline/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/autoplay.css",
+    "assets/css/controls.css",
+    "assets/css/motion.css",
+    "assets/css/style.css",
+    "assets/css/theme.css",
+    "assets/img/shirt-cabernet.webp",
+    "assets/img/shirt-linen.webp",
+    "assets/img/shirt-noir.webp",
+    "assets/img/shirt-olive.webp",
+    "assets/img/shirt-white.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 0,
+    "prompts": 0,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q10: CUSTOMISE có 0/10 bước",
+    "Q10: CUSTOMISE có 0/12 prompt",
+    "Q05/chromium: cấu trúc {\"h1\":1,\"lang\":\"en\",\"dup\":[],\"jumps\":[],\"landmarks\":{\"header\":true,\"nav\":false,\"main\":true,\"footer\":true}}",
+    "Q02/chromium/1440: vùng chạm < 44px [{\"text\":\"Collection\",\"width\":84,\"height\":12,\"inline\":false},{\"text\":\"Our story\",\"width\":77,\"height\":12,\"inline\":false},{\"text\":\"Contact\",\"width\":62,\"height\":12,\"inline\":false},{\"text\":\"Open bag\",\"width\":33,\"height\":17,\"inline\":false},{\"text\":\"Show Noir Oxford\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Cabernet Camp\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Linen Sand\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Olive Utility\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show White Mandarin\",\"width\":28,\"height\":44,\"inline\":false}]",
+    "Q02/chromium/820: vùng chạm < 44px [{\"text\":\"Collection\",\"width\":84,\"height\":12,\"inline\":false},{\"text\":\"Our story\",\"width\":77,\"height\":12,\"inline\":false},{\"text\":\"Contact\",\"width\":62,\"height\":12,\"inline\":false},{\"text\":\"Open bag\",\"width\":33,\"height\":17,\"inline\":false},{\"text\":\"Show Noir Oxford\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Cabernet Camp\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Linen Sand\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Olive Utility\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show White Mandarin\",\"width\":28,\"height\":44,\"inline\":false}]",
+    "Q02/chromium/375: vùng chạm < 44px [{\"text\":\"Open bag\",\"width\":33,\"height\":17,\"inline\":false},{\"text\":\"Open menu\",\"width\":23,\"height\":17,\"inline\":false},{\"text\":\"Show Noir Oxford\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Cabernet Camp\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Linen Sand\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Olive Utility\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show White Mandarin\",\"width\":28,\"height\":44,\"inline\":false}]",
+    "Q02/chromium/320: vùng chạm < 44px [{\"text\":\"Open bag\",\"width\":33,\"height\":17,\"inline\":false},{\"text\":\"Open menu\",\"width\":23,\"height\":17,\"inline\":false},{\"text\":\"Show Noir Oxford\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Cabernet Camp\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Linen Sand\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Olive Utility\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show White Mandarin\",\"width\":28,\"height\":44,\"inline\":false}]",
+    "Q03/chromium: không tìm thấy nút menu mobile",
+    "Q04/chromium: skip link {\"skipVisible\":false,\"skipLandsInMain\":true}",
+    "Q06/chromium: viền focus {\"element\":\"Explore the edit ↗\",\"colour\":\"rgb(16, 16, 16)\",\"width\":\"1px\",\"ratio\":1.07}",
+    "Q05/chromium: axe [{\"id\":\"aria-hidden-focus\",\"impact\":\"serious\",\"nodes\":[[\"#bag-panel\"]]}]",
+    "Q07/chromium: giảm chuyển động {\"allVisible\":true,\"runningAnimations\":1}",
+    "Q07/chromium: chuyển động còn chạy sau 5 giây nextProgress",
+    "Q07/chromium: tắt JS/mất font {\"width\":320,\"scrollWidth\":320,\"clientWidth\":320,\"allVisible\":true,\"navLinksVisible\":false}",
+    "Q05/firefox: cấu trúc {\"h1\":1,\"lang\":\"en\",\"dup\":[],\"jumps\":[],\"landmarks\":{\"header\":true,\"nav\":false,\"main\":true,\"footer\":true}}",
+    "Q02/firefox/1440: vùng chạm < 44px [{\"text\":\"Collection\",\"width\":83,\"height\":13,\"inline\":false},{\"text\":\"Our story\",\"width\":77,\"height\":13,\"inline\":false},{\"text\":\"Contact\",\"width\":62,\"height\":13,\"inline\":false},{\"text\":\"Open bag\",\"width\":29,\"height\":17,\"inline\":false},{\"text\":\"Show Noir Oxford\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Cabernet Camp\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Linen Sand\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Olive Utility\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show White Mandarin\",\"width\":28,\"height\":44,\"inline\":false}]",
+    "Q02/firefox/820: vùng chạm < 44px [{\"text\":\"Collection\",\"width\":83,\"height\":13,\"inline\":false},{\"text\":\"Our story\",\"width\":77,\"height\":13,\"inline\":false},{\"text\":\"Contact\",\"width\":62,\"height\":13,\"inline\":false},{\"text\":\"Open bag\",\"width\":29,\"height\":17,\"inline\":false},{\"text\":\"Show Noir Oxford\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Cabernet Camp\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Linen Sand\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Olive Utility\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show White Mandarin\",\"width\":28,\"height\":44,\"inline\":false}]",
+    "Q02/firefox/375: vùng chạm < 44px [{\"text\":\"Open bag\",\"width\":29,\"height\":17,\"inline\":false},{\"text\":\"Open menu\",\"width\":19,\"height\":17,\"inline\":false},{\"text\":\"Show Noir Oxford\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Cabernet Camp\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Linen Sand\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Olive Utility\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show White Mandarin\",\"width\":28,\"height\":44,\"inline\":false}]",
+    "Q02/firefox/320: vùng chạm < 44px [{\"text\":\"Open bag\",\"width\":29,\"height\":17,\"inline\":false},{\"text\":\"Open menu\",\"width\":19,\"height\":17,\"inline\":false},{\"text\":\"Show Noir Oxford\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Cabernet Camp\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Linen Sand\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show Olive Utility\",\"width\":28,\"height\":44,\"inline\":false},{\"text\":\"Show White Mandarin\",\"width\":28,\"height\":44,\"inline\":false}]",
+    "Q03/firefox: không tìm thấy nút menu mobile",
+    "Q04/firefox: skip link {\"skipVisible\":false,\"skipLandsInMain\":true}",
+    "Q06/firefox: viền focus {\"element\":\"Explore the edit ↗\",\"colour\":\"rgb(23, 24, 22)\",\"width\":\"1px\",\"ratio\":1}",
+    "Q05/firefox: axe [{\"id\":\"aria-hidden-focus\",\"impact\":\"serious\",\"nodes\":[[\"#bag-panel\"]]}]",
+    "Q07/firefox: giảm chuyển động {\"allVisible\":true,\"runningAnimations\":1}",
+    "Q07/firefox: chuyển động còn chạy sau 5 giây background-color,background-color,color,color,color,color,background-color,color,color,border-top-color,border-right-color,border-bottom-color,border-left-color,background-color,color,color,background-color,color,background-color,color,background-color,color,background-color,color,background-color,color,color,color,color,color,background-color",
+    "Q07/firefox: tắt JS/mất font {\"width\":320,\"scrollWidth\":320,\"clientWidth\":320,\"allVisible\":true,\"navLinksVisible\":false}"
+  ]
+}

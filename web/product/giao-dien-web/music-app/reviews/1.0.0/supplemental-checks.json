@@ -1,0 +1,166 @@
+{
+  "chromium": {
+    "version": "153.0.8010.12",
+    "structure": {
+      "idsUnique": true,
+      "landmarks": true,
+      "h1": 1,
+      "badSvg": 0,
+      "emptyLabels": 0
+    },
+    "targets": {
+      "320": [],
+      "375": [],
+      "820": [],
+      "1440": []
+    },
+    "oldOff": {
+      "opacity": "0.668763",
+      "transform": "matrix(1, 0, 0, 1, 0, 3.97484)"
+    },
+    "missingAssets": {
+      "title": "MUSIC APP",
+      "follow": "true",
+      "width": 920
+    },
+    "contrast": [
+      {
+        "label": "ink/background",
+        "foreground": "#1d282e",
+        "background": "#f5f2e7",
+        "ratio": 13.42969794531419
+      },
+      {
+        "label": "muted/surface",
+        "foreground": "#64665f",
+        "background": "#faf9f5",
+        "ratio": 5.525353268375458
+      },
+      {
+        "label": "white/blue",
+        "foreground": "#ffffff",
+        "background": "#344acb",
+        "ratio": 7.028385346849104
+      },
+      {
+        "label": "playlist title/coral",
+        "foreground": "#362b27",
+        "background": "#ff7965",
+        "ratio": 5.337114615055239
+      },
+      {
+        "label": "playlist label/coral",
+        "foreground": "#512d27",
+        "background": "#ff7965",
+        "ratio": 4.6593250675277815
+      },
+      {
+        "label": "ink/lavender",
+        "foreground": "#1d282e",
+        "background": "#c3b4ee",
+        "ratio": 7.943987716119565
+      },
+      {
+        "label": "focus/surface",
+        "foreground": "#344acb",
+        "background": "#faf9f5",
+        "ratio": 6.671472510325474
+      },
+      {
+        "label": "white focus/album",
+        "foreground": "#ffffff",
+        "background": "#344acb",
+        "ratio": 7.028385346849104
+      },
+      {
+        "label": "Luna label",
+        "foreground": "#ffffff",
+        "background": "#4e58a5",
+        "ratio": 6.435495178515037
+      }
+    ],
+    "staticPaths": true
+  },
+  "firefox": {
+    "version": "155.0",
+    "structure": {
+      "idsUnique": true,
+      "landmarks": true,
+      "h1": 1,
+      "badSvg": 0,
+      "emptyLabels": 0
+    },
+    "targets": {
+      "320": [],
+      "375": [],
+      "820": [],
+      "1440": []
+    },
+    "oldOff": {
+      "opacity": "0.838121",
+      "transform": "matrix(1, 0, 0, 1, 0, 1.94254)"
+    },
+    "missingAssets": {
+      "title": "MUSIC APP",
+      "follow": "true",
+      "width": 920
+    },
+    "contrast": [
+      {
+        "label": "ink/background",
+        "foreground": "#1d282e",
+        "background": "#f5f2e7",
+        "ratio": 13.42969794531419
+      },
+      {
+        "label": "muted/surface",
+        "foreground": "#64665f",
+        "background": "#faf9f5",
+        "ratio": 5.525353268375458
+      },
+      {
+        "label": "white/blue",
+        "foreground": "#ffffff",
+        "background": "#344acb",
+        "ratio": 7.028385346849104
+      },
+      {
+        "label": "playlist title/coral",
+        "foreground": "#362b27",
+        "background": "#ff7965",
+        "ratio": 5.337114615055239
+      },
+      {
+        "label": "playlist label/coral",
+        "foreground": "#512d27",
+        "background": "#ff7965",
+        "ratio": 4.6593250675277815
+      },
+      {
+        "label": "ink/lavender",
+        "foreground": "#1d282e",
+        "background": "#c3b4ee",
+        "ratio": 7.943987716119565
+      },
+      {
+        "label": "focus/surface",
+        "foreground": "#344acb",
+        "background": "#faf9f5",
+        "ratio": 6.671472510325474
+      },
+      {
+        "label": "white focus/album",
+        "foreground": "#ffffff",
+        "background": "#344acb",
+        "ratio": 7.028385346849104
+      },
+      {
+        "label": "Luna label",
+        "foreground": "#ffffff",
+        "background": "#4e58a5",
+        "ratio": 6.435495178515037
+      }
+    ],
+    "staticPaths": true
+  }
+}

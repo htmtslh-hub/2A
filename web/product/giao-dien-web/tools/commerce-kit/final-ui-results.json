@@ -1,0 +1,293 @@
+{
+  "date": "2026-10-11T07:54:09.410Z",
+  "results": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "slug": "shirtline",
+      "status": "PASS"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "slug": "novatrend",
+      "status": "PASS"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "slug": "diginest",
+      "status": "PASS"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "slug": "soniq",
+      "status": "PASS"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "slug": "astra-interior",
+      "status": "PASS"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "slug": "vybe",
+      "status": "PASS"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "slug": "solenne",
+      "status": "PASS"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "slug": "auralis",
+      "status": "PASS"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "slug": "aeris",
+      "status": "PASS"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "slug": "watchroom",
+      "status": "PASS"
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "slug": "velora",
+      "status": "PASS"
+    },
+    {
+      "browser": "chromium",
+      "slug": "shirtline",
+      "check": "offline no-JS navigation",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "slug": "shirtline",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "slug": "novatrend",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "slug": "diginest",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "slug": "soniq",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "slug": "astra-interior",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "slug": "vybe",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "slug": "solenne",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "slug": "auralis",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "slug": "aeris",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "slug": "watchroom",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "slug": "velora",
+      "status": "PASS"
+    },
+    {
+      "browser": "firefox",
+      "slug": "shirtline",
+      "check": "offline no-JS navigation",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "slug": "shirtline",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "slug": "novatrend",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "slug": "diginest",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "slug": "soniq",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "slug": "astra-interior",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "slug": "vybe",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "slug": "solenne",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "slug": "auralis",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "slug": "aeris",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "slug": "watchroom",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "slug": "velora",
+      "status": "PASS"
+    },
+    {
+      "browser": "edge",
+      "slug": "shirtline",
+      "check": "offline no-JS navigation",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "slug": "shirtline",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "slug": "novatrend",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "slug": "diginest",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "slug": "soniq",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "slug": "astra-interior",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "slug": "vybe",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "slug": "solenne",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "slug": "auralis",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "slug": "aeris",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "slug": "watchroom",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "slug": "velora",
+      "status": "PASS"
+    },
+    {
+      "browser": "coccoc",
+      "slug": "shirtline",
+      "check": "offline no-JS navigation",
+      "status": "PASS"
+    }
+  ]
+}

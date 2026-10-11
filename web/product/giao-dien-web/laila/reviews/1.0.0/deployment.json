@@ -1,0 +1,17 @@
+{
+  "deploymentId": "dpl_G15CVVyHVsWdjtf6xikkZNmA1Tpv",
+  "productionUrl": "https://web-9vogsgn6o-htmtslh-hubs-projects.vercel.app",
+  "alias": "https://forgezone.store",
+  "sourceCommit": "811767a",
+  "zipBytes": 254597,
+  "zipSha256": "c682165f9a14f6c396b03666ab9f9e938fc45a90a482b8d64cc9fe861414bfe0",
+  "zipSha1": "c88a672bb506257431ba21194ebb3286e495fc5f",
+  "deploymentFile": [
+    {
+      "path": "src/product/giao-dien-web/laila/laila.zip",
+      "uid": "c88a672bb506257431ba21194ebb3286e495fc5f"
+    }
+  ],
+  "zipMatchesDeployment": true,
+  "localDownloadTraceIncludesZip": true
+}

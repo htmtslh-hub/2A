@@ -1,0 +1,48 @@
+[
+  {
+    "browser": "edge",
+    "version": "155.0.4283.45",
+    "motionFrames": [
+      {
+        "opacity": "0.364472",
+        "transform": "matrix(1, 0, 0, 1, 0, 18.6421)"
+      },
+      {
+        "opacity": "0.861223",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.07079)"
+      },
+      {
+        "opacity": "0.99797",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.0595372)"
+      },
+      {
+        "opacity": "1",
+        "transform": "none"
+      }
+    ],
+    "violations": []
+  },
+  {
+    "browser": "coccoc",
+    "version": "152.0.7977.124",
+    "motionFrames": [
+      {
+        "opacity": "0.364472",
+        "transform": "matrix(1, 0, 0, 1, 0, 18.6421)"
+      },
+      {
+        "opacity": "0.81859",
+        "transform": "matrix(1, 0, 0, 1, 0, 5.32135)"
+      },
+      {
+        "opacity": "0.994589",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.158715)"
+      },
+      {
+        "opacity": "1",
+        "transform": "none"
+      }
+    ],
+    "violations": []
+  }
+]

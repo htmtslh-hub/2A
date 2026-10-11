@@ -1,0 +1,1145 @@
+{
+  "slug": "music-app",
+  "version": "1.0.0",
+  "date": "2026-10-11T01:06:55.488Z",
+  "os": "win32",
+  "zipBytes": 5355141,
+  "sha256": "4b2fcb182116422583880c62c9aa580a6c2549552f0c75a804ce944d811f745a",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to music",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#main"
+          },
+          {
+            "label": "Explore artist profiles",
+            "href": "#artist",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#artist"
+          },
+          {
+            "label": "PLAYLISTSSUMMERVIBES",
+            "href": "#library",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#library"
+          },
+          {
+            "label": "SUMMER VIBESSummer Beat",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "Summer VibesSolara",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "Fawbase To the H...Summer Beat",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "Followers",
+            "href": "#library",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#library"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#home"
+          },
+          {
+            "label": "Music library",
+            "href": "#library",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#library"
+          },
+          {
+            "label": "Artist profile",
+            "href": "#artist",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#artist"
+          },
+          {
+            "label": "View artist profiles",
+            "href": "#artist",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#artist"
+          },
+          {
+            "label": "AURORASOLARA",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "AURORASOLARA",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "Secondary TierarySOLARA - Art",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "The StopthSOLARA - Art",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "DaylightSummer Beat",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "HOME",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#home"
+          },
+          {
+            "label": "LIBRARY",
+            "href": "#library",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#library"
+          },
+          {
+            "label": "EXPLORE",
+            "href": "#album",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#album"
+          },
+          {
+            "label": "NEWNEW RELEASE ALERT",
+            "href": "#album",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#album"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#home"
+          },
+          {
+            "label": "Download original demo audio",
+            "href": "assets/audio/demo.wav",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/assets/audio/demo.wav"
+          },
+          {
+            "label": "Explore the next album",
+            "href": "#album",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#album"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "status": "N/A",
+        "reason": "Music App has always-visible section navigation, no collapsed menu; dialog keyboard tested in candidate-checks.json"
+      },
+      "keyboard": {
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to music",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 15.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "MUSIC APP",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              245,
+              242,
+              231
+            ],
+            "ratio": 13.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sticker sticker--beta",
+            "text": "BETA",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              29,
+              40,
+              46
+            ],
+            "ratio": 15.05,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "LABEL",
+            "text": "SEARCH BAR",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              245,
+              242,
+              231
+            ],
+            "ratio": 13.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "PLAYLISTS",
+            "colour": "rgb(81, 45, 39)",
+            "background": [
+              255,
+              121,
+              101
+            ],
+            "ratio": 4.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "SUMMERVIBES",
+            "colour": "rgb(54, 43, 39)",
+            "background": [
+              255,
+              121,
+              101
+            ],
+            "ratio": 5.34,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "SUMMER VIBES",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              250,
+              249,
+              245
+            ],
+            "ratio": 14.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Summer Beat",
+            "colour": "rgb(100, 102, 95)",
+            "background": [
+              250,
+              249,
+              245
+            ],
+            "ratio": 5.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "LUNA",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              78,
+              88,
+              165
+            ],
+            "ratio": 6.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "LUUM",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              52,
+              74,
+              203
+            ],
+            "ratio": 7.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "EUPHORIA",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              52,
+              74,
+              203
+            ],
+            "ratio": 7.03,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sticker sticker--lavender trending",
+            "text": "TRENDING",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              195,
+              180,
+              238
+            ],
+            "ratio": 7.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "SOLARA",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              250,
+              249,
+              245
+            ],
+            "ratio": 14.29,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sticker sticker--mint playing-sticker",
+            "text": "READY",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              169,
+              230,
+              214
+            ],
+            "ratio": 10.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sticker sticker--yellow now-sticker",
+            "text": "NOWPLAYING",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              255,
+              243,
+              69
+            ],
+            "ratio": 13.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-label",
+            "text": "RECENTLY PLAYED SECTION",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              169,
+              230,
+              214
+            ],
+            "ratio": 10.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Search the recently played library.",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              250,
+              249,
+              245
+            ],
+            "ratio": 14.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "sticker sticker--lavender new-sticker",
+            "text": "NEW",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              195,
+              180,
+              238
+            ],
+            "ratio": 7.94,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "NEW RELEASE ALERT",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              255,
+              243,
+              69
+            ],
+            "ratio": 13.01,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "PLAYLISTSSUMMERVIBES",
+          "colour": "rgb(52, 74, 203)",
+          "width": "3px",
+          "ratio": 6.67
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to music",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#main"
+          },
+          {
+            "label": "Explore artist profiles",
+            "href": "#artist",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#artist"
+          },
+          {
+            "label": "PLAYLISTSSUMMERVIBES",
+            "href": "#library",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#library"
+          },
+          {
+            "label": "SUMMER VIBESSummer Beat",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "Summer VibesSolara",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "Fawbase To the H...Summer Beat",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "Followers",
+            "href": "#library",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#library"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#home"
+          },
+          {
+            "label": "Music library",
+            "href": "#library",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#library"
+          },
+          {
+            "label": "Artist profile",
+            "href": "#artist",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#artist"
+          },
+          {
+            "label": "View artist profiles",
+            "href": "#artist",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#artist"
+          },
+          {
+            "label": "AURORASOLARA",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "AURORASOLARA",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "Secondary TierarySOLARA - Art",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "The StopthSOLARA - Art",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "DaylightSummer Beat",
+            "href": "#player",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#player"
+          },
+          {
+            "label": "HOME",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#home"
+          },
+          {
+            "label": "LIBRARY",
+            "href": "#library",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#library"
+          },
+          {
+            "label": "EXPLORE",
+            "href": "#album",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#album"
+          },
+          {
+            "label": "NEWNEW RELEASE ALERT",
+            "href": "#album",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#album"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#home"
+          },
+          {
+            "label": "Download original demo audio",
+            "href": "assets/audio/demo.wav",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/assets/audio/demo.wav"
+          },
+          {
+            "label": "Explore the next album",
+            "href": "#album",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/music-app/index.html#album"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "status": "N/A",
+        "reason": "Music App has always-visible section navigation, no collapsed menu; dialog keyboard tested in candidate-checks.json"
+      },
+      "keyboard": {
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to music",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 15.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "MUSIC APP",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              245,
+              242,
+              231
+            ],
+            "ratio": 13.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sticker sticker--beta",
+            "text": "BETA",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              29,
+              40,
+              46
+            ],
+            "ratio": 15.05,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "LABEL",
+            "text": "SEARCH BAR",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              245,
+              242,
+              231
+            ],
+            "ratio": 13.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "PLAYLISTS",
+            "colour": "rgb(81, 45, 39)",
+            "background": [
+              255,
+              121,
+              101
+            ],
+            "ratio": 4.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "SUMMERVIBES",
+            "colour": "rgb(54, 43, 39)",
+            "background": [
+              255,
+              121,
+              101
+            ],
+            "ratio": 5.34,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "SUMMER VIBES",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              250,
+              249,
+              245
+            ],
+            "ratio": 14.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Summer Beat",
+            "colour": "rgb(100, 102, 95)",
+            "background": [
+              250,
+              249,
+              245
+            ],
+            "ratio": 5.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "LUNA",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              78,
+              88,
+              165
+            ],
+            "ratio": 6.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "LUUM",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              52,
+              74,
+              203
+            ],
+            "ratio": 7.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "EUPHORIA",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              52,
+              74,
+              203
+            ],
+            "ratio": 7.03,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sticker sticker--lavender trending",
+            "text": "TRENDING",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              195,
+              180,
+              238
+            ],
+            "ratio": 7.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "SOLARA",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              250,
+              249,
+              245
+            ],
+            "ratio": 14.29,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sticker sticker--mint playing-sticker",
+            "text": "READY",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              169,
+              230,
+              214
+            ],
+            "ratio": 10.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sticker sticker--yellow now-sticker",
+            "text": "NOWPLAYING",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              255,
+              243,
+              69
+            ],
+            "ratio": 13.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-label",
+            "text": "RECENTLY PLAYED SECTION",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              169,
+              230,
+              214
+            ],
+            "ratio": 10.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Search the recently played library.",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              250,
+              249,
+              245
+            ],
+            "ratio": 14.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "sticker sticker--lavender new-sticker",
+            "text": "NEW",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              195,
+              180,
+              238
+            ],
+            "ratio": 7.94,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "NEW RELEASE ALERT",
+            "colour": "rgb(29, 40, 46)",
+            "background": [
+              255,
+              243,
+              69
+            ],
+            "ratio": 13.01,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "PLAYLISTSSUMMERVIBES",
+          "colour": "rgb(52, 74, 203)",
+          "width": "3px",
+          "ratio": 6.67
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "music-app/assets/audio/demo.wav",
+    "music-app/assets/css/style.css",
+    "music-app/assets/img/aurora.webp",
+    "music-app/assets/img/luna.webp",
+    "music-app/assets/img/solara.webp",
+    "music-app/assets/img/summer.webp",
+    "music-app/assets/img/user-avatar.webp",
+    "music-app/assets/js/main.js",
+    "music-app/CUSTOMISE.md",
+    "music-app/index.html",
+    "music-app/LICENCE.txt",
+    "music-app/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/audio/demo.wav",
+    "assets/css/style.css",
+    "assets/img/aurora.webp",
+    "assets/img/luna.webp",
+    "assets/img/solara.webp",
+    "assets/img/summer.webp",
+    "assets/img/user-avatar.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

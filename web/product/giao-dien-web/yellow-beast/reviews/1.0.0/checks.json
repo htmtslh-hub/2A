@@ -1,0 +1,162 @@
+{
+  "chromium": {
+    "version": "153.0.8010.12",
+    "errors": [],
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      {
+        "width": 820,
+        "height": 1180,
+        "innerWidth": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "innerWidth": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "innerWidth": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    ],
+    "interactions": {
+      "cameraSwitch": "PASS",
+      "motionToggle": "PASS",
+      "tachometer": "PASS",
+      "formSubmission": "PASS"
+    }
+  },
+  "firefox": {
+    "version": "155.0",
+    "errors": [],
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      {
+        "width": 820,
+        "height": 1180,
+        "innerWidth": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "innerWidth": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "innerWidth": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    ],
+    "interactions": {
+      "cameraSwitch": "PASS",
+      "motionToggle": "PASS",
+      "tachometer": "PASS",
+      "formSubmission": "PASS"
+    }
+  },
+  "edge": {
+    "version": "154.0.4258.62",
+    "errors": [],
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      {
+        "width": 820,
+        "height": 1180,
+        "innerWidth": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "innerWidth": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "innerWidth": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    ],
+    "interactions": {
+      "cameraSwitch": "PASS",
+      "motionToggle": "PASS",
+      "tachometer": "PASS",
+      "formSubmission": "PASS"
+    }
+  },
+  "coccoc": {
+    "version": "152.0.7977.124",
+    "errors": [],
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440
+      },
+      {
+        "width": 820,
+        "height": 1180,
+        "innerWidth": 820,
+        "scrollWidth": 820,
+        "clientWidth": 820
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "innerWidth": 375,
+        "scrollWidth": 375,
+        "clientWidth": 375
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "innerWidth": 320,
+        "scrollWidth": 320,
+        "clientWidth": 320
+      }
+    ],
+    "interactions": {
+      "cameraSwitch": "PASS",
+      "motionToggle": "PASS",
+      "tachometer": "PASS",
+      "formSubmission": "PASS"
+    }
+  }
+}

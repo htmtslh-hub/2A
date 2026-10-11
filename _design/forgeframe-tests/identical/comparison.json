@@ -1,0 +1,16 @@
+{
+  "reference": "D:\\3. Dự án\\2A\\_design\\forgeframe-tests\\reference.png",
+  "actual": "D:\\3. Dự án\\2A\\_design\\forgeframe-tests\\reference.png",
+  "size": [
+    120,
+    80
+  ],
+  "referenceCrop": null,
+  "alphaBackground": "white",
+  "meanAbsoluteRgbError": 0.0,
+  "pixelMatchPercent": 100.0,
+  "tolerance": 16,
+  "gate": "NOT ASSESSED",
+  "fidelityRubric": "NOT SCORED",
+  "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+}

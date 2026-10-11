@@ -1,3 +1,19 @@
+# Aeris 1.4.0
+
+Start with CUSTOMISE.md → **COD setup**. This update adds delivery details, editable order summary and cash-on-delivery checkout. The original visual design, cart and motion remain.
+
+Extract the whole ZIP and open index.html. No build or framework is needed. Checkout uses three additional local files: assets/js/shop-config.js (public settings), assets/js/commerce.js, assets/css/commerce.css.
+
+**Before setup:** checkout previews an order only, makes no request and leaves the bag intact. **After setup:** POST to your configured order service on explicit submission; clear the bag only after JSON {"ok":true}. Failed/timeout requests preserve the bag. Delivery fields are not persisted in browser storage. Order confirmation and inventory checks are the shop's responsibility. No online gateway account, hosting subscription or stock backend is bundled.
+
+Products, prices and delivery fees are illustrative. New sample prices for skincare are demonstration data. Keep source pricing, HTML copy and your order-service catalogue in sync. The template download price is separate from the sample goods' prices.
+
+Online payment is an optional documented integration using the merchant's own account and a server that validates product IDs/prices, creates checkout and verifies signed webhooks. No secret keys belong in the browser. Read LICENCE.txt; its existing terms are unchanged.
+
+Current checkout checks are recorded in ../reviews/1.4.0/QA.md. Earlier compatibility claims below refer to the original design, not live COD delivery or online payments.
+
+## Original design documentation (before the COD update)
+
 # Aeris 1.0.0
 
 Read CUSTOMISE.md first: it contains the exact edit map, ten setup steps and twelve complete AI prompts.

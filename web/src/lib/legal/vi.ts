@@ -36,17 +36,18 @@ export const LEGAL_VI: LegalPack = {
       {
         h: '4. Đặt hàng và thanh toán',
         p: [
-          'Giá hiển thị trên trang bảng giá tại thời điểm đặt hàng là giá áp dụng. Khách trong nước thanh toán bằng VNĐ, khách quốc tế thanh toán bằng USD.',
-          'Với đơn hàng quốc tế, <b>Paddle.com Market Ltd</b> là đơn vị bán hàng chính thức (merchant of record) và chịu trách nhiệm thu, kê khai thuế GTGT/GST tại nước của người mua. Hoá đơn của bạn sẽ mang tên Paddle.',
-          'Với đơn hàng trong nước, thanh toán được xử lý qua cổng PayOS bằng hình thức chuyển khoản ngân hàng.',
+          'Giá hiển thị tại thời điểm đặt hàng là giá áp dụng. Mọi đơn hàng mới thanh toán bằng USD, bất kể ngôn ngữ hiển thị. Thuế áp dụng được thể hiện tại checkout.',
+          '<b>Paddle.com Market Ltd</b> là đơn vị bán hàng chính thức (merchant of record) và chịu trách nhiệm thu, kê khai thuế GTGT/GST tại nước của người mua. Hoá đơn của bạn sẽ mang tên Paddle.',
           'Đơn hàng chỉ được coi là hoàn tất khi chúng tôi nhận được xác nhận thanh toán thành công từ cổng thanh toán.',
+          'Pro giá 99 USD mở toàn bộ thư viện trong 1 tháng; Ultra giá 299 USD trong 1 năm. Đây là nâng cấp tài khoản thanh toán một lần, không tự gia hạn. Thời hạn tính theo tháng/năm lịch từ lúc xác nhận thanh toán; ngày cuối tháng được điều chỉnh về ngày hợp lệ cuối cùng.',
+          'Gia hạn cùng gói cộng tiếp sau thời hạn đã mua. Chuyển sang gói khác bắt đầu khi thanh toán, không khấu trừ hay chuyển thời gian còn lại.',
         ],
       },
       {
         h: '5. Giao hàng',
         p: [
           'Ngay sau khi thanh toán thành công, quyền tải sản phẩm được mở trong tài khoản của bạn và một link tải được gửi tới email đã đăng ký.',
-          'Link trong email có hạn 7 ngày. Sau đó bạn vẫn tải lại được bất cứ lúc nào trong mục đơn hàng của tài khoản, không giới hạn số lần.',
+          'Với sản phẩm mua lẻ, link trong email có hạn 7 ngày; bạn vẫn tải lại được trong mục đơn hàng của tài khoản. Với Pro/Ultra, tải không giới hạn trong thời hạn gói và dừng tải mới khi hết hạn. File đã tải vẫn dùng theo giấy phép.',
           'Nếu sau 30 phút chưa nhận được email, hãy kiểm tra hộp thư rác rồi liên hệ chúng tôi.',
         ],
       },
@@ -119,6 +120,7 @@ export const LEGAL_VI: LegalPack = {
           '<b>Khi bạn mua hàng:</b> email, tên, thông tin đơn hàng và trạng thái thanh toán. <b>Chúng tôi không nhận và không lưu số thẻ của bạn</b> — toàn bộ thông tin thanh toán do cổng thanh toán xử lý trực tiếp.',
           '<b>Khi bạn để lại email nhận mẫu miễn phí:</b> địa chỉ email và ngôn ngữ bạn đang xem.',
           '<b>Khi bạn truy cập website:</b> nhật ký kỹ thuật thông thường của máy chủ như địa chỉ IP, loại trình duyệt và thời điểm truy cập.',
+          '<b>Thống kê truy cập khi được bật:</b> đường dẫn trang công khai đã bỏ tham số nhạy cảm, tên miền nguồn truy cập, nhóm kích thước màn hình và thời điểm xem. Mã phiên ngẫu nhiên được giữ trong sessionStorage của tab, không gắn với tài khoản. Hệ thống thống kê không lưu IP, email hoặc URL nguồn đầy đủ; không ghi nhận trang tài khoản, thanh toán hoặc quản trị và tôn trọng Do Not Track / Global Privacy Control.',
         ],
       },
       {
@@ -276,10 +278,11 @@ export const LEGAL_VI: LegalPack = {
         ],
       },
       {
-        h: '4. Gói một giao diện và gói trọn bộ',
+        h: '4. Mua lẻ và nâng cấp tài khoản',
         p: [
           '<b>Một giao diện</b> — giấy phép áp dụng cho đúng mẫu bạn đã mua, dùng cho bao nhiêu dự án cũng được.',
-          '<b>Trọn bộ</b> — giấy phép áp dụng cho tất cả các mẫu trong thư viện, kể cả các mẫu ra mắt về sau, với cùng điều kiện.',
+          '<b>Pro/Ultra</b> — tải tất cả sản phẩm, gồm sản phẩm mới, trong thời hạn gói. Giấy phép áp dụng cho file đã tải và tiếp tục có hiệu lực sau khi gói hết hạn. Hết hạn không còn quyền tải mới hoặc tải lại qua gói.',
+          '<b>Trọn bộ đã mua trước đây</b> — giữ quyền tải và giấy phép theo điều kiện tại thời điểm mua, gồm các mẫu ra mắt về sau.',
         ],
       },
       {

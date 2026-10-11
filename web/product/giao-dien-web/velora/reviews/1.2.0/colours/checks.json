@@ -1,0 +1,53 @@
+{
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "coloursPerModel": 6,
+      "models": 3,
+      "widths": [
+        1440,
+        820,
+        375,
+        320
+      ],
+      "errors": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "coloursPerModel": 6,
+      "models": 3,
+      "widths": [
+        1440,
+        820,
+        375,
+        320
+      ],
+      "errors": []
+    },
+    "edge": {
+      "version": "155.0.4283.45",
+      "coloursPerModel": 6,
+      "models": 3,
+      "widths": [
+        1440,
+        820,
+        375,
+        320
+      ],
+      "errors": []
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "coloursPerModel": 6,
+      "models": 3,
+      "widths": [
+        1440,
+        820,
+        375,
+        320
+      ],
+      "errors": []
+    }
+  },
+  "failures": []
+}

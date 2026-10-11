@@ -1,0 +1,3 @@
+# Ember Arcade 1.2.0 — brief
+
+Owner requests the same woman to protrude above the background card for a dimensional effect. Separate alpha foreground and scenery; retain live HTML title, dashboard below, existing interactions and original-world identity. Only product source/assets/docs/ZIP, its local demo and preview, design and review records. No catalog/push/deploy. W01/W03/W06 image exceptions now cover five WebP files (three complete original scenes plus two hero layers), target ZIP under1MiB and each asset under300KB; W05 existing interactions unchanged. Licence policy unchanged; artwork inventory corrected from three to five files.

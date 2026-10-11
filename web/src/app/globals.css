@@ -2,6 +2,28 @@
 @import '../generated/design.css';
 @import '../generated/hover.css';
 
+.product-card .product-category-badge {
+  background: #202733;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.35);
+  box-shadow: 0 2px 8px rgba(0,0,0,.24);
+  max-width: calc(100% - 100px);
+  letter-spacing: .035em !important;
+  line-height: 1.5;
+  text-shadow: none;
+}
+.category-preview-list p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 16px;
+  margin: 0 0 20px;
+  color: #eceef1;
+}
+.category-preview-list a { color: #fff; text-underline-offset: 4px; }
+.category-preview-list span, .category-empty { color: #c8ced6; font-size: 14px; line-height: 1.6; }
+.category-empty { padding: 24px 0; }
+
 /* Font nạp qua next/font: ghi đè hai biến font của bản thiết kế bằng
    biến CSS mà next/font sinh ra, giữ nguyên thứ tự dự phòng. */
 :root {
@@ -84,6 +106,11 @@
 .product-card {
   cursor: pointer;
   color: #fff;
+}
+
+/* Halve the added hover brightness: 1 + (1.59 - 1) / 2. */
+.product-card[href]:hover {
+  filter: brightness(1.295) saturate(1.1);
 }
 
 .product-card:hover .product-stage__frame,
@@ -185,3 +212,5 @@
 /* Preserve the complete Solenne preview inside the shared product frame. */
 .product-stage__frame:has(.product-stage__image[src*="/solenne.webp"]) { background: #fbf5ef; }
 .product-stage__image[src*="/solenne.webp"] { object-fit: contain; object-position: center; }
+.product-stage__frame:has(.product-stage__image[src*="/lingoglass.webp"]) { background: #faf7f2; }
+.product-stage__image[src*="/lingoglass.webp"] { object-fit: contain; object-position: center; }

@@ -1,0 +1,1686 @@
+{
+  "date": "2026-10-11T01:05:44.092Z",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 920,
+          "height": 1288,
+          "scrollWidth": 920,
+          "clientWidth": 920,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 47,
+              "y": 199,
+              "width": 277.703125,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 351.703125,
+              "y": 199,
+              "width": 256.671875,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 635.375,
+              "y": 199,
+              "width": 241.625,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 47,
+              "y": 550,
+              "width": 830,
+              "height": 301
+            },
+            {
+              "id": "library",
+              "x": 47,
+              "y": 887,
+              "width": 401,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 492,
+              "y": 887,
+              "width": 385,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 307,
+              "y": 223,
+              "width": 277.703125,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 611.703125,
+              "y": 223,
+              "width": 256.671875,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 895.375,
+              "y": 223,
+              "width": 241.625,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 307,
+              "y": 574,
+              "width": 830,
+              "height": 301
+            },
+            {
+              "id": "library",
+              "x": 307,
+              "y": 911,
+              "width": 401,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 752,
+              "y": 911,
+              "width": 385,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 32,
+              "y": 169,
+              "width": 257.671875,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 307.671875,
+              "y": 169,
+              "width": 238.140625,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 563.8125,
+              "y": 169,
+              "width": 224.1875,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 32,
+              "y": 520,
+              "width": 756,
+              "height": 297
+            },
+            {
+              "id": "library",
+              "x": 32,
+              "y": 853,
+              "width": 369.359375,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 433.359375,
+              "y": 853,
+              "width": 354.640625,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 22,
+              "y": 215,
+              "width": 331,
+              "height": 346
+            },
+            {
+              "id": "album",
+              "x": 22,
+              "y": 589,
+              "width": 331,
+              "height": 368.375
+            },
+            {
+              "id": "artist",
+              "x": 22,
+              "y": 985.375,
+              "width": 331,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 22,
+              "y": 1355.375,
+              "width": 331,
+              "height": 384
+            },
+            {
+              "id": "library",
+              "x": 22,
+              "y": 1775.375,
+              "width": 331,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 22,
+              "y": 2213.375,
+              "width": 331,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 16,
+              "y": 211,
+              "width": 296.171875,
+              "height": 346
+            },
+            {
+              "id": "album",
+              "x": 16,
+              "y": 585,
+              "width": 296.171875,
+              "height": 346.59375
+            },
+            {
+              "id": "artist",
+              "x": 16,
+              "y": 959.59375,
+              "width": 296.171875,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 16,
+              "y": 1329.59375,
+              "width": 288,
+              "height": 375
+            },
+            {
+              "id": "library",
+              "x": 16,
+              "y": 1740.59375,
+              "width": 288,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 16,
+              "y": 2178.59375,
+              "width": 288,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 699,
+          "height": 900,
+          "scrollWidth": 699,
+          "clientWidth": 699,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 22,
+              "y": 215,
+              "width": 655,
+              "height": 346
+            },
+            {
+              "id": "album",
+              "x": 22,
+              "y": 589,
+              "width": 655,
+              "height": 570.875
+            },
+            {
+              "id": "artist",
+              "x": 22,
+              "y": 1187.875,
+              "width": 655,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 22,
+              "y": 1557.875,
+              "width": 655,
+              "height": 384
+            },
+            {
+              "id": "library",
+              "x": 22,
+              "y": 1977.875,
+              "width": 655,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 22,
+              "y": 2415.875,
+              "width": 655,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 701,
+          "height": 900,
+          "scrollWidth": 701,
+          "clientWidth": 701,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 32,
+              "y": 169,
+              "width": 215.078125,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 265.078125,
+              "y": 169,
+              "width": 198.78125,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 481.859375,
+              "y": 169,
+              "width": 187.140625,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 32,
+              "y": 520,
+              "width": 637,
+              "height": 297
+            },
+            {
+              "id": "library",
+              "x": 32,
+              "y": 853,
+              "width": 308.65625,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 372.65625,
+              "y": 853,
+              "width": 296.328125,
+              "height": 346
+            }
+          ]
+        }
+      ],
+      "interactions": {
+        "play": {
+          "paused": false,
+          "time": 0.226
+        },
+        "pause": true,
+        "next": "EUPHORIA",
+        "previous": "AURORA",
+        "follow": "true",
+        "favourite": "true",
+        "shuffle": "true",
+        "repeat": true,
+        "volume": 0.6,
+        "seek": 5,
+        "search": 1,
+        "emptySearch": 0,
+        "dialog": true,
+        "escape": true,
+        "dialogFocusReturn": true,
+        "skipFocus": {
+          "focused": true,
+          "outline": "solid"
+        }
+      },
+      "errors": [],
+      "fallback": {
+        "file": "MUSIC APP",
+        "fileAudio": true,
+        "offlineFile": "MUSIC APP",
+        "zoomEquivalent": {
+          "scrollWidth": 720,
+          "clientWidth": 720,
+          "method": "720 CSS px equivalent to 1440 physical px at 200%; native browser zoom not tested"
+        },
+        "nojs": {
+          "title": "MUSIC APP",
+          "audio": true,
+          "content": true
+        }
+      },
+      "axe": [],
+      "motionMiddle": {
+        "opacity": "0.616288",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.60455)"
+      },
+      "motionEnd": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "reverseScroll": "1",
+      "reducedMotionMiddle": "0.604861"
+    },
+    "firefox": {
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 920,
+          "height": 1288,
+          "scrollWidth": 920,
+          "clientWidth": 920,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 47,
+              "y": 199,
+              "width": 277.7166748046875,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 351.7166748046875,
+              "y": 199,
+              "width": 256.66668701171875,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 635.38330078125,
+              "y": 199,
+              "width": 241.61666870117188,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 47,
+              "y": 550,
+              "width": 830,
+              "height": 301
+            },
+            {
+              "id": "library",
+              "x": 47,
+              "y": 887,
+              "width": 401,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 492,
+              "y": 887,
+              "width": 385,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 307,
+              "y": 223,
+              "width": 277.7166748046875,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 611.7166748046875,
+              "y": 223,
+              "width": 256.66668701171875,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 895.38330078125,
+              "y": 223,
+              "width": 241.61666870117188,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 307,
+              "y": 574,
+              "width": 830,
+              "height": 301
+            },
+            {
+              "id": "library",
+              "x": 307,
+              "y": 911,
+              "width": 401,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 752,
+              "y": 911,
+              "width": 385,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 32,
+              "y": 169,
+              "width": 257.66668701171875,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 307.66668701171875,
+              "y": 169,
+              "width": 238.13333129882812,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 563.7999877929688,
+              "y": 169,
+              "width": 224.18333435058594,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 32,
+              "y": 520,
+              "width": 756,
+              "height": 297
+            },
+            {
+              "id": "library",
+              "x": 32,
+              "y": 853,
+              "width": 369.3666687011719,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 433.3666687011719,
+              "y": 853,
+              "width": 354.6333312988281,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 22,
+              "y": 215,
+              "width": 331,
+              "height": 346.3666687011719
+            },
+            {
+              "id": "album",
+              "x": 22,
+              "y": 589.36669921875,
+              "width": 331,
+              "height": 369.3833312988281
+            },
+            {
+              "id": "artist",
+              "x": 22,
+              "y": 986.75,
+              "width": 331,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 22,
+              "y": 1356.75,
+              "width": 331,
+              "height": 386
+            },
+            {
+              "id": "library",
+              "x": 22,
+              "y": 1778.75,
+              "width": 331,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 22,
+              "y": 2216.75,
+              "width": 331,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 16,
+              "y": 211,
+              "width": 296.183349609375,
+              "height": 346.3666687011719
+            },
+            {
+              "id": "album",
+              "x": 16,
+              "y": 585.36669921875,
+              "width": 296.183349609375,
+              "height": 347.6166687011719
+            },
+            {
+              "id": "artist",
+              "x": 16,
+              "y": 960.9833374023438,
+              "width": 296.183349609375,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 16,
+              "y": 1330.9833984375,
+              "width": 288,
+              "height": 376
+            },
+            {
+              "id": "library",
+              "x": 16,
+              "y": 1742.9833984375,
+              "width": 288,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 16,
+              "y": 2180.9833984375,
+              "width": 288,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 699,
+          "height": 900,
+          "scrollWidth": 699,
+          "clientWidth": 699,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 22,
+              "y": 215,
+              "width": 655,
+              "height": 346.3666687011719
+            },
+            {
+              "id": "album",
+              "x": 22,
+              "y": 589.36669921875,
+              "width": 655,
+              "height": 571.88330078125
+            },
+            {
+              "id": "artist",
+              "x": 22,
+              "y": 1189.25,
+              "width": 655,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 22,
+              "y": 1559.25,
+              "width": 655,
+              "height": 386
+            },
+            {
+              "id": "library",
+              "x": 22,
+              "y": 1981.25,
+              "width": 655,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 22,
+              "y": 2419.25,
+              "width": 655,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 701,
+          "height": 900,
+          "scrollWidth": 701,
+          "clientWidth": 701,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 32,
+              "y": 169,
+              "width": 215.0833282470703,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 265.08331298828125,
+              "y": 169,
+              "width": 198.78334045410156,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 481.8666687011719,
+              "y": 169,
+              "width": 187.13333129882812,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 32,
+              "y": 520,
+              "width": 637,
+              "height": 297
+            },
+            {
+              "id": "library",
+              "x": 32,
+              "y": 853,
+              "width": 308.6499938964844,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 372.6499938964844,
+              "y": 853,
+              "width": 296.3500061035156,
+              "height": 346
+            }
+          ]
+        }
+      ],
+      "interactions": {
+        "play": {
+          "paused": false,
+          "time": 0.274541
+        },
+        "pause": true,
+        "next": "EUPHORIA",
+        "previous": "AURORA",
+        "follow": "true",
+        "favourite": "true",
+        "shuffle": "true",
+        "repeat": true,
+        "volume": 0.6,
+        "seek": 5,
+        "search": 1,
+        "emptySearch": 0,
+        "dialog": true,
+        "escape": true,
+        "dialogFocusReturn": true,
+        "skipFocus": {
+          "focused": true,
+          "outline": "solid"
+        }
+      },
+      "errors": [],
+      "fallback": {
+        "file": "MUSIC APP",
+        "fileAudio": true,
+        "offlineFile": "MUSIC APP",
+        "zoomEquivalent": {
+          "scrollWidth": 720,
+          "clientWidth": 720,
+          "method": "720 CSS px equivalent to 1440 physical px at 200%; native browser zoom not tested"
+        },
+        "nojs": {
+          "title": "MUSIC APP",
+          "audio": true,
+          "content": true
+        }
+      },
+      "axe": [],
+      "motionMiddle": {
+        "opacity": "0.88187",
+        "transform": "matrix(1, 0, 0, 1, 0, 1.41756)"
+      },
+      "motionEnd": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "reverseScroll": "1",
+      "reducedMotionMiddle": "0.906188"
+    },
+    "edge": {
+      "version": "155.0.4283.45",
+      "sizes": [
+        {
+          "width": 920,
+          "height": 1288,
+          "scrollWidth": 920,
+          "clientWidth": 920,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 47,
+              "y": 199,
+              "width": 277.703125,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 351.703125,
+              "y": 199,
+              "width": 256.671875,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 635.375,
+              "y": 199,
+              "width": 241.625,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 47,
+              "y": 550,
+              "width": 830,
+              "height": 301
+            },
+            {
+              "id": "library",
+              "x": 47,
+              "y": 887,
+              "width": 401,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 492,
+              "y": 887,
+              "width": 385,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 307,
+              "y": 223,
+              "width": 277.703125,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 611.703125,
+              "y": 223,
+              "width": 256.671875,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 895.375,
+              "y": 223,
+              "width": 241.625,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 307,
+              "y": 574,
+              "width": 830,
+              "height": 301
+            },
+            {
+              "id": "library",
+              "x": 307,
+              "y": 911,
+              "width": 401,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 752,
+              "y": 911,
+              "width": 385,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 32,
+              "y": 169,
+              "width": 257.671875,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 307.671875,
+              "y": 169,
+              "width": 238.140625,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 563.8125,
+              "y": 169,
+              "width": 224.1875,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 32,
+              "y": 520,
+              "width": 756,
+              "height": 297
+            },
+            {
+              "id": "library",
+              "x": 32,
+              "y": 853,
+              "width": 369.359375,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 433.359375,
+              "y": 853,
+              "width": 354.640625,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 22,
+              "y": 215,
+              "width": 331,
+              "height": 346
+            },
+            {
+              "id": "album",
+              "x": 22,
+              "y": 589,
+              "width": 331,
+              "height": 368.375
+            },
+            {
+              "id": "artist",
+              "x": 22,
+              "y": 985.375,
+              "width": 331,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 22,
+              "y": 1355.375,
+              "width": 331,
+              "height": 384
+            },
+            {
+              "id": "library",
+              "x": 22,
+              "y": 1775.375,
+              "width": 331,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 22,
+              "y": 2213.375,
+              "width": 331,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 16,
+              "y": 211,
+              "width": 296.171875,
+              "height": 346
+            },
+            {
+              "id": "album",
+              "x": 16,
+              "y": 585,
+              "width": 296.171875,
+              "height": 346.59375
+            },
+            {
+              "id": "artist",
+              "x": 16,
+              "y": 959.59375,
+              "width": 296.171875,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 16,
+              "y": 1329.59375,
+              "width": 288,
+              "height": 375
+            },
+            {
+              "id": "library",
+              "x": 16,
+              "y": 1740.59375,
+              "width": 288,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 16,
+              "y": 2178.59375,
+              "width": 288,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 699,
+          "height": 900,
+          "scrollWidth": 699,
+          "clientWidth": 699,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 22,
+              "y": 215,
+              "width": 655,
+              "height": 346
+            },
+            {
+              "id": "album",
+              "x": 22,
+              "y": 589,
+              "width": 655,
+              "height": 570.875
+            },
+            {
+              "id": "artist",
+              "x": 22,
+              "y": 1187.875,
+              "width": 655,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 22,
+              "y": 1557.875,
+              "width": 655,
+              "height": 384
+            },
+            {
+              "id": "library",
+              "x": 22,
+              "y": 1977.875,
+              "width": 655,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 22,
+              "y": 2415.875,
+              "width": 655,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 701,
+          "height": 900,
+          "scrollWidth": 701,
+          "clientWidth": 701,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 32,
+              "y": 169,
+              "width": 215.078125,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 265.078125,
+              "y": 169,
+              "width": 198.78125,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 481.859375,
+              "y": 169,
+              "width": 187.140625,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 32,
+              "y": 520,
+              "width": 637,
+              "height": 297
+            },
+            {
+              "id": "library",
+              "x": 32,
+              "y": 853,
+              "width": 308.65625,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 372.65625,
+              "y": 853,
+              "width": 296.328125,
+              "height": 346
+            }
+          ]
+        }
+      ],
+      "interactions": {
+        "play": {
+          "paused": false,
+          "time": 0.214698
+        },
+        "pause": true,
+        "next": "EUPHORIA",
+        "previous": "AURORA",
+        "follow": "true",
+        "favourite": "true",
+        "shuffle": "true",
+        "repeat": true,
+        "volume": 0.6,
+        "seek": 5,
+        "search": 1,
+        "emptySearch": 0,
+        "dialog": true,
+        "escape": true,
+        "dialogFocusReturn": true,
+        "skipFocus": {
+          "focused": true,
+          "outline": "solid"
+        }
+      },
+      "errors": [],
+      "fallback": {
+        "file": "MUSIC APP",
+        "fileAudio": true,
+        "offlineFile": "MUSIC APP",
+        "zoomEquivalent": {
+          "scrollWidth": 720,
+          "clientWidth": 720,
+          "method": "720 CSS px equivalent to 1440 physical px at 200%; native browser zoom not tested"
+        },
+        "nojs": {
+          "title": "MUSIC APP",
+          "audio": true,
+          "content": true
+        }
+      },
+      "axe": [],
+      "motionMiddle": {
+        "opacity": "0.676566",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.88121)"
+      },
+      "motionEnd": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "reverseScroll": "1",
+      "reducedMotionMiddle": "0.731961"
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "sizes": [
+        {
+          "width": 920,
+          "height": 1288,
+          "scrollWidth": 920,
+          "clientWidth": 920,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 47,
+              "y": 199,
+              "width": 277.703125,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 351.703125,
+              "y": 199,
+              "width": 256.671875,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 635.375,
+              "y": 199,
+              "width": 241.625,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 47,
+              "y": 550,
+              "width": 830,
+              "height": 301
+            },
+            {
+              "id": "library",
+              "x": 47,
+              "y": 887,
+              "width": 401,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 492,
+              "y": 887,
+              "width": 385,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 307,
+              "y": 223,
+              "width": 277.703125,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 611.703125,
+              "y": 223,
+              "width": 256.671875,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 895.375,
+              "y": 223,
+              "width": 241.625,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 307,
+              "y": 574,
+              "width": 830,
+              "height": 301
+            },
+            {
+              "id": "library",
+              "x": 307,
+              "y": 911,
+              "width": 401,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 752,
+              "y": 911,
+              "width": 385,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 32,
+              "y": 169,
+              "width": 257.671875,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 307.671875,
+              "y": 169,
+              "width": 238.140625,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 563.8125,
+              "y": 169,
+              "width": 224.1875,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 32,
+              "y": 520,
+              "width": 756,
+              "height": 297
+            },
+            {
+              "id": "library",
+              "x": 32,
+              "y": 853,
+              "width": 369.359375,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 433.359375,
+              "y": 853,
+              "width": 354.640625,
+              "height": 346
+            }
+          ]
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 22,
+              "y": 215,
+              "width": 331,
+              "height": 346
+            },
+            {
+              "id": "album",
+              "x": 22,
+              "y": 589,
+              "width": 331,
+              "height": 368.375
+            },
+            {
+              "id": "artist",
+              "x": 22,
+              "y": 985.375,
+              "width": 331,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 22,
+              "y": 1355.375,
+              "width": 331,
+              "height": 384
+            },
+            {
+              "id": "library",
+              "x": 22,
+              "y": 1775.375,
+              "width": 331,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 22,
+              "y": 2213.375,
+              "width": 331,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 16,
+              "y": 211,
+              "width": 296.171875,
+              "height": 346
+            },
+            {
+              "id": "album",
+              "x": 16,
+              "y": 585,
+              "width": 296.171875,
+              "height": 346.59375
+            },
+            {
+              "id": "artist",
+              "x": 16,
+              "y": 959.59375,
+              "width": 296.171875,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 16,
+              "y": 1329.59375,
+              "width": 288,
+              "height": 375
+            },
+            {
+              "id": "library",
+              "x": 16,
+              "y": 1740.59375,
+              "width": 288,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 16,
+              "y": 2178.59375,
+              "width": 288,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 699,
+          "height": 900,
+          "scrollWidth": 699,
+          "clientWidth": 699,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 22,
+              "y": 215,
+              "width": 655,
+              "height": 346
+            },
+            {
+              "id": "album",
+              "x": 22,
+              "y": 589,
+              "width": 655,
+              "height": 570.875
+            },
+            {
+              "id": "artist",
+              "x": 22,
+              "y": 1187.875,
+              "width": 655,
+              "height": 341
+            },
+            {
+              "id": "player",
+              "x": 22,
+              "y": 1557.875,
+              "width": 655,
+              "height": 384
+            },
+            {
+              "id": "library",
+              "x": 22,
+              "y": 1977.875,
+              "width": 655,
+              "height": 398
+            },
+            {
+              "id": "release",
+              "x": 22,
+              "y": 2415.875,
+              "width": 655,
+              "height": 345
+            }
+          ]
+        },
+        {
+          "width": 701,
+          "height": 900,
+          "scrollWidth": 701,
+          "clientWidth": 701,
+          "images": true,
+          "h1": 1,
+          "regions": [
+            {
+              "id": "playlist",
+              "x": 32,
+              "y": 169,
+              "width": 215.078125,
+              "height": 322
+            },
+            {
+              "id": "album",
+              "x": 265.078125,
+              "y": 169,
+              "width": 198.78125,
+              "height": 322
+            },
+            {
+              "id": "artist",
+              "x": 481.859375,
+              "y": 169,
+              "width": 187.140625,
+              "height": 322
+            },
+            {
+              "id": "player",
+              "x": 32,
+              "y": 520,
+              "width": 637,
+              "height": 297
+            },
+            {
+              "id": "library",
+              "x": 32,
+              "y": 853,
+              "width": 308.65625,
+              "height": 346
+            },
+            {
+              "id": "release",
+              "x": 372.65625,
+              "y": 853,
+              "width": 296.328125,
+              "height": 346
+            }
+          ]
+        }
+      ],
+      "interactions": {
+        "play": {
+          "paused": false,
+          "time": 0.220988
+        },
+        "pause": true,
+        "next": "EUPHORIA",
+        "previous": "AURORA",
+        "follow": "true",
+        "favourite": "true",
+        "shuffle": "true",
+        "repeat": true,
+        "volume": 0.6,
+        "seek": 5,
+        "search": 1,
+        "emptySearch": 0,
+        "dialog": true,
+        "escape": true,
+        "dialogFocusReturn": true,
+        "skipFocus": {
+          "focused": true,
+          "outline": "solid"
+        }
+      },
+      "errors": [],
+      "fallback": {
+        "file": "MUSIC APP",
+        "fileAudio": true,
+        "offlineFile": "MUSIC APP",
+        "zoomEquivalent": {
+          "scrollWidth": 720,
+          "clientWidth": 720,
+          "method": "720 CSS px equivalent to 1440 physical px at 200%; native browser zoom not tested"
+        },
+        "nojs": {
+          "title": "MUSIC APP",
+          "audio": true,
+          "content": true
+        }
+      },
+      "axe": [],
+      "motionMiddle": {
+        "opacity": "0.67791",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.86508)"
+      },
+      "motionEnd": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "reverseScroll": "1",
+      "reducedMotionMiddle": "0.731367"
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,60 @@
+{
+  "source": "C:\\Users\\Lenovo\\Downloads\\Pinterest.mp4",
+  "durationSeconds": 9.176758,
+  "width": 720,
+  "height": 540,
+  "selection": "uniform samples plus scene boundaries; manual transition review required",
+  "warning": null,
+  "coverage": "NOT ASSESSED",
+  "sceneTimes": [],
+  "frames": [
+    {
+      "file": "frame-0001.png",
+      "requestedTimeSeconds": 0.0
+    },
+    {
+      "file": "frame-0002.png",
+      "requestedTimeSeconds": 0.82516
+    },
+    {
+      "file": "frame-0003.png",
+      "requestedTimeSeconds": 1.65032
+    },
+    {
+      "file": "frame-0004.png",
+      "requestedTimeSeconds": 2.475479
+    },
+    {
+      "file": "frame-0005.png",
+      "requestedTimeSeconds": 3.300639
+    },
+    {
+      "file": "frame-0006.png",
+      "requestedTimeSeconds": 4.125799
+    },
+    {
+      "file": "frame-0007.png",
+      "requestedTimeSeconds": 4.950959
+    },
+    {
+      "file": "frame-0008.png",
+      "requestedTimeSeconds": 5.776119
+    },
+    {
+      "file": "frame-0009.png",
+      "requestedTimeSeconds": 6.601279
+    },
+    {
+      "file": "frame-0010.png",
+      "requestedTimeSeconds": 7.426438
+    },
+    {
+      "file": "frame-0011.png",
+      "requestedTimeSeconds": 8.251598
+    },
+    {
+      "file": "frame-0012.png",
+      "requestedTimeSeconds": 9.076758
+    }
+  ]
+}

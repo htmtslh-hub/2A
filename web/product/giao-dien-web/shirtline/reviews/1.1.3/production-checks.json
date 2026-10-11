@@ -1,0 +1,223 @@
+{
+  "date": "2026-10-07T14:15:30.685Z",
+  "assets": [
+    {
+      "file": "index.html",
+      "sha256": "7cb214892760ab966c17e9baa7fdbadb718cf310ab8bae00ae812e92e6d67918"
+    },
+    {
+      "file": "assets/js/main.js",
+      "sha256": "b9ea753ea8c621b267b16b2df42807d928e3dcc1b76990a4a8cfcba27763b483"
+    },
+    {
+      "file": "assets/css/motion.css",
+      "sha256": "73030cceae9d57db7c30d360bf188b4062ab1f49b2dff75d9b90569c0c40e98e"
+    },
+    {
+      "file": "assets/css/theme.css",
+      "sha256": "946197180536ab5bbf0ebdc5f47176460278a32883a2f62e7c29e58e68ac5003"
+    }
+  ],
+  "browsers": [
+    {
+      "name": "Edge",
+      "version": "154.0.4258.62",
+      "reverse": {
+        "position": -0.1875,
+        "selected": "4",
+        "shadows": [
+          "translate(-50%, -50%) translate3d(45.9313px, 208.374px, 0px) scale(0.940898)",
+          "translate(-50%, -50%) translate3d(196.192px, -31.2791px, 0px) scale(0.16013)",
+          "translate(-50%, -50%) translate3d(75.3223px, -113.225px, 0px) scale(0.12)",
+          "translate(-50%, -50%) translate3d(-149.641px, -93.2184px, 0px) scale(0.120145)",
+          "translate(-50%, -50%) translate3d(-167.805px, 42.3609px, 0px) scale(0.344931)"
+        ],
+        "images": 5,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "forward": {
+        "position": 4.1777,
+        "selected": "0",
+        "shadows": [
+          "translate(-50%, -50%) translate3d(169.047px, 39.8995px, 0px) scale(0.337322)",
+          "translate(-50%, -50%) translate3d(148.07px, -93.8943px, 0px) scale(0.120127)",
+          "translate(-50%, -50%) translate3d(-77.5349px, -112.88px, 0px) scale(0.12)",
+          "translate(-50%, -50%) translate3d(-195.989px, -29.8769px, 0px) scale(0.162443)",
+          "translate(-50%, -50%) translate3d(-43.5932px, 209.871px, 0px) scale(0.946689)"
+        ],
+        "images": 5,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "sizes": [
+        {
+          "position": 2,
+          "selected": "2",
+          "shadows": [
+            "translate(-50%, -50%) translate3d(-115.676px, -104.863px, 0px) scale(0.120007)",
+            "translate(-50%, -50%) translate3d(-187.168px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(0px, 223.6px, 0px) scale(1)",
+            "translate(-50%, -50%) translate3d(187.168px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(115.676px, -104.863px, 0px) scale(0.120007)"
+          ],
+          "images": 5,
+          "width": 1440,
+          "viewport": 1440
+        },
+        {
+          "position": 2,
+          "selected": "2",
+          "shadows": [
+            "translate(-50%, -50%) translate3d(-64.7152px, -104.863px, 0px) scale(0.120007)",
+            "translate(-50%, -50%) translate3d(-104.711px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(0px, 223.6px, 0px) scale(1)",
+            "translate(-50%, -50%) translate3d(104.711px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(64.7152px, -104.863px, 0px) scale(0.120007)"
+          ],
+          "images": 5,
+          "width": 820,
+          "viewport": 820
+        },
+        {
+          "position": 2,
+          "selected": "2",
+          "shadows": [
+            "translate(-50%, -50%) translate3d(-64.7152px, -104.863px, 0px) scale(0.120007)",
+            "translate(-50%, -50%) translate3d(-104.711px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(0px, 223.6px, 0px) scale(1)",
+            "translate(-50%, -50%) translate3d(104.711px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(64.7152px, -104.863px, 0px) scale(0.120007)"
+          ],
+          "images": 5,
+          "width": 375,
+          "viewport": 375
+        },
+        {
+          "position": 2,
+          "selected": "2",
+          "shadows": [
+            "translate(-50%, -50%) translate3d(-64.7152px, -104.863px, 0px) scale(0.120007)",
+            "translate(-50%, -50%) translate3d(-104.711px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(0px, 223.6px, 0px) scale(1)",
+            "translate(-50%, -50%) translate3d(104.711px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(64.7152px, -104.863px, 0px) scale(0.120007)"
+          ],
+          "images": 5,
+          "width": 320,
+          "viewport": 320
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "CocCoc",
+      "version": "152.0.7977.124",
+      "reverse": {
+        "position": -0.1804,
+        "selected": "4",
+        "shadows": [
+          "translate(-50%, -50%) translate3d(44.2283px, 209.472px, 0px) scale(0.945144)",
+          "translate(-50%, -50%) translate3d(196.047px, -30.2596px, 0px) scale(0.161805)",
+          "translate(-50%, -50%) translate3d(76.9356px, -112.974px, 0px) scale(0.12)",
+          "translate(-50%, -50%) translate3d(-148.499px, -93.7116px, 0px) scale(0.120132)",
+          "translate(-50%, -50%) translate3d(-168.713px, 40.5647px, 0px) scale(0.339372)"
+        ],
+        "images": 5,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "forward": {
+        "position": 4.1791,
+        "selected": "0",
+        "shadows": [
+          "translate(-50%, -50%) translate3d(168.876px, 40.2409px, 0px) scale(0.338374)",
+          "translate(-50%, -50%) translate3d(148.29px, -93.8005px, 0px) scale(0.12013)",
+          "translate(-50%, -50%) translate3d(-77.2272px, -112.929px, 0px) scale(0.12)",
+          "translate(-50%, -50%) translate3d(-196.019px, -30.0736px, 0px) scale(0.162114)",
+          "translate(-50%, -50%) translate3d(-43.9194px, 209.667px, 0px) scale(0.945898)"
+        ],
+        "images": 5,
+        "width": 1440,
+        "viewport": 1440
+      },
+      "sizes": [
+        {
+          "position": 2,
+          "selected": "2",
+          "shadows": [
+            "translate(-50%, -50%) translate3d(-115.676px, -104.863px, 0px) scale(0.120007)",
+            "translate(-50%, -50%) translate3d(-187.168px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(0px, 223.6px, 0px) scale(1)",
+            "translate(-50%, -50%) translate3d(187.168px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(115.676px, -104.863px, 0px) scale(0.120007)"
+          ],
+          "images": 5,
+          "width": 1440,
+          "viewport": 1440
+        },
+        {
+          "position": 2,
+          "selected": "2",
+          "shadows": [
+            "translate(-50%, -50%) translate3d(-115.676px, -104.863px, 0px) scale(0.120007)",
+            "translate(-50%, -50%) translate3d(-187.168px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(0px, 223.6px, 0px) scale(1)",
+            "translate(-50%, -50%) translate3d(187.168px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(115.676px, -104.863px, 0px) scale(0.120007)"
+          ],
+          "images": 5,
+          "width": 820,
+          "viewport": 820
+        },
+        {
+          "position": 2,
+          "selected": "2",
+          "shadows": [
+            "translate(-50%, -50%) translate3d(-64.7152px, -104.863px, 0px) scale(0.120007)",
+            "translate(-50%, -50%) translate3d(-104.711px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(0px, 223.6px, 0px) scale(1)",
+            "translate(-50%, -50%) translate3d(104.711px, 0.162094px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(64.7152px, -104.863px, 0px) scale(0.120007)"
+          ],
+          "images": 5,
+          "width": 375,
+          "viewport": 375
+        },
+        {
+          "position": 2,
+          "selected": "2",
+          "shadows": [
+            "translate(-50%, -50%) translate3d(-55.5457px, -78.6472px, 0px) scale(0.120007)",
+            "translate(-50%, -50%) translate3d(-89.8748px, 0.12157px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(0px, 167.7px, 0px) scale(1)",
+            "translate(-50%, -50%) translate3d(89.8748px, 0.12157px, 0px) scale(0.225696)",
+            "translate(-50%, -50%) translate3d(55.5457px, -78.6472px, 0px) scale(0.120007)"
+          ],
+          "images": 5,
+          "width": 320,
+          "viewport": 320
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "routes": [
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/demos/novatrend/index.html",
+      "status": 200
+    },
+    {
+      "route": "/demos/watchroom/index.html",
+      "status": 200
+    },
+    {
+      "route": "/demos/japan-trails/index.html",
+      "status": 200
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "browser": "firefox",
+  "version": "155.0",
+  "mockOnly": true,
+  "results": [
+    {
+      "width": 1440,
+      "height": 900,
+      "status": "PASS",
+      "checks": [
+        "native add",
+        "invalid fields",
+        "preview preserves bag",
+        "rejected request preserves bag",
+        "retry reference",
+        "USD canonical total",
+        "acknowledged order clears bag"
+      ],
+      "errors": []
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "status": "PASS",
+      "checks": [
+        "native add",
+        "invalid fields",
+        "preview preserves bag",
+        "rejected request preserves bag",
+        "retry reference",
+        "USD canonical total",
+        "acknowledged order clears bag"
+      ],
+      "errors": []
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "status": "PASS",
+      "checks": [
+        "native add",
+        "invalid fields",
+        "preview preserves bag",
+        "rejected request preserves bag",
+        "retry reference",
+        "USD canonical total",
+        "acknowledged order clears bag"
+      ],
+      "errors": []
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "status": "PASS",
+      "checks": [
+        "native add",
+        "invalid fields",
+        "preview preserves bag",
+        "rejected request preserves bag",
+        "retry reference",
+        "USD canonical total",
+        "acknowledged order clears bag"
+      ],
+      "errors": []
+    }
+  ]
+}

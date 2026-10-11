@@ -166,6 +166,14 @@
   button:focus-visible, a[href]:focus-visible, [role="button"]:focus-visible{ outline:none; filter: brightness(1.64) saturate(1.12); text-shadow: 0 0 12px rgba(255,255,255,.75); }
   @media (prefers-reduced-motion: reduce){ button, a[href], [role="button"]{ transition:none; } }
   [data-hero-card], [data-hero-card]:hover, [data-hero-card]:active{ filter:none !important; text-shadow:none !important; }
+
+/* Forge Zone brand stays inside the hero foreground frame. */
+.forge-hero-brand { position:absolute; z-index:5; top:40px; left:clamp(32px,4vw,56px); display:flex; align-items:center; gap:12px; padding:0; border:0; background:transparent; color:var(--acc); cursor:pointer; font-family:var(--display); font-weight:700; font-size:18px; letter-spacing:.13em; white-space:nowrap; }
+.forge-hero-brand img { width:32px; height:48px; object-fit:contain; flex:none; }
+.forge-hero-brand:focus-visible { outline:2px solid #fff; outline-offset:6px; border-radius:4px; }
+@media (max-width:1399px) { .forge-hero { padding-top:180px !important; } .forge-hero-brand { top:108px; left:32px; gap:10px; font-size:16px; } .forge-hero-brand img { width:26px; height:40px; } }
+
+[data-island-full] > button.island-brand-icon:first-child { display:flex !important; }
 </style>
 </helmet>
 
@@ -204,15 +212,13 @@
       <span aria-hidden="true" style="position:absolute; inset:0; z-index:0; border-radius:inherit; pointer-events:none; backdrop-filter:blur(26px) saturate(160%); -webkit-backdrop-filter:blur(26px) saturate(160%);"></span>
       <div style="position:relative; z-index:2; display:flex; align-items:center;">
       <div data-island-mini="" onClick="{{ toggleIsland }}" style="display:flex; align-items:center; gap:10px; height:56px; padding:0 20px; max-width:340px; overflow:hidden; white-space:nowrap; cursor:pointer; transition:max-width .95s cubic-bezier(.19,1,.22,1), opacity .5s cubic-bezier(.4,0,.2,1), padding .85s cubic-bezier(.19,1,.22,1);">
-        <span style="width:9px; height:9px; border-radius:50%; background:var(--acc); box-shadow:0 0 12px var(--acc-a55); display:inline-block; flex:none;"></span>
-        <span style="font-family:var(--display); font-weight:700; letter-spacing:.13em; font-size:13px; color:#ffffff;">FORGE ZONE</span>
+        <img src="{{ brandLogoSrc }}" alt="" width="26" height="40" data-forge-logo="" style="width:26px; height:40px; object-fit:contain; display:block; flex:none;" />
         <span style="width:4px; height:4px; border-radius:50%; background:rgba(236,238,241,.3); flex:none;"></span>
         <span style="font-size:12px; font-weight:600; color:#ffffff; letter-spacing:.02em;">{{ activeTabLabel }}</span>
       </div>
       <div data-island-full="" style="display:flex; align-items:center; gap:6px; padding:7px 9px; height:56px; max-width:0; opacity:0; overflow:hidden; transition:max-width 1s cubic-bezier(.19,1,.22,1), opacity .6s cubic-bezier(.4,0,.2,1) .12s, padding .85s cubic-bezier(.19,1,.22,1);">
-        <button onClick="{{ goHome }}" aria-label="Forge Zone" style="display:flex; align-items:center; gap:9px; flex:none; padding:0 12px 0 8px; height:42px; border:none; background:transparent; cursor:pointer; color:#ffffff; font-family:inherit;">
-          <span style="width:11px; height:11px; border-radius:50%; background:var(--acc); box-shadow:0 0 12px var(--acc-a55); display:inline-block; flex:none;"></span>
-          <span style="font-family:var(--display); font-weight:700; letter-spacing:.13em; font-size:14px;">FORGE ZONE</span>
+        <button class="island-brand-icon" onClick="{{ goHome }}" aria-label="Forge Zone" style="display:flex; align-items:center; gap:9px; flex:none; padding:0 12px 0 8px; height:42px; border:none; background:transparent; cursor:pointer; color:#ffffff; font-family:inherit;">
+          <img src="{{ brandLogoSrc }}" alt="" width="26" height="40" data-forge-logo="" style="width:26px; height:40px; object-fit:contain; display:block; flex:none;" />
         </button>
         <span style="width:1px; height:22px; background:rgba(255,255,255,.14); flex:none;"></span>
         <div data-island-tabs="" style="display:flex; align-items:center; gap:2px; min-width:0; overflow-x:auto; overflow-y:hidden; scrollbar-width:none;">
@@ -256,7 +262,8 @@
 
   <!-- ===== TAB: HOME — hero only ===== -->
   <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
-  <section id="top" style="position:relative; z-index:5; min-height:100vh; padding:clamp(96px,14vh,150px) clamp(20px,4vw,56px) clamp(36px,5vh,56px);">
+  <section class="forge-hero" id="top" style="position:relative; z-index:5; min-height:100vh; padding:clamp(96px,14vh,150px) clamp(20px,4vw,56px) clamp(36px,5vh,56px);">
+    <button class="forge-hero-brand" onClick="{{ goHome }}" aria-label="Forge Zone"><span>FORGE ZONE</span></button>
     <div style="position:absolute; inset:0; overflow:hidden; z-index:0;">
     <div id="hero-bg-wrap" style="position:absolute; top:-14%; left:-4%; right:-4%; bottom:-2%; z-index:0; will-change:transform;">
       <sc-for list="{{ heroBgs }}" as="bg" hint-placeholder-count="5">
@@ -358,7 +365,7 @@
             </span>
             <div style="position:relative; aspect-ratio:16/11; overflow:hidden;">
               <image-slot id="agentic-home-{{ hp.id }}" presentation="stage" shape="rect" fit="cover" placeholder="Ảnh preview giao diện"></image-slot>
-              <span style="position:absolute; top:12px; left:12px; padding:6px 12px; border-radius:100px; background:rgba(255,255,255,.14); box-shadow:inset 0 1px 0 rgba(255,255,255,.24); font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#ffffff;">{{ hp.catLabel }}</span>
+              <span class="product-category-badge" style="position:absolute; top:12px; left:12px; padding:6px 12px; border-radius:100px; background:#202733; box-shadow:inset 0 1px 0 rgba(255,255,255,.24); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#ffffff;">{{ hp.catLabel }}</span>
               <sc-if value="{{ hp.badge }}" hint-placeholder-val="{{ false }}">
                 <span style="position:absolute; top:12px; right:12px; padding:6px 12px; border-radius:100px; background:var(--acc); color:#ffffff; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;">{{ hp.badge }}</span>
               </sc-if>
@@ -432,10 +439,14 @@
       <sc-if value="{{ showWebProducts }}">
       <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:clamp(24px,3vw,36px);">
         <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
-          <button onClick="{{ f.onSelect }}" data-filter-chip="{{ f.key }}" style="padding:10px 18px; border-radius:100px; cursor:pointer; font-family:inherit; font-size:13px; font-weight:600; letter-spacing:.02em; border-width:1px; border-style:solid; transition:all .22s ease;" style-hover="border-color:#ffffff;">{{ f.label }}</button>
+          <button onClick="{{ f.onSelect }}" data-filter-chip="{{ f.key }}" aria-pressed="{{ f.selected }}" style="padding:10px 18px; border-radius:100px; cursor:pointer; font-family:inherit; font-size:13px; font-weight:600; letter-spacing:.02em; border-width:1px; border-style:solid; transition:all .22s ease;" style-hover="border-color:#ffffff;">{{ f.label }}</button>
         </sc-for>
       </div>
 
+      <sc-if value="{{ categoryEmpty }}"><p role="status" class="category-empty">{{ emptyCategory }}</p></sc-if>
+      <div class="category-preview-list">
+        <sc-for list="{{ previewTemplates }}" as="preview"><p><a href="{{ preview.href }}">{{ preview.name }}</a><span>{{ preview.catLabel }} · {{ preview.note }}</span></p></sc-for>
+      </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:22px;">
         <sc-for list="{{ templates }}" as="tp" hint-placeholder-count="6">
           <div class="product-card-wrap" onMouseEnter="{{ ledOn }}" onMouseLeave="{{ ledOff }}" style="position:relative; min-width:0; display:flex;">
@@ -445,7 +456,7 @@
             </span>
             <div style="position:relative; aspect-ratio:16/11; overflow:hidden;">
               <image-slot id="agentic-tpl-{{ tp.id }}" presentation="stage" shape="rect" fit="cover" placeholder="Ảnh preview giao diện"></image-slot>
-              <span style="position:absolute; top:12px; left:12px; padding:6px 12px; border-radius:100px; background:rgba(255,255,255,.14); box-shadow:inset 0 1px 0 rgba(255,255,255,.24); font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:#ffffff;">{{ tp.catLabel }}</span>
+              <span class="product-category-badge" style="position:absolute; top:12px; left:12px; padding:6px 12px; border-radius:100px; background:#202733; box-shadow:inset 0 1px 0 rgba(255,255,255,.24); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#ffffff;">{{ tp.catLabel }}</span>
               <sc-if value="{{ tp.badge }}" hint-placeholder-val="{{ false }}">
                 <span style="position:absolute; top:12px; right:12px; padding:6px 12px; border-radius:100px; background:var(--acc); color:#ffffff; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;">{{ tp.badge }}</span>
               </sc-if>

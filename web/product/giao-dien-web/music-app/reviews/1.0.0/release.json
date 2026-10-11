@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "sourceCommit": "9683cb4",
+  "evidenceCommit": "24ae033",
+  "deploymentId": "dpl_HNTFCCXEtBcskHPgPH34P32gDLro",
+  "deployment": "https://web-i4d1iba78-htmtslh-hubs-projects.vercel.app",
+  "alias": "https://forgezone.store",
+  "demo": "https://forgezone.store/demos/music-app/index.html?v=1.0.0",
+  "zipBytes": 5355141,
+  "zipSha256": "4b2fcb182116422583880c62c9aa580a6c2549552f0c75a804ce944d811f745a",
+  "assetHashStatus": "PASS",
+  "publicMotionStatus": "PASS",
+  "publicGuard": {
+    "anonymous": 401,
+    "directZip": 404
+  },
+  "postPurchase": "NOT TESTED",
+  "sourceMismatches": 0
+}

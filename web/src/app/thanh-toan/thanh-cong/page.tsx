@@ -4,6 +4,7 @@ import { COMPANY } from '@/lib/company';
 import PaymentResult from '../_result';
 import PendingPaymentRefresh from './pending-payment-refresh';
 import ClearPaidCart from './clear-paid-cart';
+import { isMembershipPlan } from '@/lib/membership-policy';
 
 export const metadata: Metadata = { title: 'Thanh toán — Forge Zone' };
 
@@ -22,10 +23,11 @@ export default async function Page({
   // được thanh toán", kể cả khi tiền chưa về hay khách chuyển thiếu. Nay đọc
   // trạng thái thật của đơn; chỉ webhook mới đổi được trạng thái đó.
   const row = order
-    ? await prisma.order.findUnique({ where: { id: order }, select: { status: true } })
+    ? await prisma.order.findUnique({ where: { id: order }, select: { status: true, kind: true } })
     : null;
 
   if (row?.status === 'PAID') {
+    if (isMembershipPlan(row.kind)) return <PaymentResult tone="ok" title="Nâng cấp tài khoản thành công" body="Gói đã được kích hoạt. Bạn có thể xem thời hạn và tải toàn bộ sản phẩm trong tài khoản. Thanh toán một lần, không tự gia hạn; file đã tải vẫn dùng theo giấy phép sau khi hết hạn." orderCode={order} cta={{ href: '/tai-khoan', label: 'Xem gói tài khoản' }} />;
     return (
       <><ClearPaidCart orderId={order!} /><PaymentResult
         tone="ok"

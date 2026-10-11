@@ -1,0 +1,54 @@
+{
+  "bytes": 570895,
+  "sha256": "879c0fa92d552486f2e6c970777a11ca9fb07b90c195e09a281f55a31f63665c",
+  "counts": [
+    {
+      "file": "index.html",
+      "needle": "NovaTrend",
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "file": "index.html",
+      "needle": "Discover Products You'll Love",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "file": "index.html",
+      "needle": "Free Worldwide Shipping Over $50",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "file": "index.html",
+      "needle": "Up To 70% Off",
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "file": "assets/css/style.css",
+      "needle": "--primary: #ff5722;",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "file": "assets/css/style.css",
+      "needle": "--dark: #111114;",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "file": "assets/js/main.js",
+      "needle": "const FREE_SHIPPING_THRESHOLD = 5000;",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "file": "assets/js/main.js",
+      "needle": "const STANDARD_SHIPPING_FEE = 499;",
+      "expected": 1,
+      "actual": 1
+    }
+  ]
+}

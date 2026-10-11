@@ -1,0 +1,203 @@
+{
+  "results": [
+    {
+      "browser": "edge",
+      "version": "155.0.4283.45",
+      "url": "https://forgezone.store/demos/laila/index.html?v=1.0.0",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "geometry": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "portraitLoaded": true
+          },
+          "menu": null,
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "geometry": {
+            "scrollWidth": 820,
+            "clientWidth": 820,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "geometry": {
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "geometry": {
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        }
+      ],
+      "motion": [
+        {
+          "opacity": "0.861105",
+          "transform": "matrix(1, 0, 0, 1, 0, 4.07425)"
+        },
+        {
+          "opacity": "0.97952",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.600732)"
+        },
+        {
+          "opacity": "1",
+          "transform": "none"
+        },
+        {
+          "opacity": "1",
+          "transform": "none"
+        }
+      ],
+      "errors": [],
+      "missingPortrait": {
+        "headingVisible": true,
+        "contactVisible": true,
+        "overflow": false
+      }
+    },
+    {
+      "browser": "coccoc",
+      "version": "152.0.7977.124",
+      "url": "https://forgezone.store/demos/laila/index.html?v=1.0.0",
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900,
+          "geometry": {
+            "scrollWidth": 1440,
+            "clientWidth": 1440,
+            "portraitLoaded": true
+          },
+          "menu": null,
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "geometry": {
+            "scrollWidth": 820,
+            "clientWidth": 820,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "geometry": {
+            "scrollWidth": 375,
+            "clientWidth": 375,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "geometry": {
+            "scrollWidth": 320,
+            "clientWidth": 320,
+            "portraitLoaded": true
+          },
+          "menu": {
+            "open": "true",
+            "focusReturn": true,
+            "linkCloses": true
+          },
+          "enterOpens": true,
+          "spaceCloses": true,
+          "learningOpens": true,
+          "axe": []
+        }
+      ],
+      "motion": [
+        {
+          "opacity": "0.308547",
+          "transform": "matrix(1, 0, 0, 1, 0, 20.2826)"
+        },
+        {
+          "opacity": "0.840433",
+          "transform": "matrix(1, 0, 0, 1, 0, 4.68062)"
+        },
+        {
+          "opacity": "0.996508",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.102429)"
+        },
+        {
+          "opacity": "1",
+          "transform": "none"
+        }
+      ],
+      "errors": [],
+      "missingPortrait": {
+        "headingVisible": true,
+        "contactVisible": true,
+        "overflow": false
+      }
+    }
+  ],
+  "bad": []
+}

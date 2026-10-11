@@ -365,7 +365,6 @@ export function buildView(
     .map((m: any) => withSave({ ...m, href: `?mau=${m.id}`, onDetail: (event: MouseEvent<HTMLAnchorElement>) => followTemplateLink(event, m.id) }));
 
   const previewTemplates = [
-    { name: 'Crimson Folio', cat: TEMPLATE_CATEGORIES['crimson-folio'], href: '/demos/crimson-folio/index.html?v=1.0.1', note: { vi: 'Bản xem trước · chưa mở bán', en: 'Preview · not available for purchase', zh: '预览 · 尚未发售' }[lang] },
     { name: 'Starter', cat: TEMPLATE_CATEGORIES['free-sample'], href: '/api/download?free=1', note: { vi: 'Mẫu miễn phí', en: 'Free sample', zh: '免费示例' }[lang] },
   ].filter((m) => productGroup === 0 && (filter === 'all' || m.cat === filter)).map((m) => ({ ...m, catLabel: t.cats[m.cat] }));
 

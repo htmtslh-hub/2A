@@ -281,7 +281,7 @@ export default function AgenticSite({
     const timer = window.setTimeout(() => {
       try {
         const stored = JSON.parse(localStorage.getItem(CART_KEY) || '[]');
-        if (Array.isArray(stored)) setCartIds([...new Set(stored.filter((id): id is string => typeof id === 'string' && Boolean(REAL_TEMPLATES[id])))].slice(0, 20));
+        if (Array.isArray(stored)) setCartIds([...new Set(stored.filter((id): id is string => typeof id === 'string' && Boolean(REAL_TEMPLATES[id]) && !REAL_TEMPLATES[id].previewOnly))].slice(0, 20));
       } catch {}
       setCartReady(true);
     }, 0);
@@ -304,7 +304,7 @@ export default function AgenticSite({
 
   const addToCart = useCallback((id: string, origin?: { x: number; y: number }) => {
     const template = REAL_TEMPLATES[id];
-    if (!template || pendingCartIdsRef.current.has(id)) return;
+    if (!template || template.previewOnly || pendingCartIdsRef.current.has(id)) return;
     const isNew = !cartIds.includes(id);
     if (isNew) {
       pendingCartIdsRef.current.add(id);

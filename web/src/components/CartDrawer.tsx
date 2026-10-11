@@ -18,7 +18,7 @@ export default function CartDrawer({ ids, count, lang, open, busy, error, pulse,
 }) {
   const t = copy[lang];
   const currency = currencyForProvider(providerForLang(lang));
-  const items = ids.filter((id) => REAL_TEMPLATES[id]);
+  const items = ids.filter((id) => REAL_TEMPLATES[id] && !REAL_TEMPLATES[id].previewOnly);
   const total = items.reduce((sum, id) => sum + priceOf('TEMPLATE', currency, id), 0);
   const closeRef = useRef<HTMLButtonElement>(null);
   const drawerRef = useRef<HTMLElement>(null);

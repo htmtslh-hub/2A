@@ -31,6 +31,8 @@ export interface RealTemplate {
   /** Website niche, shared with the store filters. */
   cat: WebCategory;
   /** Product family; existing templates default to web. */
+  previewOnly?: boolean;
+  badge?: string;
   group?: 'web' | 'skill-prompt' | 'agent';
   /** Video quay từ chính mẫu giao, chỉ dùng tại cửa hàng. */
   video?: boolean;
@@ -41,7 +43,60 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
-  a1: {
+  t13: {
+    slug: 'crimson-folio', cat: 'portfolio', version: '1.0.2',
+    badge: '',
+    specs: {
+      vi: [['Định dạng', 'HTML · CSS · JS thuần'], ['Trong gói', '6 file chính + 2 ảnh WebP'], ['Khổ đã kiểm tra', '320 · 375 · 820 · 1440 px'], ['Tài liệu', '10 bước · 12 prompt AI'], ['Giấy phép', 'Website cá nhân và khách hàng'], ['Liên hệ trong mẫu', 'Email và QR; không gửi form']],
+      en: [['Format', 'Plain HTML · CSS · JS'], ['Package', '6 core files + 2 WebP images'], ['Tested widths', '320 · 375 · 820 · 1440 px'], ['Documentation', '10 steps · 12 AI prompts'], ['Licence', 'Personal and client websites'], ['Template contact', 'Email and QR; no form submission']],
+      zh: [['格式', '纯 HTML · CSS · JS'], ['文件包', '6 个核心文件 + 2 张 WebP 图片'], ['已测试宽度', '320 · 375 · 820 · 1440 px'], ['文档', '10 个步骤 · 12 个 AI 提示词'], ['授权', '个人与客户网站'], ['模板联系', '邮件和二维码；不含表单提交']],
+    },
+    copy: {
+      vi: { name: 'Crimson Folio', desc: 'Giao diện portfolio cho designer độc lập: hero đỏ rượu vang với chân dung chồng chữ lớn, giới thiệu, quy trình sáu bước, bốn concept dự án và liên hệ email với QR. HTML/CSS/JS thuần, hai ảnh WebP cục bộ, menu mobile và hiệu ứng hiện dần. Không kèm backend hay gửi form.', tags: ['Portfolio', 'Designer', 'Editorial'] },
+      en: { name: 'Crimson Folio', desc: 'An independent designer portfolio with a burgundy portrait-and-type hero, about section, six-step process, four project concepts and email contact with QR codes. Plain HTML/CSS/JS, two local WebP images, mobile navigation and finite scroll reveals. No backend or form submission.', tags: ['Portfolio', 'Designer', 'Editorial'] },
+      zh: { name: 'Crimson Folio', desc: '独立设计师作品集模板：酒红色肖像与大字首屏、个人介绍、六步流程、四个概念项目及带二维码的邮件联系。纯 HTML/CSS/JS、两张本地 WebP 图片、移动导航与有限时长渐显动画。不含后端或表单提交。', tags: ['作品集', '设计师', '杂志风'] },
+    },
+  },
+  t16: {
+    slug: 'mint-atlas', cat: 'portfolio', version: '1.0.0', badge: '',
+    specs: {
+      vi: [['Định dạng', 'HTML · CSS · JS thuần'], ['Trong gói', '6 file chính + 3 ảnh WebP original'], ['Thiết kế', 'Xanh bạc hà · Nhân vật nổi khỏi banner'], ['Tương tác', 'Kỹ năng mở rộng · Xem artwork · Menu mobile'], ['Tài liệu', '10 bước · 12 prompt AI · Giấy phép thương mại'], ['Nội dung', 'Nhân vật và chỉ số hư cấu; không backend']],
+      en: [['Format', 'Plain HTML · CSS · JS'], ['Package', '6 core files + 3 original WebP images'], ['Design', 'Mint palette · Layered character hero'], ['Interactions', 'Expandable abilities · Full artwork · Mobile menu'], ['Documentation', '10 steps · 12 AI prompts · Commercial licence'], ['Content', 'Fictional character and scores; no backend']],
+      zh: [['格式', '纯 HTML · CSS · JS'], ['文件包', '6 个核心文件 + 3 张原创 WebP 图片'], ['设计', '薄荷绿 · 突出边框的角色首屏'], ['交互', '可展开技能 · 完整插画 · 移动菜单'], ['文档', '10 个步骤 · 12 个 AI 提示词 · 商业许可'], ['内容', '虚构角色与数值；不含后端']],
+    },
+    copy: {
+      vi: { name: 'Mint Atlas', desc: 'Giao diện hồ sơ nhân vật anime xanh bạc hà với nhân vật original nổi khỏi banner, ba kỹ năng mở rộng, bảng chỉ số và thư viện artwork nhà kính/đêm sao. Ba ảnh AI WebP cục bộ, HTML/CSS/JS dễ sửa, hướng dẫn 10 bước và 12 prompt AI, giấy phép dùng website thương mại. Nhân vật và chỉ số hư cấu; không kèm backend, đăng nhập hoặc game service.', tags: ['Hồ sơ nhân vật', 'Anime original', 'Artwork'] },
+      en: { name: 'Mint Atlas', desc: 'A mint-and-slate anime character dossier with an original explorer rising above the hero, three expandable abilities, concept statistics and glasshouse/starlight artwork. Three local AI WebP images, editable HTML/CSS/JS, ten setup steps, twelve AI prompts and a commercial website licence. Fictional character and scores; no backend, accounts or game services.', tags: ['Character dossier', 'Original anime', 'Artwork'] },
+      zh: { name: 'Mint Atlas', desc: '薄荷绿与深灰配色的动漫角色档案：突出首屏边框的原创探险者、三个可展开技能、概念属性图表及温室/星夜插画。包含三张本地 AI WebP 图片、可编辑的 HTML/CSS/JS、十个设置步骤、十二个 AI 提示词和商业网站许可。角色与数值为虚构内容，不含后端、账号或游戏服务。', tags: ['角色档案', '原创动漫', '插画'] },
+    },
+  },
+  t17: {
+    slug: 'melt-muse', cat: 'portfolio', version: '1.1.0', badge: '',
+    specs: {
+      vi: [['Định dạng', 'HTML · CSS · JS thuần'], ['Trong gói', '6 file chính + 3 ảnh WebP'], ['Thiết kế', 'Editorial · Trắng xám · Đỏ cherry'], ['Tài liệu', '10 bước · 12 prompt AI'], ['Giấy phép', 'Website cá nhân, thương mại và khách hàng'], ['Liên hệ', 'Email; không backend hoặc gửi form']],
+      en: [['Format', 'Plain HTML · CSS · JS'], ['Package', '6 core files + 3 WebP images'], ['Design', 'Editorial · Paper white · Cherry red'], ['Documentation', '10 steps · 12 AI prompts'], ['Licence', 'Personal, commercial and client websites'], ['Contact', 'Email; no backend or form submission']],
+      zh: [['格式', '纯 HTML · CSS · JS'], ['文件包', '6 个核心文件 + 3 张 WebP 图片'], ['设计', '杂志风 · 纸白色 · 樱桃红'], ['文档', '10 个步骤 · 12 个 AI 提示词'], ['授权', '个人、商业与客户网站'], ['联系', '邮件；不含后端或表单提交']],
+    },
+    copy: {
+      vi: { name: 'Melt Muse', desc: 'Portfolio thời trang và studio sáng tạo với chữ lớn, thẻ tim đỏ, nét vẽ tay và collage chân dung nghiêng. Ba ảnh AI WebP cục bộ, menu mobile, hiệu ứng hiện dần hữu hạn và liên hệ email. Kèm mã nguồn dễ sửa, giấy phép thương mại, 10 bước hướng dẫn và 12 prompt AI. Không kèm backend hay gửi form.', tags: ['Portfolio', 'Thời trang', 'Editorial'] },
+      en: { name: 'Melt Muse', desc: 'A fashion and creative studio portfolio with oversized typography, a red heart note, hand-drawn details and tilted portrait collages. Three local AI WebP images, mobile navigation, finite entrance motion and email contact. Includes editable source, a commercial licence, ten setup steps and twelve AI prompts. No backend or form submission.', tags: ['Portfolio', 'Fashion', 'Editorial'] },
+      zh: { name: 'Melt Muse', desc: '时尚与创意工作室作品集，包含大字排版、红心卡片、手绘细节和倾斜肖像拼贴。三张本地 AI WebP 图片、移动导航、有限时长渐显动画与邮件联系。附可编辑源码、商业许可、十个设置步骤和十二个 AI 提示词。不含后端或表单提交。', tags: ['作品集', '时尚', '杂志风'] },
+    },
+  },
+  t18: {
+    slug: 'apartment-flow', cat: 'commerce', version: '1.0.0', badge: '',
+    specs: {
+      vi: [['Định dạng', 'HTML · CSS · JS thuần'], ['Background', '240 frame WebP · 1920×1080'], ['Tương tác', 'Cuộn hai chiều · 4 chương'], ['Thiết kế', 'Glass · Lumière Residence'], ['Nội dung', 'Căn hộ AI minh họa'], ['Trong gói', '247 file · 10 bước · 12 prompt AI']],
+      en: [['Format', 'Plain HTML · CSS · JS'], ['Background', '240 WebP frames · 1920×1080'], ['Interaction', 'Two-way scrolling · 4 chapters'], ['Design', 'Glass · Lumière Residence'], ['Content', 'Illustrative AI apartment'], ['Package', '247 files · 10 steps · 12 AI prompts']],
+      zh: [['格式', '纯 HTML · CSS · JS'], ['背景', '240 帧 WebP · 1920×1080'], ['交互', '双向滚动 · 4 个章节'], ['设计', '毛玻璃 · Lumière Residence'], ['内容', 'AI 公寓示意'], ['文件包', '247 个文件 · 10 个步骤 · 12 个 AI 提示词']],
+    },
+    copy: {
+      vi: { name: 'Apartment Flow', desc: 'Giao diện giới thiệu căn hộ Lumière Residence với thẻ glass và camera đi từ cửa vào phòng khách, bếp, phòng ngủ theo cuộn. Chuỗi 240 frame từ video AI, điều hướng 4 chương và dialog thông tin demo. Không kèm đặt lịch hay backend. Kèm giấy phép thương mại và hướng dẫn tùy chỉnh.', tags: ['Căn hộ', 'Glass', 'Scroll animation'] },
+      en: { name: 'Apartment Flow', desc: 'A glass apartment presentation for Lumière Residence. Scroll through a continuous entrance, living room, kitchen and bedroom camera journey with 240 AI video frames, four chapters and a demo information dialog. No booking or backend. Includes a commercial licence and customisation guide.', tags: ['Apartment', 'Glass', 'Scroll animation'] },
+      zh: { name: 'Apartment Flow', desc: 'Lumière Residence 公寓毛玻璃展示页面：随滚动连续游览入口、客厅、厨房和卧室。包含 AI 视频生成的 240 帧、四个章节与演示说明弹窗。不含预约或后端。包含商业许可与定制指南。', tags: ['公寓', '毛玻璃', '滚动动画'] },
+    },
+  },
+  t14: {
     slug: 'lingoglass', cat: 'education', group: 'agent', version: '1.0.1',
     specs: {
       vi: [['Định dạng', 'Ứng dụng Electron · React · TypeScript'], ['Nền tảng', 'Windows / macOS'], ['Học tập', 'A-B Repeat · Tra từ · Shadowing'], ['Trong gói', 'Mã nguồn và tài liệu LingoGlass']],
@@ -97,7 +152,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     },
   },
 
-  t13: {
+  t22: {
     slug: 'kinetiq', cat: TEMPLATE_CATEGORIES.kinetiq,
     copy: {
       vi: { name: 'Kinetiq', desc: 'Giao diện giới thiệu hệ truyền động và linh kiện robot công nghiệp: minh họa cơ khí, danh mục hệ thống và CTA liên hệ. Không kèm thanh toán hoặc quản lý đơn hàng.', tags: ['Công nghiệp', 'Linh kiện', 'Giới thiệu sản phẩm'] },
@@ -105,7 +160,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       zh: { name: 'Kinetiq', desc: '工业传动与机器人零件展示模板，包含机械插图、系统列表与联系入口。不含支付或订单后台。', tags: ['工业', '零件', '产品展示'] },
     },
   },
-  t14: {
+  t23: {
     slug: 'watchroom', cat: TEMPLATE_CATEGORIES.watchroom, version: '1.3.0',
     copy: {
       vi: { name: 'Watchroom', desc: "Showroom đồng hồ nền tối, ba mẫu và carousel chuyển động. Có giỏ, thông tin giao hàng và COD khi chủ shop kết nối dịch vụ nhận đơn. Kèm hướng dẫn thanh toán online bằng tài khoản riêng; không kèm tồn kho hoặc tài khoản cổng thanh toán.", tags: ['Đồng hồ', 'Showroom', 'Carousel'] },
@@ -121,7 +176,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       zh: { name: 'Shirtline', desc: "五款衬衫展示店，含自动椭圆轮播与尺码选择。 包含购物袋、配送信息与 COD；店主连接订单服务后可接单。附自有账户在线支付接入说明，不含库存后台或支付账户。", tags: ['衬衫', '展厅', '轮播'] },
     },
   },
-  t16: {
+  t24: {
     slug: 'yellow-beast', cat: TEMPLATE_CATEGORIES['yellow-beast'], version: '1.0.0',
     copy: {
       vi: { name: 'The Yellow Beast', desc: 'Showroom siêu xe 2018 Porsche 911 Turbo S Exclusive Series: phối màu vàng kim loại ấn tượng, chuyển đổi 3 góc nhìn camera mượt mà, đồng hồ đo vòng tua tương tác, mô phỏng âm thanh động cơ Flat-6 và đăng ký VIP allocation. Đầy đủ animation chuyển cảnh và scroll.', tags: ['Siêu xe', 'Porsche', 'Animation', 'Showroom'] },

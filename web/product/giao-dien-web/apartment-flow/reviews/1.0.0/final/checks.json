@@ -1,0 +1,1497 @@
+{
+  "slug": "apartment-flow",
+  "version": "1.0.0",
+  "date": "2026-10-08T13:19:31.812Z",
+  "os": "win32",
+  "zipBytes": 11352935,
+  "sha256": "1081b602a1b41bb6f16c59a9ac342b49a2659303831d0744ab3734d1f4d62f9e",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "vi",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Đến nội dung chính",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#main"
+          },
+          {
+            "label": "Lumière Residence, về đầu",
+            "href": "#entrance",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#entrance"
+          },
+          {
+            "label": "Tổng quan",
+            "href": "#entrance",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#entrance"
+          },
+          {
+            "label": "Không gian",
+            "href": "#living",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#living"
+          },
+          {
+            "label": "Phòng ngủ",
+            "href": "#bedroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#bedroom"
+          },
+          {
+            "label": "Kết nối ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#contact"
+          },
+          {
+            "label": "Bước vào căn hộ ↗",
+            "href": "#living",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#living"
+          },
+          {
+            "label": "Khám phá không gian riêng ↗",
+            "href": "#bedroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#bedroom"
+          },
+          {
+            "label": "Tìm hiểu thêm về căn hộ ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#contact"
+          },
+          {
+            "label": "Khám phá phong cách căn hộ",
+            "href": "#living",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#living"
+          },
+          {
+            "label": "Tới cửa vào",
+            "href": "#entrance",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#entrance"
+          },
+          {
+            "label": "Tới phòng khách",
+            "href": "#living",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#living"
+          },
+          {
+            "label": "Tới phòng ngủ",
+            "href": "#bedroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#bedroom"
+          },
+          {
+            "label": "Tới thông tin tư vấn",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#contact"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": null
+      },
+      "keyboard": {
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": false
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Đến nội dung chính",
+            "colour": "rgb(23, 39, 35)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 15.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "lumière",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              20,
+              35,
+              32
+            ],
+            "ratio": 16.27,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__detail",
+            "text": "RESIDENCE",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              20,
+              35,
+              32
+            ],
+            "ratio": 16.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Phòng ngủ",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              43,
+              57,
+              54
+            ],
+            "ratio": 12.12,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "header-contact",
+            "text": "Kết nối ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              33,
+              29
+            ],
+            "ratio": 16.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Không gian nghỉ ngơi",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              58,
+              64,
+              61
+            ],
+            "ratio": 10.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Khép nhịp vội.Mở bình yên.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              57,
+              63,
+              60
+            ],
+            "ratio": 10.77,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "story-panel__body",
+            "text": "Qua hành lang nhỏ, phòng ngủ đón ánh sán",
+            "colour": "rgb(237, 240, 236)",
+            "background": [
+              54,
+              63,
+              62
+            ],
+            "ratio": 9.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "Gam màu nhẹ, dễ thư giãn",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              54,
+              63,
+              62
+            ],
+            "ratio": 10.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Không gian dành cho bạn",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              61,
+              69,
+              68
+            ],
+            "ratio": 9.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Ánh sáng đi qua từng căn phòng, gỗ ấm và",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              60,
+              68,
+              67
+            ],
+            "ratio": 10,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "↗",
+            "colour": "rgb(23, 39, 35)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 15.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "scene-number",
+            "text": "03 / 04",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              33,
+              46,
+              44
+            ],
+            "ratio": 14.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "01 Cửa vào",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": false
+          },
+          {
+            "element": "A",
+            "text": "02 Sinh hoạt",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              54,
+              60,
+              58
+            ],
+            "ratio": 11.26,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "03 Nghỉ ngơi",
+            "colour": "rgb(23, 39, 35)",
+            "background": [
+              41,
+              46,
+              43
+            ],
+            "ratio": 1.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": false
+          },
+          {
+            "element": "SPAN",
+            "text": "03",
+            "colour": "rgb(23, 39, 35)",
+            "background": [
+              50,
+              55,
+              52
+            ],
+            "ratio": 1.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": false
+          },
+          {
+            "element": "A",
+            "text": "04 Kết nối",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              38,
+              44,
+              42
+            ],
+            "ratio": 14.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Bước vào căn hộ ↗",
+          "colour": "rgb(255, 255, 255)",
+          "width": "3px",
+          "ratio": 16.27
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "vi",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Đến nội dung chính",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#main"
+          },
+          {
+            "label": "Lumière Residence, về đầu",
+            "href": "#entrance",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#entrance"
+          },
+          {
+            "label": "Tổng quan",
+            "href": "#entrance",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#entrance"
+          },
+          {
+            "label": "Không gian",
+            "href": "#living",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#living"
+          },
+          {
+            "label": "Phòng ngủ",
+            "href": "#bedroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#bedroom"
+          },
+          {
+            "label": "Kết nối ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#contact"
+          },
+          {
+            "label": "Bước vào căn hộ ↗",
+            "href": "#living",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#living"
+          },
+          {
+            "label": "Khám phá không gian riêng ↗",
+            "href": "#bedroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#bedroom"
+          },
+          {
+            "label": "Tìm hiểu thêm về căn hộ ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#contact"
+          },
+          {
+            "label": "Khám phá phong cách căn hộ",
+            "href": "#living",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#living"
+          },
+          {
+            "label": "Tới cửa vào",
+            "href": "#entrance",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#entrance"
+          },
+          {
+            "label": "Tới phòng khách",
+            "href": "#living",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#living"
+          },
+          {
+            "label": "Tới phòng ngủ",
+            "href": "#bedroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#bedroom"
+          },
+          {
+            "label": "Tới thông tin tư vấn",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/apartment-flow/index.html#contact"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": null
+      },
+      "keyboard": {
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": false
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Đến nội dung chính",
+            "colour": "rgb(23, 39, 35)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 15.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "lumière",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              20,
+              35,
+              32
+            ],
+            "ratio": 16.27,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__detail",
+            "text": "RESIDENCE",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              20,
+              35,
+              32
+            ],
+            "ratio": 16.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Phòng ngủ",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              43,
+              57,
+              54
+            ],
+            "ratio": 12.12,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "header-contact",
+            "text": "Kết nối ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              33,
+              29
+            ],
+            "ratio": 16.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Không gian nghỉ ngơi",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              56,
+              63,
+              60
+            ],
+            "ratio": 10.8,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Khép nhịp vội.Mở bình yên.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              54,
+              63,
+              62
+            ],
+            "ratio": 10.89,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "story-panel__body",
+            "text": "Qua hành lang nhỏ, phòng ngủ đón ánh sán",
+            "colour": "rgb(237, 240, 236)",
+            "background": [
+              54,
+              63,
+              62
+            ],
+            "ratio": 9.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "Gam màu nhẹ, dễ thư giãn",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              54,
+              63,
+              62
+            ],
+            "ratio": 10.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Không gian dành cho bạn",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              63,
+              71,
+              70
+            ],
+            "ratio": 9.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Ánh sáng đi qua từng căn phòng, gỗ ấm và",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              63,
+              70,
+              69
+            ],
+            "ratio": 9.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "↗",
+            "colour": "rgb(23, 39, 35)",
+            "background": [
+              254,
+              254,
+              254
+            ],
+            "ratio": 15.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "scene-number",
+            "text": "03 / 04",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              33,
+              46,
+              44
+            ],
+            "ratio": 14.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "01 Cửa vào",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": false
+          },
+          {
+            "element": "A",
+            "text": "02 Sinh hoạt",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              54,
+              60,
+              59
+            ],
+            "ratio": 11.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "02",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              55,
+              60,
+              59
+            ],
+            "ratio": 11.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "03 Nghỉ ngơi",
+            "colour": "rgb(23, 39, 35)",
+            "background": [
+              42,
+              46,
+              44
+            ],
+            "ratio": 1.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": false
+          },
+          {
+            "element": "SPAN",
+            "text": "03",
+            "colour": "rgb(23, 39, 35)",
+            "background": [
+              51,
+              55,
+              54
+            ],
+            "ratio": 1.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": false
+          },
+          {
+            "element": "A",
+            "text": "04 Kết nối",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              39,
+              45,
+              43
+            ],
+            "ratio": 14.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Bước vào căn hộ ↗",
+          "colour": "rgb(255, 255, 255)",
+          "width": "3px",
+          "ratio": 16.27
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "apartment-flow/assets/css/style.css",
+    "apartment-flow/assets/frames/frame-0001.webp",
+    "apartment-flow/assets/frames/frame-0002.webp",
+    "apartment-flow/assets/frames/frame-0003.webp",
+    "apartment-flow/assets/frames/frame-0004.webp",
+    "apartment-flow/assets/frames/frame-0005.webp",
+    "apartment-flow/assets/frames/frame-0006.webp",
+    "apartment-flow/assets/frames/frame-0007.webp",
+    "apartment-flow/assets/frames/frame-0008.webp",
+    "apartment-flow/assets/frames/frame-0009.webp",
+    "apartment-flow/assets/frames/frame-0010.webp",
+    "apartment-flow/assets/frames/frame-0011.webp",
+    "apartment-flow/assets/frames/frame-0012.webp",
+    "apartment-flow/assets/frames/frame-0013.webp",
+    "apartment-flow/assets/frames/frame-0014.webp",
+    "apartment-flow/assets/frames/frame-0015.webp",
+    "apartment-flow/assets/frames/frame-0016.webp",
+    "apartment-flow/assets/frames/frame-0017.webp",
+    "apartment-flow/assets/frames/frame-0018.webp",
+    "apartment-flow/assets/frames/frame-0019.webp",
+    "apartment-flow/assets/frames/frame-0020.webp",
+    "apartment-flow/assets/frames/frame-0021.webp",
+    "apartment-flow/assets/frames/frame-0022.webp",
+    "apartment-flow/assets/frames/frame-0023.webp",
+    "apartment-flow/assets/frames/frame-0024.webp",
+    "apartment-flow/assets/frames/frame-0025.webp",
+    "apartment-flow/assets/frames/frame-0026.webp",
+    "apartment-flow/assets/frames/frame-0027.webp",
+    "apartment-flow/assets/frames/frame-0028.webp",
+    "apartment-flow/assets/frames/frame-0029.webp",
+    "apartment-flow/assets/frames/frame-0030.webp",
+    "apartment-flow/assets/frames/frame-0031.webp",
+    "apartment-flow/assets/frames/frame-0032.webp",
+    "apartment-flow/assets/frames/frame-0033.webp",
+    "apartment-flow/assets/frames/frame-0034.webp",
+    "apartment-flow/assets/frames/frame-0035.webp",
+    "apartment-flow/assets/frames/frame-0036.webp",
+    "apartment-flow/assets/frames/frame-0037.webp",
+    "apartment-flow/assets/frames/frame-0038.webp",
+    "apartment-flow/assets/frames/frame-0039.webp",
+    "apartment-flow/assets/frames/frame-0040.webp",
+    "apartment-flow/assets/frames/frame-0041.webp",
+    "apartment-flow/assets/frames/frame-0042.webp",
+    "apartment-flow/assets/frames/frame-0043.webp",
+    "apartment-flow/assets/frames/frame-0044.webp",
+    "apartment-flow/assets/frames/frame-0045.webp",
+    "apartment-flow/assets/frames/frame-0046.webp",
+    "apartment-flow/assets/frames/frame-0047.webp",
+    "apartment-flow/assets/frames/frame-0048.webp",
+    "apartment-flow/assets/frames/frame-0049.webp",
+    "apartment-flow/assets/frames/frame-0050.webp",
+    "apartment-flow/assets/frames/frame-0051.webp",
+    "apartment-flow/assets/frames/frame-0052.webp",
+    "apartment-flow/assets/frames/frame-0053.webp",
+    "apartment-flow/assets/frames/frame-0054.webp",
+    "apartment-flow/assets/frames/frame-0055.webp",
+    "apartment-flow/assets/frames/frame-0056.webp",
+    "apartment-flow/assets/frames/frame-0057.webp",
+    "apartment-flow/assets/frames/frame-0058.webp",
+    "apartment-flow/assets/frames/frame-0059.webp",
+    "apartment-flow/assets/frames/frame-0060.webp",
+    "apartment-flow/assets/frames/frame-0061.webp",
+    "apartment-flow/assets/frames/frame-0062.webp",
+    "apartment-flow/assets/frames/frame-0063.webp",
+    "apartment-flow/assets/frames/frame-0064.webp",
+    "apartment-flow/assets/frames/frame-0065.webp",
+    "apartment-flow/assets/frames/frame-0066.webp",
+    "apartment-flow/assets/frames/frame-0067.webp",
+    "apartment-flow/assets/frames/frame-0068.webp",
+    "apartment-flow/assets/frames/frame-0069.webp",
+    "apartment-flow/assets/frames/frame-0070.webp",
+    "apartment-flow/assets/frames/frame-0071.webp",
+    "apartment-flow/assets/frames/frame-0072.webp",
+    "apartment-flow/assets/frames/frame-0073.webp",
+    "apartment-flow/assets/frames/frame-0074.webp",
+    "apartment-flow/assets/frames/frame-0075.webp",
+    "apartment-flow/assets/frames/frame-0076.webp",
+    "apartment-flow/assets/frames/frame-0077.webp",
+    "apartment-flow/assets/frames/frame-0078.webp",
+    "apartment-flow/assets/frames/frame-0079.webp",
+    "apartment-flow/assets/frames/frame-0080.webp",
+    "apartment-flow/assets/frames/frame-0081.webp",
+    "apartment-flow/assets/frames/frame-0082.webp",
+    "apartment-flow/assets/frames/frame-0083.webp",
+    "apartment-flow/assets/frames/frame-0084.webp",
+    "apartment-flow/assets/frames/frame-0085.webp",
+    "apartment-flow/assets/frames/frame-0086.webp",
+    "apartment-flow/assets/frames/frame-0087.webp",
+    "apartment-flow/assets/frames/frame-0088.webp",
+    "apartment-flow/assets/frames/frame-0089.webp",
+    "apartment-flow/assets/frames/frame-0090.webp",
+    "apartment-flow/assets/frames/frame-0091.webp",
+    "apartment-flow/assets/frames/frame-0092.webp",
+    "apartment-flow/assets/frames/frame-0093.webp",
+    "apartment-flow/assets/frames/frame-0094.webp",
+    "apartment-flow/assets/frames/frame-0095.webp",
+    "apartment-flow/assets/frames/frame-0096.webp",
+    "apartment-flow/assets/frames/frame-0097.webp",
+    "apartment-flow/assets/frames/frame-0098.webp",
+    "apartment-flow/assets/frames/frame-0099.webp",
+    "apartment-flow/assets/frames/frame-0100.webp",
+    "apartment-flow/assets/frames/frame-0101.webp",
+    "apartment-flow/assets/frames/frame-0102.webp",
+    "apartment-flow/assets/frames/frame-0103.webp",
+    "apartment-flow/assets/frames/frame-0104.webp",
+    "apartment-flow/assets/frames/frame-0105.webp",
+    "apartment-flow/assets/frames/frame-0106.webp",
+    "apartment-flow/assets/frames/frame-0107.webp",
+    "apartment-flow/assets/frames/frame-0108.webp",
+    "apartment-flow/assets/frames/frame-0109.webp",
+    "apartment-flow/assets/frames/frame-0110.webp",
+    "apartment-flow/assets/frames/frame-0111.webp",
+    "apartment-flow/assets/frames/frame-0112.webp",
+    "apartment-flow/assets/frames/frame-0113.webp",
+    "apartment-flow/assets/frames/frame-0114.webp",
+    "apartment-flow/assets/frames/frame-0115.webp",
+    "apartment-flow/assets/frames/frame-0116.webp",
+    "apartment-flow/assets/frames/frame-0117.webp",
+    "apartment-flow/assets/frames/frame-0118.webp",
+    "apartment-flow/assets/frames/frame-0119.webp",
+    "apartment-flow/assets/frames/frame-0120.webp",
+    "apartment-flow/assets/frames/frame-0121.webp",
+    "apartment-flow/assets/frames/frame-0122.webp",
+    "apartment-flow/assets/frames/frame-0123.webp",
+    "apartment-flow/assets/frames/frame-0124.webp",
+    "apartment-flow/assets/frames/frame-0125.webp",
+    "apartment-flow/assets/frames/frame-0126.webp",
+    "apartment-flow/assets/frames/frame-0127.webp",
+    "apartment-flow/assets/frames/frame-0128.webp",
+    "apartment-flow/assets/frames/frame-0129.webp",
+    "apartment-flow/assets/frames/frame-0130.webp",
+    "apartment-flow/assets/frames/frame-0131.webp",
+    "apartment-flow/assets/frames/frame-0132.webp",
+    "apartment-flow/assets/frames/frame-0133.webp",
+    "apartment-flow/assets/frames/frame-0134.webp",
+    "apartment-flow/assets/frames/frame-0135.webp",
+    "apartment-flow/assets/frames/frame-0136.webp",
+    "apartment-flow/assets/frames/frame-0137.webp",
+    "apartment-flow/assets/frames/frame-0138.webp",
+    "apartment-flow/assets/frames/frame-0139.webp",
+    "apartment-flow/assets/frames/frame-0140.webp",
+    "apartment-flow/assets/frames/frame-0141.webp",
+    "apartment-flow/assets/frames/frame-0142.webp",
+    "apartment-flow/assets/frames/frame-0143.webp",
+    "apartment-flow/assets/frames/frame-0144.webp",
+    "apartment-flow/assets/frames/frame-0145.webp",
+    "apartment-flow/assets/frames/frame-0146.webp",
+    "apartment-flow/assets/frames/frame-0147.webp",
+    "apartment-flow/assets/frames/frame-0148.webp",
+    "apartment-flow/assets/frames/frame-0149.webp",
+    "apartment-flow/assets/frames/frame-0150.webp",
+    "apartment-flow/assets/frames/frame-0151.webp",
+    "apartment-flow/assets/frames/frame-0152.webp",
+    "apartment-flow/assets/frames/frame-0153.webp",
+    "apartment-flow/assets/frames/frame-0154.webp",
+    "apartment-flow/assets/frames/frame-0155.webp",
+    "apartment-flow/assets/frames/frame-0156.webp",
+    "apartment-flow/assets/frames/frame-0157.webp",
+    "apartment-flow/assets/frames/frame-0158.webp",
+    "apartment-flow/assets/frames/frame-0159.webp",
+    "apartment-flow/assets/frames/frame-0160.webp",
+    "apartment-flow/assets/frames/frame-0161.webp",
+    "apartment-flow/assets/frames/frame-0162.webp",
+    "apartment-flow/assets/frames/frame-0163.webp",
+    "apartment-flow/assets/frames/frame-0164.webp",
+    "apartment-flow/assets/frames/frame-0165.webp",
+    "apartment-flow/assets/frames/frame-0166.webp",
+    "apartment-flow/assets/frames/frame-0167.webp",
+    "apartment-flow/assets/frames/frame-0168.webp",
+    "apartment-flow/assets/frames/frame-0169.webp",
+    "apartment-flow/assets/frames/frame-0170.webp",
+    "apartment-flow/assets/frames/frame-0171.webp",
+    "apartment-flow/assets/frames/frame-0172.webp",
+    "apartment-flow/assets/frames/frame-0173.webp",
+    "apartment-flow/assets/frames/frame-0174.webp",
+    "apartment-flow/assets/frames/frame-0175.webp",
+    "apartment-flow/assets/frames/frame-0176.webp",
+    "apartment-flow/assets/frames/frame-0177.webp",
+    "apartment-flow/assets/frames/frame-0178.webp",
+    "apartment-flow/assets/frames/frame-0179.webp",
+    "apartment-flow/assets/frames/frame-0180.webp",
+    "apartment-flow/assets/frames/frame-0181.webp",
+    "apartment-flow/assets/frames/frame-0182.webp",
+    "apartment-flow/assets/frames/frame-0183.webp",
+    "apartment-flow/assets/frames/frame-0184.webp",
+    "apartment-flow/assets/frames/frame-0185.webp",
+    "apartment-flow/assets/frames/frame-0186.webp",
+    "apartment-flow/assets/frames/frame-0187.webp",
+    "apartment-flow/assets/frames/frame-0188.webp",
+    "apartment-flow/assets/frames/frame-0189.webp",
+    "apartment-flow/assets/frames/frame-0190.webp",
+    "apartment-flow/assets/frames/frame-0191.webp",
+    "apartment-flow/assets/frames/frame-0192.webp",
+    "apartment-flow/assets/frames/frame-0193.webp",
+    "apartment-flow/assets/frames/frame-0194.webp",
+    "apartment-flow/assets/frames/frame-0195.webp",
+    "apartment-flow/assets/frames/frame-0196.webp",
+    "apartment-flow/assets/frames/frame-0197.webp",
+    "apartment-flow/assets/frames/frame-0198.webp",
+    "apartment-flow/assets/frames/frame-0199.webp",
+    "apartment-flow/assets/frames/frame-0200.webp",
+    "apartment-flow/assets/frames/frame-0201.webp",
+    "apartment-flow/assets/frames/frame-0202.webp",
+    "apartment-flow/assets/frames/frame-0203.webp",
+    "apartment-flow/assets/frames/frame-0204.webp",
+    "apartment-flow/assets/frames/frame-0205.webp",
+    "apartment-flow/assets/frames/frame-0206.webp",
+    "apartment-flow/assets/frames/frame-0207.webp",
+    "apartment-flow/assets/frames/frame-0208.webp",
+    "apartment-flow/assets/frames/frame-0209.webp",
+    "apartment-flow/assets/frames/frame-0210.webp",
+    "apartment-flow/assets/frames/frame-0211.webp",
+    "apartment-flow/assets/frames/frame-0212.webp",
+    "apartment-flow/assets/frames/frame-0213.webp",
+    "apartment-flow/assets/frames/frame-0214.webp",
+    "apartment-flow/assets/frames/frame-0215.webp",
+    "apartment-flow/assets/frames/frame-0216.webp",
+    "apartment-flow/assets/frames/frame-0217.webp",
+    "apartment-flow/assets/frames/frame-0218.webp",
+    "apartment-flow/assets/frames/frame-0219.webp",
+    "apartment-flow/assets/frames/frame-0220.webp",
+    "apartment-flow/assets/frames/frame-0221.webp",
+    "apartment-flow/assets/frames/frame-0222.webp",
+    "apartment-flow/assets/frames/frame-0223.webp",
+    "apartment-flow/assets/frames/frame-0224.webp",
+    "apartment-flow/assets/frames/frame-0225.webp",
+    "apartment-flow/assets/frames/frame-0226.webp",
+    "apartment-flow/assets/frames/frame-0227.webp",
+    "apartment-flow/assets/frames/frame-0228.webp",
+    "apartment-flow/assets/frames/frame-0229.webp",
+    "apartment-flow/assets/frames/frame-0230.webp",
+    "apartment-flow/assets/frames/frame-0231.webp",
+    "apartment-flow/assets/frames/frame-0232.webp",
+    "apartment-flow/assets/frames/frame-0233.webp",
+    "apartment-flow/assets/frames/frame-0234.webp",
+    "apartment-flow/assets/frames/frame-0235.webp",
+    "apartment-flow/assets/frames/frame-0236.webp",
+    "apartment-flow/assets/frames/frame-0237.webp",
+    "apartment-flow/assets/frames/frame-0238.webp",
+    "apartment-flow/assets/frames/frame-0239.webp",
+    "apartment-flow/assets/frames/frame-0240.webp",
+    "apartment-flow/assets/js/main.js",
+    "apartment-flow/CUSTOMISE.md",
+    "apartment-flow/index.html",
+    "apartment-flow/LICENCE.txt",
+    "apartment-flow/README.md",
+    "apartment-flow/THIRD-PARTY-NOTICES.txt"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "THIRD-PARTY-NOTICES.txt",
+    "assets/css/style.css",
+    "assets/frames/frame-0001.webp",
+    "assets/frames/frame-0002.webp",
+    "assets/frames/frame-0003.webp",
+    "assets/frames/frame-0004.webp",
+    "assets/frames/frame-0005.webp",
+    "assets/frames/frame-0006.webp",
+    "assets/frames/frame-0007.webp",
+    "assets/frames/frame-0008.webp",
+    "assets/frames/frame-0009.webp",
+    "assets/frames/frame-0010.webp",
+    "assets/frames/frame-0011.webp",
+    "assets/frames/frame-0012.webp",
+    "assets/frames/frame-0013.webp",
+    "assets/frames/frame-0014.webp",
+    "assets/frames/frame-0015.webp",
+    "assets/frames/frame-0016.webp",
+    "assets/frames/frame-0017.webp",
+    "assets/frames/frame-0018.webp",
+    "assets/frames/frame-0019.webp",
+    "assets/frames/frame-0020.webp",
+    "assets/frames/frame-0021.webp",
+    "assets/frames/frame-0022.webp",
+    "assets/frames/frame-0023.webp",
+    "assets/frames/frame-0024.webp",
+    "assets/frames/frame-0025.webp",
+    "assets/frames/frame-0026.webp",
+    "assets/frames/frame-0027.webp",
+    "assets/frames/frame-0028.webp",
+    "assets/frames/frame-0029.webp",
+    "assets/frames/frame-0030.webp",
+    "assets/frames/frame-0031.webp",
+    "assets/frames/frame-0032.webp",
+    "assets/frames/frame-0033.webp",
+    "assets/frames/frame-0034.webp",
+    "assets/frames/frame-0035.webp",
+    "assets/frames/frame-0036.webp",
+    "assets/frames/frame-0037.webp",
+    "assets/frames/frame-0038.webp",
+    "assets/frames/frame-0039.webp",
+    "assets/frames/frame-0040.webp",
+    "assets/frames/frame-0041.webp",
+    "assets/frames/frame-0042.webp",
+    "assets/frames/frame-0043.webp",
+    "assets/frames/frame-0044.webp",
+    "assets/frames/frame-0045.webp",
+    "assets/frames/frame-0046.webp",
+    "assets/frames/frame-0047.webp",
+    "assets/frames/frame-0048.webp",
+    "assets/frames/frame-0049.webp",
+    "assets/frames/frame-0050.webp",
+    "assets/frames/frame-0051.webp",
+    "assets/frames/frame-0052.webp",
+    "assets/frames/frame-0053.webp",
+    "assets/frames/frame-0054.webp",
+    "assets/frames/frame-0055.webp",
+    "assets/frames/frame-0056.webp",
+    "assets/frames/frame-0057.webp",
+    "assets/frames/frame-0058.webp",
+    "assets/frames/frame-0059.webp",
+    "assets/frames/frame-0060.webp",
+    "assets/frames/frame-0061.webp",
+    "assets/frames/frame-0062.webp",
+    "assets/frames/frame-0063.webp",
+    "assets/frames/frame-0064.webp",
+    "assets/frames/frame-0065.webp",
+    "assets/frames/frame-0066.webp",
+    "assets/frames/frame-0067.webp",
+    "assets/frames/frame-0068.webp",
+    "assets/frames/frame-0069.webp",
+    "assets/frames/frame-0070.webp",
+    "assets/frames/frame-0071.webp",
+    "assets/frames/frame-0072.webp",
+    "assets/frames/frame-0073.webp",
+    "assets/frames/frame-0074.webp",
+    "assets/frames/frame-0075.webp",
+    "assets/frames/frame-0076.webp",
+    "assets/frames/frame-0077.webp",
+    "assets/frames/frame-0078.webp",
+    "assets/frames/frame-0079.webp",
+    "assets/frames/frame-0080.webp",
+    "assets/frames/frame-0081.webp",
+    "assets/frames/frame-0082.webp",
+    "assets/frames/frame-0083.webp",
+    "assets/frames/frame-0084.webp",
+    "assets/frames/frame-0085.webp",
+    "assets/frames/frame-0086.webp",
+    "assets/frames/frame-0087.webp",
+    "assets/frames/frame-0088.webp",
+    "assets/frames/frame-0089.webp",
+    "assets/frames/frame-0090.webp",
+    "assets/frames/frame-0091.webp",
+    "assets/frames/frame-0092.webp",
+    "assets/frames/frame-0093.webp",
+    "assets/frames/frame-0094.webp",
+    "assets/frames/frame-0095.webp",
+    "assets/frames/frame-0096.webp",
+    "assets/frames/frame-0097.webp",
+    "assets/frames/frame-0098.webp",
+    "assets/frames/frame-0099.webp",
+    "assets/frames/frame-0100.webp",
+    "assets/frames/frame-0101.webp",
+    "assets/frames/frame-0102.webp",
+    "assets/frames/frame-0103.webp",
+    "assets/frames/frame-0104.webp",
+    "assets/frames/frame-0105.webp",
+    "assets/frames/frame-0106.webp",
+    "assets/frames/frame-0107.webp",
+    "assets/frames/frame-0108.webp",
+    "assets/frames/frame-0109.webp",
+    "assets/frames/frame-0110.webp",
+    "assets/frames/frame-0111.webp",
+    "assets/frames/frame-0112.webp",
+    "assets/frames/frame-0113.webp",
+    "assets/frames/frame-0114.webp",
+    "assets/frames/frame-0115.webp",
+    "assets/frames/frame-0116.webp",
+    "assets/frames/frame-0117.webp",
+    "assets/frames/frame-0118.webp",
+    "assets/frames/frame-0119.webp",
+    "assets/frames/frame-0120.webp",
+    "assets/frames/frame-0121.webp",
+    "assets/frames/frame-0122.webp",
+    "assets/frames/frame-0123.webp",
+    "assets/frames/frame-0124.webp",
+    "assets/frames/frame-0125.webp",
+    "assets/frames/frame-0126.webp",
+    "assets/frames/frame-0127.webp",
+    "assets/frames/frame-0128.webp",
+    "assets/frames/frame-0129.webp",
+    "assets/frames/frame-0130.webp",
+    "assets/frames/frame-0131.webp",
+    "assets/frames/frame-0132.webp",
+    "assets/frames/frame-0133.webp",
+    "assets/frames/frame-0134.webp",
+    "assets/frames/frame-0135.webp",
+    "assets/frames/frame-0136.webp",
+    "assets/frames/frame-0137.webp",
+    "assets/frames/frame-0138.webp",
+    "assets/frames/frame-0139.webp",
+    "assets/frames/frame-0140.webp",
+    "assets/frames/frame-0141.webp",
+    "assets/frames/frame-0142.webp",
+    "assets/frames/frame-0143.webp",
+    "assets/frames/frame-0144.webp",
+    "assets/frames/frame-0145.webp",
+    "assets/frames/frame-0146.webp",
+    "assets/frames/frame-0147.webp",
+    "assets/frames/frame-0148.webp",
+    "assets/frames/frame-0149.webp",
+    "assets/frames/frame-0150.webp",
+    "assets/frames/frame-0151.webp",
+    "assets/frames/frame-0152.webp",
+    "assets/frames/frame-0153.webp",
+    "assets/frames/frame-0154.webp",
+    "assets/frames/frame-0155.webp",
+    "assets/frames/frame-0156.webp",
+    "assets/frames/frame-0157.webp",
+    "assets/frames/frame-0158.webp",
+    "assets/frames/frame-0159.webp",
+    "assets/frames/frame-0160.webp",
+    "assets/frames/frame-0161.webp",
+    "assets/frames/frame-0162.webp",
+    "assets/frames/frame-0163.webp",
+    "assets/frames/frame-0164.webp",
+    "assets/frames/frame-0165.webp",
+    "assets/frames/frame-0166.webp",
+    "assets/frames/frame-0167.webp",
+    "assets/frames/frame-0168.webp",
+    "assets/frames/frame-0169.webp",
+    "assets/frames/frame-0170.webp",
+    "assets/frames/frame-0171.webp",
+    "assets/frames/frame-0172.webp",
+    "assets/frames/frame-0173.webp",
+    "assets/frames/frame-0174.webp",
+    "assets/frames/frame-0175.webp",
+    "assets/frames/frame-0176.webp",
+    "assets/frames/frame-0177.webp",
+    "assets/frames/frame-0178.webp",
+    "assets/frames/frame-0179.webp",
+    "assets/frames/frame-0180.webp",
+    "assets/frames/frame-0181.webp",
+    "assets/frames/frame-0182.webp",
+    "assets/frames/frame-0183.webp",
+    "assets/frames/frame-0184.webp",
+    "assets/frames/frame-0185.webp",
+    "assets/frames/frame-0186.webp",
+    "assets/frames/frame-0187.webp",
+    "assets/frames/frame-0188.webp",
+    "assets/frames/frame-0189.webp",
+    "assets/frames/frame-0190.webp",
+    "assets/frames/frame-0191.webp",
+    "assets/frames/frame-0192.webp",
+    "assets/frames/frame-0193.webp",
+    "assets/frames/frame-0194.webp",
+    "assets/frames/frame-0195.webp",
+    "assets/frames/frame-0196.webp",
+    "assets/frames/frame-0197.webp",
+    "assets/frames/frame-0198.webp",
+    "assets/frames/frame-0199.webp",
+    "assets/frames/frame-0200.webp",
+    "assets/frames/frame-0201.webp",
+    "assets/frames/frame-0202.webp",
+    "assets/frames/frame-0203.webp",
+    "assets/frames/frame-0204.webp",
+    "assets/frames/frame-0205.webp",
+    "assets/frames/frame-0206.webp",
+    "assets/frames/frame-0207.webp",
+    "assets/frames/frame-0208.webp",
+    "assets/frames/frame-0209.webp",
+    "assets/frames/frame-0210.webp",
+    "assets/frames/frame-0211.webp",
+    "assets/frames/frame-0212.webp",
+    "assets/frames/frame-0213.webp",
+    "assets/frames/frame-0214.webp",
+    "assets/frames/frame-0215.webp",
+    "assets/frames/frame-0216.webp",
+    "assets/frames/frame-0217.webp",
+    "assets/frames/frame-0218.webp",
+    "assets/frames/frame-0219.webp",
+    "assets/frames/frame-0220.webp",
+    "assets/frames/frame-0221.webp",
+    "assets/frames/frame-0222.webp",
+    "assets/frames/frame-0223.webp",
+    "assets/frames/frame-0224.webp",
+    "assets/frames/frame-0225.webp",
+    "assets/frames/frame-0226.webp",
+    "assets/frames/frame-0227.webp",
+    "assets/frames/frame-0228.webp",
+    "assets/frames/frame-0229.webp",
+    "assets/frames/frame-0230.webp",
+    "assets/frames/frame-0231.webp",
+    "assets/frames/frame-0232.webp",
+    "assets/frames/frame-0233.webp",
+    "assets/frames/frame-0234.webp",
+    "assets/frames/frame-0235.webp",
+    "assets/frames/frame-0236.webp",
+    "assets/frames/frame-0237.webp",
+    "assets/frames/frame-0238.webp",
+    "assets/frames/frame-0239.webp",
+    "assets/frames/frame-0240.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q03/chromium: không tìm thấy nút menu mobile",
+    "Q06/chromium: tương phản thấp [{\"element\":\"A\",\"text\":\"01 Cửa vào\",\"colour\":\"rgb(255, 255, 255)\",\"background\":[255,255,255],\"ratio\":1,\"threshold\":4.5,\"overImage\":false,\"method\":\"pixels\",\"pass\":false},{\"element\":\"A\",\"text\":\"03 Nghỉ ngơi\",\"colour\":\"rgb(23, 39, 35)\",\"background\":[41,46,43],\"ratio\":1.13,\"threshold\":4.5,\"overImage\":false,\"method\":\"pixels\",\"pass\":false},{\"element\":\"SPAN\",\"text\":\"03\",\"colour\":\"rgb(23, 39, 35)\",\"background\":[50,55,52],\"ratio\":1.28,\"threshold\":4.5,\"overImage\":false,\"method\":\"pixels\",\"pass\":false}]",
+    "Q07/chromium: tắt JS/mất font {\"width\":320,\"scrollWidth\":320,\"clientWidth\":320,\"allVisible\":true,\"navLinksVisible\":false}",
+    "Q03/firefox: không tìm thấy nút menu mobile",
+    "Q06/firefox: tương phản thấp [{\"element\":\"A\",\"text\":\"01 Cửa vào\",\"colour\":\"rgb(255, 255, 255)\",\"background\":[255,255,255],\"ratio\":1,\"threshold\":4.5,\"overImage\":false,\"method\":\"pixels\",\"pass\":false},{\"element\":\"A\",\"text\":\"03 Nghỉ ngơi\",\"colour\":\"rgb(23, 39, 35)\",\"background\":[42,46,44],\"ratio\":1.13,\"threshold\":4.5,\"overImage\":false,\"method\":\"pixels\",\"pass\":false},{\"element\":\"SPAN\",\"text\":\"03\",\"colour\":\"rgb(23, 39, 35)\",\"background\":[51,55,54],\"ratio\":1.29,\"threshold\":4.5,\"overImage\":false,\"method\":\"pixels\",\"pass\":false}]",
+    "Q07/firefox: tắt JS/mất font {\"width\":320,\"scrollWidth\":320,\"clientWidth\":320,\"allVisible\":true,\"navLinksVisible\":false}"
+  ]
+}

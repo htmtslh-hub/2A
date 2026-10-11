@@ -1,0 +1,988 @@
+{
+  "deployment": "dpl_EL9c9hnnC8Ap6FP91YT1h7uhistV",
+  "sourceCommit": "f527c1b",
+  "assetCount": 243,
+  "assetHashesMatch": true,
+  "regressionHTTP": {
+    "/": 200,
+    "/?mau=t18": 200,
+    "/demos/shirtline/index.html": 200,
+    "/demos/novatrend/index.html": 200,
+    "/demos/crimson-folio/index.html": 200,
+    "/previews/apartment-flow.webp": 200
+  },
+  "assets": [
+    {
+      "path": "index.html",
+      "match": true
+    },
+    {
+      "path": "assets/css/style.css",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0001.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0002.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0003.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0004.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0005.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0006.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0007.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0008.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0009.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0010.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0011.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0012.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0013.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0014.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0015.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0016.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0017.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0018.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0019.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0020.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0021.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0022.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0023.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0024.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0025.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0026.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0027.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0028.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0029.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0030.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0031.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0032.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0033.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0034.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0035.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0036.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0037.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0038.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0039.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0040.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0041.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0042.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0043.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0044.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0045.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0046.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0047.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0048.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0049.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0050.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0051.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0052.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0053.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0054.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0055.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0056.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0057.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0058.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0059.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0060.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0061.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0062.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0063.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0064.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0065.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0066.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0067.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0068.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0069.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0070.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0071.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0072.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0073.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0074.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0075.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0076.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0077.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0078.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0079.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0080.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0081.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0082.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0083.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0084.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0085.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0086.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0087.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0088.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0089.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0090.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0091.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0092.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0093.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0094.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0095.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0096.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0097.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0098.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0099.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0100.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0101.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0102.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0103.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0104.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0105.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0106.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0107.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0108.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0109.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0110.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0111.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0112.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0113.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0114.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0115.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0116.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0117.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0118.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0119.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0120.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0121.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0122.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0123.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0124.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0125.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0126.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0127.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0128.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0129.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0130.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0131.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0132.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0133.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0134.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0135.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0136.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0137.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0138.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0139.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0140.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0141.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0142.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0143.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0144.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0145.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0146.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0147.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0148.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0149.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0150.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0151.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0152.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0153.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0154.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0155.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0156.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0157.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0158.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0159.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0160.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0161.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0162.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0163.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0164.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0165.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0166.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0167.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0168.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0169.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0170.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0171.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0172.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0173.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0174.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0175.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0176.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0177.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0178.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0179.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0180.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0181.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0182.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0183.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0184.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0185.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0186.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0187.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0188.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0189.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0190.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0191.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0192.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0193.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0194.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0195.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0196.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0197.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0198.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0199.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0200.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0201.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0202.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0203.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0204.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0205.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0206.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0207.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0208.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0209.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0210.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0211.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0212.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0213.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0214.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0215.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0216.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0217.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0218.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0219.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0220.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0221.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0222.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0223.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0224.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0225.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0226.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0227.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0228.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0229.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0230.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0231.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0232.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0233.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0234.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0235.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0236.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0237.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0238.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0239.webp",
+      "match": true
+    },
+    {
+      "path": "assets/frames/frame-0240.webp",
+      "match": true
+    },
+    {
+      "path": "assets/js/main.js",
+      "match": true
+    }
+  ]
+}

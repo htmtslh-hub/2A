@@ -8,6 +8,7 @@ const browser = await chromium.launch({ headless: true });
 const output = resolve('reviews/2026-10-11-memberships');
 await mkdir(output, { recursive: true });
 let checks = 0;
+const base = process.env.STORE_URL || 'http://127.0.0.1:4371';
 try {
   for (const locale of ['vi-VN', 'en-US', 'zh-CN']) {
     for (const width of [1440, 390]) {
@@ -24,7 +25,7 @@ try {
         await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(body) });
       });
       const page = await context.newPage();
-      await page.goto('http://127.0.0.1:4371/?tab=pricing');
+      await page.goto(`${base}/?tab=pricing`);
       const cards = page.locator('.pricing-card');
       await cards.first().waitFor();
       assert.equal(await cards.count(), 2); checks++;

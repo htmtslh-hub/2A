@@ -2,7 +2,7 @@
 
 The active local master checkout omitted LingoGlass even though commits `7c9e9e8` (application/demo/package) and `0c1adda` (catalog integration) exist in repository history and later release branches. The Agent/Tool group was rendering placeholders unconditionally.
 
-Restored the application directory, demo and preview from `7c9e9e8`, without modifying the desktop application source. Reconnected the catalog, third product group, protected ZIP download and Next deployment trace. LingoGlass uses `a1`, because the current catalog already assigns historical LingoGlass slot `t14` to Watchroom; existing current product IDs were preserved. No historical order records were migrated.
+Restored the application directory, demo and preview from `7c9e9e8`, without modifying the desktop application source. Reconnected the catalog, third product group, protected ZIP download and Next deployment trace. The initial local recovery used `a1`. During the owner-authorized GitHub merge/release, LingoGlass retained its published `t14` ID and Watchroom received `t23`. Published Mint Atlas, Melt Muse and Apartment Flow IDs were also retained; Kinetiq/Yellow Beast received `t22`/`t24`. No historical order records were migrated.
 
 Individual price is USD 20. Pro/Ultra access checks remain in force. Product families are filtered so web templates remain in Web and LingoGlass appears in Agent/Tool. App details and its specific guide describe the source/documentation package accurately. The historical ZIP contains a built interface and source, but no standalone Windows/macOS installer; desktop activation is a separate existing application mechanism.
 

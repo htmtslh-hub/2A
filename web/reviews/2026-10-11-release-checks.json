@@ -1,0 +1,264 @@
+{
+  "deployment": "dpl_9YANKZFYG1drxpLQ3QmQrbYm6YFv",
+  "sourceCommit": "f4a48b6",
+  "catalogProducts": 24,
+  "checks": [
+    {
+      "file": "demos/crimson-folio/index.html",
+      "status": "PASS",
+      "sha256": "0b2a0499a7b930ea11af6caa9df24e99a2369e9be9210f7a430796507ca4d746"
+    },
+    {
+      "file": "previews/crimson-folio.webp",
+      "status": "PASS",
+      "sha256": "ad61487d7e64ac2313958d4d3df3b7b1d7426f8c56887387bdb5a355669634a7"
+    },
+    {
+      "file": "demos/mint-atlas/index.html",
+      "status": "PASS",
+      "sha256": "e925e21737f95b211079f1bc8bc02b6332c3a524b5447f12ddaca110288ebcdd"
+    },
+    {
+      "file": "previews/mint-atlas.webp",
+      "status": "PASS",
+      "sha256": "f425b69dcc4e70ad83df7d43b94152f8129bd2fb1535913aa15ddf91bc15e666"
+    },
+    {
+      "file": "demos/melt-muse/index.html",
+      "status": "PASS",
+      "sha256": "9973f3f420a6f8920a20b177dc5c326b80a111ae159badd9800d467511dcd594"
+    },
+    {
+      "file": "previews/melt-muse.webp",
+      "status": "PASS",
+      "sha256": "baed52a9fee6c5d92415c73ab321624f2d190ce68cc53dedf74cac75d670f1c8"
+    },
+    {
+      "file": "demos/apartment-flow/index.html",
+      "status": "PASS",
+      "sha256": "92a3b84aa1a34972411f0311d352625a8efee37e626ac51e51d772d2e62c637d"
+    },
+    {
+      "file": "previews/apartment-flow.webp",
+      "status": "PASS",
+      "sha256": "d373c28227efe01e716a9aaac7fa722a883ec56dadb09865bd0a2b7a2fa30b57"
+    },
+    {
+      "file": "demos/lingoglass/index.html",
+      "status": "PASS",
+      "sha256": "e1a1c8ce8c0b21d00d992df9265dd0a4ac98c556ea870e0807a2dba1e3b91102"
+    },
+    {
+      "file": "previews/lingoglass.webp",
+      "status": "PASS",
+      "sha256": "79916ca85db0f98a37a2ba645840f064e5e77c9d71b9998bd70587df8b328f6f"
+    },
+    {
+      "file": "demos/music-app/index.html",
+      "status": "PASS",
+      "sha256": "80649a8bda606979000df0a1f54fd3a3bed384883ad255744a14a0962092df0a"
+    },
+    {
+      "file": "previews/music-app.webp",
+      "status": "PASS",
+      "sha256": "ad3c1e4bfac1a9dfce3fc51fd62ea7786650d4be7caa88da1ba95e072c4857ad"
+    },
+    {
+      "file": "demos/laila/index.html",
+      "status": "PASS",
+      "sha256": "c725dbcc636501901dddc03127a5dd8e14977ac6e6be9fc36c059477eeada92d"
+    },
+    {
+      "file": "previews/laila.webp",
+      "status": "PASS",
+      "sha256": "dfa07a6c476f901055c7bd4ebd2199e55c38c6962f19c099dd3f6917c57a8f9f"
+    },
+    {
+      "file": "demos/velora/index.html",
+      "status": "PASS",
+      "sha256": "2b48c9c6851203cb66c30c142aaab9e841352fd7ed292af115cda53cd97e15bd"
+    },
+    {
+      "file": "previews/velora.webp",
+      "status": "PASS",
+      "sha256": "0b158903e73bd310b959ef21292443425d2bf9ddb02b1c2730fe666bf3371bb0"
+    },
+    {
+      "file": "demos/kinetiq/index.html",
+      "status": "PASS",
+      "sha256": "5f9c969413ceea1374edc899e09b9e3cc0ca4d1093cd58d890fed76e304371cf"
+    },
+    {
+      "file": "previews/kinetiq.webp",
+      "status": "PASS",
+      "sha256": "fcda07f82078b0ae5ccdb89f00ef4b9b1d5a6b44469b0c09bc51095ad9ddebcd"
+    },
+    {
+      "file": "demos/watchroom/index.html",
+      "status": "PASS",
+      "sha256": "18ddb4b22cfee27c63e88f4c4f6d2db5068d2afa9263d661bf9651c5457538b3"
+    },
+    {
+      "file": "previews/watchroom.webp",
+      "status": "PASS",
+      "sha256": "778c55470496146b6a9e492e98343e93f7a42a3902487e0ccf6789922f0d3c64"
+    },
+    {
+      "file": "demos/shirtline/index.html",
+      "status": "PASS",
+      "sha256": "d0cbe2765a3bab9c83d28c45dd176b3d818ba6c7ea78e01dc66e80d79e91b94d"
+    },
+    {
+      "file": "previews/shirtline.webp",
+      "status": "PASS",
+      "sha256": "ea11bbe2660b86f87ea970ad6f993724851251e1a2edf414a52a194b77fcc127"
+    },
+    {
+      "file": "demos/yellow-beast/index.html",
+      "status": "PASS",
+      "sha256": "5a65ed61aeac111c0913b31f43428ab5e41d5b8823eb02aff19dff07a82ad24f"
+    },
+    {
+      "file": "previews/yellow-beast.webp",
+      "status": "PASS",
+      "sha256": "c846df0d460f4c534c48a67ec8d01d422a5b213f1f64aad51c195d05b46fd0b4"
+    },
+    {
+      "file": "demos/novatrend/index.html",
+      "status": "PASS",
+      "sha256": "b3af3b85d932f0a5915a1c7cfbd13b59885f899f94f2f974b01a95d27f183924"
+    },
+    {
+      "file": "previews/novatrend.webp",
+      "status": "PASS",
+      "sha256": "440fa51609b01dd6efb359cbf53fc0f3e591497d33e2e2e13b907a3c1d8b3535"
+    },
+    {
+      "file": "demos/diginest/index.html",
+      "status": "PASS",
+      "sha256": "e1e0d938c9f8d8ccb155da7d223b5252641ba0fcd16a9fffdebd2e8759983414"
+    },
+    {
+      "file": "previews/diginest.webp",
+      "status": "PASS",
+      "sha256": "381d30fd128a474c83b762949ac23d1730b7223f691be66488670426bc5045ad"
+    },
+    {
+      "file": "demos/soniq/index.html",
+      "status": "PASS",
+      "sha256": "8fc38f7fea9634297e148b02ec050e84f94179a70c9c26607965e7e92a3764fa"
+    },
+    {
+      "file": "previews/soniq.webp",
+      "status": "PASS",
+      "sha256": "ee8276eba01f38d25527f58502fae6d922c90eaffa2afc2119879b8ef1be54d7"
+    },
+    {
+      "file": "demos/auralis/index.html",
+      "status": "PASS",
+      "sha256": "3f8d15572a5446ba355547ab16cafd68c21e9969bd0ef9180a4e8c125ee0b2e8"
+    },
+    {
+      "file": "previews/auralis.webp",
+      "status": "PASS",
+      "sha256": "7778624cb679e80bd4e169df773064a8c16ead41bd2edb28dcf54254a24ca903"
+    },
+    {
+      "file": "demos/japan-trails/index.html",
+      "status": "PASS",
+      "sha256": "132204fce1eff05be54a07d963fc7b8a4af410766a75566553d025e7e047cb47"
+    },
+    {
+      "file": "previews/japan-trails.webp",
+      "status": "PASS",
+      "sha256": "ff8f4e0434652567692a15d69dd85ce6ed6e67f7126bb1b00ab73a8c2cc63f22"
+    },
+    {
+      "file": "demos/tidal/index.html",
+      "status": "PASS",
+      "sha256": "d9204897626592e21d08a21858c8761bdbd4145e3e35434a134dd6e2347337bc"
+    },
+    {
+      "file": "previews/tidal.webp",
+      "status": "PASS",
+      "sha256": "927682ef15e9e2ded9798a51eb3c7bdd605419abd51b0802f9691ac56afc2b3f"
+    },
+    {
+      "file": "demos/keystead/index.html",
+      "status": "PASS",
+      "sha256": "d8b308177887ac1e689dd09481f86438b17764d0034a7f9c4b5d361a7f5a1d19"
+    },
+    {
+      "file": "previews/keystead.webp",
+      "status": "PASS",
+      "sha256": "85780e7699d220cb61912aaf76574f617b6708aa17c178c5a9a8c1155e5d96a4"
+    },
+    {
+      "file": "demos/solenne/index.html",
+      "status": "PASS",
+      "sha256": "e2a78a98a37d81a5f95015fac08b62f819680c9836adf93e7b69a0ea7a896080"
+    },
+    {
+      "file": "previews/solenne.webp",
+      "status": "PASS",
+      "sha256": "88dbd4929e0d14186ae2371ab3e2aedad001df07a347c03ca6cce18cf1823e43"
+    },
+    {
+      "file": "demos/aeris/index.html",
+      "status": "PASS",
+      "sha256": "d2677cc5aa4409dcb650dfa4d4f207a9cde426d8407d64033ad51f3152917db9"
+    },
+    {
+      "file": "previews/aeris.webp",
+      "status": "PASS",
+      "sha256": "9c4c81b97fa7e5b51e376e6f74740976978f80dec7b91bc917e2f2c585b9d986"
+    },
+    {
+      "file": "demos/vybe/index.html",
+      "status": "PASS",
+      "sha256": "5699d4b6a3a0089fd90e26a3d921ec3c381e660ba967e316a6a3bc14127f48e7"
+    },
+    {
+      "file": "previews/vybe.webp",
+      "status": "PASS",
+      "sha256": "62514a16519684f67536399e93dcf4197c6225ab2318b70e0a4adc727215c507"
+    },
+    {
+      "file": "demos/astra-interior/index.html",
+      "status": "PASS",
+      "sha256": "ff97cf1f8077034aeeea4c08f311ca2c3c889f83fcdf8eb0e57c513fa1fffd86"
+    },
+    {
+      "file": "previews/astra-interior.webp",
+      "status": "PASS",
+      "sha256": "7678a9943bbb3483e3ba03646859380d447e7d5dd1175e3910e8def655037ea5"
+    },
+    {
+      "file": "demos/pinehaven/index.html",
+      "status": "PASS",
+      "sha256": "0e57f2c370000d3b420b65df08237e84670d8b163a3c997069a35ad7f4d1061a"
+    },
+    {
+      "file": "previews/pinehaven.webp",
+      "status": "PASS",
+      "sha256": "61df4f95b738d3626bb07fe5e008a07e209357d9556bdced2fe6d007cbf1b799"
+    },
+    {
+      "endpoint": "/api/download?id=t14",
+      "status": 401
+    },
+    {
+      "endpoint": "/api/admin",
+      "status": 403
+    },
+    {
+      "kind": "PRO",
+      "guestCheckoutStatus": 401
+    },
+    {
+      "kind": "ULTRA",
+      "guestCheckoutStatus": 401
+    }
+  ],
+  "privateZipStatus": 404
+}

@@ -413,7 +413,7 @@
       "native-zoom.json"
     ],
     "pending": [
-      "Official ZIP/extracted-package check and store/release checks occur only after gate PASS"
+      "Post-purchase payment/download flow, Safari and physical devices are not tested; see release scope"
     ]
   },
   "blockers": [],

@@ -15,7 +15,7 @@
 | Q09 Technical | PASS | No source console/network errors; finite reveal/cleanup; no external fonts/scripts; ZIP5,355,141 bytes |
 | Q10 Docs/licence | PASS |10steps,12complete prompts, literal counted edit map; Forge zone and approved image terms. No claim of testing another AI assistant |
 | Q11 Exact package | PASS |ZIP extracted and byte matched; file/HTTP/offline browsers checks.json. SHA2564b2fcb182116422583880c62c9aa580a6c2549552f0c75a804ce944d811f745a |
-| Q12 Store | PASS local visual/build; online pending |t21, music-app, existing SaaS category; three-language copy/guide;24store checks. Local checkout intentionally has no production secrets, so auth/DB API checks unavailable locally. Online guards/artifact checks recorded in RELEASE.md. Paid purchase/download flow NOT TESTED; no entitlements or payments mutated |
+| Q12 Store | PASS local and public UI/assets/guards |t21, music-app, existing SaaS category; three-language copy/guide;24store checks. Local checkout intentionally has no production secrets, so auth/DB API checks unavailable locally. Public guards401/404, asset hashes and four-browser motion/playback PASS; download artifact included in Next tracing. See RELEASE.md. Paid purchase/download flow NOT TESTED; no entitlements or payments mutated |
 | Q13 Design | PASS scoped |ACCEPTANCE.md and regional weighted manual rubric96.432; pixel diagnostics are not fidelity scores |
 
 | Design check | Result | Explanation |
@@ -35,4 +35,4 @@ The required shared check-template command was attempted and timed out: its test
 
 All labels/controls are local demo behaviour, not streaming or account claims. Same original recording for all tracks. Finite scroll reveals tested midframe/end/reverse; playback equalizer stops on pause/end/pagehide. See candidate-checks.json for individual interaction states.
 
-Release verification remains separate until public asset hashes, UI/motion and unauthenticated download guards are confirmed. See RELEASE.md for final status.
+Public asset hashes, UI/motion and unauthenticated download guards PASS. Paid post-purchase download, Safari and physical devices remain NOT TESTED; no payment or entitlement mutations were performed. See RELEASE.md.

@@ -1,0 +1,163 @@
+{
+  "base": "https://forgezone.store",
+  "version": "1.0.0",
+  "checkedAt": "2026-10-11T01:11:21.236Z",
+  "assets": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes": 15791,
+      "sha256": "80649a8bda606979000df0a1f54fd3a3bed384883ad255744a14a0962092df0a",
+      "expected": "80649a8bda606979000df0a1f54fd3a3bed384883ad255744a14a0962092df0a",
+      "matches": true
+    },
+    {
+      "file": "assets/css/style.css",
+      "status": 200,
+      "bytes": 16928,
+      "sha256": "2dbb46bd2afb45872a27916ce623dd77540f949d8ea190b142b2f8f147ef4c2b",
+      "expected": "2dbb46bd2afb45872a27916ce623dd77540f949d8ea190b142b2f8f147ef4c2b",
+      "matches": true
+    },
+    {
+      "file": "assets/js/main.js",
+      "status": 200,
+      "bytes": 7896,
+      "sha256": "41b8e98f43b322e33e2e6b5717aef2320598396682c75b9df5e67de0deae52ef",
+      "expected": "41b8e98f43b322e33e2e6b5717aef2320598396682c75b9df5e67de0deae52ef",
+      "matches": true
+    },
+    {
+      "file": "assets/audio/demo.wav",
+      "status": 200,
+      "bytes": 6048044,
+      "sha256": "50923ffff3db45253055698792e8eece4b84079364fcfddba4ff690395d4e296",
+      "expected": "50923ffff3db45253055698792e8eece4b84079364fcfddba4ff690395d4e296",
+      "matches": true
+    },
+    {
+      "file": "assets/img/aurora.webp",
+      "status": 200,
+      "bytes": 21266,
+      "sha256": "e20f286cafe52e26bd95e74e56a33a321221de4ae321e903d8477827776effea",
+      "expected": "e20f286cafe52e26bd95e74e56a33a321221de4ae321e903d8477827776effea",
+      "matches": true
+    },
+    {
+      "file": "assets/img/luna.webp",
+      "status": 200,
+      "bytes": 19944,
+      "sha256": "d38ea4c5e2c3afc384a1b4d207cfb0b257829e5aa072aba4106ec63f5d280d45",
+      "expected": "d38ea4c5e2c3afc384a1b4d207cfb0b257829e5aa072aba4106ec63f5d280d45",
+      "matches": true
+    },
+    {
+      "file": "assets/img/summer.webp",
+      "status": 200,
+      "bytes": 37758,
+      "sha256": "dd03d5dd1699b60d12b39f12da7930e6d32769bd51134a24be1179222bbdba1c",
+      "expected": "dd03d5dd1699b60d12b39f12da7930e6d32769bd51134a24be1179222bbdba1c",
+      "matches": true
+    },
+    {
+      "file": "assets/img/solara.webp",
+      "status": 200,
+      "bytes": 27156,
+      "sha256": "caf0cb503fac104e91f90d3af2ae8008b1e4b6008da13000e602c897dfdd6220",
+      "expected": "caf0cb503fac104e91f90d3af2ae8008b1e4b6008da13000e602c897dfdd6220",
+      "matches": true
+    },
+    {
+      "file": "assets/img/user-avatar.webp",
+      "status": 200,
+      "bytes": 2838,
+      "sha256": "b1205f2506525ced2bb8750eb71e88f95c14b37bf9642d574d0a90e76ef8da5b",
+      "expected": "b1205f2506525ced2bb8750eb71e88f95c14b37bf9642d574d0a90e76ef8da5b",
+      "matches": true
+    }
+  ],
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "middle": {
+        "opacity": "0.687874",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.74551)"
+      },
+      "end": "1",
+      "audio": {
+        "paused": false,
+        "time": 0.119869,
+        "duration": 189
+      },
+      "follow": "true",
+      "dims": {
+        "sw": 375,
+        "cw": 375
+      },
+      "errors": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "middle": {
+        "opacity": "0.748533",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.01761)"
+      },
+      "end": "1",
+      "audio": {
+        "paused": false,
+        "time": 0.140791,
+        "duration": 189
+      },
+      "follow": "true",
+      "dims": {
+        "sw": 375,
+        "cw": 375
+      },
+      "errors": []
+    },
+    "edge": {
+      "version": "155.0.4283.45",
+      "middle": {
+        "opacity": "0.634474",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.38631)"
+      },
+      "end": "1",
+      "audio": {
+        "paused": false,
+        "time": 0.129842,
+        "duration": 189
+      },
+      "follow": "true",
+      "dims": {
+        "sw": 375,
+        "cw": 375
+      },
+      "errors": []
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "middle": {
+        "opacity": "0.672171",
+        "transform": "matrix(1, 0, 0, 1, 0, 3.93395)"
+      },
+      "end": "1",
+      "audio": {
+        "paused": false,
+        "time": 0.134074,
+        "duration": 189
+      },
+      "follow": "true",
+      "dims": {
+        "sw": 375,
+        "cw": 375
+      },
+      "errors": []
+    }
+  },
+  "failures": [],
+  "preview": {
+    "status": 200,
+    "matches": true,
+    "sha256": "ad3c1e4bfac1a9dfce3fc51fd62ea7786650d4be7caa88da1ba95e072c4857ad"
+  }
+}

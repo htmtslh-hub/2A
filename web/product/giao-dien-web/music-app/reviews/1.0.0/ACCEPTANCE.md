@@ -2,7 +2,7 @@
 
 11/10/2026 · Candidate 1.0.0 · Source candidate gate: **PASS**.
 
-Source manifest SHA-256: 353f3ae8dda52842f7128729e19d044a88bdefc61679a8c931e8ada0142f9786. No ZIP, commit, push, store entry or deployment has been created.
+Source manifest SHA-256: 353f3ae8dda52842f7128729e19d044a88bdefc61679a8c931e8ada0142f9786. This source gate was passed before packaging. Subsequent exact-package, store and public verification are recorded in QA.md and RELEASE.md.
 
 Reference:920×1288, DPR1, zoom100%, no crop. Viewer back/expand/image-search overlays are excluded from scoring, not reconstructed. Candidate is a genuine browser render. Mobile-reference fidelity N/A: none supplied.
 
@@ -37,7 +37,7 @@ Native Chromium browser zoom: 200%, innerWidth=720, DPR=2, scrollWidth/clientWid
 
 Supplemental Chromium/Firefox: no duplicate IDs; one h1; four landmarks; all SVGs named/hidden correctly; all labels present; four-width hit targets44px (pill uses transparent expanded hit area). Local saved-off values do not suppress animation. Missing WebP assets retain title and follow interaction. No external assets or network fonts.
 
-Safari, physical devices, streaming, backend/accounts and post-purchase downloads NOT TESTED / outside this candidate's implementation. No online deployment exists.
+Safari, physical devices, streaming, backend/accounts and post-purchase downloads NOT TESTED / outside this candidate's implementation. Public deployment and tested resources are documented in RELEASE.md.
 
 ## Outstanding release conditions
 

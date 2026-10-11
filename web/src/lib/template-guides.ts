@@ -3,6 +3,21 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  "music-app": {
+  "vi": {
+    "intro": "Giao diện âm nhạc retro với ảnh tự tạo và trình phát demo cục bộ.",
+    "notes": "### Bắt đầu\nGiải nén đủ 12 file, mở index.html và giữ assets/ bên cạnh. CUSTOMISE.md có bảng sửa đã đếm, 10 bước và 12 prompt AI.\n\n### Nội dung và âm thanh\nSửa nhãn HTML và tracks trong assets/js/main.js đồng thời. Tên nghệ sĩ và thời lượng danh sách là hư cấu; mọi lựa chọn phát cùng assets/audio/demo.wav dài 3:09. Thay bằng bản ghi được phép dùng trước khi tạo catalog thật.\n\n### Ảnh và tương tác\nNăm WebP ở assets/img/. Giấy phép Forge zone cho dùng ảnh trong website cá nhân/khách hàng, không bán hay phân phối ảnh riêng lẻ. Yêu thích và theo dõi chỉ trong phiên. Không tài khoản hoặc streaming. Token màu/font ở đầu CSS; không cần mạng. Reveal mặc định bật và hữu hạn."
+  },
+  "en": {
+    "intro": "A retro music interface with original artwork and a local demo player.",
+    "notes": "### Start\nExtract all 12 files, open index.html and keep assets/ beside it. CUSTOMISE.md contains a counted edit map, ten steps and twelve AI prompts.\n\n### Content and audio\nEdit HTML labels and the tracks array in assets/js/main.js together. Artist names and list durations are fictional; every selection plays the same 3:09 assets/audio/demo.wav. Replace it with an authorised recording before offering a real catalogue.\n\n### Images and interaction\nFive WebP images live in assets/img/. Forge zone permits personal/client website use, prohibiting standalone image resale or redistribution. Favourites/follow last for the page session. No accounts or streaming. Colour/font tokens start the CSS; no network dependency. Finite reveals default on."
+  },
+  "zh": {
+    "intro": "复古音乐界面，包含原创图片与本地示例播放器。",
+    "notes": "### 开始\n完整解压 12 个文件，打开 index.html 并保留旁边的 assets/。CUSTOMISE.md 包含精确修改表、十个步骤与十二个 AI 提示词。\n\n### 内容与音频\n同步修改 HTML 标签与 assets/js/main.js 的 tracks。艺人和列表时长为虚构；所有选择播放同一个 3:09 assets/audio/demo.wav。发布真实目录前换成获许可录音。\n\n### 图片与交互\n五张 WebP 位于 assets/img/。Forge zone 许可用于个人与客户网站，禁止独立出售或分发图片。收藏与关注仅在当前会话有效。不含账号或流媒体。颜色与字体位于 CSS 开头；无需网络。有限渐显默认开启。"
+  }
+},
+
   laila: {
     vi: { intro: 'Portfolio developer sáng tạo hồng neon và xanh đen với một chân dung AI gốc.', notes: '### Bắt đầu\nGiải nén toàn bộ 7 file, mở index.html và giữ assets/ bên cạnh. CUSTOMISE.md có bảng sửa đã đếm, 10 bước và 12 prompt AI.\n\n### Nội dung và ảnh\nThay Laila, LAILA, email và các mục giới thiệu, lộ trình, kỹ năng, learning và concept dự án. Nội dung là minh họa, không phải chứng nhận hoặc dự án khách hàng đã xác minh. Ảnh 800×1200 nằm ở assets/img/portrait.webp, được dùng trên website hoàn chỉnh theo LICENCE.txt.\n\n### Tương tác\nLearning và dự án dùng details/summary, mở được cả khi tắt JS. View résumé dẫn tới lộ trình, không tải PDF. Email mở ứng dụng thư, không tự gửi. Menu hỗ trợ Escape và bàn phím. Reveal 620ms mặc định bật, không lặp vô hạn.\n\n### Màu và xuất bản\nToken màu/font ở :root trong assets/css/style.css. Dùng font hệ thống, không cần mạng. Cập nhật query phiên bản trên CSS/JS/ảnh khi phát hành thay đổi. Bản quyền Forge Zone; đọc giấy phép trước khi dùng.' },
     en: { intro: 'A pink and navy creative developer portfolio with one original AI portrait.', notes: '### Start\nExtract all seven files and open index.html beside assets/. CUSTOMISE.md includes a counted edit map, ten steps and twelve AI prompts.\n\n### Content and portrait\nReplace Laila, LAILA, the sample email, about, journey, skills, learning and project concepts. Content is illustrative, not verified certifications or delivered client projects. The 800×1200 portrait is assets/img/portrait.webp and may be used on finished websites under LICENCE.txt.\n\n### Interaction\nLearning and projects use native details/summary, including without JS. View résumé jumps to the journey, not a PDF. Email opens a mail app without sending. Menu supports keyboard and Escape. Finite 620ms reveals default on with no perpetual loop.\n\n### Colour and publication\nColour/font tokens start assets/css/style.css. System fonts need no network. Update the CSS/JS/image version queries when publishing changes. Copyright Forge Zone; read the licence before use.' },

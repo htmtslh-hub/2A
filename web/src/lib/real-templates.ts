@@ -43,6 +43,20 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t21: {
+    slug: 'music-app', cat: 'saas', version: '1.0.0',
+    specs: {
+      vi: [['Định dạng', 'HTML/CSS/JavaScript thuần'], ['Trong gói', '12 file, 5 ảnh WebP và 1 WAV gốc'], ['Âm thanh', 'Một bản demo tổng hợp 3:09 cho mọi bài'], ['Tương tác', 'Tìm kiếm, phát, seek, volume, yêu thích và theo dõi trong phiên'], ['Tài liệu', '10 bước, 12 prompt AI, giấy phép Forge zone'], ['Phạm vi', 'Không tài khoản, backend hoặc streaming']],
+      en: [['Format', 'Plain HTML/CSS/JavaScript'], ['Package', '12 files, 5 WebP images and 1 original WAV'], ['Audio', 'One original 3:09 synthesized demo for every selection'], ['Interaction', 'Search, playback, seek, volume, session favourites and follow'], ['Documentation', '10 steps, 12 AI prompts, Forge zone licence'], ['Scope', 'No accounts, backend or streaming']],
+      zh: [['格式', '纯 HTML/CSS/JavaScript'], ['文件包', '12 个文件、5 张 WebP 与 1 个原创 WAV'], ['音频', '所有选择播放同一个 3:09 原创合成示例'], ['交互', '搜索、播放、进度、音量、会话收藏与关注'], ['文档', '10 个步骤、12 个 AI 提示词与 Forge zone 许可'], ['范围', '不含账号、后端或流媒体']],
+    },
+    copy: {
+      vi: { name: 'Music App', desc: 'Giao diện âm nhạc retro nền kem, coral và cobalt: playlist, album, hồ sơ nghệ sĩ, trình phát và thư viện. Năm ảnh tự tạo; âm thanh demo gốc 3:09, tìm kiếm cục bộ, yêu thích và theo dõi trong phiên. Reveal theo cuộn hữu hạn; không backend, tài khoản hoặc streaming.', tags: ['Âm nhạc', 'Retro', 'Ảnh tự tạo'] },
+      en: { name: 'Music App', desc: 'A cream, coral and cobalt retro music interface with playlist, album, artist, player and library cards. Five original generated images, a 3:09 original audio demo, local search and session favourites/follow. Finite scroll reveals; no backend, accounts or streaming.', tags: ['Music', 'Retro', 'Original imagery'] },
+      zh: { name: 'Music App', desc: '奶油白、珊瑚色与钴蓝复古音乐界面，包含播放列表、专辑、艺人、播放器与音乐库。五张原创生成图片、3:09 原创示例音频、本地搜索及会话收藏与关注。有限滚动渐显，不含后端、账号或流媒体。', tags: ['音乐', '复古', '原创图片'] },
+    },
+  },
+
   t20: {
     slug: 'laila', cat: 'portfolio', version: '1.0.0',
     specs: {

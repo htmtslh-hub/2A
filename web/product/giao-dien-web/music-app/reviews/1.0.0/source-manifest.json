@@ -1,0 +1,62 @@
+[
+  {
+    "file": "CUSTOMISE.md",
+    "bytes": 20529,
+    "sha256": "ada0a3e0e0a22586bff5ffa8cf8ec8729d15b23da521092e014065d2bfe3e769"
+  },
+  {
+    "file": "LICENCE.txt",
+    "bytes": 1712,
+    "sha256": "ba172bd6cdd527b7178a597a42e1701d956f518b0a26b25423f9076e69074db3"
+  },
+  {
+    "file": "README.md",
+    "bytes": 2401,
+    "sha256": "fa06020a714644ab3de37d20652cac60690b03ec1f2535ee16518ab5ded867ff"
+  },
+  {
+    "file": "assets/audio/demo.wav",
+    "bytes": 6048044,
+    "sha256": "50923ffff3db45253055698792e8eece4b84079364fcfddba4ff690395d4e296"
+  },
+  {
+    "file": "assets/css/style.css",
+    "bytes": 16928,
+    "sha256": "2dbb46bd2afb45872a27916ce623dd77540f949d8ea190b142b2f8f147ef4c2b"
+  },
+  {
+    "file": "assets/img/aurora.webp",
+    "bytes": 21266,
+    "sha256": "e20f286cafe52e26bd95e74e56a33a321221de4ae321e903d8477827776effea"
+  },
+  {
+    "file": "assets/img/luna.webp",
+    "bytes": 19944,
+    "sha256": "d38ea4c5e2c3afc384a1b4d207cfb0b257829e5aa072aba4106ec63f5d280d45"
+  },
+  {
+    "file": "assets/img/solara.webp",
+    "bytes": 27156,
+    "sha256": "caf0cb503fac104e91f90d3af2ae8008b1e4b6008da13000e602c897dfdd6220"
+  },
+  {
+    "file": "assets/img/summer.webp",
+    "bytes": 37758,
+    "sha256": "dd03d5dd1699b60d12b39f12da7930e6d32769bd51134a24be1179222bbdba1c"
+  },
+  {
+    "file": "assets/img/user-avatar.webp",
+    "bytes": 2838,
+    "sha256": "b1205f2506525ced2bb8750eb71e88f95c14b37bf9642d574d0a90e76ef8da5b"
+  },
+  {
+    "file": "assets/js/main.js",
+    "bytes": 7896,
+    "sha256": "41b8e98f43b322e33e2e6b5717aef2320598396682c75b9df5e67de0deae52ef"
+  },
+  {
+    "file": "index.html",
+    "bytes": 15760,
+    "sha256": "ed6a1daa01d590e243fc3e661531e0a7739b990402b53d75e3442ba57da75aa8"
+  }
+]

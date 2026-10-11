@@ -1,0 +1,18 @@
+import { resolve } from 'node:path';
+import { writeFileSync } from 'node:fs';
+process.env.PLAYWRIGHT_BROWSERS_PATH=resolve('_design/.browsers');
+const {chromium}=await import('../../../../../../_design/.tooling/node_modules/playwright/index.mjs');
+const review=resolve('web/product/giao-dien-web/music-app/reviews/1.0.0');
+const extension=resolve(review,'zoom-extension');
+const context=await chromium.launchPersistentContext(resolve(review,'zoom-profile'),{channel:'chromium',headless:true,viewport:{width:1440,height:900},args:[`--disable-extensions-except=${extension}`,`--load-extension=${extension}`]});
+const worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker');
+const page=await context.newPage();await page.goto('http://127.0.0.1:5133');
+const zoom=await worker.evaluate(async()=>{const tab=(await chrome.tabs.query({})).find(t=>t.url?.startsWith('http://127.0.0.1:5133'));await chrome.tabs.setZoom(tab.id,2);return await chrome.tabs.getZoom(tab.id);});
+await page.waitForTimeout(500);
+const result=await page.evaluate(()=>({innerWidth,devicePixelRatio,scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,cssZoom:getComputedStyle(document.documentElement).zoom}));
+await page.screenshot({path:resolve(review,'screenshots/native-zoom-200.png'),fullPage:true});
+await page.locator('#settings').click();const dialog=await page.locator('dialog').evaluate(d=>d.open);await page.keyboard.press('Escape');
+await page.locator('#play').click();await page.waitForFunction(()=>document.querySelector('#audio').currentTime>.1);await page.locator('#play').click();
+writeFileSync(resolve(review,'native-zoom.json'),JSON.stringify({browser:'Chromium',version:context.browser()?.version(),method:'Isolated test extension chrome.tabs.setZoom(2), no CSS zoom injection',zoom,...result,dialog,audio:true,pass:zoom===2&&result.scrollWidth<=result.clientWidth},null,2));
+console.log({zoom,...result,dialog});
+await context.close();

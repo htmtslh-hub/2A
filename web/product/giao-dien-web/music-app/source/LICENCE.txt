@@ -1,0 +1,26 @@
+MUSIC APP — LICENCE TERMS
+
+Copyright entity: Forge zone. The product owner approved the included generated-image use terms on 11 October 2026. These terms do not assert exclusive copyright in AI-generated artwork.
+
+1. WHAT YOU GET
+A perpetual, non-exclusive commercial licence to the template source upon an authorised product sale.
+
+2. WHAT YOU MAY DO
+Use the licensed source in unlimited personal and client projects, modify it and publish the resulting website without attribution.
+
+3. WHAT YOU MAY NOT DO
+Resell, sublicense or give away the template files, publish them on another marketplace, or bundle them into another template product.
+
+4. DEMO CONTENT
+Artist names, titles and durations are fictional. Replace them before using the interface as a real music catalogue. The included audio is an original synthesized demo, with no third-party recordings. The included self-created images may be used and modified within personal websites and client websites made with this licensed template. Do not sell or distribute the images separately as stock assets or standalone image packs.
+
+5. FONTS
+This template loads no font files and no external font service. It uses fonts already available on the viewer's operating system. Font ownership remains with the respective suppliers.
+
+6. OWNERSHIP
+Copyright in the template source remains with Forge zone. A licence grants use, not ownership. No exclusive copyright in AI-generated artwork is asserted.
+
+7. NO WARRANTY
+Provided as is. See the acceptance report for the browsers actually tested and the unresolved limitations. No compatibility with untested browsers is claimed.
+
+Questions about what is and is not allowed: just ask. The answer is usually yes.

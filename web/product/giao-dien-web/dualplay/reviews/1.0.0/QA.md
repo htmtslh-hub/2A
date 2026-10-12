@@ -25,3 +25,7 @@ The strict ForgeFrame >95 weighted similarity gate is NOT TESTED and is not clai
 
 ## Store regression
 All 26 existing catalog records are byte-equivalent after module evaluation; only t27 added. New preview/spec handling is scoped to dualplay. Typecheck and Next production build pass. Source and private ZIP stay outside public; only the demo runtime and preview are public.
+
+
+## Production verification
+Release commit 6ed3a28, deployment dpl_BxZM7NMaGjDHSFg5SNwGXbWRubtS READY, forgezone.store alias. online-checks.json: all seven public runtime/preview assets byte-identical, four installed engines pass initial model 1, curved midframe and both wrap directions with no page errors. Product/detail and library verified in all three languages; anonymous ZIP guard 401 and direct file path 404. Actual paid transaction/download remains NOT TESTED.

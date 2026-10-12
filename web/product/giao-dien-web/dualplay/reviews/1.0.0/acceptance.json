@@ -46,7 +46,11 @@
   "release": {
     "status": "AUTHORISED",
     "instruction": "ok em push và deploy nhé",
-    "note": "Latest explicit owner instruction authorises release of the reviewed custom circular motion and Genshin-first template. Strict >95 fidelity gate is not certified; no such claim is made."
+    "note": "Latest explicit owner instruction authorises release of the reviewed custom circular motion and Genshin-first template. Strict >95 fidelity gate is not certified; no such claim is made.",
+    "deployment": "dpl_BxZM7NMaGjDHSFg5SNwGXbWRubtS",
+    "sourceCommit": "6ed3a28",
+    "alias": "https://forgezone.store",
+    "onlineEvidence": "online-checks.json"
   },
   "candidateHash": "9757485b76365978ff913b39830a2cd6d20fca99d79a89032ffccaccfb667610"
 }

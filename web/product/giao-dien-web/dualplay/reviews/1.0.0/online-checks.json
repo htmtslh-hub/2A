@@ -1,0 +1,88 @@
+{
+  "deployment": "dpl_BxZM7NMaGjDHSFg5SNwGXbWRubtS",
+  "sourceCommit": "6ed3a28",
+  "version": "1.0.0",
+  "assets": [
+    {
+      "name": "demos/dualplay/index.html",
+      "status": 200,
+      "sha256": "7560f1882ce918bb02e769b2c7390a4c1e64c8e47a7ae7d03eb6fadae5421d3b"
+    },
+    {
+      "name": "demos/dualplay/assets/css/style.css",
+      "status": 200,
+      "sha256": "7e7c9b0d03f6da5ed86d89f641995340fffaa1a889c21f84de9b5580e109a1be"
+    },
+    {
+      "name": "demos/dualplay/assets/js/main.js",
+      "status": 200,
+      "sha256": "3aac08d084baa92c0996b09785b5f294ef57ea647b6beeecd28513d88af0f2c7"
+    },
+    {
+      "name": "demos/dualplay/assets/img/jade-v3.webp",
+      "status": 200,
+      "sha256": "5360c1d7ae8575d8e42e4562a0e4f62fc1e8b211e3a4a409c9b0cff80b428856"
+    },
+    {
+      "name": "demos/dualplay/assets/img/crimson-v3.webp",
+      "status": 200,
+      "sha256": "184dde757ad1ffcb6e3d3e44c5e2b0e375cf706825f4c57d4b2e87a92339fb3e"
+    },
+    {
+      "name": "demos/dualplay/assets/img/gold-v3.webp",
+      "status": 200,
+      "sha256": "bf42b5ee37a55899c76d254a64da17de39877c0a232215afb5c60bbe334eedad"
+    },
+    {
+      "name": "previews/dualplay.webp",
+      "status": 200,
+      "sha256": "8a878d39e0d323b30d740b55778981ad70f78cf91e3df0f913c2cf964b562185"
+    }
+  ],
+  "browsers": {
+    "Chromium": {
+      "version": "153.0.8010.12",
+      "initial": "Genshin Impact / 01",
+      "midLayers": 3,
+      "wrapBoth": true,
+      "errors": []
+    },
+    "Firefox": {
+      "version": "155.0",
+      "initial": "Genshin Impact / 01",
+      "midLayers": 3,
+      "wrapBoth": true,
+      "errors": []
+    },
+    "Edge": {
+      "version": "155.0.4283.45",
+      "initial": "Genshin Impact / 01",
+      "midLayers": 3,
+      "wrapBoth": true,
+      "errors": []
+    },
+    "CocCoc": {
+      "version": "152.0.7977.124",
+      "initial": "Genshin Impact / 01",
+      "midLayers": 3,
+      "wrapBoth": true,
+      "errors": []
+    }
+  },
+  "store": {
+    "vi": {
+      "detail": true,
+      "library": true
+    },
+    "en": {
+      "detail": true,
+      "library": true
+    },
+    "zh": {
+      "detail": true,
+      "library": true
+    }
+  },
+  "anonymous": 401,
+  "directZip": 404
+}

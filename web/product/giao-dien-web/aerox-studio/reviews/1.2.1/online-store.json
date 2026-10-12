@@ -1,0 +1,101 @@
+[
+  {
+    "locale": "vi-VN",
+    "id": "t25",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "vi-VN",
+    "id": "t26",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "vi-VN",
+    "id": "t25",
+    "images": true,
+    "price20": true,
+    "specs": true
+  },
+  {
+    "locale": "vi-VN",
+    "id": "t26",
+    "images": true,
+    "price20": true,
+    "specs": true
+  },
+  {
+    "locale": "vi-VN",
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 390
+    }
+  },
+  {
+    "locale": "en-US",
+    "id": "t25",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "en-US",
+    "id": "t26",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "en-US",
+    "id": "t25",
+    "images": true,
+    "price20": true,
+    "specs": true
+  },
+  {
+    "locale": "en-US",
+    "id": "t26",
+    "images": true,
+    "price20": true,
+    "specs": true
+  },
+  {
+    "locale": "en-US",
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 390
+    }
+  },
+  {
+    "locale": "zh-CN",
+    "id": "t25",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "zh-CN",
+    "id": "t26",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "zh-CN",
+    "id": "t25",
+    "images": true,
+    "price20": true,
+    "specs": true
+  },
+  {
+    "locale": "zh-CN",
+    "id": "t26",
+    "images": true,
+    "price20": true,
+    "specs": true
+  },
+  {
+    "locale": "zh-CN",
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 390
+    }
+  }
+]

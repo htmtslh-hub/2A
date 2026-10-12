@@ -1,0 +1,52 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "references": [
+    {
+      "file": "reference.png",
+      "width": 584,
+      "height": 1134,
+      "sha256": "f732dda09904b08a2dc0e619521ce2a3b926b67554099d21747f68f1f36adaf4"
+    }
+  ],
+  "fidelity": {
+    "method": "weighted visual rubric",
+    "strictMinimum": 95,
+    "comparisonComplete": false,
+    "status": "NOT TESTED",
+    "notes": "Screenshot-led v3 artwork and layout refinement documented in REFINEMENT.md; original detail differences remain. No certified >95% score."
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "circular-motion.json"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "interaction-checks.json"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Still image reference"
+  },
+  "technical": {
+    "status": "PASS WITH MANUAL RESOLUTIONS",
+    "evidence": [
+      "commercial/checks.json",
+      "catalog-check.json",
+      "store-local.json",
+      "download-fixture.json"
+    ]
+  },
+  "gate": "NOT TESTED",
+  "release": {
+    "status": "AUTHORISED",
+    "instruction": "ok em push và deploy nhé",
+    "note": "Latest explicit owner instruction authorises release of the reviewed custom circular motion and Genshin-first template. Strict >95 fidelity gate is not certified; no such claim is made."
+  },
+  "candidateHash": "9757485b76365978ff913b39830a2cd6d20fca99d79a89032ffccaccfb667610"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "path": "assets/css/style.css",
+    "bytes": 24792,
+    "sha256": "7e7c9b0d03f6da5ed86d89f641995340fffaa1a889c21f84de9b5580e109a1be"
+  },
+  {
+    "path": "assets/img/crimson-v3.webp",
+    "bytes": 85724,
+    "sha256": "184dde757ad1ffcb6e3d3e44c5e2b0e375cf706825f4c57d4b2e87a92339fb3e"
+  },
+  {
+    "path": "assets/img/gold-v3.webp",
+    "bytes": 98458,
+    "sha256": "bf42b5ee37a55899c76d254a64da17de39877c0a232215afb5c60bbe334eedad"
+  },
+  {
+    "path": "assets/img/jade-v3.webp",
+    "bytes": 128582,
+    "sha256": "5360c1d7ae8575d8e42e4562a0e4f62fc1e8b211e3a4a409c9b0cff80b428856"
+  },
+  {
+    "path": "assets/js/main.js",
+    "bytes": 15663,
+    "sha256": "3aac08d084baa92c0996b09785b5f294ef57ea647b6beeecd28513d88af0f2c7"
+  },
+  {
+    "path": "CUSTOMISE.md",
+    "bytes": 19171,
+    "sha256": "34da0242ae9cba39cd400d1a46a26d4816704ec38c91f314b5dcca0dc3b97c1d"
+  },
+  {
+    "path": "index.html",
+    "bytes": 12211,
+    "sha256": "a1f7ebb41b137c31683fd57a6c437bf60e47564d2ee77dbe3dbcf0ce3aee5619"
+  },
+  {
+    "path": "LICENCE.txt",
+    "bytes": 1856,
+    "sha256": "d32d86473748fa262ebd230b089c6ec700b3881eb3802e5635288f6c3f4c95cb"
+  },
+  {
+    "path": "README.md",
+    "bytes": 3617,
+    "sha256": "ff0b54224c7733c14d8c5c3bcadf72e3a246c61186d0848c4de4b56a345ee5d1"
+  }
+]

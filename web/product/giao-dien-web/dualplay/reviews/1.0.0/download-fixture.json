@@ -1,0 +1,8 @@
+{
+  "anon": 401,
+  "unowned": 403,
+  "owned": 200,
+  "bytes": 335706,
+  "zipInTracing": true,
+  "note": "Auth and entitlement are isolated fixtures; no real purchase/account flow or database mutation"
+}

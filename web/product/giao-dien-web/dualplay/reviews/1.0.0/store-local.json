@@ -1,0 +1,26 @@
+{
+  "vi": {
+    "detail": true,
+    "price": true,
+    "specs": true,
+    "library": true,
+    "mobile": true
+  },
+  "en": {
+    "detail": true,
+    "price": true,
+    "specs": true,
+    "library": true,
+    "mobile": true
+  },
+  "zh": {
+    "detail": true,
+    "price": true,
+    "specs": true,
+    "library": true,
+    "mobile": true
+  },
+  "demo": true,
+  "anonymous": 401,
+  "directZip": 404
+}

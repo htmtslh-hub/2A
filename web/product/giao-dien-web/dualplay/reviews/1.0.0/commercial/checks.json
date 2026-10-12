@@ -1,0 +1,1195 @@
+{
+  "slug": "dualplay",
+  "version": "1.0.0",
+  "date": "2026-10-12T15:54:13.405Z",
+  "os": "win32",
+  "zipBytes": 335706,
+  "sha256": "2226ef05a9dc510916d02119b21c6d0125b076aa7bc4acac55a9ccbcacf3b365",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          },
+          {
+            "label": "Controller showroom home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          },
+          {
+            "label": "Games",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#collection"
+          },
+          {
+            "label": "Accessories",
+            "href": "#features",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#features"
+          },
+          {
+            "label": "News",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#story"
+          },
+          {
+            "label": "Store",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#collection"
+          },
+          {
+            "label": "Support",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#support"
+          },
+          {
+            "label": "Browse editions",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#collection"
+          },
+          {
+            "label": "Explore edition ↗",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          },
+          {
+            "label": "Explore edition ↗",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          },
+          {
+            "label": "Explore edition ↗",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          },
+          {
+            "label": "Find your finish ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#collection"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": null
+      },
+      "keyboard": {
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip",
+            "text": "Skip to content",
+            "colour": "rgb(17, 17, 17)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 18.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Games",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              48,
+              70,
+              94
+            ],
+            "ratio": 6.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Accessories",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              50,
+              73,
+              97
+            ],
+            "ratio": 6.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Store",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              49,
+              71,
+              95
+            ],
+            "ratio": 6.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Support",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              46,
+              67,
+              92
+            ],
+            "ratio": 6.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "platform",
+            "text": "( PS5 )",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              20,
+              34,
+              60
+            ],
+            "ratio": 10.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "( PS5 CONTROLLER )",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              48,
+              71,
+              95
+            ],
+            "ratio": 6.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "GENSHINIMPACT",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              70,
+              99,
+              121
+            ],
+            "ratio": 5.79,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A world of adventure, in your hands. Ivo",
+            "colour": "rgb(240, 238, 229)",
+            "background": [
+              68,
+              95,
+              118
+            ],
+            "ratio": 5.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "＋ ADD TO CART",
+            "colour": "rgb(18, 21, 26)",
+            "background": [
+              143,
+              224,
+              244
+            ],
+            "ratio": 12.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "price",
+            "text": "$79,99",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              59,
+              85,
+              108
+            ],
+            "ratio": 7.12,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "demo-note",
+            "text": "Concept edition · Demo cart",
+            "colour": "rgb(240, 238, 229)",
+            "background": [
+              44,
+              65,
+              90
+            ],
+            "ratio": 8.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "film-name",
+            "text": "GENSHIN IMPACT",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              45,
+              81,
+              103
+            ],
+            "ratio": 8.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "film-label",
+            "text": "PLAY EDITION PREVIEW",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              78,
+              77,
+              75
+            ],
+            "ratio": 8.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(17, 17, 17)",
+            "background": [
+              143,
+              224,
+              244
+            ],
+            "ratio": 12.71,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01 / 03",
+            "colour": "rgb(195, 195, 184)",
+            "background": [
+              50,
+              72,
+              96
+            ],
+            "ratio": 5.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "12 hr",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              62,
+              82,
+              104
+            ],
+            "ratio": 7.37,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Battery life*",
+            "colour": "rgb(221, 221, 221)",
+            "background": [
+              59,
+              77,
+              100
+            ],
+            "ratio": 6.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "1 ms",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              49,
+              64,
+              87
+            ],
+            "ratio": 9.61,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Low latency*",
+            "colour": "rgb(221, 221, 221)",
+            "background": [
+              46,
+              61,
+              85
+            ],
+            "ratio": 8.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Genshin Impact selected",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              0,
+              0,
+              0
+            ],
+            "ratio": 21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "THE COLLECTION / 01—03",
+            "colour": "rgb(234, 211, 151)",
+            "background": [
+              9,
+              10,
+              11
+            ],
+            "ratio": 13.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Three worlds.One way to play.",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              9,
+              10,
+              11
+            ],
+            "ratio": 18.15,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Choose a finish. Change the atmosphere. ",
+            "colour": "rgb(195, 195, 184)",
+            "background": [
+              9,
+              10,
+              11
+            ],
+            "ratio": 11.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Explore edition ↗",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              9,
+              10,
+              11
+            ],
+            "ratio": 18.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "",
+          "colour": "rgb(255, 255, 255)",
+          "width": "3px",
+          "ratio": 3.39
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          },
+          {
+            "label": "Controller showroom home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          },
+          {
+            "label": "Games",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#collection"
+          },
+          {
+            "label": "Accessories",
+            "href": "#features",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#features"
+          },
+          {
+            "label": "News",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#story"
+          },
+          {
+            "label": "Store",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#collection"
+          },
+          {
+            "label": "Support",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#support"
+          },
+          {
+            "label": "Browse editions",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#collection"
+          },
+          {
+            "label": "Explore edition ↗",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          },
+          {
+            "label": "Explore edition ↗",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          },
+          {
+            "label": "Explore edition ↗",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          },
+          {
+            "label": "Find your finish ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#collection"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/dualplay/index.html#main"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": null
+      },
+      "keyboard": {
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip",
+            "text": "Skip to content",
+            "colour": "rgb(17, 17, 17)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 18.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Games",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              48,
+              70,
+              94
+            ],
+            "ratio": 6.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Accessories",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              50,
+              73,
+              97
+            ],
+            "ratio": 6.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "News",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              50,
+              72,
+              96
+            ],
+            "ratio": 6.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Store",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              48,
+              71,
+              95
+            ],
+            "ratio": 6.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Support",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              46,
+              67,
+              92
+            ],
+            "ratio": 6.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "platform",
+            "text": "( PS5 )",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              20,
+              34,
+              60
+            ],
+            "ratio": 10.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "( PS5 CONTROLLER )",
+            "colour": "rgb(143, 224, 244)",
+            "background": [
+              49,
+              71,
+              95
+            ],
+            "ratio": 6.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "GENSHINIMPACT",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              70,
+              99,
+              121
+            ],
+            "ratio": 5.79,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A world of adventure, in your hands. Ivo",
+            "colour": "rgb(240, 238, 229)",
+            "background": [
+              68,
+              95,
+              118
+            ],
+            "ratio": 5.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "＋ ADD TO CART",
+            "colour": "rgb(18, 21, 26)",
+            "background": [
+              143,
+              224,
+              244
+            ],
+            "ratio": 12.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "price",
+            "text": "$79,99",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              59,
+              84,
+              107
+            ],
+            "ratio": 7.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "demo-note",
+            "text": "Concept edition · Demo cart",
+            "colour": "rgb(240, 238, 229)",
+            "background": [
+              44,
+              65,
+              90
+            ],
+            "ratio": 8.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "film-name",
+            "text": "GENSHIN IMPACT",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              45,
+              81,
+              103
+            ],
+            "ratio": 8.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "film-label",
+            "text": "PLAY EDITION PREVIEW",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              78,
+              78,
+              76
+            ],
+            "ratio": 8.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(17, 17, 17)",
+            "background": [
+              143,
+              224,
+              244
+            ],
+            "ratio": 12.71,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01 / 03",
+            "colour": "rgb(195, 195, 184)",
+            "background": [
+              49,
+              72,
+              96
+            ],
+            "ratio": 5.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "12 hr",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              62,
+              81,
+              104
+            ],
+            "ratio": 7.45,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Battery life*",
+            "colour": "rgb(221, 221, 221)",
+            "background": [
+              59,
+              77,
+              100
+            ],
+            "ratio": 6.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "1 ms",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              49,
+              64,
+              87
+            ],
+            "ratio": 9.61,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Low latency*",
+            "colour": "rgb(221, 221, 221)",
+            "background": [
+              46,
+              61,
+              85
+            ],
+            "ratio": 8.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Genshin Impact selected",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              0,
+              0,
+              0
+            ],
+            "ratio": 21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "THE COLLECTION / 01—03",
+            "colour": "rgb(234, 211, 151)",
+            "background": [
+              9,
+              10,
+              11
+            ],
+            "ratio": 13.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Three worlds.One way to play.",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              9,
+              10,
+              11
+            ],
+            "ratio": 18.15,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Choose a finish. Change the atmosphere. ",
+            "colour": "rgb(195, 195, 184)",
+            "background": [
+              9,
+              10,
+              11
+            ],
+            "ratio": 11.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Explore edition ↗",
+            "colour": "rgb(246, 245, 240)",
+            "background": [
+              9,
+              10,
+              11
+            ],
+            "ratio": 18.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "",
+          "colour": "rgb(255, 255, 255)",
+          "width": "3px",
+          "ratio": 3.39
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "dualplay/assets/css/style.css",
+    "dualplay/assets/img/crimson-v3.webp",
+    "dualplay/assets/img/gold-v3.webp",
+    "dualplay/assets/img/jade-v3.webp",
+    "dualplay/assets/js/main.js",
+    "dualplay/CUSTOMISE.md",
+    "dualplay/index.html",
+    "dualplay/LICENCE.txt",
+    "dualplay/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/crimson-v3.webp",
+    "assets/img/gold-v3.webp",
+    "assets/img/jade-v3.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q03/chromium: không tìm thấy nút menu mobile",
+    "Q03/firefox: không tìm thấy nút menu mobile"
+  ]
+}

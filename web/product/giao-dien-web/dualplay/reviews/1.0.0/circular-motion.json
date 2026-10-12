@@ -1,0 +1,174 @@
+{
+  "Chromium": {
+    "version": "153.0.8010.12",
+    "errors": [],
+    "mid": [
+      {
+        "left": "392.68px",
+        "top": "213.089px",
+        "width": "646px",
+        "transform": "translate(299.434px, 123.786px) scale(0.600669) perspective(200px) rotateY(-16.7078deg) rotate(-6.34116deg)"
+      },
+      {
+        "left": "1048.39px",
+        "top": "373.352px",
+        "width": "164.45px",
+        "transform": "translate(-198.084px, -130.732px) scale(2.27737) perspective(200px) rotateY(0deg) rotate(7.97978deg)"
+      },
+      {
+        "left": "1290.14px",
+        "top": "391.341px",
+        "width": "105.6px",
+        "transform": "translate(-101.358px, 65.8705px) scale(1.09149) perspective(200px) rotateY(-18.2922deg) rotate(-3.70939deg)"
+      }
+    ],
+    "widths": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "wrapAndRapid": true
+  },
+  "Firefox": {
+    "version": "155.0",
+    "errors": [],
+    "mid": [
+      {
+        "left": "392.667px",
+        "top": "213.092px",
+        "width": "646px",
+        "transform": "translate(415.122px, 107.936px) scale(0.446394) perspective(200px) rotateY(-23.1625deg) rotate(-12.8649deg)"
+      },
+      {
+        "left": "1048.37px",
+        "top": "373.4px",
+        "width": "164.45px",
+        "transform": "translate(-274.592px, -117.614px) scale(2.77087) perspective(200px) rotateY(0deg) rotate(6.98871deg)"
+      },
+      {
+        "left": "1290.14px",
+        "top": "391.317px",
+        "width": "105.6px",
+        "transform": "translate(-140.525px, 58.2171px) scale(1.12684) perspective(200px) rotateY(-11.8375deg) rotate(0.336668deg)"
+      }
+    ],
+    "widths": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "wrapAndRapid": true
+  },
+  "Edge": {
+    "version": "155.0.4283.45",
+    "errors": [],
+    "mid": [
+      {
+        "left": "392.68px",
+        "top": "213.089px",
+        "width": "646px",
+        "transform": "translate(375.236px, 117.972px) scale(0.499578) perspective(200px) rotateY(-20.9374deg) rotate(-10.3241deg)"
+      },
+      {
+        "left": "1048.39px",
+        "top": "373.352px",
+        "width": "164.45px",
+        "transform": "translate(-248.229px, -126.676px) scale(2.60074) perspective(200px) rotateY(0deg) rotate(7.62223deg)"
+      },
+      {
+        "left": "1290.14px",
+        "top": "391.341px",
+        "width": "105.6px",
+        "transform": "translate(-127.016px, 63.2274px) scale(1.11466) perspective(200px) rotateY(-14.0626deg) rotate(-0.620348deg)"
+      }
+    ],
+    "widths": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "wrapAndRapid": true
+  },
+  "CocCoc": {
+    "version": "152.0.7977.124",
+    "errors": [],
+    "mid": [
+      {
+        "left": "392.68px",
+        "top": "213.089px",
+        "width": "646px",
+        "transform": "translate(335.957px, 123.212px) scale(0.551961) perspective(200px) rotateY(-18.7457deg) rotate(-8.11768deg)"
+      },
+      {
+        "left": "1048.39px",
+        "top": "373.352px",
+        "width": "164.45px",
+        "transform": "translate(-222.245px, -131.005px) scale(2.43318) perspective(200px) rotateY(0deg) rotate(7.95004deg)"
+      },
+      {
+        "left": "1290.14px",
+        "top": "391.341px",
+        "width": "105.6px",
+        "transform": "translate(-113.721px, 65.7551px) scale(1.10265) perspective(200px) rotateY(-16.2543deg) rotate(-2.00721deg)"
+      }
+    ],
+    "widths": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "wrapAndRapid": true
+  }
+}

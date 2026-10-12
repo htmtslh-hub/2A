@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  dualplay: {
+  "vi": {
+    "intro": "Showroom tay cầm concept với Genshin Impact số 1 và chuyển động vòng tròn thủ công.",
+    "notes": "### Bắt đầu\nGiải nén đủ 9 file, mở index.html và giữ assets/ cạnh trang. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm.\n\n### Nội dung\nThứ tự editions trong assets/js/main.js: Genshin Impact, God of War, 007 First Light. Sửa cả hero ban đầu và collection trong HTML khi thay dữ liệu. Ba ảnh WebP tự tạo nằm ở assets/img/. Tên game, nhãn hiệu, giá và thông số là dữ liệu demo; thay bằng nội dung bạn có quyền sử dụng.\n\n### Tương tác\nBấm hoặc vuốt để quay ba vị trí, 1,3 giây mỗi lượt. Thẻ bên phải là mẫu kế tiếp và mẫu sau nữa. Nút play mở cảnh sản phẩm hữu hạn sáu giây, không phải video gameplay. Escape đóng dialog. Giỏ chỉ lưu trong phiên, không gửi đơn hay xử lý thanh toán.\n\n### Giấy phép\nĐọc LICENCE.txt: mã và ảnh dùng trong website cá nhân/khách hàng; không bán lại file hoặc ảnh riêng lẻ. Không cấp quyền nhãn hiệu hoặc xác nhận sản phẩm chính hãng. Không framework, API key, font mạng hoặc build."
+  },
+  "en": {
+    "intro": "A concept controller showroom with Genshin Impact first and a manual circular carousel.",
+    "notes": "### Start\nExtract all 9 files. Open index.html beside assets/. CUSTOMISE.md includes ten steps, twelve AI prompts and counted edits.\n\n### Content\nThe editions array is ordered Genshin Impact, God of War, 007 First Light. Update the initial HTML hero and collection when editing the data. Three generated WebP assets are local in assets/img/. Game names, marks, price and specifications are illustrative; use content you are authorised to publish.\n\n### Interaction\nClick or swipe for a 1.3-second circular move. Right cards show the next and following models. Play opens a finite six-second product scene, not gameplay footage. Escape closes dialogs. The cart is session-only, with no order submission or payments.\n\n### Licence\nRead LICENCE.txt for personal/client website use. No template resale, separate image distribution, trademark rights or manufacturer endorsement. No framework, API key, remote fonts or build."
+  },
+  "zh": {
+    "intro": "概念游戏手柄展厅，原神设计为第一款，支持手动环形轮播。",
+    "notes": "### 开始\n完整解压9个文件，打开index.html并保留assets/。CUSTOMISE.md包含十个步骤、十二个AI提示词和精确修改表。\n\n### 内容\nmain.js的editions顺序为原神、战神、007。修改数据时同步更新初始首屏与产品列表。三张原创生成WebP图片位于assets/img/。游戏名称、标记、价格和规格均为演示内容；请替换为您获准使用的内容。\n\n### 交互\n点击或滑动触发1.3秒环形移动。右侧卡片展示接下来两款产品。播放按钮打开有限六秒产品场景，并非游戏视频。Escape关闭对话框。购物车仅在当前会话保存，不提交订单或处理支付。\n\n### 授权\n按LICENCE.txt用于个人/客户网站，不得转售模板或单独分发图片。不授予商标权或厂商背书。无需框架、API密钥、远程字体或构建。"
+  }
+},
   "galaxy-edge": {
   "vi": {
     "intro": "Landing page du lịch thiên hà với nền điện ảnh tự tạo và parallax.",

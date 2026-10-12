@@ -43,6 +43,120 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t27: {
+  "slug": "dualplay",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML · CSS · JS"
+      ],
+      [
+        "Gói tải",
+        "6 file chính + 3 ảnh WebP"
+      ],
+      [
+        "Chuyển động",
+        "Carousel vòng tròn thủ công · 1,3 giây"
+      ],
+      [
+        "Giỏ hàng",
+        "Giỏ demo trong phiên · Không thanh toán"
+      ],
+      [
+        "Hướng dẫn",
+        "10 bước · 12 prompt AI"
+      ],
+      [
+        "Giấy phép",
+        "Website cá nhân/khách hàng; không cấp quyền nhãn hiệu"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "HTML · CSS · JS"
+      ],
+      [
+        "Package",
+        "6 core files + 3 WebP images"
+      ],
+      [
+        "Motion",
+        "Manual circular carousel · 1.3 seconds"
+      ],
+      [
+        "Cart",
+        "Session demo cart · No checkout"
+      ],
+      [
+        "Guide",
+        "10 steps · 12 AI prompts"
+      ],
+      [
+        "Licence",
+        "Personal/client websites; no trademark rights"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "HTML · CSS · JS"
+      ],
+      [
+        "下载包",
+        "6个核心文件 + 3张WebP图片"
+      ],
+      [
+        "动画",
+        "手动环形轮播 · 1.3秒"
+      ],
+      [
+        "购物车",
+        "会话内演示购物车 · 无支付"
+      ],
+      [
+        "指南",
+        "10个步骤 · 12个AI提示词"
+      ],
+      [
+        "授权",
+        "个人/客户网站使用；不授予商标权"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "Dualplay",
+      "desc": "Showroom tay cầm với ba thiết kế concept, Genshin Impact hiển thị đầu tiên. Carousel vòng tròn khi bấm hoặc vuốt, nền đổi màu, hover, scroll reveal và màn xem sản phẩm sáu giây. Giỏ demo trong phiên; không đặt hàng hay thanh toán. Không phải sản phẩm chính thức của hãng.",
+      "tags": [
+        "Tay cầm",
+        "Carousel vòng tròn",
+        "3 ảnh AI"
+      ]
+    },
+    "en": {
+      "name": "Dualplay",
+      "desc": "A three-concept controller showroom with Genshin Impact first. Manual circular carousel, changing themes, hover, scroll reveals and a six-second product preview. Session demo cart only; no orders or payments. Independent concept, not an official manufacturer product.",
+      "tags": [
+        "Controllers",
+        "Circular carousel",
+        "3 AI images"
+      ]
+    },
+    "zh": {
+      "name": "Dualplay",
+      "desc": "三款概念游戏手柄展厅，默认首先展示原神设计。支持点击或滑动的环形轮播、主题变色、悬停、滚动渐显与六秒产品预览。仅含会话演示购物车，不含下单或支付；非厂商官方产品。",
+      "tags": [
+        "游戏手柄",
+        "环形轮播",
+        "3张AI图片"
+      ]
+    }
+  }
+},
   t25: {
   "cat": "commerce",
   "version": "1.2.1",

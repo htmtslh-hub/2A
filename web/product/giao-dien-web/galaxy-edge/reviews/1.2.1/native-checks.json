@@ -1,0 +1,30 @@
+[
+  {
+    "browser": "Edge",
+    "version": "155.0.4283.45",
+    "parallax": "matrix(1.0225, 0, 0, 1.0225, 0, 27.5)",
+    "mid": "1",
+    "end": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "dimensions": {
+      "width": 320,
+      "scrollWidth": 320
+    }
+  },
+  {
+    "browser": "CocCoc",
+    "version": "152.0.7977.124",
+    "parallax": "matrix(1.0225, 0, 0, 1.0225, 0, 27.5)",
+    "mid": "1",
+    "end": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "dimensions": {
+      "width": 320,
+      "scrollWidth": 320
+    }
+  }
+]

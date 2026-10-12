@@ -1,0 +1,53 @@
+{
+  "method": "Real GET route, isolated mocked auth and entitlement; no database writes or real purchase",
+  "report": [
+    {
+      "id": "t25",
+      "signedIn": false,
+      "owned": false,
+      "status": 401,
+      "exactZip": null,
+      "sha256": null
+    },
+    {
+      "id": "t25",
+      "signedIn": true,
+      "owned": false,
+      "status": 403,
+      "exactZip": null,
+      "sha256": null
+    },
+    {
+      "id": "t25",
+      "signedIn": true,
+      "owned": true,
+      "status": 200,
+      "exactZip": true,
+      "sha256": "aa141afdef7d76292127d436c85edcbddd43eb73e3b71b133af354945d3e5c3b"
+    },
+    {
+      "id": "t26",
+      "signedIn": false,
+      "owned": false,
+      "status": 401,
+      "exactZip": null,
+      "sha256": null
+    },
+    {
+      "id": "t26",
+      "signedIn": true,
+      "owned": false,
+      "status": 403,
+      "exactZip": null,
+      "sha256": null
+    },
+    {
+      "id": "t26",
+      "signedIn": true,
+      "owned": true,
+      "status": 200,
+      "exactZip": true,
+      "sha256": "5357a142e4ffee390865696f242a0bd7facecc271e67ba07e7ac68e001cd54e4"
+    }
+  ]
+}

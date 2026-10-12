@@ -1,0 +1,30 @@
+{
+  "existingProducts": 24,
+  "preserved": true,
+  "products": [
+    {
+      "id": "t25",
+      "slug": "galaxy-edge",
+      "canBuy": true,
+      "fileMatches": true,
+      "usd": 2000,
+      "names": [
+        "Galaxy Edge",
+        "Galaxy Edge",
+        "Galaxy Edge"
+      ]
+    },
+    {
+      "id": "t26",
+      "slug": "aerox-studio",
+      "canBuy": true,
+      "fileMatches": true,
+      "usd": 2000,
+      "names": [
+        "Aerox Studio",
+        "Aerox Studio",
+        "Aerox Studio"
+      ]
+    }
+  ]
+}

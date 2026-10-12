@@ -1,0 +1,56 @@
+[
+  {
+    "name": "chromium",
+    "version": "153.0.8010.12",
+    "before": "matrix(1, 0, 0, 1, 0, 0)",
+    "middle": "matrix(1.0225, 0, 0, 1.0225, 0, 27.5)",
+    "reverse": "matrix(1, 0, 0, 1, 0, 0)",
+    "hover": "matrix(1, 0, 0, 1, 0, -3)",
+    "widths": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "firefox",
+    "version": "155.0",
+    "before": "matrix(1, 0, 0, 1, 0, 0)",
+    "middle": "matrix(1.0225, 0, 0, 1.0225, 0, 27.5)",
+    "reverse": "matrix(1, 0, 0, 1, 0, 0)",
+    "hover": "matrix(1, 0, 0, 1, 0, -3)",
+    "widths": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "errors": []
+  }
+]

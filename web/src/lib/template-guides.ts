@@ -3,6 +3,35 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  "galaxy-edge": {
+  "vi": {
+    "intro": "Landing page du lịch thiên hà với nền điện ảnh tự tạo và parallax.",
+    "notes": "### Bắt đầu\nGiải nén đủ 7 file, mở index.html và giữ assets/ cạnh trang. Đọc CUSTOMISE.md cho 10 bước, 12 prompt AI và bảng sửa đã đếm.\n\n### Nội dung và ảnh\nThay Galaxy Edge, các điểm đến và gói du lịch minh hoạ. Ảnh nền nằm ở assets/img/galaxy-hero.webp.\n\n### Tương tác\nMenu, liên kết section, hover, parallax và reveal hữu hạn. Preview và nút tròn là liên kết, không phải video/carousel. Không kèm đặt vé hoặc thanh toán.\n\n### Giấy phép\nMã và ảnh tự tạo được dùng trong website cá nhân/khách hàng theo LICENCE.txt của Forge zone; không bán lại file mẫu hoặc ảnh riêng lẻ. Motion mặc định bật; không framework, API key hoặc build."
+  },
+  "en": {
+    "intro": "A galactic travel landing page with original cinematic artwork and parallax.",
+    "notes": "### Start\nExtract all 7 files. Open index.html beside assets/. CUSTOMISE.md has ten steps, twelve prompts and counted edits.\n\n### Content and images\nReplace the brand, fictional destinations and illustrative travel packages. The local hero image is assets/img/galaxy-hero.webp.\n\n### Interaction\nSection links, menu, hover, parallax and finite reveals. The preview and circle buttons link to sections; no video player, carousel, booking or payments.\n\n### Licence\nForge zone permits personal/client website use of the code and self-created images under LICENCE.txt. No template resale or standalone image distribution. Motion defaults on. No framework, API key or build."
+  },
+  "zh": {
+    "intro": "具有原创电影感背景与视差的银河旅行页面。",
+    "notes": "### 开始\n完整解压7个文件，打开index.html并保留assets/。CUSTOMISE.md含十个步骤、十二个提示词与精确修改表。\n\n### 内容与图片\n替换品牌、虚构目的地和示例套餐。背景位于assets/img/galaxy-hero.webp。\n\n### 交互\n菜单、区块链接、悬停、视差与有限渐显。预览与圆形按钮链接页面区块，不含视频播放器、轮播、预订或支付。\n\n### 授权\n按Forge zone的LICENCE.txt将源码与原创图片用于个人/客户网站，不得转售模板或单独分发图片。动画默认开启，无框架、API密钥或构建要求。"
+  }
+},
+  "aerox-studio": {
+  "vi": {
+    "intro": "Showroom xe máy với 5 lựa chọn xe/màu và carousel thủ công.",
+    "notes": "### Bắt đầu\nGiải nén đủ 13 file, mở index.html và giữ assets/ cạnh trang. Đọc CUSTOMISE.md cho 10 bước, 12 prompt AI và bảng sửa đã đếm.\n\n### Nội dung và ảnh\nSửa products trong assets/js/main.js và metadata HTML đồng thời. Bảy ảnh WebP cục bộ; Graphite là mô phỏng grayscale. Mẫu mới là concept, không phải dữ liệu hãng đã xác minh. Thay nhận diện bên thứ ba trước khi dùng cho doanh nghiệp.\n\n### Tương tác\nCarousel trượt vòng lặp 1,1 giây chỉ chạy khi bấm. Gallery có phím mũi tên và dialog phóng lớn; Escape đóng ảnh. Không đặt xe, tồn kho hoặc thanh toán.\n\n### Giấy phép\nMã và ảnh tự tạo được dùng trong website cá nhân/khách hàng theo LICENCE.txt của Forge zone; không bán lại file mẫu hoặc ảnh riêng lẻ. Motion mặc định bật; không framework, API key hoặc build."
+  },
+  "en": {
+    "intro": "A five-choice motorcycle showroom with a manual carousel.",
+    "notes": "### Start\nExtract all 13 files. Open index.html beside assets/. CUSTOMISE.md has ten steps, twelve prompts and counted edits.\n\n### Content and images\nEdit products in assets/js/main.js together with HTML metadata. Seven local WebP images; Graphite is grayscale. New models are illustrative concepts, not verified manufacturer data. Replace third-party branding for your business.\n\n### Interaction\nManual looping 1.1-second carousel, gallery arrow keys and enlarged-image dialog. Escape closes the image. No vehicle ordering, stock or payments.\n\n### Licence\nForge zone permits personal/client website use of the code and self-created images under LICENCE.txt. No template resale or standalone image distribution. Motion defaults on. No framework, API key or build."
+  },
+  "zh": {
+    "intro": "五种车型/颜色选择与手动轮播的摩托车展厅。",
+    "notes": "### 开始\n完整解压13个文件，打开index.html并保留assets/。CUSTOMISE.md含十个步骤、十二个提示词与精确修改表。\n\n### 内容与图片\n同步修改main.js的products与HTML元数据。七张本地WebP图片；Graphite为灰度模拟。车型为概念示例，非已核实的厂家数据。使用前替换第三方品牌。\n\n### 交互\n手动1.1秒循环轮播、图库方向键与放大图片对话框。Escape关闭图片。不含订车、库存或支付。\n\n### 授权\n按Forge zone的LICENCE.txt将源码与原创图片用于个人/客户网站，不得转售模板或单独分发图片。动画默认开启，无框架、API密钥或构建要求。"
+  }
+},
+
   lingoglass: {
     vi: { intro: 'LingoGlass là ứng dụng học ngoại ngữ trên máy tính, không phải giao diện website tĩnh.', notes: '### Bắt đầu\nGiải nén ZIP LingoGlass và đọc README.md cùng USER_GUIDE.md. Gói khôi phục gồm mã nguồn, bản dựng giao diện và tài liệu; không bao gồm bộ cài Windows/macOS.\n\n### Chạy ứng dụng từ mã nguồn\nCài Node.js, mở terminal trong thư mục lingoglass, chạy npm install rồi npm run electron:dev. Để đóng gói bản cài, dùng npm run electron:build theo README.\n\n### Học tập và bản quyền\nMở video hoặc podcast và phụ đề tương ứng; dùng A-B Repeat, tra từ và Shadowing. Bản desktop có cơ chế kích hoạt riêng: đọc USER_GUIDE.md và liên hệ nhà phát hành nếu cần mã kích hoạt. Demo trình duyệt chỉ là bản xem trước. Đọc THIRD_PARTY_NOTICES.md trước khi phân phối.' },
     en: { intro: 'LingoGlass is a desktop language-learning app, not a static website template.', notes: '### Start\nExtract the LingoGlass ZIP and read README.md and USER_GUIDE.md. The restored package contains source, a built interface and documentation; Windows/macOS installers are not included.\n\n### Run from source\nInstall Node.js, open a terminal in the lingoglass folder, run npm install and then npm run electron:dev. Use npm run electron:build to package an installer as described in README.\n\n### Learning and activation\nOpen a video or podcast and its subtitles; use A-B Repeat, dictionary and Shadowing. Desktop activation is separate: read USER_GUIDE.md and contact the publisher if an activation key is needed. The browser demo is a preview. Read THIRD_PARTY_NOTICES.md before distributing.' },

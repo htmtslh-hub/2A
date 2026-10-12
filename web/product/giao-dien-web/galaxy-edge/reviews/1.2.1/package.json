@@ -1,0 +1,9 @@
+{
+  "slug": "galaxy-edge",
+  "version": "1.2.1",
+  "zipBytes": 184866,
+  "sha256": "aa141afdef7d76292127d436c85edcbddd43eb73e3b71b133af354945d3e5c3b",
+  "priceUsdCents": 2000,
+  "templateId": "t25",
+  "tracePresent": true
+}

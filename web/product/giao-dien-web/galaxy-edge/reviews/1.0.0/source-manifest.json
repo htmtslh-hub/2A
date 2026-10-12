@@ -1,0 +1,26 @@
+[
+  {
+    "file": "index.html",
+    "sha256": "62e6596533b99adff971b2d999f5cd9cc64a7d91f0c889c1125abe95166c131e"
+  },
+  {
+    "file": "assets/css/style.css",
+    "sha256": "99096872f4ef258878a413f09640bb3527a3351845459ff2688af7727b2d2049"
+  },
+  {
+    "file": "assets/js/main.js",
+    "sha256": "20b181e6b3d841b3defda17f594b4c933e5e6d90fed5eb9e6a1fa0172e283888"
+  },
+  {
+    "file": "CUSTOMISE.md",
+    "sha256": "1341f17e91b5d1a74d16104fb6181ea942e134d60e51f39ab6b5be4a32f32134"
+  },
+  {
+    "file": "README.md",
+    "sha256": "1de6ce7373df48b6a634b9fd982e7b4d723f146d22cf9aff604a92978e760d9c"
+  },
+  {
+    "file": "LICENCE.txt",
+    "sha256": "62b8f6bc49d8ce81b1a4589f61742cb82c68a0a3c5b29377de99a65d217bfd73"
+  }
+]

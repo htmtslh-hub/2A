@@ -1,0 +1,3 @@
+# Commercial product release 1.2.1
+
+Yêu cầu mới ngày12/10/2026: đóng gói và đưa cả Galaxy Edge/Aerox Studio thành sản phẩm trên cửa hàng, push/deploy đồng bộ. Áp dụng chính sách bảy mục Forge zone đã có ở music-app cho mã và ảnh tự tạo; ghi rõ không cấp quyền nhãn hiệu bên thứ ba. Không thay payment/database, giá mỗi mẫu vẫn $20 theo catalog hiện tại. Tạo ZIP riêng ngoài public, source/demo/preview/catalog vi/en/zh và hướng dẫn đồng bộ. Ngoại lệ raster/tương tác/dung lượng riêng hai mẫu giữ theo yêu cầu trước; không đổi chuẩn chung. Không chứng nhận >95% fidelity chưa đo; giữ bố cục đã được chủ sản phẩm duyệt trong các lượt chỉnh sửa.

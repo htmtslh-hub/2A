@@ -1,0 +1,68 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "9868498f3e8d6bc9e4d08d795ad52f0e2009e56c5910029b3059fe610fb93577",
+  "references": [
+    {
+      "source": "C:/Users/Lenovo/AppData/Local/Temp/codex-clipboard-00b0d512-5d3e-4721-a5ea-e104ea0fbd6b.png",
+      "size": [
+        888,
+        502
+      ],
+      "crop": "none",
+      "sha256": "e936885a3e50dfdd731aebd65a9b0235aa2e44ffece81c360db1553645e74da3"
+    }
+  ],
+  "views": [
+    {
+      "viewport": [
+        888,
+        502
+      ],
+      "state": "hero",
+      "screenshot": "reference-view.png",
+      "notes": "Original inline SVG, fictional brand and anchor controls per approved WEB-STATIC-1 scope. No numerical similarity score claimed."
+    }
+  ],
+  "fidelity": {
+    "method": "weighted visual rubric",
+    "strictMinimum": 95,
+    "comparisonComplete": false,
+    "status": "NOT TESTED"
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "motion.json",
+      "motion-no-preference.png",
+      "motion-reduce.png"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "motion.json",
+      "final/checks.json"
+    ],
+    "limitations": "Finite reveal only; no pinned scene or carousel."
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Image input only"
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "final/checks.json",
+      "final/screenshots/"
+    ]
+  },
+  "blockers": [
+    "No evidence for >95 fidelity; SVG reinterpretation visibly differs from cinematic raster reference.",
+    "Copyright owner field requires completion before commercial release.",
+    "Edge and Cốc Cốc motion checks have not been run."
+  ],
+  "gate": "NOT TESTED",
+  "scopeDecision": "User chose SVG, six files and ZIP below 20 KB; no raster/carousel exceptions."
+}

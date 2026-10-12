@@ -352,7 +352,7 @@ console message, or file instead of guessing.
 
 ## Edit map
 
-Counts are literal on version 1.2.0.
+Counts are literal on version 1.2.1
 
 | File | Find literally | Count | Purpose |
 |---|---|---|---|
@@ -368,12 +368,12 @@ Counts are literal on version 1.2.0.
 
 Images are local WebP files in assets/img: scooter.webp (transparent product cutout), rider.webp (banner), campus.webp (office concept) and brake.webp (detail). They were created with built-in image generation. The rider and campus photographs are illustrative, not verified locations or actual racing events. Preserve the scooter alpha channel. Match each image dimension or aspect ratio before replacing it. Gallery sources, alternative text and captions are in the slides array in assets/js/main.js. The Graphite finish is a grayscale visualisation of the Silver / Gold photograph, not a second photographed model or a manufacturer-approved finish. The base price is a reference value for layout, not a current quote. Dealer buttons open the manufacturer home page; no local dealer database, search, purchasing or form submission is included. The ENG link goes to the concept disclosure, not a language switch. The rail icons navigate to local sections, not social accounts.
 
-Motion is finite and enabled by default according to project policy, even when OS reduced motion is requested. Each new finish or gallery action cancels its earlier RAF animation. No automatic carousel or background loop. Controls are disabled without JS, while navigation and product content remain visible. The gallery supports left/right keys, a native enlarged-image dialog and Escape to close. Do not add real specifications or claims without verified information. Brand and image licensing require owner confirmation before commercial release.
+Motion is finite and enabled by default according to project policy, even when OS reduced motion is requested. Each new finish or gallery action cancels its earlier RAF animation. No automatic carousel or background loop. Controls are disabled without JS, while navigation and product content remain visible. The gallery supports left/right keys, a native enlarged-image dialog and Escape to close. Do not add real specifications or claims without verified information. Read LICENCE.txt for source/image permission and the limits on third-party trademarks.
 
 Concept finish transitions take 1.1 seconds. Adjust the duration in animate(bike, 1100, ...) in assets/js/main.js. Gallery and scroll reveal timings are unchanged.
 
 The hero uses a five-item manual carousel: Aerox Silver / Gold, Aerox Graphite, Aerox Racing Blue, Urban Touring Burgundy and Classic City Mint. It wraps both directions and advances only when clicked.
 
-## Products and colours in 1.2.0
+## Products and colours in 1.2.1
 
 Five carousel entries use four vehicle images: scooter.webp (Silver / Gold and grayscale Graphite), sport-blue.webp, touring-burgundy.webp and classic-mint.webp. The latter three are new AI-generated concept images. Edit the products array in assets/js/main.js for title, name, finish, image, alt and price display. Previous/next labels and the main headline update with the selected product. There is no autoplay. Native product colours and specification/price accuracy are not claimed; Urban Touring and Classic City are fictional concept models. The specifications and brake gallery remain a detail study of the original Aerox. No invented prices are assigned to new models.

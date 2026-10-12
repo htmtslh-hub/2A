@@ -1,0 +1,56 @@
+[
+  {
+    "locale": "vi-VN",
+    "id": "t25",
+    "images": true,
+    "dimensions": {
+      "width": 390,
+      "scrollWidth": 390
+    }
+  },
+  {
+    "locale": "vi-VN",
+    "id": "t26",
+    "images": true,
+    "dimensions": {
+      "width": 390,
+      "scrollWidth": 390
+    }
+  },
+  {
+    "locale": "en-US",
+    "id": "t25",
+    "images": true,
+    "dimensions": {
+      "width": 390,
+      "scrollWidth": 390
+    }
+  },
+  {
+    "locale": "en-US",
+    "id": "t26",
+    "images": true,
+    "dimensions": {
+      "width": 390,
+      "scrollWidth": 390
+    }
+  },
+  {
+    "locale": "zh-CN",
+    "id": "t25",
+    "images": true,
+    "dimensions": {
+      "width": 390,
+      "scrollWidth": 390
+    }
+  },
+  {
+    "locale": "zh-CN",
+    "id": "t26",
+    "images": true,
+    "dimensions": {
+      "width": 390,
+      "scrollWidth": 390
+    }
+  }
+]

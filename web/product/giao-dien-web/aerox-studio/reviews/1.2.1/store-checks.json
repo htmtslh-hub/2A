@@ -1,0 +1,86 @@
+[
+  {
+    "locale": "vi-VN",
+    "id": "t25",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "vi-VN",
+    "id": "t26",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "vi-VN",
+    "id": "t25",
+    "detail": true,
+    "preview": "http://127.0.0.1:4343/demos/galaxy-edge/index.html?v=1.2.1",
+    "images": true,
+    "guide": true
+  },
+  {
+    "locale": "vi-VN",
+    "id": "t26",
+    "detail": true,
+    "preview": "http://127.0.0.1:4343/demos/aerox-studio/index.html?v=1.2.1",
+    "images": true,
+    "guide": true
+  },
+  {
+    "locale": "en-US",
+    "id": "t25",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "en-US",
+    "id": "t26",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "en-US",
+    "id": "t25",
+    "detail": true,
+    "preview": "http://127.0.0.1:4343/demos/galaxy-edge/index.html?v=1.2.1",
+    "images": true,
+    "guide": true
+  },
+  {
+    "locale": "en-US",
+    "id": "t26",
+    "detail": true,
+    "preview": "http://127.0.0.1:4343/demos/aerox-studio/index.html?v=1.2.1",
+    "images": true,
+    "guide": true
+  },
+  {
+    "locale": "zh-CN",
+    "id": "t25",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "zh-CN",
+    "id": "t26",
+    "card": true,
+    "cart": true
+  },
+  {
+    "locale": "zh-CN",
+    "id": "t25",
+    "detail": true,
+    "preview": "http://127.0.0.1:4343/demos/galaxy-edge/index.html?v=1.2.1",
+    "images": true,
+    "guide": true
+  },
+  {
+    "locale": "zh-CN",
+    "id": "t26",
+    "detail": true,
+    "preview": "http://127.0.0.1:4343/demos/aerox-studio/index.html?v=1.2.1",
+    "images": true,
+    "guide": true
+  }
+]

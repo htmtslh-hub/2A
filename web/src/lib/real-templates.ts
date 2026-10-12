@@ -43,6 +43,237 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t25: {
+  "cat": "commerce",
+  "version": "1.2.1",
+  "badge": "",
+  "slug": "galaxy-edge",
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML · CSS · JS"
+      ],
+      [
+        "Gói tải",
+        "6 file chính + 1 ảnh WebP"
+      ],
+      [
+        "Tương tác",
+        "Hover · Parallax · Scroll reveal"
+      ],
+      [
+        "Nội dung",
+        "Điểm đến thiên hà hư cấu"
+      ],
+      [
+        "Hướng dẫn",
+        "10 bước · 12 prompt AI"
+      ],
+      [
+        "Giấy phép",
+        "Website cá nhân và khách hàng"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "HTML · CSS · JS"
+      ],
+      [
+        "Package",
+        "6 core files + 1 WebP image"
+      ],
+      [
+        "Interaction",
+        "Hover · Parallax · Scroll reveals"
+      ],
+      [
+        "Content",
+        "Fictional galactic destination"
+      ],
+      [
+        "Guide",
+        "10 steps · 12 AI prompts"
+      ],
+      [
+        "Licence",
+        "Personal and client websites"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "HTML · CSS · JS"
+      ],
+      [
+        "文件包",
+        "6个核心文件 + 1张WebP图片"
+      ],
+      [
+        "交互",
+        "悬停 · 视差 · 滚动渐显"
+      ],
+      [
+        "内容",
+        "虚构银河目的地"
+      ],
+      [
+        "指南",
+        "10步骤 · 12个AI提示词"
+      ],
+      [
+        "授权",
+        "个人与客户网站"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "Galaxy Edge",
+      "desc": "Landing page du lịch thiên hà với ảnh điện ảnh tự tạo, tiêu đề lớn, ánh động cơ cyan, hover và parallax khi cuộn. Nội dung điểm đến và gói du lịch là minh hoạ; các CTA dẫn tới mục thật trên trang, không có đặt vé hay thanh toán. HTML/CSS/JS thuần, hướng dẫn 10 bước và 12 prompt AI.",
+      "tags": [
+        "Du lịch",
+        "Điện ảnh",
+        "Parallax"
+      ]
+    },
+    "en": {
+      "name": "Galaxy Edge",
+      "desc": "A cinematic galactic travel landing page with original AI artwork, oversized type, cyan engine glow, hover and scroll parallax. Fictional destinations and illustrative packages; working section links with no booking or payment service. Plain HTML/CSS/JS, ten setup steps and twelve AI prompts.",
+      "tags": [
+        "Travel",
+        "Cinematic",
+        "Parallax"
+      ]
+    },
+    "zh": {
+      "name": "Galaxy Edge",
+      "desc": "电影感银河旅行页面，包含原创AI背景、大字标题、青色引擎光效、悬停与滚动视差。目的地和旅行套餐为示例；按钮链接真实页面区块，不含预订或支付服务。纯HTML/CSS/JS，附十个设置步骤与十二个AI提示词。",
+      "tags": [
+        "旅行",
+        "电影感",
+        "视差"
+      ]
+    }
+  }
+},
+  t26: {
+  "cat": "commerce",
+  "version": "1.2.1",
+  "badge": "",
+  "slug": "aerox-studio",
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML · CSS · JS"
+      ],
+      [
+        "Gói tải",
+        "6 file chính + 7 ảnh WebP"
+      ],
+      [
+        "Showroom",
+        "5 lựa chọn · 3 kiểu xe concept"
+      ],
+      [
+        "Chuyển cảnh",
+        "Carousel thủ công · 1,1 giây"
+      ],
+      [
+        "Hướng dẫn",
+        "10 bước · 12 prompt AI"
+      ],
+      [
+        "Giấy phép",
+        "Website cá nhân và khách hàng"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "HTML · CSS · JS"
+      ],
+      [
+        "Package",
+        "6 core files + 7 WebP images"
+      ],
+      [
+        "Showroom",
+        "5 choices · 3 concept bike styles"
+      ],
+      [
+        "Transition",
+        "Manual carousel · 1.1 seconds"
+      ],
+      [
+        "Guide",
+        "10 steps · 12 AI prompts"
+      ],
+      [
+        "Licence",
+        "Personal and client websites"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "HTML · CSS · JS"
+      ],
+      [
+        "文件包",
+        "6个核心文件 + 7张WebP图片"
+      ],
+      [
+        "展厅",
+        "5种选择 · 3款概念车型"
+      ],
+      [
+        "转场",
+        "手动循环轮播 · 1.1秒"
+      ],
+      [
+        "指南",
+        "10步骤 · 12个AI提示词"
+      ],
+      [
+        "授权",
+        "个人与客户网站"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "Aerox Studio",
+      "desc": "Showroom xe máy xanh đen với 5 lựa chọn xe/màu, ảnh tự tạo tách nền và carousel trượt vòng lặp 1,1 giây chỉ chạy khi bấm. Có gallery, phóng lớn ảnh, hover và scroll reveal. Giá và mẫu xe là concept minh hoạ; không có đặt xe hoặc thanh toán. Nhận diện bên thứ ba cần thay theo thương hiệu của khách.",
+      "tags": [
+        "Xe máy",
+        "Showroom",
+        "Carousel"
+      ]
+    },
+    "en": {
+      "name": "Aerox Studio",
+      "desc": "A dark green motorcycle showroom with five bike/colour choices, original cutout artwork and a looping 1.1-second manual carousel. Gallery, image zoom, hover and scroll reveals. Illustrative concept models and prices; no vehicle ordering or payments. Replace third-party branding for your own business.",
+      "tags": [
+        "Motorcycles",
+        "Showroom",
+        "Carousel"
+      ]
+    },
+    "zh": {
+      "name": "Aerox Studio",
+      "desc": "深绿色摩托车展厅，含五种车型/颜色、原创透明背景图片及1.1秒手动循环轮播。提供图库、图片放大、悬停和滚动渐显。车型与价格为概念示例，不含订车或支付；使用前更换第三方品牌标识。",
+      "tags": [
+        "摩托车",
+        "展厅",
+        "轮播"
+      ]
+    }
+  }
+},
+
   t13: {
     slug: 'crimson-folio', cat: 'portfolio', version: '1.0.2',
     badge: '',

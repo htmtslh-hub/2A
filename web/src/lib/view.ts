@@ -230,6 +230,7 @@ export function buildView(
       .filter(id => !TPL_META.some(slot => slot.id === id))
       .map(id => ({ id, cat: REAL_TEMPLATES[id].cat, price: '', badge: '' })),
   ];
+  const productNameOrder = new Intl.Collator(lang === 'zh' ? 'zh-CN' : lang, { sensitivity: 'base', numeric: true });
   const tplMeta = catalogSlots.flatMap((m: any) => {
     const real = REAL_TEMPLATES[m.id];
     return real
@@ -243,6 +244,7 @@ export function buildView(
         }]
       : [];
   });
+  tplMeta.sort((a: any, b: any) => productNameOrder.compare(a.name, b.name) || a.id.localeCompare(b.id));
   const saveCopy = {
     vi: { save: 'Lưu sản phẩm vào tài khoản', remove: 'Bỏ lưu sản phẩm', count: 'lượt lưu' },
     en: { save: 'Save product to account', remove: 'Remove saved product', count: 'saves' },

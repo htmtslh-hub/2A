@@ -1,0 +1,118 @@
+[
+  {
+    "name": "chromium",
+    "version": "153.0.8010.12",
+    "products": [
+      {
+        "src": "assets/img/scooter.webp",
+        "loaded": true,
+        "alt": "Silver and black sport scooter, facing right, with bronze-gold alloy wheels",
+        "title": "AEROX\nCONNECTED\nABS"
+      },
+      {
+        "src": "assets/img/scooter.webp",
+        "loaded": true,
+        "alt": "Graphite grayscale sport scooter concept",
+        "title": "AEROX\nCONNECTED\nABS"
+      },
+      {
+        "src": "assets/img/sport-blue.webp",
+        "loaded": true,
+        "alt": "Racing blue black sport scooter with gold wheels",
+        "title": "AEROX\nCONNECTED\nSPORT"
+      },
+      {
+        "src": "assets/img/touring-burgundy.webp",
+        "loaded": true,
+        "alt": "Burgundy touring scooter with tall windshield and silver wheels",
+        "title": "URBAN\nTOURING\nGT"
+      },
+      {
+        "src": "assets/img/classic-mint.webp",
+        "loaded": true,
+        "alt": "Mint green retro scooter with brown seat and round headlight",
+        "title": "CLASSIC\nCITY\nRETRO"
+      }
+    ],
+    "wrap": "true",
+    "reverse": "true",
+    "rapid": "true",
+    "widths": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "firefox",
+    "version": "155.0",
+    "products": [
+      {
+        "src": "assets/img/scooter.webp",
+        "loaded": true,
+        "alt": "Silver and black sport scooter, facing right, with bronze-gold alloy wheels",
+        "title": "AEROX\nCONNECTED\nABS"
+      },
+      {
+        "src": "assets/img/scooter.webp",
+        "loaded": true,
+        "alt": "Graphite grayscale sport scooter concept",
+        "title": "AEROX\nCONNECTED\nABS"
+      },
+      {
+        "src": "assets/img/sport-blue.webp",
+        "loaded": true,
+        "alt": "Racing blue black sport scooter with gold wheels",
+        "title": "AEROX\nCONNECTED\nSPORT"
+      },
+      {
+        "src": "assets/img/touring-burgundy.webp",
+        "loaded": true,
+        "alt": "Burgundy touring scooter with tall windshield and silver wheels",
+        "title": "URBAN\nTOURING\nGT"
+      },
+      {
+        "src": "assets/img/classic-mint.webp",
+        "loaded": true,
+        "alt": "Mint green retro scooter with brown seat and round headlight",
+        "title": "CLASSIC\nCITY\nRETRO"
+      }
+    ],
+    "wrap": "true",
+    "reverse": "true",
+    "rapid": "true",
+    "widths": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ],
+    "errors": []
+  }
+]

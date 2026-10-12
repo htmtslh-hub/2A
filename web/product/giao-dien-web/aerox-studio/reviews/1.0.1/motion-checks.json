@@ -1,0 +1,38 @@
+[
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "duration": 1100,
+    "middle": {
+      "opacity": "0.939174",
+      "transform": "matrix(1, 0, 0, 1, 1.99066, 0)"
+    },
+    "end": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "rapid": {
+      "opacity": "1",
+      "transform": "none",
+      "graphite": false
+    }
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "duration": 1100,
+    "middle": {
+      "opacity": "0.962646",
+      "transform": "matrix(1, 0, 0, 1, 1.22251, 0)"
+    },
+    "end": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "rapid": {
+      "opacity": "1",
+      "transform": "none",
+      "graphite": false
+    }
+  }
+]

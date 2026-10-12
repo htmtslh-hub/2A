@@ -1,0 +1,2294 @@
+{
+  "slug": "aerox-studio",
+  "version": "1.0.0",
+  "date": "2026-10-12T02:33:11.212Z",
+  "os": "win32",
+  "zipBytes": 550613,
+  "sha256": "ff6bbe3970f6dd7e3c7d044d277c1c6e25d49ad52b9cc5b3f7a78ebfb1fec3d1",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#main"
+          },
+          {
+            "label": "View photo gallery",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "Discover our story",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#about"
+          },
+          {
+            "label": "Find a dealer section",
+            "href": "#visit",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#visit"
+          },
+          {
+            "label": "Aerox Studio home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#home"
+          },
+          {
+            "label": "Dealer",
+            "href": "#visit",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#visit"
+          },
+          {
+            "label": "Product",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#home"
+          },
+          {
+            "label": "Parts & wear",
+            "href": "#accessories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#accessories"
+          },
+          {
+            "label": "About us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#about"
+          },
+          {
+            "label": "ENG ⌄",
+            "href": "#concept",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#concept"
+          },
+          {
+            "label": "Find a dealer",
+            "href": "#visit",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#visit"
+          },
+          {
+            "label": "+ Top features",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "+ Gallery",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "+ Specs",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#specs"
+          },
+          {
+            "label": "+ Accessories",
+            "href": "#accessories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#accessories"
+          },
+          {
+            "label": "Explore the details ↗",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "+ Top features",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "+ Gallery",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "+ Specs",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#specs"
+          },
+          {
+            "label": "+ Accessories",
+            "href": "#accessories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#accessories"
+          },
+          {
+            "label": "Visit manufacturer ↗",
+            "href": "https://www.yamaha-motor.com/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.yamaha-motor.com/"
+          },
+          {
+            "label": "Find your region ↗",
+            "href": "https://www.yamaha-motor.com/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.yamaha-motor.com/"
+          },
+          {
+            "label": "AEROX STUDIO",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#home"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              7,
+              20,
+              22
+            ],
+            "ratio": 17.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "YAMAHA",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              12,
+              20,
+              23
+            ],
+            "ratio": 16.98,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Dealer",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              12,
+              20,
+              23
+            ],
+            "ratio": 16.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A NEW WAY TO MOVE",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              27,
+              63,
+              57
+            ],
+            "ratio": 7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "AEROXCONNECTEDABS",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              25,
+              60,
+              54
+            ],
+            "ratio": 11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "ABS",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              23,
+              54,
+              49
+            ],
+            "ratio": 7.95,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "REFERENCE PRICE · DEMO",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              21,
+              48,
+              45
+            ],
+            "ratio": 12.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Rp 30,3 Juta",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              21,
+              47,
+              44
+            ],
+            "ratio": 8.67,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "outline-button",
+            "text": "Find a dealer",
+            "colour": "rgb(230, 225, 199)",
+            "background": [
+              19,
+              42,
+              40
+            ],
+            "ratio": 11.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "finish-label",
+            "text": "Silver / Gold · concept finish",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              18,
+              39,
+              38
+            ],
+            "ratio": 9.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero-arrow hero-arrow--left finish-control",
+            "text": "〈",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              22,
+              51,
+              47
+            ],
+            "ratio": 8.26,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero-arrow hero-arrow--right finish-control",
+            "text": "〉",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              12,
+              20,
+              23
+            ],
+            "ratio": 11.34,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Top features",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              15,
+              29,
+              30
+            ],
+            "ratio": 15.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              15,
+              27,
+              29
+            ],
+            "ratio": 10.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Gallery",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              16,
+              31,
+              32
+            ],
+            "ratio": 15.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              16,
+              30,
+              31
+            ],
+            "ratio": 10.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Specs",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              16,
+              32,
+              32
+            ],
+            "ratio": 15.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              16,
+              32,
+              32
+            ],
+            "ratio": 10.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Accessories",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              16,
+              32,
+              33
+            ],
+            "ratio": 15.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              16,
+              32,
+              33
+            ],
+            "ratio": 10.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "finish-control",
+            "text": "〈 Silver / Gold",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              39,
+              74,
+              69
+            ],
+            "ratio": 5.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "finish-control",
+            "text": "Graphite edition 〉",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              38,
+              74,
+              69
+            ],
+            "ratio": 5.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "YAMAHA",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              105,
+              119,
+              123
+            ],
+            "ratio": 4.23,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "ABOUTUS.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              31,
+              48,
+              47
+            ],
+            "ratio": 12.58,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A shared language of precision, movement",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              43,
+              67,
+              62
+            ],
+            "ratio": 6.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Inspired by the sculpted silhouette of a",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              36,
+              57,
+              54
+            ],
+            "ratio": 7.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "small-link",
+            "text": "Explore the details ↗",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              25,
+              39,
+              40
+            ],
+            "ratio": 14.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "↗",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              26,
+              40,
+              40
+            ],
+            "ratio": 13.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "FIGCAPTION",
+            "text": "DESIGNED AROUND THE RIDER.Architecture i",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              24,
+              37,
+              38
+            ],
+            "ratio": 14.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Architecture image is an AI-generated vi",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              22,
+              34,
+              36
+            ],
+            "ratio": 9.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "scene-note",
+            "text": "INDEPENDENT DESIGN CONCEPT / 01",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              18,
+              28,
+              30
+            ],
+            "ratio": 10.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "EVERY DETAIL HAS A PURPOSE",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              39,
+              80,
+              73
+            ],
+            "ratio": 5.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Closer to the ride.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              44,
+              88,
+              80
+            ],
+            "ratio": 7.31,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery__caption",
+            "text": "SCULPTED TO STOP. DESIGNED TO MOVE.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              10,
+              10,
+              10
+            ],
+            "ratio": 18.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery-hint",
+            "text": "TAP TO VIEW MORE",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              15,
+              32,
+              32
+            ],
+            "ratio": 15.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery-prev",
+            "text": "〈",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              16,
+              34,
+              34
+            ],
+            "ratio": 10.04,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "01 / 03",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              16,
+              33,
+              33
+            ],
+            "ratio": 10.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery-next",
+            "text": "〉",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              16,
+              31,
+              32
+            ],
+            "ratio": 10.33,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Top features",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              14,
+              26,
+              28
+            ],
+            "ratio": 16.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              14,
+              26,
+              28
+            ],
+            "ratio": 10.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Gallery",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              14,
+              25,
+              27
+            ],
+            "ratio": 16.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              14,
+              25,
+              27
+            ],
+            "ratio": 10.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Specs",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              13,
+              23,
+              25
+            ],
+            "ratio": 16.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              13,
+              23,
+              26
+            ],
+            "ratio": 11.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Accessories",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              13,
+              21,
+              24
+            ],
+            "ratio": 16.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              13,
+              21,
+              24
+            ],
+            "ratio": 11.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "THE DESIGN LANGUAGE",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              20,
+              39,
+              35
+            ],
+            "ratio": 9.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Built aroundevery detail.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              20,
+              39,
+              35
+            ],
+            "ratio": 14.25,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "PARTS & WEAR",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              34,
+              60,
+              53
+            ],
+            "ratio": 7.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "The ride is onlythe beginning.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              33,
+              58,
+              52
+            ],
+            "ratio": 11.14,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-copy",
+            "text": "Choose equipment that fits your ride. Ex",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              33,
+              57,
+              51
+            ],
+            "ratio": 7.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "outline-button",
+            "text": "Visit manufacturer ↗",
+            "colour": "rgb(230, 225, 199)",
+            "background": [
+              32,
+              56,
+              51
+            ],
+            "ratio": 9.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "YOUR NEXT MOVE",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              11,
+              21,
+              24
+            ],
+            "ratio": 11.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "See it.Feel it. Ride it.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              19,
+              36,
+              35
+            ],
+            "ratio": 14.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-copy",
+            "text": "Ready to explore the real thing? Visit t",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              24,
+              46,
+              42
+            ],
+            "ratio": 8.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "outline-button",
+            "text": "Find your region ↗",
+            "colour": "rgb(230, 225, 199)",
+            "background": [
+              15,
+              29,
+              30
+            ],
+            "ratio": 13.14,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Independent design concept. Not affiliat",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              12,
+              20,
+              23
+            ],
+            "ratio": 11.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Find a dealer",
+          "colour": "rgb(237, 235, 200)",
+          "width": "3px",
+          "ratio": 5.96
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#main"
+          },
+          {
+            "label": "View photo gallery",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "Discover our story",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#about"
+          },
+          {
+            "label": "Find a dealer section",
+            "href": "#visit",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#visit"
+          },
+          {
+            "label": "Aerox Studio home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#home"
+          },
+          {
+            "label": "Dealer",
+            "href": "#visit",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#visit"
+          },
+          {
+            "label": "Product",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#home"
+          },
+          {
+            "label": "Parts & wear",
+            "href": "#accessories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#accessories"
+          },
+          {
+            "label": "About us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#about"
+          },
+          {
+            "label": "ENG ⌄",
+            "href": "#concept",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#concept"
+          },
+          {
+            "label": "Find a dealer",
+            "href": "#visit",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#visit"
+          },
+          {
+            "label": "+ Top features",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "+ Gallery",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "+ Specs",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#specs"
+          },
+          {
+            "label": "+ Accessories",
+            "href": "#accessories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#accessories"
+          },
+          {
+            "label": "Explore the details ↗",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "+ Top features",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "+ Gallery",
+            "href": "#gallery",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#gallery"
+          },
+          {
+            "label": "+ Specs",
+            "href": "#specs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#specs"
+          },
+          {
+            "label": "+ Accessories",
+            "href": "#accessories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#accessories"
+          },
+          {
+            "label": "Visit manufacturer ↗",
+            "href": "https://www.yamaha-motor.com/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.yamaha-motor.com/"
+          },
+          {
+            "label": "Find your region ↗",
+            "href": "https://www.yamaha-motor.com/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.yamaha-motor.com/"
+          },
+          {
+            "label": "AEROX STUDIO",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#home"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerox-studio/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              7,
+              20,
+              22
+            ],
+            "ratio": 17.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "YAMAHA",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              12,
+              20,
+              23
+            ],
+            "ratio": 16.98,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Dealer",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              12,
+              20,
+              23
+            ],
+            "ratio": 16.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A NEW WAY TO MOVE",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              27,
+              63,
+              57
+            ],
+            "ratio": 7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "AEROXCONNECTEDABS",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              25,
+              60,
+              54
+            ],
+            "ratio": 11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "ABS",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              22,
+              54,
+              49
+            ],
+            "ratio": 7.97,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "REFERENCE PRICE · DEMO",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              21,
+              48,
+              45
+            ],
+            "ratio": 12.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Rp 30,3 Juta",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              20,
+              47,
+              44
+            ],
+            "ratio": 8.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "outline-button",
+            "text": "Find a dealer",
+            "colour": "rgb(230, 225, 199)",
+            "background": [
+              19,
+              42,
+              40
+            ],
+            "ratio": 11.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "finish-label",
+            "text": "Silver / Gold · concept finish",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              18,
+              39,
+              37
+            ],
+            "ratio": 9.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero-arrow hero-arrow--left finish-control",
+            "text": "〈",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              21,
+              51,
+              47
+            ],
+            "ratio": 8.27,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero-arrow hero-arrow--right finish-control",
+            "text": "〉",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              12,
+              20,
+              23
+            ],
+            "ratio": 11.34,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Top features",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              15,
+              29,
+              30
+            ],
+            "ratio": 15.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              14,
+              27,
+              28
+            ],
+            "ratio": 10.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Gallery",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              15,
+              31,
+              31
+            ],
+            "ratio": 15.5,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              15,
+              30,
+              31
+            ],
+            "ratio": 10.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Specs",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              16,
+              32,
+              32
+            ],
+            "ratio": 15.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              15,
+              31,
+              32
+            ],
+            "ratio": 10.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              16,
+              32,
+              32
+            ],
+            "ratio": 10.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "finish-control",
+            "text": "〈 Silver / Gold",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              38,
+              74,
+              69
+            ],
+            "ratio": 5.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "YAMAHA",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              88,
+              107,
+              113
+            ],
+            "ratio": 5.1,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "ABOUTUS.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              31,
+              48,
+              47
+            ],
+            "ratio": 12.58,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A shared language of precision, movement",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              42,
+              67,
+              62
+            ],
+            "ratio": 6.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Inspired by the sculpted silhouette of a",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              36,
+              57,
+              54
+            ],
+            "ratio": 7.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "small-link",
+            "text": "Explore the details ↗",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              25,
+              39,
+              40
+            ],
+            "ratio": 14.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "↗",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              25,
+              40,
+              40
+            ],
+            "ratio": 13.93,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "FIGCAPTION",
+            "text": "DESIGNED AROUND THE RIDER.Architecture i",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              24,
+              37,
+              38
+            ],
+            "ratio": 14.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Architecture image is an AI-generated vi",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              22,
+              34,
+              35
+            ],
+            "ratio": 9.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "scene-note",
+            "text": "INDEPENDENT DESIGN CONCEPT / 01",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              18,
+              28,
+              30
+            ],
+            "ratio": 10.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "EVERY DETAIL HAS A PURPOSE",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              39,
+              80,
+              73
+            ],
+            "ratio": 5.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Closer to the ride.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              44,
+              88,
+              80
+            ],
+            "ratio": 7.31,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery__caption",
+            "text": "SCULPTED TO STOP. DESIGNED TO MOVE.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              10,
+              10,
+              10
+            ],
+            "ratio": 18.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery-hint",
+            "text": "TAP TO VIEW MORE",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              15,
+              32,
+              32
+            ],
+            "ratio": 15.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery-prev",
+            "text": "〈",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              16,
+              33,
+              33
+            ],
+            "ratio": 10.14,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "01 / 03",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              16,
+              32,
+              32
+            ],
+            "ratio": 10.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery-next",
+            "text": "〉",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              15,
+              31,
+              31
+            ],
+            "ratio": 10.35,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Top features",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              14,
+              26,
+              28
+            ],
+            "ratio": 16.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              14,
+              26,
+              28
+            ],
+            "ratio": 10.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Gallery",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              13,
+              25,
+              27
+            ],
+            "ratio": 16.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              13,
+              25,
+              27
+            ],
+            "ratio": 10.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Specs",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              13,
+              23,
+              25
+            ],
+            "ratio": 16.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              13,
+              23,
+              25
+            ],
+            "ratio": 11.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "+ Accessories",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              12,
+              21,
+              24
+            ],
+            "ratio": 16.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(206, 203, 176)",
+            "background": [
+              12,
+              21,
+              24
+            ],
+            "ratio": 11.26,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "THE DESIGN LANGUAGE",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              20,
+              39,
+              35
+            ],
+            "ratio": 9.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Built aroundevery detail.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              20,
+              39,
+              35
+            ],
+            "ratio": 14.25,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "PARTS & WEAR",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              34,
+              59,
+              53
+            ],
+            "ratio": 7.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "The ride is onlythe beginning.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              33,
+              58,
+              52
+            ],
+            "ratio": 11.14,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-copy",
+            "text": "Choose equipment that fits your ride. Ex",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              33,
+              57,
+              51
+            ],
+            "ratio": 7.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "outline-button",
+            "text": "Visit manufacturer ↗",
+            "colour": "rgb(230, 225, 199)",
+            "background": [
+              32,
+              56,
+              50
+            ],
+            "ratio": 9.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "YOUR NEXT MOVE",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              11,
+              21,
+              24
+            ],
+            "ratio": 11.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "See it.Feel it. Ride it.",
+            "colour": "rgb(244, 245, 239)",
+            "background": [
+              18,
+              35,
+              34
+            ],
+            "ratio": 14.86,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-copy",
+            "text": "Ready to explore the real thing? Visit t",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              24,
+              46,
+              42
+            ],
+            "ratio": 8.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "outline-button",
+            "text": "Find your region ↗",
+            "colour": "rgb(230, 225, 199)",
+            "background": [
+              15,
+              29,
+              30
+            ],
+            "ratio": 13.14,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Independent design concept. Not affiliat",
+            "colour": "rgb(193, 204, 198)",
+            "background": [
+              12,
+              20,
+              23
+            ],
+            "ratio": 11.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Find a dealer",
+          "colour": "rgb(237, 235, 200)",
+          "width": "3px",
+          "ratio": 5.96
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "aerox-studio/assets/css/style.css",
+    "aerox-studio/assets/img/brake.webp",
+    "aerox-studio/assets/img/campus.webp",
+    "aerox-studio/assets/img/rider.webp",
+    "aerox-studio/assets/img/scooter.webp",
+    "aerox-studio/assets/js/main.js",
+    "aerox-studio/CUSTOMISE.md",
+    "aerox-studio/index.html",
+    "aerox-studio/LICENCE.txt",
+    "aerox-studio/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/brake.webp",
+    "assets/img/campus.webp",
+    "assets/img/rider.webp",
+    "assets/img/scooter.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q03/chromium: link hỏng/không tên [\"Visit manufacturer ↗ -> https://www.yamaha-motor.com/\",\"Find your region ↗ -> https://www.yamaha-motor.com/\"]",
+    "Q03/firefox: link hỏng/không tên [\"Visit manufacturer ↗ -> https://www.yamaha-motor.com/\",\"Find your region ↗ -> https://www.yamaha-motor.com/\"]"
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "file": "index.html",
+    "bytes": 9561,
+    "sha256": "073163d580d27850208a821231eff43df171f2783e9e16301e9df1bc289b6de5"
+  },
+  {
+    "file": "assets/css/style.css",
+    "bytes": 15525,
+    "sha256": "b35499468b50ae7c875561a548c3e0844a7054a90fb4f3699887181c49ef5ccc"
+  },
+  {
+    "file": "assets/js/main.js",
+    "bytes": 6518,
+    "sha256": "9238ed431c2e5f6f0a55183ded6ce8afc0cf6ff0a7737e407a5c0d36749dd9e7"
+  },
+  {
+    "file": "CUSTOMISE.md",
+    "bytes": 20127,
+    "sha256": "d10cc59687d2f23cf573764ac911c07a98084b9d8d39208c4a20ca0d6de44474"
+  },
+  {
+    "file": "README.md",
+    "bytes": 1399,
+    "sha256": "499aac43587a1f6387ed195c962a51ee2e979a8ef17d9e92e186bab9f1237d62"
+  },
+  {
+    "file": "LICENCE.txt",
+    "bytes": 1463,
+    "sha256": "d5d8657df29eef7afddd4e9482a267eda63efc43eda5fe011b003fdf24ab8c06"
+  },
+  {
+    "file": "assets/img/scooter.webp",
+    "bytes": 182762,
+    "sha256": "f5d8a5536c592a1f322eeb84fbdf117574f6d0ad29df08a66c0806206694c0ac"
+  },
+  {
+    "file": "assets/img/rider.webp",
+    "bytes": 134014,
+    "sha256": "74eec66a4706db7ab6bee413f21e0d5233ff39ac1cd64d36a44d57adec81aac7"
+  },
+  {
+    "file": "assets/img/campus.webp",
+    "bytes": 118066,
+    "sha256": "cedf226779c3a3f2b204ee4071bbbdbc20cf42ac8c945dfecb94872027f867f0"
+  },
+  {
+    "file": "assets/img/brake.webp",
+    "bytes": 96846,
+    "sha256": "37da25a2a77e1bebb316b17f677345dad7b4d7d96173fd9c269d3a84e2bf1a8e"
+  }
+]

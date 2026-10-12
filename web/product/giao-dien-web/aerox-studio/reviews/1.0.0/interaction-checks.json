@@ -1,0 +1,76 @@
+[
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "mid": {
+      "opacity": "0.787405",
+      "transform": "matrix(1, 0, 0, 1, 6.95764, 0)"
+    },
+    "final": {
+      "opacity": "1",
+      "graphite": false
+    },
+    "wrapBack": "03 / 03",
+    "wrapForward": "01 / 03",
+    "rapid": "02 / 03",
+    "dialogOpen": true,
+    "dialogClosed": true,
+    "focusRestored": true,
+    "keyboardCounter": "03 / 03",
+    "widths": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ]
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "mid": {
+      "opacity": "0.894455",
+      "transform": "matrix(1, 0, 0, 1, 3.45421, 0)"
+    },
+    "final": {
+      "opacity": "1",
+      "graphite": false
+    },
+    "wrapBack": "03 / 03",
+    "wrapForward": "01 / 03",
+    "rapid": "02 / 03",
+    "dialogOpen": true,
+    "dialogClosed": true,
+    "focusRestored": true,
+    "keyboardCounter": "03 / 03",
+    "widths": [
+      {
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "width": 820,
+        "scrollWidth": 820
+      },
+      {
+        "width": 375,
+        "scrollWidth": 375
+      },
+      {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    ]
+  }
+]

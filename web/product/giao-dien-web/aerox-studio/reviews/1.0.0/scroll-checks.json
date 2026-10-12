@@ -1,0 +1,40 @@
+[
+  {
+    "browser": "chromium",
+    "mid": {
+      "opacity": "0.618981",
+      "transform": "matrix(1, 0, 0, 1, 0, 15.8758)"
+    },
+    "end": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "reverse": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "mobile": {
+      "width": 320,
+      "scrollWidth": 320
+    }
+  },
+  {
+    "browser": "firefox",
+    "mid": {
+      "opacity": "0.725982",
+      "transform": "matrix(1, 0, 0, 1, 0, 11.4174)"
+    },
+    "end": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "reverse": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "mobile": {
+      "width": 320,
+      "scrollWidth": 320
+    }
+  }
+]

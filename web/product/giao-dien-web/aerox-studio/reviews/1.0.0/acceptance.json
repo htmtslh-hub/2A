@@ -1,0 +1,67 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "b4c83d0a193a8af504790d32e1582694d024a6b6f92c212f9407cbb27e2fd42e",
+  "references": [
+    {
+      "source": "codex-clipboard-4eb9ace2-262b-4147-ba0b-dafc66d01d27.png",
+      "size": [
+        726,
+        1292
+      ],
+      "crop": "three web panels, external app overlays excluded; REFERENCE-MAP.md"
+    }
+  ],
+  "views": [
+    {
+      "state": "hero",
+      "screenshot": "hero-desktop.png"
+    },
+    {
+      "state": "about",
+      "screenshot": "about-desktop.png"
+    },
+    {
+      "state": "features",
+      "screenshot": "gallery-desktop.png"
+    }
+  ],
+  "fidelity": {
+    "method": "weighted visual rubric",
+    "strictMinimum": 95,
+    "comparisonComplete": false,
+    "status": "NOT TESTED"
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "interaction-checks.json"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "scroll-checks.json"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "image only"
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "release-candidate/checks.json",
+      "interaction-checks.json",
+      "QA.md"
+    ],
+    "notes": "External links manually verified HTTP 200; raw checker flags retained."
+  },
+  "blockers": [
+    "No quantified >95 fidelity",
+    "Commercial trademark/image redistribution terms and author identity require owner review",
+    "Edge/Cốc Cốc motion untested"
+  ],
+  "gate": "NOT TESTED"
+}

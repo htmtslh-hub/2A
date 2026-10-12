@@ -1,0 +1,52 @@
+[
+  {
+    "name": "chromium",
+    "outgoing": {
+      "opacity": "0.668564",
+      "x": -238.634
+    },
+    "incoming": {
+      "opacity": "0.603841",
+      "x": 285.235
+    },
+    "first": true,
+    "wrapped": true,
+    "backward": true,
+    "rapid": {
+      "opacity": "1",
+      "transform": "none",
+      "graphite": false
+    },
+    "idle": false,
+    "mobile": {
+      "width": 320,
+      "scrollWidth": 320
+    },
+    "errors": []
+  },
+  {
+    "name": "firefox",
+    "outgoing": {
+      "opacity": "0.491484",
+      "x": -366.1310119628906
+    },
+    "incoming": {
+      "opacity": "0.820214",
+      "x": 129.4459991455078
+    },
+    "first": true,
+    "wrapped": true,
+    "backward": true,
+    "rapid": {
+      "opacity": "1",
+      "transform": "none",
+      "graphite": false
+    },
+    "idle": false,
+    "mobile": {
+      "width": 320,
+      "scrollWidth": 320
+    },
+    "errors": []
+  }
+]

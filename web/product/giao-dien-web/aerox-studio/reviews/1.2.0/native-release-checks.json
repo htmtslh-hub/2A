@@ -1,0 +1,24 @@
+[
+  {
+    "browser": "Edge",
+    "version": "155.0.4283.45",
+    "mid": {
+      "opacity": "0.703462",
+      "transform": "matrix(1, 0, 0, 1, 213.507, 0)"
+    },
+    "back": "true",
+    "next": "true",
+    "fast": "true"
+  },
+  {
+    "browser": "CocCoc",
+    "version": "152.0.7977.124",
+    "mid": {
+      "opacity": "0.687456",
+      "transform": "matrix(1, 0, 0, 1, 225.031, 0)"
+    },
+    "back": "true",
+    "next": "true",
+    "fast": "true"
+  }
+]

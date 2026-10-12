@@ -1,0 +1,48 @@
+[
+  {
+    "browser": "Edge",
+    "version": "155.0.4283.45",
+    "width": 1440,
+    "mid": {
+      "opacity": "0.753689",
+      "transform": "matrix(1, 0, 0, 1, -177.344, 0)"
+    },
+    "selected": {
+      "alt": "Mint green retro scooter with brown seat and round headlight",
+      "loaded": true
+    },
+    "wrapped": "true",
+    "reverse": "true",
+    "rapid": "true",
+    "dimensions": {
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    "dialog": true,
+    "url": "https://forgezone.store/demos/aerox-studio/index.html#gallery",
+    "errors": []
+  },
+  {
+    "browser": "CocCoc",
+    "version": "152.0.7977.124",
+    "width": 320,
+    "mid": {
+      "opacity": "0.721497",
+      "transform": "matrix(1, 0, 0, 1, -74.6389, 0)"
+    },
+    "selected": {
+      "alt": "Mint green retro scooter with brown seat and round headlight",
+      "loaded": true
+    },
+    "wrapped": "true",
+    "reverse": "true",
+    "rapid": "true",
+    "dimensions": {
+      "width": 320,
+      "scrollWidth": 320
+    },
+    "dialog": true,
+    "url": "https://forgezone.store/demos/aerox-studio/index.html#gallery",
+    "errors": []
+  }
+]

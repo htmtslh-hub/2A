@@ -1,0 +1,115 @@
+{
+  "out": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "b8b8dee3404f064fb4e39672b5c925011f2987442f8cb0e47f23f30ffd65a9a5",
+      "matches": true,
+      "robots": "noindex, nofollow, noarchive"
+    },
+    {
+      "file": "assets/css/style.css",
+      "status": 200,
+      "sha256": "43cf2c730ea0eb46df963470c1bc4d3e7d09aa21ccae89b553b5252e333d455c",
+      "matches": true,
+      "robots": "noindex, nofollow, noarchive"
+    },
+    {
+      "file": "assets/js/main.js",
+      "status": 200,
+      "sha256": "3bb9baea5acc7e87c9018efd2a56e37edc2da697f877d89c459c804265aaeef1",
+      "matches": true,
+      "robots": "noindex, nofollow, noarchive"
+    },
+    {
+      "file": "assets/img/brake.webp",
+      "status": 200,
+      "sha256": "37da25a2a77e1bebb316b17f677345dad7b4d7d96173fd9c269d3a84e2bf1a8e",
+      "matches": true,
+      "robots": "noindex, nofollow, noarchive"
+    },
+    {
+      "file": "assets/img/campus.webp",
+      "status": 200,
+      "sha256": "cedf226779c3a3f2b204ee4071bbbdbc20cf42ac8c945dfecb94872027f867f0",
+      "matches": true,
+      "robots": "noindex, nofollow, noarchive"
+    },
+    {
+      "file": "assets/img/classic-mint.webp",
+      "status": 200,
+      "sha256": "baa3da35f775c024e5ce550d63e2e958afd28ed22abc6d462ccbc4597c1eb46c",
+      "matches": true,
+      "robots": "noindex, nofollow, noarchive"
+    },
+    {
+      "file": "assets/img/rider.webp",
+      "status": 200,
+      "sha256": "74eec66a4706db7ab6bee413f21e0d5233ff39ac1cd64d36a44d57adec81aac7",
+      "matches": true,
+      "robots": "noindex, nofollow, noarchive"
+    },
+    {
+      "file": "assets/img/scooter.webp",
+      "status": 200,
+      "sha256": "f5d8a5536c592a1f322eeb84fbdf117574f6d0ad29df08a66c0806206694c0ac",
+      "matches": true,
+      "robots": "noindex, nofollow, noarchive"
+    },
+    {
+      "file": "assets/img/sport-blue.webp",
+      "status": 200,
+      "sha256": "99e33d587e7bc74e00e744b7ef6ea4f70c5abdac7c1cb2814a81bc76417b8509",
+      "matches": true,
+      "robots": "noindex, nofollow, noarchive"
+    },
+    {
+      "file": "assets/img/touring-burgundy.webp",
+      "status": 200,
+      "sha256": "908c9da274e0dcca9e04df8e3a1928eeaadfd2af6f1abaaa25e009302b14ac4e",
+      "matches": true,
+      "robots": "noindex, nofollow, noarchive"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/huong-dan",
+      "status": 200
+    },
+    {
+      "path": "/demos/auralis/index.html?v=1.2.4",
+      "status": 200
+    },
+    {
+      "path": "/demos/velora/index.html",
+      "status": 200
+    },
+    {
+      "path": "/previews/aerox-studio.webp",
+      "status": 200
+    },
+    {
+      "path": "/demos/aerox-studio/candidate.zip",
+      "status": 404
+    },
+    {
+      "path": "/api/download?id=aerox-studio",
+      "status": 401
+    }
+  ],
+  "old": [
+    {
+      "slug": "auralis",
+      "contentMatches": true
+    },
+    {
+      "slug": "velora",
+      "contentMatches": true
+    }
+  ],
+  "previewMatch": true
+}

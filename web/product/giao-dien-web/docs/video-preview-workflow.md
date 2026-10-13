@@ -11,8 +11,8 @@
 5. Xem clip và bốn frame hero/interaction/scroll/return tại `reviews/video-previews/screenshots/`. Kiểm tra không trắng, không loading kéo dài, không cắt phần chính, không lỗi demo/asset. Đối chiếu click/scroll trong JSON từng slug. Nếu clip chưa thể hiện đúng sản phẩm, sửa kịch bản quay trong công cụ và quay lại.
 6. MP4 công khai ở `web/public/previews/<slug>.mp4`; ảnh WebP hiện tại là poster/dự phòng. Manifest `web/src/lib/preview-recordings.json` lưu version sản phẩm, revision theo SHA-256 video, hash HTML demo, byte, kích thước và thời lượng. Không sửa hash bằng tay để bỏ qua việc quay.
 7. Chạy `npm --prefix web run previews:check` (hoặc `node web/product/giao-dien-web/tools/quay-preview.mjs --check`). Mọi sản phẩm catalog phải có recording khớp version/hash/toàn bộ demo, gồm CSS/JS/ảnh. `npm run build` tự chạy kiểm tra này trước build và từ chối thiếu/stale clip. Thêm hoặc đổi sản phẩm phải quay lại clip sau đồng bộ demo; không dùng video cũ khác giao diện chỉ vì tên file trùng. `--resume` chỉ giữ clip đã hoàn thành và còn khớp hash/version.
-8. Kiểm tra cửa hàng: hover/focus phát, rời thẻ trở lại poster; điện thoại và bàn phím có nút phát/dừng ngoài liên kết thẻ; trang chi tiết có phát/dừng/toàn màn hình. Bấm thẻ vẫn mở chi tiết, Ctrl/click vẫn giữ link; nút phát không thêm giỏ/lưu hoặc điều hướng. Chỉ một preview phát; rời viewport/ẩn tab phải dừng. Không tải MP4 khi chỉ mở thư viện chưa tương tác. Lỗi video vẫn còn poster và link demo.
-9. Kiểm tra desktop/tablet/phone và Chromium/Firefox/Edge/Cốc Cốc thực, kể cả OS reduced motion. Preview vẫn sẵn sàng phát khi người dùng tương tác theo quy tắc motion của chủ sản phẩm; không lưu trạng thái tắt sang phiên khác. Clip hữu hạn, không tự chạy cả thư viện.
+8. Kiểm tra cửa hàng: tự phát không tiếng khi khung xuất hiện, không cần hover; điện thoại và bàn phím có nút phát/dừng ngoài liên kết thẻ; trang chi tiết có phát/dừng/toàn màn hình. Bấm thẻ vẫn mở chi tiết, Ctrl/click vẫn giữ link; nút phát không thêm giỏ/lưu hoặc điều hướng. Các preview đang nhìn thấy cùng phát; rời viewport/ẩn tab phải dừng. Chỉ tải MP4 cho khung vào viewport, không tải toàn thư viện ngay khi mở. Lỗi video vẫn còn poster và link demo.
+9. Kiểm tra desktop/tablet/phone và Chromium/Firefox/Edge/Cốc Cốc thực, kể cả OS reduced motion. Preview mặc định tự phát khi nhìn thấy theo quy tắc motion của chủ sản phẩm; không lưu trạng thái tắt sang phiên khác. Clip lặp bằng video native khi nhìn thấy, dừng khi offscreen/ẩn tab, không thêm vòng lặp JS/RAF. Nút pause giữ lựa chọn trong trang hiện tại; hover không bật lại; mở mới mặc định phát.
 10. Typecheck/build và kiểm diff phạm vi. Chỉ push/deploy khi đã được ủy quyền; sau deploy kiểm URL, video hash/revision, phát thực, poster và điều hướng. Ghi browser/phiên bản/kết quả thực tế, không tuyên bố Safari hoặc thiết bị thật nếu chưa thử.
 
 ## Checklist phát hành preview
@@ -22,8 +22,10 @@
 - [ ] Xem clip/contact sheet từng sản phẩm, không blank hoặc missing asset.
 - [ ] MP4 H.264, yuv420p, faststart, không audio, khoảng 12–18 giây; kiểm byte và thời lượng bằng ffprobe. Mục tiêu ≤3 MiB/clip; nếu vượt cần tối ưu hoặc ghi lý do.
 - [ ] Poster giữ nguyên bố cục khung nổi; không thêm button bên trong link thẻ.
-- [ ] Lazy playback, single active video, pause/cleanup/offscreen/error fallback hoạt động.
+- [ ] Lazy autoplay theo viewport, pause/cleanup/offscreen/error fallback hoạt động.
 - [ ] Nút/nhãn vi/en/zh và focus 44×44; điều hướng, lưu và giỏ vẫn hoạt động.
 - [ ] Manifest check/typecheck/build và kiểm bản online nếu deploy.
 
 Các file raw WebM/screenshot là bằng chứng nội bộ, không đưa vào hosting. Video mới không thay thế nghiệm thu source, license hay luồng download của sản phẩm.
+
+Chính sách phát cập nhật theo yêu cầu chủ sản phẩm 13/10/2026: tự chạy, không cần hover. Quy định hover/single-active trong hồ sơ kiểm cũ chỉ mô tả bản cũ.

@@ -457,6 +457,6 @@ PHẦN 11 — VIDEO PREVIEW BẮT BUỘC CHO CỬA HÀNG (13/10/2026)
 Đọc docs/video-preview-workflow.md. Sau đồng bộ demo cuối, quay trang thật bằng:
 node web/product/giao-dien-web/tools/quay-preview.mjs <slug>
 Sau đó kiểm toàn catalog: node web/product/giao-dien-web/tools/quay-preview.mjs --check
-Giữ ảnh WebP làm poster; MP4 ngoài ZIP, phát theo hover/focus/nút touch.
+Giữ ảnh WebP làm poster; MP4 ngoài ZIP, tự phát không tiếng khi nhìn thấy, có nút tạm dừng.
 Kiểm clip từng sản phẩm, lazy load, dừng khi offscreen, nút ngoài link, vi/en/zh.
 Cập nhật source/demo phải quay lại clip; không tái dùng video lệch bản giao.

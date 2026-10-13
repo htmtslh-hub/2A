@@ -14,7 +14,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Quy tắc trình bày sản phẩm trên cửa hàng
 
-- Mọi sản phẩm thật có preview video quay hoạt động từ demo đúng phiên bản, kèm ảnh bìa dự phòng. Đọc `product/giao-dien-web/docs/video-preview-workflow.md` khi thêm/sửa preview. Thẻ phát khi hover/focus hoặc bấm nút; nút phát/dừng nằm ngoài link thẻ và dùng được trên điện thoại. Không tải/phát toàn thư viện cùng lúc. Trang chi tiết có phát/dừng/toàn màn hình.
+- Mọi sản phẩm thật có preview video quay hoạt động từ demo đúng phiên bản, kèm ảnh bìa dự phòng. Đọc `product/giao-dien-web/docs/video-preview-workflow.md` khi thêm/sửa preview. Preview tự phát không tiếng khi khung xuất hiện trong viewport, lặp video bằng trình phát native và dừng khi ra ngoài/ẩn tab; nút phát/dừng nằm ngoài link thẻ và dùng được trên điện thoại. Không tải/phát toàn thư viện cùng lúc. Trang chi tiết có phát/dừng/toàn màn hình.
 
 - Các thẻ sản phẩm ở trang chủ, thư viện và mục giao diện tương tự phải đặt ảnh hoặc video giao diện web rõ nét trong một khung nổi. Phía sau khung là nền phối màu hoặc hình ảnh cùng tông với chính giao diện đó, theo phong cách ảnh tham chiếu của chủ dự án; tránh để ảnh preview phủ kín toàn bộ vùng trưng bày.
 - Không đặt nút “Xem chi tiết” riêng trong thẻ sản phẩm. Toàn bộ thẻ, gồm vùng preview và phần thông tin, là một liên kết mở trang chi tiết tương ứng.

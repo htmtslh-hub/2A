@@ -1,0 +1,129 @@
+{
+  "version": "1.0.0",
+  "zip": {
+    "bytes": 2301410,
+    "sha256": "39c37a0726f2864d1c08c8f8a92e82c6e5251cdf5b78a38389a1db55993b59ff"
+  },
+  "files": [
+    {
+      "path": "assets/css/style.css",
+      "bytes": 25188,
+      "sha256": "4a0a5387dd16dcd1249785e9d61ddda1b2247273a17592496fcba7828321c1b7"
+    },
+    {
+      "path": "assets/img/editorial.webp",
+      "bytes": 174306,
+      "sha256": "0984952e4909bdd67e92386f56ed626245eeccfc10dba1bba308e756d43b5ed3"
+    },
+    {
+      "path": "assets/img/ice.webp",
+      "bytes": 301856,
+      "sha256": "8067a682d64437a08e3485c17f535c5175003b19a602874d9656d28b115c4718"
+    },
+    {
+      "path": "assets/img/jupiter.webp",
+      "bytes": 374386,
+      "sha256": "23f42de42dda29cc7aae73a2f2d5f5df03174cc36c1d3d5a1e8eca7e43fb3a76"
+    },
+    {
+      "path": "assets/img/opus.webp",
+      "bytes": 228422,
+      "sha256": "6935c3dc15cd380a7b1ab7c79d4873b05f9ef29189765a6fbdf76417c27e6bda"
+    },
+    {
+      "path": "assets/img/paraiba.webp",
+      "bytes": 329826,
+      "sha256": "d2fd58421912a2919781839baddc37c4988ba0cb3925c4afbcf0f2aeae028a05"
+    },
+    {
+      "path": "assets/img/render-black-hole.webp",
+      "bytes": 51234,
+      "sha256": "32b3b1acd5ff336cfd8a8d7be42a85e62f4b2e0ab417695bb59de55f5e5f6c67"
+    },
+    {
+      "path": "assets/img/render-cowboy.webp",
+      "bytes": 52332,
+      "sha256": "bda24ed791c4c11a4c5e1e9c81ef8ac7dd956228104c0e47fa8864d253a34470"
+    },
+    {
+      "path": "assets/img/render-jupiter-gold.webp",
+      "bytes": 66532,
+      "sha256": "980f189a7c3c49bcdfd9860b9256a8c9cd654912b19a80a0d843dc4b00c62cec"
+    },
+    {
+      "path": "assets/img/render-jupiter.webp",
+      "bytes": 63170,
+      "sha256": "818bc4493f9d4740d27dfa469add2ff1942e21d3173d3761861c681a76766bac"
+    },
+    {
+      "path": "assets/img/render-meteorite.webp",
+      "bytes": 59690,
+      "sha256": "18affe8d49a01039a44a9eeb3eeb83b4781e42a3592ba534a31d8b5b41e31f1c"
+    },
+    {
+      "path": "assets/img/render-opus-ice.webp",
+      "bytes": 61004,
+      "sha256": "44d17d11dbbf98b8e23daf275cc95ef0a747ceccfcaebc86590447064e2fd681"
+    },
+    {
+      "path": "assets/img/render-opus-orange.webp",
+      "bytes": 56526,
+      "sha256": "cae302aea780d2586b6589f9d57b550d1ca06cdd20961dc3d4fac53538662d4e"
+    },
+    {
+      "path": "assets/img/render-paraiba.webp",
+      "bytes": 63108,
+      "sha256": "1fb6181c6cc5b75bb7ecd16497846effd36de11ff3178352880750a248f27cd4"
+    },
+    {
+      "path": "assets/img/render-skeleton-gold.webp",
+      "bytes": 55614,
+      "sha256": "758aaba3d683d16c1bb95ab0ef7a888f5daa1db86ee3633da36e9191cd0cca98"
+    },
+    {
+      "path": "assets/img/render-skeleton-steel.webp",
+      "bytes": 52028,
+      "sha256": "47a5054853661084faa52a0ec83d394cfedab26200c9fc6f2e2dfe4dbedf0eca"
+    },
+    {
+      "path": "assets/img/render-sunset.webp",
+      "bytes": 56336,
+      "sha256": "363586f3600ceffc131778606e2aa25d8f98cb10540c57b156b6f80cb8219940"
+    },
+    {
+      "path": "assets/img/skeleton.webp",
+      "bytes": 224794,
+      "sha256": "0f8a728e1ab37fe9f8ca816eafc1b7dc8ea6eb959f9dfa0cde6fcf1ec0ebae9f"
+    },
+    {
+      "path": "assets/js/main.js",
+      "bytes": 27583,
+      "sha256": "d723334d9e323acd165b44790b10380fd319470537adf374278961809dc860a7"
+    },
+    {
+      "path": "assets/js/watch3d.js",
+      "bytes": 14849,
+      "sha256": "da5a1cba7c9742832e489a332576ccd806fc019440125032407bc0bb3ca3c0f8"
+    },
+    {
+      "path": "CUSTOMISE.md",
+      "bytes": 22155,
+      "sha256": "44d5b9e2c97b9020cc38d8e806f88b0a841279af354abdbdeff5f41556fc2950"
+    },
+    {
+      "path": "index.html",
+      "bytes": 21402,
+      "sha256": "34539f036ef55d36c0b311030757f387ca77c7af27f4ea97c61a33114d48d68c"
+    },
+    {
+      "path": "LICENCE.txt",
+      "bytes": 1927,
+      "sha256": "489b9723b81f7479560beb4ea9290a137217091a01c1a5518151612bf27ed7b0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3368,
+      "sha256": "190cf832fbff06b8ea55e3e11ee4a250f9aadfb4c1c901bcd8c2f9e0ef40b697"
+    }
+  ]
+}

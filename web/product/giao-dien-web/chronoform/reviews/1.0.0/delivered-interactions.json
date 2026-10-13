@@ -1,0 +1,602 @@
+{
+  "source": "D:\\3. Dự án\\2A\\_design\\.qa-extracted\\chronoform",
+  "results": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "renderer": "webgl",
+      "errors": [],
+      "failed": [],
+      "wrap": [
+        {
+          "expected": "paraiba",
+          "middle": {
+            "angle": "2.188",
+            "transform": "translateX(-187.622px)",
+            "opacity": 0.182473
+          }
+        },
+        {
+          "expected": "opus-orange",
+          "middle": {
+            "angle": "-3.225",
+            "transform": "translateX(207.848px)",
+            "opacity": 0.0943443
+          }
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "route": "home",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "collection",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "detail",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "cart",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 820,
+          "route": "home",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "collection",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "detail",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "cart",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 375,
+          "route": "home",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "collection",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "detail",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "cart",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 320,
+          "route": "home",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "collection",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "detail",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "cart",
+          "sw": 320,
+          "cw": 320
+        }
+      ],
+      "axe": [
+        {
+          "route": "home",
+          "violations": []
+        },
+        {
+          "route": "collection",
+          "violations": []
+        },
+        {
+          "route": "detail",
+          "violations": []
+        },
+        {
+          "route": "cart",
+          "violations": []
+        }
+      ],
+      "rapid": true,
+      "frontBack": {
+        "front": 0,
+        "back": 3.141592653589793
+      },
+      "drag": 0.99,
+      "totals": "Illustrative VAT (19%)\n€4,534.45\nSample total excl. VAT\n€23,865.55\nTotal incl. sample VAT\n€28,400.00",
+      "email": "mailto:hello@chronoform.example?subject=Chronoform%20concept%20enquiry&body=Opus%20Chronograph%20%C2%B7%20S%20%C2%B7%2015%E2%80%9317%20cm%20%C2%B7%20%E2%82%AC14%2C200.00%0AOpus%20Chronograph%20Ice%20%C2%B7%20M%20%C2%B7%2017%E2%80%9320%20cm%20%C2%B7%20%E2%82%AC14%2C200.00%0APlease%20include%20a%20care%20note.",
+      "bag": true,
+      "filters": true,
+      "saved": true,
+      "models": 11,
+      "scroll": [
+        "translateY(0px) rotate(0deg) scale(1)",
+        "translateY(-21.0429px) rotate(8.01634deg) scale(1.04008)",
+        "translateY(-41.9921px) rotate(15.997deg) scale(1.07998)",
+        "translateY(-21.0429px) rotate(8.01634deg) scale(1.04008)",
+        "translateY(0px) rotate(0deg) scale(1)"
+      ],
+      "motionDefaults": true,
+      "idleFrames": 0
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "renderer": "webgl",
+      "errors": [],
+      "failed": [],
+      "wrap": [
+        {
+          "expected": "paraiba",
+          "middle": {
+            "angle": "2.205",
+            "transform": "translateX(-188.82px)",
+            "opacity": 0.177254
+          }
+        },
+        {
+          "expected": "opus-orange",
+          "middle": {
+            "angle": "-2.883",
+            "transform": "translateX(182.868px)",
+            "opacity": 0.203188
+          }
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "route": "home",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "collection",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "detail",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "cart",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 820,
+          "route": "home",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "collection",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "detail",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "cart",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 375,
+          "route": "home",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "collection",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "detail",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "cart",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 320,
+          "route": "home",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "collection",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "detail",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "cart",
+          "sw": 320,
+          "cw": 320
+        }
+      ],
+      "axe": [],
+      "rapid": true,
+      "frontBack": {
+        "front": 0,
+        "back": 3.141592653589793
+      },
+      "drag": 0.99,
+      "totals": "Illustrative VAT (19%)\n€4,534.45\nSample total excl. VAT\n€23,865.55\nTotal incl. sample VAT\n€28,400.00",
+      "email": "mailto:hello@chronoform.example?subject=Chronoform%20concept%20enquiry&body=Opus%20Chronograph%20%C2%B7%20S%20%C2%B7%2015%E2%80%9317%20cm%20%C2%B7%20%E2%82%AC14%2C200.00%0AOpus%20Chronograph%20Ice%20%C2%B7%20M%20%C2%B7%2017%E2%80%9320%20cm%20%C2%B7%20%E2%82%AC14%2C200.00%0APlease%20include%20a%20care%20note.",
+      "bag": true,
+      "filters": true,
+      "saved": true,
+      "models": 11,
+      "scroll": [
+        "translateY(0px) rotate(0deg) scale(1)",
+        "translateY(-20.9424px) rotate(7.97805deg) scale(1.03989)",
+        "translateY(-41.9932px) rotate(15.9974deg) scale(1.07999)",
+        "translateY(-20.9424px) rotate(7.97805deg) scale(1.03989)",
+        "translateY(0px) rotate(0deg) scale(1)"
+      ],
+      "motionDefaults": true,
+      "idleFrames": 0
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.45",
+      "renderer": "webgl",
+      "errors": [],
+      "failed": [],
+      "wrap": [
+        {
+          "expected": "paraiba",
+          "middle": {
+            "angle": "2.127",
+            "transform": "translateX(-183.11px)",
+            "opacity": 0.202136
+          }
+        },
+        {
+          "expected": "opus-orange",
+          "middle": {
+            "angle": "-2.880",
+            "transform": "translateX(182.606px)",
+            "opacity": 0.204331
+          }
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "route": "home",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "collection",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "detail",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "cart",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 820,
+          "route": "home",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "collection",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "detail",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "cart",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 375,
+          "route": "home",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "collection",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "detail",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "cart",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 320,
+          "route": "home",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "collection",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "detail",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "cart",
+          "sw": 320,
+          "cw": 320
+        }
+      ],
+      "axe": [],
+      "rapid": true,
+      "frontBack": {
+        "front": 0,
+        "back": 3.141592653589793
+      },
+      "drag": 0.99,
+      "totals": "Illustrative VAT (19%)\n€4,534.45\nSample total excl. VAT\n€23,865.55\nTotal incl. sample VAT\n€28,400.00",
+      "email": "mailto:hello@chronoform.example?subject=Chronoform%20concept%20enquiry&body=Opus%20Chronograph%20%C2%B7%20S%20%C2%B7%2015%E2%80%9317%20cm%20%C2%B7%20%E2%82%AC14%2C200.00%0AOpus%20Chronograph%20Ice%20%C2%B7%20M%20%C2%B7%2017%E2%80%9320%20cm%20%C2%B7%20%E2%82%AC14%2C200.00%0APlease%20include%20a%20care%20note.",
+      "bag": true,
+      "filters": true,
+      "saved": true,
+      "models": 11,
+      "scroll": [
+        "translateY(0px) rotate(0deg) scale(1)",
+        "translateY(-21.0429px) rotate(8.01634deg) scale(1.04008)",
+        "translateY(-41.9921px) rotate(15.997deg) scale(1.07998)",
+        "translateY(-21.0429px) rotate(8.01634deg) scale(1.04008)",
+        "translateY(0px) rotate(0deg) scale(1)"
+      ],
+      "motionDefaults": true,
+      "idleFrames": 0
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "renderer": "webgl",
+      "errors": [],
+      "failed": [],
+      "wrap": [
+        {
+          "expected": "paraiba",
+          "middle": {
+            "angle": "2.195",
+            "transform": "translateX(-188.136px)",
+            "opacity": 0.180235
+          }
+        },
+        {
+          "expected": "opus-orange",
+          "middle": {
+            "angle": "-2.857",
+            "transform": "translateX(180.918px)",
+            "opacity": 0.211686
+          }
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "route": "home",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "collection",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "detail",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 1440,
+          "route": "cart",
+          "sw": 1440,
+          "cw": 1440
+        },
+        {
+          "width": 820,
+          "route": "home",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "collection",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "detail",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 820,
+          "route": "cart",
+          "sw": 820,
+          "cw": 820
+        },
+        {
+          "width": 375,
+          "route": "home",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "collection",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "detail",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 375,
+          "route": "cart",
+          "sw": 375,
+          "cw": 375
+        },
+        {
+          "width": 320,
+          "route": "home",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "collection",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "detail",
+          "sw": 320,
+          "cw": 320
+        },
+        {
+          "width": 320,
+          "route": "cart",
+          "sw": 320,
+          "cw": 320
+        }
+      ],
+      "axe": [],
+      "rapid": true,
+      "frontBack": {
+        "front": 0,
+        "back": 3.141592653589793
+      },
+      "drag": 0.99,
+      "totals": "Illustrative VAT (19%)\n€4,534.45\nSample total excl. VAT\n€23,865.55\nTotal incl. sample VAT\n€28,400.00",
+      "email": "mailto:hello@chronoform.example?subject=Chronoform%20concept%20enquiry&body=Opus%20Chronograph%20%C2%B7%20S%20%C2%B7%2015%E2%80%9317%20cm%20%C2%B7%20%E2%82%AC14%2C200.00%0AOpus%20Chronograph%20Ice%20%C2%B7%20M%20%C2%B7%2017%E2%80%9320%20cm%20%C2%B7%20%E2%82%AC14%2C200.00%0APlease%20include%20a%20care%20note.",
+      "bag": true,
+      "filters": true,
+      "saved": true,
+      "models": 11,
+      "scroll": [
+        "translateY(0px) rotate(0deg) scale(1)",
+        "translateY(-21.0429px) rotate(8.01634deg) scale(1.04008)",
+        "translateY(-41.9921px) rotate(15.997deg) scale(1.07998)",
+        "translateY(-21.0429px) rotate(8.01634deg) scale(1.04008)",
+        "translateY(0px) rotate(0deg) scale(1)"
+      ],
+      "motionDefaults": true,
+      "idleFrames": 0
+    }
+  ]
+}

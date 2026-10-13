@@ -1,0 +1,104 @@
+[
+  {
+    "name": "chromium",
+    "file": {
+      "width": {
+        "sw": 320,
+        "cw": 320
+      },
+      "renderer": "svg",
+      "visibleReveals": true,
+      "detail": true
+    },
+    "offline": {
+      "width": {
+        "sw": 320,
+        "cw": 320
+      },
+      "renderer": "svg",
+      "visibleReveals": true,
+      "detail": true
+    },
+    "nojs": {
+      "width": {
+        "sw": 320,
+        "cw": 320
+      },
+      "renderer": null,
+      "cards": 11
+    },
+    "no-webgl": {
+      "width": {
+        "sw": 320,
+        "cw": 320
+      },
+      "renderer": "svg",
+      "visibleReveals": true,
+      "detail": true
+    },
+    "no-waapi-css": {
+      "width": {
+        "sw": 320,
+        "cw": 320
+      },
+      "renderer": "webgl",
+      "visibleReveals": true,
+      "detail": true,
+      "mid": {
+        "transform": "translateX(-81.1842px)",
+        "opacity": 0.115641
+      }
+    }
+  },
+  {
+    "name": "firefox",
+    "file": {
+      "width": {
+        "sw": 320,
+        "cw": 320
+      },
+      "renderer": "webgl",
+      "visibleReveals": true,
+      "detail": true
+    },
+    "offline": {
+      "width": {
+        "sw": 320,
+        "cw": 320
+      },
+      "renderer": "webgl",
+      "visibleReveals": true,
+      "detail": true
+    },
+    "nojs": {
+      "width": {
+        "sw": 320,
+        "cw": 320
+      },
+      "renderer": null,
+      "cards": 11
+    },
+    "no-webgl": {
+      "width": {
+        "sw": 320,
+        "cw": 320
+      },
+      "renderer": "svg",
+      "visibleReveals": true,
+      "detail": true
+    },
+    "no-waapi-css": {
+      "width": {
+        "sw": 320,
+        "cw": 320
+      },
+      "renderer": "webgl",
+      "visibleReveals": true,
+      "detail": true,
+      "mid": {
+        "transform": "translateX(-76.4517px)",
+        "opacity": 0.167193
+      }
+    }
+  }
+]

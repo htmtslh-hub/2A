@@ -418,5 +418,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "chronoform": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "44c878fa41aa",
+    "sha256": "44c878fa41aa275075227fd238dfae501b2f866af94485f81a68b06355b93df7",
+    "demoHtmlSha256": "34539f036ef55d36c0b311030757f387ca77c7af27f4ea97c61a33114d48d68c",
+    "demoSha256": "47ce701e9545f8b266ea19d9e7d50ce165c0ebe77c4c687145178725570697e3",
+    "bytes": 581468,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

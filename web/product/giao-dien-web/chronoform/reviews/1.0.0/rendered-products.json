@@ -1,0 +1,57 @@
+[
+  {
+    "id": "paraiba",
+    "file": "assets/img/render-paraiba.webp",
+    "bytes": 63108
+  },
+  {
+    "id": "jupiter",
+    "file": "assets/img/render-jupiter.webp",
+    "bytes": 63170
+  },
+  {
+    "id": "cowboy",
+    "file": "assets/img/render-cowboy.webp",
+    "bytes": 52332
+  },
+  {
+    "id": "opus-orange",
+    "file": "assets/img/render-opus-orange.webp",
+    "bytes": 56526
+  },
+  {
+    "id": "jupiter-gold",
+    "file": "assets/img/render-jupiter-gold.webp",
+    "bytes": 66532
+  },
+  {
+    "id": "black-hole",
+    "file": "assets/img/render-black-hole.webp",
+    "bytes": 51234
+  },
+  {
+    "id": "sunset",
+    "file": "assets/img/render-sunset.webp",
+    "bytes": 56336
+  },
+  {
+    "id": "meteorite",
+    "file": "assets/img/render-meteorite.webp",
+    "bytes": 59690
+  },
+  {
+    "id": "skeleton-gold",
+    "file": "assets/img/render-skeleton-gold.webp",
+    "bytes": 55614
+  },
+  {
+    "id": "skeleton-steel",
+    "file": "assets/img/render-skeleton-steel.webp",
+    "bytes": 52028
+  },
+  {
+    "id": "opus-ice",
+    "file": "assets/img/render-opus-ice.webp",
+    "bytes": 61004
+  }
+]

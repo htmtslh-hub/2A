@@ -45,6 +45,19 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t31: {
+    slug: 'chronoform', cat: 'commerce', version: '1.0.0', video: true,
+    specs: {
+      vi: [['Định dạng', 'HTML / CSS / JavaScript · WebGL thuần'], ['Gói tải', '24 file · 17 ảnh WebP gốc'], ['Bộ sưu tập', '11 mẫu · bộ lọc · chi tiết trước/sau'], ['Chuyển động', '4 mẫu hero · xoay 3D · cảnh cuộn'], ['Phạm vi', 'Giỏ tư vấn trong phiên · không thanh toán']],
+      en: [['Format', 'HTML / CSS / JavaScript · native WebGL'], ['Package', '24 files · 17 original WebP images'], ['Collection', '11 models · filters · front/back detail'], ['Motion', '4 featured models · 3D rotation · scroll scene'], ['Scope', 'Session enquiry bag · no payments']],
+      zh: [['格式', 'HTML / CSS / JavaScript · 原生 WebGL'], ['下载包', '24 个文件 · 17 张原创 WebP'], ['系列', '11 款 · 筛选 · 正反面详情'], ['动态', '4 款主展示 · 3D 旋转 · 滚动场景'], ['范围', '会话咨询袋 · 无支付']],
+    },
+    copy: {
+      vi: { name: 'Chronoform', desc: 'Showroom đồng hồ cơ theo phong cách điện ảnh: 4 mẫu hero chuyển hai chiều, đồng hồ WebGL xoay và xem trước/sau, thư viện 11 mẫu với bộ lọc, trang chi tiết và giỏ tư vấn trong phiên. Ảnh gốc tự tạo; ảnh dự phòng khi WebGL bị chặn. Giá và thông số minh họa, không có thanh toán hoặc backend.', tags: ['Đồng hồ 3D', 'Chuyển mẫu', 'Thư viện & bộ lọc'] },
+      en: { name: 'Chronoform', desc: 'A cinematic mechanical-watch showroom: four directional hero models, native WebGL rotation and front/back inspection, an eleven-model filtered collection, detail views and a session enquiry bag. Original artwork with image fallback when WebGL is blocked. Illustrative prices/specs; no payment or backend.', tags: ['3D watches', 'Model transitions', 'Collection & filters'] },
+      zh: { name: 'Chronoform', desc: '电影感机械腕表展厅：四款双向主展示、原生 WebGL 旋转与正反面查看、十一款筛选系列、详情页和会话咨询袋。原创图像，WebGL 被阻止时使用图片备用。价格与规格为示例，不含支付或后端。', tags: ['3D 腕表', '型号切换', '系列与筛选'] },
+    },
+  },
   t30: {
     slug: 'shopluxe', cat: 'commerce', version: '1.0.0', video: true,
     specs: {

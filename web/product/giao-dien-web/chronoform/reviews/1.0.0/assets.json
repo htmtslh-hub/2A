@@ -1,0 +1,44 @@
+[
+  {
+    "name": "paraiba",
+    "file": "exec-a19cdbd8-598a-4af3-a315-b7899acf5880.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 329826
+  },
+  {
+    "name": "jupiter",
+    "file": "exec-9d79f1c5-7603-4dfc-ab48-6c08db99ce60.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 374386
+  },
+  {
+    "name": "skeleton",
+    "file": "exec-41efd9b5-9016-437a-a58c-7b8f59f6c614.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 224794
+  },
+  {
+    "name": "opus",
+    "file": "exec-b943231c-bf6b-4b63-98c1-03f25252e0d3.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 228422
+  },
+  {
+    "name": "ice",
+    "file": "exec-586bab86-f115-4d32-9fc2-fd33174f150d.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 301856
+  },
+  {
+    "name": "editorial",
+    "file": "exec-9b8ae34b-5cc4-40db-af26-345a690e7427.png",
+    "width": 2172,
+    "height": 724,
+    "bytes": 174306
+  }
+]

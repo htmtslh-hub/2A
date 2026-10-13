@@ -2,6 +2,7 @@ import {resolve} from 'node:path';import {pathToFileURL} from 'node:url';import{
 process.env.PLAYWRIGHT_BROWSERS_PATH=resolve('_design/.browsers');const{chromium,firefox}=await import(pathToFileURL(resolve('_design/.tooling/node_modules/playwright/index.mjs')));
 const origin=process.env.PREVIEW_QA_URL||'http://localhost:4354',results=[];
 for(const[name,engine,options]of[['Chromium',chromium,{}],['Firefox',firefox,{}],['Edge',chromium,{executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'}],['CocCoc',chromium,{executablePath:'C:/Program Files/CocCoc/Browser/Application/browser.exe'}]]){
+ if(process.env.PREVIEW_QA_BROWSER && process.env.PREVIEW_QA_BROWSER!==name)continue;
  const browser=await engine.launch({headless:true,...options}),context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'});await context.route('**/api/traffic**',r=>r.abort());const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(origin+'/?tab=library',{waitUntil:'networkidle'});await page.mouse.move(0,0);await page.waitForTimeout(600);
  const info=await page.locator('[data-recorded-preview] video').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return{src:e.getAttribute('src'),playing:!e.paused,time:e.currentTime,inView:r.top<innerHeight&&r.bottom>0};}));

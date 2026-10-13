@@ -1,0 +1,35 @@
+{
+  "origin": "https://forgezone.store",
+  "date": "2026-10-13T02:48:12.091Z",
+  "results": [
+    {
+      "name": "Chromium",
+      "version": "153.0.8010.12",
+      "initialPlaying": 4,
+      "offscreenUnloaded": 22,
+      "sizes": [
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "client": 320
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

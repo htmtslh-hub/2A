@@ -1,0 +1,42 @@
+[
+  {
+    "path": "assets/css/style.css",
+    "bytes": 16681,
+    "sha256": "0a80fc6d480ffd43c48aa1bb4fdc33e1dde77fce0f7d2dce48838a072598615b"
+  },
+  {
+    "path": "assets/img/bean.webp",
+    "bytes": 379748,
+    "sha256": "f769c8463780a260c1fd11bb5205becc45919554466e0c2dd0f8f700e6b54c25"
+  },
+  {
+    "path": "assets/img/drinks.webp",
+    "bytes": 390414,
+    "sha256": "82e451541d2a54fda25eea6c755d2bb552622dea49d9706105c3d0b451e12e8c"
+  },
+  {
+    "path": "assets/js/main.js",
+    "bytes": 9390,
+    "sha256": "9af39b6e55636ef66cef6d48f58d9dc5c09774e91509b97a0bd815bee8668d30"
+  },
+  {
+    "path": "CUSTOMISE.md",
+    "bytes": 16518,
+    "sha256": "55f1a5aa901dc396543b16585591acd51e64245ca62e51f760f2b57a153e0b7d"
+  },
+  {
+    "path": "index.html",
+    "bytes": 9939,
+    "sha256": "51146fbdcbca61a46e177ad95f4c6f1d8a70913e24bbdaa367c4e0c7b5bf94c0"
+  },
+  {
+    "path": "LICENCE.txt",
+    "bytes": 1849,
+    "sha256": "a1fc03cacbd4edf2974ff232b8a9c4c5b847cb732eeece5a2ebf81f7f963f6a5"
+  },
+  {
+    "path": "README.md",
+    "bytes": 2042,
+    "sha256": "d531580a92f3ccd3a4d9a8f93baeb31cdd7bca10ce6df571cb2c17387a4e14cc"
+  }
+]

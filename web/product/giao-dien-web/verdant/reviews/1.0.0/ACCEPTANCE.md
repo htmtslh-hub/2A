@@ -1,0 +1,7 @@
+# Reference-led acceptance
+
+The user's latest brief explicitly asks for a similar interface, generated similar images, animation and store packaging. The delivered design preserves the reference's hero composition, green/cream palette, cup/bean scene and flavour selector arrangement, with an original Verdant identity and original drink art. Below-fold sections are deliberate additions to provide real scroll behaviour and a usable complete template.
+
+Reference: local clipboard PNG, 362×246, no crop. Candidate hero 1448×984, scale 4; quality/1448-hero.png and public preview supply actual browser evidence. No reconstructed screenshot is used as a whole website. No fabricated >95% similarity score is assigned. The exact ForgeFrame reproduction threshold is not certified by this similar-design delivery; fidelity differences include botanical logo, new drink detail, readable selector type and added carousel controls.
+
+Functional/scroll/template acceptance follows QA.md and the latest request, with explicit raster/interaction/byte exceptions. Motion/scroll PASS: candidate-checks.json and final-supplemental.json capture midframes, wraps, rapid interaction, progress, reverse scroll and resize. Image-only input: video coverage N/A. Technical release conditions PASS after manually resolving old reduced-motion checker expectations against the current project rule. Four viewport screenshots and preview contact sheet inspected. Publication verification is recorded separately after deploy.

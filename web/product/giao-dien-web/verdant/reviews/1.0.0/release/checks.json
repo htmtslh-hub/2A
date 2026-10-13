@@ -1,0 +1,1108 @@
+{
+  "slug": "verdant",
+  "version": "1.0.0",
+  "date": "2026-10-13T06:56:33.325Z",
+  "os": "win32",
+  "zipBytes": 787117,
+  "sha256": "7bdaa4022c83b997ff24678eddeec2cbe0a9bf2e12522cded9586a7e4fd3809d",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#main"
+          },
+          {
+            "label": "Verdant home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#main"
+          },
+          {
+            "label": "Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#main"
+          },
+          {
+            "label": "Shop",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#collection"
+          },
+          {
+            "label": "Our craft",
+            "href": "#craft",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#craft"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#about"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#contact"
+          },
+          {
+            "label": "Browse drinks",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#collection"
+          },
+          {
+            "label": "Contact the café",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#contact"
+          },
+          {
+            "label": "Explore menu ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#collection"
+          },
+          {
+            "label": "Find your next coffee break ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#contact"
+          },
+          {
+            "label": "Email the café ↗",
+            "href": "mailto:hello@verdant.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@verdant.example"
+          },
+          {
+            "label": "Verdant",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#main"
+          },
+          {
+            "label": "Ask about this drink ↗",
+            "href": "mailto:hello@verdant.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@verdant.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 760,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": false,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(36, 41, 35)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 14.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "active",
+            "text": "Home",
+            "colour": "rgb(8, 99, 62)",
+            "background": [
+              225,
+              235,
+              227
+            ],
+            "ratio": 6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Shop",
+            "colour": "rgb(36, 41, 35)",
+            "background": [
+              248,
+              248,
+              242
+            ],
+            "ratio": 13.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Find perfect drinkcrafted just for you.",
+            "colour": "rgb(36, 41, 35)",
+            "background": [
+              238,
+              237,
+              231
+            ],
+            "ratio": 12.64,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__price",
+            "text": "$28.00",
+            "colour": "rgb(8, 99, 62)",
+            "background": [
+              238,
+              237,
+              231
+            ],
+            "ratio": 6.25,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "A perfectly swirled Matcha Cream, offeri",
+            "colour": "rgb(80, 86, 78)",
+            "background": [
+              238,
+              237,
+              231
+            ],
+            "ratio": 6.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "S",
+            "colour": "rgb(36, 41, 35)",
+            "background": [
+              238,
+              237,
+              231
+            ],
+            "ratio": 12.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "M",
+            "colour": "rgb(19, 72, 44)",
+            "background": [
+              208,
+              226,
+              212
+            ],
+            "ratio": 7.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore menu ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              8,
+              120,
+              73
+            ],
+            "ratio": 5.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Matcha Cream",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              10,
+              119,
+              77
+            ],
+            "ratio": 5.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Mango Cloud",
+            "colour": "rgb(54, 43, 18)",
+            "background": [
+              226,
+              184,
+              65
+            ],
+            "ratio": 7.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Berry Blush",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              190,
+              82,
+              99
+            ],
+            "ratio": 4.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              83,
+              51
+            ],
+            "ratio": 9.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A flavour for every mood",
+            "colour": "rgb(8, 99, 62)",
+            "background": [
+              238,
+              237,
+              231
+            ],
+            "ratio": 6.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "From leaf to last sip",
+            "colour": "rgb(8, 99, 62)",
+            "background": [
+              218,
+              232,
+              216
+            ],
+            "ratio": 5.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Good things take a little care.",
+            "colour": "rgb(36, 41, 35)",
+            "background": [
+              218,
+              232,
+              216
+            ],
+            "ratio": 11.66,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Matcha whisked smooth. Milk blended silk",
+            "colour": "rgb(80, 86, 78)",
+            "background": [
+              218,
+              232,
+              216
+            ],
+            "ratio": 5.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Make it your kind of day",
+            "colour": "rgb(208, 232, 203)",
+            "background": [
+              7,
+              90,
+              57
+            ],
+            "ratio": 6.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Let’s talk over a cup.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              90,
+              57
+            ],
+            "ratio": 8.3,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Have a menu question or a café collabora",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              90,
+              57
+            ],
+            "ratio": 8.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button--light",
+            "text": "Email the café ↗",
+            "colour": "rgb(17, 72, 49)",
+            "background": [
+              244,
+              242,
+              233
+            ],
+            "ratio": 9.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "S",
+          "colour": "rgb(36, 41, 35)",
+          "width": "3px",
+          "ratio": 12.64
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#main"
+          },
+          {
+            "label": "Verdant home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#main"
+          },
+          {
+            "label": "Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#main"
+          },
+          {
+            "label": "Shop",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#collection"
+          },
+          {
+            "label": "Our craft",
+            "href": "#craft",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#craft"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#about"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#contact"
+          },
+          {
+            "label": "Browse drinks",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#collection"
+          },
+          {
+            "label": "Contact the café",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#contact"
+          },
+          {
+            "label": "Explore menu ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#collection"
+          },
+          {
+            "label": "Find your next coffee break ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#contact"
+          },
+          {
+            "label": "Email the café ↗",
+            "href": "mailto:hello@verdant.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@verdant.example"
+          },
+          {
+            "label": "Verdant",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/verdant/index.html#main"
+          },
+          {
+            "label": "Ask about this drink ↗",
+            "href": "mailto:hello@verdant.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@verdant.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 760,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": false,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(36, 41, 35)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 14.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "active",
+            "text": "Home",
+            "colour": "rgb(8, 99, 62)",
+            "background": [
+              225,
+              235,
+              227
+            ],
+            "ratio": 6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Shop",
+            "colour": "rgb(36, 41, 35)",
+            "background": [
+              248,
+              248,
+              242
+            ],
+            "ratio": 13.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Find perfect drinkcrafted just for you.",
+            "colour": "rgb(36, 41, 35)",
+            "background": [
+              238,
+              237,
+              231
+            ],
+            "ratio": 12.64,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__price",
+            "text": "$28.00",
+            "colour": "rgb(8, 99, 62)",
+            "background": [
+              238,
+              237,
+              231
+            ],
+            "ratio": 6.25,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "A perfectly swirled Matcha Cream, offeri",
+            "colour": "rgb(80, 86, 78)",
+            "background": [
+              238,
+              237,
+              231
+            ],
+            "ratio": 6.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "S",
+            "colour": "rgb(36, 41, 35)",
+            "background": [
+              238,
+              237,
+              231
+            ],
+            "ratio": 12.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "M",
+            "colour": "rgb(19, 72, 44)",
+            "background": [
+              208,
+              226,
+              212
+            ],
+            "ratio": 7.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore menu ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              8,
+              120,
+              73
+            ],
+            "ratio": 5.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Matcha Cream",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              10,
+              119,
+              77
+            ],
+            "ratio": 5.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Mango Cloud",
+            "colour": "rgb(54, 43, 18)",
+            "background": [
+              226,
+              184,
+              65
+            ],
+            "ratio": 7.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Berry Blush",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              190,
+              82,
+              99
+            ],
+            "ratio": 4.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              83,
+              51
+            ],
+            "ratio": 9.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "A flavour for every mood",
+            "colour": "rgb(8, 99, 62)",
+            "background": [
+              238,
+              237,
+              231
+            ],
+            "ratio": 6.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "From leaf to last sip",
+            "colour": "rgb(8, 99, 62)",
+            "background": [
+              218,
+              232,
+              216
+            ],
+            "ratio": 5.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Good things take a little care.",
+            "colour": "rgb(36, 41, 35)",
+            "background": [
+              218,
+              232,
+              216
+            ],
+            "ratio": 11.66,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Matcha whisked smooth. Milk blended silk",
+            "colour": "rgb(80, 86, 78)",
+            "background": [
+              218,
+              232,
+              216
+            ],
+            "ratio": 5.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Make it your kind of day",
+            "colour": "rgb(208, 232, 203)",
+            "background": [
+              7,
+              90,
+              57
+            ],
+            "ratio": 6.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Let’s talk over a cup.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              90,
+              57
+            ],
+            "ratio": 8.3,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Have a menu question or a café collabora",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              90,
+              57
+            ],
+            "ratio": 8.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button--light",
+            "text": "Email the café ↗",
+            "colour": "rgb(17, 72, 49)",
+            "background": [
+              244,
+              242,
+              233
+            ],
+            "ratio": 9.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "S",
+          "colour": "rgb(36, 41, 35)",
+          "width": "3px",
+          "ratio": 12.64
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "verdant/assets/css/style.css",
+    "verdant/assets/img/bean.webp",
+    "verdant/assets/img/drinks.webp",
+    "verdant/assets/js/main.js",
+    "verdant/CUSTOMISE.md",
+    "verdant/index.html",
+    "verdant/LICENCE.txt",
+    "verdant/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/bean.webp",
+    "assets/img/drinks.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q07/chromium: giảm chuyển động {\"allVisible\":false,\"runningAnimations\":0}",
+    "Q07/firefox: giảm chuyển động {\"allVisible\":false,\"runningAnimations\":0}"
+  ]
+}

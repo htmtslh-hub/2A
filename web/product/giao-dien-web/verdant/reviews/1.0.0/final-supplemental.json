@@ -1,0 +1,81 @@
+{
+  "origin": "http://localhost:4355",
+  "browsers": {
+    "Chromium": {
+      "version": "153.0.8010.12",
+      "reducedMotionDefault": true,
+      "savedOffIgnored": true,
+      "keyboardWrap": true,
+      "swipeWrap": true,
+      "midframe": {
+        "transform": "matrix(0.883797, 0.125718, -0.125718, 0.883797, 116.248, -40.2397)",
+        "opacity": "0.105784"
+      },
+      "scrollBeforeResize": "matrix(1.02957, 0.049907, -0.049907, 1.02957, 0, -29.5503)",
+      "scrollAfterResize": "matrix(1.03098, 0.0758203, -0.0758203, 1.03098, 0, -32.4122)",
+      "dimensions": {
+        "sw": 320,
+        "cw": 320
+      },
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "Firefox": {
+      "version": "155.0",
+      "reducedMotionDefault": true,
+      "savedOffIgnored": true,
+      "keyboardWrap": true,
+      "swipeWrap": true,
+      "midframe": {
+        "transform": "matrix(0.868011, 0.150716, -0.150716, 0.868011, 128.919, -44.6257)",
+        "opacity": "0.00831784"
+      },
+      "scrollBeforeResize": "matrix(1.02957, 0.0498365, -0.0498365, 1.02957, 0, -29.5425)",
+      "scrollAfterResize": "matrix(1.03098, 0.0757427, -0.0757427, 1.03098, 0, -32.4036)",
+      "dimensions": {
+        "sw": 320,
+        "cw": 320
+      },
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "Edge": {
+      "version": "155.0.4283.45",
+      "reducedMotionDefault": true,
+      "savedOffIgnored": true,
+      "keyboardWrap": true,
+      "swipeWrap": true,
+      "midframe": {
+        "transform": "matrix(0.881011, 0.130275, -0.130275, 0.881011, 118.527, -41.0284)",
+        "opacity": "0.0882571"
+      },
+      "scrollBeforeResize": "matrix(1.02957, 0.049907, -0.049907, 1.02957, 0, -29.5503)",
+      "scrollAfterResize": "matrix(1.03098, 0.0758203, -0.0758203, 1.03098, 0, -32.4122)",
+      "dimensions": {
+        "sw": 320,
+        "cw": 320
+      },
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "CocCoc": {
+      "version": "152.0.7977.124",
+      "reducedMotionDefault": true,
+      "savedOffIgnored": true,
+      "keyboardWrap": true,
+      "swipeWrap": true,
+      "midframe": {
+        "transform": "matrix(0.887967, 0.118775, -0.118775, 0.887967, 112.802, -39.0468)",
+        "opacity": "0.132294"
+      },
+      "scrollBeforeResize": "matrix(1.02957, 0.049907, -0.049907, 1.02957, 0, -29.5503)",
+      "scrollAfterResize": "matrix(1.03098, 0.0758203, -0.0758203, 1.03098, 0, -32.4122)",
+      "dimensions": {
+        "sw": 320,
+        "cw": 320
+      },
+      "sessionPause": true,
+      "missingImageFallback": true
+    }
+  }
+}

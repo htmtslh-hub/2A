@@ -1,0 +1,60 @@
+{
+  "workflow": "reference-led similar-design delivery",
+  "productVersion": "1.0.0",
+  "candidateHash": "259050b725fd087389186fb3515554bf44a7812c3e117b51581c37be78dd82f6",
+  "references": [
+    {
+      "path": "reference.png",
+      "sha256": "c12878a0be85e8e43dd5e3c67f700b5efd68c4b036a3c068eaa040c3d19f77e4",
+      "width": 362,
+      "height": 246,
+      "crop": "none",
+      "comparisonViewport": [
+        1448,
+        984
+      ]
+    }
+  ],
+  "fidelity": {
+    "method": "visual reference review",
+    "status": "NOT CERTIFIED",
+    "exactForgeFrameThreshold": 95,
+    "notes": "Latest request is a similar original interface, not a pixel-identical reproduction. No >95 percent score claimed; differences disclosed in ACCEPTANCE.md."
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "candidate-checks.json",
+      "final-supplemental.json"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "candidate-checks.json",
+      "final-supplemental.json"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Still image input"
+  },
+  "technical": {
+    "status": "PASS WITH CURRENT MOTION POLICY",
+    "evidence": [
+      "release/checks.json",
+      "QA.md"
+    ]
+  },
+  "similarDesignDelivery": "PASS",
+  "exactReproductionGate": "NOT CERTIFIED",
+  "package": {
+    "bytes": 787117,
+    "sha256": "7bdaa4022c83b997ff24678eddeec2cbe0a9bf2e12522cded9586a7e4fd3809d"
+  },
+  "limitations": [
+    "Safari and physical devices not tested",
+    "Actual paid purchase/download not tested",
+    "Menu and email are demo content"
+  ]
+}

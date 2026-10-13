@@ -1,0 +1,123 @@
+{
+  "origin": "http://localhost:4355",
+  "languages": {
+    "vi": {
+      "detail": true,
+      "specs": true,
+      "video": {
+        "paused": false,
+        "time": 1.771378,
+        "muted": true,
+        "loop": true,
+        "src": "http://localhost:4355/previews/verdant.mp4?v=28de6f16b65b"
+      },
+      "errors": [],
+      "pause": true,
+      "resume": true,
+      "library": true,
+      "autoplay": true,
+      "cardPlaybackButtons": 0,
+      "offscreenPause": true,
+      "guide": true,
+      "widths": [
+        {
+          "width": 820,
+          "clientWidth": 820,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "clientWidth": 375,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320
+        }
+      ]
+    },
+    "en": {
+      "detail": true,
+      "specs": true,
+      "video": {
+        "paused": false,
+        "time": 2.222013,
+        "muted": true,
+        "loop": true,
+        "src": "http://localhost:4355/previews/verdant.mp4?v=28de6f16b65b"
+      },
+      "errors": [],
+      "pause": true,
+      "resume": true,
+      "library": true,
+      "autoplay": true,
+      "cardPlaybackButtons": 0,
+      "offscreenPause": true,
+      "guide": true,
+      "widths": [
+        {
+          "width": 820,
+          "clientWidth": 820,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "clientWidth": 375,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320
+        }
+      ]
+    },
+    "zh": {
+      "detail": true,
+      "specs": true,
+      "video": {
+        "paused": false,
+        "time": 2.182005,
+        "muted": true,
+        "loop": true,
+        "src": "http://localhost:4355/previews/verdant.mp4?v=28de6f16b65b"
+      },
+      "errors": [],
+      "pause": true,
+      "resume": true,
+      "library": true,
+      "autoplay": true,
+      "cardPlaybackButtons": 0,
+      "offscreenPause": true,
+      "guide": true,
+      "widths": [
+        {
+          "width": 820,
+          "clientWidth": 820,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "clientWidth": 375,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320
+        }
+      ]
+    }
+  },
+  "catalogRegression": {
+    "existing": 27,
+    "changed": [],
+    "added": [
+      "t28"
+    ]
+  },
+  "anonymous": 401,
+  "directZip": 404,
+  "demo": true
+}

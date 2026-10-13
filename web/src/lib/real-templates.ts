@@ -45,6 +45,19 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t28: {
+    slug: 'verdant', cat: 'commerce', version: '1.0.0', video: true,
+    specs: {
+      vi: [['Định dạng', 'HTML / CSS / JavaScript'], ['Gói tải', '8 file · 2 ảnh WebP tự tạo'], ['Tương tác', '3 vị · carousel · cảnh cuộn'], ['Phụ thuộc', 'Không framework, API hoặc build'], ['Liên hệ', 'Email · không đặt hàng/thanh toán']],
+      en: [['Format', 'HTML / CSS / JavaScript'], ['Package', '8 files · 2 original WebP images'], ['Interactions', '3 flavours · carousel · scroll scene'], ['Dependencies', 'No framework, API or build'], ['Contact', 'Email · no orders or payments']],
+      zh: [['格式', 'HTML / CSS / JavaScript'], ['下载包', '8 个文件 · 2 张原创 WebP'], ['交互', '3 种口味 · 轮播 · 滚动场景'], ['依赖', '无需框架、API 或构建'], ['联系', '邮件 · 不含下单或支付']],
+    },
+    copy: {
+      vi: { name: 'Verdant', desc: 'Giao diện café nền kem và xanh matcha, ảnh đồ uống tự tạo với ba vị matcha, mango và strawberry. Chuyển sản phẩm theo hai hướng, vuốt và phím; chọn size, dialog chi tiết và cảnh ly chuyển động theo cuộn. Liên hệ qua email, không kèm đặt hàng hoặc thanh toán.', tags: ['Café & đồ uống', 'Carousel', 'Scroll animation'] },
+      en: { name: 'Verdant', desc: 'A cream and matcha-green café showcase with original imagery and three flavours: matcha, mango and strawberry. Directional product transitions, swipe and keyboard controls, size preferences, detail dialogs and a scroll-driven drink scene. Email enquiry; no ordering or payment service.', tags: ['Café & drinks', 'Carousel', 'Scroll animation'] },
+      zh: { name: 'Verdant', desc: '奶油白与抹茶绿咖啡馆展示页面，含原创饮品图及抹茶、芒果、草莓三种口味。支持双向轮播、滑动与键盘、尺寸偏好、详情弹窗和滚动饮品场景。通过邮件联系，不含下单或支付服务。', tags: ['咖啡与饮品', '轮播', '滚动动画'] },
+    },
+  },
   t27: {
   "slug": "dualplay",
   "cat": "commerce",

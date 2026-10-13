@@ -1,0 +1,48 @@
+{
+  "id": "t28",
+  "slug": "verdant",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T06:56:27.846Z",
+  "demo": "/demos/verdant/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "5004143808f9",
+  "sha256": "5004143808f95db63cc1faeec4de2073afac193174816b093c58f70d51641869",
+  "demoHtmlSha256": "51146fbdcbca61a46e177ad95f4c6f1d8a70913e24bbdaa367c4e0c7b5bf94c0",
+  "demoSha256": "7e1b72d0ac79b8de05deb1bb5530ca2870511edb04ca57100896f52a766ce826",
+  "bytes": 579837,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.554,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 4.882,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\verdant-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\verdant-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\verdant-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\verdant-return.jpg"
+  ]
+}

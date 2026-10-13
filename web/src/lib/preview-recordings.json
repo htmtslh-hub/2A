@@ -376,5 +376,19 @@
     "audio": false,
     "demoSha256": "95d11e1d3af2b1675e0dc421f7bc3c3afcd3bfd08ab86e5d3e11c656145f8d86",
     "status": "recorded"
+  },
+  "verdant": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "5004143808f9",
+    "sha256": "5004143808f95db63cc1faeec4de2073afac193174816b093c58f70d51641869",
+    "demoHtmlSha256": "51146fbdcbca61a46e177ad95f4c6f1d8a70913e24bbdaa367c4e0c7b5bf94c0",
+    "demoSha256": "7e1b72d0ac79b8de05deb1bb5530ca2870511edb04ca57100896f52a766ce826",
+    "bytes": 579837,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

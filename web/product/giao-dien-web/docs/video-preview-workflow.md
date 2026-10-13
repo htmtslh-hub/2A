@@ -28,4 +28,6 @@
 
 Các file raw WebM/screenshot là bằng chứng nội bộ, không đưa vào hosting. Video mới không thay thế nghiệm thu source, license hay luồng download của sản phẩm.
 
+Kiểm chính sách autoplay bằng `node web/product/giao-dien-web/reviews/video-previews/check-autoplay.mjs` từ gốc repo sau khi mở production server local. Đặt `PREVIEW_QA_URL` theo URL cần thử (mặc định localhost:4354), `PREVIEW_QA_OUTPUT` theo tên báo cáo nếu kiểm online. Công cụ đo tự phát nhiều thẻ, lazy load, pause, offscreen, loop và bốn viewport trên Chromium/Firefox/Edge/Cốc Cốc thật. `check-store.mjs` là bằng chứng của bản hover cũ.
+
 Chính sách phát cập nhật theo yêu cầu chủ sản phẩm 13/10/2026: tự chạy, không cần hover. Quy định hover/single-active trong hồ sơ kiểm cũ chỉ mô tả bản cũ.

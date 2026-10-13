@@ -8,4 +8,8 @@ Local: `autoplay-checks.json`, production build localhost:4354. Chromium 153.0.8
 
 Build/prebuild 27 recordings và lint VideoPreview PASS. Không quay lại video vì bản demo không đổi. Không thử Safari hoặc điện thoại vật lý; autoplay đã thử ở khổ phone trong các browser trên.
 
-Trạng thái: local PASS; cập nhật bằng chứng online sau deploy.
+Online: `autoplay-online.json` tại forgezone.store PASS trên cả bốn browser, cùng phạm vi/viewport như local; mặc định bốn thẻ đang nhìn thấy cùng phát và 22 thẻ ngoài màn hình chưa có src. Nút pause/play, offscreen, không tràn ngang/pageerror và loop Chromium đều PASS.
+
+Commit runtime `2d98718`, đã push/deploy. Vercel production READY `dpl_GBJnQdP1A5veVkpCAsrWxSruTKM5`, deployment `https://web-77pogb6us-htmtslh-hubs-projects.vercel.app`, alias `https://forgezone.store`. Prebuild/typecheck/build hosted PASS. Báo cáo bổ sung sau deploy không đổi runtime.
+
+Trạng thái: local và online PASS cho autoplay. Hồ sơ/quy trình đã đổi sang tự phát theo viewport.

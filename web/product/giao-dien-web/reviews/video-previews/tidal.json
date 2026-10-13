@@ -1,0 +1,39 @@
+{
+  "id": "t2",
+  "slug": "tidal",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:12:58.007Z",
+  "demo": "/demos/tidal/index.html",
+  "productVersion": "unversioned",
+  "revision": "d46755edafb3",
+  "sha256": "d46755edafb318ca2258936b8e8fcffd0b06e743b352d829a3b5095e9340ad26",
+  "demoHtmlSha256": "d9204897626592e21d08a21858c8761bdbd4145e3e35434a134dd6e2347337bc",
+  "bytes": 530965,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\tidal-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\tidal-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\tidal-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\tidal-return.jpg"
+  ],
+  "demoSha256": "accac070ea158600df93fd31b315c3ced8db1b7460a71774ffa39ebf22ff179d",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

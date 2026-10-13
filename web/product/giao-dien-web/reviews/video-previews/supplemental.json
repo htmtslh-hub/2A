@@ -1,0 +1,14 @@
+{
+  "fullscreen": "VIDEO",
+  "languages": [
+    "vi",
+    "en",
+    "zh"
+  ],
+  "touch": "PASS",
+  "errorFallback": {
+    "poster": 698,
+    "opacity": "0"
+  },
+  "noJsPoster": true
+}

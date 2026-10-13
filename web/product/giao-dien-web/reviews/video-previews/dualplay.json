@@ -1,0 +1,49 @@
+{
+  "id": "t27",
+  "slug": "dualplay",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:05:59.531Z",
+  "demo": "/demos/dualplay/index.html",
+  "productVersion": "1.0.0",
+  "revision": "e5c0b937514e",
+  "sha256": "e5c0b937514e97b5bb3a1b84967047c610df1a940528d7575208af7d9eebbc75",
+  "demoHtmlSha256": "7560f1882ce918bb02e769b2c7390a4c1e64c8e47a7ae7d03eb6fadae5421d3b",
+  "bytes": 679009,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.566,
+      "action": "click",
+      "selector": "#next"
+    },
+    {
+      "seconds": 4.892,
+      "action": "click",
+      "selector": "#next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\dualplay-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\dualplay-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\dualplay-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\dualplay-return.jpg"
+  ],
+  "demoSha256": "216f83b60cfa113cd46bcdbcb83d5f80d3f9fe89dd59fa2dbc74262197b52749",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

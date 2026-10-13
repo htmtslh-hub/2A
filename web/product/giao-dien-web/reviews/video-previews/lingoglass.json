@@ -1,0 +1,49 @@
+{
+  "id": "t14",
+  "slug": "lingoglass",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:15:34.582Z",
+  "demo": "/demos/lingoglass/index.html",
+  "productVersion": "1.0.1",
+  "revision": "11e4fce06b32",
+  "sha256": "11e4fce06b32efa37eead19f84a97968e13f3c49b7fa11be68c226824e99ac39",
+  "demoHtmlSha256": "e1a1c8ce8c0b21d00d992df9265dd0a4ac98c556ea870e0807a2dba1e3b91102",
+  "demoSha256": "f7baf2f6f1fc2ad6055b690c096f73cf8c326de65fe17e8a728f9f51e05ff552",
+  "bytes": 110933,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.547,
+      "action": "click",
+      "selector": "button named Xem kịch bản mẫu (Demo)"
+    },
+    {
+      "seconds": 4.88,
+      "action": "click",
+      "selector": "button named Cài đặt"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lingoglass-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lingoglass-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lingoglass-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lingoglass-return.jpg"
+  ],
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

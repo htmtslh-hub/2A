@@ -1,0 +1,39 @@
+{
+  "id": "t12",
+  "slug": "novatrend",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:11:20.466Z",
+  "demo": "/demos/novatrend/index.html",
+  "productVersion": "1.2.0",
+  "revision": "c0a879c6f2a8",
+  "sha256": "c0a879c6f2a8efcbbecc6b679d1ffa5098c83b16e8dccf5da37272033c81676b",
+  "demoHtmlSha256": "b3af3b85d932f0a5915a1c7cfbd13b59885f899f94f2f974b01a95d27f183924",
+  "bytes": 351316,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\novatrend-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\novatrend-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\novatrend-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\novatrend-return.jpg"
+  ],
+  "demoSha256": "a1bc17bfde454c7e2bfa01b2376a136c77b2e2e12a7253fd464d6dee02205510",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

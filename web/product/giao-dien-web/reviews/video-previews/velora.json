@@ -1,0 +1,49 @@
+{
+  "id": "t19",
+  "slug": "velora",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:09:42.794Z",
+  "demo": "/demos/velora/index.html",
+  "productVersion": "1.3.0",
+  "revision": "98f84b86539b",
+  "sha256": "98f84b86539b65db5c154090742eb581ed721ce6afa626493ac325cbc199492b",
+  "demoHtmlSha256": "2b48c9c6851203cb66c30c142aaab9e841352fd7ed292af115cda53cd97e15bd",
+  "bytes": 324374,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.525,
+      "action": "click",
+      "selector": "#configure"
+    },
+    {
+      "seconds": 4.858,
+      "action": "click",
+      "selector": "#configure"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\velora-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\velora-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\velora-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\velora-return.jpg"
+  ],
+  "demoSha256": "5ae15869cb3efe20a34e60e09202f9e4d74359964787c3a84f52f5f5b2a75a7b",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

@@ -12,12 +12,14 @@
      1. Dựng mã nguồn ở  web/product/giao-dien-web/<slug>/source/
      2. Đóng gói          node web/product/giao-dien-web/tools/dong-goi.mjs <slug>
      3. Chụp ảnh          node web/product/giao-dien-web/tools/anh-preview.mjs <slug>
-     4. Thêm một mục vào bảng dưới đây. Xong.
+     4. Thêm mục catalog, quay hoạt động thật với tools/quay-preview.mjs <slug>.
+        Manifest tự cấp revision MP4; npm run previews:check trước build.
 
    Đổi thứ tự hiển thị = đổi mã ô (t1, t2, …). Ô nào không khai ở đây thì giữ
    nguyên nội dung bịa của bản thiết kế. */
 import type { LangCode } from '@/generated/data';
 import { TEMPLATE_CATEGORIES, type WebCategory } from './template-categories';
+import PREVIEW_RECORDINGS from './preview-recordings.json';
 
 export interface TemplateCopy {
   name: string;
@@ -678,8 +680,12 @@ export const REAL_TEMPLATE_PREVIEWS: Record<string, string> = Object.fromEntries
 );
 
 export const REAL_TEMPLATE_VIDEOS: Record<string, string> = Object.fromEntries(
-  Object.entries(REAL_TEMPLATES).filter(([, t]) => t.video).flatMap(([id, t]) => [
-    [`agentic-tpl-${id}`, `/previews/${t.slug}.mp4${t.version ? '?v=' + t.version : ''}`],
-    [`agentic-home-${id}`, `/previews/${t.slug}.mp4${t.version ? '?v=' + t.version : ''}`],
-  ])
+  Object.entries(REAL_TEMPLATES).flatMap(([id, t]) => {
+    const recording = (PREVIEW_RECORDINGS as Record<string, { revision: string; productVersion: string; status: string }>)[t.slug];
+    // Recording revisions are independent of customer ZIP versions. Do not
+    // enable device stills via t.video just because a desktop clip exists.
+    if (!recording || recording.status !== 'recorded' || recording.productVersion !== (t.version ?? 'unversioned')) return [];
+    const src = `/previews/${t.slug}.mp4?v=${recording.revision}`;
+    return [[`agentic-tpl-${id}`, src], [`agentic-home-${id}`, src]];
+  })
 );

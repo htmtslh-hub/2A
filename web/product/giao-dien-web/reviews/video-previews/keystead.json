@@ -1,0 +1,39 @@
+{
+  "id": "t3",
+  "slug": "keystead",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:13:17.887Z",
+  "demo": "/demos/keystead/index.html",
+  "productVersion": "unversioned",
+  "revision": "7a3a0404abd1",
+  "sha256": "7a3a0404abd16e49dadf7f8890d837555c8ccc634f8992a25f69dff7247bab6b",
+  "demoHtmlSha256": "d8b308177887ac1e689dd09481f86438b17764d0034a7f9c4b5d361a7f5a1d19",
+  "bytes": 523570,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\keystead-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\keystead-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\keystead-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\keystead-return.jpg"
+  ],
+  "demoSha256": "03f1767632aaf85b6336a19a2a4ef06951a91118daa037f1a1c252020f8b3b79",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

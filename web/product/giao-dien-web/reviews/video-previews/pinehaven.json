@@ -1,0 +1,39 @@
+{
+  "id": "t8",
+  "slug": "pinehaven",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:14:54.518Z",
+  "demo": "/demos/pinehaven/index.html",
+  "productVersion": "unversioned",
+  "revision": "f2824289307a",
+  "sha256": "f2824289307a559a0cedbcd57d60da913be3c6354ad70af7d51d3122bd2639af",
+  "demoHtmlSha256": "0e57f2c370000d3b420b65df08237e84670d8b163a3c997069a35ad7f4d1061a",
+  "bytes": 525105,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pinehaven-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pinehaven-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pinehaven-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pinehaven-return.jpg"
+  ],
+  "demoSha256": "95d11e1d3af2b1675e0dc421f7bc3c3afcd3bfd08ab86e5d3e11c656145f8d86",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

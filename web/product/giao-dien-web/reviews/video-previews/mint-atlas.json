@@ -1,0 +1,39 @@
+{
+  "id": "t16",
+  "slug": "mint-atlas",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:07:16.812Z",
+  "demo": "/demos/mint-atlas/index.html",
+  "productVersion": "1.0.0",
+  "revision": "511483e3271b",
+  "sha256": "511483e3271be52173301c0356041584a230297829c33f8327448ad227ebc8fb",
+  "demoHtmlSha256": "e925e21737f95b211079f1bc8bc02b6332c3a524b5447f12ddaca110288ebcdd",
+  "bytes": 587167,
+  "duration": 15,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 674
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mint-atlas-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mint-atlas-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mint-atlas-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mint-atlas-return.jpg"
+  ],
+  "demoSha256": "2d3b54888c466cceaead60c322ff20f5aef8b78c189ea236c67d448022e8489f",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

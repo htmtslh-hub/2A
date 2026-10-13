@@ -1,0 +1,39 @@
+{
+  "id": "t17",
+  "slug": "melt-muse",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:08:45.211Z",
+  "demo": "/demos/melt-muse/index.html",
+  "productVersion": "1.1.0",
+  "revision": "e7a2ceea5387",
+  "sha256": "e7a2ceea5387895647b4fddd3c92bd4bbccee552e063732808e7a3fb63462349",
+  "demoHtmlSha256": "9973f3f420a6f8920a20b177dc5c326b80a111ae159badd9800d467511dcd594",
+  "bytes": 268085,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1369
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\melt-muse-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\melt-muse-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\melt-muse-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\melt-muse-return.jpg"
+  ],
+  "demoSha256": "445950d95d1d85ff98f605a53bc8ac5702a63170f99d1d2ad4b173934b7c9b34",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

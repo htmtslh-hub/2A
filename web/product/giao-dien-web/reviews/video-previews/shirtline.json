@@ -1,0 +1,49 @@
+{
+  "id": "t15",
+  "slug": "shirtline",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:10:40.624Z",
+  "demo": "/demos/shirtline/index.html",
+  "productVersion": "1.2.0",
+  "revision": "65bf02de7967",
+  "sha256": "65bf02de7967d15195ce4a43d44b393c64e3f7cd63fd7222c67c5bf3a197a668",
+  "demoHtmlSha256": "d0cbe2765a3bab9c83d28c45dd176b3d818ba6c7ea78e01dc66e80d79e91b94d",
+  "bytes": 397407,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.5,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 4.853,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\shirtline-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\shirtline-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\shirtline-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\shirtline-return.jpg"
+  ],
+  "demoSha256": "b274597fc1fca93acd8381a06f5ce138625a1b7a6a0c353ccbed6b6f239a0d7c",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

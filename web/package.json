@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prebuild": "node tools/check-preview-recordings.mjs",
+    "previews:check": "node tools/check-preview-recordings.mjs",
+    "previews:record": "cd .. && node web/product/giao-dien-web/tools/quay-preview.mjs",
     "start": "next start",
     "lint": "eslint",
     "convert": "node tools/convert.mjs && node tools/extract-data.mjs && node tools/extract-slots.mjs",

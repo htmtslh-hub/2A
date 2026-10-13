@@ -1,6 +1,6 @@
 # Quy chuẩn sản phẩm Forge Zone
 
-Phiên bản: 1.2 — Ngày: 21/09/2026 — Hồ sơ đang áp dụng: `WEB-STATIC-1`.
+Phiên bản: 1.2.1 — Ngày: 13/10/2026 — Hồ sơ đang áp dụng: `WEB-STATIC-1`.
 
 ## 1. Cách dùng bộ tài liệu
 
@@ -149,7 +149,7 @@ Ghi môi trường kiểm tra, lỗi console/network và quan sát thực tế. 
 2. Dựng đủ sáu file. Tự kiểm tra mã và nội dung; sửa lỗi trước khi chụp ảnh.
 3. Mở trình duyệt kiểm tra theo bảng bên dưới. Công cụ tự động hỗ trợ nhưng không thay cho việc nhìn giao diện và thao tác.
 4. Cập nhật tài liệu từ mã cuối cùng, đóng ZIP, giải nén vào thư mục kiểm tra riêng và kiểm tra chính bản giải nén.
-5. Tạo preview từ bản đã nghiệm thu. Nếu sửa mã sau đó, chạy lại các kiểm tra bị ảnh hưởng, đóng lại ZIP và tạo lại preview.
+5. Tạo ảnh bìa và video quay hoạt động thật theo docs/video-preview-workflow.md cho mọi sản phẩm tích hợp cửa hàng, từ bản đã nghiệm thu. Nếu sửa mã sau đó, chạy lại các kiểm tra bị ảnh hưởng, đóng lại ZIP và tạo lại preview.
 6. Chỉ tích hợp cửa hàng nếu thuộc phạm vi brief; chưa publish/deploy nếu yêu cầu chỉ là tạo gói.
 
 | Mã kiểm tra | Bằng chứng phải ghi |
@@ -215,7 +215,7 @@ AI không ở trong repository phải tạo ZIP theo đúng cây trên bằng c�
 ```text
 Bạn đang tạo sản phẩm cho Forge Zone. Đọc toàn bộ instruction-product.txt,
 product-standards.md và bản customer-guide đúng ngôn ngữ đính kèm. Áp dụng
-hồ sơ WEB-STATIC-1 theo quy chuẩn phiên bản 1.2.
+hồ sơ WEB-STATIC-1 theo quy chuẩn phiên bản 1.2.1.
 
 BRIEF:
 [Dán brief đã điền theo mục 4 của product-standards.md]
@@ -270,6 +270,8 @@ Cần chủ sản phẩm quyết: ngưỡng 1 MiB / 300 KB / 8 ảnh; có cho ph
 Mỗi lần thay đổi chuẩn: tăng phiên bản, ghi thay đổi và phạm vi áp dụng. Sản phẩm cũ giữ phiên bản chuẩn đã nghiệm thu; không tự gắn nhãn đạt bản mới khi chưa kiểm tra lại. Phiên bản sản phẩm dùng `major.minor.patch`: major khi phá vỡ cấu trúc/cách tuỳ chỉnh, minor khi thêm nội dung hoặc khả năng tương thích ngược, patch khi sửa lỗi. Tăng phiên bản và thay hash mỗi khi thay gói đã bàn giao.
 
 ### Lịch sử
+
+- 1.2.1 — 13/10/2026: bắt buộc video preview hoạt động thật cho mọi sản phẩm cửa hàng, poster dự phòng, lazy hover/touch playback, manifest và quy trình quay/kiểm tra. Chỉ bổ sung phần trưng bày; giữ nguyên hồ sơ ZIP và hướng dẫn khách hàng.
 
 - 1.2 — 21/09/2026: bổ sung bản hướng dẫn khách hàng tiếng Anh và Trung giản thể; yêu cầu ba bản giữ cùng cấu trúc 10 bước, 12 prompt.
 - 1.1 — 21/09/2026: thêm hướng dẫn khách hàng 10 bước và 12 prompt; yêu cầu tích hợp trong CUSTOMISE, mở rộng Q10. Chưa tự cập nhật hoặc nghiệm thu lại các ZIP đã có.

@@ -1,0 +1,9 @@
+{
+  "origin": "http://localhost:4353",
+  "keyboard": "PASS",
+  "singleActive": "PASS",
+  "rapidHover": "PASS",
+  "agentPreview": "PASS",
+  "solennePoster": "contain",
+  "lingoglassPoster": "contain"
+}

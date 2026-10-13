@@ -1,0 +1,49 @@
+{
+  "id": "t5",
+  "slug": "aeris",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:13:57.161Z",
+  "demo": "/demos/aeris/index.html",
+  "productVersion": "1.4.0",
+  "revision": "9a2013c9c1c5",
+  "sha256": "9a2013c9c1c5592c75d716bc964e5f76a3055dfa90bb0b689a9fb9a24e1737d4",
+  "demoHtmlSha256": "d2677cc5aa4409dcb650dfa4d4f207a9cde426d8407d64033ad51f3152917db9",
+  "bytes": 544227,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.526,
+      "action": "click",
+      "selector": "<button class=\"slider-btn slider-btn--next\" type=\"button\" data-step=\"1\" aria-label=\"Next colour\">\n            <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path d="
+    },
+    {
+      "seconds": 4.847,
+      "action": "click",
+      "selector": "<button class=\"slider-btn slider-btn--next\" type=\"button\" data-step=\"1\" aria-label=\"Next colour\">\n            <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path d="
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aeris-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aeris-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aeris-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aeris-return.jpg"
+  ],
+  "demoSha256": "6d39e9b38fe7f1681f92d8dd1d521df4e826067f486d7849b0634284ffca1a26",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

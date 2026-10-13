@@ -1,0 +1,39 @@
+{
+  "id": "t1",
+  "slug": "japan-trails",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:12:38.111Z",
+  "demo": "/demos/japan-trails/index.html",
+  "productVersion": "unversioned",
+  "revision": "ac3a14dfdf6b",
+  "sha256": "ac3a14dfdf6badb8fb09214de7bb999f6d7543a9ceefb7a8fecf057f9e84acbe",
+  "demoHtmlSha256": "132204fce1eff05be54a07d963fc7b8a4af410766a75566553d025e7e047cb47",
+  "bytes": 517475,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\japan-trails-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\japan-trails-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\japan-trails-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\japan-trails-return.jpg"
+  ],
+  "demoSha256": "5f2ad47b77ab492317070a4b0e51304ad2a1d311446b3e9a1790d01a1b034b77",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

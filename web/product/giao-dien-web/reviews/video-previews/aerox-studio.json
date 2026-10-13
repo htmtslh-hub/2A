@@ -1,0 +1,49 @@
+{
+  "id": "t26",
+  "slug": "aerox-studio",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:06:37.874Z",
+  "demo": "/demos/aerox-studio/index.html",
+  "productVersion": "1.2.1",
+  "revision": "38aa4612b4c0",
+  "sha256": "38aa4612b4c04d6e42d03dcd2a780089eb450a9aef9b0caaef2c749653ee810b",
+  "demoHtmlSha256": "b89d132bc5656124864e56a92dd6caa722e57db39ace45103dd1005602745edc",
+  "bytes": 741694,
+  "duration": 15,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.549,
+      "action": "click",
+      "selector": "<button data-js=\"\" data-step=\"1\" class=\"hero-arrow hero-arrow--right finish-control\" type=\"button\" aria-label=\"Next concept finish\">〉</button>"
+    },
+    {
+      "seconds": 4.847,
+      "action": "click",
+      "selector": "<button data-js=\"\" data-step=\"1\" class=\"hero-arrow hero-arrow--right finish-control\" type=\"button\" aria-label=\"Next concept finish\">〉</button>"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aerox-studio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aerox-studio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aerox-studio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aerox-studio-return.jpg"
+  ],
+  "demoSha256": "cfd92a507f7331aa88e75ebe9f82434a5230209af190809989136441a9e09a46",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

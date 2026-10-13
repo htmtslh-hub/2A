@@ -1,0 +1,39 @@
+{
+  "id": "t22",
+  "slug": "kinetiq",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:10:02.633Z",
+  "demo": "/demos/kinetiq/index.html",
+  "productVersion": "unversioned",
+  "revision": "35fc5e6a7a02",
+  "sha256": "35fc5e6a7a02294899a28a00e68d54d3423796bd3cd385daeb8fd6c595194f82",
+  "demoHtmlSha256": "5f9c969413ceea1374edc899e09b9e3cc0ca4d1093cd58d890fed76e304371cf",
+  "bytes": 281915,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kinetiq-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kinetiq-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kinetiq-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kinetiq-return.jpg"
+  ],
+  "demoSha256": "cb878ad6e4408a96e4af60576f2ad201eeb04ca52ce2dfc332dcb93ca1bc423a",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

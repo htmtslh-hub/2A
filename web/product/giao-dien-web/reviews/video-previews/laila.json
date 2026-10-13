@@ -1,0 +1,39 @@
+{
+  "id": "t20",
+  "slug": "laila",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:09:23.542Z",
+  "demo": "/demos/laila/index.html",
+  "productVersion": "1.0.0",
+  "revision": "cb3dcd30777f",
+  "sha256": "cb3dcd30777f52f6dd7c829cdde0fcd01d9ccd526c1fc3e2b0d8b817715603cb",
+  "demoHtmlSha256": "c725dbcc636501901dddc03127a5dd8e14977ac6e6be9fc36c059477eeada92d",
+  "bytes": 422469,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1379
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\laila-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\laila-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\laila-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\laila-return.jpg"
+  ],
+  "demoSha256": "5efaf40c19a7feeff686e838230a430b1bfda06b08db160b1b6489d2f08474b5",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

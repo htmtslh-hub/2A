@@ -1,0 +1,39 @@
+{
+  "id": "t13",
+  "slug": "crimson-folio",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:06:57.242Z",
+  "demo": "/demos/crimson-folio/index.html",
+  "productVersion": "1.0.2",
+  "revision": "d8a7aa2d963f",
+  "sha256": "d8a7aa2d963f9a26e0ed38bc1e2367f4661528b4f0073b4f7a99ea9b0ac1623c",
+  "demoHtmlSha256": "0b2a0499a7b930ea11af6caa9df24e99a2369e9be9210f7a430796507ca4d746",
+  "bytes": 442794,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\crimson-folio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\crimson-folio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\crimson-folio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\crimson-folio-return.jpg"
+  ],
+  "demoSha256": "7a07fe3d959f340c2e1df3e6fec82eb5e901cb9a96cdcbbba4665e65031e341c",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

@@ -1,0 +1,126 @@
+{
+  "origin": "http://localhost:4352",
+  "date": "2026-10-13T02:19:30.769Z",
+  "results": [
+    {
+      "name": "Chromium",
+      "version": "153.0.8010.12",
+      "catalogCards": 26,
+      "testedCards": 26,
+      "sizes": [
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "client": 320
+        }
+      ],
+      "errors": [],
+      "requests": 83
+    },
+    {
+      "name": "Firefox",
+      "version": "155.0",
+      "catalogCards": 26,
+      "testedCards": 1,
+      "sizes": [
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "client": 320
+        }
+      ],
+      "errors": [],
+      "requests": 2
+    },
+    {
+      "name": "Edge",
+      "version": "155.0.4283.45",
+      "catalogCards": 26,
+      "testedCards": 1,
+      "sizes": [
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "client": 320
+        }
+      ],
+      "errors": [],
+      "requests": 5
+    },
+    {
+      "name": "CocCoc",
+      "version": "152.0.7977.124",
+      "catalogCards": 26,
+      "testedCards": 1,
+      "sizes": [
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "client": 320
+        }
+      ],
+      "errors": [],
+      "requests": 5
+    }
+  ]
+}

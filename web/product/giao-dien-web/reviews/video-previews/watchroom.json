@@ -1,0 +1,49 @@
+{
+  "id": "t23",
+  "slug": "watchroom",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:10:21.348Z",
+  "demo": "/demos/watchroom/index.html",
+  "productVersion": "1.3.0",
+  "revision": "e6b76743495d",
+  "sha256": "e6b76743495d3ed881733093da862df296f74aa152f681d46c79db97d9c5635e",
+  "demoHtmlSha256": "18ddb4b22cfee27c63e88f4c4f6d2db5068d2afa9263d661bf9651c5457538b3",
+  "bytes": 753324,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.927,
+      "action": "click",
+      "selector": "<button class=\"next-preview js-control\" type=\"button\" data-next-preview=\"\" aria-label=\"Show next watch\"><span>NEXT EXPRESSION</span><img src=\"assets/img/onyx-gmt.webp\" width=\"1024\""
+    },
+    {
+      "seconds": 4.986,
+      "action": "click",
+      "selector": "<button class=\"next-preview js-control\" type=\"button\" data-next-preview=\"\" aria-label=\"Show next watch\"><span>NEXT EXPRESSION</span><img src=\"assets/img/solaris-38.webp\" width=\"102"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\watchroom-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\watchroom-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\watchroom-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\watchroom-return.jpg"
+  ],
+  "demoSha256": "219b3f2e69367db0cde4d0ec25a1095c078f3a21c9f419bbe1d1db1194ee926e",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

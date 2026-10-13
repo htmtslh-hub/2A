@@ -1,0 +1,49 @@
+{
+  "id": "t21",
+  "slug": "music-app",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:09:04.391Z",
+  "demo": "/demos/music-app/index.html",
+  "productVersion": "1.0.0",
+  "revision": "b9e2e9c77e81",
+  "sha256": "b9e2e9c77e81fc1af76d240e2c5c6315ed0701e4ef4414a5839a19d457211211",
+  "demoHtmlSha256": "80649a8bda606979000df0a1f54fd3a3bed384883ad255744a14a0962092df0a",
+  "bytes": 347251,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.584,
+      "action": "click",
+      "selector": "#next"
+    },
+    {
+      "seconds": 4.876,
+      "action": "click",
+      "selector": "#next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 439
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\music-app-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\music-app-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\music-app-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\music-app-return.jpg"
+  ],
+  "demoSha256": "9c8ab10c139f6e441b631291c0af94c04e796d0d10658966907aba5ed34e8db4",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

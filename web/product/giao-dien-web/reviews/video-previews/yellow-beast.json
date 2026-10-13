@@ -1,0 +1,49 @@
+{
+  "id": "t24",
+  "slug": "yellow-beast",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:11:00.703Z",
+  "demo": "/demos/yellow-beast/index.html",
+  "productVersion": "1.0.0",
+  "revision": "0dae35f17232",
+  "sha256": "0dae35f1723277c72d9fb7c0812f6d81680584d1036e97750120a2c3d48b5aa3",
+  "demoHtmlSha256": "5a65ed61aeac111c0913b31f43428ab5e41d5b8823eb02aff19dff07a82ad24f",
+  "bytes": 554196,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.524,
+      "action": "click",
+      "selector": "#hero-arrow-next"
+    },
+    {
+      "seconds": 4.862,
+      "action": "click",
+      "selector": "#hero-arrow-next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\yellow-beast-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\yellow-beast-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\yellow-beast-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\yellow-beast-return.jpg"
+  ],
+  "demoSha256": "055e07ca616becbd95368f9d9c8c3e734c61754aa0274ed93afdf28a96217b93",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

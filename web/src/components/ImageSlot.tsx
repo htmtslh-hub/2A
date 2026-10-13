@@ -3,7 +3,7 @@
    chưa có ảnh thì hiện khung placeholder giống bản thiết kế. */
 'use client';
 import { PREVIEWS } from '@/lib/previews';
-import { REAL_TEMPLATE_VIDEOS } from '@/lib/real-templates';
+import { REAL_TEMPLATE_VIDEOS, REAL_TEMPLATES } from '@/lib/real-templates';
 import VideoPreview from './VideoPreview';
 
 export default function ImageSlot({
@@ -21,6 +21,8 @@ export default function ImageSlot({
   videoControls?: boolean;
 }) {
   const src = id ? PREVIEWS[id] : undefined;
+  const productId = id?.match(/^agentic-(?:tpl|home)-(t\d+)$/)?.[1];
+  const videoLabel = productId ? REAL_TEMPLATES[productId]?.copy.en.name ?? placeholder : placeholder;
 
   if (src && presentation === 'stage') {
     return (
@@ -29,7 +31,7 @@ export default function ImageSlot({
         <span className="product-stage__wash" aria-hidden="true" />
         <span className="product-stage__frame">
           {id && REAL_TEMPLATE_VIDEOS[id] ? (
-            <VideoPreview key={id} src={REAL_TEMPLATE_VIDEOS[id]} poster={src} fit={fit} label={placeholder} controls={videoControls} />
+            <VideoPreview key={id} src={REAL_TEMPLATE_VIDEOS[id]} poster={src} fit={fit} label={videoLabel} controls={videoControls} />
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={src} alt={placeholder} className="product-stage__image" />
@@ -48,7 +50,7 @@ export default function ImageSlot({
         style={{ position: 'absolute', inset: 0, display: 'block', overflow: 'hidden' }}
       >
         {id && REAL_TEMPLATE_VIDEOS[id] ? (
-          <VideoPreview key={id} src={REAL_TEMPLATE_VIDEOS[id]} poster={src} fit={fit} label={placeholder} />
+          <VideoPreview key={id} src={REAL_TEMPLATE_VIDEOS[id]} poster={src} fit={fit} label={videoLabel} />
         ) : (
           <>
             {/* eslint-disable-next-line @next/next/no-img-element */}

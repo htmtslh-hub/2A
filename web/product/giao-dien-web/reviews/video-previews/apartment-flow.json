@@ -1,0 +1,39 @@
+{
+  "id": "t18",
+  "slug": "apartment-flow",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:08:02.716Z",
+  "demo": "/demos/apartment-flow/index.html",
+  "productVersion": "1.0.0",
+  "revision": "ea90e09cc560",
+  "sha256": "ea90e09cc5609a3abaaeafaf91b8e0908f4b535cd3f7a0382dd9046d186a0b62",
+  "demoHtmlSha256": "92a3b84aa1a34972411f0311d352625a8efee37e626ac51e51d772d2e62c637d",
+  "bytes": 532509,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 2400
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\apartment-flow-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\apartment-flow-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\apartment-flow-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\apartment-flow-return.jpg"
+  ],
+  "demoSha256": "8f7f45326e8650161104527e51e5c2f37ae35865fe5aa0167b229533d24814ee",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

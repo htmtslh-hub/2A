@@ -1,0 +1,39 @@
+{
+  "id": "t11",
+  "slug": "diginest",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:11:39.202Z",
+  "demo": "/demos/diginest/index.html",
+  "productVersion": "1.3.0",
+  "revision": "426168903b8b",
+  "sha256": "426168903b8b03ebb0520d389e6274b61d655363d06c1ed1a70a7baacc3f0371",
+  "demoHtmlSha256": "e1e0d938c9f8d8ccb155da7d223b5252641ba0fcd16a9fffdebd2e8759983414",
+  "bytes": 468834,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\diginest-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\diginest-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\diginest-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\diginest-return.jpg"
+  ],
+  "demoSha256": "d873e78c2364c924688d9eecb7b69aabd7b1b4c330a439daf22cd042836b6e73",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

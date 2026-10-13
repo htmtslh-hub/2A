@@ -1,0 +1,49 @@
+{
+  "id": "t10",
+  "slug": "soniq",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:11:58.507Z",
+  "demo": "/demos/soniq/index.html",
+  "productVersion": "1.1.0",
+  "revision": "d552d41543a6",
+  "sha256": "d552d41543a6ab4c5cbfd671f314774fde70cc550e80731d4ef02d7325f0442e",
+  "demoHtmlSha256": "8fc38f7fea9634297e148b02ec050e84f94179a70c9c26607965e7e92a3764fa",
+  "bytes": 513680,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.491,
+      "action": "click",
+      "selector": "<button type=\"button\" data-step=\"1\" aria-label=\"Next colour\">→</button>"
+    },
+    {
+      "seconds": 4.853,
+      "action": "click",
+      "selector": "<button type=\"button\" data-step=\"1\" aria-label=\"Next colour\">→</button>"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\soniq-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\soniq-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\soniq-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\soniq-return.jpg"
+  ],
+  "demoSha256": "fc42308aaa5274a832a28ea88e6a3167bc4312487088c4e84c8d2b47b41fbb08",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

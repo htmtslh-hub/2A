@@ -3,8 +3,8 @@ HƯỚNG DẪN ĐÓNG GÓI MỘT MẪU GIAO DIỆN ĐỂ BÁN
 Chuẩn dùng cho cửa hàng Forge Zone — viết để đưa cho AI khác làm theo
 ================================================================================
 
-Cập nhật: 21/09/2026
-ĐỌC KÈM: product-standards.md — quy chuẩn v1.2 cho hồ sơ WEB-STATIC-1;
+Cập nhật: 13/10/2026
+ĐỌC KÈM: product-standards.md — quy chuẩn v1.2.1 cho hồ sơ WEB-STATIC-1;
          customer-guide.md / .en.md / .zh.md — hướng dẫn khách hàng
          10 bước và 12 prompt bằng Việt, Anh và Trung giản thể.
 File này hướng dẫn cách làm; quy chuẩn quy định điều kiện nghiệm thu, brief
@@ -351,7 +351,7 @@ PHẦN 7 — NHỮNG CÁI BẪY ĐÃ MẮC PHẢI, ĐỪNG LẶP LẠI
 PHẦN 8 — ĐƯA VÀO CỬA HÀNG
 --------------------------------------------------------------------------------
 
-Bốn bước, chạy từ thư mục gốc dự án:
+Năm bước, chạy từ thư mục gốc dự án:
 
 1. Đặt mã nguồn ở  web/product/giao-dien-web/<tên-mẫu>/source/
 
@@ -361,7 +361,7 @@ Bốn bước, chạy từ thư mục gốc dự án:
 3. Chụp ảnh:      node web/product/giao-dien-web/tools/anh-preview.mjs <tên-mẫu>
    → tạo web/public/previews/<tên-mẫu>.webp  (698x524)
 
-4. Khai vào bảng  web/src/lib/real-templates.ts, thêm một mục:
+4. Khai vào bảng  web/src/lib/real-templates.ts, thêm một mục trước khi quay:
 
      t4: {
        slug: 'ten-mau',
@@ -373,12 +373,17 @@ Bốn bước, chạy từ thư mục gốc dự án:
        },
      },
 
-   Mã ô (t1, t2, …) quyết định thứ tự hiển thị trong thư viện.
+   Mã ô (t1, t2, …) định danh sản phẩm; thư viện sắp tên A–Z.
    Tên file .zip và ảnh .webp tự suy ra từ `slug` — KHÔNG khai lại ở đâu nữa.
    Đúng một bảng cho cả ba thứ, cố ý như vậy để không bao giờ lệch nhau.
 
 Kiểm tra sau khi khai: mở trang thư viện, thẻ phải hiện đúng tên, đúng ảnh,
 đúng phân loại.
+
+5. Quay hoạt động: node web/product/giao-dien-web/tools/quay-preview.mjs <tên-mẫu>
+   → tạo web/public/previews/<tên-mẫu>.mp4 và manifest revision/hash.
+   Kiểm toàn catalog trước build: npm --prefix web run previews:check.
+   Đọc docs/video-preview-workflow.md và xem clip trước khi phát hành.
 
 
 --------------------------------------------------------------------------------
@@ -394,7 +399,7 @@ lệnh giao việc độc lập nằm ở mục 4 và 11 của product-standards
 
 Tôi bán giao diện web dựng sẵn. Hãy dựng cho tôi một mẫu mới theo đúng chuẩn
 trong instruction-product.txt, product-standards.md và bản customer-guide
-đính kèm, áp dụng hồ sơ WEB-STATIC-1 theo quy chuẩn v1.2. Nếu mâu thuẫn,
+đính kèm, áp dụng hồ sơ WEB-STATIC-1 theo quy chuẩn v1.2.1. Nếu mâu thuẫn,
 theo thứ tự ưu tiên trong quy chuẩn.
 
 Chủ đề: [ghi chủ đề, ví dụ: trang giới thiệu cho phòng khám nha khoa]
@@ -446,3 +451,12 @@ Thà giao ba mẫu chắc tay còn hơn mười mẫu hụt hơi. Khách mua tem
 người làm nghề — họ mở mã nguồn ra và biết ngay hàng làm ẩu.
 
 ================================================================================
+
+
+PHẦN 11 — VIDEO PREVIEW BẮT BUỘC CHO CỬA HÀNG (13/10/2026)
+Đọc docs/video-preview-workflow.md. Sau đồng bộ demo cuối, quay trang thật bằng:
+node web/product/giao-dien-web/tools/quay-preview.mjs <slug>
+Sau đó kiểm toàn catalog: node web/product/giao-dien-web/tools/quay-preview.mjs --check
+Giữ ảnh WebP làm poster; MP4 ngoài ZIP, phát theo hover/focus/nút touch.
+Kiểm clip từng sản phẩm, lazy load, dừng khi offscreen, nút ngoài link, vi/en/zh.
+Cập nhật source/demo phải quay lại clip; không tái dùng video lệch bản giao.

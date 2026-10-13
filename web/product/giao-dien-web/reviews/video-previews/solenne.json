@@ -1,0 +1,39 @@
+{
+  "id": "t4",
+  "slug": "solenne",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:13:37.474Z",
+  "demo": "/demos/solenne/index.html",
+  "productVersion": "2.1.0",
+  "revision": "1688a75eeb76",
+  "sha256": "1688a75eeb76c8111c813b927789933f517bc2bf084caa6fc6a535c65b9eeee2",
+  "demoHtmlSha256": "e2a78a98a37d81a5f95015fac08b62f819680c9836adf93e7b69a0ea7a896080",
+  "bytes": 323495,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\solenne-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\solenne-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\solenne-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\solenne-return.jpg"
+  ],
+  "demoSha256": "6d2a9edc7d21fcc82f06e12c4708c2b2ae26d82b4a4d7c4c849c51592f4fe981",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

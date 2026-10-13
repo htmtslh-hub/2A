@@ -1,0 +1,39 @@
+{
+  "id": "t25",
+  "slug": "galaxy-edge",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:06:18.768Z",
+  "demo": "/demos/galaxy-edge/index.html",
+  "productVersion": "1.2.1",
+  "revision": "fe96792f254f",
+  "sha256": "fe96792f254f16eca9f12fd126f8ebab5c006bd233d02475afb70f7e53e9f88d",
+  "demoHtmlSha256": "067b649a5a3b8f4bbb5cf32b9d96eb99f63417838e0a3137a8d4cc793660cabc",
+  "bytes": 370436,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\galaxy-edge-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\galaxy-edge-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\galaxy-edge-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\galaxy-edge-return.jpg"
+  ],
+  "demoSha256": "a95a9b708a6e8a4b56359f4534dde492676b7a6161b09bf468eaa1d351f8839b",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

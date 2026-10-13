@@ -1,0 +1,49 @@
+{
+  "id": "t7",
+  "slug": "astra-interior",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T02:14:35.569Z",
+  "demo": "/demos/astra-interior/index.html",
+  "productVersion": "2.1.0",
+  "revision": "5a2a70509ca6",
+  "sha256": "5a2a70509ca6fe219459fa948eb52b715e5e329885a36414f13c8960b082f8bf",
+  "demoHtmlSha256": "ff97cf1f8077034aeeea4c08f311ca2c3c889f83fcdf8eb0e57c513fa1fffd86",
+  "bytes": 714664,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.507,
+      "action": "click",
+      "selector": "<button class=\"arrow\" type=\"button\" data-step=\"1\" aria-label=\"Next favourite\">→</button>"
+    },
+    {
+      "seconds": 4.854,
+      "action": "click",
+      "selector": "<button class=\"arrow\" type=\"button\" data-step=\"1\" aria-label=\"Next favourite\">→</button>"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\astra-interior-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\astra-interior-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\astra-interior-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\astra-interior-return.jpg"
+  ],
+  "demoSha256": "92a5526c28b74be665e87ed33aa030cae3807dc951ee6bbd4355273ba2036f52",
+  "codec": "h264",
+  "pixelFormat": "yuv420p"
+}

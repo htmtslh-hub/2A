@@ -27,6 +27,8 @@ Thứ tự ưu tiên: yêu cầu rõ ràng mới nhất của chủ sản phẩm
 
 ## Kiểm tra và bàn giao
 
+Preview cửa hàng phải có video quay hoạt động thật cho mọi sản phẩm, theo yêu cầu chủ sản phẩm 13/10/2026. Đọc và làm theo `docs/video-preview-workflow.md` khi tạo/cập nhật sản phẩm hoặc tài nguyên preview. Video nằm ngoài ZIP, quay sau đồng bộ demo cuối cùng; chạy kiểm tra manifest trước phát hành. Giữ ảnh bìa và nút playback ngoài link thẻ.
+
 1. Kiểm tra giao diện và tương tác ở 1440×900, 820×1180, 375×812 và 320×740, gồm menu, bàn phím, trạng thái không JS, giảm chuyển động, font dự phòng và console/network theo `docs/product-standards.md`.
 2. Nếu tạo bản giao mới, chạy `node web/product/giao-dien-web/tools/dong-goi.mjs <slug>` từ gốc dự án. Script tự ghi ZIP bằng dấu `/`, kiểm tra sáu file, từ chối file ẩn/tạm, từ chối ZIP ≥ 20.480 byte hoặc file thừa, đọc lại so khớp byte với `source/` và in SHA-256. Chỉ thêm `--ngoai-le` khi ngoại lệ đã được chủ sản phẩm chấp nhận và ghi trong QA.md.
 3. Chạy `node web/product/giao-dien-web/tools/check-template.mjs <slug> --version <x.y.z> [--ngoai-le]`. Script tự giải nén ZIP, kiểm tra tài liệu (10 bước, 12 prompt, số đếm edit map), rồi kiểm tra Chromium + Firefox: 4 khổ màn hình, vùng chạm, menu, bàn phím, tương phản (nền gradient/ảnh đo bằng điểm ảnh), axe, zoom 200%, giảm chuyển động, `file://`, không JS, offline. Bằng chứng ghi vào `<slug>/reviews/<version>/checks.json` và `screenshots/`. Kết quả tự động **không** thay việc nhìn ảnh chụp, kiểm tra chữ trên ảnh (`overImageNeedsManualCheck`), Safari/Edge và luồng tải sau thanh toán (Q12).

@@ -1,0 +1,52 @@
+{
+  "product": "Orbit Academy",
+  "version": "1.0.0",
+  "request": "Similar educational interface, generated imagery, transitions, scroll and store delivery",
+  "sourceManifestHash": "ce3fb832a0c0346f661e34f91acb303f824d1faa06340c278011316af37212f2",
+  "reference": {
+    "file": "reference.png",
+    "width": 902,
+    "height": 644,
+    "crop": "none"
+  },
+  "fidelity": {
+    "method": "reference-led visual review",
+    "percentageClaim": false,
+    "differences": "Original educational brand/copy, source-linked lessons, no fictitious learner count/account; new generated art."
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": "final-motion.json"
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": "final-motion.json"
+  },
+  "education": {
+    "status": "PASS",
+    "evidence": [
+      "SCIENCE-SOURCES.md",
+      "final-motion.json"
+    ]
+  },
+  "technical": {
+    "status": "PASS AFTER DOCUMENTED MANUAL RESOLUTIONS",
+    "evidence": [
+      "delivered/checks.json",
+      "QA.md"
+    ]
+  },
+  "package": {
+    "bytes": 911449,
+    "sha256": "3cdef6f5144a0446bd5b8f54a8bd28de3dc352dcde35cae57d5210fe25e5a14b"
+  },
+  "store": {
+    "local": "PASS",
+    "online": "PENDING"
+  },
+  "limitations": [
+    "No Safari/physical device testing",
+    "Actual paid purchase/download not tested",
+    "No LMS or certificates"
+  ]
+}

@@ -45,6 +45,19 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t29: {
+    slug: 'orbit-academy', cat: 'education', version: '1.0.0', video: true,
+    specs: {
+      vi: [['Định dạng', 'HTML / CSS / JavaScript'], ['Gói tải', '10 file · 4 ảnh WebP tự tạo'], ['Học tập', '3 chủ đề · quiz · tiến độ trong phiên'], ['Chuyển động', 'Carousel 3 cảnh · scroll parallax'], ['Phạm vi', 'Không LMS, tài khoản hoặc chứng chỉ']],
+      en: [['Format', 'HTML / CSS / JavaScript'], ['Package', '10 files · 4 original WebP images'], ['Learning', '3 topics · quizzes · session progress'], ['Motion', '3-world carousel · scroll parallax'], ['Scope', 'No LMS, accounts or certificates']],
+      zh: [['格式', 'HTML / CSS / JavaScript'], ['下载包', '10 个文件 · 4 张原创 WebP'], ['学习', '3 个主题 · 测验 · 会话进度'], ['动态', '3 场景轮播 · 滚动视差'], ['范围', '不含 LMS、账户或证书']],
+    },
+    copy: {
+      vi: { name: 'Orbit Academy', desc: 'Giao diện giáo dục thiên văn với cảnh phi hành gia và hành tinh tự tạo. Ba lộ trình Trái Đất, hành tinh và thiên thạch, tìm kiếm chủ đề cục bộ, bài học dạng dialog, câu hỏi ôn tập có phản hồi và tiến độ trong phiên. Carousel hai chiều, vuốt và cảnh cuộn; kiến thức kèm nguồn NASA, không liên kết hay được NASA bảo trợ. Không kèm LMS hoặc chứng chỉ.', tags: ['Giáo dục thiên văn', 'Quiz', 'Scroll animation'] },
+      en: { name: 'Orbit Academy', desc: 'An astronomy education interface with original astronaut and planetary concept art. Three Earth, planet and meteor learning paths, local topic search, lesson dialogs, feedback quizzes and session progress. Directional carousel, swipe and scroll storytelling; NASA reading sources, no affiliation or endorsement. No LMS or certificates.', tags: ['Astronomy education', 'Quizzes', 'Scroll animation'] },
+      zh: { name: 'Orbit Academy', desc: '天文教育界面，含原创宇航员与行星概念图。提供地球、行星、流星三个学习路径、本地主题搜索、课程弹窗、反馈测验和会话进度。支持双向轮播、滑动和滚动叙事，附 NASA 科学阅读来源，不代表合作或背书。不含 LMS 或证书。', tags: ['天文教育', '测验', '滚动动画'] },
+    },
+  },
   t28: {
     slug: 'verdant', cat: 'commerce', version: '1.0.0', video: true,
     specs: {

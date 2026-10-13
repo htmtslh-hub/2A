@@ -1,0 +1,52 @@
+[
+  {
+    "file": "assets/css/style.css",
+    "bytes": 19813,
+    "sha256": "42ad32f29278c1f4c4a388e5622a694e7617b8dbae77d18b4591abab6125d595"
+  },
+  {
+    "file": "assets/img/earth-world.webp",
+    "bytes": 274162,
+    "sha256": "4c5ce99618a2180f60609d188d622a98fddbd723e1c49db8ace477ea053d1be4"
+  },
+  {
+    "file": "assets/img/meteor-world.webp",
+    "bytes": 207218,
+    "sha256": "b5d4ac7e153ca7ee33981a2c2541bc4fda965b14de71b3d0e889bd7e27d3631c"
+  },
+  {
+    "file": "assets/img/objects.webp",
+    "bytes": 257558,
+    "sha256": "90f344c2ab43a53d7f79eb8ffd70274a4cac3836f77d6e43993499fb8363aa3b"
+  },
+  {
+    "file": "assets/img/planet-world.webp",
+    "bytes": 150460,
+    "sha256": "57afea22e659b64c86ce63551f40e4c287980f417f501a1ff40ea6b7f38eb6a3"
+  },
+  {
+    "file": "assets/js/main.js",
+    "bytes": 12298,
+    "sha256": "04062803ecd09b7df9640abbb7caf889c1369c5db01bf3621c857cc1a835bcd9"
+  },
+  {
+    "file": "CUSTOMISE.md",
+    "bytes": 21969,
+    "sha256": "7e4ecbee638cf70895f57fbd7ad63599785c42fe5e8e32867e19044f42ef46a6"
+  },
+  {
+    "file": "index.html",
+    "bytes": 12301,
+    "sha256": "c7f4ff04d28fbe76244aac725c8e92442a9739c20dc67cf741f9742fe53aa84e"
+  },
+  {
+    "file": "LICENCE.txt",
+    "bytes": 1894,
+    "sha256": "1d4fc9063bc9a2756c207522f33bd428aaf6fa6d9fba084b5e292b85cfc3804c"
+  },
+  {
+    "file": "README.md",
+    "bytes": 2090,
+    "sha256": "1a835a539e6ab0e7dcd3ab8c4a5eae18bf3e5c36dc85e24d92004a35b1f97eee"
+  }
+]

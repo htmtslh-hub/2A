@@ -1,0 +1,1438 @@
+{
+  "slug": "orbit-academy",
+  "version": "1.0.0",
+  "date": "2026-10-13T07:23:53.498Z",
+  "os": "win32",
+  "zipBytes": 911453,
+  "sha256": "ffb4155b47342e4bd7049a59ef2f13050b3b4d109a0e612d8186a3e0dd87d3c9",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#main"
+          },
+          {
+            "label": "Orbit Academy home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#main"
+          },
+          {
+            "label": "Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#main"
+          },
+          {
+            "label": "Learning paths",
+            "href": "#lessons",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#lessons"
+          },
+          {
+            "label": "Our approach",
+            "href": "#journey",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#journey"
+          },
+          {
+            "label": "Resources",
+            "href": "#resources",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#resources"
+          },
+          {
+            "label": "◉ Learning desk ↗",
+            "href": "#lessons",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#lessons"
+          },
+          {
+            "label": "Start your learning journey",
+            "href": "#lessons",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#lessons"
+          },
+          {
+            "label": "Start learning ↗",
+            "href": "#lessons",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#lessons"
+          },
+          {
+            "label": "Earth↗",
+            "href": "#earth-lesson",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#earth-lesson"
+          },
+          {
+            "label": "Planets↗",
+            "href": "#planet-lesson",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#planet-lesson"
+          },
+          {
+            "label": "Meteors↗",
+            "href": "#meteor-lesson",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#meteor-lesson"
+          },
+          {
+            "label": "Explore Earth ↗",
+            "href": "#earth-lesson",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#earth-lesson"
+          },
+          {
+            "label": "Explore planets ↗",
+            "href": "#planet-lesson",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#planet-lesson"
+          },
+          {
+            "label": "NASA source ↗",
+            "href": "https://science.nasa.gov/earth/facts/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://science.nasa.gov/earth/facts/"
+          },
+          {
+            "label": "NASA source ↗",
+            "href": "https://science.nasa.gov/saturn/facts/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://science.nasa.gov/saturn/facts/"
+          },
+          {
+            "label": "NASA source ↗",
+            "href": "https://science.nasa.gov/solar-system/meteors-meteorites/facts/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://science.nasa.gov/solar-system/meteors-meteorites/facts/"
+          },
+          {
+            "label": "Find your next resource ↗",
+            "href": "#resources",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#resources"
+          },
+          {
+            "label": "01 / Read & exploreNASA learning resourcesContinue your exploration through NASA’s science learning pages.↗",
+            "href": "https://science.nasa.gov/learn/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://science.nasa.gov/learn/"
+          },
+          {
+            "label": "02 / Make it your classroomTalk to the learning teamA demonstration contact link for educator questions. Replace the email before publishing.↗",
+            "href": "mailto:hello@orbit-academy.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@orbit-academy.example"
+          },
+          {
+            "label": "Orbit Academy",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#main"
+          },
+          {
+            "label": "Read the original science source ↗",
+            "href": "https://science.nasa.gov/earth/facts/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://science.nasa.gov/earth/facts/"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 1440,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": false,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": false,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "menu-toggle js-only",
+            "text": "Menu",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.89,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "ORBITACADEMY",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              38,
+              58,
+              64
+            ],
+            "ratio": 11.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "01",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              39,
+              126,
+              133
+            ],
+            "ratio": 4.76,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "02",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              23,
+              50,
+              55
+            ],
+            "ratio": 13.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Planetary worlds",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              30,
+              41
+            ],
+            "ratio": 17.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01 / Earth, our shared home",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              6,
+              27,
+              34
+            ],
+            "ratio": 17.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Imaginative concept art",
+            "colour": "rgb(195, 220, 217)",
+            "background": [
+              6,
+              27,
+              34
+            ],
+            "ratio": 12.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              10,
+              40,
+              48
+            ],
+            "ratio": 15.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Start learning",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              39,
+              126,
+              133
+            ],
+            "ratio": 4.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Orbit Academy · Space education",
+            "colour": "rgb(29, 98, 104)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Earth",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              206,
+              236,
+              232
+            ],
+            "ratio": 13.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Our place in space",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              34,
+              50,
+              57
+            ],
+            "ratio": 13.26,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Start with the worldwe call home.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              39,
+              51,
+              53
+            ],
+            "ratio": 13.03,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore Earth ↗",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A different perspective",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              34,
+              43,
+              41
+            ],
+            "ratio": 14.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "What makes a planeta world of its own?",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              52,
+              57,
+              48
+            ],
+            "ratio": 11.84,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Three introductory learning paths. Read ",
+            "colour": "rgb(78, 93, 96)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 6.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01 · Earth",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              29,
+              38
+            ],
+            "ratio": 17.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button js-only",
+            "text": "Open lesson ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              35,
+              77,
+              84
+            ],
+            "ratio": 9.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0 of 3 knowledge checks completed",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              230,
+              243,
+              242
+            ],
+            "ratio": 14.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Wonder is only the beginning",
+            "colour": "rgb(174, 226, 218)",
+            "background": [
+              8,
+              29,
+              39
+            ],
+            "ratio": 12.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Look up.Ask why.Keep exploring.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              6,
+              35,
+              46
+            ],
+            "ratio": 16.31,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Keep exploring.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              35,
+              41
+            ],
+            "ratio": 16.2,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Start with a question. Look for evidence",
+            "colour": "rgb(224, 238, 238)",
+            "background": [
+              10,
+              35,
+              46
+            ],
+            "ratio": 13.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01 / Read & explore",
+            "colour": "rgb(29, 98, 104)",
+            "background": [
+              230,
+              243,
+              242
+            ],
+            "ratio": 6.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "NASA learning resources",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              230,
+              243,
+              242
+            ],
+            "ratio": 14.86,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Continue your exploration through NASA’s",
+            "colour": "rgb(78, 93, 96)",
+            "background": [
+              230,
+              243,
+              242
+            ],
+            "ratio": 6.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "01",
+          "colour": "rgb(255, 255, 255)",
+          "width": "3px",
+          "ratio": 18
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#main"
+          },
+          {
+            "label": "Orbit Academy home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#main"
+          },
+          {
+            "label": "Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#main"
+          },
+          {
+            "label": "Learning paths",
+            "href": "#lessons",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#lessons"
+          },
+          {
+            "label": "Our approach",
+            "href": "#journey",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#journey"
+          },
+          {
+            "label": "Resources",
+            "href": "#resources",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#resources"
+          },
+          {
+            "label": "◉ Learning desk ↗",
+            "href": "#lessons",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#lessons"
+          },
+          {
+            "label": "Start your learning journey",
+            "href": "#lessons",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#lessons"
+          },
+          {
+            "label": "Start learning ↗",
+            "href": "#lessons",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#lessons"
+          },
+          {
+            "label": "Earth↗",
+            "href": "#earth-lesson",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#earth-lesson"
+          },
+          {
+            "label": "Planets↗",
+            "href": "#planet-lesson",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#planet-lesson"
+          },
+          {
+            "label": "Meteors↗",
+            "href": "#meteor-lesson",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#meteor-lesson"
+          },
+          {
+            "label": "Explore Earth ↗",
+            "href": "#earth-lesson",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#earth-lesson"
+          },
+          {
+            "label": "Explore planets ↗",
+            "href": "#planet-lesson",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#planet-lesson"
+          },
+          {
+            "label": "NASA source ↗",
+            "href": "https://science.nasa.gov/earth/facts/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://science.nasa.gov/earth/facts/"
+          },
+          {
+            "label": "NASA source ↗",
+            "href": "https://science.nasa.gov/saturn/facts/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://science.nasa.gov/saturn/facts/"
+          },
+          {
+            "label": "NASA source ↗",
+            "href": "https://science.nasa.gov/solar-system/meteors-meteorites/facts/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://science.nasa.gov/solar-system/meteors-meteorites/facts/"
+          },
+          {
+            "label": "Find your next resource ↗",
+            "href": "#resources",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#resources"
+          },
+          {
+            "label": "01 / Read & exploreNASA learning resourcesContinue your exploration through NASA’s science learning pages.↗",
+            "href": "https://science.nasa.gov/learn/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://science.nasa.gov/learn/"
+          },
+          {
+            "label": "02 / Make it your classroomTalk to the learning teamA demonstration contact link for educator questions. Replace the email before publishing.↗",
+            "href": "mailto:hello@orbit-academy.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@orbit-academy.example"
+          },
+          {
+            "label": "Orbit Academy",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/orbit-academy/index.html#main"
+          },
+          {
+            "label": "Read the original science source ↗",
+            "href": "https://science.nasa.gov/earth/facts/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://science.nasa.gov/earth/facts/"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 1440,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": false,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": false,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "menu-toggle js-only",
+            "text": "Menu",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.89,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "ORBITACADEMY",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              38,
+              58,
+              64
+            ],
+            "ratio": 11.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "01",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              39,
+              126,
+              133
+            ],
+            "ratio": 4.76,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "02",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              23,
+              50,
+              55
+            ],
+            "ratio": 13.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Planetary worlds",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              30,
+              41
+            ],
+            "ratio": 17.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01 / Earth, our shared home",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              6,
+              27,
+              34
+            ],
+            "ratio": 17.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Imaginative concept art",
+            "colour": "rgb(195, 220, 217)",
+            "background": [
+              6,
+              27,
+              34
+            ],
+            "ratio": 12.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              10,
+              40,
+              48
+            ],
+            "ratio": 15.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Start learning",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              39,
+              126,
+              133
+            ],
+            "ratio": 4.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Orbit Academy · Space education",
+            "colour": "rgb(29, 98, 104)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Earth",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              206,
+              236,
+              232
+            ],
+            "ratio": 13.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Our place in space",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              34,
+              49,
+              57
+            ],
+            "ratio": 13.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Start with the worldwe call home.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              39,
+              52,
+              53
+            ],
+            "ratio": 12.89,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "Explore Earth ↗",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A different perspective",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              35,
+              43,
+              41
+            ],
+            "ratio": 14.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "What makes a planeta world of its own?",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              48,
+              58,
+              55
+            ],
+            "ratio": 11.76,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Three introductory learning paths. Read ",
+            "colour": "rgb(78, 93, 96)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 6.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01 · Earth",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              29,
+              38
+            ],
+            "ratio": 17.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button js-only",
+            "text": "Open lesson ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              35,
+              77,
+              84
+            ],
+            "ratio": 9.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0 of 3 knowledge checks completed",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              230,
+              243,
+              242
+            ],
+            "ratio": 14.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "Wonder is only the beginning",
+            "colour": "rgb(174, 226, 218)",
+            "background": [
+              9,
+              30,
+              40
+            ],
+            "ratio": 11.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Look up.Ask why.Keep exploring.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              33,
+              41
+            ],
+            "ratio": 16.49,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "Keep exploring.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              13,
+              36,
+              45
+            ],
+            "ratio": 16.06,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Start with a question. Look for evidence",
+            "colour": "rgb(224, 238, 238)",
+            "background": [
+              12,
+              35,
+              46
+            ],
+            "ratio": 13.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01 / Read & explore",
+            "colour": "rgb(29, 98, 104)",
+            "background": [
+              230,
+              243,
+              242
+            ],
+            "ratio": 6.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "NASA learning resources",
+            "colour": "rgb(23, 30, 32)",
+            "background": [
+              230,
+              243,
+              242
+            ],
+            "ratio": 14.86,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Continue your exploration through NASA’s",
+            "colour": "rgb(78, 93, 96)",
+            "background": [
+              230,
+              243,
+              242
+            ],
+            "ratio": 6.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "01",
+          "colour": "rgb(255, 255, 255)",
+          "width": "3px",
+          "ratio": 18
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "orbit-academy/assets/css/style.css",
+    "orbit-academy/assets/img/earth-world.webp",
+    "orbit-academy/assets/img/meteor-world.webp",
+    "orbit-academy/assets/img/objects.webp",
+    "orbit-academy/assets/img/planet-world.webp",
+    "orbit-academy/assets/js/main.js",
+    "orbit-academy/CUSTOMISE.md",
+    "orbit-academy/index.html",
+    "orbit-academy/LICENCE.txt",
+    "orbit-academy/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/earth-world.webp",
+    "assets/img/meteor-world.webp",
+    "assets/img/objects.webp",
+    "assets/img/planet-world.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q03/chromium: link hỏng/không tên [\"NASA source ↗ -> https://science.nasa.gov/earth/facts/\",\"NASA source ↗ -> https://science.nasa.gov/saturn/facts/\",\"NASA source ↗ -> https://science.nasa.gov/solar-system/meteors-meteorites/facts/\",\"01 / Read & exploreNASA learning resourcesContinue your exploration through NASA’s science learning pages.↗ -> https://science.nasa.gov/learn/\",\"Read the original science source ↗ -> https://science.nasa.gov/earth/facts/\"]",
+    "Q03/chromium: menu resetOnDesktop",
+    "Q07/chromium: giảm chuyển động {\"allVisible\":false,\"runningAnimations\":0}",
+    "Q03/firefox: link hỏng/không tên [\"NASA source ↗ -> https://science.nasa.gov/earth/facts/\",\"NASA source ↗ -> https://science.nasa.gov/saturn/facts/\",\"NASA source ↗ -> https://science.nasa.gov/solar-system/meteors-meteorites/facts/\",\"01 / Read & exploreNASA learning resourcesContinue your exploration through NASA’s science learning pages.↗ -> https://science.nasa.gov/learn/\",\"Read the original science source ↗ -> https://science.nasa.gov/earth/facts/\"]",
+    "Q03/firefox: menu resetOnDesktop",
+    "Q07/firefox: giảm chuyển động {\"allVisible\":false,\"runningAnimations\":0}"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "t29",
+  "slug": "orbit-academy",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T07:28:34.909Z",
+  "demo": "/demos/orbit-academy/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "754f778973df",
+  "sha256": "754f778973df0e3a0c966b8cef7de691def6470aebd3cdfa98a6ad8439000e27",
+  "demoHtmlSha256": "c7f4ff04d28fbe76244aac725c8e92442a9739c20dc67cf741f9742fe53aa84e",
+  "demoSha256": "529123ad006081e36ab1f676e30b958e37960908654c87bbb8898c2250078fb9",
+  "bytes": 1016089,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.53,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 4.869,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbit-academy-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbit-academy-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbit-academy-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbit-academy-return.jpg"
+  ]
+}

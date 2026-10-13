@@ -1,0 +1,397 @@
+{
+  "url": "http://127.0.0.1:50136",
+  "browsers": {
+    "Chromium": {
+      "version": "153.0.8010.12",
+      "states": [
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06065, 0, 0, 1.06065, -77.9832, 0)",
+            "opacity": "0.13352"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.05902, 0, 0, 1.05902, -75.8865, 0)",
+            "opacity": "0.156817"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06139, 0, 0, 1.06139, -78.9323, 0)",
+            "opacity": "0.122974"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05954, 0, 0, 1.05954, 76.5542, 0)",
+            "opacity": "0.149398"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.06107, 0, 0, 1.06107, 78.5151, 0)",
+            "opacity": "0.127611"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05953, 0, 0, 1.05953, 76.5354, 0)",
+            "opacity": "0.149606"
+          }
+        }
+      ],
+      "scroll": [
+        {
+          "fraction": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "fraction": 0.5,
+          "transform": "matrix(1.05992, 0, 0, 1.05992, 0, -17.4781)"
+        },
+        {
+          "fraction": 1,
+          "transform": "matrix(1.11993, 0, 0, 1.11993, 0, -34.9781)"
+        },
+        {
+          "fraction": 0.2,
+          "transform": "matrix(1.02392, 0, 0, 1.02392, 0, -6.97813)"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320
+        }
+      ],
+      "errors": [],
+      "quiz": true,
+      "search": true,
+      "swipe": true,
+      "keyboard": true,
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "Firefox": {
+      "version": "155.0",
+      "states": [
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06849, 0, 0, 1.06849, -88.0545, 0)",
+            "opacity": "0.0216169"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.05799, 0, 0, 1.05799, -74.5638, 0)",
+            "opacity": "0.171514"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06032, 0, 0, 1.06032, -77.5604, 0)",
+            "opacity": "0.138218"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05525, 0, 0, 1.05525, 71.0313, 0)",
+            "opacity": "0.210763"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05841, 0, 0, 1.05841, 75.1007, 0)",
+            "opacity": "0.165547"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05944, 0, 0, 1.05944, 76.4262, 0)",
+            "opacity": "0.15082"
+          }
+        }
+      ],
+      "scroll": [
+        {
+          "fraction": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "fraction": 0.5,
+          "transform": "matrix(1.05989, 0, 0, 1.05989, 0, -17.4676)"
+        },
+        {
+          "fraction": 1,
+          "transform": "matrix(1.11989, 0, 0, 1.11989, 0, -34.9676)"
+        },
+        {
+          "fraction": 0.2,
+          "transform": "matrix(1.02389, 0, 0, 1.02389, 0, -6.96759)"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320
+        }
+      ],
+      "errors": [],
+      "quiz": true,
+      "search": true,
+      "swipe": true,
+      "keyboard": true,
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "Edge": {
+      "version": "155.0.4283.45",
+      "states": [
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06073, 0, 0, 1.06073, -78.0874, 0)",
+            "opacity": "0.132362"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.05653, 0, 0, 1.05653, -72.6855, 0)",
+            "opacity": "0.192384"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.05941, 0, 0, 1.05941, -76.3846, 0)",
+            "opacity": "0.151283"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.06137, 0, 0, 1.06137, 78.8993, 0)",
+            "opacity": "0.123341"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05972, 0, 0, 1.05972, 76.7782, 0)",
+            "opacity": "0.146909"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05563, 0, 0, 1.05563, 71.5275, 0)",
+            "opacity": "0.20525"
+          }
+        }
+      ],
+      "scroll": [
+        {
+          "fraction": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "fraction": 0.5,
+          "transform": "matrix(1.05992, 0, 0, 1.05992, 0, -17.4781)"
+        },
+        {
+          "fraction": 1,
+          "transform": "matrix(1.11993, 0, 0, 1.11993, 0, -34.9781)"
+        },
+        {
+          "fraction": 0.2,
+          "transform": "matrix(1.02392, 0, 0, 1.02392, 0, -6.97813)"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320
+        }
+      ],
+      "errors": [],
+      "quiz": true,
+      "search": true,
+      "swipe": true,
+      "keyboard": true,
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "CocCoc": {
+      "version": "152.0.7977.124",
+      "states": [
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06092, 0, 0, 1.06092, -78.3282, 0)",
+            "opacity": "0.129687"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06151, 0, 0, 1.06151, -79.0801, 0)",
+            "opacity": "0.121333"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06052, 0, 0, 1.06052, -77.8082, 0)",
+            "opacity": "0.135464"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.06002, 0, 0, 1.06002, 77.1642, 0)",
+            "opacity": "0.14262"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05969, 0, 0, 1.05969, 76.741, 0)",
+            "opacity": "0.147322"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05531, 0, 0, 1.05531, 71.1068, 0)",
+            "opacity": "0.209925"
+          }
+        }
+      ],
+      "scroll": [
+        {
+          "fraction": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "fraction": 0.5,
+          "transform": "matrix(1.05992, 0, 0, 1.05992, 0, -17.4781)"
+        },
+        {
+          "fraction": 1,
+          "transform": "matrix(1.11993, 0, 0, 1.11993, 0, -34.9781)"
+        },
+        {
+          "fraction": 0.2,
+          "transform": "matrix(1.02392, 0, 0, 1.02392, 0, -6.97813)"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320
+        }
+      ],
+      "errors": [],
+      "quiz": true,
+      "search": true,
+      "swipe": true,
+      "keyboard": true,
+      "sessionPause": true,
+      "missingImageFallback": true
+    }
+  }
+}

@@ -390,5 +390,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "orbit-academy": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "754f778973df",
+    "sha256": "754f778973df0e3a0c966b8cef7de691def6470aebd3cdfa98a6ad8439000e27",
+    "demoHtmlSha256": "c7f4ff04d28fbe76244aac725c8e92442a9739c20dc67cf741f9742fe53aa84e",
+    "demoSha256": "529123ad006081e36ab1f676e30b958e37960908654c87bbb8898c2250078fb9",
+    "bytes": 1016089,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

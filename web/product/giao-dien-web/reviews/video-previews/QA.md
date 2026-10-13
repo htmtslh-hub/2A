@@ -26,4 +26,14 @@ Typecheck, build và hai lệnh kiểm manifest PASS. Build tự chạy `prebuil
 
 Không thử Safari, thiết bị cảm ứng vật lý hoặc giao dịch/thanh toán/download tài khoản đã mua; các luồng này không sửa trong yêu cầu. Chỉ kiểm playback/tương tác preview, không nghiệm thu lại toàn bộ 27 sản phẩm hoặc tự gắn chứng nhận thị giác >95%. Screenshot/raw recording là bằng chứng phát triển cục bộ, không đưa lên hosting.
 
-Trạng thái: kiểm local PASS; cập nhật kết quả online sau deploy.
+## Phát hành và kiểm online
+
+- Commit runtime: `dd2ba24`, đã push origin/master.
+- Vercel production READY: `dpl_8awEErDGa81dsxe2EZfB7NXmChiF`, deployment `https://web-i8sunny24-htmtslh-hubs-projects.vercel.app`, alias `https://forgezone.store`.
+- Hosting chạy prebuild gate thành công: đủ 27 clip, demo/video hashes khớp, typecheck/build PASS.
+- `online-assets.json`: GET 200 cho đủ 27 MP4, toàn bộ SHA-256 và byte khớp bản phát hành, đúng query revision.
+- `online-store-checks.json`: Chromium, Firefox, Edge thật và Cốc Cốc thật cùng phiên bản ghi phía trên; mỗi browser thử một thẻ và trang chi tiết Dualplay ở cả bốn khổ, OS reduced-motion, không tải MP4 preview trước tương tác, phát/dừng/currentTime tiến, offscreen pause, không điều hướng do nút playback; pageerror rỗng và không overflow.
+- `online-agent.json`: LingoGlass tại t14 phát thật, URL revision `11e4fce06b32`, duration 14,966667 giây.
+- Thư viện: `https://forgezone.store/?tab=library`.
+
+Trạng thái: local và online PASS cho phạm vi preview. Hồ sơ kiểm online bổ sung sau deploy không đổi runtime, không cần deploy lại.

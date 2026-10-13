@@ -23,7 +23,7 @@ for(const [name,engine,options] of [
  if(media.length)throw Error(name+': preloads untouched library videos');
  const cards=page.locator('.product-card-wrap');
  const count=await cards.count();
- const targets=name==='Chromium'?Array.from({length:count},(_,i)=>i):[0];
+ const targets=name==='Chromium'&&!process.env.PREVIEW_QA_SAMPLE?Array.from({length:count},(_,i)=>i):[0];
  for(const index of targets){
   const card=cards.nth(index);await card.scrollIntoViewIfNeeded();await page.mouse.move(0,0);
   const video=card.locator('video'); if(!await video.count()) throw Error(name+': missing video card '+index);
@@ -54,4 +54,4 @@ for(const [name,engine,options] of [
  results.push({name,version:browser.version(),catalogCards:count,testedCards:targets.length,sizes,errors,requests:media.length});
  await browser.close();console.log(name+' PASS '+targets.length+' cards / four widths / reduced motion');
 }
-await writeFile(out+'/store-checks.json',JSON.stringify({origin,date:new Date().toISOString(),results},null,2));
+await writeFile(out+'/'+(process.env.PREVIEW_QA_OUTPUT||'store-checks.json'),JSON.stringify({origin,date:new Date().toISOString(),results},null,2));

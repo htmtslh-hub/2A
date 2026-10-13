@@ -42,11 +42,19 @@
   },
   "store": {
     "local": "PASS",
-    "online": "PENDING"
+    "online": "PASS",
+    "evidence": "online-store.json"
   },
   "limitations": [
     "No Safari/physical device testing",
     "Actual paid purchase/download not tested",
     "No LMS or certificates"
-  ]
+  ],
+  "production": {
+    "commit": "d4a2490",
+    "deployment": "dpl_G64qnefAAR4P3KHhtt9Kn5981EDx",
+    "url": "https://forgezone.store",
+    "hashEvidence": "online-hashes.json",
+    "interactionEvidence": "online-motion.json"
+  }
 }

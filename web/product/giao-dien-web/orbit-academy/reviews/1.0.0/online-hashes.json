@@ -1,0 +1,84 @@
+{
+  "origin": "https://forgezone.store",
+  "date": "2026-10-13T07:36:07.630Z",
+  "zipTraced": true,
+  "results": [
+    {
+      "file": "demos/orbit-academy/index.html",
+      "status": 200,
+      "bytes": 12301,
+      "sha256": "c7f4ff04d28fbe76244aac725c8e92442a9739c20dc67cf741f9742fe53aa84e",
+      "matches": true
+    },
+    {
+      "file": "demos/orbit-academy/assets/css/style.css",
+      "status": 200,
+      "bytes": 19813,
+      "sha256": "42ad32f29278c1f4c4a388e5622a694e7617b8dbae77d18b4591abab6125d595",
+      "matches": true
+    },
+    {
+      "file": "demos/orbit-academy/assets/js/main.js",
+      "status": 200,
+      "bytes": 12298,
+      "sha256": "04062803ecd09b7df9640abbb7caf889c1369c5db01bf3621c857cc1a835bcd9",
+      "matches": true
+    },
+    {
+      "file": "demos/orbit-academy/assets/img/earth-world.webp",
+      "status": 200,
+      "bytes": 274162,
+      "sha256": "4c5ce99618a2180f60609d188d622a98fddbd723e1c49db8ace477ea053d1be4",
+      "matches": true
+    },
+    {
+      "file": "demos/orbit-academy/assets/img/planet-world.webp",
+      "status": 200,
+      "bytes": 150460,
+      "sha256": "57afea22e659b64c86ce63551f40e4c287980f417f501a1ff40ea6b7f38eb6a3",
+      "matches": true
+    },
+    {
+      "file": "demos/orbit-academy/assets/img/meteor-world.webp",
+      "status": 200,
+      "bytes": 207218,
+      "sha256": "b5d4ac7e153ca7ee33981a2c2541bc4fda965b14de71b3d0e889bd7e27d3631c",
+      "matches": true
+    },
+    {
+      "file": "demos/orbit-academy/assets/img/objects.webp",
+      "status": 200,
+      "bytes": 257558,
+      "sha256": "90f344c2ab43a53d7f79eb8ffd70274a4cac3836f77d6e43993499fb8363aa3b",
+      "matches": true
+    },
+    {
+      "file": "previews/orbit-academy.webp",
+      "status": 200,
+      "bytes": 64502,
+      "sha256": "321e2c502a73f1ef23c387c0e36d6ea4660ca91ded9e40a66432b53b17891a69",
+      "matches": true
+    },
+    {
+      "file": "previews/orbit-academy.mp4",
+      "status": 200,
+      "bytes": 1016089,
+      "sha256": "754f778973df0e3a0c966b8cef7de691def6470aebd3cdfa98a6ad8439000e27",
+      "matches": true
+    },
+    {
+      "file": "demos/verdant/index.html",
+      "status": 200,
+      "bytes": 9939,
+      "sha256": "51146fbdcbca61a46e177ad95f4c6f1d8a70913e24bbdaa367c4e0c7b5bf94c0",
+      "matches": true
+    },
+    {
+      "file": "demos/dualplay/index.html",
+      "status": 200,
+      "bytes": 12274,
+      "sha256": "7560f1882ce918bb02e769b2c7390a4c1e64c8e47a7ae7d03eb6fadae5421d3b",
+      "matches": true
+    }
+  ]
+}

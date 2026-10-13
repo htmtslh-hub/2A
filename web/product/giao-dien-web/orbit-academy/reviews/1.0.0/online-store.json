@@ -1,0 +1,124 @@
+{
+  "origin": "https://forgezone.store",
+  "languages": {
+    "vi": {
+      "detail": true,
+      "specs": true,
+      "video": {
+        "paused": false,
+        "time": 2.101273,
+        "muted": true,
+        "loop": true,
+        "src": "https://forgezone.store/previews/orbit-academy.mp4?v=754f778973df"
+      },
+      "errors": [],
+      "category": true,
+      "pause": true,
+      "resume": true,
+      "library": true,
+      "autoplay": true,
+      "cardPlaybackButtons": 0,
+      "offscreenPause": true,
+      "guide": true,
+      "widths": [
+        {
+          "width": 820,
+          "clientWidth": 820,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "clientWidth": 375,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320
+        }
+      ]
+    },
+    "en": {
+      "detail": true,
+      "specs": true,
+      "video": {
+        "paused": false,
+        "time": 2.179601,
+        "muted": true,
+        "loop": true,
+        "src": "https://forgezone.store/previews/orbit-academy.mp4?v=754f778973df"
+      },
+      "errors": [],
+      "category": true,
+      "pause": true,
+      "resume": true,
+      "library": true,
+      "autoplay": true,
+      "cardPlaybackButtons": 0,
+      "offscreenPause": true,
+      "guide": true,
+      "widths": [
+        {
+          "width": 820,
+          "clientWidth": 820,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "clientWidth": 375,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320
+        }
+      ]
+    },
+    "zh": {
+      "detail": true,
+      "specs": true,
+      "video": {
+        "paused": false,
+        "time": 2.034945,
+        "muted": true,
+        "loop": true,
+        "src": "https://forgezone.store/previews/orbit-academy.mp4?v=754f778973df"
+      },
+      "errors": [],
+      "category": true,
+      "pause": true,
+      "resume": true,
+      "library": true,
+      "autoplay": true,
+      "cardPlaybackButtons": 0,
+      "offscreenPause": true,
+      "guide": true,
+      "widths": [
+        {
+          "width": 820,
+          "clientWidth": 820,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "clientWidth": 375,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320
+        }
+      ]
+    }
+  },
+  "catalogRegression": {
+    "existing": 29,
+    "changed": [],
+    "added": []
+  },
+  "anonymous": 401,
+  "directZip": 404,
+  "demo": true
+}

@@ -1,0 +1,397 @@
+{
+  "url": "https://forgezone.store/demos/orbit-academy/index.html",
+  "browsers": {
+    "Chromium": {
+      "version": "153.0.8010.12",
+      "states": [
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06162, 0, 0, 1.06162, -79.2264, 0)",
+            "opacity": "0.119706"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.0599, 0, 0, 1.0599, -77.018, 0)",
+            "opacity": "0.144244"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.05665, 0, 0, 1.05665, -72.8405, 0)",
+            "opacity": "0.190661"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.06121, 0, 0, 1.06121, 78.6999, 0)",
+            "opacity": "0.125556"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05973, 0, 0, 1.05973, 76.7967, 0)",
+            "opacity": "0.146703"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05893, 0, 0, 1.05893, 75.7698, 0)",
+            "opacity": "0.158113"
+          }
+        }
+      ],
+      "scroll": [
+        {
+          "fraction": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "fraction": 0.5,
+          "transform": "matrix(1.05992, 0, 0, 1.05992, 0, -17.4781)"
+        },
+        {
+          "fraction": 1,
+          "transform": "matrix(1.11993, 0, 0, 1.11993, 0, -34.9781)"
+        },
+        {
+          "fraction": 0.2,
+          "transform": "matrix(1.02392, 0, 0, 1.02392, 0, -6.97813)"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320
+        }
+      ],
+      "errors": [],
+      "quiz": true,
+      "search": true,
+      "swipe": true,
+      "keyboard": true,
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "Firefox": {
+      "version": "155.0",
+      "states": [
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06467, 0, 0, 1.06467, -83.1445, 0)",
+            "opacity": "0.0761718"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06017, 0, 0, 1.06017, -77.3633, 0)",
+            "opacity": "0.140408"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.05993, 0, 0, 1.05993, -77.0583, 0)",
+            "opacity": "0.143796"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.06128, 0, 0, 1.06128, 78.79, 0)",
+            "opacity": "0.124556"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05891, 0, 0, 1.05891, 75.7425, 0)",
+            "opacity": "0.158416"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.06111, 0, 0, 1.06111, 78.5657, 0)",
+            "opacity": "0.127048"
+          }
+        }
+      ],
+      "scroll": [
+        {
+          "fraction": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "fraction": 0.5,
+          "transform": "matrix(1.05989, 0, 0, 1.05989, 0, -17.4676)"
+        },
+        {
+          "fraction": 1,
+          "transform": "matrix(1.11989, 0, 0, 1.11989, 0, -34.9676)"
+        },
+        {
+          "fraction": 0.2,
+          "transform": "matrix(1.02389, 0, 0, 1.02389, 0, -6.96759)"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320
+        }
+      ],
+      "errors": [],
+      "quiz": true,
+      "search": true,
+      "swipe": true,
+      "keyboard": true,
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "Edge": {
+      "version": "155.0.4283.45",
+      "states": [
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.05887, 0, 0, 1.05887, -75.6917, 0)",
+            "opacity": "0.158981"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.05919, 0, 0, 1.05919, -76.0987, 0)",
+            "opacity": "0.154459"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.05923, 0, 0, 1.05923, -76.1562, 0)",
+            "opacity": "0.15382"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05931, 0, 0, 1.05931, 76.2516, 0)",
+            "opacity": "0.15276"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05615, 0, 0, 1.05615, 72.1921, 0)",
+            "opacity": "0.197866"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05963, 0, 0, 1.05963, 76.6665, 0)",
+            "opacity": "0.14815"
+          }
+        }
+      ],
+      "scroll": [
+        {
+          "fraction": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "fraction": 0.5,
+          "transform": "matrix(1.05992, 0, 0, 1.05992, 0, -17.4781)"
+        },
+        {
+          "fraction": 1,
+          "transform": "matrix(1.11993, 0, 0, 1.11993, 0, -34.9781)"
+        },
+        {
+          "fraction": 0.2,
+          "transform": "matrix(1.02392, 0, 0, 1.02392, 0, -6.97813)"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320
+        }
+      ],
+      "errors": [],
+      "quiz": true,
+      "search": true,
+      "swipe": true,
+      "keyboard": true,
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "CocCoc": {
+      "version": "152.0.7977.124",
+      "states": [
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06017, 0, 0, 1.06017, -77.3633, 0)",
+            "opacity": "0.140408"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.06116, 0, 0, 1.06116, -78.6329, 0)",
+            "opacity": "0.126301"
+          }
+        },
+        {
+          "direction": 1,
+          "mid": {
+            "transform": "matrix(1.0614, 0, 0, 1.0614, -78.9488, 0)",
+            "opacity": "0.122791"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.06147, 0, 0, 1.06147, 79.031, 0)",
+            "opacity": "0.121878"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05721, 0, 0, 1.05721, 73.559, 0)",
+            "opacity": "0.182677"
+          }
+        },
+        {
+          "direction": -1,
+          "mid": {
+            "transform": "matrix(1.05579, 0, 0, 1.05579, 71.7355, 0)",
+            "opacity": "0.202939"
+          }
+        }
+      ],
+      "scroll": [
+        {
+          "fraction": 0,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "fraction": 0.5,
+          "transform": "matrix(1.05992, 0, 0, 1.05992, 0, -17.4781)"
+        },
+        {
+          "fraction": 1,
+          "transform": "matrix(1.11993, 0, 0, 1.11993, 0, -34.9781)"
+        },
+        {
+          "fraction": 0.2,
+          "transform": "matrix(1.02392, 0, 0, 1.02392, 0, -6.97813)"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320
+        }
+      ],
+      "errors": [],
+      "quiz": true,
+      "search": true,
+      "swipe": true,
+      "keyboard": true,
+      "sessionPause": true,
+      "missingImageFallback": true
+    }
+  }
+}

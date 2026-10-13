@@ -20,7 +20,7 @@ D01–D08 PASS after visual review: clear education purpose/action; distinctive 
 | Q09 | PASS | Local assets, no page errors in template/motion/recording evidence, finite carousel RAF and event-scheduled scroll only. No synthetic performance score. |
 | Q10 | PASS | Literal edit counts, 10 steps/12 complete prompts, existing seven-clause licence policy, system fonts; ASSETS/SCIENCE-SOURCES document provenance and verification. No other-AI end-user test claimed. |
 | Q11 | PASS | Official packaging byte roundtrip and extracted package tests; private ZIP size/hash above. |
-| Q12 | Local PASS; online pending | local-store.json: t29, education, vi/en/zh detail/library/guide/specs, video autoplay/play/pause/offscreen, mobile widths, demo and guards (401 anonymous; 404 direct ZIP). All previous 28 records unchanged; only t29 added. No actual paid transaction or entitlement change authorised or attempted. |
+| Q12 | Local and online PASS in tested scope | local-store.json and online-store.json: t29, education category confirmed in vi/en/zh detail/library/guide/specs, video autoplay/play/pause/offscreen, mobile widths, demo and guards (401 anonymous; 404 direct ZIP). All previous 28 records unchanged; only t29 added. Actual paid transaction/download NOT TESTED; no entitlement changes attempted. |
 | Q13 | PASS | Design D01–D08 review above, reference/sample crops and full pages inspected. |
 
 ## Manual resolutions for older checker
@@ -30,6 +30,9 @@ The old reduced-motion check expects every below-fold reveal already visible. Th
 
 ## Interactions and limits
 Section links/subject cards and sources work without JS. Menu/arrows/01–03/swipe update the actual world. Search filters exactly three on-page paths. Lessons provide source-linked explanations and one local knowledge question each, with feedback and unique correct-check progress held only in memory. Reset and reload clear it. Guide icon opens text instructions, not video. Contact uses reserved .example email requiring replacement. No grades backend, LMS, credentials, enrolment, certificates, tracking or payment service. Concept pictures are imaginative, not scientific scale models/NASA archival photos.
+
+## Production verification
+Source commit d4a2490, deployment dpl_G64qnefAAR4P3KHhtt9Kn5981EDx READY, aliased https://forgezone.store. Online-motion.json verifies all four installed browsers: actual carousel midframes, both wraps, rapid input, keyboard/swipe, learning guide, three quizzes (wrong/correct/duplicate/reset), local search (found/empty/clear), scroll/reverse/resize, OS reduce/saved-off ignored, pause/reload and missing-art fallback. Online-store.json confirms education classification, detail/library/guide in all three languages, no errors, preview policies and protected ZIP guards. Online-hashes.json matches all nine new public runtime/preview resources byte-for-byte and two unchanged existing product pages; private ZIP is included in the Next download trace.
 
 ## Delivery scope and limitations
 Original untracked Dualplay review files preserved. Shared edits limited to this product's catalog/category/guide/spec condition and recording manifest entry. Safari, physical touchscreen and actual purchase/paid download NOT TESTED; browser pointer input is not a physical device test. Preview is native browser footage with two real carousel clicks, scroll and return, not an AI video or static-image pan. Final production evidence is appended after verification.

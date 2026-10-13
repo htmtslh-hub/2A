@@ -85,6 +85,6 @@ export default function VideoPreview({ src, poster, fit, label, controls = false
       style={{ ...mediaStyle, objectFit: 'contain', background: '#111', opacity: ready ? 1 : 0, pointerEvents: fullscreen ? 'auto' : 'none' }}
       onPlaying={() => { setReady(true); setPlaying(true); }} onPause={() => setPlaying(false)}
       onError={() => { setReady(false); setPlaying(false); setFailed(true); }} />
-    {host ? createPortal(actions, host) : controls ? actions : null}
+    {controls ? (host ? createPortal(actions, host) : actions) : null}
   </span>;
 }

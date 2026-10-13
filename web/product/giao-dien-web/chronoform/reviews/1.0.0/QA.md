@@ -23,7 +23,7 @@ D01–D08 PASS in reviewed scope: watch/model/action clear; asymmetric watch-led
 | Q09 | PASS | No page/request errors in four-engine interactions; finite model/carousel/loader RAF and event-scheduled scroll. Zero idle frames in every engine. Actual pointer drag and scrolling performed; no fabricated performance score. |
 | Q10 | PASS | README/CUSTOMISE/LICENCE match implementation, 10 steps/12 prompts, exact edit counts, source/asset provenance. Existing commercial policy retained. System fonts only. No independent customer usability study claimed. |
 | Q11 | PASS | Official ZIP roundtrip and tests performed on extracted package, hash above. |
-| Q12 | Local PASS in tested scope; online pending | local-store.json: t31 in vi/en/zh detail/library/guide, commerce category, video autoplay/pause/resume/offscreen, no card playback buttons, three mobile widths, 401 anonymous download and 404 direct ZIP. Thirty prior records unchanged, including concurrently completed Shopluxe t30. Paid transaction/download NOT TESTED; no entitlement alteration. |
+| Q12 | Local and online PASS in tested scope | local-store.json and online-store.json: t31 in vi/en/zh detail/library/guide, commerce category, video autoplay/pause/resume/offscreen, no card playback buttons, three mobile widths, 401 anonymous download and 404 direct ZIP. Thirty prior records unchanged, including concurrently completed Shopluxe t30. Paid transaction/download NOT TESTED; no entitlement alteration. |
 | Q13 | PASS in design scope | D01–D08 review above; all video states represented with honest original branding/art and disclosed limitations. |
 
 ## Older generic checker resolutions
@@ -39,3 +39,13 @@ Session bag/favourites reset on reload. The sample bag contains orange and ice O
 Official quay-preview tool captured two real model clicks, scroll and return. Inspected four-frame contact sheet: no blank state or missing art. MP4 H.264/yuv420p, 960×600, 30fps, 14.966667s, 581468 bytes, no audio; revision 44c878fa41aa. Poster captured from current source. Source/demo runtime bytes match. All 31 catalog recordings passed manifest verification; npm run build and typecheck passed. Shared integration is limited to t31 catalog/category/guide/spec and its recording manifest.
 
 Local preview policy also passed the common check-autoplay tool on actual Chromium, Firefox, Edge and Cốc Cốc. The original untracked Dualplay review files were preserved; no source from another product changed.
+
+## Production acceptance
+
+Source commit 7dd4456. Vercel deployment dpl_8hdkx2GakuLYcfY551DwYGv7Xr1T READY, production alias https://forgezone.store. The isolated release checkout passed all 31 recording manifests; public bytes were synchronised from the verified primary checkout to preserve recording hashes across Windows Git line-ending expansion. No semantic changes to other resources were introduced.
+
+online-hashes.json verifies 25 public resources: every new runtime asset, poster/video and two unchanged existing demo pages, all byte-for-byte. The private ZIP appears in the Next download route trace. online-interactions.json passed the same full four-engine test against https://forgezone.store/demos/chronoform/index.html: actual WebGL mode, midframes, both wraps, rapid input, drag/front/back, eleven models, filters, bag, saved list, menu/dialog, four viewports/views, scroll/reverse and pause/reload under reduce/stale-off. Idle RAF remained zero. Online store checks passed in vi/en/zh with protected download guards. Common online-autoplay.json passed Chromium/Firefox/Edge/Cốc Cốc.
+
+video-state-coverage.json supplements the desktop visual review with actual front/back, two-watch cart and loader midframe/end captures at 1296×918. A 320×740 active craft scene was inspected after scrolling; content and CTA are visible. Screenshot-only full-page captures before scrolling can show unrevealed below-fold text; that is not the state tested after real scroll.
+
+Safari, physical GPU/touchscreen and actual paid purchase/download remain NOT TESTED. No universal compatibility, hardware performance or percentage fidelity claim. The release worktree is archived after deployment; required files and evidence remain in the primary product folder.

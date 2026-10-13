@@ -1,0 +1,126 @@
+{
+  "origin": "https://forgezone.store",
+  "languages": {
+    "vi": {
+      "detail": true,
+      "specs": true,
+      "video": {
+        "paused": false,
+        "time": 2.403016,
+        "muted": true,
+        "loop": true,
+        "src": "https://forgezone.store/previews/chronoform.mp4?v=44c878fa41aa"
+      },
+      "errors": [],
+      "category": true,
+      "pause": true,
+      "resume": true,
+      "library": true,
+      "autoplay": true,
+      "cardPlaybackButtons": 0,
+      "offscreenPause": true,
+      "guide": true,
+      "widths": [
+        {
+          "width": 820,
+          "clientWidth": 820,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "clientWidth": 375,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320
+        }
+      ]
+    },
+    "en": {
+      "detail": true,
+      "specs": true,
+      "video": {
+        "paused": false,
+        "time": 2.186655,
+        "muted": true,
+        "loop": true,
+        "src": "https://forgezone.store/previews/chronoform.mp4?v=44c878fa41aa"
+      },
+      "errors": [],
+      "category": true,
+      "pause": true,
+      "resume": true,
+      "library": true,
+      "autoplay": true,
+      "cardPlaybackButtons": 0,
+      "offscreenPause": true,
+      "guide": true,
+      "widths": [
+        {
+          "width": 820,
+          "clientWidth": 820,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "clientWidth": 375,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320
+        }
+      ]
+    },
+    "zh": {
+      "detail": true,
+      "specs": true,
+      "video": {
+        "paused": false,
+        "time": 2.106693,
+        "muted": true,
+        "loop": true,
+        "src": "https://forgezone.store/previews/chronoform.mp4?v=44c878fa41aa"
+      },
+      "errors": [],
+      "category": true,
+      "pause": true,
+      "resume": true,
+      "library": true,
+      "autoplay": true,
+      "cardPlaybackButtons": 0,
+      "offscreenPause": true,
+      "guide": true,
+      "widths": [
+        {
+          "width": 820,
+          "clientWidth": 820,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "clientWidth": 375,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "clientWidth": 320,
+          "scrollWidth": 320
+        }
+      ]
+    }
+  },
+  "catalogRegression": {
+    "existing": 30,
+    "changed": [],
+    "added": [
+      "t31"
+    ]
+  },
+  "anonymous": 401,
+  "directZip": 404,
+  "demo": true
+}

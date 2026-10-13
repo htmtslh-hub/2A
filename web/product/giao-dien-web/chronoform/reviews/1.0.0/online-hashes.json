@@ -1,0 +1,156 @@
+{
+  "origin": "https://forgezone.store",
+  "resources": [
+    {
+      "url": "/demos/chronoform/assets/css/style.css",
+      "sha256": "4a0a5387dd16dcd1249785e9d61ddda1b2247273a17592496fcba7828321c1b7",
+      "status": 200,
+      "actual": "4a0a5387dd16dcd1249785e9d61ddda1b2247273a17592496fcba7828321c1b7"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/editorial.webp",
+      "sha256": "0984952e4909bdd67e92386f56ed626245eeccfc10dba1bba308e756d43b5ed3",
+      "status": 200,
+      "actual": "0984952e4909bdd67e92386f56ed626245eeccfc10dba1bba308e756d43b5ed3"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/ice.webp",
+      "sha256": "8067a682d64437a08e3485c17f535c5175003b19a602874d9656d28b115c4718",
+      "status": 200,
+      "actual": "8067a682d64437a08e3485c17f535c5175003b19a602874d9656d28b115c4718"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/jupiter.webp",
+      "sha256": "23f42de42dda29cc7aae73a2f2d5f5df03174cc36c1d3d5a1e8eca7e43fb3a76",
+      "status": 200,
+      "actual": "23f42de42dda29cc7aae73a2f2d5f5df03174cc36c1d3d5a1e8eca7e43fb3a76"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/opus.webp",
+      "sha256": "6935c3dc15cd380a7b1ab7c79d4873b05f9ef29189765a6fbdf76417c27e6bda",
+      "status": 200,
+      "actual": "6935c3dc15cd380a7b1ab7c79d4873b05f9ef29189765a6fbdf76417c27e6bda"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/paraiba.webp",
+      "sha256": "d2fd58421912a2919781839baddc37c4988ba0cb3925c4afbcf0f2aeae028a05",
+      "status": 200,
+      "actual": "d2fd58421912a2919781839baddc37c4988ba0cb3925c4afbcf0f2aeae028a05"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-black-hole.webp",
+      "sha256": "32b3b1acd5ff336cfd8a8d7be42a85e62f4b2e0ab417695bb59de55f5e5f6c67",
+      "status": 200,
+      "actual": "32b3b1acd5ff336cfd8a8d7be42a85e62f4b2e0ab417695bb59de55f5e5f6c67"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-cowboy.webp",
+      "sha256": "bda24ed791c4c11a4c5e1e9c81ef8ac7dd956228104c0e47fa8864d253a34470",
+      "status": 200,
+      "actual": "bda24ed791c4c11a4c5e1e9c81ef8ac7dd956228104c0e47fa8864d253a34470"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-jupiter-gold.webp",
+      "sha256": "980f189a7c3c49bcdfd9860b9256a8c9cd654912b19a80a0d843dc4b00c62cec",
+      "status": 200,
+      "actual": "980f189a7c3c49bcdfd9860b9256a8c9cd654912b19a80a0d843dc4b00c62cec"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-jupiter.webp",
+      "sha256": "818bc4493f9d4740d27dfa469add2ff1942e21d3173d3761861c681a76766bac",
+      "status": 200,
+      "actual": "818bc4493f9d4740d27dfa469add2ff1942e21d3173d3761861c681a76766bac"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-meteorite.webp",
+      "sha256": "18affe8d49a01039a44a9eeb3eeb83b4781e42a3592ba534a31d8b5b41e31f1c",
+      "status": 200,
+      "actual": "18affe8d49a01039a44a9eeb3eeb83b4781e42a3592ba534a31d8b5b41e31f1c"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-opus-ice.webp",
+      "sha256": "44d17d11dbbf98b8e23daf275cc95ef0a747ceccfcaebc86590447064e2fd681",
+      "status": 200,
+      "actual": "44d17d11dbbf98b8e23daf275cc95ef0a747ceccfcaebc86590447064e2fd681"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-opus-orange.webp",
+      "sha256": "cae302aea780d2586b6589f9d57b550d1ca06cdd20961dc3d4fac53538662d4e",
+      "status": 200,
+      "actual": "cae302aea780d2586b6589f9d57b550d1ca06cdd20961dc3d4fac53538662d4e"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-paraiba.webp",
+      "sha256": "1fb6181c6cc5b75bb7ecd16497846effd36de11ff3178352880750a248f27cd4",
+      "status": 200,
+      "actual": "1fb6181c6cc5b75bb7ecd16497846effd36de11ff3178352880750a248f27cd4"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-skeleton-gold.webp",
+      "sha256": "758aaba3d683d16c1bb95ab0ef7a888f5daa1db86ee3633da36e9191cd0cca98",
+      "status": 200,
+      "actual": "758aaba3d683d16c1bb95ab0ef7a888f5daa1db86ee3633da36e9191cd0cca98"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-skeleton-steel.webp",
+      "sha256": "47a5054853661084faa52a0ec83d394cfedab26200c9fc6f2e2dfe4dbedf0eca",
+      "status": 200,
+      "actual": "47a5054853661084faa52a0ec83d394cfedab26200c9fc6f2e2dfe4dbedf0eca"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-sunset.webp",
+      "sha256": "363586f3600ceffc131778606e2aa25d8f98cb10540c57b156b6f80cb8219940",
+      "status": 200,
+      "actual": "363586f3600ceffc131778606e2aa25d8f98cb10540c57b156b6f80cb8219940"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/skeleton.webp",
+      "sha256": "0f8a728e1ab37fe9f8ca816eafc1b7dc8ea6eb959f9dfa0cde6fcf1ec0ebae9f",
+      "status": 200,
+      "actual": "0f8a728e1ab37fe9f8ca816eafc1b7dc8ea6eb959f9dfa0cde6fcf1ec0ebae9f"
+    },
+    {
+      "url": "/demos/chronoform/assets/js/main.js",
+      "sha256": "d723334d9e323acd165b44790b10380fd319470537adf374278961809dc860a7",
+      "status": 200,
+      "actual": "d723334d9e323acd165b44790b10380fd319470537adf374278961809dc860a7"
+    },
+    {
+      "url": "/demos/chronoform/assets/js/watch3d.js",
+      "sha256": "da5a1cba7c9742832e489a332576ccd806fc019440125032407bc0bb3ca3c0f8",
+      "status": 200,
+      "actual": "da5a1cba7c9742832e489a332576ccd806fc019440125032407bc0bb3ca3c0f8"
+    },
+    {
+      "url": "/demos/chronoform/index.html",
+      "sha256": "34539f036ef55d36c0b311030757f387ca77c7af27f4ea97c61a33114d48d68c",
+      "status": 200,
+      "actual": "34539f036ef55d36c0b311030757f387ca77c7af27f4ea97c61a33114d48d68c"
+    },
+    {
+      "url": "/previews/chronoform.webp",
+      "sha256": "e5675786e287a36d7f2960a47fbb4f9a78e2c705be85aba92b6fc87322a6cdd2",
+      "status": 200,
+      "actual": "e5675786e287a36d7f2960a47fbb4f9a78e2c705be85aba92b6fc87322a6cdd2"
+    },
+    {
+      "url": "/previews/chronoform.mp4",
+      "sha256": "44c878fa41aa275075227fd238dfae501b2f866af94485f81a68b06355b93df7",
+      "status": 200,
+      "actual": "44c878fa41aa275075227fd238dfae501b2f866af94485f81a68b06355b93df7"
+    },
+    {
+      "url": "/demos/orbit-academy/index.html",
+      "sha256": "c7f4ff04d28fbe76244aac725c8e92442a9739c20dc67cf741f9742fe53aa84e",
+      "status": 200,
+      "actual": "c7f4ff04d28fbe76244aac725c8e92442a9739c20dc67cf741f9742fe53aa84e"
+    },
+    {
+      "url": "/demos/shopluxe/index.html",
+      "sha256": "90cc36c56e25ce3b5d904d6631e95bff5dbea2d0448a23df8052902244214089",
+      "status": 200,
+      "actual": "90cc36c56e25ce3b5d904d6631e95bff5dbea2d0448a23df8052902244214089"
+    }
+  ],
+  "privateZipTraced": true
+}

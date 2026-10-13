@@ -1,0 +1,70 @@
+{
+  "origin": "http://localhost:4355/demos/chronoform/index.html",
+  "viewport": "1296×918 (mobile 320×740)",
+  "states": [
+    {
+      "name": "00-blue-front",
+      "hash": "",
+      "renderer": "webgl"
+    },
+    {
+      "name": "02-blue-back",
+      "hash": "",
+      "renderer": "webgl"
+    },
+    {
+      "name": "04-gold",
+      "hash": "",
+      "renderer": "webgl"
+    },
+    {
+      "name": "06-dark",
+      "hash": "",
+      "renderer": "webgl"
+    },
+    {
+      "name": "08-collection",
+      "hash": "#collection",
+      "renderer": "webgl"
+    },
+    {
+      "name": "10-skeleton-gallery",
+      "hash": "#collection",
+      "renderer": "webgl"
+    },
+    {
+      "name": "12-skeleton-front",
+      "hash": "#detail",
+      "renderer": "webgl"
+    },
+    {
+      "name": "14-skeleton-back",
+      "hash": "#detail",
+      "renderer": "webgl"
+    },
+    {
+      "name": "16-two-watch-bag",
+      "hash": "#cart",
+      "renderer": "webgl"
+    },
+    {
+      "name": "19-clock-loader",
+      "hash": "#home",
+      "renderer": "webgl"
+    },
+    {
+      "name": "20-return-home",
+      "hash": "#home",
+      "renderer": "webgl"
+    },
+    {
+      "name": "mobile-craft",
+      "hash": "#home",
+      "renderer": "webgl"
+    }
+  ],
+  "loader": {
+    "mid": 0.955077,
+    "end": 0
+  }
+}

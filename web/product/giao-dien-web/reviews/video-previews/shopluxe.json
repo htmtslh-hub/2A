@@ -1,0 +1,48 @@
+{
+  "id": "t30",
+  "slug": "shopluxe",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-13T09:15:51.811Z",
+  "demo": "/demos/shopluxe/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3aca4a248f8f",
+  "sha256": "3aca4a248f8fe6b697f50fdb916e6fc371371dbe11598518ddcbd5ee48570242",
+  "demoHtmlSha256": "90cc36c56e25ce3b5d904d6631e95bff5dbea2d0448a23df8052902244214089",
+  "demoSha256": "3792ab67bcf2e22b5ab77a2f717ac54de9125feede865a07ea74761b7e6659e2",
+  "bytes": 279179,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.543,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 4.849,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1562
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\shopluxe-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\shopluxe-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\shopluxe-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\shopluxe-return.jpg"
+  ]
+}

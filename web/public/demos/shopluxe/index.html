@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopluxe — Everything For Everyone | Modern E-Commerce Store</title>
+  <meta name="description" content="Discover a wide range of top-quality products handpicked just for you at Shopluxe. Best quality, best prices with free shipping on orders over $50.">
+  <meta property="og:title" content="Shopluxe — Everything For Everyone">
+  <meta property="og:description" content="Discover a wide range of top-quality products handpicked just for you at Shopluxe.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Top Announcement Bar -->
+  <aside class="promo-bar" aria-label="Store announcement">
+    <div class="wrap promo-bar__inner">
+      <span class="promo-bar__text">FOR MODERN WEBSITE DESIGN, CONTACT US!</span>
+      <a href="#contact" class="promo-bar__btn">LET'S TALK &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a href="#main" class="brand" aria-label="Shopluxe Home">
+        <svg class="brand__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand__text">
+          <strong class="brand__name">SHOPLUXE</strong>
+          <small class="brand__tag">EVERYTHING YOU NEED</small>
+        </span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button type="button" class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav id="primary-nav" class="nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#main" class="nav__link nav__link--active">HOME</a></li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="#trending" class="nav__link">
+              SHOP
+              <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </li>
+          <li class="nav__item nav__item--dropdown">
+            <a href="#categories" class="nav__link">
+              COLLECTIONS
+              <svg class="nav__chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </li>
+          <li class="nav__item"><a href="#about" class="nav__link">ABOUT US</a></li>
+          <li class="nav__item"><a href="#offers" class="nav__link">BLOG</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">CONTACT US</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Utilities -->
+      <div class="header-actions">
+        <!-- Search Button -->
+        <button type="button" class="action-btn" id="search-toggle" aria-label="Toggle search input">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+
+        <!-- Account Button -->
+        <a href="#account" class="action-btn action-btn--account" aria-label="Customer account">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+
+        <!-- Cart Indicator Button -->
+        <a href="#cart" class="cart-pill" aria-label="Shopping cart, 1 item, total $59.98">
+          <svg class="cart-pill__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="cart-pill__badge" id="cart-count">1</span>
+          <span class="cart-pill__total" id="cart-total">$59.98</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Target for cart anchor link -->
+    <div id="cart" tabindex="-1" class="visually-hidden">Shopping cart</div>
+
+    <!-- Collapsible Quick Search Box -->
+    <div class="search-drawer" id="search-drawer" hidden>
+      <div class="wrap search-drawer__inner">
+        <label for="site-search" class="visually-hidden">Search products</label>
+        <input type="search" id="site-search" class="search-drawer__input" placeholder="Search products, brands, or categories...">
+        <button type="button" class="btn btn--primary btn--sm" id="search-submit">Search</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Featured collection promotion">
+      <div class="wrap hero__inner">
+        <div class="hero__content" data-reveal>
+          <p class="hero__tag">WELCOME TO SHOPLUXE</p>
+          <h1 class="hero__title">
+            EVERYTHING.<br>
+            FOR EVERYONE.
+            <span class="hero__script">Best Quality, Best Prices!</span>
+          </h1>
+          <p class="hero__desc">Discover a wide range of top-quality products handpicked just for you.</p>
+
+          <div class="hero__actions">
+            <a href="#trending" class="btn btn--primary">
+              SHOP NOW &rarr;
+            </a>
+            <a href="#categories" class="btn btn--outline">
+              EXPLORE COLLECTIONS
+            </a>
+          </div>
+
+          <!-- Feature Trust Badges -->
+          <ul class="trust-list">
+            <li class="trust-item">
+              <svg class="trust-item__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8zM5.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM18.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <div>
+                <strong>FREE SHIPPING</strong>
+                <small>On orders over $50</small>
+              </div>
+            </li>
+            <li class="trust-item">
+              <svg class="trust-item__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8M3 3v5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div>
+                <strong>EASY RETURNS</strong>
+                <small>30-day return policy</small>
+              </div>
+            </li>
+            <li class="trust-item">
+              <svg class="trust-item__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div>
+                <strong>SECURE PAYMENT</strong>
+                <small>100% secure checkout</small>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hero Stage with Product Composition -->
+        <div class="hero__stage" data-reveal>
+          <div class="hero__badge">
+            <span class="hero__badge-top">UP TO</span>
+            <strong class="hero__badge-num">50%</strong>
+            <span class="hero__badge-bot">OFF</span>
+          </div>
+
+          <div class="hero__slideshow">
+            <div class="hero__slide hero__slide--active" id="hero-slide-1">
+              <img src="assets/img/hero-products.webp" alt="Shopluxe lifestyle collection including travel backpack, thermal bottle, sneakers, and sunglasses" class="hero__image" width="345" height="280">
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="hero__controls">
+            <button type="button" class="hero__nav-btn" id="hero-prev" aria-label="Previous featured highlight" data-direction="-1">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="hero__dots" role="tablist" aria-label="Hero slide indicators">
+              <button type="button" class="hero__dot hero__dot--active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+              <button type="button" class="hero__dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+              <button type="button" class="hero__dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+            </div>
+            <button type="button" class="hero__nav-btn" id="hero-next" aria-label="Next featured highlight" data-direction="1">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse By Category Section -->
+    <section class="section categories-section" id="categories" aria-labelledby="cat-heading">
+      <div class="wrap">
+        <h2 id="cat-heading" class="section__title section__title--center">BROWSE BY CATEGORY</h2>
+
+        <div class="categories-grid" data-reveal>
+          <a href="#trending" class="cat-card" data-category="accessories">
+            <div class="cat-card__thumb">
+              <img src="assets/img/cat-accessories.webp" alt="Designer sunglasses collection" width="65" height="60" loading="lazy">
+            </div>
+            <span class="cat-card__label">Accessories</span>
+          </a>
+
+          <a href="#trending" class="cat-card" data-category="electronics">
+            <div class="cat-card__thumb">
+              <img src="assets/img/cat-electronics.webp" alt="Wireless audio and electronics" width="65" height="60" loading="lazy">
+            </div>
+            <span class="cat-card__label">Electronics</span>
+          </a>
+
+          <a href="#trending" class="cat-card" data-category="homeliving">
+            <div class="cat-card__thumb">
+              <img src="assets/img/cat-homeliving.webp" alt="Modern plants and home decor" width="65" height="60" loading="lazy">
+            </div>
+            <span class="cat-card__label">Home & Living</span>
+          </a>
+
+          <a href="#trending" class="cat-card" data-category="fashion">
+            <div class="cat-card__thumb">
+              <img src="assets/img/cat-fashion.webp" alt="Curated seasonal fashion apparel" width="65" height="60" loading="lazy">
+            </div>
+            <span class="cat-card__label">Fashion</span>
+          </a>
+
+          <a href="#trending" class="cat-card" data-category="beauty">
+            <div class="cat-card__thumb">
+              <img src="assets/img/cat-beauty.webp" alt="Clean skincare and cosmetics" width="65" height="60" loading="lazy">
+            </div>
+            <span class="cat-card__label">Beauty</span>
+          </a>
+
+          <a href="#trending" class="cat-card" data-category="sports">
+            <div class="cat-card__thumb">
+              <img src="assets/img/cat-sports.webp" alt="Dumbbells and fitness gear" width="65" height="60" loading="lazy">
+            </div>
+            <span class="cat-card__label">Sports</span>
+          </a>
+
+          <a href="#trending" class="cat-card" data-category="toys">
+            <div class="cat-card__thumb">
+              <img src="assets/img/cat-toys.webp" alt="Teddy bears and toys for all ages" width="65" height="60" loading="lazy">
+            </div>
+            <span class="cat-card__label">Toys & Games</span>
+          </a>
+
+          <a href="#trending" class="cat-card cat-card--more">
+            <div class="cat-card__thumb cat-card__thumb--icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="14" y="3" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="14" y="14" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="3" y="14" width="7" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="cat-card__label">More Categories</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending Products Section -->
+    <section class="section products-section" id="trending" aria-labelledby="trending-heading">
+      <div class="wrap">
+        <div class="section__header">
+          <h2 id="trending-heading" class="section__title">TRENDING PRODUCTS</h2>
+          <a href="#trending" class="section__link">
+            VIEW ALL PRODUCTS &rarr;
+          </a>
+        </div>
+
+        <div class="products-grid" data-reveal>
+          <!-- Product 1 -->
+          <article class="product-card" data-product-id="1">
+            <div class="product-card__visual">
+              <span class="product-badge product-badge--sale">-20%</span>
+              <img src="assets/img/prod-watch.webp" alt="Smart Watch Series 9 in midnight black" class="product-card__img" width="110" height="110" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Smart Watch Series 9</h3>
+              <div class="rating-stars" aria-label="Rating 5 out of 5 stars from 128 reviews">
+                <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(128)</span>
+              </div>
+              <div class="product-card__pricing">
+                <strong class="price-now">$159.99</strong>
+                <del class="price-was">$199.99</del>
+              </div>
+              <button type="button" class="btn btn--card btn-add-cart" data-id="1" data-name="Smart Watch Series 9" data-price="159.99">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                ADD TO CART
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-card" data-product-id="2">
+            <div class="product-card__visual">
+              <span class="product-badge product-badge--sale">-15%</span>
+              <img src="assets/img/prod-backpack.webp" alt="Weatherproof military olive travel backpack" class="product-card__img" width="110" height="110" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Travel Backpack</h3>
+              <div class="rating-stars" aria-label="Rating 5 out of 5 stars from 96 reviews">
+                <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(96)</span>
+              </div>
+              <div class="product-card__pricing">
+                <strong class="price-now">$49.99</strong>
+                <del class="price-was">$59.00</del>
+              </div>
+              <button type="button" class="btn btn--card btn-add-cart" data-id="2" data-name="Travel Backpack" data-price="49.99">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                ADD TO CART
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-card" data-product-id="3">
+            <div class="product-card__visual">
+              <img src="assets/img/prod-earbuds.webp" alt="White wireless Bluetooth earbuds with charging case" class="product-card__img" width="110" height="110" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Wireless Earbuds</h3>
+              <div class="rating-stars" aria-label="Rating 5 out of 5 stars from 243 reviews">
+                <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(243)</span>
+              </div>
+              <div class="product-card__pricing">
+                <strong class="price-now">$29.99</strong>
+              </div>
+              <button type="button" class="btn btn--card btn-add-cart" data-id="3" data-name="Wireless Earbuds" data-price="29.99">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                ADD TO CART
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-card" data-product-id="4">
+            <div class="product-card__visual">
+              <img src="assets/img/prod-perfume.webp" alt="Bleu luxury designer perfume fragrance for men" class="product-card__img" width="110" height="110" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Perfume For Men</h3>
+              <div class="rating-stars" aria-label="Rating 5 out of 5 stars from 75 reviews">
+                <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(75)</span>
+              </div>
+              <div class="product-card__pricing">
+                <strong class="price-now">$69.99</strong>
+                <del class="price-was">$89.99</del>
+              </div>
+              <button type="button" class="btn btn--card btn-add-cart" data-id="4" data-name="Perfume For Men" data-price="69.99">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                ADD TO CART
+              </button>
+            </div>
+          </article>
+
+          <!-- Product 5 -->
+          <article class="product-card" data-product-id="5">
+            <div class="product-card__visual">
+              <img src="assets/img/prod-moonlamp.webp" alt="3D realistic moon night lamp with wood stand" class="product-card__img" width="110" height="110" loading="lazy">
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Moon Lamp</h3>
+              <div class="rating-stars" aria-label="Rating 5 out of 5 stars from 58 reviews">
+                <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-count">(58)</span>
+              </div>
+              <div class="product-card__pricing">
+                <strong class="price-now">$24.99</strong>
+              </div>
+              <button type="button" class="btn btn--card btn-add-cart" data-id="5" data-name="Moon Lamp" data-price="24.99">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                ADD TO CART
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Proposition Banner Grid -->
+    <section class="section offers-section" id="offers" aria-label="Special offers and member perks">
+      <div class="wrap">
+        <div class="offer-cards-grid" data-reveal>
+          <!-- Offer 1 (Dark) -->
+          <div class="offer-card offer-card--dark">
+            <div class="offer-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <div class="offer-card__content">
+              <h3 class="offer-card__title">FREE SHIPPING</h3>
+              <p class="offer-card__text">On orders over $50</p>
+              <a href="#trending" class="offer-card__link">Shop Now &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Offer 2 (Tan Accent) -->
+          <div class="offer-card offer-card--accent">
+            <div class="offer-card__icon offer-card__icon--badge" aria-hidden="true">
+              %
+            </div>
+            <div class="offer-card__content">
+              <h3 class="offer-card__title">SPECIAL OFFER</h3>
+              <p class="offer-card__text">Save up to 50% off</p>
+              <a href="#trending" class="offer-card__link">Grab the Deal &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Offer 3 (Light) -->
+          <div class="offer-card offer-card--light">
+            <div class="offer-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <div class="offer-card__content">
+              <h3 class="offer-card__title">MEMBER BENEFITS</h3>
+              <p class="offer-card__text">Join now & get exclusive deals</p>
+              <a href="#newsletter" class="offer-card__link">Join Free &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof and Newsletter Section -->
+    <section class="section engagement-section" id="newsletter" aria-label="Customer trust and newsletter subscription">
+      <div class="wrap engagement-section__inner" data-reveal>
+        <!-- Social Proof Column -->
+        <div class="trust-proof" id="about">
+          <div class="trust-proof__badge">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <div class="trust-proof__copy">
+              <strong>TRUSTED BY THOUSANDS</strong>
+              <small>Quality products, happy customers.</small>
+            </div>
+          </div>
+          <div class="trust-proof__stats">
+            <img src="assets/img/avatars.webp" alt="Avatars of verified verified customers" class="trust-proof__avatars" width="105" height="30" loading="lazy">
+            <div class="trust-proof__score">
+              <strong class="score-num">4.8/5</strong>
+              <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <small class="score-sub">Based on 2,500+ Reviews</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="newsletter-box">
+          <h3 class="newsletter-box__title">SUBSCRIBE TO OUR NEWSLETTER</h3>
+          <p class="newsletter-box__desc">Get the latest updates on new products and sales. (Demo only)</p>
+          <form class="newsletter-form" id="newsletter-form" action="#newsletter" method="post">
+            <label for="newsletter-email" class="visually-hidden">Email address</label>
+            <input type="email" id="newsletter-email" name="email" class="newsletter-form__input" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn--primary btn--subscribe">SUBSCRIBE</button>
+          </form>
+          <p class="newsletter-feedback" id="newsletter-feedback" aria-live="polite" hidden>Thank you for subscribing! Check your inbox soon.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="wrap site-footer__main">
+      <!-- Col 1: Brand Info -->
+      <div class="footer-col footer-col--brand">
+        <a href="#main" class="brand brand--footer" aria-label="Shopluxe Home">
+          <svg class="brand__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3 6h18M16 10a4 4 0 0 1-8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand__text">
+            <strong class="brand__name">SHOPLUXE</strong>
+            <small class="brand__tag">EVERYTHING YOU NEED</small>
+          </span>
+        </a>
+        <p class="footer-desc">Your one-stop shop for quality products at the best prices. Shop smart, live better.</p>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">QUICK LINKS</h4>
+        <ul class="footer-links">
+          <li><a href="#main">Home</a></li>
+          <li><a href="#trending">Shop</a></li>
+          <li><a href="#categories">Collections</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Customer Service -->
+      <div class="footer-col">
+        <h4 class="footer-heading">CUSTOMER SERVICE</h4>
+        <ul class="footer-links">
+          <li><a href="#main">FAQs</a></li>
+          <li><a href="#offers">Shipping Policy</a></li>
+          <li><a href="#offers">Returns &amp; Refunds</a></li>
+          <li><a href="#main">Terms &amp; Conditions</a></li>
+          <li><a href="#main">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: My Account -->
+      <div class="footer-col" id="account">
+        <h4 class="footer-heading">MY ACCOUNT</h4>
+        <ul class="footer-links">
+          <li><a href="#account">My Account</a></li>
+          <li><a href="#account">Order History</a></li>
+          <li><a href="#account">Wishlist</a></li>
+          <li><a href="#account">Track Order</a></li>
+          <li><a href="#account">Login / Register</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 5: Contact Info -->
+      <div class="footer-col footer-col--contact">
+        <h4 class="footer-heading">CONTACT US</h4>
+        <ul class="footer-contact">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <a href="tel:+12345678900">+1 234 567 8900</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M22 6l-10 7L2 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <a href="mailto:support@shopluxe.example">support@shopluxe.example</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <span>123 Commerce St, New York, NY 10001, USA</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="site-footer__bottom">
+      <div class="wrap site-footer__bottom-inner">
+        <p class="copyright">&copy; 2026 Shopluxe. All Rights Reserved.</p>
+        <div class="payment-badges" aria-label="Accepted payment methods">
+          <span class="pay-tag">VISA</span>
+          <span class="pay-tag">MC</span>
+          <span class="pay-tag">AMEX</span>
+          <span class="pay-tag">PAYPAL</span>
+          <span class="pay-tag">APPLE PAY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast for Cart Action -->
+  <div class="toast" id="cart-toast" role="status" aria-live="polite" hidden>
+    <span class="toast__msg" id="toast-message">Added to cart!</span>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

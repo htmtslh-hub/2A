@@ -1,0 +1,24 @@
+Shopluxe licence
+
+1. Permission
+The intended template licence is perpetual, commercial and non-exclusive, subject to the product owner completing the ownership and raster asset terms below before sale.
+
+2. Permitted use
+Use the licensed template in unlimited projects, including client projects, and modify it freely. Attribution is not required.
+
+3. Restrictions
+Do not resell the template files themselves, list them on another marketplace or include them in a competing template collection.
+
+4. Demo content
+Shopluxe and the product names, prices and policies are fictional demonstration content. Replace them before publication. The concept images were cropped and optimized specifically for this demonstration storefront. They are not verified merchandise photographs. Commercial raster-image terms remain pending the product owner's approval; this document does not independently grant those rights.
+
+5. Fonts
+This template references Google Fonts: Plus Jakarta Sans (OFL 1.1) and Playfair Display (OFL 1.1), with robust system font fallbacks (system-ui, BlinkMacSystemFont, Segoe UI, Georgia, serif). The site functions completely offline with local system font fallbacks.
+
+6. Ownership
+Copyright owner: OWNER TO BE CONFIRMED BY PRODUCT OWNER. Copyright remains with the author; a template licence grants use, not ownership. Complete this owner field before commercial release.
+
+7. No warranty
+Provided as is without warranty. The user is responsible for verifying content, integrations and suitability. No live payment gateway, external checkout or database is included.
+
+If you are unsure whether a use is allowed, ask. The answer is usually yes.

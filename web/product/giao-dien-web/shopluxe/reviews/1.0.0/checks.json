@@ -1,0 +1,1767 @@
+{
+  "slug": "shopluxe",
+  "version": "1.0.0",
+  "date": "2026-10-13T09:05:53.006Z",
+  "os": "win32",
+  "zipBytes": 45981,
+  "sha256": "23c61db9bb3b4f4983669c76ae44d49fa922db63004cbaf7b8709ce550d3c303",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "LET'S TALK →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#contact"
+          },
+          {
+            "label": "Shopluxe Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "HOME",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "SHOP",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "COLLECTIONS",
+            "href": "#categories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#categories"
+          },
+          {
+            "label": "ABOUT US",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#about"
+          },
+          {
+            "label": "BLOG",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#offers"
+          },
+          {
+            "label": "CONTACT US",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#contact"
+          },
+          {
+            "label": "Customer account",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "Shopping cart, 1 item, total $59.98",
+            "href": "#cart",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#cart"
+          },
+          {
+            "label": "SHOP NOW →",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "EXPLORE COLLECTIONS",
+            "href": "#categories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#categories"
+          },
+          {
+            "label": "Accessories",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Electronics",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Home & Living",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Fashion",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Beauty",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Sports",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Toys & Games",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "More Categories",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "VIEW ALL PRODUCTS →",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Shop Now →",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Grab the Deal →",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Join Free →",
+            "href": "#newsletter",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#newsletter"
+          },
+          {
+            "label": "Shopluxe Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "Shop",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Collections",
+            "href": "#categories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#categories"
+          },
+          {
+            "label": "About Us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#about"
+          },
+          {
+            "label": "Contact Us",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#contact"
+          },
+          {
+            "label": "FAQs",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "Shipping Policy",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#offers"
+          },
+          {
+            "label": "Returns & Refunds",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#offers"
+          },
+          {
+            "label": "Terms & Conditions",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "My Account",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "Order History",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "Wishlist",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "Track Order",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "Login / Register",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "+1 234 567 8900",
+            "href": "tel:+12345678900",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+12345678900"
+          },
+          {
+            "label": "support@shopluxe.example",
+            "href": "mailto:support@shopluxe.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:support@shopluxe.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              18,
+              20,
+              23
+            ],
+            "ratio": 18.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "promo-bar__text",
+            "text": "FOR MODERN WEBSITE DESIGN, CONTACT US!",
+            "colour": "rgb(248, 250, 252)",
+            "background": [
+              12,
+              14,
+              18
+            ],
+            "ratio": 18.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "promo-bar__btn",
+            "text": "LET'S TALK →",
+            "colour": "rgb(17, 20, 24)",
+            "background": [
+              226,
+              206,
+              186
+            ],
+            "ratio": 12.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "SHOPLUXE",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 18.45,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__tag",
+            "text": "EVERYTHING YOU NEED",
+            "colour": "rgb(75, 85, 99)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "nav__link nav__link--active",
+            "text": "HOME",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 18.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "cart-pill__total",
+            "text": "$59.98",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              243,
+              241,
+              236
+            ],
+            "ratio": 16.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__tag",
+            "text": "WELCOME TO SHOPLUXE",
+            "colour": "rgb(142, 57, 5)",
+            "background": [
+              254,
+              253,
+              252
+            ],
+            "ratio": 7.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__title",
+            "text": "EVERYTHING.\n            FOR EVERYONE.\n  ",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              251,
+              250,
+              247
+            ],
+            "ratio": 17.68,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__script",
+            "text": "Best Quality, Best Prices!",
+            "colour": "rgb(180, 83, 9)",
+            "background": [
+              251,
+              250,
+              247
+            ],
+            "ratio": 4.81,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__desc",
+            "text": "Discover a wide range of top-quality pro",
+            "colour": "rgb(75, 85, 99)",
+            "background": [
+              250,
+              248,
+              245
+            ],
+            "ratio": 7.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--primary",
+            "text": "SHOP NOW →",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              18,
+              20,
+              23
+            ],
+            "ratio": 18.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--outline",
+            "text": "EXPLORE COLLECTIONS",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              249,
+              247,
+              243
+            ],
+            "ratio": 17.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "FREE SHIPPING",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              248,
+              245,
+              241
+            ],
+            "ratio": 16.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "On orders over $50",
+            "colour": "rgb(71, 85, 105)",
+            "background": [
+              248,
+              245,
+              240
+            ],
+            "ratio": 6.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__badge-top",
+            "text": "UP TO",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              15,
+              23,
+              42
+            ],
+            "ratio": 17.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section__title section__title--center",
+            "text": "BROWSE BY CATEGORY",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              250,
+              249,
+              246
+            ],
+            "ratio": 17.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__link",
+            "text": "VIEW ALL PRODUCTS →",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              250,
+              249,
+              246
+            ],
+            "ratio": 17.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-badge product-badge--sale",
+            "text": "-20%",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              15,
+              23,
+              42
+            ],
+            "ratio": 17.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "rating-count",
+            "text": "(128)",
+            "colour": "rgb(71, 85, 105)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__title",
+            "text": "FREE SHIPPING",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              26,
+              29,
+              36
+            ],
+            "ratio": 16.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__text",
+            "text": "On orders over $50",
+            "colour": "rgb(148, 163, 184)",
+            "background": [
+              26,
+              29,
+              36
+            ],
+            "ratio": 6.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__link",
+            "text": "Shop Now →",
+            "colour": "rgb(226, 206, 186)",
+            "background": [
+              26,
+              29,
+              36
+            ],
+            "ratio": 11.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__title",
+            "text": "SPECIAL OFFER",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              230,
+              206,
+              185
+            ],
+            "ratio": 12.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__text",
+            "text": "Save up to 50% off",
+            "colour": "rgb(63, 57, 51)",
+            "background": [
+              230,
+              206,
+              185
+            ],
+            "ratio": 7.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__link",
+            "text": "Join Free →",
+            "colour": "rgb(180, 83, 9)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 5.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "SHOPLUXE",
+            "colour": "rgb(248, 250, 252)",
+            "background": [
+              12,
+              14,
+              18
+            ],
+            "ratio": 18.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__tag",
+            "text": "EVERYTHING YOU NEED",
+            "colour": "rgb(148, 163, 184)",
+            "background": [
+              12,
+              14,
+              18
+            ],
+            "ratio": 7.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "pay-tag",
+            "text": "VISA",
+            "colour": "rgb(203, 213, 225)",
+            "background": [
+              26,
+              30,
+              38
+            ],
+            "ratio": 11.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "SHOP NOW →",
+          "colour": "rgb(18, 20, 23)",
+          "width": "3px",
+          "ratio": 16.81
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "LET'S TALK →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#contact"
+          },
+          {
+            "label": "Shopluxe Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "HOME",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "SHOP",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "COLLECTIONS",
+            "href": "#categories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#categories"
+          },
+          {
+            "label": "ABOUT US",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#about"
+          },
+          {
+            "label": "BLOG",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#offers"
+          },
+          {
+            "label": "CONTACT US",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#contact"
+          },
+          {
+            "label": "Customer account",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "Shopping cart, 1 item, total $59.98",
+            "href": "#cart",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#cart"
+          },
+          {
+            "label": "SHOP NOW →",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "EXPLORE COLLECTIONS",
+            "href": "#categories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#categories"
+          },
+          {
+            "label": "Accessories",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Electronics",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Home & Living",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Fashion",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Beauty",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Sports",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Toys & Games",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "More Categories",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "VIEW ALL PRODUCTS →",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Shop Now →",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Grab the Deal →",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Join Free →",
+            "href": "#newsletter",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#newsletter"
+          },
+          {
+            "label": "Shopluxe Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "Home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "Shop",
+            "href": "#trending",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#trending"
+          },
+          {
+            "label": "Collections",
+            "href": "#categories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#categories"
+          },
+          {
+            "label": "About Us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#about"
+          },
+          {
+            "label": "Contact Us",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#contact"
+          },
+          {
+            "label": "FAQs",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "Shipping Policy",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#offers"
+          },
+          {
+            "label": "Returns & Refunds",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#offers"
+          },
+          {
+            "label": "Terms & Conditions",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#main"
+          },
+          {
+            "label": "My Account",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "Order History",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "Wishlist",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "Track Order",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "Login / Register",
+            "href": "#account",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/shopluxe/index.html#account"
+          },
+          {
+            "label": "+1 234 567 8900",
+            "href": "tel:+12345678900",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+12345678900"
+          },
+          {
+            "label": "support@shopluxe.example",
+            "href": "mailto:support@shopluxe.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:support@shopluxe.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              18,
+              20,
+              23
+            ],
+            "ratio": 18.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "promo-bar__text",
+            "text": "FOR MODERN WEBSITE DESIGN, CONTACT US!",
+            "colour": "rgb(248, 250, 252)",
+            "background": [
+              12,
+              14,
+              18
+            ],
+            "ratio": 18.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "promo-bar__btn",
+            "text": "LET'S TALK →",
+            "colour": "rgb(17, 20, 24)",
+            "background": [
+              226,
+              206,
+              186
+            ],
+            "ratio": 12.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "SHOPLUXE",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 18.45,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__tag",
+            "text": "EVERYTHING YOU NEED",
+            "colour": "rgb(75, 85, 99)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "nav__link nav__link--active",
+            "text": "HOME",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 18.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "cart-pill__total",
+            "text": "$59.98",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              243,
+              241,
+              236
+            ],
+            "ratio": 16.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__tag",
+            "text": "WELCOME TO SHOPLUXE",
+            "colour": "rgb(142, 57, 5)",
+            "background": [
+              254,
+              254,
+              253
+            ],
+            "ratio": 7.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__title",
+            "text": "EVERYTHING.\n            FOR EVERYONE.\n  ",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              251,
+              250,
+              247
+            ],
+            "ratio": 17.68,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__script",
+            "text": "Best Quality, Best Prices!",
+            "colour": "rgb(180, 83, 9)",
+            "background": [
+              251,
+              250,
+              247
+            ],
+            "ratio": 4.81,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__desc",
+            "text": "Discover a wide range of top-quality pro",
+            "colour": "rgb(75, 85, 99)",
+            "background": [
+              250,
+              249,
+              245
+            ],
+            "ratio": 7.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--primary",
+            "text": "SHOP NOW →",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              18,
+              20,
+              23
+            ],
+            "ratio": 18.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--outline",
+            "text": "EXPLORE COLLECTIONS",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              250,
+              248,
+              244
+            ],
+            "ratio": 17.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "FREE SHIPPING",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              248,
+              246,
+              241
+            ],
+            "ratio": 17.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "On orders over $50",
+            "colour": "rgb(71, 85, 105)",
+            "background": [
+              248,
+              246,
+              240
+            ],
+            "ratio": 7.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__badge-top",
+            "text": "UP TO",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              15,
+              23,
+              42
+            ],
+            "ratio": 17.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section__title section__title--center",
+            "text": "BROWSE BY CATEGORY",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              250,
+              249,
+              246
+            ],
+            "ratio": 17.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__link",
+            "text": "VIEW ALL PRODUCTS →",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              250,
+              249,
+              246
+            ],
+            "ratio": 17.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "product-badge product-badge--sale",
+            "text": "-20%",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              15,
+              23,
+              42
+            ],
+            "ratio": 17.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "rating-count",
+            "text": "(128)",
+            "colour": "rgb(71, 85, 105)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__title",
+            "text": "FREE SHIPPING",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              26,
+              29,
+              36
+            ],
+            "ratio": 16.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__text",
+            "text": "On orders over $50",
+            "colour": "rgb(148, 163, 184)",
+            "background": [
+              26,
+              29,
+              36
+            ],
+            "ratio": 6.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__link",
+            "text": "Shop Now →",
+            "colour": "rgb(226, 206, 186)",
+            "background": [
+              26,
+              29,
+              36
+            ],
+            "ratio": 11.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__title",
+            "text": "SPECIAL OFFER",
+            "colour": "rgb(18, 20, 23)",
+            "background": [
+              230,
+              206,
+              185
+            ],
+            "ratio": 12.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__text",
+            "text": "Save up to 50% off",
+            "colour": "rgb(63, 57, 51)",
+            "background": [
+              230,
+              206,
+              185
+            ],
+            "ratio": 7.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__link",
+            "text": "Join Free →",
+            "colour": "rgb(180, 83, 9)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 5.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "SHOPLUXE",
+            "colour": "rgb(248, 250, 252)",
+            "background": [
+              12,
+              14,
+              18
+            ],
+            "ratio": 18.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__tag",
+            "text": "EVERYTHING YOU NEED",
+            "colour": "rgb(148, 163, 184)",
+            "background": [
+              12,
+              14,
+              18
+            ],
+            "ratio": 7.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "pay-tag",
+            "text": "VISA",
+            "colour": "rgb(203, 213, 225)",
+            "background": [
+              26,
+              30,
+              38
+            ],
+            "ratio": 11.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "SHOP NOW →",
+          "colour": "rgb(18, 20, 23)",
+          "width": "3px",
+          "ratio": 16.81
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "shopluxe/assets/css/style.css",
+    "shopluxe/assets/img/avatars.webp",
+    "shopluxe/assets/img/cat-accessories.webp",
+    "shopluxe/assets/img/cat-beauty.webp",
+    "shopluxe/assets/img/cat-electronics.webp",
+    "shopluxe/assets/img/cat-fashion.webp",
+    "shopluxe/assets/img/cat-homeliving.webp",
+    "shopluxe/assets/img/cat-sports.webp",
+    "shopluxe/assets/img/cat-toys.webp",
+    "shopluxe/assets/img/hero-products.webp",
+    "shopluxe/assets/img/prod-backpack.webp",
+    "shopluxe/assets/img/prod-earbuds.webp",
+    "shopluxe/assets/img/prod-moonlamp.webp",
+    "shopluxe/assets/img/prod-perfume.webp",
+    "shopluxe/assets/img/prod-watch.webp",
+    "shopluxe/assets/js/main.js",
+    "shopluxe/CUSTOMISE.md",
+    "shopluxe/index.html",
+    "shopluxe/LICENCE.txt",
+    "shopluxe/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/avatars.webp",
+    "assets/img/cat-accessories.webp",
+    "assets/img/cat-beauty.webp",
+    "assets/img/cat-electronics.webp",
+    "assets/img/cat-fashion.webp",
+    "assets/img/cat-homeliving.webp",
+    "assets/img/cat-sports.webp",
+    "assets/img/cat-toys.webp",
+    "assets/img/hero-products.webp",
+    "assets/img/prod-backpack.webp",
+    "assets/img/prod-earbuds.webp",
+    "assets/img/prod-moonlamp.webp",
+    "assets/img/prod-perfume.webp",
+    "assets/img/prod-watch.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

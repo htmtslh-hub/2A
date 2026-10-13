@@ -45,6 +45,19 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t30: {
+    slug: 'shopluxe', cat: 'commerce', version: '1.0.0', video: true,
+    specs: {
+      vi: [['Định dạng', 'HTML / CSS / JavaScript'], ['Gói tải', '20 file · 14 ảnh WebP tối ưu'], ['Tính năng', 'Carousel hero · 7 danh mục · giỏ hàng phiên'], ['Tương tác', 'Bộ lọc · tìm kiếm · toast thông báo'], ['Phạm vi', 'Giao diện tĩnh · demo only · không backend']],
+      en: [['Format', 'HTML / CSS / JavaScript'], ['Package', '20 files · 14 optimized WebP images'], ['Features', 'Hero carousel · 7 categories · in-session cart'], ['Interactions', 'Filters · search drawer · toast alerts'], ['Scope', 'Static template · demo only · no backend']],
+      zh: [['格式', 'HTML / CSS / JavaScript'], ['下载包', '20 个文件 · 14 张优化 WebP'], ['功能', 'Hero 轮播 · 7 大分类 · 会话购物车'], ['交互', '筛选 · 搜索抽屉 · 提示通知'], ['范围', '静态模板 · 仅限演示 · 无后端']],
+    },
+    copy: {
+      vi: { name: 'Shopluxe', desc: 'Giao diện cửa hàng phong cách sống và thương mại điện tử hiện đại. Khẩu hiệu "Everything For Everyone", carousel sản phẩm nổi bật hai chiều, dải 7 danh mục bo góc, lưới sản phẩm thịnh hành với đánh giá sao, tính năng thêm giỏ hàng có số đếm động trong phiên, 3 thẻ ưu đãi và khối bản tin tin cậy.', tags: ['Thương mại điện tử', 'Lifestyle shop', 'Carousel'] },
+      en: { name: 'Shopluxe', desc: 'A modern e-commerce and lifestyle storefront template. Tagline "Everything For Everyone", dual-direction hero carousel, 7 rounded category cards, trending product grid with star ratings, in-session dynamic cart badge, 3 value cards and customer trust social proof.', tags: ['E-commerce', 'Lifestyle shop', 'Carousel'] },
+      zh: { name: 'Shopluxe', desc: '现代生活方式与电子商务独立站模板。标语“Everything For Everyone”，支持双向 Hero 轮播、7 大精选圆角分类卡片、带星级评价的热门商品网格、动态会话购物车角标、3 大优惠特色卡片及真实客户信任展示。', tags: ['电子商务', '生活商店', '轮播展示'] },
+    },
+  },
   t29: {
     slug: 'orbit-academy', cat: 'education', version: '1.0.0', video: true,
     specs: {

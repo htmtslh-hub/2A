@@ -90,3 +90,25 @@
   - Ngăn kéo menu di động (mobile nav) mở trượt êm ái, hỗ trợ đầy đủ phím Escape và focus trap.
   - Carousel sản phẩm hero chuyển đổi slide linh hoạt với nút bấm Trước/Sau.
   - Giỏ hàng in-session: Bấm "ADD TO CART" trên bất kỳ thẻ sản phẩm nào sẽ tăng số đếm badge giỏ hàng và hiển thị toast thông báo sinh động.
+
+---
+
+## Triển khai Production & Xác minh trực tuyến — 13/10/2026
+
+- **Mã nguồn commit**: `ee41702` (nhánh `master` trên GitHub `https://github.com/htmtslh-hub/2A.git`).
+- **Mã triển khai Vercel**: `dpl_6akwgGtieuqqprh4aEBHBhMQiYZn` (trạng thái: **READY**).
+- **Vercel Deployment URL**: https://web-4338dd5f5-htmtslh-hubs-projects.vercel.app
+- **Tên miền sản xuất**: https://forgezone.store (đã hoàn tất trỏ bí danh / alias).
+- **Live Demo**: https://forgezone.store/demos/shopluxe/index.html
+- **Ảnh xem trước**: https://forgezone.store/previews/shopluxe.webp
+- **Video tương tác**: https://forgezone.store/previews/shopluxe.mp4
+- **Catalog Store**: Đăng ký tại slot **`t30`**, URL trực tiếp: https://forgezone.store/?mau=t30.
+- **Xác minh tài nguyên trực tuyến**:
+  - `demos/shopluxe/index.html`: HTTP 200 OK (`text/html`)
+  - `demos/shopluxe/assets/css/style.css`: HTTP 200 OK (`text/css`)
+  - `demos/shopluxe/assets/js/main.js`: HTTP 200 OK (`application/javascript`)
+  - `demos/shopluxe/assets/img/hero-products.webp`: HTTP 200 OK (`image/webp`)
+  - `previews/shopluxe.webp`: HTTP 200 OK (`image/webp`)
+  - `previews/shopluxe.mp4`: HTTP 200 OK (`video/mp4`)
+  - `/?mau=t30`: HTTP 200 OK (`text/html`)
+

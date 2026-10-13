@@ -1,0 +1,81 @@
+{
+  "origin": "https://forgezone.store",
+  "browsers": {
+    "Chromium": {
+      "version": "153.0.8010.12",
+      "reducedMotionDefault": true,
+      "savedOffIgnored": true,
+      "keyboardWrap": true,
+      "swipeWrap": true,
+      "midframe": {
+        "transform": "matrix(0.878887, 0.133706, -0.133706, 0.878887, 120.251, -41.6254)",
+        "opacity": "0.0749909"
+      },
+      "scrollBeforeResize": "matrix(1.02957, 0.049907, -0.049907, 1.02957, 0, -29.5503)",
+      "scrollAfterResize": "matrix(1.03098, 0.0758203, -0.0758203, 1.03098, 0, -32.4122)",
+      "dimensions": {
+        "sw": 320,
+        "cw": 320
+      },
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "Firefox": {
+      "version": "155.0",
+      "reducedMotionDefault": true,
+      "savedOffIgnored": true,
+      "keyboardWrap": true,
+      "swipeWrap": true,
+      "midframe": {
+        "transform": "matrix(0.873995, 0.14147, -0.14147, 0.873995, 124.182, -42.9862)",
+        "opacity": "0.0447512"
+      },
+      "scrollBeforeResize": "matrix(1.02957, 0.0498365, -0.0498365, 1.02957, 0, -29.5425)",
+      "scrollAfterResize": "matrix(1.03098, 0.0757427, -0.0757427, 1.03098, 0, -32.4036)",
+      "dimensions": {
+        "sw": 320,
+        "cw": 320
+      },
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "Edge": {
+      "version": "155.0.4283.45",
+      "reducedMotionDefault": true,
+      "savedOffIgnored": true,
+      "keyboardWrap": true,
+      "swipeWrap": true,
+      "midframe": {
+        "transform": "matrix(0.882603, 0.12768, -0.12768, 0.882603, 117.227, -40.5787)",
+        "opacity": "0.0982516"
+      },
+      "scrollBeforeResize": "matrix(1.02957, 0.049907, -0.049907, 1.02957, 0, -29.5503)",
+      "scrollAfterResize": "matrix(1.03098, 0.0758203, -0.0758203, 1.03098, 0, -32.4122)",
+      "dimensions": {
+        "sw": 320,
+        "cw": 320
+      },
+      "sessionPause": true,
+      "missingImageFallback": true
+    },
+    "CocCoc": {
+      "version": "152.0.7977.124",
+      "reducedMotionDefault": true,
+      "savedOffIgnored": true,
+      "keyboardWrap": true,
+      "swipeWrap": true,
+      "midframe": {
+        "transform": "matrix(0.882, 0.128665, -0.128665, 0.882, 117.72, -40.7493)",
+        "opacity": "0.0944605"
+      },
+      "scrollBeforeResize": "matrix(1.02957, 0.049907, -0.049907, 1.02957, 0, -29.5503)",
+      "scrollAfterResize": "matrix(1.03098, 0.0758203, -0.0758203, 1.03098, 0, -32.4122)",
+      "dimensions": {
+        "sw": 320,
+        "cw": 320
+      },
+      "sessionPause": true,
+      "missingImageFallback": true
+    }
+  }
+}

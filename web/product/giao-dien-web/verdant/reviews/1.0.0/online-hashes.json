@@ -1,0 +1,70 @@
+{
+  "origin": "https://forgezone.store",
+  "results": [
+    {
+      "file": "demos/verdant/index.html",
+      "status": 200,
+      "bytes": 9939,
+      "sha256": "51146fbdcbca61a46e177ad95f4c6f1d8a70913e24bbdaa367c4e0c7b5bf94c0",
+      "matches": true
+    },
+    {
+      "file": "demos/verdant/assets/css/style.css",
+      "status": 200,
+      "bytes": 16681,
+      "sha256": "0a80fc6d480ffd43c48aa1bb4fdc33e1dde77fce0f7d2dce48838a072598615b",
+      "matches": true
+    },
+    {
+      "file": "demos/verdant/assets/js/main.js",
+      "status": 200,
+      "bytes": 9390,
+      "sha256": "9af39b6e55636ef66cef6d48f58d9dc5c09774e91509b97a0bd815bee8668d30",
+      "matches": true
+    },
+    {
+      "file": "demos/verdant/assets/img/drinks.webp",
+      "status": 200,
+      "bytes": 390414,
+      "sha256": "82e451541d2a54fda25eea6c755d2bb552622dea49d9706105c3d0b451e12e8c",
+      "matches": true
+    },
+    {
+      "file": "demos/verdant/assets/img/bean.webp",
+      "status": 200,
+      "bytes": 379748,
+      "sha256": "f769c8463780a260c1fd11bb5205becc45919554466e0c2dd0f8f700e6b54c25",
+      "matches": true
+    },
+    {
+      "file": "previews/verdant.webp",
+      "status": 200,
+      "bytes": 29448,
+      "sha256": "ca1d33730f990a661acb5cc699fbcaa5bc8ec019bde8948da715d8d8547acd08",
+      "matches": true
+    },
+    {
+      "file": "previews/verdant.mp4",
+      "status": 200,
+      "bytes": 579837,
+      "sha256": "5004143808f95db63cc1faeec4de2073afac193174816b093c58f70d51641869",
+      "matches": true
+    },
+    {
+      "file": "demos/dualplay/index.html",
+      "status": 200,
+      "bytes": 12274,
+      "sha256": "7560f1882ce918bb02e769b2c7390a4c1e64c8e47a7ae7d03eb6fadae5421d3b",
+      "matches": true
+    },
+    {
+      "file": "demos/auralis/index.html",
+      "status": 200,
+      "bytes": 11592,
+      "sha256": "3f8d15572a5446ba355547ab16cafd68c21e9969bd0ef9180a4e8c125ee0b2e8",
+      "matches": true
+    }
+  ],
+  "zipTraced": true,
+  "date": "2026-10-13T07:02:09.203Z"
+}

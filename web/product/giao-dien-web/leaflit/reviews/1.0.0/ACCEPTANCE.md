@@ -1,4 +1,6 @@
-# ForgeFrame acceptance · Leaflit candidate
+# ForgeFrame candidate history · Leaflit
+
+Final owner-approved release was published and verified on 14/10/2026. See QA.md, RELEASE.md and DEPLOYMENT.json for current status. The audit below records the earlier candidate and does not block the later explicit release instruction; original-reference fidelity >95% is not claimed.
 
 Gate: NOT TESTED / chưa đủ điều kiện phát hành.
 

@@ -1,0 +1,1030 @@
+{
+  "slug": "semaan",
+  "version": "1.0.0",
+  "date": "2026-10-14T14:13:55.790Z",
+  "os": "win32",
+  "zipBytes": 391935,
+  "sha256": "5ff6632bed443830a21f900ba070200a4d27caa844e76f15b61da82d3395367f",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#main"
+          },
+          {
+            "label": "Semaan home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#home"
+          },
+          {
+            "label": "WORK",
+            "href": "#work",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#work"
+          },
+          {
+            "label": "ABOUT",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#about"
+          },
+          {
+            "label": "SERVICES",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#services"
+          },
+          {
+            "label": "CONTACT",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#contact"
+          },
+          {
+            "label": "Explore selected work",
+            "href": "#work",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#work"
+          },
+          {
+            "label": "VIEW WORK",
+            "href": "#work",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#work"
+          },
+          {
+            "label": "Explore my approach ↗",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#services"
+          },
+          {
+            "label": "hello@semaan.example",
+            "href": "mailto:hello@semaan.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@semaan.example"
+          },
+          {
+            "label": "Semaan",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#home"
+          },
+          {
+            "label": "BACK TO TOP ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 650,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Semaan",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              139,
+              43,
+              0
+            ],
+            "ratio": 8.59,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "WORK",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              246,
+              245,
+              241
+            ],
+            "ratio": 16.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "CREATE",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              215,
+              105,
+              0
+            ],
+            "ratio": 3.55,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Designs that inspire.Ideas that connect.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              193,
+              86,
+              0
+            ],
+            "ratio": 4.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button button--light",
+            "text": "VIEW WORK",
+            "colour": "rgb(133, 53, 0)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 8.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "AVAILABLE FOR",
+            "colour": "rgb(138, 67, 21)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.26,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "FreelanceProjects",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.48,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Built for people with big ideas.Made to ",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              202,
+              94,
+              0
+            ],
+            "ratio": 4.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": false
+          },
+          {
+            "element": "sample-label",
+            "text": "SAMPLE CLIENT NOTE",
+            "colour": "rgb(107, 75, 54)",
+            "background": [
+              243,
+              243,
+              241
+            ],
+            "ratio": 7.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "JAMES CARTER",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              243,
+              243,
+              241
+            ],
+            "ratio": 15.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Fictional client",
+            "colour": "rgb(92, 92, 88)",
+            "background": [
+              243,
+              243,
+              241
+            ],
+            "ratio": 6.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "SELECTED WORK",
+            "colour": "rgb(153, 64, 8)",
+            "background": [
+              246,
+              245,
+              241
+            ],
+            "ratio": 6.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Ideas madeinto something real.",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              246,
+              245,
+              241
+            ],
+            "ratio": 16.02,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Identity, digital and editorial concept ",
+            "colour": "rgb(86, 87, 82)",
+            "background": [
+              246,
+              245,
+              241
+            ],
+            "ratio": 6.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "HAVE SOMETHING IN MIND?",
+            "colour": "rgb(153, 64, 8)",
+            "background": [
+              238,
+              235,
+              228
+            ],
+            "ratio": 5.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Let's makeit happen.",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              238,
+              235,
+              228
+            ],
+            "ratio": 14.68,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button--dark",
+            "text": "hello@semaan.example",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              33,
+              36,
+              31
+            ],
+            "ratio": 15.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Tell me a little about your idea. Email ",
+            "colour": "rgb(86, 87, 82)",
+            "background": [
+              238,
+              235,
+              228
+            ],
+            "ratio": 6.12,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "VIEW WORK",
+          "colour": "rgb(28, 33, 27)",
+          "width": "3px",
+          "ratio": 16.37
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#main"
+          },
+          {
+            "label": "Semaan home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#home"
+          },
+          {
+            "label": "WORK",
+            "href": "#work",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#work"
+          },
+          {
+            "label": "ABOUT",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#about"
+          },
+          {
+            "label": "SERVICES",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#services"
+          },
+          {
+            "label": "CONTACT",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#contact"
+          },
+          {
+            "label": "Explore selected work",
+            "href": "#work",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#work"
+          },
+          {
+            "label": "VIEW WORK",
+            "href": "#work",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#work"
+          },
+          {
+            "label": "Explore my approach ↗",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#services"
+          },
+          {
+            "label": "hello@semaan.example",
+            "href": "mailto:hello@semaan.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@semaan.example"
+          },
+          {
+            "label": "Semaan",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#home"
+          },
+          {
+            "label": "BACK TO TOP ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/semaan/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 650,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.48,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Semaan",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              139,
+              43,
+              0
+            ],
+            "ratio": 8.59,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "WORK",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              246,
+              245,
+              241
+            ],
+            "ratio": 16.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "CREATE",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              215,
+              106,
+              0
+            ],
+            "ratio": 3.53,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Designs that inspire.Ideas that connect.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              193,
+              87,
+              1
+            ],
+            "ratio": 4.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button button--light",
+            "text": "VIEW WORK",
+            "colour": "rgb(133, 53, 0)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 8.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "AVAILABLE FOR",
+            "colour": "rgb(138, 67, 21)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 7.26,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "FreelanceProjects",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.48,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Built for people with big ideas.Made to ",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              201,
+              94,
+              0
+            ],
+            "ratio": 4.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": false
+          },
+          {
+            "element": "sample-label",
+            "text": "SAMPLE CLIENT NOTE",
+            "colour": "rgb(107, 75, 54)",
+            "background": [
+              243,
+              243,
+              241
+            ],
+            "ratio": 7.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "JAMES CARTER",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              243,
+              243,
+              241
+            ],
+            "ratio": 15.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Fictional client",
+            "colour": "rgb(92, 92, 88)",
+            "background": [
+              243,
+              243,
+              241
+            ],
+            "ratio": 6.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "SELECTED WORK",
+            "colour": "rgb(153, 64, 8)",
+            "background": [
+              246,
+              245,
+              241
+            ],
+            "ratio": 6.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Ideas madeinto something real.",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              246,
+              245,
+              241
+            ],
+            "ratio": 16.02,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Identity, digital and editorial concept ",
+            "colour": "rgb(86, 87, 82)",
+            "background": [
+              246,
+              245,
+              241
+            ],
+            "ratio": 6.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "HAVE SOMETHING IN MIND?",
+            "colour": "rgb(153, 64, 8)",
+            "background": [
+              238,
+              235,
+              228
+            ],
+            "ratio": 5.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Let's makeit happen.",
+            "colour": "rgb(25, 26, 23)",
+            "background": [
+              238,
+              235,
+              228
+            ],
+            "ratio": 14.68,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button--dark",
+            "text": "hello@semaan.example",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              33,
+              36,
+              31
+            ],
+            "ratio": 15.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Tell me a little about your idea. Email ",
+            "colour": "rgb(86, 87, 82)",
+            "background": [
+              238,
+              235,
+              228
+            ],
+            "ratio": 6.12,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "VIEW WORK",
+          "colour": "rgb(28, 33, 27)",
+          "width": "3px",
+          "ratio": 16.37
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "semaan/assets/css/style.css",
+    "semaan/assets/img/people.webp",
+    "semaan/assets/img/portrait.webp",
+    "semaan/assets/img/work.webp",
+    "semaan/assets/js/main.js",
+    "semaan/CUSTOMISE.md",
+    "semaan/index.html",
+    "semaan/LICENCE.txt",
+    "semaan/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/people.webp",
+    "assets/img/portrait.webp",
+    "assets/img/work.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q06/chromium: tương phản thấp [{\"element\":\"P\",\"text\":\"Built for people with big ideas.Made to \",\"colour\":\"rgb(255, 255, 255)\",\"background\":[202,94,0],\"ratio\":4.11,\"threshold\":4.5,\"overImage\":false,\"method\":\"pixels\",\"pass\":false}]",
+    "Q06/firefox: tương phản thấp [{\"element\":\"P\",\"text\":\"Built for people with big ideas.Made to \",\"colour\":\"rgb(255, 255, 255)\",\"background\":[201,94,0],\"ratio\":4.13,\"threshold\":4.5,\"overImage\":false,\"method\":\"pixels\",\"pass\":false}]"
+  ]
+}

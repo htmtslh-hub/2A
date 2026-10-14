@@ -45,6 +45,97 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t34: {
+  "slug": "semaan",
+  "cat": "portfolio",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "9 file · 3 ảnh WebP tự tạo"
+      ],
+      [
+        "Tương tác",
+        "Menu · chi tiết tác phẩm/dịch vụ · scroll reveal"
+      ],
+      [
+        "Phạm vi",
+        "Portfolio tĩnh · email · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · 3 original WebP images"
+      ],
+      [
+        "Interaction",
+        "Menu · work/service details · scroll reveals"
+      ],
+      [
+        "Scope",
+        "Static portfolio · email · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "9 个文件 · 3 张原创 WebP"
+      ],
+      [
+        "交互",
+        "菜单 · 作品/服务描述 · 滚动渐显"
+      ],
+      [
+        "范围",
+        "静态作品集 · 邮件 · 无后端"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "Semaan",
+      "desc": "Portfolio designer với hero chia đôi cam và trắng, chữ CREATE cao và chân dung đeo kính phản chiếu ánh cam tự tạo. Ba tác phẩm concept, giới thiệu, dịch vụ mở rộng và liên hệ email. Menu bàn phím, scroll reveal hữu hạn; lời chứng thực được ghi rõ là nội dung mẫu. HTML/CSS/JS thuần, không backend.",
+      "tags": [
+        "Portfolio designer",
+        "Chân dung tự tạo",
+        "Cam / trắng"
+      ]
+    },
+    "en": {
+      "name": "Semaan",
+      "desc": "A designer portfolio with an orange/white split hero, tall CREATE typography and an original amber-lit mirrored-sunglasses portrait. Three concept studies, about, expandable services and email contact. Keyboard menu and finite scroll reveals; testimonial clearly labelled as sample content. Plain HTML/CSS/JS, no backend.",
+      "tags": [
+        "Designer portfolio",
+        "Original portrait",
+        "Orange / white"
+      ]
+    },
+    "zh": {
+      "name": "Semaan",
+      "desc": "设计师作品集，含橙白分屏主视觉、高挑 CREATE 字体与原创暖橙镜面墨镜肖像。包含三项概念作品、个人介绍、可展开服务与邮件联系。支持键盘菜单和有限滚动渐显；客户评价明确标注为示例内容。原生 HTML/CSS/JS，无后端。",
+      "tags": [
+        "设计师作品集",
+        "原创肖像",
+        "橙色 / 白色"
+      ]
+    }
+  }
+},
   t33: {
   "slug": "ais-folio",
   "cat": "portfolio",

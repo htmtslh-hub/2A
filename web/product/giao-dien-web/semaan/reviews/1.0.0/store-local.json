@@ -1,0 +1,398 @@
+{
+  "origin": "http://localhost:4373",
+  "views": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "vi-VN",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "vi-VN",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "vi-VN",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "vi-VN",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "locale": "vi-VN",
+      "library": true,
+      "label": "BLOG/PORTFOLIO\nSemaan\n20 US$\n\nPortfolio designer với hero chia đôi cam và trắng, chữ CREATE cao và chân dung đeo kính phản chiếu ánh cam tự tạo. Ba tác phẩm concept, giới thiệu, dịch vụ mở rộng và liên hệ email. Menu bàn phím, scroll reveal hữu hạn; lời chứng thực được ghi rõ là nội dung mẫu. HTML/CSS/JS thuần, không backend.\n\nPortfolio designer\nChân dung tự tạo\nCam / trắng",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.84602
+      }
+    },
+    {
+      "name": "chromium",
+      "locale": "vi-VN",
+      "guide": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "en-US",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "en-US",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "en-US",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "en-US",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "locale": "en-US",
+      "library": true,
+      "label": "BLOG/PORTFOLIO\nSemaan\n$20\n\nA designer portfolio with an orange/white split hero, tall CREATE typography and an original amber-lit mirrored-sunglasses portrait. Three concept studies, about, expandable services and email contact. Keyboard menu and finite scroll reveals; testimonial clearly labelled as sample content. Plain HTML/CSS/JS, no backend.\n\nDesigner portfolio\nOriginal portrait\nOrange / white",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.811835
+      }
+    },
+    {
+      "name": "chromium",
+      "locale": "en-US",
+      "guide": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "zh-CN",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "zh-CN",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "zh-CN",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "zh-CN",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "locale": "zh-CN",
+      "library": true,
+      "label": "博客/作品集\nSemaan\n$20\n\n设计师作品集，含橙白分屏主视觉、高挑 CREATE 字体与原创暖橙镜面墨镜肖像。包含三项概念作品、个人介绍、可展开服务与邮件联系。支持键盘菜单和有限滚动渐显；客户评价明确标注为示例内容。原生 HTML/CSS/JS，无后端。\n\n设计师作品集\n原创肖像\n橙色 / 白色",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.835289
+      }
+    },
+    {
+      "name": "chromium",
+      "locale": "zh-CN",
+      "guide": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "vi-VN",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "vi-VN",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "vi-VN",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "vi-VN",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "locale": "vi-VN",
+      "library": true,
+      "label": "BLOG/PORTFOLIO\nSemaan\n20 US$\n\nPortfolio designer với hero chia đôi cam và trắng, chữ CREATE cao và chân dung đeo kính phản chiếu ánh cam tự tạo. Ba tác phẩm concept, giới thiệu, dịch vụ mở rộng và liên hệ email. Menu bàn phím, scroll reveal hữu hạn; lời chứng thực được ghi rõ là nội dung mẫu. HTML/CSS/JS thuần, không backend.\n\nPortfolio designer\nChân dung tự tạo\nCam / trắng",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.744395
+      }
+    },
+    {
+      "name": "firefox",
+      "locale": "vi-VN",
+      "guide": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "en-US",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "en-US",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "en-US",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "en-US",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "locale": "en-US",
+      "library": true,
+      "label": "BLOG/PORTFOLIO\nSemaan\n$20\n\nA designer portfolio with an orange/white split hero, tall CREATE typography and an original amber-lit mirrored-sunglasses portrait. Three concept studies, about, expandable services and email contact. Keyboard menu and finite scroll reveals; testimonial clearly labelled as sample content. Plain HTML/CSS/JS, no backend.\n\nDesigner portfolio\nOriginal portrait\nOrange / white",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.749843
+      }
+    },
+    {
+      "name": "firefox",
+      "locale": "en-US",
+      "guide": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "zh-CN",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "zh-CN",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "zh-CN",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "zh-CN",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "locale": "zh-CN",
+      "library": true,
+      "label": "博客/作品集\nSemaan\n$20\n\n设计师作品集，含橙白分屏主视觉、高挑 CREATE 字体与原创暖橙镜面墨镜肖像。包含三项概念作品、个人介绍、可展开服务与邮件联系。支持键盘菜单和有限滚动渐显；客户评价明确标注为示例内容。原生 HTML/CSS/JS，无后端。\n\n设计师作品集\n原创肖像\n橙色 / 白色",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.707865
+      }
+    },
+    {
+      "name": "firefox",
+      "locale": "zh-CN",
+      "guide": true
+    }
+  ],
+  "failures": [],
+  "anonymousDownload": 401,
+  "directZip": 404
+}

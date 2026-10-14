@@ -460,5 +460,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "semaan": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "fae9b4cfc6f2",
+    "sha256": "fae9b4cfc6f2a3d0bdee0687d4909c2e78eaf4090aa6de7d82e31a2c6347154c",
+    "demoHtmlSha256": "bc75974ea2e5fc3547a9d512cea4b3c24a1bb4b3e41f788d977ab8357eca784b",
+    "demoSha256": "4dd5b41b280268b0df182639c8239ce07a32e22f48569f62441ada84b1450d89",
+    "bytes": 501429,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

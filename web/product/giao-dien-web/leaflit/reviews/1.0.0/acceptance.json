@@ -89,7 +89,16 @@
     "scope": "owner-approved final Leaflit, packaging and store release; no >95% original-reference claim"
   },
   "releaseVerification": {
-    "status": "PENDING ONLINE",
+    "status": "PASS",
+    "url": "https://forgezone.store/?mau=t32",
+    "demo": "https://forgezone.store/demos/leaflit/index.html?v=1.0.0",
+    "deploymentId": "dpl_H6GPsJZt5j8ND9V3q3YaPZdrtUcC",
+    "runtimeCommit": "3c03ecd",
+    "evidence": [
+      "online-release.json",
+      "online-responsive.json",
+      "../../../reviews/video-previews/leaflit-online-autoplay.json"
+    ],
     "paidPurchaseFlow": "NOT TESTED"
   }
 }

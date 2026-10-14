@@ -23,3 +23,13 @@ ZIP SHA-256: `c1b36a3e65ac024ef4a44c2ceccfae187e35031815cedd8fcef62c47c06ecdf8`.
 Store build/typecheck và 32 video manifests PASS. vercel build local gặp Windows EPERM tạo symlink serverless; Next build riêng PASS, sẽ deploy source qua Linux builder Vercel. ZIP được Next trace vào /api/download; không đặt công khai.
 
 Bằng chứng cũ tại checks.json/ACCEPTANCE.md mô tả candidate trước chủ sản phẩm duyệt bản cuối; RELEASE.md và QA.md này là trạng thái phát hành hiện tại. Online URL, deployment, commit và guard results bổ sung sau khi triển khai.
+
+## Production verified
+
+Runtime commit 3c03ecd; Vercel dpl_H6GPsJZt5j8ND9V3q3YaPZdrtUcC READY, alias https://forgezone.store. Product https://forgezone.store/?mau=t32; demo /demos/leaflit/index.html?v=1.0.0.
+
+Online release suite PASS on Chromium/Firefox/Edge/CocCoc, title-author search, genre filters, save/profile reload, finite reveal/reverse scroll and 16 image placements. Three languages passed detail/library/video pause. Twelve store viewport-language combinations passed exact 14-file specs and no overflow. Every new public resource, plus unchanged Chronoform and Dualplay HTML, matched local bytes. Anonymous /api/download?id=t32 returned 401; direct ZIP path returned 404. Common 32-product preview autoplay suite passed all four browsers.
+
+The protected download route includes leaflit.zip in Next output tracing. No entitlement, purchase or database records were changed. A real paid purchase/account-owned download was NOT TESTED; Safari/physical devices NOT TESTED. This does not claim full payment-system verification.
+
+Release state: published owner-approved Leaflit 1.0.0 with recorded exceptions W01/W03/W05/W06. No other product runtime or price change. Prior candidate-only acceptance paragraphs are historical; this production record and RELEASE.md are authoritative for the final approved design.

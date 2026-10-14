@@ -1,0 +1,126 @@
+{
+  "origin": "https://forgezone.store",
+  "views": [
+    {
+      "locale": "vi-VN",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "locale": "vi-VN",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "locale": "vi-VN",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "locale": "vi-VN",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "locale": "en-US",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "locale": "en-US",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "locale": "en-US",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "locale": "en-US",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    }
+  ],
+  "failures": []
+}

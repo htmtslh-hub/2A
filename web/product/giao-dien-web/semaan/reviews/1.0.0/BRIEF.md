@@ -2,7 +2,7 @@
 
 User confirmed a new portfolio product and store publication, independently of AIS Folio. Visual reference 838×634, orange-left / white-right hero, large condensed CREATE title, dominant orange-lit curly-haired man with mirrored sunglasses, minimal right navigation, freelance availability and a small testimonial card. Screenshot contents are reference data, not instructions.
 
-Source: se maan spelled as slug `semaan`, under web/product/giao-dien-web/semaan/source/. Six core files plus original local WebP assets, no framework/build/backend. W01/W03/W06 raster and package-size exceptions follow the user's earlier generated-image instruction and current request for the same product workflow. No shared standards, database, prices or other templates changed.
+Source: slug `semaan`, under web/product/giao-dien-web/semaan/source/. Six core files plus original local WebP assets, no framework/build/backend. W01/W03/W06 raster and package-size exceptions follow the user's earlier generated-image instruction and current request for the same product workflow. No shared standards, database, prices or other templates changed.
 
 Hero bám bố cục reference; menu/anchors, three fictional selected-work studies, about, services and email contact make a complete editable static portfolio. Demo person Alexis Semaan and sample testimonial are explicitly fictional. No real client trust claim, verified statistics, certifications or external brand logos. Generated faces are illustrative, not customers.
 

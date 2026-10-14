@@ -1,0 +1,299 @@
+{
+  "date": "2026-10-14T02:33:58.430Z",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "geometry": {
+            "width": 1440,
+            "scrollWidth": 1440
+          },
+          "violations": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "geometry": {
+            "width": 820,
+            "scrollWidth": 820
+          },
+          "violations": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "geometry": {
+            "width": 375,
+            "scrollWidth": 375
+          },
+          "violations": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "geometry": {
+            "width": 320,
+            "scrollWidth": 320
+          },
+          "violations": []
+        }
+      ],
+      "errors": [],
+      "covers": [
+        {
+          "src": "assets/img/secret-garden.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "THE SECRET GARDEN by ADA RIVERS: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/beyond-water.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "BEYOND THE WATER by THEO BENNETT: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/father-son.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "FATHER & SON by ROBERT HAYES: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/glass-house.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "THE GLASS HOUSE by EMILY STONE: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/book-longing.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "A BOOK OF LONGING by SUE MORGAN: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/darling-rose.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "DARLING ROSE by STEPHANIE REED: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/dark-summer.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "MY DARK SUMMER by KATE ROWAN: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/weather.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "WEATHER by JENNY ELLIS: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/secret-garden.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "THE SECRET GARDEN by ADA RIVERS: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/beyond-water.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "BEYOND THE WATER by THEO BENNETT: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/father-son.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "FATHER & SON by ROBERT HAYES: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/glass-house.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "THE GLASS HOUSE by EMILY STONE: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/book-longing.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "A BOOK OF LONGING by SUE MORGAN: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/darling-rose.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "DARLING ROSE by STEPHANIE REED: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/dark-summer.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "MY DARK SUMMER by KATE ROWAN: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/weather.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "WEATHER by JENNY ELLIS: original illustrated book cover"
+        }
+      ],
+      "storageReload": true,
+      "crossTab": true,
+      "blockedStorage": true,
+      "corruptStorage": true
+    },
+    "firefox": {
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "geometry": {
+            "width": 1440,
+            "scrollWidth": 1440
+          },
+          "violations": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "geometry": {
+            "width": 820,
+            "scrollWidth": 820
+          },
+          "violations": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "geometry": {
+            "width": 375,
+            "scrollWidth": 375
+          },
+          "violations": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "geometry": {
+            "width": 320,
+            "scrollWidth": 320
+          },
+          "violations": []
+        }
+      ],
+      "errors": [],
+      "covers": [
+        {
+          "src": "assets/img/secret-garden.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "THE SECRET GARDEN by ADA RIVERS: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/beyond-water.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "BEYOND THE WATER by THEO BENNETT: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/father-son.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "FATHER & SON by ROBERT HAYES: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/glass-house.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "THE GLASS HOUSE by EMILY STONE: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/book-longing.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "A BOOK OF LONGING by SUE MORGAN: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/darling-rose.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "DARLING ROSE by STEPHANIE REED: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/dark-summer.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "MY DARK SUMMER by KATE ROWAN: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/weather.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "WEATHER by JENNY ELLIS: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/secret-garden.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "THE SECRET GARDEN by ADA RIVERS: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/beyond-water.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "BEYOND THE WATER by THEO BENNETT: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/father-son.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "FATHER & SON by ROBERT HAYES: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/glass-house.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "THE GLASS HOUSE by EMILY STONE: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/book-longing.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "A BOOK OF LONGING by SUE MORGAN: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/darling-rose.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "DARLING ROSE by STEPHANIE REED: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/dark-summer.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "MY DARK SUMMER by KATE ROWAN: original illustrated book cover"
+        },
+        {
+          "src": "assets/img/weather.webp",
+          "width": 600,
+          "height": 900,
+          "alt": "WEATHER by JENNY ELLIS: original illustrated book cover"
+        }
+      ],
+      "storageReload": true,
+      "crossTab": true,
+      "blockedStorage": true,
+      "corruptStorage": true
+    }
+  },
+  "failures": [],
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "countErrors": []
+  }
+}

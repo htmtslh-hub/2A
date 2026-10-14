@@ -1,0 +1,165 @@
+{
+  "demo": "file:///D:/3.%20D%E1%BB%B1%20%C3%A1n/2A/_design/.qa-extracted/leaflit/index.html",
+  "date": "2026-10-14T03:01:16.109Z",
+  "browsers": [
+    {
+      "name": "Chromium",
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scroll": 320
+        }
+      ],
+      "errors": [],
+      "mid": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "end": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "search": true,
+      "saveReload": true,
+      "profileReload": true,
+      "covers": true
+    },
+    {
+      "name": "Firefox",
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scroll": 320
+        }
+      ],
+      "errors": [],
+      "mid": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "end": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "search": true,
+      "saveReload": true,
+      "profileReload": true,
+      "covers": true
+    },
+    {
+      "name": "Edge",
+      "version": "155.0.4283.45",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scroll": 320
+        }
+      ],
+      "errors": [],
+      "mid": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "end": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "search": true,
+      "saveReload": true,
+      "profileReload": true,
+      "covers": true
+    },
+    {
+      "name": "CocCoc",
+      "version": "152.0.7977.124",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scroll": 320
+        }
+      ],
+      "errors": [],
+      "mid": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "end": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "search": true,
+      "saveReload": true,
+      "profileReload": true,
+      "covers": true
+    }
+  ],
+  "store": [],
+  "hashes": [],
+  "failures": []
+}

@@ -1,0 +1,1239 @@
+{
+  "slug": "leaflit",
+  "version": "1.0.0",
+  "date": "2026-10-14T02:55:42.444Z",
+  "os": "win32",
+  "zipBytes": 1349980,
+  "sha256": "cc044e59465e33fed633bdf21717fe0c103f513ba97d43b81e9748615fa84bda",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 5,
+        "links": [
+          {
+            "label": "Skip to your library",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#main"
+          },
+          {
+            "label": "Welcome back,Sarah",
+            "href": "#profile",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#profile"
+          },
+          {
+            "label": "My reading board",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#main"
+          },
+          {
+            "label": "Collections",
+            "href": "#collections",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#collections"
+          },
+          {
+            "label": "Saved books 0",
+            "href": "#collections",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#collections"
+          },
+          {
+            "label": "Profile",
+            "href": "#profile",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#profile"
+          },
+          {
+            "label": "A little spacefor big stories.",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#about"
+          },
+          {
+            "label": "Leaflit.",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#main"
+          },
+          {
+            "label": "New releases",
+            "href": "#new-releases",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#new-releases"
+          },
+          {
+            "label": "Authors",
+            "href": "#authors",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#authors"
+          },
+          {
+            "label": "The Secret GardenAda Rivers193 pages · Chapter 13",
+            "href": "#book-0",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-0"
+          },
+          {
+            "label": "Beyond the WaterTheo BennettNew in your library",
+            "href": "#book-1",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-1"
+          },
+          {
+            "label": "Father & SonRobert Hayes84 pages · Chapter 6",
+            "href": "#book-2",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-2"
+          },
+          {
+            "label": "Explore books",
+            "href": "#book-notes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-notes"
+          },
+          {
+            "label": "The Glass HouseEmily StoneMystery",
+            "href": "#book-3",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-3"
+          },
+          {
+            "label": "A Book of LongingSue MorganFiction",
+            "href": "#book-4",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-4"
+          },
+          {
+            "label": "Darling RoseStephanie ReedThriller",
+            "href": "#book-5",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-5"
+          },
+          {
+            "label": "My Dark SummerKate RowanMystery",
+            "href": "#book-6",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-6"
+          },
+          {
+            "label": "WeatherJenny EllisFiction",
+            "href": "#book-7",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-7"
+          },
+          {
+            "label": "The Secret GardenAda RiversFantasy",
+            "href": "#book-0",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-0"
+          },
+          {
+            "label": "Beyond the WaterTheo BennettFiction",
+            "href": "#book-1",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-1"
+          },
+          {
+            "label": "Father & SonRobert HayesMemoir",
+            "href": "#book-2",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-2"
+          },
+          {
+            "label": "The Glass HouseEmily StoneMystery",
+            "href": "#book-3",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-3"
+          },
+          {
+            "label": "A Book of LongingSue MorganFiction",
+            "href": "#book-4",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-4"
+          },
+          {
+            "label": "Darling RoseStephanie ReedThriller",
+            "href": "#book-5",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-5"
+          },
+          {
+            "label": "My Dark SummerKate RowanMystery",
+            "href": "#book-6",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-6"
+          },
+          {
+            "label": "WeatherJenny EllisFiction",
+            "href": "#book-7",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-7"
+          },
+          {
+            "label": "Back to your books",
+            "href": "#reading",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#reading"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 650,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to your library",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              41,
+              43,
+              40
+            ],
+            "ratio": 14.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Welcome back,",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              229,
+              225,
+              213
+            ],
+            "ratio": 10.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Sarah",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              229,
+              225,
+              213
+            ],
+            "ratio": 10.92,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "My reading board",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              248,
+              247,
+              244
+            ],
+            "ratio": 13.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "A little spacefor big stories.",
+            "colour": "rgb(100, 103, 97)",
+            "background": [
+              248,
+              247,
+              244
+            ],
+            "ratio": 5.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Leaflit.",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              248,
+              247,
+              244
+            ],
+            "ratio": 13.33,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": ".",
+            "colour": "rgb(119, 84, 17)",
+            "background": [
+              248,
+              247,
+              244
+            ],
+            "ratio": 6.4,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "The Secret Garden",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              130,
+              94,
+              73
+            ],
+            "ratio": 5.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Ada Rivers",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              129,
+              94,
+              74
+            ],
+            "ratio": 5.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "193 pages · Chapter 13",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              128,
+              93,
+              74
+            ],
+            "ratio": 5.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Beyond the Water",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              49,
+              81,
+              97
+            ],
+            "ratio": 8.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Theo Bennett",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              46,
+              78,
+              92
+            ],
+            "ratio": 8.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "New in your library",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              50,
+              82,
+              98
+            ],
+            "ratio": 8.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Father & Son",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              52,
+              69,
+              74
+            ],
+            "ratio": 10.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Robert Hayes",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              51,
+              68,
+              74
+            ],
+            "ratio": 10.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "84 pages · Chapter 6",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              58,
+              74,
+              80
+            ],
+            "ratio": 9.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "genre",
+            "text": "Mystery",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              231,
+              231,
+              225
+            ],
+            "ratio": 11.5,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Featured authors",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              238,
+              237,
+              232
+            ],
+            "ratio": 12.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "3 titles in this demo",
+            "colour": "rgb(100, 103, 97)",
+            "background": [
+              238,
+              237,
+              232
+            ],
+            "ratio": 4.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "The Secret GardenAda Rivers193",
+          "colour": "rgb(119, 84, 17)",
+          "width": "3px",
+          "ratio": 6.4
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 5,
+        "links": [
+          {
+            "label": "Skip to your library",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#main"
+          },
+          {
+            "label": "Welcome back,Sarah",
+            "href": "#profile",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#profile"
+          },
+          {
+            "label": "My reading board",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#main"
+          },
+          {
+            "label": "Collections",
+            "href": "#collections",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#collections"
+          },
+          {
+            "label": "Saved books 0",
+            "href": "#collections",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#collections"
+          },
+          {
+            "label": "Profile",
+            "href": "#profile",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#profile"
+          },
+          {
+            "label": "A little spacefor big stories.",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#about"
+          },
+          {
+            "label": "Leaflit.",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#main"
+          },
+          {
+            "label": "New releases",
+            "href": "#new-releases",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#new-releases"
+          },
+          {
+            "label": "Authors",
+            "href": "#authors",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#authors"
+          },
+          {
+            "label": "The Secret GardenAda Rivers193 pages · Chapter 13",
+            "href": "#book-0",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-0"
+          },
+          {
+            "label": "Beyond the WaterTheo BennettNew in your library",
+            "href": "#book-1",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-1"
+          },
+          {
+            "label": "Father & SonRobert Hayes84 pages · Chapter 6",
+            "href": "#book-2",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-2"
+          },
+          {
+            "label": "Explore books",
+            "href": "#book-notes",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-notes"
+          },
+          {
+            "label": "The Glass HouseEmily StoneMystery",
+            "href": "#book-3",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-3"
+          },
+          {
+            "label": "A Book of LongingSue MorganFiction",
+            "href": "#book-4",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-4"
+          },
+          {
+            "label": "Darling RoseStephanie ReedThriller",
+            "href": "#book-5",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-5"
+          },
+          {
+            "label": "My Dark SummerKate RowanMystery",
+            "href": "#book-6",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-6"
+          },
+          {
+            "label": "WeatherJenny EllisFiction",
+            "href": "#book-7",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-7"
+          },
+          {
+            "label": "The Secret GardenAda RiversFantasy",
+            "href": "#book-0",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-0"
+          },
+          {
+            "label": "Beyond the WaterTheo BennettFiction",
+            "href": "#book-1",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-1"
+          },
+          {
+            "label": "Father & SonRobert HayesMemoir",
+            "href": "#book-2",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-2"
+          },
+          {
+            "label": "The Glass HouseEmily StoneMystery",
+            "href": "#book-3",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-3"
+          },
+          {
+            "label": "A Book of LongingSue MorganFiction",
+            "href": "#book-4",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-4"
+          },
+          {
+            "label": "Darling RoseStephanie ReedThriller",
+            "href": "#book-5",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-5"
+          },
+          {
+            "label": "My Dark SummerKate RowanMystery",
+            "href": "#book-6",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-6"
+          },
+          {
+            "label": "WeatherJenny EllisFiction",
+            "href": "#book-7",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#book-7"
+          },
+          {
+            "label": "Back to your books",
+            "href": "#reading",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/leaflit/index.html#reading"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 650,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to your library",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              41,
+              43,
+              40
+            ],
+            "ratio": 14.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Welcome back,",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              229,
+              225,
+              213
+            ],
+            "ratio": 10.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Sarah",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              229,
+              225,
+              213
+            ],
+            "ratio": 10.92,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "My reading board",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              248,
+              247,
+              244
+            ],
+            "ratio": 13.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "A little spacefor big stories.",
+            "colour": "rgb(100, 103, 97)",
+            "background": [
+              248,
+              247,
+              244
+            ],
+            "ratio": 5.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Leaflit.",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              248,
+              247,
+              244
+            ],
+            "ratio": 13.33,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": ".",
+            "colour": "rgb(119, 84, 17)",
+            "background": [
+              248,
+              247,
+              244
+            ],
+            "ratio": 6.4,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "The Secret Garden",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              130,
+              94,
+              73
+            ],
+            "ratio": 5.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Ada Rivers",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              129,
+              93,
+              74
+            ],
+            "ratio": 5.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "193 pages · Chapter 13",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              128,
+              93,
+              74
+            ],
+            "ratio": 5.86,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Beyond the Water",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              49,
+              81,
+              97
+            ],
+            "ratio": 8.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Theo Bennett",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              46,
+              78,
+              92
+            ],
+            "ratio": 8.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "New in your library",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              50,
+              82,
+              98
+            ],
+            "ratio": 8.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Father & Son",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              52,
+              69,
+              74
+            ],
+            "ratio": 10.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Robert Hayes",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              51,
+              68,
+              74
+            ],
+            "ratio": 10.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "84 pages · Chapter 6",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              58,
+              74,
+              80
+            ],
+            "ratio": 9.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "genre",
+            "text": "Mystery",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              231,
+              231,
+              225
+            ],
+            "ratio": 11.5,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Featured authors",
+            "colour": "rgb(41, 43, 40)",
+            "background": [
+              238,
+              237,
+              232
+            ],
+            "ratio": 12.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "3 titles in this demo",
+            "colour": "rgb(100, 103, 97)",
+            "background": [
+              238,
+              237,
+              232
+            ],
+            "ratio": 4.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "The Secret GardenAda Rivers193",
+          "colour": "rgb(119, 84, 17)",
+          "width": "3px",
+          "ratio": 6.4
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "leaflit/assets/css/style.css",
+    "leaflit/assets/img/beyond-water.webp",
+    "leaflit/assets/img/book-longing.webp",
+    "leaflit/assets/img/dark-summer.webp",
+    "leaflit/assets/img/darling-rose.webp",
+    "leaflit/assets/img/father-son.webp",
+    "leaflit/assets/img/glass-house.webp",
+    "leaflit/assets/img/secret-garden.webp",
+    "leaflit/assets/img/weather.webp",
+    "leaflit/assets/js/main.js",
+    "leaflit/CUSTOMISE.md",
+    "leaflit/index.html",
+    "leaflit/LICENCE.txt",
+    "leaflit/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/beyond-water.webp",
+    "assets/img/book-longing.webp",
+    "assets/img/dark-summer.webp",
+    "assets/img/darling-rose.webp",
+    "assets/img/father-son.webp",
+    "assets/img/glass-house.webp",
+    "assets/img/secret-garden.webp",
+    "assets/img/weather.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q03: có <form> nhưng không ghi \"Demo only\"",
+    "Q05/chromium: 5 SVG thiếu aria-hidden/tên hoặc viewBox",
+    "Q05/firefox: 5 SVG thiếu aria-hidden/tên hoặc viewBox"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "27028ab6d87f8481d1edc8311abc8b31183819aeb463eb001f5effdb8cac762b",
+  "references": [
+    {
+      "source": "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\codex-clipboard-0dacf5e9-4c3a-411c-9af1-9f77f3b52c22.png",
+      "sha256": "70dbd9b23e0187134d31041eb76eb086fbbec44b9695b4c33bedf8cacb63a3a3",
+      "size": [
+        822,
+        490
+      ],
+      "crop": "exclude only viewer overlays; no content regions omitted"
+    }
+  ],
+  "views": [],
+  "fidelity": {
+    "method": "weighted visual rubric",
+    "strictMinimum": 95,
+    "comparisonComplete": false,
+    "status": "N/A FOR RELEASE OF APPROVED DESIGN; original-reference fidelity not claimed"
+  },
+  "animation": {
+    "status": "NOT TESTED",
+    "evidence": [
+      "candidate-checks.json: mobile intermediate and terminal frames; complete cleanup/resize audit pending"
+    ]
+  },
+  "scroll": {
+    "status": "NOT TESTED",
+    "evidence": [
+      "candidate-checks.json: viewport reveal; reverse-scroll audit pending"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "evidence": [
+      "Image input only"
+    ]
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "release-final/checks.json",
+      "local-checks.json",
+      "local-release.json",
+      "final-package.json",
+      "supplemental.json"
+    ]
+  },
+  "blockers": [],
+  "gate": "PASS FOR OWNER-APPROVED RELEASE",
+  "approvedExceptions": [
+    {
+      "code": "W05",
+      "scope": "Leaflit only, browser-local search/filter/save/profile",
+      "authorisation": "User: Cho phép tương tác cục bộ",
+      "date": "2026-10-14"
+    },
+    {
+      "codes": [
+        "W01",
+        "W03",
+        "W06"
+      ],
+      "scope": "Leaflit eight generated local raster covers replacing SVGs",
+      "authorisation": "User explicitly requested all covers replaced with generated realistic illustrations",
+      "date": "2026-10-14"
+    }
+  ],
+  "localFeatures": {
+    "status": "PASS",
+    "evidence": [
+      "local-checks.json"
+    ]
+  },
+  "coverImages": {
+    "status": "PASS",
+    "evidence": [
+      "generated-covers.json",
+      "local-checks.json",
+      "../../design/ASSETS.md"
+    ]
+  },
+  "releaseAuthorisation": {
+    "date": "2026-10-14",
+    "text": "ok em đóng gói sản phẩm và đưa lên store",
+    "scope": "owner-approved final Leaflit, packaging and store release; no >95% original-reference claim"
+  },
+  "releaseVerification": {
+    "status": "PENDING ONLINE",
+    "paidPurchaseFlow": "NOT TESTED"
+  }
+}

@@ -12,7 +12,9 @@ import { pathToFileURL } from 'node:url';
 const root = process.cwd();
 const require = createRequire(import.meta.url);
 const esbuild = require(resolve(root, '_design/.tooling/node_modules/esbuild'));
-const sharp = require(resolve(root, '_design/.tooling/node_modules/sharp'));
+const sharp = require(existsSync(resolve(root, '_design/.tooling/node_modules/sharp'))
+  ? resolve(root, '_design/.tooling/node_modules/sharp')
+  : resolve(root, 'web/node_modules/sharp'));
 process.env.PLAYWRIGHT_BROWSERS_PATH ??= resolve(root, '_design/.browsers');
 const { chromium } = await import(pathToFileURL(resolve(root, '_design/.tooling/node_modules/playwright/index.mjs')).href);
 const result = esbuild.buildSync({ entryPoints: ['web/src/lib/real-templates.ts'], bundle: true, platform: 'node', format: 'cjs', write: false });
@@ -102,6 +104,12 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'leaflit') {
+        const query = actions.some(a => a.action === 'search') ? '' : 'glass';
+        await page.locator('#book-search').fill(query);
+        actions.push({seconds:(Date.now()-start)/1000,action:'search',query});
+        return;
+      }
       if (slug === 'lingoglass') {
         const name = actions.some(a=>a.action==='click') ? 'Cài đặt' : 'Xem kịch bản mẫu (Demo)';
         await page.getByRole('button',{name,exact:true}).click();

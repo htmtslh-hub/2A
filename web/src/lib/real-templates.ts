@@ -45,6 +45,19 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t32: {
+    slug: 'leaflit', cat: 'entertainment', version: '1.0.0',
+    specs: {
+      vi: [['Định dạng', 'HTML / CSS / JavaScript thuần'], ['Gói tải', '14 file · 8 bìa WebP tự tạo'], ['Thư viện', 'Tìm tên/tác giả · lọc thể loại'], ['Lưu trữ', 'Sách đã lưu · hồ sơ · localStorage'], ['Phạm vi', 'Chạy cục bộ · không ebook hoặc backend']],
+      en: [['Format', 'Plain HTML / CSS / JavaScript'], ['Package', '14 files · 8 original WebP covers'], ['Library', 'Title/author search · genre filters'], ['Storage', 'Saved books · profile · localStorage'], ['Scope', 'Browser-local · no ebooks or backend']],
+      zh: [['格式', '原生 HTML / CSS / JavaScript'], ['下载包', '14 个文件 · 8 张原创 WebP 封面'], ['书库', '书名/作者搜索 · 类型筛选'], ['存储', '收藏图书 · 昵称 · localStorage'], ['范围', '浏览器本地 · 不含电子书或后端']],
+    },
+    copy: {
+      vi: { name: 'Leaflit', desc: 'Giao diện thư viện sách nền sáng với sidebar, sách đọc gần đây, kệ sách mới và tác giả. Tám bìa minh họa chân thực tự tạo; tìm theo tên/tác giả, lọc thể loại, lưu/bỏ lưu sách và đổi tên hồ sơ. Dữ liệu lưu cục bộ, đồng bộ giữa tab cùng trình duyệt. Không kèm nội dung ebook, tài khoản hoặc backend.', tags: ['Thư viện sách', 'Bìa ảnh gốc', 'Tìm kiếm & lưu sách'] },
+      en: { name: 'Leaflit', desc: 'A light personal book library with a sidebar, recent reads, new releases and authors. Eight original realistic illustrated covers, title/author search, genre filters, saved books and editable display name. Browser-local persistence and same-origin tab sync. No full ebooks, accounts or backend.', tags: ['Book library', 'Original cover art', 'Search & saved books'] },
+      zh: { name: 'Leaflit', desc: '浅色个人书库界面，含侧边栏、最近阅读、新书与作者。八张原创写实封面，支持书名/作者搜索、类型筛选、收藏和昵称编辑。数据保存在本地浏览器，并在同源标签页间同步。不含完整电子书、账户或后端。', tags: ['个人书库', '原创封面', '搜索与收藏'] },
+    },
+  },
   t31: {
     slug: 'chronoform', cat: 'commerce', version: '1.0.0', video: true,
     specs: {

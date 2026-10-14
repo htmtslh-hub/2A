@@ -1,0 +1,50 @@
+import { readFileSync, writeFileSync, mkdirSync, statSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
+import { createRequire } from 'node:module';
+const sharp = createRequire(resolve('web/package.json'))('sharp');
+const review=dirname(fileURLToPath(import.meta.url));
+const product=resolve(review,'../..');
+const source=resolve(product,'source');
+const assets=JSON.parse(readFileSync(resolve(review,'generated-covers.json'),'utf8'));
+if(assets.length!==8||assets.some(asset=>!asset.original))throw new Error('Expected eight generated images with local original paths.');
+mkdirSync(resolve(source,'assets/img'),{recursive:true});
+for(const asset of assets){
+  asset.file=`assets/img/${asset.slug}.webp`;
+  // Resize/encode for delivery only: preserve all artwork, text and 2:3 framing.
+  await sharp(asset.original).resize({width:600,withoutEnlargement:true}).webp({quality:88,effort:6}).toFile(resolve(source,asset.file));
+  asset.metadata=await sharp(resolve(source,asset.file)).metadata();
+  asset.bytes=statSync(resolve(source,asset.file)).size;
+  asset.sha256=createHash('sha256').update(readFileSync(resolve(source,asset.file))).digest('hex');
+}
+let html=readFileSync(resolve(source,'index.html'),'utf8');
+let index=0;
+html=html.replace(/<svg class="book-cover"[\s\S]*?<\/svg>/g,()=>{
+  const asset=assets[index++];
+  return `<img class="book-cover" src="${asset.file}" width="${asset.metadata.width}" height="${asset.metadata.height}" alt="${asset.title.replaceAll('&','&amp;')} by ${asset.author}: original illustrated book cover" loading="${index<=3?'eager':'lazy'}" decoding="async">`;
+});
+if(index!==8)throw new Error(`Expected eight SVG covers, found ${index}.`);
+writeFileSync(resolve(source,'index.html'),html);
+const readme=resolve(source,'README.md');
+let text=readFileSync(readme,'utf8');
+text=text.replace('Six source files:', 'Six core source files plus eight local WebP cover images in assets/img/:');
+text=text.replace('Inline SVG book covers and portraits are original sample illustrations.', 'Eight book covers are original AI-generated realistic illustrations, stored as local WebP files in assets/img/. Portraits remain original inline SVG illustrations.');
+text=text.replace('illustrations in index.html, and keep SVG viewBox proportions.', 'cover images in assets/img/ and their img src/alt in index.html. Preserve the 2:3 cover aspect ratio. Do not delete the image folder when copying the site. Portrait SVG viewBox proportions should remain unchanged.');
+text+='\n## Owner-approved asset scope\nThe owner requested replacement of all SVG book covers with generated images on 14 October 2026. W01/W03/W06 are therefore recorded as Leaflit-specific asset/package exceptions; the six-file and 20 KiB limits are not claimed. Source images are included locally, not hotlinked. This candidate is not a released ZIP; commercial raster-image licence wording still requires owner review because LICENCE.txt has been preserved.\n';
+writeFileSync(readme,text);
+const custom=resolve(source,'CUSTOMISE.md');
+text=readFileSync(custom,'utf8');
+text=text.replace('Book illustrations are the inline SVG inside `.book-cover`; maintain each SVG viewBox. Cover title text and the adjacent HTML title are two separate copies: update both.', 'Book covers are the eight WebP files in assets/img/ referenced by img.book-cover. Replace a file at the same path or update its src in index.html. Keep a portrait 2:3 ratio and update the alt text. Titles printed in the generated image cannot be changed by editing HTML; regenerate the cover when renaming a book, and also update its HTML caption.');
+text=text.replace('Author names appear in cover SVGs, book captions, expanded descriptions and sometimes the author list.', 'Author names appear as pixels in the cover images, plus text in book captions, expanded descriptions and sometimes the author list.');
+text=text.replace('Expected structure:', 'Expected structure (also keep assets/img/ with its eight WebP covers):');
+text+='\n## Generated cover files\n\nKeep all eight files in assets/img/: '+assets.map(a=>'`'+a.slug+'.webp`').join(', ')+'. The collection clones the same image elements rather than creating another cover set. Main cards load above-the-fold covers eagerly and lower covers lazily; collection images are lazy. All image paths are relative and work offline. If adding an image, provide accurate alt text and explicit dimensions. Keep a backup before replacement. The standard six core files plus the eight local covers travel together.\n';
+writeFileSync(custom,text);
+writeFileSync(resolve(review,'generated-covers.json'),JSON.stringify(assets,null,2));
+mkdirSync(resolve(product,'design'),{recursive:true});
+writeFileSync(resolve(product,'design/ASSETS.md'),'# Generated book covers · 14/10/2026\n\nBuilt-in imagegen, eight independent generation calls. User explicitly requested realistic generated images replacing all covers. No original reference cover artwork was copied. Original PNGs remain at the tool output paths. WebP files are resized to 600px wide without cropping; source artwork and text are unchanged. Portrait SVGs are untouched.\n\n'+assets.map(a=>`## ${a.title}\n\nFile: source/${a.file}\nOriginal: ${a.original}\nBytes: ${a.bytes}; SHA-256: ${a.sha256}\n\nPrompt:\n\n${a.prompt}\n`).join('\n')+'\nLicence: existing LICENCE.txt was not edited. It specifically mentions SVG illustrations; review raster-image wording before commercial release. No exclusive copyright in AI-generated artwork is asserted.\n');
+const brief=resolve(review,'BRIEF.md');
+text=readFileSync(brief,'utf8');
+text+='\n## Yêu cầu mới về bìa sách · 14/10/2026\n\nChủ sản phẩm: “thay toàn bộ các bìa sách bằng các ảnh em tạo”. Tạo tám bìa minh họa chân thực bằng built-in imagegen. Thay SVG bìa ở index.html bằng ảnh WebP cục bộ; bộ sưu tập JS clone cùng ảnh. Ngoại lệ W01/W03/W06 riêng Leaflit: tám tài sản raster ngoài sáu core file, không tuyên bố đạt ngưỡng ZIP 20.480 byte. Không đổi điều khoản licence; không mở rộng tới catalog/deploy.\n';
+writeFileSync(brief,text);
+console.log(JSON.stringify(assets.map(({slug,bytes,metadata})=>({slug,bytes,width:metadata.width,height:metadata.height}))));

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leaflit · Your personal reading space</title>
+  <meta name="description" content="A calm personal book library with recent reads, new discoveries and author introductions. Local library interface with sample books.">
+  <meta property="og:title" content="Leaflit · Your personal reading space">
+  <meta property="og:description" content="A personal library interface with original illustrated book covers.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to your library</a>
+<div class="library">
+  <aside class="sidebar">
+    <a href="#profile" class="welcome"><svg class="portrait portrait--green" viewBox="0 0 80 80" role="img" focusable="false" aria-label="Illustrated portrait of Sarah">
+  <rect width="80" height="80" rx="22" fill="var(--portrait-bg)"/>
+  <path d="M13 80c0-23 12-31 27-31s27 8 27 31" fill="var(--portrait-shirt)"/>
+  <path d="M22 38C12 7 60 3 61 35l-5 24H23Z" fill="#292626"/>
+  <ellipse cx="40" cy="35" rx="15" ry="19" fill="#b77e60"/>
+  <path d="M24 30c4-2 18-4 21-15l13 17V16H23Z" fill="#292626"/>
+  <path d="M34 43q6 5 12 0" fill="none" stroke="#5a3028" stroke-width="2"/>
+  <circle cx="34" cy="34" r="1.5" fill="#292626"/><circle cx="47" cy="34" r="1.5" fill="#292626"/>
+</svg><span>Welcome back,</span><strong data-profile-name>Sarah</strong></a>
+    <button class="menu-toggle" type="button" aria-controls="library-nav" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Menu</span></button>
+    <nav id="library-nav" class="sidebar__nav" aria-label="Library navigation"><a href="#main" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>My reading board</span></a><a href="#book-notes"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><path d="M3 6h7l2 3h9v11H3z"/><path d="M3 6V4h8l2 3"/></svg><span>Collections</span></a><a href="#book-notes" data-saved-view><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><path d="M6 3h12v18l-6-4-6 4z"/></svg><span>Saved books <span data-saved-count>0</span></span></a><a href="#profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><circle cx="12" cy="7" r="4"/><path d="M4 21v-3a8 8 0 0 1 16 0v3"/></svg><span>Profile</span></a></nav>
+    <a class="sidebar__brand" href="#about"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><path d="M20 3C8 2 2 8 5 15s13 6 15-12Z"/><path d="M4 21 16 7"/></svg><span>A little space<br>for big stories.</span></a>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <h1><a href="#main">Leaflit<span>.</span></a></h1>
+      <label class="search-preview local-only" for="book-search"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input id="book-search" type="search" placeholder="Search your books" aria-label="Search books by title or author" maxlength="100"></label>
+      <nav class="topbar__nav" aria-label="Discover books"><a href="#new-releases">New releases</a><a href="#authors">Authors</a></nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <noscript><p class="notice">Enable JavaScript to search, save books and edit your local profile. All sample book descriptions remain available below.</p></noscript>
+      <section id="reading" class="reading-section" aria-labelledby="reading-title">
+        <div class="section-heading"><h2 id="reading-title">Books you read last</h2><span>Pick up where you left off</span></div>
+        <div class="reading-list"><a class="reading-card reading-card--0" href="#book-0">
+  <img class="book-cover" src="assets/img/secret-garden.webp" width="600" height="900" alt="THE SECRET GARDEN by ADA RIVERS: original illustrated book cover" loading="eager" decoding="async"><span class="reading-card__copy"><strong>The Secret Garden</strong><span>Ada Rivers</span><small>193 pages · Chapter 13</small></span>
+  <span class="reading-card__arrow"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span>
+</a><a class="reading-card reading-card--1" href="#book-1">
+  <img class="book-cover" src="assets/img/beyond-water.webp" width="600" height="900" alt="BEYOND THE WATER by THEO BENNETT: original illustrated book cover" loading="eager" decoding="async"><span class="reading-card__copy"><strong>Beyond the Water</strong><span>Theo Bennett</span><small>New in your library</small></span>
+  <span class="reading-card__arrow"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span>
+</a><a class="reading-card reading-card--2" href="#book-2">
+  <img class="book-cover" src="assets/img/father-son.webp" width="600" height="900" alt="FATHER &amp; SON by ROBERT HAYES: original illustrated book cover" loading="eager" decoding="async"><span class="reading-card__copy"><strong>Father & Son</strong><span>Robert Hayes</span><small>84 pages · Chapter 6</small></span>
+  <span class="reading-card__arrow"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span>
+</a></div>
+      </section>
+      <div class="discovery">
+        <section id="new-releases" class="releases" aria-labelledby="releases-title" data-reveal>
+          <div class="section-heading"><h2 id="releases-title">New releases</h2><a href="#book-notes">Explore books <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></div>
+          <div class="book-shelf"><a class="shelf-book" href="#book-3"><img class="book-cover" src="assets/img/glass-house.webp" width="600" height="900" alt="THE GLASS HOUSE by EMILY STONE: original illustrated book cover" loading="lazy" decoding="async"><h3>The Glass House</h3><p>Emily Stone</p><span class="genre">Mystery</span></a><a class="shelf-book" href="#book-4"><img class="book-cover" src="assets/img/book-longing.webp" width="600" height="900" alt="A BOOK OF LONGING by SUE MORGAN: original illustrated book cover" loading="lazy" decoding="async"><h3>A Book of Longing</h3><p>Sue Morgan</p><span class="genre">Fiction</span></a><a class="shelf-book" href="#book-5"><img class="book-cover" src="assets/img/darling-rose.webp" width="600" height="900" alt="DARLING ROSE by STEPHANIE REED: original illustrated book cover" loading="lazy" decoding="async"><h3>Darling Rose</h3><p>Stephanie Reed</p><span class="genre">Thriller</span></a><a class="shelf-book" href="#book-6"><img class="book-cover" src="assets/img/dark-summer.webp" width="600" height="900" alt="MY DARK SUMMER by KATE ROWAN: original illustrated book cover" loading="lazy" decoding="async"><h3>My Dark Summer</h3><p>Kate Rowan</p><span class="genre">Mystery</span></a><a class="shelf-book" href="#book-7"><img class="book-cover" src="assets/img/weather.webp" width="600" height="900" alt="WEATHER by JENNY ELLIS: original illustrated book cover" loading="lazy" decoding="async"><h3>Weather</h3><p>Jenny Ellis</p><span class="genre">Fiction</span></a></div>
+        </section>
+        <aside id="authors" class="authors" aria-labelledby="authors-title" data-reveal><h2 id="authors-title">Featured authors</h2><ul><li><svg class="portrait portrait--green" viewBox="0 0 80 80" role="img" focusable="false" aria-label="Illustrated portrait of Ada Rivers">
+  <rect width="80" height="80" rx="22" fill="var(--portrait-bg)"/>
+  <path d="M13 80c0-23 12-31 27-31s27 8 27 31" fill="var(--portrait-shirt)"/>
+  <path d="M22 38C12 7 60 3 61 35l-5 24H23Z" fill="#292626"/>
+  <ellipse cx="40" cy="35" rx="15" ry="19" fill="#b77e60"/>
+  <path d="M24 30c4-2 18-4 21-15l13 17V16H23Z" fill="#292626"/>
+  <path d="M34 43q6 5 12 0" fill="none" stroke="#5a3028" stroke-width="2"/>
+  <circle cx="34" cy="34" r="1.5" fill="#292626"/><circle cx="47" cy="34" r="1.5" fill="#292626"/>
+</svg><span><strong>Ada Rivers</strong><small>3 titles in this demo</small></span></li><li><svg class="portrait portrait--blue" viewBox="0 0 80 80" role="img" focusable="false" aria-label="Illustrated portrait of Theo Bennett">
+  <rect width="80" height="80" rx="22" fill="var(--portrait-bg)"/>
+  <path d="M13 80c0-23 12-31 27-31s27 8 27 31" fill="var(--portrait-shirt)"/>
+  <path d="M22 38C12 7 60 3 61 35l-5 24H23Z" fill="#292626"/>
+  <ellipse cx="40" cy="35" rx="15" ry="19" fill="#b77e60"/>
+  <path d="M24 30c4-2 18-4 21-15l13 17V16H23Z" fill="#292626"/>
+  <path d="M34 43q6 5 12 0" fill="none" stroke="#5a3028" stroke-width="2"/>
+  <circle cx="34" cy="34" r="1.5" fill="#292626"/><circle cx="47" cy="34" r="1.5" fill="#292626"/>
+</svg><span><strong>Theo Bennett</strong><small>2 titles in this demo</small></span></li><li><svg class="portrait portrait--pink" viewBox="0 0 80 80" role="img" focusable="false" aria-label="Illustrated portrait of Stephanie Reed">
+  <rect width="80" height="80" rx="22" fill="var(--portrait-bg)"/>
+  <path d="M13 80c0-23 12-31 27-31s27 8 27 31" fill="var(--portrait-shirt)"/>
+  <path d="M22 38C12 7 60 3 61 35l-5 24H23Z" fill="#292626"/>
+  <ellipse cx="40" cy="35" rx="15" ry="19" fill="#b77e60"/>
+  <path d="M24 30c4-2 18-4 21-15l13 17V16H23Z" fill="#292626"/>
+  <path d="M34 43q6 5 12 0" fill="none" stroke="#5a3028" stroke-width="2"/>
+  <circle cx="34" cy="34" r="1.5" fill="#292626"/><circle cx="47" cy="34" r="1.5" fill="#292626"/>
+</svg><span><strong>Stephanie Reed</strong><small>1 titles in this demo</small></span></li></ul><p>Meet the voices behind<br>your next favourite story.</p></aside>
+      </div>
+      <section id="collections" class="collections local-only" aria-labelledby="collections-title">
+        <div class="section-heading"><h2 id="collections-title">Your collection</h2><span>Eight stories, one little library</span></div>
+        <div class="collection-controls">
+          <label for="genre-filter">Genre <select id="genre-filter"><option value="all">All genres</option><option>Fantasy</option><option>Fiction</option><option>Memoir</option><option>Mystery</option><option>Thriller</option></select></label>
+          <label for="view-filter">Show <select id="view-filter"><option value="all">All books</option><option value="saved">Saved books</option></select></label>
+          <button id="clear-filters" type="button">Clear filters</button>
+        </div>
+        <p id="result-count" class="result-count" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div id="collection-grid" class="collection-grid"></div>
+        <p id="empty-results" class="notice" hidden>No books match. Try another title, author or genre.</p>
+      </section>
+      <section id="book-notes" class="book-notes" aria-labelledby="notes-title" data-reveal>
+        <div class="section-heading"><h2 id="notes-title">Inside the covers</h2><span>A few words to spark your curiosity</span></div>
+        <div class="book-notes__list"><details id="book-0" class="book-detail"><summary>The Secret Garden <span>Ada Rivers · Fantasy</span></summary><p>An old garden opens a door to a world that has been waiting for someone to return.</p><p class="demo-note">Fictional book description. No full ebook is included.</p></details><details id="book-1" class="book-detail"><summary>Beyond the Water <span>Theo Bennett · Fiction</span></summary><p>A coastal journey about the people we meet, the stories we keep, and finding a way home.</p><p class="demo-note">Fictional book description. No full ebook is included.</p></details><details id="book-2" class="book-detail"><summary>Father & Son <span>Robert Hayes · Memoir</span></summary><p>A father and son retrace a mountain path and learn to listen to one another.</p><p class="demo-note">Fictional book description. No full ebook is included.</p></details><details id="book-3" class="book-detail"><summary>The Glass House <span>Emily Stone · Mystery</span></summary><p>A house on the edge of the city holds a secret behind every window.</p><p class="demo-note">Fictional book description. No full ebook is included.</p></details><details id="book-4" class="book-detail"><summary>A Book of Longing <span>Sue Morgan · Fiction</span></summary><p>A novelist follows the small, persistent hopes that shape an ordinary life.</p><p class="demo-note">Fictional book description. No full ebook is included.</p></details><details id="book-5" class="book-detail"><summary>Darling Rose <span>Stephanie Reed · Thriller</span></summary><p>A florist receives a letter that changes everything she thought she knew.</p><p class="demo-note">Fictional book description. No full ebook is included.</p></details><details id="book-6" class="book-detail"><summary>My Dark Summer <span>Kate Rowan · Mystery</span></summary><p>A summer by the sea becomes a search for a friend who disappeared.</p><p class="demo-note">Fictional book description. No full ebook is included.</p></details><details id="book-7" class="book-detail"><summary>Weather <span>Jenny Ellis · Fiction</span></summary><p>One week of rain brings an unexpected friendship to a quiet neighbourhood.</p><p class="demo-note">Fictional book description. No full ebook is included.</p></details></div>
+      </section>
+      <section id="profile" class="profile" aria-labelledby="profile-title" data-reveal><svg class="portrait portrait--green" viewBox="0 0 80 80" role="img" focusable="false" aria-label="Illustrated portrait of Sarah">
+  <rect width="80" height="80" rx="22" fill="var(--portrait-bg)"/>
+  <path d="M13 80c0-23 12-31 27-31s27 8 27 31" fill="var(--portrait-shirt)"/>
+  <path d="M22 38C12 7 60 3 61 35l-5 24H23Z" fill="#292626"/>
+  <ellipse cx="40" cy="35" rx="15" ry="19" fill="#b77e60"/>
+  <path d="M24 30c4-2 18-4 21-15l13 17V16H23Z" fill="#292626"/>
+  <path d="M34 43q6 5 12 0" fill="none" stroke="#5a3028" stroke-width="2"/>
+  <circle cx="34" cy="34" r="1.5" fill="#292626"/><circle cx="47" cy="34" r="1.5" fill="#292626"/>
+</svg><div><h2 id="profile-title"><span data-profile-name>Sarah</span>’s reading corner</h2><p>This is your local reading space. Make room for the stories you love.</p></div><a href="#reading">Back to your books <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="icon"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a></section>
+      <form id="profile-form" class="profile-form local-only">
+        <label for="profile-name">Your display name <input id="profile-name" name="name" required maxlength="40" autocomplete="nickname" value="Sarah"></label>
+        <button type="submit">Save profile</button>
+        <p class="demo-note">Local profile demo only. Saved in this browser; no account or cloud sync.</p>
+      </form>
+      <p id="local-feedback" class="local-feedback local-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    </main>
+    <footer id="about"><span>Leaflit · A personal reading space</span><p>Local library demo. Sample books and authors are fictional; no full ebooks are included.</p></footer>
+  </div>
+</div>
+</body>
+</html>

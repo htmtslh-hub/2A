@@ -432,5 +432,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "leaflit": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "814090f63a9c",
+    "sha256": "814090f63a9cb9475bbf8426493b8f812214d9a0d79afdcfa1508c6a365c7430",
+    "demoHtmlSha256": "dddc71363e63172ce967042477282d43ae8ab7fea9a3b8495304f834f033e560",
+    "demoSha256": "232a2f8f827ba6d7f3f5afec14e4266ce92e198c3abb2534870baee121b7d42b",
+    "bytes": 384363,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

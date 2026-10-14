@@ -1,0 +1,123 @@
+{
+  "demo": "http://127.0.0.1:4391/demos/leaflit/index.html?v=1.0.0",
+  "date": "2026-10-14T03:05:18.307Z",
+  "browsers": [],
+  "store": [
+    {
+      "locale": "vi-VN",
+      "detail": true,
+      "video": true,
+      "pause": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "detail": true,
+      "video": true,
+      "pause": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "detail": true,
+      "video": true,
+      "pause": true,
+      "library": true
+    }
+  ],
+  "hashes": [
+    {
+      "file": "demos/leaflit/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "dddc71363e63172ce967042477282d43ae8ab7fea9a3b8495304f834f033e560"
+    },
+    {
+      "file": "demos/leaflit/assets/css/style.css",
+      "status": 200,
+      "matches": true,
+      "sha256": "de61c6c9e475ae8d80c3463cbbf42250b90130b1e03060b4c498c9dbe94bfea0"
+    },
+    {
+      "file": "demos/leaflit/assets/js/main.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "59cc26140967611c11e9ffaceec04a0f5b6587191e86688c4a175aa48b891873"
+    },
+    {
+      "file": "demos/leaflit/assets/img/secret-garden.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "746ddef575a7ddc549cec4a7ecfe29cc78aa3489ff1823c5831ee505ca036659"
+    },
+    {
+      "file": "demos/leaflit/assets/img/beyond-water.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "27150e90f10ce76b451d1e89299d30aaecd9af6ad22959dae06baa342b80178d"
+    },
+    {
+      "file": "demos/leaflit/assets/img/father-son.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "4792822dd6e2bbf87bce18fa9b9f559e2d1954ea06bc60cf77b4ac665c748e41"
+    },
+    {
+      "file": "demos/leaflit/assets/img/glass-house.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "df40d1c22751bf962bfb6dfe68ee2ea6bb76a98ca53db7cb3a8f4a65b7f89873"
+    },
+    {
+      "file": "demos/leaflit/assets/img/book-longing.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "75289687e442a06b7366449d54554c03130271e19ba93d7ec58d8e525ffe26cf"
+    },
+    {
+      "file": "demos/leaflit/assets/img/darling-rose.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "459cd3f86c1614153b7d3aeca05d160b50ae342016ee3d736c0a9f3269fa52a5"
+    },
+    {
+      "file": "demos/leaflit/assets/img/dark-summer.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "dcff793079649e396483e43a74ecab58f5e89e2c957a049234e382ed946fcc4b"
+    },
+    {
+      "file": "demos/leaflit/assets/img/weather.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "dd8c453ae958e487faad3ac0909bb8a866b404471bc47c032dd30f8051df335f"
+    },
+    {
+      "file": "previews/leaflit.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "7d83f28ecd70eba848574a645549cfd1bb4f78119290a14f34fb22a0c9694aef"
+    },
+    {
+      "file": "previews/leaflit.mp4",
+      "status": 200,
+      "matches": true,
+      "sha256": "814090f63a9cb9475bbf8426493b8f812214d9a0d79afdcfa1508c6a365c7430"
+    },
+    {
+      "file": "demos/chronoform/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "34539f036ef55d36c0b311030757f387ca77c7af27f4ea97c61a33114d48d68c"
+    },
+    {
+      "file": "demos/dualplay/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "7560f1882ce918bb02e769b2c7390a4c1e64c8e47a7ae7d03eb6fadae5421d3b"
+    }
+  ],
+  "failures": [],
+  "downloadAnonymous": 401,
+  "directZip": 404
+}

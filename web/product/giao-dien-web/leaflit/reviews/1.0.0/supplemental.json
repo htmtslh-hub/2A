@@ -1,0 +1,122 @@
+{
+  "focus": {
+    "text": "Skip to your library",
+    "outline": "3px"
+  },
+  "resizeClosed": true,
+  "zoom200": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "overflow": []
+  },
+  "contrast": [
+    {
+      "fg": "292b28",
+      "bg": "f8f7f4",
+      "ratio": 13.33
+    },
+    {
+      "fg": "646761",
+      "bg": "f8f7f4",
+      "ratio": 5.36
+    },
+    {
+      "fg": "646761",
+      "bg": "eeede8",
+      "ratio": 4.9
+    },
+    {
+      "fg": "ffffff",
+      "bg": "896443",
+      "ratio": 5.29
+    },
+    {
+      "fg": "ffffff",
+      "bg": "755353",
+      "ratio": 6.73
+    },
+    {
+      "fg": "ffffff",
+      "bg": "173741",
+      "ratio": 12.66
+    },
+    {
+      "fg": "ffffff",
+      "bg": "3e5e70",
+      "ratio": 6.91
+    },
+    {
+      "fg": "ffffff",
+      "bg": "172c31",
+      "ratio": 14.57
+    },
+    {
+      "fg": "ffffff",
+      "bg": "48565c",
+      "ratio": 7.61
+    },
+    {
+      "fg": "775411",
+      "bg": "f8f7f4",
+      "ratio": 6.4
+    }
+  ],
+  "manifest": [
+    {
+      "file": "CUSTOMISE.md",
+      "sha256": "0d4522539bb1f1b2109c09f0aae43c8117a901325326ed7f3cf8ca3dd8a0e5fa"
+    },
+    {
+      "file": "LICENCE.txt",
+      "sha256": "11aa7e1b672ad27a9e44f35f6f51b52d1672273b5e3223c39b199efa42e949b4"
+    },
+    {
+      "file": "README.md",
+      "sha256": "b9fd95d51edc6c7f0a8d33ed6e8b1453d8b3a8b6bf4346f6a288727031c20f0d"
+    },
+    {
+      "file": "assets/css/style.css",
+      "sha256": "de61c6c9e475ae8d80c3463cbbf42250b90130b1e03060b4c498c9dbe94bfea0"
+    },
+    {
+      "file": "assets/img/beyond-water.webp",
+      "sha256": "27150e90f10ce76b451d1e89299d30aaecd9af6ad22959dae06baa342b80178d"
+    },
+    {
+      "file": "assets/img/book-longing.webp",
+      "sha256": "75289687e442a06b7366449d54554c03130271e19ba93d7ec58d8e525ffe26cf"
+    },
+    {
+      "file": "assets/img/dark-summer.webp",
+      "sha256": "dcff793079649e396483e43a74ecab58f5e89e2c957a049234e382ed946fcc4b"
+    },
+    {
+      "file": "assets/img/darling-rose.webp",
+      "sha256": "459cd3f86c1614153b7d3aeca05d160b50ae342016ee3d736c0a9f3269fa52a5"
+    },
+    {
+      "file": "assets/img/father-son.webp",
+      "sha256": "4792822dd6e2bbf87bce18fa9b9f559e2d1954ea06bc60cf77b4ac665c748e41"
+    },
+    {
+      "file": "assets/img/glass-house.webp",
+      "sha256": "df40d1c22751bf962bfb6dfe68ee2ea6bb76a98ca53db7cb3a8f4a65b7f89873"
+    },
+    {
+      "file": "assets/img/secret-garden.webp",
+      "sha256": "746ddef575a7ddc549cec4a7ecfe29cc78aa3489ff1823c5831ee505ca036659"
+    },
+    {
+      "file": "assets/img/weather.webp",
+      "sha256": "dd8c453ae958e487faad3ac0909bb8a866b404471bc47c032dd30f8051df335f"
+    },
+    {
+      "file": "assets/js/main.js",
+      "sha256": "59cc26140967611c11e9ffaceec04a0f5b6587191e86688c4a175aa48b891873"
+    },
+    {
+      "file": "index.html",
+      "sha256": "7b66cf5c3fd44ccafde2ca1011baf8711ac753a60fd8b00e10d6c72d5040344a"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "date": "2026-10-14T02:33:58.416Z",
+  "source": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\leaflit\\source",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "geometry": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "h1": 1
+          },
+          "violations": [],
+          "bookExpanded": true,
+          "motionDuring": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "motionAfter": {
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "geometry": {
+            "width": 820,
+            "scrollWidth": 820,
+            "h1": 1
+          },
+          "violations": [],
+          "bookExpanded": true,
+          "motionDuring": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "motionAfter": {
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "geometry": {
+            "width": 375,
+            "scrollWidth": 375,
+            "h1": 1
+          },
+          "violations": [],
+          "menuOpen": true,
+          "escapeClosed": true,
+          "focusReturned": true,
+          "linkClosed": true,
+          "bookExpanded": true,
+          "motionDuring": {
+            "opacity": "0.580386",
+            "transform": "matrix(1, 0, 0, 1, 0, 6.99356)"
+          },
+          "motionAfter": {
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "geometry": {
+            "width": 320,
+            "scrollWidth": 320,
+            "h1": 1
+          },
+          "violations": [],
+          "menuOpen": true,
+          "escapeClosed": true,
+          "focusReturned": true,
+          "linkClosed": true,
+          "bookExpanded": true,
+          "motionDuring": {
+            "opacity": "0.576643",
+            "transform": "matrix(1, 0, 0, 1, 0, 7.05595)"
+          },
+          "motionAfter": {
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "width": 822,
+          "height": 490,
+          "geometry": {
+            "width": 822,
+            "scrollWidth": 822,
+            "h1": 1
+          },
+          "violations": [],
+          "bookExpanded": true,
+          "motionDuring": {
+            "opacity": "0.523099",
+            "transform": "matrix(1, 0, 0, 1, 0, 7.94835)"
+          },
+          "motionAfter": {
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ],
+      "errors": [],
+      "noJsOffline": {
+        "width": 320,
+        "scrollWidth": 320,
+        "navVisible": true,
+        "books": 8
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "geometry": {
+            "width": 1440,
+            "scrollWidth": 1440,
+            "h1": 1
+          },
+          "violations": [],
+          "bookExpanded": true,
+          "motionDuring": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "motionAfter": {
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "geometry": {
+            "width": 820,
+            "scrollWidth": 820,
+            "h1": 1
+          },
+          "violations": [],
+          "bookExpanded": true,
+          "motionDuring": {
+            "opacity": "1",
+            "transform": "none"
+          },
+          "motionAfter": {
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "geometry": {
+            "width": 375,
+            "scrollWidth": 375,
+            "h1": 1
+          },
+          "violations": [],
+          "menuOpen": true,
+          "escapeClosed": true,
+          "focusReturned": true,
+          "linkClosed": true,
+          "bookExpanded": true,
+          "motionDuring": {
+            "opacity": "0.59075",
+            "transform": "matrix(1, 0, 0, 1, 0, 6.82084)"
+          },
+          "motionAfter": {
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "geometry": {
+            "width": 320,
+            "scrollWidth": 320,
+            "h1": 1
+          },
+          "violations": [],
+          "menuOpen": true,
+          "escapeClosed": true,
+          "focusReturned": true,
+          "linkClosed": true,
+          "bookExpanded": true,
+          "motionDuring": {
+            "opacity": "0.646046",
+            "transform": "matrix(1, 0, 0, 1, 0, 5.89923)"
+          },
+          "motionAfter": {
+            "opacity": "1",
+            "transform": "none"
+          }
+        },
+        {
+          "width": 822,
+          "height": 490,
+          "geometry": {
+            "width": 822,
+            "scrollWidth": 822,
+            "h1": 1
+          },
+          "violations": [],
+          "bookExpanded": true,
+          "motionDuring": {
+            "opacity": "0.65477",
+            "transform": "matrix(1, 0, 0, 1, 0, 5.75384)"
+          },
+          "motionAfter": {
+            "opacity": "1",
+            "transform": "none"
+          }
+        }
+      ],
+      "errors": [],
+      "noJsOffline": {
+        "width": 320,
+        "scrollWidth": 320,
+        "navVisible": true,
+        "books": 8
+      }
+    }
+  },
+  "structure": {
+    "inlineStyle": false,
+    "externalRequests": false,
+    "placeholderLinks": false
+  }
+}

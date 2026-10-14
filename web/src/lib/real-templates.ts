@@ -45,6 +45,97 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t33: {
+  "slug": "ais-folio",
+  "cat": "portfolio",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "8 file · nhân vật và 6 poster tự tạo"
+      ],
+      [
+        "Tương tác",
+        "Menu · mô tả tác phẩm · scroll reveal"
+      ],
+      [
+        "Phạm vi",
+        "Portfolio tĩnh · email · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "8 files · original character and 6 posters"
+      ],
+      [
+        "Interaction",
+        "Menu · artwork descriptions · scroll reveals"
+      ],
+      [
+        "Scope",
+        "Static portfolio · email · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "8 个文件 · 原创角色与6张海报"
+      ],
+      [
+        "交互",
+        "菜单 · 作品描述 · 滚动渐显"
+      ],
+      [
+        "范围",
+        "静态作品集 · 邮件 · 无后端"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "AIS Folio",
+      "desc": "Portfolio sáng tạo tông cyan và xanh đen với nhân vật anime mặc hijab tự tạo, nền lưới, bảng giới thiệu, kinh nghiệm, sáu poster và cột công cụ. Menu bàn phím, mô tả tác phẩm mở bằng details và hiệu ứng hiện khi cuộn. Nội dung cá nhân là minh họa; liên hệ mở ứng dụng email, không có backend.",
+      "tags": [
+        "Portfolio anime",
+        "Ảnh tự tạo",
+        "Cyan / navy"
+      ]
+    },
+    "en": {
+      "name": "AIS Folio",
+      "desc": "A cyan and navy creative portfolio with an original hijab anime character, grid backdrop, profile, experience, six posters and a software column. Keyboard navigation, native expandable artwork descriptions and finite scroll reveals. Illustrative personal content; contact opens an email app. No backend.",
+      "tags": [
+        "Anime portfolio",
+        "Original artwork",
+        "Cyan / navy"
+      ]
+    },
+    "zh": {
+      "name": "AIS Folio",
+      "desc": "青色与深蓝创意作品集，含原创戴头巾动漫角色、网格背景、个人介绍、经历、六张海报与工具栏。支持键盘菜单、原生作品描述展开和有限滚动渐显。个人内容为示例；联系打开邮件应用，不含后端。",
+      "tags": [
+        "动漫作品集",
+        "原创图像",
+        "青色 / 深蓝"
+      ]
+    }
+  }
+},
   t32: {
     slug: 'leaflit', cat: 'entertainment', version: '1.0.0',
     specs: {

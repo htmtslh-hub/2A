@@ -446,5 +446,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "ais-folio": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "eaf2bc6f3161",
+    "sha256": "eaf2bc6f3161fd7aa68fa6c8bb302a0afae8d25692c3af3178b9a219e3c59199",
+    "demoHtmlSha256": "b1ffd6d91163d7d79539405b0d0641c1778e235c56900aecc7034206e16e0541",
+    "demoSha256": "a3140432b85f161917bb3237484030d0f6c922297cb6d0c420d86484c1ccf44b",
+    "bytes": 586796,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

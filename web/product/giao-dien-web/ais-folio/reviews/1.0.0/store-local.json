@@ -1,0 +1,398 @@
+{
+  "origin": "http://localhost:4372",
+  "views": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "vi-VN",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "vi-VN",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "vi-VN",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "vi-VN",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "locale": "vi-VN",
+      "library": true,
+      "label": "BLOG/PORTFOLIO\nAIS Folio\n20 US$\n\nPortfolio sáng tạo tông cyan và xanh đen với nhân vật anime mặc hijab tự tạo, nền lưới, bảng giới thiệu, kinh nghiệm, sáu poster và cột công cụ. Menu bàn phím, mô tả tác phẩm mở bằng details và hiệu ứng hiện khi cuộn. Nội dung cá nhân là minh họa; liên hệ mở ứng dụng email, không có backend.\n\nPortfolio anime\nẢnh tự tạo\nCyan / navy",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.846457
+      }
+    },
+    {
+      "name": "chromium",
+      "locale": "vi-VN",
+      "guide": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "en-US",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "en-US",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "en-US",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "en-US",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "locale": "en-US",
+      "library": true,
+      "label": "BLOG/PORTFOLIO\nAIS Folio\n$20\n\nA cyan and navy creative portfolio with an original hijab anime character, grid backdrop, profile, experience, six posters and a software column. Keyboard navigation, native expandable artwork descriptions and finite scroll reveals. Illustrative personal content; contact opens an email app. No backend.\n\nAnime portfolio\nOriginal artwork\nCyan / navy",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.831941
+      }
+    },
+    {
+      "name": "chromium",
+      "locale": "en-US",
+      "guide": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "zh-CN",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "zh-CN",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "zh-CN",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "locale": "zh-CN",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "chromium",
+      "locale": "zh-CN",
+      "library": true,
+      "label": "博客/作品集\nAIS Folio\n$20\n\n青色与深蓝创意作品集，含原创戴头巾动漫角色、网格背景、个人介绍、经历、六张海报与工具栏。支持键盘菜单、原生作品描述展开和有限滚动渐显。个人内容为示例；联系打开邮件应用，不含后端。\n\n动漫作品集\n原创图像\n青色 / 深蓝",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.83441
+      }
+    },
+    {
+      "name": "chromium",
+      "locale": "zh-CN",
+      "guide": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "vi-VN",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "vi-VN",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "vi-VN",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "vi-VN",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "locale": "vi-VN",
+      "library": true,
+      "label": "BLOG/PORTFOLIO\nAIS Folio\n20 US$\n\nPortfolio sáng tạo tông cyan và xanh đen với nhân vật anime mặc hijab tự tạo, nền lưới, bảng giới thiệu, kinh nghiệm, sáu poster và cột công cụ. Menu bàn phím, mô tả tác phẩm mở bằng details và hiệu ứng hiện khi cuộn. Nội dung cá nhân là minh họa; liên hệ mở ứng dụng email, không có backend.\n\nPortfolio anime\nẢnh tự tạo\nCyan / navy",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.739363
+      }
+    },
+    {
+      "name": "firefox",
+      "locale": "vi-VN",
+      "guide": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "en-US",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "en-US",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "en-US",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "en-US",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "locale": "en-US",
+      "library": true,
+      "label": "BLOG/PORTFOLIO\nAIS Folio\n$20\n\nA cyan and navy creative portfolio with an original hijab anime character, grid backdrop, profile, experience, six posters and a software column. Keyboard navigation, native expandable artwork descriptions and finite scroll reveals. Illustrative personal content; contact opens an email app. No backend.\n\nAnime portfolio\nOriginal artwork\nCyan / navy",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.786695
+      }
+    },
+    {
+      "name": "firefox",
+      "locale": "en-US",
+      "guide": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "zh-CN",
+      "width": 1440,
+      "height": 900,
+      "geometry": {
+        "client": 1440,
+        "scroll": 1440
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "zh-CN",
+      "width": 820,
+      "height": 1180,
+      "geometry": {
+        "client": 820,
+        "scroll": 820
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "zh-CN",
+      "width": 375,
+      "height": 812,
+      "geometry": {
+        "client": 375,
+        "scroll": 375
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "locale": "zh-CN",
+      "width": 320,
+      "height": 740,
+      "geometry": {
+        "client": 320,
+        "scroll": 320
+      },
+      "specs": true
+    },
+    {
+      "name": "firefox",
+      "locale": "zh-CN",
+      "library": true,
+      "label": "博客/作品集\nAIS Folio\n$20\n\n青色与深蓝创意作品集，含原创戴头巾动漫角色、网格背景、个人介绍、经历、六张海报与工具栏。支持键盘菜单、原生作品描述展开和有限滚动渐显。个人内容为示例；联系打开邮件应用，不含后端。\n\n动漫作品集\n原创图像\n青色 / 深蓝",
+      "playing": {
+        "paused": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.735968
+      }
+    },
+    {
+      "name": "firefox",
+      "locale": "zh-CN",
+      "guide": true
+    }
+  ],
+  "failures": [],
+  "anonymousDownload": 401,
+  "directZip": 404
+}

@@ -1,0 +1,60 @@
+{
+  "workflow": "ForgeFrame reference-analysis adapted to user similar-product brief",
+  "productVersion": "1.0.0",
+  "candidateHash": "4f77f6a6c448e9370bfd4076212badbaad523fb25be33dd86519761fd2f22467",
+  "references": [
+    {
+      "source": "User supplied portfolio",
+      "sha256": "1e2545bb07dca907f586048beb6261ca893789222dfa94cad6603397d5db8220",
+      "size": [
+        720,
+        1278
+      ],
+      "excluded": "Viewer controls at bottom right"
+    }
+  ],
+  "fidelity": {
+    "method": "Visual review against similar-product brief",
+    "status": "REVIEWED",
+    "strictForgeFrame95": "NOT CERTIFIED",
+    "numericScore": null,
+    "comparisonComplete": true,
+    "evidence": [
+      "REFERENCE-MAP.md",
+      "final/screenshots/chromium-1440.png",
+      "candidate/chromium-720.png",
+      "final/screenshots/chromium-375.png"
+    ]
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "motion-checks.json"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "motion-checks.json",
+      "source-checks.json"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Image-only input"
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "final/checks.json",
+      "source-checks.json",
+      "store-local.json"
+    ]
+  },
+  "limitations": [
+    "No exact-reference >95 percent certification",
+    "No Safari/physical device test",
+    "No live purchase or entitled download"
+  ],
+  "gate": "PASS FOR USER SIMILAR-PRODUCT BRIEF"
+}

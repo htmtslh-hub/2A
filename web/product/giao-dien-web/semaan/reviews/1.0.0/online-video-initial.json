@@ -1,0 +1,106 @@
+[
+  {
+    "name": "chromium",
+    "version": "153.0.8010.12",
+    "width": 1440,
+    "playing": {
+      "paused": false,
+      "muted": true,
+      "loop": true,
+      "time": 0
+    },
+    "offscreen": true,
+    "pass": false
+  },
+  {
+    "name": "chromium",
+    "version": "153.0.8010.12",
+    "width": 375,
+    "playing": {
+      "paused": false,
+      "muted": true,
+      "loop": true,
+      "time": 0.916629
+    },
+    "offscreen": true,
+    "pass": true
+  },
+  {
+    "name": "firefox",
+    "version": "155.0",
+    "width": 1440,
+    "playing": {
+      "paused": false,
+      "muted": true,
+      "loop": true,
+      "time": 0.673526
+    },
+    "offscreen": true,
+    "pass": true
+  },
+  {
+    "name": "firefox",
+    "version": "155.0",
+    "width": 375,
+    "playing": {
+      "paused": false,
+      "muted": true,
+      "loop": true,
+      "time": 0.90206
+    },
+    "offscreen": true,
+    "pass": true
+  },
+  {
+    "name": "edge",
+    "version": "155.0.4283.45",
+    "width": 1440,
+    "playing": {
+      "paused": false,
+      "muted": true,
+      "loop": true,
+      "time": 0.818854
+    },
+    "offscreen": true,
+    "pass": true
+  },
+  {
+    "name": "edge",
+    "version": "155.0.4283.45",
+    "width": 375,
+    "playing": {
+      "paused": false,
+      "muted": true,
+      "loop": true,
+      "time": 0.971468
+    },
+    "offscreen": true,
+    "pass": true
+  },
+  {
+    "name": "coccoc",
+    "version": "152.0.7977.124",
+    "width": 1440,
+    "playing": {
+      "paused": false,
+      "muted": true,
+      "loop": true,
+      "time": 0.694751
+    },
+    "offscreen": true,
+    "pass": true
+  },
+  {
+    "name": "coccoc",
+    "version": "152.0.7977.124",
+    "width": 375,
+    "playing": {
+      "paused": false,
+      "muted": true,
+      "loop": true,
+      "time": 0.944146
+    },
+    "offscreen": true,
+    "pass": true
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "chromium",
+    "version": "153.0.8010.12",
+    "middle": {
+      "opacity": 0.646218,
+      "transform": "matrix(1, 0, 0, 1, 0, 14.1513)"
+    },
+    "end": {
+      "opacity": 1,
+      "transform": "none"
+    },
+    "resized": true,
+    "missingArtUsable": true,
+    "finite": true
+  },
+  {
+    "name": "firefox",
+    "version": "155.0",
+    "middle": {
+      "opacity": 0.832214,
+      "transform": "matrix(1, 0, 0, 1, 0, 6.71144)"
+    },
+    "end": {
+      "opacity": 1,
+      "transform": "none"
+    },
+    "resized": true,
+    "missingArtUsable": true,
+    "finite": true
+  },
+  {
+    "name": "edge",
+    "version": "155.0.4283.45",
+    "middle": {
+      "opacity": 0.646014,
+      "transform": "matrix(1, 0, 0, 1, 0, 14.1594)"
+    },
+    "end": {
+      "opacity": 1,
+      "transform": "none"
+    },
+    "resized": true,
+    "missingArtUsable": true,
+    "finite": true
+  },
+  {
+    "name": "coccoc",
+    "version": "152.0.7977.124",
+    "middle": {
+      "opacity": 0.646014,
+      "transform": "matrix(1, 0, 0, 1, 0, 14.1594)"
+    },
+    "end": {
+      "opacity": 1,
+      "transform": "none"
+    },
+    "resized": true,
+    "missingArtUsable": true,
+    "finite": true
+  }
+]

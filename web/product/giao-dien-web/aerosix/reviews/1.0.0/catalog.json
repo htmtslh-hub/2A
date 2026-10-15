@@ -1,0 +1,13 @@
+{
+  "slug":"aerosix","cat":"commerce","version":"1.0.0","video":true,
+  "specs":{
+    "vi":[["Định dạng","HTML / CSS / JavaScript thuần"],["Gói tải","9 file · 3 ảnh WebP tự tạo"],["Tương tác","3 màu · 6 cỡ · hotspot · giỏ tư vấn trong phiên"],["Chuyển động","Chuyển hai chiều · vuốt/phím · cảnh cuộn"],["Phạm vi","Showroom concept · email · không bán xe/thanh toán"]],
+    "en":[["Format","Plain HTML / CSS / JavaScript"],["Package","9 files · 3 original WebP images"],["Interaction","3 finishes · 6 sizes · hotspots · session enquiry bag"],["Motion","Two-way transitions · swipe/keys · scroll scene"],["Scope","Concept showroom · email · no bicycle sales/payments"]],
+    "zh":[["格式","原生 HTML / CSS / JavaScript"],["下载包","9 个文件 · 3 张原创 WebP"],["交互","3 种配色 · 6 个尺码 · 热点 · 会话咨询袋"],["动态","双向切换 · 滑动/按键 · 滚动场景"],["范围","概念展厅 · 邮件 · 无自行车销售或支付"]]
+  },
+  "copy":{
+    "vi":{"name":"AeroSix","desc":"Showroom xe đạp khí động học nền tối, chữ FASTER EVERYWHERE lớn sau xe và ba ảnh xe chân thực tự tạo. Chọn màu/cỡ, xem chi tiết linh kiện, giỏ tư vấn trong phiên, email và cảnh chuyển động theo cuộn. Chuyển hai chiều bằng nút, phím hoặc vuốt; See it in action là hoạt cảnh thiết kế, không phải footage. Giá, cấu hình và điều khoản giao hàng minh họa; không có bán xe, thanh toán hoặc backend.","tags":["Showroom xe đạp","3 màu chân thực","Chuyển hai chiều"]},
+    "en":{"name":"AeroSix","desc":"A dark aero-bicycle showroom with oversized FASTER EVERYWHERE type and three original photoreal finish images. Finish/size selection, component hotspots, a session enquiry bag, email and a scroll-linked scene. Directional buttons, keys and swipe; See it in action is a design sequence, not riding footage. Illustrative prices, equipment and shipping terms; no bicycle sales, payments or backend.","tags":["Bicycle showroom","3 photoreal finishes","Directional transitions"]},
+    "zh":{"name":"AeroSix","desc":"深色空气动力自行车展厅，含大型FASTER EVERYWHERE文字与三张原创写实配色图。支持配色/尺码、部件热点、会话咨询袋、邮件与滚动场景。按钮、按键或滑动双向切换；See it in action为设计动画而非骑行录像。价格、配置与配送条款为示例，无自行车销售、支付或后端。","tags":["自行车展厅","3 种写实配色","双向切换"]}
+  }
+}

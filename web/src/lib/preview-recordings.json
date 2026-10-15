@@ -488,5 +488,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "aerosix": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "e06b2ed56235",
+    "sha256": "e06b2ed562351e9d31e1e6d862511801f3a1f554b04760a7b0667d12a90077b2",
+    "demoHtmlSha256": "dd31cb0d9e2ff71969f89fdb0ccb00043a5fcfccfc5ef90d0531f9bd96ede23c",
+    "demoSha256": "d441958d1ecb52ca157c09f66b090274b6795499e7cdc5bb32c9513b672ab95b",
+    "bytes": 555456,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

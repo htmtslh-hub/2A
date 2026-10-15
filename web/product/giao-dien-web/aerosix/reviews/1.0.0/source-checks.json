@@ -1,0 +1,550 @@
+{
+  "date": "2026-10-15T12:12:04.639Z",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 700,
+          "height": 900,
+          "sw": 700,
+          "cw": 700,
+          "small": []
+        },
+        {
+          "width": 701,
+          "height": 900,
+          "sw": 701,
+          "cw": 701,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.443655,
+          "transform": "matrix(1, 0, 0, 1, -38.4706, 0)",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/bike-chalk.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/bike-chalk.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.40279800758842677,
+          "transform": "translateX(-0.777616%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.6905108701515887,
+          "transform": "translateX(1.52409%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.5178831526136916,
+          "transform": "translateX(0.143065%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "5.79524%",
+      "mobileScene": "0.8535923775203439",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.405082,
+        "transform": "matrix(1, 0, 0, 1, -41.1379, 0)",
+        "finish": "2",
+        "src": "assets/img/bike-chalk.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    },
+    "firefox": {
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 700,
+          "height": 900,
+          "sw": 700,
+          "cw": 700,
+          "small": []
+        },
+        {
+          "width": 701,
+          "height": 900,
+          "sw": 701,
+          "cw": 701,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.478846,
+          "transform": "matrix(1, 0, 0, 1, -36.0372, 0)",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/bike-chalk.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/bike-chalk.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.4027965646251981,
+          "transform": "translateX(-0.777627%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.6905083965003396,
+          "transform": "translateX(1.52407%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.5178812973752547,
+          "transform": "translateX(0.14305%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "4.77714%",
+      "mobileScene": "0.8557784989094437",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.480923,
+        "transform": "matrix(1, 0, 0, 1, -35.8936, 0)",
+        "finish": "2",
+        "src": "assets/img/bike-chalk.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    },
+    "edge": {
+      "version": "155.0.4283.45",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 700,
+          "height": 900,
+          "sw": 700,
+          "cw": 700,
+          "small": []
+        },
+        {
+          "width": 701,
+          "height": 900,
+          "sw": 701,
+          "cw": 701,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.39084,
+          "transform": "matrix(1, 0, 0, 1, -42.1228, 0)",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/bike-chalk.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/bike-chalk.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.40279800758842677,
+          "transform": "translateX(-0.777616%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.6905108701515887,
+          "transform": "translateX(1.52409%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.5178831526136916,
+          "transform": "translateX(0.143065%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "5.16905%",
+      "mobileScene": "0.8535923775203439",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.428819,
+        "transform": "matrix(1, 0, 0, 1, -39.4965, 0)",
+        "finish": "2",
+        "src": "assets/img/bike-chalk.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 700,
+          "height": 900,
+          "sw": 700,
+          "cw": 700,
+          "small": []
+        },
+        {
+          "width": 701,
+          "height": 900,
+          "sw": 701,
+          "cw": 701,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.443952,
+          "transform": "matrix(1, 0, 0, 1, -38.4501, 0)",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/bike-chalk.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/bike-black.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/bike-chalk.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.40279800758842677,
+          "transform": "translateX(-0.777616%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.6905108701515887,
+          "transform": "translateX(1.52409%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.5178831526136916,
+          "transform": "translateX(0.143065%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "4.89524%",
+      "mobileScene": "0.8518822563621438",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.389653,
+        "transform": "matrix(1, 0, 0, 1, -42.2049, 0)",
+        "finish": "2",
+        "src": "assets/img/bike-chalk.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    }
+  },
+  "failures": []
+}

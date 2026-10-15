@@ -1,0 +1,1554 @@
+{
+  "slug": "aerosix",
+  "version": "1.0.0",
+  "date": "2026-10-15T12:17:45.033Z",
+  "os": "win32",
+  "zipBytes": 1050912,
+  "sha256": "8555803d68cbcd3312bd68425447f028d95076367df732d031a3def4757317e7",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#main"
+          },
+          {
+            "label": "Cannondale design study home",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          },
+          {
+            "label": "Contact and location",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#contact"
+          },
+          {
+            "label": "The bicycle",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          },
+          {
+            "label": "Engineering",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#engineering"
+          },
+          {
+            "label": "Specifications",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#specifications"
+          },
+          {
+            "label": "Get in touch",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#contact"
+          },
+          {
+            "label": "Discuss your fit →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#contact"
+          },
+          {
+            "label": "Contact the concept showroom",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#contact"
+          },
+          {
+            "label": "EXPLORE THE DESIGN →",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#engineering"
+          },
+          {
+            "label": "Scroll to the engineering story",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#engineering"
+          },
+          {
+            "label": "READ THE CONCEPT DETAILS",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#specifications"
+          },
+          {
+            "label": "Look a little closer ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#specifications"
+          },
+          {
+            "label": "Choose your finish ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          },
+          {
+            "label": "Enquire by email ↗",
+            "href": "mailto:hello@aerosix.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aerosix.example"
+          },
+          {
+            "label": "cannondale",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          },
+          {
+            "label": "Let’s ride.hello@aerosix.example ↗",
+            "href": "mailto:hello@aerosix.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aerosix.example"
+          },
+          {
+            "label": "Read the concept notes ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#specifications"
+          },
+          {
+            "label": "System Six / HI-MOD DURA-ACE DI2 ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          },
+          {
+            "label": "Prepare enquiry email ↗",
+            "href": "mailto:hello@aerosix.example?subject=AeroSix%20concept%20enquiry&body=%0AThis%20is%20an%20enquiry%2C%20not%20an%20order.%20Please%20discuss%20real%20fit%2C%20availability%20and%20price%20separately.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aerosix.example?subject=AeroSix%20concept%20enquiry&body=%0AThis%20is%20an%20enquiry%2C%20not%20an%20order.%20Please%20discuss%20real%20fit%2C%20availability%20and%20price%20separately."
+          },
+          {
+            "label": "Back to the bicycle ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 1440,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": false,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": false,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": false
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(16, 24, 32)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "wordmark",
+            "text": "cannondale",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 17.11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(8, 22, 12)",
+            "background": [
+              33,
+              203,
+              75
+            ],
+            "ratio": 8.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "SYSTEM SIX",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              28,
+              34,
+              45
+            ],
+            "ratio": 14.32,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "model-spec",
+            "text": "HI-MOD DURA-ACE DI2",
+            "colour": "rgb(54, 213, 98)",
+            "background": [
+              26,
+              33,
+              44
+            ],
+            "ratio": 8.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "model-price",
+            "text": "$11,000",
+            "colour": "rgb(206, 212, 219)",
+            "background": [
+              18,
+              24,
+              33
+            ],
+            "ratio": 11.94,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Exterior finish",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              53,
+              61,
+              74
+            ],
+            "ratio": 9.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(163, 244, 187)",
+            "background": [
+              34,
+              57,
+              57
+            ],
+            "ratio": 9.47,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(163, 244, 187)",
+            "background": [
+              43,
+              96,
+              72
+            ],
+            "ratio": 5.65,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(163, 244, 187)",
+            "background": [
+              40,
+              64,
+              64
+            ],
+            "ratio": 8.55,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(163, 244, 187)",
+            "background": [
+              27,
+              49,
+              48
+            ],
+            "ratio": 10.61,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "→",
+            "colour": "rgb(169, 180, 194)",
+            "background": [
+              25,
+              33,
+              43
+            ],
+            "ratio": 7.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(169, 180, 194)",
+            "background": [
+              26,
+              33,
+              43
+            ],
+            "ratio": 7.71,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "social-contact",
+            "text": "f",
+            "colour": "rgb(163, 174, 185)",
+            "background": [
+              20,
+              27,
+              37
+            ],
+            "ratio": 7.68,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "action-button js-only",
+            "text": "SEE IT IN ACTION",
+            "colour": "rgb(9, 42, 18)",
+            "background": [
+              32,
+              199,
+              71
+            ],
+            "ratio": 6.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "shipping-note js-only",
+            "text": "FREE SHIPPING AND FREE RETURNS",
+            "colour": "rgb(170, 180, 193)",
+            "background": [
+              17,
+              25,
+              34
+            ],
+            "ratio": 8.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "BUILT AROUND THE AIR / 01",
+            "colour": "rgb(33, 203, 75)",
+            "background": [
+              16,
+              25,
+              34
+            ],
+            "ratio": 8.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Nothing inthe way.",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              16,
+              25,
+              34
+            ],
+            "ratio": 15.91,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A clean silhouette. A purposeful positio",
+            "colour": "rgb(178, 189, 201)",
+            "background": [
+              16,
+              25,
+              34
+            ],
+            "ratio": 9.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Look a little closer ↗",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              16,
+              25,
+              34
+            ],
+            "ratio": 15.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "EVERY DETAIL, CONNECTED / 02",
+            "colour": "rgb(33, 203, 75)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 8.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-intro",
+            "text": "Open a chapter. Explore the concept.",
+            "colour": "rgb(178, 189, 201)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 10,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01",
+            "colour": "rgb(169, 179, 189)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 8.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A sculpted aero silhouette, broad down t",
+            "colour": "rgb(170, 183, 196)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 9.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "YOUR NEXT PERSPECTIVE / 03",
+            "colour": "rgb(33, 203, 75)",
+            "background": [
+              21,
+              35,
+              30
+            ],
+            "ratio": 7.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Make ityour ride.",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              21,
+              35,
+              30
+            ],
+            "ratio": 14.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Three visual finishes. Six example sizes",
+            "colour": "rgb(178, 189, 201)",
+            "background": [
+              21,
+              35,
+              30
+            ],
+            "ratio": 8.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Choose your finish ↗",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              21,
+              35,
+              30
+            ],
+            "ratio": 14.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "green-button js-only",
+            "text": "Add to enquiry bag ↗",
+            "colour": "rgb(7, 26, 12)",
+            "background": [
+              33,
+              203,
+              75
+            ],
+            "ratio": 8.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "small-note",
+            "text": "Local concept configuration. No order or",
+            "colour": "rgb(178, 196, 183)",
+            "background": [
+              21,
+              35,
+              30
+            ],
+            "ratio": 8.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "AeroSix / Independent showroom concept.O",
+            "colour": "rgb(165, 176, 189)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 8.67,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "hello@aerosix.example ↗",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 17.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "quiet-button js-only",
+            "text": "Pause motion",
+            "colour": "rgb(163, 174, 185)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 8.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "BBQRACING GREENCHALK",
+          "colour": "rgb(99, 234, 130)",
+          "width": "3px",
+          "ratio": 7.1
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#main"
+          },
+          {
+            "label": "Cannondale design study home",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          },
+          {
+            "label": "Contact and location",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#contact"
+          },
+          {
+            "label": "The bicycle",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          },
+          {
+            "label": "Engineering",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#engineering"
+          },
+          {
+            "label": "Specifications",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#specifications"
+          },
+          {
+            "label": "Get in touch",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#contact"
+          },
+          {
+            "label": "Discuss your fit →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#contact"
+          },
+          {
+            "label": "Contact the concept showroom",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#contact"
+          },
+          {
+            "label": "EXPLORE THE DESIGN →",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#engineering"
+          },
+          {
+            "label": "Scroll to the engineering story",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#engineering"
+          },
+          {
+            "label": "READ THE CONCEPT DETAILS",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#specifications"
+          },
+          {
+            "label": "Look a little closer ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#specifications"
+          },
+          {
+            "label": "Choose your finish ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          },
+          {
+            "label": "Enquire by email ↗",
+            "href": "mailto:hello@aerosix.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aerosix.example"
+          },
+          {
+            "label": "cannondale",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          },
+          {
+            "label": "Let’s ride.hello@aerosix.example ↗",
+            "href": "mailto:hello@aerosix.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aerosix.example"
+          },
+          {
+            "label": "Read the concept notes ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#specifications"
+          },
+          {
+            "label": "System Six / HI-MOD DURA-ACE DI2 ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          },
+          {
+            "label": "Prepare enquiry email ↗",
+            "href": "mailto:hello@aerosix.example?subject=AeroSix%20concept%20enquiry&body=%0AThis%20is%20an%20enquiry%2C%20not%20an%20order.%20Please%20discuss%20real%20fit%2C%20availability%20and%20price%20separately.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@aerosix.example?subject=AeroSix%20concept%20enquiry&body=%0AThis%20is%20an%20enquiry%2C%20not%20an%20order.%20Please%20discuss%20real%20fit%2C%20availability%20and%20price%20separately."
+          },
+          {
+            "label": "Back to the bicycle ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/aerosix/index.html#showroom"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 1440,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": false,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": false,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": false
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(16, 24, 32)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 17.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "wordmark",
+            "text": "cannondale",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 17.11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(8, 22, 12)",
+            "background": [
+              33,
+              203,
+              75
+            ],
+            "ratio": 8.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "SYSTEM SIX",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              28,
+              34,
+              45
+            ],
+            "ratio": 14.32,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "model-spec",
+            "text": "HI-MOD DURA-ACE DI2",
+            "colour": "rgb(54, 213, 98)",
+            "background": [
+              26,
+              33,
+              43
+            ],
+            "ratio": 8.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "model-price",
+            "text": "$11,000",
+            "colour": "rgb(206, 212, 219)",
+            "background": [
+              17,
+              24,
+              34
+            ],
+            "ratio": 11.94,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Exterior finish",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              53,
+              61,
+              74
+            ],
+            "ratio": 9.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(163, 244, 187)",
+            "background": [
+              34,
+              57,
+              57
+            ],
+            "ratio": 9.47,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(163, 244, 187)",
+            "background": [
+              44,
+              99,
+              73
+            ],
+            "ratio": 5.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(163, 244, 187)",
+            "background": [
+              40,
+              63,
+              64
+            ],
+            "ratio": 8.65,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(163, 244, 187)",
+            "background": [
+              27,
+              49,
+              49
+            ],
+            "ratio": 10.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "→",
+            "colour": "rgb(169, 180, 194)",
+            "background": [
+              25,
+              33,
+              43
+            ],
+            "ratio": 7.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(169, 180, 194)",
+            "background": [
+              25,
+              33,
+              42
+            ],
+            "ratio": 7.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "social-contact",
+            "text": "f",
+            "colour": "rgb(163, 174, 185)",
+            "background": [
+              21,
+              28,
+              36
+            ],
+            "ratio": 7.61,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "action-button js-only",
+            "text": "SEE IT IN ACTION",
+            "colour": "rgb(9, 42, 18)",
+            "background": [
+              32,
+              199,
+              71
+            ],
+            "ratio": 6.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "shipping-note js-only",
+            "text": "FREE SHIPPING AND FREE RETURNS",
+            "colour": "rgb(170, 180, 193)",
+            "background": [
+              18,
+              26,
+              32
+            ],
+            "ratio": 8.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "BUILT AROUND THE AIR / 01",
+            "colour": "rgb(33, 203, 75)",
+            "background": [
+              16,
+              25,
+              34
+            ],
+            "ratio": 8.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Nothing inthe way.",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              16,
+              25,
+              34
+            ],
+            "ratio": 15.91,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A clean silhouette. A purposeful positio",
+            "colour": "rgb(178, 189, 201)",
+            "background": [
+              16,
+              25,
+              34
+            ],
+            "ratio": 9.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Look a little closer ↗",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              16,
+              25,
+              34
+            ],
+            "ratio": 15.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "EVERY DETAIL, CONNECTED / 02",
+            "colour": "rgb(33, 203, 75)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 8.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-intro",
+            "text": "Open a chapter. Explore the concept.",
+            "colour": "rgb(178, 189, 201)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 10,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01",
+            "colour": "rgb(169, 179, 189)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 8.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A sculpted aero silhouette, broad down t",
+            "colour": "rgb(170, 183, 196)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 9.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "YOUR NEXT PERSPECTIVE / 03",
+            "colour": "rgb(33, 203, 75)",
+            "background": [
+              21,
+              35,
+              30
+            ],
+            "ratio": 7.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Make ityour ride.",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              21,
+              35,
+              30
+            ],
+            "ratio": 14.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Three visual finishes. Six example sizes",
+            "colour": "rgb(178, 189, 201)",
+            "background": [
+              21,
+              35,
+              30
+            ],
+            "ratio": 8.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Choose your finish ↗",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              21,
+              35,
+              30
+            ],
+            "ratio": 14.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "green-button js-only",
+            "text": "Add to enquiry bag ↗",
+            "colour": "rgb(7, 26, 12)",
+            "background": [
+              33,
+              203,
+              75
+            ],
+            "ratio": 8.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "small-note",
+            "text": "Local concept configuration. No order or",
+            "colour": "rgb(178, 196, 183)",
+            "background": [
+              21,
+              35,
+              30
+            ],
+            "ratio": 8.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "AeroSix / Independent showroom concept.O",
+            "colour": "rgb(165, 176, 189)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 8.67,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "hello@aerosix.example ↗",
+            "colour": "rgb(240, 243, 245)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 17.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "quiet-button js-only",
+            "text": "Pause motion",
+            "colour": "rgb(163, 174, 185)",
+            "background": [
+              11,
+              16,
+              24
+            ],
+            "ratio": 8.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "BBQRACING GREENCHALK",
+          "colour": "rgb(99, 234, 130)",
+          "width": "3px",
+          "ratio": 7.1
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "aerosix/assets/css/style.css",
+    "aerosix/assets/img/bike-black.webp",
+    "aerosix/assets/img/bike-chalk.webp",
+    "aerosix/assets/img/bike-green.webp",
+    "aerosix/assets/js/main.js",
+    "aerosix/CUSTOMISE.md",
+    "aerosix/index.html",
+    "aerosix/LICENCE.txt",
+    "aerosix/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/bike-black.webp",
+    "assets/img/bike-chalk.webp",
+    "assets/img/bike-green.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q03/chromium: menu resetOnDesktop",
+    "Q07/chromium: giảm chuyển động {\"allVisible\":false,\"runningAnimations\":0}",
+    "Q07/chromium: tắt JS/mất font {\"width\":320,\"scrollWidth\":320,\"clientWidth\":320,\"allVisible\":true,\"navLinksVisible\":false}",
+    "Q03/firefox: menu resetOnDesktop",
+    "Q07/firefox: giảm chuyển động {\"allVisible\":false,\"runningAnimations\":0}",
+    "Q07/firefox: tắt JS/mất font {\"width\":320,\"scrollWidth\":320,\"clientWidth\":320,\"allVisible\":true,\"navLinksVisible\":false}"
+  ]
+}

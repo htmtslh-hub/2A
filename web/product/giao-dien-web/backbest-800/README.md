@@ -1,0 +1,5 @@
+# BackBest 800 1.0.0
+
+Obsidian-and-crimson wireless headphone showcase template recreated from the supplied Plantronic BackBest 800 Series reference. New commerce product, Premium by default, catalog `t38`. Source in `source/`, final ZIP `backbest-800.zip` after acceptance. Nine files including three original generated headphone finish cutouts (`headphone-black.webp`, `headphone-white.webp`, `headphone-red.webp`); plain HTML/CSS/JS, no build/font network dependency/backend. Customer `CUSTOMISE.md` has ten steps, twelve prompts and counted edits. Demo/preview/actual recording are generated from accepted source; video stays outside customer ZIP.
+
+QA, fixed reference/motion maps, asset provenance, visual comparisons, hashes and release evidence in `reviews/1.0.0/`. `WEB-STATIC-1` v1.2.1 with approved `W01/W03/W05/W06` exceptions for this image-led interactive brief. Enquiry bag and fit preferences are local to the page visit; no real retail sales, manufacturer affiliation or verified component/price/fit/shipping claim.

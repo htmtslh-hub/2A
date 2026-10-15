@@ -1,0 +1,16 @@
+{
+  "reference": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\backbest-800\\reviews\\1.0.0\\reference.png",
+  "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\backbest-800\\reviews\\1.0.0\\candidate.png",
+  "size": [
+    1440,
+    822
+  ],
+  "referenceCrop": null,
+  "alphaBackground": "white",
+  "meanAbsoluteRgbError": 16.7841373231504,
+  "pixelMatchPercent": 70.79362665585293,
+  "tolerance": 16,
+  "gate": "NOT ASSESSED",
+  "fidelityRubric": "NOT SCORED",
+  "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+}

@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'backbest-800': {
+  "vi": {
+    "intro": "Showroom tai nghe không dây nền đen đỏ với vòng đồng tâm phát sáng, ba phối màu tự tạo, hotspot và giỏ tư vấn trong phiên.",
+    "notes": "### Bắt đầu\nGiải nén đủ 9 file; mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. Không framework, build hoặc font mạng.\n\n### Nội dung và hình ảnh\nThay BackBest 800/Plantronic, tên dòng BACKBEST 800 SERIES, giá $199 ($239 gạch ngang), mô tả màng loa 40mm/khớp gập và email hello@backbest800.example. Ba ảnh headphone-black/white/red.webp là cùng một mẫu tai nghe tự tạo với ba phối màu concept, không phải ảnh chụp chính thức của hãng. Không có liên kết với nhà sản xuất.\n\n### Tương tác\nNút/phím/vuốt chuyển hai chiều, chọn 6 kiểu đệm tai, xem chi tiết bộ phận qua hotspot, tìm kiếm một mẫu tai nghe, giỏ tư vấn thêm/xóa trong phiên và email. Sound preview là hoạt cảnh phối màu 4.2 giây, không phải luồng âm thanh hay video quay thật. Chuyển động mặc định bật; Pause motion chỉ áp dụng trang đang mở. Email chỉ mở ứng dụng.\n\n### Phạm vi và giấy phép\nKhông có bán lẻ trực tiếp, thanh toán, tài khoản, đo tai hoặc tồn kho thực. Đọc LICENCE.txt; ảnh dùng trong website hoàn chỉnh, không bán lại template hoặc ảnh riêng lẻ."
+  },
+  "en": {
+    "intro": "An obsidian-and-crimson wireless headphone showroom with glowing concentric target rings, three original finishes, hotspots and a session enquiry bag.",
+    "notes": "### Start\nExtract all 9 files; open index.html beside assets/. CUSTOMISE.md has 10 steps, 12 AI prompts and counted edits. No framework, build or network fonts.\n\n### Content and artwork\nReplace BackBest 800/Plantronic, the model line BACKBEST 800 SERIES, $199 ($239 compare-at), sample 40mm driver/hinge descriptions and hello@backbest800.example. headphone-black/white/red.webp depict one original generated concept in three finishes, not official manufacturer photography. No manufacturer affiliation.\n\n### Interaction\nButtons/keys/swipe switch both ways; 6 example cushion-fit options, component hotspot details, one-model search, session add/remove enquiry bag and email. Sound preview is a 4.2-second colourway sequence, not audio/video stream footage. Motion defaults ON; Pause motion applies to this visit. Email opens an app only.\n\n### Scope and licence\nNo live retail checkout, payment, account, acoustic measurement or inventory. Read LICENCE.txt; artwork is allowed in finished sites, not template redistribution or standalone stock resale."
+  },
+  "zh": {
+    "intro": "黑红配色无线耳机展厅，含发光同心圆环、三种原创配色、热点和会话咨询袋。",
+    "notes": "### 开始\n完整解压9个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词和精确修改表。无需框架、构建或网络字体。\n\n### 内容与图像\n替换BackBest 800/Plantronic、型号名BACKBEST 800 SERIES、$199（原价$239）、示例40mm驱动单元/铰链说明及hello@backbest800.example。headphone-black/white/red.webp为同一原创概念耳机的三种配色，并非品牌官方摄影。无厂家关联。\n\n### 交互\n按钮/按键/滑动双向切换，6种示例耳垫规格、部件热点详情、单型号搜索、会话添加/移除咨询袋与邮件。Sound preview为4.2秒配色动画，非实拍音视频。动态默认开启，Pause motion仅限本次访问。邮件仅打开应用。\n\n### 范围与授权\n无零售结账、支付、账户、声学测量或库存。阅读LICENCE.txt；图像可用于成品网站，不可重新分发模板或单独作为素材转售。"
+  }
+},
   'airmax-plus': {
   "vi": {
     "intro": "Showroom giày thể thao nền tối với dải sóng lưới cam 3D, ba phối màu tự tạo, hotspot và giỏ tư vấn trong phiên.",

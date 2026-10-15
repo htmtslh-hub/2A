@@ -516,5 +516,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "backbest-800": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "2b273e54dd50",
+    "sha256": "2b273e54dd50d953054840b90a99404ed0916f2950912ff1e7877c55a7cc9240",
+    "demoHtmlSha256": "037a3ca0ec1a7dccd3fd72397689e372a67555843132d4e44f34035a1b66afda",
+    "demoSha256": "8f75bb8a09321295c2dc781bc748cbb05477dcdfd49e4fcca158a6717231b2fd",
+    "bytes": 464351,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

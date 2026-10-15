@@ -46,6 +46,109 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t38: {
+  "slug": "backbest-800",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "9 file · 3 ảnh WebP tự tạo"
+      ],
+      [
+        "Tương tác",
+        "3 phối màu · 6 cỡ đệm tai · hotspot · giỏ tư vấn trong phiên"
+      ],
+      [
+        "Chuyển động",
+        "Chuyển hai chiều · vuốt/phím · cảnh cuộn"
+      ],
+      [
+        "Phạm vi",
+        "Showroom concept · email · không bán hàng/thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · 3 original WebP images"
+      ],
+      [
+        "Interaction",
+        "3 finishes · 6 cushion fits · hotspots · session enquiry bag"
+      ],
+      [
+        "Motion",
+        "Two-way transitions · swipe/keys · scroll scene"
+      ],
+      [
+        "Scope",
+        "Concept showroom · email · no retail sales/payments"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "9 个文件 · 3 张原创 WebP"
+      ],
+      [
+        "交互",
+        "3 种配色 · 6 种耳垫规格 · 热点 · 会话咨询袋"
+      ],
+      [
+        "动态",
+        "双向切换 · 滑动/按键 · 滚动场景"
+      ],
+      [
+        "范围",
+        "概念展厅 · 邮件 · 无零售销售或支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "BackBest 800",
+      "desc": "Showroom tai nghe không dây nền đen đỏ với các vòng đồng tâm phát sáng và ba ảnh tai nghe tách nền tự tạo. Chọn phối màu Đen/Trắng/Đỏ và kiểu đệm tai, xem chi tiết màng loa 40mm và khớp gập qua hotspot, giỏ tư vấn trong phiên, email và cảnh kỹ thuật cuộn. Chuyển hai chiều bằng nút, phím hoặc vuốt; Sound preview là hoạt cảnh phối màu 4.2 giây, không phải luồng âm thanh hay video quay thật. Giá và thông số minh họa; không có thanh toán hoặc backend.",
+      "tags": [
+        "Showroom tai nghe",
+        "3 phối màu chân thực",
+        "Chuyển hai chiều"
+      ]
+    },
+    "en": {
+      "name": "BackBest 800",
+      "desc": "An obsidian-and-crimson wireless headphone showroom with glowing concentric target rings and three original photoreal finish cutouts. Colourway and cushion-fit selection, 40mm driver and hinge hotspots, a session purchase enquiry bag, email and a scroll-linked acoustic engineering scene. Directional buttons, keys and swipe; Sound preview is a 4.2-second colourway sequence, not audio/video stream footage. Illustrative price and specs; no retail checkout, payments or backend.",
+      "tags": [
+        "Headphone showroom",
+        "3 photoreal finishes",
+        "Directional transitions"
+      ]
+    },
+    "zh": {
+      "name": "BackBest 800",
+      "desc": "黑红配色无线耳机展厅，含发光同心圆环与三张原创写实配色切图。支持黑/白/红配色与耳垫规格选择、40mm驱动单元与折叠铰链热点、会话购买咨询袋、邮件与滚动声学工程场景。按钮、按键或滑动双向切换；Sound preview为4.2秒配色动画而非实拍音视频。价格与参数为示例，无零售结账、支付或后端。",
+      "tags": [
+        "无线耳机展厅",
+        "3 种写实配色",
+        "双向切换"
+      ]
+    }
+  }
+},
   t37: {
   "slug": "airmax-plus",
   "cat": "commerce",

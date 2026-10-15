@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-15T15:08:46.651Z",
+  "sizes": [
+    {
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "taglineFont": "14px",
+      "eyebrow": "14px"
+    },
+    {
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "taglineFont": "14px",
+      "eyebrow": "14px"
+    },
+    {
+      "width": 820,
+      "sw": 820,
+      "cw": 820,
+      "taglineFont": "14px",
+      "eyebrow": "14px"
+    },
+    {
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "taglineFont": "14px",
+      "eyebrow": "14px"
+    },
+    {
+      "width": 320,
+      "sw": 320,
+      "cw": 320,
+      "taglineFont": "14px",
+      "eyebrow": "14px"
+    }
+  ],
+  "axe": [],
+  "hamburgerResize": true,
+  "noJSMainLinks": [
+    {
+      "text": "PHONE",
+      "visible": true
+    },
+    {
+      "text": "→HEADPHONE",
+      "visible": true
+    },
+    {
+      "text": "LAPTOP",
+      "visible": true
+    },
+    {
+      "text": "SPEAKERS",
+      "visible": true
+    }
+  ],
+  "missingImages": true,
+  "email": "mailto:hello@backbest800.example",
+  "contrast": [
+    {
+      "role": "text",
+      "fg": "c7bbbe",
+      "bg": "0b0506",
+      "min": 4.5,
+      "ratio": 10.861
+    },
+    {
+      "role": "purchase CTA",
+      "fg": "f6f1f2",
+      "bg": "0b0506",
+      "min": 4.5,
+      "ratio": 18.085
+    },
+    {
+      "role": "crimson CTA",
+      "fg": "ffffff",
+      "bg": "b51218",
+      "min": 4.5,
+      "ratio": 6.853
+    },
+    {
+      "role": "focus",
+      "fg": "ff4d57",
+      "bg": "0b0506",
+      "min": 3,
+      "ratio": 6.212
+    },
+    {
+      "role": "hotspot",
+      "fg": "ffffff",
+      "bg": "230d10",
+      "min": 4.5,
+      "ratio": 18.478
+    },
+    {
+      "role": "eyebrow",
+      "fg": "ff5c66",
+      "bg": "0b0506",
+      "min": 4.5,
+      "ratio": 6.716
+    }
+  ]
+}

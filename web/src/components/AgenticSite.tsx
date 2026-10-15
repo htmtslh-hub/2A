@@ -19,6 +19,7 @@ import { AUTH_ERRORS, FORGOT_STRINGS } from '@/lib/i18n-extra';
 import Toast from './Toast';
 import CartDrawer from './CartDrawer';
 import { REAL_TEMPLATES } from '@/lib/real-templates';
+import { canBuyIndividually } from '@/lib/product-policy';
 import { CART_KEY, PENDING_CART_KEY, OPEN_CART_AFTER_LOGIN_KEY } from '@/lib/cart-storage';
 import { flyProductToCart } from '@/lib/cart-flight';
 
@@ -229,7 +230,7 @@ export default function AgenticSite({
   const [cartOpen, setCartOpen] = useState(false);
   const [cartBusy, setCartBusy] = useState(false);
   const [cartError, setCartError] = useState('');
-  const [profile, setProfile] = useState<{ name: string; image: string | null } | null>(null);
+  const [profile, setProfile] = useState<{ name: string; image: string | null; downloadIds: string[] } | null>(null);
   const savingIds = useRef(new Set<string>());
   const countMutationAt = useRef(new Map<string, number>());
 
@@ -281,7 +282,7 @@ export default function AgenticSite({
     const timer = window.setTimeout(() => {
       try {
         const stored = JSON.parse(localStorage.getItem(CART_KEY) || '[]');
-        if (Array.isArray(stored)) setCartIds([...new Set(stored.filter((id): id is string => typeof id === 'string' && Boolean(REAL_TEMPLATES[id]) && !REAL_TEMPLATES[id].previewOnly))].slice(0, 20));
+        if (Array.isArray(stored)) setCartIds([...new Set(stored.filter((id): id is string => typeof id === 'string' && Boolean(REAL_TEMPLATES[id]) && !REAL_TEMPLATES[id].previewOnly && canBuyIndividually(id)))].slice(0, 20));
       } catch {}
       setCartReady(true);
     }, 0);
@@ -304,7 +305,7 @@ export default function AgenticSite({
 
   const addToCart = useCallback((id: string, origin?: { x: number; y: number }) => {
     const template = REAL_TEMPLATES[id];
-    if (!template || template.previewOnly || pendingCartIdsRef.current.has(id)) return;
+    if (!template || template.previewOnly || !canBuyIndividually(id) || pendingCartIdsRef.current.has(id)) return;
     const isNew = !cartIds.includes(id);
     if (isNew) {
       pendingCartIdsRef.current.add(id);
@@ -356,7 +357,7 @@ export default function AgenticSite({
     let alive = true;
     fetch('/api/profile', { cache: 'no-store' })
       .then((r) => r.ok ? r.json() : Promise.reject(new Error('profile')))
-      .then((data) => { if (alive) setProfile({ name: data.name, image: data.image }); })
+      .then((data) => { if (alive) setProfile({ name: data.name, image: data.image, downloadIds: Array.isArray(data.downloadIds) ? data.downloadIds : [] }); })
       .catch(() => {});
     return () => { alive = false; };
   }, [session?.user]);
@@ -609,6 +610,7 @@ export default function AgenticSite({
         savedIds,
         saveCounts,
         cartIds,
+        downloadIds: profile?.downloadIds,
         accountName: profile?.name || session?.user?.name || session?.user?.email?.split('@')[0],
         accountImage: profile?.image || session?.user?.image,
       }),

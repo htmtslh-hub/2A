@@ -36,6 +36,7 @@ export interface RealTemplate {
   previewOnly?: boolean;
   badge?: string;
   group?: 'web' | 'skill-prompt' | 'agent';
+  access?: 'free';
   /** Video quay từ chính mẫu giao, chỉ dùng tại cửa hàng. */
   video?: boolean;
   /** Revision for refreshing public demo and preview assets. */
@@ -241,11 +242,11 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     },
   },
   t31: {
-    slug: 'chronoform', cat: 'commerce', version: '1.0.0', video: true,
+    slug: 'chronoform', cat: 'commerce', version: '1.0.1', video: true,
     specs: {
-      vi: [['Định dạng', 'HTML / CSS / JavaScript · WebGL thuần'], ['Gói tải', '24 file · 17 ảnh WebP gốc'], ['Bộ sưu tập', '11 mẫu · bộ lọc · chi tiết trước/sau'], ['Chuyển động', '4 mẫu hero · xoay 3D · cảnh cuộn'], ['Phạm vi', 'Giỏ tư vấn trong phiên · không thanh toán']],
-      en: [['Format', 'HTML / CSS / JavaScript · native WebGL'], ['Package', '24 files · 17 original WebP images'], ['Collection', '11 models · filters · front/back detail'], ['Motion', '4 featured models · 3D rotation · scroll scene'], ['Scope', 'Session enquiry bag · no payments']],
-      zh: [['格式', 'HTML / CSS / JavaScript · 原生 WebGL'], ['下载包', '24 个文件 · 17 张原创 WebP'], ['系列', '11 款 · 筛选 · 正反面详情'], ['动态', '4 款主展示 · 3D 旋转 · 滚动场景'], ['范围', '会话咨询袋 · 无支付']],
+      vi: [['Định dạng', 'HTML / CSS / JavaScript · WebGL thuần'], ['Gói tải', '28 file · 21 ảnh WebP gốc'], ['Bộ sưu tập', '11 mẫu · bộ lọc · chi tiết trước/sau'], ['Chuyển động', '4 mẫu hero · xoay 3D · cảnh cuộn'], ['Phạm vi', 'Giỏ tư vấn trong phiên · không thanh toán']],
+      en: [['Format', 'HTML / CSS / JavaScript · native WebGL'], ['Package', '28 files · 21 original WebP images'], ['Collection', '11 models · filters · front/back detail'], ['Motion', '4 featured models · 3D rotation · scroll scene'], ['Scope', 'Session enquiry bag · no payments']],
+      zh: [['格式', 'HTML / CSS / JavaScript · 原生 WebGL'], ['下载包', '28 个文件 · 21 张原创 WebP'], ['系列', '11 款 · 筛选 · 正反面详情'], ['动态', '4 款主展示 · 3D 旋转 · 滚动场景'], ['范围', '会话咨询袋 · 无支付']],
     },
     copy: {
       vi: { name: 'Chronoform', desc: 'Showroom đồng hồ cơ theo phong cách điện ảnh: 4 mẫu hero chuyển hai chiều, đồng hồ WebGL xoay và xem trước/sau, thư viện 11 mẫu với bộ lọc, trang chi tiết và giỏ tư vấn trong phiên. Ảnh gốc tự tạo; ảnh dự phòng khi WebGL bị chặn. Giá và thông số minh họa, không có thanh toán hoặc backend.', tags: ['Đồng hồ 3D', 'Chuyển mẫu', 'Thư viện & bộ lọc'] },
@@ -748,6 +749,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
 
   t22: {
     slug: 'kinetiq', cat: TEMPLATE_CATEGORIES.kinetiq,
+    access: 'free',
     copy: {
       vi: { name: 'Kinetiq', desc: 'Giao diện giới thiệu hệ truyền động và linh kiện robot công nghiệp: minh họa cơ khí, danh mục hệ thống và CTA liên hệ. Không kèm thanh toán hoặc quản lý đơn hàng.', tags: ['Công nghiệp', 'Linh kiện', 'Giới thiệu sản phẩm'] },
       en: { name: 'Kinetiq', desc: 'An industrial actuation and robotics component showcase with mechanical illustrations, system listings and an enquiry CTA. No checkout or order backend.', tags: ['Industrial', 'Components', 'Product showcase'] },
@@ -812,6 +814,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   },
   t1: {
     slug: 'japan-trails', cat: TEMPLATE_CATEGORIES['japan-trails'],
+    access: 'free',
     copy: {
       vi: { name: 'Japan Trails', desc: 'Giao diện du lịch Nhật Bản phong cách điện ảnh: ảnh Phú Sĩ và chùa lúc bình minh, thẻ kính mờ, hành trình và phố Kyoto. CTA liên hệ qua email.', tags: ['Du lịch Nhật Bản', 'Cinematic', 'Kính mờ'] },
       en: { name: 'Japan Trails', desc: 'A cinematic Japan travel template with Fuji sunrise photography, frosted-glass cards, journey ideas, Kyoto imagery and an email enquiry.', tags: ['Japan travel', 'Cinematic', 'Frosted glass'] },

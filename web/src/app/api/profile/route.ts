@@ -1,5 +1,6 @@
 import { auth } from '@/auth';
 import { prisma } from '@/lib/db';
+import { accessibleProductIds } from '@/lib/memberships';
 
 const noStore = { 'Cache-Control': 'private, no-store' };
 
@@ -13,7 +14,8 @@ export async function GET() {
   if (!userId) return Response.json({ error: 'Unauthorized' }, { status: 401, headers: noStore });
   const user = await prisma.user.findUnique({ where: { id: userId }, select: { name: true, email: true, image: true } });
   if (!user) return Response.json({ error: 'Not found' }, { status: 404, headers: noStore });
-  return Response.json({ name: user.name || user.email.split('@')[0], image: user.image }, { headers: noStore });
+  const downloadIds = await accessibleProductIds(userId);
+  return Response.json({ name: user.name || user.email.split('@')[0], image: user.image, downloadIds }, { headers: noStore });
 }
 
 export async function PATCH(req: Request) {

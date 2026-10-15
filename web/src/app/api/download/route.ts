@@ -15,6 +15,7 @@ import { auth } from '@/auth';
 import { templateExists, templateFile } from '@/lib/catalog';
 import { REAL_TEMPLATES } from '@/lib/real-templates';
 import { hasProductAccess } from '@/lib/memberships';
+import { isFreeProduct } from '@/lib/product-policy';
 
 const TEMPLATE_DIR = path.join(process.cwd(), 'product', 'giao-dien-web');
 
@@ -56,6 +57,8 @@ export async function GET(req: Request) {
   if (url.searchParams.get('free') === '1') {
     return serve('free-sample');
   }
+  // Only catalogue entries explicitly marked free bypass account access checks.
+  if (id && isFreeProduct(id)) return serve(id);
 
   /* --- link một lần từ email --- */
   if (token) {
@@ -96,7 +99,7 @@ export async function GET(req: Request) {
   // Mua trọn bộ (templateId = null) thì mở khoá mọi mẫu.
   const owned = await hasProductAccess(userId, id);
   if (!owned) {
-    return NextResponse.json({ error: 'Bạn cần mua sản phẩm hoặc có gói Pro/Ultra còn hiệu lực để tải.' }, { status: 403 });
+    return NextResponse.json({ error: 'Bạn cần gói Premium/Ultra còn hiệu lực hoặc quyền mua đã có để tải.', pricingUrl: '/?tab=pricing' }, { status: 403 });
   }
 
   return serve(id);

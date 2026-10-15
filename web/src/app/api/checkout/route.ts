@@ -8,6 +8,7 @@ import { auth } from '@/auth';
 import { adapterFor } from '@/lib/payments';
 import { COMPANY } from '@/lib/company';
 import { isMembershipPlan } from '@/lib/membership-policy';
+import { requiresPremium, isFreeProduct } from '@/lib/product-policy';
 import {
   currencyForProvider,
   priceOf,
@@ -69,6 +70,20 @@ export async function POST(req: Request) {
   const templateIds = kind === 'CART' ? parsed.data.templateIds : undefined;
   if (kind === 'CART' && (!templateIds || new Set(templateIds).size !== templateIds.length || !templateIds.every(templateExists))) {
     return NextResponse.json({ error: 'Giỏ hàng không hợp lệ.' }, { status: 400 });
+  }
+
+  // Enforce the same membership-only catalogue used by the storefront.
+  const freeId = kind === 'TEMPLATE' && isFreeProduct(templateId!) ? templateId : templateIds?.find(isFreeProduct);
+  if (freeId) return NextResponse.json({ error: 'Sản phẩm này miễn phí, không cần thanh toán.', downloadUrl: `/api/download?id=${freeId}` }, { status: 400 });
+  // Historical paid purchases keep their existing download entitlements.
+  if ((kind === 'TEMPLATE' && requiresPremium(templateId!)) ||
+      (kind === 'CART' && templateIds!.some(requiresPremium))) {
+    const error = {
+      vi: 'Sản phẩm Premium được tải qua gói Premium hoặc Ultra còn hiệu lực. Vui lòng chọn gói tại bảng giá.',
+      en: 'Premium products require an active Premium or Ultra plan. Choose a plan on the pricing page.',
+      zh: 'Premium 产品需要有效的 Premium 或 Ultra 套餐。请在价格页面选择套餐。',
+    }[lang];
+    return NextResponse.json({ error, pricingUrl: '/?tab=pricing' }, { status: 403 });
   }
 
   const session = await auth();

@@ -12,6 +12,7 @@ import ProfileEditor from './profile-editor';
 import styles from './account.module.css';
 import { isAdminEmail } from '@/lib/admin-access';
 import { membershipState } from '@/lib/memberships';
+import { membershipName } from '@/lib/membership-policy';
 import { MEMBERSHIP_COPY } from '@/lib/membership-copy';
 
 export const dynamic = 'force-dynamic';
@@ -83,7 +84,7 @@ export default async function AccountPage() {
   const plan = membership.active ?? membership.latest;
   const formatTerm = (date: Date) => new Intl.DateTimeFormat(dateLocale[lang], { dateStyle: 'medium', timeStyle: 'short' }).format(date);
   const activity = [
-    ...membership.periods.map(period => ({ id: `membership-${period.id}`, type: t.bought, name: `${period.plan === 'ULTRA' ? 'Ultra' : 'Pro'} · ${m.title}`, date: period.createdAt })),
+    ...membership.periods.map(period => ({ id: `membership-${period.id}`, type: t.bought, name: `${membershipName(period.plan)} · ${m.title}`, date: period.createdAt })),
     ...purchases.map((p) => ({ id: `purchase-${p.id}`, type: t.bought, name: p.templateId ? templateName(p.templateId, lang) : t.bundle, date: p.createdAt })),
     ...savedItems.filter((item) => REAL_TEMPLATES[item.templateId]).map((item) => ({ id: `saved-${item.id}`, type: t.savedAction, name: REAL_TEMPLATES[item.templateId].copy[lang].name, date: item.createdAt })),
   ].sort((a, b) => b.date.getTime() - a.date.getTime()).slice(0, 6);
@@ -103,10 +104,10 @@ export default async function AccountPage() {
       <section className={styles.section}>
         <div className={styles.sectionHead}><h2>{m.title}</h2><Link className={styles.textLink} href="/?tab=pricing">{m.upgrade} ↗</Link></div>
         <div className={styles.purchase}>
-          <div className={styles.purchaseInfo}><div><strong>{plan ? plan.plan === 'ULTRA' ? 'Ultra' : 'Pro' : m.free}</strong><span>{membership.active ? m.active : plan ? plan.startsAt > new Date() ? m.scheduled : m.expired : m.empty}</span>{plan && <span>{m.starts}: {formatTerm(plan.startsAt)} · {m.until}: {formatTerm(plan.expiresAt)}</span>}</div></div>
+          <div className={styles.purchaseInfo}><div><strong>{plan ? membershipName(plan.plan) : m.free}</strong><span>{membership.active ? m.active : plan ? plan.startsAt > new Date() ? m.scheduled : m.expired : m.empty}</span>{plan && <span>{m.starts}: {formatTerm(plan.startsAt)} · {m.until}: {formatTerm(plan.expiresAt)}</span>}</div></div>
           {membership.active && <Link className={styles.smallButton} href="/don-hang">{m.download} ↗</Link>}
         </div>
-        {membership.periods.filter(period => period.startsAt > new Date() && period.id !== plan?.id).map(period => <p key={period.id}>{m.scheduled}: {period.plan} · {m.starts}: {formatTerm(period.startsAt)} · {m.until}: {formatTerm(period.expiresAt)}</p>)}
+        {membership.periods.filter(period => period.startsAt > new Date() && period.id !== plan?.id).map(period => <p key={period.id}>{m.scheduled}: {membershipName(period.plan)} · {m.starts}: {formatTerm(period.startsAt)} · {m.until}: {formatTerm(period.expiresAt)}</p>)}
         <p>{m.policy}</p><p>{m.renewal}</p>
       </section>
 

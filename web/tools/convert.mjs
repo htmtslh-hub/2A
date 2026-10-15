@@ -528,6 +528,16 @@ function emitWithKey(node, scope, indent, idxName) {
 }
 
 /* ---------- 5. chạy ---------- */
+// Keep Premium access controls when regenerating the storefront from the design.
+markupHtml = markupHtml.replace('{{ t.dBuy }}', '{{ detailBuyLabel }}')
+  .replace('{{ t.pricingUnitOnce }}', '{{ detailPriceUnit }}');
+for (const item of ['hp', 'tp', 'rp']) {
+  const button = new RegExp(`<button[^>]*class="cart-template-button"[^>]*onClick="\\{\\{ ${item}\\.onCart \\}\\}"[^>]*>[\\s\\S]*?<\\/button>`);
+  markupHtml = markupHtml.replace(button, match => `<sc-if value="{{ !${item}.previewOnly && !${item}.premium && !${item}.free }}">${match}</sc-if>`);
+}
+markupHtml = markupHtml.replace(/<button[^>]*class="cart-detail-button"[^>]*>[\s\S]*?<\/button>/,
+  match => `<sc-if value="{{ !vm.detail.previewOnly && !vm.detail.premium && !vm.detail.free }}">${match}</sc-if>`);
+
 const frag = parseFragment(markupHtml);
 let jsxBody = frag.childNodes.map((n) => emit(n, new Set(), 3)).join('');
 const guideSlot = '<div data-customer-guide="" />';

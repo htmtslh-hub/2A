@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { REAL_TEMPLATES } from '@/lib/real-templates';
+import { canBuyIndividually } from '@/lib/product-policy';
 import { currencyForProvider, formatMoney, priceOf, providerForLang, type Lang } from '@/lib/catalog';
 import styles from './cart.module.css';
 
@@ -18,7 +19,7 @@ export default function CartDrawer({ ids, count, lang, open, busy, error, pulse,
 }) {
   const t = copy[lang];
   const currency = currencyForProvider(providerForLang(lang));
-  const items = ids.filter((id) => REAL_TEMPLATES[id] && !REAL_TEMPLATES[id].previewOnly);
+  const items = ids.filter((id) => REAL_TEMPLATES[id] && !REAL_TEMPLATES[id].previewOnly && canBuyIndividually(id));
   const total = items.reduce((sum, id) => sum + priceOf('TEMPLATE', currency, id), 0);
   const closeRef = useRef<HTMLButtonElement>(null);
   const drawerRef = useRef<HTMLElement>(null);

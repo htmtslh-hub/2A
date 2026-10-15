@@ -154,12 +154,35 @@
   let featuredIndex = 0, detailId = "skeleton-gold", currency = "EUR", motion = true;
   let view = "home", carouselFrame = 0, loaderFrame = 0, loaderToken = 0, opener;
   let visual = { x: 0, opacity: 1 };
+  // Product photographs are hero art; the native model remains available for inspection.
+  const heroPhotos = new Map(FEATURED.map((id) => {
+    const image = new Image();
+    image.className = "hero-watch-photo";
+    image.alt = "";
+    image.width = 1400;
+    image.height = 1200;
+    image.draggable = false;
+    image.addEventListener("load", () => {
+      if (stage.dataset.photoModel === id) stage.classList.add("has-hero-photo");
+    });
+    image.src = `assets/img/hero-${id}.webp`;
+    return [id, image];
+  }));
+  stage.addEventListener("pointerdown", () => stage.classList.add("is-inspecting"));
   const renderer = window.ChronoWatch3D ? new window.ChronoWatch3D(stage, byId("paraiba")) : null;
   const clamp = (value) => Math.max(0, Math.min(1, value));
   const ease = (value) => 1 - Math.pow(1 - value, 3);
   const money = (value) => new Intl.NumberFormat("en-GB", { style: "currency", currency, minimumFractionDigits: 2 }).format(value);
   const price = (product) => currency === "EUR" ? product.price : product.usd;
   function setModel(product) {
+    stage.classList.remove("has-hero-photo", "is-inspecting");
+    stage.querySelector(".hero-watch-photo")?.remove();
+    stage.dataset.photoModel = product.id;
+    const photo = heroPhotos.get(product.id);
+    if (photo) {
+      stage.append(photo);
+      stage.classList.toggle("has-hero-photo", photo.complete && photo.naturalWidth > 0);
+    }
     if (renderer) renderer.setModel(product);
     else stage.querySelectorAll("[data-dial]").forEach((image) => image.setAttribute("href", product.face));
     shell.dataset.tone = product.tone;
@@ -216,6 +239,7 @@
   }
   function stopMovement() {
     renderer?.stop();
+    stage.classList.remove("is-inspecting");
     document.querySelector("#movement-label").textContent = "View movement";
   }
   function settle() {
@@ -386,6 +410,7 @@
     cancelAnimationFrame(carouselFrame);
     settle();
     document.querySelector("#movement-label").textContent = "Stop movement";
+    stage.classList.add("is-inspecting");
     renderer.turn(3200, stopMovement);
   });
   document.querySelector("#front-view").addEventListener("click", () => renderer?.pose(-0.05, 0, 0));

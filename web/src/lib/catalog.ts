@@ -89,7 +89,7 @@ export function formatMoney(amount: number, currency: Currency, lang: Lang = 'vi
 }
 
 export function productName(kind: Kind, templateId: string | null | undefined, lang: Lang): string {
-  if (kind === 'PRO') return { vi: 'Nâng cấp Pro · 1 tháng', en: 'Pro upgrade · 1 month', zh: 'Pro 升级 · 1个月' }[lang];
+  if (kind === 'PRO') return { vi: 'Nâng cấp Premium · 1 tháng', en: 'Premium upgrade · 1 month', zh: 'Premium 升级 · 1个月' }[lang];
   if (kind === 'ULTRA') return { vi: 'Nâng cấp Ultra · 1 năm', en: 'Ultra upgrade · 1 year', zh: 'Ultra 升级 · 1年' }[lang];
   if (kind === 'BUNDLE') {
     return { vi: 'Trọn bộ thư viện', en: 'Full library', zh: '全部模板库' }[lang];

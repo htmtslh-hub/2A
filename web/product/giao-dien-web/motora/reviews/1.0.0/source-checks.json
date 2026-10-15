@@ -1,0 +1,494 @@
+{
+  "date": "2026-10-15T07:24:36.292Z",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "targets": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "targets": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "targets": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "targets": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "targets": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "targets": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.398214,
+          "transform": "matrix(1, 0, 0, 1, -17.6996, 0)",
+          "finish": "Champagne Gold"
+        },
+        "forwardWrap": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Silver"
+        },
+        "backwardWrap": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Obsidian Black"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Champagne Gold"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateY(-3%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.3260999787443721,
+          "transform": "translateY(-5.9349%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.6352727483526889,
+          "transform": "translateY(-8.71745%)"
+        },
+        {
+          "y": 1700,
+          "progress": 0.9444455179610056,
+          "transform": "translateY(-11.5%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.44976908658769876,
+          "transform": "translateY(-7.04792%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateY(-3%)"
+        },
+        {
+          "mobile": true,
+          "progress": "0.7207476341624002"
+        }
+      ],
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "offline": true,
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "h1": "Mercedes-Benz",
+        "nav": "flex",
+        "cards": 5,
+        "sw": 320,
+        "cw": 320
+      },
+      "file": true
+    },
+    "firefox": {
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "targets": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "targets": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "targets": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "targets": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "targets": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "targets": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.425595,
+          "transform": "matrix(1, 0, 0, 1, -16.8943, 0)",
+          "finish": "Champagne Gold"
+        },
+        "forwardWrap": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Silver"
+        },
+        "backwardWrap": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Obsidian Black"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Champagne Gold"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateY(-3%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.3260918857561065,
+          "transform": "translateY(-5.93483%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.6352618666341394,
+          "transform": "translateY(-8.71736%)"
+        },
+        {
+          "y": 1700,
+          "progress": 0.9444318663824104,
+          "transform": "translateY(-11.4999%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.44975987810731965,
+          "transform": "translateY(-7.04784%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateY(-3%)"
+        },
+        {
+          "mobile": true,
+          "progress": "0.7207245053020054"
+        }
+      ],
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "offline": true,
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "h1": "Mercedes-Benz",
+        "nav": "flex",
+        "cards": 5,
+        "sw": 320,
+        "cw": 320
+      },
+      "file": true
+    },
+    "edge": {
+      "version": "155.0.4283.45",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "targets": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "targets": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "targets": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "targets": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "targets": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "targets": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.381548,
+          "transform": "matrix(1, 0, 0, 1, -18.1898, 0)",
+          "finish": "Champagne Gold"
+        },
+        "forwardWrap": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Silver"
+        },
+        "backwardWrap": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Obsidian Black"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Champagne Gold"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateY(-3%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.3260999787443721,
+          "transform": "translateY(-5.9349%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.6352727483526889,
+          "transform": "translateY(-8.71745%)"
+        },
+        {
+          "y": 1700,
+          "progress": 0.9444455179610056,
+          "transform": "translateY(-11.5%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.44976908658769876,
+          "transform": "translateY(-7.04792%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateY(-3%)"
+        },
+        {
+          "mobile": true,
+          "progress": "0.7207476341624002"
+        }
+      ],
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "offline": true,
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "h1": "Mercedes-Benz",
+        "nav": "flex",
+        "cards": 5,
+        "sw": 320,
+        "cw": 320
+      },
+      "file": true
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "targets": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "targets": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "targets": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "targets": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "targets": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "targets": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.392262,
+          "transform": "matrix(1, 0, 0, 1, -17.8746, 0)",
+          "finish": "Champagne Gold"
+        },
+        "forwardWrap": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Silver"
+        },
+        "backwardWrap": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Obsidian Black"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "Champagne Gold"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateY(-3%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.3260999787443721,
+          "transform": "translateY(-5.9349%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.6352727483526889,
+          "transform": "translateY(-8.71745%)"
+        },
+        {
+          "y": 1700,
+          "progress": 0.9444455179610056,
+          "transform": "translateY(-11.5%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.44976908658769876,
+          "transform": "translateY(-7.04792%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateY(-3%)"
+        },
+        {
+          "mobile": true,
+          "progress": "0.7207476341624002"
+        }
+      ],
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "offline": true,
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "h1": "Mercedes-Benz",
+        "nav": "flex",
+        "cards": 5,
+        "sw": 320,
+        "cw": 320
+      },
+      "file": true
+    }
+  },
+  "failures": []
+}

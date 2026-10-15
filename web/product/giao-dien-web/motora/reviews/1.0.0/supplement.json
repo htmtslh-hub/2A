@@ -1,0 +1,19 @@
+{
+  "skipVisible": true,
+  "skipLandsInMain": true,
+  "focus": {
+    "colour": "rgb(155, 71, 27)",
+    "width": "3px"
+  },
+  "noCSSMotion": {
+    "opacity": "0.479762",
+    "transform": "matrix(1, 0, 0, 1, 15.3011, 0)"
+  },
+  "noCSSFinal": "Silver",
+  "missingImage": {
+    "heading": true,
+    "contact": "mailto:hello@motora.example",
+    "dialog": true
+  },
+  "offlineFreshFile": true
+}

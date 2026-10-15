@@ -474,5 +474,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "motora": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "29f05a505bb6",
+    "sha256": "29f05a505bb638998133ccae779e5d1d926ed46be3a40141a9539114388b640c",
+    "demoHtmlSha256": "093c663c5ce0980621ab335b3faa0c7e050e2a73ab0df5ce34893dfaa8bb6959",
+    "demoSha256": "2f81646368c2022150159fa22cd33583e67964ba28e1a6ba02efc4e72b907fb9",
+    "bytes": 539531,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

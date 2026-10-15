@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'motora': {
+  "vi": {
+    "intro": "Showroom ô tô nền sáng với xe vàng chân thực, 5 màu và các điểm xem chi tiết.",
+    "notes": "### Bắt đầu\nGiải nén đủ 8 file; mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. Không framework, build hoặc font mạng.\n\n### Nội dung và hình ảnh\nThay Car./Motora, tên xe, thông số minh họa và hello@motora.example. coupe.webp là xe nền trong suốt; interior.webp là nội thất tự tạo. Không có liên kết với hãng xe hoặc số liệu được chứng nhận.\n\n### Tương tác\n5 màu dùng bộ lọc ảnh, không phải mô hình 3D hoặc màu sơn chuẩn của hãng. Mâm chỉ đổi nội dung tư vấn. Cấu hình và lưu trong phiên, tìm một mẫu xe, hotspot, menu và Escape hoạt động. Email chỉ mở ứng dụng. Chuyển động mặc định bật; Pause motion chỉ áp dụng trang đang mở.\n\n### Phạm vi và giấy phép\nKhông có bán xe, thanh toán hoặc backend. Đọc LICENCE.txt; ảnh dùng trong website hoàn chỉnh, không bán lại template hoặc ảnh riêng lẻ."
+  },
+  "en": {
+    "intro": "A light automotive showroom with a photoreal gold coupe, five finishes and detail hotspots.",
+    "notes": "### Start\nExtract all 8 files; open index.html beside assets/. CUSTOMISE.md includes 10 steps, 12 AI prompts and counted edits. No framework, build or network fonts.\n\n### Content and artwork\nReplace Car./Motora, vehicle names, illustrative figures and hello@motora.example. coupe.webp is a transparent car; interior.webp is original cabin artwork. No manufacturer affiliation or verified specifications.\n\n### Interaction\nFive finishes use image filters, not 3D or factory-accurate paint. Wheels change enquiry text only. Local configuration, session save, one-model search, hotspots, keyboard menu and Escape work. Email opens an app only. Motion defaults ON; Pause motion applies to the current page visit.\n\n### Scope and licence\nNo vehicle sales, payment or backend. Read LICENCE.txt; use artwork in finished sites, not template redistribution or standalone stock resale."
+  },
+  "zh": {
+    "intro": "浅色汽车展厅，含写实金色轿跑、五种视觉配色与细节热点。",
+    "notes": "### 开始\n完整解压8个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词与精确修改表。无需框架、构建或网络字体。\n\n### 内容与图像\n替换Car./Motora、车型名称、示例数据和hello@motora.example。coupe.webp为透明汽车，interior.webp为原创内饰图。无厂家关联或认证参数。\n\n### 交互\n五种配色使用图像滤镜，并非3D或厂家准确漆色；轮毂仅更改咨询文字。支持本地配置、会话保存、单车型搜索、热点、键盘菜单和Escape。邮件仅打开应用。动态默认开启，Pause motion仅适用于本次页面访问。\n\n### 范围与授权\n无车辆销售、支付或后端。阅读LICENCE.txt；图像可用于成品网站，不可重新分发模板或单独作为素材转售。"
+  }
+},
   'semaan': {
   "vi": {
     "intro": "Portfolio designer với hero cam-trắng, chữ CREATE cao và chân dung tự tạo.",

@@ -46,6 +46,109 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t35: {
+  "slug": "motora",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "8 file · 2 ảnh WebP tự tạo"
+      ],
+      [
+        "Tương tác",
+        "5 màu · hotspot · cấu hình trong phiên"
+      ],
+      [
+        "Chuyển động",
+        "Đổi màu hai chiều · ảnh nội thất theo cuộn"
+      ],
+      [
+        "Phạm vi",
+        "Showroom concept · email · không bán xe/thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "8 files · 2 original WebP images"
+      ],
+      [
+        "Interaction",
+        "5 finishes · hotspots · session configuration"
+      ],
+      [
+        "Motion",
+        "Directional finishes · scroll-linked cabin"
+      ],
+      [
+        "Scope",
+        "Concept showroom · email · no vehicle sales/payments"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "8 个文件 · 2 张原创 WebP"
+      ],
+      [
+        "交互",
+        "5 种配色 · 热点 · 会话配置"
+      ],
+      [
+        "动态",
+        "双向配色切换 · 随滚动移动的内饰图"
+      ],
+      [
+        "范围",
+        "概念展厅 · 邮件 · 无车辆销售或支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "Motora",
+      "desc": "Showroom ô tô nền sáng với coupe vàng chân thực tự tạo, 5 màu ngoại thất, các điểm xem chi tiết và thẻ thông số. Cấu hình cục bộ, lưu trong phiên, tìm mẫu xe, menu bàn phím và ảnh nội thất chuyển động theo cuộn. Màu dùng bộ lọc ảnh; lựa chọn mâm chỉ đổi nội dung tư vấn. Dữ liệu minh họa, không có bán xe, thanh toán hoặc backend.",
+      "tags": [
+        "Showroom ô tô",
+        "5 màu ngoại thất",
+        "Cấu hình concept"
+      ]
+    },
+    "en": {
+      "name": "Motora",
+      "desc": "A light automotive showroom with an original photoreal gold coupe, five visual finishes, detail hotspots and specification cards. Local configuration, session save, model search, keyboard menu and a scroll-linked cabin image. Finishes use image filters; wheel preferences update the enquiry text. Illustrative data, no vehicle sales, payments or backend.",
+      "tags": [
+        "Automotive showroom",
+        "5 visual finishes",
+        "Concept configuration"
+      ]
+    },
+    "zh": {
+      "name": "Motora",
+      "desc": "浅色汽车展厅，含原创写实金色轿跑、五种视觉配色、细节热点和参数卡片。本地配置、会话保存、车型搜索、键盘菜单与随滚动移动的内饰图。配色使用图像滤镜；轮毂偏好仅更新咨询文字。数据为示例，无车辆销售、支付或后端。",
+      "tags": [
+        "汽车展厅",
+        "5 种视觉配色",
+        "概念配置"
+      ]
+    }
+  }
+},
   t34: {
   "slug": "semaan",
   "cat": "portfolio",

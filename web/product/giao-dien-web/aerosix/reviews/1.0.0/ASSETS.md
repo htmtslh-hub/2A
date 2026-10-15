@@ -2,6 +2,8 @@
 
 Built-in imagegen tool used. Source outputs under C:/Users/Lenovo/.codex/generated_images/01a13d1b-042a-7a73-ae61-d2b29882cc8a/:
 
+Final saved asset folder: D:/3. Dự án/2A/web/product/giao-dien-web/aerosix/source/assets/img/ . Exact prompt set is preserved in PROMPTS.md alongside this file.
+
 - exec-35d5d150-b4f4-4a1e-b82b-eb83292b0b6b.png → source/assets/img/bike-black.webp,1586×992.
 - exec-95f42d40-7f74-47af-9e37-c16488aa5144.png → source/assets/img/bike-green.webp,1585×992.
 - exec-e7f900dc-8508-4736-9659-1f28d1370d1f.png → source/assets/img/bike-chalk.webp,1585×992.

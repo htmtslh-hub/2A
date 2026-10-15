@@ -1,0 +1,14 @@
+# AirMax Plus motion map
+
+Image-only reference (`media_1792069629735_89e262a9.png`). Modest inferred motion preserves the initial `1440×816` hero composition. Product Owner policy (05/10/2026): motion defaults ON in all browsers on every page load, including when OS `prefers-reduced-motion: reduce` is active or stale `localStorage` values (`motion=off`, `airmax-plus-motion=off`) exist; `#motion-toggle` pauses/resumes motion for the current visit only and resets to ON upon reload. Zero idle `requestAnimationFrame` loops.
+
+| Motion | Trigger & timing | Fallback & cleanup |
+|---|---|---|
+| Sneaker introduction | Initialisation `900ms`, `opacity 0.15 → 1`, `translateX(60px → 0)` | Finite RAF `Map` entry removed on completion; any finish transition cancels intro immediately. Static sneaker visible without JS. |
+| Finish transition | `720ms` directional exit (`0–44%`), image/swatch/index swap at `44%`, cubic-out enter (`44–100%`) via `#finish-select`, `#hero-next` / `[data-step]`, `ArrowLeft`/`ArrowRight`, or horizontal pointer swipe | Dedicated `.shoe-motion` wrapper `transform` and `opacity`; actual `.webp` source swaps. Cancels prior RAF frame, wraps both directions (`0↔2`), rapid clicks settle cleanly. Independent of CSS transitions/WAAPI. |
+| Watch Preview sequence | `#action-open` opens `#action-dialog` and runs a `4200ms` finite timeline across all 3 sneaker finishes with progress bar and stage captions | Explicitly labelled an animated design sequence, not video footage. Finite RAF stops on dialog close, `Escape`, backdrop click, `document.hidden`, or Pause motion; `#action-replay` restarts from `0`. |
+| Editorial scroll reveal | `IntersectionObserver` (`threshold: 0.1`), `650ms` cubic-out `translateY(24px → 0)` | Runs once per `[data-reveal]` element via finite RAF; text remains `opacity: 1` for immediate readability under all modes. Cancelled and reset to `transform: none` on Pause motion. |
+| Tuned Air engineering scene | Real `scroll` and `resize` events, progress clamped `0–1` (`--scene`) | Single scheduled RAF per event (`scrollFrame = 0` after paint); reversible sneaker glide `translateX(-4% → 4%)` and progress rule fill; recomputes on mobile/resize; neutralised when motion is paused. |
+| Status toast | Configuration / bag action, `3200ms` timer | `clearTimeout` cancels prior timer; announces real local state changes via `role="status"`. |
+
+Desktop (`>860px`) displays the horizontal 5-link navigation bar matching the reference; mobile/tablet (`<=860px`) collapses `#main-nav` behind `.menu-toggle` (`aria-expanded`, `Escape` closes and restores focus, hidden links excluded from Tab order, `resize` resets menu state). Native `<dialog>` modals restore focus to their opener on close. Native `<details>` accordions operate without JS. Store video separately records the real rendered page in Chromium.

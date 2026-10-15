@@ -46,6 +46,109 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t37: {
+  "slug": "airmax-plus",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "9 file · 3 ảnh WebP tự tạo"
+      ],
+      [
+        "Tương tác",
+        "3 phối màu · 6 cỡ US · hotspot · giỏ tư vấn trong phiên"
+      ],
+      [
+        "Chuyển động",
+        "Chuyển hai chiều · vuốt/phím · cảnh cuộn"
+      ],
+      [
+        "Phạm vi",
+        "Showroom concept · email · không bán hàng/thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · 3 original WebP images"
+      ],
+      [
+        "Interaction",
+        "3 finishes · 6 US sizes · hotspots · session enquiry bag"
+      ],
+      [
+        "Motion",
+        "Two-way transitions · swipe/keys · scroll scene"
+      ],
+      [
+        "Scope",
+        "Concept showroom · email · no retail sales/payments"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "9 个文件 · 3 张原创 WebP"
+      ],
+      [
+        "交互",
+        "3 种配色 · 6 个美码 · 热点 · 会话咨询袋"
+      ],
+      [
+        "动态",
+        "双向切换 · 滑动/按键 · 滚动场景"
+      ],
+      [
+        "范围",
+        "概念展厅 · 邮件 · 无零售销售或支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "AirMax Plus",
+      "desc": "Showroom giày thể thao nền tối với dải sóng lưới cam 3D và ba ảnh giày tách nền tự tạo. Chọn phối màu/cỡ US, xem chi tiết đệm Tuned Air và khung TPU, giỏ tư vấn đặt trước trong phiên, email và cảnh kỹ thuật cuộn. Chuyển hai chiều bằng nút, phím hoặc vuốt; Watch preview là hoạt cảnh phối màu 4.2 giây, không phải video quay thật. Giá và thông số minh họa; không có thanh toán hoặc backend.",
+      "tags": [
+        "Showroom giày thể thao",
+        "3 phối màu chân thực",
+        "Chuyển hai chiều"
+      ]
+    },
+    "en": {
+      "name": "AirMax Plus",
+      "desc": "A dark sneaker showroom with a 3D orange wireframe ribbon wave and three original photoreal finish cutouts. Colourway/US size selection, Tuned Air and TPU cage hotspots, a session pre-order enquiry bag, email and a scroll-linked engineering scene. Directional buttons, keys and swipe; Watch preview is a 4.2-second colourway sequence, not video footage. Illustrative price and specs; no retail checkout, payments or backend.",
+      "tags": [
+        "Sneaker showroom",
+        "3 photoreal finishes",
+        "Directional transitions"
+      ]
+    },
+    "zh": {
+      "name": "AirMax Plus",
+      "desc": "深色运动鞋展厅，含3D橙色线框波浪与三张原创写实配色切图。支持配色/美码选择、Tuned Air与TPU骨架热点、会话预订咨询袋、邮件与滚动工程场景。按钮、按键或滑动双向切换；Watch preview为4.2秒配色动画而非实拍视频。价格与参数为示例，无零售结账、支付或后端。",
+      "tags": [
+        "运动鞋展厅",
+        "3 种写实配色",
+        "双向切换"
+      ]
+    }
+  }
+},
   t36: {
   "slug": "aerosix",
   "cat": "commerce",

@@ -1,0 +1,321 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "date": "2026-10-15T14:02:43.629Z",
+  "candidateHash": "a686fcd19174a16dca603453bd3af0d0d850d8cb9242c4a6425b9e673050db99",
+  "manifest": [
+    {
+      "file": "assets/css/style.css",
+      "bytes": 18630,
+      "sha256": "550b0628d747eda5c48ffce8baa684a87e0c8bb49ca405cda2c0e98f46ffb958"
+    },
+    {
+      "file": "assets/img/shoe-crimson.webp",
+      "bytes": 96576,
+      "sha256": "3b9ac6b472b7114cbbe42bd8efc85e07ff8d5933063b7d867cb78f3deb953816"
+    },
+    {
+      "file": "assets/img/shoe-sunset.webp",
+      "bytes": 93522,
+      "sha256": "5e5178df3c8e0a01e6e107e5509f5b1f74434ca61366fb61c96a816dbfd13149"
+    },
+    {
+      "file": "assets/img/shoe-volt.webp",
+      "bytes": 91022,
+      "sha256": "2bb68d521393a32f4febd7fd876c4e75304a7bc4d449cdee9a422ab615b6b3dc"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 14363,
+      "sha256": "c5e64f5af3ae0f0dcd729f0ead72a10fd8fa0d2b761533cc55d74c9ec0c0793a"
+    },
+    {
+      "file": "CUSTOMISE.md",
+      "bytes": 21324,
+      "sha256": "bbcf8eeb2bf6de53e3528cabd2261ba26a6d0fd717ec64a3511ff396bcb806a7"
+    },
+    {
+      "file": "index.html",
+      "bytes": 15406,
+      "sha256": "a46dda6bc6768edd15e2cebe2e9b4632ba5c3ef5367edb9398a4424c2aede045"
+    },
+    {
+      "file": "LICENCE.txt",
+      "bytes": 1921,
+      "sha256": "74fe5569e3af88c6526d899f11ffb5e2f6b74bd55d8a0896d1dfd07ecb6ba338"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2945,
+      "sha256": "848cd5d741ea020c23a336c55002c661dc4d99dea761bd409cf0ac670dd3b071"
+    }
+  ],
+  "references": [
+    {
+      "source": "C:/Users/Lenovo/.gemini/antigravity/brain/c8f748b5-dffc-4af8-b026-969a84e688cc/.user_uploaded/media_1792069629735_89e262a9.png",
+      "sha256": "eeafaf11d9ca9a03c019794e4b8c4118ad26783ae14845854e5f07610e1a3b0b",
+      "size": [
+        858,
+        486
+      ],
+      "crop": null,
+      "scale": 1.6783216783216783,
+      "normalized": [
+        1440,
+        816
+      ],
+      "excludedHostUI": [
+        795,
+        420,
+        63,
+        52
+      ]
+    }
+  ],
+  "views": [
+    {
+      "viewport": [
+        1440,
+        816
+      ],
+      "dpr": 1,
+      "zoom": 1,
+      "state": "Sunset/01/size-unselected/closed menu/scroll0",
+      "reference": "reference.png",
+      "screenshot": "candidate.png",
+      "comparison": "visual/side-by-side.png",
+      "regions": [
+        {
+          "name": "Header and navigation",
+          "weight": 0.12,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Swoosh at x54 y54, centred 5-link navigation at x498–948 and right search tool at x1373 align with the normalized 1440×816 reference."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Uppercase bold 14px navigation labels match the reference weight and tracking using system Arial."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Dark espresso header surface and crisp white brand/tool icons match the reference."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Inline SVG Swoosh and search icon match the reference geometry; subtle enquiry bag icon with real 0 count sits beside search."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "44×44 touch targets preserve the exact visual spacing of the 5 links and right tools."
+            }
+          ],
+          "score": 97.2
+        },
+        {
+          "name": "Left hero typography and story",
+          "weight": 0.22,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Nike (x119 y228), Air Max Plus (x119 y302), MAKE THE GROUND SHAKE (x119 y381) and body copy block (x119–520 y411–579) overlay the reference directly."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Two-tone heavy display heading, uppercase bold tagline and 4-line paragraph hierarchy match the reference with system Arial."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "White primary heading, burnt-orange #e87c51 model line and warm muted #c8bdb8 body copy preserve reference contrast."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "All text is live accessible HTML, not rasterized image text."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Vertical cadence between Nike, Air Max Plus, tagline and paragraph matches the normalized reference within a few pixels."
+            }
+          ],
+          "score": 97.45
+        },
+        {
+          "name": "Price, CTA and configuration controls",
+          "weight": 0.16,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "$249,99 price (x119 y588) and PRE-ORDER NOW button (x300–480 y588–623) align directly with the reference; compact finish/size pills sit cleanly underneath."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Bold 28px price with comma and 14px uppercase button label match the reference hierarchy."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Warm burnt-orange gradient (#b54924 to #89340f) with white text achieves >=5.32:1 WCAG AA contrast while preserving the reference look."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Interactive native 44px colourway and US size selects with live colour swatch extend the static hero into a working configurator."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 96,
+              "reason": "52px gap between price and CTA and 44px button height match the normalized reference."
+            }
+          ],
+          "score": 97.1
+        },
+        {
+          "name": "Sneaker stage, wireframe ribbon and hotspots",
+          "weight": 0.38,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Floating left-facing angled sneaker (x760–1340 y160–648) and 3D wireframe ribbon wave (x738–1390 y124–688) match the reference silhouette and bounds."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Hotspot markers use crisp + symbols with accessible labels."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Warm burnt-orange radial studio glow and multi-strand amber-to-rust SVG wireframe curves match the reference atmosphere."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "Original generated Sunset Tuned Air cutout reproduces the exact ~16° downward-left pose, wavy TPU flame ribs, orange whale-tail shank and red-orange Air pods; micro-reflections differ slightly."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Four 44×44 hotspot targets sit cleanly on the TPU cage, forefoot Air unit, midfoot shank and heel mesh."
+            }
+          ],
+          "score": 96.55
+        },
+        {
+          "name": "Bottom Watch Preview and stage controls",
+          "weight": 0.12,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Bottom-centre circular play trigger and two-line WATCH PREVIEW label (x671–775 y744–776) overlay the reference directly; compact finish controls sit on the right edge."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Two-line uppercase bold WATCH PREVIEW label at 14px matches the reference layout and legibility."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Translucent dark espresso ring with burnt-orange border and play triangle matches the reference; foreign bottom-right host viewer overlay is excluded."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Inline SVG play triangle and directional finish arrows provide clean vector sharpness."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "48px interactive hit target around WATCH PREVIEW and 44px finish step buttons meet touch standards without shifting the visual centre."
+            }
+          ],
+          "score": 97.05
+        }
+      ],
+      "score": 96.974
+    }
+  ],
+  "fidelity": {
+    "method": "weighted regional visual rubric assessed by agent; not pixel accuracy",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "status": "PASS",
+    "score": 96.974,
+    "pixelDiagnostics": "visual/comparison.json",
+    "mobile": "N/A: no mobile reference"
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json:midframe/wrap/rapid/keyboard/swipe/action/replay/pause/defaultOn/noCSSMotion/idle",
+      "evidence/*-motion.png"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json:forward/reverse/mobile/resize",
+      "evidence/*-1440.png and *-320.png captured after real scroll"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Image-only input; store recording follows acceptance."
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json",
+      "supplement.json",
+      "REFERENCE-MAP.md",
+      "MOTION-MAP.md",
+      "ASSETS.md"
+    ],
+    "limits": [
+      "Safari/physical devices not tested.",
+      "Paid account download/payment completion not tested; no entitlement writes."
+    ]
+  },
+  "blockers": [],
+  "gate": "PASS"
+}

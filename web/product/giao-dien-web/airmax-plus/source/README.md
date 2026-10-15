@@ -1,0 +1,14 @@
+# AirMax Plus 1.0.0
+
+A dark espresso sneaker showroom inspired by the supplied Nike Air Max Plus reference. Read CUSTOMISE.md first: ten steps, twelve complete AI prompts and a counted edit map. Extract all nine files and open index.html beside assets/. No framework, build, external font, CDN, account or API.
+
+## Included and working
+Six core files plus three original generated WebP sneaker photographs: shoe-sunset.webp, shoe-volt.webp and shoe-crimson.webp. They depict one Tuned Air concept sneaker in three visual finishes. Previous/next buttons, keyboard arrows and horizontal pointer swipes change finish with a finite directional transition. Six example US shoe-size choices update the local summary. Four component hotspots open detail dialogs. Search filters the one model; no-result state works. Mobile menu closes on links, Escape and resize; dialogs restore focus. Add unique finish/size pairs to a session-only enquiry bag, remove them, or prepare a pre-order enquiry email in a mail application. No email is automatically sent. Watch preview plays a 4.2-second local colourway sequence, explicitly not video footage. Replay and close work. Native specification accordions work without JavaScript. Engineering has a scroll-linked sneaker image/rule plus finite reveals.
+
+Motion defaults ON on every opening, including OS reduced motion and old saved-off values, per product policy. Pause motion applies to this visit only; reload enables motion. Finite requestAnimationFrame timelines work without CSS animations or Web Animations, cancel prior transitions and have no idle RAF loop. The preview sequence stops when closed or the document is hidden. NoJS retains the full hero, static finish images, specifications, navigation and email. Missing artwork leaves text/actions available. Relative paths support file:// and static hosting. System fonts only, no network font dependency.
+
+## Demonstration scope
+AirMax Plus is an independent interface study, not an operational Nike store or manufacturer listing. Brand/model/technology names and marks belong to their owners, with no endorsement or trademark rights supplied. Replace them for your own business. Generated imagery, Sunset/Cyber Volt/Crimson finishes, $249,99, US shoe sizes and all component labels are illustrative, not verified factory colours, specifications, availability, fit advice or a live retail offer. No account, inventory, checkout, payments or backend. hello@airmaxplus.example is a demo email; no physical store is listed. The enquiry bag is in-memory only and resets after reload.
+
+## Editing and compatibility
+Keep all image alpha, exterior transparency and complete silhouettes. The three images are separate generated variants, not CSS colour filters or a 3D model. CUSTOMISE.md names exact content/selector counts and explains changes. See the store QA for browsers actually tested; no universal browser or real-device guarantee. Read LICENCE.txt.

@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-15T13:57:17.347Z",
+  "sizes": [
+    {
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "taglineFont": "14px",
+      "eyebrow": "14px"
+    },
+    {
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "taglineFont": "14px",
+      "eyebrow": "14px"
+    },
+    {
+      "width": 820,
+      "sw": 820,
+      "cw": 820,
+      "taglineFont": "14px",
+      "eyebrow": "14px"
+    },
+    {
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "taglineFont": "14px",
+      "eyebrow": "14px"
+    },
+    {
+      "width": 320,
+      "sw": 320,
+      "cw": 320,
+      "taglineFont": "14px",
+      "eyebrow": "14px"
+    }
+  ],
+  "axe": [],
+  "hamburgerResize": true,
+  "noJSMainLinks": [
+    {
+      "text": "MEN",
+      "visible": true
+    },
+    {
+      "text": "WOMEN",
+      "visible": true
+    },
+    {
+      "text": "KIDS",
+      "visible": true
+    },
+    {
+      "text": "CUSTOMIZE",
+      "visible": true
+    },
+    {
+      "text": "COLLECTION",
+      "visible": true
+    }
+  ],
+  "missingImages": true,
+  "email": "mailto:hello@airmaxplus.example",
+  "contrast": [
+    {
+      "role": "text",
+      "fg": "c8bdb8",
+      "bg": "14100f",
+      "min": 4.5,
+      "ratio": 10.288
+    },
+    {
+      "role": "preorder CTA",
+      "fg": "ffffff",
+      "bg": "b54924",
+      "min": 4.5,
+      "ratio": 5.326
+    },
+    {
+      "role": "orange CTA",
+      "fg": "160904",
+      "bg": "e87c51",
+      "min": 4.5,
+      "ratio": 6.915
+    },
+    {
+      "role": "focus",
+      "fg": "ff9b42",
+      "bg": "14100f",
+      "min": 3,
+      "ratio": 9.02
+    },
+    {
+      "role": "hotspot",
+      "fg": "ffd5c2",
+      "bg": "24130d",
+      "min": 4.5,
+      "ratio": 13.245
+    },
+    {
+      "role": "orange title",
+      "fg": "e87c51",
+      "bg": "1f1513",
+      "min": 4.5,
+      "ratio": 6.326
+    }
+  ]
+}

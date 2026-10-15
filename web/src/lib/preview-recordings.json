@@ -502,5 +502,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "airmax-plus": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "5fa56abeb329",
+    "sha256": "5fa56abeb329a935cea7b61cd2161805e1c49c76d24b42c7dca87ac341e3eeb1",
+    "demoHtmlSha256": "a46dda6bc6768edd15e2cebe2e9b4632ba5c3ef5367edb9398a4424c2aede045",
+    "demoSha256": "45019ef08261e75007dba325163238dcb969dbd31a3c53c4216613e7536b640b",
+    "bytes": 551257,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

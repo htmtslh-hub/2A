@@ -1,10 +1,10 @@
 {
   "slug": "volt-hoodie",
   "version": "1.0.0",
-  "date": "2026-10-16T14:14:13.675Z",
+  "date": "2026-10-16T14:55:35.999Z",
   "os": "win32",
-  "zipBytes": 257466,
-  "sha256": "55313cd5abff343fdb98c5d4e982432bb8116a1a1757d3578b1fa04a186a939b",
+  "zipBytes": 240129,
+  "sha256": "939efa6de7e88734492a339c44b1cb133f6805f65e150e98a66b84bbc0042757",
   "exception": true,
   "browsers": {
     "chromium": {

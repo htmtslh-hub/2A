@@ -1,8 +1,8 @@
 # Volt Hoodie 1.0.0 QA
 
-16 October 2026, Windows. `WEB-STATIC-1` v1.2.1 with session-authorised `W01`/`W03`/`W05`/`W06` exceptions: nine files, three original local WebP garment cutouts (`hoodie-volt.webp`, `hoodie-mint.webp`, `hoodie-arctic.webp`), finite `requestAnimationFrame` colourway/scroll/dialog controls, and ZIP size above 20 KiB (`257,466` bytes). No shared standard, pricing, payment, database, or entitlement changes. Optional Google Fonts (`Poppins`) under `W04` with system sans-serif fallbacks.
+16 October 2026, Windows. `WEB-STATIC-1` v1.2.1 with session-authorised `W01`/`W03`/`W05`/`W06` exceptions: nine files, three original local WebP garment cutouts (`hoodie-volt.webp`, `hoodie-mint.webp`, `hoodie-arctic.webp`), finite `requestAnimationFrame` colourway/scroll/dialog controls, and ZIP size above 20 KiB (`240,129` bytes). No shared standard, pricing, payment, database, or entitlement changes. Optional Google Fonts (`Poppins`) under `W04` with system sans-serif fallbacks.
 
-Source visual-review score **96.483** (strictly >95 threshold, not pixel accuracy); frozen source manifest `ecaf0c8956922aaee6da7dd417dc3aa93195835710acc7d1440b1245f89f44ec`. Final ZIP `257,466` bytes, SHA-256 `55313cd5abff343fdb98c5d4e982432bb8116a1a1757d3578b1fa04a186a939b`. Nine extracted files match `source/` byte-for-byte. Official extraction verification `checks.json`: **zero failures**.
+Source visual-review score **96.823** (strictly >95 threshold, not pixel accuracy); frozen source manifest `db927213f62dfe746e0ebc9f535e56a5d28f76c7daa43b1a896cc17a93b8d0de`. Final ZIP `240,129` bytes, SHA-256 `939efa6de7e88734492a339c44b1cb133f6805f65e150e98a66b84bbc0042757`. Nine extracted files match `source/` byte-for-byte. Official extraction verification `checks.json`: **zero failures**.
 
 | Check | Status and evidence |
 |---|---|
@@ -16,9 +16,9 @@ Source visual-review score **96.483** (strictly >95 threshold, not pixel accurac
 | Q08 browsers | PASS Chromium `153.0.8010.12`, Firefox `155.0`, Microsoft Edge `155.0.4283.60`, and Cốc Cốc `152.0.7977.124` (`checks.json` + `source-checks.json`). Safari and physical mobile devices **NOT TESTED**. |
 | Q09 technical/motion | PASS finite `requestAnimationFrame` intermediate frames (`midTransformAnimated: true`), rapid input cancellation, scroll-reveal intermediate frames (`scrollMidAnimated: true`), and zero running animations after 5s; zero console errors, zero uncaught page errors, and zero failed local requests. |
 | Q10 docs/assets | PASS ten steps, twelve complete AI prompts, zero unfilled markers, and exact literal edit counts in `CUSTOMISE.md` (`checks.json`). Seven-part commercial licence in `LICENCE.txt` with verified Poppins OFL-1.1 source. Original AI garment artwork provenance documented in `ASSETS.md` and `PROMPTS.md`. |
-| Q11 final ZIP | PASS `checks.json` `sourceMatchesExtracted: true`, 9 files with forward-slash paths under `volt-hoodie/`, SHA-256 `55313cd5abff343fdb98c5d4e982432bb8116a1a1757d3578b1fa04a186a939b`, stored outside `web/public/`. |
+| Q11 final ZIP | PASS `checks.json` `sourceMatchesExtracted: true`, 9 files with forward-slash paths under `volt-hoodie/`, SHA-256 `939efa6de7e88734492a339c44b1cb133f6805f65e150e98a66b84bbc0042757`, stored outside `web/public/`. |
 | Q12 store | PASS within authorised scope: catalog slot `t46` (`volt-hoodie`), demo under `web/public/demos/volt-hoodie/`, poster image, and real 15s recorded preview video (`quay-preview.mjs`). Paid-account download and live payment completion **NOT TESTED**. |
-| Q13 design | PASS weighted visual rubric **96.483** (>95 gate) documented in `ACCEPTANCE.md` and `acceptance.json`. |
+| Q13 design | PASS weighted visual rubric **96.823** (>95 gate) documented in `ACCEPTANCE.md` and `acceptance.json`. |
 
 - **D01** PASS: Hero immediately establishes the 2024 Volt Hoodie athletic streetwear showcase with interactive colourways, sizes, price (`Rs. 1559/-`), and `Buy Now` anchor to the order enquiry desk.
 - **D02** PASS: High-contrast `#272727` matte carbon and `#FFD507` volt yellow diagonal split, studio hoodie cutout straddling the seam, and giant italic `HOODIE` watermark.

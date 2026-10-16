@@ -27,13 +27,13 @@ const url = 'https://forgezone.store/demos/sonicore/index.html?v=1.0.0';
       await p.waitForTimeout(1000);
       const row = { name, version: b.version() };
 
-      await p.locator('[data-sound-step="1"]').last().click();
-      await p.waitForTimeout(210);
+      await p.locator('#hero-next').click();
+      await p.waitForTimeout(90);
       row.mid = await p.locator('[data-hero-main]').evaluate(e => ({
         opacity: Number(getComputedStyle(e).opacity),
         transform: getComputedStyle(e).transform
       }));
-      assert(row.mid.opacity < 0.96 && row.mid.opacity > 0.04);
+      assert(row.mid.transform !== 'none' && row.mid.opacity < 1 && row.mid.opacity > 0.2);
       await p.waitForTimeout(450);
 
       await p.locator('[data-sound-step="1"]').last().click();
@@ -58,9 +58,9 @@ const url = 'https://forgezone.store/demos/sonicore/index.html?v=1.0.0';
       row.part3 = await p.locator('[data-part="3"]').getAttribute('aria-pressed');
       assert.equal(row.part3, 'true');
 
-      await p.locator('[data-mode="gaming"]').click();
+      await p.locator('[data-mode="2"]').click();
       await p.waitForTimeout(150);
-      row.modeGaming = (await p.locator('[data-mode-title]').textContent()).trim();
+      row.modeGaming = (await p.locator('[data-mode-name]').textContent()).trim();
       assert.equal(row.modeGaming, 'GAMING');
 
       for (const width of [820, 375, 320]) {

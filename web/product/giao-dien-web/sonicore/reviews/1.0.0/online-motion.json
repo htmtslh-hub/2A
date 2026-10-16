@@ -1,0 +1,62 @@
+{
+  "url": "https://forgezone.store/demos/sonicore/index.html?v=1.0.0",
+  "date": "2026-10-16T03:40:21.824Z",
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "mid": {
+        "opacity": 0.832,
+        "transform": "matrix(0.995414, 0.00272543, -0.00272543, 0.995414, 2.09456, -1.04712)"
+      },
+      "forwardWrap": "01",
+      "reverseWrap": "03",
+      "rapid": "01",
+      "part3": "true",
+      "modeGaming": "GAMING",
+      "mobileOverflow": false
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "mid": {
+        "opacity": 0.975,
+        "transform": "matrix(0.989286, 0.00632134, -0.00632134, 0.989286, 4.89433, -2.44646)"
+      },
+      "forwardWrap": "01",
+      "reverseWrap": "03",
+      "rapid": "01",
+      "part3": "true",
+      "modeGaming": "GAMING",
+      "mobileOverflow": false
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.60",
+      "mid": {
+        "opacity": 0.874,
+        "transform": "matrix(0.987309, 0.00746434, -0.00746434, 0.987309, 5.79537, -2.89591)"
+      },
+      "forwardWrap": "01",
+      "reverseWrap": "03",
+      "rapid": "01",
+      "part3": "true",
+      "modeGaming": "GAMING",
+      "mobileOverflow": false
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "mid": {
+        "opacity": 0.849,
+        "transform": "matrix(0.990097, 0.00584068, -0.00584068, 0.990097, 4.52176, -2.26083)"
+      },
+      "forwardWrap": "01",
+      "reverseWrap": "03",
+      "rapid": "01",
+      "part3": "true",
+      "modeGaming": "GAMING",
+      "mobileOverflow": false
+    }
+  ]
+}

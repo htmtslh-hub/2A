@@ -15,6 +15,7 @@ const{chromium,firefox}=require('../../../../../../_design/.tooling/node_modules
    const middle=await page.locator('[data-hero-image]').evaluate(e=>({opacity:+getComputedStyle(e).opacity,transform:getComputedStyle(e).transform}));assert(middle.opacity<1&&middle.transform!=='none');
    await page.screenshot({path:path.join(__dirname,'evidence',`online-${name}-motion.png`)});
    await page.evaluate(()=>{for(let i=0;i<8;i++)document.querySelector('[data-step="1"]').click();});await page.waitForTimeout(800);assert.equal(await page.locator('[data-view-count]').innerText(),'03');
+   await page.evaluate(()=>scrollTo({top:0,behavior:'instant'}));await page.reload();await page.waitForTimeout(1100);
    await page.evaluate(()=>scrollTo({top:850,behavior:'instant'}));await page.waitForTimeout(100);
    const scroll=await page.locator('.feel__portrait').evaluate(e=>({revealed:e.dataset.revealed,opacity:+getComputedStyle(e).opacity}));assert(scroll.revealed==='true'&&scroll.opacity<1);await page.waitForTimeout(800);
    await page.locator('.expand-button').click();assert(await page.locator('dialog').evaluate(e=>e.open));await page.keyboard.press('Escape');

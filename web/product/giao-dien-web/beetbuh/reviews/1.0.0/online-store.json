@@ -1,0 +1,139 @@
+{
+  "origin": "https://forgezone.store",
+  "date": "2026-10-16T07:31:20.604Z",
+  "assets": [
+    {
+      "file": "demos/beetbuh/index.html",
+      "bytes": 9116,
+      "sha256": "2d172a39f11cd950a84fdb52532a8cd3f0ae20dd85bbb8e1ded22482bce95472"
+    },
+    {
+      "file": "demos/beetbuh/assets/css/style.css",
+      "bytes": 17356,
+      "sha256": "bae29bcbba6be7e10fd28951992e613eaae4e9dfba3f71f968ae3f4d87b5f499"
+    },
+    {
+      "file": "demos/beetbuh/assets/js/main.js",
+      "bytes": 6410,
+      "sha256": "d307cfa7d75c966c7e509bc2f83be8412ab5b61ea92ed8770f6d7b448f3c5ce5"
+    },
+    {
+      "file": "demos/beetbuh/assets/img/headphone-hero.webp",
+      "bytes": 122934,
+      "sha256": "de33e9f2c36a754f0d31bc465b812a4e81d0b7182f2fca61e1cbab2abd2a1337"
+    },
+    {
+      "file": "demos/beetbuh/assets/img/headphone-angle.webp",
+      "bytes": 157984,
+      "sha256": "d24e6648af00d2d17bdfc338c88e7d9332169c2d37dd084505831e280ae45919"
+    },
+    {
+      "file": "demos/beetbuh/assets/img/listener.webp",
+      "bytes": 189252,
+      "sha256": "e0543689d2715ebf3a92363725f7e4d21f6cf2b06147278bcaed1daa54c12b11"
+    },
+    {
+      "file": "previews/beetbuh.mp4",
+      "bytes": 609921,
+      "sha256": "061521e822902450983abafe6d92ff99880cf67ee4677ca7bd187ff2c747a94c"
+    },
+    {
+      "file": "previews/beetbuh.webp",
+      "bytes": 21930,
+      "sha256": "9cf31bf03f0eb466b57972eb225753576623f2874aae9da200f4e13c914f817f"
+    }
+  ],
+  "locales": [
+    {
+      "locale": "vi-VN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "vi-VN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "status": {
+        "paused": false,
+        "time": 0.157729,
+        "muted": true,
+        "src": "https://forgezone.store/previews/beetbuh.mp4?v=061521e82290"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "status": {
+        "paused": false,
+        "time": 0.166666,
+        "muted": true,
+        "src": "https://forgezone.store/previews/beetbuh.mp4?v=061521e82290"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.60",
+      "status": {
+        "paused": false,
+        "time": 0.174186,
+        "muted": true,
+        "src": "https://forgezone.store/previews/beetbuh.mp4?v=061521e82290"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "status": {
+        "paused": false,
+        "time": 0.154583,
+        "muted": true,
+        "src": "https://forgezone.store/previews/beetbuh.mp4?v=061521e82290"
+      },
+      "offscreenPaused": true
+    }
+  ],
+  "anonymous": 401,
+  "directZip": 404,
+  "existingFree": "t22/t1 anonymous 200, exact ZIP bytes"
+}

@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-16T07:31:52.516Z",
+  "url": "https://forgezone.store/demos/beetbuh/index.html?v=1.0.0",
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "middle": {
+        "opacity": 0.581919,
+        "transform": "matrix(1, 0, 0, 1, 33.9691, 0)"
+      },
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.587761
+      },
+      "sizes": [
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320
+        }
+      ],
+      "errors": [],
+      "bothWraps": true,
+      "rapidInput": true,
+      "mobileMenu": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "middle": {
+        "opacity": 0.721521,
+        "transform": "matrix(1, 0, 0, 1, 22.6264, 0)"
+      },
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.614867
+      },
+      "sizes": [
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320
+        }
+      ],
+      "errors": [],
+      "bothWraps": true,
+      "rapidInput": true,
+      "mobileMenu": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.60",
+      "middle": {
+        "opacity": 0.610141,
+        "transform": "matrix(1, 0, 0, 1, 31.676, 0)"
+      },
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.607918
+      },
+      "sizes": [
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320
+        }
+      ],
+      "errors": [],
+      "bothWraps": true,
+      "rapidInput": true,
+      "mobileMenu": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "middle": {
+        "opacity": 0.615866,
+        "transform": "matrix(1, 0, 0, 1, 31.2109, 0)"
+      },
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.581783
+      },
+      "sizes": [
+        {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320
+        }
+      ],
+      "errors": [],
+      "bothWraps": true,
+      "rapidInput": true,
+      "mobileMenu": true
+    }
+  ]
+}

@@ -1,0 +1,1037 @@
+{
+  "slug": "fresh-reddy",
+  "version": "1.0.0",
+  "date": "2026-10-16T13:16:46.325Z",
+  "os": "win32",
+  "zipBytes": 1389122,
+  "sha256": "bd71ac3eecd5ba75e178051118dcdc858a770d4c64e263be534683548c2c050f",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#main"
+          },
+          {
+            "label": "Fresh and Reddy home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#home"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#home"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#about"
+          },
+          {
+            "label": "Coffee tasting",
+            "href": "#tasting",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#tasting"
+          },
+          {
+            "label": "Services",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#services"
+          },
+          {
+            "label": "Equipment",
+            "href": "#equipment",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#equipment"
+          },
+          {
+            "label": "Culture",
+            "href": "#culture",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#culture"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#contact"
+          },
+          {
+            "label": "Our services",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#services"
+          },
+          {
+            "label": "Book a free trial",
+            "href": "#tasting",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#tasting"
+          },
+          {
+            "label": "About us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#about"
+          },
+          {
+            "label": "Our services",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#services"
+          },
+          {
+            "label": "Coffee equipment",
+            "href": "#equipment",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#equipment"
+          },
+          {
+            "label": "Our culture",
+            "href": "#culture",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#culture"
+          },
+          {
+            "label": "Get in touch",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#contact"
+          },
+          {
+            "label": "Scroll to our story",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#about"
+          },
+          {
+            "label": "Our coffee community",
+            "href": "#culture",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#culture"
+          },
+          {
+            "label": "Explore our culture",
+            "href": "#culture",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#culture"
+          },
+          {
+            "label": "Go to contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#contact"
+          },
+          {
+            "label": "Explore next section",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#about"
+          },
+          {
+            "label": "Meet your new coffee routine ↗",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#services"
+          },
+          {
+            "label": "Find your fit ↗",
+            "href": "#tasting",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#tasting"
+          },
+          {
+            "label": "Start with a tasting ↗",
+            "href": "#tasting",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#tasting"
+          },
+          {
+            "label": "Plan your coffee tasting ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#contact"
+          },
+          {
+            "label": "hello@example.com ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 850,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(44, 44, 43)",
+            "background": [
+              250,
+              250,
+              247
+            ],
+            "ratio": 13.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "FRESH& REDDY",
+            "colour": "rgb(250, 250, 247)",
+            "background": [
+              44,
+              44,
+              43
+            ],
+            "ratio": 13.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "WE’D",
+            "colour": "rgb(250, 250, 247)",
+            "background": [
+              44,
+              44,
+              43
+            ],
+            "ratio": 13.37,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "·",
+            "colour": "rgb(170, 170, 170)",
+            "background": [
+              44,
+              44,
+              43
+            ],
+            "ratio": 6.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A proper coffee break can change the who",
+            "colour": "rgb(208, 208, 204)",
+            "background": [
+              44,
+              44,
+              43
+            ],
+            "ratio": 9.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "YOUR OFFICE.OUR ROUND.",
+            "colour": "rgb(250, 250, 247)",
+            "background": [
+              37,
+              37,
+              36
+            ],
+            "ratio": 14.67,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01",
+            "colour": "rgb(255, 117, 129)",
+            "background": [
+              37,
+              37,
+              36
+            ],
+            "ratio": 5.93,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "From the first espresso to the afternoon",
+            "colour": "rgb(208, 208, 204)",
+            "background": [
+              37,
+              37,
+              36
+            ],
+            "ratio": 9.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "LESS SMALL TALK.MORE GREAT COFFEE.",
+            "colour": "rgb(40, 40, 39)",
+            "background": [
+              232,
+              230,
+              223
+            ],
+            "ratio": 11.82,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "The kitchen is where ideas are shared, n",
+            "colour": "rgb(77, 77, 74)",
+            "background": [
+              232,
+              230,
+              223
+            ],
+            "ratio": 6.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "Start with a tasting ↗",
+            "colour": "rgb(40, 40, 39)",
+            "background": [
+              232,
+              230,
+              223
+            ],
+            "ratio": 11.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "LET’S MAKEYOU A COFFEE.",
+            "colour": "rgb(250, 250, 247)",
+            "background": [
+              150,
+              35,
+              50
+            ],
+            "ratio": 7.77,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Tell us about your team, your workspace ",
+            "colour": "rgb(255, 240, 240)",
+            "background": [
+              150,
+              35,
+              50
+            ],
+            "ratio": 7.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Our services",
+          "colour": "rgb(255, 117, 129)",
+          "width": "3px",
+          "ratio": 5.4
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#main"
+          },
+          {
+            "label": "Fresh and Reddy home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#home"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#home"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#about"
+          },
+          {
+            "label": "Coffee tasting",
+            "href": "#tasting",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#tasting"
+          },
+          {
+            "label": "Services",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#services"
+          },
+          {
+            "label": "Equipment",
+            "href": "#equipment",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#equipment"
+          },
+          {
+            "label": "Culture",
+            "href": "#culture",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#culture"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#contact"
+          },
+          {
+            "label": "Our services",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#services"
+          },
+          {
+            "label": "Book a free trial",
+            "href": "#tasting",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#tasting"
+          },
+          {
+            "label": "About us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#about"
+          },
+          {
+            "label": "Our services",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#services"
+          },
+          {
+            "label": "Coffee equipment",
+            "href": "#equipment",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#equipment"
+          },
+          {
+            "label": "Our culture",
+            "href": "#culture",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#culture"
+          },
+          {
+            "label": "Get in touch",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#contact"
+          },
+          {
+            "label": "Scroll to our story",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#about"
+          },
+          {
+            "label": "Our coffee community",
+            "href": "#culture",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#culture"
+          },
+          {
+            "label": "Explore our culture",
+            "href": "#culture",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#culture"
+          },
+          {
+            "label": "Go to contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#contact"
+          },
+          {
+            "label": "Explore next section",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#about"
+          },
+          {
+            "label": "Meet your new coffee routine ↗",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#services"
+          },
+          {
+            "label": "Find your fit ↗",
+            "href": "#tasting",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#tasting"
+          },
+          {
+            "label": "Start with a tasting ↗",
+            "href": "#tasting",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#tasting"
+          },
+          {
+            "label": "Plan your coffee tasting ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#contact"
+          },
+          {
+            "label": "hello@example.com ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4331/fresh-reddy/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 850,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(44, 44, 43)",
+            "background": [
+              250,
+              250,
+              247
+            ],
+            "ratio": 13.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "FRESH& REDDY",
+            "colour": "rgb(250, 250, 247)",
+            "background": [
+              44,
+              44,
+              43
+            ],
+            "ratio": 13.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "WE’D",
+            "colour": "rgb(250, 250, 247)",
+            "background": [
+              44,
+              44,
+              43
+            ],
+            "ratio": 13.37,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "·",
+            "colour": "rgb(170, 170, 170)",
+            "background": [
+              44,
+              44,
+              43
+            ],
+            "ratio": 6.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A proper coffee break can change the who",
+            "colour": "rgb(208, 208, 204)",
+            "background": [
+              44,
+              44,
+              43
+            ],
+            "ratio": 9.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "YOUR OFFICE.OUR ROUND.",
+            "colour": "rgb(250, 250, 247)",
+            "background": [
+              37,
+              37,
+              36
+            ],
+            "ratio": 14.67,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "01",
+            "colour": "rgb(255, 117, 129)",
+            "background": [
+              37,
+              37,
+              36
+            ],
+            "ratio": 5.93,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "From the first espresso to the afternoon",
+            "colour": "rgb(208, 208, 204)",
+            "background": [
+              37,
+              37,
+              36
+            ],
+            "ratio": 9.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "LESS SMALL TALK.MORE GREAT COFFEE.",
+            "colour": "rgb(40, 40, 39)",
+            "background": [
+              232,
+              230,
+              223
+            ],
+            "ratio": 11.82,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "The kitchen is where ideas are shared, n",
+            "colour": "rgb(77, 77, 74)",
+            "background": [
+              232,
+              230,
+              223
+            ],
+            "ratio": 6.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "Start with a tasting ↗",
+            "colour": "rgb(40, 40, 39)",
+            "background": [
+              232,
+              230,
+              223
+            ],
+            "ratio": 11.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "LET’S MAKEYOU A COFFEE.",
+            "colour": "rgb(250, 250, 247)",
+            "background": [
+              150,
+              35,
+              50
+            ],
+            "ratio": 7.77,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Tell us about your team, your workspace ",
+            "colour": "rgb(255, 240, 240)",
+            "background": [
+              150,
+              35,
+              50
+            ],
+            "ratio": 7.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Our services",
+          "colour": "rgb(255, 117, 129)",
+          "width": "3px",
+          "ratio": 5.4
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "fresh-reddy/assets/css/style.css",
+    "fresh-reddy/assets/img/coffee-cups-transparent.png",
+    "fresh-reddy/assets/js/main.js",
+    "fresh-reddy/CUSTOMISE.md",
+    "fresh-reddy/index.html",
+    "fresh-reddy/LICENCE.txt",
+    "fresh-reddy/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/coffee-cups-transparent.png",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

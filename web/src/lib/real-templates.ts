@@ -46,6 +46,240 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t43: {
+  "slug": "fresh-reddy",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "copy": {
+    "vi": {
+      "name": "Fresh & Reddy",
+      "desc": "Giao diện dịch vụ cà phê văn phòng nền than, cụm ba cốc PNG trong suốt, nội dung dịch vụ và liên hệ.",
+      "tags": [
+        "Ẩm thực",
+        "Ảnh trong suốt",
+        "Responsive"
+      ]
+    },
+    "en": {
+      "name": "Fresh & Reddy",
+      "desc": "A charcoal workplace-coffee landing page with three transparent cup renders, service sections and contact anchors.",
+      "tags": [
+        "Food & drink",
+        "Transparent imagery",
+        "Responsive"
+      ]
+    },
+    "zh": {
+      "name": "Fresh & Reddy",
+      "desc": "炭黑色办公室咖啡服务页面，含三个透明咖啡杯图像、服务介绍及联系入口。",
+      "tags": [
+        "餐饮",
+        "透明图像",
+        "自适应"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Gói tải",
+        "7 files"
+      ],
+      [
+        "Phạm vi",
+        "Giao diện tĩnh · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "7 files"
+      ],
+      [
+        "Scope",
+        "Static interface · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "7 files"
+      ],
+      [
+        "范围",
+        "静态界面 · 无后端"
+      ]
+    ]
+  }
+},
+  t44: {
+  "slug": "puro-amor",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "copy": {
+    "vi": {
+      "name": "Puro Amor",
+      "desc": "Concept cà phê trắng–xanh đậm, cốc cà phê bắn nước và nội dung tiếng Bồ Đào Nha.",
+      "tags": [
+        "Ẩm thực",
+        "Ảnh trong suốt",
+        "Responsive"
+      ]
+    },
+    "en": {
+      "name": "Puro Amor",
+      "desc": "A white-and-teal coffee concept with a coffee splash hero and Portuguese editorial content.",
+      "tags": [
+        "Food & drink",
+        "Transparent imagery",
+        "Responsive"
+      ]
+    },
+    "zh": {
+      "name": "Puro Amor",
+      "desc": "白色与深青色咖啡概念页，含咖啡飞溅主视觉及葡萄牙语内容。",
+      "tags": [
+        "餐饮",
+        "透明图像",
+        "自适应"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Gói tải",
+        "7 files"
+      ],
+      [
+        "Phạm vi",
+        "Giao diện tĩnh · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "7 files"
+      ],
+      [
+        "Scope",
+        "Static interface · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "7 files"
+      ],
+      [
+        "范围",
+        "静态界面 · 无后端"
+      ]
+    ]
+  }
+},
+  t45: {
+  "slug": "nourish-bowl",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "copy": {
+    "vi": {
+      "name": "Nourish Bowl",
+      "desc": "Landing page thực phẩm nền xanh đêm với hai ảnh tô trái cây, mục nguyên liệu mở rộng và hướng dẫn chuẩn bị.",
+      "tags": [
+        "Ẩm thực",
+        "Ảnh trong suốt",
+        "Responsive"
+      ]
+    },
+    "en": {
+      "name": "Nourish Bowl",
+      "desc": "A navy-and-cyan food landing page with two fruit bowl cutouts, expandable ingredients and preparation ideas.",
+      "tags": [
+        "Food & drink",
+        "Transparent imagery",
+        "Responsive"
+      ]
+    },
+    "zh": {
+      "name": "Nourish Bowl",
+      "desc": "深蓝与青色健康饮食页面，含两张水果餐盘图像、可展开食材及制作建议。",
+      "tags": [
+        "餐饮",
+        "透明图像",
+        "自适应"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Gói tải",
+        "8 files"
+      ],
+      [
+        "Phạm vi",
+        "Giao diện tĩnh · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "8 files"
+      ],
+      [
+        "Scope",
+        "Static interface · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "8 files"
+      ],
+      [
+        "范围",
+        "静态界面 · 无后端"
+      ]
+    ]
+  }
+},
   t42: {
     slug: 'manganresto',
     cat: 'commerce',

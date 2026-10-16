@@ -1,0 +1,24 @@
+Nourish Bowl template licence — local candidate
+
+1. Permission
+The copyright holder may grant a perpetual, non-exclusive commercial licence to the original template code when release is authorised.
+
+2. Allowed use
+That licence permits use and modification of the original code for unlimited personal and client website projects. Attribution is not required.
+
+3. Restrictions
+Do not resell or redistribute the source as a competing template, list it on another marketplace or include it in another template collection.
+
+4. Demo content and imagery
+The Nourish identity, recipe descriptions and contact address are illustrative. Replace or verify them before publication. Food images are AI-generated reference-inspired cutouts, not the original screenshot. This candidate does not finalise commercial sublicensing terms for the raster images; the product owner must approve those terms before commercial distribution. No rights to the reference screenshot are transferred. No health, nutritional, availability or business claims are verified by the template.
+
+5. Fonts
+Only system font stacks are referenced. No font files are bundled, downloaded or distributed. Each font remains subject to its own licence.
+
+6. Ownership
+Copyright remains with the original author. Copyright holder: [OWNER TO COMPLETE BEFORE COMMERCIAL RELEASE]. Permission to use the original template code is not a transfer of ownership.
+
+7. No warranty
+Provided as is. Review and test your customised website before publishing.
+
+If you are unsure whether a use is allowed, please ask. The answer is usually yes.

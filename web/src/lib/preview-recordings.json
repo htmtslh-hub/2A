@@ -586,5 +586,47 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "fresh-reddy": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "536b813212c0",
+    "sha256": "536b813212c0b820ecfdf2bb8a68c365ab7fe9325ac56b6d84aa744ef2604016",
+    "demoHtmlSha256": "355a6342d97d72a0cf0646db05ca8e195ad01917fbc34b97ae3a765bef873f78",
+    "demoSha256": "35bb4698ac5c4f4137fe77204abe12c33e15030df7cbc3914d6c25e08919d20f",
+    "bytes": 223758,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "puro-amor": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "aa60104b6623",
+    "sha256": "aa60104b6623c5bba0f2295e0ab76ee3e0ac4d94eefa5a1728f74e1a9152b0ec",
+    "demoHtmlSha256": "299f27682bb6beba30078d6d7aab06c4d834c6f19e636d3bc267c1a793e3b590",
+    "demoSha256": "10865868c90b633e29534972205fb3b506ff600a4af3f5aeb7fe22db08c283fc",
+    "bytes": 306974,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "nourish-bowl": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "caf4dfd93d8c",
+    "sha256": "caf4dfd93d8c783665716497f0468c1892b8da2a7c66960b01226ce5be641d2f",
+    "demoHtmlSha256": "84abe38b8d420a9b4066a56c074a86d5c8920d23c51cc1f286832b5255ac6e8f",
+    "demoSha256": "c50ad7b0d5001f8187e9d0ddb2d7bfbbaa9604a277b7ed6d4f7676705d1c0984",
+    "bytes": 613526,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

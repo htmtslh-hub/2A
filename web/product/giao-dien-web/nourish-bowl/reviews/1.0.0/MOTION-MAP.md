@@ -1,0 +1,2 @@
+# Motion map
+Hero copy entrance 24px→0, opacity .2→1, 700ms. Main bowl 40px→0, opacity .2→1, 1100ms. Section blocks: IntersectionObserver .15, 750ms finite RAF reveal, unobserve once entered. No perpetual movement, no sticky transforms, no external animation library. RAF works when CSS/WAAPI animation is disabled. Pagehide cancels/clears running frames. Without JS all blocks are visible. OS reduce does not disable motion under owner policy 05/10/2026. Anchors smooth-scroll in addition to actual reveal.

@@ -3,6 +3,48 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  "fresh-reddy": {
+  "vi": {
+    "intro": "Giao diện dịch vụ cà phê văn phòng nền than, cụm ba cốc PNG trong suốt, nội dung dịch vụ và liên hệ.",
+    "notes": "Giải nén đủ 7 file và mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. Ảnh PNG nền trong suốt được lưu local. Menu mobile hỗ trợ Escape, các nút dẫn section và hiệu ứng reveal hữu hạn. Không có backend, thanh toán hoặc đăng ký tài khoản. Thay email mẫu và nội dung trước khi dùng. Đọc LICENCE.txt: giấy phép không cấp quyền thương hiệu bên thứ ba."
+  },
+  "en": {
+    "intro": "A charcoal workplace-coffee landing page with three transparent cup renders, service sections and contact anchors.",
+    "notes": "Extract all 7 files and open index.html beside assets/. CUSTOMISE.md contains ten steps, twelve AI prompts and counted edits. Transparent PNG artwork is local. Escape-aware mobile menu, section links and finite scroll reveals. No backend, checkout or account system. Replace the sample email and copy. Read LICENCE.txt; third-party trademark rights are not granted."
+  },
+  "zh": {
+    "intro": "炭黑色办公室咖啡服务页面，含三个透明咖啡杯图像、服务介绍及联系入口。",
+    "notes": "解压全部7个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词和精确修改表。本地透明PNG图像；支持Escape的移动菜单、版块链接和有限滚动动画。无后端、支付或账户系统。请替换示例邮箱和文案，并阅读LICENCE.txt；不授予第三方商标权。"
+  }
+},
+  "puro-amor": {
+  "vi": {
+    "intro": "Concept cà phê trắng–xanh đậm, cốc cà phê bắn nước và nội dung tiếng Bồ Đào Nha.",
+    "notes": "Giải nén đủ 7 file và mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. Ảnh PNG nền trong suốt được lưu local. Menu mobile hỗ trợ Escape, các nút dẫn section và hiệu ứng reveal hữu hạn. Không có backend, thanh toán hoặc đăng ký tài khoản. Thay email mẫu và nội dung trước khi dùng. Đọc LICENCE.txt: giấy phép không cấp quyền thương hiệu bên thứ ba."
+  },
+  "en": {
+    "intro": "A white-and-teal coffee concept with a coffee splash hero and Portuguese editorial content.",
+    "notes": "Extract all 7 files and open index.html beside assets/. CUSTOMISE.md contains ten steps, twelve AI prompts and counted edits. Transparent PNG artwork is local. Escape-aware mobile menu, section links and finite scroll reveals. No backend, checkout or account system. Replace the sample email and copy. Read LICENCE.txt; third-party trademark rights are not granted."
+  },
+  "zh": {
+    "intro": "白色与深青色咖啡概念页，含咖啡飞溅主视觉及葡萄牙语内容。",
+    "notes": "解压全部7个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词和精确修改表。本地透明PNG图像；支持Escape的移动菜单、版块链接和有限滚动动画。无后端、支付或账户系统。请替换示例邮箱和文案，并阅读LICENCE.txt；不授予第三方商标权。"
+  }
+},
+  "nourish-bowl": {
+  "vi": {
+    "intro": "Landing page thực phẩm nền xanh đêm với hai ảnh tô trái cây, mục nguyên liệu mở rộng và hướng dẫn chuẩn bị.",
+    "notes": "Giải nén đủ 8 file và mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. Ảnh PNG nền trong suốt được lưu local. Menu mobile hỗ trợ Escape, các nút dẫn section và hiệu ứng reveal hữu hạn. Không có backend, thanh toán hoặc đăng ký tài khoản. Thay email mẫu và nội dung trước khi dùng. Đọc LICENCE.txt: giấy phép không cấp quyền thương hiệu bên thứ ba."
+  },
+  "en": {
+    "intro": "A navy-and-cyan food landing page with two fruit bowl cutouts, expandable ingredients and preparation ideas.",
+    "notes": "Extract all 8 files and open index.html beside assets/. CUSTOMISE.md contains ten steps, twelve AI prompts and counted edits. Transparent PNG artwork is local. Escape-aware mobile menu, section links and finite scroll reveals. No backend, checkout or account system. Replace the sample email and copy. Read LICENCE.txt; third-party trademark rights are not granted."
+  },
+  "zh": {
+    "intro": "深蓝与青色健康饮食页面，含两张水果餐盘图像、可展开食材及制作建议。",
+    "notes": "解压全部8个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词和精确修改表。本地透明PNG图像；支持Escape的移动菜单、版块链接和有限滚动动画。无后端、支付或账户系统。请替换示例邮箱和文案，并阅读LICENCE.txt；不授予第三方商标权。"
+  }
+},
   'manganresto': {
     "vi": {
       "intro": "Landing page nhà hàng ẩm thực cao cấp phối màu đen và vàng hổ phách theo ảnh mẫu.",

@@ -1,0 +1,252 @@
+{
+  "edge": {
+    "version": "155.0.4283.60",
+    "products": {
+      "fresh-reddy": {
+        "rows": [
+          {
+            "width": 1440,
+            "scroll": 1440,
+            "images": true
+          },
+          {
+            "width": 820,
+            "scroll": 820,
+            "images": true
+          },
+          {
+            "width": 375,
+            "scroll": 375,
+            "images": true
+          },
+          {
+            "width": 320,
+            "scroll": 320,
+            "images": true
+          },
+          {
+            "afterReverseResize": true
+          }
+        ],
+        "hero": {
+          "opacity": "0.552884",
+          "transform": "matrix(1, 0, 0, 1, 0, 13.4135)"
+        },
+        "mid": {
+          "opacity": "0.492101",
+          "transform": "matrix(1, 0, 0, 1, 0, 19.0462)"
+        },
+        "end": {
+          "opacity": "1",
+          "transform": "none"
+        },
+        "errors": []
+      },
+      "puro-amor": {
+        "rows": [
+          {
+            "width": 1440,
+            "scroll": 1440,
+            "images": true
+          },
+          {
+            "width": 820,
+            "scroll": 820,
+            "images": true
+          },
+          {
+            "width": 375,
+            "scroll": 375,
+            "images": true
+          },
+          {
+            "width": 320,
+            "scroll": 320,
+            "images": true
+          },
+          {
+            "afterReverseResize": true
+          }
+        ],
+        "hero": {
+          "opacity": "0.592809",
+          "transform": "matrix(1, 0, 0, 1, 0, 12.2157)"
+        },
+        "mid": {
+          "opacity": "0.477063",
+          "transform": "matrix(1, 0, 0, 1, 0, 19.6101)"
+        },
+        "end": {
+          "opacity": "1",
+          "transform": "none"
+        },
+        "errors": []
+      },
+      "nourish-bowl": {
+        "rows": [
+          {
+            "width": 1440,
+            "scroll": 1440,
+            "images": true
+          },
+          {
+            "width": 820,
+            "scroll": 820,
+            "images": true
+          },
+          {
+            "width": 375,
+            "scroll": 375,
+            "images": true
+          },
+          {
+            "width": 320,
+            "scroll": 320,
+            "images": true
+          },
+          {
+            "afterReverseResize": true
+          }
+        ],
+        "hero": {
+          "opacity": "0.589961",
+          "transform": "matrix(1, 0, 0, 1, 0, 12.3012)"
+        },
+        "mid": {
+          "opacity": "0.553721",
+          "transform": "matrix(1, 0, 0, 1, 0, 16.7354)"
+        },
+        "end": {
+          "opacity": "1",
+          "transform": "none"
+        },
+        "errors": []
+      }
+    }
+  },
+  "coccoc": {
+    "version": "152.0.7977.124",
+    "products": {
+      "fresh-reddy": {
+        "rows": [
+          {
+            "width": 1440,
+            "scroll": 1440,
+            "images": true
+          },
+          {
+            "width": 820,
+            "scroll": 820,
+            "images": true
+          },
+          {
+            "width": 375,
+            "scroll": 375,
+            "images": true
+          },
+          {
+            "width": 320,
+            "scroll": 320,
+            "images": true
+          },
+          {
+            "afterReverseResize": true
+          }
+        ],
+        "hero": {
+          "opacity": "0.58356",
+          "transform": "matrix(1, 0, 0, 1, 0, 12.4932)"
+        },
+        "mid": {
+          "opacity": "0.477304",
+          "transform": "matrix(1, 0, 0, 1, 0, 19.6011)"
+        },
+        "end": {
+          "opacity": "1",
+          "transform": "none"
+        },
+        "errors": []
+      },
+      "puro-amor": {
+        "rows": [
+          {
+            "width": 1440,
+            "scroll": 1440,
+            "images": true
+          },
+          {
+            "width": 820,
+            "scroll": 820,
+            "images": true
+          },
+          {
+            "width": 375,
+            "scroll": 375,
+            "images": true
+          },
+          {
+            "width": 320,
+            "scroll": 320,
+            "images": true
+          },
+          {
+            "afterReverseResize": true
+          }
+        ],
+        "hero": {
+          "opacity": "0.585554",
+          "transform": "matrix(1, 0, 0, 1, 0, 12.4334)"
+        },
+        "mid": {
+          "opacity": "0.389158",
+          "transform": "matrix(1, 0, 0, 1, 0, 22.9066)"
+        },
+        "end": {
+          "opacity": "1",
+          "transform": "none"
+        },
+        "errors": []
+      },
+      "nourish-bowl": {
+        "rows": [
+          {
+            "width": 1440,
+            "scroll": 1440,
+            "images": true
+          },
+          {
+            "width": 820,
+            "scroll": 820,
+            "images": true
+          },
+          {
+            "width": 375,
+            "scroll": 375,
+            "images": true
+          },
+          {
+            "width": 320,
+            "scroll": 320,
+            "images": true
+          },
+          {
+            "afterReverseResize": true
+          }
+        ],
+        "hero": {
+          "opacity": "0.520738",
+          "transform": "matrix(1, 0, 0, 1, 0, 14.3779)"
+        },
+        "mid": {
+          "opacity": "0.477545",
+          "transform": "matrix(1, 0, 0, 1, 0, 19.5921)"
+        },
+        "end": {
+          "opacity": "1",
+          "transform": "none"
+        },
+        "errors": []
+      }
+    }
+  }
+}

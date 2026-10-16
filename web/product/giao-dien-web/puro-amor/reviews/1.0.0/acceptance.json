@@ -1,0 +1,122 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "2a4d93e5e9172cc438646bd8fca6e48f54443859b77583c224670e9a8d08b9b9",
+  "references": [
+    {
+      "path": "D:/3. Dự án/anh mau/12bfb06a1f7a9f24c66b4.jpg",
+      "sha256": "a9de4b6e4f1f612f076e0686cb5143518b8139650cdc678c882fbea104b71a1a",
+      "size": [
+        864,
+        508
+      ],
+      "crop": null,
+      "excludedOverlay": "lower right image-viewer expand overlay"
+    }
+  ],
+  "views": [
+    {
+      "viewport": [
+        864,
+        508
+      ],
+      "dpr": 1,
+      "screenshot": "screenshots/chromium-864.png",
+      "state": "hero settled",
+      "regions": [
+        {
+          "region": "navigation",
+          "weight": 12,
+          "axes": {
+            "geometry": 93,
+            "typography": 88,
+            "colour": 90,
+            "imagery": 72,
+            "spacing": 92
+          },
+          "reason": "Seal is an approximate original SVG, profile uses generic silhouette; no real account.",
+          "score": 86.15
+        },
+        {
+          "region": "hero-copy",
+          "weight": 28,
+          "axes": {
+            "geometry": 94,
+            "typography": 92,
+            "colour": 89,
+            "imagery": 98,
+            "spacing": 94
+          },
+          "reason": "System font weight differs slightly; CTA gradient is flatter; title/description positions close.",
+          "score": 93.85
+        },
+        {
+          "region": "product-scene",
+          "weight": 50,
+          "axes": {
+            "geometry": 86,
+            "typography": 94,
+            "colour": 85,
+            "imagery": 83,
+            "spacing": 88
+          },
+          "reason": "Generated image approximates cup and splash: coffee shape, lid, background cup placement and lighting differ.",
+          "score": 87.0
+        },
+        {
+          "region": "bottom-controls",
+          "weight": 10,
+          "axes": {
+            "geometry": 88,
+            "typography": 88,
+            "colour": 91,
+            "imagery": 76,
+            "spacing": 88
+          },
+          "reason": "Two social symbols instead of three; arrow anchors differ; viewer expand overlay excluded.",
+          "score": 85.45
+        }
+      ],
+      "score": 88.66
+    }
+  ],
+  "fidelity": {
+    "method": "weighted visual rubric, interpretive not pixel accuracy",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "score": 88.66,
+    "status": "FAIL"
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "candidate-checks.json intermediate/end and OS reduced frames"
+    ]
+  },
+  "scroll": {
+    "status": "NOT TESTED",
+    "evidence": [
+      "forward reveal verified, full reverse/resize matrix incomplete"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "evidence": [
+      "image-only input"
+    ]
+  },
+  "technical": {
+    "status": "NOT TESTED",
+    "evidence": [
+      "candidate-checks.json",
+      "supplemental.json"
+    ]
+  },
+  "blockers": [
+    "Reference fidelity below >95 strict threshold.",
+    "Raster asset/seven-file/size exceptions and commercial rights not resolved for release.",
+    "Full contrast, touch-target and motion browser matrix not completed."
+  ],
+  "gate": "FAIL"
+}

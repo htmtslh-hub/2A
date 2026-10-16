@@ -1,0 +1,38 @@
+{
+  "id": "t44",
+  "slug": "puro-amor",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-16T13:19:53.461Z",
+  "demo": "/demos/puro-amor/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "aa60104b6623",
+  "sha256": "aa60104b6623c5bba0f2295e0ab76ee3e0ac4d94eefa5a1728f74e1a9152b0ec",
+  "demoHtmlSha256": "299f27682bb6beba30078d6d7aab06c4d834c6f19e636d3bc267c1a793e3b590",
+  "demoSha256": "10865868c90b633e29534972205fb3b506ff600a4af3f5aeb7fe22db08c283fc",
+  "bytes": 306974,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\puro-amor-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\puro-amor-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\puro-amor-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\puro-amor-return.jpg"
+  ]
+}

@@ -1,0 +1,2 @@
+# Motion
+Finite RAF hero copy entrance: opacity .25→1/translateY 22→0 over 700ms. Product image opacity .25→1/translateY 35→0 over 1100ms. Section reveal on IntersectionObserver threshold .12: 750ms; unobserve after reveal. No continuous loops; cancel on pagehide. Primary RAF also fallback without CSS/WAAPI. No JS keeps all content visible. OS reduced motion still defaults enabled per project owner policy. No carousel, arrows are anchor links; popover manifesto uses native HTML.

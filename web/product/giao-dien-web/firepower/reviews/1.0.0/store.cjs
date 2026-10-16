@@ -45,12 +45,14 @@ const report={origin,date:new Date().toISOString(),assets:[],locales:[],browsers
     try{
       const page=await browser.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'});
       await page.goto(origin+'/?tab=library');await page.waitForTimeout(1000);
-      const card=page.locator('a.product-card[href="?mau=t39"]');await card.scrollIntoViewIfNeeded();await page.waitForTimeout(1300);
+      const card=page.locator('a.product-card[href="?mau=t39"]');await card.scrollIntoViewIfNeeded();
+      try { await page.waitForFunction(video=>video.readyState>=2&&!video.paused&&video.currentTime>.1,await card.locator('video').elementHandle(),{timeout:20000}); }
+      catch(error) { console.log(name,await card.locator('video').evaluate(e=>({paused:e.paused,time:e.currentTime,readyState:e.readyState,networkState:e.networkState,src:e.currentSrc,error:e.error?.message,rect:e.getBoundingClientRect().toJSON()})));throw error; }
       const status=await card.locator('video').evaluate(e=>({paused:e.paused,time:e.currentTime,muted:e.muted,src:e.currentSrc}));
       assert(!status.paused&&status.time>0&&status.muted);assert(status.src.includes('firepower.mp4'));
       await page.evaluate(()=>scrollTo(0,document.body.scrollHeight));await page.waitForTimeout(500);
       const offscreenPaused=await card.locator('video').evaluate(e=>e.paused);assert(offscreenPaused);
-      report.browsers.push({name,version:browser.version(),status,offscreenPaused});
+      report.browsers.push({name,version:browser.version(),status,offscreenPaused});console.log(name,'live preview autoplay and offscreen pause PASS');
     }finally{await browser.close();}
   }
   fs.writeFileSync(path.join(__dirname,process.env.FIREPOWER_STORE_URL?'online-store.json':'local-store.json'),JSON.stringify(report,null,2));

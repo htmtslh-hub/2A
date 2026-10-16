@@ -1,0 +1,779 @@
+{
+  "slug": "beetbuh",
+  "version": "1.0.0",
+  "date": "2026-10-16T07:26:13.494Z",
+  "os": "win32",
+  "zipBytes": 489977,
+  "sha256": "2997c6f0d910f3dc4a33eab93a01df8d69fe99b96234ba25e5ea254f38530683",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#main"
+          },
+          {
+            "label": "BeetBuh home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#home"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#home"
+          },
+          {
+            "label": "Products",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#products"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#about"
+          },
+          {
+            "label": "Features",
+            "href": "#features",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#features"
+          },
+          {
+            "label": "Shop Now",
+            "href": "#enquire",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#enquire"
+          },
+          {
+            "label": "Explore Now ↗",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#products"
+          },
+          {
+            "label": "Learn More ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#specifications"
+          },
+          {
+            "label": "Enquire by email ↗",
+            "href": "mailto:hello@beetbuh.example?subject=BeetBuh%20headphone%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@beetbuh.example?subject=BeetBuh%20headphone%20enquiry"
+          },
+          {
+            "label": "BeetBuh",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#home"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(248, 240, 234)",
+            "background": [
+              28,
+              29,
+              23
+            ],
+            "ratio": 15.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "BeetBuh",
+            "colour": "rgb(28, 29, 23)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 15.07,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Home",
+            "colour": "rgb(28, 29, 23)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 15.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "Where bold design meets powerful audio. ",
+            "colour": "rgb(69, 70, 64)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 8.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "01",
+            "colour": "rgb(185, 49, 12)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 5.32,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "FEEL",
+            "colour": "rgb(248, 243, 236)",
+            "background": [
+              28,
+              30,
+              21
+            ],
+            "ratio": 15.27,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "EVERY BEAT",
+            "colour": "rgb(255, 101, 57)",
+            "background": [
+              28,
+              30,
+              21
+            ],
+            "ratio": 5.76,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Immersive audio that moves with you. Eng",
+            "colour": "rgb(240, 238, 231)",
+            "background": [
+              28,
+              30,
+              21
+            ],
+            "ratio": 14.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Deep Bass",
+            "colour": "rgb(248, 243, 236)",
+            "background": [
+              28,
+              30,
+              21
+            ],
+            "ratio": 15.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "INSPIRE",
+            "colour": "rgb(239, 90, 40)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 3.02,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Concept demonstration. Opens your mail a",
+            "colour": "rgb(86, 87, 80)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 6.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore Now ↗",
+          "colour": "rgb(154, 41, 11)",
+          "width": "3px",
+          "ratio": 6.92
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#main"
+          },
+          {
+            "label": "BeetBuh home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#home"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#home"
+          },
+          {
+            "label": "Products",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#products"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#about"
+          },
+          {
+            "label": "Features",
+            "href": "#features",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#features"
+          },
+          {
+            "label": "Shop Now",
+            "href": "#enquire",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#enquire"
+          },
+          {
+            "label": "Explore Now ↗",
+            "href": "#products",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#products"
+          },
+          {
+            "label": "Learn More ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#specifications"
+          },
+          {
+            "label": "Enquire by email ↗",
+            "href": "mailto:hello@beetbuh.example?subject=BeetBuh%20headphone%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@beetbuh.example?subject=BeetBuh%20headphone%20enquiry"
+          },
+          {
+            "label": "BeetBuh",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#home"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/beetbuh/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(248, 240, 234)",
+            "background": [
+              28,
+              29,
+              23
+            ],
+            "ratio": 15.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "BeetBuh",
+            "colour": "rgb(28, 29, 23)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 15.07,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Home",
+            "colour": "rgb(28, 29, 23)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 15.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "Where bold design meets powerful audio. ",
+            "colour": "rgb(69, 70, 64)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 8.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "01",
+            "colour": "rgb(185, 49, 12)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 5.32,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "FEEL",
+            "colour": "rgb(248, 243, 236)",
+            "background": [
+              28,
+              30,
+              21
+            ],
+            "ratio": 15.27,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "EVERY BEAT",
+            "colour": "rgb(255, 101, 57)",
+            "background": [
+              28,
+              30,
+              21
+            ],
+            "ratio": 5.76,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Immersive audio that moves with you. Eng",
+            "colour": "rgb(240, 238, 231)",
+            "background": [
+              28,
+              30,
+              21
+            ],
+            "ratio": 14.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Deep Bass",
+            "colour": "rgb(248, 243, 236)",
+            "background": [
+              28,
+              30,
+              21
+            ],
+            "ratio": 15.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "INSPIRE",
+            "colour": "rgb(239, 90, 40)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 3.02,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Concept demonstration. Opens your mail a",
+            "colour": "rgb(86, 87, 80)",
+            "background": [
+              248,
+              240,
+              234
+            ],
+            "ratio": 6.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore Now ↗",
+          "colour": "rgb(154, 41, 11)",
+          "width": "3px",
+          "ratio": 6.92
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "beetbuh/assets/css/style.css",
+    "beetbuh/assets/img/headphone-angle.webp",
+    "beetbuh/assets/img/headphone-hero.webp",
+    "beetbuh/assets/img/listener.webp",
+    "beetbuh/assets/js/main.js",
+    "beetbuh/CUSTOMISE.md",
+    "beetbuh/index.html",
+    "beetbuh/LICENCE.txt",
+    "beetbuh/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/headphone-angle.webp",
+    "assets/img/headphone-hero.webp",
+    "assets/img/listener.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

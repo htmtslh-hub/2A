@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'manganresto': {
+    "vi": {
+      "intro": "Landing page nhà hàng ẩm thực cao cấp phối màu đen và vàng hổ phách theo ảnh mẫu.",
+      "notes": "### Bắt đầu\nGiải nén đủ 9 file và mở index.html cạnh assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa chính xác. Không cần build.\n\n### Ảnh và nội dung\nBa ảnh WebP tự tạo: đĩa mì Ý tôm mực đen, bữa sáng trứng chần và salad khai vị. Thay tên nhà hàng, thực đơn, đầu bếp và thông số minh họa. Google Fonts tùy chọn; font hệ thống hoạt động bình thường offline.\n\n### Tương tác\nLọc danh mục món ăn (Breakfast, Appetizer, Main, Desserts), tìm kiếm món live theo tên/mô tả, form đặt bàn trải nghiệm gắn nhãn (Demo only). Hỗ trợ hiệu ứng đĩa nghiêng 3D theo con trỏ chuột và nút Pause motion trong phiên.\n\n### Phạm vi\nKhông kèm backend lưu trữ cơ sở dữ liệu thực, xử lý thanh toán hay đặt bàn qua mạng. Đọc LICENCE.txt; không phân phối lại template hoặc bán ảnh riêng."
+    },
+    "en": {
+      "intro": "A gourmet dining and fine culinary landing page in charcoal and warm amber gold.",
+      "notes": "### Start\nExtract all 9 files and open index.html beside assets/. CUSTOMISE.md contains 10 steps, 12 complete AI prompts and verified edit counts. No build required.\n\n### Artwork and content\nThree original WebP images: centerpiece seafood squid ink pasta plate, artisan poached egg toast and burrata fig salad. Replace restaurant name, menu items, chefs and illustrative stats. Google Fonts are optional; system fonts work offline.\n\n### Interaction\nCategory filtering (Breakfast, Appetizer, Main, Desserts), live menu search dialog, and reservation enquiry form labeled (Demo only). Hero plate kinetic tilt and session-only Pause motion.\n\n### Scope\nNo backend database, online payment processing, or live booking engine. Read LICENCE.txt; no template redistribution or standalone image resale."
+    },
+    "zh": {
+      "intro": "黑金双色高级美食品鉴餐厅展示页。",
+      "notes": "### 开始\n完整解压9个文件，在assets/旁打开index.html。CUSTOMISE.md包含10个步骤、12条AI提示词及精确修改表。无需构建。\n\n### 图像与内容\n三张原创WebP图像：墨鱼汁海鲜意面餐盘、早午餐水波蛋吐司及无花果布拉塔沙拉。替换餐厅名称、菜单项、名厨及示例参数。Google Fonts可选，离线系统字体正常显示。\n\n### 交互\n菜单分类筛选（早餐、开胃菜、主菜、甜点）、实时菜品搜索对话框及标注(Demo only)的订座咨询表单。支持餐盘3D微动视角及本次会话暂定动画功能。\n\n### 范围\n不含后端数据库、在线支付或实时预订引擎。请阅读LICENCE.txt；不可重新分发模板或单独转售图像。"
+    }
+  },
   'beetbuh': {
   "vi": {
     "intro": "Landing page tai nghe concept màu cam trên nền ivory theo ảnh tham chiếu.",

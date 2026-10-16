@@ -1,0 +1,26 @@
+MANGANRESTO — LICENCE TERMS
+
+Copyright entity: Forge Zone. These terms apply to the template source code and bundled self-created graphic assets; they do not assert exclusive copyright in AI-generated artwork.
+
+1. WHAT YOU GET
+A perpetual, non-exclusive commercial licence to the template source upon an authorised product sale or download.
+
+2. WHAT YOU MAY DO
+Use the licensed source in unlimited personal and commercial client projects, modify styling, copy, and layout, and publish the resulting website without mandatory attribution.
+
+3. WHAT YOU MAY NOT DO
+Resell, sublicense, redistribute, or give away the raw template files, publish them on another theme marketplace, or bundle them into a competing website builder product.
+
+4. DEMO CONTENT
+This culinary restaurant interface study includes original transparent food dish cutouts, illustrative recipes, fictional master chef profiles, and sample prices; it is not an operational food delivery portal or certified restaurant. Replace demo brand names, contact emails, and menu offerings before publishing for another business. The included self-created dish images may be used and modified within websites produced with this licensed template. Do not redistribute the dish images separately as standalone stock packs.
+
+5. FONTS
+Optional Google Fonts: Plus Jakarta Sans (Gursan et al.), SIL Open Font License 1.1; Playfair Display (Claus Eggers Sørensen), SIL Open Font License 1.1. No font files are bundled in the package. The stylesheet uses display=swap and system fallbacks. Font intellectual property remains with respective type designers.
+
+6. OWNERSHIP
+Copyright in the template source architecture remains with Forge Zone. A licence grants commercial usage rights, not intellectual property ownership.
+
+7. NO WARRANTY
+Provided as is. Tested across modern evergreen browsers. Compatibility with every arbitrary environment or device is not guaranteed.
+
+Questions about licensing or custom extensions: reach out via Forge Zone concierge.

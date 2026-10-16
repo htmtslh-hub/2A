@@ -46,6 +46,52 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t42: {
+    slug: 'manganresto',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    specs: {
+      vi: [
+        ['Định dạng', 'HTML / CSS / JavaScript thuần'],
+        ['Gói tải', '9 file · 3 ảnh WebP món ăn tự tạo'],
+        ['Tương tác', 'Lọc danh mục món · tìm kiếm live · đặt bàn demo'],
+        ['Chuyển động', 'Hiệu ứng đĩa nghiêng 3D · sóng nền cong · bật mặc định'],
+        ['Phạm vi', 'Landing page nhà hàng ẩm thực · không backend']
+      ],
+      en: [
+        ['Format', 'Plain HTML / CSS / JavaScript'],
+        ['Package', '9 files · 3 original local food WebP images'],
+        ['Interaction', 'Menu category filters · live search · table booking demo'],
+        ['Motion', 'Hero plate kinetic tilt · curved split backdrop · default ON'],
+        ['Scope', 'Gourmet restaurant landing page · no backend']
+      ],
+      zh: [
+        ['格式', '原生 HTML / CSS / JavaScript'],
+        ['下载包', '9个文件 · 3张原创本地美食WebP图像'],
+        ['交互', '菜单分类筛选 · 实时搜索 · 订座演示'],
+        ['动态', '主厨餐盘微动视角 · 流线双色背景 · 默认开启'],
+        ['范围', '高级美食品鉴餐厅展示页 · 无后端']
+      ]
+    },
+    copy: {
+      vi: {
+        name: 'Manganresto',
+        desc: 'Landing page nhà hàng ẩm thực cao cấp phối màu đen và vàng hổ phách, đĩa mì Ý hải sản mực đen nổi bật, thẻ thực đơn bữa sáng/khai vị và huy hiệu đầu bếp.',
+        tags: ['Nhà hàng', 'Ẩm thực cao cấp', 'Đen & Vàng hổ phách']
+      },
+      en: {
+        name: 'Manganresto',
+        desc: 'A gourmet dining and fine culinary landing page in charcoal and warm amber gold, featuring a centerpiece seafood squid ink pasta plate, breakfast/appetizer cards and chef accolades.',
+        tags: ['Restaurant', 'Fine dining', 'Charcoal & Amber gold']
+      },
+      zh: {
+        name: 'Manganresto',
+        desc: '黑金色调高级美食餐厅展示页，配有标志性墨鱼汁海鲜意面餐盘、早午餐/开胃菜卡片及名厨勋章。',
+        tags: ['餐厅', '精致餐饮', '黑金双色']
+      }
+    }
+  },
   t41: {
   "slug": "beetbuh",
   "cat": "commerce",

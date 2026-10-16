@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'volt-hoodie': {
+    vi: {
+      intro: 'Showroom áo hoodie streetwear phối mảng chéo vàng volt và đen carbon theo ảnh tham chiếu.',
+      notes: '### Bắt đầu\nGiải nén đủ 9 file và mở index.html cạnh assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm chính xác. Không cần cài đặt hay build.\n\n### Ảnh và nội dung\nBa ảnh WebP nền trong suốt tự tạo trong assets/img/: hoodie-volt.webp, hoodie-mint.webp, hoodie-arctic.webp. Thay Volt Hoodie, giá mẫu Rs. 1559/-, bảng size và orders@volthoodie.example. Nhãn nút Sing Up giữ nguyên theo ảnh tham chiếu và có hướng dẫn đổi trong CUSTOMISE.md. Google Fonts (Poppins) tùy chọn; font hệ thống hoạt động bình thường khi offline.\n\n### Tương tác\nBa phối màu điều khiển bằng nút chọn màu bên trái, chấm phân trang dưới đáy, thẻ sản phẩm, phím mũi tên Trái/Phải hoặc vuốt ngang. Chọn size S/M/L cập nhật ngay tóm tắt đơn và liên kết mailto. Ba hộp thoại dialog cho tìm kiếm nhanh, thông báo tài khoản (Demo only) và hướng dẫn nhanh. Hỗ trợ menu mobile đóng bằng Escape và nút Pause motion trong phiên.\n\n### Phạm vi\nGiao diện tĩnh, không kèm backend, giỏ hàng lưu cơ sở dữ liệu, tài khoản hay thanh toán trực tuyến. Đọc kỹ LICENCE.txt; không phân phối lại template hoặc bán ảnh riêng.',
+    },
+    en: {
+      intro: 'A diagonal volt-yellow and matte-carbon streetwear hoodie showcase inspired by the reference design.',
+      notes: '### Start\nExtract all 9 files and open index.html beside assets/. CUSTOMISE.md contains 10 steps, 12 complete AI prompts and a counted literal edit map. No install or build required.\n\n### Artwork and content\nThree original transparent WebP cutouts in assets/img/: hoodie-volt.webp, hoodie-mint.webp, and hoodie-arctic.webp. Replace Volt Hoodie, the illustrative Rs. 1559/- price, size chart and orders@volthoodie.example. The header button label Sing Up preserves the reference spelling and is documented in CUSTOMISE.md. Google Fonts (Poppins) is optional; system sans-serif fallbacks work offline.\n\n### Interaction\nThree colourways controlled via left colour swatches, bottom pagination dots, product cards, Left/Right arrow keys or horizontal swipe. S/M/L size selection updates the live order summary and mailto link. Native dialog modals for quick lookup, member access (Demo only) and capsule guide. Escape-aware mobile menu and session-only Pause motion.\n\n### Scope\nStatic showcase with no backend database, live inventory, user authentication or payment checkout. Read LICENCE.txt; no template redistribution or standalone image resale.',
+    },
+    zh: {
+      intro: '电光黄与哑光碳黑斜切街头连帽衫展示模板。',
+      notes: '### 开始\n完整解压9个文件，在assets/旁打开index.html。CUSTOMISE.md包含10个步骤、12条完整AI提示词和精确修改计数表。无需安装或构建。\n\n### 图像与内容\nassets/img/中包含三张原创透明背景WebP服装图：hoodie-volt.webp、hoodie-mint.webp与hoodie-arctic.webp。请替换Volt Hoodie、示例价格Rs. 1559/-、尺码表及orders@volthoodie.example。顶部Sing Up按钮保留了参考图拼写，可在CUSTOMISE.md中查看修改位置。Google Fonts (Poppins) 可选，离线时自动使用系统无衬线字体。\n\n### 交互\n支持通过左侧色卡、底部分页圆点、配色卡片、左右方向键或横向滑动切换三种配色。S/M/L尺码按钮实时同步至底部订购摘要与mailto邮件链接。内置原生dialog对话框（快速检索、Demo only会员提示与尺码指南）、支持Escape的移动菜单及仅限当前会话的Pause motion。\n\n### 范围\n纯静态展示页，不含后端数据库、实时库存、账户系统或在线支付。请阅读LICENCE.txt；禁止重新分发模板或单独转售图像。',
+    },
+  },
   "fresh-reddy": {
   "vi": {
     "intro": "Giao diện dịch vụ cà phê văn phòng nền than, cụm ba cốc PNG trong suốt, nội dung dịch vụ và liên hệ.",

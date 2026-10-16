@@ -46,6 +46,45 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t46: {
+    slug: 'volt-hoodie',
+    cat: 'commerce',
+    version: '1.0.0',
+    copy: {
+      vi: {
+        name: 'Volt Hoodie',
+        desc: 'Showroom áo hoodie streetwear phối mảng chéo vàng volt và đen carbon, ba phối màu WebP trong suốt, chọn size S/M/L và đặt hàng qua email.',
+        tags: ['Thời trang', '3 phối màu', 'Ảnh tự tạo'],
+      },
+      en: {
+        name: 'Volt Hoodie',
+        desc: 'A diagonal volt-yellow and matte-carbon streetwear hoodie showcase with three transparent WebP colourways, S/M/L size selection and email order enquiry.',
+        tags: ['Streetwear', '3 colourways', 'Original imagery'],
+      },
+      zh: {
+        name: 'Volt Hoodie',
+        desc: '电光黄与哑光碳黑斜切街头连帽衫展示页，含三款透明WebP配色、S/M/L尺码选择及邮件订购咨询。',
+        tags: ['街头服饰', '3种配色', '原创图片'],
+      },
+    },
+    specs: {
+      vi: [
+        ['Định dạng', 'HTML / CSS / JavaScript'],
+        ['Gói tải', '9 files'],
+        ['Phạm vi', 'Giao diện tĩnh · không backend'],
+      ],
+      en: [
+        ['Format', 'HTML / CSS / JavaScript'],
+        ['Package', '9 files'],
+        ['Scope', 'Static interface · no backend'],
+      ],
+      zh: [
+        ['格式', 'HTML / CSS / JavaScript'],
+        ['下载包', '9 files'],
+        ['范围', '静态界面 · 无后端'],
+      ],
+    },
+  },
   t43: {
   "slug": "fresh-reddy",
   "cat": "commerce",

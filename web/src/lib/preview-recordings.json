@@ -628,5 +628,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "volt-hoodie": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "d684815da027",
+    "sha256": "d684815da027e90801d05ffa4eda33e052227c5cad85a2dbe3fcf6371bea30c8",
+    "demoHtmlSha256": "91d855b1a63c8c77c51cc134c89eb0fe407ee97e976afbd0fc58643817593eab",
+    "demoSha256": "2ea47a155152cc5ce267a870d2fd01168b20e5b79ba355009000464cebf6ecd5",
+    "bytes": 470902,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

@@ -1,0 +1,48 @@
+{
+  "id": "t46",
+  "slug": "volt-hoodie",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-16T14:27:41.485Z",
+  "demo": "/demos/volt-hoodie/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d684815da027",
+  "sha256": "d684815da027e90801d05ffa4eda33e052227c5cad85a2dbe3fcf6371bea30c8",
+  "demoHtmlSha256": "91d855b1a63c8c77c51cc134c89eb0fe407ee97e976afbd0fc58643817593eab",
+  "demoSha256": "2ea47a155152cc5ce267a870d2fd01168b20e5b79ba355009000464cebf6ecd5",
+  "bytes": 470902,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.537,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 4.886,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\volt-hoodie-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\volt-hoodie-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\volt-hoodie-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\volt-hoodie-return.jpg"
+  ]
+}

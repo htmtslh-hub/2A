@@ -1,10 +1,10 @@
 {
   "slug": "sonicore",
   "version": "1.0.0",
-  "date": "2026-10-16T02:47:38.680Z",
+  "date": "2026-10-16T04:02:42.702Z",
   "os": "win32",
-  "zipBytes": 135431,
-  "sha256": "d6a064db148d28666d1cde12bc1901cbe8a35b68efe7c8b4966eb3f9aaf6733f",
+  "zipBytes": 137097,
+  "sha256": "31307862ee5e97c21d9e69f84384ffba8c6443c410c8615e51a532d611425989",
   "exception": true,
   "browsers": {
     "chromium": {
@@ -667,7 +667,7 @@
             "background": [
               15,
               13,
-              25
+              26
             ],
             "ratio": 9.53,
             "threshold": 4.5,

@@ -101,7 +101,56 @@
       </div>
 
       <div class="hero__stage" tabindex="0" data-carousel="hero" aria-label="Sonicore X1 spatial soundstage views">
-        <img class="hero__image" src="assets/img/hero-headphone.webp" alt="Sonicore X1 matte-black wireless headphones with glowing violet ring floating above a dark circular pedestal" width="830" height="700" data-hero-main>
+        <div class="hero__media">
+          <img class="hero__image" src="assets/img/hero-headphone.webp" alt="Sonicore X1 matte-black wireless headphones with glowing violet ring floating above a dark circular pedestal" width="830" height="700" data-hero-main>
+          <svg class="hero__orbits" viewBox="0 0 830 700" aria-hidden="true" focusable="false" data-hero-orbits>
+            <defs>
+              <linearGradient id="orbit-comet-a" x1="0%" y1="50%" x2="100%" y2="50%">
+                <stop offset="0%" stop-color="#f5f4fa" stop-opacity="0"/>
+                <stop offset="22%" stop-color="#c4b5fd" stop-opacity=".95"/>
+                <stop offset="50%" stop-color="#a855f7" stop-opacity=".45"/>
+                <stop offset="78%" stop-color="#e9d5ff" stop-opacity=".95"/>
+                <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="orbit-comet-b" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0"/>
+                <stop offset="28%" stop-color="#ddd6fe" stop-opacity=".88"/>
+                <stop offset="65%" stop-color="#9333ea" stop-opacity=".75"/>
+                <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0"/>
+              </linearGradient>
+              <mask id="orbit-body-mask">
+                <rect width="830" height="700" fill="#fff"/>
+                <ellipse cx="436" cy="295" rx="164" ry="238" transform="rotate(9 436 295)" fill="#000"/>
+                <ellipse cx="322" cy="422" rx="98" ry="126" transform="rotate(-8 322 422)" fill="#000"/>
+              </mask>
+            </defs>
+            <g mask="url(#orbit-body-mask)">
+              <g transform="rotate(-11.5 415 314)">
+                <ellipse class="orbit-ring orbit-ring--outer" cx="415" cy="314" rx="388" ry="114" fill="none" stroke="url(#orbit-comet-a)" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="170 260 110 290" data-orbit-ring="0"/>
+                <ellipse class="orbit-ring orbit-ring--mid" cx="415" cy="314" rx="362" ry="100" fill="none" stroke="url(#orbit-comet-b)" stroke-width="2" stroke-linecap="round" stroke-dasharray="120 210 85 240 130 220" data-orbit-ring="1"/>
+                <ellipse class="orbit-ring orbit-ring--inner" cx="415" cy="314" rx="334" ry="86" fill="none" stroke="url(#orbit-comet-a)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="14 28 95 180 18 34 105 190" data-orbit-ring="2"/>
+              </g>
+              <g class="orbit-sparks" data-orbit-sparks>
+                <circle cx="88" cy="358" r="2.4" fill="#f5f4fa"/>
+                <circle cx="118" cy="312" r="1.8" fill="#ddd6fe"/>
+                <circle cx="156" cy="274" r="2.2" fill="#c4b5fd"/>
+                <circle cx="212" cy="242" r="1.6" fill="#e9d5ff"/>
+                <circle cx="136" cy="408" r="2.0" fill="#c4b5fd"/>
+                <circle cx="194" cy="436" r="1.7" fill="#f5f4fa"/>
+                <circle cx="648" cy="176" r="2.1" fill="#e9d5ff"/>
+                <circle cx="712" cy="196" r="2.5" fill="#f5f4fa"/>
+                <circle cx="764" cy="236" r="1.9" fill="#c4b5fd"/>
+                <circle cx="742" cy="292" r="2.3" fill="#ddd6fe"/>
+                <circle cx="688" cy="336" r="1.8" fill="#c4b5fd"/>
+                <circle cx="628" cy="372" r="2.1" fill="#f5f4fa"/>
+              </g>
+            </g>
+            <g transform="rotate(18 545 406)">
+              <ellipse class="orbit-earcup" cx="545" cy="406" rx="68" ry="98" fill="none" stroke="url(#orbit-comet-a)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="120 410" data-earcup-pulse/>
+            </g>
+            <ellipse class="orbit-pedestal" cx="435" cy="632" rx="302" ry="36" fill="none" stroke="url(#orbit-comet-b)" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="150 540" data-pedestal-pulse/>
+          </svg>
+        </div>
         <div class="hero__controls js-control" aria-label="Soundstage view controls">
           <button type="button" data-sound-step="-1" aria-label="Previous spatial soundstage">←</button>
           <p class="view-count" aria-live="polite"><strong data-view-count>01</strong><span>/03</span> <em data-stage-label>CINEMA 360°</em></p>

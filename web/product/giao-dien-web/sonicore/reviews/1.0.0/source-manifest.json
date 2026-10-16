@@ -2,8 +2,8 @@
   "files": [
     {
       "file": "assets/css/style.css",
-      "bytes": 26682,
-      "sha256": "aad675a896fe49cf3901cf2d8b269956b53298c48c6ac876f6f0ca64676c0bbb"
+      "bytes": 27296,
+      "sha256": "ff34599211334eebba1290c922d20f63084ea56b65d80ae714f51d8e12b68e90"
     },
     {
       "file": "assets/img/design-closeup.webp",
@@ -27,8 +27,8 @@
     },
     {
       "file": "assets/js/main.js",
-      "bytes": 15480,
-      "sha256": "1a523187633e05ebeaf8389a2eb9de6143238a06a570e514e301fd7139e6cb7f"
+      "bytes": 18899,
+      "sha256": "fae6b20463ab61cbc8b30e469a6c6f42ba498e264730454726d36e24126d14d3"
     },
     {
       "file": "CUSTOMISE.md",
@@ -37,8 +37,8 @@
     },
     {
       "file": "index.html",
-      "bytes": 21699,
-      "sha256": "929a218b87411b4ee1d95fac2946bc42a1bb0af9c54451c0b20dd11e58b37bfa"
+      "bytes": 25397,
+      "sha256": "16b3db0595cc9c6dfdd8dbc4a0d6b02bca1fe762ed2f1f61c990e2a88b0b81f2"
     },
     {
       "file": "LICENCE.txt",
@@ -51,5 +51,5 @@
       "sha256": "d8fccff47cf22a0852b5b25f7bfd44b2fa6d33cb228d1b33a8c53733da5d847e"
     }
   ],
-  "sha256": "3705ea7b6711bec3e84c808abacf15d13b1b5da6b960e3974314ab0e34920349"
+  "sha256": "31307862ee5e97c21d9e69f84384ffba8c6443c410c8615e51a532d611425989"
 }

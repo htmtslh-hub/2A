@@ -131,13 +131,96 @@
   ];
 
   let activeModeIndex = 0;
+  const heroSection = document.querySelector(".hero");
   const heroImage = document.querySelector("[data-hero-main]");
+  const heroOrbits = document.querySelector("[data-hero-orbits]");
+  const orbitRings = Array.from(document.querySelectorAll("[data-orbit-ring]"));
+  const orbitSparks = Array.from(document.querySelectorAll("[data-orbit-sparks] circle"));
+  const earcupPulse = document.querySelector("[data-earcup-pulse]");
+  const pedestalPulse = document.querySelector("[data-pedestal-pulse]");
   const spatialImage = document.querySelector("[data-spatial-image]");
   const viewCountEl = document.querySelector("[data-view-count]");
   const stageLabelEl = document.querySelector("[data-stage-label]");
   const modeNameEl = document.querySelector("[data-mode-name]");
   const modeButtons = Array.from(document.querySelectorAll("[data-mode]"));
   const eqRects = Array.from(document.querySelectorAll("[data-eq-bars] rect"));
+
+  const sparkBase = orbitSparks.map((el, idx) => ({
+    el,
+    cx: parseFloat(el.getAttribute("cx") || "415"),
+    cy: parseFloat(el.getAttribute("cy") || "314"),
+    r: parseFloat(el.getAttribute("r") || "2"),
+    phase: idx * 0.68
+  }));
+
+  let orbitDistance = 0;
+
+  function applyOrbitFrame(dist) {
+    if (orbitRings[0]) {
+      orbitRings[0].setAttribute("stroke-dashoffset", (-dist * 1.25).toFixed(1));
+    }
+    if (orbitRings[1]) {
+      orbitRings[1].setAttribute("stroke-dashoffset", (dist * 0.92).toFixed(1));
+    }
+    if (orbitRings[2]) {
+      orbitRings[2].setAttribute("stroke-dashoffset", (-dist * 1.55).toFixed(1));
+    }
+    if (earcupPulse) {
+      earcupPulse.setAttribute("stroke-dashoffset", (-dist * 0.96).toFixed(1));
+    }
+    if (pedestalPulse) {
+      pedestalPulse.setAttribute("stroke-dashoffset", (dist * 0.78).toFixed(1));
+    }
+    const rad = dist * 0.024;
+    sparkBase.forEach((s, i) => {
+      const a = rad * (i % 2 === 0 ? 1.15 : -0.95) + s.phase;
+      const dx = Math.cos(a) * (10 + (i % 3) * 4);
+      const dy = Math.sin(a) * (4.5 + (i % 2) * 2.5) - dx * 0.19;
+      const pulse = 0.42 + 0.58 * (0.5 + 0.5 * Math.sin(rad * 1.7 + s.phase));
+      s.el.setAttribute("cx", (s.cx + dx).toFixed(2));
+      s.el.setAttribute("cy", (s.cy + dy).toFixed(2));
+      s.el.style.opacity = pulse.toFixed(2);
+    });
+  }
+
+  function triggerOrbitFlow(durationMs = 960, speedMultiplier = 1.25) {
+    if (!heroOrbits || motionPaused || durationMs <= 0) {
+      return;
+    }
+    cancelTrackedRaf("orbit-flow");
+    const start = performance.now();
+    let last = start;
+
+    function step(now) {
+      const dt = Math.min(48, Math.max(0, now - last));
+      last = now;
+      const p = Math.min(1, Math.max(0, (now - start) / durationMs));
+      const envelope = 1 - Math.pow(p, 2.2) * 0.55;
+      orbitDistance += dt * 0.24 * speedMultiplier * envelope;
+      applyOrbitFrame(orbitDistance);
+
+      if (p < 1 && !motionPaused) {
+        activeRafs.set("orbit-flow", requestAnimationFrame(step));
+      } else {
+        activeRafs.delete("orbit-flow");
+      }
+    }
+
+    activeRafs.set("orbit-flow", requestAnimationFrame(step));
+  }
+
+  triggerOrbitFlow(960, 1.3);
+
+  if (heroSection) {
+    let lastHoverKick = 0;
+    heroSection.addEventListener("pointermove", () => {
+      const now = performance.now();
+      if (now - lastHoverKick > 280) {
+        lastHoverKick = now;
+        triggerOrbitFlow(2200, 1.25);
+      }
+    });
+  }
 
   function animateEqBars(targetHeights) {
     if (!eqRects.length) {
@@ -212,6 +295,22 @@
       { x: 0, y: 0, scale: 1, rotate: 0, opacity: 1 },
       440
     );
+
+    animateTransform(
+      "hero-orbits",
+      heroOrbits,
+      {
+        x: mode.offset.x * 1.15,
+        y: mode.offset.y * 1.1,
+        scale: mode.offset.scale,
+        rotate: mode.offset.rotate * 1.4,
+        opacity: 0.62
+      },
+      { x: 0, y: 0, scale: 1, rotate: 0, opacity: 1 },
+      440
+    );
+
+    triggerOrbitFlow(440, 1.85);
 
     animateTransform(
       "spatial-image",
@@ -462,10 +561,16 @@
           heroImage.style.transform = "";
           heroImage.style.opacity = "1";
         }
+        if (heroOrbits) {
+          heroOrbits.style.transform = "";
+          heroOrbits.style.opacity = "1";
+        }
         if (explodedImage) {
           explodedImage.style.transform = "";
           explodedImage.style.opacity = "1";
         }
+      } else {
+        triggerOrbitFlow(840, 1.25);
       }
     });
   }

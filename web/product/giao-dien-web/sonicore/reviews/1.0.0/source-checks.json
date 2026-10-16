@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-16T02:27:05.578Z",
-  "url": "http://127.0.0.1:52165",
+  "date": "2026-10-16T04:00:48.409Z",
+  "url": "http://127.0.0.1:61241",
   "browsers": {
     "chromium": {
       "version": "153.0.8010.12",
@@ -50,17 +50,18 @@
       ],
       "motion": {
         "middle": {
-          "transform": "matrix(0.996489, 0.0020946, -0.0020946, 0.996489, 1.60498, -0.802199)",
-          "opacity": 0.794
+          "transform": "matrix(0.988969, 0.00654328, -0.00654328, 0.988969, 5.02918, -2.51268)",
+          "opacity": 0.824
         },
         "paused": true,
-        "cssDisabled": true
+        "cssDisabled": true,
+        "orbitStreak": true
       },
       "skip": true,
       "scroll": {
         "revealed": "true",
-        "opacity": 0.919,
-        "transform": "matrix(0.9978, 0, 0, 0.9978, 0, 2.65)"
+        "opacity": 0.924,
+        "transform": "matrix(0.9979, 0, 0, 0.9979, 0, 2.5)"
       },
       "idleFrames": 0,
       "axe": [],
@@ -122,17 +123,18 @@
       ],
       "motion": {
         "middle": {
-          "transform": "matrix(0.994, 0.00356491, -0.00356491, 0.994, 2.74096, -1.37049)",
-          "opacity": 0.814
+          "transform": "matrix(0.986721, 0.00780741, -0.00780741, 0.986721, 6.05424, -3.02496)",
+          "opacity": 0.768
         },
         "paused": true,
-        "cssDisabled": true
+        "cssDisabled": true,
+        "orbitStreak": true
       },
       "skip": true,
       "scroll": {
         "revealed": "true",
-        "opacity": 0.94,
-        "transform": "matrix(0.9984, 0, 0, 0.9984, 0, 1.97)"
+        "opacity": 0.989,
+        "transform": "matrix(0.9997, 0, 0, 0.9997, 0, 0.35)"
       },
       "idleFrames": 0,
       "axe": [],
@@ -194,17 +196,18 @@
       ],
       "motion": {
         "middle": {
-          "transform": "matrix(0.995644, 0.00259914, -0.00259914, 0.995644, 1.99079, -0.995259)",
-          "opacity": 0.799
+          "transform": "matrix(0.98715, 0.00757246, -0.00757246, 0.98715, 5.86424, -2.93027)",
+          "opacity": 0.819
         },
         "paused": true,
-        "cssDisabled": true
+        "cssDisabled": true,
+        "orbitStreak": true
       },
       "skip": true,
       "scroll": {
         "revealed": "true",
-        "opacity": 0.971,
-        "transform": "matrix(0.9992, 0, 0, 0.9992, 0, 0.96)"
+        "opacity": 0.927,
+        "transform": "matrix(0.998, 0, 0, 0.998, 0, 2.41)"
       },
       "idleFrames": 0,
       "axe": [],
@@ -266,17 +269,18 @@
       ],
       "motion": {
         "middle": {
-          "transform": "matrix(0.995064, 0.00293535, -0.00293535, 0.995064, 2.25336, -1.12683)",
-          "opacity": 0.816
+          "transform": "matrix(0.9871, 0.007644, -0.007644, 0.9871, 5.89029, -2.94514)",
+          "opacity": 0.786
         },
         "paused": true,
-        "cssDisabled": true
+        "cssDisabled": true,
+        "orbitStreak": true
       },
       "skip": true,
       "scroll": {
         "revealed": "true",
-        "opacity": 0.963,
-        "transform": "matrix(0.999, 0, 0, 0.999, 0, 1.21)"
+        "opacity": 0.947,
+        "transform": "matrix(0.9986, 0, 0, 0.9986, 0, 1.73)"
       },
       "idleFrames": 0,
       "axe": [],

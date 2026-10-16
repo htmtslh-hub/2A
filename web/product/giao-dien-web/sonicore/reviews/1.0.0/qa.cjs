@@ -296,12 +296,34 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
         check(row.idleFrames === 0, `${name} no idle RAF`, row.idleFrames);
 
         await page.addStyleTag({ content: '*{animation:none!important;transition:none!important}' });
+        const orbitBefore = await page.evaluate(() => {
+          const ring = document.querySelector('[data-orbit-ring="0"]');
+          const spark = document.querySelector('[data-orbit-sparks] circle');
+          return {
+            dashoffset: ring ? ring.getAttribute('stroke-dashoffset') : null,
+            cx: spark ? spark.getAttribute('cx') : null,
+            cy: spark ? spark.getAttribute('cy') : null
+          };
+        });
         await page.locator('#hero-next').click();
         await page.waitForTimeout(80);
         row.motion.cssDisabled = await page
           .locator('[data-hero-main]')
           .evaluate((e) => getComputedStyle(e).transform !== 'none');
         check(row.motion.cssDisabled, `${name} RAF fallback`);
+        const orbitAfter = await page.evaluate(() => {
+          const ring = document.querySelector('[data-orbit-ring="0"]');
+          const spark = document.querySelector('[data-orbit-sparks] circle');
+          return {
+            dashoffset: ring ? ring.getAttribute('stroke-dashoffset') : null,
+            cx: spark ? spark.getAttribute('cx') : null,
+            cy: spark ? spark.getAttribute('cy') : null
+          };
+        });
+        row.motion.orbitStreak =
+          Boolean(orbitBefore.dashoffset && orbitAfter.dashoffset && orbitBefore.dashoffset !== orbitAfter.dashoffset) &&
+          Boolean(orbitBefore.cx && orbitAfter.cx && (orbitBefore.cx !== orbitAfter.cx || orbitBefore.cy !== orbitAfter.cy));
+        check(row.motion.orbitStreak, `${name} orbital streak & stardust motion`, { orbitBefore, orbitAfter });
         await page.waitForTimeout(500);
 
         const axe = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();

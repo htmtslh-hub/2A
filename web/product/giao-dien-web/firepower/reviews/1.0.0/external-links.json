@@ -1,0 +1,57 @@
+{
+  "limitation": "Official checker sets external HTTPS ok=null and subsequently treats null as failure without requesting the URL (check-template.mjs lines 157, 298–300). This test checks actual target/new-tab behavior; third-party authenticated availability is not claimed.",
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "targets": [
+        {
+          "href": "https://www.facebook.com/LogitechG/",
+          "label": "Logitech G on Facebook, opens a new tab",
+          "newTab": true
+        },
+        {
+          "href": "https://x.com/LogitechG",
+          "label": "Logitech G on X, opens a new tab",
+          "newTab": true
+        },
+        {
+          "href": "https://www.youtube.com/LogitechG",
+          "label": "Logitech G on YouTube, opens a new tab",
+          "newTab": true
+        },
+        {
+          "href": "https://www.instagram.com/logitechg/",
+          "label": "Logitech G on Instagram, opens a new tab",
+          "newTab": true
+        }
+      ]
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "targets": [
+        {
+          "href": "https://www.facebook.com/LogitechG/",
+          "label": "Logitech G on Facebook, opens a new tab",
+          "newTab": true
+        },
+        {
+          "href": "https://x.com/LogitechG",
+          "label": "Logitech G on X, opens a new tab",
+          "newTab": true
+        },
+        {
+          "href": "https://www.youtube.com/LogitechG",
+          "label": "Logitech G on YouTube, opens a new tab",
+          "newTab": true
+        },
+        {
+          "href": "https://www.instagram.com/logitechg/",
+          "label": "Logitech G on Instagram, opens a new tab",
+          "newTab": true
+        }
+      ]
+    }
+  ]
+}

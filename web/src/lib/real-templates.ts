@@ -46,6 +46,109 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t39: {
+  "slug": "firepower",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "7 file · ảnh chuột cục bộ tự tạo"
+      ],
+      [
+        "Tương tác",
+        "5 góc xem · nút/phím/vuốt · thông số mở rộng"
+      ],
+      [
+        "Chuyển động",
+        "Chuyển góc hai chiều · reveal khi cuộn · tạm dừng trong phiên"
+      ],
+      [
+        "Phạm vi",
+        "Concept chuột gaming · liên hệ email · không thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "7 files · original local mouse artwork"
+      ],
+      [
+        "Interaction",
+        "5 views · buttons/keys/swipe · native specifications"
+      ],
+      [
+        "Motion",
+        "Two-way view transitions · scroll reveals · session pause"
+      ],
+      [
+        "Scope",
+        "Gaming mouse concept · email enquiry · no checkout"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "7个文件 · 原创本地鼠标图像"
+      ],
+      [
+        "交互",
+        "5个视角 · 按钮/按键/滑动 · 原生参数展开"
+      ],
+      [
+        "动态",
+        "双向视角切换 · 滚动渐显 · 会话内暂停"
+      ],
+      [
+        "范围",
+        "游戏鼠标概念 · 邮件咨询 · 无支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "Firepower",
+      "desc": "Showroom chuột gaming nền than đen, điểm nhấn cyan, ảnh sản phẩm lớn và thư viện năm góc xem điều khiển bằng nút, phím hoặc vuốt.",
+      "tags": [
+        "Chuột gaming",
+        "5 góc xem",
+        "Đen / cyan"
+      ]
+    },
+    "en": {
+      "name": "Firepower",
+      "desc": "A charcoal-and-cyan gaming mouse showcase with oversized product imagery and five detail views controlled by buttons, arrow keys or swipe.",
+      "tags": [
+        "Gaming mouse",
+        "5 product views",
+        "Dark / cyan"
+      ]
+    },
+    "zh": {
+      "name": "Firepower",
+      "desc": "炭黑与青色游戏鼠标展示页，配有大型产品图像和五个细节视角，支持按钮、方向键和滑动切换。",
+      "tags": [
+        "游戏鼠标",
+        "5个视角",
+        "深色 / 青色"
+      ]
+    }
+  }
+},
   t38: {
   "slug": "backbest-800",
   "cat": "commerce",

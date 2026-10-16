@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-16T01:04:56.067Z",
+  "contrast": [
+    {
+      "role": "body",
+      "fg": "c4c7c8",
+      "bg": "37393a",
+      "min": 4.5,
+      "ratio": 6.828
+    },
+    {
+      "role": "muted",
+      "fg": "b5b9ba",
+      "bg": "2d2f32",
+      "min": 4.5,
+      "ratio": 6.785
+    },
+    {
+      "role": "heading",
+      "fg": "f4f5f5",
+      "bg": "37393a",
+      "min": 3,
+      "ratio": 10.629
+    },
+    {
+      "role": "accent text",
+      "fg": "5be6eb",
+      "bg": "37393a",
+      "min": 4.5,
+      "ratio": 7.72
+    },
+    {
+      "role": "button hover",
+      "fg": "101718",
+      "bg": "19d8df",
+      "min": 4.5,
+      "ratio": 10.304
+    },
+    {
+      "role": "outline",
+      "fg": "19d8df",
+      "bg": "2d2f32",
+      "min": 3,
+      "ratio": 7.626
+    }
+  ],
+  "checks": [
+    "menu resets on desktop breakpoint",
+    "menu remains closed on mobile return"
+  ],
+  "zoom200Equivalent": {
+    "width": 720,
+    "scrollWidth": 720,
+    "heading": 560,
+    "method": "720×450 viewport at DPR 2, equivalent layout area to 1440×900 at 200%; not a physical browser zoom command"
+  },
+  "focus": {
+    "outline": "none",
+    "width": "3px"
+  },
+  "structure": {
+    "h1": 1,
+    "ids": [
+      "navigation",
+      "main",
+      "home",
+      "surface-grain",
+      "hero-title",
+      "about",
+      "play-title",
+      "details",
+      "details-title",
+      "product",
+      "product-title",
+      "sensor",
+      "wheel",
+      "specifications",
+      "enquire"
+    ],
+    "anchors": [
+      {
+        "href": "#main",
+        "exists": true
+      },
+      {
+        "href": "#home",
+        "exists": true
+      },
+      {
+        "href": "#home",
+        "exists": true
+      },
+      {
+        "href": "#about",
+        "exists": true
+      },
+      {
+        "href": "#product",
+        "exists": true
+      },
+      {
+        "href": "#specifications",
+        "exists": true
+      },
+      {
+        "href": "#home",
+        "exists": true
+      },
+      {
+        "href": "#about",
+        "exists": true
+      },
+      {
+        "href": "#details",
+        "exists": true
+      },
+      {
+        "href": "#product",
+        "exists": true
+      },
+      {
+        "href": "#product",
+        "exists": true
+      },
+      {
+        "href": "#sensor",
+        "exists": true
+      },
+      {
+        "href": "#wheel",
+        "exists": true
+      },
+      {
+        "href": "#home",
+        "exists": true
+      },
+      {
+        "href": "#about",
+        "exists": true
+      },
+      {
+        "href": "#details",
+        "exists": true
+      },
+      {
+        "href": "#product",
+        "exists": true
+      },
+      {
+        "href": "#enquire",
+        "exists": true
+      },
+      {
+        "href": "#home",
+        "exists": true
+      }
+    ]
+  },
+  "image": {
+    "width": 1536,
+    "height": 1024
+  }
+}

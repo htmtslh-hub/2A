@@ -388,13 +388,85 @@ document.addEventListener('DOMContentLoaded', () => {
       motionButton.setAttribute('aria-pressed', String(motionPaused));
       motionButton.textContent = motionPaused ? 'Resume motion' : 'Pause motion';
       if (motionPaused) {
+        root.classList.add('motion-paused');
         root.style.setProperty('--duration-normal', '0.001ms');
         document.querySelectorAll('*').forEach(el => {
           el.style.animation = 'none';
         });
       } else {
+        root.classList.remove('motion-paused');
         root.style.removeProperty('--duration-normal');
       }
+    });
+  }
+
+  /* ------------------------------------------------------------------------
+     11. Scroll Reveal Animations (IntersectionObserver)
+     ------------------------------------------------------------------------ */
+  const revealSelectors = [
+    '.section-header',
+    '.menu-card',
+    '.about-visual',
+    '.about-text-content',
+    '.chef-card',
+    '.reservation-info-col',
+    '.reservation-form-col',
+    '.footer-col',
+    '.metric-badge'
+  ];
+
+  const revealTargets = document.querySelectorAll(revealSelectors.join(', '));
+  revealTargets.forEach(el => {
+    el.classList.add('reveal-on-scroll');
+    if (el.classList.contains('about-visual')) {
+      el.classList.add('reveal-scale');
+    } else if (el.classList.contains('about-text-content')) {
+      el.classList.add('reveal-right');
+    } else if (el.classList.contains('reservation-info-col')) {
+      el.classList.add('reveal-left');
+    } else if (el.classList.contains('reservation-form-col')) {
+      el.classList.add('reveal-right');
+    }
+  });
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.08
+    });
+
+    revealTargets.forEach(el => revealObserver.observe(el));
+  } else {
+    revealTargets.forEach(el => el.classList.add('is-revealed'));
+  }
+
+  /* ------------------------------------------------------------------------
+     12. Interactive Mouse Hover 3D Tilt on Menu Cards
+     ------------------------------------------------------------------------ */
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.menu-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        if (root.classList.contains('motion-paused')) return;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -5;
+        const rotateY = ((x - centerX) / centerX) * 5;
+        card.style.transform = `perspective(1000px) translateY(-8px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
     });
   }
 });

@@ -213,19 +213,31 @@ button {
   padding-inline: 0.85rem;
 }
 
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
 .nav-link:hover {
   color: var(--accent-gold);
 }
 
-.nav-link.active::after {
+.nav-link::after {
   content: '';
   position: absolute;
   bottom: 6px;
-  left: 0.5rem;
-  right: 0.5rem;
+  left: 50%;
+  width: 0;
   height: 2px;
   background-color: var(--accent-gold);
   border-radius: var(--radius-full);
+  transition: width 0.3s var(--ease-spring), left 0.3s var(--ease-spring);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: calc(100% - 1.2rem);
+  left: 0.6rem;
 }
 
 .header-actions {
@@ -292,13 +304,14 @@ button {
   min-height: 44px;
   border-radius: 50%;
   color: #15171b;
-  transition: transform 0.25s var(--ease-spring), color 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.3s var(--ease-spring), color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .social-link:hover {
-  transform: scale(1.12);
-  color: var(--accent-gold-dark);
-  background-color: rgba(248, 180, 23, 0.15);
+  transform: translateX(-4px) scale(1.15);
+  color: #000000;
+  background-color: var(--accent-gold);
+  box-shadow: 0 4px 14px var(--accent-gold-glow);
 }
 
 /* --------------------------------------------------------------------------
@@ -424,8 +437,12 @@ button {
   background: #ffffff;
   color: var(--bg-dark);
   border-color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(255, 255, 255, 0.28);
+}
+
+.btn-pill-outline:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .btn-pill-gold {
@@ -438,8 +455,12 @@ button {
   background: #ffffff;
   border-color: #ffffff;
   color: var(--bg-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(248, 180, 23, 0.35);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(248, 180, 23, 0.45);
+}
+
+.btn-pill-gold:active {
+  transform: translateY(0) scale(0.98);
 }
 
 /* Bottom Left Dish Category Cards */
@@ -485,9 +506,9 @@ button {
 
 .mini-dish-card:hover,
 .mini-dish-card:focus-visible {
-  transform: translateY(-3px);
-  border-color: var(--accent-gold);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(248, 180, 23, 0.7);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 22px rgba(248, 180, 23, 0.22);
 }
 
 .mini-dish-img-wrap {
@@ -507,11 +528,12 @@ button {
   height: 100%;
   object-fit: contain;
   border-radius: 50%;
-  transition: transform 0.4s var(--ease-spring);
+  transition: transform 0.4s var(--ease-spring), filter 0.4s ease;
 }
 
 .mini-dish-card:hover .mini-dish-img {
-  transform: scale(1.12) rotate(15deg);
+  transform: scale(1.15) rotate(12deg);
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
 }
 
 .mini-dish-body {
@@ -633,6 +655,13 @@ button {
   padding: 1.1rem 1.3rem;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: transform var(--duration-normal) var(--ease-spring), box-shadow var(--duration-normal) ease;
+  cursor: default;
+}
+
+.metric-badge:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 24px rgba(248, 180, 23, 0.4);
 }
 
 .metric-header {
@@ -670,6 +699,11 @@ button {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: transform var(--duration-normal) var(--ease-spring);
+}
+
+.metric-badge:hover .metric-box {
+  transform: scale(1.1) rotate(-4deg);
 }
 
 .metric-num {
@@ -787,13 +821,14 @@ button {
   display: flex;
   flex-direction: column;
   transition: transform var(--duration-normal) var(--ease-spring), border-color var(--duration-normal) ease, box-shadow var(--duration-normal) ease;
+  transform-style: preserve-3d;
 }
 
 .menu-card:hover,
 .menu-card:focus-visible {
-  transform: translateY(-6px);
-  border-color: var(--accent-gold);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  transform: translateY(-8px);
+  border-color: rgba(248, 180, 23, 0.7);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.55), 0 0 20px rgba(248, 180, 23, 0.2);
 }
 
 .card-media {
@@ -812,11 +847,12 @@ button {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.5s var(--ease-spring);
+  transition: transform 0.55s var(--ease-spring), filter 0.55s ease;
 }
 
 .menu-card:hover .card-img {
-  transform: scale(1.08) rotate(4deg);
+  transform: scale(1.12) rotate(6deg);
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.55));
 }
 
 .badge-featured {
@@ -860,6 +896,11 @@ button {
   font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
+  transition: color var(--duration-normal) ease;
+}
+
+.menu-card:hover .card-dish-name {
+  color: var(--accent-gold);
 }
 
 .card-price {
@@ -867,6 +908,13 @@ button {
   font-weight: 800;
   color: var(--accent-gold);
   white-space: nowrap;
+  display: inline-block;
+  transition: transform var(--duration-normal) var(--ease-spring), text-shadow var(--duration-normal) ease;
+}
+
+.menu-card:hover .card-price {
+  transform: scale(1.08);
+  text-shadow: 0 0 14px rgba(248, 180, 23, 0.45);
 }
 
 .card-dish-desc {
@@ -892,6 +940,12 @@ button {
   background: rgba(255, 255, 255, 0.14);
   padding: 0.4rem 0.8rem;
   border-radius: var(--radius-sm);
+  transition: background-color var(--duration-normal) ease, color var(--duration-normal) ease;
+}
+
+.menu-card:hover .card-tag {
+  background: rgba(248, 180, 23, 0.2);
+  color: var(--accent-gold);
 }
 
 .btn-card-order {
@@ -907,14 +961,19 @@ button {
   padding: 0.6rem 1.3rem;
   border-radius: var(--radius-full);
   border: 1.5px solid rgba(248, 180, 23, 0.45);
-  transition: all var(--duration-normal) ease;
+  transition: transform var(--duration-normal) var(--ease-spring), box-shadow var(--duration-normal) ease, background-color var(--duration-normal) ease, color var(--duration-normal) ease, border-color var(--duration-normal) ease;
 }
 
 .btn-card-order:hover {
   background: var(--accent-gold);
   color: var(--text-on-gold);
   border-color: var(--accent-gold);
-  box-shadow: 0 4px 14px var(--accent-gold-glow);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 18px var(--accent-gold-glow);
+}
+
+.btn-card-order:active {
+  transform: translateY(0) scale(0.98);
 }
 
 /* --------------------------------------------------------------------------
@@ -962,6 +1021,13 @@ button {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
   display: flex;
   flex-direction: column;
+  transition: transform var(--duration-normal) var(--ease-spring), box-shadow var(--duration-normal) ease;
+  cursor: default;
+}
+
+.about-badge-floating:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45), 0 0 22px rgba(248, 180, 23, 0.35);
 }
 
 .about-badge-num {
@@ -1002,6 +1068,14 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 1.2rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-md);
+  transition: transform var(--duration-normal) var(--ease-spring), background-color var(--duration-normal) ease;
+}
+
+.feature-item:hover {
+  transform: translateX(6px);
+  background-color: rgba(255, 255, 255, 0.03);
 }
 
 .feature-icon {
@@ -1017,6 +1091,12 @@ button {
   font-weight: 800;
   flex-shrink: 0;
   margin-top: 0.15rem;
+  transition: transform var(--duration-normal) var(--ease-spring), box-shadow var(--duration-normal) ease;
+}
+
+.feature-item:hover .feature-icon {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 0 16px var(--accent-gold-glow);
 }
 
 .feature-title {
@@ -1054,13 +1134,14 @@ button {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: transform var(--duration-normal) var(--ease-spring), border-color var(--duration-normal) ease;
+  transition: transform var(--duration-normal) var(--ease-spring), border-color var(--duration-normal) ease, box-shadow var(--duration-normal) ease;
 }
 
 .chef-card:hover,
 .chef-card:focus-visible {
-  transform: translateY(-6px);
-  border-color: var(--accent-gold);
+  transform: translateY(-8px);
+  border-color: rgba(248, 180, 23, 0.7);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 22px rgba(248, 180, 23, 0.18);
 }
 
 .chef-avatar {
@@ -1074,12 +1155,24 @@ button {
   justify-content: center;
   margin-bottom: 1.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform var(--duration-normal) var(--ease-spring), box-shadow var(--duration-normal) ease, border-color var(--duration-normal) ease;
+}
+
+.chef-card:hover .chef-avatar {
+  transform: scale(1.1) rotate(4deg);
+  border-color: #ffffff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5), 0 0 24px var(--accent-gold-glow);
 }
 
 .chef-initials {
   font-size: 1.6rem;
   font-weight: 800;
   color: var(--accent-gold);
+  transition: transform var(--duration-normal) var(--ease-spring);
+}
+
+.chef-card:hover .chef-initials {
+  transform: scale(1.05);
 }
 
 .chef-name {
@@ -1087,6 +1180,11 @@ button {
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 0.3rem;
+  transition: color var(--duration-normal) ease;
+}
+
+.chef-card:hover .chef-name {
+  color: var(--accent-gold);
 }
 
 .chef-role {
@@ -1161,10 +1259,21 @@ button {
   border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
   font-size: 0.95rem;
   color: var(--text-secondary);
+  transition: transform var(--duration-normal) var(--ease-spring), color var(--duration-normal) ease;
+}
+
+.hours-list li:hover {
+  transform: translateX(6px);
+  color: #ffffff;
 }
 
 .hours-list li strong {
   color: #ffffff;
+  transition: color var(--duration-normal) ease;
+}
+
+.hours-list li:hover strong {
+  color: var(--accent-gold);
 }
 
 /* Reservation Form */
@@ -1702,6 +1811,72 @@ button {
   }
 }
 
+/* --------------------------------------------------------------------------
+   Scroll Reveal Animations (IntersectionObserver driven)
+   No-JS Fallback: All content remains fully visible when JS is not enabled.
+   -------------------------------------------------------------------------- */
+.reveal-on-scroll {
+  opacity: 1;
+  transform: none;
+}
+
+.js-ready .reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.js-ready .reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.js-ready .reveal-left {
+  transform: translateX(-36px);
+}
+
+.js-ready .reveal-left.is-revealed {
+  transform: translateX(0);
+}
+
+.js-ready .reveal-right {
+  transform: translateX(36px);
+}
+
+.js-ready .reveal-right.is-revealed {
+  transform: translateX(0);
+}
+
+.js-ready .reveal-scale {
+  transform: scale(0.92) translateY(20px);
+}
+
+.js-ready .reveal-scale.is-revealed {
+  transform: scale(1) translateY(0);
+}
+
+/* Stagger delay for card grids */
+.menu-grid .menu-card:nth-child(1) { transition-delay: 0.05s; }
+.menu-grid .menu-card:nth-child(2) { transition-delay: 0.12s; }
+.menu-grid .menu-card:nth-child(3) { transition-delay: 0.2s; }
+.menu-grid .menu-card:nth-child(4) { transition-delay: 0.08s; }
+.menu-grid .menu-card:nth-child(5) { transition-delay: 0.16s; }
+.menu-grid .menu-card:nth-child(6) { transition-delay: 0.24s; }
+
+.chefs-grid .chef-card:nth-child(1) { transition-delay: 0.05s; }
+.chefs-grid .chef-card:nth-child(2) { transition-delay: 0.15s; }
+.chefs-grid .chef-card:nth-child(3) { transition-delay: 0.25s; }
+
+/* Motion paused and reduced motion state */
+html.motion-paused .reveal-on-scroll,
+html.motion-paused .js-ready .reveal-on-scroll {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
 /* Reduced Motion Fallback */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -1710,5 +1885,11 @@ button {
   }
   html {
     scroll-behavior: auto !important;
+  }
+  .reveal-on-scroll,
+  .js-ready .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

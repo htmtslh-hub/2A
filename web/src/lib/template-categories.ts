@@ -25,7 +25,7 @@ export const TEMPLATE_CATEGORIES = {
   'vybe': 'commerce', 'astra-interior': 'commerce', 'pinehaven': 'commerce',
   'kinetiq': 'commerce', 'watchroom': 'commerce', 'shirtline': 'commerce', 'yellow-beast': 'commerce', 'crimson-folio': 'portfolio',
   'free-sample': 'communication',
-  'galaxy-edge': 'commerce', 'aerox-studio': 'commerce', 'dualplay': 'commerce',
+  'galaxy-edge': 'commerce', 'aerox-studio': 'commerce', 'dualplay': 'commerce', 'sonicore': 'commerce',
 } as const satisfies Record<string, WebCategory>;
 
 export const EMPTY_CATEGORY_COPY: Record<LangCode, string> = {

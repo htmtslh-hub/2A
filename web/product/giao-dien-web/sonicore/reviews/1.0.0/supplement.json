@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-16T02:17:04.485Z",
+  "contrast": [
+    {
+      "role": "body",
+      "fg": "b8b4c9",
+      "bg": "050508",
+      "min": 4.5,
+      "ratio": 10.09
+    },
+    {
+      "role": "muted",
+      "fg": "9e99b3",
+      "bg": "050508",
+      "min": 4.5,
+      "ratio": 7.426
+    },
+    {
+      "role": "heading",
+      "fg": "f5f4fa",
+      "bg": "050508",
+      "min": 3,
+      "ratio": 18.614
+    },
+    {
+      "role": "accent text",
+      "fg": "c4b5fd",
+      "bg": "050508",
+      "min": 4.5,
+      "ratio": 11.026
+    },
+    {
+      "role": "card quote",
+      "fg": "f5f4fa",
+      "bg": "120f1d",
+      "min": 4.5,
+      "ratio": 17.272
+    },
+    {
+      "role": "outline",
+      "fg": "d8b4fe",
+      "bg": "050508",
+      "min": 3,
+      "ratio": 11.515
+    }
+  ],
+  "checks": [
+    "menu resets on desktop breakpoint",
+    "menu remains closed on mobile return"
+  ],
+  "zoom200Equivalent": {
+    "width": 720,
+    "scrollWidth": 720,
+    "heading": 672,
+    "method": "720×450 viewport at DPR 2, equivalent layout area to 1440×900 at 200%; not a physical browser zoom command"
+  },
+  "focus": {
+    "outline": "none",
+    "width": "3px"
+  },
+  "structure": {
+    "h1": 1,
+    "ids": [
+      "navigation",
+      "main",
+      "home",
+      "hero-title",
+      "hero-next",
+      "technology",
+      "tech-title",
+      "sound",
+      "sound-title",
+      "design",
+      "design-title",
+      "reviews",
+      "reviews-title",
+      "eq-grad",
+      "support",
+      "support-title",
+      "specifications",
+      "preorder"
+    ],
+    "anchors": [
+      {
+        "href": "#main",
+        "exists": true
+      },
+      {
+        "href": "#home",
+        "exists": true
+      },
+      {
+        "href": "#technology",
+        "exists": true
+      },
+      {
+        "href": "#sound",
+        "exists": true
+      },
+      {
+        "href": "#design",
+        "exists": true
+      },
+      {
+        "href": "#reviews",
+        "exists": true
+      },
+      {
+        "href": "#support",
+        "exists": true
+      },
+      {
+        "href": "#preorder",
+        "exists": true
+      },
+      {
+        "href": "#sound",
+        "exists": true
+      },
+      {
+        "href": "#specifications",
+        "exists": true
+      },
+      {
+        "href": "#preorder",
+        "exists": true
+      },
+      {
+        "href": "#home",
+        "exists": true
+      }
+    ]
+  },
+  "images": [
+    {
+      "src": "assets/img/hero-headphone.webp",
+      "width": 830,
+      "height": 700
+    },
+    {
+      "src": "assets/img/exploded-view.webp",
+      "width": 1030,
+      "height": 400
+    },
+    {
+      "src": "assets/img/spatial-bust.webp",
+      "width": 555,
+      "height": 370
+    },
+    {
+      "src": "assets/img/design-closeup.webp",
+      "width": 895,
+      "height": 310
+    }
+  ]
+}

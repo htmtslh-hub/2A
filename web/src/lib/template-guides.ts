@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'sonicore': {
+  "vi": {
+    "intro": "Showroom tai nghe âm thanh không gian Sonicore X1 nền tối ánh tím với sơ đồ tách lớp linh kiện, âm trường 360° và so sánh thông số.",
+    "notes": "### Bắt đầu\nGiải nén đủ 10 file và mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. HTML/CSS/JS thuần, không build hay font mạng.\n\n### Nội dung và ảnh\nThay Sonicore / Sonicore X1, giải thưởng và trích dẫn minh họa, giá $349, thông số mẫu, hello@sonicore.example. Bốn ảnh WebP trong assets/img/ là ảnh render concept tự tạo, không phải ảnh hãng hay mô hình 3D thời gian thực.\n\n### Tương tác\nBa chế độ sân khấu âm thanh ở hero, 6 điểm linh kiện tách lớp, 3 preset không gian và bảng so sánh X1 / Studio; điều khiển bằng nút, phím mũi tên hoặc vuốt. Hỗ trợ dùng thử không gian 4.2 giây, mục thông số mở rộng bằng details, menu mobile hỗ trợ Escape, và Pause motion trong phiên.\n\n### Phạm vi\nKhông backend, tồn kho, tài khoản, xử lý DSP âm thanh thật hoặc thanh toán. Đặt trước chỉ mở ứng dụng email. Đọc LICENCE.txt trước khi dùng; không phân phối lại template hoặc bán ảnh riêng."
+  },
+  "en": {
+    "intro": "A dark-violet spatial audio headphone showcase for Sonicore X1 with an interactive exploded diagram, 360° soundstage presets and specification comparison.",
+    "notes": "### Start\nExtract all 10 files and open index.html beside assets/. CUSTOMISE.md contains 10 steps, 12 complete AI prompts and counted edits. Plain HTML/CSS/JS, no build or network fonts.\n\n### Content and artwork\nReplace Sonicore / Sonicore X1, illustrative award badges and press quotes, $349 sample price, specifications and hello@sonicore.example. The four WebP files in assets/img/ are original generated concept renders, not manufacturer photography or a live WebGL 3D model.\n\n### Interaction\nThree hero soundstages, 6 exploded hardware callouts, 3 spatial presets and an X1 / Studio comparison toggle controlled by buttons, arrow keys or swipe. Includes a 4.2-second visual soundstage tour, native details specifications, Escape-aware mobile menu and session-only Pause motion.\n\n### Scope\nNo backend, stock, accounts, live audio DSP or checkout. Pre-order actions only open a mail app. Read LICENCE.txt; no template redistribution or standalone image resale."
+  },
+  "zh": {
+    "intro": "深紫光效 Sonicore X1 空间音频耳机展示页，含交互式硬件拆解图、360°声场预设与参数对比。",
+    "notes": "### 开始\n完整解压10个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条完整AI提示词和精确修改表。原生HTML/CSS/JS，无需构建或网络字体。\n\n### 内容与图像\n替换Sonicore / Sonicore X1、示例奖项与媒体评语、$349示例价格、参数及hello@sonicore.example。assets/img/中的4张WebP为原创AI概念图，并非官方摄影或实时3D模型。\n\n### 交互\n首屏3种声场、6个硬件拆解热点、3种空间预设及X1 / Studio对比切换，支持按钮、方向键和滑动。含4.2秒视觉声场预览、原生参数展开、支持Escape的移动菜单以及仅限本次会话的Pause motion。\n\n### 范围\n无后端、库存、账户、实时音频DSP或支付。预订仅打开邮件应用。请阅读LICENCE.txt；不可重新分发模板或单独转售图像。"
+  }
+},
   'firepower': {
   "vi": {
     "intro": "Landing page chuột gaming theo ảnh tham chiếu Logitech, nền than đen và điểm nhấn cyan.",

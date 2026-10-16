@@ -1,13 +1,13 @@
 {
   "url": "https://forgezone.store/demos/sonicore/index.html?v=1.0.0",
-  "date": "2026-10-16T03:40:21.824Z",
+  "date": "2026-10-16T06:55:39.959Z",
   "browsers": [
     {
       "name": "chromium",
       "version": "153.0.8010.12",
       "mid": {
-        "opacity": 0.832,
-        "transform": "matrix(0.995414, 0.00272543, -0.00272543, 0.995414, 2.09456, -1.04712)"
+        "opacity": 0.834,
+        "transform": "matrix(0.993695, 0.0037458, -0.0037458, 0.993695, 2.87765, -1.43951)"
       },
       "forwardWrap": "01",
       "reverseWrap": "03",
@@ -20,8 +20,8 @@
       "name": "firefox",
       "version": "155.0",
       "mid": {
-        "opacity": 0.975,
-        "transform": "matrix(0.989286, 0.00632134, -0.00632134, 0.989286, 4.89433, -2.44646)"
+        "opacity": 0.823,
+        "transform": "matrix(0.989629, 0.00614313, -0.00614313, 0.989629, 4.73063, -2.36626)"
       },
       "forwardWrap": "01",
       "reverseWrap": "03",
@@ -34,8 +34,8 @@
       "name": "edge",
       "version": "155.0.4283.60",
       "mid": {
-        "opacity": 0.874,
-        "transform": "matrix(0.987309, 0.00746434, -0.00746434, 0.987309, 5.79537, -2.89591)"
+        "opacity": 0.804,
+        "transform": "matrix(0.988074, 0.00707057, -0.00707057, 0.988074, 5.44339, -2.7218)"
       },
       "forwardWrap": "01",
       "reverseWrap": "03",
@@ -48,8 +48,8 @@
       "name": "coccoc",
       "version": "152.0.7977.124",
       "mid": {
-        "opacity": 0.849,
-        "transform": "matrix(0.990097, 0.00584068, -0.00584068, 0.990097, 4.52176, -2.26083)"
+        "opacity": 0.801,
+        "transform": "matrix(0.990712, 0.00547225, -0.00547225, 0.990712, 4.23524, -2.1163)"
       },
       "forwardWrap": "01",
       "reverseWrap": "03",

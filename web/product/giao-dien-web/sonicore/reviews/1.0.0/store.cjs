@@ -87,7 +87,10 @@ const report = {
         await card.scrollIntoViewIfNeeded();
         assert((await card.innerText()).includes('Premium'));
         assert.equal(await card.locator('button').count(), 0);
-        await card.click();
+        await Promise.all([
+          page.waitForURL(/\?mau=t40/),
+          card.click({ position: { x: 24, y: 24 } })
+        ]);
         await page.getByRole('heading', { name: /^Sonicore/ }).waitFor();
         report.locales.push({ locale, width, detail: true, guide: true, library: true });
         await context.close();
@@ -109,14 +112,21 @@ const report = {
       await p.goto(origin + '/?tab=library');
       await p.waitForTimeout(1000);
       const card = p.locator('a.product-card[href="?mau=t40"]');
+      await card.waitFor();
       await card.scrollIntoViewIfNeeded();
-      await p.waitForTimeout(1400);
-      const status = await card.locator('video').evaluate(e => ({
-        paused: e.paused,
-        time: e.currentTime,
-        muted: e.muted,
-        src: e.currentSrc
-      }));
+      let status = { paused: true, time: 0, muted: false, src: '' };
+      for (let attempt = 0; attempt < 14; attempt++) {
+        await p.waitForTimeout(250);
+        status = await card.locator('video').evaluate(e => ({
+          paused: e.paused,
+          time: e.currentTime,
+          muted: e.muted,
+          src: e.currentSrc
+        }));
+        if (!status.paused && status.time > 0 && status.muted) {
+          break;
+        }
+      }
       assert(!status.paused && status.time > 0 && status.muted);
       assert(status.src.includes('sonicore.mp4'));
       report.browsers.push({ name, version: browser.version(), status });

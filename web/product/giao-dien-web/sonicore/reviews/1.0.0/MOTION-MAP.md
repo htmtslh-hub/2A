@@ -1,0 +1,9 @@
+# Motion map
+
+- Hero entry: finite `720ms` `requestAnimationFrame` transform/opacity sequence for hero copy and 3D headphone stage. Defaults ON across all browsers including OS `prefers-reduced-motion: reduce` and stale stored `off` values (`localStorage` is never read to disable motion).
+- Spatial Mode & Soundstage switcher (`EXPERIENCE SOUND`, `WATCH FILM`, and the `SPATIAL MODE` widget / `CINEMA`, `STUDIO`, `GAMING` presets): finite `540ms` directional transition updating the active spatial mode, spectrum visualizer bars, hero stage state (`01 / 03` to `03 / 03`), and live status announcement. Supports next/previous controls, keyboard `ArrowLeft`/`ArrowRight`, and horizontal touch swipe. Prior animation frames are cancelled on rapid input; zero idle RAF loop.
+- Exploded hardware component inspector: clicking or pressing any of the 6 component callouts (`PROTEIN LEATHER`, `DYNAMIC DRIVER`, `HI-RES AUDIO CHIP`, `ACOUSTIC CHAMBER`, `NEODYMIUM MAGNET`, `SPATIAL PROCESSING`) or using prev/next buttons runs a finite `480ms` highlight & detail transition updating the active component specification readout.
+- Review showcase pagination: clicking the 4 review pagination dots or swiping switches the highlighted review set with a finite `460ms` transition.
+- Scroll reveal: `IntersectionObserver` triggers a finite `700ms` `requestAnimationFrame` opacity/translateY entrance once per `[data-reveal]` block and immediately unobserves the element. Works even when CSS transitions/animations are disabled.
+- Session motion toggle: `Pause motion` button in the footer immediately cancels active RAF jobs and disables transitions for the current page session; reloading resets motion to ON.
+- Mobile navigation: inline expandable menu (`aria-expanded`, `aria-controls="navigation"`), closes on link click, `Escape` (returning focus to `.nav-toggle`), and viewport resize across `950px/951px`.

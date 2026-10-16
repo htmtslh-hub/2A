@@ -1,0 +1,48 @@
+{
+  "id": "t40",
+  "slug": "sonicore",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-16T02:47:08.235Z",
+  "demo": "/demos/sonicore/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d04301c48b60",
+  "sha256": "d04301c48b60daf54aabe70bc4f26bc703e0808dd9f05e06c44eb29fd545cae8",
+  "demoHtmlSha256": "929a218b87411b4ee1d95fac2946bc42a1bb0af9c54451c0b20dd11e58b37bfa",
+  "demoSha256": "4cc08e0c0cabcce2e4119b7f0d029fbcba25f7195c9d7f7c890844f04583c480",
+  "bytes": 568318,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.551,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 4.863,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sonicore-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sonicore-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sonicore-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sonicore-return.jpg"
+  ]
+}

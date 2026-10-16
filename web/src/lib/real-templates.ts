@@ -46,6 +46,109 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t40: {
+  "slug": "sonicore",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "10 file · 4 ảnh WebP tai nghe tự tạo"
+      ],
+      [
+        "Tương tác",
+        "3 sân khấu âm thanh · 6 linh kiện tách lớp · 3 không gian · so sánh thông số"
+      ],
+      [
+        "Chuyển động",
+        "Chuyển cảnh hai chiều · vuốt/phím · reveal khi cuộn · tạm dừng trong phiên"
+      ],
+      [
+        "Phạm vi",
+        "Showroom concept tai nghe · đặt trước qua email · không thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "10 files · 4 original headphone WebP renders"
+      ],
+      [
+        "Interaction",
+        "3 soundstages · 6 exploded parts · 3 spatial presets · spec comparison"
+      ],
+      [
+        "Motion",
+        "Two-way stage transitions · swipe/keys · scroll reveals · session pause"
+      ],
+      [
+        "Scope",
+        "Headphone concept showroom · email pre-order enquiry · no checkout"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "10个文件 · 4张原创耳机 WebP 渲染图"
+      ],
+      [
+        "交互",
+        "3种声场 · 6个拆解部件 · 3种空间预设 · 参数对比"
+      ],
+      [
+        "动态",
+        "双向场景切换 · 滑动/按键 · 滚动渐显 · 会话内暂停"
+      ],
+      [
+        "范围",
+        "概念耳机展厅 · 邮件预订咨询 · 无支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "Sonicore",
+      "desc": "Showroom tai nghe âm thanh không gian nền tối ánh tím, sơ đồ tách lớp linh kiện 6 điểm chạm, mô phỏng âm trường 360° và bảng so sánh thông số.",
+      "tags": [
+        "Tai nghe 3D",
+        "Tách lớp linh kiện",
+        "Đen / tím"
+      ]
+    },
+    "en": {
+      "name": "Sonicore",
+      "desc": "A dark violet spatial-audio headphone showcase with a six-part interactive exploded hardware diagram, 360° soundstage presets and specification comparison.",
+      "tags": [
+        "Spatial headphones",
+        "Exploded view",
+        "Dark / violet"
+      ]
+    },
+    "zh": {
+      "name": "Sonicore",
+      "desc": "深紫光效空间音频耳机展示页，配备六部件交互拆解图、360°声场预设切换与参数对比表。",
+      "tags": [
+        "空间音频耳机",
+        "硬件拆解图",
+        "深色 / 紫色"
+      ]
+    }
+  }
+},
   t38: {
   "slug": "backbest-800",
   "cat": "commerce",

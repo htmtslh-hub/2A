@@ -1,0 +1,295 @@
+{
+  "date": "2026-10-16T02:27:05.578Z",
+  "url": "http://127.0.0.1:52165",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "small": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "transform": "matrix(0.996489, 0.0020946, -0.0020946, 0.996489, 1.60498, -0.802199)",
+          "opacity": 0.794
+        },
+        "paused": true,
+        "cssDisabled": true
+      },
+      "skip": true,
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.919,
+        "transform": "matrix(0.9978, 0, 0, 0.9978, 0, 2.65)"
+      },
+      "idleFrames": 0,
+      "axe": [],
+      "errors": [],
+      "missing": [],
+      "nojs": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "h1": 1,
+        "href": "mailto:hello@sonicore.example?subject=Sonicore%20X1%20Pre-Order%20Enquiry"
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "small": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "transform": "matrix(0.994, 0.00356491, -0.00356491, 0.994, 2.74096, -1.37049)",
+          "opacity": 0.814
+        },
+        "paused": true,
+        "cssDisabled": true
+      },
+      "skip": true,
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.94,
+        "transform": "matrix(0.9984, 0, 0, 0.9984, 0, 1.97)"
+      },
+      "idleFrames": 0,
+      "axe": [],
+      "errors": [],
+      "missing": [],
+      "nojs": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "h1": 1,
+        "href": "mailto:hello@sonicore.example?subject=Sonicore%20X1%20Pre-Order%20Enquiry"
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.60",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "small": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "transform": "matrix(0.995644, 0.00259914, -0.00259914, 0.995644, 1.99079, -0.995259)",
+          "opacity": 0.799
+        },
+        "paused": true,
+        "cssDisabled": true
+      },
+      "skip": true,
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.971,
+        "transform": "matrix(0.9992, 0, 0, 0.9992, 0, 0.96)"
+      },
+      "idleFrames": 0,
+      "axe": [],
+      "errors": [],
+      "missing": [],
+      "nojs": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "h1": 1,
+        "href": "mailto:hello@sonicore.example?subject=Sonicore%20X1%20Pre-Order%20Enquiry"
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "small": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "transform": "matrix(0.995064, 0.00293535, -0.00293535, 0.995064, 2.25336, -1.12683)",
+          "opacity": 0.816
+        },
+        "paused": true,
+        "cssDisabled": true
+      },
+      "skip": true,
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.963,
+        "transform": "matrix(0.999, 0, 0, 0.999, 0, 1.21)"
+      },
+      "idleFrames": 0,
+      "axe": [],
+      "errors": [],
+      "missing": [],
+      "nojs": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "h1": 1,
+        "href": "mailto:hello@sonicore.example?subject=Sonicore%20X1%20Pre-Order%20Enquiry"
+      }
+    }
+  },
+  "failures": []
+}

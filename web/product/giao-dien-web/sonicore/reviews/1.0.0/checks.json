@@ -1,0 +1,2280 @@
+{
+  "slug": "sonicore",
+  "version": "1.0.0",
+  "date": "2026-10-16T02:47:38.680Z",
+  "os": "win32",
+  "zipBytes": 135431,
+  "sha256": "d6a064db148d28666d1cde12bc1901cbe8a35b68efe7c8b4966eb3f9aaf6733f",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#main"
+          },
+          {
+            "label": "Sonicore X1 concept home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#home"
+          },
+          {
+            "label": "TECHNOLOGY",
+            "href": "#technology",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#technology"
+          },
+          {
+            "label": "SOUND",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#sound"
+          },
+          {
+            "label": "DESIGN",
+            "href": "#design",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#design"
+          },
+          {
+            "label": "REVIEWS",
+            "href": "#reviews",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#reviews"
+          },
+          {
+            "label": "SUPPORT",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#support"
+          },
+          {
+            "label": "PRE-ORDER NOW",
+            "href": "#preorder",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#preorder"
+          },
+          {
+            "label": "WATCH FILM",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#sound"
+          },
+          {
+            "label": "+ EXPLORE THE TECHNOLOGY",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#specifications"
+          },
+          {
+            "label": "+ SEE THE DESIGN",
+            "href": "#preorder",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#preorder"
+          },
+          {
+            "label": "PRE-ORDER BY EMAIL",
+            "href": "mailto:hello@sonicore.example?subject=Sonicore%20X1%20Pre-Order%20Enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@sonicore.example?subject=Sonicore%20X1%20Pre-Order%20Enquiry"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(5, 5, 8)",
+            "background": [
+              196,
+              181,
+              253
+            ],
+            "ratio": 11.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "SONICORE",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              5,
+              5,
+              8
+            ],
+            "ratio": 18.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "TECHNOLOGY",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              10,
+              7,
+              17
+            ],
+            "ratio": 9.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "SOUND",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              11,
+              8,
+              19
+            ],
+            "ratio": 9.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "DESIGN",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              12,
+              8,
+              21
+            ],
+            "ratio": 9.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "REVIEWS",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              13,
+              9,
+              22
+            ],
+            "ratio": 9.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "SUPPORT",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              13,
+              9,
+              23
+            ],
+            "ratio": 9.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "preorder-pill",
+            "text": "PRE-ORDER NOW",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              33,
+              21,
+              61
+            ],
+            "ratio": 15.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__kicker",
+            "text": "SPATIAL AUDIO REIMAGINED",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              7,
+              6,
+              12
+            ],
+            "ratio": 10.93,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "HEARBEYONDREALITY",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              11,
+              8,
+              19
+            ],
+            "ratio": 18.14,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "Sonicore X1 delivers true-to-life spatia",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              10,
+              8,
+              18
+            ],
+            "ratio": 9.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "EXPERIENCE SOUND",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              40,
+              23,
+              74
+            ],
+            "ratio": 14.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "WATCH FILM",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              11,
+              8,
+              18
+            ],
+            "ratio": 18.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "award__text",
+            "text": "reddot winner 2024",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              7,
+              6,
+              11
+            ],
+            "ratio": 10.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "reddot",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              6,
+              6,
+              9
+            ],
+            "ratio": 18.5,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "CES",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              14,
+              11,
+              22
+            ],
+            "ratio": 17.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "INNOVATION AWARDS",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              14,
+              11,
+              22
+            ],
+            "ratio": 9.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "2024",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              14,
+              11,
+              22
+            ],
+            "ratio": 10.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "award__good-text",
+            "text": "GOODDESIGN",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              10,
+              8,
+              18
+            ],
+            "ratio": 18.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              10,
+              8,
+              16
+            ],
+            "ratio": 18.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "01",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              10,
+              9,
+              16
+            ],
+            "ratio": 18.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "/03",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              10,
+              8,
+              16
+            ],
+            "ratio": 9.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "CINEMA 360°",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              13,
+              11,
+              19
+            ],
+            "ratio": 10.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "→",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              11,
+              9,
+              17
+            ],
+            "ratio": 18.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "ENGINEEREDTO PERFECTION",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              6,
+              6,
+              9
+            ],
+            "ratio": 18.5,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Every component of Sonicore X1 is precis",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              5,
+              5,
+              9
+            ],
+            "ratio": 10.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "exploded__readout",
+            "text": "Selected component: Protein Leather — me",
+            "colour": "rgb(158, 153, 179)",
+            "background": [
+              7,
+              7,
+              12
+            ],
+            "ratio": 7.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__title",
+            "text": "PROTEIN LEATHER",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              1,
+              1,
+              3
+            ],
+            "ratio": 11.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__sub",
+            "text": "MEMORY CUSHIONS",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              1,
+              1,
+              3
+            ],
+            "ratio": 10.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__title",
+            "text": "DYNAMIC DRIVER",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              1,
+              1,
+              3
+            ],
+            "ratio": 19.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__title",
+            "text": "ACOUSTIC CHAMBER",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              0,
+              2,
+              3
+            ],
+            "ratio": 19.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__sub",
+            "text": "PRECISION TUNED",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              15,
+              13,
+              25
+            ],
+            "ratio": 9.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__sub",
+            "text": "N52 GRADE",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              19,
+              14,
+              32
+            ],
+            "ratio": 9.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__sub",
+            "text": "360° SOUND STAGE",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              13,
+              11,
+              23
+            ],
+            "ratio": 9.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "SPATIAL AUDIOTHAT MOVES WITH YOU",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              16,
+              12,
+              27
+            ],
+            "ratio": 17.61,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Our advanced spatial audio engine adapts",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              15,
+              12,
+              26
+            ],
+            "ratio": 9.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "360° SOUND STAGE",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              15,
+              11,
+              26
+            ],
+            "ratio": 17.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Immersive & Realistic",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              15,
+              11,
+              25
+            ],
+            "ratio": 9.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "HEAD TRACKING",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              13,
+              11,
+              22
+            ],
+            "ratio": 17.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Dynamic & Precise",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              13,
+              10,
+              22
+            ],
+            "ratio": 9.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Tailored to You",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              9,
+              8,
+              15
+            ],
+            "ratio": 9.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "DESIGNED FORTHE FUTURE",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              13,
+              9,
+              24
+            ],
+            "ratio": 17.96,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Elegance meets innovation. Sonicore X1 i",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              14,
+              9,
+              26
+            ],
+            "ratio": 9.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "SEE THE DESIGN",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              13,
+              9,
+              22
+            ],
+            "ratio": 17.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "BEYONDEXPECTATIONS",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              12,
+              8,
+              20
+            ],
+            "ratio": 18.11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__quote",
+            "text": "“The best headphones I’ve ever used. The",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              16,
+              13,
+              27
+            ],
+            "ratio": 17.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__name",
+            "text": "Alex M.",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              16,
+              13,
+              26
+            ],
+            "ratio": 9.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__stars",
+            "text": "★★★★★",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              16,
+              13,
+              27
+            ],
+            "ratio": 10.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__name",
+            "text": "Sophia R.",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              16,
+              13,
+              27
+            ],
+            "ratio": 9.5,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__stars",
+            "text": "★★★★★",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              16,
+              13,
+              26
+            ],
+            "ratio": 10.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__quote",
+            "text": "“A new benchmark for premium audio.”",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              16,
+              13,
+              26
+            ],
+            "ratio": 17.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__stars",
+            "text": "★★★★★",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              15,
+              13,
+              25
+            ],
+            "ratio": 10.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "SPATIAL MODE",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              22,
+              18,
+              33
+            ],
+            "ratio": 9.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "CINEMA",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              22,
+              18,
+              33
+            ],
+            "ratio": 9.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "TECHNICAL SPECIFICATIONS & PRE-ORDER ENQ",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              9,
+              7,
+              15
+            ],
+            "ratio": 18.31,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Illustrative concept specifications, sam",
+            "colour": "rgb(158, 153, 179)",
+            "background": [
+              14,
+              11,
+              22
+            ],
+            "ratio": 7.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Connect your own booking or checkout lin",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              17,
+              13,
+              29
+            ],
+            "ratio": 9.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Concept demonstration. Email opens your ",
+            "colour": "rgb(158, 153, 179)",
+            "background": [
+              17,
+              12,
+              28
+            ],
+            "ratio": 7.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Sonicore X1 · Independent spatial-audio ",
+            "colour": "rgb(158, 153, 179)",
+            "background": [
+              5,
+              5,
+              8
+            ],
+            "ratio": 7.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-control",
+            "text": "Pause motion",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              15,
+              12,
+              25
+            ],
+            "ratio": 9.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "EXPERIENCE SOUND",
+          "colour": "rgb(216, 180, 254)",
+          "width": "2px",
+          "ratio": 10.7
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#main"
+          },
+          {
+            "label": "Sonicore X1 concept home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#home"
+          },
+          {
+            "label": "TECHNOLOGY",
+            "href": "#technology",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#technology"
+          },
+          {
+            "label": "SOUND",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#sound"
+          },
+          {
+            "label": "DESIGN",
+            "href": "#design",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#design"
+          },
+          {
+            "label": "REVIEWS",
+            "href": "#reviews",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#reviews"
+          },
+          {
+            "label": "SUPPORT",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#support"
+          },
+          {
+            "label": "PRE-ORDER NOW",
+            "href": "#preorder",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#preorder"
+          },
+          {
+            "label": "WATCH FILM",
+            "href": "#sound",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#sound"
+          },
+          {
+            "label": "+ EXPLORE THE TECHNOLOGY",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#specifications"
+          },
+          {
+            "label": "+ SEE THE DESIGN",
+            "href": "#preorder",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#preorder"
+          },
+          {
+            "label": "PRE-ORDER BY EMAIL",
+            "href": "mailto:hello@sonicore.example?subject=Sonicore%20X1%20Pre-Order%20Enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@sonicore.example?subject=Sonicore%20X1%20Pre-Order%20Enquiry"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/sonicore/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(5, 5, 8)",
+            "background": [
+              196,
+              181,
+              253
+            ],
+            "ratio": 11.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "SONICORE",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              5,
+              5,
+              8
+            ],
+            "ratio": 18.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "TECHNOLOGY",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              10,
+              7,
+              17
+            ],
+            "ratio": 9.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "SOUND",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              11,
+              8,
+              19
+            ],
+            "ratio": 9.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "DESIGN",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              12,
+              8,
+              21
+            ],
+            "ratio": 9.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "REVIEWS",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              12,
+              8,
+              22
+            ],
+            "ratio": 9.8,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "SUPPORT",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              13,
+              9,
+              23
+            ],
+            "ratio": 9.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "preorder-pill",
+            "text": "PRE-ORDER NOW",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              35,
+              22,
+              63
+            ],
+            "ratio": 15.26,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__kicker",
+            "text": "SPATIAL AUDIO REIMAGINED",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              7,
+              6,
+              13
+            ],
+            "ratio": 10.93,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "HEARBEYONDREALITY",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              11,
+              8,
+              19
+            ],
+            "ratio": 18.14,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "Sonicore X1 delivers true-to-life spatia",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              10,
+              8,
+              18
+            ],
+            "ratio": 9.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "EXPERIENCE SOUND",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              41,
+              23,
+              75
+            ],
+            "ratio": 14.57,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "WATCH FILM",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              10,
+              8,
+              18
+            ],
+            "ratio": 18.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "award__text",
+            "text": "reddot winner 2024",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              6,
+              6,
+              11
+            ],
+            "ratio": 10.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "reddot",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              5,
+              5,
+              9
+            ],
+            "ratio": 18.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "CES",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              14,
+              11,
+              22
+            ],
+            "ratio": 17.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "INNOVATION AWARDS",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              14,
+              11,
+              22
+            ],
+            "ratio": 9.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "2024",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              14,
+              11,
+              22
+            ],
+            "ratio": 10.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              10,
+              8,
+              16
+            ],
+            "ratio": 18.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "01",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              10,
+              9,
+              16
+            ],
+            "ratio": 18.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "/03",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              10,
+              8,
+              16
+            ],
+            "ratio": 9.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "CINEMA 360°",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              13,
+              11,
+              19
+            ],
+            "ratio": 10.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "ENGINEEREDTO PERFECTION",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              5,
+              5,
+              9
+            ],
+            "ratio": 18.61,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Every component of Sonicore X1 is precis",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              6,
+              5,
+              9
+            ],
+            "ratio": 10.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "EXPLORE THE TECHNOLOGY",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              6,
+              5,
+              9
+            ],
+            "ratio": 18.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "exploded__readout",
+            "text": "Selected component: Protein Leather — me",
+            "colour": "rgb(158, 153, 179)",
+            "background": [
+              7,
+              6,
+              12
+            ],
+            "ratio": 7.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__title",
+            "text": "PROTEIN LEATHER",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              1,
+              1,
+              3
+            ],
+            "ratio": 11.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__sub",
+            "text": "MEMORY CUSHIONS",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              1,
+              1,
+              3
+            ],
+            "ratio": 10.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__title",
+            "text": "DYNAMIC DRIVER",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              1,
+              1,
+              3
+            ],
+            "ratio": 19.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__title",
+            "text": "ACOUSTIC CHAMBER",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              0,
+              2,
+              3
+            ],
+            "ratio": 19.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__sub",
+            "text": "PRECISION TUNED",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              15,
+              11,
+              26
+            ],
+            "ratio": 9.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__sub",
+            "text": "N52 GRADE",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              18,
+              14,
+              32
+            ],
+            "ratio": 9.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout-btn__sub",
+            "text": "360° SOUND STAGE",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              13,
+              11,
+              24
+            ],
+            "ratio": 9.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "SPATIAL AUDIOTHAT MOVES WITH YOU",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              16,
+              12,
+              27
+            ],
+            "ratio": 17.61,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Our advanced spatial audio engine adapts",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              15,
+              11,
+              27
+            ],
+            "ratio": 9.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "360° SOUND STAGE",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              15,
+              11,
+              27
+            ],
+            "ratio": 17.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Immersive & Realistic",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              14,
+              11,
+              26
+            ],
+            "ratio": 9.63,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "HEAD TRACKING",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              13,
+              9,
+              22
+            ],
+            "ratio": 17.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Dynamic & Precise",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              13,
+              10,
+              23
+            ],
+            "ratio": 9.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "PERSONALIZED EQ",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              9,
+              8,
+              16
+            ],
+            "ratio": 18.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Tailored to You",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              9,
+              8,
+              16
+            ],
+            "ratio": 9.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "DESIGNED FORTHE FUTURE",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              13,
+              9,
+              24
+            ],
+            "ratio": 17.96,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Elegance meets innovation. Sonicore X1 i",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              14,
+              9,
+              26
+            ],
+            "ratio": 9.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "SEE THE DESIGN",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              13,
+              9,
+              23
+            ],
+            "ratio": 17.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "BEYONDEXPECTATIONS",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              11,
+              8,
+              20
+            ],
+            "ratio": 18.13,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__quote",
+            "text": "“The best headphones I’ve ever used. The",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              16,
+              13,
+              27
+            ],
+            "ratio": 17.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__name",
+            "text": "Alex M.",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              16,
+              13,
+              26
+            ],
+            "ratio": 9.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__stars",
+            "text": "★★★★★",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              16,
+              13,
+              27
+            ],
+            "ratio": 10.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__name",
+            "text": "Sophia R.",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              16,
+              13,
+              27
+            ],
+            "ratio": 9.5,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__stars",
+            "text": "★★★★★",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              16,
+              13,
+              26
+            ],
+            "ratio": 10.39,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__quote",
+            "text": "“A new benchmark for premium audio.”",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              16,
+              13,
+              26
+            ],
+            "ratio": 17.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "review-card__stars",
+            "text": "★★★★★",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              15,
+              13,
+              25
+            ],
+            "ratio": 10.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "SPATIAL MODE",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              22,
+              18,
+              33
+            ],
+            "ratio": 9.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "CINEMA",
+            "colour": "rgb(196, 181, 253)",
+            "background": [
+              22,
+              18,
+              33
+            ],
+            "ratio": 9.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "TECHNICAL SPECIFICATIONS & PRE-ORDER ENQ",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              9,
+              7,
+              15
+            ],
+            "ratio": 18.31,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Illustrative concept specifications, sam",
+            "colour": "rgb(158, 153, 179)",
+            "background": [
+              14,
+              11,
+              22
+            ],
+            "ratio": 7.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Connect your own booking or checkout lin",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              18,
+              14,
+              30
+            ],
+            "ratio": 9.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button button--glow",
+            "text": "PRE-ORDER BY EMAIL",
+            "colour": "rgb(245, 244, 250)",
+            "background": [
+              40,
+              23,
+              75
+            ],
+            "ratio": 14.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Concept demonstration. Email opens your ",
+            "colour": "rgb(158, 153, 179)",
+            "background": [
+              18,
+              13,
+              29
+            ],
+            "ratio": 6.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Sonicore X1 · Independent spatial-audio ",
+            "colour": "rgb(158, 153, 179)",
+            "background": [
+              5,
+              5,
+              8
+            ],
+            "ratio": 7.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-control",
+            "text": "Pause motion",
+            "colour": "rgb(184, 180, 201)",
+            "background": [
+              15,
+              12,
+              25
+            ],
+            "ratio": 9.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "EXPERIENCE SOUND",
+          "colour": "rgb(216, 180, 254)",
+          "width": "2px",
+          "ratio": 10.7
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "sonicore/assets/css/style.css",
+    "sonicore/assets/img/design-closeup.webp",
+    "sonicore/assets/img/exploded-view.webp",
+    "sonicore/assets/img/hero-headphone.webp",
+    "sonicore/assets/img/spatial-bust.webp",
+    "sonicore/assets/js/main.js",
+    "sonicore/CUSTOMISE.md",
+    "sonicore/index.html",
+    "sonicore/LICENCE.txt",
+    "sonicore/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/design-closeup.webp",
+    "assets/img/exploded-view.webp",
+    "assets/img/hero-headphone.webp",
+    "assets/img/spatial-bust.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

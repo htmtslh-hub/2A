@@ -530,5 +530,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "sonicore": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "d04301c48b60",
+    "sha256": "d04301c48b60daf54aabe70bc4f26bc703e0808dd9f05e06c44eb29fd545cae8",
+    "demoHtmlSha256": "929a218b87411b4ee1d95fac2946bc42a1bb0af9c54451c0b20dd11e58b37bfa",
+    "demoSha256": "4cc08e0c0cabcce2e4119b7f0d029fbcba25f7195c9d7f7c890844f04583c480",
+    "bytes": 568318,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

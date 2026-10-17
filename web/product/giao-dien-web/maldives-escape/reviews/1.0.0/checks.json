@@ -1,0 +1,1334 @@
+{
+  "slug": "maldives-escape",
+  "version": "1.0.0",
+  "date": "2026-10-17T23:53:51.398Z",
+  "os": "win32",
+  "zipBytes": 610321,
+  "sha256": "88e5b152fff4f4851cf323226ceb0cb5fcf9ddc3b6901a7a24c92626e038648c",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#main"
+          },
+          {
+            "label": "Maldives Escape home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#top"
+          },
+          {
+            "label": "Home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#top"
+          },
+          {
+            "label": "Travel",
+            "href": "#travel",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#travel"
+          },
+          {
+            "label": "Offers",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "About us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#about"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#contact"
+          },
+          {
+            "label": "Book Now",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "View Package",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "View Package",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "View Package",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "View Package",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "Book Enquiry",
+            "href": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Lagoon%20Water-Slide%20Escape",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Lagoon%20Water-Slide%20Escape"
+          },
+          {
+            "label": "Book Enquiry",
+            "href": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Starlit%20Pool%20%26%20Pergola",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Starlit%20Pool%20%26%20Pergola"
+          },
+          {
+            "label": "Book Enquiry",
+            "href": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Twin-Pool%20Reef%20Pavilion",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Twin-Pool%20Reef%20Pavilion"
+          },
+          {
+            "label": "Email concierge@maldivesescape.example",
+            "href": "mailto:concierge@maldivesescape.example?subject=Maldives%20Villa%20Reservation%20Enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@maldivesescape.example?subject=Maldives%20Villa%20Reservation%20Enquiry"
+          },
+          {
+            "label": "Call +960 664 2090",
+            "href": "tel:+9606642090",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+9606642090"
+          },
+          {
+            "label": "Home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#top"
+          },
+          {
+            "label": "Travel",
+            "href": "#travel",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#travel"
+          },
+          {
+            "label": "Offers",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "About us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#about"
+          },
+          {
+            "label": "concierge@maldivesescape.example",
+            "href": "mailto:concierge@maldivesescape.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@maldivesescape.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 920,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(6, 16, 25)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 19.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__text",
+            "text": "Maldives Escape",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              6,
+              16,
+              25
+            ],
+            "ratio": 19.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-nav__link",
+            "text": "Travel",
+            "colour": "rgb(217, 232, 242)",
+            "background": [
+              6,
+              16,
+              25
+            ],
+            "ratio": 15.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-headline__kicker",
+            "text": "Baa & North Malé Atolls · Sunset Pergola",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              6,
+              16,
+              25
+            ],
+            "ratio": 14.5,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-headline__title",
+            "text": "MALDIVES",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              6,
+              16,
+              25
+            ],
+            "ratio": 19.16,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "filter-pill",
+            "text": "Overwater Villas",
+            "colour": "rgb(217, 232, 242)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 12.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "atoll-card__title",
+            "text": "Lagoon Water-Slide Reserve",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 16.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "btn btn--subtle",
+            "text": "Preview on Hero",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              44,
+              61,
+              76
+            ],
+            "ratio": 11.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "atoll-card__link",
+            "text": "View Package",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 12.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__eyebrow",
+            "text": "Seasonal Offers",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              10,
+              24,
+              38
+            ],
+            "ratio": 13.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Curated Seaplane & Overwater Stays",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              10,
+              24,
+              38
+            ],
+            "ratio": 17.93,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__desc",
+            "text": "Illustrative resort packages showing how",
+            "colour": "rgb(217, 232, 242)",
+            "background": [
+              10,
+              24,
+              38
+            ],
+            "ratio": 14.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__pill",
+            "text": "Lagoon Slide",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              27,
+              65,
+              80
+            ],
+            "ratio": 8.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__sub",
+            "text": "Noonu Atoll · Return Seaplane Included",
+            "colour": "rgb(246, 185, 121)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 9.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__label",
+            "text": "Illustrative rate",
+            "colour": "rgb(168, 194, 212)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 8.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__nights",
+            "text": "6 Nights · Sunset Reserve",
+            "colour": "rgb(217, 232, 242)",
+            "background": [
+              21,
+              45,
+              68
+            ],
+            "ratio": 11.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__pill",
+            "text": "Signature",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              32,
+              74,
+              94
+            ],
+            "ratio": 7.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__title",
+            "text": "Starlit Pool & Pergola Sanctuary",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              45,
+              68
+            ],
+            "ratio": 14.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__sub",
+            "text": "South Ari Atoll · Private Twilight Deck",
+            "colour": "rgb(246, 185, 121)",
+            "background": [
+              21,
+              45,
+              68
+            ],
+            "ratio": 8.14,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__label",
+            "text": "Illustrative rate",
+            "colour": "rgb(168, 194, 212)",
+            "background": [
+              21,
+              45,
+              68
+            ],
+            "ratio": 7.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "pillar__num",
+            "text": "01",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 12.23,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Reserve Your Maldives Atoll Brief",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 16.17,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "btn btn--glass",
+            "text": "Call +960 664 2090",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              8,
+              19,
+              30
+            ],
+            "ratio": 18.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-footer__copy",
+            "text": "© 2026 Maldives Escape Showcase Template",
+            "colour": "rgb(168, 194, 212)",
+            "background": [
+              6,
+              16,
+              25
+            ],
+            "ratio": 10.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "",
+          "colour": "rgb(255, 255, 255)",
+          "width": "3px",
+          "ratio": 19.16
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#main"
+          },
+          {
+            "label": "Maldives Escape home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#top"
+          },
+          {
+            "label": "Home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#top"
+          },
+          {
+            "label": "Travel",
+            "href": "#travel",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#travel"
+          },
+          {
+            "label": "Offers",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "About us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#about"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#contact"
+          },
+          {
+            "label": "Book Now",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "View Package",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "View Package",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "View Package",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "View Package",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "Book Enquiry",
+            "href": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Lagoon%20Water-Slide%20Escape",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Lagoon%20Water-Slide%20Escape"
+          },
+          {
+            "label": "Book Enquiry",
+            "href": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Starlit%20Pool%20%26%20Pergola",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Starlit%20Pool%20%26%20Pergola"
+          },
+          {
+            "label": "Book Enquiry",
+            "href": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Twin-Pool%20Reef%20Pavilion",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Twin-Pool%20Reef%20Pavilion"
+          },
+          {
+            "label": "Email concierge@maldivesescape.example",
+            "href": "mailto:concierge@maldivesescape.example?subject=Maldives%20Villa%20Reservation%20Enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@maldivesescape.example?subject=Maldives%20Villa%20Reservation%20Enquiry"
+          },
+          {
+            "label": "Call +960 664 2090",
+            "href": "tel:+9606642090",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+9606642090"
+          },
+          {
+            "label": "Home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#top"
+          },
+          {
+            "label": "Travel",
+            "href": "#travel",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#travel"
+          },
+          {
+            "label": "Offers",
+            "href": "#offers",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#offers"
+          },
+          {
+            "label": "About us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4339/maldives-escape/index.html#about"
+          },
+          {
+            "label": "concierge@maldivesescape.example",
+            "href": "mailto:concierge@maldivesescape.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@maldivesescape.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 920,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(6, 16, 25)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 19.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__text",
+            "text": "Maldives Escape",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              6,
+              16,
+              25
+            ],
+            "ratio": 19.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle",
+            "text": "Pause motion",
+            "colour": "rgb(6, 16, 25)",
+            "background": [
+              205,
+              207,
+              209
+            ],
+            "ratio": 12.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-nav__link",
+            "text": "Travel",
+            "colour": "rgb(217, 232, 242)",
+            "background": [
+              6,
+              16,
+              25
+            ],
+            "ratio": 15.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-headline__kicker",
+            "text": "Baa & North Malé Atolls · Sunset Pergola",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              6,
+              16,
+              25
+            ],
+            "ratio": 14.5,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-headline__title",
+            "text": "MALDIVES",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              6,
+              16,
+              25
+            ],
+            "ratio": 19.16,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "filter-pill",
+            "text": "Overwater Villas",
+            "colour": "rgb(217, 232, 242)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 12.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "atoll-card__title",
+            "text": "Lagoon Water-Slide Reserve",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 16.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "btn btn--subtle",
+            "text": "Preview on Hero",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              44,
+              61,
+              76
+            ],
+            "ratio": 11.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "atoll-card__link",
+            "text": "View Package",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 12.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__eyebrow",
+            "text": "Seasonal Offers",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              10,
+              24,
+              38
+            ],
+            "ratio": 13.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Curated Seaplane & Overwater Stays",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              10,
+              24,
+              38
+            ],
+            "ratio": 17.93,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__desc",
+            "text": "Illustrative resort packages showing how",
+            "colour": "rgb(217, 232, 242)",
+            "background": [
+              10,
+              24,
+              38
+            ],
+            "ratio": 14.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__pill",
+            "text": "Lagoon Slide",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              27,
+              65,
+              80
+            ],
+            "ratio": 8.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__sub",
+            "text": "Noonu Atoll · Return Seaplane Included",
+            "colour": "rgb(246, 185, 121)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 9.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__label",
+            "text": "Illustrative rate",
+            "colour": "rgb(168, 194, 212)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 8.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__nights",
+            "text": "6 Nights · Sunset Reserve",
+            "colour": "rgb(217, 232, 242)",
+            "background": [
+              21,
+              45,
+              68
+            ],
+            "ratio": 11.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__pill",
+            "text": "Signature",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              32,
+              74,
+              94
+            ],
+            "ratio": 7.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__title",
+            "text": "Starlit Pool & Pergola Sanctuary",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              45,
+              68
+            ],
+            "ratio": 14.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__sub",
+            "text": "South Ari Atoll · Private Twilight Deck",
+            "colour": "rgb(246, 185, 121)",
+            "background": [
+              21,
+              45,
+              68
+            ],
+            "ratio": 8.14,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "offer-card__label",
+            "text": "Illustrative rate",
+            "colour": "rgb(168, 194, 212)",
+            "background": [
+              21,
+              45,
+              68
+            ],
+            "ratio": 7.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "pillar__num",
+            "text": "01",
+            "colour": "rgb(140, 240, 244)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 12.23,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Reserve Your Maldives Atoll Brief",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              15,
+              34,
+              52
+            ],
+            "ratio": 16.17,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "btn btn--glass",
+            "text": "Call +960 664 2090",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              8,
+              19,
+              30
+            ],
+            "ratio": 18.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-footer__copy",
+            "text": "© 2026 Maldives Escape Showcase Template",
+            "colour": "rgb(168, 194, 212)",
+            "background": [
+              6,
+              16,
+              25
+            ],
+            "ratio": 10.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "",
+          "colour": "rgb(255, 255, 255)",
+          "width": "3px",
+          "ratio": 19.16
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "maldives-escape/assets/css/style.css",
+    "maldives-escape/assets/img/aerial-pool-pavilion.webp",
+    "maldives-escape/assets/img/lagoon-slide-villa.webp",
+    "maldives-escape/assets/img/sunset-pergola-deck.webp",
+    "maldives-escape/assets/img/underwater-atoll-dining.webp",
+    "maldives-escape/assets/js/main.js",
+    "maldives-escape/CUSTOMISE.md",
+    "maldives-escape/index.html",
+    "maldives-escape/LICENCE.txt",
+    "maldives-escape/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/aerial-pool-pavilion.webp",
+    "assets/img/lagoon-slide-villa.webp",
+    "assets/img/sunset-pergola-deck.webp",
+    "assets/img/underwater-atoll-dining.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

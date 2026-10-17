@@ -46,6 +46,52 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t52: {
+    slug: 'maldives-escape',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'Maldives Escape',
+        desc: 'Trang khám phá khu nghỉ dưỡng và biệt thự trên biển Maldives toàn màn hình lúc hoàng hôn với hồ bơi vô cực ánh sao, vòm kính mờ tròn bên trái chứa 2 thẻ dọc xem trước resort kèm nút viên thuốc trắng Book Now, chữ tiêu đề MALDIVES thanh mảnh cỡ lớn, 4 chấm phân trang đáy và bộ lọc 4 khu bảo tồn san hô.',
+        tags: ['Khu nghỉ dưỡng Maldives', 'Vòm kính & 2 thẻ dọc', 'Hoàng hôn trên biển'],
+      },
+      en: {
+        name: 'Maldives Escape',
+        desc: 'A full-bleed Maldives overwater resort and island travel showcase featuring a sunset starlit infinity-pool deck hero, a circular frosted dome overlay framing two vertical resort preview cards with a white Book Now pill button, oversized thin geometric MALDIVES typography, 4 pagination dots and interactive atoll sanctuary filtering.',
+        tags: ['Maldives Resort', 'Circular Dome & Cards', 'Overwater Villas'],
+      },
+      zh: {
+        name: 'Maldives Escape',
+        desc: '马尔代夫水上别墅与海岛度假全屏展示模板，配备日落星光无边泳池甲板主视觉、左侧圆形磨砂玻璃穹顶与双纵向度假村预览卡片、白色胶囊 Book Now 按钮、超大几何 MALDIVES 标题、底部四点分页及环礁别墅分类筛选。',
+        tags: ['马尔代夫度假村', '圆形磨砂穹顶卡片', '水上别墅'],
+      },
+    },
+    specs: {
+      vi: [
+        ['Định dạng', 'HTML / CSS / JavaScript thuần'],
+        ['Gói tải', '10 file · 4 ảnh resort WebP tự tạo'],
+        ['Tương tác', 'Mũi tên < / > · 2 thẻ dọc · 4 chấm đáy · lọc khu bảo tồn · nhảy cảnh'],
+        ['Chuyển động', 'Crossfade cảnh nền · nhịp chuyển rAF hữu hạn · Pause motion'],
+        ['Phạm vi', 'Showcase resort & du lịch biển đảo · liên hệ email/tel · không backend'],
+      ],
+      en: [
+        ['Format', 'Plain HTML / CSS / JavaScript'],
+        ['Package', '10 files · 4 original resort WebP photos'],
+        ['Interaction', '< / > arrows · 2 vertical cards · 4 bottom dots · atoll filter · stage jump'],
+        ['Motion', 'Hero crossfade · finite rAF card settle · Pause motion'],
+        ['Scope', 'Resort & island travel showcase · email/tel enquiry · no backend'],
+      ],
+      zh: [
+        ['格式', '纯 HTML / CSS / JavaScript'],
+        ['文件包', '10 个文件 · 4 张原创度假村 WebP 照片'],
+        ['交互', '< / > 箭头 · 双纵向卡片 · 4 个底部圆点 · 环礁筛选 · 主视觉预览'],
+        ['动态', '主视觉淡入淡出 · 有限 rAF 卡片过渡 · 会话内暂停控制'],
+        ['范围', '海岛度假村展示页 · 邮件/电话咨询 · 无后端'],
+      ],
+    },
+  },
   t51: {
   "slug": "beyond-voyages",
   "cat": "commerce",

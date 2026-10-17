@@ -712,5 +712,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "maldives-escape": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "c56a342dc350",
+    "sha256": "c56a342dc350cec02f6f847ae4a81d0fdd647ea4c7a18174ab579cb3121d0755",
+    "demoHtmlSha256": "b7a0156ab653a5803d27ce74eb44016908c6d1689edeb16b358d554423800649",
+    "demoSha256": "c6a5eca831289b5811979e5a4ff64ec01db497391c7b5bd198c24b74d9789bd1",
+    "bytes": 809042,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

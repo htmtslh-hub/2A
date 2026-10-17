@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maldives Escape — The Sunny Side of Life</title>
+  <meta name="description" content="Discover luxury overwater villas, private reef pool pavilions, and twilight pergola decks across the Maldives atolls. Compare seasonal offers and seaplane transfers.">
+  <meta property="og:title" content="Maldives Escape — The Sunny Side of Life">
+  <meta property="og:description" content="Interactive Maldives resort and overwater villa showcase featuring a frosted arc card switcher, four atoll scenes, seasonal packages, and direct concierge booking.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none'%3E%3Ccircle cx='14' cy='14' r='11' stroke='white' stroke-width='2'/%3E%3Cpath d='M7 16.5C9.5 14.5 12 14.5 14 16.5C16 18.5 18.5 18.5 21 16.5' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='14' cy='10' r='2.4' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-header__left">
+          <a class="brand" href="#top" aria-label="Maldives Escape home">
+            <svg class="brand__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M6.5 14.2C8.3 12.6 10.2 12.6 12 14.2C13.8 15.8 15.7 15.8 17.5 14.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="12" cy="8.5" r="2" fill="currentColor"/>
+            </svg>
+            <span class="brand__text">Maldives Escape</span>
+          </a>
+          <button type="button" class="motion-toggle" data-motion-toggle aria-pressed="false">Pause motion</button>
+        </div>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link is-current" href="#top">Home</a></li>
+            <li><a class="site-nav__link" href="#travel">Travel</a></li>
+            <li><a class="site-nav__link" href="#offers">Offers</a></li>
+            <li><a class="site-nav__link" href="#about">About us</a></li>
+            <li><a class="site-nav__link" href="#contact">Contact us</a></li>
+          </ul>
+        </nav>
+
+        <button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation menu">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO SECTION MATCHING REFERENCE SCREENSHOT -->
+      <section class="hero" aria-label="Maldives resort showcase">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            class="hero-media__img"
+            data-scene-img="0"
+            src="assets/img/lagoon-slide-villa.webp"
+            alt=""
+            width="1280"
+            height="720"
+          >
+          <img
+            class="hero-media__img"
+            data-scene-img="1"
+            src="assets/img/aerial-pool-pavilion.webp"
+            alt=""
+            width="1280"
+            height="720"
+          >
+          <img
+            class="hero-media__img"
+            data-scene-img="2"
+            src="assets/img/underwater-atoll-dining.webp"
+            alt=""
+            width="1280"
+            height="720"
+          >
+          <img
+            class="hero-media__img is-active"
+            data-scene-img="3"
+            src="assets/img/sunset-pergola-deck.webp"
+            alt=""
+            width="1600"
+            height="900"
+          >
+        </div>
+
+        <!-- Left frosted circular arc overlay -->
+        <div class="hero-dome" aria-hidden="true"></div>
+
+        <div class="hero__inner">
+          <!-- Left vertical card carousel + Book Now pill -->
+          <div class="hero-showcase" role="group" aria-label="Featured resort cards">
+            <div class="hero-carousel">
+              <button type="button" id="hero-prev" class="carousel-arrow" data-step="-1" aria-label="Previous resort scene">
+                <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false">
+                  <path d="M12.8 4.2L7 10L12.8 15.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <!-- Primary tall card -->
+              <div class="hero-carousel__primary-wrap">
+                <button
+                  type="button"
+                  class="resort-card resort-card--primary"
+                  data-primary-card
+                  aria-label="Preview featured resort card on hero stage"
+                >
+                  <img
+                    class="resort-card__img"
+                    data-primary-card-img
+                    src="assets/img/lagoon-slide-villa.webp"
+                    alt=""
+                    width="380"
+                    height="640"
+                  >
+                  <span class="resort-card__scrim" aria-hidden="true"></span>
+                  <span class="resort-card__caption" data-primary-card-caption>
+                    New Maldives Resort Comes With Water Slide
+                  </span>
+                </button>
+
+                <a class="book-pill" href="#offers">Book Now</a>
+              </div>
+
+              <!-- Secondary preview card -->
+              <button
+                type="button"
+                class="resort-card resort-card--secondary"
+                data-secondary-card
+                aria-label="Switch to next resort scene: Twin Reef Pool Pavilion"
+              >
+                <img
+                  class="resort-card__img"
+                  data-secondary-card-img
+                  src="assets/img/aerial-pool-pavilion.webp"
+                  alt=""
+                  width="300"
+                  height="500"
+                >
+                <span class="resort-card__scrim" aria-hidden="true"></span>
+                <span class="resort-card__tag" data-secondary-card-tag>Reef Pavilion</span>
+              </button>
+
+              <button type="button" id="hero-next" class="carousel-arrow" data-step="1" data-next-preview aria-label="Next resort scene">
+                <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false">
+                  <path d="M7.2 4.2L13 10L7.2 15.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right-center oversized MALDIVES headline -->
+          <div class="hero-headline">
+            <p class="hero-headline__kicker" data-hero-kicker aria-live="polite">
+              Baa &amp; North Malé Atolls · Sunset Pergola Reserve
+            </p>
+            <h1 class="hero-headline__title">MALDIVES</h1>
+            <p class="hero-headline__sub" data-hero-sub>The sunny side of life</p>
+          </div>
+        </div>
+
+        <!-- Bottom-center 4 pagination dots (4th dot active by default matching reference) -->
+        <div class="hero-dots" role="group" aria-label="Select Maldives showcase slide">
+          <button type="button" class="hero-dot" data-scene-dot="0" aria-label="Slide 1: Overwater Lagoon Water Slide Villa" aria-pressed="false"></button>
+          <button type="button" class="hero-dot" data-scene-dot="1" aria-label="Slide 2: Twin Reef Infinity Pool Pavilion" aria-pressed="false"></button>
+          <button type="button" class="hero-dot" data-scene-dot="2" aria-label="Slide 3: Subsea Coral Dome Dining" aria-pressed="false"></button>
+          <button type="button" class="hero-dot is-active" data-scene-dot="3" aria-label="Slide 4: Sunset Starlit Pool &amp; Pergola Deck" aria-pressed="true"></button>
+        </div>
+
+        <!-- Bottom-right slide numeral -->
+        <div class="hero-numeral" aria-hidden="true" data-hero-numeral>4</div>
+      </section>
+
+      <!-- TRAVEL SECTION (#travel) -->
+      <section id="travel" class="section" data-reveal>
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <p class="section__eyebrow">Atoll Collection</p>
+              <h2 class="section__title">Four Signature Overwater &amp; Reef Sanctuaries</h2>
+            </div>
+            <p class="section__desc">
+              Filter by experience style to compare seaplane transfer times from Velana International (MLE), reef lagoon depth, and private deck amenities.
+            </p>
+          </div>
+
+          <div class="filter-bar" role="group" aria-label="Filter sanctuaries by category">
+            <button type="button" class="filter-pill is-active" data-atoll-filter="all" aria-pressed="true">All Sanctuaries (4)</button>
+            <button type="button" class="filter-pill" data-atoll-filter="villa" aria-pressed="false">Overwater Villas</button>
+            <button type="button" class="filter-pill" data-atoll-filter="sunset" aria-pressed="false">Sunset Decks</button>
+            <button type="button" class="filter-pill" data-atoll-filter="dining" aria-pressed="false">Subsea Dining</button>
+          </div>
+
+          <div class="atoll-grid">
+            <article class="atoll-card" data-category="villa" data-reveal>
+              <div class="atoll-card__media">
+                <img src="assets/img/lagoon-slide-villa.webp" alt="Aerial view of thatched overwater villas with a curved water slide into a turquoise Maldives lagoon" width="640" height="360" loading="lazy">
+                <span class="atoll-card__badge">Noonu Atoll</span>
+              </div>
+              <div class="atoll-card__body">
+                <h3 class="atoll-card__title">Lagoon Water-Slide Reserve</h3>
+                <p class="atoll-card__text">
+                  Two-storey thatched timber villa featuring a curved private water slide directly into a 1.8-metre crystal coral lagoon and retractable master-bedroom roof.
+                </p>
+                <dl class="atoll-card__specs">
+                  <div>
+                    <dt>Transfer</dt>
+                    <dd>40 min Seaplane</dd>
+                  </div>
+                  <div>
+                    <dt>Deck Area</dt>
+                    <dd>410 m² Overwater</dd>
+                  </div>
+                </dl>
+                <div class="atoll-card__actions">
+                  <button type="button" class="btn btn--subtle" data-stage-jump="0">Preview on Hero</button>
+                  <a class="atoll-card__link" href="#offers">View Package</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="atoll-card" data-category="villa" data-reveal>
+              <div class="atoll-card__media">
+                <img src="assets/img/aerial-pool-pavilion.webp" alt="Symmetrical overwater villa pavilion flanked by two turquoise infinity plunge pools" width="640" height="360" loading="lazy">
+                <span class="atoll-card__badge">North Malé Atoll</span>
+              </div>
+              <div class="atoll-card__body">
+                <h3 class="atoll-card__title">Twin-Pool Reef Pavilion</h3>
+                <p class="atoll-card__text">
+                  Architectural dark-shingle residence with dual sunrise and sunset infinity plunge pools, direct reef-edge snorkel steps, and dedicated island host service.
+                </p>
+                <dl class="atoll-card__specs">
+                  <div>
+                    <dt>Transfer</dt>
+                    <dd>25 min Luxury Yacht</dd>
+                  </div>
+                  <div>
+                    <dt>Deck Area</dt>
+                    <dd>520 m² Dual-Pool</dd>
+                  </div>
+                </dl>
+                <div class="atoll-card__actions">
+                  <button type="button" class="btn btn--subtle" data-stage-jump="1">Preview on Hero</button>
+                  <a class="atoll-card__link" href="#offers">View Package</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="atoll-card" data-category="dining" data-reveal>
+              <div class="atoll-card__media">
+                <img src="assets/img/underwater-atoll-dining.webp" alt="Underwater panoramic acrylic dome restaurant in the Maldives with manta rays swimming overhead" width="640" height="360" loading="lazy">
+                <span class="atoll-card__badge">Baa Atoll Biosphere</span>
+              </div>
+              <div class="atoll-card__body">
+                <h3 class="atoll-card__title">Subsea Coral Dome &amp; Cellar</h3>
+                <p class="atoll-card__text">
+                  Six metres beneath the lagoon surface, dine under a 180-degree transparent acrylic arch while reef manta rays and fusiliers glide past illuminated coral gardens.
+                </p>
+                <dl class="atoll-card__specs">
+                  <div>
+                    <dt>Depth</dt>
+                    <dd>5.8 Metres Below Sea</dd>
+                  </div>
+                  <div>
+                    <dt>Seating</dt>
+                    <dd>14 Private Tables</dd>
+                  </div>
+                </dl>
+                <div class="atoll-card__actions">
+                  <button type="button" class="btn btn--subtle" data-stage-jump="2">Preview on Hero</button>
+                  <a class="atoll-card__link" href="#offers">View Package</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="atoll-card" data-category="sunset" data-reveal>
+              <div class="atoll-card__media">
+                <img src="assets/img/sunset-pergola-deck.webp" alt="Twilight overwater villa sundeck with starlit fiber-optic plunge pool and candlelit four-poster pergola" width="640" height="360" loading="lazy">
+                <span class="atoll-card__badge">South Ari Atoll</span>
+              </div>
+              <div class="atoll-card__body">
+                <h3 class="atoll-card__title">Starlit Pool &amp; Sunset Pergola</h3>
+                <p class="atoll-card__text">
+                  West-facing teak sanctuary featuring a fiber-optic starlit infinity pool, draped four-poster ocean pergola, and private twilight champagne deck service.
+                </p>
+                <dl class="atoll-card__specs">
+                  <div>
+                    <dt>Transfer</dt>
+                    <dd>30 min Seaplane</dd>
+                  </div>
+                  <div>
+                    <dt>Orientation</dt>
+                    <dd>True West Sunset</dd>
+                  </div>
+                </dl>
+                <div class="atoll-card__actions">
+                  <button type="button" class="btn btn--subtle" data-stage-jump="3">Preview on Hero</button>
+                  <a class="atoll-card__link" href="#offers">View Package</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- OFFERS SECTION (#offers) -->
+      <section id="offers" class="section section--alt" data-reveal>
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <p class="section__eyebrow">Seasonal Offers</p>
+              <h2 class="section__title">Curated Seaplane &amp; Overwater Stays</h2>
+            </div>
+            <p class="section__desc">
+              Illustrative resort packages showing how return transfers, half-board dining, and reef excursions combine. Replace `[YOUR PRICE]` with verified seasonal rates.
+            </p>
+          </div>
+
+          <div class="offer-grid">
+            <article class="offer-card" data-reveal>
+              <div class="offer-card__head">
+                <span class="offer-card__nights">5 Nights · Overwater</span>
+                <span class="offer-card__pill">Lagoon Slide</span>
+              </div>
+              <h3 class="offer-card__title">Lagoon Water-Slide Escape</h3>
+              <p class="offer-card__sub">Noonu Atoll · Return Seaplane Included</p>
+              <ul class="offer-card__list">
+                <li>Five nights in a Lagoon Water-Slide Villa with retractable star-viewing roof</li>
+                <li>VIP lounge access and round-trip shared seaplane transfer from Malé (MLE)</li>
+                <li>Daily lagoon breakfast delivery and one private sandbank picnic</li>
+                <li>Guided house-reef snorkelling with resident marine biologist</li>
+              </ul>
+              <div class="offer-card__foot">
+                <div>
+                  <span class="offer-card__label">Illustrative rate</span>
+                  <strong class="offer-card__price">[YOUR PRICE] / villa</strong>
+                </div>
+                <a class="btn btn--solid" href="mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Lagoon%20Water-Slide%20Escape">Book Enquiry</a>
+              </div>
+            </article>
+
+            <article class="offer-card offer-card--featured" data-reveal>
+              <div class="offer-card__head">
+                <span class="offer-card__nights">6 Nights · Sunset Reserve</span>
+                <span class="offer-card__pill">Signature</span>
+              </div>
+              <h3 class="offer-card__title">Starlit Pool &amp; Pergola Sanctuary</h3>
+              <p class="offer-card__sub">South Ari Atoll · Private Twilight Deck</p>
+              <ul class="offer-card__list">
+                <li>Six nights in a West-Facing Sunset Pergola Villa with fiber-optic infinity pool</li>
+                <li>One 7-course tasting dinner inside the Subsea Coral Dome restaurant</li>
+                <li>Private sunset dhoni dolphin cruise with champagne and canapés</li>
+                <li>24-hour dedicated island butler and complimentary non-motorised water sports</li>
+              </ul>
+              <div class="offer-card__foot">
+                <div>
+                  <span class="offer-card__label">Illustrative rate</span>
+                  <strong class="offer-card__price">[YOUR PRICE] / villa</strong>
+                </div>
+                <a class="btn btn--solid" href="mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Starlit%20Pool%20%26%20Pergola">Book Enquiry</a>
+              </div>
+            </article>
+
+            <article class="offer-card" data-reveal>
+              <div class="offer-card__head">
+                <span class="offer-card__nights">7 Nights · Two-Bedroom</span>
+                <span class="offer-card__pill">Private Yacht</span>
+              </div>
+              <h3 class="offer-card__title">Twin-Pool Reef Pavilion Charter</h3>
+              <p class="offer-card__sub">North Malé Atoll · Direct Yacht Transfer</p>
+              <ul class="offer-card__list">
+                <li>Seven nights in the symmetrical Twin-Pool Overwater Reef Pavilion</li>
+                <li>Private 25-minute luxury motor-yacht transfer directly from Velana airport</li>
+                <li>In-villa teppanyaki and reef-edge barbecue hosted by private resort chef</li>
+                <li>Coral frame adoption experience and private manta-point excursion</li>
+              </ul>
+              <div class="offer-card__foot">
+                <div>
+                  <span class="offer-card__label">Illustrative rate</span>
+                  <strong class="offer-card__price">[YOUR PRICE] / pavilion</strong>
+                </div>
+                <a class="btn btn--solid" href="mailto:concierge@maldivesescape.example?subject=Offer%20Enquiry%3A%20Twin-Pool%20Reef%20Pavilion">Book Enquiry</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT US SECTION (#about) -->
+      <section id="about" class="section" data-reveal>
+        <div class="section__inner">
+          <div class="about-grid">
+            <div class="about-grid__intro">
+              <p class="section__eyebrow">About Us</p>
+              <h2 class="section__title">Crafted Around Lagoon Stillness &amp; Atoll Light</h2>
+              <p class="about-grid__text">
+                From the moment you step off Velana International into our private seaplane terminal, every transfer, tide window, and villa orientation is matched to how you want to experience the Indian Ocean.
+              </p>
+            </div>
+            <div class="pillars">
+              <div class="pillar">
+                <span class="pillar__num">01</span>
+                <h3 class="pillar__title">Seaplane &amp; Yacht Sync</h3>
+                <p class="pillar__text">Coordinated international flight arrivals with minimal lounge wait before your atoll transfer.</p>
+              </div>
+              <div class="pillar">
+                <span class="pillar__num">02</span>
+                <h3 class="pillar__title">Verified Villa Privacy</h3>
+                <p class="pillar__text">Every overwater deck is angled for unobstructed horizon views and direct lagoon swim access.</p>
+              </div>
+              <div class="pillar">
+                <span class="pillar__num">03</span>
+                <h3 class="pillar__title">Living Reef Stewardship</h3>
+                <p class="pillar__text">Resident marine biologists guide coral propagation frames and low-impact manta encounters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT US SECTION (#contact) -->
+      <section id="contact" class="section section--alt" data-reveal>
+        <div class="section__inner">
+          <div class="contact-box">
+            <div class="contact-box__main">
+              <p class="section__eyebrow">Contact Us</p>
+              <h2 class="section__title">Reserve Your Maldives Atoll Brief</h2>
+              <p class="contact-box__text">
+                Tell our island specialists your preferred travel dates, party size, and favourite villa from the showcase above to receive a tailored seaplane and resort comparison.
+              </p>
+              <div class="contact-box__actions">
+                <a class="btn btn--solid" href="mailto:concierge@maldivesescape.example?subject=Maldives%20Villa%20Reservation%20Enquiry">
+                  Email concierge@maldivesescape.example
+                </a>
+                <a class="btn btn--glass" href="tel:+9606642090">
+                  Call +960 664 2090
+                </a>
+              </div>
+            </div>
+            <div class="contact-box__aside">
+              <h3 class="contact-box__sub">Atoll Desk &amp; Demo Scope</h3>
+              <p class="contact-box__note">
+                Atoll Concierge Desk: Boduthakurufaanu Magu, Malé 20026, Maldives · Daily 07:00–22:00 MVT.
+              </p>
+              <p class="contact-box__note">
+                Demo notice: This static template demonstrates interactive slide switching, category filtering, and direct email/phone links without a live booking engine or checkout backend.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <span class="site-footer__brand">Maldives Escape — The Sunny Side of Life</span>
+          <p class="site-footer__copy">© 2026 Maldives Escape Showcase Template. Sample resort concepts and rates for demonstration.</p>
+        </div>
+        <div class="site-footer__links">
+          <a href="#top">Home</a>
+          <a href="#travel">Travel</a>
+          <a href="#offers">Offers</a>
+          <a href="#about">About us</a>
+          <a href="mailto:concierge@maldivesescape.example">concierge@maldivesescape.example</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

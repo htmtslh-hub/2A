@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'maldives-escape': {
+    vi: {
+      intro: 'Trang khám phá khu nghỉ dưỡng và biệt thự trên biển Maldives toàn màn hình với vòm kính mờ tròn, 2 thẻ dọc xem trước resort, nút Book Now viên thuốc trắng và chữ MALDIVES thanh mảnh cỡ lớn theo ảnh tham chiếu.',
+      notes: '### Bắt đầu\nGiải nén đủ 10 file rồi mở index.html cạnh thư mục assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm chính xác. Không cần cài đặt hay build.\n\n### Ảnh và nội dung\nBốn ảnh resort WebP cục bộ trong assets/img/: sunset-pergola-deck.webp, lagoon-slide-villa.webp, aerial-pool-pavilion.webp và underwater-atoll-dining.webp. Thay Maldives Escape, concierge@maldivesescape.example và các mốc [YOUR PRICE] trước khi xuất bản. Google Fonts (Outfit và Plus Jakarta Sans) tùy chọn; font hệ thống hoạt động bình thường khi offline.\n\n### Tương tác & chuyển động\nHai nút mũi tên < / > và 2 thẻ dọc bên trong vòm kính mờ tròn đồng bộ với 4 chấm phân trang đáy, phím mũi tên và vuốt cảm ứng; bộ lọc khu bảo tồn ở Atoll Collection; nút Preview on Hero; menu mobile hỗ trợ Escape và nút Pause motion trong phiên.\n\n### Phạm vi\nGiao diện tĩnh, không kèm hệ thống đặt phòng trực tuyến hay thanh toán. Đọc kỹ LICENCE.txt trước khi phát hành.',
+    },
+    en: {
+      intro: 'A full-bleed Maldives overwater resort and island travel showcase featuring a circular frosted dome, two vertical resort preview cards, a white Book Now pill and oversized geometric MALDIVES typography inspired by the reference design.',
+      notes: '### Start\nExtract all 10 files and open index.html beside assets/. CUSTOMISE.md includes 10 steps, 12 complete AI prompts and a counted literal edit map. No install or build required.\n\n### Artwork and content\nFour local resort WebP images in assets/img/: sunset-pergola-deck.webp, lagoon-slide-villa.webp, aerial-pool-pavilion.webp and underwater-atoll-dining.webp. Replace Maldives Escape, concierge@maldivesescape.example and the [YOUR PRICE] markers before publishing. Google Fonts (Outfit and Plus Jakarta Sans) are optional; system fallbacks work offline.\n\n### Interaction & motion\nThe < / > carousel arrows and two vertical resort cards inside the circular frosted dome synchronize with the 4 bottom pagination dots, arrow keys and touch swipe; category filter pills in Atoll Collection; Preview on Hero jump buttons; Escape-aware mobile menu and session-only Pause motion.\n\n### Scope\nStatic showcase with no live booking engine or checkout backend. Read LICENCE.txt before publishing.',
+    },
+    zh: {
+      intro: '马尔代夫水上别墅与海岛度假全屏展示模板，配备左侧圆形磨砂玻璃穹顶、双纵向预览卡片、白色胶囊 Book Now 按钮与超大几何 MALDIVES 标题。',
+      notes: '### 开始\n解压全部10个文件，在 assets/ 旁打开 index.html。CUSTOMISE.md 含10个步骤、12条完整AI提示词和精确修改表。无需安装或构建。\n\n### 图像与内容\nassets/img/ 中含四张本地度假村 WebP：sunset-pergola-deck.webp、lagoon-slide-villa.webp、aerial-pool-pavilion.webp 与 underwater-atoll-dining.webp。发布前请替换 Maldives Escape、concierge@maldivesescape.example 及 [YOUR PRICE]。Google Fonts（Outfit 与 Plus Jakarta Sans）可选，离线时自动使用系统字体。\n\n### 交互与动态\n左侧圆形磨砂穹顶内的 < / > 箭头与两张纵向卡片同底部四个分页圆点、方向键及触摸滑动实时同步；Atoll Collection 支持分类筛选与回到主视觉预览；含支持 Escape 的移动菜单与会话内暂停控制。\n\n### 范围\n纯静态展示页，无在线预订或支付后端。发布前请阅读 LICENCE.txt。',
+    },
+  },
   'beyond-voyages': {
     "vi": {
       "intro": "Trang khám phá điểm đến và hành trình du lịch cao cấp với sân khấu phong cảnh toàn màn hình và vòng cung 5 điểm đến tương tác theo ảnh tham chiếu.",

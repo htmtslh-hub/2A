@@ -1,6 +1,6 @@
 {
   "origin": "http://127.0.0.1:4477",
-  "date": "2026-10-17T06:05:30.053Z",
+  "date": "2026-10-17T06:11:36.346Z",
   "assets": [
     {
       "file": "demos/astro-armor/index.html",
@@ -93,7 +93,7 @@
       "version": "153.0.8010.12",
       "status": {
         "paused": false,
-        "time": 0.132046,
+        "time": 0.124612,
         "muted": true,
         "src": "http://127.0.0.1:4477/previews/astro-armor.mp4?v=7217e6b57cdc"
       },
@@ -104,7 +104,7 @@
       "version": "155.0",
       "status": {
         "paused": false,
-        "time": 0.25056,
+        "time": 0.208509,
         "muted": true,
         "src": "http://127.0.0.1:4477/previews/astro-armor.mp4?v=7217e6b57cdc"
       },
@@ -115,7 +115,7 @@
       "version": "155.0.4283.62",
       "status": {
         "paused": false,
-        "time": 0.273477,
+        "time": 0.166642,
         "muted": true,
         "src": "http://127.0.0.1:4477/previews/astro-armor.mp4?v=7217e6b57cdc"
       },
@@ -126,7 +126,7 @@
       "version": "152.0.7977.124",
       "status": {
         "paused": false,
-        "time": 0.117947,
+        "time": 0.122712,
         "muted": true,
         "src": "http://127.0.0.1:4477/previews/astro-armor.mp4?v=7217e6b57cdc"
       },

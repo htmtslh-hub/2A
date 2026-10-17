@@ -1,0 +1,141 @@
+{
+  "verifiedAt": "2026-10-17T02:22:09.797Z",
+  "deploymentId": "dpl_DXwGARbgZY8h1scHKJfkQbQfkLMy",
+  "productionUrl": "https://forgezone.store",
+  "immutableUrl": "https://web-rm6kaihjj-htmtslh-hubs-projects.vercel.app",
+  "slot": "t48",
+  "slug": "fitclub-food",
+  "allEndpointsPass": true,
+  "endpoints": [
+    {
+      "name": "storeDetail",
+      "url": "https://forgezone.store/?mau=t48",
+      "status": 200,
+      "expectedStatus": 200,
+      "bytes": 240946,
+      "sha256": "05fe425cc196453404991af02cfc01af1e26e0215a52104ab48584be77ec6daf",
+      "hashMatch": null,
+      "pass": true
+    },
+    {
+      "name": "demoHtml",
+      "url": "https://forgezone.store/demos/fitclub-food/index.html?v=1.0.0",
+      "status": 200,
+      "expectedStatus": 200,
+      "bytes": 24315,
+      "sha256": "ccca43469b7f0f97c8268d2b1c8ace5ea0ab31314027d1bee5f712fdcabf23aa",
+      "hashMatch": true,
+      "pass": true
+    },
+    {
+      "name": "demoCss",
+      "url": "https://forgezone.store/demos/fitclub-food/assets/css/style.css",
+      "status": 200,
+      "expectedStatus": 200,
+      "bytes": 23489,
+      "sha256": "e74196267a71325f08a7a5b97799e3b73d8d39e739f6dcf6d097f768171cd6c1",
+      "hashMatch": true,
+      "pass": true
+    },
+    {
+      "name": "demoJs",
+      "url": "https://forgezone.store/demos/fitclub-food/assets/js/main.js",
+      "status": 200,
+      "expectedStatus": 200,
+      "bytes": 15133,
+      "sha256": "f08bb10a119283e9a52cdfd15b213a57711a543f5cc72f6661b7fa06bf1bfe75",
+      "hashMatch": true,
+      "pass": true
+    },
+    {
+      "name": "imgClub",
+      "url": "https://forgezone.store/demos/fitclub-food/assets/img/platter-club.webp",
+      "status": 200,
+      "expectedStatus": 200,
+      "bytes": 95098,
+      "sha256": "f198d8798dee9aa5bb702b0418c0b4d785297404d0104bb8f545c836d133aea2",
+      "hashMatch": true,
+      "pass": true
+    },
+    {
+      "name": "imgProtein",
+      "url": "https://forgezone.store/demos/fitclub-food/assets/img/platter-protein.webp",
+      "status": 200,
+      "expectedStatus": 200,
+      "bytes": 101838,
+      "sha256": "84532bd6a7b4f0d1500460ae73c2ee7722b42e3c9ad4c2cba105a1381d38de08",
+      "hashMatch": true,
+      "pass": true
+    },
+    {
+      "name": "imgBerry",
+      "url": "https://forgezone.store/demos/fitclub-food/assets/img/platter-berry.webp",
+      "status": 200,
+      "expectedStatus": 200,
+      "bytes": 107256,
+      "sha256": "0a451efa7ada5eff28485e35759804d536e075f33e1056c977b1466658489669",
+      "hashMatch": true,
+      "pass": true
+    },
+    {
+      "name": "posterWebp",
+      "url": "https://forgezone.store/previews/fitclub-food.webp?v=1.0.0",
+      "status": 200,
+      "expectedStatus": 200,
+      "bytes": 26026,
+      "sha256": "d9cd18a737453aa13622013c9220fd412a14ac4c4c0c46c821abc50e2c54cd6b",
+      "hashMatch": true,
+      "pass": true
+    },
+    {
+      "name": "videoMp4",
+      "url": "https://forgezone.store/previews/fitclub-food.mp4?v=20089483d646",
+      "status": 200,
+      "expectedStatus": 200,
+      "bytes": 653791,
+      "sha256": "20089483d646110628689939e954763628fa05385f9017cc069b7a20cd187c02",
+      "hashMatch": true,
+      "pass": true
+    },
+    {
+      "name": "downloadAuthGuard",
+      "url": "https://forgezone.store/api/download?id=t48",
+      "status": 401,
+      "expectedStatus": 401,
+      "bytes": 44,
+      "sha256": "921ecba4594ce6fc9fc5e5ecb923fc218b0edabe3343d0a60be0d9f3e3cf1010",
+      "hashMatch": null,
+      "pass": true
+    },
+    {
+      "name": "zipRootBlocked",
+      "url": "https://forgezone.store/fitclub-food.zip",
+      "status": 404,
+      "expectedStatus": 404,
+      "bytes": 16985,
+      "sha256": "ebac4ecfa6f0e6a5b9a226c5e24b8d5f40c41609e0ca0fa6908becd5c99cb834",
+      "hashMatch": null,
+      "pass": true
+    },
+    {
+      "name": "zipDemoBlocked",
+      "url": "https://forgezone.store/demos/fitclub-food/fitclub-food.zip",
+      "status": 404,
+      "expectedStatus": 404,
+      "bytes": 17012,
+      "sha256": "26c82898b3551d8ad2bcd33c87653c0ced6050c4d63bd5e4dd6461bb4d8edc31",
+      "hashMatch": null,
+      "pass": true
+    },
+    {
+      "name": "existingVoltHoodieDemo",
+      "url": "https://forgezone.store/demos/volt-hoodie/index.html?v=1.0.0",
+      "status": 200,
+      "expectedStatus": 200,
+      "bytes": 21662,
+      "sha256": "91d855b1a63c8c77c51cc134c89eb0fe407ee97e976afbd0fc58643817593eab",
+      "hashMatch": null,
+      "pass": true
+    }
+  ]
+}

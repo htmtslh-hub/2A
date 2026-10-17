@@ -1,0 +1,64 @@
+{
+  "candidateHash": "7fde3234980436b5ec2dddd48f6ef9e1243c7af76ddaa0a5b2ec0cd78dd75c8e",
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets\\css\\style.css",
+    "assets\\img\\platter-berry.webp",
+    "assets\\img\\platter-club.webp",
+    "assets\\img\\platter-protein.webp",
+    "assets\\js\\main.js",
+    "index.html"
+  ],
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "midTransformAnimated": true,
+      "midTransform": "matrix(0.977647, -0.0262836, 0.0262836, 0.977647, 0, 6.17)",
+      "settledTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "viewAfterClick": "1",
+      "wrapForward": "0",
+      "wrapBackward": "2",
+      "scrollMidAnimated": true,
+      "scrollSettled": "matrix(1, 0, 0, 1, 0, 0)",
+      "pausedPressed": "true"
+    },
+    "firefox": {
+      "version": "155.0",
+      "midTransformAnimated": true,
+      "midTransform": "matrix(0.988096, -0.0143148, 0.0143148, 0.988096, 0, 3.31)",
+      "settledTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "viewAfterClick": "1",
+      "wrapForward": "0",
+      "wrapBackward": "2",
+      "scrollMidAnimated": true,
+      "scrollSettled": "matrix(1, 0, 0, 1, 0, 0)",
+      "pausedPressed": "true"
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "midTransformAnimated": true,
+      "midTransform": "matrix(0.984425, -0.0185582, 0.0185582, 0.984425, 0, 4.32)",
+      "settledTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "viewAfterClick": "1",
+      "wrapForward": "0",
+      "wrapBackward": "2",
+      "scrollMidAnimated": true,
+      "scrollSettled": "matrix(1, 0, 0, 1, 0, 0)",
+      "pausedPressed": "true"
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "midTransformAnimated": true,
+      "midTransform": "matrix(0.985244, -0.0175415, 0.0175415, 0.985244, 0, 4.09)",
+      "settledTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "viewAfterClick": "1",
+      "wrapForward": "0",
+      "wrapBackward": "2",
+      "scrollMidAnimated": true,
+      "scrollSettled": "matrix(1, 0, 0, 1, 0, 0)",
+      "pausedPressed": "true"
+    }
+  }
+}

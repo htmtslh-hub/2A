@@ -124,6 +124,84 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     ]
   }
 },
+  t49: {
+    slug: 'chain-warden',
+    cat: 'entertainment',
+    version: '1.0.0',
+    copy: {
+      vi: {
+        name: 'Chain Warden',
+        desc: 'Landing page giới thiệu tướng giả tưởng đen tối và cai ngục xiềng xích theo ảnh tham chiếu: sân khấu linh hồn lục bảo, 5 kỹ năng P/Q/W/E/R tương tác, 4 ngoại trang đổi ánh sáng sân khấu và hộp thoại tiêu điểm.',
+        tags: ['Game showcase', '5 kỹ năng', '4 ngoại trang'],
+      },
+      en: {
+        name: 'Chain Warden',
+        desc: 'A dark-fantasy spectral champion showcase inspired by the reference design, featuring an emerald soul-lantern stage, interactive 5-ability P/Q/W/E/R matrix, 4 skin realms and spotlight dialogs.',
+        tags: ['Game showcase', '5 abilities', '4 skins'],
+      },
+      zh: {
+        name: 'Chain Warden',
+        desc: '暗黑奇幻幽魂典狱长英雄展示页，含翠绿魂灯舞台、P/Q/W/E/R五技能交互面板、四款皮肤领域切换及聚光灯预览对话框。',
+        tags: ['游戏英雄展示', '5项技能', '4款皮肤'],
+      },
+    },
+    specs: {
+      vi: [
+        ['Định dạng', 'HTML / CSS / JavaScript'],
+        ['Gói tải', '10 files'],
+        ['Phạm vi', 'Giao diện tĩnh · không backend'],
+      ],
+      en: [
+        ['Format', 'HTML / CSS / JavaScript'],
+        ['Package', '10 files'],
+        ['Scope', 'Static interface · no backend'],
+      ],
+      zh: [
+        ['格式', 'HTML / CSS / JavaScript'],
+        ['下载包', '10 files'],
+        ['范围', '静态界面 · 无后端'],
+      ],
+    },
+  },
+  t48: {
+    slug: 'fitclub-food',
+    cat: 'commerce',
+    version: '1.0.0',
+    copy: {
+      vi: {
+        name: 'FitClub Food',
+        desc: 'Landing page câu lạc bộ ẩm thực lành mạnh và tô dinh dưỡng thể hình nền tím mận tối theo ảnh tham chiếu, ba khay món WebP trong suốt, chọn khẩu phần và đặt món qua email.',
+        tags: ['Ẩm thực lành mạnh', '3 khay món', 'Ảnh trong suốt'],
+      },
+      en: {
+        name: 'FitClub Food',
+        desc: 'A dark-plum fitness and healthy club bowl landing page inspired by the reference design, featuring three transparent WebP platter cutouts, portion tiers and direct email enquiry.',
+        tags: ['Healthy food', '3 platters', 'Transparent cutouts'],
+      },
+      zh: {
+        name: 'FitClub Food',
+        desc: '深梅紫健身与健康俱乐部营养碗展示页，含三款透明WebP餐盘切图、份量档位选择及邮件订餐咨询。',
+        tags: ['健康轻食', '3款餐盘', '透明切图'],
+      },
+    },
+    specs: {
+      vi: [
+        ['Định dạng', 'HTML / CSS / JavaScript'],
+        ['Gói tải', '9 files'],
+        ['Phạm vi', 'Giao diện tĩnh · không backend'],
+      ],
+      en: [
+        ['Format', 'HTML / CSS / JavaScript'],
+        ['Package', '9 files'],
+        ['Scope', 'Static interface · no backend'],
+      ],
+      zh: [
+        ['格式', 'HTML / CSS / JavaScript'],
+        ['下载包', '9 files'],
+        ['范围', '静态界面 · 无后端'],
+      ],
+    },
+  },
   t46: {
     slug: 'volt-hoodie',
     cat: 'commerce',

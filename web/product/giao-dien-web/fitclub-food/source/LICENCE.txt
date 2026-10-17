@@ -1,0 +1,27 @@
+LICENCE — FitClub Food Static Website Template (Version 1.0.0)
+Copyright (c) 2026 Forge Zone. All rights reserved.
+
+1. GRANT OF LICENCE
+You are granted a non-exclusive, perpetual commercial licence to use this template once purchased from Forge Zone.
+
+2. WHAT YOU MAY DO
+You may use and modify this template for unlimited personal or client websites. Attribution is not required. You may replace the text, colours, fonts, and images to match your own brand or your client's brand.
+
+3. WHAT YOU MAY NOT DO
+You may not resell, redistribute, sublicense, share, or publish the template source files or ZIP archive on any template marketplace, asset library, Git repository, or starter kit bundle. You may not extract and sell the included food platter WebP images as standalone stock assets.
+
+4. DEMO CONTENT & TRADEMARKS
+All brand names (FitClub Food, FFIFEET CTUB), macro nutrition figures, calorie counts, meal plan prices, kitchen schedules, and contact addresses in this template are fictional demonstration content. Replace all sample claims, nutritional values, and prices with verified business data before publishing. Included artwork is provided for use within your customised website under this licence and does not grant ownership of any third-party trademark.
+
+5. FONTS
+This template optionally loads Plus Jakarta Sans from Google Fonts:
+- Plus Jakarta Sans: https://fonts.google.com/specimen/Plus+Jakarta+Sans (Source: https://github.com/tokotype/PlusJakartaSans) — licensed under the SIL Open Font License 1.1 (OFL-1.1).
+When offline, the template uses standard system sans-serif fallback fonts.
+
+6. OWNERSHIP
+Forge Zone retains copyright ownership of the template design, code structure, and original generated artwork. This document grants a usage licence, not a transfer of copyright.
+
+7. NO WARRANTY
+This template is provided "as is" without warranty of any kind, express or implied, including fitness for a particular purpose, nutritional accuracy, or legal compliance.
+
+If you are unsure whether a specific use is permitted, please ask — the answer is usually yes.

@@ -1,0 +1,33 @@
+FORGE ZONE COMMERCIAL TEMPLATE LICENCE
+Product: Chain Warden (chain-warden)
+Version: 1.0.0
+
+1. What you receive
+You receive a perpetual, non-exclusive commercial licence to use the HTML, CSS, JavaScript, and bundled local assets in this package to create websites for yourself or your clients.
+
+2. What you may do
+- Use the template for unlimited personal or client websites.
+- Modify the layout, colours, typography, copy, abilities, skins, and imagery freely.
+- Publish the customised website on any static or commercial web host without attribution.
+
+3. What you may not do
+- Do not resell, redistribute, or sublicense the original or minimally modified template files as a standalone template.
+- Do not upload this package to another template marketplace or bundle it into a competing UI kit or site builder library.
+
+4. Demo content and third-party trademarks
+All sample titles, character names, ability names, skin names, lore excerpts, and email addresses in the demo ("LEAGUE OF LEGENDS", "Thresh", "THE CHAIN WARDEN", "Shadow Isles", "Death Sentence", "Dark Star", "High Noon", "FPX", and "press@shadowwarden-studio.example") are illustrative placeholders used solely to demonstrate a game character showcase layout. This template licence does NOT grant any rights to third-party game trademarks, character names, or intellectual property. You must replace all sample names, lore, and demo imagery with your own original or licensed game brand assets before commercial publication.
+
+5. Fonts
+This template loads three open-source font families from Google Fonts, each verified under the SIL Open Font License 1.1 (OFL-1.1):
+- Syne — https://fonts.google.com/specimen/Syne/about (SIL Open Font License 1.1)
+- Cinzel — https://fonts.google.com/specimen/Cinzel/about (SIL Open Font License 1.1)
+- Plus Jakarta Sans — https://fonts.google.com/specimen/Plus+Jakarta+Sans/about (SIL Open Font License 1.1)
+When offline, the stylesheet falls back to Trebuchet MS, Georgia, and system sans-serif stacks.
+
+6. Ownership
+Copyright in the template code and layout structure remains with the template author / [COPYRIGHT OWNER TO BE COMPLETED BY PRODUCT OWNER]. This document grants a licence to use, not a transfer of copyright ownership.
+
+7. No warranty
+The template is provided "as is" without warranty of any kind, express or implied, including fitness for a particular purpose or legal compliance in your jurisdiction.
+
+Questions about what is allowed or not allowed? Just ask. The answer is usually yes.

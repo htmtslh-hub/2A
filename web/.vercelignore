@@ -22,3 +22,9 @@ product/retired/
 
 # Crimson Folio scratch files are private working material.
 product/giao-dien-web/crimson-folio/scratch/
+
+# Build dependencies and caches are recreated on Vercel, never uploaded.
+node_modules/
+.next/
+*.tsbuildinfo
+

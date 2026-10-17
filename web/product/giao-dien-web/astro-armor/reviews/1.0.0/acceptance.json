@@ -1,0 +1,269 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "date": "2026-10-17T06:03:05.062Z",
+  "candidateHash": "202fdc0331a20e657d514a4748d29c7d755d265fe0409d2735c86eee82207fae",
+  "sourceManifest": [
+    {
+      "file": "CUSTOMISE.md",
+      "bytes": 21584,
+      "sha256": "fcbd4833fd08f6cda68d4e4fc31792c489ad37e9e27469eab37004f2232f96d2"
+    },
+    {
+      "file": "LICENCE.txt",
+      "bytes": 2112,
+      "sha256": "cf684cd72484cc038d5b07ed2d7e9752539056c33c40ea3e6df659c3fbd64b44"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2144,
+      "sha256": "6951340a6cded78ad71e5e624b5b3f52177ee47874a0e6b714b35c80f3c2d88d"
+    },
+    {
+      "file": "assets/css/style.css",
+      "bytes": 19618,
+      "sha256": "0945d432e7f100eedc67ce6450246115c63b3f44410772956650b14cb6689ddf"
+    },
+    {
+      "file": "assets/img/armor-beige.webp",
+      "bytes": 152818,
+      "sha256": "f6ad8ec063937b0392d45a234ba08179a512566cceac94fad4b00f664a759ec5"
+    },
+    {
+      "file": "assets/img/armor-red.webp",
+      "bytes": 144412,
+      "sha256": "26be80dbafac93101bc31ea9a5730f074f96ce00d18f5e46b40ba5da8464c3df"
+    },
+    {
+      "file": "assets/img/armor-reference.jpg",
+      "bytes": 96321,
+      "sha256": "fe005bd5bbd2c50a793cb7e6b9146e529a1875c215f1a5d08c5bdded09e32301"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 8253,
+      "sha256": "48bebcea6ef665cc23a8b98386ee9527f03ba0b156bd2b3c850735f1367a1197"
+    },
+    {
+      "file": "index.html",
+      "bytes": 10562,
+      "sha256": "a3213d9cf6d6f122a881a68b1816f3913bf96e9bc246bb219545e89ab677f206"
+    }
+  ],
+  "references": [
+    {
+      "source": "D:/3. Dự án/anh mau/4599c5406a50ea0eb3411.jpg",
+      "sha256": "fe005bd5bbd2c50a793cb7e6b9146e529a1875c215f1a5d08c5bdded09e32301",
+      "size": [
+        820,
+        746
+      ],
+      "normalization": "Uniformly reduced desktop inference: render 1440×1310 DPR1, scale width to 820; do not independently transform comparison regions.",
+      "excluded": "Viewer arrow at bottom right and viewer lower border only"
+    }
+  ],
+  "views": [
+    {
+      "viewport": [
+        1440,
+        1310
+      ],
+      "normalizedSize": [
+        820,
+        746
+      ],
+      "dpr": 1,
+      "scroll": 0,
+      "state": "Default beige M, collapsed details",
+      "reference": "user JPEG",
+      "screenshot": "comparison-candidate.png",
+      "regions": [
+        {
+          "name": "navigation",
+          "weight": 10,
+          "axes": {
+            "geometry": {
+              "score": 97,
+              "reason": "Brand/nav anchors within a few pixels; right group spacing remains slightly different."
+            },
+            "typography": {
+              "score": 96,
+              "reason": "System sans and uppercase proportions closely track the reduced reference; source uses readable 14px controls."
+            },
+            "surfaces": {
+              "score": 94,
+              "reason": "Warm ivory is close; original photographic grain is not reproduced across the page."
+            },
+            "imagery": {
+              "score": 96,
+              "reason": "Inline search/cart/account icons preserve roles and line style; exact icon paths differ."
+            },
+            "spacing": {
+              "score": 96,
+              "reason": "Single header row and reference margins preserved; two link gaps differ by a few pixels."
+            }
+          },
+          "score": 95.95
+        },
+        {
+          "name": "information",
+          "weight": 18,
+          "axes": {
+            "geometry": {
+              "score": 96,
+              "reason": "Three title lines, $560 price and left column align with the reference; description heading is slightly higher."
+            },
+            "typography": {
+              "score": 96,
+              "reason": "Condensed heading treatment preserves line breaks; source text is at least 16px and captions 14px, resulting in slightly fuller body text."
+            },
+            "surfaces": {
+              "score": 94,
+              "reason": "Ink and cream palette retained; source is cleaner than the grainy JPEG."
+            },
+            "imagery": {
+              "score": 98,
+              "reason": "Brand/price and editorial information are coded text; no unsupported badge or logo added."
+            },
+            "spacing": {
+              "score": 96,
+              "reason": "Description/read-more/detail dividers remain within roughly a text line of the reference."
+            }
+          },
+          "score": 96.2
+        },
+        {
+          "name": "product-stage",
+          "weight": 45,
+          "axes": {
+            "geometry": {
+              "score": 97,
+              "reason": "Original jacket image retained at the reference composition. CSS contour has small edge deviations at cuffs and sleeve outlines."
+            },
+            "typography": {
+              "score": 96,
+              "reason": "Two-line fabrication caption is close in placement; source caption uses a larger readable font than the inferred source."
+            },
+            "surfaces": {
+              "score": 94,
+              "reason": "Garment colours are original pixels; surrounding paper is cleaner and shadow transition differs slightly."
+            },
+            "imagery": {
+              "score": 97,
+              "reason": "Same jacket, pose, orange trim, zippers and line drawings from supplied image. No full-page screenshot substitution. Resolution is limited to the original JPEG."
+            },
+            "spacing": {
+              "score": 97,
+              "reason": "Jacket top/hem and surrounding whitespace closely align; a few pixels differ at the original contour/shadow."
+            }
+          },
+          "score": 96.35
+        },
+        {
+          "name": "options",
+          "weight": 17,
+          "axes": {
+            "geometry": {
+              "score": 96,
+              "reason": "Size/colour headings right-align; swatches and two pill buttons closely match; safety/demo note is an additional small caption."
+            },
+            "typography": {
+              "score": 95,
+              "reason": "Legends and labels preserve hierarchy; source labels are kept readable, some word widths differ."
+            },
+            "surfaces": {
+              "score": 95,
+              "reason": "Orange accent, thin outline and cream controls retained; orange is slightly more saturated."
+            },
+            "imagery": {
+              "score": 98,
+              "reason": "Four original model swatches are real image-region crops; interactive states are coded controls."
+            },
+            "spacing": {
+              "score": 96,
+              "reason": "Vertical rhythm closely matches after row-gap tuning; size-guide underline and favourite spacing differ slightly."
+            }
+          },
+          "score": 96.15
+        },
+        {
+          "name": "construction",
+          "weight": 10,
+          "axes": {
+            "geometry": {
+              "score": 96,
+              "reason": "Four image/text pairs preserved; later card positions drift up to about 18px in the reduced view."
+            },
+            "typography": {
+              "score": 94,
+              "reason": "Readable 16px source copy is fuller than the tiny original, with slightly different wraps."
+            },
+            "surfaces": {
+              "score": 94,
+              "reason": "Same original photos; paper surface cleaner."
+            },
+            "imagery": {
+              "score": 98,
+              "reason": "All four actual detail photographs retained via CSS image-region crops."
+            },
+            "spacing": {
+              "score": 94,
+              "reason": "First thumbnail aligns; later gaps and paragraph density vary slightly."
+            }
+          },
+          "score": 95.5
+        }
+      ],
+      "score": 96.164
+    }
+  ],
+  "fidelity": {
+    "method": "weighted visual rubric",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "status": "PASS",
+    "score": 96.164,
+    "diagnostic": "frozen-visual-diff metrics are pixel diagnostics, not rubric or pixel accuracy"
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "interactions.json",
+      "chromium-colour-mid.png",
+      "firefox-colour-mid.png",
+      "edge-colour-mid.png",
+      "coccoc-colour-mid.png"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "interactions.json",
+      "edge-scroll-mid.png",
+      "coccoc-scroll-mid.png"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Image-only input; store recording is a separate release verification"
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "package/checks.json",
+      "package/screenshots/",
+      "interactions.json",
+      "responsive.json"
+    ],
+    "revalidation": "The official customer ZIP matches every source file byte-for-byte and passed the canonical Chromium/Firefox suite. Additional nine-viewport aspect/overflow checks verify the current CSS hash."
+  },
+  "blockers": [],
+  "gate": "PASS",
+  "limitations": [
+    "Rubric is an evidence-based design assessment, not a perceptual guarantee or pixel accuracy.",
+    "Mobile reference fidelity N/A; only desktop reference supplied.",
+    "Safari, physical devices and real paid-account download/payment completion not tested.",
+    "Alternate full-size colour previews are inferred concept states, not reference photographs."
+  ]
+}

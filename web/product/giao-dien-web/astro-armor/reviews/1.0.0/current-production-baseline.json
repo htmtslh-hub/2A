@@ -1,0 +1,26 @@
+[
+  {
+    "path": "demos/fitclub-food/index.html",
+    "sha256": "ccca43469b7f0f97c8268d2b1c8ace5ea0ab31314027d1bee5f712fdcabf23aa"
+  },
+  {
+    "path": "demos/fitclub-food/assets/css/style.css",
+    "sha256": "e74196267a71325f08a7a5b97799e3b73d8d39e739f6dcf6d097f768171cd6c1"
+  },
+  {
+    "path": "demos/fitclub-food/assets/js/main.js",
+    "sha256": "f08bb10a119283e9a52cdfd15b213a57711a543f5cc72f6661b7fa06bf1bfe75"
+  },
+  {
+    "path": "demos/chain-warden/index.html",
+    "sha256": "7ffcd316807f766671e5af5ce61f6697dfb5fc13ca6fd0bdf8a3861f9e81ab32"
+  },
+  {
+    "path": "demos/chain-warden/assets/css/style.css",
+    "sha256": "c2669e8154d29896ce57e5b8b1de9f36b41d3856215f7973e7e4c5c37b1fd67b"
+  },
+  {
+    "path": "demos/chain-warden/assets/js/main.js",
+    "sha256": "a11d913b1f1e60dbf3198461ee94ba717619efdf869aa45ced5af79eb7b62717"
+  }
+]

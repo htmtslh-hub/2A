@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'astro-armor': {
+  "vi": {
+    "intro": "Giao diện sản phẩm áo khoác nền kem, điểm nhấn cam và bố cục ba cột theo ảnh mẫu. Có chọn size, bốn phối màu, bảng size và giỏ demo trong phiên; không có thanh toán hay backend.",
+    "notes": "Giải nén đủ 9 file rồi mở index.html cạnh assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm. Ảnh mẫu JPEG được giữ nguyên và hiển thị qua vùng cắt CSS; hai WebP dùng cho phối màu bổ sung. Độ nét ảnh beige/thumbnail giới hạn bởi ảnh tham chiếu. Có chọn size, màu, yêu thích và giỏ trong phiên với xóa/tổng tiền, bảng size, tìm một sản phẩm và hộp thông tin tài khoản. Không có đăng nhập, tồn kho, nhận đơn hay thanh toán thật. Thay thông tin demo, email và ảnh theo quyền của bạn; xem LICENCE.txt. Motion mặc định bật, có nút tạm dừng trong phiên."
+  },
+  "en": {
+    "intro": "An ivory-and-orange puffer product page with a reference-led three-column composition. Includes size selection, four colour previews, a size guide and a page-session demo bag; no checkout or backend.",
+    "notes": "Extract all 9 files and open index.html beside assets/. CUSTOMISE.md includes ten steps, twelve AI prompts and counted edits. The unchanged supplied JPEG is shown through CSS image-region crops; two WebP files provide alternate colour concepts. Beige and thumbnail resolution is limited to the reference. Size/colour selection, favourite and session bag with removal/subtotal, size guide, single-item search and account information dialog work locally. No login, inventory, order processing or live checkout. Replace demo details, email and artwork with permitted content; read LICENCE.txt. Motion starts enabled with a session pause control."
+  },
+  "zh": {
+    "intro": "奶油白与橙色羽绒服产品页面，采用参考图的三栏布局。包含尺码选择、四种配色预览、尺码表和会话内购物袋演示；无支付或后端。",
+    "notes": "解压全部9个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词及精确修改表。原始JPEG通过CSS局部裁切显示，两个WebP用于额外配色概念。米色主图和缩略图清晰度受参考图限制。本地支持尺码/颜色选择、收藏、可删除并计算小计的会话购物袋、尺码表、单品搜索及账户说明。无登录、库存、订单处理或真实结账。请替换演示资料、邮箱及具有使用权限的图片，并阅读LICENCE.txt。动画默认开启，可在当前会话暂停。"
+  }
+},
   'chain-warden': {
     vi: {
       intro: 'Landing page giới thiệu tướng giả tưởng đen tối và bộ kỹ năng tương tác theo ảnh tham chiếu.',

@@ -11,7 +11,8 @@ type Section = 'overview' | 'users' | 'orders' | 'traffic' | 'audit';
 type UserRow = { id: string; name: string | null; email: string; createdAt: string; suspendedAt: string | null; admin: boolean; _count: { orders: number; purchases: number; savedTemplates: number } };
 type OrderRow = { id: string; buyerEmail: string; buyerName: string | null; amount: number; currency: string; status: string; provider: string; kind: string; templateId: string | null; description: string; adminNote: string; createdAt: string; paidAt: string | null; payosOrderCode: string | null; paddleTxnId: string | null; items: { templateId: string; amount: number }[]; _count: { purchases: number } };
 type AuditRow = { id: string; actorId: string; action: string; targetId: string; detail: string; createdAt: string };
-type Summary = { days: number; accounts: number; newAccounts: number; orders: number; pending: number; views: number; sessions: number; tracking: boolean; revenue: { currency: string; _sum: { amount: number | null }; _count: number }[]; chart: { day: string; views: number; sessions: number }[]; paths: { path: string; _count: number }[]; sources: { referrer: string; _count: number }[]; devices: { device: string; _count: number }[] };
+type TemplateDownloadRow = { templateId: string; slug: string; name: string; category: string; isFree: boolean; downloads: number; totalDownloads: number; purchases: number; saved: number };
+type Summary = { days: number; accounts: number; newAccounts: number; orders: number; pending: number; views: number; sessions: number; downloads?: number; totalDownloads?: number; templateDownloads?: TemplateDownloadRow[]; tracking: boolean; revenue: { currency: string; _sum: { amount: number | null }; _count: number }[]; chart: { day: string; views: number; sessions: number }[]; paths: { path: string; _count: number }[]; sources: { referrer: string; _count: number }[]; devices: { device: string; _count: number }[] };
 type List<T> = { total: number; page: number; rows: T[] };
 type Payload = Summary | List<UserRow | OrderRow | AuditRow>;
 const sections: { id: Section; name: string; icon: string }[] = [
@@ -227,6 +228,7 @@ export default function Dashboard({ name }: { name: string }) {
             <Metric label="Doanh thu USD" value={summary.revenue.find(r => r.currency === 'USD')?._sum.amount ?? 0} format={usd} sub="Tách riêng tiền tệ · Chưa trừ phí" motion={motion} icon="store" />
           </div>}
           {!summary.tracking && <div className={styles.notice}>Thu thập truy cập đang tắt. Bật ANALYTICS_ENABLED sau khi áp dụng migration để bắt đầu ghi nhận dữ liệu.</div>}
+          <TemplateDownloads summary={summary} />
           <section data-reveal className={`${styles.panel} ${styles.chartPanel}`}><div className={styles.panelHeading}><div><h2>Lưu lượng truy cập</h2><p>{integer(summary.views)} lượt xem · {integer(summary.sessions)} phiên / {days} ngày</p></div><div className={styles.chartControls}><span className={styles.legend}><i /> Lượt xem</span><div className={styles.periods} aria-label="Khoảng ngày biểu đồ">{[7,30,90].map(d => <button key={d} aria-label={`Biểu đồ ${d} ngày`} aria-pressed={days === d} onClick={() => { setDays(d); setPage(1); }}>{d}N</button>)}</div></div></div><TrafficChart data={summary.chart} motion={motion} />
             {summary.views === 0 && <p className={styles.chartEmpty}>Chưa có lượt xem được ghi nhận trong khoảng này.</p>}
           </section><div className={styles.twoColumns}><section data-reveal className={styles.panel}><div className={styles.panelHeading}><div><h2>Thiết bị</h2><p>Theo kích thước màn hình lúc xem</p></div><Icon name="monitor" /></div><div className={styles.deviceList}>{['desktop', 'mobile', 'tablet'].map(device => {
@@ -283,6 +285,56 @@ function Badge({ value }: { value: string }) { return <span className={`${styles
 function UserTableRow({ row, open }: { row: UserRow; open: (target: HTMLElement) => void }) { return <tr><td><strong>{row.name || 'Chưa đặt tên'} {row.admin && <small className={styles.adminBadge}>ADMIN</small>}</strong><small>{row.email}</small></td><td><Badge value={row.suspendedAt ? 'locked' : 'active'} /></td><td>{date(row.createdAt)}</td><td>{row._count.orders} / {row._count.purchases}</td><td><button aria-label={`Quản lý ${row.email}`} onClick={e => open(e.currentTarget)}>Quản lý ↗</button></td></tr>; }
 function OrderTableRow({ row, open }: { row: OrderRow; open: (target: HTMLElement) => void }) { return <tr><td><strong>{product(row)}</strong><small><code>{row.id}</code> · {row.provider}</small></td><td>{row.buyerName || '—'}<small>{row.buyerEmail}</small></td><td className={styles.amount}>{money(row.amount, row.currency)}</td><td><Badge value={row.status} /></td><td>{date(row.createdAt)}</td><td><button aria-label={`Xem đơn ${row.id}`} onClick={e => open(e.currentTarget)}>Chi tiết ↗</button></td></tr>; }
 function AuditTableRow({ row }: { row: AuditRow }) { return <tr><td>{date(row.createdAt)}</td><td><code>{row.actorId}</code></td><td><strong>{row.detail}</strong><small>{row.action}</small></td><td><code>{row.targetId}</code></td></tr>; }
+function TemplateDownloads({ summary }: { summary: Summary }) {
+  const [tplSearch, setTplSearch] = useState('');
+  const [tplFilter, setTplFilter] = useState<'all' | 'downloaded' | 'free'>('all');
+  const [expanded, setExpanded] = useState(false);
+  const rows = summary.templateDownloads ?? [];
+  const downloadedCount = rows.filter(r => r.totalDownloads > 0 || r.downloads > 0).length;
+  const freeCount = rows.filter(r => r.isFree).length;
+  const q = tplSearch.trim().toLowerCase();
+  const filtered = rows.filter(r => {
+    if (tplFilter === 'downloaded' && r.totalDownloads === 0 && r.downloads === 0) return false;
+    if (tplFilter === 'free' && !r.isFree) return false;
+    if (!q) return true;
+    return r.name.toLowerCase().includes(q) || r.templateId.toLowerCase().includes(q) || r.slug.toLowerCase().includes(q) || r.category.toLowerCase().includes(q);
+  });
+  const visible = expanded || q || tplFilter !== 'all' ? filtered : filtered.slice(0, 8);
+  const max = Math.max(1, ...filtered.map(r => Math.max(r.downloads, r.totalDownloads)));
+  return <section data-reveal className={`${styles.panel} ${styles.downloadsPanel}`}>
+    <div className={styles.panelHeading}>
+      <div>
+        <h2>Lượt tải theo mẫu giao diện</h2>
+        <p>{integer(summary.downloads ?? 0)} lượt tải ({summary.days} ngày) · {integer(summary.totalDownloads ?? 0)} tổng lượt tải · {integer(downloadedCount)}/{integer(rows.length)} mẫu đã có lượt tải</p>
+      </div>
+      <div className={styles.downloadControls}>
+        <div className={styles.periods} role="group" aria-label="Bộ lọc mẫu giao diện">
+          <button type="button" aria-pressed={tplFilter === 'all'} onClick={() => setTplFilter('all')}>Tất cả ({rows.length})</button>
+          <button type="button" aria-pressed={tplFilter === 'downloaded'} onClick={() => setTplFilter('downloaded')}>Đã tải ({downloadedCount})</button>
+          <button type="button" aria-pressed={tplFilter === 'free'} onClick={() => setTplFilter('free')}>Miễn phí ({freeCount})</button>
+        </div>
+        <input className={styles.tplSearchInput} aria-label="Tìm mẫu giao diện" value={tplSearch} onChange={e => setTplSearch(e.target.value)} placeholder="Tìm tên mẫu, mã t1…t49 hoặc slug…" maxLength={80} />
+      </div>
+    </div>
+    {visible.length ? <ol className={styles.ranking}>{visible.map((item, i) => {
+      const barVal = item.downloads || item.totalDownloads;
+      return <li key={item.templateId}>
+        <span className={styles.rank}>{String(i + 1).padStart(2, '0')}</span>
+        <div>
+          <button type="button" onClick={() => window.open(item.templateId === 'free-sample' ? '/?tab=library' : `/?mau=${item.templateId}`, '_blank', 'noopener')} aria-label={`Mở ${item.name}`}>
+            {item.name} <span className={`${styles.badge} ${item.isFree ? styles.good : styles.neutral}`}>{item.isFree ? 'MIỄN PHÍ' : 'PRO'}</span>
+            <small>{item.templateId.toUpperCase()} · {item.slug} · Tổng tải: {integer(item.totalDownloads)} · Đã mua: {integer(item.purchases)} · Đã lưu: {integer(item.saved)}</small>
+          </button>
+          <progress max={max} value={barVal} aria-label={`Lượt tải ${item.name}`} />
+        </div>
+        <strong>{integer(item.downloads)}<small>trong {summary.days}N · tổng {integer(item.totalDownloads)}</small></strong>
+      </li>;
+    })}</ol> : <div className={styles.empty}>Chưa có mẫu giao diện phù hợp với bộ lọc.</div>}
+    {!q && tplFilter === 'all' && filtered.length > 8 && <div className={styles.downloadMore}>
+      <button type="button" onClick={() => setExpanded(v => !v)}>{expanded ? 'Thu gọn danh sách' : `Xem tất cả ${integer(filtered.length)} mẫu giao diện`}</button>
+    </div>}
+  </section>;
+}
 function Ranking({ title, rows, compact = false, navigate }: { title: string; rows: [string, number][]; compact?: boolean; navigate?: (path: string) => void }) {
   const max = Math.max(1, ...rows.map(r => r[1]));
   const pageLabel = (value: string) => value === '/' ? 'Trang chủ' : value === '/?tab=library' ? 'Thư viện giao diện' : value === '/huong-dan' ? 'Hướng dẫn sử dụng' : value.startsWith('/?mau=') ? templateName(value.split('=')[1]) : value;

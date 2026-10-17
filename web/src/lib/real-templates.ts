@@ -46,6 +46,108 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t50: {
+  "slug": "vesper-ai",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "copy": {
+    "vi": {
+      "name": "Vesper.ai",
+      "desc": "Landing page hạ tầng AI vận hành một khung nhìn nền đen tuyền #000000: video nền 3D điện ảnh, thanh điều hướng liquid-metal, nút liquid-glass quét sáng 115°, tiêu đề H1 hai dòng cắt mặt nạ với chữ Instrument Serif nghiêng và chuỗi chuyển động 9-keyframe spring-settle.",
+      "tags": [
+        "Hạ tầng AI",
+        "Liquid-metal & Glass",
+        "Đen tuyền / Video"
+      ]
+    },
+    "en": {
+      "name": "Vesper.ai",
+      "desc": "A single-viewport operational AI infrastructure landing page on pure black #000000 with a full-bleed cinematic hero video, liquid-metal navigation pills, 115° specular liquid-glass buttons, a two-line masked H1 with Instrument Serif italic accent and 9-keyframe spring-settle choreography.",
+      "tags": [
+        "AI infrastructure",
+        "Liquid-metal & Glass",
+        "Pure black / Video"
+      ]
+    },
+    "zh": {
+      "name": "Vesper.ai",
+      "desc": "纯黑 #000000 单屏 AI 运营基础设施着陆页：全屏电影级背景视频、液态金属导航胶囊、115° 流光液态玻璃按钮、Instrument Serif 斜体双行遮罩主标题及 9 关键帧弹簧入场动效。",
+      "tags": [
+        "AI 基础设施",
+        "液态金属与玻璃",
+        "纯黑 / 视频"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "9 file · 2 font WOFF2 + video H.264 cục bộ"
+      ],
+      [
+        "Tương tác",
+        "Liquid-metal nav · Liquid-glass CTA · Menu mobile · Pause motion"
+      ],
+      [
+        "Chuyển động",
+        "Chuỗi 9-keyframe spring-settle · H1 line-mask · Video nền lặp"
+      ],
+      [
+        "Phạm vi",
+        "Landing page hạ tầng AI · tĩnh · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · 2 local WOFF2 fonts + H.264 hero video"
+      ],
+      [
+        "Interaction",
+        "Liquid-metal nav · Liquid-glass CTAs · Mobile menu · Pause motion"
+      ],
+      [
+        "Motion",
+        "9-keyframe spring-settle · H1 line-mask · Looping hero video"
+      ],
+      [
+        "Scope",
+        "AI infrastructure landing page · static · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "9个文件 · 2个本地 WOFF2 字体 + H.264 视频"
+      ],
+      [
+        "交互",
+        "液态金属导航 · 液态玻璃按钮 · 移动菜单 · 会话内暂停动画"
+      ],
+      [
+        "动态",
+        "9关键帧弹簧入场 · H1 遮罩滑入 · 循环主视觉视频"
+      ],
+      [
+        "范围",
+        "AI 基础设施着陆页 · 静态 · 无后端"
+      ]
+    ]
+  }
+},
   t47: {
   "slug": "astro-armor",
   "cat": "commerce",
@@ -645,7 +747,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       ],
       [
         "Chuyển động",
-        "Chuyển cảnh hai chiều · vuốt/phím · reveal khi cuộn · tạm dừng trong phiên"
+        "10 lớp hiệu ứng Vesper · vòng sao chổi · liquid-glass · sóng nhạc 35 cột"
       ],
       [
         "Phạm vi",
@@ -667,7 +769,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       ],
       [
         "Motion",
-        "Two-way stage transitions · swipe/keys · scroll reveals · session pause"
+        "10 Vesper effect layers · comet rings · liquid-glass · 35-bar equalizer"
       ],
       [
         "Scope",
@@ -689,7 +791,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       ],
       [
         "动态",
-        "双向场景切换 · 滑动/按键 · 滚动渐显 · 会话内暂停"
+        "10层 Vesper 动效 · 彗星光环 · 液态玻璃 · 35段动态频谱"
       ],
       [
         "范围",
@@ -700,29 +802,29 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   "copy": {
     "vi": {
       "name": "Sonicore",
-      "desc": "Showroom tai nghe âm thanh không gian nền tối ánh tím, sơ đồ tách lớp linh kiện 6 điểm chạm, mô phỏng âm trường 360° và bảng so sánh thông số.",
+      "desc": "Showroom tai nghe âm thanh không gian nâng cấp hệ hiệu ứng Vesper: tai nghe lơ lửng 3D, vòng sao chổi ngược chiều, nút liquid-metal/liquid-glass quét sáng 115°, sơ đồ tách lớp phát sóng sonar và phổ nhạc 35 cột.",
       "tags": [
         "Tai nghe 3D",
-        "Tách lớp linh kiện",
-        "Đen / tím"
+        "Hiệu ứng Vesper",
+        "Liquid Glass"
       ]
     },
     "en": {
       "name": "Sonicore",
-      "desc": "A dark violet spatial-audio headphone showcase with a six-part interactive exploded hardware diagram, 360° soundstage presets and specification comparison.",
+      "desc": "A spatial-audio headphone showcase upgraded with the Vesper motion system: 3D headphone levitation, counter-rotating comet rings, 115° liquid-metal and liquid-glass shine sweeps, sonar-pulsing exploded hardware and a 35-bar dancing equalizer.",
       "tags": [
         "Spatial headphones",
-        "Exploded view",
-        "Dark / violet"
+        "Vesper motion",
+        "Liquid Glass"
       ]
     },
     "zh": {
       "name": "Sonicore",
-      "desc": "深紫光效空间音频耳机展示页，配备六部件交互拆解图、360°声场预设切换与参数对比表。",
+      "desc": "升级 Vesper 动效系统的空间音频耳机展示页：3D 悬浮耳机、反向旋转彗星光环、115° 液态金属与液态玻璃扫光、声呐脉冲六部件拆解图及 35 段跃动频谱。",
       "tags": [
         "空间音频耳机",
-        "硬件拆解图",
-        "深色 / 紫色"
+        "Vesper 动效",
+        "液态玻璃"
       ]
     }
   }

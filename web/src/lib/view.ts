@@ -404,7 +404,7 @@ export function buildView(
           w: ['100%', '62%', '30%'][i],
           ratio: ['16/10', '3/4', '9/16'][i],
         })),
-        specs: ((REAL_TEMPLATES[d.id]?.group === 'agent' || ['astro-armor', 'galaxy-edge', 'aerox-studio', 'dualplay', 'verdant', 'orbit-academy', 'shopluxe', 'chronoform', 'leaflit', 'ais-folio', 'semaan', 'motora', 'aerosix', 'airmax-plus', 'backbest-800', 'firepower', 'beetbuh', 'sonicore', 'manganresto', 'volt-hoodie', 'fitclub-food'].includes(REAL_TEMPLATES[d.id]?.slug)) ? REAL_TEMPLATES[d.id].specs?.[lang] ?? [] : t.dSpecRows ?? []).map((r: string[]) => ({ k: r[0], v: r[1] })),
+        specs: ((REAL_TEMPLATES[d.id]?.group === 'agent' || ['vesper-ai', 'astro-armor', 'galaxy-edge', 'aerox-studio', 'dualplay', 'verdant', 'orbit-academy', 'shopluxe', 'chronoform', 'leaflit', 'ais-folio', 'semaan', 'motora', 'aerosix', 'airmax-plus', 'backbest-800', 'firepower', 'beetbuh', 'sonicore', 'manganresto', 'volt-hoodie', 'fitclub-food'].includes(REAL_TEMPLATES[d.id]?.slug)) ? REAL_TEMPLATES[d.id].specs?.[lang] ?? [] : t.dSpecRows ?? []).map((r: string[]) => ({ k: r[0], v: r[1] })),
         related: allTpl
           .filter((m: any) => m.cat === d.cat && m.id !== d.id)
           .concat(allTpl.filter((m: any) => m.cat !== d.cat && m.id !== d.id))

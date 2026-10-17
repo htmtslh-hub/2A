@@ -1,0 +1,38 @@
+{
+  "id": "t50",
+  "slug": "vesper-ai",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-17T08:21:43.323Z",
+  "demo": "/demos/vesper-ai/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "6a1cd0a1ad06",
+  "sha256": "6a1cd0a1ad0656bb20c181de54854de7634287855ea7e7f9b82b82e6ed21b26e",
+  "demoHtmlSha256": "b90cfa328a6d9aa6a37010fbb2078c605270ec1e306a63e4a3b0a8bfcf68e648",
+  "demoSha256": "2aeffd5660f47d63284b0e1bde6497ebdeca648c7d92579177417c49c6045b11",
+  "bytes": 1402198,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vesper-ai-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vesper-ai-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vesper-ai-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vesper-ai-return.jpg"
+  ]
+}

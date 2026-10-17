@@ -8,14 +8,17 @@
   <meta property="og:title" content="Sonicore | Spatial audio headphone showcase">
   <meta property="og:description" content="Hear beyond reality with the Sonicore X1 spatial audio headphone concept.">
   <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%239d7aff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23c4b5fd' stroke-width='1.8' stroke-dasharray='3 2'/%3E%3Ccircle cx='16' cy='16' r='3.2' fill='%23c4b5fd'/%3E%3C/svg%3E">
   <link rel="preload" as="image" href="assets/img/hero-headphone.webp">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="menu-backdrop" aria-hidden="true" data-menu-backdrop></div>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Sonicore X1 concept home">
+    <a class="brand appear appear--scale appear-d1" href="#home" aria-label="Sonicore X1 concept home">
       <svg class="brand__icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
         <circle cx="16" cy="16" r="13" fill="none" stroke="#9d7aff" stroke-width="1.6" opacity=".85"/>
         <circle cx="16" cy="16" r="8" fill="none" stroke="#c4b5fd" stroke-width="1.5" stroke-dasharray="3 2"/>
@@ -23,17 +26,17 @@
       </svg>
       <span>SONICORE</span>
     </a>
-    <button class="nav-toggle js-control" type="button" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
+    <button class="nav-toggle js-control appear appear--scale appear-d2" type="button" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
     <nav id="navigation" class="navigation" aria-label="Main navigation">
-      <a href="#technology">TECHNOLOGY</a>
-      <a href="#sound">SOUND</a>
-      <a href="#design">DESIGN</a>
-      <a href="#reviews">REVIEWS</a>
-      <a href="#support">SUPPORT</a>
+      <a class="appear appear--scale appear-d2" href="#technology">TECHNOLOGY</a>
+      <a class="appear appear--soft appear-d3" href="#sound">SOUND</a>
+      <a class="appear appear--scale appear-d4" href="#design">DESIGN</a>
+      <a class="appear appear--soft appear-d5" href="#reviews">REVIEWS</a>
+      <a class="appear appear--scale appear-d6" href="#support">SUPPORT</a>
     </nav>
     <div class="header-actions">
-      <a class="preorder-pill" href="#preorder">PRE-ORDER NOW</a>
-      <span class="header-bars" aria-hidden="true">
+      <a class="preorder-pill appear appear--scale appear-d7" href="#preorder">PRE-ORDER NOW</a>
+      <span class="header-bars appear appear--soft appear-d8" aria-hidden="true">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M3 6h18M3 12h18M3 18h18" stroke="#d8d4e8" stroke-width="1.8" stroke-linecap="round"/>
         </svg>
@@ -43,29 +46,38 @@
 
   <main id="main">
     <section class="hero section" id="home" aria-labelledby="hero-title">
-      <div class="rail-marker rail-marker--hero" aria-hidden="true">
+      <div class="rail-marker rail-marker--hero appear appear--side appear-d7" aria-hidden="true">
         <span class="rail-dot"></span>
         <span class="rail-num">02</span>
         <span class="rail-num">03</span>
         <span class="rail-num">04</span>
         <span class="rail-num">05</span>
       </div>
-      <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-indicator appear appear--side appear-d8" aria-hidden="true">
         <span>SCROLL</span>
         <i></i>
       </div>
       <div class="hero__copy" data-entry>
-        <p class="hero__kicker">SPATIAL AUDIO REIMAGINED</p>
-        <h1 id="hero-title">HEAR<br>BEYOND<br>REALITY</h1>
-        <p class="hero__description">Sonicore X1 delivers true-to-life spatial audio<br>with unmatched clarity, depth, and precision.</p>
+        <p class="hero__kicker appear appear--pop appear-d3">
+          <svg class="hero__kicker-star" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M12 2.6C12.55 2.6 12.88 3.15 13.08 4.7c.62 4.7 1.52 5.6 6.22 6.22 1.55.2 2.1.53 2.1 1.08s-.55.88-2.1 1.08c-4.7.62-5.6 1.52-6.22 6.22-.2 1.55-.53 2.1-1.08 2.1s-.88-.55-1.08-2.1c-.62-4.7-1.52-5.6-6.22-6.22C3.15 12.88 2.6 12.55 2.6 12s.55-.88 2.1-1.08c4.7-.62 5.6-1.52 6.22-6.22C11.12 3.15 11.45 2.6 12 2.6Z"/>
+          </svg>
+          <span>SPATIAL AUDIO REIMAGINED</span>
+        </p>
+        <h1 id="hero-title">
+          <span class="headline-line"><span class="appear appear--mask appear-d4">HEAR</span></span>
+          <span class="headline-line"><span class="appear appear--mask appear-d5">BEYOND</span></span>
+          <span class="headline-line"><span class="appear appear--mask appear-d6"><em class="headline-accent appear appear--em appear-d8">REALITY</em></span></span>
+        </h1>
+        <p class="hero__description appear appear--soft appear-d7">Sonicore X1 delivers true-to-life spatial audio<br>with unmatched clarity, depth, and precision.</p>
         <div class="hero__actions">
-          <button class="button button--glow" type="button" id="hero-next" data-next data-sound-step="1">
+          <button class="button button--glow appear appear--btn appear-d8" type="button" id="hero-next" data-next data-sound-step="1">
             <span data-experience-label>EXPERIENCE SOUND</span>
             <svg class="button__wave" viewBox="0 0 20 18" aria-hidden="true" focusable="false">
               <path d="M2 9h2M6 5v8M10 2v14M14 5v8M18 9h-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
           </button>
-          <a class="watch-film" href="#sound">
+          <a class="watch-film appear appear--btn appear-d9" href="#sound">
             <span>WATCH FILM</span>
             <span class="watch-film__play" aria-hidden="true">
               <svg viewBox="0 0 36 36" aria-hidden="true" focusable="false">
@@ -76,21 +88,21 @@
           </a>
         </div>
         <div class="hero__awards" aria-label="Concept design recognition badges (illustrative)">
-          <div class="award">
+          <div class="award appear appear--stat appear-d9">
             <svg class="award__badge" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
               <circle cx="18" cy="18" r="14" fill="#d92b2b"/>
               <circle cx="15" cy="15" r="9" fill="none" stroke="#ff8a8a" stroke-width="1.4" stroke-dasharray="2 2"/>
             </svg>
             <span class="award__text"><strong>reddot</strong> winner 2024</span>
           </div>
-          <div class="award award--ces">
+          <div class="award award--ces appear appear--stat appear-d10">
             <span class="award__ces-box">
               <strong>CES</strong>
               <span>INNOVATION AWARDS</span>
               <em>2024</em>
             </span>
           </div>
-          <div class="award">
+          <div class="award appear appear--stat appear-d11">
             <svg class="award__good" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
               <path d="M14 2 26 14 14 26 2 14 14 2Z" fill="none" stroke="#f5f4fa" stroke-width="1.8"/>
               <path d="M14 8l6 6-6 6-6-6 6-6Z" fill="#f5f4fa"/>
@@ -100,7 +112,7 @@
         </div>
       </div>
 
-      <div class="hero__stage" tabindex="0" data-carousel="hero" aria-label="Sonicore X1 spatial soundstage views">
+      <div class="hero__stage appear appear--scale appear-d5" tabindex="0" data-carousel="hero" aria-label="Sonicore X1 spatial soundstage views">
         <div class="hero__media">
           <img class="hero__image" src="assets/img/hero-headphone.webp" alt="Sonicore X1 matte-black wireless headphones with glowing violet ring floating above a dark circular pedestal" width="830" height="700" data-hero-main>
           <svg class="hero__orbits" viewBox="0 0 830 700" aria-hidden="true" focusable="false" data-hero-orbits>
@@ -151,7 +163,7 @@
             <ellipse class="orbit-pedestal" cx="435" cy="632" rx="302" ry="36" fill="none" stroke="url(#orbit-comet-b)" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="150 540" data-pedestal-pulse/>
           </svg>
         </div>
-        <div class="hero__controls js-control" aria-label="Soundstage view controls">
+        <div class="hero__controls js-control appear appear--side appear-d9" aria-label="Soundstage view controls">
           <button type="button" data-sound-step="-1" aria-label="Previous spatial soundstage">←</button>
           <p class="view-count" aria-live="polite"><strong data-view-count>01</strong><span>/03</span> <em data-stage-label>CINEMA 360°</em></p>
           <button type="button" data-sound-step="1" aria-label="Next spatial soundstage">→</button>
@@ -159,31 +171,34 @@
       </div>
     </section>
 
-    <section class="exploded section" id="technology" aria-labelledby="tech-title">
+    <section class="exploded section" id="technology" aria-labelledby="tech-title" data-scroll-section>
       <span class="rail-dot rail-dot--section" aria-hidden="true"></span>
       <div class="exploded__copy" data-reveal>
-        <h2 id="tech-title">ENGINEERED<br>TO PERFECTION</h2>
-        <p>Every component of Sonicore X1 is precision-engineered to create an unparalleled audio experience.</p>
-        <a class="plus-action" href="#specifications">
+        <h2 id="tech-title">
+          <span class="headline-line"><span class="scroll-mask scroll-d1">ENGINEERED</span></span>
+          <span class="headline-line"><span class="scroll-mask scroll-d2"><em class="headline-accent scroll-em scroll-d3">TO PERFECTION</em></span></span>
+        </h2>
+        <p class="scroll-item scroll-item--soft scroll-d3">Every component of Sonicore X1 is precision-engineered to create an unparalleled audio experience.</p>
+        <a class="plus-action scroll-item scroll-item--btn scroll-d4" href="#specifications">
           <span class="plus-action__icon" aria-hidden="true">+</span>
           <span>EXPLORE THE TECHNOLOGY</span>
         </a>
-        <p class="exploded__readout" aria-live="polite" data-part-status>Selected component: Protein Leather — memory-foam acoustic seal with breathable micro-grain finish.</p>
+        <p class="exploded__readout scroll-item scroll-item--soft scroll-d5" aria-live="polite" data-part-status>Selected component: Protein Leather — memory-foam acoustic seal with breathable micro-grain finish.</p>
       </div>
 
-      <div class="exploded__stage" data-reveal tabindex="0" data-carousel="exploded" aria-label="Exploded internal headphone components">
+      <div class="exploded__stage scroll-item scroll-item--scale scroll-d2" data-reveal tabindex="0" data-carousel="exploded" aria-label="Exploded internal headphone components">
         <div class="exploded__callouts exploded__callouts--top">
-          <button class="callout-btn" type="button" data-part="0" aria-pressed="true">
+          <button class="callout-btn scroll-item scroll-item--pop scroll-d3" type="button" data-part="0" aria-pressed="true">
             <span class="callout-btn__title">PROTEIN LEATHER</span>
             <span class="callout-btn__sub">MEMORY CUSHIONS</span>
             <span class="callout-btn__line callout-btn__line--down" aria-hidden="true"></span>
           </button>
-          <button class="callout-btn" type="button" data-part="1" aria-pressed="false">
+          <button class="callout-btn scroll-item scroll-item--pop scroll-d4" type="button" data-part="1" aria-pressed="false">
             <span class="callout-btn__title">DYNAMIC DRIVER</span>
             <span class="callout-btn__sub">50MM TITANIUM</span>
             <span class="callout-btn__line callout-btn__line--down" aria-hidden="true"></span>
           </button>
-          <button class="callout-btn" type="button" data-part="2" aria-pressed="false">
+          <button class="callout-btn scroll-item scroll-item--pop scroll-d5" type="button" data-part="2" aria-pressed="false">
             <span class="callout-btn__title">HI-RES AUDIO CHIP</span>
             <span class="callout-btn__sub">24BIT / 192KHZ</span>
             <span class="callout-btn__line callout-btn__line--down" aria-hidden="true"></span>
@@ -193,17 +208,17 @@
         <img class="exploded__image" src="assets/img/exploded-view.webp" alt="Exploded internal view of Sonicore X1 showing ear cushion, acoustic chamber, 50mm titanium driver, N52 magnet, hi-res DAC chip and outer housing" width="1030" height="400" loading="lazy" data-exploded-image>
 
         <div class="exploded__callouts exploded__callouts--bottom">
-          <button class="callout-btn callout-btn--bottom" type="button" data-part="3" aria-pressed="false">
+          <button class="callout-btn callout-btn--bottom scroll-item scroll-item--pop scroll-d6" type="button" data-part="3" aria-pressed="false">
             <span class="callout-btn__line callout-btn__line--up" aria-hidden="true"></span>
             <span class="callout-btn__title">ACOUSTIC CHAMBER</span>
             <span class="callout-btn__sub">PRECISION TUNED</span>
           </button>
-          <button class="callout-btn callout-btn--bottom" type="button" data-part="4" aria-pressed="false">
+          <button class="callout-btn callout-btn--bottom scroll-item scroll-item--pop scroll-d7" type="button" data-part="4" aria-pressed="false">
             <span class="callout-btn__line callout-btn__line--up" aria-hidden="true"></span>
             <span class="callout-btn__title">NEODYMIUM MAGNET</span>
             <span class="callout-btn__sub">N52 GRADE</span>
           </button>
-          <button class="callout-btn callout-btn--bottom" type="button" data-part="5" aria-pressed="false">
+          <button class="callout-btn callout-btn--bottom scroll-item scroll-item--pop scroll-d8" type="button" data-part="5" aria-pressed="false">
             <span class="callout-btn__line callout-btn__line--up" aria-hidden="true"></span>
             <span class="callout-btn__title">SPATIAL PROCESSING</span>
             <span class="callout-btn__sub">360° SOUND STAGE</span>
@@ -212,20 +227,23 @@
       </div>
     </section>
 
-    <section class="spatial section" id="sound" aria-labelledby="sound-title">
+    <section class="spatial section" id="sound" aria-labelledby="sound-title" data-scroll-section>
       <span class="rail-dot rail-dot--section" aria-hidden="true"></span>
-      <div class="spatial__visual" data-reveal>
+      <div class="spatial__visual scroll-item scroll-item--scale scroll-d1" data-reveal>
         <img class="spatial__image" src="assets/img/spatial-bust.webp" alt="Sculpted head wearing Sonicore X1 headphones inside a glowing 360-degree spatial sound sphere" width="555" height="370" loading="lazy" data-spatial-image>
       </div>
       <div class="spatial__copy" data-reveal>
-        <h2 id="sound-title">SPATIAL AUDIO<br>THAT MOVES WITH YOU</h2>
-        <p>Our advanced spatial audio engine adapts in real-time to your movements, delivering immersive 360° sound no matter where you are.</p>
+        <h2 id="sound-title">
+          <span class="headline-line"><span class="scroll-mask scroll-d1">SPATIAL AUDIO</span></span>
+          <span class="headline-line"><span class="scroll-mask scroll-d2"><em class="headline-accent scroll-em scroll-d3">THAT MOVES WITH YOU</em></span></span>
+        </h2>
+        <p class="scroll-item scroll-item--soft scroll-d3">Our advanced spatial audio engine adapts in real-time to your movements, delivering immersive 360° sound no matter where you are.</p>
         <div class="spatial__features">
-          <article class="spatial-feat">
+          <article class="spatial-feat scroll-item scroll-item--stat scroll-d4">
             <span class="spatial-feat__icon" aria-hidden="true">
               <svg viewBox="0 0 44 44" aria-hidden="true" focusable="false">
                 <circle cx="22" cy="22" r="20" fill="#130e24" stroke="#7c4dff" stroke-width="1.2"/>
-                <circle cx="22" cy="22" r="11" fill="none" stroke="#c4b5fd" stroke-width="1.2" stroke-dasharray="3 2"/>
+                <circle class="feat-svg-spin" cx="22" cy="22" r="11" fill="none" stroke="#c4b5fd" stroke-width="1.2" stroke-dasharray="3 2"/>
                 <ellipse cx="22" cy="22" rx="11" ry="5" fill="none" stroke="#9d7aff" stroke-width="1.2"/>
                 <circle cx="22" cy="22" r="2.2" fill="#f5f4fa"/>
               </svg>
@@ -235,12 +253,12 @@
               <p>Immersive &amp; Realistic</p>
             </div>
           </article>
-          <article class="spatial-feat">
+          <article class="spatial-feat scroll-item scroll-item--stat scroll-d5">
             <span class="spatial-feat__icon" aria-hidden="true">
               <svg viewBox="0 0 44 44" aria-hidden="true" focusable="false">
                 <circle cx="22" cy="22" r="20" fill="#130e24" stroke="#7c4dff" stroke-width="1.2"/>
                 <path d="M22 13c-4 0-6.5 3-6.5 6.8 0 2.5 1.2 4.6 2.5 5.8v3.4h8v-3.4c1.3-1.2 2.5-3.3 2.5-5.8 0-3.8-2.5-6.8-6.5-6.8Z" fill="none" stroke="#c4b5fd" stroke-width="1.3"/>
-                <path d="M12 19a11 11 0 0 1 2-5M32 19a11 11 0 0 0-2-5" fill="none" stroke="#9d7aff" stroke-width="1.2" stroke-linecap="round"/>
+                <path class="feat-svg-wave" d="M12 19a11 11 0 0 1 2-5M32 19a11 11 0 0 0-2-5" fill="none" stroke="#9d7aff" stroke-width="1.2" stroke-linecap="round"/>
               </svg>
             </span>
             <div>
@@ -248,11 +266,11 @@
               <p>Dynamic &amp; Precise</p>
             </div>
           </article>
-          <article class="spatial-feat">
+          <article class="spatial-feat scroll-item scroll-item--stat scroll-d6">
             <span class="spatial-feat__icon" aria-hidden="true">
               <svg viewBox="0 0 44 44" aria-hidden="true" focusable="false">
                 <circle cx="22" cy="22" r="20" fill="#130e24" stroke="#7c4dff" stroke-width="1.2"/>
-                <path d="M14 27V17M18 29V15M22 25V19M26 30V14M30 26V18" stroke="#c4b5fd" stroke-width="1.6" stroke-linecap="round"/>
+                <path class="feat-svg-eq" d="M14 27V17M18 29V15M22 25V19M26 30V14M30 26V18" stroke="#c4b5fd" stroke-width="1.6" stroke-linecap="round"/>
               </svg>
             </span>
             <div>
@@ -264,27 +282,33 @@
       </div>
     </section>
 
-    <section class="design section" id="design" aria-labelledby="design-title">
+    <section class="design section" id="design" aria-labelledby="design-title" data-scroll-section>
       <span class="rail-dot rail-dot--section" aria-hidden="true"></span>
       <div class="design__copy" data-reveal>
-        <h2 id="design-title">DESIGNED FOR<br>THE FUTURE</h2>
-        <p>Elegance meets innovation. Sonicore X1 is crafted with premium materials for ultimate comfort and style.</p>
-        <a class="plus-action" href="#preorder">
+        <h2 id="design-title">
+          <span class="headline-line"><span class="scroll-mask scroll-d1">DESIGNED FOR</span></span>
+          <span class="headline-line"><span class="scroll-mask scroll-d2"><em class="headline-accent scroll-em scroll-d3">THE FUTURE</em></span></span>
+        </h2>
+        <p class="scroll-item scroll-item--soft scroll-d3">Elegance meets innovation. Sonicore X1 is crafted with premium materials for ultimate comfort and style.</p>
+        <a class="plus-action scroll-item scroll-item--btn scroll-d4" href="#preorder">
           <span class="plus-action__icon" aria-hidden="true">+</span>
           <span>SEE THE DESIGN</span>
         </a>
       </div>
-      <div class="design__visual" data-reveal>
+      <div class="design__visual scroll-item scroll-item--scale scroll-d2" data-reveal>
         <img class="design__image" src="assets/img/design-closeup.webp" alt="Macro studio close-up of the Sonicore X1 matte anodized headband arch, precision hinge and plush earcup" width="895" height="310" loading="lazy">
       </div>
     </section>
 
-    <section class="reviews section" id="reviews" aria-labelledby="reviews-title">
+    <section class="reviews section" id="reviews" aria-labelledby="reviews-title" data-scroll-section>
       <span class="rail-dot rail-dot--section" aria-hidden="true"></span>
       <div class="reviews__main" data-reveal>
-        <h2 id="reviews-title">BEYOND<br>EXPECTATIONS</h2>
+        <h2 id="reviews-title">
+          <span class="headline-line"><span class="scroll-mask scroll-d1">BEYOND</span></span>
+          <span class="headline-line"><span class="scroll-mask scroll-d2"><em class="headline-accent scroll-em scroll-d3">EXPECTATIONS</em></span></span>
+        </h2>
         <div class="reviews__grid" data-review-grid>
-          <article class="review-card" data-review-card="0">
+          <article class="review-card scroll-item scroll-item--pop scroll-d3" data-review-card="0">
             <p class="review-card__quote">“The best headphones I’ve ever used. The spatial audio is mind-blowing.”</p>
             <div class="review-card__meta">
               <span class="review-card__avatar" aria-hidden="true">AM</span>
@@ -292,7 +316,7 @@
               <span class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</span>
             </div>
           </article>
-          <article class="review-card" data-review-card="1">
+          <article class="review-card scroll-item scroll-item--pop scroll-d4" data-review-card="1">
             <p class="review-card__quote">“Incredible clarity and depth. It feels like you’re there.”</p>
             <div class="review-card__meta">
               <span class="review-card__avatar" aria-hidden="true">SR</span>
@@ -300,7 +324,7 @@
               <span class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</span>
             </div>
           </article>
-          <article class="review-card" data-review-card="2">
+          <article class="review-card scroll-item scroll-item--pop scroll-d5" data-review-card="2">
             <p class="review-card__quote">“A new benchmark for premium audio.”</p>
             <div class="review-card__meta">
               <span class="review-card__avatar" aria-hidden="true">DK</span>
@@ -309,7 +333,7 @@
             </div>
           </article>
         </div>
-        <div class="reviews__dots js-control" aria-label="Highlight sample review">
+        <div class="reviews__dots js-control scroll-item scroll-item--soft scroll-d6" aria-label="Highlight sample review">
           <button type="button" data-review-dot="0" aria-label="Highlight review 1" aria-pressed="true"></button>
           <button type="button" data-review-dot="1" aria-label="Highlight review 2" aria-pressed="false"></button>
           <button type="button" data-review-dot="2" aria-label="Highlight review 3" aria-pressed="false"></button>
@@ -317,7 +341,7 @@
         </div>
       </div>
 
-      <aside class="spatial-widget" aria-label="Spatial mode preview controller">
+      <aside class="spatial-widget scroll-item scroll-item--side scroll-d4" aria-label="Spatial mode preview controller">
         <button class="spatial-widget__header" type="button" data-mode-cycle aria-label="Switch spatial audio mode">
           <span>
             <small>SPATIAL MODE</small>
@@ -353,10 +377,12 @@
       </aside>
     </section>
 
-    <section class="support section" id="support" aria-labelledby="support-title">
+    <section class="support section" id="support" aria-labelledby="support-title" data-scroll-section>
       <div class="support__inner">
-        <h2 id="support-title">TECHNICAL SPECIFICATIONS &amp; PRE-ORDER ENQUIRY</h2>
-        <details class="specifications" id="specifications">
+        <h2 id="support-title">
+          <span class="headline-line"><span class="scroll-mask scroll-d1">TECHNICAL SPECIFICATIONS &amp; <em class="headline-accent scroll-em scroll-d2">PRE-ORDER ENQUIRY</em></span></span>
+        </h2>
+        <details class="specifications scroll-item scroll-item--pop scroll-d3" id="specifications">
           <summary>View full Sonicore X1 specifications <span aria-hidden="true">+</span></summary>
           <dl>
             <div><dt>Model</dt><dd>Sonicore X1 Spatial Audio Concept</dd></div>
@@ -366,7 +392,7 @@
           </dl>
           <p>Illustrative concept specifications, sample customer quotes and recognition badges for template demonstration only. Generated product imagery is not official manufacturer photography.</p>
         </details>
-        <div class="preorder-box" id="preorder">
+        <div class="preorder-box scroll-item scroll-item--pop scroll-d4" id="preorder">
           <h3>Reserve Sonicore X1 via email enquiry</h3>
           <p>Connect your own booking or checkout link, or let visitors enquire directly by email.</p>
           <a class="button button--glow" href="mailto:hello@sonicore.example?subject=Sonicore%20X1%20Pre-Order%20Enquiry">PRE-ORDER BY EMAIL</a>

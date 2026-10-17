@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'vesper-ai': {
+    "vi": {
+      "intro": "Landing page hạ tầng AI vận hành một khung nhìn nền đen tuyền #000000 với video nền 3D điện ảnh, thanh điều hướng liquid-metal, nút liquid-glass quét sáng 115° và chuỗi chuyển động 9-keyframe spring-settle.",
+      "notes": "### Bắt đầu\nGiải nén đủ 9 file rồi mở index.html cạnh inter.woff2, instrument-serif-italic.woff2 và video nền H.264. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm. Không cần cài đặt hay build.\n\n### Font và video\nHai font WOFF2 tự lưu trữ (Inter biến thiên và Instrument Serif nghiêng) kèm dự phòng Google Fonts; video nền H.264 lặp mượt 100% opacity với lớp phủ scrim đa tầng và hạt film SVG feTurbulence.\n\n### Tương tác & chuyển động\nBốn pill điều hướng liquid-metal, các nút CTA liquid-glass quét sáng 115°, tiêu đề H1 cắt mặt nạ hai dòng, chuỗi chuyển động 9-keyframe spring-settle, menu mobile hỗ trợ Escape và nút Pause motion trong phiên.\n\n### Phạm vi\nGiao diện tĩnh một khung nhìn, không kèm backend, tài khoản hay thanh toán. Đọc LICENCE.txt trước khi xuất bản."
+    },
+    "en": {
+      "intro": "A single-viewport operational AI infrastructure landing page on pure black #000000 with a full-bleed cinematic hero video, liquid-metal navigation pills, 115° specular liquid-glass buttons and 9-keyframe spring-settle choreography.",
+      "notes": "### Start\nExtract all 9 files and open index.html beside inter.woff2, instrument-serif-italic.woff2 and the H.264 hero video. CUSTOMISE.md includes 10 steps, 12 AI prompts and counted edits. No install or build required.\n\n### Fonts and video\nTwo self-hosted WOFF2 fonts (Inter variable and Instrument Serif italic) with Google Fonts fallback; looping H.264 hero video with radial/linear scrim overlays and SVG feTurbulence film grain.\n\n### Interaction & motion\nFour liquid-metal navigation pills, 115° specular liquid-glass CTA buttons, two-line masked H1 reveal, 9-keyframe spring-settle entrance choreography, Escape-aware mobile drawer and session-only Pause motion.\n\n### Scope\nStatic single-viewport landing page with no backend, accounts or checkout. Read LICENCE.txt before publishing."
+    },
+    "zh": {
+      "intro": "纯黑 #000000 单屏 AI 运营基础设施着陆页，配备全屏电影级背景视频、液态金属导航胶囊、115° 流光液态玻璃按钮与 9 关键帧弹簧入场动效。",
+      "notes": "### 开始\n解压全部9个文件，在 inter.woff2、instrument-serif-italic.woff2 及 H.264 背景视频旁打开 index.html。CUSTOMISE.md 含10个步骤、12条AI提示词和精确修改表。无需安装或构建。\n\n### 字体与视频\n内置两个本地 WOFF2 字体（Inter 可变字体与 Instrument Serif 斜体）及 Google Fonts 备用；全屏循环 H.264 视频配多层渐变遮罩与 SVG 胶片颗粒。\n\n### 交互与动态\n四个液态金属导航胶囊、115° 流光液态玻璃按钮、双行遮罩主标题、9关键帧弹簧入场动效、支持 Escape 的移动菜单与会话内暂停控制。\n\n### 范围\n静态单屏着陆页，无后端、账户或支付。发布前请阅读 LICENCE.txt。"
+    }
+  },
   'astro-armor': {
   "vi": {
     "intro": "Giao diện sản phẩm áo khoác nền kem, điểm nhấn cam và bố cục ba cột theo ảnh mẫu. Có chọn size, bốn phối màu, bảng size và giỏ demo trong phiên; không có thanh toán hay backend.",

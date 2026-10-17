@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'chain-warden': {
+    vi: {
+      intro: 'Landing page giới thiệu tướng giả tưởng đen tối và bộ kỹ năng tương tác theo ảnh tham chiếu.',
+      notes: '### Bắt đầu\nGiải nén đủ 10 file và mở index.html cạnh assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm chính xác. Không cần cài đặt hay build.\n\n### Ảnh và nội dung\nBốn ảnh WebP cục bộ trong assets/img/: warden-classic.webp, warden-darkstar.webp, warden-highnoon.webp và sprite UI warden-ui.webp. Thay LEAGUE OF LEGENDS, THE CHAIN WARDEN, Thresh, thông số kỹ năng P/Q/W/E/R, tên 4 ngoại trang và press@shadowwarden-studio.example bằng nhân vật/thương hiệu riêng trước khi phát hành thương mại. Google Fonts (Syne và Plus Jakarta Sans) tùy chọn; font hệ thống hoạt động bình thường khi offline.\n\n### Tương tác\nBốn ngoại trang (Classic, Dark Star, High Noon, FPX) điều khiển bằng bệ tượng ở hero, nút Prev/Next Skin, thẻ bộ sưu tập, phím mũi tên Trái/Phải hoặc vuốt ngang. Năm kỹ năng (P, Q, W, E, R) đồng bộ giữa hero và ma trận kỹ năng. Ba hộp thoại dialog cho cốt truyện đầy đủ, hoạt cảnh tiêu điểm và thông báo bản dựng (Demo only). Hỗ trợ menu mobile đóng bằng Escape và nút Pause motion trong phiên.\n\n### Phạm vi\nGiao diện tĩnh, không kèm bộ cài game, máy chủ đăng nhập tài khoản hay ghép trận trực tuyến. Đọc kỹ LICENCE.txt; không phân phối lại template hoặc bán ảnh riêng.',
+    },
+    en: {
+      intro: 'A dark-fantasy spectral champion and interactive ability kit showcase inspired by the reference design.',
+      notes: '### Start\nExtract all 10 files and open index.html beside assets/. CUSTOMISE.md contains 10 steps, 12 complete AI prompts and a counted literal edit map. No install or build required.\n\n### Artwork and content\nFour local WebP assets in assets/img/: warden-classic.webp, warden-darkstar.webp, warden-highnoon.webp, and the warden-ui.webp sprite. Replace LEAGUE OF LEGENDS, THE CHAIN WARDEN, Thresh, the P/Q/W/E/R ability telemetry, 4 skin titles and press@shadowwarden-studio.example with your own original character and studio branding before commercial publication. Google Fonts (Syne and Plus Jakarta Sans) are optional; system fallbacks work offline.\n\n### Interaction\nFour skins (Classic, Dark Star, High Noon, FPX) controlled via hero pedestals, Prev/Next Skin buttons, archive cards, Left/Right arrow keys or horizontal swipe. Five abilities (P, Q, W, E, R) stay synchronized between the hero panel and tactical matrix. Three native dialog modals for full lore, spotlight preview and build info (Demo only). Escape-aware mobile menu and session-only Pause motion.\n\n### Scope\nStatic showcase with no game client installer, account authentication or live matchmaking backend. Read LICENCE.txt; no template redistribution or standalone image resale.',
+    },
+    zh: {
+      intro: '暗黑奇幻幽魂典狱长英雄与技能交互展示模板。',
+      notes: '### 开始\n完整解压10个文件，在assets/旁打开index.html。CUSTOMISE.md包含10个步骤、12条完整AI提示词和精确修改计数表。无需安装或构建。\n\n### 图像与内容\nassets/img/中包含四张本地WebP资源：warden-classic.webp、warden-darkstar.webp、warden-highnoon.webp及warden-ui.webp精灵图。正式商用发布前，请将LEAGUE OF LEGENDS、THE CHAIN WARDEN、Thresh、P/Q/W/E/R技能参数、4款皮肤名称及press@shadowwarden-studio.example替换为您自己的原创角色与工作室品牌。Google Fonts (Syne 与 Plus Jakarta Sans) 可选，离线时自动使用系统字体。\n\n### 交互\n支持通过首屏底座、Prev/Next Skin按钮、皮肤档案卡片、左右方向键或横向滑动切换四款皮肤（Classic、Dark Star、High Noon、FPX）。五项技能（P、Q、W、E、R）在首屏面板与技能矩阵间实时同步。内置三个原生dialog对话框（完整背景故事、聚光灯预览与Demo only构建说明）、支持Escape的移动菜单及仅限当前会话的Pause motion。\n\n### 范围\n纯静态展示页，不含游戏客户端下载、账户登录或实时匹配后端。请阅读LICENCE.txt；禁止重新分发模板或单独转售图像。',
+    },
+  },
   'fitclub-food': {
     vi: {
       intro: 'Landing page câu lạc bộ ẩm thực lành mạnh và tô dinh dưỡng thể hình nền tím mận tối theo ảnh tham chiếu.',

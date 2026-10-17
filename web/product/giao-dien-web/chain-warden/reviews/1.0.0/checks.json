@@ -1,0 +1,1089 @@
+{
+  "slug": "chain-warden",
+  "version": "1.0.0",
+  "date": "2026-10-17T03:32:55.954Z",
+  "os": "win32",
+  "zipBytes": 254280,
+  "sha256": "3e59125d6771bffefa4776ebfc7ee1e53706ec0850e9e56f2e97c7a613abed0d",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#main"
+          },
+          {
+            "label": "League of Legends — Chain Warden showcase home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#top"
+          },
+          {
+            "label": "GAMEPLAY",
+            "href": "#gameplay",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#gameplay"
+          },
+          {
+            "label": "CHAMPIONS",
+            "href": "#champions",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#champions"
+          },
+          {
+            "label": "NEWS",
+            "href": "#news",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#news"
+          },
+          {
+            "label": "COLLECTION",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#collection"
+          },
+          {
+            "label": "ESPORTS",
+            "href": "#esports",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#esports"
+          },
+          {
+            "label": "PLAY NOW",
+            "href": "#play",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#play"
+          },
+          {
+            "label": "Role: Support",
+            "href": "#champions",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#champions"
+          },
+          {
+            "label": "Difficulty: Moderate",
+            "href": "#champions",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#champions"
+          },
+          {
+            "label": "Attack type: Ranged",
+            "href": "#champions",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#champions"
+          },
+          {
+            "label": "Assigned lane: Bottom",
+            "href": "#champions",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#champions"
+          },
+          {
+            "label": "Competitive Roster Kit",
+            "href": "#play",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#play"
+          },
+          {
+            "label": "Request Studio Press Kit",
+            "href": "mailto:press@shadowwarden-studio.example?subject=Champion%20Showcase%20Enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:press@shadowwarden-studio.example?subject=Champion%20Showcase%20Enquiry"
+          },
+          {
+            "label": "Return to Hero Stage",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#top"
+          },
+          {
+            "label": "Abilities",
+            "href": "#gameplay",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#gameplay"
+          },
+          {
+            "label": "Skins",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#collection"
+          },
+          {
+            "label": "Lore",
+            "href": "#news",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#news"
+          },
+          {
+            "label": "press@shadowwarden-studio.example",
+            "href": "mailto:press@shadowwarden-studio.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:press@shadowwarden-studio.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 820,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(7, 16, 20)",
+            "background": [
+              214,
+              168,
+              86
+            ],
+            "ratio": 8.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__line1",
+            "text": "LEAGUEOF",
+            "colour": "rgb(230, 188, 110)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 10.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-nav__link",
+            "text": "GAMEPLAY",
+            "colour": "rgb(158, 181, 184)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 8.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-nav__link is-current",
+            "text": "CHAMPIONS",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 17.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "THE CHAIN WARDEN",
+            "colour": "rgb(94, 230, 200)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 12.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__title",
+            "text": "Thresh",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 17.75,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__lore",
+            "text": "Sadistic and cunning, Thresh is an ambit",
+            "colour": "rgb(191, 209, 211)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 12.14,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "skin-btn__label",
+            "text": "Classic",
+            "colour": "rgb(94, 230, 200)",
+            "background": [
+              11,
+              24,
+              30
+            ],
+            "ratio": 11.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "skin-btn__label",
+            "text": "Dark Star",
+            "colour": "rgb(158, 181, 184)",
+            "background": [
+              11,
+              24,
+              30
+            ],
+            "ratio": 8.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "spotlight-card__caption",
+            "text": "Shadow Isles: None Escape",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              7,
+              16,
+              21
+            ],
+            "ratio": 17.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "stage-ctrl",
+            "text": "Prev Skin",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              11,
+              24,
+              30
+            ],
+            "ratio": 16.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "matrix-card__badge",
+            "text": "PASSIVE",
+            "colour": "rgb(230, 188, 110)",
+            "background": [
+              16,
+              35,
+              43
+            ],
+            "ratio": 9.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "matrix-card__title",
+            "text": "Damnation",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              16,
+              35,
+              43
+            ],
+            "ratio": 14.96,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "matrix-card__stats",
+            "text": "Passive Souls: +1.0 Armor & AP per Soul ",
+            "colour": "rgb(94, 230, 200)",
+            "background": [
+              16,
+              35,
+              43
+            ],
+            "ratio": 10.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "matrix-card__text",
+            "text": "Fallen enemies drop luminous soul fragme",
+            "colour": "rgb(191, 209, 211)",
+            "background": [
+              16,
+              35,
+              43
+            ],
+            "ratio": 10.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Bottom Lane Vanguard Profile",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              11,
+              24,
+              30
+            ],
+            "ratio": 16.68,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__lead",
+            "text": "Built for high-leverage pick creation, l",
+            "colour": "rgb(191, 209, 211)",
+            "background": [
+              11,
+              24,
+              30
+            ],
+            "ratio": 11.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "stat-pill__num",
+            "text": "450",
+            "colour": "rgb(94, 230, 200)",
+            "background": [
+              16,
+              35,
+              43
+            ],
+            "ratio": 10.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Read more",
+          "colour": "rgb(94, 230, 200)",
+          "width": "3px",
+          "ratio": 12.47
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#main"
+          },
+          {
+            "label": "League of Legends — Chain Warden showcase home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#top"
+          },
+          {
+            "label": "GAMEPLAY",
+            "href": "#gameplay",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#gameplay"
+          },
+          {
+            "label": "CHAMPIONS",
+            "href": "#champions",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#champions"
+          },
+          {
+            "label": "NEWS",
+            "href": "#news",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#news"
+          },
+          {
+            "label": "COLLECTION",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#collection"
+          },
+          {
+            "label": "ESPORTS",
+            "href": "#esports",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#esports"
+          },
+          {
+            "label": "PLAY NOW",
+            "href": "#play",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#play"
+          },
+          {
+            "label": "Role: Support",
+            "href": "#champions",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#champions"
+          },
+          {
+            "label": "Difficulty: Moderate",
+            "href": "#champions",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#champions"
+          },
+          {
+            "label": "Attack type: Ranged",
+            "href": "#champions",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#champions"
+          },
+          {
+            "label": "Assigned lane: Bottom",
+            "href": "#champions",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#champions"
+          },
+          {
+            "label": "Competitive Roster Kit",
+            "href": "#play",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#play"
+          },
+          {
+            "label": "Request Studio Press Kit",
+            "href": "mailto:press@shadowwarden-studio.example?subject=Champion%20Showcase%20Enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:press@shadowwarden-studio.example?subject=Champion%20Showcase%20Enquiry"
+          },
+          {
+            "label": "Return to Hero Stage",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#top"
+          },
+          {
+            "label": "Abilities",
+            "href": "#gameplay",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#gameplay"
+          },
+          {
+            "label": "Skins",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#collection"
+          },
+          {
+            "label": "Lore",
+            "href": "#news",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chain-warden/index.html#news"
+          },
+          {
+            "label": "press@shadowwarden-studio.example",
+            "href": "mailto:press@shadowwarden-studio.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:press@shadowwarden-studio.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 820,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(7, 16, 20)",
+            "background": [
+              214,
+              168,
+              86
+            ],
+            "ratio": 8.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__line1",
+            "text": "LEAGUEOF",
+            "colour": "rgb(230, 188, 110)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 10.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-nav__link",
+            "text": "GAMEPLAY",
+            "colour": "rgb(158, 181, 184)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 8.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-nav__link is-current",
+            "text": "CHAMPIONS",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 17.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "THE CHAIN WARDEN",
+            "colour": "rgb(94, 230, 200)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 12.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__title",
+            "text": "Thresh",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 17.75,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__lore",
+            "text": "Sadistic and cunning, Thresh is an ambit",
+            "colour": "rgb(191, 209, 211)",
+            "background": [
+              7,
+              16,
+              20
+            ],
+            "ratio": 12.14,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "skin-btn__label",
+            "text": "Classic",
+            "colour": "rgb(94, 230, 200)",
+            "background": [
+              11,
+              24,
+              30
+            ],
+            "ratio": 11.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "skin-btn__label",
+            "text": "Dark Star",
+            "colour": "rgb(158, 181, 184)",
+            "background": [
+              11,
+              24,
+              30
+            ],
+            "ratio": 8.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "spotlight-card__caption",
+            "text": "Shadow Isles: None Escape",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              7,
+              16,
+              21
+            ],
+            "ratio": 17.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "stage-ctrl",
+            "text": "Prev Skin",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              11,
+              24,
+              30
+            ],
+            "ratio": 16.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "matrix-card__badge",
+            "text": "PASSIVE",
+            "colour": "rgb(230, 188, 110)",
+            "background": [
+              16,
+              35,
+              43
+            ],
+            "ratio": 9.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "matrix-card__title",
+            "text": "Damnation",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              16,
+              35,
+              43
+            ],
+            "ratio": 14.96,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "matrix-card__stats",
+            "text": "Passive Souls: +1.0 Armor & AP per Soul ",
+            "colour": "rgb(94, 230, 200)",
+            "background": [
+              16,
+              35,
+              43
+            ],
+            "ratio": 10.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "matrix-card__text",
+            "text": "Fallen enemies drop luminous soul fragme",
+            "colour": "rgb(191, 209, 211)",
+            "background": [
+              16,
+              35,
+              43
+            ],
+            "ratio": 10.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Bottom Lane Vanguard Profile",
+            "colour": "rgb(242, 247, 246)",
+            "background": [
+              11,
+              24,
+              30
+            ],
+            "ratio": 16.68,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__lead",
+            "text": "Built for high-leverage pick creation, l",
+            "colour": "rgb(191, 209, 211)",
+            "background": [
+              11,
+              24,
+              30
+            ],
+            "ratio": 11.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "stat-pill__num",
+            "text": "450",
+            "colour": "rgb(94, 230, 200)",
+            "background": [
+              16,
+              35,
+              43
+            ],
+            "ratio": 10.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Read more",
+          "colour": "rgb(94, 230, 200)",
+          "width": "3px",
+          "ratio": 12.47
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "chain-warden/assets/css/style.css",
+    "chain-warden/assets/img/warden-classic.webp",
+    "chain-warden/assets/img/warden-darkstar.webp",
+    "chain-warden/assets/img/warden-highnoon.webp",
+    "chain-warden/assets/img/warden-ui.webp",
+    "chain-warden/assets/js/main.js",
+    "chain-warden/CUSTOMISE.md",
+    "chain-warden/index.html",
+    "chain-warden/LICENCE.txt",
+    "chain-warden/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/warden-classic.webp",
+    "assets/img/warden-darkstar.webp",
+    "assets/img/warden-highnoon.webp",
+    "assets/img/warden-ui.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

@@ -656,5 +656,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "chain-warden": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "5ba207c11c54",
+    "sha256": "5ba207c11c542878bc5d070c5631e2fbcf5ace2708ddd4f986cdabfa5740af15",
+    "demoHtmlSha256": "7ffcd316807f766671e5af5ce61f6697dfb5fc13ca6fd0bdf8a3861f9e81ab32",
+    "demoSha256": "f0583eb72d7107fe13a32705dc72cae5bd8cd40e23fbc861998758ae7497dcd7",
+    "bytes": 655491,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

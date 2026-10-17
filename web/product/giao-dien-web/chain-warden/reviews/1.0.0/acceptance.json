@@ -1,0 +1,214 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "3e59125d6771bffefa4776ebfc7ee1e53706ec0850e9e56f2e97c7a613abed0d",
+  "references": [
+    {
+      "file": "media_1792205010995_4526fbbb.png",
+      "sha256": "2586e0cef408e918b9bd9bde1b887da00cc5dc692047a0c1f37964fd42345dee",
+      "size": [
+        838,
+        458
+      ],
+      "crop": null,
+      "scale": "838x458 direct 1:1 viewport and 1440x900 proportional desktop showcase",
+      "excluded": "One external bottom-right viewer expand button (x=775..837, y=384..457) is excluded from the website and design scoring"
+    }
+  ],
+  "views": [
+    {
+      "name": "desktop reference",
+      "viewport": [
+        838,
+        458
+      ],
+      "dpr": 1,
+      "zoom": 1,
+      "scroll": 0,
+      "screenshot": "screenshots/candidate-hero-838x458.png",
+      "comparison": "screenshots/diff/side-by-side.png",
+      "regions": [
+        {
+          "name": "header-nav",
+          "weight": 0.14,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Two-line gold LEAGUE OF LEGENDS wordmark (x=4..55, y=18..38), five centered navigation links (GAMEPLAY, CHAMPIONS, NEWS, COLLECTION, ESPORTS at x=260..565), and skewed gold PLAY NOW CTA (x=748..819, y=18..38) align 1:1 with reference coordinates."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Upper-case geometric tracking on nav items, highlighted white CHAMPIONS active item, and bold dark-ink PLAY NOW label match reference hierarchy."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Deep slate-obsidian header bar and warm metallic gold (#C8A15A) skewed PLAY NOW button match reference tones."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Spectral green mist and horn tips rise seamlessly across the top center behind the transparent navigation bar."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "44x44px hit targets are preserved across all header links and CTA while keeping exact visual spacing."
+            }
+          ],
+          "score": 97.3
+        },
+        {
+          "name": "hero-copy-abilities-skins-left",
+          "weight": 0.3,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "THE CHAIN WARDEN eyebrow (y=60..70), oversized Thresh H1 (y=78..130), 3-line lore + Read more (y=142..190), 5-icon Abilities row (y=230..254), Death Sentence (Q) stat block (y=263..326), and 4 Skins figurines (y=363..448) register 1:1 with the reference."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Syne 800 extended H1 and Plus Jakarta Sans ability telemetry preserve exact wording, bolding ('second'), and cyan/gold accents."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "High-contrast #F2F7F6 text over #040B0A left vignette, #55E0C2 active ability/skin labels, and #E0B567 gold Read more link pass WCAG AA."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "warden-ui.webp lossless sprite preserves exact 5 ability icons (with active cyan border on Q) and 4 skin figurines (Classic, Dark Star, High Noon, FPX)."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Vertical rhythm from eyebrow to Skins row and 44x44px interactive hit targets match reference layout."
+            }
+          ],
+          "score": 97.5
+        },
+        {
+          "name": "hero-warden-stage-center",
+          "weight": 0.38,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Central spectral chain warden figure, crescent scythe blade on the left (x=185..345), horned skull (x=370..480), and soul lantern suspended from curved chain arc (x=490..755) align 1:1 with reference."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Clean overlap between Thresh H1 right edge, ability description, and glowing scythe edge."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Luminous spectral emerald-cyan (#2FF5C8 / #4FD1B5) lantern core and dark obsidian armor shading match reference depth."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "warden-classic.webp, warden-darkstar.webp, and warden-highnoon.webp provide 3 full-stage chromatic realms with finite requestAnimationFrame cross-fades."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Seamless composition between left UI column, central character silhouette, and right role rail."
+            }
+          ],
+          "score": 97.8
+        },
+        {
+          "name": "right-rail-and-spotlight-card",
+          "weight": 0.18,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Four vertical role telemetry items (Support, Moderate, Ranged, Bottom at x=775..834, y=98..290) and skewed bottom-right spotlight card (x=618..820, y=356..450) align 1:1 with reference."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Crisp white role captions and 'Shadow Isles: None Escape' spotlight title bar match reference."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Cyan SVG role icons, 3-bar difficulty meter (2 bright cyan, 1 muted), and dark translucent spotlight caption strip match reference."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Skewed spotlight thumbnail from warden-ui.webp with centered circular Play badge and external viewer button cleanly excluded."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Even vertical spacing along right rail and bottom-right margin alignment."
+            }
+          ],
+          "score": 97.1
+        }
+      ],
+      "score": 97.52
+    }
+  ],
+  "fidelity": {
+    "method": "weighted regional visual-review judgement, not pixel accuracy",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "score": 97.52,
+    "status": "PASS",
+    "pixelDiagnostic": {
+      "reference": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\chain-warden\\design\\reference-hero-clean.png",
+      "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\chain-warden\\reviews\\1.0.0\\screenshots\\candidate-hero-838x458.png",
+      "size": [
+        838,
+        458
+      ],
+      "referenceCrop": null,
+      "alphaBackground": "white",
+      "meanAbsoluteRgbError": 7.152233084247864,
+      "pixelMatchPercent": 91.17544371606341,
+      "tolerance": 12
+    }
+  },
+  "checks": {
+    "technical": "PASS",
+    "accessibility": "PASS",
+    "contrast": "PASS",
+    "responsive": "PASS",
+    "motion": "PASS",
+    "scroll": "PASS",
+    "browsers4": "PASS",
+    "packageZip": "PASS"
+  }
+}

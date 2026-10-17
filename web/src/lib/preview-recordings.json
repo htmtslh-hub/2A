@@ -642,5 +642,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "astro-armor": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "7217e6b57cdc",
+    "sha256": "7217e6b57cdcf917b7b76c9378e2f9256bcb3964f78c04efbc03437fb179f369",
+    "demoHtmlSha256": "77fe258f75e502c914d6f45ca192f917d601dc22f0d1b30d94db27140d8c6f60",
+    "demoSha256": "4acb212166ac4824f47031f3ca144b5c05eb03031dea654b34d13f9d328b0e69",
+    "bytes": 558970,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

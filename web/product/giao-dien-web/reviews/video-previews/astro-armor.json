@@ -1,0 +1,48 @@
+{
+  "id": "t47",
+  "slug": "astro-armor",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-17T01:31:24.277Z",
+  "demo": "/demos/astro-armor/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "7217e6b57cdc",
+  "sha256": "7217e6b57cdcf917b7b76c9378e2f9256bcb3964f78c04efbc03437fb179f369",
+  "demoHtmlSha256": "77fe258f75e502c914d6f45ca192f917d601dc22f0d1b30d94db27140d8c6f60",
+  "demoSha256": "4acb212166ac4824f47031f3ca144b5c05eb03031dea654b34d13f9d328b0e69",
+  "bytes": 558970,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.485,
+      "action": "click",
+      "selector": "<button type=\"button\" data-colour=\"red\" data-next-preview=\"\" aria-pressed=\"true\"><span class=\"swatch-image\"><img class=\"reference-swatch\" src=\"assets/img/armor-reference.jpg\" width"
+    },
+    {
+      "seconds": 4.846,
+      "action": "click",
+      "selector": "<button type=\"button\" data-colour=\"red\" data-next-preview=\"\" aria-pressed=\"true\"><span class=\"swatch-image\"><img class=\"reference-swatch\" src=\"assets/img/armor-reference.jpg\" width"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 903
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\astro-armor-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\astro-armor-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\astro-armor-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\astro-armor-return.jpg"
+  ]
+}

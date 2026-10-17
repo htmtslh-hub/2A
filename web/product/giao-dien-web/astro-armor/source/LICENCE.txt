@@ -1,0 +1,26 @@
+ASTRO ARMOR — LICENCE TERMS
+
+Copyright entity: Forge zone. These terms apply to the template source and included artwork; they do not assert exclusive copyright in AI-generated artwork.
+
+1. WHAT YOU GET
+A perpetual, non-exclusive commercial licence to the template source upon an authorised product sale.
+
+2. WHAT YOU MAY DO
+Use the licensed source in unlimited personal and client projects, modify it and publish the resulting website without attribution.
+
+3. WHAT YOU MAY NOT DO
+Resell, sublicense or give away the template files, publish them on another marketplace, or bundle them into another template product.
+
+4. DEMO CONTENT
+This independent fashion interface study includes AI-reconstructed jacket artwork based on the user-supplied visual reference, illustrative specifications, sizing tables, a $560 price and fabrication locations. It is not an operational retailer or manufacturer listing. Third-party names, artwork and marks remain with their respective owners; this licence grants no trademark rights or endorsement. Replace brand references, prices, specifications and the reserved example email before publishing for a live business. The supplied artwork is for this interface concept; establish any necessary third-party permissions or replace it with your own permitted product imagery before commercial use. Do not sell or distribute images separately. Assets you add are your responsibility.
+
+5. FONTS
+No font files or remote font stylesheets are bundled. The CSS uses installed Helvetica Neue, Helvetica and generic sans-serif fallbacks under the user’s own operating-system font licences. No font redistribution rights are granted or required by this package.
+
+6. OWNERSHIP
+Copyright in the template source remains with Forge zone. A licence grants use, not ownership. No exclusive copyright in AI-generated artwork is asserted.
+
+7. NO WARRANTY
+Provided as is. See the verification report for the browsers actually tested and the limitations. Compatibility with every browser or use is not guaranteed.
+
+Questions about what is and is not allowed: just ask. The answer is usually yes.

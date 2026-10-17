@@ -46,6 +46,84 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t47: {
+  "slug": "astro-armor",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "copy": {
+    "vi": {
+      "name": "ASTRO Armor",
+      "desc": "Giao diện sản phẩm áo khoác nền kem, điểm nhấn cam và bố cục ba cột theo ảnh mẫu. Có chọn size, bốn phối màu, bảng size và giỏ demo trong phiên; không có thanh toán hay backend.",
+      "tags": [
+        "Thời trang",
+        "Áo khoác",
+        "Giỏ demo"
+      ]
+    },
+    "en": {
+      "name": "ASTRO Armor",
+      "desc": "An ivory-and-orange puffer product page with a reference-led three-column composition. Includes size selection, four colour previews, a size guide and a page-session demo bag; no checkout or backend.",
+      "tags": [
+        "Fashion",
+        "Outerwear",
+        "Demo bag"
+      ]
+    },
+    "zh": {
+      "name": "ASTRO Armor",
+      "desc": "奶油白与橙色羽绒服产品页面，采用参考图的三栏布局。包含尺码选择、四种配色预览、尺码表和会话内购物袋演示；无支付或后端。",
+      "tags": [
+        "时尚",
+        "外套",
+        "购物袋演示"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Gói tải",
+        "9 file · ảnh cục bộ"
+      ],
+      [
+        "Phạm vi",
+        "Giao diện tĩnh · giỏ demo"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · local artwork"
+      ],
+      [
+        "Scope",
+        "Static template · demo bag"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "文件包",
+        "9个文件 · 本地图像"
+      ],
+      [
+        "范围",
+        "静态模板 · 购物袋演示"
+      ]
+    ]
+  }
+},
   t46: {
     slug: 'volt-hoodie',
     cat: 'commerce',

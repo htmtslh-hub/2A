@@ -46,6 +46,109 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t51: {
+  "slug": "beyond-voyages",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "copy": {
+    "vi": {
+      "name": "Beyond Voyages",
+      "desc": "Trang khám phá điểm đến và hành trình du lịch cao cấp với sân khấu phong cảnh toàn màn hình, vòng cung 5 điểm đến tương tác bên phải (Cameo Island, Koh Phi Phi Don, Lago di Braies, Cinque Terre, Grand Canal), bộ lọc vùng địa lý, 3 gói lịch trình mẫu và liên hệ concierge trực tiếp.",
+      "tags": [
+        "Du lịch & Điểm đến",
+        "Vòng cung 5 cảnh",
+        "Kính mờ / Hoàng hôn"
+      ]
+    },
+    "en": {
+      "name": "Beyond Voyages",
+      "desc": "A luxury travel and destination discovery showcase with a full-bleed scenic hero stage, an interactive 5-destination curved orbital selector (Cameo Island, Koh Phi Phi Don, Lago di Braies, Cinque Terre, Grand Canal), regional atlas filtering, three bespoke itinerary packages and direct concierge enquiry links.",
+      "tags": [
+        "Travel & Destinations",
+        "5-scene orbital arc",
+        "Frosted glass"
+      ]
+    },
+    "zh": {
+      "name": "Beyond Voyages",
+      "desc": "高端旅行与目的地探索展示页，采用全屏风景主视觉、右侧五目的地弧形轨道切换器（Cameo Island、Koh Phi Phi Don、Lago di Braies、Cinque Terre、Grand Canal）、区域筛选图鉴、三套定制行程方案及礼宾邮件咨询。",
+      "tags": [
+        "旅行与目的地",
+        "5景弧形轨道",
+        "磨砂玻璃"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "11 file · 5 ảnh phong cảnh WebP tự tạo"
+      ],
+      [
+        "Tương tác",
+        "Vòng cung 5 điểm đến · 5 chấm phân trang · lọc vùng · nhảy cảnh"
+      ],
+      [
+        "Chuyển động",
+        "Crossfade cảnh nền · nhịp chuyển rAF hữu hạn · Pause motion"
+      ],
+      [
+        "Phạm vi",
+        "Showcase du lịch & điểm đến · liên hệ email/tel · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "11 files · 5 original scenic WebP photos"
+      ],
+      [
+        "Interaction",
+        "5-destination orbital arc · 5 slide dots · region filter · stage jump"
+      ],
+      [
+        "Motion",
+        "Scenic crossfade · finite rAF copy pulse · session Pause motion"
+      ],
+      [
+        "Scope",
+        "Travel & destination showcase · mailto/tel concierge · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "11个文件 · 5张原创风景 WebP 图像"
+      ],
+      [
+        "交互",
+        "5目的地弧形轨道 · 5个分页点 · 区域筛选 · 舞台跳转"
+      ],
+      [
+        "动态",
+        "背景渐变切换 · 有限 rAF 动效 · 会话内暂停动画"
+      ],
+      [
+        "范围",
+        "旅行与目的地展示页 · 邮件/电话礼宾咨询 · 无后端"
+      ]
+    ]
+  }
+},
   t50: {
   "slug": "vesper-ai",
   "cat": "commerce",

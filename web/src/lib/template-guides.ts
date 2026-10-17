@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'beyond-voyages': {
+    "vi": {
+      "intro": "Trang khám phá điểm đến và hành trình du lịch cao cấp với sân khấu phong cảnh toàn màn hình và vòng cung 5 điểm đến tương tác theo ảnh tham chiếu.",
+      "notes": "### Bắt đầu\nGiải nén đủ 11 file rồi mở index.html cạnh thư mục assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm chính xác. Không cần cài đặt hay build.\n\n### Ảnh và nội dung\nNăm ảnh phong cảnh WebP cục bộ trong assets/img/: boathouse-lake.webp, cameo-island.webp, koh-phi-phi.webp, cinque-terre.webp và grand-canal.webp. Thay Logoipsum, Beyond Voyages, concierge@beyondvoyages.example và 3 mốc [YOUR PRICE] trước khi xuất bản. Google Fonts (Lobster và Plus Jakarta Sans) tùy chọn; font hệ thống hoạt động bình thường khi offline.\n\n### Tương tác & chuyển động\nVòng cung 5 điểm đến bên phải hero đồng bộ với 5 chấm phân trang dọc, phím mũi tên và vuốt cảm ứng; bộ lọc vùng địa lý ở Destination Atlas; nút View on Hero Stage; menu mobile hỗ trợ Escape và nút Pause motion trong phiên.\n\n### Phạm vi\nGiao diện tĩnh, không kèm hệ thống đặt vé trực tuyến hay thanh toán. Đọc kỹ LICENCE.txt trước khi phát hành."
+    },
+    "en": {
+      "intro": "A luxury travel and destination discovery showcase with a full-bleed scenic hero stage and an interactive 5-destination curved orbital selector inspired by the reference design.",
+      "notes": "### Start\nExtract all 11 files and open index.html beside assets/. CUSTOMISE.md includes 10 steps, 12 complete AI prompts and a counted literal edit map. No install or build required.\n\n### Artwork and content\nFive local scenic WebP images in assets/img/: boathouse-lake.webp, cameo-island.webp, koh-phi-phi.webp, cinque-terre.webp and grand-canal.webp. Replace Logoipsum, Beyond Voyages, concierge@beyondvoyages.example and the three [YOUR PRICE] markers before publishing. Google Fonts (Lobster and Plus Jakarta Sans) are optional; system fallbacks work offline.\n\n### Interaction & motion\nFive orbital destination nodes on the right curve synchronized with 5 vertical pagination dots, arrow keys and touch swipe; regional filter pills in Destination Atlas; View on Hero Stage jump buttons; Escape-aware mobile menu and session-only Pause motion.\n\n### Scope\nStatic showcase with no live booking engine or checkout backend. Read LICENCE.txt before publishing."
+    },
+    "zh": {
+      "intro": "高端旅行与目的地探索展示模板，配备全屏风景主视觉与右侧五目的地弧形轨道切换器。",
+      "notes": "### 开始\n解压全部11个文件，在 assets/ 旁打开 index.html。CUSTOMISE.md 含10个步骤、12条完整AI提示词和精确修改表。无需安装或构建。\n\n### 图像与内容\nassets/img/ 中含五张本地风景 WebP：boathouse-lake.webp、cameo-island.webp、koh-phi-phi.webp、cinque-terre.webp 与 grand-canal.webp。发布前请替换 Logoipsum、Beyond Voyages、concierge@beyondvoyages.example 及三处 [YOUR PRICE]。Google Fonts（Lobster 与 Plus Jakarta Sans）可选，离线时自动使用系统字体。\n\n### 交互与动态\n右侧五个弧形目的地按钮与五个纵向分页点、方向键和触摸滑动实时同步；目的地支持区域筛选与回到主视觉预览；含支持 Escape 的移动菜单与会话内暂停控制。\n\n### 范围\n纯静态展示页，无在线预订或支付后端。发布前请阅读 LICENCE.txt。"
+    }
+  },
   'vesper-ai': {
     "vi": {
       "intro": "Landing page hạ tầng AI vận hành một khung nhìn nền đen tuyền #000000 với video nền 3D điện ảnh, thanh điều hướng liquid-metal, nút liquid-glass quét sáng 115° và chuỗi chuyển động 9-keyframe spring-settle.",

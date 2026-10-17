@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beyond Voyages — Travel Beyond the Ordinary</title>
+  <meta name="description" content="Explore extraordinary places, compare curated travel routes, and uncover coastal, island, and alpine experiences tailored to your travel style.">
+  <meta property="og:title" content="Beyond Voyages — Travel Beyond the Ordinary">
+  <meta property="og:description" content="Interactive destination discovery showcase featuring an orbital destination arc, curated travel packages, seasonal route comparisons, and direct concierge planning.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28' fill='none'%3E%3Cpath d='M14 2.5L23.5 6.2V13.4C23.5 19.3 19.4 23.9 14 25.5C8.6 23.9 4.5 19.3 4.5 13.4V6.2L14 2.5Z' stroke='white' stroke-width='2.2'/%3E%3Cpath d='M14 7.8L15.6 12.4L20.2 14L15.6 15.6L14 20.2L12.4 15.6L7.8 14L12.4 12.4L14 7.8Z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="#top" aria-label="Logoipsum — Beyond Voyages home">
+          <svg class="brand__mark" viewBox="0 0 28 28" width="28" height="28" aria-hidden="true" focusable="false">
+            <path d="M14 2.4L23.6 6.1V13.3C23.6 19.4 19.5 24 14 25.6C8.5 24 4.4 19.4 4.4 13.3V6.1L14 2.4Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="M14 7.4L15.75 12.25L20.6 14L15.75 15.75L14 20.6L12.25 15.75L7.4 14L12.25 12.25L14 7.4Z" fill="currentColor"/>
+          </svg>
+          <span class="brand__name">Logoipsum</span>
+        </a>
+
+        <button type="button" class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation menu">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link is-current" href="#top">Home</a></li>
+            <li><a class="site-nav__link" href="#destinations">Destinations</a></li>
+            <li><a class="site-nav__link" href="#packages">Travel Packages</a></li>
+            <li><a class="site-nav__link" href="#about">About Us</a></li>
+            <li><a class="site-nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <button type="button" class="motion-toggle" data-motion-toggle aria-pressed="false">Pause motion</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO SHOWCASE WITH CURVED ORBITAL DESTINATION SELECTOR -->
+      <section class="hero" aria-label="Featured destinations showcase">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            class="hero-media__img"
+            data-scene-img="0"
+            src="assets/img/cameo-island.webp"
+            alt=""
+            width="1280"
+            height="720"
+          >
+          <img
+            class="hero-media__img"
+            data-scene-img="1"
+            src="assets/img/koh-phi-phi.webp"
+            alt=""
+            width="1280"
+            height="720"
+          >
+          <img
+            class="hero-media__img is-active"
+            data-scene-img="2"
+            src="assets/img/boathouse-lake.webp"
+            alt=""
+            width="1600"
+            height="900"
+          >
+          <img
+            class="hero-media__img"
+            data-scene-img="3"
+            src="assets/img/cinque-terre.webp"
+            alt=""
+            width="1280"
+            height="720"
+          >
+          <img
+            class="hero-media__img"
+            data-scene-img="4"
+            src="assets/img/grand-canal.webp"
+            alt=""
+            width="1280"
+            height="720"
+          >
+        </div>
+
+        <div class="hero__grid">
+          <!-- Left editorial hero content -->
+          <div class="hero__copy">
+            <div class="hero-badge">
+              <span class="hero-badge__pill">New</span>
+              <span class="hero-badge__text" data-hero-kicker>Travel Beyond Expectations</span>
+            </div>
+
+            <h1 class="hero__title">Travel Beyond the Ordinary</h1>
+
+            <p class="hero__lede" data-hero-lede>
+              Explore extraordinary places, compare travel options, and uncover experiences that match your travel style. Travel smarter, discover more, and make every moment count.
+            </p>
+
+            <div class="hero__cta-row">
+              <a class="btn btn--glass hero__cta" href="#destinations">
+                <span>Explore Destinations</span>
+                <svg class="btn__icon" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false">
+                  <path d="M5.5 14.5L14.5 5.5M14.5 5.5H7.2M14.5 5.5V12.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <span class="hero__scene-tag" aria-live="polite">
+                <span class="hero__scene-dot" aria-hidden="true"></span>
+                <span data-hero-caption>Lago di Braies — Dolomites, Italy</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Right curved orbital destination selector -->
+          <div class="hero-arc" role="group" aria-label="Select featured destination scene">
+            <svg class="hero-arc__curve" viewBox="0 0 420 760" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="arcLineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06"/>
+                  <stop offset="22%" stop-color="#ffffff" stop-opacity="0.48"/>
+                  <stop offset="50%" stop-color="#ffffff" stop-opacity="0.72"/>
+                  <stop offset="78%" stop-color="#ffffff" stop-opacity="0.48"/>
+                  <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+                </linearGradient>
+              </defs>
+              <path
+                d="M 380 24 A 430 430 0 0 0 380 736"
+                fill="none"
+                stroke="url(#arcLineGrad)"
+                stroke-width="1.6"
+              />
+            </svg>
+
+            <div class="hero-arc__nodes">
+              <!-- Node 1: Cameo Island -->
+              <button
+                type="button"
+                class="arc-node arc-node--pos-0"
+                data-scene-btn="0"
+                aria-pressed="false"
+                aria-label="Show Cameo Island, Zakynthos, Greece"
+              >
+                <span class="arc-node__meta">
+                  <span class="arc-node__title">Cameo Island</span>
+                  <span class="arc-node__sub">Zakynthos, Greece</span>
+                </span>
+                <span class="arc-node__thumb-ring">
+                  <img class="arc-node__thumb" src="assets/img/cameo-island.webp" alt="" width="160" height="160">
+                </span>
+              </button>
+
+              <!-- Node 2: Koh Phi Phi Don -->
+              <button
+                type="button"
+                class="arc-node arc-node--pos-1"
+                data-scene-btn="1"
+                aria-pressed="false"
+                aria-label="Show Koh Phi Phi Don, Islands, Thailand"
+              >
+                <span class="arc-node__meta">
+                  <span class="arc-node__title">Koh Phi Phi Don</span>
+                  <span class="arc-node__sub">Islands, Thailand</span>
+                </span>
+                <span class="arc-node__thumb-ring">
+                  <img class="arc-node__thumb" src="assets/img/koh-phi-phi.webp" alt="" width="160" height="160">
+                </span>
+              </button>
+
+              <!-- Node 3: Active Center (Lago di Braies Boathouse) -->
+              <button
+                type="button"
+                class="arc-node arc-node--pos-2 is-active"
+                data-scene-btn="2"
+                aria-pressed="true"
+                aria-label="Show Lago di Braies Boathouse, Dolomites, Italy"
+              >
+                <span class="arc-node__meta arc-node__meta--center">
+                  <span class="arc-node__title">Lago di Braies</span>
+                  <span class="arc-node__sub">Dolomites, Italy</span>
+                </span>
+                <span class="arc-node__thumb-ring">
+                  <img class="arc-node__thumb" src="assets/img/boathouse-lake.webp" alt="" width="220" height="220">
+                </span>
+              </button>
+
+              <!-- Node 4: Cinque Terre -->
+              <button
+                type="button"
+                class="arc-node arc-node--pos-3"
+                data-scene-btn="3"
+                data-next-preview
+                aria-pressed="false"
+                aria-label="Show Cinque Terre, Vernazza, Italy"
+              >
+                <span class="arc-node__meta">
+                  <span class="arc-node__title">Cinque Terre</span>
+                  <span class="arc-node__sub">Vernazza, Italy</span>
+                </span>
+                <span class="arc-node__thumb-ring">
+                  <img class="arc-node__thumb" src="assets/img/cinque-terre.webp" alt="" width="160" height="160">
+                </span>
+              </button>
+
+              <!-- Node 5: Grand Canal -->
+              <button
+                type="button"
+                class="arc-node arc-node--pos-4"
+                data-scene-btn="4"
+                aria-pressed="false"
+                aria-label="Show Grand Canal, Venice, Italy"
+              >
+                <span class="arc-node__meta">
+                  <span class="arc-node__title">Grand Canal</span>
+                  <span class="arc-node__sub">Venice, Italy</span>
+                </span>
+                <span class="arc-node__thumb-ring">
+                  <img class="arc-node__thumb" src="assets/img/grand-canal.webp" alt="" width="160" height="160">
+                </span>
+              </button>
+            </div>
+
+            <!-- Right edge vertical pagination dots -->
+            <div class="hero-dots" role="group" aria-label="Destination slide indicators">
+              <button type="button" class="hero-dot" data-scene-dot="0" aria-label="Slide 1: Cameo Island" aria-pressed="false"></button>
+              <button type="button" class="hero-dot" data-scene-dot="1" aria-label="Slide 2: Koh Phi Phi Don" aria-pressed="false"></button>
+              <button type="button" class="hero-dot is-active" data-scene-dot="2" aria-label="Slide 3: Lago di Braies" aria-pressed="true"></button>
+              <button type="button" class="hero-dot" data-scene-dot="3" aria-label="Slide 4: Cinque Terre" aria-pressed="false"></button>
+              <button type="button" class="hero-dot" data-scene-dot="4" aria-label="Slide 5: Grand Canal" aria-pressed="false"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESTINATIONS SECTION -->
+      <section id="destinations" class="section" data-reveal>
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <p class="section__eyebrow">Destination Atlas</p>
+              <h2 class="section__title">Compare Five Signature Horizons</h2>
+            </div>
+            <p class="section__desc">
+              Filter by geography to compare best seasonal windows, local transfer routes, and quiet-hour access across all five showcase destinations.
+            </p>
+          </div>
+
+          <div class="filter-bar" role="group" aria-label="Filter destinations by region">
+            <button type="button" class="filter-pill is-active" data-region-filter="all" aria-pressed="true">All Regions (5)</button>
+            <button type="button" class="filter-pill" data-region-filter="alpine" aria-pressed="false">Alpine &amp; Lakes</button>
+            <button type="button" class="filter-pill" data-region-filter="mediterranean" aria-pressed="false">Mediterranean Coast</button>
+            <button type="button" class="filter-pill" data-region-filter="asia" aria-pressed="false">Southeast Asia</button>
+          </div>
+
+          <div class="dest-grid">
+            <article class="dest-card" data-region="alpine" data-reveal>
+              <div class="dest-card__media">
+                <img src="assets/img/boathouse-lake.webp" alt="Wooden rowboats moored beside the timber boathouse on Lago di Braies in the Italian Dolomites" width="640" height="360" loading="lazy">
+                <span class="dest-card__badge">Alpine Sanctuary</span>
+              </div>
+              <div class="dest-card__body">
+                <div class="dest-card__top">
+                  <h3 class="dest-card__title">Lago di Braies</h3>
+                  <span class="dest-card__loc">Dolomites, Italy</span>
+                </div>
+                <p class="dest-card__text">
+                  Dawn rowboat launch from the historic 1904 timber boathouse before valley shuttle arrivals, paired with high-altitude traverse routes across Fanes-Sennes-Braies.
+                </p>
+                <dl class="dest-card__meta">
+                  <div>
+                    <dt>Ideal Window</dt>
+                    <dd>May – Jun &amp; Sep – Oct</dd>
+                  </div>
+                  <div>
+                    <dt>Gateway</dt>
+                    <dd>Bolzano / Cortina (95 min)</dd>
+                  </div>
+                </dl>
+                <div class="dest-card__actions">
+                  <button type="button" class="btn btn--subtle" data-stage-jump="2">View on Hero Stage</button>
+                  <a class="dest-card__link" href="#packages">See Alpine Route</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="dest-card" data-region="mediterranean" data-reveal>
+              <div class="dest-card__media">
+                <img src="assets/img/cameo-island.webp" alt="Wooden footbridge crossing turquoise Ionian water toward Cameo Island in Zakynthos, Greece" width="640" height="360" loading="lazy">
+                <span class="dest-card__badge">Ionian Islet</span>
+              </div>
+              <div class="dest-card__body">
+                <div class="dest-card__top">
+                  <h3 class="dest-card__title">Cameo Island</h3>
+                  <span class="dest-card__loc">Zakynthos, Greece</span>
+                </div>
+                <p class="dest-card__text">
+                  Walk the timber causeway over translucent Ionian shallows at first light, followed by private wooden caique sailing along the southern limestone sea caves.
+                </p>
+                <dl class="dest-card__meta">
+                  <div>
+                    <dt>Ideal Window</dt>
+                    <dd>May – Jun &amp; Sep</dd>
+                  </div>
+                  <div>
+                    <dt>Gateway</dt>
+                    <dd>Zakynthos ZTH (25 min)</dd>
+                  </div>
+                </dl>
+                <div class="dest-card__actions">
+                  <button type="button" class="btn btn--subtle" data-stage-jump="0">View on Hero Stage</button>
+                  <a class="dest-card__link" href="#packages">See Ionian Route</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="dest-card" data-region="asia" data-reveal>
+              <div class="dest-card__media">
+                <img src="assets/img/koh-phi-phi.webp" alt="Traditional wooden longtail boats floating in emerald water framed by limestone cliffs at Koh Phi Phi Don" width="640" height="360" loading="lazy">
+                <span class="dest-card__badge">Karst Lagoon</span>
+              </div>
+              <div class="dest-card__body">
+                <div class="dest-card__top">
+                  <h3 class="dest-card__title">Koh Phi Phi Don</h3>
+                  <span class="dest-card__loc">Islands, Thailand</span>
+                </div>
+                <p class="dest-card__text">
+                  Sunrise longtail charter into emerald limestone amphitheatres, coral reef snorkelling off Bamboo Island, and cliffside ridge trails above Ton Sai Bay.
+                </p>
+                <dl class="dest-card__meta">
+                  <div>
+                    <dt>Ideal Window</dt>
+                    <dd>Nov – Apr</dd>
+                  </div>
+                  <div>
+                    <dt>Gateway</dt>
+                    <dd>Krabi / Phuket speedboat</dd>
+                  </div>
+                </dl>
+                <div class="dest-card__actions">
+                  <button type="button" class="btn btn--subtle" data-stage-jump="1">View on Hero Stage</button>
+                  <a class="dest-card__link" href="#packages">See Andaman Route</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="dest-card" data-region="mediterranean" data-reveal>
+              <div class="dest-card__media">
+                <img src="assets/img/cinque-terre.webp" alt="Sunset over terraced cliffside buildings and harbour boats in Vernazza, Cinque Terre, Italy" width="640" height="360" loading="lazy">
+                <span class="dest-card__badge">Ligurian Cliffs</span>
+              </div>
+              <div class="dest-card__body">
+                <div class="dest-card__top">
+                  <h3 class="dest-card__title">Cinque Terre</h3>
+                  <span class="dest-card__loc">Vernazza, Italy</span>
+                </div>
+                <p class="dest-card__text">
+                  Dry-stone vineyard paths linking Monterosso and Vernazza above the Ligurian Sea, paired with golden-hour wooden gozzo boat tastings along the headland.
+                </p>
+                <dl class="dest-card__meta">
+                  <div>
+                    <dt>Ideal Window</dt>
+                    <dd>Apr – May &amp; Oct</dd>
+                  </div>
+                  <div>
+                    <dt>Gateway</dt>
+                    <dd>La Spezia / Pisa rail</dd>
+                  </div>
+                </dl>
+                <div class="dest-card__actions">
+                  <button type="button" class="btn btn--subtle" data-stage-jump="3">View on Hero Stage</button>
+                  <a class="dest-card__link" href="#packages">See Ligurian Route</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="dest-card" data-region="mediterranean" data-reveal>
+              <div class="dest-card__media">
+                <img src="assets/img/grand-canal.webp" alt="Gondolas gliding along the Grand Canal in Venice at sunset with Santa Maria della Salute in the distance" width="640" height="360" loading="lazy">
+                <span class="dest-card__badge">Venetian Lagoon</span>
+              </div>
+              <div class="dest-card__body">
+                <div class="dest-card__top">
+                  <h3 class="dest-card__title">Grand Canal</h3>
+                  <span class="dest-card__loc">Venice, Italy</span>
+                </div>
+                <p class="dest-card__text">
+                  Twilight water-limousine passage from Dorsoduro palazzos to quiet northern lagoon islands, artisan squero boatyards, and after-hours basilica courtyards.
+                </p>
+                <dl class="dest-card__meta">
+                  <div>
+                    <dt>Ideal Window</dt>
+                    <dd>Mar – May &amp; Oct – Nov</dd>
+                  </div>
+                  <div>
+                    <dt>Gateway</dt>
+                    <dd>Venice Marco Polo water pier</dd>
+                  </div>
+                </dl>
+                <div class="dest-card__actions">
+                  <button type="button" class="btn btn--subtle" data-stage-jump="4">View on Hero Stage</button>
+                  <a class="dest-card__link" href="#packages">See Lagoon Route</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRAVEL PACKAGES SECTION -->
+      <section id="packages" class="section section--alt" data-reveal>
+        <div class="section__inner">
+          <div class="section__header">
+            <div>
+              <p class="section__eyebrow">Travel Packages</p>
+              <h2 class="section__title">Bespoke Multi-Stop Itineraries</h2>
+            </div>
+            <p class="section__desc">
+              Sample itineraries illustrating how routes, private transfers, and seasonal lodging combine. Replace sample rates with your verified agency pricing before launch.
+            </p>
+          </div>
+
+          <div class="package-grid">
+            <article class="package-card" data-reveal>
+              <div class="package-card__head">
+                <span class="package-card__duration">7 Days · 6 Nights</span>
+                <span class="package-card__tag">Alpine &amp; Lagoon</span>
+              </div>
+              <h3 class="package-card__title">Dolomites Peaks to Venetian Canals</h3>
+              <p class="package-card__route">Lago di Braies → Cortina d'Ampezzo → Grand Canal, Venice</p>
+              <ul class="package-card__list">
+                <li>Private sunrise boathouse pier access and wooden rowboat session on Lago di Braies</li>
+                <li>Guided high-meadow ridge walk with mountain rifugio lunch</li>
+                <li>Direct chauffeur transfer from South Tyrol down to Venice water taxi pier</li>
+                <li>Evening wooden launch tour along the Grand Canal and Giudecca</li>
+              </ul>
+              <div class="package-card__foot">
+                <div>
+                  <span class="package-card__price-label">Illustrative sample rate</span>
+                  <strong class="package-card__price">[YOUR PRICE] / traveller</strong>
+                </div>
+                <a class="btn btn--solid" href="mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Dolomites%20to%20Venice">Request Brief</a>
+              </div>
+            </article>
+
+            <article class="package-card package-card--featured" data-reveal>
+              <div class="package-card__head">
+                <span class="package-card__duration">9 Days · 8 Nights</span>
+                <span class="package-card__tag">Mediterranean Arc</span>
+              </div>
+              <h3 class="package-card__title">Ligurian Harbours &amp; Ionian Coves</h3>
+              <p class="package-card__route">Vernazza, Cinque Terre → Florence → Cameo Island, Zakynthos</p>
+              <ul class="package-card__list">
+                <li>Cliffside heritage stay overlooking Vernazza harbour with vineyard trail guide</li>
+                <li>Sunset Ligurian wooden gozzo coastal cruise across all five villages</li>
+                <li>Private rib charter around Zakynthos limestone arches and Cameo Island bridge</li>
+                <li>Dedicated route coordinator and flexible ferry/flight synchronization</li>
+              </ul>
+              <div class="package-card__foot">
+                <div>
+                  <span class="package-card__price-label">Illustrative sample rate</span>
+                  <strong class="package-card__price">[YOUR PRICE] / traveller</strong>
+                </div>
+                <a class="btn btn--solid" href="mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Mediterranean%20Arc">Request Brief</a>
+              </div>
+            </article>
+
+            <article class="package-card" data-reveal>
+              <div class="package-card__head">
+                <span class="package-card__duration">8 Days · 7 Nights</span>
+                <span class="package-card__tag">Tropical Karst</span>
+              </div>
+              <h3 class="package-card__title">Andaman Limestone &amp; Private Longtail</h3>
+              <p class="package-card__route">Krabi Coast → Koh Phi Phi Don → Phang Nga Bay</p>
+              <ul class="package-card__list">
+                <li>Early-morning longtail departure timed two hours ahead of day-boat arrivals</li>
+                <li>Marine biologist-led coral garden swim and hidden lagoon kayaking</li>
+                <li>Boutique beachfront villa stay with private sunset deck dining</li>
+                <li>Seamless airport-to-pier private van and twin-engine speedboat transfers</li>
+              </ul>
+              <div class="package-card__foot">
+                <div>
+                  <span class="package-card__price-label">Illustrative sample rate</span>
+                  <strong class="package-card__price">[YOUR PRICE] / traveller</strong>
+                </div>
+                <a class="btn btn--solid" href="mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Andaman%20Limestone">Request Brief</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT US SECTION -->
+      <section id="about" class="section" data-reveal>
+        <div class="section__inner">
+          <div class="about-split">
+            <div class="about-split__lead">
+              <p class="section__eyebrow">About Us</p>
+              <h2 class="section__title">Designed Around Quiet Hours &amp; Authentic Access</h2>
+              <p class="about-split__text">
+                Iconic landscapes lose their magic when experienced on rigid group schedules. We structure every route around golden-hour arrival windows, local skippers, and side-valley trails so you experience the world's most photographed places in rare stillness.
+              </p>
+            </div>
+
+            <div class="pillars-grid">
+              <div class="pillar-card">
+                <span class="pillar-card__num">01</span>
+                <h3 class="pillar-card__title">Cadence-First Timing</h3>
+                <p class="pillar-card__text">
+                  Every itinerary pairs famous landmarks with early-dawn or twilight access windows before peak excursion traffic arrives.
+                </p>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-card__num">02</span>
+                <h3 class="pillar-card__title">Side-by-Side Route Clarity</h3>
+                <p class="pillar-card__text">
+                  Compare transfer durations, seasonal weather patterns, and lodging styles clearly before committing to a single flight.
+                </p>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-card__num">03</span>
+                <h3 class="pillar-card__title">Direct Local Skippers</h3>
+                <p class="pillar-card__text">
+                  From Venetian wooden launches to Andaman longtail captains, we work directly with licensed local craft operators.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section section--alt" data-reveal>
+        <div class="section__inner">
+          <div class="contact-card">
+            <div class="contact-card__copy">
+              <p class="section__eyebrow">Contact Concierge</p>
+              <h2 class="section__title">Start Planning Your Next Horizon</h2>
+              <p class="contact-card__text">
+                Share your preferred season, travel pace, and favourite destination from the orbital showcase above. Our route planners respond with a tailored day-by-day comparison brief.
+              </p>
+              <div class="contact-card__direct">
+                <a class="btn btn--solid" href="mailto:concierge@beyondvoyages.example?subject=Custom%20Travel%20Brief">
+                  Email concierge@beyondvoyages.example
+                </a>
+                <a class="btn btn--glass" href="tel:+41445802490">
+                  Call +41 44 580 24 90
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-card__meta">
+              <h3 class="contact-card__sub">Studio &amp; Sample Notice</h3>
+              <p class="contact-card__note">
+                Dispatch Desk: Talstrasse 82, 8001 Zürich, Switzerland · Mon–Sat 08:30–19:00 CET.
+              </p>
+              <p class="contact-card__note">
+                Demo notice: This static template demonstrates destination switching, region filtering, and email inquiry links without a live booking engine or checkout backend.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="site-footer__name">Logoipsum · Beyond Voyages</span>
+          <p class="site-footer__copy">© 2026 Beyond Voyages Showcase Template. Sample imagery and route concepts for demonstration.</p>
+        </div>
+        <div class="site-footer__links">
+          <a href="#top">Home</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#packages">Travel Packages</a>
+          <a href="#about">About Us</a>
+          <a href="mailto:concierge@beyondvoyages.example">concierge@beyondvoyages.example</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

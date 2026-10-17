@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'fitclub-food': {
+    vi: {
+      intro: 'Landing page câu lạc bộ ẩm thực lành mạnh và tô dinh dưỡng thể hình nền tím mận tối theo ảnh tham chiếu.',
+      notes: '### Bắt đầu\nGiải nén đủ 9 file và mở index.html cạnh assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm chính xác. Không cần cài đặt hay build.\n\n### Ảnh và nội dung\nBa ảnh WebP nền trong suốt trong assets/img/: platter-club.webp, platter-protein.webp, platter-berry.webp. Thay FitClub, giá mẫu $14–$16 / bowl, chỉ số dinh dưỡng minh họa, [YOUR STUDIO ADDRESS] và kitchen@fitclubfood.example. Cụm chữ FFIFEET CTUB và Fitreess & giữ nguyên theo ảnh tham chiếu và có hướng dẫn đổi trong CUSTOMISE.md. Google Fonts (Plus Jakarta Sans) tùy chọn; font hệ thống hoạt động bình thường khi offline.\n\n### Tương tác\nBa khay món điều khiển bằng ba nút tròn ở thanh tính năng dưới đáy, nút Preview on Stage trên thẻ món, phím mũi tên Trái/Phải hoặc vuốt ngang trên sân khấu. Chọn khẩu phần cập nhật ngay tóm tắt đơn và liên kết mailto. Hai hộp thoại dialog cho thông báo giao hộp lạnh (Demo only) và bảng tham chiếu dinh dưỡng. Hỗ trợ menu mobile đóng bằng Escape và nút Pause motion trong phiên.\n\n### Phạm vi\nGiao diện tĩnh, không kèm backend, cổng thanh toán trực tuyến hay hệ thống điều phối giao hàng. Đọc kỹ LICENCE.txt; không phân phối lại template hoặc bán ảnh riêng.',
+    },
+    en: {
+      intro: 'A dark-plum fitness and healthy club bowl landing page inspired by the reference design.',
+      notes: '### Start\nExtract all 9 files and open index.html beside assets/. CUSTOMISE.md contains 10 steps, 12 complete AI prompts and a counted literal edit map. No install or build required.\n\n### Artwork and content\nThree transparent WebP platter cutouts in assets/img/: platter-club.webp, platter-protein.webp, and platter-berry.webp. Replace FitClub, the illustrative $14–$16 / bowl prices, sample macro figures, [YOUR STUDIO ADDRESS] and kitchen@fitclubfood.example. The wordmark FFIFEET CTUB and eyebrow Fitreess & preserve the reference lettering and are documented in CUSTOMISE.md. Google Fonts (Plus Jakarta Sans) is optional; system sans-serif fallbacks work offline.\n\n### Interaction\nThree platters controlled via the bottom feature circles, card Preview on Stage buttons, Left/Right arrow keys or horizontal swipe. Portion tier buttons update the live order summary and mailto link. Native dialog modals for chilled delivery details (Demo only) and macro comparison. Escape-aware mobile menu and session-only Pause motion.\n\n### Scope\nStatic showcase with no backend database, payment processor or live courier dispatch. Read LICENCE.txt; no template redistribution or standalone image resale.',
+    },
+    zh: {
+      intro: '深梅紫健身与健康俱乐部营养碗展示模板。',
+      notes: '### 开始\n完整解压9个文件，在assets/旁打开index.html。CUSTOMISE.md包含10个步骤、12条完整AI提示词和精确修改计数表。无需安装或构建。\n\n### 图像与内容\nassets/img/中包含三张透明背景WebP餐盘图：platter-club.webp、platter-protein.webp与platter-berry.webp。请替换FitClub、示例价格$14–$16 / bowl、营养参数、[YOUR STUDIO ADDRESS]及kitchen@fitclubfood.example。顶部FFIFEET CTUB与Fitreess &保留了参考图拼写，可在CUSTOMISE.md中查看修改位置。Google Fonts (Plus Jakarta Sans) 可选，离线时自动使用系统无衬线字体。\n\n### 交互\n支持通过底部圆形图标按钮、卡片预览按钮、左右方向键或横向滑动切换三款餐盘。份量档位按钮实时同步至底部订餐摘要与mailto邮件链接。内置原生dialog对话框（Demo only冷链配送说明与营养对照表）、支持Escape的移动菜单及仅限当前会话的Pause motion。\n\n### 范围\n纯静态展示页，不含后端数据库、在线支付或实时配送系统。请阅读LICENCE.txt；禁止重新分发模板或单独转售图像。',
+    },
+  },
   'volt-hoodie': {
     vi: {
       intro: 'Showroom áo hoodie streetwear phối mảng chéo vàng volt và đen carbon theo ảnh tham chiếu.',

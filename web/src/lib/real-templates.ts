@@ -46,6 +46,45 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t48: {
+    slug: 'fitclub-food',
+    cat: 'commerce',
+    version: '1.0.0',
+    copy: {
+      vi: {
+        name: 'FitClub Food',
+        desc: 'Landing page câu lạc bộ ẩm thực lành mạnh và tô dinh dưỡng thể hình nền tím mận tối theo ảnh tham chiếu, ba khay món WebP trong suốt, chọn khẩu phần và đặt món qua email.',
+        tags: ['Ẩm thực lành mạnh', '3 khay món', 'Ảnh trong suốt'],
+      },
+      en: {
+        name: 'FitClub Food',
+        desc: 'A dark-plum fitness and healthy club bowl landing page inspired by the reference design, featuring three transparent WebP platter cutouts, portion tiers and direct email enquiry.',
+        tags: ['Healthy food', '3 platters', 'Transparent cutouts'],
+      },
+      zh: {
+        name: 'FitClub Food',
+        desc: '深梅紫健身与健康俱乐部营养碗展示页，含三款透明WebP餐盘切图、份量档位选择及邮件订餐咨询。',
+        tags: ['健康轻食', '3款餐盘', '透明切图'],
+      },
+    },
+    specs: {
+      vi: [
+        ['Định dạng', 'HTML / CSS / JavaScript'],
+        ['Gói tải', '9 files'],
+        ['Phạm vi', 'Giao diện tĩnh · không backend'],
+      ],
+      en: [
+        ['Format', 'HTML / CSS / JavaScript'],
+        ['Package', '9 files'],
+        ['Scope', 'Static interface · no backend'],
+      ],
+      zh: [
+        ['格式', 'HTML / CSS / JavaScript'],
+        ['下载包', '9 files'],
+        ['范围', '静态界面 · 无后端'],
+      ],
+    },
+  },
   t46: {
     slug: 'volt-hoodie',
     cat: 'commerce',

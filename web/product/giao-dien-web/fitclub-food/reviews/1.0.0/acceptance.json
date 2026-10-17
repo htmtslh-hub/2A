@@ -1,0 +1,232 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "7fde3234980436b5ec2dddd48f6ef9e1243c7af76ddaa0a5b2ec0cd78dd75c8e",
+  "references": [
+    {
+      "file": "media_1792199311495_de83b151.jpg",
+      "sha256": "b98b677cd5d5bf340c54c29876ccbb3ce40fec4764cb866836c3f24ffad643f2",
+      "size": [
+        856,
+        740
+      ],
+      "crop": null,
+      "scale": "856x740 direct 1:1 viewport and 1440x900 proportional desktop showcase",
+      "excluded": "One external bottom-right viewer expand button (light-grey rounded square with diagonal expand arrows at x=791..855, y=633..719) is excluded from the website and design scoring"
+    }
+  ],
+  "views": [
+    {
+      "name": "desktop reference",
+      "viewport": [
+        856,
+        740
+      ],
+      "dpr": 1,
+      "zoom": 1,
+      "scroll": 0,
+      "screenshot": "screenshots/reference-856x740.png",
+      "comparison": "visual-diff/side-by-side.png",
+      "regions": [
+        {
+          "name": "header-nav",
+          "weight": 0.14,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Top lavender ribbon (x=0..627, y=0..6), left FFIFEET CTUB wordmark (x=38..158, y=49..63), four nav items (x=428..706, y=52..59), and right white-bordered pill button (x=735..812, y=39..69) align 1:1 with reference coordinates."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Plus Jakarta Sans 800 wordmark preserves exact FFIFEET CTUB spelling; real English nav labels (CLASSES, NUTRITION, BOWLS, CHEF TABLE) and ORDER pill replace illegible synthetic glyphs per D06."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Top lavender gradient (#9D70B3 -> #86629F), dark plum header backdrop, and 1.5px white-bordered ORDER pill match reference tones."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "Clean pill outline and top-right diagonal dashed lines intersecting below the ORDER pill match reference."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "44x44px hit targets are achieved with transparent hit boxes while preserving exact visual spacing."
+            }
+          ],
+          "score": 96.9
+        },
+        {
+          "name": "hero-copy-left",
+          "weight": 0.26,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Pink Fitreess & eyebrow (y=191..221), two-line Healthy Club / Food H1 (y=236..341), 3-line description (y=378..418), gradient CTA pill (x=39..194, y=450..486), and bottom-left pink diamond grid (x=0..85, y=507..626) match reference."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Plus Jakarta Sans 700/800 preserves Fitreess & and Healthy Club / Food lettering while replacing synthetic placeholder text and NDSD NUDE with real English macro-bowl copy and VIEW MENU."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Top-left magenta-plum radial glow (#844982 -> #341E3C), #EA93E4 eyebrow, and WCAG AA compliant #B43B96 -> #7B38B4 CTA gradient match reference."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "18-diamond rotated pink lattice (#B83C92) in the lower-left margin matches reference positions."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Left margin alignment at x=39..42px and vertical rhythm from eyebrow to CTA pill match reference overlay."
+            }
+          ],
+          "score": 97.0
+        },
+        {
+          "name": "hero-platter-stage-right",
+          "weight": 0.38,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Concentric dark-purple stage rings, top-right diagonal dashed lines (x=747..854, y=66..173), and overhead food platter stage (x=426..856, y=150..600) register 1:1 with the reference canvas."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Stage integrates cleanly with adjacent hero headline and interactive keyboard/swipe accessibility labels."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Deep plum stage vignette (#27142E / #2C1833) and #45294E / #3E2447 concentric ring borders match reference depth."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Default platter-club.webp (688x720 transparent WebP) preserves the exact white ceramic salad bowl, charcoal walnut/granola bowl, white pomegranate ramekin, strawberries, blueberries, basil, almonds, and half avocado, with two additional studio platter variants for interactive switching."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Clear separation between left hero copy, concentric ring edge, and bottom feature circles."
+            }
+          ],
+          "score": 97.5
+        },
+        {
+          "name": "bottom-feature-strip",
+          "weight": 0.22,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Four 70px circular badges centered at x=149, 333, 515, 703 (y=652) and three vertical 1px dividers at x=240, 424, 615 (y=631..716) align 1:1 with reference."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "First badge preserves ENIISKE SVG lettering; two-line real English captions replace illegible synthetic sub-captions per D06."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Solid #432C4C circular fills, crisp white SVG strokes, and subtle rgba(230,214,238,0.22) vertical dividers match reference."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "Four custom vector icons (crest + ENIISKE, angled protein packet, organic leaf, cloche/house) match reference stroke geometry."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Balanced 4-column distribution across x=57..795 with external viewer button at x=791..855 excluded."
+            }
+          ],
+          "score": 97.1
+        }
+      ],
+      "score": 97.198
+    }
+  ],
+  "fidelity": {
+    "method": "weighted regional visual-review judgement, not pixel accuracy",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "score": 97.198,
+    "status": "PASS",
+    "pixelDiagnostic": {
+      "reference": "C:\\Users\\Lenovo\\.gemini\\antigravity\\brain\\2f29ff2f-b383-475c-8657-dcea83d91517\\.user_uploaded\\media_1792199311495_de83b151.jpg",
+      "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\fitclub-food\\reviews\\1.0.0\\screenshots\\reference-856x740.png",
+      "size": [
+        856,
+        740
+      ],
+      "referenceCrop": null,
+      "alphaBackground": "white",
+      "meanAbsoluteRgbError": 14.30835332996548,
+      "pixelMatchPercent": 79.67494948219247,
+      "tolerance": 16,
+      "gate": "NOT ASSESSED",
+      "fidelityRubric": "NOT SCORED",
+      "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+    }
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: 4 actual browsers (Chromium 153.0.8010.12, Firefox 155.0, Edge 155.0.4283.62, Cốc Cốc 152.0.7977.124) verified under reducedMotion: reduce; intermediate requestAnimationFrame transform frames, forward/backward wrap, keyboard arrows, swipe, and session-only Pause motion verified."
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: scroll-triggered finite requestAnimationFrame intermediate transform and settled state verified across all 4 browsers."
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Still screenshot reference; no input video provided."
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "checks.json: 0 failures across Chromium 153.0.8010.12 and Firefox 155.0 at 1440x900, 820x1180, 375x812, 320x740, 620px menu breakpoint, keyboard skip-link and focus contrast, axe WCAG A/AA, zoom200 (720x450 DPR2), reducedMotion, file://, and no-JS/no-font at 320px.",
+      "CUSTOMISE.md: 10 steps, 12 prompts, 0 unfilled markers, 0 literal count errors."
+    ]
+  },
+  "blockers": [],
+  "gate": "PASS"
+}

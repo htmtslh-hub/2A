@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-17T06:21:45.210Z",
+  "origin": "https://forgezone.store/demos/astro-armor/index.html",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "errors": [],
+      "osReduce": true,
+      "savedOffKeysIgnored": true,
+      "cssAnimationAndTransitionDisabled": true,
+      "size": true,
+      "midColour": {
+        "opacity": 0.816899,
+        "transform": "matrix(0.990013, 0, 0, 0.990013, 0, 4.66076)",
+        "src": "https://forgezone.store/demos/astro-armor/assets/img/armor-red.webp"
+      },
+      "endColour": {
+        "opacity": 1,
+        "src": "https://forgezone.store/demos/astro-armor/assets/img/armor-red.webp",
+        "complete": true
+      },
+      "rapid": true,
+      "favourite": true,
+      "bag": true,
+      "remove": true,
+      "dialogFocus": true,
+      "sizeGuide": true,
+      "scrollMid": "matrix(1, 0, 0, 1, 0, -11.4286)",
+      "scrollEnd": "matrix(1, 0, 0, 1, 0, -20)",
+      "scrollReverse": "matrix(1, 0, 0, 1, 0, 0)",
+      "pause": true
+    },
+    "firefox": {
+      "version": "155.0",
+      "errors": [],
+      "osReduce": true,
+      "savedOffKeysIgnored": true,
+      "cssAnimationAndTransitionDisabled": true,
+      "size": true,
+      "midColour": {
+        "opacity": 0.958651,
+        "transform": "matrix(0.997745, 0, 0, 0.997745, 0, 1.05251)",
+        "src": "https://forgezone.store/demos/astro-armor/assets/img/armor-red.webp"
+      },
+      "endColour": {
+        "opacity": 1,
+        "src": "https://forgezone.store/demos/astro-armor/assets/img/armor-red.webp",
+        "complete": true
+      },
+      "rapid": true,
+      "favourite": true,
+      "bag": true,
+      "remove": true,
+      "dialogFocus": true,
+      "sizeGuide": true,
+      "scrollMid": "matrix(1, 0, 0, 1, 0, -11.4286)",
+      "scrollEnd": "matrix(1, 0, 0, 1, 0, -20)",
+      "scrollReverse": "matrix(1, 0, 0, 1, 0, 0)",
+      "pause": true
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "errors": [],
+      "osReduce": true,
+      "savedOffKeysIgnored": true,
+      "cssAnimationAndTransitionDisabled": true,
+      "size": true,
+      "midColour": {
+        "opacity": 0.738468,
+        "transform": "matrix(0.985735, 0, 0, 0.985735, 0, 6.65719)",
+        "src": "https://forgezone.store/demos/astro-armor/assets/img/armor-red.webp"
+      },
+      "endColour": {
+        "opacity": 1,
+        "src": "https://forgezone.store/demos/astro-armor/assets/img/armor-red.webp",
+        "complete": true
+      },
+      "rapid": true,
+      "favourite": true,
+      "bag": true,
+      "remove": true,
+      "dialogFocus": true,
+      "sizeGuide": true,
+      "scrollMid": "matrix(1, 0, 0, 1, 0, -11.4286)",
+      "scrollEnd": "matrix(1, 0, 0, 1, 0, -20)",
+      "scrollReverse": "matrix(1, 0, 0, 1, 0, 0)",
+      "pause": true
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "errors": [],
+      "osReduce": true,
+      "savedOffKeysIgnored": true,
+      "cssAnimationAndTransitionDisabled": true,
+      "size": true,
+      "midColour": {
+        "opacity": 0.780204,
+        "transform": "matrix(0.988011, 0, 0, 0.988011, 0, 5.59482)",
+        "src": "https://forgezone.store/demos/astro-armor/assets/img/armor-red.webp"
+      },
+      "endColour": {
+        "opacity": 1,
+        "src": "https://forgezone.store/demos/astro-armor/assets/img/armor-red.webp",
+        "complete": true
+      },
+      "rapid": true,
+      "favourite": true,
+      "bag": true,
+      "remove": true,
+      "dialogFocus": true,
+      "sizeGuide": true,
+      "scrollMid": "matrix(1, 0, 0, 1, 0, -11.4286)",
+      "scrollEnd": "matrix(1, 0, 0, 1, 0, -20)",
+      "scrollReverse": "matrix(1, 0, 0, 1, 0, 0)",
+      "pause": true
+    }
+  },
+  "failures": []
+}

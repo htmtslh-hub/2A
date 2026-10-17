@@ -15,7 +15,7 @@
 | Q09 technical | PASS zero canonical console/network errors; finite motion with no idle animation loop; package size 415024 bytes under approved size exception. No remote runtime/font dependency. |
 | Q10 docs/assets | PASS 10 steps, 12 complete prompts, literal edit counts verified, no required prompt fields left unfilled. System fonts only, no font redistribution. User-supplied reference and built-in ImageGen provenance in ASSETS.md; no trademark endorsement claimed. No claim of testing prompts in another AI. |
 | Q11 final ZIP | PASS 415024 bytes; SHA-256 bd2e95c79ba3023adac2dac076b3368e041e3243879dc9f1a95f26bb1ed6a846; nine extracted files byte-identical to source. file:// and HTTP tested from the official extracted ZIP. |
-| Q12 store | PASS local store; online verification pending. Premium membership policy inherited; no price override or entitlement changes. Real paid-account download and real payment completion: NOT TESTED, no test entitlement fabricated. |
+| Q12 store | PASS public deployment/assets/guards and store browser checks. Premium membership policy inherited; no price override or entitlement changes. Real paid-account download and real payment completion: NOT TESTED, no test entitlement fabricated. |
 | Q13 design | PASS D01–D08 and weighted visual rubric 96.164; rubric is not pixel accuracy. See ACCEPTANCE.md and comparison diagnostics. |
 
 ## Design checks

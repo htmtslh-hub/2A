@@ -1,0 +1,1250 @@
+{
+  "slug": "astro-armor",
+  "version": "1.0.0",
+  "date": "2026-10-17T01:12:58.120Z",
+  "os": "win32",
+  "zipBytes": 414598,
+  "sha256": "0655ce76a0c170fa700c0808fbabba87bfb090b6b743606b89368d0c903d4fdc",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to product",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "ASTRO home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "Products",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "Category",
+            "href": "#construction",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#construction"
+          },
+          {
+            "label": "More",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#story"
+          },
+          {
+            "label": "About us",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#story"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#contact"
+          },
+          {
+            "label": "Back to the jacket ↗",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "ASTRO.",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "hello@astro.example",
+            "href": "mailto:hello@astro.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@astro.example"
+          },
+          {
+            "label": "Contact details",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#contact"
+          },
+          {
+            "label": "Winter Armor II — $560",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "View contact details",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#contact"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 760,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to product",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              36,
+              38,
+              32
+            ],
+            "ratio": 15.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "wordmark",
+            "text": "ASTRO.",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              242,
+              239,
+              232
+            ],
+            "ratio": 13.32,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Products",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              242,
+              239,
+              232
+            ],
+            "ratio": 13.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "More",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              243,
+              239,
+              232
+            ],
+            "ratio": 13.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "navigation__about",
+            "text": "About us",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              247,
+              242,
+              233
+            ],
+            "ratio": 13.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Contact",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              247,
+              243,
+              234
+            ],
+            "ratio": 13.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "New",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              242,
+              239,
+              232
+            ],
+            "ratio": 6.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "ASTROWINTERARMOR II",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              240,
+              237,
+              230
+            ],
+            "ratio": 13.08,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Description",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              239,
+              236,
+              229
+            ],
+            "ratio": 12.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A puffer jacket that carries the romance",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              238,
+              235,
+              227
+            ],
+            "ratio": 6.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Oversized volume. A high protective coll",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              237,
+              234,
+              226
+            ],
+            "ratio": 6.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "FIGCAPTION",
+            "text": "Designed in San FranciscoFabric and stit",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              241,
+              238,
+              230
+            ],
+            "ratio": 13.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "S",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              231,
+              226,
+              216
+            ],
+            "ratio": 11.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "M",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              237,
+              138,
+              54
+            ],
+            "ratio": 6.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Beige",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              246,
+              242,
+              233
+            ],
+            "ratio": 13.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Black",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              229,
+              224,
+              216
+            ],
+            "ratio": 11.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "White",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              228,
+              224,
+              215
+            ],
+            "ratio": 11.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "pill pill--outline",
+            "text": "Favorite",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              245,
+              241,
+              233
+            ],
+            "ratio": 13.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "pill pill--orange",
+            "text": "Add to bag",
+            "colour": "rgb(52, 33, 15)",
+            "background": [
+              237,
+              138,
+              54
+            ],
+            "ratio": 6.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Concept · demo bag",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              244,
+              241,
+              233
+            ],
+            "ratio": 6.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Beige, size M selected",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              237,
+              234,
+              226
+            ],
+            "ratio": 12.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "3X beigewashed",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              240,
+              237,
+              230
+            ],
+            "ratio": 13.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "The beige color is accented with orange ",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              241,
+              238,
+              230
+            ],
+            "ratio": 6.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "34 areas puffed",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              241,
+              238,
+              231
+            ],
+            "ratio": 13.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "The design is not only fashionable but a",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              241,
+              238,
+              231
+            ],
+            "ratio": 6.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Graphics",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              243,
+              240,
+              232
+            ],
+            "ratio": 13.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Read more",
+          "colour": "rgb(141, 61, 11)",
+          "width": "3px",
+          "ratio": 6.23
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to product",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "ASTRO home",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "Products",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "Category",
+            "href": "#construction",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#construction"
+          },
+          {
+            "label": "More",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#story"
+          },
+          {
+            "label": "About us",
+            "href": "#story",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#story"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#contact"
+          },
+          {
+            "label": "Back to the jacket ↗",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "ASTRO.",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "hello@astro.example",
+            "href": "mailto:hello@astro.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@astro.example"
+          },
+          {
+            "label": "Contact details",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#contact"
+          },
+          {
+            "label": "Winter Armor II — $560",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#main"
+          },
+          {
+            "label": "View contact details",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/astro-armor/index.html#contact"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 760,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to product",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              36,
+              38,
+              32
+            ],
+            "ratio": 15.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "wordmark",
+            "text": "ASTRO.",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              242,
+              239,
+              232
+            ],
+            "ratio": 13.32,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Products",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              242,
+              239,
+              232
+            ],
+            "ratio": 13.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Category",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              242,
+              239,
+              231
+            ],
+            "ratio": 13.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "More",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              243,
+              239,
+              232
+            ],
+            "ratio": 13.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "navigation__about",
+            "text": "About us",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              247,
+              243,
+              234
+            ],
+            "ratio": 13.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Contact",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              248,
+              243,
+              234
+            ],
+            "ratio": 13.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "New",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              242,
+              239,
+              232
+            ],
+            "ratio": 6.44,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "ASTROWINTERARMOR II",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              240,
+              237,
+              230
+            ],
+            "ratio": 13.08,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Description",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              239,
+              236,
+              229
+            ],
+            "ratio": 12.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A puffer jacket that carries the romance",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              238,
+              234,
+              228
+            ],
+            "ratio": 6.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Oversized volume. A high protective coll",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              237,
+              234,
+              226
+            ],
+            "ratio": 6.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "FIGCAPTION",
+            "text": "Designed in San FranciscoFabric and stit",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              240,
+              237,
+              230
+            ],
+            "ratio": 13.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "S",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              231,
+              226,
+              216
+            ],
+            "ratio": 11.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "M",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              237,
+              138,
+              54
+            ],
+            "ratio": 6.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Beige",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              246,
+              242,
+              234
+            ],
+            "ratio": 13.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Black",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              228,
+              224,
+              216
+            ],
+            "ratio": 11.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "White",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              228,
+              223,
+              215
+            ],
+            "ratio": 11.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "pill pill--outline",
+            "text": "Favorite",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              245,
+              241,
+              233
+            ],
+            "ratio": 13.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "pill pill--orange",
+            "text": "Add to bag",
+            "colour": "rgb(52, 33, 15)",
+            "background": [
+              237,
+              138,
+              54
+            ],
+            "ratio": 6.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Concept · demo bag",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              244,
+              241,
+              232
+            ],
+            "ratio": 6.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Beige, size M selected",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              237,
+              234,
+              226
+            ],
+            "ratio": 12.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "3X beigewashed",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              240,
+              237,
+              231
+            ],
+            "ratio": 13.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "The beige color is accented with orange ",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              240,
+              237,
+              231
+            ],
+            "ratio": 6.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "34 areas puffed",
+            "colour": "rgb(36, 38, 32)",
+            "background": [
+              241,
+              237,
+              231
+            ],
+            "ratio": 13.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "The design is not only fashionable but a",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              241,
+              238,
+              231
+            ],
+            "ratio": 6.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Technical drawings trace an imagined exp",
+            "colour": "rgb(86, 86, 79)",
+            "background": [
+              243,
+              239,
+              232
+            ],
+            "ratio": 6.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Read more",
+          "colour": "rgb(141, 61, 11)",
+          "width": "3px",
+          "ratio": 6.23
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "astro-armor/assets/css/style.css",
+    "astro-armor/assets/img/armor-beige.webp",
+    "astro-armor/assets/img/armor-red.webp",
+    "astro-armor/assets/img/armor-reference.jpg",
+    "astro-armor/assets/js/main.js",
+    "astro-armor/CUSTOMISE.md",
+    "astro-armor/index.html",
+    "astro-armor/LICENCE.txt",
+    "astro-armor/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/armor-beige.webp",
+    "assets/img/armor-red.webp",
+    "assets/img/armor-reference.jpg",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

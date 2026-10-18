@@ -1,0 +1,143 @@
+{
+  "slug": "chain-warden",
+  "slot": "t49",
+  "version": "1.0.0",
+  "verifiedAt": "2026-10-17T03:48:02.418Z",
+  "productionBaseUrl": "https://forgezone.store",
+  "endpointChecks": [
+    {
+      "path": "/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null
+    },
+    {
+      "path": "/demos/chain-warden/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null
+    },
+    {
+      "path": "/demos/chain-warden/assets/css/style.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "contentLength": null
+    },
+    {
+      "path": "/demos/chain-warden/assets/js/main.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "contentLength": null
+    },
+    {
+      "path": "/demos/chain-warden/assets/img/warden-classic.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "contentLength": "67248"
+    },
+    {
+      "path": "/demos/chain-warden/assets/img/warden-darkstar.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "contentLength": "57410"
+    },
+    {
+      "path": "/demos/chain-warden/assets/img/warden-highnoon.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "contentLength": "60674"
+    },
+    {
+      "path": "/demos/chain-warden/assets/img/warden-ui.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "contentLength": "42638"
+    },
+    {
+      "path": "/previews/chain-warden.webp?v=1.0.0",
+      "status": 200,
+      "contentType": "image/webp",
+      "contentLength": "37232"
+    },
+    {
+      "path": "/previews/chain-warden.mp4?v=1.0.0",
+      "status": 200,
+      "contentType": "video/mp4",
+      "contentLength": "655491"
+    },
+    {
+      "path": "/api/download?slug=chain-warden",
+      "status": 401,
+      "contentType": "application/json",
+      "contentLength": null
+    },
+    {
+      "path": "/chain-warden.zip",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null
+    },
+    {
+      "path": "/demos/fitclub-food/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null
+    },
+    {
+      "path": "/previews/fitclub-food.webp?v=1.0.0",
+      "status": 200,
+      "contentType": "image/webp",
+      "contentLength": "26026"
+    },
+    {
+      "path": "/demos/volt-hoodie/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentLength": null
+    },
+    {
+      "path": "/previews/volt-hoodie.webp?v=1.0.0",
+      "status": 200,
+      "contentType": "image/webp",
+      "contentLength": "15874"
+    }
+  ],
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "demoH1": "Thresh",
+      "afterSkin": "Skin 02 / 04 · Dark Star",
+      "afterAbility": "The Box",
+      "storeHasChainWarden": true,
+      "consoleAndPageErrors": [],
+      "pass": true
+    },
+    "firefox": {
+      "version": "155.0",
+      "demoH1": "Thresh",
+      "afterSkin": "Skin 02 / 04 · Dark Star",
+      "afterAbility": "The Box",
+      "storeHasChainWarden": true,
+      "consoleAndPageErrors": [],
+      "pass": true
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "demoH1": "Thresh",
+      "afterSkin": "Skin 02 / 04 · Dark Star",
+      "afterAbility": "The Box",
+      "storeHasChainWarden": true,
+      "consoleAndPageErrors": [],
+      "pass": true
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "demoH1": "Thresh",
+      "afterSkin": "Skin 02 / 04 · Dark Star",
+      "afterAbility": "The Box",
+      "storeHasChainWarden": true,
+      "consoleAndPageErrors": [],
+      "pass": true
+    }
+  }
+}

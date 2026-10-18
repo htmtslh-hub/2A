@@ -1,15 +1,15 @@
 {
-  "checkedAt": "2026-10-07T01:08:18.567Z",
+  "checkedAt": "2026-10-17T06:33:44.048Z",
   "url": "https://forgezone.store/admin",
   "accounts": 1,
-  "orders": 7,
+  "orders": 0,
   "tracking": true,
   "anonymousDenied": true,
   "readOnlyAccountAndOrderChecks": true,
   "browsers": [
     {
       "browser": "Edge",
-      "version": "154.0.4258.62",
+      "version": "155.0.4283.62",
       "width": 1440,
       "result": "PASS",
       "checks": "Authorized page/API, live storefront pageview appears without reload, account dialog/Escape, responsive layout, current production resources, no runtime errors"

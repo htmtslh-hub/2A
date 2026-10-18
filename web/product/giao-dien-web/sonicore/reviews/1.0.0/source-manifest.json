@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "file": "assets/css/style.css",
+      "bytes": 27296,
+      "sha256": "ff34599211334eebba1290c922d20f63084ea56b65d80ae714f51d8e12b68e90"
+    },
+    {
+      "file": "assets/img/design-closeup.webp",
+      "bytes": 17488,
+      "sha256": "747623a376d14bdf21bd4b2eb2ff2cdbf685fd777463c5b0b5c058ff7d85758c"
+    },
+    {
+      "file": "assets/img/exploded-view.webp",
+      "bytes": 30792,
+      "sha256": "39fc441d95623eafafb117243bb7f54f316b5bdbbb53ec628276930d49543dff"
+    },
+    {
+      "file": "assets/img/hero-headphone.webp",
+      "bytes": 46946,
+      "sha256": "059edb14f974e3311f8f04c068fa88047dc06376d2f13e794fbc22190a869238"
+    },
+    {
+      "file": "assets/img/spatial-bust.webp",
+      "bytes": 13920,
+      "sha256": "e40b77a5a26f4fd316985fde8f59abbd29ad8c0dcfb0afc759c0b092f232f809"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 18899,
+      "sha256": "fae6b20463ab61cbc8b30e469a6c6f42ba498e264730454726d36e24126d14d3"
+    },
+    {
+      "file": "CUSTOMISE.md",
+      "bytes": 21072,
+      "sha256": "59976c085d8a68be99e47140f48f9f1d60cf2b41d187d48bf7e400ff02c36621"
+    },
+    {
+      "file": "index.html",
+      "bytes": 25397,
+      "sha256": "16b3db0595cc9c6dfdd8dbc4a0d6b02bca1fe762ed2f1f61c990e2a88b0b81f2"
+    },
+    {
+      "file": "LICENCE.txt",
+      "bytes": 1980,
+      "sha256": "c93f4ed431b9939f936ab0b9a8615870a7d9ebd2745a6e94234b72cade43d31d"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2652,
+      "sha256": "d8fccff47cf22a0852b5b25f7bfd44b2fa6d33cb228d1b33a8c53733da5d847e"
+    }
+  ],
+  "sha256": "31307862ee5e97c21d9e69f84384ffba8c6443c410c8615e51a532d611425989"
+}

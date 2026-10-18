@@ -1,0 +1,22 @@
+{
+  "chromium": {
+    "mid": {
+      "opacity": "0.476099",
+      "transform": "matrix(1, 0, 0, 1, 0, 19.6463)"
+    },
+    "end": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  },
+  "firefox": {
+    "mid": {
+      "opacity": "0.514687",
+      "transform": "matrix(1, 0, 0, 1, 0, 18.1992)"
+    },
+    "end": {
+      "opacity": "1",
+      "transform": "none"
+    }
+  }
+}

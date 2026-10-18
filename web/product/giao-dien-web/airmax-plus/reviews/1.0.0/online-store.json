@@ -1,0 +1,139 @@
+{
+  "origin": "https://forgezone.store",
+  "date": "2026-10-15T14:29:07.388Z",
+  "assets": [
+    {
+      "file": "index.html",
+      "bytes": 15406,
+      "sha256": "a46dda6bc6768edd15e2cebe2e9b4632ba5c3ef5367edb9398a4424c2aede045"
+    },
+    {
+      "file": "assets/css/style.css",
+      "bytes": 18630,
+      "sha256": "550b0628d747eda5c48ffce8baa684a87e0c8bb49ca405cda2c0e98f46ffb958"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 14363,
+      "sha256": "c5e64f5af3ae0f0dcd729f0ead72a10fd8fa0d2b761533cc55d74c9ec0c0793a"
+    },
+    {
+      "file": "assets/img/shoe-sunset.webp",
+      "bytes": 93522,
+      "sha256": "5e5178df3c8e0a01e6e107e5509f5b1f74434ca61366fb61c96a816dbfd13149"
+    },
+    {
+      "file": "assets/img/shoe-volt.webp",
+      "bytes": 91022,
+      "sha256": "2bb68d521393a32f4febd7fd876c4e75304a7bc4d449cdee9a422ab615b6b3dc"
+    },
+    {
+      "file": "assets/img/shoe-crimson.webp",
+      "bytes": 96576,
+      "sha256": "3b9ac6b472b7114cbbe42bd8efc85e07ff8d5933063b7d867cb78f3deb953816"
+    },
+    {
+      "file": "airmax-plus.mp4",
+      "bytes": 551257,
+      "sha256": "5fa56abeb329a935cea7b61cd2161805e1c49c76d24b42c7dca87ac341e3eeb1"
+    },
+    {
+      "file": "airmax-plus.webp",
+      "bytes": 24008,
+      "sha256": "4e59fb6fdb2c80724b738aa83b99c1be0b4a5186a87f35f8133aa7b6152b1f83"
+    }
+  ],
+  "locales": [
+    {
+      "locale": "vi-VN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "vi-VN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "status": {
+        "paused": false,
+        "time": 2.146909,
+        "muted": true,
+        "src": "https://forgezone.store/previews/airmax-plus.mp4?v=5fa56abeb329"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "status": {
+        "paused": false,
+        "time": 2.085598,
+        "muted": true,
+        "src": "https://forgezone.store/previews/airmax-plus.mp4?v=5fa56abeb329"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.45",
+      "status": {
+        "paused": false,
+        "time": 1.903105,
+        "muted": true,
+        "src": "https://forgezone.store/previews/airmax-plus.mp4?v=5fa56abeb329"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "status": {
+        "paused": false,
+        "time": 2.062348,
+        "muted": true,
+        "src": "https://forgezone.store/previews/airmax-plus.mp4?v=5fa56abeb329"
+      },
+      "offscreenPaused": true
+    }
+  ],
+  "anonymous": 401,
+  "directZip": 404,
+  "existingFree": "t22/t1 exact ZIP, anonymous 200"
+}

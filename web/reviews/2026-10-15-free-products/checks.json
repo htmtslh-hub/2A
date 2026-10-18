@@ -1,0 +1,26 @@
+{
+  "origin": "https://forgezone.store",
+  "browser": "Chromium",
+  "rows": [
+    {
+      "id": "t22",
+      "slug": "kinetiq",
+      "status": 200,
+      "bytes": 14471,
+      "sha256": "f25952692f29e9a4697291a8ede65646e7cf9461f351c13e634b5115134b48f9"
+    },
+    {
+      "id": "t1",
+      "slug": "japan-trails",
+      "status": 200,
+      "bytes": 879268,
+      "sha256": "caf65c9af7b53fbda28fd461cb7a14e3e6744934fd20eaf4d9efd3340606b93f"
+    }
+  ],
+  "premiumAnonymous": 401,
+  "locales": [
+    "vi-VN",
+    "en-US",
+    "zh-CN"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "slug": "fennec",
+  "zip": "web\\product\\giao-dien-web\\fennec\\fennec.zip",
+  "bytes": 6670,
+  "sha256": "142db3433ce0a4bc5cbae1649cce3c172bf5a8f2e7e92ba04f7c30c50c55c225",
+  "files": [
+    "index.html"
+  ],
+  "byteVerified": true
+}

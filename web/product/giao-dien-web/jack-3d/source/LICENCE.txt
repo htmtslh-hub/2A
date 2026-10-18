@@ -1,0 +1,24 @@
+Jack — 3D Creator — LICENCE TERMS
+
+1. WHAT YOU GET
+A perpetual, non-exclusive commercial licence to the original template code, subject to these terms and the separate third-party terms below.
+
+2. WHAT YOU MAY DO
+Use and modify the template for unlimited personal and client websites. Charge for your finished websites. No attribution is required for the original template code.
+
+3. WHAT YOU MAY NOT DO
+Do not resell, sublicense, distribute or publish these template files as another template, marketplace listing or template bundle.
+
+4. DEMO CONTENT AND MEDIA
+Jack is fictional. Replace the demo copy and connect your own contact and project destinations. External images and GIFs are references supplied in the brief; their ownership and usage rights are separate. This licence grants no ownership or blanket rights to them. Verify your intended use before publication.
+
+5. FONTS AND LIBRARIES
+Kanit is by The Kanit Project Authors and uses SIL Open Font License1.1, verified in the official Google Fonts repository: https://github.com/google/fonts/blob/main/ofl/kanit/OFL.txt . React, React DOM, Framer Motion and other runtime dependencies retain their respective licences. Lucide uses ISC. Bundled dependency notices are in THIRD-PARTY-LICENSES.txt. These terms do not restrict rights granted separately by open-source licences.
+
+6. OWNERSHIP
+Copyright in original code stays with its author. The licence gives permission to use it, not ownership. Third-party copyright stays with the relevant rightsholder.
+
+7. NO WARRANTY
+Provided as is. Actual browser checks and limitations are recorded in README.md; no promise of every browser, accessibility certification or a connected contact backend is made.
+
+Questions about what is and is not allowed: just ask. The answer is usually yes.

@@ -1,0 +1,1576 @@
+{
+  "slug": "firepower",
+  "version": "1.0.0",
+  "date": "2026-10-16T01:06:29.734Z",
+  "os": "win32",
+  "zipBytes": 150663,
+  "sha256": "4d38b84a50d74547ef333991782e8beb98f351bacff328fff76344890b7f5f0c",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#main"
+          },
+          {
+            "label": "Logitech concept home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#home"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#home"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#about"
+          },
+          {
+            "label": "Product",
+            "href": "#product",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#product"
+          },
+          {
+            "label": "Specifications",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#specifications"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#home"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#about"
+          },
+          {
+            "label": "Details",
+            "href": "#details",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#details"
+          },
+          {
+            "label": "Product",
+            "href": "#product",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#product"
+          },
+          {
+            "label": "Logitech G on Facebook, opens a new tab",
+            "href": "https://www.facebook.com/LogitechG/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.facebook.com/LogitechG/"
+          },
+          {
+            "label": "Logitech G on X, opens a new tab",
+            "href": "https://x.com/LogitechG",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://x.com/LogitechG"
+          },
+          {
+            "label": "Logitech G on YouTube, opens a new tab",
+            "href": "https://www.youtube.com/LogitechG",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.youtube.com/LogitechG"
+          },
+          {
+            "label": "Logitech G on Instagram, opens a new tab",
+            "href": "https://www.instagram.com/logitechg/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.instagram.com/logitechg/"
+          },
+          {
+            "label": "PLAY ADVANCED",
+            "href": "#product",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#product"
+          },
+          {
+            "label": "HERO 16K sensor",
+            "href": "#sensor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#sensor"
+          },
+          {
+            "label": "Dual-mode hyperfast scroll wheel",
+            "href": "#wheel",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#wheel"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#home"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#about"
+          },
+          {
+            "label": "Details",
+            "href": "#details",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#details"
+          },
+          {
+            "label": "Product",
+            "href": "#product",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#product"
+          },
+          {
+            "label": "BUY enquire by email about this concept",
+            "href": "#enquire",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#enquire"
+          },
+          {
+            "label": "ENQUIRE BY EMAIL",
+            "href": "mailto:hello@firepower.example?subject=Gaming%20mouse%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@firepower.example?subject=Gaming%20mouse%20enquiry"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(16, 23, 24)",
+            "background": [
+              25,
+              216,
+              223
+            ],
+            "ratio": 10.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "logitech",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              23,
+              24,
+              25
+            ],
+            "ratio": 16.28,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Home",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              23,
+              24,
+              25
+            ],
+            "ratio": 16.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "navigation__active",
+            "text": "Product",
+            "colour": "rgb(91, 230, 235)",
+            "background": [
+              23,
+              24,
+              25
+            ],
+            "ratio": 11.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "f",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              38,
+              42,
+              42
+            ],
+            "ratio": 8.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "𝕏",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              39,
+              41,
+              40
+            ],
+            "ratio": 8.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "▷",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              39,
+              39,
+              41
+            ],
+            "ratio": 8.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "◎",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              36,
+              38,
+              39
+            ],
+            "ratio": 8.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Forge yourfirepower",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              31,
+              32,
+              32
+            ],
+            "ratio": 14.95,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__lead",
+            "text": "ALL-NEW G604 FOR BATTLE ROYALE MASTERY. ",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              35,
+              35,
+              37
+            ],
+            "ratio": 14.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "Make your weapons play harder in the con",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              33,
+              35,
+              36
+            ],
+            "ratio": 9.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "PLAY ADVANCED",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              24,
+              26,
+              26
+            ],
+            "ratio": 16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout callout--sensor",
+            "text": "HERO 16K sensor",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              39,
+              41,
+              42
+            ],
+            "ratio": 8.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout callout--wheel",
+            "text": "Dual-mode hyperfast scroll wheel",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              45,
+              48,
+              49
+            ],
+            "ratio": 7.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              26,
+              28,
+              28
+            ],
+            "ratio": 10.07,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "01",
+            "colour": "rgb(25, 216, 223)",
+            "background": [
+              26,
+              29,
+              30
+            ],
+            "ratio": 9.63,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "/05",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              26,
+              28,
+              29
+            ],
+            "ratio": 10.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "→",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              26,
+              28,
+              29
+            ],
+            "ratio": 10.06,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "MAKE YOUR PLAY",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              34,
+              35,
+              37
+            ],
+            "ratio": 14.4,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Your power, your control. Conquer MOBA, ",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              33,
+              34,
+              36
+            ],
+            "ratio": 9.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "BUY enquire by email about this concept",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              30,
+              31,
+              33
+            ],
+            "ratio": 15.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "enquire by email about this concept",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              41,
+              43,
+              45
+            ],
+            "ratio": 13.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "SEE MORE DETAILS",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              39,
+              40,
+              41
+            ],
+            "ratio": 13.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery__arrow gallery__arrow--previous js-control",
+            "text": "←",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              38,
+              38,
+              38
+            ],
+            "ratio": 8.9,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery__arrow gallery__arrow--next js-control",
+            "text": "→",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              31,
+              33,
+              34
+            ],
+            "ratio": 9.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Top view, 1 of 5",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              59,
+              61,
+              62
+            ],
+            "ratio": 10,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "PRODUCT",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              45,
+              47,
+              50
+            ],
+            "ratio": 12.29,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Program, refine, and win. Master your ar",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              45,
+              47,
+              50
+            ],
+            "ratio": 7.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "ENQUIRE BY EMAIL",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              45,
+              47,
+              50
+            ],
+            "ratio": 12.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Concept demonstration. Email opens your ",
+            "colour": "rgb(181, 185, 186)",
+            "background": [
+              45,
+              47,
+              50
+            ],
+            "ratio": 6.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Firepower · Independent interface concep",
+            "colour": "rgb(181, 185, 186)",
+            "background": [
+              23,
+              24,
+              25
+            ],
+            "ratio": 8.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-control",
+            "text": "Pause motion",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              23,
+              24,
+              25
+            ],
+            "ratio": 10.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "",
+          "colour": "rgb(25, 216, 223)",
+          "width": "3px",
+          "ratio": 6.6
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#main"
+          },
+          {
+            "label": "Logitech concept home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#home"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#home"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#about"
+          },
+          {
+            "label": "Product",
+            "href": "#product",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#product"
+          },
+          {
+            "label": "Specifications",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#specifications"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#home"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#about"
+          },
+          {
+            "label": "Details",
+            "href": "#details",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#details"
+          },
+          {
+            "label": "Product",
+            "href": "#product",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#product"
+          },
+          {
+            "label": "Logitech G on Facebook, opens a new tab",
+            "href": "https://www.facebook.com/LogitechG/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.facebook.com/LogitechG/"
+          },
+          {
+            "label": "Logitech G on X, opens a new tab",
+            "href": "https://x.com/LogitechG",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://x.com/LogitechG"
+          },
+          {
+            "label": "Logitech G on YouTube, opens a new tab",
+            "href": "https://www.youtube.com/LogitechG",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.youtube.com/LogitechG"
+          },
+          {
+            "label": "Logitech G on Instagram, opens a new tab",
+            "href": "https://www.instagram.com/logitechg/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.instagram.com/logitechg/"
+          },
+          {
+            "label": "PLAY ADVANCED",
+            "href": "#product",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#product"
+          },
+          {
+            "label": "HERO 16K sensor",
+            "href": "#sensor",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#sensor"
+          },
+          {
+            "label": "Dual-mode hyperfast scroll wheel",
+            "href": "#wheel",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#wheel"
+          },
+          {
+            "label": "Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#home"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#about"
+          },
+          {
+            "label": "Details",
+            "href": "#details",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#details"
+          },
+          {
+            "label": "Product",
+            "href": "#product",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#product"
+          },
+          {
+            "label": "BUY enquire by email about this concept",
+            "href": "#enquire",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#enquire"
+          },
+          {
+            "label": "ENQUIRE BY EMAIL",
+            "href": "mailto:hello@firepower.example?subject=Gaming%20mouse%20enquiry",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@firepower.example?subject=Gaming%20mouse%20enquiry"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/firepower/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(16, 23, 24)",
+            "background": [
+              25,
+              216,
+              223
+            ],
+            "ratio": 10.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "logitech",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              23,
+              24,
+              25
+            ],
+            "ratio": 16.28,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Home",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              23,
+              24,
+              25
+            ],
+            "ratio": 16.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "navigation__active",
+            "text": "Product",
+            "colour": "rgb(91, 230, 235)",
+            "background": [
+              23,
+              24,
+              25
+            ],
+            "ratio": 11.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "f",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              39,
+              41,
+              41
+            ],
+            "ratio": 8.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "𝕏",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              39,
+              40,
+              40
+            ],
+            "ratio": 8.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "▷",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              37,
+              39,
+              39
+            ],
+            "ratio": 8.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "◎",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              36,
+              37,
+              39
+            ],
+            "ratio": 9.02,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Forge yourfirepower",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              29,
+              33,
+              33
+            ],
+            "ratio": 14.88,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__lead",
+            "text": "ALL-NEW G604 FOR BATTLE ROYALE MASTERY. ",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              34,
+              36,
+              37
+            ],
+            "ratio": 14.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__description",
+            "text": "Make your weapons play harder in the con",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              33,
+              35,
+              36
+            ],
+            "ratio": 9.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "PLAY ADVANCED",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              23,
+              26,
+              26
+            ],
+            "ratio": 16.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout callout--sensor",
+            "text": "HERO 16K sensor",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              39,
+              41,
+              42
+            ],
+            "ratio": 8.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "callout callout--wheel",
+            "text": "Dual-mode hyperfast scroll wheel",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              45,
+              48,
+              48
+            ],
+            "ratio": 7.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "←",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              27,
+              27,
+              29
+            ],
+            "ratio": 10.11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "01",
+            "colour": "rgb(25, 216, 223)",
+            "background": [
+              26,
+              29,
+              28
+            ],
+            "ratio": 9.65,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "/05",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              27,
+              28,
+              28
+            ],
+            "ratio": 10.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "→",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              27,
+              28,
+              28
+            ],
+            "ratio": 10.05,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "MAKE YOUR PLAY",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              33,
+              35,
+              37
+            ],
+            "ratio": 14.44,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Your power, your control. Conquer MOBA, ",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              33,
+              34,
+              36
+            ],
+            "ratio": 9.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "BUY enquire by email about this concept",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              30,
+              31,
+              32
+            ],
+            "ratio": 15.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "enquire by email about this concept",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              41,
+              43,
+              45
+            ],
+            "ratio": 13.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "SEE MORE DETAILS",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              38,
+              40,
+              41
+            ],
+            "ratio": 13.56,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery__arrow gallery__arrow--previous js-control",
+            "text": "←",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              56,
+              56,
+              56
+            ],
+            "ratio": 6.9,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "gallery__arrow gallery__arrow--next js-control",
+            "text": "→",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              31,
+              33,
+              34
+            ],
+            "ratio": 9.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Top view, 1 of 5",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              59,
+              61,
+              62
+            ],
+            "ratio": 10,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "PRODUCT",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              45,
+              47,
+              50
+            ],
+            "ratio": 12.29,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Program, refine, and win. Master your ar",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              45,
+              47,
+              50
+            ],
+            "ratio": 7.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button",
+            "text": "ENQUIRE BY EMAIL",
+            "colour": "rgb(244, 245, 245)",
+            "background": [
+              45,
+              47,
+              50
+            ],
+            "ratio": 12.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "Concept demonstration. Email opens your ",
+            "colour": "rgb(181, 185, 186)",
+            "background": [
+              45,
+              47,
+              50
+            ],
+            "ratio": 6.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Firepower · Independent interface concep",
+            "colour": "rgb(181, 185, 186)",
+            "background": [
+              23,
+              24,
+              25
+            ],
+            "ratio": 8.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-control",
+            "text": "Pause motion",
+            "colour": "rgb(196, 199, 200)",
+            "background": [
+              23,
+              24,
+              25
+            ],
+            "ratio": 10.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "",
+          "colour": "rgb(25, 216, 223)",
+          "width": "3px",
+          "ratio": 6.6
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "firepower/assets/css/style.css",
+    "firepower/assets/img/mouse-views.webp",
+    "firepower/assets/js/main.js",
+    "firepower/CUSTOMISE.md",
+    "firepower/index.html",
+    "firepower/LICENCE.txt",
+    "firepower/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/mouse-views.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q03/chromium: link hỏng/không tên [\"Logitech G on Facebook, opens a new tab -> https://www.facebook.com/LogitechG/\",\"Logitech G on X, opens a new tab -> https://x.com/LogitechG\",\"Logitech G on YouTube, opens a new tab -> https://www.youtube.com/LogitechG\",\"Logitech G on Instagram, opens a new tab -> https://www.instagram.com/logitechg/\"]",
+    "Q03/firefox: link hỏng/không tên [\"Logitech G on Facebook, opens a new tab -> https://www.facebook.com/LogitechG/\",\"Logitech G on X, opens a new tab -> https://x.com/LogitechG\",\"Logitech G on YouTube, opens a new tab -> https://www.youtube.com/LogitechG\",\"Logitech G on Instagram, opens a new tab -> https://www.instagram.com/logitechg/\"]"
+  ]
+}

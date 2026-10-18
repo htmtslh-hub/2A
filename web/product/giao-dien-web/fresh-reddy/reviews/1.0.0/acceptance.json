@@ -1,0 +1,134 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "fbc84acd567787844e91bf8dc0dd41b0ef745d34b0cd99b65f7f8a62502f0c1d",
+  "references": [
+    {
+      "source": "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\codex-clipboard-cc7afe8a-bccf-41ec-8792-75ed7b925e0e.png",
+      "sha256": "34cfbe36f606e986a321e6b6025af244e4cab6c149ecf996ed7948df6c8fac2d",
+      "size": [
+        898,
+        496
+      ],
+      "crop": null,
+      "scale": 1
+    }
+  ],
+  "views": [
+    {
+      "viewport": [
+        898,
+        496
+      ],
+      "state": "hero after load",
+      "screenshot": "screenshots/chromium-898.png",
+      "regions": [
+        {
+          "region": "header",
+          "weight": 10,
+          "axes": {
+            "geometry": 85,
+            "typography": 77,
+            "colour": 96,
+            "imagery": 75,
+            "spacing": 85
+          },
+          "reason": "Logo and nav approximate; type differs.",
+          "score": 82.55
+        },
+        {
+          "region": "copy/CTA",
+          "weight": 25,
+          "axes": {
+            "geometry": 88,
+            "typography": 78,
+            "colour": 96,
+            "imagery": 89,
+            "spacing": 86
+          },
+          "reason": "Headline condensed by CSS, font shape differs; CTA vertical position lower.",
+          "score": 87.15
+        },
+        {
+          "region": "cups",
+          "weight": 45,
+          "axes": {
+            "geometry": 74,
+            "typography": 68,
+            "colour": 82,
+            "imagery": 55,
+            "spacing": 74
+          },
+          "reason": "SVG differs from original photoreal render, particularly perspective, lids and proportions.",
+          "score": 69.25
+        },
+        {
+          "region": "signature/dots",
+          "weight": 10,
+          "axes": {
+            "geometry": 93,
+            "typography": 84,
+            "colour": 97,
+            "imagery": 90,
+            "spacing": 91
+          },
+          "reason": "Close location; font weight and dot geometry differ.",
+          "score": 90.75
+        },
+        {
+          "region": "bottom",
+          "weight": 10,
+          "axes": {
+            "geometry": 89,
+            "typography": 82,
+            "colour": 96,
+            "imagery": 88,
+            "spacing": 85
+          },
+          "reason": "Mouse and community icons approximate; sizes differ.",
+          "score": 87.8
+        }
+      ],
+      "score": 79.06
+    }
+  ],
+  "fidelity": {
+    "method": "weighted visual rubric; human-readable visual review of screenshot",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "status": "FAIL",
+    "score": 79.06
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "candidate-checks.json: midReveal/endReveal/reducedMotion"
+    ]
+  },
+  "scroll": {
+    "status": "NOT TESTED",
+    "evidence": [
+      "candidate-checks.json: one forward scroll reveal verified; reverse/resize motion coverage incomplete"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "evidence": [
+      "image input only"
+    ]
+  },
+  "technical": {
+    "status": "NOT TESTED",
+    "evidence": [
+      "candidate-checks.json",
+      "supplemental.json"
+    ]
+  },
+  "blockers": [
+    "SVG reconstruction differs materially from supplied 3D render. Original high-resolution cup assets would enable closer fidelity, subject to an authorised raster/profile exception.",
+    "Brand and copyright holder not cleared for commercial release.",
+    "Small desktop typography/tap sizes conflict with WEB-STATIC-1; final accessibility and cross-browser motion coverage incomplete."
+  ],
+  "gate": "FAIL"
+}

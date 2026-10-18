@@ -1,0 +1,102 @@
+{
+  "origin": "https://forgezone.store",
+  "results": [
+    {
+      "name": "Chromium",
+      "version": "153.0.8010.12",
+      "checks": [
+        {
+          "id": "t54",
+          "slug": "spaceedu",
+          "name": "SpaceEdu",
+          "status": 200,
+          "video": {
+            "src": "https://forgezone.store/previews/spaceedu.mp4?v=fc51175cb09b",
+            "playing": true,
+            "time": 0.142267
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t55",
+          "slug": "mostar-city",
+          "name": "Mostar City",
+          "status": 200,
+          "video": {
+            "src": "https://forgezone.store/previews/mostar-city.mp4?v=ab04036778cc",
+            "playing": true,
+            "time": 0.129684
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t56",
+          "slug": "fennec",
+          "name": "FENNEC",
+          "status": 200,
+          "video": {
+            "src": "https://forgezone.store/previews/fennec.mp4?v=a8665eab1647",
+            "playing": true,
+            "time": 0.197902
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t57",
+          "slug": "riverine-ai",
+          "name": "riverine.ai",
+          "status": 200,
+          "video": {
+            "src": "https://forgezone.store/previews/riverine-ai.mp4?v=45f8c69e9154",
+            "playing": true,
+            "time": 0.24286
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t58",
+          "slug": "freight-axis",
+          "name": "Freight Axis",
+          "status": 200,
+          "video": {
+            "src": "https://forgezone.store/previews/freight-axis.mp4?v=7bb58b98bd30",
+            "playing": true,
+            "time": 0.150453
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t59",
+          "slug": "meridian",
+          "name": "Meridian",
+          "status": 200,
+          "video": {
+            "src": "https://forgezone.store/previews/meridian.mp4?v=a10e86b9d9ac",
+            "playing": true,
+            "time": 0.168761
+          },
+          "unauthenticatedDownload": 401
+        }
+      ],
+      "sizes": [
+        {
+          "width": 1440,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

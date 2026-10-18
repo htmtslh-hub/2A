@@ -1,0 +1,14 @@
+{
+  "id": "t57",
+  "slug": "riverine-ai",
+  "name": "riverine.ai",
+  "version": "1.0.1",
+  "bytes": 11795,
+  "sha256": "2d8f4a9816765784d0300e35eabe78af1e5e0c3c711d9f74b0426c4d0e3335c3",
+  "files": [
+    "CUSTOMISE.md",
+    "index.html",
+    "LICENCE.txt",
+    "README.md"
+  ]
+}

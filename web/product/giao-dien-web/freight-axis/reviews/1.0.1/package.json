@@ -1,0 +1,14 @@
+{
+  "id": "t58",
+  "slug": "freight-axis",
+  "name": "Freight Axis",
+  "version": "1.0.1",
+  "bytes": 9757,
+  "sha256": "0f216ae9d600726fa66232be7b9bb75782096a5c0a70d6f12c3b98d1ec0f452f",
+  "files": [
+    "CUSTOMISE.md",
+    "index.html",
+    "LICENCE.txt",
+    "README.md"
+  ]
+}

@@ -1,0 +1,7 @@
+# Free products — 15/10/2026
+
+User requested Kinetiq (t22) and Japan Trails (t1) be free for everyone. Added explicit free catalogue flags with no change to their source/ZIP/demo/video. Their card prices now show Free in vi/en/zh; detail uses Download free and no sign-in required; download streams before authentication only for those explicit entries. Free products cannot enter an individual/mixed checkout or cart, preventing accidental charges. Other web/Skill/Prompt defaults remain Premium; Agent sales and prior entitlements remain unchanged.
+
+PASS 342 offline membership/security assertions, including free anonymous streaming, exact free ID allowlist, no-charge checkout rejection and existing membership/refund/suspension tests. Build PASS with all 34 video manifests. check-free-products.mjs passed locally and online: anonymous HTTP 200 ZIP for both products, SHA-256 identical to packaged ZIP, real browser download from detail, free card labels vi/en/zh on 390px Chromium; t31 anonymous download remains 401. First online browser attempt had a transient ERR_INTERNET_DISCONNECTED; retry passed all checks. No customer data, paid transaction or email created.
+
+Production deployment dpl_ComnTq86t75QmPEU27uenTtPCr5d READY, alias https://forgezone.store, URL https://web-kgwbzfg60-htmtslh-hubs-projects.vercel.app. checks.json records final online bytes/hashes. No claim of Safari/physical-device testing.

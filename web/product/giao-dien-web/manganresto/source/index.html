@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manganresto — Modern Gourmet Dining &amp; Culinary Artistry</title>
+  <meta name="description" content="Manganresto offers authentic gourmet dining, curated breakfast and appetizer menus, and culinary masterpieces crafted by 8 award-winning master chefs.">
+  <meta property="og:title" content="Manganresto — Modern Gourmet Dining &amp; Culinary Artistry">
+  <meta property="og:description" content="Experience authentic culinary excellence. Fresh organic ingredients, handcrafted pasta, and signature chef creations.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Manganresto homepage">
+        <span class="logo-text">Manganresto</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#chefs" class="nav-link">Chefs</a></li>
+          <li class="nav-item"><a href="#location" class="nav-link">Location</a></li>
+          <li class="nav-item"><a href="#reservation" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="action-btn" id="search-open-btn" aria-label="Search culinary menu" aria-haspopup="dialog" aria-expanded="false">
+          <svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button type="button" class="action-btn menu-toggle" id="menu-toggle-btn" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle mobile menu">
+          <svg class="icon icon-menu" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+          <svg class="icon icon-close" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Right Floating Social Media Dock -->
+  <aside class="social-dock" aria-label="Social media channels">
+    <ul class="social-list">
+      <li>
+        <a href="#reservation" class="social-link" aria-label="Follow Manganresto on Facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#menu" class="social-link" aria-label="Follow Manganresto on Twitter">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#about" class="social-link" aria-label="Follow Manganresto on Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#location" class="social-link" aria-label="Contact Manganresto on WhatsApp">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <main id="main">
+    <!-- Hero Section with Organic Split Curve and Centerpiece Plate -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-heading">
+      <!-- Background Fluid S-Curve Divider -->
+      <div class="hero-backdrop" aria-hidden="true">
+        <div class="backdrop-dark"></div>
+        <div class="backdrop-gold">
+          <svg class="curve-wave" viewBox="0 0 1000 800" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M 0,0 C 450,120 220,540 680,680 C 850,730 950,780 1000,800 L 1000,0 Z" fill="#f8b417" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero-container">
+        <!-- Hero Left Content -->
+        <div class="hero-content">
+          <p class="hero-kicker">Are You Hungry ?</p>
+          <h1 class="hero-title" id="hero-heading">Don't Wait !</h1>
+          <p class="hero-tagline">Let start to order food now</p>
+
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn btn-pill-outline">Check Out Menu</a>
+            <a href="#reservation" class="btn btn-pill-gold">Book A Table</a>
+          </div>
+
+          <!-- Bottom Left Dish Category Previews -->
+          <div class="hero-dish-cards" role="region" aria-label="Featured culinary categories">
+            <div class="card-accent-bar" aria-hidden="true">
+              <span class="accent-arrow">◀</span>
+            </div>
+
+            <article class="mini-dish-card" tabindex="0">
+              <div class="mini-dish-img-wrap">
+                <img src="assets/img/dish-breakfast.webp" alt="Gourmet Breakfast with poached eggs and avocado" class="mini-dish-img" width="70" height="70" loading="eager">
+              </div>
+              <div class="mini-dish-body">
+                <h2 class="mini-dish-title"><span class="bullet" aria-hidden="true">•</span> Breakfast</h2>
+                <p class="mini-dish-desc">Provides a healthy and warm breakfast menu for the pleasure of delicious food</p>
+              </div>
+            </article>
+
+            <article class="mini-dish-card" tabindex="0">
+              <div class="mini-dish-img-wrap">
+                <img src="assets/img/dish-appetizer.webp" alt="Signature Appetizer Salad with burrata and figs" class="mini-dish-img" width="70" height="70" loading="eager">
+              </div>
+              <div class="mini-dish-body">
+                <h2 class="mini-dish-title"><span class="bullet" aria-hidden="true">•</span> Appetizer</h2>
+                <p class="mini-dish-desc">The best appetizer with authentic flavors by the best chef</p>
+              </div>
+            </article>
+
+            <div class="card-accent-bar accent-bar--right" aria-hidden="true">
+              <span class="accent-arrow">▶</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Centerpiece Plate Showcase (Overlapping the Wave Boundary) -->
+        <div class="hero-centerpiece" aria-label="Signature squid ink and garlic prawn pasta presentation">
+          <div class="plate-orbit-outer" aria-hidden="true"></div>
+          <div class="plate-orbit-inner" aria-hidden="true"></div>
+          <div class="plate-wrapper" id="hero-plate-wrap">
+            <img src="assets/img/hero-plate.webp" alt="Manganresto signature squid ink pasta with grilled king prawns and cherry tomatoes on a white porcelain rim plate" class="hero-plate-img" id="hero-plate" width="620" height="620" fetchpriority="high">
+          </div>
+        </div>
+
+        <!-- Hero Right Metrics / Badges (Resting on Yellow Backdrop) -->
+        <div class="hero-metrics" role="region" aria-label="Restaurant highlights">
+          <!-- Stat 1: Best Chef -->
+          <div class="metric-badge">
+            <div class="metric-header">
+              <span class="metric-dot" aria-hidden="true">•</span>
+              <h2 class="metric-label">Best Cheff</h2>
+            </div>
+            <div class="metric-content">
+              <div class="metric-box">
+                <span class="metric-num">8</span>
+              </div>
+              <p class="metric-desc">There are 8 best chefs who are ready to make food with authentic flavors</p>
+            </div>
+          </div>
+
+          <!-- Stat 2: Best Menu -->
+          <div class="metric-badge">
+            <div class="metric-header">
+              <span class="metric-dot" aria-hidden="true">•</span>
+              <h2 class="metric-label">Best Menu</h2>
+            </div>
+            <div class="metric-content">
+              <div class="metric-box">
+                <span class="metric-num">38</span>
+              </div>
+              <p class="metric-desc">38 food menus are served for your culinary pleasure</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Menu Section -->
+    <section class="section menu-section" id="menu" aria-labelledby="menu-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-kicker">Culinary Selection</p>
+          <h2 class="section-title" id="menu-heading">Our Signature Menu</h2>
+          <p class="section-subtitle">Crafted daily from organic artisanal ingredients, combining classical European culinary techniques with bold contemporary flavors.</p>
+        </div>
+
+        <!-- Menu Filter Category Tabs -->
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button type="button" class="tab-btn active" role="tab" aria-selected="true" aria-controls="menu-grid" data-category="all">All Dishes</button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="menu-grid" data-category="breakfast">Breakfast</button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="menu-grid" data-category="appetizer">Appetizers</button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="menu-grid" data-category="pasta">Handcrafted Pasta</button>
+          <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="menu-grid" data-category="specials">Chef Specials</button>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="menu-grid" id="menu-grid" role="region" aria-live="polite">
+          <!-- Item 1: Signature Pasta -->
+          <article class="menu-card" data-category="pasta specials" tabindex="0">
+            <div class="card-media">
+              <img src="assets/img/hero-plate.webp" alt="Nero Tagliatelle seafood pasta" class="card-img" width="360" height="360" loading="lazy">
+              <span class="badge-featured">Chef Signature</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-dish-name">Nero Tagliatelle Gamberi</h3>
+                <span class="card-price">$28.00</span>
+              </div>
+              <p class="card-dish-desc">Black squid ink ribbon pasta tossed with garlic-infused linguine, charred Mediterranean prawns, cherry tomatoes, and micro basil.</p>
+              <div class="card-footer">
+                <span class="card-tag">Seafood</span>
+                <button type="button" class="btn-card-order" data-dish="Nero Tagliatelle Gamberi" data-price="$28.00" aria-label="Order Nero Tagliatelle Gamberi">Order Dish</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Poached Egg Avocado -->
+          <article class="menu-card" data-category="breakfast" tabindex="0">
+            <div class="card-media">
+              <img src="assets/img/dish-breakfast.webp" alt="Artisan Poached Eggs and Avocado on Toast" class="card-img" width="360" height="360" loading="lazy">
+              <span class="badge-featured badge--green">Organic</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-dish-name">Tuscan Harvest Morning</h3>
+                <span class="card-price">$16.50</span>
+              </div>
+              <p class="card-dish-desc">Organic pasture-raised poached eggs, Haas avocado curls, heirloom cherry tomatoes, toasted pumpkin seeds on crusty sourdough.</p>
+              <div class="card-footer">
+                <span class="card-tag">Breakfast</span>
+                <button type="button" class="btn-card-order" data-dish="Tuscan Harvest Morning" data-price="$16.50" aria-label="Order Tuscan Harvest Morning">Order Dish</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Burrata & Fig Salad -->
+          <article class="menu-card" data-category="appetizer" tabindex="0">
+            <div class="card-media">
+              <img src="assets/img/dish-appetizer.webp" alt="Burrata cheese and black mission fig salad" class="card-img" width="360" height="360" loading="lazy">
+              <span class="badge-featured badge--gold">Artisanal</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-dish-name">Pugliese Burrata &amp; Fig</h3>
+                <span class="card-price">$19.00</span>
+              </div>
+              <p class="card-dish-desc">Handmade creamy burrata, ripe black mission figs, aged parmesan shavings, ruby pomegranate pearls, and 12-year balsamic glaze.</p>
+              <div class="card-footer">
+                <span class="card-tag">Appetizer</span>
+                <button type="button" class="btn-card-order" data-dish="Pugliese Burrata & Fig" data-price="$19.00" aria-label="Order Pugliese Burrata & Fig">Order Dish</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Truffle Mushroom Tagliolini -->
+          <article class="menu-card" data-category="pasta" tabindex="0">
+            <div class="card-media">
+              <img src="assets/img/hero-plate.webp" alt="Wild Truffle and Forest Mushroom Tagliolini" class="card-img" width="360" height="360" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-dish-name">Umbrian Truffle Tagliolini</h3>
+                <span class="card-price">$32.00</span>
+              </div>
+              <p class="card-dish-desc">Hand-rolled egg ribbon pasta, shaved black summer truffles, wild chanterelles, and golden Normandy butter emulsified with pecorino.</p>
+              <div class="card-footer">
+                <span class="card-tag">Vegetarian</span>
+                <button type="button" class="btn-card-order" data-dish="Umbrian Truffle Tagliolini" data-price="$32.00" aria-label="Order Umbrian Truffle Tagliolini">Order Dish</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Citrus Cured Salmon Carpaccio -->
+          <article class="menu-card" data-category="appetizer specials" tabindex="0">
+            <div class="card-media">
+              <img src="assets/img/dish-appetizer.webp" alt="Citrus cured wild salmon carpaccio" class="card-img" width="360" height="360" loading="lazy">
+              <span class="badge-featured">Special</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-dish-name">Citrus Salmon Carpaccio</h3>
+                <span class="card-price">$22.50</span>
+              </div>
+              <p class="card-dish-desc">Thinly sliced king salmon cured in blood orange and Meyer lemon zest, caper berries, shallot crisps, and cold-pressed olive oil.</p>
+              <div class="card-footer">
+                <span class="card-tag">Gluten-Free</span>
+                <button type="button" class="btn-card-order" data-dish="Citrus Salmon Carpaccio" data-price="$22.50" aria-label="Order Citrus Salmon Carpaccio">Order Dish</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Mediterranean Shakshuka Bowl -->
+          <article class="menu-card" data-category="breakfast" tabindex="0">
+            <div class="card-media">
+              <img src="assets/img/dish-breakfast.webp" alt="Slow-simmered Mediterranean Shakshuka" class="card-img" width="360" height="360" loading="lazy">
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <h3 class="card-dish-name">Mangan Shakshuka Bowl</h3>
+                <span class="card-price">$17.50</span>
+              </div>
+              <p class="card-dish-desc">Spiced San Marzano tomato reduction, roasted sweet bell peppers, gently poached organic eggs, crumbled sheep feta, and warm pita.</p>
+              <div class="card-footer">
+                <span class="card-tag">Breakfast</span>
+                <button type="button" class="btn-card-order" data-dish="Mangan Shakshuka Bowl" data-price="$17.50" aria-label="Order Mangan Shakshuka Bowl">Order Dish</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Culinary Philosophy Section -->
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual">
+            <div class="about-card-glow"></div>
+            <div class="about-image-frame">
+              <img src="assets/img/hero-plate.webp" alt="Culinary preparation in progress at Manganresto" class="about-img" width="500" height="500" loading="lazy">
+              <div class="about-badge-floating">
+                <span class="about-badge-num">100%</span>
+                <span class="about-badge-text">Fresh Organic Produce</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text-content">
+            <p class="section-kicker">Our Heritage</p>
+            <h2 class="section-title" id="about-heading">Culinary Craftsmanship Meets Passion</h2>
+            <p class="about-lead">At Manganresto, dining is more than sustenance — it is an immersive sensory journey. Founded by master chefs united by a singular dedication to pure flavor and artisanal culinary mastery.</p>
+            <p class="about-p">We collaborate directly with local heirloom growers, sustainable Mediterranean fisheries, and artisanal dairy farmers to ensure every component on your plate delivers unforgettable vibrancy.</p>
+
+            <ul class="about-features-list">
+              <li class="feature-item">
+                <span class="feature-icon" aria-hidden="true">✔</span>
+                <div>
+                  <h3 class="feature-title">8 World-Class Resident Chefs</h3>
+                  <p class="feature-desc">Decades of collective Michelin-starred kitchen training, infusing precision and innovation into every recipe.</p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon" aria-hidden="true">✔</span>
+                <div>
+                  <h3 class="feature-title">Handmade Daily Fresh Pasta</h3>
+                  <p class="feature-desc">Semolina extruded through authentic bronze dies each morning for the ideal al dente texture and sauce adhesion.</p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-icon" aria-hidden="true">✔</span>
+                <div>
+                  <h3 class="feature-title">38 Seasonal Delicacies</h3>
+                  <p class="feature-desc">A revolving tasting menu inspired by seasonal micro-climates and peak harvest windows.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Master Chefs Section -->
+    <section class="section chefs-section" id="chefs" aria-labelledby="chefs-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-kicker">Meet The Artists</p>
+          <h2 class="section-title" id="chefs-heading">Our Master Culinary Team</h2>
+          <p class="section-subtitle">Meet the culinary virtuosos orchestrating taste, aroma, and presentation at Manganresto.</p>
+        </div>
+
+        <div class="chefs-grid">
+          <article class="chef-card" tabindex="0">
+            <div class="chef-avatar">
+              <span class="chef-initials">MR</span>
+            </div>
+            <div class="chef-info">
+              <h3 class="chef-name">Marco Rossi</h3>
+              <p class="chef-role">Executive Chef &amp; Pasta Artisan</p>
+              <p class="chef-bio">Over 16 years leading top trattorias in Bologna and Florence. Master of bronze-extruded pasta and coastal seafood gastronomy.</p>
+            </div>
+          </article>
+
+          <article class="chef-card" tabindex="0">
+            <div class="chef-avatar">
+              <span class="chef-initials">EL</span>
+            </div>
+            <div class="chef-info">
+              <h3 class="chef-name">Elena Laurent</h3>
+              <p class="chef-role">Head of Appetizers &amp; Garde Manger</p>
+              <p class="chef-bio">Trained in Lyon and Milan. Renowned for balancing delicate dairy, wild botanicals, and bespoke cold-press infusions.</p>
+            </div>
+          </article>
+
+          <article class="chef-card" tabindex="0">
+            <div class="chef-avatar">
+              <span class="chef-initials">DK</span>
+            </div>
+            <div class="chef-info">
+              <h3 class="chef-name">David Kwon</h3>
+              <p class="chef-role">Pastry &amp; Breakfast Specialist</p>
+              <p class="chef-bio">Pioneer of sourdough fermentation and morning vitality bowls, elevating simple morning staples into memorable feasts.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Table Reservation Section -->
+    <section class="section reservation-section" id="reservation" aria-labelledby="reservation-heading">
+      <div class="container">
+        <div class="reservation-grid">
+          <div class="reservation-info-col" id="location">
+            <p class="section-kicker">Visit Us</p>
+            <h2 class="section-title" id="reservation-heading">Reserve Your Experience</h2>
+            <p class="reservation-lead">Whether celebrating an intimate milestone, hosting a business luncheon, or seeking a quiet gourmet dinner, we invite you to our table.</p>
+
+            <div class="info-block">
+              <h3 class="info-label">Restaurant Location</h3>
+              <p class="info-value">482 Grand Culinary Boulevard, Suite 10, Downtown Plaza</p>
+            </div>
+
+            <div class="info-block">
+              <h3 class="info-label">Operating Hours</h3>
+              <ul class="hours-list">
+                <li><span>Monday – Friday:</span> <strong>07:30 AM – 10:30 PM</strong></li>
+                <li><span>Saturday – Sunday:</span> <strong>08:00 AM – 11:30 PM</strong></li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h3 class="info-label">Direct Inquiries</h3>
+              <p class="info-value">Phone: <a href="tel:+18005553663">+1 (800) 555-FOOD</a></p>
+              <p class="info-value">Email: <a href="mailto:reservations@manganresto.demo">reservations@manganresto.demo</a></p>
+            </div>
+          </div>
+
+          <!-- Reservation Form (Demonstration with native accessible form handling) -->
+          <div class="reservation-form-col">
+            <form class="reservation-form" id="booking-form" novalidate>
+              <h3 class="form-title">Table Booking Request <span class="badge-demo">(Demo only)</span></h3>
+              <p class="form-sub">Demo only. Inquiry demonstration with our reservations concierge.</p>
+
+              <div class="form-group">
+                <label for="guest-name" class="form-label">Full Name *</label>
+                <input type="text" id="guest-name" name="name" class="form-input" placeholder="e.g. Eleanor Vance" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="guest-email" class="form-label">Email Address *</label>
+                  <input type="email" id="guest-email" name="email" class="form-input" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="guest-phone" class="form-label">Phone Number *</label>
+                  <input type="tel" id="guest-phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="booking-date" class="form-label">Date *</label>
+                  <input type="date" id="booking-date" name="date" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="booking-time" class="form-label">Time *</label>
+                  <select id="booking-time" name="time" class="form-input" required>
+                    <option value="">Select dinner time</option>
+                    <option value="12:00">12:00 PM (Lunch)</option>
+                    <option value="13:30">01:30 PM (Lunch)</option>
+                    <option value="18:00">06:00 PM (Dinner)</option>
+                    <option value="19:30">07:30 PM (Dinner)</option>
+                    <option value="20:30">08:30 PM (Dinner)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="guest-count" class="form-label">Guests *</label>
+                  <select id="guest-count" name="guests" class="form-input" required>
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="6">6 Guests</option>
+                    <option value="8">8+ Guests (Private dining)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="special-notes" class="form-label">Dietary or Seating Preferences</label>
+                <textarea id="special-notes" name="notes" class="form-textarea" rows="3" placeholder="Allergies, anniversaries, outdoor patio request..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-submit" id="submit-booking-btn">Confirm Reservation Request</button>
+              <div class="form-status" id="booking-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="logo-text">Manganresto</span>
+        </a>
+        <p class="footer-desc">Exceptional culinary art with fresh organic ingredients, bronze-drawn pasta, and seasonal breakfast delicacies.</p>
+        <p class="footer-notice">Demo template published for Forge Zone store. Replace demo content with your authentic culinary enterprise details.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#chefs">Master Chefs</a></li>
+          <li><a href="#reservation">Table Reservation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hours &amp; Contact</h4>
+        <ul class="footer-links">
+          <li>Mon – Fri: 07:30 – 22:30</li>
+          <li>Sat – Sun: 08:00 – 23:30</li>
+          <li>482 Grand Culinary Blvd</li>
+          <li><a href="tel:+18005553663">+1 (800) 555-FOOD</a></li>
+          <li><a href="mailto:contact@manganresto.demo">contact@manganresto.demo</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-row">
+        <p class="copyright">&copy; 2026 Manganresto. All rights reserved. Built for Forge Zone.</p>
+        <button class="motion-toggle js-control" type="button" aria-pressed="false">Pause motion</button>
+        <a href="#hero" class="back-to-top" aria-label="Back to top of page">
+          Back to Top ↑
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal Dialog -->
+  <div class="modal-backdrop" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-title" hidden>
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title" id="search-modal-title">Search Culinary Menu</h3>
+        <button type="button" class="btn-close-modal" id="search-close-btn" aria-label="Close search dialog">✕</button>
+      </div>
+      <div class="modal-body">
+        <label for="menu-search-input" class="visually-hidden">Search dishes or ingredients</label>
+        <input type="search" id="menu-search-input" class="search-input" placeholder="Type pasta, shrimp, salad, breakfast, truffle..." autofocus>
+        <div class="search-results-list" id="search-results" aria-live="polite">
+          <p class="search-hint">Search among our 38 seasonal dishes and specialty tasting menus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order / Dish Inquire Toast Modal -->
+  <div class="toast-notice" id="order-toast" role="status" aria-live="polite" hidden>
+    <div class="toast-content">
+      <span class="toast-icon" aria-hidden="true">🍽</span>
+      <div class="toast-body">
+        <strong id="toast-dish-name">Dish Selected</strong>
+        <p id="toast-dish-desc">Added to your tasting request. Our team looks forward to serving you.</p>
+      </div>
+      <button type="button" class="toast-close" id="toast-close-btn" aria-label="Dismiss notice">✕</button>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

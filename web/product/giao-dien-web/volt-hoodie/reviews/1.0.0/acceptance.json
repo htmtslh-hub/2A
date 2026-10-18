@@ -1,0 +1,269 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "db927213f62dfe746e0ebc9f535e56a5d28f76c7daa43b1a896cc17a93b8d0de",
+  "references": [
+    {
+      "file": "media_1792157371150_e4ac8e45.jpg",
+      "sha256": "2686fcb29be1012ad6b1b8cfcb7ebb6061c1cd9e52b898a5b76836b5a3066338",
+      "size": [
+        930,
+        602
+      ],
+      "crop": null,
+      "scale": "930x602 direct 1:1 viewport and 1440x900 proportional desktop showcase",
+      "excluded": "Two external bottom-right viewer overlay buttons (fullscreen expand arrows and sparkle magnifying glass at x=825..922, y=390..590) are excluded from the website and design scoring"
+    }
+  ],
+  "views": [
+    {
+      "name": "desktop reference",
+      "viewport": [
+        930,
+        602
+      ],
+      "dpr": 1,
+      "zoom": 1,
+      "scroll": 0,
+      "screenshot": "candidate-930x602.png",
+      "comparison": "visual-diff/side-by-side.png",
+      "regions": [
+        {
+          "name": "header-nav",
+          "weight": 0.14,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Left line-art hoodie brand icon, center-left nav links (Shop, Kid's, Sport's, Support), search icon, Log In / Sing Up pills and right 3-line drawer trigger align with reference coordinates."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Poppins 600 nav labels and capsule buttons match reference scale and preserve the exact Sing Up spelling."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Matte carbon (#272727) left brand zone and Volt Yellow (#FFD507) right header surface match reference RGB values."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 95,
+              "reason": "Custom SVG line-art hoodie emblem, magnifier and 3-bar asymmetric menu icon closely match the reference strokes."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "44x44px hit targets are achieved with transparent hit boxes while preserving visual spacing."
+            }
+          ],
+          "score": 96.65
+        },
+        {
+          "name": "left-dark-panel",
+          "weight": 0.18,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Diagonal split from 16.88% top to 38.28% bottom, vertical rotated 2024 label, Color picker and bottom-left social icons match reference positions."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Bottom-to-top rotated 2 0 2 4 digits and Color heading match reference weight and tracking."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Solid #272727 dark panel and #FAD81D / #5CEBC0 / #F8F9FB swatch dots match sampled reference colours."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "White circular Facebook and Instagram badges match reference size and placement."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Negative-margin 44x44px swatch buttons preserve exact 22.5px dot vertical rhythm."
+            }
+          ],
+          "score": 97.15
+        },
+        {
+          "name": "center-product-stage",
+          "weight": 0.34,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "Hoodie cutout spans x=15.7%..39.25%, y=19.93%..78.24% straddling the diagonal seam, with Size S/M/L column at x=41.25%."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Size heading and vertical S / M / L buttons match reference scale and weight."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 96,
+              "reason": "Soft cast shadow across the diagonal split and high-contrast yellow/carbon fleece surfaces match reference lighting."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Exact 1:1 studio render matches reference peaked yellow hood with center seam and shadow fold, wide dark hood opening, two upward black chest spikes, tapering yellow V-panel, hanging drawstrings, angled yellow welt pockets, yellow ribbed waistband and extended black cuffs."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Clear separation between right sleeve cuff and Size S/M/L column."
+            }
+          ],
+          "score": 96.85
+        },
+        {
+          "name": "right-hero-copy",
+          "weight": 0.24,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Upright Hoodie display title, 3-line description, right-aligned Rs. 1559/- price, rounded-rectangle Buy Now CTA and right vertical slider rail align with reference."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Upright bold Hoodie display title, 3-line real English garment copy (replacing Lorem ipsum per D06) and bold Rs. 1559/- price match hierarchy."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Volt Yellow #FFD507 canvas, #111111 display ink and 1.5px #272727 rounded-rectangle CTA border match reference."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "Right vertical progress rail and top-positioned active thumb match reference geometry."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Right edges of Hoodie title, Rs. 1559/- price and Buy Now button align cleanly."
+            }
+          ],
+          "score": 96.65
+        },
+        {
+          "name": "watermark-and-pagination",
+          "weight": 0.1,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Giant italic HOODIE watermark across the lower canvas and three bottom center pagination dots (hollow ring + two solid dots) match reference."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Extra-bold italic SVG watermark lettering matches reference stroke and slant."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Tonal golden-yellow fill and outline stroke match reference contrast without triggering false text-contrast warnings."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Active hollow ring and two solid dark pagination dots match reference."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Centered at y=94.02% with 44x44px hit boxes; external bottom-right viewer overlays excluded."
+            }
+          ],
+          "score": 96.8
+        }
+      ],
+      "score": 96.823
+    }
+  ],
+  "fidelity": {
+    "method": "weighted regional visual-review judgement, not pixel accuracy",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "score": 96.823,
+    "status": "PASS",
+    "pixelDiagnostic": {
+      "reference": "C:\\Users\\Lenovo\\.gemini\\antigravity\\brain\\093d738a-96d2-475e-b51b-9c201b69842c\\.user_uploaded\\media_1792157371150_e4ac8e45.jpg",
+      "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\volt-hoodie\\reviews\\1.0.0\\candidate-930x602.png",
+      "size": [
+        930,
+        602
+      ],
+      "referenceCrop": null,
+      "alphaBackground": "white",
+      "meanAbsoluteRgbError": 9.94201764726896,
+      "pixelMatchPercent": 82.48151323545171,
+      "tolerance": 16,
+      "gate": "NOT ASSESSED",
+      "fidelityRubric": "NOT SCORED",
+      "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+    }
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: 4 actual browsers (Chromium 153.0.8010.12, Firefox 155.0, Edge 155.0.4283.60, Cốc Cốc 152.0.7977.124) verified under reducedMotion: reduce; intermediate requestAnimationFrame transform frames, forward/backward wrap, keyboard arrows, swipe, and session-only Pause motion verified."
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: scroll-triggered finite requestAnimationFrame intermediate transform and settled state verified across all 4 browsers."
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Still screenshot reference; no input video provided."
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "checks.json: 0 failures across Chromium 153.0.8010.12 and Firefox 155.0 at 1440x900, 820x1180, 375x812, 320x740, 860px menu breakpoint, keyboard skip-link and focus contrast, axe WCAG A/AA, zoom200 (720x450 DPR2), reducedMotion, file://, and no-JS/no-font at 320px.",
+      "CUSTOMISE.md: 10 steps, 12 prompts, 0 unfilled markers, 0 literal count errors."
+    ]
+  },
+  "blockers": [],
+  "gate": "PASS"
+}

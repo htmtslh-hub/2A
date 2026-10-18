@@ -1,0 +1,16 @@
+{
+  "reference": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\motora\\reviews\\1.0.0\\reference.png",
+  "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\motora\\reviews\\1.0.0\\candidate.png",
+  "size": [
+    1440,
+    983
+  ],
+  "referenceCrop": null,
+  "alphaBackground": "white",
+  "meanAbsoluteRgbError": 22.69780834369466,
+  "pixelMatchPercent": 69.75175200632982,
+  "tolerance": 16,
+  "gate": "NOT ASSESSED",
+  "fidelityRubric": "NOT SCORED",
+  "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+}

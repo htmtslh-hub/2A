@@ -39,7 +39,7 @@ export const LEGAL_VI: LegalPack = {
           'Giá hiển thị tại thời điểm đặt hàng là giá áp dụng. Mọi đơn hàng mới thanh toán bằng USD, bất kể ngôn ngữ hiển thị. Thuế áp dụng được thể hiện tại checkout.',
           '<b>Paddle.com Market Ltd</b> là đơn vị bán hàng chính thức (merchant of record) và chịu trách nhiệm thu, kê khai thuế GTGT/GST tại nước của người mua. Hoá đơn của bạn sẽ mang tên Paddle.',
           'Đơn hàng chỉ được coi là hoàn tất khi chúng tôi nhận được xác nhận thanh toán thành công từ cổng thanh toán.',
-          'Pro giá 99 USD mở toàn bộ thư viện trong 1 tháng; Ultra giá 299 USD trong 1 năm. Đây là nâng cấp tài khoản thanh toán một lần, không tự gia hạn. Thời hạn tính theo tháng/năm lịch từ lúc xác nhận thanh toán; ngày cuối tháng được điều chỉnh về ngày hợp lệ cuối cùng.',
+          'Premium giá 20 USD mở toàn bộ thư viện trong 1 tháng; Ultra giá 200 USD trong 1 năm. Đây là nâng cấp tài khoản thanh toán một lần, không tự gia hạn. Thời hạn tính theo tháng/năm lịch từ lúc xác nhận thanh toán; ngày cuối tháng được điều chỉnh về ngày hợp lệ cuối cùng.',
           'Gia hạn cùng gói cộng tiếp sau thời hạn đã mua. Chuyển sang gói khác bắt đầu khi thanh toán, không khấu trừ hay chuyển thời gian còn lại.',
         ],
       },
@@ -47,7 +47,7 @@ export const LEGAL_VI: LegalPack = {
         h: '5. Giao hàng',
         p: [
           'Ngay sau khi thanh toán thành công, quyền tải sản phẩm được mở trong tài khoản của bạn và một link tải được gửi tới email đã đăng ký.',
-          'Với sản phẩm mua lẻ, link trong email có hạn 7 ngày; bạn vẫn tải lại được trong mục đơn hàng của tài khoản. Với Pro/Ultra, tải không giới hạn trong thời hạn gói và dừng tải mới khi hết hạn. File đã tải vẫn dùng theo giấy phép.',
+          'Giao diện web, Skill và Prompt mặc định thuộc Premium, cần gói Premium hoặc Ultra còn hiệu lực để tải. Quyền mua lẻ đã thanh toán trước đây được giữ nguyên. Với sản phẩm mua lẻ, link trong email có hạn 7 ngày; bạn vẫn tải lại được trong mục đơn hàng của tài khoản. Với Premium/Ultra, tải không giới hạn trong thời hạn gói và dừng tải mới khi hết hạn. File đã tải vẫn dùng theo giấy phép.',
           'Nếu sau 30 phút chưa nhận được email, hãy kiểm tra hộp thư rác rồi liên hệ chúng tôi.',
         ],
       },
@@ -281,7 +281,7 @@ export const LEGAL_VI: LegalPack = {
         h: '4. Mua lẻ và nâng cấp tài khoản',
         p: [
           '<b>Một giao diện</b> — giấy phép áp dụng cho đúng mẫu bạn đã mua, dùng cho bao nhiêu dự án cũng được.',
-          '<b>Pro/Ultra</b> — tải tất cả sản phẩm, gồm sản phẩm mới, trong thời hạn gói. Giấy phép áp dụng cho file đã tải và tiếp tục có hiệu lực sau khi gói hết hạn. Hết hạn không còn quyền tải mới hoặc tải lại qua gói.',
+          '<b>Premium/Ultra</b> — tải tất cả sản phẩm, gồm sản phẩm mới, trong thời hạn gói. Giấy phép áp dụng cho file đã tải và tiếp tục có hiệu lực sau khi gói hết hạn. Hết hạn không còn quyền tải mới hoặc tải lại qua gói.',
           '<b>Trọn bộ đã mua trước đây</b> — giữ quyền tải và giấy phép theo điều kiện tại thời điểm mua, gồm các mẫu ra mắt về sau.',
         ],
       },

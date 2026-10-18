@@ -1,0 +1,144 @@
+{
+  "origin": "http://127.0.0.1:4398",
+  "date": "2026-10-16T03:31:47.791Z",
+  "assets": [
+    {
+      "file": "index.html",
+      "bytes": 21699,
+      "sha256": "929a218b87411b4ee1d95fac2946bc42a1bb0af9c54451c0b20dd11e58b37bfa"
+    },
+    {
+      "file": "assets/css/style.css",
+      "bytes": 26682,
+      "sha256": "aad675a896fe49cf3901cf2d8b269956b53298c48c6ac876f6f0ca64676c0bbb"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 15480,
+      "sha256": "1a523187633e05ebeaf8389a2eb9de6143238a06a570e514e301fd7139e6cb7f"
+    },
+    {
+      "file": "assets/img/hero-headphone.webp",
+      "bytes": 46946,
+      "sha256": "059edb14f974e3311f8f04c068fa88047dc06376d2f13e794fbc22190a869238"
+    },
+    {
+      "file": "assets/img/exploded-view.webp",
+      "bytes": 30792,
+      "sha256": "39fc441d95623eafafb117243bb7f54f316b5bdbbb53ec628276930d49543dff"
+    },
+    {
+      "file": "assets/img/spatial-bust.webp",
+      "bytes": 13920,
+      "sha256": "e40b77a5a26f4fd316985fde8f59abbd29ad8c0dcfb0afc759c0b092f232f809"
+    },
+    {
+      "file": "assets/img/design-closeup.webp",
+      "bytes": 17488,
+      "sha256": "747623a376d14bdf21bd4b2eb2ff2cdbf685fd777463c5b0b5c058ff7d85758c"
+    },
+    {
+      "file": "sonicore.mp4",
+      "bytes": 568318,
+      "sha256": "d04301c48b60daf54aabe70bc4f26bc703e0808dd9f05e06c44eb29fd545cae8"
+    },
+    {
+      "file": "sonicore.webp",
+      "bytes": 29770,
+      "sha256": "8599273a7564c65c1f13ad4f5e0dbf4801ba6065e3e8c137f8ac51d85edc6e31"
+    }
+  ],
+  "locales": [
+    {
+      "locale": "vi-VN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "vi-VN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "status": {
+        "paused": false,
+        "time": 1.403143,
+        "muted": true,
+        "src": "http://127.0.0.1:4398/previews/sonicore.mp4?v=d04301c48b60"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "status": {
+        "paused": false,
+        "time": 1.018067,
+        "muted": true,
+        "src": "http://127.0.0.1:4398/previews/sonicore.mp4?v=d04301c48b60"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.60",
+      "status": {
+        "paused": false,
+        "time": 0.962479,
+        "muted": true,
+        "src": "http://127.0.0.1:4398/previews/sonicore.mp4?v=d04301c48b60"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "status": {
+        "paused": false,
+        "time": 1.115926,
+        "muted": true,
+        "src": "http://127.0.0.1:4398/previews/sonicore.mp4?v=d04301c48b60"
+      },
+      "offscreenPaused": true
+    }
+  ],
+  "anonymous": 401,
+  "directZip": 404,
+  "existingFree": "t22/t1 exact ZIP, anonymous 200"
+}

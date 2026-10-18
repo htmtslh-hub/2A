@@ -1,0 +1,134 @@
+{
+  "origin": "https://forgezone.store",
+  "date": "2026-10-15T11:53:09.176Z",
+  "assets": [
+    {
+      "file": "index.html",
+      "bytes": 14377,
+      "sha256": "093c663c5ce0980621ab335b3faa0c7e050e2a73ab0df5ce34893dfaa8bb6959"
+    },
+    {
+      "file": "assets/css/style.css",
+      "bytes": 22827,
+      "sha256": "18383a31bb83e89231c0c4c23027c0d5c8c335368776b27d919b60d248167f11"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 13542,
+      "sha256": "8d2908b5d87721a462fd5a268c96f626f37163c6f5d2aedde9dadec7a9a7454d"
+    },
+    {
+      "file": "assets/img/coupe.webp",
+      "bytes": 276540,
+      "sha256": "8b2b108680f3c1bfc688023292b382fd787f87d0d6b9c2a3b6b1f01b06b8f011"
+    },
+    {
+      "file": "assets/img/interior.webp",
+      "bytes": 152340,
+      "sha256": "742740d05ac9850eb73be99864df3d2aae622d9764459a4288ec953a6d52854a"
+    },
+    {
+      "file": "motora.mp4",
+      "bytes": 539531,
+      "sha256": "29f05a505bb638998133ccae779e5d1d926ed46be3a40141a9539114388b640c"
+    },
+    {
+      "file": "motora.webp",
+      "bytes": 31214,
+      "sha256": "0d8d0bba560ccc480c75fc300f8aa5e729b3858bf47b3842cdf14d7499545f41"
+    }
+  ],
+  "locales": [
+    {
+      "locale": "vi-VN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "vi-VN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "status": {
+        "paused": false,
+        "time": 1.198153,
+        "muted": true,
+        "src": "https://forgezone.store/previews/motora.mp4?v=29f05a505bb6"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "status": {
+        "paused": false,
+        "time": 0.91705,
+        "muted": true,
+        "src": "https://forgezone.store/previews/motora.mp4?v=29f05a505bb6"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.45",
+      "status": {
+        "paused": false,
+        "time": 1.133239,
+        "muted": true,
+        "src": "https://forgezone.store/previews/motora.mp4?v=29f05a505bb6"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "status": {
+        "paused": false,
+        "time": 1.101382,
+        "muted": true,
+        "src": "https://forgezone.store/previews/motora.mp4?v=29f05a505bb6"
+      },
+      "offscreenPaused": true
+    }
+  ],
+  "anonymous": 401,
+  "directZip": 404,
+  "existingFree": "t22/t1 exact ZIP, anonymous200"
+}

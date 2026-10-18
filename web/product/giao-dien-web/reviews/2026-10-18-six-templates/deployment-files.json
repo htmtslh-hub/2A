@@ -1,0 +1,47 @@
+[
+  {
+    "path": "index.html",
+    "bytes": 2585,
+    "sha256": "7301c3d00723799442e70d213e6e99ad0124bf2648c6e2cc4fbdfdf15feb619b"
+  },
+  {
+    "path": "demos/fennec/index.html",
+    "bytes": 22030,
+    "sha256": "784bd9e76ca141cc992c67c85a9eb434c9e65ff24ab3cf8d1d020854fbf68cdd"
+  },
+  {
+    "path": "demos/freight-axis/index.html",
+    "bytes": 14679,
+    "sha256": "366cc8f9074d7128d90657aad240a5e85b12c513c0283e8581a1508135c60213"
+  },
+  {
+    "path": "demos/meridian/index.html",
+    "bytes": 7276,
+    "sha256": "e5373a69345c33378f6cdad38f01b3f657e0deff2372140a37fca94c4da060b2"
+  },
+  {
+    "path": "demos/mostar-city/index.html",
+    "bytes": 5847,
+    "sha256": "3882b8ba45d8f20de041439a921cb1d9fb39fd2c9e02b0477752d1c189c0e013"
+  },
+  {
+    "path": "demos/mostar-city/script.js",
+    "bytes": 10341,
+    "sha256": "788b87de1ca9fc4536de94cd6a52e67e2984aa338e0a6cd35f7cb5d31beeb3de"
+  },
+  {
+    "path": "demos/mostar-city/styles.css",
+    "bytes": 12951,
+    "sha256": "4b35cf761539112d2a24cfb8ea95e4151bb442dce6dbf4d55ac62190dccc10ad"
+  },
+  {
+    "path": "demos/riverine-ai/index.html",
+    "bytes": 20922,
+    "sha256": "da9e008421700d1f64a398e64203b476dece496b24a7cef598ae0bc3525d12e5"
+  },
+  {
+    "path": "demos/spaceedu/index.html",
+    "bytes": 28039,
+    "sha256": "198e79555cd59dc1dbca0482a200ebb771cb7077492d040e16f90a7733f69c89"
+  }
+]

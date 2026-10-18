@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-16T07:23:24.891Z",
+  "contrast": [
+    {
+      "role": "body",
+      "fg": "1c1d17",
+      "bg": "f8f0ea",
+      "min": 4.5,
+      "ratio": 15.065
+    },
+    {
+      "role": "muted",
+      "fg": "565750",
+      "bg": "f8f0ea",
+      "min": 4.5,
+      "ratio": 6.485
+    },
+    {
+      "role": "heading",
+      "fg": "f8f0ea",
+      "bg": "1c1d17",
+      "min": 3,
+      "ratio": 15.065
+    },
+    {
+      "role": "accent text",
+      "fg": "b9310c",
+      "bg": "f8f0ea",
+      "min": 4.5,
+      "ratio": 5.315
+    },
+    {
+      "role": "brush",
+      "fg": "ff6539",
+      "bg": "1c1d17",
+      "min": 3,
+      "ratio": 5.796
+    },
+    {
+      "role": "focus",
+      "fg": "9a290b",
+      "bg": "f8f0ea",
+      "min": 3,
+      "ratio": 6.915
+    },
+    {
+      "role": "large orange",
+      "fg": "ef5a28",
+      "bg": "f8f0ea",
+      "min": 3,
+      "ratio": 3.025
+    },
+    {
+      "role": "panel copy",
+      "fg": "f0eee7",
+      "bg": "1c1e15",
+      "min": 4.5,
+      "ratio": 14.518
+    },
+    {
+      "role": "body secondary",
+      "fg": "454640",
+      "bg": "f8f0ea",
+      "min": 4.5,
+      "ratio": 8.462
+    },
+    {
+      "role": "CTA hover",
+      "fg": "f8f0ea",
+      "bg": "1c1d17",
+      "min": 4.5,
+      "ratio": 15.065
+    }
+  ],
+  "checks": [
+    "menu resets on desktop breakpoint",
+    "menu remains closed on mobile return"
+  ],
+  "zoom200Equivalent": {
+    "width": 720,
+    "scrollWidth": 720,
+    "heading": 331.921875,
+    "method": "720×450 viewport at DPR 2, equivalent layout area to 1440×900 at 200%; not a physical browser zoom command"
+  },
+  "focus": {
+    "outline": "none",
+    "width": "3px"
+  },
+  "structure": {
+    "h1": 1,
+    "ids": [
+      "navigation",
+      "main",
+      "home",
+      "hero-title",
+      "stamp-top",
+      "stamp-bottom",
+      "about",
+      "feel-title",
+      "products",
+      "crafted-title",
+      "features",
+      "specifications",
+      "spec-title",
+      "enquire",
+      "image-dialog",
+      "image-title"
+    ],
+    "anchors": [
+      {
+        "href": "#main",
+        "exists": true
+      },
+      {
+        "href": "#home",
+        "exists": true
+      },
+      {
+        "href": "#home",
+        "exists": true
+      },
+      {
+        "href": "#products",
+        "exists": true
+      },
+      {
+        "href": "#about",
+        "exists": true
+      },
+      {
+        "href": "#features",
+        "exists": true
+      },
+      {
+        "href": "#enquire",
+        "exists": true
+      },
+      {
+        "href": "#products",
+        "exists": true
+      },
+      {
+        "href": "#specifications",
+        "exists": true
+      },
+      {
+        "href": "#home",
+        "exists": true
+      },
+      {
+        "href": "#home",
+        "exists": true
+      }
+    ]
+  },
+  "image": {
+    "width": 1024,
+    "height": 1024
+  }
+}

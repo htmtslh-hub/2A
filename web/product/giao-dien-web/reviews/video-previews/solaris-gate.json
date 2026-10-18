@@ -1,0 +1,51 @@
+{
+  "id": "t61",
+  "slug": "solaris-gate",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T08:23:48.972Z",
+  "demo": "/demos/solaris-gate/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3bc7f26e8ee5",
+  "sha256": "3bc7f26e8ee59fae4db5c1d621c5f31ddad0982335124407454d243a7705551d",
+  "demoHtmlSha256": "1b4e9c49e62a125f4a62b9fe9c3b2838eb06dcea8f7e346af45a94c18efe1c0f",
+  "demoSha256": "d71be77d2c929472bb445f8adef12a7396ad7101c0cb6965cedfb07b9fbd83ae",
+  "bytes": 861438,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.628,
+      "action": "click",
+      "selector": "#portal"
+    },
+    {
+      "seconds": 5.386,
+      "action": "tilt portal"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 10.619,
+      "action": "tilt portal"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\solaris-gate-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\solaris-gate-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\solaris-gate-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\solaris-gate-return.jpg"
+  ]
+}

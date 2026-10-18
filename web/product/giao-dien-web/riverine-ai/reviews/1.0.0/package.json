@@ -1,0 +1,10 @@
+{
+  "slug": "riverine-ai",
+  "zip": "web\\product\\giao-dien-web\\riverine-ai\\riverine-ai.zip",
+  "bytes": 6218,
+  "sha256": "a9011a76beb6a644317f7510e599d3781ebe5450a2cf11a5cf6f7916e4d066e1",
+  "files": [
+    "index.html"
+  ],
+  "byteVerified": true
+}

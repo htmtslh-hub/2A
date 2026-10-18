@@ -1,0 +1,192 @@
+{
+  "date": "2026-10-18",
+  "status": "deployed",
+  "site": "https://forgezone.store",
+  "deployment": "https://web-b7lc9228k-htmtslh-hubs-projects.vercel.app",
+  "deploymentId": "dpl_DJ45nTxrxE6QR1QJr3EGKNmdSftJ",
+  "products": [
+    {
+      "id": "t54",
+      "slug": "spaceedu",
+      "name": "SpaceEdu",
+      "version": "1.0.1",
+      "bytes": 12505,
+      "sha256": "b55d5f7d7a8c6b479263309e542bc4b82b75ad326e44ed410a853abda6a6d16e",
+      "files": [
+        "CUSTOMISE.md",
+        "index.html",
+        "LICENCE.txt",
+        "README.md"
+      ]
+    },
+    {
+      "id": "t55",
+      "slug": "mostar-city",
+      "name": "Mostar City",
+      "version": "1.0.1",
+      "bytes": 84000,
+      "sha256": "d124b8f66dba6ca13f4f842b44fab938b490be42eb2ddaf54ea27c5703a8291e",
+      "files": [
+        "CUSTOMISE.md",
+        "index.html",
+        "LICENCE.txt",
+        "README.md",
+        "script.js",
+        "styles.css",
+        "assets/fonts/OggText-Medium.woff2"
+      ]
+    },
+    {
+      "id": "t56",
+      "slug": "fennec",
+      "name": "FENNEC",
+      "version": "1.0.1",
+      "bytes": 1124593,
+      "sha256": "eef46bc715eb3354ffbb4712b4c64f4077d68a770f0f507543e8d614b9b80ae2",
+      "files": [
+        "CUSTOMISE.md",
+        "index.html",
+        "LICENCE.txt",
+        "README.md",
+        "assets/video/forest-h264.mp4"
+      ]
+    },
+    {
+      "id": "t57",
+      "slug": "riverine-ai",
+      "name": "riverine.ai",
+      "version": "1.0.1",
+      "bytes": 11795,
+      "sha256": "2d8f4a9816765784d0300e35eabe78af1e5e0c3c711d9f74b0426c4d0e3335c3",
+      "files": [
+        "CUSTOMISE.md",
+        "index.html",
+        "LICENCE.txt",
+        "README.md"
+      ]
+    },
+    {
+      "id": "t58",
+      "slug": "freight-axis",
+      "name": "Freight Axis",
+      "version": "1.0.1",
+      "bytes": 9757,
+      "sha256": "0f216ae9d600726fa66232be7b9bb75782096a5c0a70d6f12c3b98d1ec0f452f",
+      "files": [
+        "CUSTOMISE.md",
+        "index.html",
+        "LICENCE.txt",
+        "README.md"
+      ]
+    },
+    {
+      "id": "t59",
+      "slug": "meridian",
+      "name": "Meridian",
+      "version": "1.0.1",
+      "bytes": 1377390,
+      "sha256": "1e2fa861ad8fe0ba9b30b284920cccf1295ad4f1a09b399f6fc86de930eb4089",
+      "files": [
+        "CUSTOMISE.md",
+        "index.html",
+        "LICENCE.txt",
+        "README.md",
+        "assets/video/viaduct-h264.mp4"
+      ]
+    }
+  ],
+  "checks": {
+    "typecheck": "PASS",
+    "localBuild": "PASS",
+    "vercelBuild": "PASS",
+    "catalogRecordings": "PASS 56 products",
+    "zipBytesMatchSource": true,
+    "downloadTracing": true,
+    "onlineAssetHashes": 21,
+    "browsers": [
+      {
+        "name": "Chromium",
+        "version": "153.0.8010.12"
+      },
+      {
+        "name": "Firefox",
+        "version": "155.0"
+      },
+      {
+        "name": "Edge",
+        "version": "155.0.4283.62"
+      },
+      {
+        "name": "CocCoc",
+        "version": "152.0.7977.124"
+      }
+    ],
+    "domainChecks": [
+      {
+        "id": "t54",
+        "slug": "spaceedu",
+        "name": "SpaceEdu",
+        "detailStatus": 200,
+        "catalogPresent": true,
+        "demoStatus": 200,
+        "demoBytesMatch": true,
+        "unauthenticatedDownload": 401
+      },
+      {
+        "id": "t55",
+        "slug": "mostar-city",
+        "name": "Mostar City",
+        "detailStatus": 200,
+        "catalogPresent": true,
+        "demoStatus": 200,
+        "demoBytesMatch": true,
+        "unauthenticatedDownload": 401
+      },
+      {
+        "id": "t56",
+        "slug": "fennec",
+        "name": "FENNEC",
+        "detailStatus": 200,
+        "catalogPresent": true,
+        "demoStatus": 200,
+        "demoBytesMatch": true,
+        "unauthenticatedDownload": 401
+      },
+      {
+        "id": "t57",
+        "slug": "riverine-ai",
+        "name": "riverine.ai",
+        "detailStatus": 200,
+        "catalogPresent": true,
+        "demoStatus": 200,
+        "demoBytesMatch": true,
+        "unauthenticatedDownload": 401
+      },
+      {
+        "id": "t58",
+        "slug": "freight-axis",
+        "name": "Freight Axis",
+        "detailStatus": 200,
+        "catalogPresent": true,
+        "demoStatus": 200,
+        "demoBytesMatch": true,
+        "unauthenticatedDownload": 401
+      },
+      {
+        "id": "t59",
+        "slug": "meridian",
+        "name": "Meridian",
+        "detailStatus": 200,
+        "catalogPresent": true,
+        "demoStatus": 200,
+        "demoBytesMatch": true,
+        "unauthenticatedDownload": 401
+      }
+    ]
+  },
+  "limits": [
+    "Riverine RV fonts were not supplied; original declared fallbacks remain.",
+    "No real payment was made; unauthenticated download protection and ZIP deployment tracing were verified, not a paid-user checkout transaction.",
+    "Original brief exceptions remain: inline HTML, remote media, demo-only links and product-specific motion preferences."
+  ]
+}

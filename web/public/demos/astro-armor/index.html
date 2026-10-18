@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/demos/astro-armor/index.html">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASTRO — Winter Armor II</title>
+  <meta name="description" content="Winter Armor II. An experimental puffer silhouette in four colourways. A static fashion concept by ASTRO.">
+  <meta property="og:title" content="ASTRO — Winter Armor II">
+  <meta property="og:description" content="Technical lines. Everyday warmth. Explore the Winter Armor II concept.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to product</a>
+  <header class="site-header">
+    <a class="wordmark" href="#main" aria-label="ASTRO home">ASTRO.</a>
+    <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">+</span></button>
+    <nav id="navigation" class="navigation" aria-label="Main navigation">
+      <a href="#main">Products</a><a href="#construction">Category</a><a href="#story">More</a>
+      <a class="navigation__about" href="#story">About us</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button type="button" data-open="search-dialog" aria-label="Search the collection"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></button>
+      <button type="button" data-open="bag-dialog" aria-label="Open demo bag"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 4h3l2 12h11l2-9H7M10 20h.01M18 20h.01"/></svg><span id="bag-count" class="bag-count" hidden>0</span></button>
+      <button type="button" data-open="account-dialog" aria-label="Account information"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="7" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="product" aria-labelledby="product-title">
+      <div class="product-copy">
+        <p class="eyebrow">New</p>
+        <h1 id="product-title">ASTRO<br>WINTER<br><span>ARMOR II</span></h1>
+        <p class="product-price">$560</p>
+        <div class="description">
+          <h2>Description</h2>
+          <p>A puffer jacket that marries retro style with the precision of modern winter expeditions. A soothing beige shell forms a versatile foundation for your winter wardrobe, accented with strategic orange details.</p>
+          <details class="read-more"><summary>Read more</summary><p>Oversized volume. A high protective collar. Technical linework inspired by the equipment that takes us further.</p></details>
+        </div>
+        <details class="product-detail"><summary>Materials &amp; care</summary><p>Concept specification: washed nylon shell, synthetic fill. Gentle cold wash; air dry. Replace these demo specifications with verified product information.</p></details>
+        <details class="product-detail"><summary>Shipping &amp; returns</summary><p>This is a static concept. No order is placed and no delivery is arranged. Connect your own shop service before selling.</p></details>
+      </div>
+      <figure class="product-stage">
+        <div class="jacket-wrap"><div class="jacket-frame"><img id="jacket" class="jacket jacket--reference" src="assets/img/armor-reference.jpg" width="820" height="746" alt="Beige oversized puffer jacket with orange collar, sleeve pocket and technical line drawings" fetchpriority="high"></div></div>
+        <figcaption>Designed in San Francisco<span>Fabric and stitched in Bangladesh</span></figcaption>
+      </figure>
+      <div class="product-options">
+        <fieldset class="sizes"><legend>Size</legend><div class="size-list">
+          <button type="button" data-size="S" aria-pressed="false">S</button><button type="button" data-size="M" aria-pressed="true">M</button><button type="button" data-size="L" aria-pressed="false">L</button><button type="button" data-size="XL" aria-pressed="false">XL</button>
+        </div><button class="text-button" type="button" data-open="size-dialog">Size guide</button></fieldset>
+        <fieldset class="colours"><legend>Color</legend><div class="colour-list">
+          <button type="button" data-colour="beige" aria-pressed="true"><span class="swatch-image"><img class="reference-swatch" src="assets/img/armor-reference.jpg" width="820" height="746" alt=""></span><span>Beige</span></button>
+          <button type="button" data-colour="red" data-next-preview aria-pressed="false"><span class="swatch-image"><img class="reference-swatch" src="assets/img/armor-reference.jpg" width="820" height="746" alt=""></span><span>Red</span></button>
+          <button type="button" data-colour="black" aria-pressed="false"><span class="swatch-image"><img class="reference-swatch" src="assets/img/armor-reference.jpg" width="820" height="746" alt=""></span><span>Black</span></button>
+          <button type="button" data-colour="white" aria-pressed="false"><span class="swatch-image"><img class="reference-swatch" src="assets/img/armor-reference.jpg" width="820" height="746" alt=""></span><span>White</span></button>
+        </div></fieldset>
+        <div class="purchase-actions"><button id="favourite" class="pill pill--outline" type="button" aria-pressed="false">Favorite</button><button id="add-bag" class="pill pill--orange" type="button">Add to bag</button><small>Concept · demo bag</small></div>
+        <p id="selection-status" class="sr-only" role="status">Beige, size M selected</p>
+        <noscript><p>Colour selection and demo bag require JavaScript. All product information is available below.</p></noscript>
+      </div>
+    </section>
+    <section id="construction" class="construction" aria-label="Jacket construction" tabindex="0">
+      <article class="construction-card" data-reveal><div class="detail-image detail-image--fabric"><img class="reference-detail" src="assets/img/armor-reference.jpg" width="820" height="746" alt="Technical linework on the washed beige shell" loading="lazy"></div><div><h2>3X beigewashed</h2><p>The beige color is accented with orange details that add a pop of color and enhance the retro vibe.</p></div></article>
+      <article class="construction-card" data-reveal><div class="detail-image detail-image--sleeve"><img class="reference-detail" src="assets/img/armor-reference.jpg" width="820" height="746" alt="Padded construction of the jacket sleeve" loading="lazy"></div><div><h2>34 areas puffed</h2><p>The design is not only fashionable but also functional: a warm layer providing insulation and comfort.</p></div></article>
+      <article class="construction-card" data-reveal><div class="detail-image detail-image--collar"><img class="reference-detail" src="assets/img/armor-reference.jpg" width="820" height="746" alt="Model wearing the beige puffer jacket" loading="lazy"></div><div><h2>Insulation</h2><p>A generous puffer silhouette and high collar. Built around the feeling of being ready for the cold.</p></div></article>
+      <article class="construction-card" data-reveal><div class="detail-image detail-image--graphic"><img class="reference-detail" src="assets/img/armor-reference.jpg" width="820" height="746" alt="Orange pocket and graphic linework" loading="lazy"></div><div><h2>Graphics</h2><p>Technical drawings trace an imagined expedition. Small orange accents bring the whole piece to life.</p></div></article>
+    </section>
+    <section id="story" class="story" data-reveal><p class="eyebrow">Field notes / 002</p><h2>Made for the<br>outside of ordinary.</h2><div><p>Somewhere between an archive piece and tomorrow’s equipment. Winter Armor II explores the meeting of soft volume, precise lines and the simple pleasure of getting outside.</p><p class="demo-note">Independent interface concept. Product specifications, locations and price are demonstration content.</p><a href="#main">Back to the jacket <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer id="contact" class="site-footer"><a class="wordmark" href="#main">ASTRO.</a><p>Objects for a world in motion.</p><a href="mailto:hello@astro.example">hello@astro.example</a><button type="button" data-motion-toggle aria-pressed="false">Pause motion</button><span>Concept store / 2026</span></footer>
+  <dialog id="size-dialog" aria-labelledby="size-title"><button class="dialog-close" type="button" aria-label="Close size guide">×</button><p class="eyebrow">Fit reference</p><h2 id="size-title">Find your armor.</h2><p>Oversized fit. Illustrative garment measurements in cm.</p><table><caption>Demo sizing — verify before selling</caption><thead><tr><th scope="col">Size</th><th scope="col">Chest</th><th scope="col">Length</th><th scope="col">Sleeve</th></tr></thead><tbody><tr><th scope="row">S</th><td>120</td><td>66</td><td>60</td></tr><tr><th scope="row">M</th><td>126</td><td>68</td><td>62</td></tr><tr><th scope="row">L</th><td>132</td><td>70</td><td>64</td></tr><tr><th scope="row">XL</th><td>138</td><td>72</td><td>66</td></tr></tbody></table></dialog>
+  <dialog id="bag-dialog" aria-labelledby="bag-title"><button class="dialog-close" type="button" aria-label="Close bag">×</button><p class="eyebrow">Demo only</p><h2 id="bag-title">Your field kit.</h2><p>Stored for this page visit only. No payment or order is sent.</p><ul id="bag-items" class="bag-items"><li>Your bag is empty.</li></ul><p class="bag-total">Subtotal <strong id="bag-total">$0</strong></p><a class="pill pill--outline" href="#contact" data-close-dialog>Contact details</a></dialog>
+  <dialog id="search-dialog" aria-labelledby="search-title"><button class="dialog-close" type="button" aria-label="Close search">×</button><h2 id="search-title">Explore the collection.</h2><label for="product-search">Search this concept collection</label><input id="product-search" type="search" placeholder="Try winter or armor"><p id="search-result"><a href="#main" data-close-dialog>Winter Armor II — $560</a></p></dialog>
+  <dialog id="account-dialog" aria-labelledby="account-title"><button class="dialog-close" type="button" aria-label="Close account information">×</button><p class="eyebrow">Concept store</p><h2 id="account-title">Travel light.</h2><p>This template has no account service. Your favourite and bag are kept only while this page is open. No personal details are collected.</p><a href="#contact" data-close-dialog>View contact details</a></dialog>
+</body>
+</html>

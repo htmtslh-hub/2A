@@ -1,0 +1,30 @@
+[
+  {
+    "path": "assets/img/blue-fruit-bowl.png",
+    "bytes": 2448151,
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "source": "built-in imagegen, prompts in IMAGE-PROMPTS.txt"
+  },
+  {
+    "path": "assets/img/fruit-serving-platter.png",
+    "bytes": 2696742,
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "source": "built-in imagegen, prompts in IMAGE-PROMPTS.txt"
+  }
+]

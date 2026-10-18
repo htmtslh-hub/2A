@@ -1,0 +1,2064 @@
+{
+  "slug": "manganresto",
+  "version": "1.0.0",
+  "date": "2026-10-16T09:01:30.223Z",
+  "os": "win32",
+  "zipBytes": 433354,
+  "sha256": "f25d95698e6e2fa255bed9a5ebe34fd4dfee603792c706cf4503f3ac1635a2b6",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#main"
+          },
+          {
+            "label": "Manganresto homepage",
+            "href": "#hero",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#hero"
+          },
+          {
+            "label": "Home",
+            "href": "#hero",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#hero"
+          },
+          {
+            "label": "Menu",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#menu"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#about"
+          },
+          {
+            "label": "Chefs",
+            "href": "#chefs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#chefs"
+          },
+          {
+            "label": "Location",
+            "href": "#location",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#location"
+          },
+          {
+            "label": "Contact",
+            "href": "#reservation",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#reservation"
+          },
+          {
+            "label": "Follow Manganresto on Facebook",
+            "href": "#reservation",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#reservation"
+          },
+          {
+            "label": "Follow Manganresto on Twitter",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#menu"
+          },
+          {
+            "label": "Follow Manganresto on Instagram",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#about"
+          },
+          {
+            "label": "Contact Manganresto on WhatsApp",
+            "href": "#location",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#location"
+          },
+          {
+            "label": "Check Out Menu",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#menu"
+          },
+          {
+            "label": "Book A Table",
+            "href": "#reservation",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#reservation"
+          },
+          {
+            "label": "+1 (800) 555-FOOD",
+            "href": "tel:+18005553663",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+18005553663"
+          },
+          {
+            "label": "reservations@manganresto.demo",
+            "href": "mailto:reservations@manganresto.demo",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:reservations@manganresto.demo"
+          },
+          {
+            "label": "Manganresto",
+            "href": "#hero",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#hero"
+          },
+          {
+            "label": "Home",
+            "href": "#hero",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#hero"
+          },
+          {
+            "label": "Menu",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#menu"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#about"
+          },
+          {
+            "label": "Master Chefs",
+            "href": "#chefs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#chefs"
+          },
+          {
+            "label": "Table Reservation",
+            "href": "#reservation",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#reservation"
+          },
+          {
+            "label": "+1 (800) 555-FOOD",
+            "href": "tel:+18005553663",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+18005553663"
+          },
+          {
+            "label": "contact@manganresto.demo",
+            "href": "mailto:contact@manganresto.demo",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:contact@manganresto.demo"
+          },
+          {
+            "label": "Back to top of page",
+            "href": "#hero",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#hero"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 990,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(21, 23, 27)",
+            "background": [
+              248,
+              180,
+              23
+            ],
+            "ratio": 9.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "logo-text",
+            "text": "Manganresto",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 9.85,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "nav-link active",
+            "text": "Home",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 17.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-kicker",
+            "text": "Are You Hungry ?",
+            "colour": "rgb(241, 242, 245)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 16.03,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-title",
+            "text": "Don't Wait !",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 17.94,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-tagline",
+            "text": "Let start to order food now",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 9.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "mini-dish-title",
+            "text": "• Breakfast",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              26,
+              29,
+              35
+            ],
+            "ratio": 16.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "mini-dish-desc",
+            "text": "Provides a healthy and warm breakfast me",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              26,
+              29,
+              35
+            ],
+            "ratio": 11.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "metric-num",
+            "text": "8",
+            "colour": "rgb(21, 23, 27)",
+            "background": [
+              228,
+              166,
+              21
+            ],
+            "ratio": 8.32,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-subtitle",
+            "text": "Crafted daily from organic artisanal ing",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 12.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "tab-btn",
+            "text": "Breakfast",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 11.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card-dish-name",
+            "text": "Nero Tagliatelle Gamberi",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 16.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card-price",
+            "text": "$28.00",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 9.17,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card-tag",
+            "text": "Seafood",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              59,
+              62,
+              67
+            ],
+            "ratio": 10.8,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "btn-card-order",
+            "text": "Order Dish",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              54,
+              48,
+              34
+            ],
+            "ratio": 7.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "badge-featured badge--green",
+            "text": "Organic",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              25,
+              111,
+              61
+            ],
+            "ratio": 6.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "badge-featured badge--gold",
+            "text": "Artisanal",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              135,
+              54,
+              0
+            ],
+            "ratio": 8.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "about-badge-num",
+            "text": "100%",
+            "colour": "rgb(21, 23, 27)",
+            "background": [
+              248,
+              180,
+              23
+            ],
+            "ratio": 9.85,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "about-badge-text",
+            "text": "Fresh Organic Produce",
+            "colour": "rgb(21, 23, 27)",
+            "background": [
+              248,
+              180,
+              23
+            ],
+            "ratio": 9.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-kicker",
+            "text": "Our Heritage",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              26,
+              29,
+              35
+            ],
+            "ratio": 9.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-title",
+            "text": "Culinary Craftsmanship Meets Passion",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              28,
+              31,
+              38
+            ],
+            "ratio": 16.49,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "about-lead",
+            "text": "At Manganresto, dining is more than sust",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              29,
+              33,
+              40
+            ],
+            "ratio": 16.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "about-p",
+            "text": "We collaborate directly with local heirl",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              30,
+              34,
+              41
+            ],
+            "ratio": 10.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-desc",
+            "text": "Decades of collective Michelin-starred k",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              30,
+              33,
+              41
+            ],
+            "ratio": 10.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-title",
+            "text": "Handmade Daily Fresh Pasta",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              28,
+              32,
+              39
+            ],
+            "ratio": 16.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-desc",
+            "text": "Semolina extruded through authentic bron",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              28,
+              32,
+              39
+            ],
+            "ratio": 11.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-title",
+            "text": "38 Seasonal Delicacies",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              27,
+              30,
+              37
+            ],
+            "ratio": 16.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-desc",
+            "text": "A revolving tasting menu inspired by sea",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              27,
+              31,
+              37
+            ],
+            "ratio": 11.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "chef-initials",
+            "text": "MR",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              29,
+              32,
+              39
+            ],
+            "ratio": 8.95,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "chef-role",
+            "text": "Executive Chef & Pasta Artisan",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 9.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "chef-initials",
+            "text": "EL",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              29,
+              32,
+              38
+            ],
+            "ratio": 8.96,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-kicker",
+            "text": "Visit Us",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              26,
+              29,
+              34
+            ],
+            "ratio": 9.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-title",
+            "text": "Reserve Your Experience",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 16.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "info-label",
+            "text": "Restaurant Location",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              28,
+              32,
+              39
+            ],
+            "ratio": 8.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "info-label",
+            "text": "Operating Hours",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              29,
+              33,
+              40
+            ],
+            "ratio": 8.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Monday – Friday:",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              29,
+              33,
+              40
+            ],
+            "ratio": 10.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "08:00 AM – 11:30 PM",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              29,
+              33,
+              41
+            ],
+            "ratio": 16.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "info-label",
+            "text": "Direct Inquiries",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              30,
+              34,
+              42
+            ],
+            "ratio": 8.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "info-value",
+            "text": "Phone: +1 (800) 555-FOOD",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              30,
+              34,
+              42
+            ],
+            "ratio": 15.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "info-value",
+            "text": "Email: reservations@manganresto.demo",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              30,
+              34,
+              41
+            ],
+            "ratio": 15.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "form-sub",
+            "text": "Demo only. Inquiry demonstration with ou",
+            "colour": "rgb(157, 163, 178)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 6.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "form-label",
+            "text": "Full Name *",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 11.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "logo-text",
+            "text": "Manganresto",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              14,
+              15,
+              18
+            ],
+            "ratio": 10.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "footer-desc",
+            "text": "Exceptional culinary art with fresh orga",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              14,
+              15,
+              18
+            ],
+            "ratio": 12.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "footer-notice",
+            "text": "Demo template published for Forge Zone s",
+            "colour": "rgb(157, 163, 178)",
+            "background": [
+              14,
+              15,
+              18
+            ],
+            "ratio": 7.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-control",
+            "text": "Pause motion",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              26,
+              27,
+              30
+            ],
+            "ratio": 11.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "back-to-top",
+            "text": "Back to Top ↑",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              14,
+              15,
+              18
+            ],
+            "ratio": 10.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Check Out Menu",
+          "colour": "rgb(248, 180, 23)",
+          "width": "3px",
+          "ratio": 9.85
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#main"
+          },
+          {
+            "label": "Manganresto homepage",
+            "href": "#hero",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#hero"
+          },
+          {
+            "label": "Home",
+            "href": "#hero",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#hero"
+          },
+          {
+            "label": "Menu",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#menu"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#about"
+          },
+          {
+            "label": "Chefs",
+            "href": "#chefs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#chefs"
+          },
+          {
+            "label": "Location",
+            "href": "#location",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#location"
+          },
+          {
+            "label": "Contact",
+            "href": "#reservation",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#reservation"
+          },
+          {
+            "label": "Follow Manganresto on Facebook",
+            "href": "#reservation",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#reservation"
+          },
+          {
+            "label": "Follow Manganresto on Twitter",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#menu"
+          },
+          {
+            "label": "Follow Manganresto on Instagram",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#about"
+          },
+          {
+            "label": "Contact Manganresto on WhatsApp",
+            "href": "#location",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#location"
+          },
+          {
+            "label": "Check Out Menu",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#menu"
+          },
+          {
+            "label": "Book A Table",
+            "href": "#reservation",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#reservation"
+          },
+          {
+            "label": "+1 (800) 555-FOOD",
+            "href": "tel:+18005553663",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+18005553663"
+          },
+          {
+            "label": "reservations@manganresto.demo",
+            "href": "mailto:reservations@manganresto.demo",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:reservations@manganresto.demo"
+          },
+          {
+            "label": "Manganresto",
+            "href": "#hero",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#hero"
+          },
+          {
+            "label": "Home",
+            "href": "#hero",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#hero"
+          },
+          {
+            "label": "Menu",
+            "href": "#menu",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#menu"
+          },
+          {
+            "label": "About",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#about"
+          },
+          {
+            "label": "Master Chefs",
+            "href": "#chefs",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#chefs"
+          },
+          {
+            "label": "Table Reservation",
+            "href": "#reservation",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#reservation"
+          },
+          {
+            "label": "+1 (800) 555-FOOD",
+            "href": "tel:+18005553663",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+18005553663"
+          },
+          {
+            "label": "contact@manganresto.demo",
+            "href": "mailto:contact@manganresto.demo",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:contact@manganresto.demo"
+          },
+          {
+            "label": "Back to top of page",
+            "href": "#hero",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/manganresto/index.html#hero"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 990,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(21, 23, 27)",
+            "background": [
+              248,
+              180,
+              23
+            ],
+            "ratio": 9.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "logo-text",
+            "text": "Manganresto",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 9.85,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "nav-link active",
+            "text": "Home",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 17.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-kicker",
+            "text": "Are You Hungry ?",
+            "colour": "rgb(241, 242, 245)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 16.03,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-title",
+            "text": "Don't Wait !",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 17.94,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-tagline",
+            "text": "Let start to order food now",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 9.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "mini-dish-title",
+            "text": "• Breakfast",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              26,
+              29,
+              35
+            ],
+            "ratio": 16.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "mini-dish-desc",
+            "text": "Provides a healthy and warm breakfast me",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              26,
+              29,
+              35
+            ],
+            "ratio": 11.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "metric-num",
+            "text": "8",
+            "colour": "rgb(21, 23, 27)",
+            "background": [
+              228,
+              166,
+              21
+            ],
+            "ratio": 8.32,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-subtitle",
+            "text": "Crafted daily from organic artisanal ing",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              21,
+              23,
+              27
+            ],
+            "ratio": 12.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "tab-btn",
+            "text": "Breakfast",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 11.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card-dish-name",
+            "text": "Nero Tagliatelle Gamberi",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 16.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card-price",
+            "text": "$28.00",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 9.17,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "card-tag",
+            "text": "Seafood",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              59,
+              62,
+              67
+            ],
+            "ratio": 10.8,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "btn-card-order",
+            "text": "Order Dish",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              54,
+              48,
+              34
+            ],
+            "ratio": 7.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "badge-featured badge--green",
+            "text": "Organic",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              25,
+              111,
+              61
+            ],
+            "ratio": 6.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "badge-featured badge--gold",
+            "text": "Artisanal",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              135,
+              54,
+              0
+            ],
+            "ratio": 8.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "about-badge-num",
+            "text": "100%",
+            "colour": "rgb(21, 23, 27)",
+            "background": [
+              248,
+              180,
+              23
+            ],
+            "ratio": 9.85,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "about-badge-text",
+            "text": "Fresh Organic Produce",
+            "colour": "rgb(21, 23, 27)",
+            "background": [
+              248,
+              180,
+              23
+            ],
+            "ratio": 9.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-kicker",
+            "text": "Our Heritage",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              26,
+              29,
+              35
+            ],
+            "ratio": 9.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-title",
+            "text": "Culinary Craftsmanship Meets Passion",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              28,
+              31,
+              38
+            ],
+            "ratio": 16.49,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "about-lead",
+            "text": "At Manganresto, dining is more than sust",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              29,
+              33,
+              40
+            ],
+            "ratio": 16.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "about-p",
+            "text": "We collaborate directly with local heirl",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              30,
+              34,
+              41
+            ],
+            "ratio": 10.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-desc",
+            "text": "Decades of collective Michelin-starred k",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              29,
+              33,
+              41
+            ],
+            "ratio": 10.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-title",
+            "text": "Handmade Daily Fresh Pasta",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              28,
+              32,
+              39
+            ],
+            "ratio": 16.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-desc",
+            "text": "Semolina extruded through authentic bron",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              28,
+              32,
+              39
+            ],
+            "ratio": 11.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-title",
+            "text": "38 Seasonal Delicacies",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              27,
+              30,
+              37
+            ],
+            "ratio": 16.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-desc",
+            "text": "A revolving tasting menu inspired by sea",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              27,
+              30,
+              37
+            ],
+            "ratio": 11.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "chef-initials",
+            "text": "MR",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              29,
+              32,
+              39
+            ],
+            "ratio": 8.95,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "chef-role",
+            "text": "Executive Chef & Pasta Artisan",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 9.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "chef-initials",
+            "text": "EL",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              28,
+              31,
+              38
+            ],
+            "ratio": 9.06,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "chef-initials",
+            "text": "DK",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              29,
+              32,
+              38
+            ],
+            "ratio": 8.96,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-kicker",
+            "text": "Visit Us",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              25,
+              28,
+              34
+            ],
+            "ratio": 9.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "section-title",
+            "text": "Reserve Your Experience",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              26,
+              30,
+              36
+            ],
+            "ratio": 16.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "info-label",
+            "text": "Restaurant Location",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              28,
+              31,
+              38
+            ],
+            "ratio": 9.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "info-label",
+            "text": "Operating Hours",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              29,
+              32,
+              40
+            ],
+            "ratio": 8.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Monday – Friday:",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              29,
+              33,
+              40
+            ],
+            "ratio": 10.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "info-label",
+            "text": "Direct Inquiries",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              30,
+              34,
+              41
+            ],
+            "ratio": 8.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "info-value",
+            "text": "Phone: +1 (800) 555-FOOD",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              30,
+              34,
+              42
+            ],
+            "ratio": 15.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "info-value",
+            "text": "Email: reservations@manganresto.demo",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              29,
+              33,
+              41
+            ],
+            "ratio": 16.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "form-title",
+            "text": "Table Booking Request (Demo only)",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 16.7,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "form-sub",
+            "text": "Demo only. Inquiry demonstration with ou",
+            "colour": "rgb(157, 163, 178)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 6.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "form-label",
+            "text": "Full Name *",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              27,
+              30,
+              36
+            ],
+            "ratio": 11.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "logo-text",
+            "text": "Manganresto",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              14,
+              15,
+              18
+            ],
+            "ratio": 10.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "footer-desc",
+            "text": "Exceptional culinary art with fresh orga",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              14,
+              15,
+              18
+            ],
+            "ratio": 12.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "footer-notice",
+            "text": "Demo template published for Forge Zone s",
+            "colour": "rgb(157, 163, 178)",
+            "background": [
+              14,
+              15,
+              18
+            ],
+            "ratio": 7.59,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-control",
+            "text": "Pause motion",
+            "colour": "rgb(208, 212, 222)",
+            "background": [
+              26,
+              27,
+              30
+            ],
+            "ratio": 11.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "back-to-top",
+            "text": "Back to Top ↑",
+            "colour": "rgb(248, 180, 23)",
+            "background": [
+              14,
+              15,
+              18
+            ],
+            "ratio": 10.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Check Out Menu",
+          "colour": "rgb(248, 180, 23)",
+          "width": "3px",
+          "ratio": 9.85
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "manganresto/assets/css/style.css",
+    "manganresto/assets/img/dish-appetizer.webp",
+    "manganresto/assets/img/dish-breakfast.webp",
+    "manganresto/assets/img/hero-plate.webp",
+    "manganresto/assets/js/main.js",
+    "manganresto/CUSTOMISE.md",
+    "manganresto/index.html",
+    "manganresto/LICENCE.txt",
+    "manganresto/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/dish-appetizer.webp",
+    "assets/img/dish-breakfast.webp",
+    "assets/img/hero-plate.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

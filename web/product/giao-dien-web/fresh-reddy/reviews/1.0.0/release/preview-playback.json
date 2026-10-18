@@ -1,0 +1,38 @@
+[
+  {
+    "id": "t43",
+    "before": {
+      "time": 2.742108,
+      "paused": false,
+      "ready": 4,
+      "muted": true,
+      "poster": "http://127.0.0.1:4345/previews/fresh-reddy.webp?v=1.0.0"
+    },
+    "after": 3.472788,
+    "advances": true
+  },
+  {
+    "id": "t44",
+    "before": {
+      "time": 2.642949,
+      "paused": false,
+      "ready": 4,
+      "muted": true,
+      "poster": "http://127.0.0.1:4345/previews/puro-amor.webp?v=1.0.0"
+    },
+    "after": 3.368006,
+    "advances": true
+  },
+  {
+    "id": "t45",
+    "before": {
+      "time": 2.6405,
+      "paused": false,
+      "ready": 4,
+      "muted": true,
+      "poster": "http://127.0.0.1:4345/previews/nourish-bowl.webp?v=1.0.0"
+    },
+    "after": 3.361851,
+    "advances": true
+  }
+]

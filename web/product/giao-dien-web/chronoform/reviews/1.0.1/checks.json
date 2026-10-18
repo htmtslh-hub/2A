@@ -1,0 +1,1338 @@
+{
+  "slug": "chronoform",
+  "version": "1.0.1",
+  "date": "2026-10-15T01:18:48.094Z",
+  "os": "win32",
+  "zipBytes": 3234030,
+  "sha256": "0cb1abf849bec0112db6e271a0e0d7a4a31aeecce5e42b433ee4e5cec0bdd2aa",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#main"
+          },
+          {
+            "label": "CHRONOFORM",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#home"
+          },
+          {
+            "label": "Watches",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "Care & service",
+            "href": "#service",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#service"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#contact"
+          },
+          {
+            "label": "Featured watches",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#home"
+          },
+          {
+            "label": "All watches",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "Care & service",
+            "href": "#service",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#service"
+          },
+          {
+            "label": "Contact the atelier",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#contact"
+          },
+          {
+            "label": "Explore watches",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "The hands behind the hours ↗",
+            "href": "#service",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#service"
+          },
+          {
+            "label": "Mechanical art, in motion ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "Begin a conversation ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#contact"
+          },
+          {
+            "label": "Explore the collection",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "Contact the atelier ↗",
+            "href": "mailto:hello@chronoform.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@chronoform.example"
+          },
+          {
+            "label": "Explore watches",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "Direct contact ↗",
+            "href": "mailto:hello@chronoform.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@chronoform.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 1440,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": false,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": false,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": false,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": false
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(17, 17, 17)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 18.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "CHRONOFORM",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              18,
+              70,
+              102
+            ],
+            "ratio": 9.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Watches",
+            "colour": "rgb(211, 220, 226)",
+            "background": [
+              36,
+              63,
+              79
+            ],
+            "ratio": 7.95,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Care & service",
+            "colour": "rgb(211, 220, 226)",
+            "background": [
+              25,
+              47,
+              61
+            ],
+            "ratio": 9.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Contact",
+            "colour": "rgb(211, 220, 226)",
+            "background": [
+              8,
+              20,
+              28
+            ],
+            "ratio": 13.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Sample price currency",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              6,
+              11,
+              17
+            ],
+            "ratio": 19.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "language-pill",
+            "text": "EN",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              39,
+              49,
+              59
+            ],
+            "ratio": 12.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              29,
+              119,
+              157
+            ],
+            "ratio": 5.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "edition hero__edition",
+            "text": "Concept edition · 15",
+            "colour": "rgb(208, 227, 238)",
+            "background": [
+              10,
+              34,
+              52
+            ],
+            "ratio": 12.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__availability",
+            "text": "Showcase",
+            "colour": "rgb(128, 206, 245)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 11.67,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "product-code",
+            "text": "CF-3123-PABL",
+            "colour": "rgb(193, 206, 214)",
+            "background": [
+              13,
+              47,
+              69
+            ],
+            "ratio": 8.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "OPEN GEARFLYINGTOURBILLONPARAIBA",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              12,
+              42,
+              61
+            ],
+            "ratio": 13.58,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button js-only",
+            "text": "Find out more",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              22,
+              125,
+              175
+            ],
+            "ratio": 4.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "View movement",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              30,
+              37
+            ],
+            "ratio": 16.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "← Opus Chronograph",
+            "colour": "rgb(203, 213, 219)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 13.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "01",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 20.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "02",
+            "colour": "rgb(181, 192, 200)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 10.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "The hands behind the hours ↗",
+            "colour": "rgb(202, 211, 217)",
+            "background": [
+              11,
+              16,
+              21
+            ],
+            "ratio": 12.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "The art of looking closer",
+            "colour": "rgb(128, 206, 245)",
+            "background": [
+              11,
+              16,
+              19
+            ],
+            "ratio": 10.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "A movement.A thousandsmall decisions.",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              20,
+              22,
+              23
+            ],
+            "ratio": 16.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "small decisions.",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              21,
+              22,
+              23
+            ],
+            "ratio": 16.57,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A concept collection exploring the beaut",
+            "colour": "rgb(169, 180, 189)",
+            "background": [
+              16,
+              19,
+              21
+            ],
+            "ratio": 8.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Meet the atelier.",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 18.57,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Ask about the concept, a finish or a col",
+            "colour": "rgb(169, 180, 189)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 9.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "CHRONOFORM · INDEPENDENT CONCEPT",
+            "colour": "rgb(186, 199, 209)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 11.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-only",
+            "text": "Pause motion",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              32,
+              44
+            ],
+            "ratio": 16.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Find out more",
+          "colour": "rgb(143, 212, 255)",
+          "width": "3px",
+          "ratio": 5.86
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#main"
+          },
+          {
+            "label": "CHRONOFORM",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#home"
+          },
+          {
+            "label": "Watches",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "Care & service",
+            "href": "#service",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#service"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#contact"
+          },
+          {
+            "label": "Featured watches",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#home"
+          },
+          {
+            "label": "All watches",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "Care & service",
+            "href": "#service",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#service"
+          },
+          {
+            "label": "Contact the atelier",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#contact"
+          },
+          {
+            "label": "Explore watches",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "The hands behind the hours ↗",
+            "href": "#service",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#service"
+          },
+          {
+            "label": "Mechanical art, in motion ↗",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "Begin a conversation ↗",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#contact"
+          },
+          {
+            "label": "Explore the collection",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "Contact the atelier ↗",
+            "href": "mailto:hello@chronoform.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@chronoform.example"
+          },
+          {
+            "label": "Explore watches",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/chronoform/index.html#collection"
+          },
+          {
+            "label": "Direct contact ↗",
+            "href": "mailto:hello@chronoform.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@chronoform.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 1440,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": false,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": false,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": false,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": false
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(17, 17, 17)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 18.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "CHRONOFORM",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              18,
+              70,
+              103
+            ],
+            "ratio": 9.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Watches",
+            "colour": "rgb(211, 220, 226)",
+            "background": [
+              36,
+              64,
+              80
+            ],
+            "ratio": 7.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Care & service",
+            "colour": "rgb(211, 220, 226)",
+            "background": [
+              27,
+              48,
+              62
+            ],
+            "ratio": 9.82,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Contact",
+            "colour": "rgb(211, 220, 226)",
+            "background": [
+              8,
+              21,
+              29
+            ],
+            "ratio": 13.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Sample price currency",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              6,
+              11,
+              17
+            ],
+            "ratio": 19.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "language-pill",
+            "text": "EN",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              39,
+              49,
+              59
+            ],
+            "ratio": 12.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              29,
+              119,
+              157
+            ],
+            "ratio": 5.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "edition hero__edition",
+            "text": "Concept edition · 15",
+            "colour": "rgb(208, 227, 238)",
+            "background": [
+              11,
+              34,
+              52
+            ],
+            "ratio": 12.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__availability",
+            "text": "Showcase",
+            "colour": "rgb(128, 206, 245)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 11.67,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "product-code",
+            "text": "CF-3123-PABL",
+            "colour": "rgb(193, 206, 214)",
+            "background": [
+              13,
+              48,
+              69
+            ],
+            "ratio": 8.56,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "OPEN GEARFLYINGTOURBILLONPARAIBA",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              12,
+              43,
+              63
+            ],
+            "ratio": 13.4,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "button js-only",
+            "text": "Find out more",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              22,
+              125,
+              175
+            ],
+            "ratio": 4.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "View movement",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              31,
+              37
+            ],
+            "ratio": 16.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "← Opus Chronograph",
+            "colour": "rgb(203, 213, 219)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 13.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "01",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 20.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "02",
+            "colour": "rgb(181, 192, 200)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 10.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "The hands behind the hours ↗",
+            "colour": "rgb(202, 211, 217)",
+            "background": [
+              11,
+              16,
+              21
+            ],
+            "ratio": 12.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "The art of looking closer",
+            "colour": "rgb(128, 206, 245)",
+            "background": [
+              12,
+              17,
+              20
+            ],
+            "ratio": 10.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "A movement.A thousandsmall decisions.",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              22,
+              22,
+              24
+            ],
+            "ratio": 16.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "EM",
+            "text": "small decisions.",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              21,
+              23,
+              24
+            ],
+            "ratio": 16.45,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A concept collection exploring the beaut",
+            "colour": "rgb(169, 180, 189)",
+            "background": [
+              16,
+              20,
+              22
+            ],
+            "ratio": 8.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Meet the atelier.",
+            "colour": "rgb(243, 245, 246)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 18.57,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Ask about the concept, a finish or a col",
+            "colour": "rgb(169, 180, 189)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 9.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "CHRONOFORM · INDEPENDENT CONCEPT",
+            "colour": "rgb(186, 199, 209)",
+            "background": [
+              3,
+              6,
+              9
+            ],
+            "ratio": 11.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle js-only",
+            "text": "Pause motion",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              32,
+              44
+            ],
+            "ratio": 16.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Find out more",
+          "colour": "rgb(143, 212, 255)",
+          "width": "3px",
+          "ratio": 5.86
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "chronoform/assets/css/style.css",
+    "chronoform/assets/img/editorial.webp",
+    "chronoform/assets/img/hero-cowboy.webp",
+    "chronoform/assets/img/hero-jupiter.webp",
+    "chronoform/assets/img/hero-opus-orange.webp",
+    "chronoform/assets/img/hero-paraiba.webp",
+    "chronoform/assets/img/ice.webp",
+    "chronoform/assets/img/jupiter.webp",
+    "chronoform/assets/img/opus.webp",
+    "chronoform/assets/img/paraiba.webp",
+    "chronoform/assets/img/render-black-hole.webp",
+    "chronoform/assets/img/render-cowboy.webp",
+    "chronoform/assets/img/render-jupiter-gold.webp",
+    "chronoform/assets/img/render-jupiter.webp",
+    "chronoform/assets/img/render-meteorite.webp",
+    "chronoform/assets/img/render-opus-ice.webp",
+    "chronoform/assets/img/render-opus-orange.webp",
+    "chronoform/assets/img/render-paraiba.webp",
+    "chronoform/assets/img/render-skeleton-gold.webp",
+    "chronoform/assets/img/render-skeleton-steel.webp",
+    "chronoform/assets/img/render-sunset.webp",
+    "chronoform/assets/img/skeleton.webp",
+    "chronoform/assets/js/main.js",
+    "chronoform/assets/js/watch3d.js",
+    "chronoform/CUSTOMISE.md",
+    "chronoform/index.html",
+    "chronoform/LICENCE.txt",
+    "chronoform/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/editorial.webp",
+    "assets/img/hero-cowboy.webp",
+    "assets/img/hero-jupiter.webp",
+    "assets/img/hero-opus-orange.webp",
+    "assets/img/hero-paraiba.webp",
+    "assets/img/ice.webp",
+    "assets/img/jupiter.webp",
+    "assets/img/opus.webp",
+    "assets/img/paraiba.webp",
+    "assets/img/render-black-hole.webp",
+    "assets/img/render-cowboy.webp",
+    "assets/img/render-jupiter-gold.webp",
+    "assets/img/render-jupiter.webp",
+    "assets/img/render-meteorite.webp",
+    "assets/img/render-opus-ice.webp",
+    "assets/img/render-opus-orange.webp",
+    "assets/img/render-paraiba.webp",
+    "assets/img/render-skeleton-gold.webp",
+    "assets/img/render-skeleton-steel.webp",
+    "assets/img/render-sunset.webp",
+    "assets/img/skeleton.webp",
+    "assets/js/main.js",
+    "assets/js/watch3d.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q03/chromium: menu resetOnDesktop",
+    "Q07/chromium: giảm chuyển động {\"allVisible\":false,\"runningAnimations\":0}",
+    "Q07/chromium: file:// {\"width\":1440,\"scrollWidth\":1440,\"clientWidth\":1440,\"allVisible\":false,\"styled\":true}",
+    "Q07/chromium: offline {\"width\":320,\"scrollWidth\":320,\"clientWidth\":320,\"allVisible\":false}",
+    "Q03/firefox: menu resetOnDesktop",
+    "Q07/firefox: giảm chuyển động {\"allVisible\":false,\"runningAnimations\":0}",
+    "Q07/firefox: file:// {\"width\":1440,\"scrollWidth\":1440,\"clientWidth\":1440,\"allVisible\":false,\"styled\":true}",
+    "Q07/firefox: offline {\"width\":320,\"scrollWidth\":320,\"clientWidth\":320,\"allVisible\":false}"
+  ]
+}

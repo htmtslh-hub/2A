@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chain Warden — Thresh Dark-Fantasy Champion Showcase Template</title>
+  <meta name="description" content="Chain Warden is an interactive dark-fantasy champion showcase template featuring ability telemetry (P/Q/W/E/R), chromatic skin switching, role attributes, and Shadow Isles lore.">
+  <meta property="og:title" content="Chain Warden — Thresh Dark-Fantasy Champion Showcase">
+  <meta property="og:description" content="Interactive dark-fantasy champion showcase with 5 ability breakdowns, 4 skin stage previews, tactical role telemetry, and lore spotlight.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="League of Legends — Chain Warden showcase home">
+        <span class="brand__line1">LEAGUE<span class="brand__of">OF</span></span>
+        <span class="brand__line2">LEGENDS</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <svg class="menu-toggle__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="menu-toggle__label">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#gameplay">GAMEPLAY</a></li>
+          <li><a class="site-nav__link is-current" href="#champions">CHAMPIONS</a></li>
+          <li><a class="site-nav__link" href="#news">NEWS</a></li>
+          <li><a class="site-nav__link" href="#collection">COLLECTION</a></li>
+          <li><a class="site-nav__link" href="#esports">ESPORTS</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn-play" href="#play">PLAY NOW</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__stage" id="hero-stage" aria-live="polite">
+        <img
+          id="hero-stage-img"
+          class="hero__stage-img"
+          src="assets/img/warden-classic.webp"
+          width="838"
+          height="458"
+          alt="Thresh, The Chain Warden, in spectral emerald armor wielding a curved hooked scythe and glowing soul lantern"
+        >
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__left">
+          <p class="hero__eyebrow">THE CHAIN WARDEN</p>
+          <h1 class="hero__title" id="hero-title">Thresh</h1>
+          <p class="hero__lore">
+            Sadistic and cunning, Thresh is an ambitious and restless spirit of the Shadow Isles. Once the custodian of countless arcane secrets, he was undone by a power greater than life...
+          </p>
+          <div class="hero__lore-actions">
+            <button class="link-readmore" id="lore-open-btn" type="button" aria-haspopup="dialog" aria-controls="lore-modal">Read more</button>
+          </div>
+
+          <div class="abilities-panel" aria-labelledby="abilities-heading">
+            <h2 class="panel-heading" id="abilities-heading">Abilities</h2>
+            <div class="abilities-bar" role="group" aria-label="Champion abilities">
+              <button class="ability-btn" type="button" data-ability="0" aria-pressed="false" aria-label="Damnation (Passive)">
+                <span class="ability-btn__frame" aria-hidden="true">
+                  <img class="ability-btn__sprite ability-btn__sprite--p" src="assets/img/warden-ui.webp" width="280" height="200" alt="">
+                </span>
+              </button>
+              <button class="ability-btn is-active" type="button" data-ability="1" aria-pressed="true" aria-label="Death Sentence (Q)">
+                <span class="ability-btn__frame" aria-hidden="true">
+                  <img class="ability-btn__sprite ability-btn__sprite--q" src="assets/img/warden-ui.webp" width="280" height="200" alt="">
+                </span>
+              </button>
+              <button class="ability-btn" type="button" data-ability="2" aria-pressed="false" aria-label="Dark Passage (W)">
+                <span class="ability-btn__frame" aria-hidden="true">
+                  <img class="ability-btn__sprite ability-btn__sprite--w" src="assets/img/warden-ui.webp" width="280" height="200" alt="">
+                </span>
+              </button>
+              <button class="ability-btn" type="button" data-ability="3" aria-pressed="false" aria-label="Flay (E)">
+                <span class="ability-btn__frame" aria-hidden="true">
+                  <img class="ability-btn__sprite ability-btn__sprite--e" src="assets/img/warden-ui.webp" width="280" height="200" alt="">
+                </span>
+              </button>
+              <button class="ability-btn" type="button" data-ability="4" aria-pressed="false" aria-label="The Box (R)">
+                <span class="ability-btn__frame" aria-hidden="true">
+                  <img class="ability-btn__sprite ability-btn__sprite--r" src="assets/img/warden-ui.webp" width="280" height="200" alt="">
+                </span>
+              </button>
+            </div>
+
+            <div class="ability-detail" id="ability-detail" aria-live="polite">
+              <p class="ability-detail__name">
+                <span class="ability-detail__title" id="ability-name">Death Sentence</span>
+                <span class="ability-detail__key" id="ability-key">(Q)</span>
+              </p>
+              <p class="ability-detail__stat" id="ability-stat-1">
+                <strong class="ability-detail__stat-label">Magic Damage:</strong>
+                <span id="ability-stat-1-val">80 / 120 / 160 / 200 / 240 (+ 50% AP)</span>
+              </p>
+              <p class="ability-detail__stat" id="ability-stat-2">
+                <strong class="ability-detail__stat-label">Cooldown:</strong>
+                <span id="ability-stat-2-val">20 / 18 / 16 / 14 / 12</span>
+              </p>
+              <p class="ability-detail__desc" id="ability-desc">
+                Thresh binds an enemy in chains and pulls them toward him.<br>
+                Activating this ability a <strong class="ability-detail__em">second</strong> time pulls Thresh to the enemy.
+              </p>
+            </div>
+          </div>
+
+          <div class="skins-panel" aria-labelledby="skins-heading">
+            <h2 class="panel-heading" id="skins-heading">Skins</h2>
+            <div class="skins-bar" role="group" aria-label="Champion skins">
+              <button class="skin-btn is-active" type="button" data-skin="0" aria-pressed="true" aria-label="Classic skin">
+                <span class="skin-btn__art" aria-hidden="true">
+                  <img class="skin-btn__sprite skin-btn__sprite--classic" src="assets/img/warden-ui.webp" width="280" height="200" alt="">
+                </span>
+                <span class="skin-btn__label">Classic</span>
+              </button>
+              <button class="skin-btn" type="button" data-skin="1" aria-pressed="false" aria-label="Dark Star skin">
+                <span class="skin-btn__art" aria-hidden="true">
+                  <img class="skin-btn__sprite skin-btn__sprite--darkstar" src="assets/img/warden-ui.webp" width="280" height="200" alt="">
+                </span>
+                <span class="skin-btn__label">Dark Star</span>
+              </button>
+              <button class="skin-btn" type="button" data-skin="2" aria-pressed="false" aria-label="High Noon skin">
+                <span class="skin-btn__art" aria-hidden="true">
+                  <img class="skin-btn__sprite skin-btn__sprite--highnoon" src="assets/img/warden-ui.webp" width="280" height="200" alt="">
+                </span>
+                <span class="skin-btn__label">High Noon</span>
+              </button>
+              <button class="skin-btn" type="button" data-skin="3" aria-pressed="false" aria-label="FPX skin">
+                <span class="skin-btn__art" aria-hidden="true">
+                  <img class="skin-btn__sprite skin-btn__sprite--fpx" src="assets/img/warden-ui.webp" width="280" height="200" alt="">
+                </span>
+                <span class="skin-btn__label">FPX</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="hero__rail" aria-label="Champion role and combat attributes">
+            <a class="rail-item" href="#champions" aria-label="Role: Support">
+              <span class="rail-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+                  <path d="M12 3l2.2 3.8L19 5l-2 5.2L20 13l-4.5 1.2L12 20l-3.5-5.8L4 13l3-2.8L5 5l4.8 1.8L12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="rail-item__label">Support</span>
+            </a>
+
+            <a class="rail-item" href="#champions" aria-label="Difficulty: Moderate">
+              <span class="rail-item__icon rail-item__icon--meter" aria-hidden="true">
+                <svg viewBox="0 0 36 12" width="28" height="10" aria-hidden="true" focusable="false">
+                  <polygon points="3,10 11,10 14,2 6,2" fill="#43d8b9"/>
+                  <polygon points="13,10 21,10 24,2 16,2" fill="#43d8b9"/>
+                  <polygon points="23,10 31,10 34,2 26,2" fill="#21353a"/>
+                </svg>
+              </span>
+              <span class="rail-item__label">Moderate</span>
+            </a>
+
+            <a class="rail-item" href="#champions" aria-label="Attack type: Ranged">
+              <span class="rail-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+                  <circle cx="11" cy="13" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="11" cy="13" r="2.2" fill="currentColor"/>
+                  <path d="M14 10l6-6m0 0h-4.2M20 4v4.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="rail-item__label">Ranged</span>
+            </a>
+
+            <a class="rail-item" href="#champions" aria-label="Assigned lane: Bottom">
+              <span class="rail-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+                  <path d="M5 5h10v2H7v10H5V5z" fill="#22383e"/>
+                  <path d="M19 9v10H9v-2h8V9h2z" fill="currentColor"/>
+                  <rect x="9" y="9" width="4" height="4" fill="#2a454c"/>
+                </svg>
+              </span>
+              <span class="rail-item__label">Bottom</span>
+            </a>
+          </div>
+
+          <button class="spotlight-card" id="spotlight-open-btn" type="button" aria-haspopup="dialog" aria-controls="spotlight-modal" aria-label="Play lore spotlight: Shadow Isles: None Escape">
+            <span class="spotlight-card__media" aria-hidden="true">
+              <img class="spotlight-card__img" src="assets/img/warden-ui.webp" width="280" height="200" alt="">
+            </span>
+            <span class="spotlight-card__caption">Shadow Isles: None Escape</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__controls" aria-label="Stage skin and motion controls">
+        <button class="stage-ctrl" id="hero-prev" type="button" data-step="-1" aria-label="Previous champion skin">Prev Skin</button>
+        <span class="stage-status" id="stage-status" aria-live="polite">Skin 01 / 04 · Classic</span>
+        <button class="stage-ctrl" id="hero-next" type="button" data-step="1" aria-label="Next champion skin">Next Skin</button>
+        <button class="stage-ctrl stage-ctrl--motion" id="motion-toggle" type="button" aria-pressed="false">Pause motion</button>
+      </div>
+    </section>
+
+    <section class="section section--abilities" id="gameplay" aria-labelledby="matrix-title" data-reveal>
+      <div class="section__inner">
+        <div class="section__header">
+          <p class="section__eyebrow">TACTICAL ABILITY MATRIX</p>
+          <h2 class="section__title" id="matrix-title">Five-Part Chain Control Kit</h2>
+          <p class="section__lead">
+            Select any ability below or in the hero bar to inspect scaling ratios, cooldown windows, and crowd-control sequencing.
+          </p>
+        </div>
+
+        <div class="matrix-grid">
+          <article class="matrix-card" data-ability-card="0">
+            <div class="matrix-card__head">
+              <span class="matrix-card__badge">PASSIVE</span>
+              <h3 class="matrix-card__title">Damnation</h3>
+            </div>
+            <p class="matrix-card__stats">Passive Souls: +1.0 Armor &amp; AP per Soul · Permanent Stacking</p>
+            <p class="matrix-card__text"> Fallen enemies drop luminous soul fragments. Walking near souls or casting Dark Passage harvests them for permanent defensive and magical scaling.</p>
+            <button class="matrix-card__btn" type="button" data-ability="0">Inspect Passive in Hero</button>
+          </article>
+
+          <article class="matrix-card is-selected" data-ability-card="1">
+            <div class="matrix-card__head">
+              <span class="matrix-card__badge">KEY Q</span>
+              <h3 class="matrix-card__title">Death Sentence</h3>
+            </div>
+            <p class="matrix-card__stats">Magic Damage: 80 / 120 / 160 / 200 / 240 (+ 50% AP) · CD: 20–12s</p>
+            <p class="matrix-card__text">Winds up and hurls his scythe, stunning the first target hit and tugging them twice. Recasting dashes Thresh directly to the bound target.</p>
+            <button class="matrix-card__btn" type="button" data-ability="1">Inspect Q in Hero</button>
+          </article>
+
+          <article class="matrix-card" data-ability-card="2">
+            <div class="matrix-card__head">
+              <span class="matrix-card__badge">KEY W</span>
+              <h3 class="matrix-card__title">Dark Passage</h3>
+            </div>
+            <p class="matrix-card__stats">Shield: 60 / 90 / 120 / 150 / 180 (+ 2 per Soul) · CD: 22–16s</p>
+            <p class="matrix-card__text">Casts the spectral lantern to a target location, shielding allies in its aura and allowing one teammate to click the lantern to dash to safety.</p>
+            <button class="matrix-card__btn" type="button" data-ability="2">Inspect W in Hero</button>
+          </article>
+
+          <article class="matrix-card" data-ability-card="3">
+            <div class="matrix-card__head">
+              <span class="matrix-card__badge">KEY E</span>
+              <h3 class="matrix-card__title">Flay</h3>
+            </div>
+            <p class="matrix-card__stats">Magic Damage: 75 / 110 / 145 / 180 / 215 (+ 60% AP) · CD: 13–10s</p>
+            <p class="matrix-card__text">Sweeps iron chains along a chosen vector, knocking enemies toward or away from Thresh while empowering basic attacks between casts.</p>
+            <button class="matrix-card__btn" type="button" data-ability="3">Inspect E in Hero</button>
+          </article>
+
+          <article class="matrix-card" data-ability-card="4">
+            <div class="matrix-card__head">
+              <span class="matrix-card__badge">ULTIMATE R</span>
+              <h3 class="matrix-card__title">The Box</h3>
+            </div>
+            <p class="matrix-card__stats">Magic Damage: 250 / 400 / 550 (+ 100% AP) · Slow: 99% for 2s</p>
+            <p class="matrix-card__text">Erects a pentagon of five spectral walls around Thresh. Enemy champions who cross a wall shatter it, suffering heavy magic damage and a 99% slow.</p>
+            <button class="matrix-card__btn" type="button" data-ability="4">Inspect R in Hero</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--telemetry" id="champions" aria-labelledby="telemetry-title" data-reveal>
+      <div class="section__inner">
+        <div class="section__header">
+          <p class="section__eyebrow">ROLE &amp; LANE TELEMETRY</p>
+          <h2 class="section__title" id="telemetry-title">Bottom Lane Vanguard Profile</h2>
+          <p class="section__lead">
+            Built for high-leverage pick creation, lantern rescues, and zone denial around neutral objectives.
+          </p>
+        </div>
+
+        <div class="telemetry-grid">
+          <article class="telemetry-card">
+            <h3 class="telemetry-card__title">Support</h3>
+            <p class="telemetry-card__meta">Primary Role · Vanguard / Catcher Hybrid</p>
+            <p class="telemetry-card__body">Excels at locking down priority carries with Death Sentence while repositioning vulnerable allies across terrain with Dark Passage.</p>
+          </article>
+          <article class="telemetry-card">
+            <h3 class="telemetry-card__title">Moderate</h3>
+            <p class="telemetry-card__meta">Difficulty Tier · 2 / 3 Skill Ceiling</p>
+            <p class="telemetry-card__body">Requires wind-up timing prediction on Q hooks and directional vector control on Flay to interrupt enemy dashes mid-flight.</p>
+          </article>
+          <article class="telemetry-card">
+            <h3 class="telemetry-card__title">Ranged</h3>
+            <p class="telemetry-card__meta">Attack Range · 450 Units Scythe Lash</p>
+            <p class="telemetry-card__body">Harasses melee supports from a safe tether distance using Flay’s passive wind-up bonus magic damage on basic attacks.</p>
+          </article>
+          <article class="telemetry-card">
+            <h3 class="telemetry-card__title">Bottom</h3>
+            <p class="telemetry-card__meta">Assigned Lane · Duo Dragon Control</p>
+            <p class="telemetry-card__body">Pairs with aggressive marksmen to convert level-two all-ins and river vision traps into decisive objective leads.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--skins" id="collection" aria-labelledby="collection-title" data-reveal>
+      <div class="section__inner">
+        <div class="section__header">
+          <p class="section__eyebrow">CHROMATIC SKIN ARCHIVE</p>
+          <h2 class="section__title" id="collection-title">Four Alternate Realms</h2>
+          <p class="section__lead">
+            Preview each alternate universe concept and switch the main hero stage lighting in real time.
+          </p>
+        </div>
+
+        <div class="collection-grid">
+          <article class="collection-card" data-skin-card="0">
+            <span class="collection-card__tag">DEFAULT REALM</span>
+            <h3 class="collection-card__title">Classic Thresh</h3>
+            <p class="collection-card__text">Wreathed in the cursed emerald mist of the Shadow Isles, carrying the iron reliquary lantern of Helia.</p>
+            <button class="collection-card__btn" type="button" data-skin="0">Activate Classic Stage</button>
+          </article>
+
+          <article class="collection-card" data-skin-card="1">
+            <span class="collection-card__tag">COSMIC HORROR</span>
+            <h3 class="collection-card__title">Dark Star Thresh</h3>
+            <p class="collection-card__text">An ancient singularity shepherd who feeds entire star systems into the violet event horizon of his gravity lantern.</p>
+            <button class="collection-card__btn" type="button" data-skin="1">Activate Dark Star Stage</button>
+          </article>
+
+          <article class="collection-card" data-skin-card="2">
+            <span class="collection-card__tag">FRONTIER GOTHIC</span>
+            <h3 class="collection-card__title">High Noon Thresh</h3>
+            <p class="collection-card__text">A brimstone outlaw demon forging infernal lasso chains and an amber hellfire coaching lamp across the scorched west.</p>
+            <button class="collection-card__btn" type="button" data-skin="2">Activate High Noon Stage</button>
+          </article>
+
+          <article class="collection-card" data-skin-card="3">
+            <span class="collection-card__tag">CHAMPIONSHIP EDITION</span>
+            <h3 class="collection-card__title">FPX Thresh</h3>
+            <p class="collection-card__text">Clad in crimson-and-gold phoenix armor commemorating world-stage finals playmaking and lantern saves.</p>
+            <button class="collection-card__btn" type="button" data-skin="3">Activate FPX Stage</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--lore" id="news" aria-labelledby="lore-section-title" data-scroll-scene data-reveal>
+      <div class="section__inner">
+        <div class="lore-banner">
+          <div class="lore-banner__copy">
+            <p class="section__eyebrow">CHRONICLE OF HELIA · SCROLL SCENE</p>
+            <h2 class="section__title" id="lore-section-title">Shadow Isles: None Escape</h2>
+            <p class="section__lead">
+              Beneath the vaulted catacombs of once-golden Helia, a forgotten custodian unlocked the Black Mist and emerged as an immortal collector of mortal dread.
+            </p>
+            <div class="lore-progress" aria-hidden="true">
+              <div class="lore-progress__bar" id="lore-progress-bar"></div>
+            </div>
+            <div class="lore-banner__actions" id="esports">
+              <button class="btn-secondary" id="lore-banner-modal-btn" type="button" aria-haspopup="dialog" aria-controls="spotlight-modal">Open Spotlight Breakdown</button>
+              <a class="btn-secondary" href="#play">Competitive Roster Kit</a>
+            </div>
+          </div>
+          <div class="lore-banner__stats">
+            <div class="stat-pill">
+              <span class="stat-pill__num">450</span>
+              <span class="stat-pill__label">Tether Lash Range</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-pill__num">99%</span>
+              <span class="stat-pill__label">Spectral Box Slow</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-pill__num">04</span>
+              <span class="stat-pill__label">Chromatic Skins</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--play" id="play" aria-labelledby="play-title" data-reveal>
+      <div class="section__inner">
+        <div class="play-box">
+          <div class="play-box__copy">
+            <p class="section__eyebrow">DEMO SHOWCASE &amp; PRESS KIT</p>
+            <h2 class="section__title" id="play-title">Deploy Your Champion Showcase</h2>
+            <p class="section__lead">
+              This static HTML/CSS/JS template demonstrates an interactive game character reveal page. It does not include a live game client download, account login, or matchmaking backend.
+            </p>
+          </div>
+          <div class="play-box__actions">
+            <a class="btn-cta" href="mailto:press@shadowwarden-studio.example?subject=Champion%20Showcase%20Enquiry">Request Studio Press Kit</a>
+            <a class="btn-secondary" href="#top">Return to Hero Stage</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__copy">
+        <strong>Chain Warden</strong> — Static UI template concept for game character and skin showcases. Sample names and lore are illustrative and must be replaced before commercial publication.
+      </p>
+      <ul class="site-footer__links">
+        <li><a href="#gameplay">Abilities</a></li>
+        <li><a href="#collection">Skins</a></li>
+        <li><a href="#news">Lore</a></li>
+        <li><a href="mailto:press@shadowwarden-studio.example">press@shadowwarden-studio.example</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="lore-modal" aria-labelledby="lore-modal-title">
+    <div class="modal__box">
+      <div class="modal__head">
+        <p class="section__eyebrow">BIOGRAPHY ARCHIVE</p>
+        <h2 class="modal__title" id="lore-modal-title">Thresh — The Chain Warden</h2>
+      </div>
+      <p class="modal__body">
+        Sadistic and cunning, Thresh is an ambitious and restless spirit of the Shadow Isles. Once the custodian of countless arcane secrets in the subterranean vaults of Helia, he was undone by a power greater than life or death and now sustains himself by tormenting and breaking others with slow, excruciating inventiveness.
+      </p>
+      <p class="modal__body">
+        His victims suffer far beyond their brief mortal coil, for Thresh wreaks agony upon their very souls, imprisoning them within his unholy lantern to curse for all eternity.
+      </p>
+      <div class="modal__foot">
+        <button class="btn-secondary" id="lore-close-btn" type="button">Close Biography</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="spotlight-modal" aria-labelledby="spotlight-modal-title">
+    <div class="modal__box">
+      <div class="modal__head">
+        <p class="section__eyebrow">CINEMATIC LORE SPOTLIGHT (STATIC PREVIEW)</p>
+        <h2 class="modal__title" id="spotlight-modal-title">Shadow Isles: None Escape</h2>
+      </div>
+      <p class="modal__body">
+        In the mist-choked waters surrounding the Shadow Isles, every broken chain link echoes the toll of the Warden’s lantern. Use the skin switcher below to preview how the spotlight stage adapts across Classic, Dark Star, High Noon, and FPX editions.
+      </p>
+      <div class="modal__actions">
+        <button class="btn-secondary" type="button" data-skin="0">Preview Classic</button>
+        <button class="btn-secondary" type="button" data-skin="1">Preview Dark Star</button>
+        <button class="btn-secondary" type="button" data-skin="2">Preview High Noon</button>
+        <button class="btn-secondary" id="spotlight-close-btn" type="button">Close Spotlight</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

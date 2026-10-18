@@ -1,0 +1,17 @@
+{
+  "id": "t55",
+  "slug": "mostar-city",
+  "name": "Mostar City",
+  "version": "1.0.1",
+  "bytes": 84000,
+  "sha256": "d124b8f66dba6ca13f4f842b44fab938b490be42eb2ddaf54ea27c5703a8291e",
+  "files": [
+    "CUSTOMISE.md",
+    "index.html",
+    "LICENCE.txt",
+    "README.md",
+    "script.js",
+    "styles.css",
+    "assets/fonts/OggText-Medium.woff2"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "t59",
+  "slug": "meridian",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T06:52:44.749Z",
+  "demo": "/demos/meridian/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.1",
+  "revision": "a10e86b9d9ac",
+  "sha256": "a10e86b9d9aca22e49bc738297189f4411bf490985b21bda0a1a1e0d8d515b1a",
+  "demoHtmlSha256": "2d0ccf456a53e38c124a747e4dc08ab5673b86da268f0c04098c4c6192b1bcf9",
+  "demoSha256": "e9d68ff97796acac30057d0a50ab853e08b38028f08d7c9ddfb64dc34831d2d2",
+  "bytes": 660812,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\meridian-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\meridian-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\meridian-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\meridian-return.jpg"
+  ]
+}

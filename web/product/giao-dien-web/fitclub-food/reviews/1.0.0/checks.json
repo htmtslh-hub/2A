@@ -1,0 +1,1227 @@
+{
+  "slug": "fitclub-food",
+  "version": "1.0.0",
+  "date": "2026-10-17T01:48:44.248Z",
+  "os": "win32",
+  "zipBytes": 331299,
+  "sha256": "02ce936a94e636ef567e55ec956511a1eb83be74541fa6449a6bb45e2ec6eec7",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#main"
+          },
+          {
+            "label": "FitClub Food — FFIFEET CTUB home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#home"
+          },
+          {
+            "label": "CLASSES",
+            "href": "#bowls",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#bowls"
+          },
+          {
+            "label": "NUTRITION",
+            "href": "#nutrition",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#nutrition"
+          },
+          {
+            "label": "BOWLS",
+            "href": "#plans",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#plans"
+          },
+          {
+            "label": "CHEF TABLE",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#order"
+          },
+          {
+            "label": "Order a healthy club bowl",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#order"
+          },
+          {
+            "label": "VIEW MENU",
+            "href": "#bowls",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#bowls"
+          },
+          {
+            "label": "Send Kitchen Enquiry via Email",
+            "href": "mailto:kitchen@fitclubfood.example?subject=FitClub%20Bowl%20Enquiry%20-%20Club%20Harvest%20Platter&body=Hello%20FitClub%20Kitchen%2C%0A%0AI%20would%20like%20to%20enquire%20about%20ordering%3A%0A-%20Platter%3A%20Club%20Harvest%20Platter%0A-%20Portion%3A%20Standard%20(520%20kcal)%0A-%20Macros%3A%20520%20kcal%20%C2%B7%2024g%20Protein%20%C2%B7%2014g%20Fibre%0A-%20Indicative%20Rate%3A%20%2414%20%2F%20bowl%0A",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:kitchen@fitclubfood.example?subject=FitClub%20Bowl%20Enquiry%20-%20Club%20Harvest%20Platter&body=Hello%20FitClub%20Kitchen%2C%0A%0AI%20would%20like%20to%20enquire%20about%20ordering%3A%0A-%20Platter%3A%20Club%20Harvest%20Platter%0A-%20Portion%3A%20Standard%20(520%20kcal)%0A-%20Macros%3A%20520%20kcal%20%C2%B7%2024g%20Protein%20%C2%B7%2014g%20Fibre%0A-%20Indicative%20Rate%3A%20%2414%20%2F%20bowl%0A"
+          },
+          {
+            "label": "FFIFEET CTUB",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#home"
+          },
+          {
+            "label": "kitchen@fitclubfood.example",
+            "href": "mailto:kitchen@fitclubfood.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:kitchen@fitclubfood.example"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#home"
+          },
+          {
+            "label": "kitchen@fitclubfood.example",
+            "href": "mailto:kitchen@fitclubfood.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:kitchen@fitclubfood.example"
+          },
+          {
+            "label": "Go to Order Desk",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#order"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 620,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              42,
+              23,
+              49
+            ],
+            "ratio": 16.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "FFIFEET CTUB",
+            "colour": "rgb(246, 241, 249)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 13.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "CLASSES",
+            "colour": "rgb(246, 241, 249)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 13.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "header-pill__box",
+            "text": "ORDER",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 15.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "Fitreess &",
+            "colour": "rgb(234, 147, 228)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 7.01,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Healthy ClubFood",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 15.03,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__lead",
+            "text": "Freshly prepared macro bowls crafted wit",
+            "colour": "rgb(212, 195, 220)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 9.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__cta-box",
+            "text": "VIEW MENU",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              162,
+              58,
+              161
+            ],
+            "ratio": 5.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-item__sub",
+            "text": "Prepared fresh",
+            "colour": "rgb(191, 169, 202)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 6.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "01 / Signature Club Platters",
+            "colour": "rgb(234, 147, 228)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 7.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "platter-card__tag",
+            "text": "Platter 01 · Default",
+            "colour": "rgb(234, 147, 228)",
+            "background": [
+              63,
+              38,
+              73
+            ],
+            "ratio": 6.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Club Harvest Platter",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              63,
+              38,
+              73
+            ],
+            "ratio": 13.25,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Crisp leaf lettuce, blackberries, cherry",
+            "colour": "rgb(212, 195, 220)",
+            "background": [
+              63,
+              38,
+              73
+            ],
+            "ratio": 7.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "520 kcal",
+            "colour": "rgb(246, 241, 249)",
+            "background": [
+              42,
+              23,
+              49
+            ],
+            "ratio": 14.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$14 / bowl",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              63,
+              38,
+              73
+            ],
+            "ratio": 13.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "02 / Macro & Ingredient Architecture",
+            "colour": "rgb(234, 147, 228)",
+            "background": [
+              42,
+              23,
+              49
+            ],
+            "ratio": 7.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Whole Ingredients Measured to the Gram",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              42,
+              23,
+              49
+            ],
+            "ratio": 16.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__sub",
+            "text": "Our club kitchen preps small batches eve",
+            "colour": "rgb(212, 195, 220)",
+            "background": [
+              42,
+              23,
+              49
+            ],
+            "ratio": 9.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Standard Club",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              75,
+              48,
+              86
+            ],
+            "ratio": 11.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Base 520 kcal · Balanced recovery",
+            "colour": "rgb(212, 195, 220)",
+            "background": [
+              75,
+              48,
+              86
+            ],
+            "ratio": 6.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "order-cta",
+            "text": "Send Kitchen Enquiry via Email",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              174,
+              59,
+              154
+            ],
+            "ratio": 5.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "FFIFEET CTUB",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              36,
+              19,
+              43
+            ],
+            "ratio": 17.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Fitness & Healthy Club Food · Static tem",
+            "colour": "rgb(212, 195, 220)",
+            "background": [
+              36,
+              19,
+              43
+            ],
+            "ratio": 10.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "kitchen@fitclubfood.example",
+            "colour": "rgb(246, 241, 249)",
+            "background": [
+              36,
+              19,
+              43
+            ],
+            "ratio": 15.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle",
+            "text": "Pause motion",
+            "colour": "rgb(246, 241, 249)",
+            "background": [
+              63,
+              38,
+              73
+            ],
+            "ratio": 11.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "VIEW MENU",
+          "colour": "rgb(234, 147, 228)",
+          "width": "3px",
+          "ratio": 7.01
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#main"
+          },
+          {
+            "label": "FitClub Food — FFIFEET CTUB home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#home"
+          },
+          {
+            "label": "CLASSES",
+            "href": "#bowls",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#bowls"
+          },
+          {
+            "label": "NUTRITION",
+            "href": "#nutrition",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#nutrition"
+          },
+          {
+            "label": "BOWLS",
+            "href": "#plans",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#plans"
+          },
+          {
+            "label": "CHEF TABLE",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#order"
+          },
+          {
+            "label": "Order a healthy club bowl",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#order"
+          },
+          {
+            "label": "VIEW MENU",
+            "href": "#bowls",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#bowls"
+          },
+          {
+            "label": "Send Kitchen Enquiry via Email",
+            "href": "mailto:kitchen@fitclubfood.example?subject=FitClub%20Bowl%20Enquiry%20-%20Club%20Harvest%20Platter&body=Hello%20FitClub%20Kitchen%2C%0A%0AI%20would%20like%20to%20enquire%20about%20ordering%3A%0A-%20Platter%3A%20Club%20Harvest%20Platter%0A-%20Portion%3A%20Standard%20(520%20kcal)%0A-%20Macros%3A%20520%20kcal%20%C2%B7%2024g%20Protein%20%C2%B7%2014g%20Fibre%0A-%20Indicative%20Rate%3A%20%2414%20%2F%20bowl%0A",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:kitchen@fitclubfood.example?subject=FitClub%20Bowl%20Enquiry%20-%20Club%20Harvest%20Platter&body=Hello%20FitClub%20Kitchen%2C%0A%0AI%20would%20like%20to%20enquire%20about%20ordering%3A%0A-%20Platter%3A%20Club%20Harvest%20Platter%0A-%20Portion%3A%20Standard%20(520%20kcal)%0A-%20Macros%3A%20520%20kcal%20%C2%B7%2024g%20Protein%20%C2%B7%2014g%20Fibre%0A-%20Indicative%20Rate%3A%20%2414%20%2F%20bowl%0A"
+          },
+          {
+            "label": "FFIFEET CTUB",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#home"
+          },
+          {
+            "label": "kitchen@fitclubfood.example",
+            "href": "mailto:kitchen@fitclubfood.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:kitchen@fitclubfood.example"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#home"
+          },
+          {
+            "label": "kitchen@fitclubfood.example",
+            "href": "mailto:kitchen@fitclubfood.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:kitchen@fitclubfood.example"
+          },
+          {
+            "label": "Go to Order Desk",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/fitclub-food/index.html#order"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 620,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              42,
+              23,
+              49
+            ],
+            "ratio": 16.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "FFIFEET CTUB",
+            "colour": "rgb(246, 241, 249)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 13.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "CLASSES",
+            "colour": "rgb(246, 241, 249)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 13.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "header-pill__box",
+            "text": "ORDER",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 15.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "Fitreess &",
+            "colour": "rgb(234, 147, 228)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 7.01,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Healthy ClubFood",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 15.03,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__lead",
+            "text": "Freshly prepared macro bowls crafted wit",
+            "colour": "rgb(212, 195, 220)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 9.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__cta-box",
+            "text": "VIEW MENU",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              162,
+              58,
+              160
+            ],
+            "ratio": 5.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-item__sub",
+            "text": "Prepared fresh",
+            "colour": "rgb(191, 169, 202)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 6.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "01 / Signature Club Platters",
+            "colour": "rgb(234, 147, 228)",
+            "background": [
+              52,
+              30,
+              60
+            ],
+            "ratio": 7.01,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "platter-card__tag",
+            "text": "Platter 01 · Default",
+            "colour": "rgb(234, 147, 228)",
+            "background": [
+              63,
+              38,
+              73
+            ],
+            "ratio": 6.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Club Harvest Platter",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              63,
+              38,
+              73
+            ],
+            "ratio": 13.25,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Crisp leaf lettuce, blackberries, cherry",
+            "colour": "rgb(212, 195, 220)",
+            "background": [
+              63,
+              38,
+              73
+            ],
+            "ratio": 7.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "520 kcal",
+            "colour": "rgb(246, 241, 249)",
+            "background": [
+              42,
+              23,
+              49
+            ],
+            "ratio": 14.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "$14 / bowl",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              63,
+              38,
+              73
+            ],
+            "ratio": 13.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "02 / Macro & Ingredient Architecture",
+            "colour": "rgb(234, 147, 228)",
+            "background": [
+              42,
+              23,
+              49
+            ],
+            "ratio": 7.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Whole Ingredients Measured to the Gram",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              42,
+              23,
+              49
+            ],
+            "ratio": 16.6,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__sub",
+            "text": "Our club kitchen preps small batches eve",
+            "colour": "rgb(212, 195, 220)",
+            "background": [
+              42,
+              23,
+              49
+            ],
+            "ratio": 9.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Standard Club",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              75,
+              48,
+              86
+            ],
+            "ratio": 11.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Base 520 kcal · Balanced recovery",
+            "colour": "rgb(212, 195, 220)",
+            "background": [
+              75,
+              48,
+              86
+            ],
+            "ratio": 6.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "order-cta",
+            "text": "Send Kitchen Enquiry via Email",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              174,
+              59,
+              154
+            ],
+            "ratio": 5.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "brand",
+            "text": "FFIFEET CTUB",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              36,
+              19,
+              43
+            ],
+            "ratio": 17.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Fitness & Healthy Club Food · Static tem",
+            "colour": "rgb(212, 195, 220)",
+            "background": [
+              36,
+              19,
+              43
+            ],
+            "ratio": 10.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "kitchen@fitclubfood.example",
+            "colour": "rgb(246, 241, 249)",
+            "background": [
+              36,
+              19,
+              43
+            ],
+            "ratio": 15.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle",
+            "text": "Pause motion",
+            "colour": "rgb(246, 241, 249)",
+            "background": [
+              63,
+              38,
+              73
+            ],
+            "ratio": 11.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "VIEW MENU",
+          "colour": "rgb(234, 147, 228)",
+          "width": "3px",
+          "ratio": 7.01
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "fitclub-food/assets/css/style.css",
+    "fitclub-food/assets/img/platter-berry.webp",
+    "fitclub-food/assets/img/platter-club.webp",
+    "fitclub-food/assets/img/platter-protein.webp",
+    "fitclub-food/assets/js/main.js",
+    "fitclub-food/CUSTOMISE.md",
+    "fitclub-food/index.html",
+    "fitclub-food/LICENCE.txt",
+    "fitclub-food/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/platter-berry.webp",
+    "assets/img/platter-club.webp",
+    "assets/img/platter-protein.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

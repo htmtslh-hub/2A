@@ -1,0 +1,14 @@
+{
+  "id": "t54",
+  "slug": "spaceedu",
+  "name": "SpaceEdu",
+  "version": "1.0.1",
+  "bytes": 12505,
+  "sha256": "b55d5f7d7a8c6b479263309e542bc4b82b75ad326e44ed410a853abda6a6d16e",
+  "files": [
+    "CUSTOMISE.md",
+    "index.html",
+    "LICENCE.txt",
+    "README.md"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "syntax": "PASS",
+  "defaultMotionWithoutSystemGate": "PASS",
+  "autoplayRejectionShowsButton": "PASS",
+  "successfulRetryHidesButton": "PASS",
+  "mutedBeforePlay": "PASS",
+  "playCalls": 2,
+  "browserPlayback": "NOT TESTED: file URL browser inspection was blocked; no alternate browser path attempted"
+}

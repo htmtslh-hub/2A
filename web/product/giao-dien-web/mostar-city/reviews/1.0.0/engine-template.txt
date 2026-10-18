@@ -1,0 +1,92 @@
+/* Mostar City — finite, demand-driven scroll and pointer animation. */
+(() => {
+'use strict';
+const section=document.querySelector('.cinema-scroll');
+const root=document.documentElement;
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
+const track=document.querySelector('.sights-track');
+const sightsControls=document.querySelector('.sights-controls');
+const prev=document.querySelector('.sight-prev');
+const next=document.querySelector('.sight-next');
+const originals=[...document.querySelectorAll('.sight-card')];
+const originalSightCount=originals.length;
+let targetMouseX=0,targetMouseY=0,mouseX=0,mouseY=0,targetScroll=0,smoothScroll=0;
+let initialized=false,rafPending=false,sightCards=[],activeSight=originalSightCount;
+let normalizeTimer=0;
+const clamp=(v,min=0,max=1)=>Math.min(max,Math.max(min,v));
+const smoothstep=(e0,e1,v)=>{const x=clamp((v-e0)/(e1-e0));return x*x*(3-2*x);};
+const lerp=(a,b,t)=>a+(b-a)*t;
+const segmentInOut=(s,a,b,c,d)=>{const enter=smoothstep(a,b,s),exit=smoothstep(c,d,s);return {enter,exit,active:enter*(1-exit)};};
+const getScrollDistance=()=>clamp(-section.getBoundingClientRect().top,0,section.offsetHeight-innerHeight);
+const set=(key,value)=>root.style.setProperty(key,String(value));
+function update(){
+ rafPending=false;
+UPDATE
+WRITES
+ const visible=sightsEnter>.01;
+ sightCards.forEach(card=>{card.tabIndex=visible?0:-1;});
+ prev.tabIndex=next.tabIndex=sightsControlsEnter>.98?0:-1;
+ const note=document.querySelector('.note-button');
+ note.tabIndex=panel3Opacity>.1?0:-1;
+ note.style.pointerEvents=panel3Opacity>.1?'auto':'none';
+ if(Math.abs(smoothScroll-targetScroll)>.08 || Math.abs(mouseX-targetMouseX)>.001 || Math.abs(mouseY-targetMouseY)>.001)requestTick();
+}
+function requestTick(){if(!rafPending){rafPending=true;requestAnimationFrame(update);}}
+function updateSightSlider(){
+ if(!sightCards.length)return;
+ const cardWidth=sightCards[0].offsetWidth;
+ const gap=parseFloat(getComputedStyle(track).columnGap||'0');
+ set('--sights-shift',`${-(cardWidth+gap)*activeSight}px`);
+ sightCards.forEach((card,i)=>card.classList.toggle('is-active',i===activeSight));
+}
+function jumpSightSlider(i){
+ track.classList.add('is-jumping');activeSight=i;updateSightSlider();
+ requestAnimationFrame(()=>requestAnimationFrame(()=>track.classList.remove('is-jumping')));
+}
+function normalizeSightSlider(){
+ clearTimeout(normalizeTimer);
+ if(activeSight>=originalSightCount*2)jumpSightSlider(activeSight-originalSightCount);
+ else if(activeSight<originalSightCount)jumpSightSlider(activeSight+originalSightCount);
+}
+function moveSightSlider(dir){
+ // Keep rapid input inside the three cloned sets before transitionend arrives.
+ if(activeSight<=0 || activeSight>=sightCards.length-1)normalizeSightSlider();
+ activeSight+=dir;updateSightSlider();scheduleNormalize();
+}
+function scheduleNormalize(){clearTimeout(normalizeTimer);normalizeTimer=setTimeout(normalizeSightSlider,700);}
+function selectSightCard(card){const i=Number(card.dataset.sightIndex);if(Number.isFinite(i)){activeSight=i;updateSightSlider();scheduleNormalize();}}
+function setupSightSlider(){
+ track.replaceChildren();
+ for(let setIndex=0;setIndex<3;setIndex++)originals.forEach((card,cardIndex)=>{
+  const clone=card.cloneNode(true);clone.dataset.sightIndex=setIndex*originalSightCount+cardIndex;track.append(clone);
+ });
+ sightCards=[...track.querySelectorAll('.sight-card')];activeSight=originalSightCount;
+ sightCards.forEach(card=>{
+  card.addEventListener('click',()=>selectSightCard(card));
+  card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectSightCard(card);}});
+ });
+ track.addEventListener('transitionend',event=>{if(event.target===track&&event.propertyName==='transform')normalizeSightSlider();});
+ updateSightSlider();
+}
+window.addEventListener('scroll',requestTick,{passive:true});
+window.addEventListener('resize',()=>{updateSightSlider();requestTick();});
+window.addEventListener('pointermove',event=>{
+ targetMouseX=event.clientX/innerWidth-.5;targetMouseY=event.clientY/innerHeight-.5;
+ if(reduceMotion.matches)targetMouseX=targetMouseY=0;
+ requestTick();
+},{passive:true});
+reduceMotion.addEventListener('change',()=>{targetMouseX=targetMouseY=0;requestTick();});
+prev.addEventListener('click',()=>moveSightSlider(-1));next.addEventListener('click',()=>moveSightSlider(1));
+// Required hrefs map onto the continuous cinematic timeline.
+const stops={'#cinema':0,'#bridge':1060,'#bazaar':2320,'#routes':3700};
+function goTo(hash){const offset=stops[hash];if(offset===undefined)return;window.scrollTo({top:section.offsetTop+offset,behavior:reduceMotion.matches?'instant':'smooth'});}
+document.querySelectorAll('.site-nav a,.site-logo').forEach(a=>a.addEventListener('click',event=>{event.preventDefault();history.replaceState(null,'',a.getAttribute('href'));goTo(a.getAttribute('href'));}));
+const dialog=document.querySelector('.info-dialog');
+function openInfo(title,copy){document.querySelector('#dialog-title').textContent=title;document.querySelector('.dialog-copy').textContent=copy;dialog.showModal();}
+document.querySelector('.note-button').addEventListener('click',()=>openInfo('Old town notes',"Stone lanes, mosque courtyards, copper stalls, and riverside coffee stay within a short walk of Stari Most. Explore Kujundziluk, then return to the Neretva for the view of the bridge."));
+document.querySelector('.language-switcher').addEventListener('click',()=>openInfo('Language: English','This demo is available in English. Additional translations have not been included.'));
+document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
+setupSightSlider();requestTick();
+if(location.hash in stops)goTo(location.hash);
+})();

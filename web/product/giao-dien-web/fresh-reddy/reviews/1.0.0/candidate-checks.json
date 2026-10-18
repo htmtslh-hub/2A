@@ -1,0 +1,140 @@
+{
+  "chromium": {
+    "version": "153.0.8010.12",
+    "sizes": [
+      {
+        "width": 898,
+        "height": 496,
+        "scroll": 898,
+        "client": 898,
+        "h1": 1,
+        "brokenAnchors": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scroll": 1440,
+        "client": 1440,
+        "h1": 1,
+        "brokenAnchors": []
+      },
+      {
+        "width": 820,
+        "height": 1180,
+        "scroll": 820,
+        "client": 820,
+        "h1": 1,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "scroll": 375,
+        "client": 375,
+        "h1": 1,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "scroll": 320,
+        "client": 320,
+        "h1": 1,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      }
+    ],
+    "errors": [],
+    "midReveal": {
+      "opacity": "0.463695",
+      "transform": "matrix(1, 0, 0, 1, 0, 20.1114)"
+    },
+    "endReveal": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "reducedMotion": "matrix(1, 0, 0, 1, 0, 23.1128)",
+    "noJS": {
+      "scroll": 320,
+      "client": 320,
+      "links": true
+    }
+  },
+  "firefox": {
+    "version": "155.0",
+    "sizes": [
+      {
+        "width": 898,
+        "height": 496,
+        "scroll": 898,
+        "client": 898,
+        "h1": 1,
+        "brokenAnchors": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scroll": 1440,
+        "client": 1440,
+        "h1": 1,
+        "brokenAnchors": []
+      },
+      {
+        "width": 820,
+        "height": 1180,
+        "scroll": 820,
+        "client": 820,
+        "h1": 1,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "scroll": 375,
+        "client": 375,
+        "h1": 1,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "scroll": 320,
+        "client": 320,
+        "h1": 1,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      }
+    ],
+    "errors": [],
+    "midReveal": {
+      "opacity": "0.497425",
+      "transform": "matrix(1, 0, 0, 1, 0, 18.8466)"
+    },
+    "endReveal": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "reducedMotion": "matrix(1, 0, 0, 1, 0, 24.5666)",
+    "noJS": {
+      "scroll": 320,
+      "client": 320,
+      "links": true
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "t45",
+  "slug": "nourish-bowl",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-16T13:20:13.726Z",
+  "demo": "/demos/nourish-bowl/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "caf4dfd93d8c",
+  "sha256": "caf4dfd93d8c783665716497f0468c1892b8da2a7c66960b01226ce5be641d2f",
+  "demoHtmlSha256": "84abe38b8d420a9b4066a56c074a86d5c8920d23c51cc1f286832b5255ac6e8f",
+  "demoSha256": "c50ad7b0d5001f8187e9d0ddb2d7bfbbaa9604a277b7ed6d4f7676705d1c0984",
+  "bytes": 613526,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nourish-bowl-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nourish-bowl-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nourish-bowl-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nourish-bowl-return.jpg"
+  ]
+}

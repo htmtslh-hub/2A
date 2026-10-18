@@ -1,0 +1,8 @@
+# Nourish Bowl — acceptance 1.0.0
+16/10/2026. Local visual candidate. Gate FAIL for release; design rubric 88.44/100, below strict >95. This is an interpretive comparison, not pixel accuracy. Original English copy/brand replaces unreadable reference text as declared in brief. Viewer overlays are excluded; no crop/scale. Ref/candidate 868×874 DPR1. Weights/axis reasons in acceptance.json; comparison/ has side-by-side, overlay and diff. Pixel diagnostic does not grant PASS.
+
+Visual differences: food poses/texture, blue bowl size, platter arrangement, photographic versus vector leaves, pictogram shapes, typography and some spacing. No whole screenshot used as the web page. Two generated PNG cutouts use real alpha, see assets.json and exact prompts.
+
+Browser checks: Chromium 153.0.8010.12 and Firefox 155.0 Windows file URL; four prescribed sizes and reference size. No overflow; main image loads; internal anchors exist; mobile menu/Escape focus pass. No-JS narrow navigation/content pass. Supplemental Chromium HTTP: axe 0 violations, skip link main target, menu link close/breakpoint reset, native bowl details open, offline file title, 720×450 layout equivalent pass. This does not prove full manual contrast or actual browser zoom. Primary candidate-checks.json measured an unanimated h2 inside the animated wrapper; motion-checks.json correctly measures the wrapper and shows opacity/transform mid-transition and cleared end state in both engines.
+
+Forward scroll reveals pass; full reverse/resize/Edge/Cốc Cốc motion suite NOT TESTED. No Safari or physical-device claims. ZIP/catalogue/store-preview/deploy N/A to local scope. No package produced before acceptance. Raster/size profile and commercial image terms unresolved.

@@ -1,0 +1,275 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "b4c800ec0024f118a20d510248567a83644afc462931341c9a9a8f163fe57106",
+  "references": [
+    {
+      "file": "reference.png",
+      "sha256": "df347587a042ae94064a201c060e8f0d5a8e8d3a2baba3f571301740b0808371",
+      "size": [
+        746,
+        1298
+      ],
+      "crop": [
+        3,
+        4,
+        729,
+        1294
+      ],
+      "scale": "729/1440 uniformly; height rounded to1294",
+      "excluded": "External AI-edit badge and sparkle viewer overlay; their obscured website regions not scored"
+    }
+  ],
+  "views": [
+    {
+      "name": "desktop reference",
+      "viewport": [
+        1440,
+        2556
+      ],
+      "dpr": 1,
+      "zoom": 1,
+      "scroll": 0,
+      "screenshot": "reference-view.png",
+      "comparison": "side-by-side.png",
+      "regions": [
+        {
+          "name": "navigation",
+          "weight": 0.08,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Logo/link/capsule row at corresponding margins."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Wordmark reconstructed in system sans; small glyph differences."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Ivory and near-black match; reference compression excluded."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "Text logo matches wording; not supplied as vector."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Reference slim header and right group retained."
+            }
+          ],
+          "score": 96.7
+        },
+        {
+          "name": "hero",
+          "weight": 0.42,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Left title and upright right product, stamp and section boundary align in side-by-side."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Narrow two-line title and three-line lead retained; glyph shapes and 6px title baseline differ at reference scale."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Ivory, orange and black palette retained; contour field is redrawn."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 94,
+              "reason": "Orange lattice, grey cap/red light, long arch and ear cushion pose match; vent/cage microgeometry is generated."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "CTA/stamp/counter align; added previous/next hit targets and 44px dots spread states slightly."
+            }
+          ],
+          "score": 96.05
+        },
+        {
+          "name": "lifestyle",
+          "weight": 0.25,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Dark rounded band, left raised-face model and right copy/icons occupy matching bands."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 93,
+              "reason": "Narrow FEEL preserved; brush face is visibly heavier/rounder than reference lettering."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Near-black panel and orange brush/hoodie retained."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 94,
+              "reason": "Same fictional campaign composition, closed eyes, right-facing raised head and orange headset; face/hoodie folds differ."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Model hair slightly lower and hoodie extends left by about23px; text/icon spacing follows reference."
+            }
+          ],
+          "score": 95.45
+        },
+        {
+          "name": "product-story",
+          "weight": 0.2,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Left headline and open-angle product align; section/feature boundary preserved."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Condensed two-line title and orange INSPIRE match hierarchy; small line-height difference."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Ivory/circle/orange retained; softer grain than source."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 94,
+              "reason": "Both earcups and open arch in original pose; earcup grille and cushion microgeometry differ."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Headline/image blocks and Learn More button align; product top about7px lower at reference scale."
+            }
+          ],
+          "score": 96.05
+        },
+        {
+          "name": "visible-features",
+          "weight": 0.05,
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Four columns, thin dividers, rounded outline align."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Four original labels and two-line details retained; system glyph widths differ."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Ivory and thin neutral borders retained."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 94,
+              "reason": "Four semantically matching custom line icons; exact paths reconstructed."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Feature density retained; external AI edit/viewer overlays are excluded and never rendered."
+            }
+          ],
+          "score": 96.3
+        }
+      ],
+      "score": 95.96449999999999
+    }
+  ],
+  "fidelity": {
+    "method": "weighted regional visual-review judgement, not pixel accuracy",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "score": 95.96449999999999,
+    "status": "PASS",
+    "pixelDiagnostic": {
+      "reference": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\beetbuh\\reviews\\1.0.0\\reference-crop.png",
+      "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\beetbuh\\reviews\\1.0.0\\comparison-actual.png",
+      "size": [
+        729,
+        1294
+      ],
+      "referenceCrop": null,
+      "alphaBackground": "white",
+      "meanAbsoluteRgbError": 22.971225924724504,
+      "pixelMatchPercent": 72.66936350741949,
+      "tolerance": 16,
+      "gate": "NOT ASSESSED",
+      "fidelityRubric": "NOT SCORED",
+      "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+    }
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: 4 browsers, intermediate frames, both wraps, rapid clicks, keys/swipe, CSS-disabled fallback, pause/reload and zero idle frames"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: actual scroll midframe, settled/reverse states and resize"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Still screenshot, no video input"
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: 4 sizes plus breakpoint, keyboard, axe, no JS, offline file, missing artwork and network/console",
+      "supplement.json: actual contrast, zoom-equivalent, menu resize and anchors",
+      "CUSTOMISE.md: ten steps/twelve prompts/literal edits"
+    ]
+  },
+  "blockers": [],
+  "gate": "PASS"
+}

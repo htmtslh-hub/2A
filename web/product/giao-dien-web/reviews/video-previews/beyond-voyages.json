@@ -1,0 +1,48 @@
+{
+  "id": "t51",
+  "slug": "beyond-voyages",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-17T09:41:17.840Z",
+  "demo": "/demos/beyond-voyages/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "89fbe96db966",
+  "sha256": "89fbe96db9662d6874452fbd74f4aaedb2f2d037b28162adde365eeadd6be1b5",
+  "demoHtmlSha256": "a011c8fb09da56e65a9c9932e58bfa9a9ed01ab301d20653c9c32e12a7023540",
+  "demoSha256": "0df635c352e8cb51c01f77434aae72d56625656b7485110b2d85e7949392ee61",
+  "bytes": 873448,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.46,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"arc-node arc-node--pos-4\" data-scene-btn=\"4\" aria-pressed=\"false\" aria-label=\"Show Grand Canal, Venice, Italy\" data-next-preview=\"\">\n                <s"
+    },
+    {
+      "seconds": 4.822,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"arc-node arc-node--pos-0\" data-scene-btn=\"0\" aria-pressed=\"false\" aria-label=\"Show Cameo Island, Zakynthos, Greece\" data-next-preview=\"\">\n             "
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\beyond-voyages-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\beyond-voyages-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\beyond-voyages-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\beyond-voyages-return.jpg"
+  ]
+}

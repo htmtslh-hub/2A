@@ -1,0 +1,135 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "1860136643aa92833a1e6b51e128478ca6303770d03ab8ecdbae9bffe7d4623b",
+  "references": [
+    {
+      "path": "D:\\3. Dự án\\anh mau\\fe42498de69d66c33f8c6.jpg",
+      "sha256": "83205f32797bebbbe0fa484c176d05b2de2beb067f3c66c0d0037898ca7392ce",
+      "size": [
+        868,
+        874
+      ],
+      "crop": null,
+      "excludedOverlay": "viewer expand/refresh controls lower-right"
+    }
+  ],
+  "views": [
+    {
+      "viewport": [
+        868,
+        874
+      ],
+      "dpr": 1,
+      "state": "settled page top",
+      "screenshot": "screenshots/chromium-868.png",
+      "regions": [
+        {
+          "region": "navigation",
+          "weight": 10,
+          "axes": {
+            "geometry": 90,
+            "typography": 82,
+            "colour": 90,
+            "imagery": 95,
+            "spacing": 88
+          },
+          "reason": "Different meaningful brand/copy replaces unreadable reference, nav starts farther right.",
+          "score": 89.35
+        },
+        {
+          "region": "top-bowl",
+          "weight": 30,
+          "axes": {
+            "geometry": 90,
+            "typography": 95,
+            "colour": 90,
+            "imagery": 87,
+            "spacing": 90
+          },
+          "reason": "Generated bowl has close fruit placement but grain size and rim perspective differ; bowl is slightly smaller.",
+          "score": 90.25
+        },
+        {
+          "region": "headline-cta",
+          "weight": 20,
+          "axes": {
+            "geometry": 91,
+            "typography": 86,
+            "colour": 91,
+            "imagery": 96,
+            "spacing": 88
+          },
+          "reason": "Original English text explicitly declared; font and letter shapes differ; positions close.",
+          "score": 90.8
+        },
+        {
+          "region": "feature-strip",
+          "weight": 15,
+          "axes": {
+            "geometry": 89,
+            "typography": 85,
+            "colour": 88,
+            "imagery": 72,
+            "spacing": 86
+          },
+          "reason": "Four circular icons match structure; original inline icons differ and microcopy uses actual English.",
+          "score": 83.35
+        },
+        {
+          "region": "lower-section",
+          "weight": 25,
+          "axes": {
+            "geometry": 90,
+            "typography": 87,
+            "colour": 87,
+            "imagery": 83,
+            "spacing": 89
+          },
+          "reason": "Oversized platter approximates reference but ingredients/proportions differ; decorative leaf is vector, not photo.",
+          "score": 87.05
+        }
+      ],
+      "score": 88.44
+    }
+  ],
+  "fidelity": {
+    "method": "weighted visual rubric, not pixel accuracy",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "status": "FAIL",
+    "score": 88.44
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "motion-checks.json finite RAF mid/end, candidate-checks.json OS reduced still animates"
+    ]
+  },
+  "scroll": {
+    "status": "NOT TESTED",
+    "evidence": [
+      "forward scroll reveal measured; full reverse/resize matrix incomplete"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "evidence": [
+      "image-only input"
+    ]
+  },
+  "technical": {
+    "status": "NOT TESTED",
+    "evidence": [
+      "candidate-checks.json",
+      "supplemental.json"
+    ]
+  },
+  "blockers": [
+    "Local similar-design candidate below >95 exact-fidelity requirement.",
+    "Eight-file raster/size departures require resolution before commercial packaging.",
+    "Manual contrast/tap-target, real browser zoom and full motion matrix not completed."
+  ],
+  "gate": "FAIL"
+}

@@ -1,0 +1,328 @@
+[
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "model": "ready",
+    "video": [
+      {
+        "time": 0,
+        "ready": 0,
+        "paused": true
+      },
+      {
+        "time": 0,
+        "ready": 0,
+        "paused": true
+      }
+    ],
+    "viewports": [
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "state": {
+          "width": 1440,
+          "scroll": 1440,
+          "links": {
+            "x": 20,
+            "y": 30.5,
+            "width": 278.53125,
+            "height": 17,
+            "top": 30.5,
+            "right": 298.53125,
+            "bottom": 47.5,
+            "left": 20
+          },
+          "brand": {
+            "x": 1200.375,
+            "y": 17,
+            "width": 219.625,
+            "height": 44,
+            "top": 17,
+            "right": 1420,
+            "bottom": 61,
+            "left": 1200.375
+          },
+          "canvas": "1"
+        },
+        "opened": "true",
+        "closed": "false"
+      },
+      {
+        "viewport": [
+          820,
+          1180
+        ],
+        "state": {
+          "width": 820,
+          "scroll": 820,
+          "links": {
+            "x": 20,
+            "y": 30.5,
+            "width": 278.53125,
+            "height": 17,
+            "top": 30.5,
+            "right": 298.53125,
+            "bottom": 47.5,
+            "left": 20
+          },
+          "brand": {
+            "x": 580.375,
+            "y": 17,
+            "width": 219.625,
+            "height": 44,
+            "top": 17,
+            "right": 800,
+            "bottom": 61,
+            "left": 580.375
+          },
+          "canvas": "1"
+        },
+        "opened": "true",
+        "closed": "false"
+      },
+      {
+        "viewport": [
+          375,
+          812
+        ],
+        "state": {
+          "width": 375,
+          "scroll": 375,
+          "links": {
+            "x": 16,
+            "y": 24.5,
+            "width": 139.625,
+            "height": 17,
+            "top": 24.5,
+            "right": 155.625,
+            "bottom": 41.5,
+            "left": 16
+          },
+          "brand": {
+            "x": 183.4375,
+            "y": 14,
+            "width": 175.5625,
+            "height": 38,
+            "top": 14,
+            "right": 359,
+            "bottom": 52,
+            "left": 183.4375
+          },
+          "canvas": "1"
+        },
+        "opened": "true",
+        "closed": "false"
+      },
+      {
+        "viewport": [
+          320,
+          740
+        ],
+        "state": {
+          "width": 320,
+          "scroll": 320,
+          "links": {
+            "x": 16,
+            "y": 24.5,
+            "width": 139.625,
+            "height": 17,
+            "top": 24.5,
+            "right": 155.625,
+            "bottom": 41.5,
+            "left": 16
+          },
+          "brand": {
+            "x": 155.625,
+            "y": 14,
+            "width": 175.5625,
+            "height": 38,
+            "top": 14,
+            "right": 331.1875,
+            "bottom": 52,
+            "left": 155.625
+          },
+          "canvas": "1"
+        },
+        "opened": "true",
+        "closed": "false"
+      }
+    ],
+    "theme": "true",
+    "info": true,
+    "reduced": "none",
+    "errors": [],
+    "failed": [
+      {
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261016_125941_6c5f1180-2f4e-44ec-b90c-aa0b05e5109b.mp4",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261016_125941_6c5f1180-2f4e-44ec-b90c-aa0b05e5109b.mp4",
+        "error": "net::ERR_ABORTED"
+      }
+    ]
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "model": "ready",
+    "video": [
+      {
+        "time": 0,
+        "ready": 1,
+        "paused": false
+      },
+      {
+        "time": 0,
+        "ready": 1,
+        "paused": false
+      }
+    ],
+    "viewports": [
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "state": {
+          "width": 1440,
+          "scroll": 1440,
+          "links": {
+            "x": 20,
+            "y": 30.5,
+            "width": 278.4666748046875,
+            "height": 17,
+            "top": 30.5,
+            "right": 298.4666748046875,
+            "bottom": 47.5,
+            "left": 20
+          },
+          "brand": {
+            "x": 1200.3333740234375,
+            "y": 17,
+            "width": 219.6666717529297,
+            "height": 44,
+            "top": 17,
+            "right": 1420.0000457763672,
+            "bottom": 61,
+            "left": 1200.3333740234375
+          },
+          "canvas": "1"
+        },
+        "opened": "true",
+        "closed": "false"
+      },
+      {
+        "viewport": [
+          820,
+          1180
+        ],
+        "state": {
+          "width": 820,
+          "scroll": 820,
+          "links": {
+            "x": 20,
+            "y": 30.5,
+            "width": 278.4666748046875,
+            "height": 17,
+            "top": 30.5,
+            "right": 298.4666748046875,
+            "bottom": 47.5,
+            "left": 20
+          },
+          "brand": {
+            "x": 580.3333129882812,
+            "y": 17,
+            "width": 219.6666717529297,
+            "height": 44,
+            "top": 17,
+            "right": 799.9999847412109,
+            "bottom": 61,
+            "left": 580.3333129882812
+          },
+          "canvas": "1"
+        },
+        "opened": "true",
+        "closed": "false"
+      },
+      {
+        "viewport": [
+          375,
+          812
+        ],
+        "state": {
+          "width": 375,
+          "scroll": 375,
+          "links": {
+            "x": 16,
+            "y": 24.5,
+            "width": 139.71665954589844,
+            "height": 17,
+            "top": 24.5,
+            "right": 155.71665954589844,
+            "bottom": 41.5,
+            "left": 16
+          },
+          "brand": {
+            "x": 183.46665954589844,
+            "y": 14,
+            "width": 175.53334045410156,
+            "height": 38,
+            "top": 14,
+            "right": 359,
+            "bottom": 52,
+            "left": 183.46665954589844
+          },
+          "canvas": "1"
+        },
+        "opened": "true",
+        "closed": "false"
+      },
+      {
+        "viewport": [
+          320,
+          740
+        ],
+        "state": {
+          "width": 320,
+          "scroll": 320,
+          "links": {
+            "x": 16,
+            "y": 24.5,
+            "width": 139.71665954589844,
+            "height": 17,
+            "top": 24.5,
+            "right": 155.71665954589844,
+            "bottom": 41.5,
+            "left": 16
+          },
+          "brand": {
+            "x": 155.71665954589844,
+            "y": 14,
+            "width": 175.53334045410156,
+            "height": 38,
+            "top": 14,
+            "right": 331.25,
+            "bottom": 52,
+            "left": 155.71665954589844
+          },
+          "canvas": "1"
+        },
+        "opened": "true",
+        "closed": "false"
+      }
+    ],
+    "theme": "true",
+    "info": true,
+    "reduced": "none",
+    "errors": [],
+    "failed": [
+      {
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261016_125941_6c5f1180-2f4e-44ec-b90c-aa0b05e5109b.mp4",
+        "error": "NS_ERROR_PARSED_DATA_CACHED"
+      }
+    ]
+  }
+]

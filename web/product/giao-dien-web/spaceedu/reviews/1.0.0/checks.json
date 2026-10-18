@@ -1,0 +1,478 @@
+[
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "viewport": [
+      1440,
+      900
+    ],
+    "state": {
+      "width": 1440,
+      "scroll": 1440,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": false
+        },
+        {
+          "planet": "mars",
+          "loaded": false
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "14.2081px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": null,
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "viewport": [
+      820,
+      1180
+    ],
+    "state": {
+      "width": 820,
+      "scroll": 820,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "16.728px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": "true -> false",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "viewport": [
+      375,
+      812
+    ],
+    "state": {
+      "width": 375,
+      "scroll": 375,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "14.26px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": "true -> false",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "viewport": [
+      320,
+      740
+    ],
+    "state": {
+      "width": 320,
+      "scroll": 320,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "14.26px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": "true -> false",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "viewport": [
+      1353,
+      1163
+    ],
+    "state": {
+      "width": 1353,
+      "scroll": 1353,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "18.36px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": null,
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "viewport": [
+      2560,
+      1440
+    ],
+    "state": {
+      "width": 2560,
+      "scroll": 2560,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "22.7329px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": null,
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "viewport": [
+      844,
+      390
+    ],
+    "state": {
+      "width": 844,
+      "scroll": 844,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "12.8617px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": "true -> false",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "reduced": {
+      "classes": "",
+      "video": "none"
+    }
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "viewport": [
+      1440,
+      900
+    ],
+    "state": {
+      "width": 1440,
+      "scroll": 1440,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "14.0781px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": null,
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "viewport": [
+      820,
+      1180
+    ],
+    "state": {
+      "width": 820,
+      "scroll": 820,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "16.5313px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": "true -> false",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "viewport": [
+      375,
+      812
+    ],
+    "state": {
+      "width": 375,
+      "scroll": 375,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "14.2656px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": "true -> false",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "viewport": [
+      320,
+      740
+    ],
+    "state": {
+      "width": 320,
+      "scroll": 320,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "14.2656px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": "true -> false",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "viewport": [
+      1353,
+      1163
+    ],
+    "state": {
+      "width": 1353,
+      "scroll": 1353,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "18.0625px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": null,
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "viewport": [
+      2560,
+      1440
+    ],
+    "state": {
+      "width": 2560,
+      "scroll": 2560,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "22.6563px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": null,
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "viewport": [
+      844,
+      390
+    ],
+    "state": {
+      "width": 844,
+      "scroll": 844,
+      "title": "EARTH",
+      "classes": "",
+      "images": [
+        {
+          "planet": "venus",
+          "loaded": true
+        },
+        {
+          "planet": "mars",
+          "loaded": true
+        }
+      ],
+      "planetStyle": "absolute",
+      "bodyText": "12.6563px"
+    },
+    "cycle": [
+      "VENUS",
+      "MARS",
+      "EARTH"
+    ],
+    "menu": "true -> false",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "reduced": {
+      "classes": "",
+      "video": "none"
+    }
+  }
+]

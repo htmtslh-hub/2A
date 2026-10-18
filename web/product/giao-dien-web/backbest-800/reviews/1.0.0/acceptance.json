@@ -1,0 +1,321 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "date": "2026-10-15T15:13:02.892Z",
+  "candidateHash": "569ee3c2d03beee4a6f1432693c62a5fce2356e8b6c3e8cc206fc71c8f6506c1",
+  "manifest": [
+    {
+      "file": "assets/css/style.css",
+      "bytes": 22781,
+      "sha256": "749992ae5184797c1197a57a7edc81c0b4236ab9976c854d2e4697094f601a3f"
+    },
+    {
+      "file": "assets/img/headphone-black.webp",
+      "bytes": 51298,
+      "sha256": "42c11963fdc7f3168fcf63ff15c2d10b64d1ca6eac1a62ecbc9dad913f0d33e6"
+    },
+    {
+      "file": "assets/img/headphone-red.webp",
+      "bytes": 60626,
+      "sha256": "914482217877fcd80b46373b9a7b69ca8598ecaa6bf5f2a5188f182244cdc071"
+    },
+    {
+      "file": "assets/img/headphone-white.webp",
+      "bytes": 51318,
+      "sha256": "b2d4e39604560f68f32b43fb131ed56a9ea52f21db1af5ddcc5b800a7c3ac6a1"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 14904,
+      "sha256": "193f480f58c48c1d115edeb508e5004be4c58a114ed027ce7896866ee86fc345"
+    },
+    {
+      "file": "CUSTOMISE.md",
+      "bytes": 21609,
+      "sha256": "b83e6503f2a95340acd1a5d81e6da225fcf2f31938c7667a3f4e82b08fe9b924"
+    },
+    {
+      "file": "index.html",
+      "bytes": 17808,
+      "sha256": "037a3ca0ec1a7dccd3fd72397689e372a67555843132d4e44f34035a1b66afda"
+    },
+    {
+      "file": "LICENCE.txt",
+      "bytes": 1930,
+      "sha256": "e8a119e822b256764ce1844c1157f13eb6b06af6d06cfd28fa0b7bcf73350b13"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3156,
+      "sha256": "36c1acd5324ecb0bff1d936f23871ed7d567bea335b2afd7b838ad68974ab1b1"
+    }
+  ],
+  "references": [
+    {
+      "source": "C:/Users/Lenovo/.gemini/antigravity/brain/2dc5ca64-88d3-496a-9887-fe110a537bef/.user_uploaded/media_1792074878844_0322ecdc.png",
+      "sha256": "37693354564c91ae9299728f461ec00e237c1b23e16b59ef2c1b4ccbfd3f75b0",
+      "size": [
+        760,
+        434
+      ],
+      "crop": null,
+      "scale": 1.894736842105263,
+      "normalized": [
+        1440,
+        822
+      ],
+      "excludedHostUI": [
+        1330,
+        608,
+        110,
+        163
+      ]
+    }
+  ],
+  "views": [
+    {
+      "viewport": [
+        1440,
+        822
+      ],
+      "dpr": 1,
+      "zoom": 1,
+      "state": "Black/01/fit-unselected/closed menu/scroll0",
+      "reference": "reference.png",
+      "screenshot": "candidate.png",
+      "comparison": "visual/side-by-side.png",
+      "regions": [
+        {
+          "name": "Left architectural spine, navigation and social rail",
+          "weight": 0.14,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Concentric logo mark at x57 y53, vertical 4-item navigation stack (PHONE, → HEADPHONE, LAPTOP, SPEAKERS) at x142 y105–238, diagonal charcoal slab and vertical rotated PLANTRONIC / BACKBEST 800 SERIES watermark, vertical social rail at x57 y436–694 and bottom-left glowing circular index trigger at (57, 761) align with the normalized 1440×822 reference."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Uppercase bold 14px navigation and social labels with system Arial match the reference weight and wide tracking."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Charcoal diagonal slab (#1b1a1b) over obsidian (#0b0506) and neon crimson circular index button match the reference surface treatment."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Inline SVG concentric mark and crisp red active arrow (→) reproduce the reference icons cleanly."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "44×44 touch targets preserve the vertical cadence of the 4 nav links, 3 rotated social links and 71px bottom-left circle."
+            }
+          ],
+          "score": 97.2
+        },
+        {
+          "name": "Top-right utility controls (search & glowing bag)",
+          "weight": 0.1,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Circular search button at center (1311, 58) and glowing neon-red circular bag button at center (1375, 58) with top-right count badge at (1400, 39) overlay the normalized reference directly."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Bold 14px count badge inside the glowing bag button remains crisp and legible."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Subtle dark ring border on search and dual-layer neon red glow on the 71px bag circle match the reference."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Inline SVG magnifier and shopping bag glyph with real session-only count badge match the reference iconography."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Spacing between search and bag circle centers (64px) and 44px+ hit areas match the reference."
+            }
+          ],
+          "score": 97.55
+        },
+        {
+          "name": "Center headphone stage, concentric red rings, orbs and badges",
+          "weight": 0.38,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Three-quarter right-facing headphone silhouette (x328–734, y81–684), concentric red target rings centered at (574, 496) with radii 95–392px, three floating glowing red ring orbs at (776, 118), (213, 437) and (306, 773), single-line SPECIAL EDITION frame (x656–826, y372–419) and vertical BEST HEADPHONE 2017 AWARD label align with the normalized reference."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Single-line uppercase SPECIAL EDITION badge, vertical BEST HEADPHONE 2017 AWARD caption and + hotspot symbols match reference tracking and legibility."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Deep crimson radial studio glow, multi-weight concentric red rings and smoky translucent SPECIAL EDITION frame match the reference atmosphere."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "Original generated 900×900 transparent WebP headphone cutouts (Black, White, Red) preserve both exterior and interior arch alpha transparency and match the reference 3/4 right-facing pose, concentric outer cap grooves, 3-rivet inner hinge and pleated leather ear cushions."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Four 44×44 interactive + hotspots on the headband arch, inner hinge, outer driver shell and inner ear cushion sit cleanly on the headphone anatomy."
+            }
+          ],
+          "score": 96.95
+        },
+        {
+          "name": "Right product detail column (brand, title, copy, color, price, CTA)",
+          "weight": 0.28,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "PLANTRONIC / BACKBEST 800 SERIES heading (x855, y200–255), WIRELESS HEADPHONE tagline (y301), 4-line copy block (x855–1295), COLOR: BLACK / WHITE / RED tabs with red active underline, $199 / $239 price row and ← PURCHASE NOW + SOUND PREVIEW row align cleanly with the normalized reference, with compact finish/fit select pills tucked underneath."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Heavy uppercase display title, 56px $199 price, 26px struck-through $239 compare price and 14px tracked labels match the reference hierarchy."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "High-contrast white display text, warm muted body copy (#c7bbbe, 10.86:1 contrast), glowing white purchase disc and red underline accent match the reference palette."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Interactive colourway tabs, native finish/fit selects, session-only enquiry bag CTA and 4.2-second Sound Preview sequence turn the static reference into a working showcase."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 96,
+              "reason": "Vertical rhythm across heading, tagline, copy, color tabs, price row and purchase CTA matches the normalized 1440×822 reference while keeping all controls inside the first screen."
+            }
+          ],
+          "score": 96.8
+        },
+        {
+          "name": "Far-right slide indicator and directional controls",
+          "weight": 0.1,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Slide number 01 at x1391 y398 and stacked 44×44 circular next (→) and previous (←) buttons at center x1391 y439 and y490 match the normalized reference; foreign bottom-right host viewer expand overlay (x1330–1440, y608–771) is excluded."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "14px bold numeric slide indicator and crisp arrow glyphs match the reference."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Subtle dark crimson-bordered circular buttons on obsidian background match the reference surface."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Live slide counter updates 01 / 02 / 03 in sync with directional finite RAF transitions."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "44×44 circular button dimensions and 8px vertical gap match the reference geometry."
+            }
+          ],
+          "score": 97.55
+        }
+      ],
+      "score": 97.063
+    }
+  ],
+  "fidelity": {
+    "method": "weighted regional visual rubric assessed by agent; not pixel accuracy",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "status": "PASS",
+    "score": 97.063,
+    "pixelDiagnostics": "visual/comparison.json",
+    "mobile": "N/A: no mobile reference"
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json:midframe/wrap/rapid/keyboard/swipe/action/replay/pause/defaultOn/noCSSMotion/idle",
+      "evidence/*-motion.png"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json:forward/reverse/mobile/resize",
+      "evidence/*-1440.png and *-320.png captured after real scroll"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Image-only input; local package scope per Product Owner."
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json",
+      "supplement.json",
+      "REFERENCE-MAP.md",
+      "MOTION-MAP.md",
+      "ASSETS.md"
+    ],
+    "limits": [
+      "Safari/physical devices not tested.",
+      "Local package scope only; storefront integration and live deployment excluded per Product Owner instruction."
+    ]
+  },
+  "blockers": [],
+  "gate": "PASS"
+}

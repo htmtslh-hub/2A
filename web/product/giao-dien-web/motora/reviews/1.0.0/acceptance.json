@@ -1,0 +1,314 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "date": "2026-10-15T07:26:55.200Z",
+  "candidateHash": "78f33a3aaf92f4e5a4ab26b4635bba0cb20a0142f2ab4ec1ff97428bdfc56bc7",
+  "manifest": [
+    {
+      "file": "assets/css/style.css",
+      "bytes": 22827,
+      "sha256": "18383a31bb83e89231c0c4c23027c0d5c8c335368776b27d919b60d248167f11"
+    },
+    {
+      "file": "assets/img/coupe.webp",
+      "bytes": 276540,
+      "sha256": "8b2b108680f3c1bfc688023292b382fd787f87d0d6b9c2a3b6b1f01b06b8f011"
+    },
+    {
+      "file": "assets/img/interior.webp",
+      "bytes": 152340,
+      "sha256": "742740d05ac9850eb73be99864df3d2aae622d9764459a4288ec953a6d52854a"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 13542,
+      "sha256": "8d2908b5d87721a462fd5a268c96f626f37163c6f5d2aedde9dadec7a9a7454d"
+    },
+    {
+      "file": "CUSTOMISE.md",
+      "bytes": 21208,
+      "sha256": "37abb6da2a157023f820a62c9461fbb26c210485c27d11080951649de0530305"
+    },
+    {
+      "file": "index.html",
+      "bytes": 14377,
+      "sha256": "093c663c5ce0980621ab335b3faa0c7e050e2a73ab0df5ce34893dfaa8bb6959"
+    },
+    {
+      "file": "LICENCE.txt",
+      "bytes": 1923,
+      "sha256": "f98b64245b6c9d106b6a3b03afd0008969c766abd63e69db6765d3aaf8fe40bd"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2796,
+      "sha256": "eae0318e7aca15ee6b5e8591648abb604d98693e9ffabe20a5de185ed6a0735b"
+    }
+  ],
+  "references": [
+    {
+      "source": "C:/Users/Lenovo/AppData/Local/Temp/codex-clipboard-240bef67-8155-4184-b5d9-5b7f2a1df289.png",
+      "sha256": "0d54ee9f301117fd3f9f3aadf1b5067bd9040b40a35d0b2c2aaf99496f23f31a",
+      "size": [
+        390,
+        284
+      ],
+      "crop": [
+        6,
+        24,
+        378,
+        258
+      ],
+      "scale": 3.8095238095238093,
+      "normalized": [
+        1440,
+        983
+      ]
+    }
+  ],
+  "views": [
+    {
+      "viewport": [
+        1440,
+        983
+      ],
+      "dpr": 1,
+      "zoom": 1,
+      "state": "Gold / Design / scroll0",
+      "reference": "reference.png",
+      "screenshot": "candidate.png",
+      "comparison": "visual-final/side-by-side.png",
+      "regions": [
+        {
+          "name": "Navigation",
+          "weight": 0.14,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Six pills occupy the reference band; Models begins x337 versus about354 in the reference."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 95,
+              "reason": "Font is system Arial; weight and pill text hierarchy retained, tiny original glyphs cannot be identified."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Black active pill, pale surfaces and thin grey outlines match; hover states are additional."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 95,
+              "reason": "UI icons use the same simple line style; suitcase/save details reconstructed."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 96,
+              "reason": "Brand/tool spacing differs by approximately15–20px at the normalized width."
+            }
+          ],
+          "score": 96.1
+        },
+        {
+          "name": "Model heading and notes",
+          "weight": 0.16,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Title at x22 y167; reference approximately x20 y164. Note at x385 y246 and right card x1148 y157."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Italic bold model heading and muted secondary line retained; explanatory microcopy reconstructed."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Off-white, pale note and black-headed right card preserve reference hierarchy."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Faint emblem and information actions retain visual roles; emblem stroke is cleaner."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Right card is approximately18px shorter; body copy wraps differently."
+            }
+          ],
+          "score": 97.2
+        },
+        {
+          "name": "Car, stage and hotspots",
+          "weight": 0.45,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Full right-facing side-profile coupe spans approximately x250–1370 y336–678; reference approximately x250–1365 y340–670."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Short uppercase hotspot labels retained; deliberately stronger readable weight."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 96,
+              "reason": "Champagne body, dark roof/wheels and red brakes retained; hotspot surfaces have stronger contrast."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 95,
+              "reason": "Original car recreates pose, silhouette, spoiler and stance. Reflections, door trim and headlight details visibly differ at close inspection."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Four hotspots occupy rear, roof, body and wheel positions; label sizing differs slightly."
+            }
+          ],
+          "score": 96.4
+        },
+        {
+          "name": "Tabs and colours",
+          "weight": 0.1,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Five vertical tabs and five colours at the feature-heading baseline."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Label sizes reconstructed with a14px readable minimum."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Design black, other tabs pale; same five swatch hues."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Circular swatches and small directional controls preserve their roles."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "44px hit areas expand reference dots without changing the group alignment."
+            }
+          ],
+          "score": 97.2
+        },
+        {
+          "name": "Feature strip",
+          "weight": 0.15,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Five cards with partial last card, seat photograph and black transmission badge; card top about11px above reference."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 94,
+              "reason": "503hp and card hierarchy retained; labels are crisper and some weights differ."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Pale translucent card borders/radii and black transmission area retained."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "New cabin photograph substitutes the tiny reference seat crop; UI icons reconstructed."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 96,
+              "reason": "Grid widths and cropped fifth card closely track the reference; seat crop is slightly wider."
+            }
+          ],
+          "score": 96
+        }
+      ],
+      "score": 96.506
+    }
+  ],
+  "fidelity": {
+    "method": "weighted visual rubric; human-style design assessment, not pixel accuracy",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "status": "PASS",
+    "score": 96.506,
+    "pixelDiagnostics": "visual-final/comparison.json",
+    "mobile": "N/A: no supplied mobile reference"
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: motion, middle screenshot, forward/backward wrap, rapid, keyboard, saved off and OS reduce",
+      "supplement.json: noCSSMotion and noCSSFinal"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: forward/reverse/resize/mobile progress and idleFrames=0",
+      "evidence/complete-*.png: source captured after actual scroll reveals"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Image-only input; store recording is separately generated after acceptance."
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json",
+      "supplement.json",
+      "REFERENCE-MAP.md",
+      "MOTION-MAP.md"
+    ],
+    "limitations": [
+      "Safari and physical devices not tested.",
+      "Paid account download will be reported separately; no purchase or entitlement data is mutated."
+    ]
+  },
+  "blockers": [],
+  "gate": "PASS"
+}

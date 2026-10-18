@@ -1,0 +1,10 @@
+{
+  "slug": "freight-axis",
+  "zip": "web\\product\\giao-dien-web\\freight-axis\\freight-axis.zip",
+  "bytes": 4162,
+  "sha256": "8d70bc68910f5d57e32cc7fc9b3631f3bdd4c8b9c94bf14bab930e7ba6ea473b",
+  "files": [
+    "index.html"
+  ],
+  "byteVerified": true
+}

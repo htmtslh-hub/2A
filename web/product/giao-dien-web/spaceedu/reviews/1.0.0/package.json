@@ -1,0 +1,10 @@
+{
+  "slug": "spaceedu",
+  "zip": "web\\product\\giao-dien-web\\spaceedu\\spaceedu.zip",
+  "bytes": 7129,
+  "sha256": "429b591be6aad205a2692799f35dfc28c076256813a3f23c85203b4392c14843",
+  "files": [
+    "index.html"
+  ],
+  "byteVerified": true
+}

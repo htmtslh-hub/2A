@@ -1,0 +1,51 @@
+{
+  "id": "t62",
+  "slug": "monoframe",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T09:11:23.497Z",
+  "demo": "/demos/monoframe/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "8a20ec978658",
+  "sha256": "8a20ec978658a2fb360c1af2769e6d2fa727f8d96b88f6a1fe448fa1a9050bff",
+  "demoHtmlSha256": "2362fd1f525e7c17e4e4030d18b565ac9c3a405a9469a1e404388af55e6e541c",
+  "demoSha256": "90d6ce1f612179531008736703e699523643c782855e0efe5487e4d47eff1331",
+  "bytes": 321853,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.821,
+      "action": "scrub-right"
+    },
+    {
+      "seconds": 4.91,
+      "action": "click",
+      "selector": "main button:nth-of-type(5)"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 10.412,
+      "action": "scrub-return"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\monoframe-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\monoframe-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\monoframe-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\monoframe-return.jpg"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "reference": "D:\\3. Dự án\\anh mau\\12bfb06a1f7a9f24c66b4.jpg",
+  "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\puro-amor\\reviews\\1.0.0\\screenshots\\chromium-864.png",
+  "size": [
+    864,
+    508
+  ],
+  "referenceCrop": null,
+  "alphaBackground": "white",
+  "meanAbsoluteRgbError": 29.837661459852242,
+  "pixelMatchPercent": 55.660360163312916,
+  "tolerance": 16,
+  "gate": "NOT ASSESSED",
+  "fidelityRubric": "NOT SCORED",
+  "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+}

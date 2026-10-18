@@ -3,6 +3,230 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'atrium-mtl': {
+    vi: {
+      intro: 'Landing page bảo tàng và kho lưu trữ nhiếp ảnh kiến trúc Brutalist một khung nhìn trên nền giấy ấm #f5f4ef với thẻ header trắng nổi, chữ tiêu đề Archivo 900 4 dòng và lưới mosaic 3–6 cột cuộn ngược chiều vô tận 14,6 giây.',
+      notes: '### Bắt đầu\nGiải nén đủ 13 file rồi mở index.html cạnh thư mục assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm chính xác. Không cần cài đặt hay build.\n\n### Font và hình ảnh\nHai font WOFF2 biến thiên tự lưu trữ tại assets/fonts/archivo.woff2 và assets/fonts/inter.woff2; 4 ảnh kiến trúc đen trắng WebP và 1 SVG hạt film khai báo đúng URL CloudFront trong :root kèm bản sao cục bộ trong assets/img/.\n\n### Tương tác & chuyển động\nChuỗi chuyển động WAAPI 2,1 giây khi vào trang bàn giao mượt sang hiệu ứng cuộn ngược chiều 14,6 giây (colDown / colUp); tự động nhân đôi 5 ô mỗi cột bằng JS; hỗ trợ 5 chế độ bố cục (desk, tab-l, tab-p, mob-l, mob) và tôn trọng prefers-reduced-motion.\n\n### Phạm vi\nGiao diện tĩnh một khung nhìn, không kèm hệ thống bán vé trực tuyến hay thanh toán. Đọc kỹ LICENCE.txt trước khi xuất bản.',
+    },
+    en: {
+      intro: 'A single-viewport editorial museum and brutalist architectural photography archive landing page on warm off-white paper (#f5f4ef) with a floating white header card, four-line Archivo 900 display typography and a 14.6s opposing infinite mosaic.',
+      notes: '### Start\nExtract all 13 files and open index.html beside assets/. CUSTOMISE.md includes 10 steps, 12 complete AI prompts and a counted literal edit map. No install or build required.\n\n### Fonts and imagery\nTwo self-hosted variable WOFF2 fonts at assets/fonts/archivo.woff2 and assets/fonts/inter.woff2; four monochrome brutalist WebP photographs and one SVG grain texture referenced via exact CloudFront URLs in :root with byte-identical local copies in assets/img/.\n\n### Interaction & motion\nA 2.1s WAAPI entrance choreography hands off seamlessly to the 14.6s opposing CSS marquee (colDown / colUp); JS clones each column’s 5 tiles once; supports 5 responsive layout modes (desk, tab-l, tab-p, mob-l, mob) and respects prefers-reduced-motion.\n\n### Scope\nStatic single-viewport showcase with no live ticketing or checkout backend. Read LICENCE.txt before publishing.',
+    },
+    zh: {
+      intro: '暖白纸感（#f5f4ef）野兽派建筑摄影博物馆与档案单屏展示页，配备悬浮白色页头、Archivo 900 四行大字标题与 14.6 秒反向无限循环马赛克网格。',
+      notes: '### 开始\n解压全部13个文件，在 assets/ 旁打开 index.html。CUSTOMISE.md 含10个步骤、12条完整AI提示词和精确修改表。无需安装或构建。\n\n### 字体与图像\n内置两个本地可变 WOFF2 字体（assets/fonts/archivo.woff2 与 assets/fonts/inter.woff2）；:root 中使用精确 CloudFront 链接并在 assets/img/ 附带本地副本。\n\n### 交互与动态\n2.1 秒 WAAPI 入场动画无缝衔接 14.6 秒反向 CSS 无限滚动；JS 自动复制每列5个单元格；支持 5 种响应式架构（desk、tab-l、tab-p、mob-l、mob）与减弱动态效果设置。\n\n### 范围\n纯静态单屏展示页，无在线售票或支付后端。发布前请阅读 LICENCE.txt。',
+    },
+  },
+  'maldives-escape': {
+    vi: {
+      intro: 'Trang khám phá khu nghỉ dưỡng và biệt thự trên biển Maldives toàn màn hình với vòm kính mờ tròn, 2 thẻ dọc xem trước resort, nút Book Now viên thuốc trắng và chữ MALDIVES thanh mảnh cỡ lớn theo ảnh tham chiếu.',
+      notes: '### Bắt đầu\nGiải nén đủ 10 file rồi mở index.html cạnh thư mục assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm chính xác. Không cần cài đặt hay build.\n\n### Ảnh và nội dung\nBốn ảnh resort WebP cục bộ trong assets/img/: sunset-pergola-deck.webp, lagoon-slide-villa.webp, aerial-pool-pavilion.webp và underwater-atoll-dining.webp. Thay Maldives Escape, concierge@maldivesescape.example và các mốc [YOUR PRICE] trước khi xuất bản. Google Fonts (Outfit và Plus Jakarta Sans) tùy chọn; font hệ thống hoạt động bình thường khi offline.\n\n### Tương tác & chuyển động\nHai nút mũi tên < / > và 2 thẻ dọc bên trong vòm kính mờ tròn đồng bộ với 4 chấm phân trang đáy, phím mũi tên và vuốt cảm ứng; bộ lọc khu bảo tồn ở Atoll Collection; nút Preview on Hero; menu mobile hỗ trợ Escape và nút Pause motion trong phiên.\n\n### Phạm vi\nGiao diện tĩnh, không kèm hệ thống đặt phòng trực tuyến hay thanh toán. Đọc kỹ LICENCE.txt trước khi phát hành.',
+    },
+    en: {
+      intro: 'A full-bleed Maldives overwater resort and island travel showcase featuring a circular frosted dome, two vertical resort preview cards, a white Book Now pill and oversized geometric MALDIVES typography inspired by the reference design.',
+      notes: '### Start\nExtract all 10 files and open index.html beside assets/. CUSTOMISE.md includes 10 steps, 12 complete AI prompts and a counted literal edit map. No install or build required.\n\n### Artwork and content\nFour local resort WebP images in assets/img/: sunset-pergola-deck.webp, lagoon-slide-villa.webp, aerial-pool-pavilion.webp and underwater-atoll-dining.webp. Replace Maldives Escape, concierge@maldivesescape.example and the [YOUR PRICE] markers before publishing. Google Fonts (Outfit and Plus Jakarta Sans) are optional; system fallbacks work offline.\n\n### Interaction & motion\nThe < / > carousel arrows and two vertical resort cards inside the circular frosted dome synchronize with the 4 bottom pagination dots, arrow keys and touch swipe; category filter pills in Atoll Collection; Preview on Hero jump buttons; Escape-aware mobile menu and session-only Pause motion.\n\n### Scope\nStatic showcase with no live booking engine or checkout backend. Read LICENCE.txt before publishing.',
+    },
+    zh: {
+      intro: '马尔代夫水上别墅与海岛度假全屏展示模板，配备左侧圆形磨砂玻璃穹顶、双纵向预览卡片、白色胶囊 Book Now 按钮与超大几何 MALDIVES 标题。',
+      notes: '### 开始\n解压全部10个文件，在 assets/ 旁打开 index.html。CUSTOMISE.md 含10个步骤、12条完整AI提示词和精确修改表。无需安装或构建。\n\n### 图像与内容\nassets/img/ 中含四张本地度假村 WebP：sunset-pergola-deck.webp、lagoon-slide-villa.webp、aerial-pool-pavilion.webp 与 underwater-atoll-dining.webp。发布前请替换 Maldives Escape、concierge@maldivesescape.example 及 [YOUR PRICE]。Google Fonts（Outfit 与 Plus Jakarta Sans）可选，离线时自动使用系统字体。\n\n### 交互与动态\n左侧圆形磨砂穹顶内的 < / > 箭头与两张纵向卡片同底部四个分页圆点、方向键及触摸滑动实时同步；Atoll Collection 支持分类筛选与回到主视觉预览；含支持 Escape 的移动菜单与会话内暂停控制。\n\n### 范围\n纯静态展示页，无在线预订或支付后端。发布前请阅读 LICENCE.txt。',
+    },
+  },
+  'beyond-voyages': {
+    "vi": {
+      "intro": "Trang khám phá điểm đến và hành trình du lịch cao cấp với sân khấu phong cảnh toàn màn hình và vòng cung 5 điểm đến tương tác theo ảnh tham chiếu.",
+      "notes": "### Bắt đầu\nGiải nén đủ 11 file rồi mở index.html cạnh thư mục assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm chính xác. Không cần cài đặt hay build.\n\n### Ảnh và nội dung\nNăm ảnh phong cảnh WebP cục bộ trong assets/img/: boathouse-lake.webp, cameo-island.webp, koh-phi-phi.webp, cinque-terre.webp và grand-canal.webp. Thay Logoipsum, Beyond Voyages, concierge@beyondvoyages.example và 3 mốc [YOUR PRICE] trước khi xuất bản. Google Fonts (Lobster và Plus Jakarta Sans) tùy chọn; font hệ thống hoạt động bình thường khi offline.\n\n### Tương tác & chuyển động\nVòng cung 5 điểm đến bên phải hero đồng bộ với 5 chấm phân trang dọc, phím mũi tên và vuốt cảm ứng; bộ lọc vùng địa lý ở Destination Atlas; nút View on Hero Stage; menu mobile hỗ trợ Escape và nút Pause motion trong phiên.\n\n### Phạm vi\nGiao diện tĩnh, không kèm hệ thống đặt vé trực tuyến hay thanh toán. Đọc kỹ LICENCE.txt trước khi phát hành."
+    },
+    "en": {
+      "intro": "A luxury travel and destination discovery showcase with a full-bleed scenic hero stage and an interactive 5-destination curved orbital selector inspired by the reference design.",
+      "notes": "### Start\nExtract all 11 files and open index.html beside assets/. CUSTOMISE.md includes 10 steps, 12 complete AI prompts and a counted literal edit map. No install or build required.\n\n### Artwork and content\nFive local scenic WebP images in assets/img/: boathouse-lake.webp, cameo-island.webp, koh-phi-phi.webp, cinque-terre.webp and grand-canal.webp. Replace Logoipsum, Beyond Voyages, concierge@beyondvoyages.example and the three [YOUR PRICE] markers before publishing. Google Fonts (Lobster and Plus Jakarta Sans) are optional; system fallbacks work offline.\n\n### Interaction & motion\nFive orbital destination nodes on the right curve synchronized with 5 vertical pagination dots, arrow keys and touch swipe; regional filter pills in Destination Atlas; View on Hero Stage jump buttons; Escape-aware mobile menu and session-only Pause motion.\n\n### Scope\nStatic showcase with no live booking engine or checkout backend. Read LICENCE.txt before publishing."
+    },
+    "zh": {
+      "intro": "高端旅行与目的地探索展示模板，配备全屏风景主视觉与右侧五目的地弧形轨道切换器。",
+      "notes": "### 开始\n解压全部11个文件，在 assets/ 旁打开 index.html。CUSTOMISE.md 含10个步骤、12条完整AI提示词和精确修改表。无需安装或构建。\n\n### 图像与内容\nassets/img/ 中含五张本地风景 WebP：boathouse-lake.webp、cameo-island.webp、koh-phi-phi.webp、cinque-terre.webp 与 grand-canal.webp。发布前请替换 Logoipsum、Beyond Voyages、concierge@beyondvoyages.example 及三处 [YOUR PRICE]。Google Fonts（Lobster 与 Plus Jakarta Sans）可选，离线时自动使用系统字体。\n\n### 交互与动态\n右侧五个弧形目的地按钮与五个纵向分页点、方向键和触摸滑动实时同步；目的地支持区域筛选与回到主视觉预览；含支持 Escape 的移动菜单与会话内暂停控制。\n\n### 范围\n纯静态展示页，无在线预订或支付后端。发布前请阅读 LICENCE.txt。"
+    }
+  },
+  'vesper-ai': {
+    "vi": {
+      "intro": "Landing page hạ tầng AI vận hành một khung nhìn nền đen tuyền #000000 với video nền 3D điện ảnh, thanh điều hướng liquid-metal, nút liquid-glass quét sáng 115° và chuỗi chuyển động 9-keyframe spring-settle.",
+      "notes": "### Bắt đầu\nGiải nén đủ 9 file rồi mở index.html cạnh inter.woff2, instrument-serif-italic.woff2 và video nền H.264. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm. Không cần cài đặt hay build.\n\n### Font và video\nHai font WOFF2 tự lưu trữ (Inter biến thiên và Instrument Serif nghiêng) kèm dự phòng Google Fonts; video nền H.264 lặp mượt 100% opacity với lớp phủ scrim đa tầng và hạt film SVG feTurbulence.\n\n### Tương tác & chuyển động\nBốn pill điều hướng liquid-metal, các nút CTA liquid-glass quét sáng 115°, tiêu đề H1 cắt mặt nạ hai dòng, chuỗi chuyển động 9-keyframe spring-settle, menu mobile hỗ trợ Escape và nút Pause motion trong phiên.\n\n### Phạm vi\nGiao diện tĩnh một khung nhìn, không kèm backend, tài khoản hay thanh toán. Đọc LICENCE.txt trước khi xuất bản."
+    },
+    "en": {
+      "intro": "A single-viewport operational AI infrastructure landing page on pure black #000000 with a full-bleed cinematic hero video, liquid-metal navigation pills, 115° specular liquid-glass buttons and 9-keyframe spring-settle choreography.",
+      "notes": "### Start\nExtract all 9 files and open index.html beside inter.woff2, instrument-serif-italic.woff2 and the H.264 hero video. CUSTOMISE.md includes 10 steps, 12 AI prompts and counted edits. No install or build required.\n\n### Fonts and video\nTwo self-hosted WOFF2 fonts (Inter variable and Instrument Serif italic) with Google Fonts fallback; looping H.264 hero video with radial/linear scrim overlays and SVG feTurbulence film grain.\n\n### Interaction & motion\nFour liquid-metal navigation pills, 115° specular liquid-glass CTA buttons, two-line masked H1 reveal, 9-keyframe spring-settle entrance choreography, Escape-aware mobile drawer and session-only Pause motion.\n\n### Scope\nStatic single-viewport landing page with no backend, accounts or checkout. Read LICENCE.txt before publishing."
+    },
+    "zh": {
+      "intro": "纯黑 #000000 单屏 AI 运营基础设施着陆页，配备全屏电影级背景视频、液态金属导航胶囊、115° 流光液态玻璃按钮与 9 关键帧弹簧入场动效。",
+      "notes": "### 开始\n解压全部9个文件，在 inter.woff2、instrument-serif-italic.woff2 及 H.264 背景视频旁打开 index.html。CUSTOMISE.md 含10个步骤、12条AI提示词和精确修改表。无需安装或构建。\n\n### 字体与视频\n内置两个本地 WOFF2 字体（Inter 可变字体与 Instrument Serif 斜体）及 Google Fonts 备用；全屏循环 H.264 视频配多层渐变遮罩与 SVG 胶片颗粒。\n\n### 交互与动态\n四个液态金属导航胶囊、115° 流光液态玻璃按钮、双行遮罩主标题、9关键帧弹簧入场动效、支持 Escape 的移动菜单与会话内暂停控制。\n\n### 范围\n静态单屏着陆页，无后端、账户或支付。发布前请阅读 LICENCE.txt。"
+    }
+  },
+  'astro-armor': {
+  "vi": {
+    "intro": "Giao diện sản phẩm áo khoác nền kem, điểm nhấn cam và bố cục ba cột theo ảnh mẫu. Có chọn size, bốn phối màu, bảng size và giỏ demo trong phiên; không có thanh toán hay backend.",
+    "notes": "Giải nén đủ 9 file rồi mở index.html cạnh assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm. Ảnh mẫu JPEG được giữ nguyên và hiển thị qua vùng cắt CSS; hai WebP dùng cho phối màu bổ sung. Độ nét ảnh beige/thumbnail giới hạn bởi ảnh tham chiếu. Có chọn size, màu, yêu thích và giỏ trong phiên với xóa/tổng tiền, bảng size, tìm một sản phẩm và hộp thông tin tài khoản. Không có đăng nhập, tồn kho, nhận đơn hay thanh toán thật. Thay thông tin demo, email và ảnh theo quyền của bạn; xem LICENCE.txt. Motion mặc định bật, có nút tạm dừng trong phiên."
+  },
+  "en": {
+    "intro": "An ivory-and-orange puffer product page with a reference-led three-column composition. Includes size selection, four colour previews, a size guide and a page-session demo bag; no checkout or backend.",
+    "notes": "Extract all 9 files and open index.html beside assets/. CUSTOMISE.md includes ten steps, twelve AI prompts and counted edits. The unchanged supplied JPEG is shown through CSS image-region crops; two WebP files provide alternate colour concepts. Beige and thumbnail resolution is limited to the reference. Size/colour selection, favourite and session bag with removal/subtotal, size guide, single-item search and account information dialog work locally. No login, inventory, order processing or live checkout. Replace demo details, email and artwork with permitted content; read LICENCE.txt. Motion starts enabled with a session pause control."
+  },
+  "zh": {
+    "intro": "奶油白与橙色羽绒服产品页面，采用参考图的三栏布局。包含尺码选择、四种配色预览、尺码表和会话内购物袋演示；无支付或后端。",
+    "notes": "解压全部9个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词及精确修改表。原始JPEG通过CSS局部裁切显示，两个WebP用于额外配色概念。米色主图和缩略图清晰度受参考图限制。本地支持尺码/颜色选择、收藏、可删除并计算小计的会话购物袋、尺码表、单品搜索及账户说明。无登录、库存、订单处理或真实结账。请替换演示资料、邮箱及具有使用权限的图片，并阅读LICENCE.txt。动画默认开启，可在当前会话暂停。"
+  }
+},
+  "fresh-reddy": {
+  "vi": {
+    "intro": "Giao diện dịch vụ cà phê văn phòng nền than, cụm ba cốc PNG trong suốt, nội dung dịch vụ và liên hệ.",
+    "notes": "Giải nén đủ 7 file và mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. Ảnh PNG nền trong suốt được lưu local. Menu mobile hỗ trợ Escape, các nút dẫn section và hiệu ứng reveal hữu hạn. Không có backend, thanh toán hoặc đăng ký tài khoản. Thay email mẫu và nội dung trước khi dùng. Đọc LICENCE.txt: giấy phép không cấp quyền thương hiệu bên thứ ba."
+  },
+  "en": {
+    "intro": "A charcoal workplace-coffee landing page with three transparent cup renders, service sections and contact anchors.",
+    "notes": "Extract all 7 files and open index.html beside assets/. CUSTOMISE.md contains ten steps, twelve AI prompts and counted edits. Transparent PNG artwork is local. Escape-aware mobile menu, section links and finite scroll reveals. No backend, checkout or account system. Replace the sample email and copy. Read LICENCE.txt; third-party trademark rights are not granted."
+  },
+  "zh": {
+    "intro": "炭黑色办公室咖啡服务页面，含三个透明咖啡杯图像、服务介绍及联系入口。",
+    "notes": "解压全部7个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词和精确修改表。本地透明PNG图像；支持Escape的移动菜单、版块链接和有限滚动动画。无后端、支付或账户系统。请替换示例邮箱和文案，并阅读LICENCE.txt；不授予第三方商标权。"
+  }
+},
+  "puro-amor": {
+  "vi": {
+    "intro": "Concept cà phê trắng–xanh đậm, cốc cà phê bắn nước và nội dung tiếng Bồ Đào Nha.",
+    "notes": "Giải nén đủ 7 file và mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. Ảnh PNG nền trong suốt được lưu local. Menu mobile hỗ trợ Escape, các nút dẫn section và hiệu ứng reveal hữu hạn. Không có backend, thanh toán hoặc đăng ký tài khoản. Thay email mẫu và nội dung trước khi dùng. Đọc LICENCE.txt: giấy phép không cấp quyền thương hiệu bên thứ ba."
+  },
+  "en": {
+    "intro": "A white-and-teal coffee concept with a coffee splash hero and Portuguese editorial content.",
+    "notes": "Extract all 7 files and open index.html beside assets/. CUSTOMISE.md contains ten steps, twelve AI prompts and counted edits. Transparent PNG artwork is local. Escape-aware mobile menu, section links and finite scroll reveals. No backend, checkout or account system. Replace the sample email and copy. Read LICENCE.txt; third-party trademark rights are not granted."
+  },
+  "zh": {
+    "intro": "白色与深青色咖啡概念页，含咖啡飞溅主视觉及葡萄牙语内容。",
+    "notes": "解压全部7个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词和精确修改表。本地透明PNG图像；支持Escape的移动菜单、版块链接和有限滚动动画。无后端、支付或账户系统。请替换示例邮箱和文案，并阅读LICENCE.txt；不授予第三方商标权。"
+  }
+},
+  "nourish-bowl": {
+  "vi": {
+    "intro": "Landing page thực phẩm nền xanh đêm với hai ảnh tô trái cây, mục nguyên liệu mở rộng và hướng dẫn chuẩn bị.",
+    "notes": "Giải nén đủ 8 file và mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. Ảnh PNG nền trong suốt được lưu local. Menu mobile hỗ trợ Escape, các nút dẫn section và hiệu ứng reveal hữu hạn. Không có backend, thanh toán hoặc đăng ký tài khoản. Thay email mẫu và nội dung trước khi dùng. Đọc LICENCE.txt: giấy phép không cấp quyền thương hiệu bên thứ ba."
+  },
+  "en": {
+    "intro": "A navy-and-cyan food landing page with two fruit bowl cutouts, expandable ingredients and preparation ideas.",
+    "notes": "Extract all 8 files and open index.html beside assets/. CUSTOMISE.md contains ten steps, twelve AI prompts and counted edits. Transparent PNG artwork is local. Escape-aware mobile menu, section links and finite scroll reveals. No backend, checkout or account system. Replace the sample email and copy. Read LICENCE.txt; third-party trademark rights are not granted."
+  },
+  "zh": {
+    "intro": "深蓝与青色健康饮食页面，含两张水果餐盘图像、可展开食材及制作建议。",
+    "notes": "解压全部8个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词和精确修改表。本地透明PNG图像；支持Escape的移动菜单、版块链接和有限滚动动画。无后端、支付或账户系统。请替换示例邮箱和文案，并阅读LICENCE.txt；不授予第三方商标权。"
+  }
+},
+  'manganresto': {
+    "vi": {
+      "intro": "Landing page nhà hàng ẩm thực cao cấp Manganresto với nền cong đen và vàng hổ phách, đĩa mì Ý hải sản nổi bật, bộ lọc thực đơn và đặt bàn demo.",
+      "notes": "### Bắt đầu\nGiải nén đủ 9 file và mở index.html cạnh assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa chính xác. Không cần cài đặt hay build.\n\n### Ảnh và nội dung\nBa ảnh WebP tự tạo: đĩa mì Ý hải sản mực đen (hero-plate.webp), bữa sáng bơ trứng (dish-breakfast.webp), khai vị phô mai burrata (dish-appetizer.webp). Thay Manganresto, reservations@manganresto.demo, danh sách món và tiểu sử đầu bếp theo nhà hàng thực tế.\n\n### Tương tác\nBộ lọc danh mục thực đơn tức thì, tìm kiếm món ăn bằng modal pop-up, form đặt bàn với kiểm tra trường hợp lệ và thông báo tức thì, vi chuyển động nghiêng 3D của đĩa ăn, menu mobile phản hồi với Escape.\n\n### Phạm vi\nKhông có backend quản lý đơn hàng, cổng thanh toán thẻ hay cơ sở dữ liệu quan hệ. Đọc LICENCE.txt trước khi dùng; không phân phối lại template hoặc bán ảnh riêng."
+    },
+    "en": {
+      "intro": "A fine-dining gourmet restaurant landing page in charcoal and warm amber gold with signature pasta plate, menu filters and table reservation demo.",
+      "notes": "### Start\nExtract all 9 files and open index.html beside assets/. CUSTOMISE.md contains 10 steps, 12 complete AI prompts and counted edits. No build or install required.\n\n### Artwork and content\nThree original transparent WebP cutouts: squid ink seafood pasta (hero-plate.webp), poached egg avocado breakfast (dish-breakfast.webp), burrata fig salad (dish-appetizer.webp). Replace Manganresto, reservations@manganresto.demo, menu items and chef bios with your genuine restaurant details.\n\n### Interaction\nInstant menu category filtering, accessible search dialog modal, table reservation inquiry form with real-time feedback, hero plate 3D kinetic tilt, and Escape-aware mobile navigation.\n\n### Scope\nNo backend database, live table booking engine or credit card checkout. Read LICENCE.txt; no raw template redistribution or standalone image resale."
+    },
+    "zh": {
+      "intro": "黑金双色调高级美食餐厅展示页，包含标志性墨鱼汁海鲜意面餐盘、分类筛选菜单及在线预订演示。",
+      "notes": "### 开始\n完整解压9个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条完整AI提示词和精确修改表。无需构建或安装。\n\n### 图像与内容\n三张原创透明WebP抠图：黑墨鱼汁海鲜意面（hero-plate.webp）、水波蛋牛油果早餐（dish-breakfast.webp）、布拉塔无花果沙拉（dish-appetizer.webp）。请替换Manganresto名称、邮箱、菜单与主厨简介。\n\n### 交互\n菜单分类即时筛选、实时菜品搜索弹窗、带表单校验与即时反馈的桌位预约、主厨餐盘3D透视微动、以及支持Escape键的移动端导航。\n\n### 范围\n不含后端数据库、实时订座后台或信用卡结账。请阅读LICENCE.txt；不可重新分发模板或单独转售图像。"
+    }
+  },
+  'beetbuh': {
+  "vi": {
+    "intro": "Landing page tai nghe concept màu cam trên nền ivory theo ảnh tham chiếu.",
+    "notes": "### Bắt đầu\nGiải nén đủ 9 file và mở index.html cạnh assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa chính xác. Không cần build.\n\n### Ảnh và nội dung\nBa ảnh WebP tự tạo: hai góc tai nghe và người mẫu giả định. Thay BeetBuh, hello@beetbuh.example và thông số minh họa. Google Fonts tùy chọn; font hệ thống hoạt động offline nhưng khác hình thức.\n\n### Tương tác\nBa trạng thái gồm hai góc và một crop chi tiết, không phải 3D. Nút/phím/vuốt, hộp phóng to ảnh, menu Escape, thông số native và reveal khi cuộn. Pause motion chỉ trong phiên. Shop Now dẫn tới email, không đặt hàng.\n\n### Phạm vi\nKhông backend, âm thanh, tồn kho, tài khoản hay thanh toán. Đọc LICENCE.txt; không phân phối lại template hoặc bán ảnh riêng."
+  },
+  "en": {
+    "intro": "An ivory-and-orange sculptural headphone concept landing page.",
+    "notes": "### Start\nExtract all 9 files and open index.html beside assets/. CUSTOMISE.md contains 10 steps, 12 complete AI prompts and counted edits. No build required.\n\n### Artwork and content\nThree original WebP images: two headphone angles and a fictional campaign model. Replace BeetBuh, hello@beetbuh.example and illustrative specifications. Google Fonts are optional; offline system fonts differ visually.\n\n### Interaction\nThree states are two angles and an earcup crop, not 3D. Buttons/keys/swipe, image dialog, Escape menu, native specifications and scroll reveals. Pause motion is session-only. Shop Now leads to email enquiry without ordering.\n\n### Scope\nNo backend, audio engine, stock, accounts or checkout. Read LICENCE.txt; no template redistribution or standalone image resale."
+  },
+  "zh": {
+    "intro": "象牙白与橙色的雕塑感耳机概念展示页。",
+    "notes": "### 开始\n完整解压9个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条完整AI提示词和精确修改表。无需构建。\n\n### 图像与内容\n三张原创WebP图像：两个耳机角度和虚构模特。替换BeetBuh、hello@beetbuh.example和示例参数。Google Fonts可选，离线系统字体外观不同。\n\n### 交互\n三种视图为两个角度及耳罩裁剪细节，并非3D。支持按钮、方向键、滑动、放大对话框、Escape菜单、原生参数和滚动渐显。Pause motion仅用于本次访问。Shop Now前往邮件咨询，不下单。\n\n### 范围\n无后端、音频、库存、账户或支付。请阅读LICENCE.txt；不可重新分发模板或单独转售图像。"
+  }
+},
+  'sonicore': {
+  "vi": {
+    "intro": "Showroom tai nghe âm thanh không gian Sonicore X1 nền tối ánh tím với sơ đồ tách lớp linh kiện, âm trường 360° và so sánh thông số.",
+    "notes": "### Bắt đầu\nGiải nén đủ 10 file và mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. HTML/CSS/JS thuần, không build hay font mạng.\n\n### Nội dung và ảnh\nThay Sonicore / Sonicore X1, giải thưởng và trích dẫn minh họa, giá $349, thông số mẫu, hello@sonicore.example. Bốn ảnh WebP trong assets/img/ là ảnh render concept tự tạo, không phải ảnh hãng hay mô hình 3D thời gian thực.\n\n### Tương tác\nBa chế độ sân khấu âm thanh ở hero, 6 điểm linh kiện tách lớp, 3 preset không gian và bảng so sánh X1 / Studio; điều khiển bằng nút, phím mũi tên hoặc vuốt. Hỗ trợ dùng thử không gian 4.2 giây, mục thông số mở rộng bằng details, menu mobile hỗ trợ Escape, và Pause motion trong phiên.\n\n### Phạm vi\nKhông backend, tồn kho, tài khoản, xử lý DSP âm thanh thật hoặc thanh toán. Đặt trước chỉ mở ứng dụng email. Đọc LICENCE.txt trước khi dùng; không phân phối lại template hoặc bán ảnh riêng."
+  },
+  "en": {
+    "intro": "A dark-violet spatial audio headphone showcase for Sonicore X1 with an interactive exploded diagram, 360° soundstage presets and specification comparison.",
+    "notes": "### Start\nExtract all 10 files and open index.html beside assets/. CUSTOMISE.md contains 10 steps, 12 complete AI prompts and counted edits. Plain HTML/CSS/JS, no build or network fonts.\n\n### Content and artwork\nReplace Sonicore / Sonicore X1, illustrative award badges and press quotes, $349 sample price, specifications and hello@sonicore.example. The four WebP files in assets/img/ are original generated concept renders, not manufacturer photography or a live WebGL 3D model.\n\n### Interaction\nThree hero soundstages, 6 exploded hardware callouts, 3 spatial presets and an X1 / Studio comparison toggle controlled by buttons, arrow keys or swipe. Includes a 4.2-second visual soundstage tour, native details specifications, Escape-aware mobile menu and session-only Pause motion.\n\n### Scope\nNo backend, stock, accounts, live audio DSP or checkout. Pre-order actions only open a mail app. Read LICENCE.txt; no template redistribution or standalone image resale."
+  },
+  "zh": {
+    "intro": "深紫光效 Sonicore X1 空间音频耳机展示页，含交互式硬件拆解图、360°声场预设与参数对比。",
+    "notes": "### 开始\n完整解压10个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条完整AI提示词和精确修改表。原生HTML/CSS/JS，无需构建或网络字体。\n\n### 内容与图像\n替换Sonicore / Sonicore X1、示例奖项与媒体评语、$349示例价格、参数及hello@sonicore.example。assets/img/中的4张WebP为原创AI概念图，并非官方摄影或实时3D模型。\n\n### 交互\n首屏3种声场、6个硬件拆解热点、3种空间预设及X1 / Studio对比切换，支持按钮、方向键和滑动。含4.2秒视觉声场预览、原生参数展开、支持Escape的移动菜单以及仅限本次会话的Pause motion。\n\n### 范围\n无后端、库存、账户、实时音频DSP或支付。预订仅打开邮件应用。请阅读LICENCE.txt；不可重新分发模板或单独转售图像。"
+  }
+},
+  'firepower': {
+  "vi": {
+    "intro": "Landing page chuột gaming theo ảnh tham chiếu Logitech, nền than đen và điểm nhấn cyan.",
+    "notes": "### Bắt đầu\nGiải nén đủ 7 file và mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. HTML/CSS/JS thuần, không build hay font mạng.\n\n### Nội dung và ảnh\nThay Firepower, tên/nhãn Logitech và G604, thông số minh họa, hello@firepower.example. mouse-views.webp là sheet 3×2 ảnh chuột concept tự tạo, không phải ảnh hãng hay mô hình 3D. Không có liên kết hoặc quyền thương hiệu Logitech.\n\n### Tương tác\nNăm góc xem ở hero và gallery; nút, phím mũi tên, vuốt và trạng thái hiện tại. Thông số dùng details; menu hỗ trợ Escape. Reveal hữu hạn khi cuộn, motion mặc định bật và Pause motion chỉ cho phiên hiện tại. BUY dẫn đến mục email, không đặt hàng.\n\n### Phạm vi\nKhông backend, tồn kho, tài khoản hoặc thanh toán. Email chỉ mở ứng dụng. Đọc LICENCE.txt trước khi dùng; không phân phối lại template hoặc bán ảnh riêng."
+  },
+  "en": {
+    "intro": "A reference-inspired gaming mouse landing page in charcoal and cyan.",
+    "notes": "### Start\nExtract all 7 files and open index.html beside assets/. CUSTOMISE.md contains 10 steps, 12 complete AI prompts and counted edits. Plain HTML/CSS/JS, no build or network fonts.\n\n### Content and artwork\nReplace Firepower, Logitech/G604 references, illustrative specifications and hello@firepower.example. mouse-views.webp is a 3×2 sheet of original generated concept renders, not manufacturer photos or a 3D model. No manufacturer affiliation or trademark rights.\n\n### Interaction\nFive hero and gallery views with buttons, arrow keys, swipe and current state. Native specifications; mobile menu supports Escape. Finite scroll reveals, motion ON by default, session-only Pause motion. BUY leads to an email enquiry section without placing an order.\n\n### Scope\nNo backend, stock, accounts or checkout. Email only opens a mail app. Read LICENCE.txt; no template redistribution or standalone image resale."
+  },
+  "zh": {
+    "intro": "参考游戏鼠标展示页，采用炭黑与青色视觉。",
+    "notes": "### 开始\n完整解压7个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条完整AI提示词和精确修改表。原生HTML/CSS/JS，无需构建或网络字体。\n\n### 内容与图像\n替换Firepower、Logitech/G604名称、示例参数和hello@firepower.example。mouse-views.webp是3×2原创AI概念图，不是官方摄影或3D模型。无厂家关联或商标授权。\n\n### 交互\n主视觉与图集支持五个视角、按钮、方向键、滑动和当前状态。原生参数展开，移动菜单支持Escape。有限滚动渐显，动态默认开启，Pause motion仅用于本次访问。BUY前往邮件咨询区域，不会下单。\n\n### 范围\n无后端、库存、账户或支付。邮件仅打开应用。请阅读LICENCE.txt；不可重新分发模板或单独转售图像。"
+  }
+},
+  'backbest-800': {
+  "vi": {
+    "intro": "Showroom tai nghe không dây nền đen đỏ với vòng đồng tâm phát sáng, ba phối màu tự tạo, hotspot và giỏ tư vấn trong phiên.",
+    "notes": "### Bắt đầu\nGiải nén đủ 9 file; mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. Không framework, build hoặc font mạng.\n\n### Nội dung và hình ảnh\nThay BackBest 800/Plantronic, tên dòng BACKBEST 800 SERIES, giá $199 ($239 gạch ngang), mô tả màng loa 40mm/khớp gập và email hello@backbest800.example. Ba ảnh headphone-black/white/red.webp là cùng một mẫu tai nghe tự tạo với ba phối màu concept, không phải ảnh chụp chính thức của hãng. Không có liên kết với nhà sản xuất.\n\n### Tương tác\nNút/phím/vuốt chuyển hai chiều, chọn 6 kiểu đệm tai, xem chi tiết bộ phận qua hotspot, tìm kiếm một mẫu tai nghe, giỏ tư vấn thêm/xóa trong phiên và email. Sound preview là hoạt cảnh phối màu 4.2 giây, không phải luồng âm thanh hay video quay thật. Chuyển động mặc định bật; Pause motion chỉ áp dụng trang đang mở. Email chỉ mở ứng dụng.\n\n### Phạm vi và giấy phép\nKhông có bán lẻ trực tiếp, thanh toán, tài khoản, đo tai hoặc tồn kho thực. Đọc LICENCE.txt; ảnh dùng trong website hoàn chỉnh, không bán lại template hoặc ảnh riêng lẻ."
+  },
+  "en": {
+    "intro": "An obsidian-and-crimson wireless headphone showroom with glowing concentric target rings, three original finishes, hotspots and a session enquiry bag.",
+    "notes": "### Start\nExtract all 9 files; open index.html beside assets/. CUSTOMISE.md has 10 steps, 12 AI prompts and counted edits. No framework, build or network fonts.\n\n### Content and artwork\nReplace BackBest 800/Plantronic, the model line BACKBEST 800 SERIES, $199 ($239 compare-at), sample 40mm driver/hinge descriptions and hello@backbest800.example. headphone-black/white/red.webp depict one original generated concept in three finishes, not official manufacturer photography. No manufacturer affiliation.\n\n### Interaction\nButtons/keys/swipe switch both ways; 6 example cushion-fit options, component hotspot details, one-model search, session add/remove enquiry bag and email. Sound preview is a 4.2-second colourway sequence, not audio/video stream footage. Motion defaults ON; Pause motion applies to this visit. Email opens an app only.\n\n### Scope and licence\nNo live retail checkout, payment, account, acoustic measurement or inventory. Read LICENCE.txt; artwork is allowed in finished sites, not template redistribution or standalone stock resale."
+  },
+  "zh": {
+    "intro": "黑红配色无线耳机展厅，含发光同心圆环、三种原创配色、热点和会话咨询袋。",
+    "notes": "### 开始\n完整解压9个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词和精确修改表。无需框架、构建或网络字体。\n\n### 内容与图像\n替换BackBest 800/Plantronic、型号名BACKBEST 800 SERIES、$199（原价$239）、示例40mm驱动单元/铰链说明及hello@backbest800.example。headphone-black/white/red.webp为同一原创概念耳机的三种配色，并非品牌官方摄影。无厂家关联。\n\n### 交互\n按钮/按键/滑动双向切换，6种示例耳垫规格、部件热点详情、单型号搜索、会话添加/移除咨询袋与邮件。Sound preview为4.2秒配色动画，非实拍音视频。动态默认开启，Pause motion仅限本次访问。邮件仅打开应用。\n\n### 范围与授权\n无零售结账、支付、账户、声学测量或库存。阅读LICENCE.txt；图像可用于成品网站，不可重新分发模板或单独作为素材转售。"
+  }
+},
+  'airmax-plus': {
+  "vi": {
+    "intro": "Showroom giày thể thao nền tối với dải sóng lưới cam 3D, ba phối màu tự tạo, hotspot và giỏ tư vấn trong phiên.",
+    "notes": "### Bắt đầu\nGiải nén đủ 9 file; mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. Không framework, build hoặc font mạng.\n\n### Nội dung và hình ảnh\nThay AirMax Plus/Nike, tên mẫu Air Max Plus, giá $249,99, mô tả đệm Tuned Air/khung TPU và email hello@airmaxplus.example. Ba ảnh shoe-sunset/volt/crimson.webp là cùng một mẫu giày tự tạo với ba phối màu concept, không phải ảnh chụp chính thức của hãng. Không có liên kết với nhà sản xuất.\n\n### Tương tác\nNút/phím/vuốt chuyển hai chiều, chọn 6 cỡ US, xem chi tiết bộ phận qua hotspot, tìm kiếm một mẫu giày, giỏ tư vấn đặt trước thêm/xóa trong phiên và email. Watch preview là hoạt cảnh phối màu 4.2 giây, không phải video quay thật. Chuyển động mặc định bật; Pause motion chỉ áp dụng trang đang mở. Email chỉ mở ứng dụng.\n\n### Phạm vi và giấy phép\nKhông có bán lẻ trực tiếp, thanh toán, tài khoản, đo chân hoặc tồn kho thực. Đọc LICENCE.txt; ảnh dùng trong website hoàn chỉnh, không bán lại template hoặc ảnh riêng lẻ."
+  },
+  "en": {
+    "intro": "A dark sneaker showroom with a 3D orange wireframe ribbon, three original finishes, hotspots and a session enquiry bag.",
+    "notes": "### Start\nExtract all 9 files; open index.html beside assets/. CUSTOMISE.md has 10 steps, 12 AI prompts and counted edits. No framework, build or network fonts.\n\n### Content and artwork\nReplace AirMax Plus/Nike, the model name Air Max Plus, $249,99, sample Tuned Air/TPU descriptions and hello@airmaxplus.example. shoe-sunset/volt/crimson.webp depict one original generated concept in three finishes, not official manufacturer photography. No manufacturer affiliation.\n\n### Interaction\nButtons/keys/swipe switch both ways; 6 example US sizes, component hotspot details, one-model search, session add/remove enquiry bag and email. Watch preview is a 4.2-second colourway sequence, not video footage. Motion defaults ON; Pause motion applies to this visit. Email opens an app only.\n\n### Scope and licence\nNo live retail checkout, payment, account, foot measurement or inventory. Read LICENCE.txt; artwork is allowed in finished sites, not template redistribution or standalone stock resale."
+  },
+  "zh": {
+    "intro": "深色运动鞋展厅，含3D橙色线框波浪、三种原创配色、热点和会话咨询袋。",
+    "notes": "### 开始\n完整解压9个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词和精确修改表。无需框架、构建或网络字体。\n\n### 内容与图像\n替换AirMax Plus/Nike、鞋款名Air Max Plus、$249,99、示例Tuned Air/TPU说明及hello@airmaxplus.example。shoe-sunset/volt/crimson.webp为同一原创概念鞋款的三种配色，并非品牌官方摄影。无厂家关联。\n\n### 交互\n按钮/按键/滑动双向切换，6个示例美码、部件热点详情、单鞋款搜索、会话添加/移除咨询袋与邮件。Watch preview为4.2秒配色动画，非实拍录像。动态默认开启，Pause motion仅限本次访问。邮件仅打开应用。\n\n### 范围与授权\n无零售结账、支付、账户、脚型测量或库存。阅读LICENCE.txt；图像可用于成品网站，不可重新分发模板或单独作为素材转售。"
+  }
+},
+  'aerosix': {
+  "vi": {
+    "intro": "Showroom xe đạp nền tối với ba màu xe tự tạo, hotspot và giỏ tư vấn trong phiên.",
+    "notes": "### Bắt đầu\nGiải nén đủ 9 file; mở index.html cạnh assets/. CUSTOMISE.md có10 bước,12 prompt AI và bảng sửa đã đếm. Không framework,build hoặc font mạng.\n\n### Nội dung và hình ảnh\nThay AeroSix/cannondale,tên xe,giá $11,000,cấu hình minh họa,email hello@aerosix.example và câu giao hàng. Ba ảnh bike-black/green/chalk.webp là cùng một mẫu xe tự tạo với ba màu concept,không phải màu sơn chuẩn của hãng. Không có liên kết với nhà sản xuất.\n\n### Tương tác\nNút/phím/vuốt chuyển hai chiều,chọn6 cỡ,xem linh kiện,tìm một mẫu xe,giỏ tư vấn thêm/xóa trong phiên và email. See it in action là hoạt cảnh thiết kế4.2 giây,không phải footage. Chuyển động mặc định bật;Pause motion chỉ áp dụng trang đang mở. Email chỉ mở ứng dụng.\n\n### Phạm vi và giấy phép\nKhông có bán xe,thanh toán,tài khoản,tính fit hoặc tồn kho. Điều khoản giao hàng mẫu phải thay trước khi xuất bản. Đọc LICENCE.txt;ảnh dùng trong website hoàn chỉnh,không bán lại template hoặc ảnh riêng lẻ."
+  },
+  "en": {
+    "intro": "A dark bicycle showroom with three original finishes,hotspots and a session enquiry bag.",
+    "notes": "### Start\nExtract all9 files;open index.html beside assets/. CUSTOMISE.md has10 steps,12 AI prompts and counted edits. No framework,build or network fonts.\n\n### Content and artwork\nReplace AeroSix/cannondale,the model,$11,000,sample equipment,hello@aerosix.example and the shipping line. bike-black/green/chalk.webp depict one original generated concept in three finishes,not verified factory paint. No manufacturer affiliation.\n\n### Interaction\nButtons/keys/swipe switch both ways;6 example sizes,component details,one-model search,session add/remove bag and email. See it in action is a4.2-second design sequence,not footage. Motion defaults ON;Pause motion applies to this visit. Email opens an app only.\n\n### Scope and licence\nNo bicycle sales,payment,account,fit calculation or inventory. Replace sample shipping terms before publication. Read LICENCE.txt;artwork is allowed in finished sites,not template redistribution or standalone stock resale."
+  },
+  "zh": {
+    "intro": "深色自行车展厅，含三种原创配色、热点和会话咨询袋。",
+    "notes": "### 开始\n完整解压9个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词和精确修改表。无需框架、构建或网络字体。\n\n### 内容与图像\n替换AeroSix/cannondale、车型、$11,000、示例配置、hello@aerosix.example及配送文字。bike-black/green/chalk.webp为同一原创概念车型的三种配色，并非厂家认证漆色。无厂家关联。\n\n### 交互\n按钮/按键/滑动双向切换，6个示例尺码、部件详情、单车型搜索、会话添加/移除咨询袋与邮件。See it in action为4.2秒设计动画，非骑行录像。动态默认开启，Pause motion仅限本次访问。邮件仅打开应用。\n\n### 范围与授权\n无自行车销售、支付、账户、适配计算或库存。发布前替换示例配送条款。阅读LICENCE.txt；图像可用于成品网站，不可重新分发模板或单独作为素材转售。"
+  }
+},
+  'motora': {
+  "vi": {
+    "intro": "Showroom ô tô nền sáng với xe vàng chân thực, 5 màu và các điểm xem chi tiết.",
+    "notes": "### Bắt đầu\nGiải nén đủ 8 file; mở index.html cạnh assets/. CUSTOMISE.md có 10 bước, 12 prompt AI và bảng sửa đã đếm. Không framework, build hoặc font mạng.\n\n### Nội dung và hình ảnh\nThay Car./Motora, tên xe, thông số minh họa và hello@motora.example. coupe.webp là xe nền trong suốt; interior.webp là nội thất tự tạo. Không có liên kết với hãng xe hoặc số liệu được chứng nhận.\n\n### Tương tác\n5 màu dùng bộ lọc ảnh, không phải mô hình 3D hoặc màu sơn chuẩn của hãng. Mâm chỉ đổi nội dung tư vấn. Cấu hình và lưu trong phiên, tìm một mẫu xe, hotspot, menu và Escape hoạt động. Email chỉ mở ứng dụng. Chuyển động mặc định bật; Pause motion chỉ áp dụng trang đang mở.\n\n### Phạm vi và giấy phép\nKhông có bán xe, thanh toán hoặc backend. Đọc LICENCE.txt; ảnh dùng trong website hoàn chỉnh, không bán lại template hoặc ảnh riêng lẻ."
+  },
+  "en": {
+    "intro": "A light automotive showroom with a photoreal gold coupe, five finishes and detail hotspots.",
+    "notes": "### Start\nExtract all 8 files; open index.html beside assets/. CUSTOMISE.md includes 10 steps, 12 AI prompts and counted edits. No framework, build or network fonts.\n\n### Content and artwork\nReplace Car./Motora, vehicle names, illustrative figures and hello@motora.example. coupe.webp is a transparent car; interior.webp is original cabin artwork. No manufacturer affiliation or verified specifications.\n\n### Interaction\nFive finishes use image filters, not 3D or factory-accurate paint. Wheels change enquiry text only. Local configuration, session save, one-model search, hotspots, keyboard menu and Escape work. Email opens an app only. Motion defaults ON; Pause motion applies to the current page visit.\n\n### Scope and licence\nNo vehicle sales, payment or backend. Read LICENCE.txt; use artwork in finished sites, not template redistribution or standalone stock resale."
+  },
+  "zh": {
+    "intro": "浅色汽车展厅，含写实金色轿跑、五种视觉配色与细节热点。",
+    "notes": "### 开始\n完整解压8个文件，在assets/旁打开index.html。CUSTOMISE.md含10个步骤、12条AI提示词与精确修改表。无需框架、构建或网络字体。\n\n### 内容与图像\n替换Car./Motora、车型名称、示例数据和hello@motora.example。coupe.webp为透明汽车，interior.webp为原创内饰图。无厂家关联或认证参数。\n\n### 交互\n五种配色使用图像滤镜，并非3D或厂家准确漆色；轮毂仅更改咨询文字。支持本地配置、会话保存、单车型搜索、热点、键盘菜单和Escape。邮件仅打开应用。动态默认开启，Pause motion仅适用于本次页面访问。\n\n### 范围与授权\n无车辆销售、支付或后端。阅读LICENCE.txt；图像可用于成品网站，不可重新分发模板或单独作为素材转售。"
+  }
+},
   'semaan': {
   "vi": {
     "intro": "Portfolio designer với hero cam-trắng, chữ CREATE cao và chân dung tự tạo.",
@@ -330,6 +554,95 @@ Colours are in \`:root\` in assets/css/style.css (\`--ink\`, \`--accent\`, \`--b
   },
 };
 
+
+// Six single-page briefs released on 18 October 2026.
+Object.assign(TEMPLATE_GUIDES, {
+  "spaceedu": {
+    "vi": {
+      "intro": "Hero thiên văn với video Earth/Venus/Mars, chuyển hành tinh bằng hai nút cạnh và menu mobile. Một HTML có CSS/JS nội tuyến; tài nguyên hành tinh tải qua mạng. CTA khoá học là demo, chưa có đăng ký hay backend.",
+      "notes": "### Bắt đầu\nGiải nén toàn bộ ZIP, mở index.html và giữ nguyên các file đi kèm. README.md, CUSTOMISE.md và LICENCE.txt nằm trong gói. CUSTOMISE có10bước,12prompt AI và bảng sửa đã đếm.\n\n### Mã nguồn và tài nguyên\nNăm mẫu giữ CSS/JS nội tuyến; Mostar dùng styles.css/script.js. FENNEC/Meridian có video H.264 trong assets/video; Mostar có font Ogg trong assets/fonts. Các tài nguyên remote còn lại cần mạng. Riverine dùng font fallback khi thiếu RV; Freight dùng font condensed có sẵn trên máy.\n\n### Phạm vi\nHero thiên văn với video Earth/Venus/Mars, chuyển hành tinh bằng hai nút cạnh và menu mobile. Một HTML có CSS/JS nội tuyến; tài nguyên hành tinh tải qua mạng. CTA khoá học là demo, chưa có đăng ký hay backend.\nĐọc điều khoản và kiểm tra quyền sử dụng tài nguyên/font trước khi xuất bản."
+    },
+    "en": {
+      "intro": "A planetary video hero featuring Earth, Venus and Mars, side-planet switching and a mobile menu. One HTML with inline CSS/JS; planetary media requires a network connection. Course links are demo placeholders; no enrolment backend.",
+      "notes": "### Start\nExtract the complete ZIP and open index.html with its relative files. Read README.md, CUSTOMISE.md and LICENCE.txt. CUSTOMISE includes10steps,12copyable AI prompts and a counted edit map.\n\n### Code and assets\nFive templates keep inline CSS/JS; Mostar uses styles.css/script.js. FENNEC/Meridian include H.264 video in assets/video; Mostar includes Ogg in assets/fonts. Remaining remote media needs a network connection. Riverine uses fallbacks when RV fonts are absent; Freight uses installed condensed fonts.\n\n### Scope\nA planetary video hero featuring Earth, Venus and Mars, side-planet switching and a mobile menu. One HTML with inline CSS/JS; planetary media requires a network connection. Course links are demo placeholders; no enrolment backend.\nReview separate media/font rights before publishing."
+    },
+    "zh": {
+      "intro": "Earth、Venus、Mars 行星视频首屏，支持两侧切换与移动菜单。单个 HTML 内嵌 CSS/JS，行星素材需要联网。课程入口为演示，不含报名后台。",
+      "notes": "### 开始\n完整解压 ZIP，保持相对文件与 index.html 一起。阅读 README.md、CUSTOMISE.md、LICENCE.txt。CUSTOMISE 含10个步骤、12条 AI 提示词和精确修改表。\n\n### 源码与素材\n五款模板使用内嵌 CSS/JS；Mostar 使用 styles.css/script.js。FENNEC/Meridian 附 assets/video 中的 H.264 视频；Mostar 附 assets/fonts 中的 Ogg 字体。其余远程素材需要联网。Riverine 缺少 RV 字体时使用后备字体，Freight 使用本机窄体字体。\n\n### 范围\nEarth、Venus、Mars 行星视频首屏，支持两侧切换与移动菜单。单个 HTML 内嵌 CSS/JS，行星素材需要联网。课程入口为演示，不含报名后台。\n发布前核实素材及字体的独立使用权限。"
+    }
+  },
+  "mostar-city": {
+    "vi": {
+      "intro": "Trang kể chuyện Mostar theo cuộn: cầu Stari Most, phố cổ và slider địa danh lặp hai chiều. PNG nhiều lớp, font Ogg đi kèm và ba file HTML/CSS/JS. Nội dung du lịch demo; không có đặt tour.",
+      "notes": "### Bắt đầu\nGiải nén toàn bộ ZIP, mở index.html và giữ nguyên các file đi kèm. README.md, CUSTOMISE.md và LICENCE.txt nằm trong gói. CUSTOMISE có10bước,12prompt AI và bảng sửa đã đếm.\n\n### Mã nguồn và tài nguyên\nNăm mẫu giữ CSS/JS nội tuyến; Mostar dùng styles.css/script.js. FENNEC/Meridian có video H.264 trong assets/video; Mostar có font Ogg trong assets/fonts. Các tài nguyên remote còn lại cần mạng. Riverine dùng font fallback khi thiếu RV; Freight dùng font condensed có sẵn trên máy.\n\n### Phạm vi\nTrang kể chuyện Mostar theo cuộn: cầu Stari Most, phố cổ và slider địa danh lặp hai chiều. PNG nhiều lớp, font Ogg đi kèm và ba file HTML/CSS/JS. Nội dung du lịch demo; không có đặt tour.\nĐọc điều khoản và kiểm tra quyền sử dụng tài nguyên/font trước khi xuất bản."
+    },
+    "en": {
+      "intro": "A layered Mostar scroll story with Stari Most, the old town and an infinite sights slider. Includes the Ogg font and separate HTML/CSS/JS. Travel presentation only; no booking backend.",
+      "notes": "### Start\nExtract the complete ZIP and open index.html with its relative files. Read README.md, CUSTOMISE.md and LICENCE.txt. CUSTOMISE includes10steps,12copyable AI prompts and a counted edit map.\n\n### Code and assets\nFive templates keep inline CSS/JS; Mostar uses styles.css/script.js. FENNEC/Meridian include H.264 video in assets/video; Mostar includes Ogg in assets/fonts. Remaining remote media needs a network connection. Riverine uses fallbacks when RV fonts are absent; Freight uses installed condensed fonts.\n\n### Scope\nA layered Mostar scroll story with Stari Most, the old town and an infinite sights slider. Includes the Ogg font and separate HTML/CSS/JS. Travel presentation only; no booking backend.\nReview separate media/font rights before publishing."
+    },
+    "zh": {
+      "intro": "Mostar 多层图片滚动叙事，展示古桥、老城与无限景点滑块。附 Ogg 字体及独立 HTML/CSS/JS。旅游展示模板，不含预订后台。",
+      "notes": "### 开始\n完整解压 ZIP，保持相对文件与 index.html 一起。阅读 README.md、CUSTOMISE.md、LICENCE.txt。CUSTOMISE 含10个步骤、12条 AI 提示词和精确修改表。\n\n### 源码与素材\n五款模板使用内嵌 CSS/JS；Mostar 使用 styles.css/script.js。FENNEC/Meridian 附 assets/video 中的 H.264 视频；Mostar 附 assets/fonts 中的 Ogg 字体。其余远程素材需要联网。Riverine 缺少 RV 字体时使用后备字体，Freight 使用本机窄体字体。\n\n### 范围\nMostar 多层图片滚动叙事，展示古桥、老城与无限景点滑块。附 Ogg 字体及独立 HTML/CSS/JS。旅游展示模板，不含预订后台。\n发布前核实素材及字体的独立使用权限。"
+    }
+  },
+  "fennec": {
+    "vi": {
+      "intro": "Hero AI automation tông cam với cáo GLB 3D, parallax theo chuột và menu clip-path từ pill thương hiệu. Video H.264 đi kèm; Three.js và GLB cần mạng. Liên kết mở thông tin demo; chưa có dịch vụ AI hay billing.",
+      "notes": "### Bắt đầu\nGiải nén toàn bộ ZIP, mở index.html và giữ nguyên các file đi kèm. README.md, CUSTOMISE.md và LICENCE.txt nằm trong gói. CUSTOMISE có10bước,12prompt AI và bảng sửa đã đếm.\n\n### Mã nguồn và tài nguyên\nNăm mẫu giữ CSS/JS nội tuyến; Mostar dùng styles.css/script.js. FENNEC/Meridian có video H.264 trong assets/video; Mostar có font Ogg trong assets/fonts. Các tài nguyên remote còn lại cần mạng. Riverine dùng font fallback khi thiếu RV; Freight dùng font condensed có sẵn trên máy.\n\n### Phạm vi\nHero AI automation tông cam với cáo GLB 3D, parallax theo chuột và menu clip-path từ pill thương hiệu. Video H.264 đi kèm; Three.js và GLB cần mạng. Liên kết mở thông tin demo; chưa có dịch vụ AI hay billing.\nĐọc điều khoản và kiểm tra quyền sử dụng tài nguyên/font trước khi xuất bản."
+    },
+    "en": {
+      "intro": "A warm AI automation hero with a GLB fox, pointer parallax and a pill-origin clip-path menu. Includes H.264 video; Three.js and the model require a network connection. Links show demo information; no AI service or billing backend.",
+      "notes": "### Start\nExtract the complete ZIP and open index.html with its relative files. Read README.md, CUSTOMISE.md and LICENCE.txt. CUSTOMISE includes10steps,12copyable AI prompts and a counted edit map.\n\n### Code and assets\nFive templates keep inline CSS/JS; Mostar uses styles.css/script.js. FENNEC/Meridian include H.264 video in assets/video; Mostar includes Ogg in assets/fonts. Remaining remote media needs a network connection. Riverine uses fallbacks when RV fonts are absent; Freight uses installed condensed fonts.\n\n### Scope\nA warm AI automation hero with a GLB fox, pointer parallax and a pill-origin clip-path menu. Includes H.264 video; Three.js and the model require a network connection. Links show demo information; no AI service or billing backend.\nReview separate media/font rights before publishing."
+    },
+    "zh": {
+      "intro": "暖橙色 AI 自动化首屏，含 GLB 狐狸、鼠标视差与胶囊展开菜单。附 H.264 视频；Three.js 与模型需要联网。链接展示演示信息，不含 AI 服务或计费后台。",
+      "notes": "### 开始\n完整解压 ZIP，保持相对文件与 index.html 一起。阅读 README.md、CUSTOMISE.md、LICENCE.txt。CUSTOMISE 含10个步骤、12条 AI 提示词和精确修改表。\n\n### 源码与素材\n五款模板使用内嵌 CSS/JS；Mostar 使用 styles.css/script.js。FENNEC/Meridian 附 assets/video 中的 H.264 视频；Mostar 附 assets/fonts 中的 Ogg 字体。其余远程素材需要联网。Riverine 缺少 RV 字体时使用后备字体，Freight 使用本机窄体字体。\n\n### 范围\n暖橙色 AI 自动化首屏，含 GLB 狐狸、鼠标视差与胶囊展开菜单。附 H.264 视频；Three.js 与模型需要联网。链接展示演示信息，不含 AI 服务或计费后台。\n发布前核实素材及字体的独立使用权限。"
+    }
+  },
+  "riverine-ai": {
+    "vi": {
+      "intro": "Hero regenerative AI trên nền video dòng sông, logo cây và bướm SVG, menu responsive và entrance WAAPI một lượt. Một HTML; font RV chưa cung cấp nên dùng fallback. Các liên kết neo là demo, không có section đích hoặc âm thanh thật.",
+      "notes": "### Bắt đầu\nGiải nén toàn bộ ZIP, mở index.html và giữ nguyên các file đi kèm. README.md, CUSTOMISE.md và LICENCE.txt nằm trong gói. CUSTOMISE có10bước,12prompt AI và bảng sửa đã đếm.\n\n### Mã nguồn và tài nguyên\nNăm mẫu giữ CSS/JS nội tuyến; Mostar dùng styles.css/script.js. FENNEC/Meridian có video H.264 trong assets/video; Mostar có font Ogg trong assets/fonts. Các tài nguyên remote còn lại cần mạng. Riverine dùng font fallback khi thiếu RV; Freight dùng font condensed có sẵn trên máy.\n\n### Phạm vi\nHero regenerative AI trên nền video dòng sông, logo cây và bướm SVG, menu responsive và entrance WAAPI một lượt. Một HTML; font RV chưa cung cấp nên dùng fallback. Các liên kết neo là demo, không có section đích hoặc âm thanh thật.\nĐọc điều khoản và kiểm tra quyền sử dụng tài nguyên/font trước khi xuất bản."
+    },
+    "en": {
+      "intro": "A regenerative AI river-video hero with tree-and-moth SVG branding, responsive navigation and a single WAAPI entrance. One HTML; RV fonts are not included and use the specified fallbacks. Anchor links and sound control are visual demo elements.",
+      "notes": "### Start\nExtract the complete ZIP and open index.html with its relative files. Read README.md, CUSTOMISE.md and LICENCE.txt. CUSTOMISE includes10steps,12copyable AI prompts and a counted edit map.\n\n### Code and assets\nFive templates keep inline CSS/JS; Mostar uses styles.css/script.js. FENNEC/Meridian include H.264 video in assets/video; Mostar includes Ogg in assets/fonts. Remaining remote media needs a network connection. Riverine uses fallbacks when RV fonts are absent; Freight uses installed condensed fonts.\n\n### Scope\nA regenerative AI river-video hero with tree-and-moth SVG branding, responsive navigation and a single WAAPI entrance. One HTML; RV fonts are not included and use the specified fallbacks. Anchor links and sound control are visual demo elements.\nReview separate media/font rights before publishing."
+    },
+    "zh": {
+      "intro": "河流视频上的再生 AI 首屏，树与蝴蝶 SVG 标识、响应式导航和一次性 WAAPI 入场。单个 HTML；未附 RV 字体，使用指定后备字体。锚点与声音按钮为视觉演示。",
+      "notes": "### 开始\n完整解压 ZIP，保持相对文件与 index.html 一起。阅读 README.md、CUSTOMISE.md、LICENCE.txt。CUSTOMISE 含10个步骤、12条 AI 提示词和精确修改表。\n\n### 源码与素材\n五款模板使用内嵌 CSS/JS；Mostar 使用 styles.css/script.js。FENNEC/Meridian 附 assets/video 中的 H.264 视频；Mostar 附 assets/fonts 中的 Ogg 字体。其余远程素材需要联网。Riverine 缺少 RV 字体时使用后备字体，Freight 使用本机窄体字体。\n\n### 范围\n河流视频上的再生 AI 首屏，树与蝴蝶 SVG 标识、响应式导航和一次性 WAAPI 入场。单个 HTML；未附 RV 字体，使用指定后备字体。锚点与声音按钮为视觉演示。\n发布前核实素材及字体的独立使用权限。"
+    }
+  },
+  "freight-axis": {
+    "vi": {
+      "intro": "Hero logistics video tàu hàng từ trên cao, headline condensed và hai khối nội dung căn đối xứng qua trục đường ray. Một HTML không JS, entrance CSS một lượt, reflow portrait/phone. Font condensed dùng local(), cần mạng cho video.",
+      "notes": "### Bắt đầu\nGiải nén toàn bộ ZIP, mở index.html và giữ nguyên các file đi kèm. README.md, CUSTOMISE.md và LICENCE.txt nằm trong gói. CUSTOMISE có10bước,12prompt AI và bảng sửa đã đếm.\n\n### Mã nguồn và tài nguyên\nNăm mẫu giữ CSS/JS nội tuyến; Mostar dùng styles.css/script.js. FENNEC/Meridian có video H.264 trong assets/video; Mostar có font Ogg trong assets/fonts. Các tài nguyên remote còn lại cần mạng. Riverine dùng font fallback khi thiếu RV; Freight dùng font condensed có sẵn trên máy.\n\n### Phạm vi\nHero logistics video tàu hàng từ trên cao, headline condensed và hai khối nội dung căn đối xứng qua trục đường ray. Một HTML không JS, entrance CSS một lượt, reflow portrait/phone. Font condensed dùng local(), cần mạng cho video.\nĐọc điều khoản và kiểm tra quyền sử dụng tài nguyên/font trước khi xuất bản."
+    },
+    "en": {
+      "intro": "An aerial freight-video hero with condensed headlines and two rail-axis feature blocks. One HTML without JavaScript, a single CSS entrance and portrait/phone reflow. Uses locally installed condensed fonts and remote video.",
+      "notes": "### Start\nExtract the complete ZIP and open index.html with its relative files. Read README.md, CUSTOMISE.md and LICENCE.txt. CUSTOMISE includes10steps,12copyable AI prompts and a counted edit map.\n\n### Code and assets\nFive templates keep inline CSS/JS; Mostar uses styles.css/script.js. FENNEC/Meridian include H.264 video in assets/video; Mostar includes Ogg in assets/fonts. Remaining remote media needs a network connection. Riverine uses fallbacks when RV fonts are absent; Freight uses installed condensed fonts.\n\n### Scope\nAn aerial freight-video hero with condensed headlines and two rail-axis feature blocks. One HTML without JavaScript, a single CSS entrance and portrait/phone reflow. Uses locally installed condensed fonts and remote video.\nReview separate media/font rights before publishing."
+    },
+    "zh": {
+      "intro": "货运列车航拍视频首屏，窄体标题与沿铁轨轴对称的信息区。单个 HTML、无 JavaScript、一次 CSS 入场和竖屏重排。使用本机窄体字体，视频需要联网。",
+      "notes": "### 开始\n完整解压 ZIP，保持相对文件与 index.html 一起。阅读 README.md、CUSTOMISE.md、LICENCE.txt。CUSTOMISE 含10个步骤、12条 AI 提示词和精确修改表。\n\n### 源码与素材\n五款模板使用内嵌 CSS/JS；Mostar 使用 styles.css/script.js。FENNEC/Meridian 附 assets/video 中的 H.264 视频；Mostar 附 assets/fonts 中的 Ogg 字体。其余远程素材需要联网。Riverine 缺少 RV 字体时使用后备字体，Freight 使用本机窄体字体。\n\n### 范围\n货运列车航拍视频首屏，窄体标题与沿铁轨轴对称的信息区。单个 HTML、无 JavaScript、一次 CSS 入场和竖屏重排。使用本机窄体字体，视频需要联网。\n发布前核实素材及字体的独立使用权限。"
+    }
+  },
+  "meridian": {
+    "vi": {
+      "intro": "Footer một viewport màu sage với la bàn SVG, Fraunces/Inter và video cầu cạn khắc nét có xe ngựa chạy qua. Video H.264 đi kèm, blend multiply, nav desktop/tablet/mobile và năm tự cập nhật. Các liên kết # chưa nối trang thật.",
+      "notes": "### Bắt đầu\nGiải nén toàn bộ ZIP, mở index.html và giữ nguyên các file đi kèm. README.md, CUSTOMISE.md và LICENCE.txt nằm trong gói. CUSTOMISE có10bước,12prompt AI và bảng sửa đã đếm.\n\n### Mã nguồn và tài nguyên\nNăm mẫu giữ CSS/JS nội tuyến; Mostar dùng styles.css/script.js. FENNEC/Meridian có video H.264 trong assets/video; Mostar có font Ogg trong assets/fonts. Các tài nguyên remote còn lại cần mạng. Riverine dùng font fallback khi thiếu RV; Freight dùng font condensed có sẵn trên máy.\n\n### Phạm vi\nFooter một viewport màu sage với la bàn SVG, Fraunces/Inter và video cầu cạn khắc nét có xe ngựa chạy qua. Video H.264 đi kèm, blend multiply, nav desktop/tablet/mobile và năm tự cập nhật. Các liên kết # chưa nối trang thật.\nĐọc điều khoản và kiểm tra quyền sử dụng tài nguyên/font trước khi xuất bản."
+    },
+    "en": {
+      "intro": "A sage viewport footer with a compass SVG, Fraunces/Inter and an engraved viaduct coach video. Includes H.264 video, multiply blending, responsive footer navigation and the current year. Hash links are not connected to full pages.",
+      "notes": "### Start\nExtract the complete ZIP and open index.html with its relative files. Read README.md, CUSTOMISE.md and LICENCE.txt. CUSTOMISE includes10steps,12copyable AI prompts and a counted edit map.\n\n### Code and assets\nFive templates keep inline CSS/JS; Mostar uses styles.css/script.js. FENNEC/Meridian include H.264 video in assets/video; Mostar includes Ogg in assets/fonts. Remaining remote media needs a network connection. Riverine uses fallbacks when RV fonts are absent; Freight uses installed condensed fonts.\n\n### Scope\nA sage viewport footer with a compass SVG, Fraunces/Inter and an engraved viaduct coach video. Includes H.264 video, multiply blending, responsive footer navigation and the current year. Hash links are not connected to full pages.\nReview separate media/font rights before publishing."
+    },
+    "zh": {
+      "intro": "鼠尾草色全屏页脚，含罗盘 SVG、Fraunces/Inter 与马车驶过高架桥的版画视频。附 H.264 视频、正片叠底、响应式导航及动态年份。# 链接尚未连接实际页面。",
+      "notes": "### 开始\n完整解压 ZIP，保持相对文件与 index.html 一起。阅读 README.md、CUSTOMISE.md、LICENCE.txt。CUSTOMISE 含10个步骤、12条 AI 提示词和精确修改表。\n\n### 源码与素材\n五款模板使用内嵌 CSS/JS；Mostar 使用 styles.css/script.js。FENNEC/Meridian 附 assets/video 中的 H.264 视频；Mostar 附 assets/fonts 中的 Ogg 字体。其余远程素材需要联网。Riverine 缺少 RV 字体时使用后备字体，Freight 使用本机窄体字体。\n\n### 范围\n鼠尾草色全屏页脚，含罗盘 SVG、Fraunces/Inter 与马车驶过高架桥的版画视频。附 H.264 视频、正片叠底、响应式导航及动态年份。# 链接尚未连接实际页面。\n发布前核实素材及字体的独立使用权限。"
+    }
+  }
+});
+
 // Current COD setup for the ten authorised physical-goods templates.
 const COD_GUIDES: Record<LangCode, string> = {
   vi: '### Bắt đầu\nGiải nén toàn bộ ZIP, giữ assets/ cạnh index.html rồi mở trang. README.md và CUSTOMISE.md có hướng dẫn đổi thương hiệu, ảnh, sản phẩm, 10 bước và 12 prompt AI. Không cần build.\n\n### Nhận đơn COD\nMở assets/js/shop-config.js. Điền tên shop, phí giao hàng và orderEndpoint từ dịch vụ nhận đơn do anh sở hữu. CUSTOMISE.md → COD setup có từng bước với Formspree và cách kiểm tra hộp nhận đơn. Khi endpoint còn trống, checkout chỉ xem trước, không gửi đơn; giỏ vẫn giữ nguyên. Khi kết nối, chỉ xóa giỏ sau khi dịch vụ xác nhận nhận đơn. Shop cần kiểm tra tồn kho và xác nhận giao hàng.\n\n### Sản phẩm và USD\nGiá hàng mẫu khác giá mua template $20. Storefront dùng catalog hiện có trong HTML/main.js; showroom dùng products trong shop-config.js. Giá checkout và phí giao hàng tính bằng cent USD: 3800 = $38. Giữ giá hiển thị và catalog đồng bộ.\n\n### Thanh toán online\nDùng tài khoản cổng thanh toán riêng và server riêng để xác thực giá, tạo checkout và kiểm tra webhook. Hướng dẫn và hợp đồng JSON nằm trong CUSTOMISE.md. Không đặt khóa bí mật vào JavaScript; không kèm tài khoản thanh toán hoặc hệ thống tồn kho.',
@@ -346,3 +659,48 @@ for (const slug of ['shirtline','novatrend','diginest','soniq','astra-interior',
     TEMPLATE_GUIDES[slug][lang].notes = COD_GUIDES[lang];
   }
 }
+
+Object.assign(TEMPLATE_GUIDES, {
+  "jack-3d": {
+    "vi": {
+      "intro": "Portfolio 3D nền tối với chân dung magnetic, hai hàng GIF chuyển động theo cuộn, giới thiệu hiện từng ký tự, năm dịch vụ và ba project card xếp chồng. React + TypeScript, cần Node.js và build. Contact/Live Project mở hộp demo; chưa nối email hay website thật. Tài nguyên tải qua mạng; một GIF Celestia nguồn bị 404 có ô thay thế.",
+      "notes": "### Bắt đầu\nGiải nén ZIP, đọc CUSTOMISE.md và README.md. Cài Node.js 20.19+ hoặc 22.12+, chạy npm ci rồi npm run dev. Chạy npm run build và upload nội dung dist/ để xuất bản. Không mở trực tiếp file://.\n\n### Gói giao\nMã nguồn React/TypeScript, package-lock.json, cấu hình Vite/Tailwind và bản build sẵn trong built/. Không kèm node_modules.\n\n### Tuỳ chỉnh\nsrc/main.tsx chứa nội dung và hành vi; src/assets.json chứa URL ảnh/GIF; src/styles.css chứa giao diện. CUSTOMISE.md có10bước và12prompt AI.\n\n### Giới hạn\nCần JavaScript và mạng cho media/font. Contact và Live Project là demo, không gửi dữ liệu. Một GIF Celestia nguồn404 có trạng thái thay thế. Kiểm tra quyền media riêng trước khi xuất bản."
+    },
+    "en": {
+      "intro": "A dark 3D creator portfolio with a magnetic portrait, two scroll-driven GIF rows, character-reveal biography, five services and three stacking project cards. React + TypeScript; Node.js and a build required. Contact/Live Project open demo dialogs, with no real email or project destinations. Media requires internet; one unavailable Celestia GIF has a fallback tile.",
+      "notes": "### Start\nExtract the ZIP and read CUSTOMISE.md and README.md. Install Node.js20.19+ or22.12+, run npm ci and npm run dev. Run npm run build and publish dist/. Direct file:// opening is unsupported.\n\n### Package\nEditable React/TypeScript source, package-lock.json, Vite/Tailwind configuration and a prebuilt site in built/. node_modules is excluded.\n\n### Edit\nsrc/main.tsx contains content and behavior; src/assets.json contains media URLs; src/styles.css contains styling. CUSTOMISE.md has10steps and12AI prompts.\n\n### Limits\nJavaScript and internet for media/fonts are required. Contact/Live Project are demo dialogs and send no data. One404Celestia GIF has a fallback tile. Verify separate media rights before publishing."
+    },
+    "zh": {
+      "intro": "深色3D创作者作品集，包含磁吸人像、双行滚动GIF、逐字显现介绍、五项服务及三张叠放项目卡。React + TypeScript，需要Node.js和构建。Contact/Live Project仅打开演示弹窗，未连接真实邮箱或项目地址。素材需联网；一个Celestia GIF源返回404，显示替代状态。",
+      "notes": "### 开始\n解压ZIP，阅读CUSTOMISE.md和README.md。安装Node.js20.19+或22.12+，运行npm ci、npm run dev。运行npm run build并发布dist/。不支持直接通过file://打开。\n\n### 文件\n可编辑React/TypeScript源码、锁文件、Vite/Tailwind配置及built/预构建网站。不含node_modules。\n\n### 修改\nsrc/main.tsx为内容和交互；src/assets.json为素材URL；src/styles.css为样式。CUSTOMISE.md含10步和12条AI提示词。\n\n### 范围\n需JavaScript和联网媒体/字体。联系和项目按钮为演示弹窗，不发送数据。Celestia GIF源404，显示替代状态。发布前确认素材独立授权。"
+    }
+  },
+  "solaris-gate": {
+    "vi": {
+      "intro": "Trải nghiệm cổng không gian 3D một khung nhìn với preloader 0–100%, cổng vòm 3D nghiêng theo chuột trên canvas và hành trình du hành Mars → Earth → Venus kèm bảng thông số thiên văn.",
+      "notes": "### Bắt đầu\nGiải nén đủ 4 file trong solaris-gate.zip và mở index.html trên trình duyệt có kết nối mạng. CUSTOMISE.md gồm bảng Editing Map đã đếm chính xác, 10 bước tùy chỉnh và 12 prompt AI. Không cần cài đặt hay build.\n\n### Mã nguồn và tài nguyên\nToàn bộ HTML, CSS và JavaScript nằm gọn trong một file index.html. Sáu tài nguyên video MP4, ảnh JPEG Mercury và logo SVG tải từ CloudFront qua mạng. Bốn khai báo @font-face (SF Pro 400/700, SF Pro Thin 100, Aalto 400) ưu tiên font máy cục bộ và tự động dùng fallback Arial / Arial Narrow.\n\n### Tương tác & chuyển động\nPreloader đếm 0% → 100% và đưa logo về góc trái trên; cổng 3D ở giữa nghiêng theo chuột nhờ phép chiếu phối cảnh trên #portal-canvas; bấm vào cổng để du hành Mars → Earth → Venus (dừng ở Venus).\n\n### Phạm vi\nCác liên kết About, Explore, Planets và nút Menu trên header là điều khiển demo, chưa nối trang đích. Đọc kỹ LICENCE.txt trước khi xuất bản."
+    },
+    "en": {
+      "intro": "A single-viewport 3D space portal experience with a 0–100% preloader, pointer-tilted 3D canvas portal and interactive Mars → Earth → Venus travel with planetary fact tables.",
+      "notes": "### Start\nExtract all 4 files from solaris-gate.zip and open index.html in a browser with an active internet connection. CUSTOMISE.md includes a counted literal editing map, 10 customisation steps and 12 ready-to-copy AI prompts. No install or build required.\n\n### Code and assets\nAll HTML, CSS and JavaScript live inside a single self-contained index.html. Six remote MP4 videos, the Mercury JPEG and the SVG mark stream from CloudFront. Four @font-face rules (SF Pro 400/700, SF Pro Thin 100, Aalto 400) use local() fonts with clean Arial / Arial Narrow fallbacks.\n\n### Interaction & motion\nThe preloader counts from 0% to 100% and docks the floating mark into the top-left corner; the central 3D portal tilts with mouse movement on #portal-canvas; clicking the portal travels Mars → Earth → Venus (terminal at Venus).\n\n### Scope\nHeader links (About, Explore, Planets) and the Menu button are visual demo placeholders. Read LICENCE.txt before publishing."
+    },
+    "zh": {
+      "intro": "单屏 3D 太空传送门互动体验，配备 0–100% 视频预加载、随鼠标倾斜的 3D Canvas 传送门及 Mars → Earth → Venus 星际切换与行星参数表。",
+      "notes": "### 开始\n完整解压 solaris-gate.zip 中的 4 个文件，在联网浏览器中打开 index.html。CUSTOMISE.md 含精确检索表、10 个步骤和 12 条 AI 提示词。无需安装或构建。\n\n### 源码与素材\n全部 HTML、CSS 与 JavaScript 内联于单个 index.html。视频、水星图片与 SVG 标志通过 CloudFront 联网加载。四个 @font-face 声明优先使用本机字体并自动回退至 Arial / Arial Narrow。\n\n### 交互与动态\n预加载从 0% 计数至 100% 并将标志归位至左上角；中央 3D 传送门在 #portal-canvas 上随鼠标透视倾斜；点击传送门依次从 Mars 穿越至 Earth 和 Venus（终点为 Venus）。\n\n### 范围\n顶部 About、Explore、Planets 链接与 Menu 按钮为视觉演示。发布前请阅读 LICENCE.txt。"
+    }
+  },
+  "monoframe": {
+    "vi": {
+      "intro": "Hero creative agency toàn màn hình dựng bằng React 18, TypeScript, Vite và Tailwind CSS với video 3D tua theo chuyển động chuột ngang, hiệu ứng gõ chữ useTypewriter và 5 nút pill tương tác.",
+      "notes": "### Bắt đầu\nGiải nén monoframe.zip, đọc CUSTOMISE.md và README.md. Cài Node.js 20.19+ hoặc 22.12+, chạy npm ci rồi npm run dev để chỉnh sửa trực tiếp, hoặc chạy npm run build để xuất bản thư mục dist/. Có sẵn bản dựng tĩnh trong built/ để chạy ngay qua HTTP server. Không mở trực tiếp qua giao thức file://.\n\n### Mã nguồn và tài nguyên\nsrc/App.tsx chứa cấu hình video (VIDEO_SRC, FALLBACK_H264_SRC), độ nhạy tua chuột (SENSITIVITY = 0.8), danh sách menu (NAV_LINKS), các nút pill (ACTION_PILLS), thông điệp gõ chữ (TYPEWRITER_TEXT) và hook useTypewriter. Gói kèm sẵn bản video H.264 (public/assets/hero-h264.mp4) để tương thích mượt trên mọi trình duyệt.\n\n### Tương tác & chuyển động\nDi chuột ngang trên màn hình để tua tiến/lùi video nền thông qua hàng đợi onSeeked; nhóm 5 nút pill trượt lên sau 400ms; hiệu ứng gõ chữ chạy sau 600ms (38ms/ký tự) và ẩn con trỏ khi gõ xong; nút viền sao chép nhanh hello@monoframe.co vào clipboard.\n\n### Phạm vi\nCác liên kết điều hướng (#labs, #studio, #openings, #shop) là điểm neo mẫu cần gắn trang đích thật khi triển khai. Đọc kỹ LICENCE.txt và THIRD-PARTY-LICENSES.txt trước khi xuất bản."
+    },
+    "en": {
+      "intro": "A full-screen creative agency hero built with React 18, TypeScript, Vite and Tailwind CSS featuring a horizontal mouse-scrubbed 3D video, custom useTypewriter hook and 5 interactive action pills.",
+      "notes": "### Start\nExtract monoframe.zip and read CUSTOMISE.md and README.md. Install Node.js 20.19+ or 22.12+, run npm ci and npm run dev to edit, or npm run build to publish dist/. A prebuilt static snapshot is also included in built/ for immediate HTTP hosting. Direct file:// opening is unsupported.\n\n### Code and assets\nsrc/App.tsx holds the video sources (VIDEO_SRC, FALLBACK_H264_SRC), scrub sensitivity (SENSITIVITY = 0.8), navigation links (NAV_LINKS), action pills (ACTION_PILLS), typewriter message (TYPEWRITER_TEXT) and useTypewriter hook. A local H.264 video (public/assets/hero-h264.mp4) is bundled for universal browser scrubbing.\n\n### Interaction & motion\nMove the mouse horizontally across the viewport to scrub the background video forward and backward via a queued onSeeked handler; the 5 action pills fade and slide in at 400ms; the typewriter reveals characters at 38ms intervals after a 600ms delay and removes the blinking cursor when done; clicking the outline pill copies hello@monoframe.co to the clipboard.\n\n### Scope\nNavigation anchors (#labs, #studio, #openings, #shop) are demo placeholders to connect to your real destinations. Review LICENCE.txt and THIRD-PARTY-LICENSES.txt before publishing."
+    },
+    "zh": {
+      "intro": "基于 React 18、TypeScript、Vite 与 Tailwind CSS 构建的全屏创意机构首屏，支持鼠标横向拖拽控制 3D 视频进度、useTypewriter 打字机动效及 5 个交互胶囊按钮。",
+      "notes": "### 开始\n解压 monoframe.zip 并阅读 CUSTOMISE.md 和 README.md。安装 Node.js 20.19+ 或 22.12+，运行 npm ci 与 npm run dev 进行本地开发，或运行 npm run build 发布 dist/。包内亦附带 built/ 预构建静态目录供 HTTP 服务器直接运行。不支持直接通过 file:// 打开。\n\n### 源码与素材\nsrc/App.tsx 包含视频地址（VIDEO_SRC、FALLBACK_H264_SRC）、拖拽灵敏度（SENSITIVITY = 0.8）、导航菜单（NAV_LINKS）、操作按钮（ACTION_PILLS）、打字机文案（TYPEWRITER_TEXT）及 useTypewriter Hook。随包附带 H.264 视频（public/assets/hero-h264.mp4）以确保跨浏览器流畅拖拽。\n\n### 交互与动态\n在屏幕水平移动鼠标可通过 onSeeked 队列平滑拖拽背景视频进度；5 个胶囊按钮在加载 400ms 后淡入上移；打字机在 600ms 延迟后按 38ms/字符逐字显示并在完成后隐藏闪烁光标；点击描边胶囊按钮可复制 hello@monoframe.co。\n\n### 范围\n导航锚点（#labs、#studio、#openings、#shop）为演示入口，上线前请连接真实页面并查阅 LICENCE.txt 与 THIRD-PARTY-LICENSES.txt。"
+    }
+  }
+});

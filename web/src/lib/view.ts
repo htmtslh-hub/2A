@@ -4,6 +4,7 @@
 import { createElement, type MouseEvent, type RefObject } from 'react';
 import AccountNavContent from '@/components/AccountNavContent';
 import { MEMBERSHIP_COPY } from './membership-copy';
+import { requiresPremium, isFreeProduct } from './product-policy';
 import {
   REGISTER_STRINGS,
   FORGOT_STRINGS,
@@ -175,7 +176,7 @@ export function buildView(
   state: State,
   refs: Refs,
   im: Imperative,
-  ctx: { signedIn: boolean; authLoading: boolean; googleEnabled: boolean; savedIds: readonly string[]; saveCounts: Readonly<Record<string, number>>; cartIds: readonly string[]; accountName?: string; accountImage?: string | null } = { signedIn: false, authLoading: false, googleEnabled: false, savedIds: [], saveCounts: {}, cartIds: [] }
+  ctx: { signedIn: boolean; authLoading: boolean; googleEnabled: boolean; savedIds: readonly string[]; saveCounts: Readonly<Record<string, number>>; cartIds: readonly string[]; downloadIds?: readonly string[]; accountName?: string; accountImage?: string | null } = { signedIn: false, authLoading: false, googleEnabled: false, savedIds: [], saveCounts: {}, cartIds: [] }
 ): View {
   const lang: LangCode = (I18N as any)[state.lang] ? state.lang : 'vi';
   const base = (I18N as any)[lang];
@@ -238,8 +239,10 @@ export function buildView(
           ...m,
           cat: real.cat,
           group: real.group ?? 'web',
+          premium: requiresPremium(m.id),
+          free: isFreeProduct(m.id),
           badge: real.video ? '' : m.badge,
-          price: formatMoney(priceOf('TEMPLATE', currency, m.id), currency, lang as Lang),
+          price: isFreeProduct(m.id) ? { vi: 'Miễn phí', en: 'Free', zh: '免费' }[lang] : requiresPremium(m.id) ? 'Premium' : formatMoney(priceOf('TEMPLATE', currency, m.id), currency, lang as Lang),
           ...(real.copy[lang] ?? real.copy.vi),
         }]
       : [];
@@ -401,7 +404,7 @@ export function buildView(
           w: ['100%', '62%', '30%'][i],
           ratio: ['16/10', '3/4', '9/16'][i],
         })),
-        specs: ((REAL_TEMPLATES[d.id]?.group === 'agent' || ['galaxy-edge', 'aerox-studio', 'dualplay', 'verdant', 'orbit-academy', 'shopluxe', 'chronoform', 'leaflit', 'ais-folio', 'semaan'].includes(REAL_TEMPLATES[d.id]?.slug)) ? REAL_TEMPLATES[d.id].specs?.[lang] ?? [] : t.dSpecRows ?? []).map((r: string[]) => ({ k: r[0], v: r[1] })),
+        specs: ((REAL_TEMPLATES[d.id]?.group === 'agent' || ['monoframe', 'solaris-gate', 'jack-3d', 'spaceedu', 'mostar-city', 'fennec', 'riverine-ai', 'freight-axis', 'meridian', 'vesper-ai', 'astro-armor', 'galaxy-edge', 'aerox-studio', 'dualplay', 'verdant', 'orbit-academy', 'shopluxe', 'chronoform', 'leaflit', 'ais-folio', 'semaan', 'motora', 'aerosix', 'airmax-plus', 'backbest-800', 'firepower', 'beetbuh', 'sonicore', 'manganresto'].includes(REAL_TEMPLATES[d.id]?.slug)) ? REAL_TEMPLATES[d.id].specs?.[lang] ?? [] : t.dSpecRows ?? []).map((r: string[]) => ({ k: r[0], v: r[1] })),
         related: allTpl
           .filter((m: any) => m.cat === d.cat && m.id !== d.id)
           .concat(allTpl.filter((m: any) => m.cat !== d.cat && m.id !== d.id))
@@ -670,7 +673,7 @@ export function buildView(
       title: inc.title,
       desc: inc.desc,
     })),
-    // Hai gói nâng cấp tài khoản; mua lẻ vẫn ở thư viện và giỏ hàng.
+    // Premium library access uses plans; individual Agent/Tool sales keep the cart.
     tiers: MEMBERSHIP_COPY[lang].plans.map((tr, i) => ({
       ...TIER_STYLE[i],
       ...tr,
@@ -686,8 +689,27 @@ export function buildView(
     buyDetail: () => {
       if (!state.detail) return;
       if (!REAL_TEMPLATES[state.detail]) return;
+      if (isFreeProduct(state.detail)) {
+        window.location.href = `/api/download?id=${encodeURIComponent(state.detail)}`;
+        return;
+      }
+      if (requiresPremium(state.detail)) {
+        if (ctx.signedIn && ctx.downloadIds?.includes(state.detail)) {
+          window.location.href = `/api/download?id=${encodeURIComponent(state.detail)}`;
+        } else goTab('pricing');
+        return;
+      }
       im.startCheckout('TEMPLATE', state.detail);
     },
+    detailBuyLabel: detail?.free ? { vi: 'Tải miễn phí', en: 'Download free', zh: '免费下载' }[lang] : detail?.premium
+      ? ctx.signedIn && ctx.downloadIds?.includes(detail.id)
+        ? { vi: 'Tải sản phẩm', en: 'Download product', zh: '下载产品' }[lang]
+        : { vi: 'Xem gói Premium', en: 'Explore Premium plans', zh: '查看 Premium 套餐' }[lang]
+      : t.dBuy,
+    premiumIncludedLabel: { vi: 'Trong gói Premium / Ultra', en: 'Included with Premium / Ultra', zh: '包含在 Premium / Ultra 套餐内' }[lang],
+    detailPriceUnit: detail?.previewOnly ? '' : detail?.free ? { vi: 'Không cần đăng nhập', en: 'No sign-in required', zh: '无需登录' }[lang] : detail?.premium
+      ? { vi: 'Trong gói Premium / Ultra', en: 'Included with Premium / Ultra', zh: '包含在 Premium / Ultra 套餐内' }[lang]
+      : t.pricingUnitOnce,
     addDetailToCart: (event: MouseEvent<HTMLButtonElement>) => {
       if (!state.detail) return;
       const rect = event.currentTarget.getBoundingClientRect();

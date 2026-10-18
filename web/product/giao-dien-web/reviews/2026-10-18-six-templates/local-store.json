@@ -1,0 +1,393 @@
+{
+  "origin": "http://127.0.0.1:4395",
+  "results": [
+    {
+      "name": "Chromium",
+      "version": "153.0.8010.12",
+      "checks": [
+        {
+          "id": "t54",
+          "slug": "spaceedu",
+          "name": "SpaceEdu",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/spaceedu.mp4?v=fc51175cb09b",
+            "playing": true,
+            "time": 0.133799
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t55",
+          "slug": "mostar-city",
+          "name": "Mostar City",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/mostar-city.mp4?v=ab04036778cc",
+            "playing": true,
+            "time": 0.189869
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t56",
+          "slug": "fennec",
+          "name": "FENNEC",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/fennec.mp4?v=a8665eab1647",
+            "playing": true,
+            "time": 0.152484
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t57",
+          "slug": "riverine-ai",
+          "name": "riverine.ai",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/riverine-ai.mp4?v=45f8c69e9154",
+            "playing": true,
+            "time": 0.137195
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t58",
+          "slug": "freight-axis",
+          "name": "Freight Axis",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/freight-axis.mp4?v=7bb58b98bd30",
+            "playing": true,
+            "time": 0.151817
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t59",
+          "slug": "meridian",
+          "name": "Meridian",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/meridian.mp4?v=a10e86b9d9ac",
+            "playing": true,
+            "time": 0.27865
+          },
+          "unauthenticatedDownload": 401
+        }
+      ],
+      "sizes": [
+        {
+          "width": 1440,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "Firefox",
+      "version": "155.0",
+      "checks": [
+        {
+          "id": "t54",
+          "slug": "spaceedu",
+          "name": "SpaceEdu",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/spaceedu.mp4?v=fc51175cb09b",
+            "playing": true,
+            "time": 0.378559
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t55",
+          "slug": "mostar-city",
+          "name": "Mostar City",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/mostar-city.mp4?v=ab04036778cc",
+            "playing": true,
+            "time": 0.420846
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t56",
+          "slug": "fennec",
+          "name": "FENNEC",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/fennec.mp4?v=a8665eab1647",
+            "playing": true,
+            "time": 0.291165
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t57",
+          "slug": "riverine-ai",
+          "name": "riverine.ai",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/riverine-ai.mp4?v=45f8c69e9154",
+            "playing": true,
+            "time": 0.161268
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t58",
+          "slug": "freight-axis",
+          "name": "Freight Axis",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/freight-axis.mp4?v=7bb58b98bd30",
+            "playing": true,
+            "time": 0.166666
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t59",
+          "slug": "meridian",
+          "name": "Meridian",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/meridian.mp4?v=a10e86b9d9ac",
+            "playing": true,
+            "time": 0.248168
+          },
+          "unauthenticatedDownload": 401
+        }
+      ],
+      "sizes": [
+        {
+          "width": 1440,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "Edge",
+      "version": "155.0.4283.62",
+      "checks": [
+        {
+          "id": "t54",
+          "slug": "spaceedu",
+          "name": "SpaceEdu",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/spaceedu.mp4?v=fc51175cb09b",
+            "playing": true,
+            "time": 0.153805
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t55",
+          "slug": "mostar-city",
+          "name": "Mostar City",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/mostar-city.mp4?v=ab04036778cc",
+            "playing": true,
+            "time": 0.184886
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t56",
+          "slug": "fennec",
+          "name": "FENNEC",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/fennec.mp4?v=a8665eab1647",
+            "playing": true,
+            "time": 0.135662
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t57",
+          "slug": "riverine-ai",
+          "name": "riverine.ai",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/riverine-ai.mp4?v=45f8c69e9154",
+            "playing": true,
+            "time": 0.153752
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t58",
+          "slug": "freight-axis",
+          "name": "Freight Axis",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/freight-axis.mp4?v=7bb58b98bd30",
+            "playing": true,
+            "time": 0.154456
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t59",
+          "slug": "meridian",
+          "name": "Meridian",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/meridian.mp4?v=a10e86b9d9ac",
+            "playing": true,
+            "time": 0.143226
+          },
+          "unauthenticatedDownload": 401
+        }
+      ],
+      "sizes": [
+        {
+          "width": 1440,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "CocCoc",
+      "version": "152.0.7977.124",
+      "checks": [
+        {
+          "id": "t54",
+          "slug": "spaceedu",
+          "name": "SpaceEdu",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/spaceedu.mp4?v=fc51175cb09b",
+            "playing": true,
+            "time": 0.159675
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t55",
+          "slug": "mostar-city",
+          "name": "Mostar City",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/mostar-city.mp4?v=ab04036778cc",
+            "playing": true,
+            "time": 0.162141
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t56",
+          "slug": "fennec",
+          "name": "FENNEC",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/fennec.mp4?v=a8665eab1647",
+            "playing": true,
+            "time": 0.154379
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t57",
+          "slug": "riverine-ai",
+          "name": "riverine.ai",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/riverine-ai.mp4?v=45f8c69e9154",
+            "playing": true,
+            "time": 0.156514
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t58",
+          "slug": "freight-axis",
+          "name": "Freight Axis",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/freight-axis.mp4?v=7bb58b98bd30",
+            "playing": true,
+            "time": 0.150788
+          },
+          "unauthenticatedDownload": 401
+        },
+        {
+          "id": "t59",
+          "slug": "meridian",
+          "name": "Meridian",
+          "status": 200,
+          "video": {
+            "src": "http://127.0.0.1:4395/previews/meridian.mp4?v=a10e86b9d9ac",
+            "playing": true,
+            "time": 0.17282
+          },
+          "unauthenticatedDownload": 401
+        }
+      ],
+      "sizes": [
+        {
+          "width": 1440,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

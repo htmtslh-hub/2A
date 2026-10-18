@@ -1,0 +1,139 @@
+{
+  "origin": "http://127.0.0.1:4477",
+  "date": "2026-10-17T06:11:36.346Z",
+  "assets": [
+    {
+      "file": "demos/astro-armor/index.html",
+      "bytes": 10608,
+      "sha256": "77fe258f75e502c914d6f45ca192f917d601dc22f0d1b30d94db27140d8c6f60"
+    },
+    {
+      "file": "demos/astro-armor/assets/css/style.css",
+      "bytes": 19618,
+      "sha256": "0945d432e7f100eedc67ce6450246115c63b3f44410772956650b14cb6689ddf"
+    },
+    {
+      "file": "demos/astro-armor/assets/js/main.js",
+      "bytes": 8253,
+      "sha256": "48bebcea6ef665cc23a8b98386ee9527f03ba0b156bd2b3c850735f1367a1197"
+    },
+    {
+      "file": "demos/astro-armor/assets/img/armor-reference.jpg",
+      "bytes": 96321,
+      "sha256": "fe005bd5bbd2c50a793cb7e6b9146e529a1875c215f1a5d08c5bdded09e32301"
+    },
+    {
+      "file": "demos/astro-armor/assets/img/armor-beige.webp",
+      "bytes": 152818,
+      "sha256": "f6ad8ec063937b0392d45a234ba08179a512566cceac94fad4b00f664a759ec5"
+    },
+    {
+      "file": "demos/astro-armor/assets/img/armor-red.webp",
+      "bytes": 144412,
+      "sha256": "26be80dbafac93101bc31ea9a5730f074f96ce00d18f5e46b40ba5da8464c3df"
+    },
+    {
+      "file": "previews/astro-armor.mp4",
+      "bytes": 558970,
+      "sha256": "7217e6b57cdcf917b7b76c9378e2f9256bcb3964f78c04efbc03437fb179f369"
+    },
+    {
+      "file": "previews/astro-armor.webp",
+      "bytes": 24646,
+      "sha256": "a1bd931e044266c98c4c2a687a2c67851f9aba27bd552cedb0c4c10e5b50d292"
+    }
+  ],
+  "locales": [
+    {
+      "locale": "vi-VN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "vi-VN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "status": {
+        "paused": false,
+        "time": 0.124612,
+        "muted": true,
+        "src": "http://127.0.0.1:4477/previews/astro-armor.mp4?v=7217e6b57cdc"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "status": {
+        "paused": false,
+        "time": 0.208509,
+        "muted": true,
+        "src": "http://127.0.0.1:4477/previews/astro-armor.mp4?v=7217e6b57cdc"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.62",
+      "status": {
+        "paused": false,
+        "time": 0.166642,
+        "muted": true,
+        "src": "http://127.0.0.1:4477/previews/astro-armor.mp4?v=7217e6b57cdc"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "status": {
+        "paused": false,
+        "time": 0.122712,
+        "muted": true,
+        "src": "http://127.0.0.1:4477/previews/astro-armor.mp4?v=7217e6b57cdc"
+      },
+      "offscreenPaused": true
+    }
+  ],
+  "anonymous": 401,
+  "directZip": 404,
+  "existingFree": "t22/t1 anonymous 200, exact ZIP bytes"
+}

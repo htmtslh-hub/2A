@@ -1,0 +1,48 @@
+{
+  "id": "t54",
+  "slug": "spaceedu",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T06:51:00.754Z",
+  "demo": "/demos/spaceedu/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.1",
+  "revision": "fc51175cb09b",
+  "sha256": "fc51175cb09b270e378efec5f6c37d841766b37af43ca55b81f597ea41c5d361",
+  "demoHtmlSha256": "6f1c98314c2d91f66c8dbfd787b5b6506e92595fa913865422cda860e65dbe2e",
+  "demoSha256": "219bdaf2085a60aa98c2c9695b0ba8ab15467880f8dd4e46cbdd18384492962f",
+  "bytes": 886804,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.462,
+      "action": "click",
+      "selector": ".planet-r"
+    },
+    {
+      "seconds": 4.843,
+      "action": "click",
+      "selector": ".planet-r"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\spaceedu-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\spaceedu-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\spaceedu-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\spaceedu-return.jpg"
+  ]
+}

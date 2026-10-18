@@ -1,0 +1,48 @@
+{
+  "id": "t55",
+  "slug": "mostar-city",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T06:51:21.543Z",
+  "demo": "/demos/mostar-city/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.1",
+  "revision": "ab04036778cc",
+  "sha256": "ab04036778ccaf81080b5db32d8f5a9ee6dea02a963df413d6d34383cc662bc9",
+  "demoHtmlSha256": "ee7d2a8382b52b209e7a2ad03c622a804590905075ff6abd9baa5c689232eb18",
+  "demoSha256": "5fc5184cf58696a32949e746ee96f498b7a1ec3c61ceced52f4478aa1f41b5f9",
+  "bytes": 1653457,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.407,
+      "action": "chapter",
+      "y": 1060
+    },
+    {
+      "seconds": 4.806,
+      "action": "chapter",
+      "y": 2320
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 3700
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mostar-city-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mostar-city-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mostar-city-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mostar-city-return.jpg"
+  ]
+}

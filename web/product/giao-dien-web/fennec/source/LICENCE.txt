@@ -1,0 +1,24 @@
+FENNEC — LICENCE TERMS
+
+1. WHAT YOU GET
+A perpetual, non-exclusive, worldwide commercial licence to the template source code, subject to the terms below.
+
+2. WHAT YOU MAY DO
+Use and modify this code for unlimited personal or client projects, deploy the resulting websites, and charge for your work. No attribution is required for the template code.
+
+3. WHAT YOU MAY NOT DO
+Do not resell, sublicense, give away, publish on another marketplace/public repository, or bundle the template files as another template product. Do not use the files to build a product whose main value is the template itself.
+
+4. DEMO CONTENT AND MEDIA
+Demo names, sample copy and interface flows must be reviewed before publication. Third-party video, photos, models and fonts keep their own rights. The code licence does not grant rights to these assets. The source URLs came from the project brief; verify your intended media/font use separately. Do not treat a demo interface as a connected booking, payment, AI or enrolment service.
+
+5. FONTS AND LIBRARIES
+Google Fonts Prata, Hanken Grotesk, Poppins, Questrial, Urbanist, Fraunces and Inter use the SIL Open Font License; the relevant licence files were verified in the official google/fonts repository on18Oct2026: https://github.com/google/fonts/tree/main/ofl . Each product uses only its declared fonts. Ogg and locally installed system fonts have separate terms; no blanket font rights are granted here. Three.js (FENNEC only) is MIT licensed: https://github.com/mrdoob/three.js/blob/r160/LICENSE . CDN dependencies are referenced, not bundled.
+
+6. OWNERSHIP
+Copyright in the template design and code remains with its original author. This licence grants permission to use the code, not ownership. Breach of section3 terminates this licence; stop using the template and delete your copies.
+
+7. NO WARRANTY
+Provided as is, without a guarantee for every purpose or browser. Actual checks and limitations are documented in README and the product description. No untested browser or accessibility certification is promised.
+
+Questions about what is and is not allowed: just ask. The answer is usually yes.

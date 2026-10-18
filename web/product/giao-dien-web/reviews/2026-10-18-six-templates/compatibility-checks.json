@@ -1,0 +1,108 @@
+[
+  {
+    "slug": "spaceedu",
+    "errors": [],
+    "state": {
+      "width": 375,
+      "scroll": 375,
+      "fonts": [],
+      "videos": [
+        {
+          "time": 3.440337,
+          "ready": 4,
+          "paused": false
+        },
+        {
+          "time": 0,
+          "ready": 4,
+          "paused": true
+        },
+        {
+          "time": 0,
+          "ready": 4,
+          "paused": true
+        }
+      ]
+    }
+  },
+  {
+    "slug": "mostar-city",
+    "errors": [],
+    "state": {
+      "width": 375,
+      "scroll": 375,
+      "fonts": [
+        {
+          "family": "Ogg Medium",
+          "status": "loaded"
+        }
+      ],
+      "videos": []
+    }
+  },
+  {
+    "slug": "fennec",
+    "errors": [],
+    "state": {
+      "width": 375,
+      "scroll": 375,
+      "fonts": [],
+      "videos": [
+        {
+          "time": 1.547426,
+          "ready": 4,
+          "paused": false
+        }
+      ]
+    }
+  },
+  {
+    "slug": "riverine-ai",
+    "errors": [],
+    "state": {
+      "width": 375,
+      "scroll": 375,
+      "fonts": [],
+      "videos": [
+        {
+          "time": 4.095665,
+          "ready": 4,
+          "paused": false
+        }
+      ]
+    }
+  },
+  {
+    "slug": "freight-axis",
+    "errors": [],
+    "state": {
+      "width": 375,
+      "scroll": 375,
+      "fonts": [],
+      "videos": [
+        {
+          "time": 3.712017,
+          "ready": 4,
+          "paused": false
+        }
+      ]
+    }
+  },
+  {
+    "slug": "meridian",
+    "errors": [],
+    "state": {
+      "width": 375,
+      "scroll": 375,
+      "fonts": [],
+      "videos": [
+        {
+          "time": 4.072477,
+          "ready": 4,
+          "paused": false
+        }
+      ],
+      "copyBottom": 398
+    }
+  }
+]

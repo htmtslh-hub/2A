@@ -11,6 +11,7 @@ import { GUIDE_LABELS, guideHref } from '@/lib/guide-links';
 import guideStyles from '@/components/guide/guide.module.css';
 import { SignOutButton } from './actions';
 import { membershipState } from '@/lib/memberships';
+import { membershipName } from '@/lib/membership-policy';
 import { MEMBERSHIP_COPY } from '@/lib/membership-copy';
 
 const DATE_LOCALE: Record<Lang, string> = { vi: 'vi-VN', en: 'en-US', zh: 'zh-CN' };
@@ -259,7 +260,7 @@ export default async function Page() {
         <p style={{ margin: '0 0 32px', fontSize: 13, color: '#6f767f' }}>{session?.user?.email}</p>
 
         {membership.active && <section style={{ marginBottom: 28 }}>
-          <h2>{membership.active.plan === 'ULTRA' ? 'Ultra' : 'Pro'} · {m.download}</h2>
+          <h2>{membershipName(membership.active.plan)} · {m.download}</h2>
           <p>{m.until}: {new Intl.DateTimeFormat(DATE_LOCALE[lang], { dateStyle: 'long', timeStyle: 'short' }).format(membership.active.expiresAt)}</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>{Object.entries(REAL_TEMPLATES).map(([id, tpl]) => <div key={id} style={card}>
             <strong>{tpl.copy[lang].name}</strong><div className={guideStyles.orderLinks}>

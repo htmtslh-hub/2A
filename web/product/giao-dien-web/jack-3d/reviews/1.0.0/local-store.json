@@ -1,0 +1,129 @@
+{
+  "origin": "http://127.0.0.1:4395",
+  "result": [
+    {
+      "name": "Chromium",
+      "version": "153.0.8010.12",
+      "status": 200,
+      "video": {
+        "src": "http://127.0.0.1:4395/previews/jack-3d.mp4?v=062eff8d0f26",
+        "time": 0.204431,
+        "paused": false
+      },
+      "guestZip": 401,
+      "widths": [
+        {
+          "width": 1440,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320
+        }
+      ],
+      "dialogs": true,
+      "errors": []
+    },
+    {
+      "name": "Firefox",
+      "version": "155.0",
+      "status": 200,
+      "video": {
+        "src": "http://127.0.0.1:4395/previews/jack-3d.mp4?v=062eff8d0f26",
+        "time": 0.162344,
+        "paused": false
+      },
+      "guestZip": 401,
+      "widths": [
+        {
+          "width": 1440,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320
+        }
+      ],
+      "dialogs": true,
+      "errors": []
+    },
+    {
+      "name": "Edge",
+      "version": "155.0.4283.62",
+      "status": 200,
+      "video": {
+        "src": "http://127.0.0.1:4395/previews/jack-3d.mp4?v=062eff8d0f26",
+        "time": 0.148568,
+        "paused": false
+      },
+      "guestZip": 401,
+      "widths": [
+        {
+          "width": 1440,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320
+        }
+      ],
+      "dialogs": true,
+      "errors": []
+    },
+    {
+      "name": "CocCoc",
+      "version": "152.0.7977.124",
+      "status": 200,
+      "video": {
+        "src": "http://127.0.0.1:4395/previews/jack-3d.mp4?v=062eff8d0f26",
+        "time": 0.146424,
+        "paused": false
+      },
+      "guestZip": 401,
+      "widths": [
+        {
+          "width": 1440,
+          "scroll": 1440
+        },
+        {
+          "width": 820,
+          "scroll": 820
+        },
+        {
+          "width": 375,
+          "scroll": 375
+        },
+        {
+          "width": 320,
+          "scroll": 320
+        }
+      ],
+      "dialogs": true,
+      "errors": []
+    }
+  ]
+}

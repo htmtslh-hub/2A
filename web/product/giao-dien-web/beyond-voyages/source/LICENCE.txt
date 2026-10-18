@@ -1,0 +1,26 @@
+BEYOND VOYAGES — LICENCE TERMS
+
+Copyright entity: Forge Zone. These terms apply to the template source and included assets; they do not assert exclusive copyright in AI-generated media.
+
+1. WHAT YOU GET
+A perpetual, non-exclusive commercial licence to use the Beyond Voyages static website template upon an authorised purchase.
+
+2. WHAT YOU MAY DO
+Use the template for unlimited personal and client website projects, modify the HTML, CSS, JavaScript, and included artwork, and publish the resulting website without attribution.
+
+3. WHAT YOU MAY NOT DO
+You may not resell, redistribute, sublicense, or share the template source archive on its own, list it on another template marketplace, or bundle it into a competing template or theme pack.
+
+4. DEMO CONTENT & INCLUDED IMAGERY
+All sample brand names ("Logoipsum", "Beyond Voyages"), itineraries, route notes, addresses, phone numbers, email addresses, and "[YOUR PRICE]" placeholders are fictional demonstration data and must be replaced or verified before publishing. The five WebP destination scenes in assets/img/ are original AI-generated illustrations created for this template; you may use them on your published website or replace them with your own licensed photography, but you may not sell or redistribute the image files separately as stock media.
+
+5. FONTS
+The template references Google Fonts for "Lobster" (https://fonts.google.com/specimen/Lobster) and "Plus Jakarta Sans" (https://fonts.google.com/specimen/Plus+Jakarta+Sans), both published under the SIL Open Font License 1.1 (https://openfontlicense.org). Font intellectual property belongs to the respective type designers.
+
+6. OWNERSHIP
+Copyright in the template code and layout structure remains with Forge Zone. This licence grants usage rights, not transfer of copyright ownership.
+
+7. NO WARRANTY
+The template is provided "as is" without warranty of any kind. See the accompanying documentation for tested browsers and static-site scope.
+
+Questions about what is or is not allowed? Just ask. The answer is usually yes.

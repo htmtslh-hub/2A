@@ -1,0 +1,259 @@
+{
+  "origin": "https://forgezone.store",
+  "date": "2026-10-15T01:29:00.576Z",
+  "resources": [
+    {
+      "url": "/demos/chronoform/assets/css/style.css",
+      "status": 200,
+      "sha256": "8b21efe37cd1f902a8fad624482aca091c913fe0c8b1763dada8b2b6b096ee82"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/editorial.webp",
+      "status": 200,
+      "sha256": "0984952e4909bdd67e92386f56ed626245eeccfc10dba1bba308e756d43b5ed3"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/hero-cowboy.webp",
+      "status": 200,
+      "sha256": "4248d68660bd4ddb96f04151cddb260c87519c5569561bbae64b685bd2c3f85f"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/hero-jupiter.webp",
+      "status": 200,
+      "sha256": "9c472342fd0f09d41de6c1cc9d5f00ca5578a8c16ef371c1a7ebf7e09686eab7"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/hero-opus-orange.webp",
+      "status": 200,
+      "sha256": "72cd083437aa88cf41b7afbc59ad657820f72d5ed69304a521aa805e886f7e74"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/hero-paraiba.webp",
+      "status": 200,
+      "sha256": "d2a9d93b8190c25acda2d8380efac450ceb8be340c9c1970556150fa7729dff9"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/ice.webp",
+      "status": 200,
+      "sha256": "8067a682d64437a08e3485c17f535c5175003b19a602874d9656d28b115c4718"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/jupiter.webp",
+      "status": 200,
+      "sha256": "23f42de42dda29cc7aae73a2f2d5f5df03174cc36c1d3d5a1e8eca7e43fb3a76"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/opus.webp",
+      "status": 200,
+      "sha256": "6935c3dc15cd380a7b1ab7c79d4873b05f9ef29189765a6fbdf76417c27e6bda"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/paraiba.webp",
+      "status": 200,
+      "sha256": "d2fd58421912a2919781839baddc37c4988ba0cb3925c4afbcf0f2aeae028a05"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-black-hole.webp",
+      "status": 200,
+      "sha256": "32b3b1acd5ff336cfd8a8d7be42a85e62f4b2e0ab417695bb59de55f5e5f6c67"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-cowboy.webp",
+      "status": 200,
+      "sha256": "bda24ed791c4c11a4c5e1e9c81ef8ac7dd956228104c0e47fa8864d253a34470"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-jupiter-gold.webp",
+      "status": 200,
+      "sha256": "980f189a7c3c49bcdfd9860b9256a8c9cd654912b19a80a0d843dc4b00c62cec"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-jupiter.webp",
+      "status": 200,
+      "sha256": "818bc4493f9d4740d27dfa469add2ff1942e21d3173d3761861c681a76766bac"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-meteorite.webp",
+      "status": 200,
+      "sha256": "18affe8d49a01039a44a9eeb3eeb83b4781e42a3592ba534a31d8b5b41e31f1c"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-opus-ice.webp",
+      "status": 200,
+      "sha256": "44d17d11dbbf98b8e23daf275cc95ef0a747ceccfcaebc86590447064e2fd681"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-opus-orange.webp",
+      "status": 200,
+      "sha256": "cae302aea780d2586b6589f9d57b550d1ca06cdd20961dc3d4fac53538662d4e"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-paraiba.webp",
+      "status": 200,
+      "sha256": "1fb6181c6cc5b75bb7ecd16497846effd36de11ff3178352880750a248f27cd4"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-skeleton-gold.webp",
+      "status": 200,
+      "sha256": "758aaba3d683d16c1bb95ab0ef7a888f5daa1db86ee3633da36e9191cd0cca98"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-skeleton-steel.webp",
+      "status": 200,
+      "sha256": "47a5054853661084faa52a0ec83d394cfedab26200c9fc6f2e2dfe4dbedf0eca"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/render-sunset.webp",
+      "status": 200,
+      "sha256": "363586f3600ceffc131778606e2aa25d8f98cb10540c57b156b6f80cb8219940"
+    },
+    {
+      "url": "/demos/chronoform/assets/img/skeleton.webp",
+      "status": 200,
+      "sha256": "0f8a728e1ab37fe9f8ca816eafc1b7dc8ea6eb959f9dfa0cde6fcf1ec0ebae9f"
+    },
+    {
+      "url": "/demos/chronoform/assets/js/main.js",
+      "status": 200,
+      "sha256": "a45c7569b079dd49773fa86ed9fa861da7ecf89bb11d5d1afdfc924138a330ca"
+    },
+    {
+      "url": "/demos/chronoform/assets/js/watch3d.js",
+      "status": 200,
+      "sha256": "da5a1cba7c9742832e489a332576ccd806fc019440125032407bc0bb3ca3c0f8"
+    },
+    {
+      "url": "/demos/chronoform/index.html",
+      "status": 200,
+      "sha256": "15282e1aa40298ee219dfe246aefca29a7e7244ef62a1d807d47cc3a21b7ad12"
+    },
+    {
+      "url": "/previews/chronoform.webp",
+      "status": 200,
+      "sha256": "106913fb73ef3361ff31fe4899375e2b82a0a3e98889d137c0b6b14b8585c87d"
+    },
+    {
+      "url": "/previews/chronoform.mp4",
+      "status": 200,
+      "sha256": "984baf4e10c68514efe899b2116ba03f1882c9496593a6a1888f825abb3c41fb"
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "models": [
+        {
+          "src": "assets/img/hero-paraiba.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-jupiter.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-cowboy.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-opus-orange.webp",
+          "loaded": true,
+          "visible": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "models": [
+        {
+          "src": "assets/img/hero-paraiba.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-jupiter.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-cowboy.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-opus-orange.webp",
+          "loaded": true,
+          "visible": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.45",
+      "models": [
+        {
+          "src": "assets/img/hero-paraiba.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-jupiter.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-cowboy.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-opus-orange.webp",
+          "loaded": true,
+          "visible": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "models": [
+        {
+          "src": "assets/img/hero-paraiba.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-jupiter.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-cowboy.webp",
+          "loaded": true,
+          "visible": true
+        },
+        {
+          "src": "assets/img/hero-opus-orange.webp",
+          "loaded": true,
+          "visible": true
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "store": {
+    "src": "https://forgezone.store/previews/chronoform.mp4?v=984baf4e10c6",
+    "playing": true,
+    "muted": true,
+    "loop": true
+  },
+  "anonymousDownload": 401,
+  "directZip": 404
+}

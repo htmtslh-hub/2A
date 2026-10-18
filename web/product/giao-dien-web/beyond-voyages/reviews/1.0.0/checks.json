@@ -1,0 +1,1395 @@
+{
+  "slug": "beyond-voyages",
+  "version": "1.0.0",
+  "date": "2026-10-17T09:33:30.879Z",
+  "os": "win32",
+  "zipBytes": 895888,
+  "sha256": "8dea4c913ceff51336363378752e27576d1b9898e3351edb2cf894a7b2434187",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#main"
+          },
+          {
+            "label": "Logoipsum — Beyond Voyages home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#top"
+          },
+          {
+            "label": "Home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#top"
+          },
+          {
+            "label": "Destinations",
+            "href": "#destinations",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#destinations"
+          },
+          {
+            "label": "Travel Packages",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "About Us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#about"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#contact"
+          },
+          {
+            "label": "Explore Destinations",
+            "href": "#destinations",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#destinations"
+          },
+          {
+            "label": "See Alpine Route",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "See Ionian Route",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "See Andaman Route",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "See Ligurian Route",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "See Lagoon Route",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "Request Brief",
+            "href": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Dolomites%20to%20Venice",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Dolomites%20to%20Venice"
+          },
+          {
+            "label": "Request Brief",
+            "href": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Mediterranean%20Arc",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Mediterranean%20Arc"
+          },
+          {
+            "label": "Request Brief",
+            "href": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Andaman%20Limestone",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Andaman%20Limestone"
+          },
+          {
+            "label": "Email concierge@beyondvoyages.example",
+            "href": "mailto:concierge@beyondvoyages.example?subject=Custom%20Travel%20Brief",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@beyondvoyages.example?subject=Custom%20Travel%20Brief"
+          },
+          {
+            "label": "Call +41 44 580 24 90",
+            "href": "tel:+41445802490",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+41445802490"
+          },
+          {
+            "label": "Home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#top"
+          },
+          {
+            "label": "Destinations",
+            "href": "#destinations",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#destinations"
+          },
+          {
+            "label": "Travel Packages",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "About Us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#about"
+          },
+          {
+            "label": "concierge@beyondvoyages.example",
+            "href": "mailto:concierge@beyondvoyages.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@beyondvoyages.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 920,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(7, 17, 24)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 19.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "Logoipsum",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              17,
+              24
+            ],
+            "ratio": 19.05,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-nav__link is-current",
+            "text": "Home",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              42,
+              50,
+              56
+            ],
+            "ratio": 12.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-nav__link",
+            "text": "Destinations",
+            "colour": "rgb(216, 230, 239)",
+            "background": [
+              7,
+              17,
+              24
+            ],
+            "ratio": 14.95,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle",
+            "text": "Pause motion",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              17,
+              24
+            ],
+            "ratio": 19.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__eyebrow",
+            "text": "Destination Atlas",
+            "colour": "rgb(245, 185, 113)",
+            "background": [
+              7,
+              17,
+              24
+            ],
+            "ratio": 10.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "filter-pill",
+            "text": "Alpine & Lakes",
+            "colour": "rgb(216, 230, 239)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 12.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "dest-card__title",
+            "text": "Lago di Braies",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 16.42,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "dest-card__loc",
+            "text": "Dolomites, Italy",
+            "colour": "rgb(245, 185, 113)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 9.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "btn btn--subtle",
+            "text": "View on Hero Stage",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              45,
+              60,
+              71
+            ],
+            "ratio": 11.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "dest-card__link",
+            "text": "See Alpine Route",
+            "colour": "rgb(255, 210, 157)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 11.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__eyebrow",
+            "text": "Travel Packages",
+            "colour": "rgb(245, 185, 113)",
+            "background": [
+              11,
+              24,
+              34
+            ],
+            "ratio": 10.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Bespoke Multi-Stop Itineraries",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              11,
+              24,
+              34
+            ],
+            "ratio": 17.98,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__desc",
+            "text": "Sample itineraries illustrating how rout",
+            "colour": "rgb(216, 230, 239)",
+            "background": [
+              11,
+              24,
+              34
+            ],
+            "ratio": 14.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__tag",
+            "text": "Alpine & Lagoon",
+            "colour": "rgb(255, 210, 157)",
+            "background": [
+              53,
+              57,
+              57
+            ],
+            "ratio": 8.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__price-label",
+            "text": "Illustrative sample rate",
+            "colour": "rgb(169, 192, 207)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 8.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__price",
+            "text": "[YOUR PRICE] / traveller",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 16.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__duration",
+            "text": "9 Days · 8 Nights",
+            "colour": "rgb(216, 230, 239)",
+            "background": [
+              21,
+              42,
+              58
+            ],
+            "ratio": 11.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__tag",
+            "text": "Mediterranean Arc",
+            "colour": "rgb(255, 210, 157)",
+            "background": [
+              57,
+              65,
+              67
+            ],
+            "ratio": 7.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__title",
+            "text": "Ligurian Harbours & Ionian Coves",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              42,
+              58
+            ],
+            "ratio": 14.75,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__route",
+            "text": "Vernazza, Cinque Terre → Florence → Came",
+            "colour": "rgb(245, 185, 113)",
+            "background": [
+              21,
+              42,
+              58
+            ],
+            "ratio": 8.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__price-label",
+            "text": "Illustrative sample rate",
+            "colour": "rgb(169, 192, 207)",
+            "background": [
+              21,
+              42,
+              58
+            ],
+            "ratio": 7.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__price",
+            "text": "[YOUR PRICE] / traveller",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              42,
+              58
+            ],
+            "ratio": 14.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "pillar-card__num",
+            "text": "01",
+            "colour": "rgb(245, 185, 113)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 9.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "btn btn--glass",
+            "text": "Call +41 44 580 24 90",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              9,
+              21,
+              29
+            ],
+            "ratio": 18.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-footer__copy",
+            "text": "© 2026 Beyond Voyages Showcase Template.",
+            "colour": "rgb(169, 192, 207)",
+            "background": [
+              7,
+              17,
+              24
+            ],
+            "ratio": 10.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore Destinations",
+          "colour": "rgb(255, 255, 255)",
+          "width": "3px",
+          "ratio": 19.05
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#main"
+          },
+          {
+            "label": "Logoipsum — Beyond Voyages home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#top"
+          },
+          {
+            "label": "Home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#top"
+          },
+          {
+            "label": "Destinations",
+            "href": "#destinations",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#destinations"
+          },
+          {
+            "label": "Travel Packages",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "About Us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#about"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#contact"
+          },
+          {
+            "label": "Explore Destinations",
+            "href": "#destinations",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#destinations"
+          },
+          {
+            "label": "See Alpine Route",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "See Ionian Route",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "See Andaman Route",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "See Ligurian Route",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "See Lagoon Route",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "Request Brief",
+            "href": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Dolomites%20to%20Venice",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Dolomites%20to%20Venice"
+          },
+          {
+            "label": "Request Brief",
+            "href": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Mediterranean%20Arc",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Mediterranean%20Arc"
+          },
+          {
+            "label": "Request Brief",
+            "href": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Andaman%20Limestone",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@beyondvoyages.example?subject=Itinerary%20Enquiry%3A%20Andaman%20Limestone"
+          },
+          {
+            "label": "Email concierge@beyondvoyages.example",
+            "href": "mailto:concierge@beyondvoyages.example?subject=Custom%20Travel%20Brief",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@beyondvoyages.example?subject=Custom%20Travel%20Brief"
+          },
+          {
+            "label": "Call +41 44 580 24 90",
+            "href": "tel:+41445802490",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+41445802490"
+          },
+          {
+            "label": "Home",
+            "href": "#top",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#top"
+          },
+          {
+            "label": "Destinations",
+            "href": "#destinations",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#destinations"
+          },
+          {
+            "label": "Travel Packages",
+            "href": "#packages",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#packages"
+          },
+          {
+            "label": "About Us",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4338/beyond-voyages/index.html#about"
+          },
+          {
+            "label": "concierge@beyondvoyages.example",
+            "href": "mailto:concierge@beyondvoyages.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:concierge@beyondvoyages.example"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 920,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(7, 17, 24)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 19.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "Logoipsum",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              17,
+              24
+            ],
+            "ratio": 19.05,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-nav__link is-current",
+            "text": "Home",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              42,
+              50,
+              56
+            ],
+            "ratio": 12.99,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-nav__link",
+            "text": "Destinations",
+            "colour": "rgb(216, 230, 239)",
+            "background": [
+              7,
+              17,
+              24
+            ],
+            "ratio": 14.95,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle",
+            "text": "Pause motion",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              7,
+              17,
+              24
+            ],
+            "ratio": 19.05,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__eyebrow",
+            "text": "Destination Atlas",
+            "colour": "rgb(245, 185, 113)",
+            "background": [
+              7,
+              17,
+              24
+            ],
+            "ratio": 10.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "filter-pill",
+            "text": "Alpine & Lakes",
+            "colour": "rgb(216, 230, 239)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 12.89,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "dest-card__title",
+            "text": "Lago di Braies",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 16.42,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "dest-card__loc",
+            "text": "Dolomites, Italy",
+            "colour": "rgb(245, 185, 113)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 9.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "btn btn--subtle",
+            "text": "View on Hero Stage",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              45,
+              60,
+              71
+            ],
+            "ratio": 11.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "dest-card__link",
+            "text": "See Alpine Route",
+            "colour": "rgb(255, 210, 157)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 11.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__eyebrow",
+            "text": "Travel Packages",
+            "colour": "rgb(245, 185, 113)",
+            "background": [
+              11,
+              24,
+              34
+            ],
+            "ratio": 10.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__title",
+            "text": "Bespoke Multi-Stop Itineraries",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              11,
+              24,
+              34
+            ],
+            "ratio": 17.98,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section__desc",
+            "text": "Sample itineraries illustrating how rout",
+            "colour": "rgb(216, 230, 239)",
+            "background": [
+              11,
+              24,
+              34
+            ],
+            "ratio": 14.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__tag",
+            "text": "Alpine & Lagoon",
+            "colour": "rgb(255, 210, 157)",
+            "background": [
+              53,
+              57,
+              57
+            ],
+            "ratio": 8.31,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__price-label",
+            "text": "Illustrative sample rate",
+            "colour": "rgb(169, 192, 207)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 8.7,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__price",
+            "text": "[YOUR PRICE] / traveller",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 16.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__duration",
+            "text": "9 Days · 8 Nights",
+            "colour": "rgb(216, 230, 239)",
+            "background": [
+              21,
+              42,
+              58
+            ],
+            "ratio": 11.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__tag",
+            "text": "Mediterranean Arc",
+            "colour": "rgb(255, 210, 157)",
+            "background": [
+              57,
+              65,
+              67
+            ],
+            "ratio": 7.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__title",
+            "text": "Ligurian Harbours & Ionian Coves",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              42,
+              58
+            ],
+            "ratio": 14.75,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__route",
+            "text": "Vernazza, Cinque Terre → Florence → Came",
+            "colour": "rgb(245, 185, 113)",
+            "background": [
+              21,
+              42,
+              58
+            ],
+            "ratio": 8.47,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__price-label",
+            "text": "Illustrative sample rate",
+            "colour": "rgb(169, 192, 207)",
+            "background": [
+              21,
+              42,
+              58
+            ],
+            "ratio": 7.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "package-card__price",
+            "text": "[YOUR PRICE] / traveller",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              21,
+              42,
+              58
+            ],
+            "ratio": 14.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "pillar-card__num",
+            "text": "01",
+            "colour": "rgb(245, 185, 113)",
+            "background": [
+              16,
+              33,
+              46
+            ],
+            "ratio": 9.43,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "btn btn--glass",
+            "text": "Call +41 44 580 24 90",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              9,
+              21,
+              29
+            ],
+            "ratio": 18.54,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-footer__copy",
+            "text": "© 2026 Beyond Voyages Showcase Template.",
+            "colour": "rgb(169, 192, 207)",
+            "background": [
+              7,
+              17,
+              24
+            ],
+            "ratio": 10.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Explore Destinations",
+          "colour": "rgb(255, 255, 255)",
+          "width": "3px",
+          "ratio": 19.05
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "beyond-voyages/assets/css/style.css",
+    "beyond-voyages/assets/img/boathouse-lake.webp",
+    "beyond-voyages/assets/img/cameo-island.webp",
+    "beyond-voyages/assets/img/cinque-terre.webp",
+    "beyond-voyages/assets/img/grand-canal.webp",
+    "beyond-voyages/assets/img/koh-phi-phi.webp",
+    "beyond-voyages/assets/js/main.js",
+    "beyond-voyages/CUSTOMISE.md",
+    "beyond-voyages/index.html",
+    "beyond-voyages/LICENCE.txt",
+    "beyond-voyages/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/boathouse-lake.webp",
+    "assets/img/cameo-island.webp",
+    "assets/img/cinque-terre.webp",
+    "assets/img/grand-canal.webp",
+    "assets/img/koh-phi-phi.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

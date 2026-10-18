@@ -1,0 +1,90 @@
+{
+  "url": "https://forgezone.store/demos/backbest-800/index.html?v=1.0.0",
+  "date": "2026-10-15T15:43:30.510Z",
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "mid": {
+        "opacity": 0.382828,
+        "transform": "matrix(1, 0, 0, 1, -42.6768, 0)"
+      },
+      "forward": "0",
+      "reverse": "2",
+      "rapid": "0",
+      "scroll": [
+        0,
+        0.4986219724784044,
+        0.8725884518372077,
+        0.560949719038205,
+        0
+      ],
+      "actionProgress": "4.99762%",
+      "mobileOverflow": false,
+      "dialog": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "mid": {
+        "opacity": 0.274527,
+        "transform": "matrix(1, 0, 0, 1, -50.1657, 0)"
+      },
+      "forward": "0",
+      "reverse": "2",
+      "rapid": "0",
+      "scroll": [
+        0,
+        0.4986080499910566,
+        0.8725640874843491,
+        0.5609340562399386,
+        0
+      ],
+      "actionProgress": "5.93667%",
+      "mobileOverflow": false,
+      "dialog": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.45",
+      "mid": {
+        "opacity": 0.340101,
+        "transform": "matrix(1, 0, 0, 1, -45.6313, 0)"
+      },
+      "forward": "0",
+      "reverse": "2",
+      "rapid": "0",
+      "scroll": [
+        0,
+        0.4986219724784044,
+        0.8725884518372077,
+        0.560949719038205,
+        0
+      ],
+      "actionProgress": "3.99048%",
+      "mobileOverflow": false,
+      "dialog": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "mid": {
+        "opacity": 0.419621,
+        "transform": "matrix(1, 0, 0, 1, -40.1326, 0)"
+      },
+      "forward": "0",
+      "reverse": "2",
+      "rapid": "0",
+      "scroll": [
+        0,
+        0.4986219724784044,
+        0.8725884518372077,
+        0.560949719038205,
+        0
+      ],
+      "actionProgress": "4.24286%",
+      "mobileOverflow": false,
+      "dialog": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "t53",
+  "slug": "atrium-mtl",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T00:59:13.701Z",
+  "demo": "/demos/atrium-mtl/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a239421817d7",
+  "sha256": "a239421817d744660675a196577ed2e1e9464847a05f89e1b21837d99782a12c",
+  "demoHtmlSha256": "8ae7f35a8407872f5cde6fdadfe1fe477c7a5281f652f6deb2fab91943577fdb",
+  "demoSha256": "debc8e56f8e683f12424d6ceae8064603cfde641601e2c5ae6ada04e2e0ebf61",
+  "bytes": 375035,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.483,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"search-btn\" aria-label=\"Search archive\" data-next=\"\">\n            <svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\" focusable=\"false\">\n          "
+    },
+    {
+      "seconds": 4.858,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"search-btn\" aria-label=\"Search archive\" data-next=\"\">\n            <svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\" focusable=\"false\">\n          "
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\atrium-mtl-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\atrium-mtl-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\atrium-mtl-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\atrium-mtl-return.jpg"
+  ]
+}

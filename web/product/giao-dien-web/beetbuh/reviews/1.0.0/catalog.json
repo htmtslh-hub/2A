@@ -1,0 +1,103 @@
+{
+  "slug": "beetbuh",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "9 file · 3 ảnh WebP cục bộ tự tạo"
+      ],
+      [
+        "Tương tác",
+        "3 trạng thái xem · nút/phím/vuốt · phóng to ảnh"
+      ],
+      [
+        "Chuyển động",
+        "Chuyển góc hữu hạn · reveal khi cuộn · tạm dừng trong phiên"
+      ],
+      [
+        "Phạm vi",
+        "Concept tai nghe · liên hệ email · không thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · 3 original local WebP images"
+      ],
+      [
+        "Interaction",
+        "3 view states · buttons/keys/swipe · image expansion"
+      ],
+      [
+        "Motion",
+        "Finite view transitions · scroll reveals · session pause"
+      ],
+      [
+        "Scope",
+        "Headphone concept · email enquiry · no checkout"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "9个文件 · 3张原创本地WebP图像"
+      ],
+      [
+        "交互",
+        "3种视图 · 按钮/按键/滑动 · 图像放大"
+      ],
+      [
+        "动态",
+        "有限视角切换 · 滚动渐显 · 会话内暂停"
+      ],
+      [
+        "范围",
+        "耳机概念 · 邮件咨询 · 无支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "BeetBuh",
+      "desc": "Landing page tai nghe màu cam trên nền ivory, chữ tiêu đề lớn, ảnh lifestyle và ba trạng thái xem sản phẩm có chuyển động.",
+      "tags": [
+        "Tai nghe",
+        "3 trạng thái xem",
+        "Ivory / cam"
+      ]
+    },
+    "en": {
+      "name": "BeetBuh",
+      "desc": "An ivory-and-orange headphone landing page with oversized condensed type, lifestyle artwork and three animated product view states.",
+      "tags": [
+        "Headphones",
+        "3 view states",
+        "Ivory / orange"
+      ]
+    },
+    "zh": {
+      "name": "BeetBuh",
+      "desc": "象牙白与橙色耳机展示页，配有大型窄体标题、生活方式图像及三种动态产品视图。",
+      "tags": [
+        "耳机",
+        "3种视图",
+        "象牙白 / 橙色"
+      ]
+    }
+  }
+}

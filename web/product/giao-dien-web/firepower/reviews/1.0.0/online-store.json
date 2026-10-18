@@ -1,0 +1,129 @@
+{
+  "origin": "https://forgezone.store",
+  "date": "2026-10-16T06:43:12.266Z",
+  "assets": [
+    {
+      "file": "demos/firepower/index.html",
+      "bytes": 9581,
+      "sha256": "0bf5f6f6b8ac0d2b0234c3410205f1b40373e23f1cf022c5e88eb0e932f3ca08"
+    },
+    {
+      "file": "demos/firepower/assets/css/style.css",
+      "bytes": 15634,
+      "sha256": "5b3e153ca98734845a3aae0d79208b54ed44737b9cbef283cd4cd300b214e0b1"
+    },
+    {
+      "file": "demos/firepower/assets/js/main.js",
+      "bytes": 6718,
+      "sha256": "a36f33835b634f5d789ea912a2e879f877fbebfb794b9faac1e92c527fdd7265"
+    },
+    {
+      "file": "demos/firepower/assets/img/mouse-views.webp",
+      "bytes": 130900,
+      "sha256": "c9a1d077d4151aaf56d765f7d03f8e6de58bbd4cb7ca58d214b642ae2a09a572"
+    },
+    {
+      "file": "previews/firepower.mp4",
+      "bytes": 319374,
+      "sha256": "df2680f7da03b278fb638d5079af7ade38b7a7d7f6ee8ff69e00b163a663bb42"
+    },
+    {
+      "file": "previews/firepower.webp",
+      "bytes": 15610,
+      "sha256": "b7c8071d19d958d09c32d6d559520e7033d29c9574832d96ba63f868e99dbc29"
+    }
+  ],
+  "locales": [
+    {
+      "locale": "vi-VN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "vi-VN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "status": {
+        "paused": false,
+        "time": 0.134302,
+        "muted": true,
+        "src": "https://forgezone.store/previews/firepower.mp4?v=df2680f7da03"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "status": {
+        "paused": false,
+        "time": 0.125847,
+        "muted": true,
+        "src": "https://forgezone.store/previews/firepower.mp4?v=df2680f7da03"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.60",
+      "status": {
+        "paused": false,
+        "time": 0.124239,
+        "muted": true,
+        "src": "https://forgezone.store/previews/firepower.mp4?v=df2680f7da03"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "status": {
+        "paused": false,
+        "time": 0.117177,
+        "muted": true,
+        "src": "https://forgezone.store/previews/firepower.mp4?v=df2680f7da03"
+      },
+      "offscreenPaused": true
+    }
+  ],
+  "anonymous": 401,
+  "directZip": 404,
+  "existingFree": "t22/t1 anonymous 200, exact ZIP bytes"
+}

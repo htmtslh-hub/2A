@@ -1,0 +1,578 @@
+{
+  "date": "2026-10-15T15:09:07.616Z",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 822,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 860,
+          "height": 900,
+          "sw": 860,
+          "cw": 860,
+          "small": []
+        },
+        {
+          "width": 861,
+          "height": 900,
+          "sw": 861,
+          "cw": 861,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.436534,
+          "transform": "matrix(1, 0, 0, 1, -38.9631, 0)",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/headphone-red.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/headphone-red.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.43629422591860384,
+          "transform": "translateX(-0.509646%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.7479329587176066,
+          "transform": "translateX(1.98346%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.560949719038205,
+          "transform": "translateX(0.487598%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "5.16429%",
+      "mobileScene": "0.5126244947868537",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.452557,
+        "transform": "matrix(1, 0, 0, 1, -37.8551, 0)",
+        "finish": "2",
+        "src": "assets/img/headphone-red.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    },
+    "firefox": {
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 822,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 860,
+          "height": 900,
+          "sw": 860,
+          "cw": 860,
+          "small": []
+        },
+        {
+          "width": 861,
+          "height": 900,
+          "sw": 861,
+          "cw": 861,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.40983,
+          "transform": "matrix(1, 0, 0, 1, -40.8097, 0)",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/headphone-red.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/headphone-red.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.43628204374217455,
+          "transform": "translateX(-0.509744%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.747912074986585,
+          "transform": "translateX(1.9833%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.5609340562399386,
+          "transform": "translateX(0.487472%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "5.20762%",
+      "mobileScene": "0.5126045436699616",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.439857,
+        "transform": "matrix(1, 0, 0, 1, -38.7333, 0)",
+        "finish": "2",
+        "src": "assets/img/headphone-red.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    },
+    "edge": {
+      "version": "155.0.4283.45",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 822,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 860,
+          "height": 900,
+          "sw": 860,
+          "cw": 860,
+          "small": []
+        },
+        {
+          "width": 861,
+          "height": 900,
+          "sw": 861,
+          "cw": 861,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.435644,
+          "transform": "matrix(1, 0, 0, 1, -39.0246, 0)",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/headphone-red.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/headphone-red.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.43629422591860384,
+          "transform": "translateX(-0.509646%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.7479329587176066,
+          "transform": "translateX(1.98346%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.560949719038205,
+          "transform": "translateX(0.487598%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "5.1619%",
+      "mobileScene": "0.5126244947868537",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.439798,
+        "transform": "matrix(1, 0, 0, 1, -38.7374, 0)",
+        "finish": "2",
+        "src": "assets/img/headphone-red.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 822,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 860,
+          "height": 900,
+          "sw": 860,
+          "cw": 860,
+          "small": []
+        },
+        {
+          "width": 861,
+          "height": 900,
+          "sw": 861,
+          "cw": 861,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.394994,
+          "transform": "matrix(1, 0, 0, 1, -41.8355, 0)",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/headphone-red.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/headphone-black.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/headphone-red.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.43629422591860384,
+          "transform": "translateX(-0.509646%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.7479329587176066,
+          "transform": "translateX(1.98346%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.560949719038205,
+          "transform": "translateX(0.487598%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "5.18333%",
+      "mobileScene": "0.5126244947868537",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.438908,
+        "transform": "matrix(1, 0, 0, 1, -38.7989, 0)",
+        "finish": "2",
+        "src": "assets/img/headphone-red.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    }
+  },
+  "failures": []
+}

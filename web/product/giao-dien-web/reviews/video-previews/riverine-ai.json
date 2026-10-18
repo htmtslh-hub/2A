@@ -1,0 +1,38 @@
+{
+  "id": "t57",
+  "slug": "riverine-ai",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T06:52:03.438Z",
+  "demo": "/demos/riverine-ai/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.1",
+  "revision": "45f8c69e9154",
+  "sha256": "45f8c69e9154a011464dff5912cc6ae3bba73a89e576ce95f993fe4f3191760f",
+  "demoHtmlSha256": "8bf16eb4d3bb239d4128d8043dd715be029217d2115a6852165a9b30d1f02216",
+  "demoSha256": "2e4c2253111aa6554f1441f6ed326df763740add171e13c6c0f4cdb1d0ace972",
+  "bytes": 784959,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\riverine-ai-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\riverine-ai-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\riverine-ai-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\riverine-ai-return.jpg"
+  ]
+}

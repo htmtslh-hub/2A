@@ -39,7 +39,7 @@ export const LEGAL_EN: LegalPack = {
           'The price shown at the time you order applies. All new purchases are paid in USD, regardless of display language. Applicable taxes are shown at checkout.',
           '<b>Paddle.com Market Ltd</b> is the merchant of record and is responsible for collecting and remitting VAT/GST in your country. Your invoice and card statement will show Paddle.',
           'An order is complete only once we receive confirmation of successful payment from the payment provider.',
-          'Pro costs USD 99 for one month of full-library access; Ultra costs USD 299 for one year. These are one-time account upgrades with no automatic renewal. Terms use calendar months/years from confirmed payment, clamping month-end dates to the last valid day.',
+          'Premium costs USD 20 for one month of full-library access; Ultra costs USD 200 for one year. These are one-time account upgrades with no automatic renewal. Terms use calendar months/years from confirmed payment, clamping month-end dates to the last valid day.',
           'Renewing the same plan extends your purchased term. A different plan starts on payment, with no credit or transfer of remaining time.',
         ],
       },
@@ -47,7 +47,7 @@ export const LEGAL_EN: LegalPack = {
         h: '5. Delivery',
         p: [
           'As soon as payment succeeds, access is unlocked in your account and a download link is emailed to the address you registered.',
-          'For individual purchases, the emailed link lasts 7 days and account downloads remain available. Pro/Ultra allow unlimited downloads during the plan term; downloads stop at expiry. Downloaded files remain usable under their licence.',
+          'Web interfaces, Skills and Prompts are Premium by default and require an active Premium or Ultra plan to download. Previously paid individual purchases retain their access. For individual purchases, the emailed link lasts 7 days and account downloads remain available. Premium/Ultra allow unlimited downloads during the plan term; downloads stop at expiry. Downloaded files remain usable under their licence.',
           'If nothing arrives within 30 minutes, please check your spam folder and then contact us.',
         ],
       },
@@ -281,7 +281,7 @@ export const LEGAL_EN: LegalPack = {
         h: '4. Individual purchases and account upgrades',
         p: [
           '<b>Single template</b> — the licence covers the one template you bought, across unlimited projects.',
-          '<b>Pro/Ultra</b> — download every product, including new releases, during your term. The licence covers downloaded files and remains valid after expiry. Expired plans no longer grant new downloads or re-downloads.',
+          '<b>Premium/Ultra</b> — download every product, including new releases, during your term. The licence covers downloaded files and remains valid after expiry. Expired plans no longer grant new downloads or re-downloads.',
           '<b>Previously purchased full-library bundles</b> retain their download rights and licence under the original purchase terms, including future templates.',
         ],
       },

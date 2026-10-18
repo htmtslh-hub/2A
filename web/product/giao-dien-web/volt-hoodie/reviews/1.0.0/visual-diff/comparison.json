@@ -1,0 +1,16 @@
+{
+  "reference": "C:\\Users\\Lenovo\\.gemini\\antigravity\\brain\\093d738a-96d2-475e-b51b-9c201b69842c\\.user_uploaded\\media_1792157371150_e4ac8e45.jpg",
+  "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\volt-hoodie\\reviews\\1.0.0\\screenshots\\reference-930x602.png",
+  "size": [
+    930,
+    602
+  ],
+  "referenceCrop": null,
+  "alphaBackground": "white",
+  "meanAbsoluteRgbError": 9.94201764726896,
+  "pixelMatchPercent": 82.48151323545171,
+  "tolerance": 16,
+  "gate": "NOT ASSESSED",
+  "fidelityRubric": "NOT SCORED",
+  "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+}

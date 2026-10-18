@@ -1,0 +1,38 @@
+{
+  "id": "t58",
+  "slug": "freight-axis",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T06:52:24.385Z",
+  "demo": "/demos/freight-axis/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.1",
+  "revision": "7bb58b98bd30",
+  "sha256": "7bb58b98bd30a42f9a4d5d113e9c59ec51cab22195d6f6feac8b9086e717f8c2",
+  "demoHtmlSha256": "89d0b374613548b34e5bcb46ee3efe9b234c2c1063a9f6e4049c0cdf1ebefdb4",
+  "demoSha256": "a47f6ce1f9fe0bed513d23fd2ba7f2dd3a78f253bbbbdd8eb7560098889ca580",
+  "bytes": 1251422,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\freight-axis-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\freight-axis-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\freight-axis-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\freight-axis-return.jpg"
+  ]
+}

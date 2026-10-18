@@ -1,0 +1,22 @@
+Monoframe® — Creative Agency Hero — LICENCE TERMS
+
+1. WHAT YOU GET
+A perpetual, non-exclusive commercial licence to the original template code in this package, subject to these terms and the separate third-party terms noted below.
+
+2. WHAT YOU MAY DO
+Use and modify the template to create unlimited personal and commercial client websites. Charge your clients for finished websites built with this template. No attribution is required for the original template code.
+
+3. WHAT YOU MAY NOT DO
+Do not resell, redistribute, sublicense, or publish the template source or built files as a standalone template, UI kit, starter template, or marketplace listing.
+
+4. DEMO CONTENT AND EXTERNAL MEDIA
+Monoframe® and A.R.I.A are fictional demonstration branding. Replace all demo copy, navigation destinations, and contact addresses before publishing. The remote background video (`d8j0ntlcm91z4.cloudfront.net`) and local H.264 preview transcode (`public/assets/hero-h264.mp4`) are included from the product specification for demonstration only; ownership and commercial usage rights for third-party video and external font files (`db.onlinewebfonts.com`) remain with their respective rightsholders. Verify or replace third-party media and fonts with your own licensed assets before commercial launch.
+
+5. OPEN-SOURCE LIBRARIES
+React, React DOM, Scheduler, and Lucide React retain their respective MIT/ISC licences as documented in `THIRD-PARTY-LICENSES.txt`. Nothing in this licence restricts rights granted under those open-source licences.
+
+6. OWNERSHIP
+Copyright in the original template code remains with its author. This licence grants usage rights, not ownership.
+
+7. NO WARRANTY
+The template is provided "as is" without warranty of any kind. Verified browser checks and known scope boundaries are recorded in `README.md`.

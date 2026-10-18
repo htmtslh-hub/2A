@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-16T07:32:20.627Z",
+  "assets": [
+    {
+      "file": "demos/sonicore/index.html",
+      "sha256": "16b3db0595cc9c6dfdd8dbc4a0d6b02bca1fe762ed2f1f61c990e2a88b0b81f2"
+    },
+    {
+      "file": "demos/sonicore/assets/css/style.css",
+      "sha256": "ff34599211334eebba1290c922d20f63084ea56b65d80ae714f51d8e12b68e90"
+    },
+    {
+      "file": "demos/sonicore/assets/js/main.js",
+      "sha256": "fae6b20463ab61cbc8b30e469a6c6f42ba498e264730454726d36e24126d14d3"
+    },
+    {
+      "file": "demos/firepower/index.html",
+      "sha256": "0bf5f6f6b8ac0d2b0234c3410205f1b40373e23f1cf022c5e88eb0e932f3ca08"
+    },
+    {
+      "file": "demos/firepower/assets/css/style.css",
+      "sha256": "5b3e153ca98734845a3aae0d79208b54ed44737b9cbef283cd4cd300b214e0b1"
+    },
+    {
+      "file": "demos/firepower/assets/js/main.js",
+      "sha256": "a36f33835b634f5d789ea912a2e879f877fbebfb794b9faac1e92c527fdd7265"
+    },
+    {
+      "file": "demos/backbest-800/index.html",
+      "sha256": "037a3ca0ec1a7dccd3fd72397689e372a67555843132d4e44f34035a1b66afda"
+    },
+    {
+      "file": "demos/backbest-800/assets/css/style.css",
+      "sha256": "749992ae5184797c1197a57a7edc81c0b4236ab9976c854d2e4697094f601a3f"
+    },
+    {
+      "file": "demos/backbest-800/assets/js/main.js",
+      "sha256": "193f480f58c48c1d115edeb508e5004be4c58a114ed027ce7896866ee86fc345"
+    }
+  ],
+  "cards": [
+    "t39",
+    "t40",
+    "t41"
+  ]
+}

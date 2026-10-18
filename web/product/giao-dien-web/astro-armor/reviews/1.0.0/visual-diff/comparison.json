@@ -1,0 +1,16 @@
+{
+  "reference": "D:\\3. Dự án\\anh mau\\4599c5406a50ea0eb3411.jpg",
+  "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\astro-armor\\reviews\\1.0.0\\comparison-candidate.png",
+  "size": [
+    820,
+    746
+  ],
+  "referenceCrop": null,
+  "alphaBackground": "white",
+  "meanAbsoluteRgbError": 11.288642952113166,
+  "pixelMatchPercent": 84.65588831491532,
+  "tolerance": 16,
+  "gate": "NOT ASSESSED",
+  "fidelityRubric": "NOT SCORED",
+  "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+}

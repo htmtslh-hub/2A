@@ -1,0 +1,16 @@
+{
+  "reference": "C:\\Users\\Lenovo\\.gemini\\antigravity\\brain\\2f29ff2f-b383-475c-8657-dcea83d91517\\.user_uploaded\\media_1792199311495_de83b151.jpg",
+  "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\fitclub-food\\reviews\\1.0.0\\screenshots\\reference-856x740.png",
+  "size": [
+    856,
+    740
+  ],
+  "referenceCrop": null,
+  "alphaBackground": "white",
+  "meanAbsoluteRgbError": 14.30835332996548,
+  "pixelMatchPercent": 79.67494948219247,
+  "tolerance": 16,
+  "gate": "NOT ASSESSED",
+  "fidelityRubric": "NOT SCORED",
+  "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+}

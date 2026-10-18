@@ -1,0 +1,16 @@
+{
+  "reference": "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\codex-clipboard-cc7afe8a-bccf-41ec-8792-75ed7b925e0e.png",
+  "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\fresh-reddy\\reviews\\1.0.0\\screenshots\\chromium-898.png",
+  "size": [
+    898,
+    496
+  ],
+  "referenceCrop": null,
+  "alphaBackground": "white",
+  "meanAbsoluteRgbError": 12.463668516655892,
+  "pixelMatchPercent": 85.34893850132912,
+  "tolerance": 16,
+  "gate": "NOT ASSESSED",
+  "fidelityRubric": "NOT SCORED",
+  "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+}

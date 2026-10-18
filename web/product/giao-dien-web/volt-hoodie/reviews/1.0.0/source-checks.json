@@ -1,0 +1,64 @@
+{
+  "candidateHash": "ecaf0c8956922aaee6da7dd417dc3aa93195835710acc7d1440b1245f89f44ec",
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/hoodie-arctic.webp",
+    "assets/img/hoodie-mint.webp",
+    "assets/img/hoodie-volt.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "midTransformAnimated": true,
+      "midTransform": "matrix(0.9716, 0, 0, 0.9716, 0, 9.08)",
+      "settledTransform": "none",
+      "viewAfterClick": "1",
+      "wrapForward": "0",
+      "wrapBackward": "2",
+      "scrollMidAnimated": true,
+      "scrollSettled": "none",
+      "pausedPressed": "true"
+    },
+    "firefox": {
+      "version": "155.0",
+      "midTransformAnimated": true,
+      "midTransform": "matrix(0.9765, 0, 0, 0.9765, 0, 7.53)",
+      "settledTransform": "none",
+      "viewAfterClick": "1",
+      "wrapForward": "0",
+      "wrapBackward": "2",
+      "scrollMidAnimated": true,
+      "scrollSettled": "none",
+      "pausedPressed": "true"
+    },
+    "edge": {
+      "version": "155.0.4283.60",
+      "midTransformAnimated": true,
+      "midTransform": "matrix(0.9759, 0, 0, 0.9759, 0, 7.71)",
+      "settledTransform": "none",
+      "viewAfterClick": "1",
+      "wrapForward": "0",
+      "wrapBackward": "2",
+      "scrollMidAnimated": true,
+      "scrollSettled": "none",
+      "pausedPressed": "true"
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "midTransformAnimated": true,
+      "midTransform": "matrix(0.9761, 0, 0, 0.9761, 0, 7.65)",
+      "settledTransform": "none",
+      "viewAfterClick": "1",
+      "wrapForward": "0",
+      "wrapBackward": "2",
+      "scrollMidAnimated": true,
+      "scrollSettled": "none",
+      "pausedPressed": "true"
+    }
+  }
+}

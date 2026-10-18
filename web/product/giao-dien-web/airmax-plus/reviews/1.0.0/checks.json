@@ -1,0 +1,1289 @@
+{
+  "slug": "airmax-plus",
+  "version": "1.0.0",
+  "date": "2026-10-15T14:02:44.365Z",
+  "os": "win32",
+  "zipBytes": 305709,
+  "sha256": "86f123659477711df4dcd65f220d169c6b39f072efb8ee654c56878226cbf004",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#main"
+          },
+          {
+            "label": "Nike Air Max Plus design study home",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          },
+          {
+            "label": "MEN",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          },
+          {
+            "label": "WOMEN",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#engineering"
+          },
+          {
+            "label": "KIDS",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#specifications"
+          },
+          {
+            "label": "CUSTOMIZE",
+            "href": "#build",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#build"
+          },
+          {
+            "label": "COLLECTION",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#contact"
+          },
+          {
+            "label": "PRE-ORDER NOW",
+            "href": "#build",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#build"
+          },
+          {
+            "label": "Discuss your size →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#contact"
+          },
+          {
+            "label": "WATCHPREVIEW",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#engineering"
+          },
+          {
+            "label": "Inspect the construction ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#specifications"
+          },
+          {
+            "label": "Switch colourway in hero ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          },
+          {
+            "label": "Enquire by email ↗",
+            "href": "mailto:hello@airmaxplus.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@airmaxplus.example"
+          },
+          {
+            "label": "AirMax Plus showroom top",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          },
+          {
+            "label": "Step into the drop.hello@airmaxplus.example ↗",
+            "href": "mailto:hello@airmaxplus.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@airmaxplus.example"
+          },
+          {
+            "label": "Read the concept notes ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#specifications"
+          },
+          {
+            "label": "Nike Air Max Plus / Tuned Air OG ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          },
+          {
+            "label": "Prepare pre-order email ↗",
+            "href": "mailto:hello@airmaxplus.example?subject=AirMax%20Plus%20pre-order%20enquiry&body=%0AThis%20is%20a%20local%20concept%20enquiry%2C%20not%20a%20live%20retail%20order.%20Please%20confirm%20sizing%2C%20availability%20and%20pricing%20separately.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@airmaxplus.example?subject=AirMax%20Plus%20pre-order%20enquiry&body=%0AThis%20is%20a%20local%20concept%20enquiry%2C%20not%20a%20live%20retail%20order.%20Please%20confirm%20sizing%2C%20availability%20and%20pricing%20separately."
+          },
+          {
+            "label": "Back to the sneaker ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 860,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(20, 9, 5)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 19.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "MEN",
+            "colour": "rgb(243, 236, 232)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 16.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(22, 9, 4)",
+            "background": [
+              232,
+              124,
+              81
+            ],
+            "ratio": 6.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand-line",
+            "text": "Nike",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 18.91,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "model-line",
+            "text": "Air Max Plus",
+            "colour": "rgb(232, 124, 81)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 6.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-tagline",
+            "text": "MAKE THE GROUND SHAKE",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 16.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-copy",
+            "text": "Let your attitude have the edge in your ",
+            "colour": "rgb(200, 189, 184)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 10.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "preorder-button js-only",
+            "text": "PRE-ORDER NOW",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              174,
+              70,
+              33
+            ],
+            "ratio": 5.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(255, 213, 194)",
+            "background": [
+              34,
+              19,
+              13
+            ],
+            "ratio": 13.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "→",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              30,
+              21,
+              18
+            ],
+            "ratio": 16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "watch-text",
+            "text": "WATCHPREVIEW",
+            "colour": "rgb(229, 218, 213)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 13.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "TUNED AIR ARCHITECTURE / 01",
+            "colour": "rgb(232, 124, 81)",
+            "background": [
+              26,
+              19,
+              17
+            ],
+            "ratio": 6.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Built to holdyour ground.",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              26,
+              19,
+              17
+            ],
+            "ratio": 16.36,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Wavy TPU ribs frame a breathable gradien",
+            "colour": "rgb(200, 189, 184)",
+            "background": [
+              26,
+              19,
+              17
+            ],
+            "ratio": 9.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Inspect the construction ↗",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              26,
+              19,
+              17
+            ],
+            "ratio": 16.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "EVERY ELEMENT, TUNED / 02",
+            "colour": "rgb(232, 124, 81)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 6.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Defiant fromheel to toe.",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 16.87,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "CUSTOMIZE YOUR PAIR / 03",
+            "colour": "rgb(232, 124, 81)",
+            "background": [
+              28,
+              20,
+              17
+            ],
+            "ratio": 6.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Lock inyour rotation.",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              28,
+              20,
+              17
+            ],
+            "ratio": 16.19,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Three original finishes. Six example US ",
+            "colour": "rgb(200, 189, 184)",
+            "background": [
+              28,
+              20,
+              17
+            ],
+            "ratio": 9.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Switch colourway in hero ↗",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              28,
+              20,
+              17
+            ],
+            "ratio": 16.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "CURRENT SELECTION",
+            "colour": "rgb(232, 124, 81)",
+            "background": [
+              21,
+              15,
+              13
+            ],
+            "ratio": 6.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Air Max Plus",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              21,
+              15,
+              13
+            ],
+            "ratio": 16.94,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Sunset / Select a size",
+            "colour": "rgb(200, 189, 184)",
+            "background": [
+              21,
+              15,
+              13
+            ],
+            "ratio": 10.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "quiet-button js-only",
+            "text": "Pause motion",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              36,
+              25,
+              22
+            ],
+            "ratio": 15.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "PRE-ORDER NOW",
+          "colour": "rgb(255, 155, 66)",
+          "width": "3px",
+          "ratio": 9.02
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#main"
+          },
+          {
+            "label": "Nike Air Max Plus design study home",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          },
+          {
+            "label": "MEN",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          },
+          {
+            "label": "WOMEN",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#engineering"
+          },
+          {
+            "label": "KIDS",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#specifications"
+          },
+          {
+            "label": "CUSTOMIZE",
+            "href": "#build",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#build"
+          },
+          {
+            "label": "COLLECTION",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#contact"
+          },
+          {
+            "label": "PRE-ORDER NOW",
+            "href": "#build",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#build"
+          },
+          {
+            "label": "Discuss your size →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#contact"
+          },
+          {
+            "label": "WATCHPREVIEW",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#engineering"
+          },
+          {
+            "label": "Inspect the construction ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#specifications"
+          },
+          {
+            "label": "Switch colourway in hero ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          },
+          {
+            "label": "Enquire by email ↗",
+            "href": "mailto:hello@airmaxplus.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@airmaxplus.example"
+          },
+          {
+            "label": "AirMax Plus showroom top",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          },
+          {
+            "label": "Step into the drop.hello@airmaxplus.example ↗",
+            "href": "mailto:hello@airmaxplus.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@airmaxplus.example"
+          },
+          {
+            "label": "Read the concept notes ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#specifications"
+          },
+          {
+            "label": "Nike Air Max Plus / Tuned Air OG ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          },
+          {
+            "label": "Prepare pre-order email ↗",
+            "href": "mailto:hello@airmaxplus.example?subject=AirMax%20Plus%20pre-order%20enquiry&body=%0AThis%20is%20a%20local%20concept%20enquiry%2C%20not%20a%20live%20retail%20order.%20Please%20confirm%20sizing%2C%20availability%20and%20pricing%20separately.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@airmaxplus.example?subject=AirMax%20Plus%20pre-order%20enquiry&body=%0AThis%20is%20a%20local%20concept%20enquiry%2C%20not%20a%20live%20retail%20order.%20Please%20confirm%20sizing%2C%20availability%20and%20pricing%20separately."
+          },
+          {
+            "label": "Back to the sneaker ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/airmax-plus/index.html#showroom"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 860,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(20, 9, 5)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 19.61,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "MEN",
+            "colour": "rgb(243, 236, 232)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 16.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(22, 9, 4)",
+            "background": [
+              232,
+              124,
+              81
+            ],
+            "ratio": 6.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand-line",
+            "text": "Nike",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 18.91,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "model-line",
+            "text": "Air Max Plus",
+            "colour": "rgb(232, 124, 81)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 6.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-tagline",
+            "text": "MAKE THE GROUND SHAKE",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 16.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-copy",
+            "text": "Let your attitude have the edge in your ",
+            "colour": "rgb(200, 189, 184)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 10.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "preorder-button js-only",
+            "text": "PRE-ORDER NOW",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              174,
+              70,
+              33
+            ],
+            "ratio": 5.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(255, 213, 194)",
+            "background": [
+              34,
+              19,
+              13
+            ],
+            "ratio": 13.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "→",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              30,
+              21,
+              18
+            ],
+            "ratio": 16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "watch-text",
+            "text": "WATCHPREVIEW",
+            "colour": "rgb(229, 218, 213)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 13.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "TUNED AIR ARCHITECTURE / 01",
+            "colour": "rgb(232, 124, 81)",
+            "background": [
+              26,
+              19,
+              17
+            ],
+            "ratio": 6.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Built to holdyour ground.",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              26,
+              19,
+              17
+            ],
+            "ratio": 16.36,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Wavy TPU ribs frame a breathable gradien",
+            "colour": "rgb(200, 189, 184)",
+            "background": [
+              26,
+              19,
+              17
+            ],
+            "ratio": 9.98,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Inspect the construction ↗",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              26,
+              19,
+              17
+            ],
+            "ratio": 16.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "EVERY ELEMENT, TUNED / 02",
+            "colour": "rgb(232, 124, 81)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 6.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Defiant fromheel to toe.",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              20,
+              16,
+              15
+            ],
+            "ratio": 16.87,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "CUSTOMIZE YOUR PAIR / 03",
+            "colour": "rgb(232, 124, 81)",
+            "background": [
+              28,
+              20,
+              17
+            ],
+            "ratio": 6.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Lock inyour rotation.",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              28,
+              20,
+              17
+            ],
+            "ratio": 16.19,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Three original finishes. Six example US ",
+            "colour": "rgb(200, 189, 184)",
+            "background": [
+              28,
+              20,
+              17
+            ],
+            "ratio": 9.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Switch colourway in hero ↗",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              28,
+              20,
+              17
+            ],
+            "ratio": 16.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "CURRENT SELECTION",
+            "colour": "rgb(232, 124, 81)",
+            "background": [
+              21,
+              15,
+              13
+            ],
+            "ratio": 6.72,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Air Max Plus",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              21,
+              15,
+              13
+            ],
+            "ratio": 16.94,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Sunset / Select a size",
+            "colour": "rgb(200, 189, 184)",
+            "background": [
+              21,
+              15,
+              13
+            ],
+            "ratio": 10.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "quiet-button js-only",
+            "text": "Pause motion",
+            "colour": "rgb(246, 241, 238)",
+            "background": [
+              36,
+              25,
+              22
+            ],
+            "ratio": 15.29,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "PRE-ORDER NOW",
+          "colour": "rgb(255, 155, 66)",
+          "width": "3px",
+          "ratio": 9.02
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "airmax-plus/assets/css/style.css",
+    "airmax-plus/assets/img/shoe-crimson.webp",
+    "airmax-plus/assets/img/shoe-sunset.webp",
+    "airmax-plus/assets/img/shoe-volt.webp",
+    "airmax-plus/assets/js/main.js",
+    "airmax-plus/CUSTOMISE.md",
+    "airmax-plus/index.html",
+    "airmax-plus/LICENCE.txt",
+    "airmax-plus/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/shoe-crimson.webp",
+    "assets/img/shoe-sunset.webp",
+    "assets/img/shoe-volt.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "path": "demos/fennec/assets/video/forest-h264.mp4",
+    "status": 200,
+    "bytes": 1113952,
+    "match": true
+  },
+  {
+    "path": "demos/meridian/assets/video/viaduct-h264.mp4",
+    "status": 200,
+    "bytes": 1372836,
+    "match": true
+  },
+  {
+    "path": "demos/mostar-city/assets/fonts/OggText-Medium.woff2",
+    "status": 200,
+    "bytes": 68832,
+    "match": true
+  }
+]

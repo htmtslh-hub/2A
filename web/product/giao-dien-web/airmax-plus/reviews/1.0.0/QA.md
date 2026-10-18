@@ -1,0 +1,36 @@
+# AirMax Plus 1.0.0 — QA
+
+Windows, 15/10/2026. `WEB-STATIC-1` v1.2.1 with Product Owner approved task-specific `W01/W03/W05/W06` exceptions (`--ngoai-le`): 9 files, 3 original transparent raster sneaker photographs (`shoe-sunset.webp`, `shoe-volt.webp`, `shoe-crimson.webp`), colourway/size configuration, hotspot dialogs, session enquiry bag, Watch Preview animated sequence dialog, and ZIP above `20 KiB`. No generic standard changed. Prices, Tuned Air/TPU descriptions, sizing and brand marks are explicitly illustrative demonstration content, not live commercial retail services.
+
+Source gate **96.974** by fixed regional design rubric (strictly above `95.00`), not pixel accuracy; `ACCEPTANCE.md` and `acceptance.json` contain region/axis scores, reasons and visual comparison. Candidate manifest hash `a686fcd19174a16dca603453bd3af0d0d850d8cb9242c4a6425b9e673050db99`. Final ZIP `305,709` bytes, SHA-256 `86f123659477711df4dcd65f220d169c6b39f072efb8ee654c56878226cbf004`. Official final extracted report `final/checks.json` passed with **0 failures** (`sourceMatchesExtracted = true`, 10 steps, 12 prompts, zero count errors, zero unfilled markers, zero contrast failures, zero axe violations).
+
+| Check | Status & evidence |
+|---|---|
+| Q01 structure | PASS under documented `--ngoai-le` exceptions: 6 core files + 3 original WebP cutouts (`93,522` / `91,022` / `96,576` bytes), no secrets, frameworks or extras. |
+| Q02 responsive | PASS `1440×816`, `1440×900`, `820×1180`, `375×812`, `320×740`, `860/861` menu breakpoint; zero horizontal overflow, all standalone interactive targets `>= 44×44 px`. Full-page screenshots captured after real scroll. |
+| Q03 interactions | PASS desktop 5-link horizontal nav (`> 860px`) and mobile hamburger menu (`<= 860px`, `resetOnDesktop = true`, `closedBackOnMobile = true`, `linkCloses = true`, `escapeClosesAndFocuses = true`); 3 finishes (`Sunset`, `Cyber Volt`, `Crimson`), 6 US sizes, directional buttons, both wraps (`0↔2`), rapid-click cancellation, keyboard `ArrowLeft`/`ArrowRight`, horizontal pointer swipe, 4 component hotspot dialogs (`cage`, `air`, `shank`, `mesh`), one-model search + empty state, size validation, deduplicated session enquiry bag add/remove, mailto summary, `4200ms` Watch Preview sequence/replay/close, native `<details>` accordions. |
+| Q04 keyboard | PASS `.skip-link` visible on Tab and lands inside `<main>`, logical Tab/Shift+Tab order, hidden mobile menu skipped, `Escape` closes menu and `<dialog>` modals and restores opener focus; verified in 4 browsers (`source-checks.json`) and `final/checks.json`. |
+| Q05 structure | PASS 1 `<h1>`, semantic landmarks (`header`, `nav`, `main`, `footer`), sequential heading hierarchy, unique IDs, valid SVG attributes, zero `axe-core` (`wcag2a`, `wcag2aa`, `wcag21aa`) violations across all 4 browsers. |
+| Q06 contrast | PASS zero failing pairs in `final/checks.json` and `supplement.json`: muted text `#c8bdb8` on `#14100f` (`10.288:1`), `PRE-ORDER NOW` `#ffffff` on `#b54924` (`5.326:1`), orange CTA `#160904` on `#e87c51` (`6.915:1`), focus `#ff9b42` on `#14100f` (`9.020:1`), hotspot `#ffd5c2` on `#24130d` (`13.245:1`), orange heading `#e87c51` on `#1f1513` (`6.326:1`). Manually inspected all 3 sneaker cutouts and control surfaces. |
+| Q07 fallback | PASS `noJsNoFont320` retains full hero, visible 5-link navigation, static `Cyber Volt` & `Crimson` finish gallery, openable specifications and email link with `scrollWidth <= 320`; fresh offline `file://` loads sneaker image (`complete && naturalWidth > 0`); blocked `*.webp` images leave `<h1>`, hotspot dialogs and contact links working; OS `prefers-reduced-motion: reduce` and stale `localStorage` off keep motion ON by default per owner policy (05/10/2026) while session-only `#motion-toggle` pauses/resumes and resets on reload; `200%` equivalent zoom (`720×450@2`) has zero overflow. |
+| Q08 browsers | PASS `Chromium 153.0.8010.12`, `Firefox 155.0`, `Edge 155.0.4283.45`, `Cốc Cốc 152.0.7977.124` (actual Windows executables, 0 failures in `source-checks.json`). Safari and physical mobile devices `NOT TESTED`. |
+| Q09 technical | PASS zero console errors, zero uncaught page errors, zero 404/network failures; finite `requestAnimationFrame` timelines only, `idleFrames === 0` after 1s settle, reversible scroll-linked `--scene` progress (`0–1`), RAF fallback verified with all CSS animations/transitions disabled. |
+| Q10 docs/rights | PASS `CUSTOMISE.md` has 10 steps, 12 complete AI prompts, zero unfilled `[UPPERCASE]` markers inside prompt blocks, and 16 verified literal/selector counts (`countErrors = []`). `ASSETS.md` and `PROMPTS.md` record original image generation; system fonts only; 7-section `LICENCE.txt` retained. |
+| Q11 final ZIP | PASS byte-for-byte roundtrip equality (`sourceMatchesExtracted = true`) and zero automated failures in `final/checks.json`. |
+| Q12 store | Integrated at `t37` (`commerce`, Premium default, 3 locales `vi`/`en`/`zh`, public demo, WebP poster + real 15s recorded MP4 preview). Local and online storefront checks recorded in `local-store.json`, `online-store.json`, `online-motion.json`, `detail-video.json` and `RELEASE.md`. Paid-account download and live payment completion `NOT TESTED` (no entitlement mutations created). |
+| Q13 visual/content | PASS `D01`–`D08` below; regional rubric **96.974** (`acceptance.json`). |
+
+## D01–D08
+
+- **D01 PASS**: Immediate sneaker showroom identity, clear `PRE-ORDER NOW` / `WATCH PREVIEW` actions, and direct configuration/enquiry path.
+- **D02 PASS**: High-impact dark espresso stage with 3D orange wireframe ribbon wave, floating angled Tuned Air sneaker, 4 component hotspots, and scroll-linked engineering showcase.
+- **D03 PASS**: Cohesive narrative flow — hero showcases colourways & size selection, `#engineering` explains the Tuned Air silhouette, `#specifications` covers construction/fit/terms, `#build` summarizes the pre-order enquiry, and `#contact` provides email & motion controls.
+- **D04 PASS**: Consistent espresso/burnt-orange colour tokens, system display typography, spacing scale and `44px` control geometry.
+- **D05 PASS**: Visually verified across `1440×816`, `1440×900`, `820×1180`, `375×812`, `320×740`, and `720×450@2` screenshots (`final/screenshots/` and `evidence/`).
+- **D06 PASS**: Concrete English footwear showroom copy throughout; zero placeholder or lorem ipsum text.
+- **D07 PASS**: Original generated sneaker cutouts, illustrative `$249,99` price and specifications, honest local enquiry bag and mailto flow, no fabricated stock or retail checkout claims.
+- **D08 PASS**: Single sneaker model across 3 finishes (`Sunset`, `Cyber Volt`, `Crimson`), 6 US sizes (`US 8`–`US 12`), and `$249,99` consistent across HTML, JS, bag summary, and guides; `WATCH PREVIEW` is explicitly described as an animated colourway sequence, not video footage.
+
+## Limits
+
+No 3D WebGL model, official factory colour verification, live stock, foot measurement calculation, user accounts, live checkout, payment processing, or automated email delivery. Enquiry bag is in-memory for the current page visit only. Safari, physical iOS/Android devices, paid-account download, and live payment completion are `NOT TESTED`.

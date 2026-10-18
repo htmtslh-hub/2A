@@ -1,0 +1,661 @@
+{
+  "date": "2026-10-18T08:52:30.124Z",
+  "baseUrl": "http://127.0.0.1:61463/index.html",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "768": {
+          "innerWidth": 768,
+          "innerHeight": 1024,
+          "scrollWidth": 768,
+          "scrollHeight": 1024,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        }
+      },
+      "interactions": {
+        "midTyping": {
+          "textLength": 17,
+          "cursorPresent": true,
+          "pillsOpacity": "1"
+        },
+        "scrubAndCopy": {
+          "scrubbedTime": 2.694,
+          "copiedText": "hello@monoframe.co"
+        },
+        "mobileMenu": {
+          "open": {
+            "ariaExpanded": "true",
+            "overlayOpacity": "1",
+            "overlayPointerEvents": "auto"
+          },
+          "closedAfterEscape": {
+            "ariaExpanded": "false",
+            "overlayOpacity": "0",
+            "overlayPointerEvents": "none"
+          }
+        }
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "768": {
+          "innerWidth": 768,
+          "innerHeight": 1024,
+          "scrollWidth": 768,
+          "scrollHeight": 1024,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        }
+      },
+      "interactions": {
+        "midTyping": {
+          "textLength": 29,
+          "cursorPresent": true,
+          "pillsOpacity": "1"
+        },
+        "scrubAndCopy": {
+          "scrubbedTime": 2.695,
+          "copiedText": "hello@monoframe.co"
+        },
+        "mobileMenu": {
+          "open": {
+            "ariaExpanded": "true",
+            "overlayOpacity": "1",
+            "overlayPointerEvents": "auto"
+          },
+          "closedAfterEscape": {
+            "ariaExpanded": "false",
+            "overlayOpacity": "0",
+            "overlayPointerEvents": "none"
+          }
+        }
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "768": {
+          "innerWidth": 768,
+          "innerHeight": 1024,
+          "scrollWidth": 768,
+          "scrollHeight": 1024,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        }
+      },
+      "interactions": {
+        "midTyping": {
+          "textLength": 22,
+          "cursorPresent": true,
+          "pillsOpacity": "1"
+        },
+        "scrubAndCopy": {
+          "scrubbedTime": 2.694,
+          "copiedText": "hello@monoframe.co"
+        },
+        "mobileMenu": {
+          "open": {
+            "ariaExpanded": "true",
+            "overlayOpacity": "1",
+            "overlayPointerEvents": "auto"
+          },
+          "closedAfterEscape": {
+            "ariaExpanded": "false",
+            "overlayOpacity": "0",
+            "overlayPointerEvents": "none"
+          }
+        }
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "768": {
+          "innerWidth": 768,
+          "innerHeight": 1024,
+          "scrollWidth": 768,
+          "scrollHeight": 1024,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "video": {
+            "position": "fixed",
+            "zIndex": "0",
+            "objectFit": "cover",
+            "objectPosition": "70% 50%",
+            "muted": true,
+            "playsInline": true,
+            "preload": "auto",
+            "autoplay": false,
+            "duration": 4.042,
+            "videoWidth": 1920,
+            "videoHeight": 1080,
+            "currentTime": 0.001
+          },
+          "introFilter": "blur(4px)",
+          "introText": "Hey there, meet A.R.I.A,\nMonoframe's Adaptive Response Interface Agent",
+          "typewriterText": "Glad you stopped in. Good taste tends to find us. Now, what are we building?",
+          "cursorAfterDone": false,
+          "pillsCount": 5,
+          "pillsWithinViewport": true
+        }
+      },
+      "interactions": {
+        "midTyping": {
+          "textLength": 23,
+          "cursorPresent": true,
+          "pillsOpacity": "1"
+        },
+        "scrubAndCopy": {
+          "scrubbedTime": 2.694,
+          "copiedText": "hello@monoframe.co"
+        },
+        "mobileMenu": {
+          "open": {
+            "ariaExpanded": "true",
+            "overlayOpacity": "1",
+            "overlayPointerEvents": "auto"
+          },
+          "closedAfterEscape": {
+            "ariaExpanded": "false",
+            "overlayOpacity": "0",
+            "overlayPointerEvents": "none"
+          }
+        }
+      }
+    }
+  }
+}

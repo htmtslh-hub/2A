@@ -1,0 +1,48 @@
+{
+  "id": "t56",
+  "slug": "fennec",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T06:51:43.567Z",
+  "demo": "/demos/fennec/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.1",
+  "revision": "a8665eab1647",
+  "sha256": "a8665eab1647b158529e44d2eb4b398c4bf3113473b0403b783d251f099e4897",
+  "demoHtmlSha256": "f56e9e72e743722f3cbf805d46981e4f681b825ab1162adcc9222494bd26b395",
+  "demoSha256": "ba8afdf63df4c728d3a620f29e2bcebba8ee7856483dbe0d1ddffeba640a773c",
+  "bytes": 1429733,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 8.501,
+      "action": "click",
+      "selector": ".brand__menu"
+    },
+    {
+      "seconds": 9.703,
+      "action": "click",
+      "selector": ".brand__menu"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fennec-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fennec-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fennec-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fennec-return.jpg"
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "date": "2026-10-15T12:21:39.732Z",
+  "candidateHash": "ca68f3c064a8f4574e61e9f1eb4f4a6868e6109385f47eddcba65ce847b6c341",
+  "manifest": [
+    {
+      "file": "assets/css/style.css",
+      "bytes": 23824,
+      "sha256": "3dcd68f10008cd9ede485e93faccd5bc65f4b20c5b2cfa14c32f191a0983b88c"
+    },
+    {
+      "file": "assets/img/bike-black.webp",
+      "bytes": 369056,
+      "sha256": "30932fcf4f185e4df6609659dce52ea679d8bc8d16f751be70ac69eaaa0d19ee"
+    },
+    {
+      "file": "assets/img/bike-chalk.webp",
+      "bytes": 325770,
+      "sha256": "cdd1c87ca6412dd13ef55124f73139d2a34f8666bbd9c8c1cb852f2407ec305d"
+    },
+    {
+      "file": "assets/img/bike-green.webp",
+      "bytes": 332478,
+      "sha256": "ee85aeb029680fc08dd6685928ff70d284db268fa0c66c9f93dd3ed9f913e222"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 15067,
+      "sha256": "fd9d4591cdcfb2c2270018675d27faf2f250f875a33ed1d375cba4b7b2031103"
+    },
+    {
+      "file": "CUSTOMISE.md",
+      "bytes": 21419,
+      "sha256": "ce6a1915c246c8ba01d68198deed6312f0df27ec3583bae078b1c61bb15f1927"
+    },
+    {
+      "file": "index.html",
+      "bytes": 12894,
+      "sha256": "dd31cb0d9e2ff71969f89fdb0ccb00043a5fcfccfc5ef90d0531f9bd96ede23c"
+    },
+    {
+      "file": "LICENCE.txt",
+      "bytes": 1922,
+      "sha256": "350d0b02114a1861ef477fb00646f96d3797ad684c465b9b34358cd1c0b75c90"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3095,
+      "sha256": "1512bbe6234345d911343ed22fbb9972cd1b094fd2da73afe4801e990eb378a1"
+    }
+  ],
+  "references": [
+    {
+      "source": "C:/Users/Lenovo/AppData/Local/Temp/codex-clipboard-a7fe45e6-8c23-44f6-aa78-b6f376edb856.png",
+      "sha256": "f20e3ecf2ddd58ebae9fd6d8af163f9bd91306b3dd0812962dda792574e69c76",
+      "size": [
+        1040,
+        650
+      ],
+      "crop": null,
+      "scale": 1.3846153846153846,
+      "normalized": [
+        1440,
+        900
+      ],
+      "excludedHostUI": [
+        978,
+        532,
+        62,
+        94
+      ]
+    }
+  ],
+  "views": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "dpr": 1,
+      "zoom": 1,
+      "state": "BBQ/01/size-unselected/closed menu/scroll0",
+      "reference": "reference.png",
+      "screenshot": "candidate.png",
+      "comparison": "visual/side-by-side.png",
+      "regions": [
+        {
+          "name": "Header",
+          "weight": 0.1,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Logo atx32 and five tool centres line up with reference; menu hit area44px is larger than the tiny reference icon."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 95,
+              "reason": "System Arial wordmark is horizontally expanded to track the reference; exact logo glyphs differ."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Dark header and green menu retained; dark menu strokes improve contrast."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Search/location/rider/bag/menu remain simple line icons. Real empty bag0 replaces illustrative badge2."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Tool centres approximately1010/1104/1198/1292/1386 at normalized width."
+            }
+          ],
+          "score": 96.85
+        },
+        {
+          "name": "Oversized headline",
+          "weight": 0.15,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Headline spans approximatelyx119–1305,y214–300,behind the bike; reference approximatelyx119–1307,y213–302."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Uppercase heavy system font with matching width/cap height; exact original font unknown."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Muted charcoal on navy studio gradient; reference grain/reflections softer."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Text is live decorative SVG,not rasterized screenshot."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Headline whitespace above/below preserved without clipping at mobile sizes."
+            }
+          ],
+          "score": 97.65
+        },
+        {
+          "name": "Bicycle and hotspots",
+          "weight": 0.45,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Full right-facing aero bicycle approximatelyx424–1320,y225–735; reference approximatelyx426–1302,y228–749. Silhouette/wheels remain complete."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "Muted diagonal brand and wheel lettering preserved; generated letter contours are cleaner."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 96,
+              "reason": "Graphite carbon/dark wheels/light metal highlights retained; reference product is slightly dimmer."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 95,
+              "reason": "Same subject,pose,aero profile,deep wheels,tall seatpost and disc drivetrain. Exact reflections,handlebar wrap,spokes and fork details differ."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Four hotspot roles and positions retained;44px hit areas enclose small green circles."
+            }
+          ],
+          "score": 96.15
+        },
+        {
+          "name": "Left information and selects",
+          "weight": 0.15,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Model info x124,y415;price around567 and native finish/size controls below,tracking reference."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 95,
+              "reason": "Narrow reference model type reconstructed using readable Arial; secondary line and price hierarchy preserved."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "White model/grey price/green specification and outlined selectors retained."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Visual swatch,chevrons and actual selects replace the blurry reference controls."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 96,
+              "reason": "44px functional targets with smaller visual borders; spacing differs slightly from tiny original pills."
+            }
+          ],
+          "score": 96.7
+        },
+        {
+          "name": "Peripheral actions",
+          "weight": 0.15,
+          "axes": [
+            {
+              "axis": "layout",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "Left01 rule,right next/previous,green lower-left action,centre scroll cue and delivery line in corresponding positions."
+            },
+            {
+              "axis": "typography",
+              "weight": 0.2,
+              "score": 95,
+              "reason": "Delivery caption increased to14px. CTA label is dark rather than reference white to achieve6.897:1 contrast."
+            },
+            {
+              "axis": "surface",
+              "weight": 0.15,
+              "score": 92,
+              "reason": "Green surface retained; dark caption/menu strokes are deliberate contrast adaptations. Grey host viewer overlay excluded,not recreated."
+            },
+            {
+              "axis": "image",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "Scroll and social roles retained with honest local journal/contact actions rather than fabricated social URLs."
+            },
+            {
+              "axis": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Bottom action begins atsame72px band; header/menu targets expanded for touch and actual state."
+            }
+          ],
+          "score": 95.6
+        }
+      ],
+      "score": 96.445
+    }
+  ],
+  "fidelity": {
+    "method": "weighted regional visual rubric assessed by agent; not pixel accuracy",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "status": "PASS",
+    "score": 96.445,
+    "pixelDiagnostics": "visual/comparison.json",
+    "mobile": "N/A: no mobile reference"
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json:midframe/wrap/rapid/keyboard/swipe/action/replay/pause/defaultOn/noCSSMotion/idle",
+      "evidence/*-motion.png"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json:forward/reverse/mobile/resize",
+      "evidence/*-1440.png and *-320.png captured after real scroll"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Image-only input; store recording follows acceptance."
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json",
+      "supplement.json",
+      "REFERENCE-MAP.md",
+      "MOTION-MAP.md",
+      "ASSETS.md"
+    ],
+    "limits": [
+      "Safari/physical devices not tested.",
+      "Paid account download/payment completion not tested; no entitlement writes."
+    ]
+  },
+  "blockers": [],
+  "gate": "PASS"
+}

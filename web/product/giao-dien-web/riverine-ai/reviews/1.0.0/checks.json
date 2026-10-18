@@ -1,0 +1,806 @@
+[
+  {
+    "browser": "chromium",
+    "version": "153.0.8010.12",
+    "video": [
+      {
+        "time": 0,
+        "ready": 0,
+        "paused": false
+      },
+      {
+        "time": 0,
+        "ready": 0,
+        "paused": false
+      }
+    ],
+    "frames": [
+      {
+        "viewport": [
+          1280,
+          960
+        ],
+        "state": {
+          "width": 1280,
+          "scroll": 1280,
+          "stage": 960,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 225.234375,
+              "bottom": 569
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 585.609375,
+              "bottom": 640.75
+            },
+            {
+              "text": "Future Thinking",
+              "right": 477.15625,
+              "bottom": 712.5
+            }
+          ],
+          "actions": {
+            "x": 32,
+            "y": 814,
+            "width": 553.609375,
+            "height": 46,
+            "top": 814,
+            "right": 585.609375,
+            "bottom": 860,
+            "left": 32
+          }
+        },
+        "menu": null
+      },
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "state": {
+          "width": 1440,
+          "scroll": 1440,
+          "stage": 900,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 211.140625,
+              "bottom": 533.4375
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 548.9375,
+              "bottom": 600.703125
+            },
+            {
+              "text": "Future Thinking",
+              "right": 447.28125,
+              "bottom": 667.96875
+            }
+          ],
+          "actions": {
+            "x": 30,
+            "y": 763.125,
+            "width": 518.9375,
+            "height": 43.125,
+            "top": 763.125,
+            "right": 548.9375,
+            "bottom": 806.25,
+            "left": 30
+          }
+        },
+        "menu": null
+      },
+      {
+        "viewport": [
+          820,
+          1180
+        ],
+        "state": {
+          "width": 820,
+          "scroll": 820,
+          "stage": 1180,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 229.8828125,
+              "bottom": 785.1328125
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 602.5078125,
+              "bottom": 859.331298828125
+            },
+            {
+              "text": "Future Thinking",
+              "right": 490.3765869140625,
+              "bottom": 933.5297241210938
+            }
+          ],
+          "actions": {
+            "x": 30.078125,
+            "y": 1038.4422607421875,
+            "width": 572.4296875,
+            "height": 47.5577392578125,
+            "top": 1038.4422607421875,
+            "right": 602.5078125,
+            "bottom": 1086,
+            "left": 30.078125
+          }
+        },
+        "menu": null
+      },
+      {
+        "viewport": [
+          375,
+          812
+        ],
+        "state": {
+          "width": 375,
+          "scroll": 375,
+          "stage": 812,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 128.359375,
+              "bottom": 508.171875
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 328.140625,
+              "bottom": 547.984375
+            },
+            {
+              "text": "Future Thinking",
+              "right": 267.828125,
+              "bottom": 587.796875
+            }
+          ],
+          "actions": {
+            "x": 21,
+            "y": 671.640625,
+            "width": 333,
+            "height": 44.21875,
+            "top": 671.640625,
+            "right": 354,
+            "bottom": 715.859375,
+            "left": 21
+          }
+        },
+        "menu": {
+          "open": "true",
+          "focus": "Work",
+          "closed": "false",
+          "focusBack": true
+        }
+      },
+      {
+        "viewport": [
+          320,
+          740
+        ],
+        "state": {
+          "width": 320,
+          "scroll": 320,
+          "stage": 740,
+          "classes": "",
+          "animations": 2,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 109.578125,
+              "bottom": 401.359375
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 279.953125,
+              "bottom": 435.296875
+            },
+            {
+              "text": "Future Thinking",
+              "right": 228.53125,
+              "bottom": 469.234375
+            }
+          ],
+          "actions": {
+            "x": 18,
+            "y": 551.203125,
+            "width": 284,
+            "height": 94.796875,
+            "top": 551.203125,
+            "right": 302,
+            "bottom": 646,
+            "left": 18
+          }
+        },
+        "menu": {
+          "open": "true",
+          "focus": "Work",
+          "closed": "false",
+          "focusBack": true
+        }
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "state": {
+          "width": 844,
+          "scroll": 844,
+          "stage": 390,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 141.421875,
+              "bottom": 181.515625
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 345,
+              "bottom": 222.0625
+            },
+            {
+              "text": "Future Thinking",
+              "right": 283.546875,
+              "bottom": 262.609375
+            }
+          ],
+          "actions": {
+            "x": 32,
+            "y": 318.59375,
+            "width": 313,
+            "height": 43.21875,
+            "top": 318.59375,
+            "right": 345,
+            "bottom": 361.8125,
+            "left": 32
+          }
+        },
+        "menu": null
+      },
+      {
+        "viewport": [
+          600,
+          400
+        ],
+        "state": {
+          "width": 600,
+          "scroll": 600,
+          "stage": 400,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 144.21875,
+              "bottom": 189.40625
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 353.03125,
+              "bottom": 231
+            },
+            {
+              "text": "Future Thinking",
+              "right": 290,
+              "bottom": 272.59375
+            }
+          ],
+          "actions": {
+            "x": 32,
+            "y": 328.578125,
+            "width": 321.03125,
+            "height": 43.234375,
+            "top": 328.578125,
+            "right": 353.03125,
+            "bottom": 371.8125,
+            "left": 32
+          }
+        },
+        "menu": {
+          "open": "true",
+          "focus": "Work",
+          "closed": "false",
+          "focusBack": true
+        }
+      },
+      {
+        "viewport": [
+          650,
+          960
+        ],
+        "state": {
+          "width": 650,
+          "scroll": 650,
+          "stage": 960,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 229.8828125,
+              "bottom": 565.1328125
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 602.5078125,
+              "bottom": 639.3312377929688
+            },
+            {
+              "text": "Future Thinking",
+              "right": 490.3765869140625,
+              "bottom": 713.5296630859375
+            }
+          ],
+          "actions": {
+            "x": 30.078125,
+            "y": 818.4421997070312,
+            "width": 572.4296875,
+            "height": 47.55780029296875,
+            "top": 818.4421997070312,
+            "right": 602.5078125,
+            "bottom": 866,
+            "left": 30.078125
+          }
+        },
+        "menu": null
+      }
+    ],
+    "sound": "false",
+    "reduced": {
+      "classes": "",
+      "animations": 0,
+      "title": "1"
+    },
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-display.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-brand.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-text.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-text.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-display.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-brand.woff2",
+        "status": 404
+      }
+    ]
+  },
+  {
+    "browser": "firefox",
+    "version": "155.0",
+    "video": [
+      {
+        "time": 5.069184,
+        "ready": 4,
+        "paused": false
+      },
+      {
+        "time": 5.839249,
+        "ready": 4,
+        "paused": false
+      }
+    ],
+    "frames": [
+      {
+        "viewport": [
+          1280,
+          960
+        ],
+        "state": {
+          "width": 1280,
+          "scroll": 1280,
+          "stage": 960,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 221.5500030517578,
+              "bottom": 575.4666595458984
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 576.1833343505859,
+              "bottom": 646.0500183105469
+            },
+            {
+              "text": "Future Thinking",
+              "right": 470.5833282470703,
+              "bottom": 716.6333160400391
+            }
+          ],
+          "actions": {
+            "x": 31.466659545898438,
+            "y": 816.433349609375,
+            "width": 544.7166748046875,
+            "height": 45.23333740234375,
+            "top": 816.433349609375,
+            "right": 576.1833343505859,
+            "bottom": 861.6666870117188,
+            "left": 31.466659545898438
+          }
+        },
+        "menu": null
+      },
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "state": {
+          "width": 1440,
+          "scroll": 1440,
+          "stage": 900,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 210.13333129882812,
+              "bottom": 535.1000061035156
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 546.3833312988281,
+              "bottom": 602.0499725341797
+            },
+            {
+              "text": "Future Thinking",
+              "right": 446.3666687011719,
+              "bottom": 668.9999847412109
+            }
+          ],
+          "actions": {
+            "x": 29.866668701171875,
+            "y": 763.7333374023438,
+            "width": 516.5166625976562,
+            "height": 42.93333435058594,
+            "top": 763.7333374023438,
+            "right": 546.3833312988281,
+            "bottom": 806.6666717529297,
+            "left": 29.866668701171875
+          }
+        },
+        "menu": null
+      },
+      {
+        "viewport": [
+          820,
+          1180
+        ],
+        "state": {
+          "width": 820,
+          "scroll": 820,
+          "stage": 1180,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 229.9166717529297,
+              "bottom": 785.0999755859375
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 602.8000030517578,
+              "bottom": 859.3166351318359
+            },
+            {
+              "text": "Future Thinking",
+              "right": 491.84999084472656,
+              "bottom": 933.5333251953125
+            }
+          ],
+          "actions": {
+            "x": 30.083328247070312,
+            "y": 1038.449951171875,
+            "width": 572.7166748046875,
+            "height": 47.55000305175781,
+            "top": 1038.449951171875,
+            "right": 602.8000030517578,
+            "bottom": 1085.9999542236328,
+            "left": 30.083328247070312
+          }
+        },
+        "menu": null
+      },
+      {
+        "viewport": [
+          375,
+          812
+        ],
+        "state": {
+          "width": 375,
+          "scroll": 375,
+          "stage": 812,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 128.28334045410156,
+              "bottom": 510.83331298828125
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 327.76666259765625,
+              "bottom": 550.6166534423828
+            },
+            {
+              "text": "Future Thinking",
+              "right": 268.46665954589844,
+              "bottom": 590.4000244140625
+            }
+          ],
+          "actions": {
+            "x": 20.98333740234375,
+            "y": 673.2999877929688,
+            "width": 333.0333251953125,
+            "height": 43.69999694824219,
+            "top": 673.2999877929688,
+            "right": 354.01666259765625,
+            "bottom": 716.9999847412109,
+            "left": 20.98333740234375
+          }
+        },
+        "menu": {
+          "open": "true",
+          "focus": "Work",
+          "closed": "false",
+          "focusBack": true
+        }
+      },
+      {
+        "viewport": [
+          320,
+          740
+        ],
+        "state": {
+          "width": 320,
+          "scroll": 320,
+          "stage": 740,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 109.53334045410156,
+              "bottom": 400.3000030517578
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 280.01666259765625,
+              "bottom": 434.2333221435547
+            },
+            {
+              "text": "Future Thinking",
+              "right": 228.98333740234375,
+              "bottom": 468.1666717529297
+            }
+          ],
+          "actions": {
+            "x": 18,
+            "y": 550.1666870117188,
+            "width": 284,
+            "height": 95.83332824707031,
+            "top": 550.1666870117188,
+            "right": 302,
+            "bottom": 646.0000152587891,
+            "left": 18
+          }
+        },
+        "menu": {
+          "open": "true",
+          "focus": "Work",
+          "closed": "false",
+          "focusBack": true
+        }
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "state": {
+          "width": 844,
+          "scroll": 844,
+          "stage": 390,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 141.35000610351562,
+              "bottom": 182.3000030517578
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 345,
+              "bottom": 222.86666870117188
+            },
+            {
+              "text": "Future Thinking",
+              "right": 284.1499938964844,
+              "bottom": 263.43333435058594
+            }
+          ],
+          "actions": {
+            "x": 32,
+            "y": 319.066650390625,
+            "width": 313,
+            "height": 42.93333435058594,
+            "top": 319.066650390625,
+            "right": 345,
+            "bottom": 361.99998474121094,
+            "left": 32
+          }
+        },
+        "menu": null
+      },
+      {
+        "viewport": [
+          600,
+          400
+        ],
+        "state": {
+          "width": 600,
+          "scroll": 600,
+          "stage": 400,
+          "classes": "",
+          "animations": 0,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 144.23333740234375,
+              "bottom": 189.31666564941406
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 352.933349609375,
+              "bottom": 230.9166717529297
+            },
+            {
+              "text": "Future Thinking",
+              "right": 290.683349609375,
+              "bottom": 272.51666259765625
+            }
+          ],
+          "actions": {
+            "x": 32,
+            "y": 328.566650390625,
+            "width": 320.933349609375,
+            "height": 43.23333740234375,
+            "top": 328.566650390625,
+            "right": 352.933349609375,
+            "bottom": 371.79998779296875,
+            "left": 32
+          }
+        },
+        "menu": {
+          "open": "true",
+          "focus": "Work",
+          "closed": "false",
+          "focusBack": true
+        }
+      },
+      {
+        "viewport": [
+          650,
+          960
+        ],
+        "state": {
+          "width": 650,
+          "scroll": 650,
+          "stage": 960,
+          "classes": "",
+          "animations": 1,
+          "inline": 0,
+          "title": [
+            {
+              "text": "Where",
+              "right": 229.9166717529297,
+              "bottom": 565.1000061035156
+            },
+            {
+              "text": "Regeneration Fuels",
+              "right": 602.8000030517578,
+              "bottom": 639.3166351318359
+            },
+            {
+              "text": "Future Thinking",
+              "right": 491.84999084472656,
+              "bottom": 713.5333251953125
+            }
+          ],
+          "actions": {
+            "x": 30.083328247070312,
+            "y": 818.4500122070312,
+            "width": 572.7166748046875,
+            "height": 47.55000305175781,
+            "top": 818.4500122070312,
+            "right": 602.8000030517578,
+            "bottom": 866.0000152587891,
+            "left": 30.083328247070312
+          }
+        },
+        "menu": null
+      }
+    ],
+    "sound": "false",
+    "reduced": {
+      "classes": "",
+      "animations": 0,
+      "title": "1"
+    },
+    "errors": [],
+    "failed": [
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-text.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-brand.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-display.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-text.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-brand.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://127.0.0.1:4390/assets/fonts/rv-display.woff2",
+        "status": 404
+      }
+    ]
+  }
+]

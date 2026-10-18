@@ -67,13 +67,38 @@ const server = createServer(async (req, res) => {
   if (path.endsWith('/')) path += 'index.html';
   const file = resolve(publicRoot, '.' + path);
   if (!file.startsWith(publicRoot + sep)) return res.writeHead(403).end();
-  try { const bytes = await readFile(file); res.writeHead(200, { 'Content-Type': mime[extname(file)] ?? 'application/octet-stream' }); res.end(bytes); }
+  try {
+    const bytes = await readFile(file);
+    const contentType = mime[extname(file)] ?? 'application/octet-stream';
+    const range = req.headers.range;
+    if (range && extname(file) === '.mp4') {
+      const [startStr, endStr] = range.replace(/bytes=/, '').split('-');
+      const start = Number.parseInt(startStr, 10);
+      const end = endStr ? Number.parseInt(endStr, 10) : bytes.length - 1;
+      const chunk = bytes.subarray(start, end + 1);
+      res.writeHead(206, {
+        'Content-Range': `bytes ${start}-${end}/${bytes.length}`,
+        'Accept-Ranges': 'bytes',
+        'Content-Length': chunk.length,
+        'Content-Type': contentType,
+      });
+      res.end(chunk);
+    } else {
+      res.writeHead(200, {
+        'Accept-Ranges': 'bytes',
+        'Content-Length': bytes.length,
+        'Content-Type': contentType,
+      });
+      res.end(bytes);
+    }
+  }
   catch { res.writeHead(404).end(); }
 });
 await new Promise(ok => server.listen(0, '127.0.0.1', ok));
 const origin = `http://127.0.0.1:${server.address().port}`;
 const browser = await chromium.launch({ headless: true });
 const nextSelector = '#hero-next, #hero-arrow-next, #next, [data-step="1"], [data-direction="1"], [data-next], [data-next-preview]';
+const remoteBriefProducts = new Set(['spaceedu','mostar-city','fennec','riverine-ai','freight-axis','meridian','solaris-gate','monoframe']);
 try {
   for (const [id, product] of selected) {
     const slug = product.slug;
@@ -84,19 +109,50 @@ try {
     }
     if (!existsSync(resolve(publicRoot, `demos/${slug}/index.html`))) throw Error(`${slug}: no released demo`);
     const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, recordVideo: { dir: resolve(evidence, 'recordings'), size: { width: 1440, height: 900 } } });
+    const allowedBriefHosts = new Set();
+    if (slug === 'jack-3d') {
+      for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
+    }
+    if (slug === 'monoframe') {
+      for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
+    }
+    if (remoteBriefProducts.has(slug)) {
+      const html = await readFile(resolve(publicRoot, `demos/${slug}/index.html`), 'utf8');
+      for (const match of html.matchAll(/https:\/\/[^\s"'<>]+/g)) {
+        try { allowedBriefHosts.add(new URL(match[0]).hostname); } catch {}
+      }
+    }
     // Capture only public demo activity. No submissions, checkout or analytics.
     await context.route('**/*', route => {
       const url = new URL(route.request().url());
       if (url.origin === origin || ['fonts.googleapis.com','fonts.gstatic.com'].includes(url.hostname)) return route.continue();
+      if (allowedBriefHosts.has(url.hostname)) return route.continue();
       return route.abort();
     });
     const page = await context.newPage();
     const errors = [], missing = [], actions = [], frames = [];
     page.on('pageerror', e => errors.push(e.message));
-    page.on('response', r => { if (r.status() >= 400 && r.url().startsWith(origin)) missing.push(r.url().replace(origin,'')); });
+    page.on('response', r => {
+      if (r.status() < 400 || !r.url().startsWith(origin)) return;
+      const path = r.url().replace(origin,'');
+      // The Riverine brief explicitly requests these absent font declarations
+      // and their exact fallback stacks until the owner supplies the fonts.
+      if (slug === 'riverine-ai' && /\/assets\/fonts\/rv-(display|brand|text)\.woff2$/.test(path)) return;
+      missing.push(path);
+    });
     await page.goto(`${origin}/demos/${slug}/index.html`, { waitUntil: 'load' });
     await page.waitForTimeout(1800);
     await page.evaluate(() => document.fonts.ready);
+    if (slug === 'jack-3d') await page.waitForFunction(() => document.querySelector('.hero-portrait img')?.naturalWidth > 0, null, {timeout:30000});
+    if (slug === 'fennec') await page.waitForFunction(() => document.querySelector('#fox')?.dataset.model === 'ready', null, {timeout:60000});
+    if (['meridian','freight-axis','riverine-ai','monoframe'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (slug === 'monoframe') {
+      await page.waitForTimeout(2000);
+    }
+    if (slug === 'solaris-gate') {
+      await page.waitForFunction(() => document.body.classList.contains('intro-ready'), null, { timeout: 30000 });
+      await page.waitForTimeout(2200);
+    }
     const start = Date.now();
     const at = async seconds => { const remaining = seconds * 1000 - (Date.now() - start); if (remaining > 0) await page.waitForTimeout(remaining); };
     const shot = async name => {
@@ -104,6 +160,49 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'jack-3d') {
+        const selector = actions.some(a=>a.action==='chapter') ? '#about' : '.marquee';
+        await page.locator(selector).scrollIntoViewIfNeeded();
+        actions.push({seconds:(Date.now()-start)/1000,action:'chapter',selector}); return;
+      }
+      if (slug === 'mostar-city') {
+        const y = actions.some(a=>a.action==='chapter') ? 2320 : 1060;
+        await page.evaluate(y=>window.scrollTo({top:y,behavior:'instant'}),y);
+        actions.push({seconds:(Date.now()-start)/1000,action:'chapter',y}); return;
+      }
+      if (slug === 'spaceedu' || slug === 'fennec') {
+        const selector = slug === 'spaceedu' ? '.planet-r' : '.brand__menu';
+        await page.locator(selector).click();
+        actions.push({seconds:(Date.now()-start)/1000,action:'click',selector}); return;
+      }
+      if (slug === 'monoframe') {
+        if (!actions.some(a => a.action === 'scrub-right')) {
+          await page.mouse.move(140, 450);
+          await page.mouse.move(1320, 450, { steps: 24 });
+          actions.push({seconds:(Date.now()-start)/1000,action:'scrub-right'});
+        } else if (!actions.some(a => a.action === 'click')) {
+          await page.locator('main button').nth(4).click();
+          actions.push({seconds:(Date.now()-start)/1000,action:'click',selector:'main button:nth-of-type(5)'});
+        } else {
+          await page.mouse.move(320, 450);
+          await page.mouse.move(1180, 450, { steps: 20 });
+          actions.push({seconds:(Date.now()-start)/1000,action:'scrub-return'});
+        }
+        return;
+      }
+      if (slug === 'solaris-gate') {
+        if (!actions.some(a => a.action === 'click')) {
+          await page.mouse.move(720, 450, { steps: 10 });
+          await page.locator('#portal').click();
+          actions.push({seconds:(Date.now()-start)/1000,action:'click',selector:'#portal'});
+        } else {
+          await page.mouse.move(880, 360, { steps: 12 });
+          await page.mouse.move(560, 520, { steps: 12 });
+          await page.mouse.move(720, 450, { steps: 10 });
+          actions.push({seconds:(Date.now()-start)/1000,action:'tilt portal'});
+        }
+        return;
+      }
       if (slug === 'leaflit') {
         const query = actions.some(a => a.action === 'search') ? '' : 'glass';
         await page.locator('#book-search').fill(query);
@@ -130,12 +229,17 @@ try {
     await at(4.8); await next();
     await at(6.7);
     const scrollHeight = await page.evaluate(() => document.documentElement.scrollHeight);
-    const target = Math.min(scrollHeight-900, slug === 'apartment-flow' ? 2400 : 1650);
+    const target = slug === 'jack-3d'
+      ? await page.locator('#projects').evaluate(e=>Math.max(0,e.getBoundingClientRect().top+220))
+      : Math.min(scrollHeight-900, slug === 'mostar-city' ? 3700 : slug === 'apartment-flow' ? 2400 : 1650);
     for (let step=1; step<=5; step++) {
       await page.mouse.wheel(0, Math.max(0,target)/5); await page.waitForTimeout(450);
     }
     actions.push({ seconds:6.7, action:'scroll', target });
     await at(10); await shot('scroll');
+    if (slug === 'solaris-gate' || slug === 'monoframe') {
+      await next();
+    }
     await at(11.5); await page.evaluate(() => window.scrollTo({ top:0, behavior:'smooth' }));
     await at(14); await shot('return');
     await at(15.5);

@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-15T12:21:34.677Z",
+  "sizes": [
+    {
+      "width": 1440,
+      "sw": 1440,
+      "cw": 1440,
+      "shippingFont": "14px",
+      "eyebrow": "14px"
+    },
+    {
+      "width": 820,
+      "sw": 820,
+      "cw": 820,
+      "shippingFont": "14px",
+      "eyebrow": "14px"
+    },
+    {
+      "width": 375,
+      "sw": 375,
+      "cw": 375,
+      "shippingFont": "14px",
+      "eyebrow": "14px"
+    },
+    {
+      "width": 320,
+      "sw": 320,
+      "cw": 320,
+      "shippingFont": "14px",
+      "eyebrow": "14px"
+    }
+  ],
+  "axe": [],
+  "hamburgerResize": true,
+  "noJSMainLinks": [
+    {
+      "text": "The bicycle",
+      "visible": true
+    },
+    {
+      "text": "Engineering",
+      "visible": true
+    },
+    {
+      "text": "Specifications",
+      "visible": true
+    },
+    {
+      "text": "Get in touch",
+      "visible": true
+    }
+  ],
+  "missingImages": true,
+  "email": "mailto:hello@aerosix.example",
+  "contrast": [
+    {
+      "role": "text",
+      "fg": "a3aeb9",
+      "bg": "0b1018",
+      "min": 4.5,
+      "ratio": 8.454
+    },
+    {
+      "role": "CTA",
+      "fg": "092a12",
+      "bg": "20c747",
+      "min": 4.5,
+      "ratio": 6.897
+    },
+    {
+      "role": "focus",
+      "fg": "63ea82",
+      "bg": "0b1018",
+      "min": 3,
+      "ratio": 12.366
+    },
+    {
+      "role": "hotspot",
+      "fg": "a3f4bb",
+      "bg": "353d4a",
+      "min": 3,
+      "ratio": 8.455
+    },
+    {
+      "role": "green type",
+      "fg": "36d562",
+      "bg": "353d4a",
+      "min": 4.5,
+      "ratio": 5.658
+    }
+  ]
+}

@@ -1,0 +1,569 @@
+{
+  "source": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\chronoform\\source",
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "errors": [],
+      "missing": [],
+      "models": [
+        {
+          "id": "paraiba",
+          "src": "assets/img/hero-paraiba.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "jupiter",
+          "src": "assets/img/hero-jupiter.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "cowboy",
+          "src": "assets/img/hero-cowboy.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "opus-orange",
+          "src": "assets/img/hero-opus-orange.webp",
+          "loaded": true,
+          "display": "block"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "id": "paraiba",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "jupiter",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "cowboy",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "opus-orange",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 820,
+          "id": "paraiba",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "jupiter",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "cowboy",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "opus-orange",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 375,
+          "id": "paraiba",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "jupiter",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "cowboy",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "opus-orange",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 320,
+          "id": "paraiba",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "jupiter",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "cowboy",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "opus-orange",
+          "scroll": 320,
+          "client": 320
+        }
+      ],
+      "inspectionStates": [
+        {
+          "inspecting": true,
+          "photo": "none"
+        },
+        {
+          "inspecting": false,
+          "photo": "block"
+        }
+      ],
+      "filePhoto": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "errors": [],
+      "missing": [],
+      "models": [
+        {
+          "id": "paraiba",
+          "src": "assets/img/hero-paraiba.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "jupiter",
+          "src": "assets/img/hero-jupiter.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "cowboy",
+          "src": "assets/img/hero-cowboy.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "opus-orange",
+          "src": "assets/img/hero-opus-orange.webp",
+          "loaded": true,
+          "display": "block"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "id": "paraiba",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "jupiter",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "cowboy",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "opus-orange",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 820,
+          "id": "paraiba",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "jupiter",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "cowboy",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "opus-orange",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 375,
+          "id": "paraiba",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "jupiter",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "cowboy",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "opus-orange",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 320,
+          "id": "paraiba",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "jupiter",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "cowboy",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "opus-orange",
+          "scroll": 320,
+          "client": 320
+        }
+      ],
+      "inspectionStates": [
+        {
+          "inspecting": true,
+          "photo": "none"
+        },
+        {
+          "inspecting": false,
+          "photo": "block"
+        }
+      ],
+      "filePhoto": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.45",
+      "errors": [],
+      "missing": [],
+      "models": [
+        {
+          "id": "paraiba",
+          "src": "assets/img/hero-paraiba.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "jupiter",
+          "src": "assets/img/hero-jupiter.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "cowboy",
+          "src": "assets/img/hero-cowboy.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "opus-orange",
+          "src": "assets/img/hero-opus-orange.webp",
+          "loaded": true,
+          "display": "block"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "id": "paraiba",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "jupiter",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "cowboy",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "opus-orange",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 820,
+          "id": "paraiba",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "jupiter",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "cowboy",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "opus-orange",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 375,
+          "id": "paraiba",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "jupiter",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "cowboy",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "opus-orange",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 320,
+          "id": "paraiba",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "jupiter",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "cowboy",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "opus-orange",
+          "scroll": 320,
+          "client": 320
+        }
+      ],
+      "inspectionStates": [
+        {
+          "inspecting": true,
+          "photo": "none"
+        },
+        {
+          "inspecting": false,
+          "photo": "block"
+        }
+      ],
+      "filePhoto": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "errors": [],
+      "missing": [],
+      "models": [
+        {
+          "id": "paraiba",
+          "src": "assets/img/hero-paraiba.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "jupiter",
+          "src": "assets/img/hero-jupiter.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "cowboy",
+          "src": "assets/img/hero-cowboy.webp",
+          "loaded": true,
+          "display": "block"
+        },
+        {
+          "id": "opus-orange",
+          "src": "assets/img/hero-opus-orange.webp",
+          "loaded": true,
+          "display": "block"
+        }
+      ],
+      "widths": [
+        {
+          "width": 1440,
+          "id": "paraiba",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "jupiter",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "cowboy",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 1440,
+          "id": "opus-orange",
+          "scroll": 1440,
+          "client": 1440
+        },
+        {
+          "width": 820,
+          "id": "paraiba",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "jupiter",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "cowboy",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 820,
+          "id": "opus-orange",
+          "scroll": 820,
+          "client": 820
+        },
+        {
+          "width": 375,
+          "id": "paraiba",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "jupiter",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "cowboy",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 375,
+          "id": "opus-orange",
+          "scroll": 375,
+          "client": 375
+        },
+        {
+          "width": 320,
+          "id": "paraiba",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "jupiter",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "cowboy",
+          "scroll": 320,
+          "client": 320
+        },
+        {
+          "width": 320,
+          "id": "opus-orange",
+          "scroll": 320,
+          "client": 320
+        }
+      ],
+      "inspectionStates": [
+        {
+          "inspecting": true,
+          "photo": "none"
+        },
+        {
+          "inspecting": false,
+          "photo": "block"
+        }
+      ],
+      "filePhoto": true
+    }
+  ]
+}

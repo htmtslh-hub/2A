@@ -1,0 +1,26 @@
+VESPER.AI — LICENCE TERMS
+
+Copyright entity: Forge zone. These terms apply to the template source and included assets; they do not assert exclusive copyright in AI-generated media.
+
+1. WHAT YOU GET
+A perpetual, non-exclusive commercial licence to the template source upon an authorised product sale.
+
+2. WHAT YOU MAY DO
+Use the licensed source in unlimited personal and client projects, modify it and publish the resulting website without attribution.
+
+3. WHAT YOU MAY NOT DO
+Resell, sublicense or give away the template files, publish them on another marketplace, or bundle them into another template product.
+
+4. DEMO CONTENT
+This operational AI infrastructure hero template includes illustrative metrics, brand names and a looping hero background video; it is not an operational software service or backend platform. Replace sample metrics, brand copy and anchor targets before publishing for another business. Do not sell or distribute the media files separately as stock assets. Assets you add are your responsibility.
+
+5. FONTS
+Includes local WOFF2 files for Inter and Instrument Serif (italic) under their open-source font licences (SIL Open Font License 1.1). Font ownership remains with the respective authors.
+
+6. OWNERSHIP
+Copyright in the template source remains with Forge zone. A licence grants use, not ownership. No exclusive copyright in AI-generated media is asserted.
+
+7. NO WARRANTY
+Provided as is. See the verification report for the browsers actually tested and the limitations. Compatibility with every browser or use is not guaranteed.
+
+Questions about what is and is not allowed: just ask. The answer is usually yes.

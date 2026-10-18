@@ -1,0 +1,701 @@
+{
+  "date": "2026-10-18T07:58:41.201Z",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "1440x900": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 26,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 560,
+            "top": 276,
+            "width": 320,
+            "height": 350
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "820x1180": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 21,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 260,
+            "top": 428,
+            "width": 300,
+            "height": 328
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "768x1024": {
+          "innerWidth": 768,
+          "innerHeight": 1024,
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 19,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 234,
+            "top": 350,
+            "width": 300,
+            "height": 328
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "375x812": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 14,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 64,
+            "top": 225,
+            "width": 248,
+            "height": 271
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "320x740": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 14,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 54,
+            "top": 215,
+            "width": 211,
+            "height": 231
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        }
+      },
+      "flow": {
+        "cursorState": {
+          "visible": true,
+          "enter": true,
+          "transform": "translate3d(694.482px, 438.847px, 0px)"
+        },
+        "earthState": {
+          "planet": "earth",
+          "title": "EARTH",
+          "nextNumber": "[02]",
+          "nextName": "Venus",
+          "portalAria": "Travel to Venus",
+          "activeItem": "Earth",
+          "isSwitching": true
+        },
+        "venusState": {
+          "planet": "venus",
+          "title": "VENUS",
+          "nextNumber": "[06]",
+          "nextName": "Mercury",
+          "portalAria": "Travel to Mercury",
+          "activeItem": "Venus",
+          "portalImageDisplay": "block",
+          "portalVideoDisplay": "none",
+          "mercuryLoaded": true
+        },
+        "afterTerminalClick": {
+          "planet": "venus",
+          "isTransitioning": false,
+          "isLoading": false
+        },
+        "errors": []
+      },
+      "errors": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "1440x900": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 26,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 560,
+            "top": 276,
+            "width": 320,
+            "height": 350
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "820x1180": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 21,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 260,
+            "top": 428,
+            "width": 300,
+            "height": 328
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "768x1024": {
+          "innerWidth": 768,
+          "innerHeight": 1024,
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 19,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 234,
+            "top": 350,
+            "width": 300,
+            "height": 328
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "375x812": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 14,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 64,
+            "top": 225,
+            "width": 248,
+            "height": 271
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "320x740": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 14,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 54,
+            "top": 215,
+            "width": 211,
+            "height": 231
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        }
+      },
+      "flow": {
+        "cursorState": {
+          "visible": true,
+          "enter": true,
+          "transform": "translate3d(693.868px, 438.382px, 0px)"
+        },
+        "earthState": {
+          "planet": "earth",
+          "title": "EARTH",
+          "nextNumber": "[02]",
+          "nextName": "Venus",
+          "portalAria": "Travel to Venus",
+          "activeItem": "Earth",
+          "isSwitching": true
+        },
+        "venusState": {
+          "planet": "venus",
+          "title": "VENUS",
+          "nextNumber": "[06]",
+          "nextName": "Mercury",
+          "portalAria": "Travel to Mercury",
+          "activeItem": "Venus",
+          "portalImageDisplay": "block",
+          "portalVideoDisplay": "none",
+          "mercuryLoaded": true
+        },
+        "afterTerminalClick": {
+          "planet": "venus",
+          "isTransitioning": false,
+          "isLoading": false
+        },
+        "errors": []
+      },
+      "errors": []
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "1440x900": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 26,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 560,
+            "top": 276,
+            "width": 320,
+            "height": 350
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "820x1180": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 21,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 260,
+            "top": 428,
+            "width": 300,
+            "height": 328
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "768x1024": {
+          "innerWidth": 768,
+          "innerHeight": 1024,
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 19,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 234,
+            "top": 350,
+            "width": 300,
+            "height": 328
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "375x812": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 14,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 64,
+            "top": 225,
+            "width": 248,
+            "height": 271
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "320x740": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 14,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 54,
+            "top": 215,
+            "width": 211,
+            "height": 231
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        }
+      },
+      "flow": {
+        "cursorState": {
+          "visible": true,
+          "enter": true,
+          "transform": "translate3d(693.868px, 438.552px, 0px)"
+        },
+        "earthState": {
+          "planet": "earth",
+          "title": "EARTH",
+          "nextNumber": "[02]",
+          "nextName": "Venus",
+          "portalAria": "Travel to Venus",
+          "activeItem": "Earth",
+          "isSwitching": true
+        },
+        "venusState": {
+          "planet": "venus",
+          "title": "VENUS",
+          "nextNumber": "[06]",
+          "nextName": "Mercury",
+          "portalAria": "Travel to Mercury",
+          "activeItem": "Venus",
+          "portalImageDisplay": "block",
+          "portalVideoDisplay": "none",
+          "mercuryLoaded": true
+        },
+        "afterTerminalClick": {
+          "planet": "venus",
+          "isTransitioning": false,
+          "isLoading": false
+        },
+        "errors": []
+      },
+      "errors": []
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "1440x900": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 26,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 560,
+            "top": 276,
+            "width": 320,
+            "height": 350
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "820x1180": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 21,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 260,
+            "top": 428,
+            "width": 300,
+            "height": 328
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "768x1024": {
+          "innerWidth": 768,
+          "innerHeight": 1024,
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 19,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 234,
+            "top": 350,
+            "width": 300,
+            "height": 328
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "375x812": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 14,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 64,
+            "top": 225,
+            "width": 248,
+            "height": 271
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        },
+        "320x740": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "planet": "mars",
+          "title": "MARS",
+          "titleLeft": 14,
+          "nextNumber": "[03]",
+          "nextName": "Earth",
+          "factsCount": 4,
+          "planetItemsCount": 8,
+          "activePlanetItem": "Mars",
+          "logoDocked": true,
+          "logoAlt": "Solaris Gate",
+          "portalRect": {
+            "left": 54,
+            "top": 215,
+            "width": 211,
+            "height": 231
+          },
+          "overflowX": false,
+          "overflowY": false,
+          "errors": []
+        }
+      },
+      "flow": {
+        "cursorState": {
+          "visible": true,
+          "enter": true,
+          "transform": "translate3d(699.095px, 441.077px, 0px)"
+        },
+        "earthState": {
+          "planet": "earth",
+          "title": "EARTH",
+          "nextNumber": "[02]",
+          "nextName": "Venus",
+          "portalAria": "Travel to Venus",
+          "activeItem": "Earth",
+          "isSwitching": true
+        },
+        "venusState": {
+          "planet": "venus",
+          "title": "VENUS",
+          "nextNumber": "[06]",
+          "nextName": "Mercury",
+          "portalAria": "Travel to Mercury",
+          "activeItem": "Venus",
+          "portalImageDisplay": "block",
+          "portalVideoDisplay": "none",
+          "mercuryLoaded": true
+        },
+        "afterTerminalClick": {
+          "planet": "venus",
+          "isTransitioning": false,
+          "isLoading": false
+        },
+        "errors": []
+      },
+      "errors": []
+    }
+  }
+}

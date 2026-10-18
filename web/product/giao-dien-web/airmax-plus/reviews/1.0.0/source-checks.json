@@ -1,0 +1,578 @@
+{
+  "date": "2026-10-15T13:58:53.970Z",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 816,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 860,
+          "height": 900,
+          "sw": 860,
+          "cw": 860,
+          "small": []
+        },
+        {
+          "width": 861,
+          "height": 900,
+          "sw": 861,
+          "cw": 861,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.384312,
+          "transform": "matrix(1, 0, 0, 1, -42.5742, 0)",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/shoe-crimson.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/shoe-crimson.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.45407553059942024,
+          "transform": "translateX(-0.367396%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.7784151953132918,
+          "transform": "translateX(2.22732%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.5838113964849689,
+          "transform": "translateX(0.670491%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "4.93095%",
+      "mobileScene": "0.7103295827561998",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.46947,
+        "transform": "matrix(1, 0, 0, 1, -36.6856, 0)",
+        "finish": "2",
+        "src": "assets/img/shoe-crimson.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    },
+    "firefox": {
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 816,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 860,
+          "height": 900,
+          "sw": 860,
+          "cw": 860,
+          "small": []
+        },
+        {
+          "width": 861,
+          "height": 900,
+          "sw": 861,
+          "cw": 861,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.486917,
+          "transform": "matrix(1, 0, 0, 1, -35.4792, 0)",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/shoe-crimson.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/shoe-crimson.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.4557291666666667,
+          "transform": "translateX(-0.354167%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.78125,
+          "transform": "translateX(2.25%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.5859375,
+          "transform": "translateX(0.6875%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "5.33333%",
+      "mobileScene": "0.7102770710269567",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.485433,
+        "transform": "matrix(1, 0, 0, 1, -35.5818, 0)",
+        "finish": "2",
+        "src": "assets/img/shoe-crimson.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    },
+    "edge": {
+      "version": "155.0.4283.45",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 816,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 860,
+          "height": 900,
+          "sw": 860,
+          "cw": 860,
+          "small": []
+        },
+        {
+          "width": 861,
+          "height": 900,
+          "sw": 861,
+          "cw": 861,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.432083,
+          "transform": "matrix(1, 0, 0, 1, -39.2708, 0)",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/shoe-crimson.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/shoe-crimson.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.45407553059942024,
+          "transform": "translateX(-0.367396%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.7784151953132918,
+          "transform": "translateX(2.22732%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.5838113964849689,
+          "transform": "translateX(0.670491%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "5.24286%",
+      "mobileScene": "0.7103295827561998",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.43149,
+        "transform": "matrix(1, 0, 0, 1, -39.3119, 0)",
+        "finish": "2",
+        "src": "assets/img/shoe-crimson.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 816,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 860,
+          "height": 900,
+          "sw": 860,
+          "cw": 860,
+          "small": []
+        },
+        {
+          "width": 861,
+          "height": 900,
+          "sw": 861,
+          "cw": 861,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "opacity": 0.400928,
+          "transform": "matrix(1, 0, 0, 1, -41.4252, 0)",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "forward": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "reverse": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/shoe-crimson.webp"
+        },
+        "rapid": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "0",
+          "src": "assets/img/shoe-sunset.webp"
+        },
+        "swipe": {
+          "opacity": 1,
+          "transform": "none",
+          "finish": "2",
+          "src": "assets/img/shoe-crimson.webp"
+        }
+      },
+      "scroll": [
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        },
+        {
+          "y": 700,
+          "progress": 0.45407553059942024,
+          "transform": "translateX(-0.367396%)"
+        },
+        {
+          "y": 1200,
+          "progress": 0.7784151953132918,
+          "transform": "translateX(2.22732%)"
+        },
+        {
+          "y": 1800,
+          "progress": 1,
+          "transform": "translateX(4%)"
+        },
+        {
+          "y": 900,
+          "progress": 0.5838113964849689,
+          "transform": "translateX(0.670491%)"
+        },
+        {
+          "y": 0,
+          "progress": 0,
+          "transform": "translateX(-4%)"
+        }
+      ],
+      "skipVisible": true,
+      "skipMain": true,
+      "actionMiddle": "4.85476%",
+      "mobileScene": "0.7103295827561998",
+      "idleFrames": 0,
+      "axe": [],
+      "zoom": {
+        "sw": 720,
+        "cw": 720
+      },
+      "noCSSMotion": {
+        "opacity": 0.423182,
+        "transform": "matrix(1, 0, 0, 1, -39.8864, 0)",
+        "finish": "2",
+        "src": "assets/img/shoe-crimson.webp"
+      },
+      "consoleErrors": [],
+      "missingAssets": [],
+      "noJS": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "finishes": true
+      },
+      "offlineFile": true
+    }
+  },
+  "failures": []
+}

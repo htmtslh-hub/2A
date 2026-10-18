@@ -1,0 +1,95 @@
+{
+  "origin": "https://web-b7lc9228k-htmtslh-hubs-projects.vercel.app",
+  "checks": [
+    {
+      "path": "/demos/spaceedu/index.html",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/spaceedu.mp4",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/spaceedu.webp",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/demos/mostar-city/index.html",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/mostar-city.mp4",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/mostar-city.webp",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/demos/fennec/index.html",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/fennec.mp4",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/fennec.webp",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/demos/riverine-ai/index.html",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/riverine-ai.mp4",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/riverine-ai.webp",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/demos/freight-axis/index.html",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/freight-axis.mp4",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/freight-axis.webp",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/demos/meridian/index.html",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/meridian.mp4",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/previews/meridian.webp",
+      "status": 200,
+      "matches": true
+    }
+  ]
+}

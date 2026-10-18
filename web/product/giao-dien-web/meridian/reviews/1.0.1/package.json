@@ -1,0 +1,15 @@
+{
+  "id": "t59",
+  "slug": "meridian",
+  "name": "Meridian",
+  "version": "1.0.1",
+  "bytes": 1377390,
+  "sha256": "1e2fa861ad8fe0ba9b30b284920cccf1295ad4f1a09b399f6fc86de930eb4089",
+  "files": [
+    "CUSTOMISE.md",
+    "index.html",
+    "LICENCE.txt",
+    "README.md",
+    "assets/video/viaduct-h264.mp4"
+  ]
+}

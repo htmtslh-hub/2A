@@ -1,0 +1,243 @@
+{
+  "origin": "http://127.0.0.1:4345",
+  "checks": [
+    {
+      "lang": "vi",
+      "id": "t43",
+      "titlePresent": true,
+      "width": 1440,
+      "scroll": 1440,
+      "hasPreview": true
+    },
+    {
+      "lang": "vi",
+      "id": "t44",
+      "titlePresent": true,
+      "width": 1440,
+      "scroll": 1440,
+      "hasPreview": true
+    },
+    {
+      "lang": "vi",
+      "id": "t45",
+      "titlePresent": true,
+      "width": 1440,
+      "scroll": 1440,
+      "hasPreview": true
+    },
+    {
+      "lang": "vi",
+      "id": "t43",
+      "titlePresent": true,
+      "width": 375,
+      "scroll": 375,
+      "hasPreview": true
+    },
+    {
+      "lang": "vi",
+      "id": "t44",
+      "titlePresent": true,
+      "width": 375,
+      "scroll": 375,
+      "hasPreview": true
+    },
+    {
+      "lang": "vi",
+      "id": "t45",
+      "titlePresent": true,
+      "width": 375,
+      "scroll": 375,
+      "hasPreview": true
+    },
+    {
+      "lang": "en",
+      "id": "t43",
+      "titlePresent": true,
+      "width": 1440,
+      "scroll": 1440,
+      "hasPreview": true
+    },
+    {
+      "lang": "en",
+      "id": "t44",
+      "titlePresent": true,
+      "width": 1440,
+      "scroll": 1440,
+      "hasPreview": true
+    },
+    {
+      "lang": "en",
+      "id": "t45",
+      "titlePresent": true,
+      "width": 1440,
+      "scroll": 1440,
+      "hasPreview": true
+    },
+    {
+      "lang": "en",
+      "id": "t43",
+      "titlePresent": true,
+      "width": 375,
+      "scroll": 375,
+      "hasPreview": true
+    },
+    {
+      "lang": "en",
+      "id": "t44",
+      "titlePresent": true,
+      "width": 375,
+      "scroll": 375,
+      "hasPreview": true
+    },
+    {
+      "lang": "en",
+      "id": "t45",
+      "titlePresent": true,
+      "width": 375,
+      "scroll": 375,
+      "hasPreview": true
+    },
+    {
+      "lang": "zh",
+      "id": "t43",
+      "titlePresent": true,
+      "width": 1440,
+      "scroll": 1440,
+      "hasPreview": true
+    },
+    {
+      "lang": "zh",
+      "id": "t44",
+      "titlePresent": true,
+      "width": 1440,
+      "scroll": 1440,
+      "hasPreview": true
+    },
+    {
+      "lang": "zh",
+      "id": "t45",
+      "titlePresent": true,
+      "width": 1440,
+      "scroll": 1440,
+      "hasPreview": true
+    },
+    {
+      "lang": "zh",
+      "id": "t43",
+      "titlePresent": true,
+      "width": 375,
+      "scroll": 375,
+      "hasPreview": true
+    },
+    {
+      "lang": "zh",
+      "id": "t44",
+      "titlePresent": true,
+      "width": 375,
+      "scroll": 375,
+      "hasPreview": true
+    },
+    {
+      "lang": "zh",
+      "id": "t45",
+      "titlePresent": true,
+      "width": 375,
+      "scroll": 375,
+      "hasPreview": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "/demos/fresh-reddy/index.html",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/demos/fresh-reddy/assets/css/style.css",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/demos/fresh-reddy/assets/js/main.js",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/previews/fresh-reddy.webp",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/previews/fresh-reddy.mp4",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/demos/puro-amor/index.html",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/demos/puro-amor/assets/css/style.css",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/demos/puro-amor/assets/js/main.js",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/previews/puro-amor.webp",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/previews/puro-amor.mp4",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/demos/nourish-bowl/index.html",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/demos/nourish-bowl/assets/css/style.css",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/demos/nourish-bowl/assets/js/main.js",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/previews/nourish-bowl.webp",
+      "status": 200,
+      "same": true
+    },
+    {
+      "path": "/previews/nourish-bowl.mp4",
+      "status": 200,
+      "same": true
+    }
+  ],
+  "guards": [
+    {
+      "id": "t43",
+      "anonymous": 401,
+      "direct": 404
+    },
+    {
+      "id": "t44",
+      "anonymous": 401,
+      "direct": 404
+    },
+    {
+      "id": "t45",
+      "anonymous": 401,
+      "direct": 404
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "browser": "chromium",
+    "width": 320,
+    "brandRight": 304,
+    "brandLeft": 143.640625,
+    "linksRight": 133.484375,
+    "scroll": 320,
+    "videoError": "",
+    "hevc": ""
+  },
+  {
+    "browser": "firefox",
+    "width": 320,
+    "brandRight": 304,
+    "brandLeft": 143.6666717529297,
+    "linksRight": 133.51666259765625,
+    "scroll": 320,
+    "videoError": "Failed to decode media",
+    "hevc": "probably"
+  }
+]

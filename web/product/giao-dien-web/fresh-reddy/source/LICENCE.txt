@@ -1,0 +1,24 @@
+Template licence — candidate
+
+1. Permission
+Perpetual, non-exclusive commercial permission applies to the original template code supplied by its copyright holder.
+
+2. Allowed use
+Customise and use the original template code for unlimited personal and client website projects. Attribution is not required.
+
+3. Restrictions
+Do not resell or redistribute the template files as a competing template, list them on another marketplace or include them in a template bundle.
+
+4. Demo content
+Business descriptions and contacts are demonstration content and must be replaced. Fresh & Reddy comes from a supplied visual reference; brand rights have not been verified or granted. Replace the identity or obtain permission before commercial use. No rights to the reference screenshot or original 3D artwork transfer. The SVG is an independently drawn reconstruction.
+
+5. Fonts
+System font stacks only. No fonts are bundled, downloaded or licensed by this package. Available system fonts remain subject to their respective licences. Do not redistribute font files without permission.
+
+6. Ownership
+Copyright stays with the author. Copyright holder: [OWNER TO COMPLETE BEFORE COMMERCIAL RELEASE]. This is permission to use the original code, not ownership or a licence to third-party marks.
+
+7. No warranty
+Provided as is. Review and test your customised website before publishing.
+
+If you are unsure whether a use is allowed, please ask. The answer is usually yes.

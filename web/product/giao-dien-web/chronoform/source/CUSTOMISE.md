@@ -25,7 +25,7 @@ template-folder/
 ├── assets/
 │   ├── css/style.css
 │   ├── js/main.js and js/watch3d.js
-│   └── img/ (17 WebP images)
+│   └── img/ (21 WebP images)
 ├── CUSTOMISE.md
 ├── README.md
 └── LICENCE.txt
@@ -79,7 +79,7 @@ I bought a static website template from Forge Zone and want to turn it into
 my own website. I am not a developer. Guide me in clear, small steps.
 
 First read every file I provide: index.html, assets/css/style.css,
-assets/js/main.js, assets/js/watch3d.js, the 17 WebP images, CUSTOMISE.md, README.md, and LICENCE.txt. If I send CSS or
+assets/js/main.js, assets/js/watch3d.js, the 21 WebP images, CUSTOMISE.md, README.md, and LICENCE.txt. If I send CSS or
 JavaScript as separate files, use the paths above. Tell me which files you
 read and which are missing. Do not guess the contents of a missing file and
 do not edit anything yet.
@@ -378,6 +378,8 @@ Counts below are literal matches in the shipped file, including metadata and acc
 The five 1254×1254 textures are paraiba.webp, jupiter.webp, skeleton.webp, opus.webp and ice.webp. Keep the circular dial centred; the renderer maps it to the watch face. The 2172×724 editorial.webp contains three separate equal-width panels; CSS editorial-crop classes select one third. The eleven render-*.webp images are transparent snapshots of the corresponding native model. Keep these in sync with dial, case and strap changes; otherwise gallery and canvas will show different products. Replace thumbnails with your own transparent product images if preferred.
 
 watch3d.js contains mesh construction, shader lighting, texture loading and pointer drag. The back uses the concept Jupiter texture. Altering geometry needs JavaScript/WebGL knowledge; ask AI to read that file rather than treating the model as a single replaceable photograph. Fallback photographs support file opening and disabled WebGL, but do not provide full 3D inspection. All assets use relative paths.
+
+The four hero-*.webp files are original AI-generated photographic cutouts on transparent 1400x1190 canvases, not 360-degree models. They are selected by the heroPhotos map in main.js. Preserve alpha, full straps and equal visual scale. CSS restricts them to .hero__visual-slot; dragging or View movement reveals the existing 3D concept. Slide changes and completed movement inspection restore the photograph. Detail, collection and enquiry imagery continue to use the original renderer/snapshots. If a photograph fails to load, the original renderer remains visible. The initial HTML fallback uses hero-paraiba.webp for no-JavaScript viewing.
 
 ### Linked data and motion
 The PRODUCTS array, FEATURED IDs, headings array, HTML card data-product/data-open/data-save attributes and render-* file names must agree. Adding a model requires a card and thumbnail; each family group must retain its heading. There is one shared watch-stage moved between hero/detail, not two independent renderers. Keep the loader and carousel cancellation, direct wrap, keyboard and finite animation lifecycle. Pause motion is session-only; the newer product brief requires ON at each opening regardless of OS preferences. Do not add an infinite idle requestAnimationFrame loop.

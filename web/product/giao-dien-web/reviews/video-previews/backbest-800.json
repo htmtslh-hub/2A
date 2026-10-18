@@ -1,0 +1,48 @@
+{
+  "id": "t38",
+  "slug": "backbest-800",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-15T15:29:54.039Z",
+  "demo": "/demos/backbest-800/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "2b273e54dd50",
+  "sha256": "2b273e54dd50d953054840b90a99404ed0916f2950912ff1e7877c55a7cc9240",
+  "demoHtmlSha256": "037a3ca0ec1a7dccd3fd72397689e372a67555843132d4e44f34035a1b66afda",
+  "demoSha256": "8f75bb8a09321295c2dc781bc748cbb05477dcdfd49e4fcca158a6717231b2fd",
+  "bytes": 464351,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.513,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 4.862,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\backbest-800-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\backbest-800-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\backbest-800-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\backbest-800-return.jpg"
+  ]
+}

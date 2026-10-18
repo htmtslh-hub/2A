@@ -1,0 +1,86 @@
+{
+  "url": "https://forgezone.store/demos/motora/index.html?v=1.0.0",
+  "date": "2026-10-15T11:53:09.093Z",
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "mid": {
+        "opacity": 0.336012,
+        "transform": "matrix(1, 0, 0, 1, -19.5291, 0)"
+      },
+      "forward": "Silver",
+      "reverse": "Obsidian Black",
+      "rapid": "Champagne Gold",
+      "scroll": [
+        0,
+        0.38793453266603545,
+        0.7589418561960155,
+        0.44976908658769876,
+        0
+      ],
+      "mobileOverflow": false,
+      "dialog": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "mid": {
+        "opacity": 0.584442,
+        "transform": "matrix(1, 0, 0, 1, 12.2223, 0)"
+      },
+      "forward": "Silver",
+      "reverse": "Obsidian Black",
+      "rapid": "Champagne Gold",
+      "scroll": [
+        0,
+        0.38792588193171307,
+        0.7589298589853526,
+        0.44975987810731965,
+        0
+      ],
+      "mobileOverflow": false,
+      "dialog": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.45",
+      "mid": {
+        "opacity": 0.47381,
+        "transform": "matrix(1, 0, 0, 1, -15.4762, 0)"
+      },
+      "forward": "Silver",
+      "reverse": "Obsidian Black",
+      "rapid": "Champagne Gold",
+      "scroll": [
+        0,
+        0.38793453266603545,
+        0.7589418561960155,
+        0.44976908658769876,
+        0
+      ],
+      "mobileOverflow": false,
+      "dialog": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "mid": {
+        "opacity": 0.470833,
+        "transform": "matrix(1, 0, 0, 1, -15.5637, 0)"
+      },
+      "forward": "Silver",
+      "reverse": "Obsidian Black",
+      "rapid": "Champagne Gold",
+      "scroll": [
+        0,
+        0.38793453266603545,
+        0.7589418561960155,
+        0.44976908658769876,
+        0
+      ],
+      "mobileOverflow": false,
+      "dialog": true
+    }
+  ]
+}

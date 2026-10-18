@@ -1,0 +1,10 @@
+{
+  "slug": "meridian",
+  "zip": "web\\product\\giao-dien-web\\meridian\\meridian.zip",
+  "bytes": 2734,
+  "sha256": "d267bdf2ed9d993336495210a7d76d29293a14f3a3857027e034cf3f5cf95c64",
+  "files": [
+    "index.html"
+  ],
+  "byteVerified": true
+}

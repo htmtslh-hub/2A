@@ -1,0 +1,7 @@
+# Nourish Bowl — 1.0.0 candidate
+16/10/2026. User requests a new web product similar to fe42498de69d66c33f8c6.jpg (868×874). Local-only continuation, independent slug nourish-bowl. No changes to existing coffee sites, shared store, catalogue, DB or hosting.
+Direction: deep navy, cyan/teal accents, large top-down blue fruit bowl on left, headline/CTA on right, four compact features below, oversize dark platter lower-right, scattered leaves/berries, sweeping blue background shape.
+Original image text is low-resolution/unintelligible. Use original coherent English demo copy for a healthy-food editorial brand, no unsupported nutrition/medical claims. Brand Nourish is illustrative. Goal: explore bowl combinations and simple preparation ideas; CTA to #bowls. No real orders, payment, account or form service.
+Two generated transparent PNG assets follow the current imagegen workflow established with user. These raster files/size depart from WEB-STATIC-1 W01/W03/W06 and remain candidate-only pending release profile/permissions. No arbitrary shared profile changes or commercial package. JS menu and finite reveal only. Native details for recipe ingredients.
+Reference viewer overlays lower-right (expand/refresh) are excluded from web reconstruction. Full screenshot/no crop, desktop comparison 868×874 DPR1. Hero/image scale are based on reference width. Mobile reference absent.
+Visual weights locked: navigation 10%, top bowl 30%, headline/CTA 20%, feature strip 15%, lower platter/section 25%. Axes geometry 25%, typography 20%, colour 15%, imagery 25%, spacing 15%.

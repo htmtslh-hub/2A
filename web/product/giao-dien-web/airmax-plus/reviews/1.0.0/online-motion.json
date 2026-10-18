@@ -1,0 +1,90 @@
+{
+  "url": "https://forgezone.store/demos/airmax-plus/index.html?v=1.0.0",
+  "date": "2026-10-15T14:30:15.913Z",
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "mid": {
+        "opacity": 0.444249,
+        "transform": "matrix(1, 0, 0, 1, -38.4296, 0)"
+      },
+      "forward": "0",
+      "reverse": "2",
+      "rapid": "0",
+      "scroll": [
+        0,
+        0.5189434635421946,
+        0.9081510611988405,
+        0.5838113964849689,
+        0
+      ],
+      "actionProgress": "4.37381%",
+      "mobileOverflow": false,
+      "dialog": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "mid": {
+        "opacity": 0.394282,
+        "transform": "matrix(1, 0, 0, 1, -41.8848, 0)"
+      },
+      "forward": "0",
+      "reverse": "2",
+      "rapid": "0",
+      "scroll": [
+        0,
+        0.5208333333333334,
+        0.9114583333333334,
+        0.5859375,
+        0
+      ],
+      "actionProgress": "4.97667%",
+      "mobileOverflow": false,
+      "dialog": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.45",
+      "mid": {
+        "opacity": 0.434457,
+        "transform": "matrix(1, 0, 0, 1, -39.1067, 0)"
+      },
+      "forward": "0",
+      "reverse": "2",
+      "rapid": "0",
+      "scroll": [
+        0,
+        0.5189434635421946,
+        0.9081510611988405,
+        0.5838113964849689,
+        0
+      ],
+      "actionProgress": "4.43095%",
+      "mobileOverflow": false,
+      "dialog": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "mid": {
+        "opacity": 0.430896,
+        "transform": "matrix(1, 0, 0, 1, -39.3529, 0)"
+      },
+      "forward": "0",
+      "reverse": "2",
+      "rapid": "0",
+      "scroll": [
+        0,
+        0.5189434635421946,
+        0.9081510611988405,
+        0.5838113964849689,
+        0
+      ],
+      "actionProgress": "4.5%",
+      "mobileOverflow": false,
+      "dialog": true
+    }
+  ]
+}

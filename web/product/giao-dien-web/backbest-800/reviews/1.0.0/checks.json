@@ -1,0 +1,1497 @@
+{
+  "slug": "backbest-800",
+  "version": "1.0.0",
+  "date": "2026-10-15T15:13:30.367Z",
+  "os": "win32",
+  "zipBytes": 189290,
+  "sha256": "c013f647b93fdd8b748d3bf2c9e12a63f825bf4efe355314c6cbfc8a9c9bfc47",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#main"
+          },
+          {
+            "label": "Plantronic BackBest 800 design study home",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          },
+          {
+            "label": "PHONE",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#engineering"
+          },
+          {
+            "label": "→HEADPHONE",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          },
+          {
+            "label": "LAPTOP",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#specifications"
+          },
+          {
+            "label": "SPEAKERS",
+            "href": "#build",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#build"
+          },
+          {
+            "label": "TWITTER",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#contact"
+          },
+          {
+            "label": "INSTAGRAM",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#contact"
+          },
+          {
+            "label": "FACEBOOK",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#contact"
+          },
+          {
+            "label": "Jump to technical specifications",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#specifications"
+          },
+          {
+            "label": "Discuss your configuration →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#contact"
+          },
+          {
+            "label": "← PURCHASE NOW",
+            "href": "#build",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#build"
+          },
+          {
+            "label": "Inspect the acoustic specs ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#specifications"
+          },
+          {
+            "label": "Switch colourway in hero ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          },
+          {
+            "label": "Enquire by email ↗",
+            "href": "mailto:hello@backbest800.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@backbest800.example"
+          },
+          {
+            "label": "BackBest 800 showroom top",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          },
+          {
+            "label": "Tune into the session.hello@backbest800.example ↗",
+            "href": "mailto:hello@backbest800.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@backbest800.example"
+          },
+          {
+            "label": "Read the concept notes ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#specifications"
+          },
+          {
+            "label": "Plantronic BackBest 800 Series / Wireless Headphone ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          },
+          {
+            "label": "Prepare purchase email ↗",
+            "href": "mailto:hello@backbest800.example?subject=BackBest%20800%20purchase%20enquiry&body=%0AThis%20is%20a%20local%20concept%20enquiry%2C%20not%20a%20live%20retail%20order.%20Please%20confirm%20fit%2C%20availability%20and%20pricing%20separately.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@backbest800.example?subject=BackBest%20800%20purchase%20enquiry&body=%0AThis%20is%20a%20local%20concept%20enquiry%2C%20not%20a%20live%20retail%20order.%20Please%20confirm%20fit%2C%20availability%20and%20pricing%20separately."
+          },
+          {
+            "label": "Back to the headphone ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 860,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(11, 5, 6)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 20.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Plantronic BackBest 800 home",
+            "colour": "rgb(216, 207, 208)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 13.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "is-active",
+            "text": "→HEADPHONE",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 20.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(11, 5, 6)",
+            "background": [
+              255,
+              77,
+              84
+            ],
+            "ratio": 6.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "TWITTER",
+            "colour": "rgb(214, 202, 204)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 12.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(255, 226, 228)",
+            "background": [
+              29,
+              9,
+              11
+            ],
+            "ratio": 15.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand-line",
+            "text": "PLANTRONIC",
+            "colour": "rgb(244, 238, 239)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 17.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "model-line",
+            "text": "BACKBEST 800 SERIES",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 20.22,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-tagline",
+            "text": "WIRELESS HEADPHONE",
+            "colour": "rgb(216, 204, 206)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 12.95,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-copy",
+            "text": "Dual 40mm custom dynamic drivers deliver",
+            "colour": "rgb(207, 195, 197)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 11.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "color-heading",
+            "text": "COLOR:",
+            "colour": "rgb(230, 220, 221)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 15.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "color-choice",
+            "text": "WHITE",
+            "colour": "rgb(184, 172, 174)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 9.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "old-price",
+            "text": "Previous illustrative price $239",
+            "colour": "rgb(184, 172, 174)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 9.2,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "purchase-label",
+            "text": "← PURCHASE NOW",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 18.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "watch-text",
+            "text": "SOUNDPREVIEW",
+            "colour": "rgb(229, 218, 221)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 14.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "→",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              23,
+              10,
+              12
+            ],
+            "ratio": 17.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "ACOUSTIC ARCHITECTURE / 01",
+            "colour": "rgb(255, 82, 88)",
+            "background": [
+              19,
+              9,
+              11
+            ],
+            "ratio": 6.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Tuned for deepstudio silence.",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              19,
+              9,
+              11
+            ],
+            "ratio": 17.53,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Concentric acoustic damping rings and du",
+            "colour": "rgb(207, 195, 197)",
+            "background": [
+              19,
+              9,
+              11
+            ],
+            "ratio": 11.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Inspect the acoustic specs ↗",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              19,
+              9,
+              11
+            ],
+            "ratio": 17.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "EVERY ELEMENT, CALIBRATED / 02",
+            "colour": "rgb(255, 82, 88)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 6.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Built for longlistening hours.",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 18.09,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "CONFIGURE YOUR EDITION / 03",
+            "colour": "rgb(255, 82, 88)",
+            "background": [
+              20,
+              9,
+              11
+            ],
+            "ratio": 6.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Lock inyour soundstage.",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              20,
+              9,
+              11
+            ],
+            "ratio": 17.49,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Three studio finishes. Six sample cushio",
+            "colour": "rgb(207, 195, 197)",
+            "background": [
+              20,
+              9,
+              11
+            ],
+            "ratio": 11.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Switch colourway in hero ↗",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              20,
+              9,
+              11
+            ],
+            "ratio": 17.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "CURRENT SELECTION",
+            "colour": "rgb(255, 82, 88)",
+            "background": [
+              14,
+              6,
+              7
+            ],
+            "ratio": 6.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "BackBest 800 Series",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              14,
+              6,
+              7
+            ],
+            "ratio": 17.93,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Black / Select a fit",
+            "colour": "rgb(207, 195, 197)",
+            "background": [
+              14,
+              6,
+              7
+            ],
+            "ratio": 11.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "orange-button js-only",
+            "text": "Add to enquiry bag ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              184,
+              20,
+              28
+            ],
+            "ratio": 6.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "quiet-button js-only",
+            "text": "Pause motion",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              28,
+              12,
+              15
+            ],
+            "ratio": 16.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "TWITTER",
+          "colour": "rgb(255, 122, 107)",
+          "width": "3px",
+          "ratio": 7.94
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#main"
+          },
+          {
+            "label": "Plantronic BackBest 800 design study home",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          },
+          {
+            "label": "PHONE",
+            "href": "#engineering",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#engineering"
+          },
+          {
+            "label": "→HEADPHONE",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          },
+          {
+            "label": "LAPTOP",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#specifications"
+          },
+          {
+            "label": "SPEAKERS",
+            "href": "#build",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#build"
+          },
+          {
+            "label": "TWITTER",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#contact"
+          },
+          {
+            "label": "INSTAGRAM",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#contact"
+          },
+          {
+            "label": "FACEBOOK",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#contact"
+          },
+          {
+            "label": "Jump to technical specifications",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#specifications"
+          },
+          {
+            "label": "Discuss your configuration →",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#contact"
+          },
+          {
+            "label": "← PURCHASE NOW",
+            "href": "#build",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#build"
+          },
+          {
+            "label": "Inspect the acoustic specs ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#specifications"
+          },
+          {
+            "label": "Switch colourway in hero ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          },
+          {
+            "label": "Enquire by email ↗",
+            "href": "mailto:hello@backbest800.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@backbest800.example"
+          },
+          {
+            "label": "BackBest 800 showroom top",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          },
+          {
+            "label": "Tune into the session.hello@backbest800.example ↗",
+            "href": "mailto:hello@backbest800.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@backbest800.example"
+          },
+          {
+            "label": "Read the concept notes ↗",
+            "href": "#specifications",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#specifications"
+          },
+          {
+            "label": "Plantronic BackBest 800 Series / Wireless Headphone ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          },
+          {
+            "label": "Prepare purchase email ↗",
+            "href": "mailto:hello@backbest800.example?subject=BackBest%20800%20purchase%20enquiry&body=%0AThis%20is%20a%20local%20concept%20enquiry%2C%20not%20a%20live%20retail%20order.%20Please%20confirm%20fit%2C%20availability%20and%20pricing%20separately.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@backbest800.example?subject=BackBest%20800%20purchase%20enquiry&body=%0AThis%20is%20a%20local%20concept%20enquiry%2C%20not%20a%20live%20retail%20order.%20Please%20confirm%20fit%2C%20availability%20and%20pricing%20separately."
+          },
+          {
+            "label": "Back to the headphone ↗",
+            "href": "#showroom",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/backbest-800/index.html#showroom"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 860,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(11, 5, 6)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 20.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "sr-only",
+            "text": "Plantronic BackBest 800 home",
+            "colour": "rgb(216, 207, 208)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 13.24,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "is-active",
+            "text": "→HEADPHONE",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 20.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "0",
+            "colour": "rgb(11, 5, 6)",
+            "background": [
+              255,
+              77,
+              84
+            ],
+            "ratio": 6.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "TWITTER",
+            "colour": "rgb(214, 202, 204)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 12.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "+",
+            "colour": "rgb(255, 226, 228)",
+            "background": [
+              29,
+              9,
+              11
+            ],
+            "ratio": 15.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand-line",
+            "text": "PLANTRONIC",
+            "colour": "rgb(244, 238, 239)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 17.64,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "model-line",
+            "text": "BACKBEST 800 SERIES",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 20.22,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-tagline",
+            "text": "WIRELESS HEADPHONE",
+            "colour": "rgb(216, 204, 206)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 12.95,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero-copy",
+            "text": "Dual 40mm custom dynamic drivers deliver",
+            "colour": "rgb(207, 195, 197)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 11.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "color-heading",
+            "text": "COLOR:",
+            "colour": "rgb(230, 220, 221)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 15.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "color-choice",
+            "text": "WHITE",
+            "colour": "rgb(184, 172, 174)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 9.2,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "old-price",
+            "text": "Previous illustrative price $239",
+            "colour": "rgb(184, 172, 174)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 9.2,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "purchase-label",
+            "text": "← PURCHASE NOW",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 18.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "watch-text",
+            "text": "SOUNDPREVIEW",
+            "colour": "rgb(229, 218, 221)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 14.83,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "→",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              23,
+              10,
+              12
+            ],
+            "ratio": 17.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "ACOUSTIC ARCHITECTURE / 01",
+            "colour": "rgb(255, 82, 88)",
+            "background": [
+              19,
+              9,
+              11
+            ],
+            "ratio": 6.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Tuned for deepstudio silence.",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              19,
+              9,
+              11
+            ],
+            "ratio": 17.53,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Concentric acoustic damping rings and du",
+            "colour": "rgb(207, 195, 197)",
+            "background": [
+              19,
+              9,
+              11
+            ],
+            "ratio": 11.45,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Inspect the acoustic specs ↗",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              19,
+              9,
+              11
+            ],
+            "ratio": 17.53,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "EVERY ELEMENT, CALIBRATED / 02",
+            "colour": "rgb(255, 82, 88)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 6.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Built for longlistening hours.",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              11,
+              5,
+              6
+            ],
+            "ratio": 18.09,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "CONFIGURE YOUR EDITION / 03",
+            "colour": "rgb(255, 82, 88)",
+            "background": [
+              20,
+              9,
+              11
+            ],
+            "ratio": 6.15,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Lock inyour soundstage.",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              20,
+              9,
+              11
+            ],
+            "ratio": 17.49,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Three studio finishes. Six sample cushio",
+            "colour": "rgb(207, 195, 197)",
+            "background": [
+              20,
+              9,
+              11
+            ],
+            "ratio": 11.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "line-link",
+            "text": "Switch colourway in hero ↗",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              20,
+              9,
+              11
+            ],
+            "ratio": 17.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "CURRENT SELECTION",
+            "colour": "rgb(255, 82, 88)",
+            "background": [
+              14,
+              6,
+              7
+            ],
+            "ratio": 6.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "BackBest 800 Series",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              14,
+              6,
+              7
+            ],
+            "ratio": 17.93,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Black / Select a fit",
+            "colour": "rgb(207, 195, 197)",
+            "background": [
+              14,
+              6,
+              7
+            ],
+            "ratio": 11.71,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "orange-button js-only",
+            "text": "Add to enquiry bag ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              184,
+              20,
+              28
+            ],
+            "ratio": 6.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "quiet-button js-only",
+            "text": "Pause motion",
+            "colour": "rgb(246, 241, 242)",
+            "background": [
+              28,
+              12,
+              15
+            ],
+            "ratio": 16.94,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "TWITTER",
+          "colour": "rgb(255, 122, 107)",
+          "width": "3px",
+          "ratio": 7.94
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "backbest-800/assets/css/style.css",
+    "backbest-800/assets/img/headphone-black.webp",
+    "backbest-800/assets/img/headphone-red.webp",
+    "backbest-800/assets/img/headphone-white.webp",
+    "backbest-800/assets/js/main.js",
+    "backbest-800/CUSTOMISE.md",
+    "backbest-800/index.html",
+    "backbest-800/LICENCE.txt",
+    "backbest-800/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/headphone-black.webp",
+    "assets/img/headphone-red.webp",
+    "assets/img/headphone-white.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

@@ -1,0 +1,1279 @@
+{
+  "slug": "volt-hoodie",
+  "version": "1.0.0",
+  "date": "2026-10-16T14:55:35.999Z",
+  "os": "win32",
+  "zipBytes": 240129,
+  "sha256": "939efa6de7e88734492a339c44b1cb133f6805f65e150e98a66b84bbc0042757",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#main"
+          },
+          {
+            "label": "Volt Hoodie — Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#home"
+          },
+          {
+            "label": "Shop",
+            "href": "#shop",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#shop"
+          },
+          {
+            "label": "Kid's",
+            "href": "#kids",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#kids"
+          },
+          {
+            "label": "Sport's",
+            "href": "#sports",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#sports"
+          },
+          {
+            "label": "Support",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#support"
+          },
+          {
+            "label": "Facebook community",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#support"
+          },
+          {
+            "label": "Instagram lookbook",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#support"
+          },
+          {
+            "label": "Buy Now",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#order"
+          },
+          {
+            "label": "Request Kid's Sizing in Order Note →",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#order"
+          },
+          {
+            "label": "Send Order Enquiry via Email",
+            "href": "mailto:orders@volthoodie.example?subject=Order%20Enquiry%20-%20Volt%20Hoodie%20(Volt%20Yellow%2C%20Size%20S)&body=Hello%20Volt%20Studio%2C%0A%0AI%20would%20like%20to%20order%20the%202024%20Hoodie%20(Volt%20Yellow%20%2F%20Carbon%2C%20Size%20S%2C%20Rs.%201559%2F-).",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:orders@volthoodie.example?subject=Order%20Enquiry%20-%20Volt%20Hoodie%20(Volt%20Yellow%2C%20Size%20S)&body=Hello%20Volt%20Studio%2C%0A%0AI%20would%20like%20to%20order%20the%202024%20Hoodie%20(Volt%20Yellow%20%2F%20Carbon%2C%20Size%20S%2C%20Rs.%201559%2F-)."
+          },
+          {
+            "label": "Call Studio Desk: +91 98765 43210",
+            "href": "tel:+919876543210",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+919876543210"
+          },
+          {
+            "label": "Volt Hoodie 2024",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#home"
+          },
+          {
+            "label": "orders@volthoodie.example",
+            "href": "mailto:orders@volthoodie.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:orders@volthoodie.example"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#home"
+          },
+          {
+            "label": "View Full S / M / L Size Matrix →",
+            "href": "#sports",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#sports"
+          },
+          {
+            "label": "Go to Order Enquiry",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#order"
+          },
+          {
+            "label": "Email Studio Support",
+            "href": "mailto:orders@volthoodie.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:orders@volthoodie.example"
+          },
+          {
+            "label": "01 / Shop Three Colourways",
+            "href": "#shop",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#shop"
+          },
+          {
+            "label": "02 / Kid's & Youth Capsule",
+            "href": "#kids",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#kids"
+          },
+          {
+            "label": "03 / Sport's Size Matrix",
+            "href": "#sports",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#sports"
+          },
+          {
+            "label": "04 / Direct Order Enquiry",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#order"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 860,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(243, 243, 243)",
+            "background": [
+              39,
+              39,
+              39
+            ],
+            "ratio": 13.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Shop",
+            "colour": "rgb(34, 30, 11)",
+            "background": [
+              255,
+              213,
+              7
+            ],
+            "ratio": 11.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "2",
+            "colour": "rgb(214, 214, 214)",
+            "background": [
+              39,
+              39,
+              39
+            ],
+            "ratio": 10.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Hoodie",
+            "colour": "rgb(17, 17, 17)",
+            "background": [
+              255,
+              213,
+              7
+            ],
+            "ratio": 13.28,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__lead",
+            "text": "Engineered brushed fleece hoodie built w",
+            "colour": "rgb(51, 44, 16)",
+            "background": [
+              255,
+              213,
+              7
+            ],
+            "ratio": 9.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__price",
+            "text": "Rs. 1559/-",
+            "colour": "rgb(22, 22, 22)",
+            "background": [
+              255,
+              213,
+              7
+            ],
+            "ratio": 12.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "buy-button",
+            "text": "Buy Now",
+            "colour": "rgb(39, 39, 39)",
+            "background": [
+              255,
+              213,
+              7
+            ],
+            "ratio": 10.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "01 / 2024 Capsule Architecture",
+            "colour": "rgb(255, 213, 7)",
+            "background": [
+              39,
+              39,
+              39
+            ],
+            "ratio": 10.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Built for Street Motion & Cold-Weather P",
+            "colour": "rgb(243, 243, 243)",
+            "background": [
+              39,
+              39,
+              39
+            ],
+            "ratio": 13.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "colourway-card__tag",
+            "text": "Edition 01 · Default",
+            "colour": "rgb(255, 213, 7)",
+            "background": [
+              31,
+              31,
+              31
+            ],
+            "ratio": 11.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Volt Yellow / Carbon",
+            "colour": "rgb(243, 243, 243)",
+            "background": [
+              31,
+              31,
+              31
+            ],
+            "ratio": 14.85,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "High-visibility signal yellow chevron to",
+            "colour": "rgb(214, 214, 214)",
+            "background": [
+              31,
+              31,
+              31
+            ],
+            "ratio": 11.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Rs. 1559/-",
+            "colour": "rgb(243, 243, 243)",
+            "background": [
+              31,
+              31,
+              31
+            ],
+            "ratio": 14.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow eyebrow--dark",
+            "text": "02 / Kid's & Youth Division",
+            "colour": "rgb(51, 44, 16)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 13.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Junior Proportions, Identical 420 GSM Wa",
+            "colour": "rgb(34, 30, 11)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "Ages 8–10 (JR-S) · Chest 32 in",
+            "colour": "rgb(34, 30, 11)",
+            "background": [
+              247,
+              246,
+              241
+            ],
+            "ratio": 15.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "420 GSM",
+            "colour": "rgb(255, 213, 7)",
+            "background": [
+              39,
+              39,
+              39
+            ],
+            "ratio": 10.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow eyebrow--dark",
+            "text": "04 / Direct Studio Order Enquiry",
+            "colour": "rgb(51, 44, 16)",
+            "background": [
+              255,
+              254,
+              248
+            ],
+            "ratio": 13.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Reserve Your 2024 Volt Hoodie",
+            "colour": "rgb(34, 30, 11)",
+            "background": [
+              255,
+              254,
+              248
+            ],
+            "ratio": 16.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "secondary-link",
+            "text": "Call Studio Desk: +91 98765 43210",
+            "colour": "rgb(34, 30, 11)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Machine wash cold (30°C) inside out with",
+            "colour": "rgb(51, 44, 16)",
+            "background": [
+              247,
+              246,
+              241
+            ],
+            "ratio": 12.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "footer-brand",
+            "text": "Volt Hoodie 2024",
+            "colour": "rgb(255, 213, 7)",
+            "background": [
+              24,
+              24,
+              24
+            ],
+            "ratio": 12.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-footer__note",
+            "text": "Static HTML/CSS/JS streetwear product te",
+            "colour": "rgb(214, 214, 214)",
+            "background": [
+              24,
+              24,
+              24
+            ],
+            "ratio": 12.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "",
+          "colour": "rgb(255, 213, 7)",
+          "width": "3px",
+          "ratio": 10.51
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#main"
+          },
+          {
+            "label": "Volt Hoodie — Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#home"
+          },
+          {
+            "label": "Shop",
+            "href": "#shop",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#shop"
+          },
+          {
+            "label": "Kid's",
+            "href": "#kids",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#kids"
+          },
+          {
+            "label": "Sport's",
+            "href": "#sports",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#sports"
+          },
+          {
+            "label": "Support",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#support"
+          },
+          {
+            "label": "Facebook community",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#support"
+          },
+          {
+            "label": "Instagram lookbook",
+            "href": "#support",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#support"
+          },
+          {
+            "label": "Buy Now",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#order"
+          },
+          {
+            "label": "Request Kid's Sizing in Order Note →",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#order"
+          },
+          {
+            "label": "Send Order Enquiry via Email",
+            "href": "mailto:orders@volthoodie.example?subject=Order%20Enquiry%20-%20Volt%20Hoodie%20(Volt%20Yellow%2C%20Size%20S)&body=Hello%20Volt%20Studio%2C%0A%0AI%20would%20like%20to%20order%20the%202024%20Hoodie%20(Volt%20Yellow%20%2F%20Carbon%2C%20Size%20S%2C%20Rs.%201559%2F-).",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:orders@volthoodie.example?subject=Order%20Enquiry%20-%20Volt%20Hoodie%20(Volt%20Yellow%2C%20Size%20S)&body=Hello%20Volt%20Studio%2C%0A%0AI%20would%20like%20to%20order%20the%202024%20Hoodie%20(Volt%20Yellow%20%2F%20Carbon%2C%20Size%20S%2C%20Rs.%201559%2F-)."
+          },
+          {
+            "label": "Call Studio Desk: +91 98765 43210",
+            "href": "tel:+919876543210",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "tel:+919876543210"
+          },
+          {
+            "label": "Volt Hoodie 2024",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#home"
+          },
+          {
+            "label": "orders@volthoodie.example",
+            "href": "mailto:orders@volthoodie.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:orders@volthoodie.example"
+          },
+          {
+            "label": "Back to top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#home"
+          },
+          {
+            "label": "View Full S / M / L Size Matrix →",
+            "href": "#sports",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#sports"
+          },
+          {
+            "label": "Go to Order Enquiry",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#order"
+          },
+          {
+            "label": "Email Studio Support",
+            "href": "mailto:orders@volthoodie.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:orders@volthoodie.example"
+          },
+          {
+            "label": "01 / Shop Three Colourways",
+            "href": "#shop",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#shop"
+          },
+          {
+            "label": "02 / Kid's & Youth Capsule",
+            "href": "#kids",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#kids"
+          },
+          {
+            "label": "03 / Sport's Size Matrix",
+            "href": "#sports",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#sports"
+          },
+          {
+            "label": "04 / Direct Order Enquiry",
+            "href": "#order",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/volt-hoodie/index.html#order"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 860,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(243, 243, 243)",
+            "background": [
+              39,
+              39,
+              39
+            ],
+            "ratio": 13.46,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Shop",
+            "colour": "rgb(34, 30, 11)",
+            "background": [
+              255,
+              213,
+              7
+            ],
+            "ratio": 11.74,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "2",
+            "colour": "rgb(214, 214, 214)",
+            "background": [
+              39,
+              39,
+              39
+            ],
+            "ratio": 10.28,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H1",
+            "text": "Hoodie",
+            "colour": "rgb(17, 17, 17)",
+            "background": [
+              255,
+              213,
+              7
+            ],
+            "ratio": 13.28,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__lead",
+            "text": "Engineered brushed fleece hoodie built w",
+            "colour": "rgb(51, 44, 16)",
+            "background": [
+              255,
+              213,
+              7
+            ],
+            "ratio": 9.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__price",
+            "text": "Rs. 1559/-",
+            "colour": "rgb(22, 22, 22)",
+            "background": [
+              255,
+              213,
+              7
+            ],
+            "ratio": 12.73,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "buy-button",
+            "text": "Buy Now",
+            "colour": "rgb(39, 39, 39)",
+            "background": [
+              255,
+              213,
+              7
+            ],
+            "ratio": 10.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "01 / 2024 Capsule Architecture",
+            "colour": "rgb(255, 213, 7)",
+            "background": [
+              39,
+              39,
+              39
+            ],
+            "ratio": 10.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Built for Street Motion & Cold-Weather P",
+            "colour": "rgb(243, 243, 243)",
+            "background": [
+              39,
+              39,
+              39
+            ],
+            "ratio": 13.46,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "colourway-card__tag",
+            "text": "Edition 01 · Default",
+            "colour": "rgb(255, 213, 7)",
+            "background": [
+              31,
+              31,
+              31
+            ],
+            "ratio": 11.6,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H3",
+            "text": "Volt Yellow / Carbon",
+            "colour": "rgb(243, 243, 243)",
+            "background": [
+              31,
+              31,
+              31
+            ],
+            "ratio": 14.85,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "High-visibility signal yellow chevron to",
+            "colour": "rgb(214, 214, 214)",
+            "background": [
+              31,
+              31,
+              31
+            ],
+            "ratio": 11.34,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "Rs. 1559/-",
+            "colour": "rgb(243, 243, 243)",
+            "background": [
+              31,
+              31,
+              31
+            ],
+            "ratio": 14.85,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow eyebrow--dark",
+            "text": "02 / Kid's & Youth Division",
+            "colour": "rgb(51, 44, 16)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 13.92,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Junior Proportions, Identical 420 GSM Wa",
+            "colour": "rgb(34, 30, 11)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.69,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "LI",
+            "text": "Ages 8–10 (JR-S) · Chest 32 in",
+            "colour": "rgb(34, 30, 11)",
+            "background": [
+              247,
+              246,
+              241
+            ],
+            "ratio": 15.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "420 GSM",
+            "colour": "rgb(255, 213, 7)",
+            "background": [
+              39,
+              39,
+              39
+            ],
+            "ratio": 10.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow eyebrow--dark",
+            "text": "04 / Direct Studio Order Enquiry",
+            "colour": "rgb(51, 44, 16)",
+            "background": [
+              255,
+              254,
+              248
+            ],
+            "ratio": 13.78,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Reserve Your 2024 Volt Hoodie",
+            "colour": "rgb(34, 30, 11)",
+            "background": [
+              255,
+              254,
+              248
+            ],
+            "ratio": 16.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "secondary-link",
+            "text": "Call Studio Desk: +91 98765 43210",
+            "colour": "rgb(34, 30, 11)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 16.69,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Machine wash cold (30°C) inside out with",
+            "colour": "rgb(51, 44, 16)",
+            "background": [
+              247,
+              246,
+              241
+            ],
+            "ratio": 12.87,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "footer-brand",
+            "text": "Volt Hoodie 2024",
+            "colour": "rgb(255, 213, 7)",
+            "background": [
+              24,
+              24,
+              24
+            ],
+            "ratio": 12.49,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-footer__note",
+            "text": "Static HTML/CSS/JS streetwear product te",
+            "colour": "rgb(214, 214, 214)",
+            "background": [
+              24,
+              24,
+              24
+            ],
+            "ratio": 12.22,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "",
+          "colour": "rgb(255, 213, 7)",
+          "width": "3px",
+          "ratio": 10.51
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "volt-hoodie/assets/css/style.css",
+    "volt-hoodie/assets/img/hoodie-arctic.webp",
+    "volt-hoodie/assets/img/hoodie-mint.webp",
+    "volt-hoodie/assets/img/hoodie-volt.webp",
+    "volt-hoodie/assets/js/main.js",
+    "volt-hoodie/CUSTOMISE.md",
+    "volt-hoodie/index.html",
+    "volt-hoodie/LICENCE.txt",
+    "volt-hoodie/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/hoodie-arctic.webp",
+    "assets/img/hoodie-mint.webp",
+    "assets/img/hoodie-volt.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

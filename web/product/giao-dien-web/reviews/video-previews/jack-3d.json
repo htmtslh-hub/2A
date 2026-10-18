@@ -1,0 +1,48 @@
+{
+  "id": "t60",
+  "slug": "jack-3d",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T07:27:30.956Z",
+  "demo": "/demos/jack-3d/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "062eff8d0f26",
+  "sha256": "062eff8d0f2621a0280b071a8ffc441dcd87a37bc155d57af84056c855ff07f9",
+  "demoHtmlSha256": "d1200bda6646adde28e3f9ce00c80c9cabc23c80981be2f78d207e7687bcc743",
+  "demoSha256": "2c9b95f6d2897d7e545f62a4e0794f88ad6cc1033b51a8e1a841c68f5691d623",
+  "bytes": 527535,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.51,
+      "action": "chapter",
+      "selector": ".marquee"
+    },
+    {
+      "seconds": 4.838,
+      "action": "chapter",
+      "selector": "#about"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 2817
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\jack-3d-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\jack-3d-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\jack-3d-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\jack-3d-return.jpg"
+  ]
+}

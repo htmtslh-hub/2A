@@ -1,0 +1,9 @@
+{
+  "name": "solaris-gate-qa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright multi-browser QA suite for Solaris Gate 1.0.0",
+  "scripts": {
+    "test": "node check.cjs"
+  }
+}

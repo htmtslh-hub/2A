@@ -1,0 +1,1599 @@
+{
+  "slug": "motora",
+  "version": "1.0.0",
+  "date": "2026-10-15T07:26:56.054Z",
+  "os": "win32",
+  "zipBytes": 453580,
+  "sha256": "867aa9a423387e1a8f81dec13c8e041bcd1f929f4370abc461eb98acfe049438",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#main"
+          },
+          {
+            "label": "Car. Motora showroom home",
+            "href": "#models",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#models"
+          },
+          {
+            "label": "Models",
+            "href": "#models",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#models"
+          },
+          {
+            "label": "Services",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#services"
+          },
+          {
+            "label": "Experience",
+            "href": "#experience",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#experience"
+          },
+          {
+            "label": "Shop",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#collection"
+          },
+          {
+            "label": "Publisher",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#about"
+          },
+          {
+            "label": "Contact the showroom",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#contact"
+          },
+          {
+            "label": "Explore performance",
+            "href": "#performance",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#performance"
+          },
+          {
+            "label": "Discover the details ↗",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#services"
+          },
+          {
+            "label": "Enquire by email ↗",
+            "href": "mailto:hello@motora.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@motora.example"
+          },
+          {
+            "label": "Car.Motora / Concept garage",
+            "href": "#models",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#models"
+          },
+          {
+            "label": "Let’s talk.hello@motora.example ↗",
+            "href": "mailto:hello@motora.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@motora.example"
+          },
+          {
+            "label": "Prepare enquiry email ↗",
+            "href": "mailto:hello@motora.example?subject=Motora%20concept%20enquiry&body=I%20would%20like%20to%20discuss%20this%20concept%20configuration%3A%0AMercedes-Benz%20%2F%20AMG%20C63%20S%20Coup%C3%A9%0AChampagne%20Gold%20%2F%20Forged%20multi-spoke%0AThis%20is%20an%20enquiry%2C%20not%20an%20order.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@motora.example?subject=Motora%20concept%20enquiry&body=I%20would%20like%20to%20discuss%20this%20concept%20configuration%3A%0AMercedes-Benz%20%2F%20AMG%20C63%20S%20Coup%C3%A9%0AChampagne%20Gold%20%2F%20Forged%20multi-spoke%0AThis%20is%20an%20enquiry%2C%20not%20an%20order."
+          },
+          {
+            "label": "Mercedes-Benz / AMG C63 S Coupé ↗",
+            "href": "#models",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#models"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": false,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              17,
+              17
+            ],
+            "ratio": 18.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "wordmark",
+            "text": "Car.CONCEPTGARAGE",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              246,
+              246,
+              244
+            ],
+            "ratio": 16.11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "CONCEPTGARAGE",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              246,
+              246,
+              244
+            ],
+            "ratio": 16.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "is-current",
+            "text": "Models",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              16,
+              17,
+              18
+            ],
+            "ratio": 18.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Services",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              240,
+              241,
+              238
+            ],
+            "ratio": 15.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "round-button js-only",
+            "text": "i",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              241,
+              242,
+              239
+            ],
+            "ratio": 15.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "AMG C63 S Coupé — 2023",
+            "colour": "rgb(96, 100, 104)",
+            "background": [
+              246,
+              246,
+              244
+            ],
+            "ratio": 5.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "note-icon",
+            "text": "↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              41,
+              43,
+              44
+            ],
+            "ratio": 14.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A sculpted silhouette meets a beautifull",
+            "colour": "rgb(93, 98, 104)",
+            "background": [
+              240,
+              241,
+              239
+            ],
+            "ratio": 5.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-button js-only",
+            "text": "↗ AMG performance",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              240,
+              241,
+              239
+            ],
+            "ratio": 15.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "Performance",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              237,
+              238,
+              235
+            ],
+            "ratio": 14.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A statement of beautifully considered pr",
+            "colour": "rgb(85, 91, 96)",
+            "background": [
+              240,
+              241,
+              238
+            ],
+            "ratio": 6.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hotspot-label",
+            "text": "AMG REAR SPOILER",
+            "colour": "rgb(36, 39, 42)",
+            "background": [
+              252,
+              252,
+              251
+            ],
+            "ratio": 14.63,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hotspot-dot",
+            "text": "+",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              107,
+              109,
+              103
+            ],
+            "ratio": 5.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "view-caption",
+            "text": "01 / Champagne Gold",
+            "colour": "rgb(102, 108, 114)",
+            "background": [
+              246,
+              246,
+              244
+            ],
+            "ratio": 4.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "feature-meta",
+            "text": "Seating",
+            "colour": "rgb(98, 105, 112)",
+            "background": [
+              241,
+              242,
+              239
+            ],
+            "ratio": 4.95,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "4seats",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              245,
+              246,
+              243
+            ],
+            "ratio": 16.07,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "seats",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              245,
+              246,
+              243
+            ],
+            "ratio": 16.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-name",
+            "text": "capacity",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              247,
+              247,
+              245
+            ],
+            "ratio": 16.25,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-meta",
+            "text": "Engine",
+            "colour": "rgb(98, 105, 112)",
+            "background": [
+              244,
+              245,
+              242
+            ],
+            "ratio": 5.08,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "engine-value",
+            "text": "V8",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              241,
+              242,
+              239
+            ],
+            "ratio": 15.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "feature-name",
+            "text": "AMG 4.0L V8 biturbo",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              245,
+              245,
+              243
+            ],
+            "ratio": 15.97,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-meta",
+            "text": "Power",
+            "colour": "rgb(98, 105, 112)",
+            "background": [
+              247,
+              247,
+              245
+            ],
+            "ratio": 5.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "503hp",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              244,
+              245,
+              242
+            ],
+            "ratio": 15.93,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "hp",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              244,
+              245,
+              242
+            ],
+            "ratio": 15.93,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "transmission-badge",
+            "text": "AMGSPEEDSHIFT MCT 9G",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              17,
+              17
+            ],
+            "ratio": 18.88,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "SPEEDSHIFT MCT 9G",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              17,
+              17
+            ],
+            "ratio": 18.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-meta",
+            "text": "Acceleration",
+            "colour": "rgb(98, 105, 112)",
+            "background": [
+              245,
+              245,
+              243
+            ],
+            "ratio": 5.1,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "3.7sec",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              246,
+              247,
+              244
+            ],
+            "ratio": 16.21,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "sec",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              246,
+              247,
+              244
+            ],
+            "ratio": 16.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-name",
+            "text": "0–60 mph · concept data",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              243,
+              244,
+              241
+            ],
+            "ratio": 15.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "FEEL EVERY DETAIL / 02",
+            "colour": "rgb(243, 243, 236)",
+            "background": [
+              25,
+              27,
+              27
+            ],
+            "ratio": 15.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Power, witha softer side.",
+            "colour": "rgb(243, 243, 236)",
+            "background": [
+              25,
+              27,
+              27
+            ],
+            "ratio": 15.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "The road ahead. The space around you. Ex",
+            "colour": "rgb(197, 202, 196)",
+            "background": [
+              25,
+              27,
+              27
+            ],
+            "ratio": 10.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "MAKE IT YOURS / 04",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              238,
+              239,
+              235
+            ],
+            "ratio": 15.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Your point of view.",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              238,
+              239,
+              235
+            ],
+            "ratio": 15.09,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Choose a finish. Pick a wheel style. Sav",
+            "colour": "rgb(96, 100, 104)",
+            "background": [
+              238,
+              239,
+              235
+            ],
+            "ratio": 5.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "dark-button js-only",
+            "text": "Build your configuration ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              19,
+              21,
+              21
+            ],
+            "ratio": 18.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "i",
+          "colour": "rgb(155, 71, 27)",
+          "width": "3px",
+          "ratio": 5.86
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#main"
+          },
+          {
+            "label": "Car. Motora showroom home",
+            "href": "#models",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#models"
+          },
+          {
+            "label": "Models",
+            "href": "#models",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#models"
+          },
+          {
+            "label": "Services",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#services"
+          },
+          {
+            "label": "Experience",
+            "href": "#experience",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#experience"
+          },
+          {
+            "label": "Shop",
+            "href": "#collection",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#collection"
+          },
+          {
+            "label": "Publisher",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#about"
+          },
+          {
+            "label": "Contact the showroom",
+            "href": "#contact",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#contact"
+          },
+          {
+            "label": "Explore performance",
+            "href": "#performance",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#performance"
+          },
+          {
+            "label": "Discover the details ↗",
+            "href": "#services",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#services"
+          },
+          {
+            "label": "Enquire by email ↗",
+            "href": "mailto:hello@motora.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@motora.example"
+          },
+          {
+            "label": "Car.Motora / Concept garage",
+            "href": "#models",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#models"
+          },
+          {
+            "label": "Let’s talk.hello@motora.example ↗",
+            "href": "mailto:hello@motora.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@motora.example"
+          },
+          {
+            "label": "Prepare enquiry email ↗",
+            "href": "mailto:hello@motora.example?subject=Motora%20concept%20enquiry&body=I%20would%20like%20to%20discuss%20this%20concept%20configuration%3A%0AMercedes-Benz%20%2F%20AMG%20C63%20S%20Coup%C3%A9%0AChampagne%20Gold%20%2F%20Forged%20multi-spoke%0AThis%20is%20an%20enquiry%2C%20not%20an%20order.",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@motora.example?subject=Motora%20concept%20enquiry&body=I%20would%20like%20to%20discuss%20this%20concept%20configuration%3A%0AMercedes-Benz%20%2F%20AMG%20C63%20S%20Coup%C3%A9%0AChampagne%20Gold%20%2F%20Forged%20multi-spoke%0AThis%20is%20an%20enquiry%2C%20not%20an%20order."
+          },
+          {
+            "label": "Mercedes-Benz / AMG C63 S Coupé ↗",
+            "href": "#models",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/motora/index.html#models"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 950,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": false,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to content",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              17,
+              17
+            ],
+            "ratio": 18.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "wordmark",
+            "text": "Car.CONCEPTGARAGE",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              246,
+              246,
+              244
+            ],
+            "ratio": 16.11,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "CONCEPTGARAGE",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              246,
+              246,
+              244
+            ],
+            "ratio": 16.11,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "is-current",
+            "text": "Models",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              16,
+              17,
+              18
+            ],
+            "ratio": 18.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Services",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              240,
+              241,
+              238
+            ],
+            "ratio": 15.37,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "round-button js-only",
+            "text": "i",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              241,
+              242,
+              239
+            ],
+            "ratio": 15.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "AMG C63 S Coupé — 2023",
+            "colour": "rgb(96, 100, 104)",
+            "background": [
+              246,
+              246,
+              244
+            ],
+            "ratio": 5.51,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "note-icon",
+            "text": "↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              41,
+              43,
+              44
+            ],
+            "ratio": 14.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A sculpted silhouette meets a beautifull",
+            "colour": "rgb(93, 98, 104)",
+            "background": [
+              240,
+              241,
+              239
+            ],
+            "ratio": 5.43,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-button js-only",
+            "text": "↗ AMG performance",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              240,
+              241,
+              239
+            ],
+            "ratio": 15.38,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "BUTTON",
+            "text": "Performance",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              237,
+              238,
+              235
+            ],
+            "ratio": 14.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "A statement of beautifully considered pr",
+            "colour": "rgb(85, 91, 96)",
+            "background": [
+              240,
+              241,
+              238
+            ],
+            "ratio": 6.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hotspot-label",
+            "text": "AMG REAR SPOILER",
+            "colour": "rgb(36, 39, 42)",
+            "background": [
+              252,
+              252,
+              251
+            ],
+            "ratio": 14.63,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hotspot-dot",
+            "text": "+",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              107,
+              109,
+              103
+            ],
+            "ratio": 5.23,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "view-caption",
+            "text": "01 / Champagne Gold",
+            "colour": "rgb(102, 108, 114)",
+            "background": [
+              246,
+              246,
+              244
+            ],
+            "ratio": 4.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "feature-meta",
+            "text": "Seating",
+            "colour": "rgb(98, 105, 112)",
+            "background": [
+              241,
+              242,
+              239
+            ],
+            "ratio": 4.95,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "4seats",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              245,
+              246,
+              243
+            ],
+            "ratio": 16.07,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "seats",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              245,
+              246,
+              243
+            ],
+            "ratio": 16.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-name",
+            "text": "capacity",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              246,
+              247,
+              244
+            ],
+            "ratio": 16.21,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-meta",
+            "text": "Engine",
+            "colour": "rgb(98, 105, 112)",
+            "background": [
+              243,
+              244,
+              242
+            ],
+            "ratio": 5.04,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "engine-value",
+            "text": "V8",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              241,
+              242,
+              239
+            ],
+            "ratio": 15.51,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "feature-name",
+            "text": "AMG 4.0L V8 biturbo",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              244,
+              244,
+              243
+            ],
+            "ratio": 15.84,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-meta",
+            "text": "Power",
+            "colour": "rgb(98, 105, 112)",
+            "background": [
+              247,
+              247,
+              245
+            ],
+            "ratio": 5.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "503hp",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              243,
+              244,
+              242
+            ],
+            "ratio": 15.8,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "hp",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              243,
+              244,
+              242
+            ],
+            "ratio": 15.8,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "transmission-badge",
+            "text": "AMGSPEEDSHIFT MCT 9G",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              17,
+              17
+            ],
+            "ratio": 18.88,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SMALL",
+            "text": "SPEEDSHIFT MCT 9G",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              17,
+              17,
+              17
+            ],
+            "ratio": 18.88,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-meta",
+            "text": "Acceleration",
+            "colour": "rgb(98, 105, 112)",
+            "background": [
+              244,
+              244,
+              243
+            ],
+            "ratio": 5.06,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "STRONG",
+            "text": "3.7sec",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              246,
+              247,
+              244
+            ],
+            "ratio": 16.21,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "feature-name",
+            "text": "0–60 mph · concept data",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              243,
+              244,
+              241
+            ],
+            "ratio": 15.79,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "FEEL EVERY DETAIL / 02",
+            "colour": "rgb(243, 243, 236)",
+            "background": [
+              25,
+              27,
+              27
+            ],
+            "ratio": 15.52,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Power, witha softer side.",
+            "colour": "rgb(243, 243, 236)",
+            "background": [
+              25,
+              27,
+              27
+            ],
+            "ratio": 15.52,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "The road ahead. The space around you. Ex",
+            "colour": "rgb(197, 202, 196)",
+            "background": [
+              25,
+              27,
+              27
+            ],
+            "ratio": 10.4,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "MAKE IT YOURS / 04",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              238,
+              239,
+              235
+            ],
+            "ratio": 15.09,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Your point of view.",
+            "colour": "rgb(25, 26, 27)",
+            "background": [
+              238,
+              239,
+              235
+            ],
+            "ratio": 15.09,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Choose a finish. Pick a wheel style. Sav",
+            "colour": "rgb(96, 100, 104)",
+            "background": [
+              238,
+              239,
+              235
+            ],
+            "ratio": 5.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "dark-button js-only",
+            "text": "Build your configuration ↗",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              19,
+              21,
+              21
+            ],
+            "ratio": 18.33,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "i",
+          "colour": "rgb(155, 71, 27)",
+          "width": "3px",
+          "ratio": 5.86
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "motora/assets/css/style.css",
+    "motora/assets/img/coupe.webp",
+    "motora/assets/img/interior.webp",
+    "motora/assets/js/main.js",
+    "motora/CUSTOMISE.md",
+    "motora/index.html",
+    "motora/LICENCE.txt",
+    "motora/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/coupe.webp",
+    "assets/img/interior.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q07/chromium: giảm chuyển động {\"allVisible\":false,\"runningAnimations\":0}",
+    "Q07/firefox: giảm chuyển động {\"allVisible\":false,\"runningAnimations\":0}"
+  ]
+}

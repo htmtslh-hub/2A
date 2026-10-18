@@ -15,6 +15,9 @@ import { auth } from '@/auth';
 import { templateExists, templateFile } from '@/lib/catalog';
 import { REAL_TEMPLATES } from '@/lib/real-templates';
 import { hasProductAccess } from '@/lib/memberships';
+import { isFreeProduct } from '@/lib/product-policy';
+
+import crypto from 'node:crypto';
 
 const TEMPLATE_DIR = path.join(process.cwd(), 'product', 'giao-dien-web');
 
@@ -26,7 +29,7 @@ function fileFor(templateId: string) {
   return path.join(TEMPLATE_DIR, slug, `${slug}.zip`);
 }
 
-function serve(templateId: string) {
+async function serve(templateId: string, logUserId?: string) {
   const file = fileFor(templateId);
   if (!existsSync(file)) {
     return NextResponse.json(
@@ -35,6 +38,18 @@ function serve(templateId: string) {
       },
       { status: 404 }
     );
+  }
+  if (logUserId) {
+    const now = new Date();
+    await prisma.downloadToken.create({
+      data: {
+        token: `dl_${crypto.randomUUID()}`,
+        userId: logUserId,
+        templateId,
+        expiresAt: now,
+        usedAt: now,
+      },
+    }).catch(() => {});
   }
   const stream = Readable.toWeb(createReadStream(file)) as ReadableStream;
   return new NextResponse(stream, {
@@ -54,8 +69,10 @@ export async function GET(req: Request) {
 
   /* --- mẫu miễn phí từ form thu email --- */
   if (url.searchParams.get('free') === '1') {
-    return serve('free-sample');
+    return serve('free-sample', 'guest-free');
   }
+  // Only catalogue entries explicitly marked free bypass account access checks.
+  if (id && isFreeProduct(id)) return serve(id, 'guest-free');
 
   /* --- link một lần từ email --- */
   if (token) {
@@ -71,11 +88,14 @@ export async function GET(req: Request) {
     if (row.expiresAt < new Date()) {
       return NextResponse.json({ error: 'Link đã hết hạn.' }, { status: 410 });
     }
-    await prisma.downloadToken.update({
-      where: { token },
-      data: { usedAt: row.usedAt ?? new Date() },
-    });
-    return serve(row.templateId);
+    if (!row.usedAt) {
+      await prisma.downloadToken.update({
+        where: { token },
+        data: { usedAt: new Date() },
+      });
+      return serve(row.templateId);
+    }
+    return serve(row.templateId, row.userId);
   }
 
   /* --- tải lại bằng tài khoản --- */
@@ -96,8 +116,8 @@ export async function GET(req: Request) {
   // Mua trọn bộ (templateId = null) thì mở khoá mọi mẫu.
   const owned = await hasProductAccess(userId, id);
   if (!owned) {
-    return NextResponse.json({ error: 'Bạn cần mua sản phẩm hoặc có gói Pro/Ultra còn hiệu lực để tải.' }, { status: 403 });
+    return NextResponse.json({ error: 'Bạn cần gói Premium/Ultra còn hiệu lực hoặc quyền mua đã có để tải.', pricingUrl: '/?tab=pricing' }, { status: 403 });
   }
 
-  return serve(id);
+  return serve(id, userId);
 }

@@ -1,0 +1,24 @@
+Puro Amor template licence — local candidate
+
+1. Permission
+The original template code may be supplied under a perpetual, non-exclusive commercial licence by its copyright holder once release is authorised.
+
+2. Allowed use
+That licence permits customisation and use of the original template code in unlimited personal and client website projects without required attribution.
+
+3. Restrictions
+Do not resell or redistribute template files as a competing template, list them on another marketplace or bundle them in another template collection.
+
+4. Demo content and third-party identity
+This is an independent visual reference study. STARBUCKS, its marks, product representations and profile names are demonstration material, not evidence of affiliation. Third-party rights are not verified or granted. Replace the identity or obtain permission before publication or commercial distribution. No rights in the supplied screenshot are transferred. Generated raster imagery is not commercially sublicensed by this candidate licence; the product owner must settle its release terms. Sample contacts, Card and business copy must be replaced or verified.
+
+5. Fonts
+Only system font stacks are referenced. No font files are bundled, downloaded or redistributed. Those fonts remain subject to their respective licences.
+
+6. Ownership
+The original author keeps copyright. Copyright holder: [OWNER TO COMPLETE BEFORE COMMERCIAL RELEASE]. Permission to use the original code is not ownership of the code or third-party identities.
+
+7. No warranty
+Provided as is. Review and test your customised website before publication.
+
+If you are unsure whether a use is allowed, please ask. The answer is usually yes.

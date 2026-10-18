@@ -1,0 +1,683 @@
+{
+  "sampleOnlineSha256": "749992ae5184797c1197a57a7edc81c0b4236ab9976c854d2e4697094f601a3f",
+  "files": [
+    {
+      "file": "web\\public\\demos\\mint-atlas\\assets\\css\\style.css",
+      "from": "65cce1188ab732b30d9802b53f2741890fde6fea121114b1d4c53994ca4cdd81",
+      "to": "ca0626df2fc20ef661c68ef0ea0a1f69c0e08edacf094e482de76edead44a4c6",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\mint-atlas\\assets\\js\\main.js",
+      "from": "542edc226b3143f719037d0339aef9031748cf9be5bfbae56113cc5809fc6a42",
+      "to": "bc5a00bbd4dd31e351598c21de3408563c5c446ed2c2f0e54014636af5cd8df2",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\mint-atlas\\index.html",
+      "from": "f1f1ba2ada8e972fabcfb9314f85e5cbc2f7b644cc26bad8f2cca3da67184a4e",
+      "to": "e925e21737f95b211079f1bc8bc02b6332c3a524b5447f12ddaca110288ebcdd",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\music-app\\assets\\css\\style.css",
+      "from": "6e930d8cd3b015e6a3014990ce1affaefed728a67041cc179aad9fdc50d55e6b",
+      "to": "2dbb46bd2afb45872a27916ce623dd77540f949d8ea190b142b2f8f147ef4c2b",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\music-app\\assets\\js\\main.js",
+      "from": "d3e9ae5468cb81df0dc1bf7d91bdf1e8eafa5e8542936fd385516958433c7251",
+      "to": "41b8e98f43b322e33e2e6b5717aef2320598396682c75b9df5e67de0deae52ef",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\music-app\\index.html",
+      "from": "8cf40133f1c04c776bbbc27763127b84036d164f5952eac63e3d0fc2087e9dfb",
+      "to": "80649a8bda606979000df0a1f54fd3a3bed384883ad255744a14a0962092df0a",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\laila\\assets\\css\\style.css",
+      "from": "f4eb8d70e3605f33dd25288fbb779e75bcad4aa8c4ef80efe9cfacff21b39a0e",
+      "to": "64ffd082e5dd86b91ec3d44155628de3df66761a13b73952e4351900e89a9506",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\velora\\assets\\css\\commerce.css",
+      "from": "933d9d93624e897acc9426579141aed42e122ac784230489e74e2477d2f585f3",
+      "to": "2a3d2f49e0a06f21c5e53c51a6b8869f06458d2981b60a24708d222277638a91",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\velora\\assets\\js\\commerce.js",
+      "from": "82a895dc6edbc041720753d1a5e72a3a82a169739be14d760348f8186dd30c03",
+      "to": "a83b927779afabf35f84ba41a2c725533ff707b66877a50e4022006a0dcac7fb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\velora\\assets\\js\\shop-config.js",
+      "from": "c8e407163d076bd967143a988af1653131645f2caeed0f0e26529febfb69deb1",
+      "to": "2d512915c7d0b597c0b7faadf1ca4b25aa2a78d5983391f64fa610474e86bcab",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\velora\\README.md",
+      "from": "8893035492e74a535e9750aaae1d55ceb77ed96e94ed9dea06da8ece6d1acd80",
+      "to": "9e24e78f7ee836ad3e7a02a676c0c39070ce8572e3644304508a1962d6c6386f",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\kinetiq\\assets\\css\\style.css",
+      "from": "1fb29d1c6e4274e4b99bc4ed4a689df49a402c79d1f398af751f850b9f3a418b",
+      "to": "83b1fe09923d96a79ca144f87c6eb7c218f902d90917f0dc1d1cc52697661b4c",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\kinetiq\\assets\\js\\main.js",
+      "from": "609b8bfcdf8c98914119aecb451a04a85de051c98a864475b7878456b8b9df15",
+      "to": "bd79841660821def3b86bca9cf7b25c1fa159b3ad2a8dfe2aca54ebaa015a7a1",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\kinetiq\\index.html",
+      "from": "dd26892be6378c3bb3899a4cd0bd697afd55ed4011a6555eefc88d6b0bff8841",
+      "to": "5f9c969413ceea1374edc899e09b9e3cc0ca4d1093cd58d890fed76e304371cf",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\watchroom\\assets\\css\\commerce.css",
+      "from": "933d9d93624e897acc9426579141aed42e122ac784230489e74e2477d2f585f3",
+      "to": "2a3d2f49e0a06f21c5e53c51a6b8869f06458d2981b60a24708d222277638a91",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\watchroom\\assets\\css\\style.css",
+      "from": "4aeb3cd715e5ffcba81d80d2f3065a5952c990381e4a07f686f7f9e1911c9040",
+      "to": "252d16065279c1686e39e043be698d998d751da1f476dbfb307a3fe28f7e6018",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\watchroom\\assets\\js\\commerce.js",
+      "from": "82a895dc6edbc041720753d1a5e72a3a82a169739be14d760348f8186dd30c03",
+      "to": "a83b927779afabf35f84ba41a2c725533ff707b66877a50e4022006a0dcac7fb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\watchroom\\assets\\js\\main.js",
+      "from": "bfa6eb62e800c431163bc59a4a20a92e7e8deeb7e5ce294574c179e072ad7c0c",
+      "to": "3b25d69203df3adb29f76537a9c20886f7bc4661ef705d517906525433c7177b",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\watchroom\\assets\\js\\shop-config.js",
+      "from": "e6870a8b09e6aad989bb8cced7d3d9da8b2cb9da039d1d66865ca1aae06b7f17",
+      "to": "ca0c211a01f415132467914b746b3c079d3a643e7971afb02809f7c71297cead",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\watchroom\\CUSTOMISE.md",
+      "from": "f0a5a3d6028f442d17051d33c061837a3276ad3f96d1adca7cb17642bab2de07",
+      "to": "4f3bb1fe7609da8f5a9ed49a2bfe17138ba50385a07154983884bc6238adf210",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\watchroom\\README.md",
+      "from": "7c1c079a33acb3eba856d6df6989e7cf986c3c1217abffd98849ee0f9ca7495e",
+      "to": "12d1657f8350b870fb71c45ee6955b2b32e3f4f1aa29c23d98359132a038ff11",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shirtline\\assets\\css\\autoplay.css",
+      "from": "6da1f27365c3b86d62cd137373825fe3234b81b256694fea541386eb05edeee9",
+      "to": "112008367fca8c8a6aa338847db44a2e2cfa92853c26c0a9710a6ec357f9ff32",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shirtline\\assets\\css\\commerce.css",
+      "from": "933d9d93624e897acc9426579141aed42e122ac784230489e74e2477d2f585f3",
+      "to": "2a3d2f49e0a06f21c5e53c51a6b8869f06458d2981b60a24708d222277638a91",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shirtline\\assets\\css\\motion.css",
+      "from": "60a7ce7e050cd329208cdd7725d1448dc4bdc2a2e3099fa4082888fca88dfee6",
+      "to": "73030cceae9d57db7c30d360bf188b4062ab1f49b2dff75d9b90569c0c40e98e",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shirtline\\assets\\css\\style.css",
+      "from": "a5e3af3e33d24ed861f8838c6b6bd37bcf82d55a9f605a734cf7ba197d472159",
+      "to": "5788887f02201e55a5049c02e73d449336a91a67eb333d587905733ceeffb2b7",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shirtline\\assets\\css\\theme.css",
+      "from": "6cf87a4dc6801219ddfa832955673ef9e95fbea606a9de3ec6fe1823d2050a1d",
+      "to": "946197180536ab5bbf0ebdc5f47176460278a32883a2f62e7c29e58e68ac5003",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shirtline\\assets\\js\\commerce.js",
+      "from": "82a895dc6edbc041720753d1a5e72a3a82a169739be14d760348f8186dd30c03",
+      "to": "a83b927779afabf35f84ba41a2c725533ff707b66877a50e4022006a0dcac7fb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shirtline\\assets\\js\\shop-config.js",
+      "from": "8f7389d16e98195f2f2e36052c19ea46cac7738ba10ff57854204989f668556f",
+      "to": "b140d377f74b976a24119a9ad435efd40f7fae59577bbcdb32174249456ff0cb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shirtline\\LICENCE.txt",
+      "from": "46489785c4a9e2cf66c4b007d3c0845e8be25cb6467458b1427677922e98166e",
+      "to": "eab82901f75858d408574a6feb4ca68c0aee49aa59fbf70f7147282f23fe1705",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\yellow-beast\\assets\\css\\style.css",
+      "from": "36cc624a028c232cfa7e18b4b132552c621e459f0c74ff249cae01a964c04388",
+      "to": "bb733028569006c2330f921442f3a46e6b8a9fc9a3babeb875988aee3a00f4f4",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\yellow-beast\\assets\\js\\main.js",
+      "from": "fd23a1c1d73a18e80a615e314a7cb67c7afa3ef258af181852460ef0b285c15a",
+      "to": "592417ba6384063e47af9eebb17544b9515238885b2e8cf267c1f36a623a9f27",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\yellow-beast\\CUSTOMISE.md",
+      "from": "f2104c8c3c58d991faf93f8c10f8197f3a62d94fb7f494113dffcbba10e79442",
+      "to": "14b0c55322451da72dbc49f7da63b722bb0536d81c2b2276e821bc386f58ad93",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\yellow-beast\\index.html",
+      "from": "dcc8c04d7abf4c194229924cdc64c77f7f55783210b8a3b8abd46228296c0e8c",
+      "to": "5a65ed61aeac111c0913b31f43428ab5e41d5b8823eb02aff19dff07a82ad24f",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\yellow-beast\\LICENCE.txt",
+      "from": "056a5f509598794889825566c7d4c53206fbc7617e2f89566127248eeba6e5c9",
+      "to": "cf476c2c24cd0969d2ddec7ba11b0b4958bdd09b8351b88e6f32c8c35400f521",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\yellow-beast\\README.md",
+      "from": "32ea339b4e02fc5440962605db67c02f0b87f7616e000209cd6373aacbe29113",
+      "to": "b52f52be992ffae25a86824fb4aa9cc9e6a73aad23a3030fb28811c58a055fb9",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\novatrend\\assets\\css\\commerce.css",
+      "from": "933d9d93624e897acc9426579141aed42e122ac784230489e74e2477d2f585f3",
+      "to": "2a3d2f49e0a06f21c5e53c51a6b8869f06458d2981b60a24708d222277638a91",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\novatrend\\assets\\css\\style.css",
+      "from": "33c9151b525b2deaa1571e849c16f5833c33cc72eff67c11ba4a91abc379dc91",
+      "to": "5cf4d29836948c244d787973c34204f60471298b15c4496a181318ddedfd9664",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\novatrend\\assets\\js\\commerce.js",
+      "from": "82a895dc6edbc041720753d1a5e72a3a82a169739be14d760348f8186dd30c03",
+      "to": "a83b927779afabf35f84ba41a2c725533ff707b66877a50e4022006a0dcac7fb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\novatrend\\assets\\js\\main.js",
+      "from": "f4da5e5b57904e05ea40a5392a618cb57ec50a256839f4509c35e81cd5c15bb8",
+      "to": "9927bfe240b4b8584ea4689bf0bd62d7115a9af123733b3a59c8ccba8b30d8be",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\novatrend\\assets\\js\\shop-config.js",
+      "from": "e3fc185fe9660c2501bfd2bc269ab887a600948fceb7f7175b74ea335b39d434",
+      "to": "e5fdbc10a0c23fd9f5c5ab2973e40858099c21e4563fcc21d2de49378174d17c",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\novatrend\\CUSTOMISE.md",
+      "from": "537ada1d9a5bb9bf6c15ea28cf4ca0d435e2e21a866aaee1fe9d10e01ff3e5d1",
+      "to": "2a5836168fe430917c86833307f7ef68960bb15832e52f4f6dc9a0f8963e20d9",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\novatrend\\index.html",
+      "from": "278125318b3fe29c97821522c97831283ca944d2adcb59a0b95e8555bfd060a5",
+      "to": "b3af3b85d932f0a5915a1c7cfbd13b59885f899f94f2f974b01a95d27f183924",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\novatrend\\LICENCE.txt",
+      "from": "45a731a91abe58dc638b717d81abb3767fbbad0ed837b8c6e3059d5022f62eba",
+      "to": "b9034809411ae310c938310acc80fe7ca18688ee41b018dc54cd756ecc62021d",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\diginest\\assets\\css\\commerce.css",
+      "from": "933d9d93624e897acc9426579141aed42e122ac784230489e74e2477d2f585f3",
+      "to": "2a3d2f49e0a06f21c5e53c51a6b8869f06458d2981b60a24708d222277638a91",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\diginest\\assets\\css\\style.css",
+      "from": "ccc1792f310a0ac1c14b80a31636020f2703f503a604b727cd0d6ada191e49f9",
+      "to": "74c02f582c3b59414a9798eef5ab2a62345a02150a755fd97f26213a8a4bc6db",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\diginest\\assets\\js\\commerce.js",
+      "from": "82a895dc6edbc041720753d1a5e72a3a82a169739be14d760348f8186dd30c03",
+      "to": "a83b927779afabf35f84ba41a2c725533ff707b66877a50e4022006a0dcac7fb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\diginest\\assets\\js\\main.js",
+      "from": "6e5f0348e136062c6e5c68b84bfa57daaffddb3d6fa6922edd2403d6e1a1eb66",
+      "to": "f8f8584a4c7d66ae05eeec0b952c24ae04e52f453c35458f4c7985bd99612ae9",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\diginest\\assets\\js\\shop-config.js",
+      "from": "494271c8394bf193c3fb3cb4a28c2e747eaec1b6cab044efbf9b0e6f49ad3475",
+      "to": "5f77a6ad4e0ebb3824b5945a85e46dac71572585f83dca9875558806bb5ddaba",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\diginest\\CUSTOMISE.md",
+      "from": "1604b52eb1af9f3bfb852c8d22bc6b42a1b0fcd0901b10677959c24bf002362d",
+      "to": "f49b29821e00afafa3e0b25c07a18be8bb1712ad79f772bd565c04f0f6b92bcd",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\diginest\\index.html",
+      "from": "b8d146ea50da94285ab017693a5e22417ee63bfa2d524c7c82bfbf41a96242d9",
+      "to": "e1e0d938c9f8d8ccb155da7d223b5252641ba0fcd16a9fffdebd2e8759983414",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\diginest\\README.md",
+      "from": "12c81953c72913f885bfd0d2ffc74a6851bdc218157ae3c676a2286948ff712a",
+      "to": "d2815a900a11c23c43be92dc0a44210d3164ef22f8e0dae10855b7bf1393e8bb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\soniq\\assets\\css\\commerce.css",
+      "from": "933d9d93624e897acc9426579141aed42e122ac784230489e74e2477d2f585f3",
+      "to": "2a3d2f49e0a06f21c5e53c51a6b8869f06458d2981b60a24708d222277638a91",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\soniq\\assets\\js\\commerce.js",
+      "from": "82a895dc6edbc041720753d1a5e72a3a82a169739be14d760348f8186dd30c03",
+      "to": "a83b927779afabf35f84ba41a2c725533ff707b66877a50e4022006a0dcac7fb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\soniq\\assets\\js\\main.js",
+      "from": "2355cba70a6e3110be55754b00d809b6d9bd8c8f48b12d304255095ed9fd8529",
+      "to": "32d838fcd164930b058fdd4056e373f629beb3273519fb12ba3f92f5a5cf3813",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\soniq\\assets\\js\\shop-config.js",
+      "from": "e824d19af70f1f0acf98fe97f9a9d9b18a693d8f73250ec3536f36dadfefc9f8",
+      "to": "62a730cf5cc4f13aadb2450a20fe67deae895d77d26fd7f68ec52d6e5ce02ea1",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\soniq\\CUSTOMISE.md",
+      "from": "611c09571a42dfc9bbef72872253151377dfe1a8861728ac4525e647929c45f4",
+      "to": "51cdcb4f23049300d08b6533077e9cae3c89d2eabbc818b590a65afb0d9430cb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\soniq\\index.html",
+      "from": "41c69f95e625a302ee50655754f9cdc382f318377cde0bfc1201c5dcb47e5fe0",
+      "to": "8fc38f7fea9634297e148b02ec050e84f94179a70c9c26607965e7e92a3764fa",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\soniq\\README.md",
+      "from": "3e1d35522fe99a570456df8d749788cb6dc49dfd5dc8fb15b34098eceb5eb177",
+      "to": "bfc4bc87ecd5445058c977139a61f36aecf42952ff1e9ca54214d5b91db8a791",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\auralis\\assets\\css\\commerce.css",
+      "from": "933d9d93624e897acc9426579141aed42e122ac784230489e74e2477d2f585f3",
+      "to": "2a3d2f49e0a06f21c5e53c51a6b8869f06458d2981b60a24708d222277638a91",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\auralis\\assets\\css\\style.css",
+      "from": "a2224334515b2283e6db467cfc860790b2aed3747eea1aeae64a063046e20556",
+      "to": "f6a7b51c3c7db4a73a0ac632569681fbad22f33c38a6a6ac0343bdd4c44be5d3",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\auralis\\assets\\js\\commerce.js",
+      "from": "82a895dc6edbc041720753d1a5e72a3a82a169739be14d760348f8186dd30c03",
+      "to": "a83b927779afabf35f84ba41a2c725533ff707b66877a50e4022006a0dcac7fb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\auralis\\assets\\js\\main.js",
+      "from": "d7f1bf72758a8559ac026ec677ae90d86f50822f313a2a9c69f0d25a5ce9adbe",
+      "to": "faaab317a5b7c4434644a7984ab36025fa3af13f4bae4296ff821a8f660bba4c",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\auralis\\assets\\js\\shop-config.js",
+      "from": "2e802a0737e5744fce09d1f21ae9dc98ea67c27000f5ba3bdd5e2664d3a5798d",
+      "to": "04feee7edd2cf471321eadef1d2aefe99310ec2ee68c8caca03503dd16d21d42",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\auralis\\CUSTOMISE.md",
+      "from": "443a9ceb34343d83c7d4a6c41dd120cfd14a97be35180a1239312862f484becb",
+      "to": "d024cd90e39fb458235d48911895b4d197dfcdf28a7bc255a270c4e91b843248",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\auralis\\README.md",
+      "from": "a2cac5e9aaf1f7ade21b145cfe01c60517b3c01fc52c4c80b5004b8342ed19f5",
+      "to": "a39ba5c26c92aa6a1cc9cd8c6bd9d3f8e8e83dc1ae329ddbd4d12ac443846025",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\japan-trails\\assets\\js\\main.js",
+      "from": "aaf2233f3f1ee8ce072ad38bcbbeb3eaed90ceef45d1ce14f6bcedbd6bcda85b",
+      "to": "895f1f6e3aa86e2b8f11c79e5ad69fba03a9400925c529028fc9e3bb1c5ce06a",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\tidal\\assets\\css\\style.css",
+      "from": "23d5047fe319ee4174c5fad474321d8bc12d988c41e25e147e1d09ea28325c94",
+      "to": "3d2d4493fec388d03569c751a3838b00357dffe65b0d8af775af748ca3dfb490",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\tidal\\assets\\js\\main.js",
+      "from": "80d8ee9052787196ccf3af1336641c084cefc0c8a31e83959943d85617d7e5d3",
+      "to": "358d5564fdea5f058a8a67edaeaf583b24fc290d393f54e1f0603ae64818e697",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\tidal\\index.html",
+      "from": "7c776bcdde32fbe60b0d9ddc85969c74992d4c293c2b52791ee5b149afd90c86",
+      "to": "d9204897626592e21d08a21858c8761bdbd4145e3e35434a134dd6e2347337bc",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\keystead\\assets\\css\\style.css",
+      "from": "ecacce8d185151f9b1c0d5f5030e1c2f2dbe838cbdb71cb6ad978a8779e257c3",
+      "to": "d30bbbf3d5c01219a5ae55913f504006d6e1b9312494498c25452f632478f237",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\keystead\\assets\\js\\main.js",
+      "from": "e565554afd02c4b9e9c68466f74195bedaa7320d0cd14debb58873122d0479fe",
+      "to": "07d6e3578370b067a348e7a31c016def13fc22445e13abe5ba770b196d857277",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\keystead\\index.html",
+      "from": "f389167db73bdb33b84aefb85bbf4faa976bb14840b26a531048f1dad875cbf4",
+      "to": "d8b308177887ac1e689dd09481f86438b17764d0034a7f9c4b5d361a7f5a1d19",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\solenne\\assets\\css\\commerce.css",
+      "from": "933d9d93624e897acc9426579141aed42e122ac784230489e74e2477d2f585f3",
+      "to": "2a3d2f49e0a06f21c5e53c51a6b8869f06458d2981b60a24708d222277638a91",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\solenne\\assets\\js\\commerce.js",
+      "from": "82a895dc6edbc041720753d1a5e72a3a82a169739be14d760348f8186dd30c03",
+      "to": "a83b927779afabf35f84ba41a2c725533ff707b66877a50e4022006a0dcac7fb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\solenne\\assets\\js\\main.js",
+      "from": "aaf2233f3f1ee8ce072ad38bcbbeb3eaed90ceef45d1ce14f6bcedbd6bcda85b",
+      "to": "895f1f6e3aa86e2b8f11c79e5ad69fba03a9400925c529028fc9e3bb1c5ce06a",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\solenne\\assets\\js\\shop-config.js",
+      "from": "d830004bd087612f22f8cd4103c4af14ca6eaf1a225bf53ba8011debe95f6c5b",
+      "to": "0b456c00aa61d56daac1564d42b6ccd634674e8b49b80dc7cb7ea97a287a07f5",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\solenne\\CUSTOMISE.md",
+      "from": "e40832fa12e069a5ffa0301c3004edad1669702503ebd3d1750f5db54980ba1b",
+      "to": "b94c261da55e2250df5f1bb89d62ad0cd2ead452a360841461524cbb78032e83",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\solenne\\README.md",
+      "from": "ccb6deda0c0b06b17648f450c8d841ddc5d981ebb7fedc5e61752f2213031b31",
+      "to": "99ac8b5ddc7be2447fd5a93b6eb96c20d3ff0c3a2ff6ea6adf9c9f6ffdf02c8e",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\vybe\\assets\\css\\commerce.css",
+      "from": "933d9d93624e897acc9426579141aed42e122ac784230489e74e2477d2f585f3",
+      "to": "2a3d2f49e0a06f21c5e53c51a6b8869f06458d2981b60a24708d222277638a91",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\vybe\\assets\\js\\commerce.js",
+      "from": "82a895dc6edbc041720753d1a5e72a3a82a169739be14d760348f8186dd30c03",
+      "to": "a83b927779afabf35f84ba41a2c725533ff707b66877a50e4022006a0dcac7fb",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\vybe\\assets\\js\\shop-config.js",
+      "from": "b23bf01f7835122793eb2ea377bc6a88469f2e80cb2dd98cf42ce2f8a6d8a892",
+      "to": "78b1b9b61e512b9946a2327021df15bef2d4e1e89c2c778a0b59f84907b99a90",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\vybe\\CUSTOMISE.md",
+      "from": "cf239d8bbfbc8e197361a15e2e43fc2ccc9b821617b8513c588c5362890733fe",
+      "to": "5877c42018c933a4ff5e6b46e052657c77d6a515c347e3ff9b86a1ffac632c8f",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\vybe\\README.md",
+      "from": "9996d5195c7435bc421b3433ff7ee5d297ea82f76dd0f0a4db50c1643de028c1",
+      "to": "f762532a2acca1c1598249f8163f163fcd908d029f0cf73ac3816338cd6dbc18",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\astra-interior\\index.html",
+      "from": "a5e351c2465f5a04854144a487cfb82bcdbc22927ca61de8f8fdcc6852ef8ad4",
+      "to": "ff97cf1f8077034aeeea4c08f311ca2c3c889f83fcdf8eb0e57c513fa1fffd86",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\astra-interior\\README.md",
+      "from": "6cf1928dcf2e96a46a89bcd537ca5bca04bf229577b925348f9de7517779a517",
+      "to": "b3ecfafca36d8ff78b7baf6c124e3ff77266aa17df182608bd3d33ae9eeef967",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\pinehaven\\assets\\js\\main.js",
+      "from": "b7cc1e7b27eb3fd9b6450f9432c1ac23ca2ae46cc9bd73cc05eed14343437934",
+      "to": "749dce66c363e52ae3d444ea54c6c4642c49bf61176694d0a7175c3614e50e77",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\verdant\\assets\\css\\style.css",
+      "from": "049ab2b5ee85759698bfa87c19bf4d2e59fcf098a53de424625682ca517b8524",
+      "to": "0a80fc6d480ffd43c48aa1bb4fdc33e1dde77fce0f7d2dce48838a072598615b",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\verdant\\assets\\js\\main.js",
+      "from": "bd66610933c542ecc1cea421bf841d850097cdbf09e823ac009e38d3f312d793",
+      "to": "9af39b6e55636ef66cef6d48f58d9dc5c09774e91509b97a0bd815bee8668d30",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\verdant\\index.html",
+      "from": "96d941b54bae23ace6c0b5c1a234b2c4f1042989d78f05f7d67e3afd6fd33e86",
+      "to": "51146fbdcbca61a46e177ad95f4c6f1d8a70913e24bbdaa367c4e0c7b5bf94c0",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\orbit-academy\\assets\\css\\style.css",
+      "from": "5e9b459d1f7541784e4d8fafc176e22bfb35448367e3b55191dceb1544031a61",
+      "to": "42ad32f29278c1f4c4a388e5622a694e7617b8dbae77d18b4591abab6125d595",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\orbit-academy\\assets\\js\\main.js",
+      "from": "c417d0cf94690bed3b7f67ac378f9c4a4d63a446570559aca2ecf9d1ef4c5b09",
+      "to": "04062803ecd09b7df9640abbb7caf889c1369c5db01bf3621c857cc1a835bcd9",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\orbit-academy\\index.html",
+      "from": "e7e6ef774a5ac35a5cd3e2648e49ca9dfe248940adebbe88c2d10ca5c7bbccf2",
+      "to": "c7f4ff04d28fbe76244aac725c8e92442a9739c20dc67cf741f9742fe53aa84e",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shopluxe\\assets\\css\\style.css",
+      "from": "ac409dbbfedb82955420c5dc19e501c15ae15a21246363ed185cd4e6ee9c81f4",
+      "to": "9f94eb327fd6265a6133e58a1bfc30a274924bf70cbd94cc50b1a0239f662fce",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shopluxe\\assets\\js\\main.js",
+      "from": "1dd74e0f026c3b787d2bf3a697d5c4386d7ff55770187789bae3621895b9c290",
+      "to": "70ad42dbd82f73476986727f5fafc74feb6f1696fbbe6312ecc8ec17402348c3",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shopluxe\\CUSTOMISE.md",
+      "from": "07e8ad9784f89d43fba6e1a4cf92fd15bdb11df89f7cc58f6b6c7526c09c7718",
+      "to": "ab6683a22e6ae578b4a53643201bf2fc235557f31b9a4331f4d958affa451199",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shopluxe\\index.html",
+      "from": "cae134120cf2857ca03669a69de15a50f795d67453f06fa2abfe99f85607921e",
+      "to": "90cc36c56e25ce3b5d904d6631e95bff5dbea2d0448a23df8052902244214089",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shopluxe\\LICENCE.txt",
+      "from": "5256de9c380cde6a7116a8b716c6e2cb17d7cb5eda06992d1cd26305e99bdece",
+      "to": "486cb61886cf0baba068e6984e3bc4a20fee596c5e25c1913b58743a3cfc88c5",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\shopluxe\\README.md",
+      "from": "e0ac714fbb60d8ac2a5336f529cf47bf7d07bee84981ba58d6091f5c4440fa8c",
+      "to": "3705c7ef0381fb19b03f63b0805aa825d8687fc36b443ba40dd0d07bbe942d36",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\chronoform\\assets\\css\\style.css",
+      "from": "2d623d2f3f55b41e3bea5399ecdbcaddfd4e2e98cebdc1c34a3c6a53dd2634d4",
+      "to": "8b21efe37cd1f902a8fad624482aca091c913fe0c8b1763dada8b2b6b096ee82",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\chronoform\\assets\\js\\main.js",
+      "from": "23888aba3211ee2aa7b4c28121fe976d075f406dea17dd7020cf4bd6495ffda8",
+      "to": "a45c7569b079dd49773fa86ed9fa861da7ecf89bb11d5d1afdfc924138a330ca",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\chronoform\\assets\\js\\watch3d.js",
+      "from": "3a87641a3525d79eb7c87a5423753d1dcac02fd4f7f9307229bc62fe78af0145",
+      "to": "da5a1cba7c9742832e489a332576ccd806fc019440125032407bc0bb3ca3c0f8",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\chronoform\\index.html",
+      "from": "d56abe09b5d01f808b9fed8b9cb0341042f70006776a35a2737bdb855bc42807",
+      "to": "15282e1aa40298ee219dfe246aefca29a7e7244ef62a1d807d47cc3a21b7ad12",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\leaflit\\assets\\css\\style.css",
+      "from": "4bf901dacace799dbe89c22d650973cab778beef45bc42e9ffb7a118149e0984",
+      "to": "de61c6c9e475ae8d80c3463cbbf42250b90130b1e03060b4c498c9dbe94bfea0",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\leaflit\\assets\\js\\main.js",
+      "from": "ca1768e90af5278c4c634228239baecba48f7f69f3c983cd1d537918179c9d3a",
+      "to": "59cc26140967611c11e9ffaceec04a0f5b6587191e86688c4a175aa48b891873",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\semaan\\assets\\css\\style.css",
+      "from": "4e016c40cf4f4f6a37186479bf9d2e56fe56e6acaad4281902ce721868a78b41",
+      "to": "d8ebe51b016547393c8462d9af47c64d7b00d4890070619396537e3f7c4f9da7",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\semaan\\assets\\js\\main.js",
+      "from": "403ab707080a144248fec8bb5da23b63b7f4519a50a78607e90648b391c02afa",
+      "to": "2da94c643321efcc49a1708b9fcb344ae547ffaade85ce36311467b548736f4c",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\semaan\\index.html",
+      "from": "ef40db7bba003b947280639d180b4e93e37101322863186e443f9545b517ad13",
+      "to": "feaad2cc1b8cb2c2ac96e570f6e3f51253d37105acec86f3cafc84b7c8bc9c46",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\motora\\assets\\css\\style.css",
+      "from": "4944df06fb96848cdf40c290c2ebe8f80fe3d2484e376ee432c48a2aa424f618",
+      "to": "18383a31bb83e89231c0c4c23027c0d5c8c335368776b27d919b60d248167f11",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\motora\\assets\\js\\main.js",
+      "from": "b9c0b6b445cb423f477ce5e27ede8d56661ba8ae312040f0d851c8cd21380aaa",
+      "to": "8d2908b5d87721a462fd5a268c96f626f37163c6f5d2aedde9dadec7a9a7454d",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\motora\\index.html",
+      "from": "786d22aa443766e81c5133fc4ef5fa87bcd31d60f870978071b85d82821f0a85",
+      "to": "093c663c5ce0980621ab335b3faa0c7e050e2a73ab0df5ce34893dfaa8bb6959",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\backbest-800\\assets\\css\\style.css",
+      "from": "b23b58d440fc317f75da2ce51560c5c254218591c11d307cb69cdc4c7bb43037",
+      "to": "749992ae5184797c1197a57a7edc81c0b4236ab9976c854d2e4697094f601a3f",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\backbest-800\\assets\\js\\main.js",
+      "from": "b3bc9d022920f37b13691daa4dcddd227a2729606326b13a7383e75d8f35a748",
+      "to": "193f480f58c48c1d115edeb508e5004be4c58a114ed027ce7896866ee86fc345",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    },
+    {
+      "file": "web\\public\\demos\\backbest-800\\index.html",
+      "from": "0f880125e5c376e9f0d68ab8b0c0f5d20c342ab816bd73d969ef015f7edba2d7",
+      "to": "037a3ca0ec1a7dccd3fd72397689e372a67555843132d4e44f34035a1b66afda",
+      "reason": "Newline-only restoration to existing deployed manifest"
+    }
+  ]
+}

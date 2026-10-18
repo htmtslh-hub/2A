@@ -1,0 +1,32 @@
+[
+  {
+    "file": "demos/jack-3d/index.html",
+    "status": 200,
+    "bytes": 790,
+    "sha256": "d1200bda6646adde28e3f9ce00c80c9cabc23c80981be2f78d207e7687bcc743"
+  },
+  {
+    "file": "previews/jack-3d.mp4",
+    "status": 200,
+    "bytes": 527535,
+    "sha256": "062eff8d0f2621a0280b071a8ffc441dcd87a37bc155d57af84056c855ff07f9"
+  },
+  {
+    "file": "previews/jack-3d.webp",
+    "status": 200,
+    "bytes": 21616,
+    "sha256": "a261e65f8486ac99aba967ab3b08215135aaed7d82a387a2ae1a5b1100b57fcd"
+  },
+  {
+    "file": "demos/jack-3d/assets/index-l17EWDgp.css",
+    "status": 200,
+    "bytes": 15482,
+    "sha256": "ec90f246417994e73cd38e15918318ec46ca1a403b932ba28b06b02ead4a9a0f"
+  },
+  {
+    "file": "demos/jack-3d/assets/index-z_R5PwRP.js",
+    "status": 200,
+    "bytes": 296421,
+    "sha256": "92009089ba75ad173a0c95a5b6dd84a53fdf92a94135ba3765a8289b6b869928"
+  }
+]

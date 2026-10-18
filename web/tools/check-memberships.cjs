@@ -15,6 +15,7 @@ function load(file, mocks = {}, globals = {}) {
     if (name in mocks) return mocks[name];
     if (name.startsWith('.') || name.startsWith('@/')) {
       const target = name.startsWith('@/') ? path.join(root, 'src', name.slice(2)) : path.resolve(path.dirname(absolute), name);
+      if (target.endsWith('.json')) return JSON.parse(fs.readFileSync(target, 'utf8'));
       return load(path.relative(root, fs.existsSync(target + '.ts') ? target + '.ts' : target + '.tsx'), mocks, globals);
     }
     return require(name);
@@ -23,8 +24,23 @@ function load(file, mocks = {}, globals = {}) {
 }
 const policy = load('src/lib/membership-policy.ts');
 const catalog = load('src/lib/catalog.ts');
+const products = load('src/lib/real-templates.ts').REAL_TEMPLATES;
+const productPolicy = load('src/lib/product-policy.ts');
 const record = (plan, start, end, status = 'PAID') => ({ id: `${plan}-${start}`, plan, createdAt: new Date(start), startsAt: new Date(start), expiresAt: new Date(end), order: { status } });
 async function main() {
+  eq(productPolicy.productAccessTier({}), 'premium');
+  eq(productPolicy.productAccessTier({ group: 'web' }), 'premium');
+  eq(productPolicy.productAccessTier({ group: 'skill-prompt' }), 'premium');
+  eq(productPolicy.productAccessTier({ group: 'agent' }), 'individual');
+  eq(productPolicy.productAccessTier({ access: 'free' }), 'free');
+  eq(Object.keys(products).filter(productPolicy.isFreeProduct).sort().join(','), 't1,t22');
+  for (const id of ['t1', 't22']) {
+    eq(productPolicy.requiresPremium(id), false);
+    eq(productPolicy.canBuyIndividually(id), false);
+  }
+  eq(productPolicy.requiresPremium('unknown'), false);
+  eq(policy.membershipName('PRO'), 'Premium');
+  eq(catalog.productName('PRO', null, 'en'), 'Premium upgrade · 1 month');
   for (const [start, plan, end] of [
     ['2026-01-31T12:34:56.789Z', 'PRO', '2026-02-28T12:34:56.789Z'],
     ['2028-01-31T00:00:00Z', 'PRO', '2028-02-29T00:00:00.000Z'],
@@ -40,8 +56,8 @@ async function main() {
   eq(policy.activeMembership([active, ultra], now), ultra);
   for (const lang of ['vi', 'en', 'zh']) {
     eq(catalog.providerForLang(lang), 'PADDLE');
-    eq(catalog.priceOf('PRO', 'USD'), 9900);
-    eq(catalog.priceOf('ULTRA', 'USD'), 29900);
+    eq(catalog.priceOf('PRO', 'USD'), 2000);
+    eq(catalog.priceOf('ULTRA', 'USD'), 20000);
     for (const id of Object.keys(load('src/lib/real-templates.ts').REAL_TEMPLATES)) eq(catalog.priceOf('TEMPLATE', 'USD', id), 2000);
   }
   assert.throws(() => catalog.priceOf('PRO', 'VND')); checks++;
@@ -64,11 +80,29 @@ async function main() {
   suspended = false;
   for (const kind of ['PRO', 'ULTRA']) {
     eq((await post({ kind, amount: 1, currency: 'VND' })).status, 200);
-    eq(adapterInput.amount, kind === 'PRO' ? 9900 : 29900);
+    eq(adapterInput.amount, kind === 'PRO' ? 2000 : 20000);
     eq(adapterInput.currency, 'USD');
     eq(created.at(-1).userId, 'user-1');
     eq(created.at(-1).templateId, null);
   }
+  const beforeBlocked = created.length;
+  for (const id of ['t1', 't22']) {
+    eq((await post({ kind: 'TEMPLATE', templateId: id })).status, 400);
+    eq((await post({ kind: 'CART', templateIds: [id] })).status, 400);
+  }
+  for (const id of Object.keys(products).filter(productPolicy.requiresPremium)) {
+    eq((await post({ kind: 'TEMPLATE', templateId: id })).status, 403);
+    eq((await post({ kind: 'CART', templateIds: [id] })).status, 403);
+  }
+  const premiumId = Object.keys(products).find(productPolicy.requiresPremium);
+  const agentId = Object.keys(products).find(id => products[id].group === 'agent');
+  eq((await post({ kind: 'CART', templateIds: [premiumId, agentId] })).status, 403);
+  eq(created.length, beforeBlocked);
+  eq((await post({ kind: 'TEMPLATE', templateId: agentId })).status, 200);
+  eq(adapterInput.amount, 2000);
+  session = null;
+  eq((await post({ kind: 'TEMPLATE', templateId: premiumId })).status, 403);
+  session = { user: { id: 'user-1', email: 'buyer@example.test' } };
 
   const orders = new Map(), memberships = [], purchases = [], tokens = [], emails = [];
   const tx = {
@@ -90,48 +124,54 @@ async function main() {
   let queue = Promise.resolve();
   const db = { ...tx, user: { findUnique: async () => ({ id: 'user-1' }) }, orderItem: { findMany: async () => [] }, order: { ...tx.order, update: async ({ where, data }) => Object.assign(orders.get(where.id), data) }, downloadToken: { create: async ({ data }) => { tokens.push(data); } }, $transaction: callback => { const job = queue.then(() => callback(tx)); queue = job.catch(() => {}); return job; } };
   const fulfil = load('src/lib/fulfil.ts', { '@/lib/db': { prisma: db }, '@/lib/mail': { sendMail: async email => emails.push(email), orderPaidEmail: options => options } });
-  function order(id, kind, amount) { const row = { id, kind, amount, currency: 'USD', status: 'PENDING', userId: 'user-1', buyerEmail: 'buyer@example.test', lang: 'en', templateId: kind === 'TEMPLATE' ? 't1' : null }; orders.set(id, row); return { ...row }; }
-  const first = order('pro-first', 'PRO', 9900);
-  const results = await Promise.all([fulfil.fulfilOrder(first, { amount: 9900, currency: 'USD' }, 'https://shop.example.test'), fulfil.fulfilOrder(first, { amount: 9900, currency: 'USD' }, 'https://shop.example.test')]);
+  function order(id, kind, amount) { const row = { id, kind, amount, currency: 'USD', status: 'PENDING', userId: 'user-1', buyerEmail: 'buyer@example.test', lang: 'en', templateId: kind === 'TEMPLATE' ? 't31' : null }; orders.set(id, row); return { ...row }; }
+  const first = order('pro-first', 'PRO', 2000);
+  const results = await Promise.all([fulfil.fulfilOrder(first, { amount: 2000, currency: 'USD' }, 'https://shop.example.test'), fulfil.fulfilOrder(first, { amount: 2000, currency: 'USD' }, 'https://shop.example.test')]);
   eq(results.filter(result => result === 'ok').length, 1);
   eq(memberships.length, 1); eq(purchases.length, 0); eq(tokens.length, 0); eq(emails.length, 1);
   eq(emails[0].membership, true); eq(emails[0].downloadUrl, 'https://shop.example.test/tai-khoan');
   const previousEnd = memberships[0].expiresAt;
-  const renewal = order('pro-renew', 'PRO', 9900);
-  eq(await fulfil.fulfilOrder(renewal, { amount: 9900, currency: 'USD' }, 'https://shop.example.test'), 'ok');
+  const renewal = order('pro-renew', 'PRO', 2000);
+  eq(await fulfil.fulfilOrder(renewal, { amount: 2000, currency: 'USD' }, 'https://shop.example.test'), 'ok');
   eq(memberships[1].startsAt.getTime(), previousEnd.getTime());
   eq(memberships[1].expiresAt.toISOString(), policy.membershipExpiry(previousEnd, 'PRO').toISOString());
-  const annual = order('annual', 'ULTRA', 29900);
-  eq(await fulfil.fulfilOrder(annual, { amount: 29900, currency: 'USD' }, 'https://shop.example.test'), 'ok');
+  const annual = order('annual', 'ULTRA', 20000);
+  eq(await fulfil.fulfilOrder(annual, { amount: 20000, currency: 'USD' }, 'https://shop.example.test'), 'ok');
   eq(memberships[2].expiresAt.toISOString(), policy.membershipExpiry(memberships[2].startsAt, 'ULTRA').toISOString());
   eq(await fulfil.revokeOrder({ ...orders.get('annual') }), 'ok');
   eq(memberships.some(m => m.orderId === 'annual'), false);
   eq(await fulfil.revokeOrder({ ...orders.get('annual') }), 'not-paid');
-  eq(await fulfil.fulfilOrder({ ...orders.get('annual') }, { amount: 29900, currency: 'USD' }, 'https://shop.example.test'), 'already-paid');
-  const bad = order('wrong-amount', 'ULTRA', 29900);
+  eq(await fulfil.fulfilOrder({ ...orders.get('annual') }, { amount: 20000, currency: 'USD' }, 'https://shop.example.test'), 'already-paid');
+  const bad = order('wrong-amount', 'ULTRA', 20000);
   eq(await fulfil.fulfilOrder(bad, { amount: 99, currency: 'USD' }, 'https://shop.example.test'), 'amount-mismatch');
   eq(memberships.length, 2);
   const single = order('single', 'TEMPLATE', 2000);
   eq(await fulfil.fulfilOrder(single, { amount: 2000, currency: 'USD' }, 'https://shop.example.test'), 'ok');
-  eq(purchases[0].templateId, 't1'); eq(tokens.length, 1); eq(emails.at(-1).membership, false);
+  eq(purchases[0].templateId, 't31'); eq(tokens.length, 1); eq(emails.at(-1).membership, false);
   const bundle = order('legacy', 'BUNDLE', 39900);
   eq(await fulfil.fulfilOrder(bundle, { amount: 39900, currency: 'USD' }, 'https://shop.example.test'), 'ok');
   eq(purchases.at(-1).kind, 'BUNDLE'); eq(purchases.at(-1).templateId, null);
 
-  let accessRows = [active], owned = null;
-  const access = load('src/lib/memberships.ts', { '@/lib/db': { prisma: { user: { findUnique: async () => ({ suspendedAt: suspended ? now : null }) }, purchase: { findFirst: async ({ where }) => { eq(where.userId, 'user-1'); eq(where.order.status, 'PAID'); return owned; } }, membership: { findMany: async () => accessRows } } } });
-  eq(await access.hasProductAccess('user-1', 't1', now), true);
+  let accessRows = [active], owned = null, ownedRows = [];
+  const access = load('src/lib/memberships.ts', { '@/lib/db': { prisma: { user: { findUnique: async () => ({ suspendedAt: suspended ? now : null }) }, purchase: { findMany: async ({where}) => { eq(where.order.status, 'PAID'); return ownedRows; }, findFirst: async ({ where }) => { eq(where.userId, 'user-1'); eq(where.order.status, 'PAID'); return owned; } }, membership: { findMany: async () => accessRows } } } });
+  eq((await access.accessibleProductIds('user-1', now)).includes('t31'), true);
+  eq(await access.hasProductAccess('user-1', 't31', now), true);
   accessRows = [record('PRO', '2026-09-11', now)];
-  eq(await access.hasProductAccess('user-1', 't1', now), false);
+  eq(await access.hasProductAccess('user-1', 't31', now), false);
+  eq((await access.accessibleProductIds('user-1', now)).length, 0);
   accessRows = [record('ULTRA', '2026-10-01', '2027-10-01', 'REFUNDED')];
-  eq(await access.hasProductAccess('user-1', 't1', now), false);
+  eq(await access.hasProductAccess('user-1', 't31', now), false);
+  eq((await access.accessibleProductIds('user-1', now)).length, 0);
+  ownedRows = [{kind:'TEMPLATE', templateId:'t31'}];
+  eq((await access.accessibleProductIds('user-1', now)).join(','), 't31');
   owned = { kind: 'TEMPLATE' };
-  eq(await access.hasProductAccess('user-1', 't1', now), true);
+  eq(await access.hasProductAccess('user-1', 't31', now), true);
   suspended = true;
-  eq(await access.hasProductAccess('user-1', 't1', now), false);
+  eq(await access.hasProductAccess('user-1', 't31', now), false);
+  eq((await access.accessibleProductIds('user-1', now)).length, 0);
   const mail = load('src/lib/mail.ts', { resend: { Resend: class {} } });
   for (const lang of ['vi', 'en', 'zh']) {
-    const html = mail.orderPaidEmail({ productName: 'Pro', amountLabel: '$99', downloadUrl: '/tai-khoan', lang, membership: true }).html;
+    const html = mail.orderPaidEmail({ productName: 'Premium', amountLabel: '$20', downloadUrl: '/tai-khoan', lang, membership: true }).html;
     eq(/7 days|7 ngày|7 天/.test(html), false);
     eq(html.includes('/tai-khoan'), true);
   }
@@ -179,24 +219,33 @@ async function main() {
     'node:fs': { existsSync: () => true, statSync: () => ({ size: 4 }), createReadStream: () => require('node:stream').Readable.from([Buffer.from('PKxx')]) },
   });
   const get = id => download.GET(new Request(`https://shop.example.test/api/download?id=${id}`));
-  eq((await get('t1')).status, 401);
+  for (const id of ['t1', 't22']) {
+    const free = await get(id);
+    eq(free.status, 200);
+    eq(free.headers.get('Content-Type'), 'application/zip');
+    eq(await free.text(), 'PKxx');
+  }
+  eq((await get('t31')).status, 401);
   session = { user: { id: 'user-1', email: 'buyer@example.test' } };
-  let response = await get('t1');
+  let response = await get('t31');
   eq(response.status, 200); eq(response.headers.get('Cache-Control'), 'private, no-store'); eq(await response.text(), 'PKxx');
   accessRows = [record('PRO', new Date(current.getTime() - 10000), new Date(current.getTime() - 1000))];
-  eq((await get('t1')).status, 403);
+  eq((await get('t31')).status, 403);
   eq((await get('unknown')).status, 404);
   owned = { kind: 'TEMPLATE' };
-  response = await get('t1'); eq(response.status, 200); await response.text();
+  response = await get('t31'); eq(response.status, 200); await response.text();
   suspended = true;
-  eq((await get('t1')).status, 403);
+  eq((await get('t31')).status, 403);
   let payload;
   const paddle = load('src/lib/payments/paddle.ts', {}, { fetch: async (_, options) => { payload = JSON.parse(options.body); return { ok: true, json: async () => ({ data: { id: 'test', checkout: { url: 'https://shop.example.test/checkout' } } }) }; } });
   for (const kind of ['PRO', 'ULTRA']) {
     await paddle.paddleAdapter.createCheckout({ orderId: kind, kind, amount: catalog.priceOf(kind, 'USD'), currency: 'USD', productName: kind, buyerEmail: 'buyer@example.test', lang: 'en', baseUrl: 'https://shop.example.test' });
-    eq(payload.items[0].price.unit_price.amount, kind === 'PRO' ? '9900' : '29900');
+    eq(payload.items[0].price.unit_price.amount, kind === 'PRO' ? '2000' : '20000');
     eq('billing_cycle' in payload.items[0].price, false);
   }
+  // Orders created at the former prices still reconcile against their recorded amount.
+  const oldPremium = order('legacy-pro-price', 'PRO', 9900);
+  eq(await fulfil.fulfilOrder(oldPremium, { amount: 9900, currency: 'USD' }, 'https://shop.example.test'), 'ok');
   console.log(`PASS ${checks} offline membership checks: calendar expiry, prices, authenticated checkout, payment idempotency, renewal, refunds, permanent purchases, access control, mail and one-time Paddle payload.`);
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

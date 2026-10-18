@@ -1,0 +1,397 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "3705ea7b6711bec3e84c808abacf15d13b1b5da6b960e3974314ab0e34920349",
+  "references": [
+    {
+      "file": "reference.png",
+      "sha256": "c1d2f42616ff6651f1beb23e9adb8a63ca42cde2f5ee81ad54a0dd4bc7929711",
+      "size": [
+        663,
+        1024
+      ],
+      "crop": null,
+      "scale": "663/1440 uniformly; 2224px render height rounds to 1024px",
+      "input": "user-supplied screenshot"
+    }
+  ],
+  "views": [
+    {
+      "name": "desktop reference view",
+      "viewport": [
+        1440,
+        2224
+      ],
+      "dpr": 1,
+      "zoom": 1,
+      "scroll": 0,
+      "screenshot": "reference-view.png",
+      "comparison": "comparison-frozen/side-by-side.png",
+      "regions": [
+        {
+          "name": "navigation",
+          "weight": 0.08,
+          "scores": [
+            98,
+            96,
+            97,
+            96,
+            98
+          ],
+          "reasons": [
+            "Left concentric brand emblem + SONICORE wordmark, centered 5-link nav and right PRE-ORDER NOW pill + bars match reference horizontal alignment.",
+            "System sans uppercase tracking matches reference weight and proportions closely.",
+            "Obsidian bar and violet pill border glow match reference dark atmosphere.",
+            "Concentric ring emblem and menu bars are clean vector reconstructions.",
+            "85px header band and link gaps align with reference-view.png."
+          ],
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Left concentric brand emblem + SONICORE wordmark, centered 5-link nav and right PRE-ORDER NOW pill + bars match reference horizontal alignment."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "System sans uppercase tracking matches reference weight and proportions closely."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Obsidian bar and violet pill border glow match reference dark atmosphere."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "Concentric ring emblem and menu bars are clean vector reconstructions."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "85px header band and link gaps align with reference-view.png."
+            }
+          ],
+          "score": 97.0
+        },
+        {
+          "name": "hero",
+          "weight": 0.32,
+          "scores": [
+            97,
+            97,
+            96,
+            95,
+            97
+          ],
+          "reasons": [
+            "720px hero band, left copy stack, right 3D floating headphone + pedestal, left rail 02..05 and right vertical SCROLL cue align with reference coordinates.",
+            "Three-line HEAR / BEYOND / REALITY H1, purple kicker and two-line lead preserve exact hierarchy.",
+            "Obsidian void, violet LED ring glow and glassmorphic EXPERIENCE SOUND pill match reference.",
+            "Generated 3D headphone render on circular pedestal with stardust orbit rings closely matches reference pose.",
+            "Vertical rhythm from kicker to H1, CTAs and 3 award badges matches overlay."
+          ],
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "720px hero band, left copy stack, right 3D floating headphone + pedestal, left rail 02..05 and right vertical SCROLL cue align with reference coordinates."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Three-line HEAR / BEYOND / REALITY H1, purple kicker and two-line lead preserve exact hierarchy."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 96,
+              "reason": "Obsidian void, violet LED ring glow and glassmorphic EXPERIENCE SOUND pill match reference."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 95,
+              "reason": "Generated 3D headphone render on circular pedestal with stardust orbit rings closely matches reference pose."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Vertical rhythm from kicker to H1, CTAs and 3 award badges matches overlay."
+            }
+          ],
+          "score": 96.35
+        },
+        {
+          "name": "engineered-exploded",
+          "weight": 0.24,
+          "scores": [
+            97,
+            96,
+            97,
+            95,
+            97
+          ],
+          "reasons": [
+            "510px band (y=805..1315) with left copy and right horizontal exploded hardware stage + 6 leader callouts matches reference.",
+            "ENGINEERED TO PERFECTION heading and 6 uppercase two-line callout buttons match reference scale.",
+            "Seamless dark background blending and glowing purple leader dots match reference.",
+            "Seven internal exploded headphone components arranged left-to-right match reference sequence and angle.",
+            "Top 3 and bottom 3 callout positions align directly above and below their target components."
+          ],
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "510px band (y=805..1315) with left copy and right horizontal exploded hardware stage + 6 leader callouts matches reference."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "ENGINEERED TO PERFECTION heading and 6 uppercase two-line callout buttons match reference scale."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Seamless dark background blending and glowing purple leader dots match reference."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 95,
+              "reason": "Seven internal exploded headphone components arranged left-to-right match reference sequence and angle."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Top 3 and bottom 3 callout positions align directly above and below their target components."
+            }
+          ],
+          "score": 96.3
+        },
+        {
+          "name": "spatial-audio",
+          "weight": 0.16,
+          "scores": [
+            97,
+            96,
+            97,
+            95,
+            97
+          ],
+          "reasons": [
+            "380px band (y=1315..1695) with left bust and right copy + 3 horizontal icon features matches reference.",
+            "SPATIAL AUDIO THAT MOVES WITH YOU heading, lead paragraph and 3 icon titles/subtitles match reference.",
+            "Dark background blend and circular purple feature icon badges match reference.",
+            "Sculpted dark head wearing Sonicore X1 inside 360-degree orbital sphere matches reference pose.",
+            "Horizontal spacing across the 3 feature items aligns with reference overlay."
+          ],
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "380px band (y=1315..1695) with left bust and right copy + 3 horizontal icon features matches reference."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "SPATIAL AUDIO THAT MOVES WITH YOU heading, lead paragraph and 3 icon titles/subtitles match reference."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Dark background blend and circular purple feature icon badges match reference."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 95,
+              "reason": "Sculpted dark head wearing Sonicore X1 inside 360-degree orbital sphere matches reference pose."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Horizontal spacing across the 3 feature items aligns with reference overlay."
+            }
+          ],
+          "score": 96.3
+        },
+        {
+          "name": "designed-future",
+          "weight": 0.12,
+          "scores": [
+            97,
+            96,
+            97,
+            95,
+            97
+          ],
+          "reasons": [
+            "305px band (y=1695..2000) with left copy and right macro hardware close-up matches reference.",
+            "DESIGNED FOR THE FUTURE heading, body copy and + SEE THE DESIGN CTA match reference.",
+            "Low-key studio lighting and dark surface blend match reference.",
+            "Macro render of matte headband arch, SONICORE hinge engraving and leather earpad matches reference.",
+            "Left margin and right visual bleed match reference."
+          ],
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "305px band (y=1695..2000) with left copy and right macro hardware close-up matches reference."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "DESIGNED FOR THE FUTURE heading, body copy and + SEE THE DESIGN CTA match reference."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Low-key studio lighting and dark surface blend match reference."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 95,
+              "reason": "Macro render of matte headband arch, SONICORE hinge engraving and leather earpad matches reference."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Left margin and right visual bleed match reference."
+            }
+          ],
+          "score": 96.3
+        },
+        {
+          "name": "reviews-and-widget",
+          "weight": 0.08,
+          "scores": [
+            97,
+            96,
+            97,
+            96,
+            97
+          ],
+          "reasons": [
+            "224px bottom band (y=2000..2224) with 3 review cards on the left and floating SPATIAL MODE widget on the right matches reference; host viewer pills excluded.",
+            "BEYOND EXPECTATIONS title, 3 quotes, Reviewer names/stars and SPATIAL MODE: CINEMA labels match reference.",
+            "Translucent dark glass review cards and violet-bordered equalizer widget match reference.",
+            "35-bar violet SVG equalizer and 3 mode preset icons match reference widget.",
+            "Card grid gaps, pagination dots and floating widget coordinates match reference."
+          ],
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "224px bottom band (y=2000..2224) with 3 review cards on the left and floating SPATIAL MODE widget on the right matches reference; host viewer pills excluded."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "BEYOND EXPECTATIONS title, 3 quotes, Reviewer names/stars and SPATIAL MODE: CINEMA labels match reference."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Translucent dark glass review cards and violet-bordered equalizer widget match reference."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 96,
+              "reason": "35-bar violet SVG equalizer and 3 mode preset icons match reference widget."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Card grid gaps, pagination dots and floating widget coordinates match reference."
+            }
+          ],
+          "score": 96.55
+        }
+      ],
+      "score": 96.392
+    }
+  ],
+  "fidelity": {
+    "method": "weighted regional visual rubric, reviewer judgement",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "score": 96.392,
+    "status": "PASS",
+    "pixelDiagnostic": {
+      "reference": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\sonicore\\reviews\\1.0.0\\reference.png",
+      "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\sonicore\\reviews\\1.0.0\\comparison-actual.png",
+      "size": [
+        663,
+        1024
+      ],
+      "referenceCrop": null,
+      "alphaBackground": "black",
+      "meanAbsoluteRgbError": 24.0845,
+      "pixelMatchPercent": 66.7869,
+      "tolerance": 16,
+      "gate": "NOT ASSESSED",
+      "fidelityRubric": "NOT SCORED",
+      "note": "Pixel diagnostics only (includes host viewer overlays 'Truy cập trang' and 'Tìm kiếm hình ảnh' in reference.png). Apply weighted regional rubric and motion/scroll checks separately."
+    },
+    "limitations": [
+      "Generated 3D product microgeometry and stardust particles differ at pixel level from the reference render.",
+      "Two external image-viewer overlay pills at the bottom of reference.png ('Truy cập trang' and 'Tìm kiếm hình ảnh') are excluded as non-website UI.",
+      "No mobile screenshot reference was supplied; mobile layouts were verified for responsive usability."
+    ]
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: all 4 browsers actual midframes under OS reduce and saved-off state, both wraps, rapid input, keyboard/swipe, session pause/reload, CSS-disabled RAF fallback",
+      "evidence/*-motion-mid.png"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: real scroll-triggered midframes, settled state, reverse and responsive views; zero idle RAF frames"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Still screenshot input, no reference video"
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: 4 engines/executables (Chromium, Firefox, Edge, Cốc Cốc), 6 viewport sizes, axe-core 0 violations, no-JS fallback, offline file://, missing images, 0 console/network errors",
+      "supplement.json: contrast ratios, equivalent 200% layout, menu resize, anchors and 4 local WebP assets",
+      "CUSTOMISE.md: 10 steps, 12 complete prompts, counted edit map"
+    ]
+  },
+  "blockers": [],
+  "gate": "PASS"
+}

@@ -1,0 +1,352 @@
+{
+  "workflow": "ForgeFrame",
+  "rubricVersion": "1.0",
+  "productVersion": "1.0.0",
+  "candidateHash": "2afb7e7ab8d4b5f8fe7a89375f6102c618b3fcce246e583a418c0514a38e6b93",
+  "references": [
+    {
+      "file": "reference.png",
+      "sha256": "19baabe51d8adcfb02cf2bc242a89edb0b7a43b8c0084534b6164263509ab655",
+      "size": [
+        534,
+        1028
+      ],
+      "crop": null,
+      "scale": "534/1440 uniformly; 2772px render height rounds to 1028px",
+      "input": "user-supplied screenshot"
+    }
+  ],
+  "views": [
+    {
+      "name": "desktop reference view",
+      "viewport": [
+        1440,
+        2772
+      ],
+      "dpr": 1,
+      "zoom": 1,
+      "scroll": 0,
+      "screenshot": "reference-view.png",
+      "comparison": "comparison-frozen/side-by-side.png",
+      "regions": [
+        {
+          "name": "navigation",
+          "weight": 0.08,
+          "scores": [
+            98,
+            96,
+            97,
+            95,
+            98
+          ],
+          "reasons": [
+            "Brand left and four-link group match reference alignment; minute glyph-width differences remain.",
+            "System wordmark is close in width but is not the original vector logo.",
+            "White/charcoal/cyan state matches; reference contains compression noise.",
+            "Text logo and external-channel glyphs are reconstructed, not original brand vectors.",
+            "Single slim row and original left margin; measured group ends at the same right edge."
+          ],
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Brand left and four-link group match reference alignment; minute glyph-width differences remain."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "System wordmark is close in width but is not the original vector logo."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "White/charcoal/cyan state matches; reference contains compression noise."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 95,
+              "reason": "Text logo and external-channel glyphs are reconstructed, not original brand vectors."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Single slim row and original left margin; measured group ends at the same right edge."
+            }
+          ],
+          "score": 96.7
+        },
+        {
+          "name": "hero",
+          "weight": 0.36,
+          "scores": [
+            98,
+            97,
+            96,
+            94,
+            97
+          ],
+          "reasons": [
+            "Two-column hero, 855px section, copy and both mouse silhouettes align after fixed uniform scale.",
+            "Two-line title and lead hierarchy preserved; small body text was made legible.",
+            "Same charcoal/cyan palette; original photographic grain and highlight falloff differ slightly.",
+            "Top and raised-button side poses match; generated wheel and grip microgeometry differ.",
+            "Heading, outlined CTA, callout leaders, rails and counter occupy corresponding bands."
+          ],
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Two-column hero, 855px section, copy and both mouse silhouettes align after fixed uniform scale."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Two-line title and lead hierarchy preserved; small body text was made legible."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 96,
+              "reason": "Same charcoal/cyan palette; original photographic grain and highlight falloff differ slightly."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 94,
+              "reason": "Top and raised-button side poses match; generated wheel and grip microgeometry differ."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Heading, outlined CTA, callout leaders, rails and counter occupy corresponding bands."
+            }
+          ],
+          "score": 96.35000000000001
+        },
+        {
+          "name": "make-your-play",
+          "weight": 0.24,
+          "scores": [
+            97,
+            96,
+            96,
+            94,
+            98
+          ],
+          "reasons": [
+            "600px angled view and right copy preserve the original diagonal composition.",
+            "All-caps section title retained; paragraph wraps differ slightly from the compressed reference.",
+            "Dark gradient and cyan outline retained; generated product highlights are crisper.",
+            "Heel upper right and nose lower left with thumbrest match; grip details are a reconstruction.",
+            "Section ends at y1565 versus reference y580×1440/534; image/text placement tuned in comparison."
+          ],
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 97,
+              "reason": "600px angled view and right copy preserve the original diagonal composition."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "All-caps section title retained; paragraph wraps differ slightly from the compressed reference."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 96,
+              "reason": "Dark gradient and cyan outline retained; generated product highlights are crisper."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 94,
+              "reason": "Heel upper right and nose lower left with thumbrest match; grip details are a reconstruction."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 98,
+              "reason": "Section ends at y1565 versus reference y580×1440/534; image/text placement tuned in comparison."
+            }
+          ],
+          "score": 96.05
+        },
+        {
+          "name": "detail-gallery",
+          "weight": 0.2,
+          "scores": [
+            98,
+            97,
+            95,
+            92,
+            97
+          ],
+          "reasons": [
+            "Five components in original order with dominant centre mouse, arrows and state dots.",
+            "Centred all-caps title matches relative size; glyph weight differs slightly.",
+            "Radial grey stage is close; the reference has stronger image grain.",
+            "All five subject silhouettes and orientations represented; circular assembly and wheel internals are visibly reconstructed.",
+            "Title-to-product and product-to-state-control spacing align; component widths vary by small amounts."
+          ],
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Five components in original order with dominant centre mouse, arrows and state dots."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 97,
+              "reason": "Centred all-caps title matches relative size; glyph weight differs slightly."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 95,
+              "reason": "Radial grey stage is close; the reference has stronger image grain."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 92,
+              "reason": "All five subject silhouettes and orientations represented; circular assembly and wheel internals are visibly reconstructed."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Title-to-product and product-to-state-control spacing align; component widths vary by small amounts."
+            }
+          ],
+          "score": 95.7
+        },
+        {
+          "name": "visible-product-section",
+          "weight": 0.12,
+          "scores": [
+            98,
+            96,
+            97,
+            94,
+            97
+          ],
+          "reasons": [
+            "Section begins at y2185, matching reference y810 after fixed scale; left mouse/right feature rail preserved.",
+            "PRODUCT and first control heading hierarchy match; exact typeface not supplied.",
+            "Lighter charcoal panel and cyan vertical connector match the reference.",
+            "Same top-view silhouette; generated texture is more defined than the small source image.",
+            "First feature marker/heading aligned with reference y954; no text or product cropping."
+          ],
+          "axes": [
+            {
+              "name": "geometry",
+              "weight": 0.25,
+              "score": 98,
+              "reason": "Section begins at y2185, matching reference y810 after fixed scale; left mouse/right feature rail preserved."
+            },
+            {
+              "name": "typography",
+              "weight": 0.2,
+              "score": 96,
+              "reason": "PRODUCT and first control heading hierarchy match; exact typeface not supplied."
+            },
+            {
+              "name": "surfaces",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "Lighter charcoal panel and cyan vertical connector match the reference."
+            },
+            {
+              "name": "imagery",
+              "weight": 0.25,
+              "score": 94,
+              "reason": "Same top-view silhouette; generated texture is more defined than the small source image."
+            },
+            {
+              "name": "spacing",
+              "weight": 0.15,
+              "score": 97,
+              "reason": "First feature marker/heading aligned with reference y954; no text or product cropping."
+            }
+          ],
+          "score": 96.3
+        }
+      ],
+      "score": 96.16999999999999
+    }
+  ],
+  "fidelity": {
+    "method": "weighted regional visual rubric, reviewer judgement",
+    "strictMinimum": 95,
+    "comparisonComplete": true,
+    "score": 96.16999999999999,
+    "status": "PASS",
+    "pixelDiagnostic": {
+      "reference": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\firepower\\reviews\\1.0.0\\reference.png",
+      "actual": "D:\\3. Dự án\\2A\\web\\product\\giao-dien-web\\firepower\\reviews\\1.0.0\\comparison-actual.png",
+      "size": [
+        534,
+        1028
+      ],
+      "referenceCrop": null,
+      "alphaBackground": "white",
+      "meanAbsoluteRgbError": 12.244423313270863,
+      "pixelMatchPercent": 77.3005654410586,
+      "tolerance": 16,
+      "gate": "NOT ASSESSED",
+      "fidelityRubric": "NOT SCORED",
+      "note": "Pixel diagnostics only. Apply weighted regional rubric and motion/scroll/video checks separately."
+    },
+    "limitations": [
+      "Generated product microgeometry differs from original official product photography.",
+      "System wordmark and social glyphs are reconstructed.",
+      "No mobile screenshot reference was supplied; mobile compared for usability only."
+    ]
+  },
+  "animation": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: all 4 browsers actual midframes, both wraps, rapid input, keyboard/swipe, session pause/reload, CSS-disabled RAF fallback",
+      "evidence/*-motion-mid.png"
+    ]
+  },
+  "scroll": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: real scroll-triggered midframes, settled state, reverse and responsive views; no idle RAF"
+    ]
+  },
+  "videoCoverage": {
+    "status": "N/A",
+    "reason": "Still screenshot input, no reference video"
+  },
+  "technical": {
+    "status": "PASS",
+    "evidence": [
+      "source-checks.json: 4 engines/executables, 4 sizes plus breakpoint, axe, no JS, offline file, missing images, network/console",
+      "supplement.json: contrast ratios, equivalent 200% layout, menu resize, anchors and local artwork",
+      "CUSTOMISE.md: 10 steps, 12 complete prompts, counted edit map",
+      "external-links.json: Chromium/Firefox external target/new-tab behavior"
+    ]
+  },
+  "blockers": [],
+  "gate": "PASS",
+  "releaseVerification": {
+    "officialCheckerRaw": "checks.json",
+    "rawFailures": 2,
+    "reconciliation": "Only external HTTPS links are set to null and rejected without requests by the generic checker. Actual target, label, noopener and new-tab behavior pass in external-links.json; remote platform authenticated availability not claimed."
+  }
+}

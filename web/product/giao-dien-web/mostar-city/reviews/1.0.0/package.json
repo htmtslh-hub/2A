@@ -1,0 +1,12 @@
+{
+  "slug": "mostar-city",
+  "zip": "web\\product\\giao-dien-web\\mostar-city\\mostar-city.zip",
+  "bytes": 9514,
+  "sha256": "39281534f7eb6efae00db3690f84b414bc920c41fb4a7397bfb32903011bdaf5",
+  "files": [
+    "index.html",
+    "script.js",
+    "styles.css"
+  ],
+  "byteVerified": true
+}

@@ -1,0 +1,20 @@
+FORGE ZONE COMMERCIAL WEBSITE TEMPLATE LICENCE
+Product: ATRIUM MTL (atrium-mtl)
+Version: 1.0.0
+
+1. GRANT OF LICENCE
+This licence grants the purchaser a non-exclusive, worldwide, perpetual right to use, modify, and publish the ATRIUM MTL website template ("the Template") for:
+- One (1) personal or commercial business website owned by the purchaser, OR
+- One (1) client website delivered as part of a bespoke web design or development engagement.
+
+2. PERMITTED MODIFICATIONS
+You may freely edit the HTML, CSS, JavaScript, colour palette, typography, layout, copy, and imagery to suit your museum, gallery, architectural studio, exhibition, or publication.
+
+3. RESTRICTIONS
+You may NOT:
+- Resell, redistribute, sublicense, share, or publish the unmodified or modified Template source files as a downloadable template, theme, starter kit, or UI kit on any marketplace or repository.
+- Extract the bundled photography or font files for standalone resale.
+- Claim trademark rights over demo brand names ("ATRIUM MTL"), sample phone numbers, or illustrative retrospective copy.
+
+4. DISCLAIMER OF WARRANTY
+The Template is provided "AS IS" without warranty of any kind. It is a static front-end showcase and does not include a live ticketing backend, search engine, or payment processor. The publisher is responsible for verifying all public exhibition dates, ticket links, and contact details before launch.

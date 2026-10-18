@@ -1,0 +1,66 @@
+{
+  "origin": "https://forgezone.store",
+  "deployment": "https://web-b7lc9228k-htmtslh-hubs-projects.vercel.app",
+  "checks": [
+    {
+      "id": "t54",
+      "slug": "spaceedu",
+      "name": "SpaceEdu",
+      "detailStatus": 200,
+      "catalogPresent": true,
+      "demoStatus": 200,
+      "demoBytesMatch": true,
+      "unauthenticatedDownload": 401
+    },
+    {
+      "id": "t55",
+      "slug": "mostar-city",
+      "name": "Mostar City",
+      "detailStatus": 200,
+      "catalogPresent": true,
+      "demoStatus": 200,
+      "demoBytesMatch": true,
+      "unauthenticatedDownload": 401
+    },
+    {
+      "id": "t56",
+      "slug": "fennec",
+      "name": "FENNEC",
+      "detailStatus": 200,
+      "catalogPresent": true,
+      "demoStatus": 200,
+      "demoBytesMatch": true,
+      "unauthenticatedDownload": 401
+    },
+    {
+      "id": "t57",
+      "slug": "riverine-ai",
+      "name": "riverine.ai",
+      "detailStatus": 200,
+      "catalogPresent": true,
+      "demoStatus": 200,
+      "demoBytesMatch": true,
+      "unauthenticatedDownload": 401
+    },
+    {
+      "id": "t58",
+      "slug": "freight-axis",
+      "name": "Freight Axis",
+      "detailStatus": 200,
+      "catalogPresent": true,
+      "demoStatus": 200,
+      "demoBytesMatch": true,
+      "unauthenticatedDownload": 401
+    },
+    {
+      "id": "t59",
+      "slug": "meridian",
+      "name": "Meridian",
+      "detailStatus": 200,
+      "catalogPresent": true,
+      "demoStatus": 200,
+      "demoBytesMatch": true,
+      "unauthenticatedDownload": 401
+    }
+  ]
+}

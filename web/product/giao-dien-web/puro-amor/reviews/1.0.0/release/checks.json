@@ -1,0 +1,1228 @@
+{
+  "slug": "puro-amor",
+  "version": "1.0.0",
+  "date": "2026-10-16T13:16:57.118Z",
+  "os": "win32",
+  "zipBytes": 1257911,
+  "sha256": "e86b9713ab20c9e4ba29400b8b88912db5f830ee5bf4764fc9af6cced76acb55",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "pt-BR",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Pular para o conteúdo",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#main"
+          },
+          {
+            "label": "Starbucks — início",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#home"
+          },
+          {
+            "label": "Café",
+            "href": "#cafe",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cafe"
+          },
+          {
+            "label": "Cardápio",
+            "href": "#cardapio",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cardapio"
+          },
+          {
+            "label": "Card",
+            "href": "#card",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#card"
+          },
+          {
+            "label": "Sobre",
+            "href": "#sobre",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#sobre"
+          },
+          {
+            "label": "Busque por bebidas, lojas, promoções...",
+            "href": "#cardapio",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cardapio"
+          },
+          {
+            "label": "Conheça o Card — perfil ilustrativo",
+            "href": "#card",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#card"
+          },
+          {
+            "label": "Descubra mais",
+            "href": "#cafe",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cafe"
+          },
+          {
+            "label": "Starbucks no Facebook",
+            "href": "https://www.facebook.com/Starbucks/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.facebook.com/Starbucks/"
+          },
+          {
+            "label": "Starbucks no Instagram",
+            "href": "https://www.instagram.com/starbucks/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.instagram.com/starbucks/"
+          },
+          {
+            "label": "Conheça a nossa história",
+            "href": "#sobre",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#sobre"
+          },
+          {
+            "label": "Descubra o café",
+            "href": "#cafe",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cafe"
+          },
+          {
+            "label": "Encontre o seu favorito ↗",
+            "href": "#cardapio",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cardapio"
+          },
+          {
+            "label": "Saiba mais sobre este estilo ↗",
+            "href": "#contato",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#contato"
+          },
+          {
+            "label": "Saiba mais sobre este estilo ↗",
+            "href": "#contato",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#contato"
+          },
+          {
+            "label": "Saiba mais sobre este estilo ↗",
+            "href": "#contato",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#contato"
+          },
+          {
+            "label": "Vamos conversar ↗",
+            "href": "#contato",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#contato"
+          },
+          {
+            "label": "STARBUCKS®",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#home"
+          },
+          {
+            "label": "hello@example.com ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Voltar ao início ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 820,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Pular para o conteúdo",
+            "colour": "rgb(8, 11, 9)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 19.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "STARBUCKS®",
+            "colour": "rgb(8, 11, 9)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 19.77,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Busque por bebidas, lojas, promoções...",
+            "colour": "rgb(195, 215, 211)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 1.5,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": false
+          },
+          {
+            "element": "SPAN",
+            "text": "Bem-vindo,Roberto Mota",
+            "colour": "rgb(212, 228, 222)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 1.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": false
+          },
+          {
+            "element": "STRONG",
+            "text": "Roberto Mota",
+            "colour": "rgb(161, 217, 200)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 1.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": false
+          },
+          {
+            "element": "P",
+            "text": "Nós já conhecemos seu amor pelo café.Ago",
+            "colour": "rgb(92, 99, 94)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 6.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button--gradient",
+            "text": "Descubra mais",
+            "colour": "rgb(0, 53, 43)",
+            "background": [
+              36,
+              184,
+              132
+            ],
+            "ratio": 5.35,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Veja o vídeo-manifesto",
+            "colour": "rgb(37, 44, 38)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 14.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "←",
+            "colour": "rgb(0, 72, 62)",
+            "background": [
+              234,
+              243,
+              238
+            ],
+            "ratio": 9.3,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "Encontre o seu favorito ↗",
+            "colour": "rgb(0, 117, 74)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 5.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Qual é o seupróximo favorito?",
+            "colour": "rgb(8, 11, 9)",
+            "background": [
+              240,
+              244,
+              238
+            ],
+            "ratio": 17.78,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Explore estilos de café. Uma seleção ilu",
+            "colour": "rgb(92, 99, 94)",
+            "background": [
+              240,
+              244,
+              238
+            ],
+            "ratio": 5.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "drink-list__number",
+            "text": "01",
+            "colour": "rgb(0, 99, 61)",
+            "background": [
+              240,
+              244,
+              238
+            ],
+            "ratio": 6.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Saiba mais sobre este estilo ↗",
+            "colour": "rgb(0, 117, 74)",
+            "background": [
+              240,
+              244,
+              238
+            ],
+            "ratio": 5.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "STARBUCKS",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              25,
+              129,
+              73
+            ],
+            "ratio": 4.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Um cartão. Muitos momentos.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              6,
+              111,
+              64
+            ],
+            "ratio": 6.26,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Leve o seu amorpelo café com você.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              0,
+              61,
+              50
+            ],
+            "ratio": 12.26,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Um espaço para apresentar o seu programa",
+            "colour": "rgb(210, 230, 215)",
+            "background": [
+              0,
+              61,
+              50
+            ],
+            "ratio": 9.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "Vamos conversar ↗",
+            "colour": "rgb(195, 232, 203)",
+            "background": [
+              0,
+              61,
+              50
+            ],
+            "ratio": 9.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Café aproxima.Uma pausa também.",
+            "colour": "rgb(8, 11, 9)",
+            "background": [
+              250,
+              248,
+              241
+            ],
+            "ratio": 18.61,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Este projeto visual explora o carinho pe",
+            "colour": "rgb(92, 99, 94)",
+            "background": [
+              250,
+              248,
+              241
+            ],
+            "ratio": 5.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link manifesto-open",
+            "text": "Leia o manifesto ↗",
+            "colour": "rgb(0, 117, 74)",
+            "background": [
+              250,
+              248,
+              241
+            ],
+            "ratio": 5.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Descubra mais",
+          "colour": "rgb(183, 90, 32)",
+          "width": "3px",
+          "ratio": 4.67
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "pt-BR",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Pular para o conteúdo",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#main"
+          },
+          {
+            "label": "Starbucks — início",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#home"
+          },
+          {
+            "label": "Café",
+            "href": "#cafe",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cafe"
+          },
+          {
+            "label": "Cardápio",
+            "href": "#cardapio",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cardapio"
+          },
+          {
+            "label": "Card",
+            "href": "#card",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#card"
+          },
+          {
+            "label": "Sobre",
+            "href": "#sobre",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#sobre"
+          },
+          {
+            "label": "Busque por bebidas, lojas, promoções...",
+            "href": "#cardapio",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cardapio"
+          },
+          {
+            "label": "Conheça o Card — perfil ilustrativo",
+            "href": "#card",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#card"
+          },
+          {
+            "label": "Descubra mais",
+            "href": "#cafe",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cafe"
+          },
+          {
+            "label": "Starbucks no Facebook",
+            "href": "https://www.facebook.com/Starbucks/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.facebook.com/Starbucks/"
+          },
+          {
+            "label": "Starbucks no Instagram",
+            "href": "https://www.instagram.com/starbucks/",
+            "ok": null,
+            "sameOrigin": false,
+            "url": "https://www.instagram.com/starbucks/"
+          },
+          {
+            "label": "Conheça a nossa história",
+            "href": "#sobre",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#sobre"
+          },
+          {
+            "label": "Descubra o café",
+            "href": "#cafe",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cafe"
+          },
+          {
+            "label": "Encontre o seu favorito ↗",
+            "href": "#cardapio",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#cardapio"
+          },
+          {
+            "label": "Saiba mais sobre este estilo ↗",
+            "href": "#contato",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#contato"
+          },
+          {
+            "label": "Saiba mais sobre este estilo ↗",
+            "href": "#contato",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#contato"
+          },
+          {
+            "label": "Saiba mais sobre este estilo ↗",
+            "href": "#contato",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#contato"
+          },
+          {
+            "label": "Vamos conversar ↗",
+            "href": "#contato",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#contato"
+          },
+          {
+            "label": "STARBUCKS®",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#home"
+          },
+          {
+            "label": "hello@example.com ↗",
+            "href": "mailto:hello@example.com",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:hello@example.com"
+          },
+          {
+            "label": "Voltar ao início ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4332/puro-amor/index.html#home"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 820,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Pular para o conteúdo",
+            "colour": "rgb(8, 11, 9)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 19.77,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "STARBUCKS®",
+            "colour": "rgb(8, 11, 9)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 19.77,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Busque por bebidas, lojas, promoções...",
+            "colour": "rgb(195, 215, 211)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 1.5,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": false
+          },
+          {
+            "element": "SPAN",
+            "text": "Bem-vindo,Roberto Mota",
+            "colour": "rgb(212, 228, 222)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 1.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": false
+          },
+          {
+            "element": "STRONG",
+            "text": "Roberto Mota",
+            "colour": "rgb(161, 217, 200)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 1.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": false
+          },
+          {
+            "element": "P",
+            "text": "Nós já conhecemos seu amor pelo café.Ago",
+            "colour": "rgb(92, 99, 94)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 6.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "button button--gradient",
+            "text": "Descubra mais",
+            "colour": "rgb(0, 53, 43)",
+            "background": [
+              36,
+              184,
+              132
+            ],
+            "ratio": 5.35,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Veja o vídeo-manifesto",
+            "colour": "rgb(37, 44, 38)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 14.32,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "←",
+            "colour": "rgb(0, 72, 62)",
+            "background": [
+              234,
+              243,
+              238
+            ],
+            "ratio": 9.3,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "Encontre o seu favorito ↗",
+            "colour": "rgb(0, 117, 74)",
+            "background": [
+              255,
+              255,
+              255
+            ],
+            "ratio": 5.76,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Qual é o seupróximo favorito?",
+            "colour": "rgb(8, 11, 9)",
+            "background": [
+              240,
+              244,
+              238
+            ],
+            "ratio": 17.78,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Explore estilos de café. Uma seleção ilu",
+            "colour": "rgb(92, 99, 94)",
+            "background": [
+              240,
+              244,
+              238
+            ],
+            "ratio": 5.55,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "drink-list__number",
+            "text": "01",
+            "colour": "rgb(0, 99, 61)",
+            "background": [
+              240,
+              244,
+              238
+            ],
+            "ratio": 6.62,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Saiba mais sobre este estilo ↗",
+            "colour": "rgb(0, 117, 74)",
+            "background": [
+              240,
+              244,
+              238
+            ],
+            "ratio": 5.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "STARBUCKS",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              25,
+              129,
+              73
+            ],
+            "ratio": 4.91,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Um cartão. Muitos momentos.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              6,
+              111,
+              64
+            ],
+            "ratio": 6.26,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Leve o seu amorpelo café com você.",
+            "colour": "rgb(255, 255, 255)",
+            "background": [
+              0,
+              61,
+              50
+            ],
+            "ratio": 12.26,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Um espaço para apresentar o seu programa",
+            "colour": "rgb(210, 230, 215)",
+            "background": [
+              0,
+              61,
+              50
+            ],
+            "ratio": 9.36,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link",
+            "text": "Vamos conversar ↗",
+            "colour": "rgb(195, 232, 203)",
+            "background": [
+              0,
+              61,
+              50
+            ],
+            "ratio": 9.18,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "H2",
+            "text": "Café aproxima.Uma pausa também.",
+            "colour": "rgb(8, 11, 9)",
+            "background": [
+              250,
+              248,
+              241
+            ],
+            "ratio": 18.61,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "P",
+            "text": "Este projeto visual explora o carinho pe",
+            "colour": "rgb(92, 99, 94)",
+            "background": [
+              250,
+              248,
+              241
+            ],
+            "ratio": 5.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "text-link manifesto-open",
+            "text": "Leia o manifesto ↗",
+            "colour": "rgb(0, 117, 74)",
+            "background": [
+              250,
+              248,
+              241
+            ],
+            "ratio": 5.42,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "Descubra mais",
+          "colour": "rgb(183, 90, 32)",
+          "width": "3px",
+          "ratio": 4.67
+        },
+        "overImageNeedsManualCheck": []
+      },
+      "hover": [
+        {
+          "selector": ".button",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "puro-amor/assets/css/style.css",
+    "puro-amor/assets/img/coffee-splash-transparent.png",
+    "puro-amor/assets/js/main.js",
+    "puro-amor/CUSTOMISE.md",
+    "puro-amor/index.html",
+    "puro-amor/LICENCE.txt",
+    "puro-amor/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/coffee-splash-transparent.png",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": [
+    "Q03/chromium: link hỏng/không tên [\"Starbucks no Facebook -> https://www.facebook.com/Starbucks/\",\"Starbucks no Instagram -> https://www.instagram.com/starbucks/\"]",
+    "Q06/chromium: tương phản thấp [{\"element\":\"SPAN\",\"text\":\"Busque por bebidas, lojas, promoções...\",\"colour\":\"rgb(195, 215, 211)\",\"background\":[255,255,255],\"ratio\":1.5,\"threshold\":4.5,\"overImage\":false,\"method\":\"css\",\"pass\":false},{\"element\":\"SPAN\",\"text\":\"Bem-vindo,Roberto Mota\",\"colour\":\"rgb(212, 228, 222)\",\"background\":[255,255,255],\"ratio\":1.32,\"threshold\":4.5,\"overImage\":false,\"method\":\"css\",\"pass\":false},{\"element\":\"STRONG\",\"text\":\"Roberto Mota\",\"colour\":\"rgb(161, 217, 200)\",\"background\":[255,255,255],\"ratio\":1.58,\"threshold\":4.5,\"overImage\":false,\"method\":\"css\",\"pass\":false}]",
+    "Q03/firefox: link hỏng/không tên [\"Starbucks no Facebook -> https://www.facebook.com/Starbucks/\",\"Starbucks no Instagram -> https://www.instagram.com/starbucks/\"]",
+    "Q06/firefox: tương phản thấp [{\"element\":\"SPAN\",\"text\":\"Busque por bebidas, lojas, promoções...\",\"colour\":\"rgb(195, 215, 211)\",\"background\":[255,255,255],\"ratio\":1.5,\"threshold\":4.5,\"overImage\":false,\"method\":\"css\",\"pass\":false},{\"element\":\"SPAN\",\"text\":\"Bem-vindo,Roberto Mota\",\"colour\":\"rgb(212, 228, 222)\",\"background\":[255,255,255],\"ratio\":1.32,\"threshold\":4.5,\"overImage\":false,\"method\":\"css\",\"pass\":false},{\"element\":\"STRONG\",\"text\":\"Roberto Mota\",\"colour\":\"rgb(161, 217, 200)\",\"background\":[255,255,255],\"ratio\":1.58,\"threshold\":4.5,\"overImage\":false,\"method\":\"css\",\"pass\":false}]"
+  ]
+}

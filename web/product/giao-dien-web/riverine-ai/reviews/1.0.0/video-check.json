@@ -1,0 +1,20 @@
+{
+  "browser": "153.0.8010.12",
+  "samples": [
+    {
+      "time": 0.085799,
+      "ready": 4,
+      "paused": false
+    },
+    {
+      "time": 0.927537,
+      "ready": 4,
+      "paused": false
+    }
+  ],
+  "clean": {
+    "classes": "",
+    "inline": 0,
+    "animations": 0
+  }
+}

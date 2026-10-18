@@ -1,0 +1,295 @@
+{
+  "date": "2026-10-16T01:04:25.767Z",
+  "url": "http://127.0.0.1:4409",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "small": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "transform": "matrix(1, 0, 0, 1, 27.7838, 0)",
+          "opacity": 0.62955
+        },
+        "paused": true,
+        "cssDisabled": true
+      },
+      "skip": true,
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.61792,
+        "transform": "matrix(1, 0, 0, 1, 16.2384, 0)"
+      },
+      "idleFrames": 0,
+      "axe": [],
+      "errors": [],
+      "missing": [],
+      "nojs": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "h1": 1,
+        "href": "mailto:hello@firepower.example?subject=Gaming%20mouse%20enquiry"
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "small": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "transform": "matrix(1, 0, 0, 1, 30.1345, 0)",
+          "opacity": 0.598207
+        },
+        "paused": true,
+        "cssDisabled": true
+      },
+      "skip": true,
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.595879,
+        "transform": "matrix(1, 0, 0, 1, 17.1751, 0)"
+      },
+      "idleFrames": 0,
+      "axe": [],
+      "errors": [],
+      "missing": [],
+      "nojs": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "h1": 1,
+        "href": "mailto:hello@firepower.example?subject=Gaming%20mouse%20enquiry"
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.60",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "small": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "transform": "matrix(1, 0, 0, 1, 28.0749, 0)",
+          "opacity": 0.625669
+        },
+        "paused": true,
+        "cssDisabled": true
+      },
+      "skip": true,
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.618937,
+        "transform": "matrix(1, 0, 0, 1, 16.1952, 0)"
+      },
+      "idleFrames": 0,
+      "axe": [],
+      "errors": [],
+      "missing": [],
+      "nojs": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "h1": 1,
+        "href": "mailto:hello@firepower.example?subject=Gaming%20mouse%20enquiry"
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "sizes": [
+        {
+          "width": 1440,
+          "height": 900,
+          "sw": 1440,
+          "cw": 1440,
+          "small": []
+        },
+        {
+          "width": 820,
+          "height": 1180,
+          "sw": 820,
+          "cw": 820,
+          "small": []
+        },
+        {
+          "width": 375,
+          "height": 812,
+          "sw": 375,
+          "cw": 375,
+          "small": []
+        },
+        {
+          "width": 320,
+          "height": 740,
+          "sw": 320,
+          "cw": 320,
+          "small": []
+        },
+        {
+          "width": 950,
+          "height": 900,
+          "sw": 950,
+          "cw": 950,
+          "small": []
+        },
+        {
+          "width": 951,
+          "height": 900,
+          "sw": 951,
+          "cw": 951,
+          "small": []
+        }
+      ],
+      "motion": {
+        "middle": {
+          "transform": "matrix(1, 0, 0, 1, 28.6208, 0)",
+          "opacity": 0.618389
+        },
+        "paused": true,
+        "cssDisabled": true
+      },
+      "skip": true,
+      "scroll": {
+        "revealed": "true",
+        "opacity": 0.607438,
+        "transform": "matrix(1, 0, 0, 1, 16.6839, 0)"
+      },
+      "idleFrames": 0,
+      "axe": [],
+      "errors": [],
+      "missing": [],
+      "nojs": {
+        "sw": 320,
+        "cw": 320,
+        "nav": "flex",
+        "h1": 1,
+        "href": "mailto:hello@firepower.example?subject=Gaming%20mouse%20enquiry"
+      }
+    }
+  },
+  "failures": []
+}

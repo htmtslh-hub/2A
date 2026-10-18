@@ -1,0 +1,139 @@
+{
+  "origin": "http://127.0.0.1:4398",
+  "date": "2026-10-15T12:23:25.836Z",
+  "assets": [
+    {
+      "file": "index.html",
+      "bytes": 12894,
+      "sha256": "dd31cb0d9e2ff71969f89fdb0ccb00043a5fcfccfc5ef90d0531f9bd96ede23c"
+    },
+    {
+      "file": "assets/css/style.css",
+      "bytes": 23824,
+      "sha256": "3dcd68f10008cd9ede485e93faccd5bc65f4b20c5b2cfa14c32f191a0983b88c"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 15067,
+      "sha256": "fd9d4591cdcfb2c2270018675d27faf2f250f875a33ed1d375cba4b7b2031103"
+    },
+    {
+      "file": "assets/img/bike-black.webp",
+      "bytes": 369056,
+      "sha256": "30932fcf4f185e4df6609659dce52ea679d8bc8d16f751be70ac69eaaa0d19ee"
+    },
+    {
+      "file": "assets/img/bike-green.webp",
+      "bytes": 332478,
+      "sha256": "ee85aeb029680fc08dd6685928ff70d284db268fa0c66c9f93dd3ed9f913e222"
+    },
+    {
+      "file": "assets/img/bike-chalk.webp",
+      "bytes": 325770,
+      "sha256": "cdd1c87ca6412dd13ef55124f73139d2a34f8666bbd9c8c1cb852f2407ec305d"
+    },
+    {
+      "file": "aerosix.mp4",
+      "bytes": 555456,
+      "sha256": "e06b2ed562351e9d31e1e6d862511801f3a1f554b04760a7b0667d12a90077b2"
+    },
+    {
+      "file": "aerosix.webp",
+      "bytes": 20150,
+      "sha256": "2a0f660c6fa24747b38a268db7c579d610c29f861878fc51dd9103d180847253"
+    }
+  ],
+  "locales": [
+    {
+      "locale": "vi-VN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "vi-VN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "en-US",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 1440,
+      "detail": true,
+      "guide": true,
+      "library": true
+    },
+    {
+      "locale": "zh-CN",
+      "width": 375,
+      "detail": true,
+      "guide": true,
+      "library": true
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "status": {
+        "paused": false,
+        "time": 2.228351,
+        "muted": true,
+        "src": "http://127.0.0.1:4398/previews/aerosix.mp4?v=e06b2ed56235"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "status": {
+        "paused": false,
+        "time": 2.166666,
+        "muted": true,
+        "src": "http://127.0.0.1:4398/previews/aerosix.mp4?v=e06b2ed56235"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "edge",
+      "version": "155.0.4283.45",
+      "status": {
+        "paused": false,
+        "time": 1.762813,
+        "muted": true,
+        "src": "http://127.0.0.1:4398/previews/aerosix.mp4?v=e06b2ed56235"
+      },
+      "offscreenPaused": true
+    },
+    {
+      "name": "coccoc",
+      "version": "152.0.7977.124",
+      "status": {
+        "paused": false,
+        "time": 1.900579,
+        "muted": true,
+        "src": "http://127.0.0.1:4398/previews/aerosix.mp4?v=e06b2ed56235"
+      },
+      "offscreenPaused": true
+    }
+  ],
+  "anonymous": 401,
+  "directZip": 404,
+  "existingFree": "t22/t1 exact ZIP, anonymous200"
+}

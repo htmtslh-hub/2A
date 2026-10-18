@@ -1,0 +1,48 @@
+{
+  "id": "t41",
+  "slug": "beetbuh",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-16T07:27:02.337Z",
+  "demo": "/demos/beetbuh/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "061521e82290",
+  "sha256": "061521e822902450983abafe6d92ff99880cf67ee4677ca7bd187ff2c747a94c",
+  "demoHtmlSha256": "2d172a39f11cd950a84fdb52532a8cd3f0ae20dd85bbb8e1ded22482bce95472",
+  "demoSha256": "c4fe020f60ce29e61c001fa4ea112b80666278af6f2a3e5a0cdc393ca53c34a7",
+  "bytes": 609921,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.554,
+      "action": "click",
+      "selector": "<button type=\"button\" data-step=\"1\" data-next=\"\" aria-label=\"Next headphone view\">→</button>"
+    },
+    {
+      "seconds": 4.853,
+      "action": "click",
+      "selector": "<button type=\"button\" data-step=\"1\" data-next=\"\" aria-label=\"Next headphone view\">→</button>"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\beetbuh-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\beetbuh-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\beetbuh-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\beetbuh-return.jpg"
+  ]
+}

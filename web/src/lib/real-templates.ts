@@ -36,6 +36,7 @@ export interface RealTemplate {
   previewOnly?: boolean;
   badge?: string;
   group?: 'web' | 'skill-prompt' | 'agent';
+  access?: 'free';
   /** Video quay từ chính mẫu giao, chỉ dùng tại cửa hàng. */
   video?: boolean;
   /** Revision for refreshing public demo and preview assets. */
@@ -45,6 +46,2119 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t62: {
+    slug: 'monoframe',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    specs: {
+      vi: [
+        ['Format', 'React 18 · TypeScript · Vite · Tailwind CSS'],
+        ['Version', '1.0.0'],
+        ['Assets', 'Bundled H.264 + remote media/fonts'],
+        ['Scope', 'Hero creative agency toàn màn hình với video 3D tua theo chuyển động chuột ngang (SENSITIVITY = 0.8, hàng đợi onSeeked), nhãn giới thiệu A.R.I.A làm mờ, thông điệp gõ chữ useTypewriter kèm con trỏ nhấp nháy, nhóm 5 nút pill (kèm copy email hello@monoframe.co) và menu mobile. Kèm cả mã nguồn React và bản dựng sẵn built/.'],
+      ],
+      en: [
+        ['Format', 'React 18 · TypeScript · Vite · Tailwind CSS'],
+        ['Version', '1.0.0'],
+        ['Assets', 'Bundled H.264 + remote media/fonts'],
+        ['Scope', 'A full-screen creative agency hero with horizontal mouse-scrubbed 3D video (SENSITIVITY = 0.8 with queued onSeeked seeks), blurred A.R.I.A intro label, custom useTypewriter prompt with blinking cursor, 5 action pill buttons (including clipboard email copy for hello@monoframe.co) and mobile menu overlay. Includes editable React source and prebuilt built/ output.'],
+      ],
+      zh: [
+        ['Format', 'React 18 · TypeScript · Vite · Tailwind CSS'],
+        ['Version', '1.0.0'],
+        ['Assets', 'Bundled H.264 + remote media/fonts'],
+        ['Scope', '全屏创意机构首屏，支持随水平鼠标移动逐帧拖拽的 3D 视频背景（SENSITIVITY = 0.8，含 onSeeked 队列防抖）、A.R.I.A 模糊引导语、带闪烁光标的 useTypewriter 打字机文案、5 个胶囊操作按钮（含一键复制 hello@monoframe.co）及移动端全屏菜单。同时附带可编辑 React 源码与 built/ 预构建版本。'],
+      ],
+    },
+    copy: {
+      vi: {
+        name: 'Monoframe',
+        desc: 'Hero creative agency toàn màn hình dựng bằng React, TypeScript, Vite và Tailwind CSS: video nhân vật 3D tua mượt theo chuột ngang, dòng giới thiệu A.R.I.A làm mờ, hiệu ứng gõ chữ useTypewriter kèm con trỏ nhấp nháy và 5 nút pill tương tác (copy nhanh hello@monoframe.co). Gói ZIP kèm cả mã nguồn và bản dựng sẵn built/.',
+        tags: ['React + TypeScript', 'Mouse-Scrub Video', 'Creative Agency'],
+      },
+      en: {
+        name: 'Monoframe',
+        desc: 'A full-screen creative agency hero built with React, TypeScript, Vite and Tailwind CSS featuring a horizontal mouse-scrubbed 3D character video, blurred A.R.I.A intro label, custom useTypewriter effect with blinking cursor, and 5 interactive action pills with one-click email copy. ZIP includes both editable source and prebuilt built/ files.',
+        tags: ['React + TypeScript', 'Mouse-Scrub Video', 'Creative Agency'],
+      },
+      zh: {
+        name: 'Monoframe',
+        desc: '基于 React、TypeScript、Vite 与 Tailwind CSS 构建的全屏创意机构首屏：支持鼠标横向拖拽控制 3D 角色视频进度、A.R.I.A 模糊引导标签、带闪烁光标的 useTypewriter 打字机动效及 5 个交互胶囊按钮（含一键复制邮箱）。ZIP 内含可编辑源码与 built/ 预构建静态文件。',
+        tags: ['React + TypeScript', '鼠标拖拽视频', '创意机构'],
+      },
+    },
+  },
+  t61: {
+    slug: 'solaris-gate',
+    cat: 'education',
+    version: '1.0.0',
+    video: true,
+    specs: {
+      vi: [
+        ['Format', 'HTML/CSS/JS · no build'],
+        ['Version', '1.0.0'],
+        ['Assets', 'Remote media (CloudFront)'],
+        ['Scope', 'Landing page cổng không gian 3D một khung nhìn với chuỗi preloader đếm 0–100%, logo thu về góc trái, cổng vòm 3D nghiêng theo chuột trên canvas 2D và hành trình chuyển qua Mars → Earth → Venus kèm bảng 4 thông số thiên văn. Một file HTML tự chứa; tài nguyên video/ảnh tải qua mạng, các liên kết header là demo.'],
+      ],
+      en: [
+        ['Format', 'HTML/CSS/JS · no build'],
+        ['Version', '1.0.0'],
+        ['Assets', 'Remote media (CloudFront)'],
+        ['Scope', 'A single-viewport 3D space portal landing experience featuring a 0–100% video preloader, docking SVG mark, pointer-tilted 3D rounded portal rendered on 2D canvas, and an interactive Mars → Earth → Venus travel chain with four planetary fact rows. Single self-contained HTML; media loads over the network and header links are demo placeholders.'],
+      ],
+      zh: [
+        ['Format', 'HTML/CSS/JS · no build'],
+        ['Version', '1.0.0'],
+        ['Assets', 'Remote media (CloudFront)'],
+        ['Scope', '单屏 3D 太空传送门着陆页，配备 0–100% 视频预加载、归位 SVG 标志、基于 2D Canvas 透视投影的鼠标倾斜 3D 圆角传送门，以及 Mars → Earth → Venus 星际切换与四行天文参数。单文件自包含 HTML；媒体素材需联网加载，顶部导航为演示入口。'],
+      ],
+    },
+    copy: {
+      vi: {
+        name: 'Solaris Gate',
+        desc: 'Trải nghiệm cổng không gian 3D một khung nhìn với preloader đếm 0–100%, cổng vòm 3D nghiêng theo chuột trên canvas, con trỏ quỹ đạo tùy chỉnh và hành trình du hành Mars → Earth → Venus kèm bảng thông số hành tinh. Một HTML tự chứa; tài nguyên video/ảnh tải qua mạng.',
+        tags: ['Cổng không gian 3D', 'Canvas Portal', 'Hành trình hành tinh'],
+      },
+      en: {
+        name: 'Solaris Gate',
+        desc: 'A full-viewport 3D space portal experience with a 0–100% video preloader, pointer-tilted 3D canvas portal, custom orbital cursor, and interactive Mars → Earth → Venus planetary travel with four-row fact tables. Single self-contained HTML; remote media assets.',
+        tags: ['3D Space Portal', 'Canvas Portal', 'Planetary Journey'],
+      },
+      zh: {
+        name: 'Solaris Gate',
+        desc: '全屏 3D 太空传送门互动体验，含 0–100% 视频预加载、随鼠标倾斜的 3D Canvas 传送门、自定义轨道光标及 Mars → Earth → Venus 星际穿越与行星参数表。单文件 HTML；远程媒体素材。',
+        tags: ['3D 太空传送门', 'Canvas 透视', '星际探索'],
+      },
+    },
+  },
+  t60: {
+  "slug": "jack-3d",
+  "cat": "portfolio",
+  "version": "1.0.0",
+  "video": true,
+  "copy": {
+    "vi": {
+      "name": "Jack — 3D Creator",
+      "desc": "Portfolio 3D nền tối với chân dung magnetic, hai hàng GIF chuyển động theo cuộn, giới thiệu hiện từng ký tự, năm dịch vụ và ba project card xếp chồng. React + TypeScript, cần Node.js và build. Contact/Live Project mở hộp demo; chưa nối email hay website thật. Tài nguyên tải qua mạng; một GIF Celestia nguồn bị 404 có ô thay thế.",
+      "tags": [
+        "React + TypeScript",
+        "Framer Motion",
+        "3D Portfolio"
+      ]
+    },
+    "en": {
+      "name": "Jack — 3D Creator",
+      "desc": "A dark 3D creator portfolio with a magnetic portrait, two scroll-driven GIF rows, character-reveal biography, five services and three stacking project cards. React + TypeScript; Node.js and a build required. Contact/Live Project open demo dialogs, with no real email or project destinations. Media requires internet; one unavailable Celestia GIF has a fallback tile.",
+      "tags": [
+        "React + TypeScript",
+        "Framer Motion",
+        "3D Portfolio"
+      ]
+    },
+    "zh": {
+      "name": "Jack — 3D Creator",
+      "desc": "深色3D创作者作品集，包含磁吸人像、双行滚动GIF、逐字显现介绍、五项服务及三张叠放项目卡。React + TypeScript，需要Node.js和构建。Contact/Live Project仅打开演示弹窗，未连接真实邮箱或项目地址。素材需联网；一个Celestia GIF源返回404，显示替代状态。",
+      "tags": [
+        "React + TypeScript",
+        "Framer Motion",
+        "3D Portfolio"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Format",
+        "React 18 · TypeScript · Vite"
+      ],
+      [
+        "Version",
+        "1.0.0"
+      ],
+      [
+        "Dependencies",
+        "Tailwind CSS · Framer Motion · Lucide"
+      ],
+      [
+        "Setup",
+        "Node.js · npm ci · npm run build"
+      ],
+      [
+        "Scope",
+        "Portfolio 3D nền tối với chân dung magnetic, hai hàng GIF chuyển động theo cuộn, giới thiệu hiện từng ký tự, năm dịch vụ và ba project card xếp chồng. React + TypeScript, cần Node.js và build. Contact/Live Project mở hộp demo; chưa nối email hay website thật. Tài nguyên tải qua mạng; một GIF Celestia nguồn bị 404 có ô thay thế."
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "React 18 · TypeScript · Vite"
+      ],
+      [
+        "Version",
+        "1.0.0"
+      ],
+      [
+        "Dependencies",
+        "Tailwind CSS · Framer Motion · Lucide"
+      ],
+      [
+        "Setup",
+        "Node.js · npm ci · npm run build"
+      ],
+      [
+        "Scope",
+        "A dark 3D creator portfolio with a magnetic portrait, two scroll-driven GIF rows, character-reveal biography, five services and three stacking project cards. React + TypeScript; Node.js and a build required. Contact/Live Project open demo dialogs, with no real email or project destinations. Media requires internet; one unavailable Celestia GIF has a fallback tile."
+      ]
+    ],
+    "zh": [
+      [
+        "Format",
+        "React 18 · TypeScript · Vite"
+      ],
+      [
+        "Version",
+        "1.0.0"
+      ],
+      [
+        "Dependencies",
+        "Tailwind CSS · Framer Motion · Lucide"
+      ],
+      [
+        "Setup",
+        "Node.js · npm ci · npm run build"
+      ],
+      [
+        "Scope",
+        "深色3D创作者作品集，包含磁吸人像、双行滚动GIF、逐字显现介绍、五项服务及三张叠放项目卡。React + TypeScript，需要Node.js和构建。Contact/Live Project仅打开演示弹窗，未连接真实邮箱或项目地址。素材需联网；一个Celestia GIF源返回404，显示替代状态。"
+      ]
+    ]
+  }
+},
+  t54: {
+    "slug": "spaceedu",
+    "cat": "education",
+    "version": "1.0.1",
+    "video": true,
+    "specs": {
+      "vi": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Remote media"
+        ],
+        [
+          "Scope",
+          "Hero thiên văn với video Earth/Venus/Mars, chuyển hành tinh bằng hai nút cạnh và menu mobile. Một HTML có CSS/JS nội tuyến; tài nguyên hành tinh tải qua mạng. CTA khoá học là demo, chưa có đăng ký hay backend."
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Remote media"
+        ],
+        [
+          "Scope",
+          "A planetary video hero featuring Earth, Venus and Mars, side-planet switching and a mobile menu. One HTML with inline CSS/JS; planetary media requires a network connection. Course links are demo placeholders; no enrolment backend."
+        ]
+      ],
+      "zh": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Remote media"
+        ],
+        [
+          "Scope",
+          "Earth、Venus、Mars 行星视频首屏，支持两侧切换与移动菜单。单个 HTML 内嵌 CSS/JS，行星素材需要联网。课程入口为演示，不含报名后台。"
+        ]
+      ]
+    },
+    "copy": {
+      "vi": {
+        "name": "SpaceEdu",
+        "desc": "Hero thiên văn với video Earth/Venus/Mars, chuyển hành tinh bằng hai nút cạnh và menu mobile. Một HTML có CSS/JS nội tuyến; tài nguyên hành tinh tải qua mạng. CTA khoá học là demo, chưa có đăng ký hay backend.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      },
+      "en": {
+        "name": "SpaceEdu",
+        "desc": "A planetary video hero featuring Earth, Venus and Mars, side-planet switching and a mobile menu. One HTML with inline CSS/JS; planetary media requires a network connection. Course links are demo placeholders; no enrolment backend.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      },
+      "zh": {
+        "name": "SpaceEdu",
+        "desc": "Earth、Venus、Mars 行星视频首屏，支持两侧切换与移动菜单。单个 HTML 内嵌 CSS/JS，行星素材需要联网。课程入口为演示，不含报名后台。",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      }
+    }
+  },
+  t55: {
+    "slug": "mostar-city",
+    "cat": "portfolio",
+    "version": "1.0.1",
+    "video": true,
+    "specs": {
+      "vi": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Local Ogg + remote PNG"
+        ],
+        [
+          "Scope",
+          "Trang kể chuyện Mostar theo cuộn: cầu Stari Most, phố cổ và slider địa danh lặp hai chiều. PNG nhiều lớp, font Ogg đi kèm và ba file HTML/CSS/JS. Nội dung du lịch demo; không có đặt tour."
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Local Ogg + remote PNG"
+        ],
+        [
+          "Scope",
+          "A layered Mostar scroll story with Stari Most, the old town and an infinite sights slider. Includes the Ogg font and separate HTML/CSS/JS. Travel presentation only; no booking backend."
+        ]
+      ],
+      "zh": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Local Ogg + remote PNG"
+        ],
+        [
+          "Scope",
+          "Mostar 多层图片滚动叙事，展示古桥、老城与无限景点滑块。附 Ogg 字体及独立 HTML/CSS/JS。旅游展示模板，不含预订后台。"
+        ]
+      ]
+    },
+    "copy": {
+      "vi": {
+        "name": "Mostar City",
+        "desc": "Trang kể chuyện Mostar theo cuộn: cầu Stari Most, phố cổ và slider địa danh lặp hai chiều. PNG nhiều lớp, font Ogg đi kèm và ba file HTML/CSS/JS. Nội dung du lịch demo; không có đặt tour.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Scroll story"
+        ]
+      },
+      "en": {
+        "name": "Mostar City",
+        "desc": "A layered Mostar scroll story with Stari Most, the old town and an infinite sights slider. Includes the Ogg font and separate HTML/CSS/JS. Travel presentation only; no booking backend.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Scroll story"
+        ]
+      },
+      "zh": {
+        "name": "Mostar City",
+        "desc": "Mostar 多层图片滚动叙事，展示古桥、老城与无限景点滑块。附 Ogg 字体及独立 HTML/CSS/JS。旅游展示模板，不含预订后台。",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Scroll story"
+        ]
+      }
+    }
+  },
+  t56: {
+    "slug": "fennec",
+    "cat": "commerce",
+    "version": "1.0.1",
+    "video": true,
+    "specs": {
+      "vi": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Bundled H.264"
+        ],
+        [
+          "Scope",
+          "Hero AI automation tông cam với cáo GLB 3D, parallax theo chuột và menu clip-path từ pill thương hiệu. Video H.264 đi kèm; Three.js và GLB cần mạng. Liên kết mở thông tin demo; chưa có dịch vụ AI hay billing."
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Bundled H.264"
+        ],
+        [
+          "Scope",
+          "A warm AI automation hero with a GLB fox, pointer parallax and a pill-origin clip-path menu. Includes H.264 video; Three.js and the model require a network connection. Links show demo information; no AI service or billing backend."
+        ]
+      ],
+      "zh": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Bundled H.264"
+        ],
+        [
+          "Scope",
+          "暖橙色 AI 自动化首屏，含 GLB 狐狸、鼠标视差与胶囊展开菜单。附 H.264 视频；Three.js 与模型需要联网。链接展示演示信息，不含 AI 服务或计费后台。"
+        ]
+      ]
+    },
+    "copy": {
+      "vi": {
+        "name": "FENNEC",
+        "desc": "Hero AI automation tông cam với cáo GLB 3D, parallax theo chuột và menu clip-path từ pill thương hiệu. Video H.264 đi kèm; Three.js và GLB cần mạng. Liên kết mở thông tin demo; chưa có dịch vụ AI hay billing.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      },
+      "en": {
+        "name": "FENNEC",
+        "desc": "A warm AI automation hero with a GLB fox, pointer parallax and a pill-origin clip-path menu. Includes H.264 video; Three.js and the model require a network connection. Links show demo information; no AI service or billing backend.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      },
+      "zh": {
+        "name": "FENNEC",
+        "desc": "暖橙色 AI 自动化首屏，含 GLB 狐狸、鼠标视差与胶囊展开菜单。附 H.264 视频；Three.js 与模型需要联网。链接展示演示信息，不含 AI 服务或计费后台。",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      }
+    }
+  },
+  t57: {
+    "slug": "riverine-ai",
+    "cat": "education",
+    "version": "1.0.1",
+    "video": true,
+    "specs": {
+      "vi": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Remote media"
+        ],
+        [
+          "Scope",
+          "Hero regenerative AI trên nền video dòng sông, logo cây và bướm SVG, menu responsive và entrance WAAPI một lượt. Một HTML; font RV chưa cung cấp nên dùng fallback. Các liên kết neo là demo, không có section đích hoặc âm thanh thật."
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Remote media"
+        ],
+        [
+          "Scope",
+          "A regenerative AI river-video hero with tree-and-moth SVG branding, responsive navigation and a single WAAPI entrance. One HTML; RV fonts are not included and use the specified fallbacks. Anchor links and sound control are visual demo elements."
+        ]
+      ],
+      "zh": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Remote media"
+        ],
+        [
+          "Scope",
+          "河流视频上的再生 AI 首屏，树与蝴蝶 SVG 标识、响应式导航和一次性 WAAPI 入场。单个 HTML；未附 RV 字体，使用指定后备字体。锚点与声音按钮为视觉演示。"
+        ]
+      ]
+    },
+    "copy": {
+      "vi": {
+        "name": "riverine.ai",
+        "desc": "Hero regenerative AI trên nền video dòng sông, logo cây và bướm SVG, menu responsive và entrance WAAPI một lượt. Một HTML; font RV chưa cung cấp nên dùng fallback. Các liên kết neo là demo, không có section đích hoặc âm thanh thật.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      },
+      "en": {
+        "name": "riverine.ai",
+        "desc": "A regenerative AI river-video hero with tree-and-moth SVG branding, responsive navigation and a single WAAPI entrance. One HTML; RV fonts are not included and use the specified fallbacks. Anchor links and sound control are visual demo elements.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      },
+      "zh": {
+        "name": "riverine.ai",
+        "desc": "河流视频上的再生 AI 首屏，树与蝴蝶 SVG 标识、响应式导航和一次性 WAAPI 入场。单个 HTML；未附 RV 字体，使用指定后备字体。锚点与声音按钮为视觉演示。",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      }
+    }
+  },
+  t58: {
+    "slug": "freight-axis",
+    "cat": "commerce",
+    "version": "1.0.1",
+    "video": true,
+    "specs": {
+      "vi": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Remote media"
+        ],
+        [
+          "Scope",
+          "Hero logistics video tàu hàng từ trên cao, headline condensed và hai khối nội dung căn đối xứng qua trục đường ray. Một HTML không JS, entrance CSS một lượt, reflow portrait/phone. Font condensed dùng local(), cần mạng cho video."
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Remote media"
+        ],
+        [
+          "Scope",
+          "An aerial freight-video hero with condensed headlines and two rail-axis feature blocks. One HTML without JavaScript, a single CSS entrance and portrait/phone reflow. Uses locally installed condensed fonts and remote video."
+        ]
+      ],
+      "zh": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Remote media"
+        ],
+        [
+          "Scope",
+          "货运列车航拍视频首屏，窄体标题与沿铁轨轴对称的信息区。单个 HTML、无 JavaScript、一次 CSS 入场和竖屏重排。使用本机窄体字体，视频需要联网。"
+        ]
+      ]
+    },
+    "copy": {
+      "vi": {
+        "name": "Freight Axis",
+        "desc": "Hero logistics video tàu hàng từ trên cao, headline condensed và hai khối nội dung căn đối xứng qua trục đường ray. Một HTML không JS, entrance CSS một lượt, reflow portrait/phone. Font condensed dùng local(), cần mạng cho video.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      },
+      "en": {
+        "name": "Freight Axis",
+        "desc": "An aerial freight-video hero with condensed headlines and two rail-axis feature blocks. One HTML without JavaScript, a single CSS entrance and portrait/phone reflow. Uses locally installed condensed fonts and remote video.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      },
+      "zh": {
+        "name": "Freight Axis",
+        "desc": "货运列车航拍视频首屏，窄体标题与沿铁轨轴对称的信息区。单个 HTML、无 JavaScript、一次 CSS 入场和竖屏重排。使用本机窄体字体，视频需要联网。",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      }
+    }
+  },
+  t59: {
+    "slug": "meridian",
+    "cat": "communication",
+    "version": "1.0.1",
+    "video": true,
+    "specs": {
+      "vi": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Bundled H.264"
+        ],
+        [
+          "Scope",
+          "Footer một viewport màu sage với la bàn SVG, Fraunces/Inter và video cầu cạn khắc nét có xe ngựa chạy qua. Video H.264 đi kèm, blend multiply, nav desktop/tablet/mobile và năm tự cập nhật. Các liên kết # chưa nối trang thật."
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Bundled H.264"
+        ],
+        [
+          "Scope",
+          "A sage viewport footer with a compass SVG, Fraunces/Inter and an engraved viaduct coach video. Includes H.264 video, multiply blending, responsive footer navigation and the current year. Hash links are not connected to full pages."
+        ]
+      ],
+      "zh": [
+        [
+          "Format",
+          "HTML/CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.1"
+        ],
+        [
+          "Assets",
+          "Bundled H.264"
+        ],
+        [
+          "Scope",
+          "鼠尾草色全屏页脚，含罗盘 SVG、Fraunces/Inter 与马车驶过高架桥的版画视频。附 H.264 视频、正片叠底、响应式导航及动态年份。# 链接尚未连接实际页面。"
+        ]
+      ]
+    },
+    "copy": {
+      "vi": {
+        "name": "Meridian",
+        "desc": "Footer một viewport màu sage với la bàn SVG, Fraunces/Inter và video cầu cạn khắc nét có xe ngựa chạy qua. Video H.264 đi kèm, blend multiply, nav desktop/tablet/mobile và năm tự cập nhật. Các liên kết # chưa nối trang thật.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      },
+      "en": {
+        "name": "Meridian",
+        "desc": "A sage viewport footer with a compass SVG, Fraunces/Inter and an engraved viaduct coach video. Includes H.264 video, multiply blending, responsive footer navigation and the current year. Hash links are not connected to full pages.",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      },
+      "zh": {
+        "name": "Meridian",
+        "desc": "鼠尾草色全屏页脚，含罗盘 SVG、Fraunces/Inter 与马车驶过高架桥的版画视频。附 H.264 视频、正片叠底、响应式导航及动态年份。# 链接尚未连接实际页面。",
+        "tags": [
+          "HTML/CSS/JS",
+          "Responsive",
+          "Video"
+        ]
+      }
+    }
+  },
+
+  t53: {
+    slug: 'atrium-mtl',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'ATRIUM MTL',
+        desc: 'Landing page bảo tàng và kho lưu trữ nhiếp ảnh kiến trúc Brutalist một khung nhìn trên nền giấy kem #f5f4ef: thẻ header trắng nổi bo góc dưới 22px, tiêu đề Archivo 900 4 dòng cỡ lớn (An archive / of light / cast in / stone), lưới mosaic 3–6 cột cuộn ngược chiều vô tận 14,6 giây kết hợp 4 ảnh kiến trúc đen trắng cùng các ô màu hạt film và chuỗi chuyển động WAAPI 2,1 giây.',
+        tags: ['Bảo tàng & Lưu trữ', 'Mosaic cuộn vô tận', 'Brutalist Editorial'],
+      },
+      en: {
+        name: 'ATRIUM MTL',
+        desc: 'An editorial museum and brutalist architectural photography archive landing page on warm off-white paper (#f5f4ef): floating white header card with 22px bottom corners, four-line Archivo 900 uppercase display headline (An archive / of light / cast in / stone), a 3-to-6-column opposing infinite mosaic (14.6s loop) of monochrome photography and grain-textured primary color blocks, and a 2.1s WAAPI entrance choreography.',
+        tags: ['Museum & Archive', 'Infinite Mosaic', 'Brutalist Editorial'],
+      },
+      zh: {
+        name: 'ATRIUM MTL',
+        desc: '暖白纸感（#f5f4ef）野兽派建筑摄影博物馆与档案单屏展示页：22px 下圆角悬浮白色页头、Archivo 900 四行超大标题（An archive / of light / cast in / stone）、3至6列反向无限循环马赛克网格（14.6秒循环，含四张黑白建筑摄影与胶片颗粒色块）及 2.1 秒 WAAPI 入场动效。',
+        tags: ['博物馆与档案', '无限循环马赛克', '野兽派杂志风'],
+      },
+    },
+    specs: {
+      vi: [
+        ['Định dạng', '1 file index.html tự chứa (inline CSS · SVG · JS)'],
+        ['Gói tải', '13 file · 2 font biến thiên WOFF2 + 4 ảnh WebP + 1 SVG hạt'],
+        ['Tương tác', '5 chế độ responsive (desk · tab-l · tab-p · mob-l · mob) · Menu drawer'],
+        ['Chuyển động', 'WAAPI 2,1s bàn giao mượt sang marquee 14,6s ngược chiều'],
+        ['Phạm vi', 'Showcase triển lãm & lưu trữ kiến trúc · không backend'],
+      ],
+      en: [
+        ['Format', 'Self-contained index.html (inline CSS · SVG · JS)'],
+        ['Package', '13 files · 2 variable WOFF2 fonts + 4 WebP photos + 1 grain SVG'],
+        ['Interaction', '5 responsive modes (desk · tab-l · tab-p · mob-l · mob) · Menu drawer'],
+        ['Motion', '2.1s WAAPI entrance with seamless 14.6s opposing marquee handoff'],
+        ['Scope', 'Architectural archive & museum showcase · no backend'],
+      ],
+      zh: [
+        ['格式', '单文件自包含 index.html（内联 CSS · SVG · JS）'],
+        ['文件包', '13 个文件 · 2 个可变 WOFF2 字体 + 4 张 WebP + 1 个颗粒 SVG'],
+        ['交互', '5 种响应式模式（desk · tab-l · tab-p · mob-l · mob）· 展开式菜单'],
+        ['动态', '2.1 秒 WAAPI 入场无缝衔接 14.6 秒反向无限滚动'],
+        ['范围', '建筑档案与展览展示页 · 无后端'],
+      ],
+    },
+  },
+  t52: {
+    slug: 'maldives-escape',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'Maldives Escape',
+        desc: 'Trang khám phá khu nghỉ dưỡng và biệt thự trên biển Maldives toàn màn hình lúc hoàng hôn với hồ bơi vô cực ánh sao, vòm kính mờ tròn bên trái chứa 2 thẻ dọc xem trước resort kèm nút viên thuốc trắng Book Now, chữ tiêu đề MALDIVES thanh mảnh cỡ lớn, 4 chấm phân trang đáy và bộ lọc 4 khu bảo tồn san hô.',
+        tags: ['Khu nghỉ dưỡng Maldives', 'Vòm kính & 2 thẻ dọc', 'Hoàng hôn trên biển'],
+      },
+      en: {
+        name: 'Maldives Escape',
+        desc: 'A full-bleed Maldives overwater resort and island travel showcase featuring a sunset starlit infinity-pool deck hero, a circular frosted dome overlay framing two vertical resort preview cards with a white Book Now pill button, oversized thin geometric MALDIVES typography, 4 pagination dots and interactive atoll sanctuary filtering.',
+        tags: ['Maldives Resort', 'Circular Dome & Cards', 'Overwater Villas'],
+      },
+      zh: {
+        name: 'Maldives Escape',
+        desc: '马尔代夫水上别墅与海岛度假全屏展示模板，配备日落星光无边泳池甲板主视觉、左侧圆形磨砂玻璃穹顶与双纵向度假村预览卡片、白色胶囊 Book Now 按钮、超大几何 MALDIVES 标题、底部四点分页及环礁别墅分类筛选。',
+        tags: ['马尔代夫度假村', '圆形磨砂穹顶卡片', '水上别墅'],
+      },
+    },
+    specs: {
+      vi: [
+        ['Định dạng', 'HTML / CSS / JavaScript thuần'],
+        ['Gói tải', '10 file · 4 ảnh resort WebP tự tạo'],
+        ['Tương tác', 'Mũi tên < / > · 2 thẻ dọc · 4 chấm đáy · lọc khu bảo tồn · nhảy cảnh'],
+        ['Chuyển động', 'Crossfade cảnh nền · nhịp chuyển rAF hữu hạn · Pause motion'],
+        ['Phạm vi', 'Showcase resort & du lịch biển đảo · liên hệ email/tel · không backend'],
+      ],
+      en: [
+        ['Format', 'Plain HTML / CSS / JavaScript'],
+        ['Package', '10 files · 4 original resort WebP photos'],
+        ['Interaction', '< / > arrows · 2 vertical cards · 4 bottom dots · atoll filter · stage jump'],
+        ['Motion', 'Hero crossfade · finite rAF card settle · Pause motion'],
+        ['Scope', 'Resort & island travel showcase · email/tel enquiry · no backend'],
+      ],
+      zh: [
+        ['格式', '纯 HTML / CSS / JavaScript'],
+        ['文件包', '10 个文件 · 4 张原创度假村 WebP 照片'],
+        ['交互', '< / > 箭头 · 双纵向卡片 · 4 个底部圆点 · 环礁筛选 · 主视觉预览'],
+        ['动态', '主视觉淡入淡出 · 有限 rAF 卡片过渡 · 会话内暂停控制'],
+        ['范围', '海岛度假村展示页 · 邮件/电话咨询 · 无后端'],
+      ],
+    },
+  },
+  t51: {
+  "slug": "beyond-voyages",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "copy": {
+    "vi": {
+      "name": "Beyond Voyages",
+      "desc": "Trang khám phá điểm đến và hành trình du lịch cao cấp với sân khấu phong cảnh toàn màn hình, vòng cung 5 điểm đến tương tác bên phải (Cameo Island, Koh Phi Phi Don, Lago di Braies, Cinque Terre, Grand Canal), bộ lọc vùng địa lý, 3 gói lịch trình mẫu và liên hệ concierge trực tiếp.",
+      "tags": [
+        "Du lịch & Điểm đến",
+        "Vòng cung 5 cảnh",
+        "Kính mờ / Hoàng hôn"
+      ]
+    },
+    "en": {
+      "name": "Beyond Voyages",
+      "desc": "A luxury travel and destination discovery showcase with a full-bleed scenic hero stage, an interactive 5-destination curved orbital selector (Cameo Island, Koh Phi Phi Don, Lago di Braies, Cinque Terre, Grand Canal), regional atlas filtering, three bespoke itinerary packages and direct concierge enquiry links.",
+      "tags": [
+        "Travel & Destinations",
+        "5-scene orbital arc",
+        "Frosted glass"
+      ]
+    },
+    "zh": {
+      "name": "Beyond Voyages",
+      "desc": "高端旅行与目的地探索展示页，采用全屏风景主视觉、右侧五目的地弧形轨道切换器（Cameo Island、Koh Phi Phi Don、Lago di Braies、Cinque Terre、Grand Canal）、区域筛选图鉴、三套定制行程方案及礼宾邮件咨询。",
+      "tags": [
+        "旅行与目的地",
+        "5景弧形轨道",
+        "磨砂玻璃"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "11 file · 5 ảnh phong cảnh WebP tự tạo"
+      ],
+      [
+        "Tương tác",
+        "Vòng cung 5 điểm đến · 5 chấm phân trang · lọc vùng · nhảy cảnh"
+      ],
+      [
+        "Chuyển động",
+        "Crossfade cảnh nền · nhịp chuyển rAF hữu hạn · Pause motion"
+      ],
+      [
+        "Phạm vi",
+        "Showcase du lịch & điểm đến · liên hệ email/tel · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "11 files · 5 original scenic WebP photos"
+      ],
+      [
+        "Interaction",
+        "5-destination orbital arc · 5 slide dots · region filter · stage jump"
+      ],
+      [
+        "Motion",
+        "Scenic crossfade · finite rAF copy pulse · session Pause motion"
+      ],
+      [
+        "Scope",
+        "Travel & destination showcase · mailto/tel concierge · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "11个文件 · 5张原创风景 WebP 图像"
+      ],
+      [
+        "交互",
+        "5目的地弧形轨道 · 5个分页点 · 区域筛选 · 舞台跳转"
+      ],
+      [
+        "动态",
+        "背景渐变切换 · 有限 rAF 动效 · 会话内暂停动画"
+      ],
+      [
+        "范围",
+        "旅行与目的地展示页 · 邮件/电话礼宾咨询 · 无后端"
+      ]
+    ]
+  }
+},
+  t50: {
+  "slug": "vesper-ai",
+  "cat": "commerce",
+  "access": "free",
+  "version": "1.0.0",
+  "copy": {
+    "vi": {
+      "name": "Vesper.ai",
+      "desc": "Landing page hạ tầng AI vận hành một khung nhìn nền đen tuyền #000000: video nền 3D điện ảnh, thanh điều hướng liquid-metal, nút liquid-glass quét sáng 115°, tiêu đề H1 hai dòng cắt mặt nạ với chữ Instrument Serif nghiêng và chuỗi chuyển động 9-keyframe spring-settle.",
+      "tags": [
+        "Hạ tầng AI",
+        "Liquid-metal & Glass",
+        "Đen tuyền / Video"
+      ]
+    },
+    "en": {
+      "name": "Vesper.ai",
+      "desc": "A single-viewport operational AI infrastructure landing page on pure black #000000 with a full-bleed cinematic hero video, liquid-metal navigation pills, 115° specular liquid-glass buttons, a two-line masked H1 with Instrument Serif italic accent and 9-keyframe spring-settle choreography.",
+      "tags": [
+        "AI infrastructure",
+        "Liquid-metal & Glass",
+        "Pure black / Video"
+      ]
+    },
+    "zh": {
+      "name": "Vesper.ai",
+      "desc": "纯黑 #000000 单屏 AI 运营基础设施着陆页：全屏电影级背景视频、液态金属导航胶囊、115° 流光液态玻璃按钮、Instrument Serif 斜体双行遮罩主标题及 9 关键帧弹簧入场动效。",
+      "tags": [
+        "AI 基础设施",
+        "液态金属与玻璃",
+        "纯黑 / 视频"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "9 file · 2 font WOFF2 + video H.264 cục bộ"
+      ],
+      [
+        "Tương tác",
+        "Liquid-metal nav · Liquid-glass CTA · Menu mobile · Pause motion"
+      ],
+      [
+        "Chuyển động",
+        "Chuỗi 9-keyframe spring-settle · H1 line-mask · Video nền lặp"
+      ],
+      [
+        "Phạm vi",
+        "Landing page hạ tầng AI · tĩnh · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · 2 local WOFF2 fonts + H.264 hero video"
+      ],
+      [
+        "Interaction",
+        "Liquid-metal nav · Liquid-glass CTAs · Mobile menu · Pause motion"
+      ],
+      [
+        "Motion",
+        "9-keyframe spring-settle · H1 line-mask · Looping hero video"
+      ],
+      [
+        "Scope",
+        "AI infrastructure landing page · static · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "9个文件 · 2个本地 WOFF2 字体 + H.264 视频"
+      ],
+      [
+        "交互",
+        "液态金属导航 · 液态玻璃按钮 · 移动菜单 · 会话内暂停动画"
+      ],
+      [
+        "动态",
+        "9关键帧弹簧入场 · H1 遮罩滑入 · 循环主视觉视频"
+      ],
+      [
+        "范围",
+        "AI 基础设施着陆页 · 静态 · 无后端"
+      ]
+    ]
+  }
+},
+  t47: {
+  "slug": "astro-armor",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "copy": {
+    "vi": {
+      "name": "ASTRO Armor",
+      "desc": "Giao diện sản phẩm áo khoác nền kem, điểm nhấn cam và bố cục ba cột theo ảnh mẫu. Có chọn size, bốn phối màu, bảng size và giỏ demo trong phiên; không có thanh toán hay backend.",
+      "tags": [
+        "Thời trang",
+        "Áo khoác",
+        "Giỏ demo"
+      ]
+    },
+    "en": {
+      "name": "ASTRO Armor",
+      "desc": "An ivory-and-orange puffer product page with a reference-led three-column composition. Includes size selection, four colour previews, a size guide and a page-session demo bag; no checkout or backend.",
+      "tags": [
+        "Fashion",
+        "Outerwear",
+        "Demo bag"
+      ]
+    },
+    "zh": {
+      "name": "ASTRO Armor",
+      "desc": "奶油白与橙色羽绒服产品页面，采用参考图的三栏布局。包含尺码选择、四种配色预览、尺码表和会话内购物袋演示；无支付或后端。",
+      "tags": [
+        "时尚",
+        "外套",
+        "购物袋演示"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Gói tải",
+        "9 file · ảnh cục bộ"
+      ],
+      [
+        "Phạm vi",
+        "Giao diện tĩnh · giỏ demo"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · local artwork"
+      ],
+      [
+        "Scope",
+        "Static template · demo bag"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "文件包",
+        "9个文件 · 本地图像"
+      ],
+      [
+        "范围",
+        "静态模板 · 购物袋演示"
+      ]
+    ]
+  }
+},
+  t43: {
+  "slug": "fresh-reddy",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "copy": {
+    "vi": {
+      "name": "Fresh & Reddy",
+      "desc": "Giao diện dịch vụ cà phê văn phòng nền than, cụm ba cốc PNG trong suốt, nội dung dịch vụ và liên hệ.",
+      "tags": [
+        "Ẩm thực",
+        "Ảnh trong suốt",
+        "Responsive"
+      ]
+    },
+    "en": {
+      "name": "Fresh & Reddy",
+      "desc": "A charcoal workplace-coffee landing page with three transparent cup renders, service sections and contact anchors.",
+      "tags": [
+        "Food & drink",
+        "Transparent imagery",
+        "Responsive"
+      ]
+    },
+    "zh": {
+      "name": "Fresh & Reddy",
+      "desc": "炭黑色办公室咖啡服务页面，含三个透明咖啡杯图像、服务介绍及联系入口。",
+      "tags": [
+        "餐饮",
+        "透明图像",
+        "自适应"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Gói tải",
+        "7 files"
+      ],
+      [
+        "Phạm vi",
+        "Giao diện tĩnh · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "7 files"
+      ],
+      [
+        "Scope",
+        "Static interface · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "7 files"
+      ],
+      [
+        "范围",
+        "静态界面 · 无后端"
+      ]
+    ]
+  }
+},
+  t44: {
+  "slug": "puro-amor",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "copy": {
+    "vi": {
+      "name": "Puro Amor",
+      "desc": "Concept cà phê trắng–xanh đậm, cốc cà phê bắn nước và nội dung tiếng Bồ Đào Nha.",
+      "tags": [
+        "Ẩm thực",
+        "Ảnh trong suốt",
+        "Responsive"
+      ]
+    },
+    "en": {
+      "name": "Puro Amor",
+      "desc": "A white-and-teal coffee concept with a coffee splash hero and Portuguese editorial content.",
+      "tags": [
+        "Food & drink",
+        "Transparent imagery",
+        "Responsive"
+      ]
+    },
+    "zh": {
+      "name": "Puro Amor",
+      "desc": "白色与深青色咖啡概念页，含咖啡飞溅主视觉及葡萄牙语内容。",
+      "tags": [
+        "餐饮",
+        "透明图像",
+        "自适应"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Gói tải",
+        "7 files"
+      ],
+      [
+        "Phạm vi",
+        "Giao diện tĩnh · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "7 files"
+      ],
+      [
+        "Scope",
+        "Static interface · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "7 files"
+      ],
+      [
+        "范围",
+        "静态界面 · 无后端"
+      ]
+    ]
+  }
+},
+  t45: {
+  "slug": "nourish-bowl",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "copy": {
+    "vi": {
+      "name": "Nourish Bowl",
+      "desc": "Landing page thực phẩm nền xanh đêm với hai ảnh tô trái cây, mục nguyên liệu mở rộng và hướng dẫn chuẩn bị.",
+      "tags": [
+        "Ẩm thực",
+        "Ảnh trong suốt",
+        "Responsive"
+      ]
+    },
+    "en": {
+      "name": "Nourish Bowl",
+      "desc": "A navy-and-cyan food landing page with two fruit bowl cutouts, expandable ingredients and preparation ideas.",
+      "tags": [
+        "Food & drink",
+        "Transparent imagery",
+        "Responsive"
+      ]
+    },
+    "zh": {
+      "name": "Nourish Bowl",
+      "desc": "深蓝与青色健康饮食页面，含两张水果餐盘图像、可展开食材及制作建议。",
+      "tags": [
+        "餐饮",
+        "透明图像",
+        "自适应"
+      ]
+    }
+  },
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Gói tải",
+        "8 files"
+      ],
+      [
+        "Phạm vi",
+        "Giao diện tĩnh · không backend"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "8 files"
+      ],
+      [
+        "Scope",
+        "Static interface · no backend"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "8 files"
+      ],
+      [
+        "范围",
+        "静态界面 · 无后端"
+      ]
+    ]
+  }
+},
+  t42: {
+    slug: 'manganresto',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    specs: {
+      vi: [
+        ['Định dạng', 'HTML / CSS / JavaScript thuần'],
+        ['Gói tải', '9 file · 3 ảnh WebP món ăn tự tạo'],
+        ['Tương tác', 'Lọc danh mục món · tìm kiếm live · đặt bàn demo'],
+        ['Chuyển động', 'Hiệu ứng đĩa nghiêng 3D · sóng nền cong · bật mặc định'],
+        ['Phạm vi', 'Landing page nhà hàng ẩm thực · không backend']
+      ],
+      en: [
+        ['Format', 'Plain HTML / CSS / JavaScript'],
+        ['Package', '9 files · 3 original local food WebP images'],
+        ['Interaction', 'Menu category filters · live search · table booking demo'],
+        ['Motion', 'Hero plate kinetic tilt · curved split backdrop · default ON'],
+        ['Scope', 'Gourmet restaurant landing page · no backend']
+      ],
+      zh: [
+        ['格式', '原生 HTML / CSS / JavaScript'],
+        ['下载包', '9个文件 · 3张原创本地美食WebP图像'],
+        ['交互', '菜单分类筛选 · 实时搜索 · 订座演示'],
+        ['动态', '主厨餐盘微动视角 · 流线双色背景 · 默认开启'],
+        ['范围', '高级美食品鉴餐厅展示页 · 无后端']
+      ]
+    },
+    copy: {
+      vi: {
+        name: 'Manganresto',
+        desc: 'Landing page nhà hàng ẩm thực cao cấp phối màu đen và vàng hổ phách, đĩa mì Ý hải sản mực đen nổi bật, thẻ thực đơn bữa sáng/khai vị và huy hiệu đầu bếp.',
+        tags: ['Nhà hàng', 'Ẩm thực cao cấp', 'Đen & Vàng hổ phách']
+      },
+      en: {
+        name: 'Manganresto',
+        desc: 'A gourmet dining and fine culinary landing page in charcoal and warm amber gold, featuring a centerpiece seafood squid ink pasta plate, breakfast/appetizer cards and chef accolades.',
+        tags: ['Restaurant', 'Fine dining', 'Charcoal & Amber gold']
+      },
+      zh: {
+        name: 'Manganresto',
+        desc: '黑金色调高级美食餐厅展示页，配有标志性墨鱼汁海鲜意面餐盘、早午餐/开胃菜卡片及名厨勋章。',
+        tags: ['餐厅', '精致餐饮', '黑金双色']
+      }
+    }
+  },
+  t41: {
+  "slug": "beetbuh",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "9 file · 3 ảnh WebP cục bộ tự tạo"
+      ],
+      [
+        "Tương tác",
+        "3 trạng thái xem · nút/phím/vuốt · phóng to ảnh"
+      ],
+      [
+        "Chuyển động",
+        "Chuyển góc hữu hạn · reveal khi cuộn · tạm dừng trong phiên"
+      ],
+      [
+        "Phạm vi",
+        "Concept tai nghe · liên hệ email · không thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · 3 original local WebP images"
+      ],
+      [
+        "Interaction",
+        "3 view states · buttons/keys/swipe · image expansion"
+      ],
+      [
+        "Motion",
+        "Finite view transitions · scroll reveals · session pause"
+      ],
+      [
+        "Scope",
+        "Headphone concept · email enquiry · no checkout"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "9个文件 · 3张原创本地WebP图像"
+      ],
+      [
+        "交互",
+        "3种视图 · 按钮/按键/滑动 · 图像放大"
+      ],
+      [
+        "动态",
+        "有限视角切换 · 滚动渐显 · 会话内暂停"
+      ],
+      [
+        "范围",
+        "耳机概念 · 邮件咨询 · 无支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "BeetBuh",
+      "desc": "Landing page tai nghe màu cam trên nền ivory, chữ tiêu đề lớn, ảnh lifestyle và ba trạng thái xem sản phẩm có chuyển động.",
+      "tags": [
+        "Tai nghe",
+        "3 trạng thái xem",
+        "Ivory / cam"
+      ]
+    },
+    "en": {
+      "name": "BeetBuh",
+      "desc": "An ivory-and-orange headphone landing page with oversized condensed type, lifestyle artwork and three animated product view states.",
+      "tags": [
+        "Headphones",
+        "3 view states",
+        "Ivory / orange"
+      ]
+    },
+    "zh": {
+      "name": "BeetBuh",
+      "desc": "象牙白与橙色耳机展示页，配有大型窄体标题、生活方式图像及三种动态产品视图。",
+      "tags": [
+        "耳机",
+        "3种视图",
+        "象牙白 / 橙色"
+      ]
+    }
+  }
+},
+  t40: {
+  "slug": "sonicore",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "10 file · 4 ảnh WebP tai nghe tự tạo"
+      ],
+      [
+        "Tương tác",
+        "3 sân khấu âm thanh · 6 linh kiện tách lớp · 3 không gian · so sánh thông số"
+      ],
+      [
+        "Chuyển động",
+        "10 lớp hiệu ứng Vesper · vòng sao chổi · liquid-glass · sóng nhạc 35 cột"
+      ],
+      [
+        "Phạm vi",
+        "Showroom concept tai nghe · đặt trước qua email · không thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "10 files · 4 original headphone WebP renders"
+      ],
+      [
+        "Interaction",
+        "3 soundstages · 6 exploded parts · 3 spatial presets · spec comparison"
+      ],
+      [
+        "Motion",
+        "10 Vesper effect layers · comet rings · liquid-glass · 35-bar equalizer"
+      ],
+      [
+        "Scope",
+        "Headphone concept showroom · email pre-order enquiry · no checkout"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "10个文件 · 4张原创耳机 WebP 渲染图"
+      ],
+      [
+        "交互",
+        "3种声场 · 6个拆解部件 · 3种空间预设 · 参数对比"
+      ],
+      [
+        "动态",
+        "10层 Vesper 动效 · 彗星光环 · 液态玻璃 · 35段动态频谱"
+      ],
+      [
+        "范围",
+        "概念耳机展厅 · 邮件预订咨询 · 无支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "Sonicore",
+      "desc": "Showroom tai nghe âm thanh không gian nâng cấp hệ hiệu ứng Vesper: tai nghe lơ lửng 3D, vòng sao chổi ngược chiều, nút liquid-metal/liquid-glass quét sáng 115°, sơ đồ tách lớp phát sóng sonar và phổ nhạc 35 cột.",
+      "tags": [
+        "Tai nghe 3D",
+        "Hiệu ứng Vesper",
+        "Liquid Glass"
+      ]
+    },
+    "en": {
+      "name": "Sonicore",
+      "desc": "A spatial-audio headphone showcase upgraded with the Vesper motion system: 3D headphone levitation, counter-rotating comet rings, 115° liquid-metal and liquid-glass shine sweeps, sonar-pulsing exploded hardware and a 35-bar dancing equalizer.",
+      "tags": [
+        "Spatial headphones",
+        "Vesper motion",
+        "Liquid Glass"
+      ]
+    },
+    "zh": {
+      "name": "Sonicore",
+      "desc": "升级 Vesper 动效系统的空间音频耳机展示页：3D 悬浮耳机、反向旋转彗星光环、115° 液态金属与液态玻璃扫光、声呐脉冲六部件拆解图及 35 段跃动频谱。",
+      "tags": [
+        "空间音频耳机",
+        "Vesper 动效",
+        "液态玻璃"
+      ]
+    }
+  }
+},
+  t39: {
+  "slug": "firepower",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "7 file · ảnh chuột cục bộ tự tạo"
+      ],
+      [
+        "Tương tác",
+        "5 góc xem · nút/phím/vuốt · thông số mở rộng"
+      ],
+      [
+        "Chuyển động",
+        "Chuyển góc hai chiều · reveal khi cuộn · tạm dừng trong phiên"
+      ],
+      [
+        "Phạm vi",
+        "Concept chuột gaming · liên hệ email · không thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "7 files · original local mouse artwork"
+      ],
+      [
+        "Interaction",
+        "5 views · buttons/keys/swipe · native specifications"
+      ],
+      [
+        "Motion",
+        "Two-way view transitions · scroll reveals · session pause"
+      ],
+      [
+        "Scope",
+        "Gaming mouse concept · email enquiry · no checkout"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "7个文件 · 原创本地鼠标图像"
+      ],
+      [
+        "交互",
+        "5个视角 · 按钮/按键/滑动 · 原生参数展开"
+      ],
+      [
+        "动态",
+        "双向视角切换 · 滚动渐显 · 会话内暂停"
+      ],
+      [
+        "范围",
+        "游戏鼠标概念 · 邮件咨询 · 无支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "Firepower",
+      "desc": "Showroom chuột gaming nền than đen, điểm nhấn cyan, ảnh sản phẩm lớn và thư viện năm góc xem điều khiển bằng nút, phím hoặc vuốt.",
+      "tags": [
+        "Chuột gaming",
+        "5 góc xem",
+        "Đen / cyan"
+      ]
+    },
+    "en": {
+      "name": "Firepower",
+      "desc": "A charcoal-and-cyan gaming mouse showcase with oversized product imagery and five detail views controlled by buttons, arrow keys or swipe.",
+      "tags": [
+        "Gaming mouse",
+        "5 product views",
+        "Dark / cyan"
+      ]
+    },
+    "zh": {
+      "name": "Firepower",
+      "desc": "炭黑与青色游戏鼠标展示页，配有大型产品图像和五个细节视角，支持按钮、方向键和滑动切换。",
+      "tags": [
+        "游戏鼠标",
+        "5个视角",
+        "深色 / 青色"
+      ]
+    }
+  }
+},
+  t38: {
+  "slug": "backbest-800",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "9 file · 3 ảnh WebP tự tạo"
+      ],
+      [
+        "Tương tác",
+        "3 phối màu · 6 cỡ đệm tai · hotspot · giỏ tư vấn trong phiên"
+      ],
+      [
+        "Chuyển động",
+        "Chuyển hai chiều · vuốt/phím · cảnh cuộn"
+      ],
+      [
+        "Phạm vi",
+        "Showroom concept · email · không bán hàng/thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · 3 original WebP images"
+      ],
+      [
+        "Interaction",
+        "3 finishes · 6 cushion fits · hotspots · session enquiry bag"
+      ],
+      [
+        "Motion",
+        "Two-way transitions · swipe/keys · scroll scene"
+      ],
+      [
+        "Scope",
+        "Concept showroom · email · no retail sales/payments"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "9 个文件 · 3 张原创 WebP"
+      ],
+      [
+        "交互",
+        "3 种配色 · 6 种耳垫规格 · 热点 · 会话咨询袋"
+      ],
+      [
+        "动态",
+        "双向切换 · 滑动/按键 · 滚动场景"
+      ],
+      [
+        "范围",
+        "概念展厅 · 邮件 · 无零售销售或支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "BackBest 800",
+      "desc": "Showroom tai nghe không dây nền đen đỏ với các vòng đồng tâm phát sáng và ba ảnh tai nghe tách nền tự tạo. Chọn phối màu Đen/Trắng/Đỏ và kiểu đệm tai, xem chi tiết màng loa 40mm và khớp gập qua hotspot, giỏ tư vấn trong phiên, email và cảnh kỹ thuật cuộn. Chuyển hai chiều bằng nút, phím hoặc vuốt; Sound preview là hoạt cảnh phối màu 4.2 giây, không phải luồng âm thanh hay video quay thật. Giá và thông số minh họa; không có thanh toán hoặc backend.",
+      "tags": [
+        "Showroom tai nghe",
+        "3 phối màu chân thực",
+        "Chuyển hai chiều"
+      ]
+    },
+    "en": {
+      "name": "BackBest 800",
+      "desc": "An obsidian-and-crimson wireless headphone showroom with glowing concentric target rings and three original photoreal finish cutouts. Colourway and cushion-fit selection, 40mm driver and hinge hotspots, a session purchase enquiry bag, email and a scroll-linked acoustic engineering scene. Directional buttons, keys and swipe; Sound preview is a 4.2-second colourway sequence, not audio/video stream footage. Illustrative price and specs; no retail checkout, payments or backend.",
+      "tags": [
+        "Headphone showroom",
+        "3 photoreal finishes",
+        "Directional transitions"
+      ]
+    },
+    "zh": {
+      "name": "BackBest 800",
+      "desc": "黑红配色无线耳机展厅，含发光同心圆环与三张原创写实配色切图。支持黑/白/红配色与耳垫规格选择、40mm驱动单元与折叠铰链热点、会话购买咨询袋、邮件与滚动声学工程场景。按钮、按键或滑动双向切换；Sound preview为4.2秒配色动画而非实拍音视频。价格与参数为示例，无零售结账、支付或后端。",
+      "tags": [
+        "无线耳机展厅",
+        "3 种写实配色",
+        "双向切换"
+      ]
+    }
+  }
+},
+  t37: {
+  "slug": "airmax-plus",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "9 file · 3 ảnh WebP tự tạo"
+      ],
+      [
+        "Tương tác",
+        "3 phối màu · 6 cỡ US · hotspot · giỏ tư vấn trong phiên"
+      ],
+      [
+        "Chuyển động",
+        "Chuyển hai chiều · vuốt/phím · cảnh cuộn"
+      ],
+      [
+        "Phạm vi",
+        "Showroom concept · email · không bán hàng/thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · 3 original WebP images"
+      ],
+      [
+        "Interaction",
+        "3 finishes · 6 US sizes · hotspots · session enquiry bag"
+      ],
+      [
+        "Motion",
+        "Two-way transitions · swipe/keys · scroll scene"
+      ],
+      [
+        "Scope",
+        "Concept showroom · email · no retail sales/payments"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "9 个文件 · 3 张原创 WebP"
+      ],
+      [
+        "交互",
+        "3 种配色 · 6 个美码 · 热点 · 会话咨询袋"
+      ],
+      [
+        "动态",
+        "双向切换 · 滑动/按键 · 滚动场景"
+      ],
+      [
+        "范围",
+        "概念展厅 · 邮件 · 无零售销售或支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "AirMax Plus",
+      "desc": "Showroom giày thể thao nền tối với dải sóng lưới cam 3D và ba ảnh giày tách nền tự tạo. Chọn phối màu/cỡ US, xem chi tiết đệm Tuned Air và khung TPU, giỏ tư vấn đặt trước trong phiên, email và cảnh kỹ thuật cuộn. Chuyển hai chiều bằng nút, phím hoặc vuốt; Watch preview là hoạt cảnh phối màu 4.2 giây, không phải video quay thật. Giá và thông số minh họa; không có thanh toán hoặc backend.",
+      "tags": [
+        "Showroom giày thể thao",
+        "3 phối màu chân thực",
+        "Chuyển hai chiều"
+      ]
+    },
+    "en": {
+      "name": "AirMax Plus",
+      "desc": "A dark sneaker showroom with a 3D orange wireframe ribbon wave and three original photoreal finish cutouts. Colourway/US size selection, Tuned Air and TPU cage hotspots, a session pre-order enquiry bag, email and a scroll-linked engineering scene. Directional buttons, keys and swipe; Watch preview is a 4.2-second colourway sequence, not video footage. Illustrative price and specs; no retail checkout, payments or backend.",
+      "tags": [
+        "Sneaker showroom",
+        "3 photoreal finishes",
+        "Directional transitions"
+      ]
+    },
+    "zh": {
+      "name": "AirMax Plus",
+      "desc": "深色运动鞋展厅，含3D橙色线框波浪与三张原创写实配色切图。支持配色/美码选择、Tuned Air与TPU骨架热点、会话预订咨询袋、邮件与滚动工程场景。按钮、按键或滑动双向切换；Watch preview为4.2秒配色动画而非实拍视频。价格与参数为示例，无零售结账、支付或后端。",
+      "tags": [
+        "运动鞋展厅",
+        "3 种写实配色",
+        "双向切换"
+      ]
+    }
+  }
+},
+  t36: {
+  "slug": "aerosix",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "9 file · 3 ảnh WebP tự tạo"
+      ],
+      [
+        "Tương tác",
+        "3 màu · 6 cỡ · hotspot · giỏ tư vấn trong phiên"
+      ],
+      [
+        "Chuyển động",
+        "Chuyển hai chiều · vuốt/phím · cảnh cuộn"
+      ],
+      [
+        "Phạm vi",
+        "Showroom concept · email · không bán xe/thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "9 files · 3 original WebP images"
+      ],
+      [
+        "Interaction",
+        "3 finishes · 6 sizes · hotspots · session enquiry bag"
+      ],
+      [
+        "Motion",
+        "Two-way transitions · swipe/keys · scroll scene"
+      ],
+      [
+        "Scope",
+        "Concept showroom · email · no bicycle sales/payments"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "9 个文件 · 3 张原创 WebP"
+      ],
+      [
+        "交互",
+        "3 种配色 · 6 个尺码 · 热点 · 会话咨询袋"
+      ],
+      [
+        "动态",
+        "双向切换 · 滑动/按键 · 滚动场景"
+      ],
+      [
+        "范围",
+        "概念展厅 · 邮件 · 无自行车销售或支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "AeroSix",
+      "desc": "Showroom xe đạp khí động học nền tối, chữ FASTER EVERYWHERE lớn sau xe và ba ảnh xe chân thực tự tạo. Chọn màu/cỡ, xem chi tiết linh kiện, giỏ tư vấn trong phiên, email và cảnh chuyển động theo cuộn. Chuyển hai chiều bằng nút, phím hoặc vuốt; See it in action là hoạt cảnh thiết kế, không phải footage. Giá, cấu hình và điều khoản giao hàng minh họa; không có bán xe, thanh toán hoặc backend.",
+      "tags": [
+        "Showroom xe đạp",
+        "3 màu chân thực",
+        "Chuyển hai chiều"
+      ]
+    },
+    "en": {
+      "name": "AeroSix",
+      "desc": "A dark aero-bicycle showroom with oversized FASTER EVERYWHERE type and three original photoreal finish images. Finish/size selection, component hotspots, a session enquiry bag, email and a scroll-linked scene. Directional buttons, keys and swipe; See it in action is a design sequence, not riding footage. Illustrative prices, equipment and shipping terms; no bicycle sales, payments or backend.",
+      "tags": [
+        "Bicycle showroom",
+        "3 photoreal finishes",
+        "Directional transitions"
+      ]
+    },
+    "zh": {
+      "name": "AeroSix",
+      "desc": "深色空气动力自行车展厅，含大型FASTER EVERYWHERE文字与三张原创写实配色图。支持配色/尺码、部件热点、会话咨询袋、邮件与滚动场景。按钮、按键或滑动双向切换；See it in action为设计动画而非骑行录像。价格、配置与配送条款为示例，无自行车销售、支付或后端。",
+      "tags": [
+        "自行车展厅",
+        "3 种写实配色",
+        "双向切换"
+      ]
+    }
+  }
+},
+  t35: {
+  "slug": "motora",
+  "cat": "commerce",
+  "version": "1.0.0",
+  "video": true,
+  "specs": {
+    "vi": [
+      [
+        "Định dạng",
+        "HTML / CSS / JavaScript thuần"
+      ],
+      [
+        "Gói tải",
+        "8 file · 2 ảnh WebP tự tạo"
+      ],
+      [
+        "Tương tác",
+        "5 màu · hotspot · cấu hình trong phiên"
+      ],
+      [
+        "Chuyển động",
+        "Đổi màu hai chiều · ảnh nội thất theo cuộn"
+      ],
+      [
+        "Phạm vi",
+        "Showroom concept · email · không bán xe/thanh toán"
+      ]
+    ],
+    "en": [
+      [
+        "Format",
+        "Plain HTML / CSS / JavaScript"
+      ],
+      [
+        "Package",
+        "8 files · 2 original WebP images"
+      ],
+      [
+        "Interaction",
+        "5 finishes · hotspots · session configuration"
+      ],
+      [
+        "Motion",
+        "Directional finishes · scroll-linked cabin"
+      ],
+      [
+        "Scope",
+        "Concept showroom · email · no vehicle sales/payments"
+      ]
+    ],
+    "zh": [
+      [
+        "格式",
+        "原生 HTML / CSS / JavaScript"
+      ],
+      [
+        "下载包",
+        "8 个文件 · 2 张原创 WebP"
+      ],
+      [
+        "交互",
+        "5 种配色 · 热点 · 会话配置"
+      ],
+      [
+        "动态",
+        "双向配色切换 · 随滚动移动的内饰图"
+      ],
+      [
+        "范围",
+        "概念展厅 · 邮件 · 无车辆销售或支付"
+      ]
+    ]
+  },
+  "copy": {
+    "vi": {
+      "name": "Motora",
+      "desc": "Showroom ô tô nền sáng với coupe vàng chân thực tự tạo, 5 màu ngoại thất, các điểm xem chi tiết và thẻ thông số. Cấu hình cục bộ, lưu trong phiên, tìm mẫu xe, menu bàn phím và ảnh nội thất chuyển động theo cuộn. Màu dùng bộ lọc ảnh; lựa chọn mâm chỉ đổi nội dung tư vấn. Dữ liệu minh họa, không có bán xe, thanh toán hoặc backend.",
+      "tags": [
+        "Showroom ô tô",
+        "5 màu ngoại thất",
+        "Cấu hình concept"
+      ]
+    },
+    "en": {
+      "name": "Motora",
+      "desc": "A light automotive showroom with an original photoreal gold coupe, five visual finishes, detail hotspots and specification cards. Local configuration, session save, model search, keyboard menu and a scroll-linked cabin image. Finishes use image filters; wheel preferences update the enquiry text. Illustrative data, no vehicle sales, payments or backend.",
+      "tags": [
+        "Automotive showroom",
+        "5 visual finishes",
+        "Concept configuration"
+      ]
+    },
+    "zh": {
+      "name": "Motora",
+      "desc": "浅色汽车展厅，含原创写实金色轿跑、五种视觉配色、细节热点和参数卡片。本地配置、会话保存、车型搜索、键盘菜单与随滚动移动的内饰图。配色使用图像滤镜；轮毂偏好仅更新咨询文字。数据为示例，无车辆销售、支付或后端。",
+      "tags": [
+        "汽车展厅",
+        "5 种视觉配色",
+        "概念配置"
+      ]
+    }
+  }
+},
   t34: {
   "slug": "semaan",
   "cat": "portfolio",
@@ -241,11 +2355,11 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     },
   },
   t31: {
-    slug: 'chronoform', cat: 'commerce', version: '1.0.0', video: true,
+    slug: 'chronoform', cat: 'commerce', version: '1.0.1', video: true,
     specs: {
-      vi: [['Định dạng', 'HTML / CSS / JavaScript · WebGL thuần'], ['Gói tải', '24 file · 17 ảnh WebP gốc'], ['Bộ sưu tập', '11 mẫu · bộ lọc · chi tiết trước/sau'], ['Chuyển động', '4 mẫu hero · xoay 3D · cảnh cuộn'], ['Phạm vi', 'Giỏ tư vấn trong phiên · không thanh toán']],
-      en: [['Format', 'HTML / CSS / JavaScript · native WebGL'], ['Package', '24 files · 17 original WebP images'], ['Collection', '11 models · filters · front/back detail'], ['Motion', '4 featured models · 3D rotation · scroll scene'], ['Scope', 'Session enquiry bag · no payments']],
-      zh: [['格式', 'HTML / CSS / JavaScript · 原生 WebGL'], ['下载包', '24 个文件 · 17 张原创 WebP'], ['系列', '11 款 · 筛选 · 正反面详情'], ['动态', '4 款主展示 · 3D 旋转 · 滚动场景'], ['范围', '会话咨询袋 · 无支付']],
+      vi: [['Định dạng', 'HTML / CSS / JavaScript · WebGL thuần'], ['Gói tải', '28 file · 21 ảnh WebP gốc'], ['Bộ sưu tập', '11 mẫu · bộ lọc · chi tiết trước/sau'], ['Chuyển động', '4 mẫu hero · xoay 3D · cảnh cuộn'], ['Phạm vi', 'Giỏ tư vấn trong phiên · không thanh toán']],
+      en: [['Format', 'HTML / CSS / JavaScript · native WebGL'], ['Package', '28 files · 21 original WebP images'], ['Collection', '11 models · filters · front/back detail'], ['Motion', '4 featured models · 3D rotation · scroll scene'], ['Scope', 'Session enquiry bag · no payments']],
+      zh: [['格式', 'HTML / CSS / JavaScript · 原生 WebGL'], ['下载包', '28 个文件 · 21 张原创 WebP'], ['系列', '11 款 · 筛选 · 正反面详情'], ['动态', '4 款主展示 · 3D 旋转 · 滚动场景'], ['范围', '会话咨询袋 · 无支付']],
     },
     copy: {
       vi: { name: 'Chronoform', desc: 'Showroom đồng hồ cơ theo phong cách điện ảnh: 4 mẫu hero chuyển hai chiều, đồng hồ WebGL xoay và xem trước/sau, thư viện 11 mẫu với bộ lọc, trang chi tiết và giỏ tư vấn trong phiên. Ảnh gốc tự tạo; ảnh dự phòng khi WebGL bị chặn. Giá và thông số minh họa, không có thanh toán hoặc backend.', tags: ['Đồng hồ 3D', 'Chuyển mẫu', 'Thư viện & bộ lọc'] },
@@ -748,6 +2862,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
 
   t22: {
     slug: 'kinetiq', cat: TEMPLATE_CATEGORIES.kinetiq,
+    access: 'free',
     copy: {
       vi: { name: 'Kinetiq', desc: 'Giao diện giới thiệu hệ truyền động và linh kiện robot công nghiệp: minh họa cơ khí, danh mục hệ thống và CTA liên hệ. Không kèm thanh toán hoặc quản lý đơn hàng.', tags: ['Công nghiệp', 'Linh kiện', 'Giới thiệu sản phẩm'] },
       en: { name: 'Kinetiq', desc: 'An industrial actuation and robotics component showcase with mechanical illustrations, system listings and an enquiry CTA. No checkout or order backend.', tags: ['Industrial', 'Components', 'Product showcase'] },
@@ -763,7 +2878,8 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     },
   },
   t15: {
-    slug: 'shirtline', cat: TEMPLATE_CATEGORIES.shirtline, version: '1.2.0',
+    slug: 'shirtline', cat: TEMPLATE_CATEGORIES.shirtline,
+ version: '1.2.0',
     copy: {
       vi: { name: 'Shirtline', desc: "Showroom năm mẫu sơ mi, vòng quay oval tự động và chọn size. Có giỏ, thông tin giao hàng và COD khi chủ shop kết nối dịch vụ nhận đơn. Kèm hướng dẫn thanh toán online bằng tài khoản riêng; không kèm tồn kho hoặc tài khoản cổng thanh toán.", tags: ['Áo sơ mi', 'Showroom', 'Carousel'] },
       en: { name: 'Shirtline', desc: "A five-shirt showroom with an automatic oval orbit and size selection. Includes a bag, delivery details and COD after the shop connects its order service. Includes guidance for online payments with the merchant’s own account; no inventory backend or gateway account is bundled.", tags: ['Shirts', 'Showroom', 'Carousel'] },
@@ -812,6 +2928,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   },
   t1: {
     slug: 'japan-trails', cat: TEMPLATE_CATEGORIES['japan-trails'],
+    access: 'free',
     copy: {
       vi: { name: 'Japan Trails', desc: 'Giao diện du lịch Nhật Bản phong cách điện ảnh: ảnh Phú Sĩ và chùa lúc bình minh, thẻ kính mờ, hành trình và phố Kyoto. CTA liên hệ qua email.', tags: ['Du lịch Nhật Bản', 'Cinematic', 'Kính mờ'] },
       en: { name: 'Japan Trails', desc: 'A cinematic Japan travel template with Fuji sunrise photography, frosted-glass cards, journey ideas, Kyoto imagery and an email enquiry.', tags: ['Japan travel', 'Cinematic', 'Frosted glass'] },
@@ -862,7 +2979,8 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     },
   },
   t4: {
-    slug: 'solenne', cat: TEMPLATE_CATEGORIES['solenne'], version: '2.1.0',
+    slug: 'solenne', cat: TEMPLATE_CATEGORIES['solenne'],
+ version: '2.1.0',
     copy: {
       vi: { name: 'Solenne', desc: "Giao diện skincare tông kem và hồng đất, ảnh sản phẩm gốc và bộ sưu tập. Có giỏ, thông tin giao hàng và COD khi chủ shop kết nối dịch vụ nhận đơn. Kèm hướng dẫn thanh toán online bằng tài khoản riêng; không kèm tồn kho hoặc tài khoản cổng thanh toán.", tags: ['Skincare', 'Editorial', 'Ảnh sản phẩm'] },
       en: { name: 'Solenne', desc: "An ivory and rose skincare store with original product imagery and a collection. Includes a bag, delivery details and COD after the shop connects its order service. Includes guidance for online payments with the merchant’s own account; no inventory backend or gateway account is bundled.", tags: ['Skincare', 'Editorial', 'Product photography'] },
@@ -878,7 +2996,8 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     },
   },
   t6: {
-    slug: 'vybe', cat: TEMPLATE_CATEGORIES['vybe'], video: false, version: '1.1.0',
+    slug: 'vybe', cat: TEMPLATE_CATEGORIES['vybe'], video: false,
+ version: '1.1.0',
     copy: {
       vi: { name: 'VYBE', desc: "Cửa hàng streetwear coral với năm mẫu áo, chọn size và chuyển sản phẩm Morge. Có giỏ, thông tin giao hàng và COD khi chủ shop kết nối dịch vụ nhận đơn. Kèm hướng dẫn thanh toán online bằng tài khoản riêng; không kèm tồn kho hoặc tài khoản cổng thanh toán.", tags: ['Streetwear', 'Morge', '5 mẫu áo'] },
       en: { name: 'VYBE', desc: "A coral streetwear store with five pieces, size selection and Morge transitions. Includes a bag, delivery details and COD after the shop connects its order service. Includes guidance for online payments with the merchant’s own account; no inventory backend or gateway account is bundled.", tags: ['Streetwear', 'Morge', '5 pieces'] },

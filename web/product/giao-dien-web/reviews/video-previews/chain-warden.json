@@ -1,0 +1,48 @@
+{
+  "id": "t49",
+  "slug": "chain-warden",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-17T03:41:00.236Z",
+  "demo": "/demos/chain-warden/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "5ba207c11c54",
+  "sha256": "5ba207c11c542878bc5d070c5631e2fbcf5ace2708ddd4f986cdabfa5740af15",
+  "demoHtmlSha256": "7ffcd316807f766671e5af5ce61f6697dfb5fc13ca6fd0bdf8a3861f9e81ab32",
+  "demoSha256": "f0583eb72d7107fe13a32705dc72cae5bd8cd40e23fbc861998758ae7497dcd7",
+  "bytes": 655491,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.552,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 4.886,
+      "action": "click",
+      "selector": "#hero-next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\chain-warden-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\chain-warden-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\chain-warden-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\chain-warden-return.jpg"
+  ]
+}

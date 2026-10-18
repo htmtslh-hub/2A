@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "file": "CUSTOMISE.md",
+      "bytes": 21107,
+      "sha256": "615b1f9aaf94d1b7761ce82120f5fa7f30ac30ac4194c3981a545aa867d91bcc"
+    },
+    {
+      "file": "LICENCE.txt",
+      "bytes": 1922,
+      "sha256": "64bccafabfd638d535a6c8c420a22a2800e63761e80acaae309dfc5b362d5151"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2363,
+      "sha256": "e403304e4d0d87a08f93179a2325a8df1ef72aea126dad54866511a6314105c5"
+    },
+    {
+      "file": "assets/css/style.css",
+      "bytes": 15634,
+      "sha256": "5b3e153ca98734845a3aae0d79208b54ed44737b9cbef283cd4cd300b214e0b1"
+    },
+    {
+      "file": "assets/img/mouse-views.webp",
+      "bytes": 130900,
+      "sha256": "c9a1d077d4151aaf56d765f7d03f8e6de58bbd4cb7ca58d214b642ae2a09a572"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 6718,
+      "sha256": "a36f33835b634f5d789ea912a2e879f877fbebfb794b9faac1e92c527fdd7265"
+    },
+    {
+      "file": "index.html",
+      "bytes": 9530,
+      "sha256": "a4ec489d4e783cd6b7366c21c0aa584dc2c9a5d195cc88f958957678aca3230f"
+    }
+  ],
+  "sha256": "2afb7e7ab8d4b5f8fe7a89375f6102c618b3fcce246e583a418c0514a38e6b93"
+}

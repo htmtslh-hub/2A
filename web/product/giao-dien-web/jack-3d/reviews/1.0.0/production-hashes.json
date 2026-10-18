@@ -1,0 +1,27 @@
+[
+  {
+    "file": "demos/jack-3d/index.html",
+    "status": 200,
+    "bytes": 790
+  },
+  {
+    "file": "previews/jack-3d.mp4",
+    "status": 200,
+    "bytes": 527535
+  },
+  {
+    "file": "previews/jack-3d.webp",
+    "status": 200,
+    "bytes": 21616
+  },
+  {
+    "file": "demos/jack-3d/assets/index-l17EWDgp.css",
+    "status": 200,
+    "bytes": 15482
+  },
+  {
+    "file": "demos/jack-3d/assets/index-z_R5PwRP.js",
+    "status": 200,
+    "bytes": 296421
+  }
+]

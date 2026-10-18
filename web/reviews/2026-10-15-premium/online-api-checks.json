@@ -1,0 +1,30 @@
+[
+  {
+    "kind": "TEMPLATE",
+    "status": 403,
+    "error": "Sản phẩm Premium được tải qua gói Premium hoặc Ultra còn hiệu lực. Vui lòng chọn gói tại bảng giá."
+  },
+  {
+    "kind": "CART",
+    "status": 403,
+    "error": "Sản phẩm Premium được tải qua gói Premium hoặc Ultra còn hiệu lực. Vui lòng chọn gói tại bảng giá."
+  },
+  {
+    "kind": "PRO",
+    "status": 401,
+    "error": "Vui lòng đăng nhập đúng tài khoản để thanh toán."
+  },
+  {
+    "kind": "ULTRA",
+    "status": 401,
+    "error": "Vui lòng đăng nhập đúng tài khoản để thanh toán."
+  },
+  {
+    "url": "/api/download?id=t31",
+    "status": 401
+  },
+  {
+    "url": "/api/profile",
+    "status": 401
+  }
+]

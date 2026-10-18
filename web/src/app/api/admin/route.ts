@@ -2,6 +2,7 @@ import { Prisma, OrderStatus } from '@prisma/client';
 import { z } from 'zod';
 import { prisma } from '@/lib/db';
 import { adminIdentity, adminHeaders, adminError, isAdminEmail, sameOrigin } from '@/lib/admin-access';
+import { REAL_TEMPLATES } from '@/lib/real-templates';
 
 export const dynamic = 'force-dynamic';
 const fail = (error: string, status: number) => Response.json({ error }, { status, headers: adminHeaders });
@@ -59,7 +60,10 @@ export async function GET(req: Request) {
       return Response.json({ total, page, rows }, { headers: adminHeaders });
     }
     if (section !== 'overview' && section !== 'traffic') return fail('Mục không hợp lệ.', 400);
-    const [accounts, newAccounts, orders, pending, revenue, views, sessions, chart, paths, sources, devices] = await Promise.all([
+    const [
+      accounts, newAccounts, orders, pending, revenue, views, sessions, chart, paths, sources, devices,
+      downloadsByPeriod, downloadsAllTime, purchasesByTemplate, savedByTemplate,
+    ] = await Promise.all([
       prisma.user.count(), prisma.user.count({ where: { createdAt: { gte: since } } }),
       prisma.order.count({ where: { createdAt: { gte: since } } }),
       prisma.order.count({ where: { status: 'PENDING' } }),
@@ -70,8 +74,64 @@ export async function GET(req: Request) {
       prisma.pageView.groupBy({ by: ['path'], where: { createdAt: { gte: since } }, _count: true, orderBy: { _count: { path: 'desc' } }, take: 10 }),
       prisma.pageView.groupBy({ by: ['referrer'], where: { createdAt: { gte: since } }, _count: true, orderBy: { _count: { referrer: 'desc' } }, take: 10 }),
       prisma.pageView.groupBy({ by: ['device'], where: { createdAt: { gte: since } }, _count: true }),
+      prisma.downloadToken.groupBy({ by: ['templateId'], where: { usedAt: { gte: since } }, _count: true }),
+      prisma.downloadToken.groupBy({ by: ['templateId'], where: { usedAt: { not: null } }, _count: true }),
+      prisma.purchase.groupBy({ by: ['templateId'], _count: true }),
+      prisma.savedTemplate.groupBy({ by: ['templateId'], _count: true }),
     ]);
+    const periodMap = new Map(downloadsByPeriod.map(d => [d.templateId, d._count]));
+    const allTimeMap = new Map(downloadsAllTime.map(d => [d.templateId, d._count]));
+    const purchaseMap = new Map(purchasesByTemplate.map(p => [p.templateId, p._count]));
+    const savedMap = new Map(savedByTemplate.map(s => [s.templateId, s._count]));
+    const catalogEntries: { templateId: string; slug: string; name: string; category: string; isFree: boolean }[] = Object.entries(REAL_TEMPLATES)
+      .filter(([, t]) => !t.previewOnly)
+      .map(([id, t]) => ({
+        templateId: id,
+        slug: t.slug,
+        name: t.copy.vi.name,
+        category: t.cat,
+        isFree: t.access === 'free',
+      }));
+    if (allTimeMap.has('free-sample') || periodMap.has('free-sample')) {
+      catalogEntries.push({
+        templateId: 'free-sample',
+        slug: 'forge-starter-sample',
+        name: 'Gói mẫu miễn phí (Starter)',
+        category: 'portfolio',
+        isFree: true,
+      });
+    }
+    const knownIds = new Set(catalogEntries.map(e => e.templateId));
+    for (const [id] of allTimeMap) {
+      if (!knownIds.has(id)) {
+        catalogEntries.push({
+          templateId: id,
+          slug: id,
+          name: id,
+          category: 'portfolio',
+          isFree: false,
+        });
+      }
+    }
+    const templateDownloads = catalogEntries
+      .map(entry => ({
+        ...entry,
+        downloads: periodMap.get(entry.templateId) ?? 0,
+        totalDownloads: allTimeMap.get(entry.templateId) ?? 0,
+        purchases: purchaseMap.get(entry.templateId) ?? 0,
+        saved: savedMap.get(entry.templateId) ?? 0,
+      }))
+      .sort((a, b) => (
+        b.downloads - a.downloads
+        || b.totalDownloads - a.totalDownloads
+        || b.purchases - a.purchases
+        || b.saved - a.saved
+        || a.templateId.localeCompare(b.templateId, undefined, { numeric: true })
+      ));
+    const downloads = downloadsByPeriod.reduce((sum, d) => sum + d._count, 0);
+    const totalDownloads = downloadsAllTime.reduce((sum, d) => sum + d._count, 0);
     return Response.json({ days, since, accounts, newAccounts, orders, pending, revenue, views, sessions: sessions[0]?.count ?? 0,
+      downloads, totalDownloads, templateDownloads,
       chart: Array.from({ length: days }, (_, i) => {
         const date = new Date(since); date.setUTCDate(date.getUTCDate() + i);
         const day = date.toISOString().slice(0, 10);

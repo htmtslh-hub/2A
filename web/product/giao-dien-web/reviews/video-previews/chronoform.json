@@ -2,15 +2,15 @@
   "id": "t31",
   "slug": "chronoform",
   "browser": "153.0.8010.12",
-  "date": "2026-10-13T14:10:40.692Z",
+  "date": "2026-10-15T01:18:01.313Z",
   "demo": "/demos/chronoform/index.html",
   "status": "recorded",
-  "productVersion": "1.0.0",
-  "revision": "44c878fa41aa",
-  "sha256": "44c878fa41aa275075227fd238dfae501b2f866af94485f81a68b06355b93df7",
-  "demoHtmlSha256": "34539f036ef55d36c0b311030757f387ca77c7af27f4ea97c61a33114d48d68c",
-  "demoSha256": "47ce701e9545f8b266ea19d9e7d50ce165c0ebe77c4c687145178725570697e3",
-  "bytes": 581468,
+  "productVersion": "1.0.1",
+  "revision": "984baf4e10c6",
+  "sha256": "984baf4e10c68514efe899b2116ba03f1882c9496593a6a1888f825abb3c41fb",
+  "demoHtmlSha256": "15282e1aa40298ee219dfe246aefca29a7e7244ef62a1d807d47cc3a21b7ad12",
+  "demoSha256": "529950fe827c88de25413641058c33d2965c7be90ace42153844bbc217cb786b",
+  "bytes": 549116,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,12 +22,12 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.524,
+      "seconds": 2.532,
       "action": "click",
       "selector": "#hero-next"
     },
     {
-      "seconds": 4.839,
+      "seconds": 4.872,
       "action": "click",
       "selector": "#hero-next"
     },

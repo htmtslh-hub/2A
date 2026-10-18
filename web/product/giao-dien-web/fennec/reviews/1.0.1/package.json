@@ -1,0 +1,15 @@
+{
+  "id": "t56",
+  "slug": "fennec",
+  "name": "FENNEC",
+  "version": "1.0.1",
+  "bytes": 1124593,
+  "sha256": "eef46bc715eb3354ffbb4712b4c64f4077d68a770f0f507543e8d614b9b80ae2",
+  "files": [
+    "CUSTOMISE.md",
+    "index.html",
+    "LICENCE.txt",
+    "README.md",
+    "assets/video/forest-h264.mp4"
+  ]
+}

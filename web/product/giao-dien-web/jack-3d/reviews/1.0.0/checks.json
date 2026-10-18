@@ -1,0 +1,70 @@
+[
+  {
+    "exe": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+    "version": "155.0.4283.62",
+    "magnet": "matrix(1, 0, 0, 1, 26.6667, -6.16146)",
+    "marqueeBefore": [
+      "translateX(70px)",
+      "translateX(-70px)"
+    ],
+    "marqueeAfter": [
+      "translateX(130px)",
+      "translateX(-130px)"
+    ],
+    "sizes": [
+      {
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "width": 820,
+        "overflow": false
+      },
+      {
+        "width": 375,
+        "overflow": false
+      },
+      {
+        "width": 320,
+        "overflow": false
+      }
+    ],
+    "modal": true,
+    "project": "Let's build something incredible.",
+    "errors": []
+  },
+  {
+    "exe": "C:/Program Files/CocCoc/Browser/Application/browser.exe",
+    "version": "152.0.7977.124",
+    "magnet": "matrix(1, 0, 0, 1, 26.6667, -6.16146)",
+    "marqueeBefore": [
+      "translateX(70px)",
+      "translateX(-70px)"
+    ],
+    "marqueeAfter": [
+      "translateX(130px)",
+      "translateX(-130px)"
+    ],
+    "sizes": [
+      {
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "width": 820,
+        "overflow": false
+      },
+      {
+        "width": 375,
+        "overflow": false
+      },
+      {
+        "width": 320,
+        "overflow": false
+      }
+    ],
+    "modal": true,
+    "project": "Nextlevel Studio",
+    "errors": []
+  }
+]

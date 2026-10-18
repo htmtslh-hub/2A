@@ -1,0 +1,192 @@
+{
+  "viewports": [
+    {
+      "browser": "edge",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "scrollHeight": 1080,
+      "clientHeight": 1080,
+      "overflowX": false,
+      "videoReadyState": 4,
+      "videoPaused": false,
+      "videoCurrentTime": 2.63,
+      "isInCount": 15,
+      "totalAppear": 16
+    },
+    {
+      "browser": "edge",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "scrollHeight": 900,
+      "clientHeight": 900,
+      "overflowX": false,
+      "videoReadyState": 4,
+      "videoPaused": false,
+      "videoCurrentTime": 2.46,
+      "isInCount": 15,
+      "totalAppear": 16
+    },
+    {
+      "browser": "edge",
+      "width": 820,
+      "height": 1180,
+      "scrollWidth": 820,
+      "clientWidth": 820,
+      "scrollHeight": 1180,
+      "clientHeight": 1180,
+      "overflowX": false,
+      "videoReadyState": 4,
+      "videoPaused": false,
+      "videoCurrentTime": 2.42,
+      "isInCount": 15,
+      "totalAppear": 16
+    },
+    {
+      "browser": "edge",
+      "width": 375,
+      "height": 812,
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "scrollHeight": 812,
+      "clientHeight": 812,
+      "overflowX": false,
+      "videoReadyState": 4,
+      "videoPaused": false,
+      "videoCurrentTime": 2.55,
+      "isInCount": 15,
+      "totalAppear": 16
+    },
+    {
+      "browser": "edge",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "scrollHeight": 765,
+      "clientHeight": 740,
+      "overflowX": false,
+      "videoReadyState": 4,
+      "videoPaused": false,
+      "videoCurrentTime": 2.45,
+      "isInCount": 15,
+      "totalAppear": 16
+    },
+    {
+      "browser": "firefox",
+      "width": 1920,
+      "height": 1080,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "scrollHeight": 1080,
+      "clientHeight": 1080,
+      "overflowX": false,
+      "videoReadyState": 4,
+      "videoPaused": false,
+      "videoCurrentTime": 2.5,
+      "isInCount": 15,
+      "totalAppear": 16
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "scrollHeight": 900,
+      "clientHeight": 900,
+      "overflowX": false,
+      "videoReadyState": 4,
+      "videoPaused": false,
+      "videoCurrentTime": 2.5,
+      "isInCount": 15,
+      "totalAppear": 16
+    },
+    {
+      "browser": "firefox",
+      "width": 820,
+      "height": 1180,
+      "scrollWidth": 820,
+      "clientWidth": 820,
+      "scrollHeight": 1180,
+      "clientHeight": 1180,
+      "overflowX": false,
+      "videoReadyState": 4,
+      "videoPaused": false,
+      "videoCurrentTime": 2.5,
+      "isInCount": 15,
+      "totalAppear": 16
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "height": 812,
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "scrollHeight": 812,
+      "clientHeight": 812,
+      "overflowX": false,
+      "videoReadyState": 4,
+      "videoPaused": false,
+      "videoCurrentTime": 2.46,
+      "isInCount": 15,
+      "totalAppear": 16
+    },
+    {
+      "browser": "firefox",
+      "width": 320,
+      "height": 740,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "scrollHeight": 765,
+      "clientHeight": 740,
+      "overflowX": false,
+      "videoReadyState": 4,
+      "videoPaused": false,
+      "videoCurrentTime": 2.5,
+      "isInCount": 15,
+      "totalAppear": 16
+    }
+  ],
+  "interactions": {
+    "edge": {
+      "menuOpenState": {
+        "bodyHasOpen": true,
+        "ariaExpanded": "true",
+        "ariaLabel": "Close menu",
+        "firstLinkWidth": 331
+      },
+      "afterEscState": {
+        "bodyHasOpen": false,
+        "ariaExpanded": "false",
+        "ariaLabel": "Open menu"
+      },
+      "afterResizeState": {
+        "bodyHasOpen": false,
+        "ariaExpanded": "false"
+      }
+    },
+    "firefox": {
+      "menuOpenState": {
+        "bodyHasOpen": true,
+        "ariaExpanded": "true",
+        "ariaLabel": "Close menu",
+        "firstLinkWidth": 331
+      },
+      "afterEscState": {
+        "bodyHasOpen": false,
+        "ariaExpanded": "false",
+        "ariaLabel": "Open menu"
+      },
+      "afterResizeState": {
+        "bodyHasOpen": false,
+        "ariaExpanded": "false"
+      }
+    }
+  },
+  "consoleErrors": [],
+  "networkFailures": []
+}

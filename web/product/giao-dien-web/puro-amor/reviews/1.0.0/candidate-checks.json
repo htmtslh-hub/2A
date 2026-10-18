@@ -1,0 +1,150 @@
+{
+  "chromium": {
+    "version": "153.0.8010.12",
+    "sizes": [
+      {
+        "width": 864,
+        "height": 508,
+        "scroll": 864,
+        "client": 864,
+        "h1": 1,
+        "imageLoaded": true,
+        "brokenAnchors": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scroll": 1440,
+        "client": 1440,
+        "h1": 1,
+        "imageLoaded": true,
+        "brokenAnchors": []
+      },
+      {
+        "width": 820,
+        "height": 1180,
+        "scroll": 820,
+        "client": 820,
+        "h1": 1,
+        "imageLoaded": true,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "scroll": 375,
+        "client": 375,
+        "h1": 1,
+        "imageLoaded": true,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "scroll": 320,
+        "client": 320,
+        "h1": 1,
+        "imageLoaded": true,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      }
+    ],
+    "errors": [],
+    "midReveal": {
+      "opacity": "0.465898",
+      "transform": "matrix(1, 0, 0, 1, 0, 20.0288)"
+    },
+    "endReveal": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "reducedMotion": "matrix(1, 0, 0, 1, 0, 28.0607)",
+    "noJS": {
+      "scroll": 320,
+      "client": 320,
+      "links": true
+    }
+  },
+  "firefox": {
+    "version": "155.0",
+    "sizes": [
+      {
+        "width": 864,
+        "height": 508,
+        "scroll": 864,
+        "client": 864,
+        "h1": 1,
+        "imageLoaded": true,
+        "brokenAnchors": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "scroll": 1440,
+        "client": 1440,
+        "h1": 1,
+        "imageLoaded": true,
+        "brokenAnchors": []
+      },
+      {
+        "width": 820,
+        "height": 1180,
+        "scroll": 820,
+        "client": 820,
+        "h1": 1,
+        "imageLoaded": true,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      },
+      {
+        "width": 375,
+        "height": 812,
+        "scroll": 375,
+        "client": 375,
+        "h1": 1,
+        "imageLoaded": true,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      },
+      {
+        "width": 320,
+        "height": 740,
+        "scroll": 320,
+        "client": 320,
+        "h1": 1,
+        "imageLoaded": true,
+        "brokenAnchors": [],
+        "menuOpen": "true",
+        "menuClosed": "false",
+        "escapeFocus": true
+      }
+    ],
+    "errors": [],
+    "midReveal": {
+      "opacity": "0.546571",
+      "transform": "matrix(1, 0, 0, 1, 0, 17.0036)"
+    },
+    "endReveal": {
+      "opacity": "1",
+      "transform": "none"
+    },
+    "reducedMotion": "matrix(1, 0, 0, 1, 0, 19.3401)",
+    "noJS": {
+      "scroll": 320,
+      "client": 320,
+      "links": true
+    }
+  }
+}

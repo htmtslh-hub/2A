@@ -55,7 +55,7 @@ const LEAD: Record<Lang, { subject: string; title: string; body: string[]; cta: 
     title: 'Mẫu miễn phí của bạn đây',
     body: [
       'Cảm ơn bạn đã quan tâm. Bấm nút bên dưới để tải mẫu miễn phí.',
-      'Mua lẻ mỗi sản phẩm 20 USD hoặc nâng cấp tài khoản Pro 99 USD/1 tháng, Ultra 299 USD/1 năm. Thanh toán một lần, không tự gia hạn.',
+      'Tải giao diện web, Skill và Prompt bằng gói Premium 20 USD/1 tháng hoặc Ultra 200 USD/1 năm. Thanh toán một lần, không tự gia hạn.',
     ],
     cta: 'Tải mẫu miễn phí',
   },
@@ -64,7 +64,7 @@ const LEAD: Record<Lang, { subject: string; title: string; body: string[]; cta: 
     title: 'Here is your free template',
     body: [
       'Thanks for your interest. Hit the button below to download your free template.',
-      'Individual products cost USD 20. Upgrade to Pro for USD 99/1 month or Ultra for USD 299/1 year. One payment, no automatic renewal.',
+      'Download web interfaces, Skills and Prompts with Premium for USD 20/1 month or Ultra for USD 200/1 year. One payment, no automatic renewal.',
     ],
     cta: 'Download free template',
   },
@@ -73,7 +73,7 @@ const LEAD: Record<Lang, { subject: string; title: string; body: string[]; cta: 
     title: '这是你的免费模板',
     body: [
       '感谢关注。点击下方按钮即可下载免费模板。',
-      '单件产品 20 美元；Pro 一个月 99 美元，Ultra 一年 299 美元。一次付款，不自动续费。',
+      '网页界面、技能和提示词需要 Premium 一个月 20 美元或 Ultra 一年 200 美元。一次付款，不自动续费。',
     ],
     cta: '下载免费模板',
   },

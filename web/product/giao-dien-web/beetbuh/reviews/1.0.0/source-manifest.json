@@ -1,0 +1,50 @@
+{
+  "files": [
+    {
+      "file": "CUSTOMISE.md",
+      "bytes": 21198,
+      "sha256": "899137083d98fddeee347616bc32006c46bb9a287b7a50d21a390cbbc510f9b5"
+    },
+    {
+      "file": "LICENCE.txt",
+      "bytes": 2257,
+      "sha256": "6bf4ca82aafebbddf2f87d3d4f81d446e0fd160e8cbdaf953ac8071e695cbd56"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2730,
+      "sha256": "d24b3fed53631653fe3ddaa76e8fa0cce45b863d9bc03ac04ea5e839eb0f4dab"
+    },
+    {
+      "file": "assets/css/style.css",
+      "bytes": 17356,
+      "sha256": "bae29bcbba6be7e10fd28951992e613eaae4e9dfba3f71f968ae3f4d87b5f499"
+    },
+    {
+      "file": "assets/img/headphone-angle.webp",
+      "bytes": 157984,
+      "sha256": "d24e6648af00d2d17bdfc338c88e7d9332169c2d37dd084505831e280ae45919"
+    },
+    {
+      "file": "assets/img/headphone-hero.webp",
+      "bytes": 122934,
+      "sha256": "de33e9f2c36a754f0d31bc465b812a4e81d0b7182f2fca61e1cbab2abd2a1337"
+    },
+    {
+      "file": "assets/img/listener.webp",
+      "bytes": 189252,
+      "sha256": "e0543689d2715ebf3a92363725f7e4d21f6cf2b06147278bcaed1daa54c12b11"
+    },
+    {
+      "file": "assets/js/main.js",
+      "bytes": 6410,
+      "sha256": "d307cfa7d75c966c7e509bc2f83be8412ab5b61ea92ed8770f6d7b448f3c5ce5"
+    },
+    {
+      "file": "index.html",
+      "bytes": 9011,
+      "sha256": "af239659a35592288fca31eb5ac653ec9a07a577a7de1c94f3ece131b3843264"
+    }
+  ],
+  "sha256": "b4c800ec0024f118a20d510248567a83644afc462931341c9a9a8f163fe57106"
+}

@@ -1,0 +1,17 @@
+/* ATRIUM MTL — An archive of light cast in stone
+ * Companion token reference file (primary styles are inlined in index.html per single-file specification).
+ */
+:root {
+  --paper: #f5f4ef;
+  --ink: #0f0f0e;
+  --card-dark: #151515;
+  --card-cream: #f9f6f1;
+  --red: #ef5d44;
+  --yellow: #fcdd71;
+  --blue: #9fd5f7;
+  --nav-bg: #ffffff;
+  --col: 205.33px;
+  --gap: 13px;
+  --pitch: 282.5px;
+  --r: 22px;
+}

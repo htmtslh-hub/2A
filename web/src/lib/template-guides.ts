@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'atrium-mtl': {
+    vi: {
+      intro: 'Landing page bảo tàng và kho lưu trữ nhiếp ảnh kiến trúc Brutalist một khung nhìn trên nền giấy ấm #f5f4ef với thẻ header trắng nổi, chữ tiêu đề Archivo 900 4 dòng và lưới mosaic 3–6 cột cuộn ngược chiều vô tận 14,6 giây.',
+      notes: '### Bắt đầu\nGiải nén đủ 13 file rồi mở index.html cạnh thư mục assets/. CUSTOMISE.md gồm 10 bước, 12 prompt AI và bảng sửa đã đếm chính xác. Không cần cài đặt hay build.\n\n### Font và hình ảnh\nHai font WOFF2 biến thiên tự lưu trữ tại assets/fonts/archivo.woff2 và assets/fonts/inter.woff2; 4 ảnh kiến trúc đen trắng WebP và 1 SVG hạt film khai báo đúng URL CloudFront trong :root kèm bản sao cục bộ trong assets/img/.\n\n### Tương tác & chuyển động\nChuỗi chuyển động WAAPI 2,1 giây khi vào trang bàn giao mượt sang hiệu ứng cuộn ngược chiều 14,6 giây (colDown / colUp); tự động nhân đôi 5 ô mỗi cột bằng JS; hỗ trợ 5 chế độ bố cục (desk, tab-l, tab-p, mob-l, mob) và tôn trọng prefers-reduced-motion.\n\n### Phạm vi\nGiao diện tĩnh một khung nhìn, không kèm hệ thống bán vé trực tuyến hay thanh toán. Đọc kỹ LICENCE.txt trước khi xuất bản.',
+    },
+    en: {
+      intro: 'A single-viewport editorial museum and brutalist architectural photography archive landing page on warm off-white paper (#f5f4ef) with a floating white header card, four-line Archivo 900 display typography and a 14.6s opposing infinite mosaic.',
+      notes: '### Start\nExtract all 13 files and open index.html beside assets/. CUSTOMISE.md includes 10 steps, 12 complete AI prompts and a counted literal edit map. No install or build required.\n\n### Fonts and imagery\nTwo self-hosted variable WOFF2 fonts at assets/fonts/archivo.woff2 and assets/fonts/inter.woff2; four monochrome brutalist WebP photographs and one SVG grain texture referenced via exact CloudFront URLs in :root with byte-identical local copies in assets/img/.\n\n### Interaction & motion\nA 2.1s WAAPI entrance choreography hands off seamlessly to the 14.6s opposing CSS marquee (colDown / colUp); JS clones each column’s 5 tiles once; supports 5 responsive layout modes (desk, tab-l, tab-p, mob-l, mob) and respects prefers-reduced-motion.\n\n### Scope\nStatic single-viewport showcase with no live ticketing or checkout backend. Read LICENCE.txt before publishing.',
+    },
+    zh: {
+      intro: '暖白纸感（#f5f4ef）野兽派建筑摄影博物馆与档案单屏展示页，配备悬浮白色页头、Archivo 900 四行大字标题与 14.6 秒反向无限循环马赛克网格。',
+      notes: '### 开始\n解压全部13个文件，在 assets/ 旁打开 index.html。CUSTOMISE.md 含10个步骤、12条完整AI提示词和精确修改表。无需安装或构建。\n\n### 字体与图像\n内置两个本地可变 WOFF2 字体（assets/fonts/archivo.woff2 与 assets/fonts/inter.woff2）；:root 中使用精确 CloudFront 链接并在 assets/img/ 附带本地副本。\n\n### 交互与动态\n2.1 秒 WAAPI 入场动画无缝衔接 14.6 秒反向 CSS 无限滚动；JS 自动复制每列5个单元格；支持 5 种响应式架构（desk、tab-l、tab-p、mob-l、mob）与减弱动态效果设置。\n\n### 范围\n纯静态单屏展示页，无在线售票或支付后端。发布前请阅读 LICENCE.txt。',
+    },
+  },
   'maldives-escape': {
     vi: {
       intro: 'Trang khám phá khu nghỉ dưỡng và biệt thự trên biển Maldives toàn màn hình với vòm kính mờ tròn, 2 thẻ dọc xem trước resort, nút Book Now viên thuốc trắng và chữ MALDIVES thanh mảnh cỡ lớn theo ảnh tham chiếu.',

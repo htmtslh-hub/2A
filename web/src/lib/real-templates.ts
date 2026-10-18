@@ -46,6 +46,52 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t53: {
+    slug: 'atrium-mtl',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'ATRIUM MTL',
+        desc: 'Landing page bảo tàng và kho lưu trữ nhiếp ảnh kiến trúc Brutalist một khung nhìn trên nền giấy kem #f5f4ef: thẻ header trắng nổi bo góc dưới 22px, tiêu đề Archivo 900 4 dòng cỡ lớn (An archive / of light / cast in / stone), lưới mosaic 3–6 cột cuộn ngược chiều vô tận 14,6 giây kết hợp 4 ảnh kiến trúc đen trắng cùng các ô màu hạt film và chuỗi chuyển động WAAPI 2,1 giây.',
+        tags: ['Bảo tàng & Lưu trữ', 'Mosaic cuộn vô tận', 'Brutalist Editorial'],
+      },
+      en: {
+        name: 'ATRIUM MTL',
+        desc: 'An editorial museum and brutalist architectural photography archive landing page on warm off-white paper (#f5f4ef): floating white header card with 22px bottom corners, four-line Archivo 900 uppercase display headline (An archive / of light / cast in / stone), a 3-to-6-column opposing infinite mosaic (14.6s loop) of monochrome photography and grain-textured primary color blocks, and a 2.1s WAAPI entrance choreography.',
+        tags: ['Museum & Archive', 'Infinite Mosaic', 'Brutalist Editorial'],
+      },
+      zh: {
+        name: 'ATRIUM MTL',
+        desc: '暖白纸感（#f5f4ef）野兽派建筑摄影博物馆与档案单屏展示页：22px 下圆角悬浮白色页头、Archivo 900 四行超大标题（An archive / of light / cast in / stone）、3至6列反向无限循环马赛克网格（14.6秒循环，含四张黑白建筑摄影与胶片颗粒色块）及 2.1 秒 WAAPI 入场动效。',
+        tags: ['博物馆与档案', '无限循环马赛克', '野兽派杂志风'],
+      },
+    },
+    specs: {
+      vi: [
+        ['Định dạng', '1 file index.html tự chứa (inline CSS · SVG · JS)'],
+        ['Gói tải', '13 file · 2 font biến thiên WOFF2 + 4 ảnh WebP + 1 SVG hạt'],
+        ['Tương tác', '5 chế độ responsive (desk · tab-l · tab-p · mob-l · mob) · Menu drawer'],
+        ['Chuyển động', 'WAAPI 2,1s bàn giao mượt sang marquee 14,6s ngược chiều'],
+        ['Phạm vi', 'Showcase triển lãm & lưu trữ kiến trúc · không backend'],
+      ],
+      en: [
+        ['Format', 'Self-contained index.html (inline CSS · SVG · JS)'],
+        ['Package', '13 files · 2 variable WOFF2 fonts + 4 WebP photos + 1 grain SVG'],
+        ['Interaction', '5 responsive modes (desk · tab-l · tab-p · mob-l · mob) · Menu drawer'],
+        ['Motion', '2.1s WAAPI entrance with seamless 14.6s opposing marquee handoff'],
+        ['Scope', 'Architectural archive & museum showcase · no backend'],
+      ],
+      zh: [
+        ['格式', '单文件自包含 index.html（内联 CSS · SVG · JS）'],
+        ['文件包', '13 个文件 · 2 个可变 WOFF2 字体 + 4 张 WebP + 1 个颗粒 SVG'],
+        ['交互', '5 种响应式模式（desk · tab-l · tab-p · mob-l · mob）· 展开式菜单'],
+        ['动态', '2.1 秒 WAAPI 入场无缝衔接 14.6 秒反向无限滚动'],
+        ['范围', '建筑档案与展览展示页 · 无后端'],
+      ],
+    },
+  },
   t52: {
     slug: 'maldives-escape',
     cat: 'commerce',

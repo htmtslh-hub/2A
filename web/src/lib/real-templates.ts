@@ -198,6 +198,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t50: {
   "slug": "vesper-ai",
   "cat": "commerce",
+  "access": "free",
   "version": "1.0.0",
   "copy": {
     "vi": {

@@ -150,11 +150,20 @@
 .save-template-button[aria-pressed="true"] .save-heart::before { opacity: .72; }
 .save-template-button[aria-pressed="true"] .save-heart::after { opacity: 1; }
 .save-template-button .save-count { min-width: 2.2em; padding: 4px 7px; border-radius: 999px; background: rgba(255,255,255,.1); color: #fff; font-size: 11px; font-variant-numeric: tabular-nums; text-align: center; }
-.product-card-wrap { flex-direction: column; }
+.product-card-wrap { flex-direction: column; border-radius: 24px; transition: transform .3s ease; }
+.product-card-wrap:hover, .product-card-wrap:focus-within { transform: translateY(-4px); }
 .product-card-wrap > .product-card { border-radius: 24px 24px 0 0 !important; border-bottom: 0 !important; }
+.product-card-wrap > .product-card:hover { transform: none !important; }
+.product-card-wrap:hover > [data-led], .product-card-wrap:focus-within > [data-led] { opacity: 1 !important; }
+.product-card-wrap > [data-led] > [data-led-spin] { transform: translate(-50%, -50%); animation: islandLed 1.8s linear infinite; }
+.product-card-wrap:hover > .product-card { border-color: var(--acc-a55) !important; }
+.product-card-wrap:hover .save-template-button { border-bottom-color: var(--acc-a55); border-left-color: var(--acc-a55); }
+.product-card-wrap:hover .save-template-button:only-child { border-right-color: var(--acc-a55); }
+.product-card-wrap:hover .cart-template-button { border-bottom-color: var(--acc-a55); border-right-color: var(--acc-a55); }
 .product-card-actions { display: flex; min-height: 48px; }
 .product-card-actions > button { flex: 1 1 50%; width: 50%; }
 .product-card-actions .save-template-button { border-radius: 0 0 0 24px; font-size: 11px; }
+.product-card-actions .save-template-button:only-child { border-radius: 0 0 24px 24px; }
 .cart-template-button { display: flex; align-items: center; justify-content: center; min-height: 46px; padding: 8px; border: 1px solid rgba(236,238,241,.14); border-left: 0; border-radius: 0 0 24px 0; background: rgba(232,58,52,.13); color: #f4eeee; cursor: pointer; }
 .cart-template-button:hover { background: rgba(232,58,52,.24); }
 .cart-template-button[aria-pressed="true"] { color: #ff8d88; background: rgba(232,58,52,.24); }

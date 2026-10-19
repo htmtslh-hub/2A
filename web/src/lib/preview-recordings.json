@@ -824,5 +824,47 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "cyber-ronin": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "7ee559bb2092",
+    "sha256": "7ee559bb209268b94cea58cb4e7cfe8495f4c720cdf4488ca053796ed6683d78",
+    "demoHtmlSha256": "d8a469385adb009826c50beb337093d1edb115a0716f6fe09b4dda4b589f9d01",
+    "demoSha256": "03e8914b1481ec1076be63760585c601650a905b0eea703c475ebae8d10daf42",
+    "bytes": 409029,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "vertex-shops": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "81303c817dd8",
+    "sha256": "81303c817dd8b4fe548555bbbf2f67a889d34ea4842589ee1980839a33e04d4d",
+    "demoHtmlSha256": "c6e5519b7daa73fcccf8d799b484e9158368d4f312fcb489928a85ff1c400e7b",
+    "demoSha256": "aa2f93c2e29b0f2c603b6842fcc70a15e06a9575f95f63f70aa44365967321c3",
+    "bytes": 460596,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "veyra": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "5deb5c07e716",
+    "sha256": "5deb5c07e716d9f31941733c73bfd30e5d6368065733b535867517f6ed65bad3",
+    "demoHtmlSha256": "29bbc251cc42f3f78d0fcae5793b3c3e0638399fe5d6a2aa22f3b5d13b04ef0b",
+    "demoSha256": "20aabc6358d7a02ec4d34e018c13aba121bfae18148c20c52ea4d23cd20e9ff2",
+    "bytes": 694673,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

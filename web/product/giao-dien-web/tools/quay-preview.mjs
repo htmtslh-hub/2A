@@ -98,7 +98,7 @@ await new Promise(ok => server.listen(0, '127.0.0.1', ok));
 const origin = `http://127.0.0.1:${server.address().port}`;
 const browser = await chromium.launch({ headless: true });
 const nextSelector = '#hero-next, #hero-arrow-next, #next, [data-step="1"], [data-direction="1"], [data-next], [data-next-preview]';
-const remoteBriefProducts = new Set(['spaceedu','mostar-city','fennec','riverine-ai','freight-axis','meridian','solaris-gate','monoframe']);
+const remoteBriefProducts = new Set(['spaceedu','mostar-city','fennec','riverine-ai','freight-axis','meridian','solaris-gate','monoframe','cyber-ronin','vertex-shops']);
 try {
   for (const [id, product] of selected) {
     const slug = product.slug;
@@ -160,6 +160,38 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'cyber-ronin') {
+        const back = actions.some(a => a.action === 'spotlight-right');
+        await page.mouse.move(back ? 1100 : 220, 340);
+        await page.mouse.move(back ? 400 : 1100, 460, { steps: 40 });
+        actions.push({seconds:(Date.now()-start)/1000,action:back ? 'spotlight-left' : 'spotlight-right'});
+        return;
+      }
+      if (slug === 'vertex-shops') {
+        await page.locator('.cta2').hover();
+        actions.push({seconds:(Date.now()-start)/1000,action:'hover CTA; 37-card ring rotates'});
+        return;
+      }
+      if (slug === 'veyra') {
+        if (!actions.some(a => a.action === 'select-paint')) {
+          await page.getByRole('button',{name:'Body colour',exact:true}).click();
+          await page.getByRole('button',{name:'Electric Green',exact:true}).click();
+          actions.push({seconds:(Date.now()-start)/1000,action:'select-paint',value:'Electric Green'});
+        } else if (await page.locator('#appearance-paint').count()) {
+          await page.keyboard.press('Escape');
+          await page.locator('#appearance-paint').waitFor({state:'detached'});
+          await page.waitForTimeout(300);
+          await page.getByRole('button',{name:'Explore the drive unit',exact:true}).click();
+          await page.waitForFunction(()=>document.querySelector('.phase-detail'));
+          actions.push({seconds:(Date.now()-start)/1000,action:'click',selector:'Explore the drive unit'});
+        } else if (await page.locator('.phase-detail').count()) {
+          await page.getByRole('button',{name:'Back to vehicle',exact:true}).click();
+          await page.waitForFunction(()=>document.querySelector('.phase-overview'));
+          actions.push({seconds:(Date.now()-start)/1000,action:'click',selector:'Back to vehicle'});
+        }
+        return;
+      }
+
       if (slug === 'jack-3d') {
         const selector = actions.some(a=>a.action==='chapter') ? '#about' : '.marquee';
         await page.locator(selector).scrollIntoViewIfNeeded();
@@ -237,7 +269,7 @@ try {
     }
     actions.push({ seconds:6.7, action:'scroll', target });
     await at(10); await shot('scroll');
-    if (slug === 'solaris-gate' || slug === 'monoframe') {
+    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra'].includes(slug)) {
       await next();
     }
     await at(11.5); await page.evaluate(() => window.scrollTo({ top:0, behavior:'smooth' }));

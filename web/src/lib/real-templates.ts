@@ -46,6 +46,280 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t65: {
+    "slug": "cyber-ronin",
+    "cat": "commerce",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Cyber Ronin",
+        "desc": "Hero cyberpunk cam/kem với spotlight theo chuột hoặc cảm ứng để hé lộ cảnh thay thế, chữ xuất hiện tuần tự, thẻ sản phẩm kính mờ và thông số. Một HTML tự chứa; ảnh/font tải ngoài. Reserve Now và các nút icon là giao diện demo.",
+        "tags": [
+          "HTML tự chứa",
+          "Spotlight Reveal",
+          "Cyberpunk"
+        ]
+      },
+      "en": {
+        "name": "Cyber Ronin",
+        "desc": "An orange-and-cream cyberpunk hero with mouse/touch spotlight revealing an alternate scene, staggered type, glass product card and specs. One self-contained HTML; remote images/fonts. Reserve Now and icon controls are presentation-only.",
+        "tags": [
+          "Single HTML",
+          "Spotlight Reveal",
+          "Cyberpunk"
+        ]
+      },
+      "zh": {
+        "name": "Cyber Ronin",
+        "desc": "橙色与奶油色赛博朋克首屏，鼠标/触摸聚光灯揭示另一场景，搭配逐词动画、玻璃产品卡及参数。单个HTML；图片与字体从外部加载。Reserve Now和图标按钮仅作展示。",
+        "tags": [
+          "单文件HTML",
+          "聚光灯揭示",
+          "赛博朋克"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Format",
+          "Single HTML · inline CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Assets",
+          "Remote images and fonts"
+        ],
+        [
+          "Scope",
+          "Hero cyberpunk cam/kem với spotlight theo chuột hoặc cảm ứng để hé lộ cảnh thay thế, chữ xuất hiện tuần tự, thẻ sản phẩm kính mờ và thông số. Một HTML tự chứa; ảnh/font tải ngoài. Reserve Now và các nút icon là giao diện demo."
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single HTML · inline CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Assets",
+          "Remote images and fonts"
+        ],
+        [
+          "Scope",
+          "An orange-and-cream cyberpunk hero with mouse/touch spotlight revealing an alternate scene, staggered type, glass product card and specs. One self-contained HTML; remote images/fonts. Reserve Now and icon controls are presentation-only."
+        ]
+      ],
+      "zh": [
+        [
+          "Format",
+          "Single HTML · inline CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Assets",
+          "Remote images and fonts"
+        ],
+        [
+          "Scope",
+          "橙色与奶油色赛博朋克首屏，鼠标/触摸聚光灯揭示另一场景，搭配逐词动画、玻璃产品卡及参数。单个HTML；图片与字体从外部加载。Reserve Now和图标按钮仅作展示。"
+        ]
+      ]
+    }
+  },
+  t64: {
+    "slug": "veyra",
+    "cat": "commerce",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "VEYRA",
+        "desc": "Design study xe điện tương tác theo release v1.0.0 của Amir Mušić: video mở nắp capo/reveal pin, hai cutaway, năm màu sơn và ba kiểu bánh. React/TypeScript/Vite, nguồn MIT và 18 media gốc kèm built/. Giữ các hạn chế focus và chạm chú thích của bản gốc.",
+        "tags": [
+          "React + TypeScript",
+          "Video Hotspots",
+          "MIT Source"
+        ]
+      },
+      "en": {
+        "name": "VEYRA",
+        "desc": "Amir Mušić’s v1.0.0 electric-vehicle design study: hood/battery hover films, two cutaways, five paints and three wheels. React/TypeScript/Vite, MIT source, 18 original media files and built/ output. Preserves upstream focus and phone annotation limits.",
+        "tags": [
+          "React + TypeScript",
+          "Video Hotspots",
+          "MIT Source"
+        ]
+      },
+      "zh": {
+        "name": "VEYRA",
+        "desc": "Amir Mušić 的v1.0.0电动车交互设计研究：引擎盖/电池悬停视频、两个剖视图、五种车色与三款轮毂。React/TypeScript/Vite，MIT源码、18个原始媒体及built/版本。保留原版焦点及手机注释点击限制。",
+        "tags": [
+          "React + TypeScript",
+          "视频热点",
+          "MIT源码"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Format",
+          "React 18 · TypeScript · Vite · pnpm 10.15.1"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Assets",
+          "18 bundled original media · Google Font"
+        ],
+        [
+          "Scope",
+          "Design study xe điện tương tác theo release v1.0.0 của Amir Mušić: video mở nắp capo/reveal pin, hai cutaway, năm màu sơn và ba kiểu bánh. React/TypeScript/Vite, nguồn MIT và 18 media gốc kèm built/. Giữ các hạn chế focus và chạm chú thích của bản gốc."
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 · TypeScript · Vite · pnpm 10.15.1"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Assets",
+          "18 bundled original media · Google Font"
+        ],
+        [
+          "Scope",
+          "Amir Mušić’s v1.0.0 electric-vehicle design study: hood/battery hover films, two cutaways, five paints and three wheels. React/TypeScript/Vite, MIT source, 18 original media files and built/ output. Preserves upstream focus and phone annotation limits."
+        ]
+      ],
+      "zh": [
+        [
+          "Format",
+          "React 18 · TypeScript · Vite · pnpm 10.15.1"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Assets",
+          "18 bundled original media · Google Font"
+        ],
+        [
+          "Scope",
+          "Amir Mušić 的v1.0.0电动车交互设计研究：引擎盖/电池悬停视频、两个剖视图、五种车色与三款轮毂。React/TypeScript/Vite，MIT源码、18个原始媒体及built/版本。保留原版焦点及手机注释点击限制。"
+        ]
+      ]
+    }
+  },
+  t63: {
+    "slug": "vertex-shops",
+    "cat": "commerce",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Vertex Shops",
+        "desc": "Hero SaaS nền tối với vòng 37 thẻ 3D chuyển động, bộ căn chữ theo font, nút sáng cyan và mô phỏng cửa hàng skincare phía trước. Một HTML tự chứa; ảnh/font cần mạng. CTA và cửa hàng là demo, chưa có checkout hay tạo shop.",
+        "tags": [
+          "HTML tự chứa",
+          "Carousel 3D",
+          "SaaS Hero"
+        ]
+      },
+      "en": {
+        "name": "Vertex Shops",
+        "desc": "A dark SaaS hero with a rotating 37-card 3D ring, measured typography, cyan-foot buttons and foreground skincare storefront mock. One self-contained HTML; remote images/fonts. Demo CTAs/storefront, without checkout or shop onboarding.",
+        "tags": [
+          "Single HTML",
+          "3D Carousel",
+          "SaaS Hero"
+        ]
+      },
+      "zh": {
+        "name": "Vertex Shops",
+        "desc": "深色 SaaS 首屏，含37张卡片的3D旋转环、字体测量排版、青色发光按钮及前景护肤店铺示意。单个HTML；图片与字体需联网。CTA与店铺仅为演示，不含结账或开店后台。",
+        "tags": [
+          "单文件HTML",
+          "3D轮播",
+          "SaaS首屏"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Format",
+          "Single HTML · inline CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Assets",
+          "Remote images and fonts"
+        ],
+        [
+          "Scope",
+          "Hero SaaS nền tối với vòng 37 thẻ 3D chuyển động, bộ căn chữ theo font, nút sáng cyan và mô phỏng cửa hàng skincare phía trước. Một HTML tự chứa; ảnh/font cần mạng. CTA và cửa hàng là demo, chưa có checkout hay tạo shop."
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single HTML · inline CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Assets",
+          "Remote images and fonts"
+        ],
+        [
+          "Scope",
+          "A dark SaaS hero with a rotating 37-card 3D ring, measured typography, cyan-foot buttons and foreground skincare storefront mock. One self-contained HTML; remote images/fonts. Demo CTAs/storefront, without checkout or shop onboarding."
+        ]
+      ],
+      "zh": [
+        [
+          "Format",
+          "Single HTML · inline CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Assets",
+          "Remote images and fonts"
+        ],
+        [
+          "Scope",
+          "深色 SaaS 首屏，含37张卡片的3D旋转环、字体测量排版、青色发光按钮及前景护肤店铺示意。单个HTML；图片与字体需联网。CTA与店铺仅为演示，不含结账或开店后台。"
+        ]
+      ]
+    }
+  },
+
   t62: {
     slug: 'monoframe',
     cat: 'commerce',

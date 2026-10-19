@@ -1,0 +1,14 @@
+node:fs:441
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open 'D:\3. Dự án\2A\_design\.qa-extracted\cyber-ronin\assets\css\style.css'
+    at readFileSync (node:fs:441:20)
+    at file:///D:/3.%20D%E1%BB%B1%20%C3%A1n/2A/web/product/giao-dien-web/tools/check-template.mjs:94:13 {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\3. Dự án\\2A\\_design\\.qa-extracted\\cyber-ronin\\assets\\css\\style.css'
+}
+
+Node.js v24.15.0

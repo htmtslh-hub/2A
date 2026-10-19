@@ -1,0 +1,26 @@
+VERTEX SHOPS — LICENCE TERMS
+
+Copyright entity: Forge zone. These terms apply to the template code and customer documentation. They do not grant ownership of third-party images, fonts, services or trademarks.
+
+1. WHAT YOU GET
+A perpetual, non-exclusive commercial licence to the template source upon an authorised product sale.
+
+2. WHAT YOU MAY DO
+Use the licensed source in unlimited personal and client projects, modify it and publish the resulting website without attribution.
+
+3. WHAT YOU MAY NOT DO
+Resell, sublicense or give away the template files, publish them on another marketplace, or bundle them into another template product.
+
+4. DEMO CONTENT AND REMOTE ASSETS
+Vertex Shops, Glow Skin Care, store prices and other demo content are fictional sample content. Replace them with verified material before selling an actual product. The approved brief supplies fifteen remote image URLs, which remain external references. No image files are bundled, no exclusive copyright in AI-generated artwork is asserted, and this code licence does not grant separate redistribution or stock-asset rights in remote images. Use your own authorised assets for your published business website. Remote service availability is not guaranteed.
+
+5. FONTS
+Poppins and Playfair Display load from Google Fonts; no font files are bundled. Official font licence sources: https://raw.githubusercontent.com/google/fonts/main/ofl/poppins/OFL.txt and https://raw.githubusercontent.com/google/fonts/main/ofl/playfairdisplay/OFL.txt. Both are SIL Open Font License fonts. Font rights stay with their authors. Preserve upstream notices when self-hosting.
+
+6. OWNERSHIP
+Copyright in the template source remains with Forge zone. A licence grants use, not ownership. Third-party rights stay with their respective owners.
+
+7. NO WARRANTY
+Provided as is. Read README.md for functional limits and the actual browser coverage. No shop or payment backend is included. Compatibility with every browser, external service or use is not guaranteed.
+
+Questions about what is and is not allowed: just ask. The answer is usually yes.

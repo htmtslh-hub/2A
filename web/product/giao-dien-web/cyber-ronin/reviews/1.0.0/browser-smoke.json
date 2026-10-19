@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Chromium",
+    "version": "153.0.8010.12",
+    "midway": {
+      "opacity": "0.616372",
+      "transform": "matrix(1.06905, 0, 0, 1.06905, 0, 0)"
+    },
+    "hoverLift": 1,
+    "reduced": "none",
+    "errors": [],
+    "result": "PASS"
+  },
+  {
+    "name": "Edge",
+    "version": "155.0.4283.62",
+    "midway": {
+      "opacity": "0.61711",
+      "transform": "matrix(1.06892, 0, 0, 1.06892, 0, 0)"
+    },
+    "hoverLift": 1,
+    "reduced": "none",
+    "errors": [],
+    "result": "PASS"
+  },
+  {
+    "name": "CocCoc",
+    "version": "152.0.7977.124",
+    "midway": {
+      "opacity": "0.579801",
+      "transform": "matrix(1.07564, 0, 0, 1.07564, 0, 0)"
+    },
+    "hoverLift": 1,
+    "reduced": "none",
+    "errors": [],
+    "result": "PASS"
+  }
+]

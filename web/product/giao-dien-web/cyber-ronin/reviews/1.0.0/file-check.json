@@ -1,0 +1,6 @@
+{
+  "title": "Cyber Ronin // Neural Edges",
+  "initial": "radial-gradient(0px at -999px -999px, rgb(255, 255, 255), rgba(0, 0, 0, 0))",
+  "mask": "radial-gradient(260px at 800px 300px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+  "result": "PASS"
+}

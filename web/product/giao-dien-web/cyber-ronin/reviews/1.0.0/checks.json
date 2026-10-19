@@ -1,0 +1,660 @@
+{
+  "errors": [],
+  "failed": [],
+  "sizes": [
+    {
+      "w": 1440,
+      "h": 900,
+      "scroll": 1440,
+      "height": 900,
+      "mask": "radial-gradient(260px at 936px 405px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+      "lines": 3,
+      "words": [
+        {
+          "text": "RONIN-X",
+          "delay": "0s"
+        },
+        {
+          "text": "//",
+          "delay": "0.1s"
+        },
+        {
+          "text": "SHADOW",
+          "delay": "0.2s"
+        },
+        {
+          "text": "NIGHTFALL",
+          "delay": "0.3s"
+        }
+      ],
+      "heading": {
+        "x": 44,
+        "y": 36,
+        "width": 342.171875,
+        "height": 158.765625,
+        "top": 36,
+        "right": 386.171875,
+        "bottom": 194.765625,
+        "left": 44
+      },
+      "lastRow": {
+        "x": 1056,
+        "y": 830,
+        "width": 340,
+        "height": 30,
+        "top": 830,
+        "right": 1396,
+        "bottom": 860,
+        "left": 1056
+      },
+      "card": {
+        "x": 44,
+        "y": 739.90625,
+        "width": 320,
+        "height": 120.09375,
+        "top": 739.90625,
+        "right": 364,
+        "bottom": 860,
+        "left": 44
+      },
+      "font": "Orbitron-Medium, \"Arial Narrow\", sans-serif"
+    },
+    {
+      "w": 820,
+      "h": 1180,
+      "scroll": 820,
+      "height": 1180,
+      "mask": "radial-gradient(260px at 533px 531px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+      "lines": 3,
+      "words": [
+        {
+          "text": "RONIN-X",
+          "delay": "0s"
+        },
+        {
+          "text": "//",
+          "delay": "0.1s"
+        },
+        {
+          "text": "SHADOW",
+          "delay": "0.2s"
+        },
+        {
+          "text": "NIGHTFALL",
+          "delay": "0.3s"
+        }
+      ],
+      "heading": {
+        "x": 22,
+        "y": 28,
+        "width": 332,
+        "height": 120.9375,
+        "top": 28,
+        "right": 354,
+        "bottom": 148.9375,
+        "left": 22
+      },
+      "lastRow": {
+        "x": 518,
+        "y": 1122,
+        "width": 280,
+        "height": 30,
+        "top": 1122,
+        "right": 798,
+        "bottom": 1152,
+        "left": 518
+      },
+      "card": {
+        "x": 22,
+        "y": 1031.90625,
+        "width": 320,
+        "height": 120.09375,
+        "top": 1031.90625,
+        "right": 342,
+        "bottom": 1152,
+        "left": 22
+      },
+      "font": "Orbitron-Medium, \"Arial Narrow\", sans-serif"
+    },
+    {
+      "w": 375,
+      "h": 812,
+      "scroll": 375,
+      "height": 812,
+      "mask": "radial-gradient(120px at 243px 365px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+      "lines": 3,
+      "words": [
+        {
+          "text": "RONIN-X",
+          "delay": "0s"
+        },
+        {
+          "text": "//",
+          "delay": "0.1s"
+        },
+        {
+          "text": "SHADOW",
+          "delay": "0.2s"
+        },
+        {
+          "text": "NIGHTFALL",
+          "delay": "0.3s"
+        }
+      ],
+      "heading": {
+        "x": 16,
+        "y": 18,
+        "width": 295,
+        "height": 83.15625,
+        "top": 18,
+        "right": 311,
+        "bottom": 101.15625,
+        "left": 16
+      },
+      "lastRow": {
+        "x": 16,
+        "y": 765,
+        "width": 343,
+        "height": 27,
+        "top": 765,
+        "right": 359,
+        "bottom": 792,
+        "left": 16
+      },
+      "card": {
+        "x": 16,
+        "y": 242.9375,
+        "width": 343,
+        "height": 108.375,
+        "top": 242.9375,
+        "right": 359,
+        "bottom": 351.3125,
+        "left": 16
+      },
+      "font": "Orbitron-Medium, \"Arial Narrow\", sans-serif"
+    },
+    {
+      "w": 320,
+      "h": 740,
+      "scroll": 320,
+      "height": 740,
+      "mask": "radial-gradient(120px at 208px 333px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+      "lines": 3,
+      "words": [
+        {
+          "text": "RONIN-X",
+          "delay": "0s"
+        },
+        {
+          "text": "//",
+          "delay": "0.1s"
+        },
+        {
+          "text": "SHADOW",
+          "delay": "0.2s"
+        },
+        {
+          "text": "NIGHTFALL",
+          "delay": "0.3s"
+        }
+      ],
+      "heading": {
+        "x": 16,
+        "y": 18,
+        "width": 240,
+        "height": 50.390625,
+        "top": 18,
+        "right": 256,
+        "bottom": 68.390625,
+        "left": 16
+      },
+      "lastRow": {
+        "x": 16,
+        "y": 693,
+        "width": 288,
+        "height": 27,
+        "top": 693,
+        "right": 304,
+        "bottom": 720,
+        "left": 16
+      },
+      "card": {
+        "x": 16,
+        "y": 228.765625,
+        "width": 288,
+        "height": 108.375,
+        "top": 228.765625,
+        "right": 304,
+        "bottom": 337.140625,
+        "left": 16
+      },
+      "font": "Orbitron-Medium, \"Arial Narrow\", sans-serif"
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "scroll": 1024,
+      "height": 768,
+      "mask": "radial-gradient(260px at 665px 345px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+      "lines": 3,
+      "words": [
+        {
+          "text": "RONIN-X",
+          "delay": "0s"
+        },
+        {
+          "text": "//",
+          "delay": "0.1s"
+        },
+        {
+          "text": "SHADOW",
+          "delay": "0.2s"
+        },
+        {
+          "text": "NIGHTFALL",
+          "delay": "0.3s"
+        }
+      ],
+      "heading": {
+        "x": 28,
+        "y": 32,
+        "width": 340,
+        "height": 116.0625,
+        "top": 32,
+        "right": 368,
+        "bottom": 148.0625,
+        "left": 28
+      },
+      "lastRow": {
+        "x": 696,
+        "y": 702,
+        "width": 300,
+        "height": 30,
+        "top": 702,
+        "right": 996,
+        "bottom": 732,
+        "left": 696
+      },
+      "card": {
+        "x": 28,
+        "y": 611.90625,
+        "width": 320,
+        "height": 120.09375,
+        "top": 611.90625,
+        "right": 348,
+        "bottom": 732,
+        "left": 28
+      },
+      "font": "Orbitron-Medium, \"Arial Narrow\", sans-serif"
+    },
+    {
+      "w": 900,
+      "h": 900,
+      "scroll": 900,
+      "height": 900,
+      "mask": "radial-gradient(260px at 585px 405px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+      "lines": 3,
+      "words": [
+        {
+          "text": "RONIN-X",
+          "delay": "0s"
+        },
+        {
+          "text": "//",
+          "delay": "0.1s"
+        },
+        {
+          "text": "SHADOW",
+          "delay": "0.2s"
+        },
+        {
+          "text": "NIGHTFALL",
+          "delay": "0.3s"
+        }
+      ],
+      "heading": {
+        "x": 22,
+        "y": 28,
+        "width": 340,
+        "height": 120.9375,
+        "top": 28,
+        "right": 362,
+        "bottom": 148.9375,
+        "left": 22
+      },
+      "lastRow": {
+        "x": 598,
+        "y": 842,
+        "width": 280,
+        "height": 30,
+        "top": 842,
+        "right": 878,
+        "bottom": 872,
+        "left": 598
+      },
+      "card": {
+        "x": 22,
+        "y": 751.90625,
+        "width": 320,
+        "height": 120.09375,
+        "top": 751.90625,
+        "right": 342,
+        "bottom": 872,
+        "left": 22
+      },
+      "font": "Orbitron-Medium, \"Arial Narrow\", sans-serif"
+    },
+    {
+      "w": 768,
+      "h": 1024,
+      "scroll": 768,
+      "height": 1024,
+      "mask": "radial-gradient(260px at 499px 460px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+      "lines": 3,
+      "words": [
+        {
+          "text": "RONIN-X",
+          "delay": "0s"
+        },
+        {
+          "text": "//",
+          "delay": "0.1s"
+        },
+        {
+          "text": "SHADOW",
+          "delay": "0.2s"
+        },
+        {
+          "text": "NIGHTFALL",
+          "delay": "0.3s"
+        }
+      ],
+      "heading": {
+        "x": 20,
+        "y": 24,
+        "width": 340,
+        "height": 120.9375,
+        "top": 24,
+        "right": 360,
+        "bottom": 144.9375,
+        "left": 20
+      },
+      "lastRow": {
+        "x": 20,
+        "y": 966,
+        "width": 728,
+        "height": 30,
+        "top": 966,
+        "right": 748,
+        "bottom": 996,
+        "left": 20
+      },
+      "card": {
+        "x": 20,
+        "y": 720.90625,
+        "width": 320,
+        "height": 120.09375,
+        "top": 720.90625,
+        "right": 340,
+        "bottom": 841,
+        "left": 20
+      },
+      "font": "Orbitron-Medium, \"Arial Narrow\", sans-serif"
+    },
+    {
+      "w": 720,
+      "h": 900,
+      "scroll": 720,
+      "height": 900,
+      "mask": "radial-gradient(260px at 468px 405px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+      "lines": 3,
+      "words": [
+        {
+          "text": "RONIN-X",
+          "delay": "0s"
+        },
+        {
+          "text": "//",
+          "delay": "0.1s"
+        },
+        {
+          "text": "SHADOW",
+          "delay": "0.2s"
+        },
+        {
+          "text": "NIGHTFALL",
+          "delay": "0.3s"
+        }
+      ],
+      "heading": {
+        "x": 18,
+        "y": 22,
+        "width": 636,
+        "height": 120.9375,
+        "top": 22,
+        "right": 654,
+        "bottom": 142.9375,
+        "left": 18
+      },
+      "lastRow": {
+        "x": 18,
+        "y": 846,
+        "width": 684,
+        "height": 30,
+        "top": 846,
+        "right": 702,
+        "bottom": 876,
+        "left": 18
+      },
+      "card": {
+        "x": 18,
+        "y": 283.6875,
+        "width": 684,
+        "height": 112,
+        "top": 283.6875,
+        "right": 702,
+        "bottom": 395.6875,
+        "left": 18
+      },
+      "font": "Orbitron-Medium, \"Arial Narrow\", sans-serif"
+    },
+    {
+      "w": 480,
+      "h": 850,
+      "scroll": 480,
+      "height": 850,
+      "mask": "radial-gradient(160px at 312px 382px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+      "lines": 3,
+      "words": [
+        {
+          "text": "RONIN-X",
+          "delay": "0s"
+        },
+        {
+          "text": "//",
+          "delay": "0.1s"
+        },
+        {
+          "text": "SHADOW",
+          "delay": "0.2s"
+        },
+        {
+          "text": "NIGHTFALL",
+          "delay": "0.3s"
+        }
+      ],
+      "heading": {
+        "x": 16,
+        "y": 18,
+        "width": 400,
+        "height": 83.15625,
+        "top": 18,
+        "right": 416,
+        "bottom": 101.15625,
+        "left": 16
+      },
+      "lastRow": {
+        "x": 16,
+        "y": 803,
+        "width": 448,
+        "height": 27,
+        "top": 803,
+        "right": 464,
+        "bottom": 830,
+        "left": 16
+      },
+      "card": {
+        "x": 16,
+        "y": 224.34375,
+        "width": 448,
+        "height": 94,
+        "top": 224.34375,
+        "right": 464,
+        "bottom": 318.34375,
+        "left": 16
+      },
+      "font": "Orbitron-Medium, \"Arial Narrow\", sans-serif"
+    },
+    {
+      "w": 360,
+      "h": 800,
+      "scroll": 360,
+      "height": 800,
+      "mask": "radial-gradient(120px at 234px 360px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+      "lines": 3,
+      "words": [
+        {
+          "text": "RONIN-X",
+          "delay": "0s"
+        },
+        {
+          "text": "//",
+          "delay": "0.1s"
+        },
+        {
+          "text": "SHADOW",
+          "delay": "0.2s"
+        },
+        {
+          "text": "NIGHTFALL",
+          "delay": "0.3s"
+        }
+      ],
+      "heading": {
+        "x": 16,
+        "y": 18,
+        "width": 280,
+        "height": 50.390625,
+        "top": 18,
+        "right": 296,
+        "bottom": 68.390625,
+        "left": 16
+      },
+      "lastRow": {
+        "x": 16,
+        "y": 753,
+        "width": 328,
+        "height": 27,
+        "top": 753,
+        "right": 344,
+        "bottom": 780,
+        "left": 16
+      },
+      "card": {
+        "x": 16,
+        "y": 210.171875,
+        "width": 328,
+        "height": 108.375,
+        "top": 210.171875,
+        "right": 344,
+        "bottom": 318.546875,
+        "left": 16
+      },
+      "font": "Orbitron-Medium, \"Arial Narrow\", sans-serif"
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "scroll": 1920,
+      "height": 1080,
+      "mask": "radial-gradient(260px at 1248px 486px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+      "lines": 3,
+      "words": [
+        {
+          "text": "RONIN-X",
+          "delay": "0s"
+        },
+        {
+          "text": "//",
+          "delay": "0.1s"
+        },
+        {
+          "text": "SHADOW",
+          "delay": "0.2s"
+        },
+        {
+          "text": "NIGHTFALL",
+          "delay": "0.3s"
+        }
+      ],
+      "heading": {
+        "x": 44,
+        "y": 36,
+        "width": 342.171875,
+        "height": 158.765625,
+        "top": 36,
+        "right": 386.171875,
+        "bottom": 194.765625,
+        "left": 44
+      },
+      "lastRow": {
+        "x": 1536,
+        "y": 1010,
+        "width": 340,
+        "height": 30,
+        "top": 1010,
+        "right": 1876,
+        "bottom": 1040,
+        "left": 1536
+      },
+      "card": {
+        "x": 44,
+        "y": 919.90625,
+        "width": 320,
+        "height": 120.09375,
+        "top": 919.90625,
+        "right": 364,
+        "bottom": 1040,
+        "left": 44
+      },
+      "font": "Orbitron-Medium, \"Arial Narrow\", sans-serif"
+    }
+  ],
+  "browser": "153.0.8010.12",
+  "midAnimation": "0",
+  "assets": [
+    {
+      "url": "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260831_115955_2a9adb39-5e9b-4ced-96e2-6900eabe3de9.png&w=1920&q=85",
+      "loaded": true,
+      "width": 1920,
+      "height": 1086
+    },
+    {
+      "url": "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260831_123709_183f0065-efb2-4bb2-a849-13aaa5af2f3f.png&w=1920&q=85",
+      "loaded": true,
+      "width": 1920,
+      "height": 1086
+    },
+    {
+      "url": "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260831_121937_3f02b5a0-5b86-43d9-b30e-03c5e46632e7.png&w=1920&q=85",
+      "loaded": true,
+      "width": 1920,
+      "height": 1086
+    }
+  ],
+  "touch": "radial-gradient(120px at 155px 420px, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0.12) 88%, transparent 100%)",
+  "reduced": true,
+  "noObserver": true,
+  "noJS": "1",
+  "result": "PASS"
+}

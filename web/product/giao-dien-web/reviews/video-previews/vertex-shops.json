@@ -1,0 +1,46 @@
+{
+  "id": "t63",
+  "slug": "vertex-shops",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T14:16:24.843Z",
+  "demo": "/demos/vertex-shops/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "81303c817dd8",
+  "sha256": "81303c817dd8b4fe548555bbbf2f67a889d34ea4842589ee1980839a33e04d4d",
+  "demoHtmlSha256": "c6e5519b7daa73fcccf8d799b484e9158368d4f312fcb489928a85ff1c400e7b",
+  "demoSha256": "aa2f93c2e29b0f2c603b6842fcc70a15e06a9575f95f63f70aa44365967321c3",
+  "bytes": 460596,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.515,
+      "action": "hover CTA; 37-card ring rotates"
+    },
+    {
+      "seconds": 4.911,
+      "action": "hover CTA; 37-card ring rotates"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vertex-shops-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vertex-shops-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vertex-shops-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vertex-shops-return.jpg"
+  ]
+}

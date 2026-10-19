@@ -1,0 +1,53 @@
+{
+  "id": "t64",
+  "slug": "veyra",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T14:16:44.780Z",
+  "demo": "/demos/veyra/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "5deb5c07e716",
+  "sha256": "5deb5c07e716d9f31941733c73bfd30e5d6368065733b535867517f6ed65bad3",
+  "demoHtmlSha256": "29bbc251cc42f3f78d0fcae5793b3c3e0638399fe5d6a2aa22f3b5d13b04ef0b",
+  "demoSha256": "20aabc6358d7a02ec4d34e018c13aba121bfae18148c20c52ea4d23cd20e9ff2",
+  "bytes": 694673,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.809,
+      "action": "select-paint",
+      "value": "Electric Green"
+    },
+    {
+      "seconds": 6.463,
+      "action": "click",
+      "selector": "Explore the drive unit"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 11.414,
+      "action": "click",
+      "selector": "Back to vehicle"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\veyra-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\veyra-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\veyra-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\veyra-return.jpg"
+  ]
+}

@@ -1,0 +1,474 @@
+{
+  "browsers": [
+    {
+      "name": "Chromium",
+      "version": "153.0.8010.12",
+      "products": [
+        {
+          "slug": "vertex-shops",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1440,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 820,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 375,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        },
+        {
+          "slug": "veyra",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1410,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 805,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 360,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        },
+        {
+          "slug": "cyber-ronin",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1440,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 820,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 375,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "Firefox",
+      "version": "155.0",
+      "products": [
+        {
+          "slug": "vertex-shops",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1440,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 820,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 375,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        },
+        {
+          "slug": "veyra",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1440,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 820,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 375,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        },
+        {
+          "slug": "cyber-ronin",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1440,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 820,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 375,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "Edge",
+      "version": "155.0.4283.62",
+      "products": [
+        {
+          "slug": "vertex-shops",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1440,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 820,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 375,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        },
+        {
+          "slug": "veyra",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1410,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 805,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 360,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        },
+        {
+          "slug": "cyber-ronin",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1440,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 820,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 375,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        }
+      ]
+    },
+    {
+      "name": "CocCoc",
+      "version": "152.0.7977.124",
+      "products": [
+        {
+          "slug": "vertex-shops",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1440,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 820,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 375,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "Vision — Streamline the shop virtual"
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        },
+        {
+          "slug": "veyra",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1408,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 804,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 359,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "VEYRA — Electric, inside out."
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        },
+        {
+          "slug": "cyber-ronin",
+          "checks": [
+            {
+              "w": 1440,
+              "client": 1440,
+              "scroll": 1440,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 820,
+              "client": 820,
+              "scroll": 820,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 375,
+              "client": 375,
+              "scroll": 375,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            },
+            {
+              "w": 320,
+              "client": 320,
+              "scroll": 320,
+              "h1": 1,
+              "title": "Cyber Ronin // Neural Edges"
+            }
+          ],
+          "errors": [],
+          "http": [],
+          "interaction": "PASS",
+          "reduced": "PASS"
+        }
+      ]
+    }
+  ],
+  "observations": [],
+  "origin": "http://127.0.0.1:8767"
+}

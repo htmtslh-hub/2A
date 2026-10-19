@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "vertex-shops",
+    "zipBytes": 20478,
+    "sha256": "7de252e3b104850c9badf8bd5bb370ccb6e03aec108a7cf41567515cf8d112b0",
+    "files": 4,
+    "sourceBytesMatch": true,
+    "steps": 10,
+    "prompts": 12,
+    "editCounts": [
+      [
+        "Vertex Shops",
+        3
+      ],
+      [
+        "VERTEX",
+        1
+      ],
+      [
+        "Streamline the shop",
+        4
+      ],
+      [
+        "Build new shop",
+        1
+      ],
+      [
+        "See prices",
+        1
+      ],
+      [
+        "href=\"#\"",
+        7
+      ],
+      [
+        "https://d8j0ntlcm91z4.cloudfront.net/",
+        15
+      ],
+      [
+        "SHOTS",
+        2
+      ],
+      [
+        "function creative(",
+        1
+      ],
+      [
+        "function layout(",
+        1
+      ],
+      [
+        "function resize(",
+        1
+      ]
+    ]
+  },
+  {
+    "slug": "veyra",
+    "zipBytes": 47420678,
+    "sha256": "53cf98712930105fb24d2fc20234243de225eb1dc5c44c662d6c5e3d58de403b",
+    "files": 81,
+    "sourceBytesMatch": true,
+    "steps": 10,
+    "prompts": 12,
+    "editCounts": []
+  },
+  {
+    "slug": "cyber-ronin",
+    "zipBytes": 12414,
+    "sha256": "f13b4821c278ede8b2678bffe759beee05eb136e088e591562fb2973ff285413",
+    "files": 4,
+    "sourceBytesMatch": true,
+    "steps": 10,
+    "prompts": 12,
+    "editCounts": [
+      [
+        "Cyber Ronin",
+        3
+      ],
+      [
+        "RONIN-X //",
+        1
+      ],
+      [
+        "RONIN-X",
+        2
+      ],
+      [
+        "SHADOW",
+        1
+      ],
+      [
+        "NIGHTFALL",
+        1
+      ],
+      [
+        "CR-01: CYBER FRAME",
+        1
+      ],
+      [
+        "Reserve Now",
+        1
+      ],
+      [
+        "https://images.higgs.ai/",
+        3
+      ],
+      [
+        "Orbitron-Medium",
+        2
+      ],
+      [
+        "--cream:",
+        1
+      ],
+      [
+        "--muted:",
+        1
+      ]
+    ]
+  }
+]

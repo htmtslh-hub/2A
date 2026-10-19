@@ -1,0 +1,50 @@
+{
+  "id": "t65",
+  "slug": "cyber-ronin",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-18T14:16:03.653Z",
+  "demo": "/demos/cyber-ronin/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "7ee559bb2092",
+  "sha256": "7ee559bb209268b94cea58cb4e7cfe8495f4c720cdf4488ca053796ed6683d78",
+  "demoHtmlSha256": "d8a469385adb009826c50beb337093d1edb115a0716f6fe09b4dda4b589f9d01",
+  "demoSha256": "03e8914b1481ec1076be63760585c601650a905b0eea703c475ebae8d10daf42",
+  "bytes": 409029,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 3.287,
+      "action": "spotlight-right"
+    },
+    {
+      "seconds": 5.765,
+      "action": "spotlight-left"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 11.108,
+      "action": "spotlight-left"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cyber-ronin-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cyber-ronin-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cyber-ronin-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cyber-ronin-return.jpg"
+  ]
+}

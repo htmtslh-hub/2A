@@ -46,6 +46,98 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t76: {
+    "slug": "sellix",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Sellix",
+        "desc": "Hero tài chính xuyên biên giới (Cross-border finance) một file HTML độc lập trên nền đen #000000: hai thẻ video địa cầu ma trận điểm tím xoay giữa bầu trời sao tự động cross-fade 0.9s mượt mà tại điểm lặp 10s, hệ quy chiếu pixel tham chiếu 1280×800 co giãn tỷ lệ --u, tiêu đề Plus Jakarta Sans 500 hai dòng che mặt nạ (lineRise), cặp nút pill trắng & kính mờ, menu di động góc trên phải và chuỗi hoạt ảnh vào trang tự tháo gỡ sau 1.67s.",
+        "tags": [
+          "Cross-border Finance",
+          "Dual-Video Crossfade",
+          "Standalone HTML"
+        ]
+      },
+      "en": {
+        "name": "Sellix",
+        "desc": "A standalone single-file cross-border finance hero on pure black #000000: two stacked violet dot-matrix Earth videos seamlessly cross-fading over 0.9s at the 10s loop point, a 1280×800 reference-pixel --u proportional scaling system, a two-line masked Plus Jakarta Sans 500 headline (lineRise), paired white and frosted-glass CTA pills, a top-right mobile menu panel and a self-detaching 1.67s entrance sequence.",
+        "tags": [
+          "Cross-border Finance",
+          "Dual-Video Crossfade",
+          "Standalone HTML"
+        ]
+      },
+      "zh": {
+        "name": "Sellix",
+        "desc": "纯黑 #000000 单文件跨境金融（Cross-border finance）全屏首屏模板：双层紫色点阵地球星空视频在 10 秒循环点自动进行 0.9 秒无缝交叉淡入淡出，采用 1280×800 参考像素 --u 比例缩放系统、Plus Jakarta Sans 500 双行遮罩上浮主标题（lineRise）、纯白与磨砂玻璃双胶囊按钮、右上角移动端磨砂菜单及 1.67 秒完成后自动卸载的入场动效。",
+        "tags": [
+          "跨境金融",
+          "双视频无缝循环",
+          "单文件 HTML"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "1 file index.html độc lập (HTML5 + CSS --u + 3 khối JS inline)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "4 file · 11.5 KB ZIP"
+        ],
+        [
+          "Tương tác",
+          "Cross-fade 2 video 0.9s · chuỗi entrance 1.67s tự tháo gỡ · menu <=1160px"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single standalone index.html (HTML5 + CSS --u + 3 inline JS blocks)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "4 files · 11.5 KB ZIP"
+        ],
+        [
+          "Interaction",
+          "0.9s dual-video loop crossfade · self-detaching 1.67s entrance · <=1160px menu"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件独立 index.html（HTML5 + CSS --u + 3 段内联 JS）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "4 个文件 · 11.5 KB ZIP"
+        ],
+        [
+          "交互",
+          "0.9s 双视频循环渐变 · 1.67s 自动清理入场动效 · <=1160px 移动菜单"
+        ]
+      ]
+    }
+  },
   t75: {
     "slug": "camper",
     "cat": "commerce",

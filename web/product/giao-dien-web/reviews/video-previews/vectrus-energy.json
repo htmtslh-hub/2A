@@ -2,15 +2,15 @@
   "id": "t69",
   "slug": "vectrus-energy",
   "browser": "153.0.8010.12",
-  "date": "2026-10-19T03:04:03.330Z",
+  "date": "2026-10-19T07:57:02.603Z",
   "demo": "/demos/vectrus-energy/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "c70717ae6934",
-  "sha256": "c70717ae69345c07b0a33b72db0489336f7a5640a3dcb76f484831ec3f0f119a",
-  "demoHtmlSha256": "addf120f59629426c8ea5dfa0264160fb35573e86e57292e27bfe77328d6cbbc",
-  "demoSha256": "1271813135270f564ca334a3099ec0fc88d6c9df3d47c3a76eabdd93772f8361",
-  "bytes": 552317,
+  "revision": "26ba5048a6ea",
+  "sha256": "26ba5048a6ea0967244d387f138022ee05dceec8d17544e72d447c3a34c01115",
+  "demoHtmlSha256": "416b8d7ceea8a97ddc0b718c10a637e7614acb37f72fb9f45d80b5637d1e7a2b",
+  "demoSha256": "442de55e59197fc6f781d0943a5454bccf66b74f7fe2a057e5e2c4b2bed9b584",
+  "bytes": 525038,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,7 +22,7 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.558,
+      "seconds": 2.637,
       "action": "vectrus-scroll-section-2"
     },
     {

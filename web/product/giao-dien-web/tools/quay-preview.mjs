@@ -98,7 +98,7 @@ await new Promise(ok => server.listen(0, '127.0.0.1', ok));
 const origin = `http://127.0.0.1:${server.address().port}`;
 const browser = await chromium.launch({ headless: true });
 const nextSelector = '#hero-next, #hero-arrow-next, #next, [data-step="1"], [data-direction="1"], [data-next], [data-next-preview]';
-const remoteBriefProducts = new Set(['spaceedu','mostar-city','fennec','riverine-ai','freight-axis','meridian','solaris-gate','monoframe','cyber-ronin','vertex-shops','nexlayer','halden']);
+const remoteBriefProducts = new Set(['spaceedu','mostar-city','fennec','riverine-ai','freight-axis','meridian','solaris-gate','monoframe','cyber-ronin','vertex-shops','nexlayer','halden','sellix']);
 try {
   for (const [id, product] of selected) {
     const slug = product.slug;
@@ -113,8 +113,8 @@ try {
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
-    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper') {
-      for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','images.higgs.ai']) allowedBriefHosts.add(host);
+    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix') {
+      for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai']) allowedBriefHosts.add(host);
     }
     if (slug === 'toonhub') {
       allowedBriefHosts.add('fifth-gentle-45902158.figma.site');
@@ -152,8 +152,8 @@ try {
     if (slug === 'prmpt') await page.waitForFunction(() => { const lv = document.getElementById('left-video'); const rv = document.getElementById('right-video'); const imgs = Array.from(document.querySelectorAll('.bp-card img')); return lv && rv && lv.readyState >= 2 && rv.readyState >= 2 && imgs.length === 10 && imgs.every(i => i.complete && i.naturalWidth > 0); }, null, {timeout:60000});
     if (slug === 'viktor') await page.waitForFunction(() => { const videos = Array.from(document.querySelectorAll('video')); return videos.length === 3 && videos.every(v => v.readyState >= 2); }, null, {timeout:60000});
     if (slug === 'fennec') await page.waitForFunction(() => document.querySelector('#fox')?.dataset.model === 'ready', null, {timeout:60000});
-    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
-    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper') {
+    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix') {
       await page.waitForTimeout(2000);
     }
     if (slug === 'solaris-gate') {
@@ -167,6 +167,20 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'sellix') {
+        const step = actions.filter(a => a.action.startsWith('sellix-')).length;
+        if (step === 0) {
+          await page.locator('.ctas .btn-primary').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'sellix-hover-primary-cta' });
+        } else if (step === 1) {
+          await page.locator('.ctas .btn-ghost').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'sellix-hover-ghost-cta' });
+        } else {
+          await page.locator('.btn-nav-start').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'sellix-hover-nav-start' });
+        }
+        return;
+      }
       if (slug === 'camper') {
         const step = actions.filter(a => a.action.startsWith('camper-')).length;
         if (step === 0) {

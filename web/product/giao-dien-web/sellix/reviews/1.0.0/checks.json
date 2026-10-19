@@ -1,0 +1,662 @@
+{
+  "date": "2026-10-19T08:09:00.095Z",
+  "url": "http://127.0.0.1:49407/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "chromium-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "chromium-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "chromium-820.png"
+        },
+        "1280": {
+          "width": 1280,
+          "height": 800,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": false,
+          "navLinksVisible": true,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "chromium-1280.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": false,
+          "navLinksVisible": true,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "chromium-1440.png"
+        }
+      },
+      "interactions": {
+        "menuOpened": true,
+        "menuClosedOnEscape": true,
+        "dualVideoCrossfadeSwapped": true,
+        "reducedMotionStatic": {
+          "hasAnim": false,
+          "hasGo": false,
+          "videoAPaused": true,
+          "videoBPaused": true,
+          "videoATime": 0
+        },
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "firefox-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "firefox-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "firefox-820.png"
+        },
+        "1280": {
+          "width": 1280,
+          "height": 800,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": false,
+          "navLinksVisible": true,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "firefox-1280.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": false,
+          "navLinksVisible": true,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "firefox-1440.png"
+        }
+      },
+      "interactions": {
+        "menuOpened": true,
+        "menuClosedOnEscape": true,
+        "dualVideoCrossfadeSwapped": true,
+        "reducedMotionStatic": {
+          "hasAnim": false,
+          "hasGo": false,
+          "videoAPaused": true,
+          "videoBPaused": true,
+          "videoATime": 0
+        },
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "edge-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "edge-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "edge-820.png"
+        },
+        "1280": {
+          "width": 1280,
+          "height": 800,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": false,
+          "navLinksVisible": true,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "edge-1280.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": false,
+          "navLinksVisible": true,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "edge-1440.png"
+        }
+      },
+      "interactions": {
+        "menuOpened": true,
+        "menuClosedOnEscape": true,
+        "dualVideoCrossfadeSwapped": true,
+        "reducedMotionStatic": {
+          "hasAnim": false,
+          "hasGo": false,
+          "videoAPaused": true,
+          "videoBPaused": true,
+          "videoATime": 0
+        },
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "coccoc-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "coccoc-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": true,
+          "navLinksVisible": false,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "coccoc-820.png"
+        },
+        "1280": {
+          "width": 1280,
+          "height": 800,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 1280,
+          "clientWidth": 1280,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": false,
+          "navLinksVisible": true,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "coccoc-1280.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "title": "Sellix — Cross-border finance",
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "htmlOverflow": "hidden",
+          "bodyOverflow": "hidden",
+          "animDetached": true,
+          "videoAReady": true,
+          "videoBExists": true,
+          "activeVideosCount": 1,
+          "logoText": "Sellix",
+          "h1Lines": [
+            "Cross-border",
+            "finance"
+          ],
+          "line1SingleLine": true,
+          "line2SingleLine": true,
+          "burgerVisible": false,
+          "navLinksVisible": true,
+          "ctas": [
+            "Get Started",
+            "Contact Sales"
+          ],
+          "consoleErrors": 0,
+          "screenshot": "coccoc-1440.png"
+        }
+      },
+      "interactions": {
+        "menuOpened": true,
+        "menuClosedOnEscape": true,
+        "dualVideoCrossfadeSwapped": true,
+        "reducedMotionStatic": {
+          "hasAnim": false,
+          "hasGo": false,
+          "videoAPaused": true,
+          "videoBPaused": true,
+          "videoATime": 0
+        },
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    }
+  }
+}

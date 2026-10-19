@@ -44,7 +44,7 @@ function extractDescription(mp4file: MP4Box.ISOFile, trackId: number): Uint8Arra
     if (box) {
       const stream = new MP4Box.DataStream(undefined, 0, MP4Box.DataStream.BIG_ENDIAN);
       box.write(stream);
-      return new Uint8Array(stream.buffer, 8);
+      return new Uint8Array(stream.buffer, 8, Math.max(0, stream.position - 8));
     }
   }
   return undefined;
@@ -96,7 +96,7 @@ export function useVideoScrub(videoSrc: string) {
     };
 
     const getProgress = () => {
-      updateSpan();
+      if (st.span <= 1) updateSpan();
       return clamp(0, 1, window.scrollY / st.span);
     };
 

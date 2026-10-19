@@ -1,0 +1,46 @@
+{
+  "id": "t76",
+  "slug": "sellix",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-19T08:14:00.941Z",
+  "demo": "/demos/sellix/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "734f374f8745",
+  "sha256": "734f374f8745db1f82275130a12635fbdcb527b41fe7f1af327baffa898a7f44",
+  "demoHtmlSha256": "615ad7517a612d3923031a1a344fa269bc35ac8918cf58454578d1b84e489f66",
+  "demoSha256": "47fc7b48e0d9a52bac0802505e033dfba51d1ffe444d05f6011ddbe2efbb4603",
+  "bytes": 1573910,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.477,
+      "action": "sellix-hover-primary-cta"
+    },
+    {
+      "seconds": 4.911,
+      "action": "sellix-hover-ghost-cta"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sellix-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sellix-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sellix-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sellix-return.jpg"
+  ]
+}

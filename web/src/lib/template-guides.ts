@@ -3,6 +3,20 @@ import type { LangCode } from '@/generated/data';
 type TemplateGuide = { intro: string; notes: string };
 
 export const TEMPLATE_GUIDES: Record<string, Record<LangCode, TemplateGuide>> = {
+  'sellix': {
+    vi: {
+      intro: 'Hero tài chính xuyên biên giới (Cross-border finance) một file HTML độc lập trên nền đen #000000 với hai thẻ video địa cầu ma trận điểm tím cross-fade 0.9s tại điểm lặp 10s, hệ đơn vị --u theo chuẩn 1280×800 và tiêu đề Plus Jakarta Sans 500 hai dòng che mặt nạ.',
+      notes: '### Bắt đầu\nGiải nén đủ 4 file rồi mở trực tiếp `index.html` trên trình duyệt (không cần cài đặt hay công cụ build). `CUSTOMISE.md` gồm 10 bước, 12 prompt AI và bảng sửa đã đếm chính xác.\n\n### Font và video\nFont `Plus Jakarta Sans` (300–800, bí danh `PJS`, `font-display: block`) nạp từ Google Fonts cùng hai thẻ video nền CloudFront (`#bgVideoA` và `#bgVideoB`) kèm ảnh poster WebP quay cảnh địa cầu ma trận điểm tím xoay trên nền sao.\n\n### Tương tác & chuyển động\nHai luồng `<video>` tự động cross-fade 0.9 giây (`FADE = 0.9`) trước điểm kết thúc chu kỳ 10.04 giây để xóa hoàn toàn vết cắt lặp; chuỗi hoạt ảnh vào trang chờ `document.fonts.ready` rồi chạy 4 nhóm chuyển động (`lineRise`, `subIn`/`subInFlat`, `pillIn`, `liftIn`/`logoIn`) và tự tháo gỡ sạch class `anim`/`go` khi hoàn tất (`1.67s`); menu kính mờ góc trên phải ở `<=1160px` đóng/mở bằng `#burger`, click ngoài hoặc phím `Escape`; tôn trọng hoàn toàn `prefers-reduced-motion: reduce`.\n\n### Phạm vi\nGiao diện hero một khung nhìn không kèm hệ thống đăng nhập hay thanh toán backend. Đọc kỹ `LICENCE.txt` trước khi xuất bản.',
+    },
+    en: {
+      intro: 'A single-file cross-border finance hero on pure black #000000 featuring dual violet dot-matrix Earth videos with a 0.9s loop cross-fade, a 1280×800 reference-pixel --u scaling system and a two-line masked Plus Jakarta Sans 500 headline.',
+      notes: '### Start\nExtract all 4 files and open `index.html` directly in any modern browser (no install or build step required). `CUSTOMISE.md` includes 10 steps, 12 complete AI prompts and a counted literal edit map.\n\n### Fonts and video\n`Plus Jakarta Sans` (weights 300–800, aliased to `PJS` with `font-display: block`) loaded from Google Fonts alongside two stacked CloudFront `<video>` elements (`#bgVideoA` and `#bgVideoB`) and a WebP poster depicting a rotating violet dot-matrix Earth against a starfield.\n\n### Interaction & motion\nThe two `<video>` elements cross-fade over `0.9s` (`FADE = 0.9`) before the 10.04-second loop point so the globe rotates seamlessly without a jump cut; the font-gated entrance sequence runs four choreographed moves (`lineRise`, `subIn`/`subInFlat`, `pillIn`, `liftIn`/`logoIn`) and removes `anim` and `go` once `.btn-ghost` finishes (`1.67s`); the top-right frosted menu at `<=1160px` closes on link click, outside click or `Escape`; fully respects `prefers-reduced-motion: reduce`.\n\n### Scope\nSingle-viewport hero showcase with no live authentication or payment processing backend. Read `LICENCE.txt` before publishing.',
+    },
+    zh: {
+      intro: '纯黑 #000000 单文件跨境金融（Cross-border finance）首屏模板，配备 0.9 秒无缝交叉循环的双层紫色点阵地球视频、1280×800 参考像素 --u 比例缩放系统与 Plus Jakarta Sans 500 双行遮罩主标题。',
+      notes: '### 开始\n解压全部 4 个文件后直接在浏览器中打开 `index.html`（无需安装或构建）。`CUSTOMISE.md` 含 10 个步骤、12 条完整 AI 提示词和精确修改表。\n\n### 字体与视频\n从 Google Fonts 加载 `Plus Jakarta Sans`（300–800 字重，别名为 `PJS`，`font-display: block`），搭配两层叠加的 CloudFront 紫色点阵地球星空背景视频（`#bgVideoA` 与 `#bgVideoB`）及 WebP 海报帧。\n\n### 交互与动态\n双 `<video>` 元素在 10.04 秒循环点前进行 0.9 秒（`FADE = 0.9`）交叉淡入淡出，消除循环跳帧；入场序列等待 `document.fonts.ready` 后执行四组动画（`lineRise`、`subIn`/`subInFlat`、`pillIn`、`liftIn`/`logoIn`），并在 1.67 秒完成后自动移除 `anim` 与 `go` 类名；`<=1160px` 右上角磨砂菜单支持点击外部与 `Escape` 关闭，并完整支持 `prefers-reduced-motion: reduce`。\n\n### 范围\n单屏展示首屏，不含在线认证或支付后端。发布前请阅读 `LICENCE.txt`。',
+    },
+  },
   'camper': {
     vi: {
       intro: 'Hero trại qua đêm mùa đông dưới ánh trăng một file HTML độc lập trên nền đêm #0b1a2b với sân khấu video lặp 1280×960 co giãn tỷ lệ --u qua 3 chế độ JS (exact, tablet, compact), tiêu đề Gelasio 700 Overnight / Camp và nút Explore cam #ec4f30.',

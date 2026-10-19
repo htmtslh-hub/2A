@@ -21,6 +21,11 @@ function startServer() {
   return new Promise((resolve) => {
     const server = http.createServer((req, res) => {
       const cleanPath = decodeURIComponent((req.url || '/').split('?')[0]);
+      if (cleanPath === '/favicon.ico') {
+        res.writeHead(204);
+        res.end();
+        return;
+      }
       const rel = cleanPath === '/' ? 'index.html' : cleanPath.replace(/^\/+/, '');
       const full = path.join(DEMO_DIR, rel);
       if (!full.startsWith(DEMO_DIR) || !fs.existsSync(full) || fs.statSync(full).isDirectory()) {
@@ -94,7 +99,17 @@ const BROWSERS = [
         null,
         { timeout: 60000 }
       );
-      await page.waitForTimeout(800);
+      await page
+        .waitForFunction(
+          () => {
+            const c = document.querySelector('canvas');
+            return c && c.classList.contains('opacity-100');
+          },
+          null,
+          { timeout: 8000 }
+        )
+        .catch(() => {});
+      await page.waitForTimeout(500);
 
       for (const vp of VIEWPORTS) {
         await page.setViewportSize({ width: vp.width, height: vp.height });

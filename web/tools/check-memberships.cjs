@@ -33,8 +33,9 @@ async function main() {
   eq(productPolicy.productAccessTier({ group: 'skill-prompt' }), 'premium');
   eq(productPolicy.productAccessTier({ group: 'agent' }), 'individual');
   eq(productPolicy.productAccessTier({ access: 'free' }), 'free');
-  eq(Object.keys(products).filter(productPolicy.isFreeProduct).sort().join(','), 't1,t22');
-  for (const id of ['t1', 't22']) {
+  const freeIds = ['t1', 't22', 't50', 't53', 't54', 't55', 't56', 't57', 't58', 't59', 't60', 't61', 't62', 't63', 't64', 't65', 't66', 't67', 't68', 't69', 't70'];
+  eq(Object.keys(products).filter(productPolicy.isFreeProduct).sort().join(','), freeIds.join(','));
+  for (const id of freeIds) {
     eq(productPolicy.requiresPremium(id), false);
     eq(productPolicy.canBuyIndividually(id), false);
   }
@@ -86,7 +87,7 @@ async function main() {
     eq(created.at(-1).templateId, null);
   }
   const beforeBlocked = created.length;
-  for (const id of ['t1', 't22']) {
+  for (const id of freeIds) {
     eq((await post({ kind: 'TEMPLATE', templateId: id })).status, 400);
     eq((await post({ kind: 'CART', templateIds: [id] })).status, 400);
   }
@@ -215,11 +216,11 @@ async function main() {
   const download = load('src/app/api/download/route.ts', {
     '@/auth': { auth: async () => session },
     '@/lib/memberships': access,
-    '@/lib/db': { prisma: {} },
+    '@/lib/db': { prisma: { downloadToken: { create: async () => ({}) } } },
     'node:fs': { existsSync: () => true, statSync: () => ({ size: 4 }), createReadStream: () => require('node:stream').Readable.from([Buffer.from('PKxx')]) },
   });
   const get = id => download.GET(new Request(`https://shop.example.test/api/download?id=${id}`));
-  for (const id of ['t1', 't22']) {
+  for (const id of freeIds) {
     const free = await get(id);
     eq(free.status, 200);
     eq(free.headers.get('Content-Type'), 'application/zip');

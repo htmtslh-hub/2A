@@ -49,6 +49,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t70: {
     "slug": "halden",
     "cat": "commerce",
+    "access": "free",
     "version": "1.0.0",
     "video": true,
     "copy": {
@@ -140,6 +141,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t69: {
     "slug": "vectrus-energy",
     "cat": "commerce",
+    "access": "free",
     "version": "1.0.0",
     "video": true,
     "copy": {
@@ -231,6 +233,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t68: {
     "slug": "toonhub",
     "cat": "commerce",
+    "access": "free",
     "version": "1.0.0",
     "video": true,
     "copy": {
@@ -322,6 +325,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t67: {
     "slug": "nexlayer",
     "cat": "commerce",
+    "access": "free",
     "version": "1.0.0",
     "video": true,
     "copy": {
@@ -413,6 +417,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t66: {
     "slug": "aethera",
     "cat": "commerce",
+    "access": "free",
     "version": "1.0.0",
     "video": true,
     "copy": {
@@ -504,6 +509,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t65: {
     "slug": "cyber-ronin",
     "cat": "commerce",
+    "access": "free",
     "version": "1.0.0",
     "video": true,
     "copy": {
@@ -595,6 +601,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t64: {
     "slug": "veyra",
     "cat": "commerce",
+    "access": "free",
     "version": "1.0.0",
     "video": true,
     "copy": {
@@ -686,6 +693,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t63: {
     "slug": "vertex-shops",
     "cat": "commerce",
+    "access": "free",
     "version": "1.0.0",
     "video": true,
     "copy": {
@@ -778,6 +786,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t62: {
     slug: 'monoframe',
     cat: 'commerce',
+    access: 'free',
     version: '1.0.0',
     video: true,
     specs: {
@@ -821,6 +830,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t61: {
     slug: 'solaris-gate',
     cat: 'education',
+    access: 'free',
     version: '1.0.0',
     video: true,
     specs: {
@@ -864,6 +874,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t60: {
   "slug": "jack-3d",
   "cat": "portfolio",
+  "access": "free",
   "version": "1.0.0",
   "video": true,
   "copy": {
@@ -967,6 +978,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t54: {
     "slug": "spaceedu",
     "cat": "education",
+    "access": "free",
     "version": "1.0.1",
     "video": true,
     "specs": {
@@ -1058,6 +1070,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t55: {
     "slug": "mostar-city",
     "cat": "portfolio",
+    "access": "free",
     "version": "1.0.1",
     "video": true,
     "specs": {
@@ -1149,6 +1162,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t56: {
     "slug": "fennec",
     "cat": "commerce",
+    "access": "free",
     "version": "1.0.1",
     "video": true,
     "specs": {
@@ -1240,6 +1254,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t57: {
     "slug": "riverine-ai",
     "cat": "education",
+    "access": "free",
     "version": "1.0.1",
     "video": true,
     "specs": {
@@ -1331,6 +1346,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t58: {
     "slug": "freight-axis",
     "cat": "commerce",
+    "access": "free",
     "version": "1.0.1",
     "video": true,
     "specs": {
@@ -1422,6 +1438,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t59: {
     "slug": "meridian",
     "cat": "communication",
+    "access": "free",
     "version": "1.0.1",
     "video": true,
     "specs": {
@@ -1514,6 +1531,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t53: {
     slug: 'atrium-mtl',
     cat: 'portfolio',
+    access: 'free',
     version: '1.0.0',
     video: true,
     copy: {

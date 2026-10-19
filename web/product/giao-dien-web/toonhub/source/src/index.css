@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.toonhub-nav-btn {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  transition: transform 150ms ease, background-color 150ms ease;
+}
+
+.toonhub-nav-btn:hover {
+  transform: scale(1.08);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.toonhub-nav-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.toonhub-discover-link {
+  opacity: 0.95;
+  transition: opacity 200ms ease;
+}
+
+.toonhub-discover-link:hover {
+  opacity: 1;
+}

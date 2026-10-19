@@ -1,0 +1,46 @@
+{
+  "id": "t67",
+  "slug": "nexlayer",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-19T02:29:35.010Z",
+  "demo": "/demos/nexlayer/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "13f9f32d8b70",
+  "sha256": "13f9f32d8b707b8017eda702a38efed2b6e84b3ddbd342d0d57704be50e50b97",
+  "demoHtmlSha256": "81a7ccfbb5e1027b2dbe5c0ec4d2a4012ea673882e2dec2c30237e763d417fe1",
+  "demoSha256": "0f7ba3a0fbe21ee6f36002a8cd14237df5ac562a71ce289e2263b19b1c08927b",
+  "bytes": 405925,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.477,
+      "action": "nexlayer-hover-hero-cta"
+    },
+    {
+      "seconds": 4.856,
+      "action": "nexlayer-hover-nav-features"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexlayer-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexlayer-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexlayer-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexlayer-return.jpg"
+  ]
+}

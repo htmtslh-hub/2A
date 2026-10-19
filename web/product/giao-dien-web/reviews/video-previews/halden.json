@@ -1,0 +1,46 @@
+{
+  "id": "t70",
+  "slug": "halden",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-19T03:20:10.006Z",
+  "demo": "/demos/halden/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "ee7144608125",
+  "sha256": "ee714460812544ff9c87d55c3c4a5a17b977a11f3c9e4f3ec06b8a76e4760800",
+  "demoHtmlSha256": "7cdc24a6aa730410f5bdd9c918e708636fd73bd42a3e0ffb1590c43e536368c9",
+  "demoSha256": "1699d6e01a2db1aa75da81ff714465eb9df81c74176b14fb961e3559a0a3abab",
+  "bytes": 329350,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 3.112,
+      "action": "halden-open-discover-volcanoes"
+    },
+    {
+      "seconds": 4.86,
+      "action": "halden-morph-journeys"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halden-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halden-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halden-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\halden-return.jpg"
+  ]
+}

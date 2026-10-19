@@ -98,7 +98,7 @@ await new Promise(ok => server.listen(0, '127.0.0.1', ok));
 const origin = `http://127.0.0.1:${server.address().port}`;
 const browser = await chromium.launch({ headless: true });
 const nextSelector = '#hero-next, #hero-arrow-next, #next, [data-step="1"], [data-direction="1"], [data-next], [data-next-preview]';
-const remoteBriefProducts = new Set(['spaceedu','mostar-city','fennec','riverine-ai','freight-axis','meridian','solaris-gate','monoframe','cyber-ronin','vertex-shops']);
+const remoteBriefProducts = new Set(['spaceedu','mostar-city','fennec','riverine-ai','freight-axis','meridian','solaris-gate','monoframe','cyber-ronin','vertex-shops','nexlayer','halden']);
 try {
   for (const [id, product] of selected) {
     const slug = product.slug;
@@ -113,8 +113,11 @@ try {
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
-    if (slug === 'monoframe') {
+    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden') {
       for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
+    }
+    if (slug === 'toonhub') {
+      allowedBriefHosts.add('fifth-gentle-45902158.figma.site');
     }
     if (remoteBriefProducts.has(slug)) {
       const html = await readFile(resolve(publicRoot, `demos/${slug}/index.html`), 'utf8');
@@ -144,8 +147,10 @@ try {
     await page.waitForTimeout(1800);
     await page.evaluate(() => document.fonts.ready);
     if (slug === 'jack-3d') await page.waitForFunction(() => document.querySelector('.hero-portrait img')?.naturalWidth > 0, null, {timeout:30000});
+    if (slug === 'toonhub') await page.waitForFunction(() => { const imgs = Array.from(document.querySelectorAll('[data-carousel-item] img')); return imgs.length === 4 && imgs.every(i => i.complete && i.naturalWidth > 0); }, null, {timeout:45000});
+    if (slug === 'halden') await page.waitForFunction(() => { const imgs = Array.from(document.querySelectorAll('#dd img')); return imgs.length === 6 && imgs.every(i => i.complete && i.naturalWidth > 0); }, null, {timeout:45000});
     if (slug === 'fennec') await page.waitForFunction(() => document.querySelector('#fox')?.dataset.model === 'ready', null, {timeout:60000});
-    if (['meridian','freight-axis','riverine-ai','monoframe'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
     if (slug === 'monoframe') {
       await page.waitForTimeout(2000);
     }
@@ -160,11 +165,74 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'halden') {
+        const step = actions.filter(a => a.action.startsWith('halden-')).length;
+        if (step === 0) {
+          await page.locator('.trigger[data-menu="discover"]').hover();
+          await page.waitForTimeout(500);
+          await page.locator('.d-item[data-img="1"]').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'halden-open-discover-volcanoes' });
+        } else if (step === 1) {
+          await page.locator('.trigger[data-menu="journeys"]').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'halden-morph-journeys' });
+        } else {
+          await page.locator('.trigger[data-menu="regions"]').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'halden-morph-regions' });
+        }
+        return;
+      }
       if (slug === 'cyber-ronin') {
         const back = actions.some(a => a.action === 'spotlight-right');
         await page.mouse.move(back ? 1100 : 220, 340);
         await page.mouse.move(back ? 400 : 1100, 460, { steps: 40 });
         actions.push({seconds:(Date.now()-start)/1000,action:back ? 'spotlight-left' : 'spotlight-right'});
+        return;
+      }
+      if (slug === 'nexlayer') {
+        const step = actions.filter(a => a.action.startsWith('nexlayer-')).length;
+        if (step === 0) {
+          await page.locator('.pill-cta').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'nexlayer-hover-hero-cta' });
+        } else if (step === 1) {
+          await page.locator('.links a').nth(1).hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'nexlayer-hover-nav-features' });
+        } else {
+          await page.locator('.pill-nav').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'nexlayer-hover-header-cta' });
+        }
+        return;
+      }
+      if (slug === 'vectrus-energy') {
+        const step = actions.filter(a => a.action.startsWith('vectrus-')).length;
+        if (step === 0) {
+          await page.locator('#hero-next').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'vectrus-scroll-section-2' });
+        } else if (step === 1) {
+          await page.locator('button[aria-label="Scroll to next section"]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'vectrus-scroll-section-3' });
+        } else {
+          await page.locator('button[aria-label="Contact Nordvik"]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'vectrus-scroll-top' });
+        }
+        return;
+      }
+      if (slug === 'aethera') {
+        if (!actions.some(a => a.action === 'open-journey')) {
+          await page.locator('main button').click();
+          await page.locator('[role="dialog"]').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'open-journey', selector: 'main button' });
+        } else if (await page.locator('[role="dialog"]').count()) {
+          await page.fill('#journey-name', 'Clara Vance');
+          await page.fill('#journey-email', 'clara@aethera.studio');
+          await page.locator('[role="dialog"] button[type="submit"]').click();
+          await page.waitForTimeout(600);
+          await page.keyboard.press('Escape');
+          await page.locator('[role="dialog"]').waitFor({ state: 'detached' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'submit-and-close-journey' });
+        } else {
+          await page.locator('main button').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'hover-cta' });
+        }
         return;
       }
       if (slug === 'vertex-shops') {

@@ -1,0 +1,994 @@
+{
+  "date": "2026-10-19T02:44:54.677Z",
+  "url": "http://127.0.0.1:55067/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": false,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "60%",
+              "styleBottom": "22%",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "80%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "13%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "20%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": false,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "60%",
+              "styleBottom": "22%",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "80%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "13%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "20%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": true,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "92%",
+              "styleBottom": "0px",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "70%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "22%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "30%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": true,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "92%",
+              "styleBottom": "0px",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "70%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "22%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "30%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "lockedIndexDuringAnimation": "1",
+        "afterNext": {
+          "activeIndex": "1",
+          "bgColor": "rgb(107, 191, 122)",
+          "roles": [
+            "left",
+            "center",
+            "right",
+            "back"
+          ]
+        },
+        "afterPrev": {
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)"
+        }
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": false,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "60%",
+              "styleBottom": "22%",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "80%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "13%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "20%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/3.4df853b4.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/4.4457fbce.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/1.02464a56.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/2.b977faab.png\" line: 0}]"
+          ],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": false,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "60%",
+              "styleBottom": "22%",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "80%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "13%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "20%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/3.4df853b4.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/4.4457fbce.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/1.02464a56.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/2.b977faab.png\" line: 0}]"
+          ],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": true,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "92%",
+              "styleBottom": "0px",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "70%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "22%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "30%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/3.4df853b4.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/4.4457fbce.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/1.02464a56.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/2.b977faab.png\" line: 0}]"
+          ],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": true,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "92%",
+              "styleBottom": "0px",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "70%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "22%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "30%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/3.4df853b4.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/4.4457fbce.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/1.02464a56.png\" line: 0}]",
+            "[JavaScript Error: \"Cookie “__cf_bm” has been rejected for invalid domain.\" {file: \"https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/2.b977faab.png\" line: 0}]"
+          ],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "lockedIndexDuringAnimation": "1",
+        "afterNext": {
+          "activeIndex": "1",
+          "bgColor": "rgb(107, 191, 122)",
+          "roles": [
+            "left",
+            "center",
+            "right",
+            "back"
+          ]
+        },
+        "afterPrev": {
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)"
+        }
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": false,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "60%",
+              "styleBottom": "22%",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "80%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "13%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "20%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": false,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "60%",
+              "styleBottom": "22%",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "80%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "13%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "20%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": true,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "92%",
+              "styleBottom": "0px",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "70%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "22%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "30%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": true,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "92%",
+              "styleBottom": "0px",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "70%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "22%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "30%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "lockedIndexDuringAnimation": "1",
+        "afterNext": {
+          "activeIndex": "1",
+          "bgColor": "rgb(107, 191, 122)",
+          "roles": [
+            "left",
+            "center",
+            "right",
+            "back"
+          ]
+        },
+        "afterPrev": {
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)"
+        }
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": false,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "60%",
+              "styleBottom": "22%",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "80%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "13%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "20%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": false,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "60%",
+              "styleBottom": "22%",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "80%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "13%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "20%",
+              "styleHeight": "16%",
+              "styleBottom": "32%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": true,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "92%",
+              "styleBottom": "0px",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "70%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "22%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "30%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)",
+          "ghostText": "3D SHAPE",
+          "brandText": "TOONHUB",
+          "discoverText": "DISCOVER IT",
+          "descriptionVisible": true,
+          "items": [
+            {
+              "index": 0,
+              "role": "center",
+              "styleLeft": "50%",
+              "styleHeight": "92%",
+              "styleBottom": "0px",
+              "styleFilter": "blur(0px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 1,
+              "role": "right",
+              "styleLeft": "70%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 2,
+              "role": "back",
+              "styleLeft": "50%",
+              "styleHeight": "22%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(4px)",
+              "naturalWidth": 2160
+            },
+            {
+              "index": 3,
+              "role": "left",
+              "styleLeft": "30%",
+              "styleHeight": "28%",
+              "styleBottom": "12%",
+              "styleFilter": "blur(2px)",
+              "naturalWidth": 2160
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "lockedIndexDuringAnimation": "1",
+        "afterNext": {
+          "activeIndex": "1",
+          "bgColor": "rgb(107, 191, 122)",
+          "roles": [
+            "left",
+            "center",
+            "right",
+            "back"
+          ]
+        },
+        "afterPrev": {
+          "activeIndex": "0",
+          "bgColor": "rgb(244, 132, 95)"
+        }
+      }
+    }
+  }
+}

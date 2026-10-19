@@ -1,0 +1,23 @@
+Halden — Expeditions to the Edge Hero & Morphing Dropdown Template
+Copyright (c) 2026 2A Template Store. All rights reserved.
+
+COMMERCIAL TEMPLATE LICENCE (v1.0.0)
+
+1. GRANT OF LICENCE
+This licence grants the purchaser a non-exclusive, perpetual, worldwide right to use, modify, and deploy the "Halden" template ("the Software") for personal or commercial web projects, client deliverables, and production websites.
+
+2. PERMITTED USES
+- Use the template in unlimited personal or client projects after purchase.
+- Modify HTML, CSS, JavaScript, colors, typography, photography, and dropdown panels to fit your brand.
+- Deploy the self-contained `index.html` to any static hosting or cloud platform.
+
+3. RESTRICTIONS
+- You may NOT resell, redistribute, sublicense, or publish the unmodified or lightly modified template as a standalone template, theme, or starter kit on any marketplace or public repository.
+- You may NOT claim exclusive authorship of the underlying template design system in a competing template store.
+
+4. THIRD-PARTY ASSETS
+- Google Fonts (`Geist`) is loaded under the SIL Open Font License 1.1.
+- Replace demonstration expedition photography and brand copy with your own licensed assets before commercial launch if required by your intellectual property policy.
+
+5. DISCLAIMER OF WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.

@@ -1,0 +1,22 @@
+NexLayer — The Next Layer of Intelligence — LICENCE TERMS
+
+1. WHAT YOU GET
+A perpetual, non-exclusive commercial licence to the original template code in this package, subject to these terms and the separate third-party terms noted below.
+
+2. WHAT YOU MAY DO
+Use and modify the template to create unlimited personal and commercial client websites. Charge your clients for finished websites built with this template. No attribution is required for the original template code.
+
+3. WHAT YOU MAY NOT DO
+Do not resell, redistribute, sublicense, or publish the template source files as a standalone template, UI kit, starter template, or marketplace listing.
+
+4. DEMO CONTENT AND EXTERNAL MEDIA
+All copy, partner marks (`logoipsum`), and anchor links in `index.html` are demonstration placeholders; replace them with your own verified brand details before publishing. The remote background video (`d8j0ntlcm91z4.cloudfront.net`) is referenced from the product specification for demonstration only; ownership and commercial usage rights for third-party video assets remain with their respective rightsholders. Verify or replace third-party media with your own licensed assets before commercial launch.
+
+5. FONTS
+`Manrope` is loaded from Google Fonts under the SIL Open Font License 1.1. Nothing in this licence restricts rights granted under that open-source font licence.
+
+6. OWNERSHIP
+Copyright in the original template code remains with its author. This licence grants usage rights, not ownership.
+
+7. NO WARRANTY
+The template is provided "as is" without warranty of any kind. Verified browser checks and known scope boundaries are recorded in `README.md`.

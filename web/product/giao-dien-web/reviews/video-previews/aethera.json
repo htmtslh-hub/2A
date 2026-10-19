@@ -1,0 +1,47 @@
+{
+  "id": "t66",
+  "slug": "aethera",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-19T02:08:20.631Z",
+  "demo": "/demos/aethera/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "863047d06055",
+  "sha256": "863047d06055cf78cdaf52456cc17e946b9df354f9adbb336577fe6d11b68988",
+  "demoHtmlSha256": "14201c8ddd296afc22d038e6ae549ee791623e96da341a5049696e908a81d8fa",
+  "demoSha256": "19f41913e404b86fabf7479707df46389e67899e8f7780dea1fe7ea132cb04a9",
+  "bytes": 628197,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.511,
+      "action": "open-journey",
+      "selector": "main button"
+    },
+    {
+      "seconds": 5.5,
+      "action": "submit-and-close-journey"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aethera-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aethera-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aethera-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aethera-return.jpg"
+  ]
+}

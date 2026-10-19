@@ -1,0 +1,46 @@
+{
+  "id": "t69",
+  "slug": "vectrus-energy",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-19T03:04:03.330Z",
+  "demo": "/demos/vectrus-energy/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "c70717ae6934",
+  "sha256": "c70717ae69345c07b0a33b72db0489336f7a5640a3dcb76f484831ec3f0f119a",
+  "demoHtmlSha256": "addf120f59629426c8ea5dfa0264160fb35573e86e57292e27bfe77328d6cbbc",
+  "demoSha256": "1271813135270f564ca334a3099ec0fc88d6c9df3d47c3a76eabdd93772f8361",
+  "bytes": 552317,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.558,
+      "action": "vectrus-scroll-section-2"
+    },
+    {
+      "seconds": 4.849,
+      "action": "vectrus-scroll-section-3"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vectrus-energy-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vectrus-energy-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vectrus-energy-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vectrus-energy-return.jpg"
+  ]
+}

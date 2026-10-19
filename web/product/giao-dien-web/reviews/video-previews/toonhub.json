@@ -1,0 +1,48 @@
+{
+  "id": "t68",
+  "slug": "toonhub",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-19T02:46:33.077Z",
+  "demo": "/demos/toonhub/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "1117f83ab7ec",
+  "sha256": "1117f83ab7ecdaf5b55ed9d6e88bc577d6c79bda0dab6a224d8b2643b92a0237",
+  "demoHtmlSha256": "c0acb0b23e7275260c3078e23643c3eeaa0632fe4c472a2818aada4807c74f3a",
+  "demoSha256": "817dc25e656bf523783fac75833ada984c7df91ec577eb00854dd62d66bbe847",
+  "bytes": 356760,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.533,
+      "action": "click",
+      "selector": "#next"
+    },
+    {
+      "seconds": 4.86,
+      "action": "click",
+      "selector": "#next"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\toonhub-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\toonhub-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\toonhub-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\toonhub-return.jpg"
+  ]
+}

@@ -1,0 +1,46 @@
+:root {
+  --color-background: #FFFFFF;
+  --color-foreground: #000000;
+  --color-muted: #6F6F6F;
+  --color-button-text: #FFFFFF;
+}
+
+@keyframes fade-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-rise 0.8s ease-out forwards;
+  will-change: opacity, transform;
+}
+
+.animate-fade-rise-delay {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-rise 0.8s ease-out 0.2s forwards;
+  will-change: opacity, transform;
+}
+
+.animate-fade-rise-delay-2 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-rise 0.8s ease-out 0.4s forwards;
+  will-change: opacity, transform;
+}
+
+/* Finite fallback guarantee so entrance elements never stay hidden in any browser */
+[data-motion-settled="true"] .animate-fade-rise,
+[data-motion-settled="true"] .animate-fade-rise-delay,
+[data-motion-settled="true"] .animate-fade-rise-delay-2 {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}

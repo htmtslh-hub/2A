@@ -46,6 +46,461 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t70: {
+    "slug": "halden",
+    "cat": "commerce",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Halden",
+        "desc": "Hero thương hiệu du lịch thám hiểm tự chứa trong một file HTML duy nhất (CSS + JS thuần, không bước build): thanh điều hướng 76px với hộp thả xuống kính mờ biến hình kích thước mượt (Discover 664×358, Journeys 446×308, Regions 232×218), lưới ảnh thám hiểm tự đổi khi di chuột, cảnh bình minh băng giá toàn màn hình và ngăn kéo điều hướng di động.",
+        "tags": [
+          "Du lịch thám hiểm",
+          "Morphing Dropdown",
+          "HTML / CSS / JS thuần"
+        ]
+      },
+      "en": {
+        "name": "Halden",
+        "desc": "A standalone single-file expedition travel hero (vanilla HTML, CSS and JS, no build step): a 76px top bar with a dimension-morphing glassmorphic dropdown (Discover 664×358, Journeys 446×308, Regions 232×218), hover-swapping photography previews, a full-bleed glacial sunrise backdrop and a responsive mobile drawer.",
+        "tags": [
+          "Expedition Travel",
+          "Morphing Dropdown",
+          "Vanilla HTML / CSS / JS"
+        ]
+      },
+      "zh": {
+        "name": "Halden",
+        "desc": "单文件自包含探险旅行品牌首屏（原生 HTML、CSS 与 JS，无需构建）：配备 76px 顶栏与尺寸平滑变形毛玻璃下拉菜单（Discover 664×358、Journeys 446×308、Regions 232×218）、悬停切换探险摄影预览、满版冰川日出主视觉及响应式移动抽屉菜单。",
+        "tags": [
+          "探险旅行",
+          "变形下拉菜单",
+          "原生 HTML / CSS / JS"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Một file index.html tự chứa (HTML + CSS + JS thuần, không cần build)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "4 file · 13.7 KB ZIP"
+        ],
+        [
+          "Tương tác",
+          "Hộp thả xuống biến hình 3 khung · đổi ảnh khi hover · ngăn kéo mobile <=860px"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single self-contained index.html (inline CSS + JS, no build step)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "4 files · 13.7 KB ZIP"
+        ],
+        [
+          "Interaction",
+          "3-panel morphing dropdown · hover photo swap · mobile sheet <=860px"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件自包含 index.html（内联 CSS + JS，无需构建）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "4 个文件 · 13.7 KB ZIP"
+        ],
+        [
+          "交互",
+          "三面板变形下拉框 · 悬停换图 · <=860px 移动抽屉"
+        ]
+      ]
+    }
+  },
+  t69: {
+    "slug": "vectrus-energy",
+    "cat": "commerce",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Vectrus Energy",
+        "desc": "Landing page điện ảnh một trang điều khiển video theo vị trí cuộn (500vh sticky scene) dựng bằng React 18, TypeScript, Vite, Tailwind CSS và MP4Box WebCodecs: giải mã khung hình vào bộ nhớ đệm LRU 24 ImageBitmap trên canvas 1920×1080 kèm nội suy LERP mượt, 3 phân cảnh chữ tuần tự (Helvetica Neue ME), thanh điều hướng tự đảo màu tại p > 0.55 và menu di động toàn màn hình.",
+        "tags": [
+          "WebCodecs + MP4Box",
+          "Scroll-Tied Video",
+          "React + Vite"
+        ]
+      },
+      "en": {
+        "name": "Vectrus Energy",
+        "desc": "A standalone scroll-tied video landing page (500vh sticky scene) built with React 18, TypeScript, Vite, Tailwind CSS and MP4Box WebCodecs: frame-bank decoding into a 24-slot ImageBitmap LRU cache painted onto a 1920×1080 canvas with exponential LERP scrubbing, three sequential Helvetica Neue ME text sections, a p > 0.55 adaptive navbar and a full-screen mobile menu.",
+        "tags": [
+          "WebCodecs + MP4Box",
+          "Scroll-Tied Video",
+          "React + Vite"
+        ]
+      },
+      "zh": {
+        "name": "Vectrus Energy",
+        "desc": "基于 React 18、TypeScript、Vite、Tailwind CSS 与 MP4Box WebCodecs 构建的滚动驱动视频单页（500vh 粘性视口）：将视频帧解码至 24 槽位 ImageBitmap LRU 缓存并配合指数 LERP 平滑绘制到 1920×1080 画布，包含三段顺序渐隐 Helvetica Neue ME 文案、p > 0.55 自动反色导航栏及全屏移动端菜单。",
+        "tags": [
+          "WebCodecs + MP4Box",
+          "滚动驱动视频",
+          "React + Vite"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 18 + TypeScript + Vite + Tailwind CSS + mp4box + lucide-react (kèm built/)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "19 file · 132.5 KB ZIP"
+        ],
+        [
+          "Cơ chế cuộn",
+          "500vh sticky track · WebCodecs + MP4Box frame bank · LERP_TAU = 8"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 + TypeScript + Vite + Tailwind CSS + mp4box + lucide-react (with built/)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "19 files · 132.5 KB ZIP"
+        ],
+        [
+          "Scroll engine",
+          "500vh sticky track · WebCodecs + MP4Box frame bank · LERP_TAU = 8"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 18 + TypeScript + Vite + Tailwind CSS + mp4box + lucide-react（附 built/）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "19 个文件 · 132.5 KB ZIP"
+        ],
+        [
+          "滚动引擎",
+          "500vh 粘性轨道 · WebCodecs + MP4Box 帧缓存 · LERP_TAU = 8"
+        ]
+      ]
+    }
+  },
+  t68: {
+    "slug": "toonhub",
+    "cat": "commerce",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "TOONHUB",
+        "desc": "Hero trưng bày mô hình nhân vật 3D toàn màn hình dựng bằng React 18, TypeScript, Vite, Tailwind CSS và lucide-react: vòng xoay 4 vị trí có độ sâu trường ảnh (center, left, right, back), nền đổi màu đồng bộ 650ms (#F4845F, #6BBF7A, #E882B4, #6EB5FF), chữ nền khổng lồ 3D SHAPE (Anton) và lớp phủ hạt phim SVG.",
+        "tags": [
+          "React + Vite",
+          "3D Figurine",
+          "Depth Carousel"
+        ]
+      },
+      "en": {
+        "name": "TOONHUB",
+        "desc": "A full-viewport 3D character figurine carousel hero built with React 18, TypeScript, Vite, Tailwind CSS and lucide-react: four-role depth-of-field staging (center, left, right, back), synchronized 650ms palette transitions (#F4845F, #6BBF7A, #E882B4, #6EB5FF), giant Anton 3D SHAPE backdrop and SVG fractal-noise grain.",
+        "tags": [
+          "React + Vite",
+          "3D Figurine",
+          "Depth Carousel"
+        ]
+      },
+      "zh": {
+        "name": "TOONHUB",
+        "desc": "基于 React 18、TypeScript、Vite、Tailwind CSS 与 lucide-react 构建的全屏 3D 潮玩手办轮播首屏：四位置景深舞台（center、left、right、back）、650ms 同步背景色切换（#F4845F、#6BBF7A、#E882B4、#6EB5FF）、Anton 巨型 3D SHAPE 背景字与 SVG 颗粒遮罩。",
+        "tags": [
+          "React + Vite",
+          "3D 手办",
+          "景深轮播"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 18 + TypeScript + Vite + Tailwind CSS + lucide-react (kèm built/)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "17 file · 87.8 KB ZIP"
+        ],
+        [
+          "Chuyển động",
+          "Xoay 4 vị trí (center/left/right/back) · 650ms cubic-bezier(0.4,0,0.2,1)"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 + TypeScript + Vite + Tailwind CSS + lucide-react (with built/)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "17 files · 87.8 KB ZIP"
+        ],
+        [
+          "Motion",
+          "4-role depth carousel · 650ms cubic-bezier(0.4,0,0.2,1)"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 18 + TypeScript + Vite + Tailwind CSS + lucide-react（附 built/）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "17 个文件 · 87.8 KB ZIP"
+        ],
+        [
+          "动态",
+          "四位置景深轮播 · 650ms cubic-bezier(0.4,0,0.2,1)"
+        ]
+      ]
+    }
+  },
+  t67: {
+    "slug": "nexlayer",
+    "cat": "commerce",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "NexLayer",
+        "desc": "Landing page hạ tầng AI tối màu theo lưới tham chiếu 1487×1058: biểu tượng tia chớp SVG chuyển sắc kim loại, chữ Manrope sắc nét, video cổng ánh sáng toàn khung nhìn kèm lớp mờ đáy/cạnh, cặp CTA pill trắng và dải 4 logo đối tác. Một file HTML tự chứa kèm menu kính mờ trên di động.",
+        "tags": [
+          "HTML tự chứa",
+          "AI Infrastructure",
+          "Looping Video"
+        ]
+      },
+      "en": {
+        "name": "NexLayer",
+        "desc": "A dark cinematic AI-infrastructure landing page locked to a 1487×1058 reference grid: metallic angular S-bolt SVG mark, Manrope typography, full-bleed portal video with measured bottom and letterbox fades, white pill CTAs and a four-mark partner strip. Self-contained single HTML with a frosted mobile menu.",
+        "tags": [
+          "Single HTML",
+          "AI Infrastructure",
+          "Looping Video"
+        ]
+      },
+      "zh": {
+        "name": "NexLayer",
+        "desc": "基于 1487×1058 参考画布构建的深色电影感 AI 基础设施着陆页：金属渐变闪电 S 标志、Manrope 字体排印、带底部与两侧渐变的满版光门循环视频、白色胶囊按钮及四枚合作伙伴标志。单文件自包含 HTML，配备移动端毛玻璃菜单。",
+        "tags": [
+          "单文件HTML",
+          "AI 基础设施",
+          "循环视频"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "1 file HTML tự chứa · CSS/JS nội tuyến · không cần build"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "4 file · 12.2 KB ZIP"
+        ],
+        [
+          "Hệ tọa độ",
+          "Khung 1487×1058 (--u / --h) + bố cục dọc portrait (--m)"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single HTML · inline CSS/JS · no build"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "4 files · 12.2 KB ZIP"
+        ],
+        [
+          "Grid",
+          "1487×1058 (--u / --h) desktop + portrait flow (--m)"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML · 内联 CSS/JS · 无需构建"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "4 个文件 · 12.2 KB ZIP"
+        ],
+        [
+          "网格系统",
+          "1487×1058 (--u / --h) 桌面端 + 竖屏流式布局 (--m)"
+        ]
+      ]
+    }
+  },
+  t66: {
+    "slug": "aethera",
+    "cat": "commerce",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Aethera",
+        "desc": "Hero điện ảnh một trang với chữ Instrument Serif + Inter, hiệu ứng fade-rise tuần tự, nền video lặp mượt bằng requestAnimationFrame (fade-in/fade-out 0.5s, nghỉ 100ms khi ended), lớp phủ chuyển sắc trắng và hộp thoại đăng ký kính mờ. Dựng bằng React + Vite + Tailwind CSS + TypeScript kèm bản dựng sẵn trong built/.",
+        "tags": [
+          "React + TypeScript",
+          "Looping Video Hero",
+          "Instrument Serif"
+        ]
+      },
+      "en": {
+        "name": "Aethera",
+        "desc": "A single-page cinematic hero pairing Instrument Serif and Inter typography, staggered fade-rise animations, a custom requestAnimationFrame fade-in/fade-out video loop (0.5s fades, 100ms reset on ended), white gradient overlays and a glassmorphic inquiry modal. Built with React + Vite + Tailwind CSS + TypeScript with a prebuilt snapshot in built/.",
+        "tags": [
+          "React + TypeScript",
+          "Looping Video Hero",
+          "Instrument Serif"
+        ]
+      },
+      "zh": {
+        "name": "Aethera",
+        "desc": "单页电影感首屏模板，采用 Instrument Serif 与 Inter 字体排印、阶梯式 fade-rise 动效、基于 requestAnimationFrame 的自定义淡入淡出循环视频（0.5 秒过渡、播放结束 100 毫秒重置）、白色渐变遮罩与毛玻璃咨询弹窗。基于 React + Vite + Tailwind CSS + TypeScript 构建，附带 built/ 预构建静态文件。",
+        "tags": [
+          "React + TypeScript",
+          "循环视频首屏",
+          "Instrument Serif"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 18 · Vite · Tailwind CSS · TypeScript"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "19 file · nguồn + built/ · 89 KB ZIP"
+        ],
+        [
+          "Hiệu ứng",
+          "Loop video fade 0.5s · fade-rise · modal kính mờ"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 · Vite · Tailwind CSS · TypeScript"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "19 files · source + built/ · 89 KB ZIP"
+        ],
+        [
+          "Motion",
+          "0.5s fade video loop · fade-rise · glass modal"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 18 · Vite · Tailwind CSS · TypeScript"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "19 个文件 · 源码 + built/ · 89 KB ZIP"
+        ],
+        [
+          "动效",
+          "0.5秒淡入淡出视频循环 · fade-rise · 毛玻璃弹窗"
+        ]
+      ]
+    }
+  },
   t65: {
     "slug": "cyber-ronin",
     "cat": "commerce",

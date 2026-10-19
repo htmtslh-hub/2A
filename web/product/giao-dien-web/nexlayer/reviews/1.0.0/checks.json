@@ -1,0 +1,1938 @@
+{
+  "date": "2026-10-19T02:22:31.070Z",
+  "baseUrl": "http://127.0.0.1:60683/index.html",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 16.4,
+            "top": 14.9,
+            "width": 20.8,
+            "height": 32,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 16.4,
+            "top": 461.3,
+            "width": 287.3,
+            "height": 67.5,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 16.4,
+            "top": 540.8,
+            "width": 287.3,
+            "height": 60.9,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 16.4,
+            "top": 619.5,
+            "width": 112.4,
+            "height": 32.7,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 145.1,
+            "top": 628.9,
+            "width": 118.1,
+            "height": 14,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 16.4,
+            "top": 679,
+            "width": 136.9,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 166.7,
+            "top": 679,
+            "width": 137,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 16.4,
+            "top": 705.8,
+            "width": 136.9,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 166.7,
+            "top": 705.8,
+            "width": 137,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.874
+          }
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 19.2,
+            "top": 17.4,
+            "width": 24.4,
+            "height": 37.5,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 19.2,
+            "top": 516.2,
+            "width": 336.7,
+            "height": 79.1,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 19.2,
+            "top": 609.3,
+            "width": 336.7,
+            "height": 40.6,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 19.2,
+            "top": 670.8,
+            "width": 129.1,
+            "height": 38.4,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 167.4,
+            "top": 682.8,
+            "width": 121.6,
+            "height": 14.4,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 19.2,
+            "top": 740.5,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 195.3,
+            "top": 740.5,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 19.2,
+            "top": 771.9,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 195.3,
+            "top": 771.9,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.89
+          }
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 21,
+            "top": 19.1,
+            "width": 26.7,
+            "height": 41,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 21,
+            "top": 864.3,
+            "width": 778.1,
+            "height": 113.3,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 21,
+            "top": 992.8,
+            "width": 518.7,
+            "height": 44.2,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 21,
+            "top": 1059.9,
+            "width": 141.1,
+            "height": 42,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 183,
+            "top": 1073,
+            "width": 133,
+            "height": 15.7,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 21,
+            "top": 1136.2,
+            "width": 181.6,
+            "height": 21,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 219.8,
+            "top": 1136.2,
+            "width": 181.7,
+            "height": 21,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 418.6,
+            "top": 1136.2,
+            "width": 181.6,
+            "height": 21,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 617.4,
+            "top": 1136.2,
+            "width": 181.7,
+            "height": 21,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.972
+          }
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 63.8,
+            "top": 23,
+            "width": 26.8,
+            "height": 41.3,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 587.3,
+            "top": 35.3,
+            "width": 265.4,
+            "height": 16.2,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 1227,
+            "top": 23,
+            "width": 148.9,
+            "height": 41.7,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 64.2,
+            "top": 196.1,
+            "width": 440.5,
+            "height": 143.6,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 64.2,
+            "top": 364.6,
+            "width": 453.6,
+            "height": 41.9,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 63.7,
+            "top": 432,
+            "width": 156.6,
+            "height": 44.6,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 260.5,
+            "top": 445.3,
+            "width": 154.8,
+            "height": 18.4,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 421.4,
+            "top": 846.1,
+            "width": 25.9,
+            "height": 26.4,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 597.5,
+            "top": 847,
+            "width": 20.8,
+            "height": 25.5,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 776.1,
+            "top": 847.8,
+            "width": 24.2,
+            "height": 23.8,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 949.7,
+            "top": 849.5,
+            "width": 24.2,
+            "height": 21.7,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.957
+          }
+        },
+        "1487": {
+          "innerWidth": 1487,
+          "innerHeight": 1058,
+          "scrollWidth": 1487,
+          "scrollHeight": 1058,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 75,
+            "top": 27,
+            "width": 31.5,
+            "height": 48.5,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 587.5,
+            "top": 41.5,
+            "width": 312,
+            "height": 19,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 1236.6,
+            "top": 27,
+            "width": 175,
+            "height": 49,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 75.5,
+            "top": 230.5,
+            "width": 494,
+            "height": 161,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 75.5,
+            "top": 419.5,
+            "width": 508.6,
+            "height": 47,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 74.9,
+            "top": 495,
+            "width": 175.6,
+            "height": 50,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 295.5,
+            "top": 510,
+            "width": 173.6,
+            "height": 20.6,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 392.5,
+            "top": 994.7,
+            "width": 30.5,
+            "height": 31,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 599.5,
+            "top": 995.7,
+            "width": 24.5,
+            "height": 30,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 809.5,
+            "top": 996.7,
+            "width": 28.5,
+            "height": 28,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 1013.5,
+            "top": 998.7,
+            "width": 28.5,
+            "height": 25.5,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 2.122
+          }
+        }
+      },
+      "interactions": {
+        "openState": {
+          "stageOpen": true,
+          "ariaExpanded": "true",
+          "menuAriaHidden": "false",
+          "menuOpacity": "1"
+        },
+        "afterEscape": {
+          "stageOpen": false,
+          "ariaExpanded": "false",
+          "menuAriaHidden": "true"
+        },
+        "afterLandscapeResize": {
+          "stageOpen": false
+        }
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 16.1,
+            "top": 14.7,
+            "width": 20.5,
+            "height": 31.5,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 16.1,
+            "top": 464.4,
+            "width": 287.7,
+            "height": 66.6,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 16.1,
+            "top": 542.7,
+            "width": 287.7,
+            "height": 60.9,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 16.1,
+            "top": 621.2,
+            "width": 111.9,
+            "height": 32.3,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 144.1,
+            "top": 630.3,
+            "width": 118,
+            "height": 14,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 16.1,
+            "top": 679.9,
+            "width": 137.3,
+            "height": 16.1,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 166.6,
+            "top": 679.9,
+            "width": 137.3,
+            "height": 16.1,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 16.1,
+            "top": 706.3,
+            "width": 137.3,
+            "height": 16.1,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 166.6,
+            "top": 706.3,
+            "width": 137.3,
+            "height": 16.1,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.844
+          }
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 19.1,
+            "top": 17.3,
+            "width": 24.3,
+            "height": 37.3,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 19.1,
+            "top": 517.8,
+            "width": 336.9,
+            "height": 78.6,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 19.1,
+            "top": 610.2,
+            "width": 336.9,
+            "height": 40.6,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 19.1,
+            "top": 671.6,
+            "width": 128.3,
+            "height": 38.1,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 166.4,
+            "top": 683.5,
+            "width": 120.8,
+            "height": 14.3,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 19.1,
+            "top": 740.9,
+            "width": 160.6,
+            "height": 19.1,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 195.3,
+            "top": 740.9,
+            "width": 160.6,
+            "height": 19.1,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 19.1,
+            "top": 772.1,
+            "width": 160.6,
+            "height": 19.1,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 195.3,
+            "top": 772.1,
+            "width": 160.6,
+            "height": 19.1,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.716
+          }
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 20.9,
+            "top": 19,
+            "width": 26.6,
+            "height": 40.9,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 20.9,
+            "top": 865.3,
+            "width": 778.2,
+            "height": 112.9,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 20.9,
+            "top": 993.4,
+            "width": 516.9,
+            "height": 44.1,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 20.9,
+            "top": 1060.3,
+            "width": 140.6,
+            "height": 41.8,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 182.4,
+            "top": 1073.4,
+            "width": 132.5,
+            "height": 15.7,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 20.9,
+            "top": 1136.3,
+            "width": 181.7,
+            "height": 20.9,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 219.7,
+            "top": 1136.3,
+            "width": 181.7,
+            "height": 20.9,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 418.6,
+            "top": 1136.3,
+            "width": 181.7,
+            "height": 20.9,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 617.4,
+            "top": 1136.3,
+            "width": 181.7,
+            "height": 20.9,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.839
+          }
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 63.8,
+            "top": 23,
+            "width": 26.8,
+            "height": 41.3,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 587.4,
+            "top": 35.3,
+            "width": 265.2,
+            "height": 16.1,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 1227,
+            "top": 23,
+            "width": 148.9,
+            "height": 41.7,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 64.2,
+            "top": 196.1,
+            "width": 436.4,
+            "height": 142.2,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 64.2,
+            "top": 363,
+            "width": 449.1,
+            "height": 41.5,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 63.7,
+            "top": 429.7,
+            "width": 155.1,
+            "height": 44.2,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 258.6,
+            "top": 443,
+            "width": 153.2,
+            "height": 18.2,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 421.4,
+            "top": 846.2,
+            "width": 25.9,
+            "height": 26.4,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 597.5,
+            "top": 847,
+            "width": 20.8,
+            "height": 25.5,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 776.1,
+            "top": 847.8,
+            "width": 24.2,
+            "height": 23.8,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 949.7,
+            "top": 849.5,
+            "width": 24.2,
+            "height": 21.7,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.718
+          }
+        },
+        "1487": {
+          "innerWidth": 1487,
+          "innerHeight": 1058,
+          "scrollWidth": 1487,
+          "scrollHeight": 1058,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 75,
+            "top": 27,
+            "width": 31.5,
+            "height": 48.5,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 587.5,
+            "top": 41.5,
+            "width": 312,
+            "height": 19,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 1236.6,
+            "top": 27,
+            "width": 175,
+            "height": 49,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 75.5,
+            "top": 230.5,
+            "width": 494.2,
+            "height": 161,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 75.5,
+            "top": 419.5,
+            "width": 508.1,
+            "height": 47,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 74.9,
+            "top": 495,
+            "width": 175.6,
+            "height": 50,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 295.5,
+            "top": 510,
+            "width": 173.6,
+            "height": 20.6,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 392.5,
+            "top": 994.7,
+            "width": 30.5,
+            "height": 31,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 599.5,
+            "top": 995.7,
+            "width": 24.5,
+            "height": 30,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 809.5,
+            "top": 996.7,
+            "width": 28.5,
+            "height": 28,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 1013.5,
+            "top": 998.7,
+            "width": 28.5,
+            "height": 25.5,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 2.588
+          }
+        }
+      },
+      "interactions": {
+        "openState": {
+          "stageOpen": true,
+          "ariaExpanded": "true",
+          "menuAriaHidden": "false",
+          "menuOpacity": "1"
+        },
+        "afterEscape": {
+          "stageOpen": false,
+          "ariaExpanded": "false",
+          "menuAriaHidden": "true"
+        },
+        "afterLandscapeResize": {
+          "stageOpen": false
+        }
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 16.4,
+            "top": 14.9,
+            "width": 20.8,
+            "height": 32,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 16.4,
+            "top": 461.3,
+            "width": 287.3,
+            "height": 67.5,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 16.4,
+            "top": 540.8,
+            "width": 287.3,
+            "height": 60.9,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 16.4,
+            "top": 619.5,
+            "width": 112.4,
+            "height": 32.7,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 145.1,
+            "top": 628.9,
+            "width": 118.1,
+            "height": 14,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 16.4,
+            "top": 679,
+            "width": 136.9,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 166.7,
+            "top": 679,
+            "width": 137,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 16.4,
+            "top": 705.8,
+            "width": 136.9,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 166.7,
+            "top": 705.8,
+            "width": 137,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.883
+          }
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 19.2,
+            "top": 17.4,
+            "width": 24.4,
+            "height": 37.5,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 19.2,
+            "top": 516.2,
+            "width": 336.7,
+            "height": 79.1,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 19.2,
+            "top": 609.3,
+            "width": 336.7,
+            "height": 40.6,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 19.2,
+            "top": 670.8,
+            "width": 129.1,
+            "height": 38.4,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 167.4,
+            "top": 682.8,
+            "width": 121.6,
+            "height": 14.4,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 19.2,
+            "top": 740.5,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 195.3,
+            "top": 740.5,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 19.2,
+            "top": 771.9,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 195.3,
+            "top": 771.9,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.817
+          }
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 21,
+            "top": 19.1,
+            "width": 26.7,
+            "height": 41,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 21,
+            "top": 864.3,
+            "width": 778.1,
+            "height": 113.3,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 21,
+            "top": 992.8,
+            "width": 518.7,
+            "height": 44.2,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 21,
+            "top": 1059.9,
+            "width": 141.1,
+            "height": 42,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 183,
+            "top": 1073,
+            "width": 133,
+            "height": 15.7,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 21,
+            "top": 1136.2,
+            "width": 181.6,
+            "height": 21,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 219.8,
+            "top": 1136.2,
+            "width": 181.7,
+            "height": 21,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 418.6,
+            "top": 1136.2,
+            "width": 181.6,
+            "height": 21,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 617.4,
+            "top": 1136.2,
+            "width": 181.7,
+            "height": 21,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.796
+          }
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 63.8,
+            "top": 23,
+            "width": 26.8,
+            "height": 41.3,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 587.3,
+            "top": 35.3,
+            "width": 265.4,
+            "height": 16.2,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 1227,
+            "top": 23,
+            "width": 148.9,
+            "height": 41.7,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 64.2,
+            "top": 196.1,
+            "width": 440.5,
+            "height": 143.6,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 64.2,
+            "top": 364.6,
+            "width": 453.6,
+            "height": 41.9,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 63.7,
+            "top": 432,
+            "width": 156.6,
+            "height": 44.6,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 260.5,
+            "top": 445.3,
+            "width": 154.8,
+            "height": 18.4,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 421.4,
+            "top": 846.1,
+            "width": 25.9,
+            "height": 26.4,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 597.5,
+            "top": 847,
+            "width": 20.8,
+            "height": 25.5,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 776.1,
+            "top": 847.8,
+            "width": 24.2,
+            "height": 23.8,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 949.7,
+            "top": 849.5,
+            "width": 24.2,
+            "height": 21.7,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.849
+          }
+        },
+        "1487": {
+          "innerWidth": 1487,
+          "innerHeight": 1058,
+          "scrollWidth": 1487,
+          "scrollHeight": 1058,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 75,
+            "top": 27,
+            "width": 31.5,
+            "height": 48.5,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 587.5,
+            "top": 41.5,
+            "width": 312,
+            "height": 19,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 1236.6,
+            "top": 27,
+            "width": 175,
+            "height": 49,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 75.5,
+            "top": 230.5,
+            "width": 494,
+            "height": 161,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 75.5,
+            "top": 419.5,
+            "width": 508.6,
+            "height": 47,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 74.9,
+            "top": 495,
+            "width": 175.6,
+            "height": 50,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 295.5,
+            "top": 510,
+            "width": 173.6,
+            "height": 20.6,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 392.5,
+            "top": 994.7,
+            "width": 30.5,
+            "height": 31,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 599.5,
+            "top": 995.7,
+            "width": 24.5,
+            "height": 30,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 809.5,
+            "top": 996.7,
+            "width": 28.5,
+            "height": 28,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 1013.5,
+            "top": 998.7,
+            "width": 28.5,
+            "height": 25.5,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.884
+          }
+        }
+      },
+      "interactions": {
+        "openState": {
+          "stageOpen": true,
+          "ariaExpanded": "true",
+          "menuAriaHidden": "false",
+          "menuOpacity": "1"
+        },
+        "afterEscape": {
+          "stageOpen": false,
+          "ariaExpanded": "false",
+          "menuAriaHidden": "true"
+        },
+        "afterLandscapeResize": {
+          "stageOpen": false
+        }
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 16.4,
+            "top": 14.9,
+            "width": 20.8,
+            "height": 32,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 16.4,
+            "top": 461.3,
+            "width": 287.3,
+            "height": 67.5,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 16.4,
+            "top": 540.8,
+            "width": 287.3,
+            "height": 60.9,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 16.4,
+            "top": 619.5,
+            "width": 112.4,
+            "height": 32.7,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 145.1,
+            "top": 628.9,
+            "width": 118.1,
+            "height": 14,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 16.4,
+            "top": 679,
+            "width": 136.9,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 166.7,
+            "top": 679,
+            "width": 137,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 16.4,
+            "top": 705.8,
+            "width": 136.9,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 166.7,
+            "top": 705.8,
+            "width": 137,
+            "height": 16.4,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.787
+          }
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 19.2,
+            "top": 17.4,
+            "width": 24.4,
+            "height": 37.5,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 19.2,
+            "top": 516.2,
+            "width": 336.7,
+            "height": 79.1,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 19.2,
+            "top": 609.3,
+            "width": 336.7,
+            "height": 40.6,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 19.2,
+            "top": 670.8,
+            "width": 129.1,
+            "height": 38.4,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 167.4,
+            "top": 682.8,
+            "width": 121.6,
+            "height": 14.4,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 19.2,
+            "top": 740.5,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 195.3,
+            "top": 740.5,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 19.2,
+            "top": 771.9,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 195.3,
+            "top": 771.9,
+            "width": 160.5,
+            "height": 19.2,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.798
+          }
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 21,
+            "top": 19.1,
+            "width": 26.7,
+            "height": 41,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 0,
+            "top": 0,
+            "width": 0,
+            "height": 0,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 21,
+            "top": 864.3,
+            "width": 778.1,
+            "height": 113.3,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 21,
+            "top": 992.8,
+            "width": 518.7,
+            "height": 44.2,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 21,
+            "top": 1059.9,
+            "width": 141.1,
+            "height": 42,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 183,
+            "top": 1073,
+            "width": 133,
+            "height": 15.7,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 21,
+            "top": 1136.2,
+            "width": 181.6,
+            "height": 21,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 219.8,
+            "top": 1136.2,
+            "width": 181.7,
+            "height": 21,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 418.6,
+            "top": 1136.2,
+            "width": 181.6,
+            "height": 21,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 617.4,
+            "top": 1136.2,
+            "width": 181.7,
+            "height": 21,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.784
+          }
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 63.8,
+            "top": 23,
+            "width": 26.8,
+            "height": 41.3,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 587.3,
+            "top": 35.3,
+            "width": 265.4,
+            "height": 16.2,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 1227,
+            "top": 23,
+            "width": 148.9,
+            "height": 41.7,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 64.2,
+            "top": 196.1,
+            "width": 440.5,
+            "height": 143.6,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 64.2,
+            "top": 364.6,
+            "width": 453.6,
+            "height": 41.9,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 63.7,
+            "top": 432,
+            "width": 156.6,
+            "height": 44.6,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 260.5,
+            "top": 445.3,
+            "width": 154.8,
+            "height": 18.4,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 421.4,
+            "top": 846.1,
+            "width": 25.9,
+            "height": 26.4,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 597.5,
+            "top": 847,
+            "width": 20.8,
+            "height": 25.5,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 776.1,
+            "top": 847.8,
+            "width": 24.2,
+            "height": 23.8,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 949.7,
+            "top": 849.5,
+            "width": 24.2,
+            "height": 21.7,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 3.007
+          }
+        },
+        "1487": {
+          "innerWidth": 1487,
+          "innerHeight": 1058,
+          "scrollWidth": 1487,
+          "scrollHeight": 1058,
+          "horizontalOverflow": false,
+          "title": "The Next Layer of Intelligence",
+          "brand": {
+            "left": 75,
+            "top": 27,
+            "width": 31.5,
+            "height": 48.5,
+            "opacity": "1"
+          },
+          "links": {
+            "left": 587.5,
+            "top": 41.5,
+            "width": 312,
+            "height": 19,
+            "opacity": "1"
+          },
+          "pillNav": {
+            "left": 1236.6,
+            "top": 27,
+            "width": 175,
+            "height": 49,
+            "opacity": "1"
+          },
+          "headline": {
+            "left": 75.5,
+            "top": 230.5,
+            "width": 494,
+            "height": 161,
+            "opacity": "1"
+          },
+          "sub": {
+            "left": 75.5,
+            "top": 419.5,
+            "width": 508.6,
+            "height": 47,
+            "opacity": "1"
+          },
+          "pillCta": {
+            "left": 74.9,
+            "top": 495,
+            "width": 175.6,
+            "height": 50,
+            "opacity": "1"
+          },
+          "ghost": {
+            "left": 295.5,
+            "top": 510,
+            "width": 173.6,
+            "height": 20.6,
+            "opacity": "1"
+          },
+          "lg1": {
+            "left": 392.5,
+            "top": 994.7,
+            "width": 30.5,
+            "height": 31,
+            "opacity": "1"
+          },
+          "lg2": {
+            "left": 599.5,
+            "top": 995.7,
+            "width": 24.5,
+            "height": 30,
+            "opacity": "1"
+          },
+          "lg3": {
+            "left": 809.5,
+            "top": 996.7,
+            "width": 28.5,
+            "height": 28,
+            "opacity": "1"
+          },
+          "lg4": {
+            "left": 1013.5,
+            "top": 998.7,
+            "width": 28.5,
+            "height": 25.5,
+            "opacity": "1"
+          },
+          "video": {
+            "src": "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4",
+            "videoWidth": 1664,
+            "videoHeight": 1248,
+            "duration": 10.042,
+            "currentTime": 1.888
+          }
+        }
+      },
+      "interactions": {
+        "openState": {
+          "stageOpen": true,
+          "ariaExpanded": "true",
+          "menuAriaHidden": "false",
+          "menuOpacity": "1"
+        },
+        "afterEscape": {
+          "stageOpen": false,
+          "ariaExpanded": "false",
+          "menuAriaHidden": "true"
+        },
+        "afterLandscapeResize": {
+          "stageOpen": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,678 @@
+{
+  "date": "2026-10-19T02:59:46.397Z",
+  "url": "http://127.0.0.1:61475/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 3700,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": true,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 4060,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": true,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 5900,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": true,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 4500,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": false,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "scrollSections": {
+        "s2State": {
+          "progress": "0.450",
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            0,
+            1,
+            0
+          ]
+        },
+        "s3State": {
+          "progress": "0.850",
+          "navColor": "rgb(255, 255, 255)",
+          "sections": [
+            0,
+            0,
+            1
+          ],
+          "videoTime": 8.520551
+        }
+      },
+      "mobileMenu": {
+        "openState": {
+          "ariaHidden": "false",
+          "bodyOverflow": "hidden"
+        },
+        "closeState": {
+          "ariaHidden": "true",
+          "bodyOverflow": ""
+        }
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 3700,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": false,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 4060,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": false,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 5900,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": false,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 4500,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": false,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "scrollSections": {
+        "s2State": {
+          "progress": "0.450",
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            0,
+            1,
+            0
+          ]
+        },
+        "s3State": {
+          "progress": "0.850",
+          "navColor": "rgb(255, 255, 255)",
+          "sections": [
+            0,
+            0,
+            1
+          ],
+          "videoTime": 4.092975149795207
+        }
+      },
+      "mobileMenu": {
+        "openState": {
+          "ariaHidden": "false",
+          "bodyOverflow": "hidden"
+        },
+        "closeState": {
+          "ariaHidden": "true",
+          "bodyOverflow": ""
+        }
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 3700,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": true,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 4060,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": true,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 5900,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": true,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 4500,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": false,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        }
+      },
+      "scrollSections": {
+        "s2State": {
+          "progress": "0.450",
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            0,
+            1,
+            0
+          ]
+        },
+        "s3State": {
+          "progress": "0.850",
+          "navColor": "rgb(255, 255, 255)",
+          "sections": [
+            0,
+            0,
+            1
+          ],
+          "videoTime": 0.56195
+        }
+      },
+      "mobileMenu": {
+        "openState": {
+          "ariaHidden": "false",
+          "bodyOverflow": "hidden"
+        },
+        "closeState": {
+          "ariaHidden": "true",
+          "bodyOverflow": ""
+        }
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 3700,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": true,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 4060,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": true,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 5900,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": true,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 4500,
+          "horizontalOverflow": false,
+          "trackRatio": 5,
+          "title": "Scroll Tied Video Section",
+          "h1Text": "Advancing resources for a cleaner future",
+          "videoPaused": true,
+          "videoReadyState": 4,
+          "canvasWidth": 1920,
+          "canvasHeight": 1080,
+          "canvasLive": false,
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            {
+              "label": "Hero Section",
+              "opacity": 1
+            },
+            {
+              "label": "Partnerships Section",
+              "opacity": 0
+            },
+            {
+              "label": "Nordvik Section",
+              "opacity": 0
+            }
+          ],
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        }
+      },
+      "scrollSections": {
+        "s2State": {
+          "progress": "0.450",
+          "navColor": "rgb(29, 48, 69)",
+          "sections": [
+            0,
+            1,
+            0
+          ]
+        },
+        "s3State": {
+          "progress": "0.850",
+          "navColor": "rgb(255, 255, 255)",
+          "sections": [
+            0,
+            0,
+            1
+          ],
+          "videoTime": 0.549268
+        }
+      },
+      "mobileMenu": {
+        "openState": {
+          "ariaHidden": "false",
+          "bodyOverflow": "hidden"
+        },
+        "closeState": {
+          "ariaHidden": "true",
+          "bodyOverflow": ""
+        }
+      }
+    }
+  }
+}

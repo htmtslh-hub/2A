@@ -1,0 +1,20 @@
+THIRD-PARTY SOFTWARE NOTICES AND LICENCES — VECTRUS ENERGY (v1.0.0)
+
+1. React & React DOM (^18.3.1)
+   - Licence: MIT License
+   - Copyright (c) Meta Platforms, Inc. and affiliates.
+   - Upstream: https://github.com/facebook/react
+
+2. MP4Box.js (mp4box ^0.5.2)
+   - Licence: BSD-3-Clause License
+   - Copyright (c) 2012-2016 Telecom ParisTech / GPAC
+   - Upstream: https://github.com/gpac/mp4box.js
+
+3. Lucide React (^0.469.0)
+   - Licence: ISC License
+   - Copyright (c) 2020, Lucide Contributors
+   - Upstream: https://github.com/lucide-icons/lucide
+
+4. Tailwind CSS (^3.4.1), PostCSS (^8.5.3), Autoprefixer (^10.4.21), Vite (^6.4.1), TypeScript (^5.7.3)
+   - Licence: MIT License / Apache-2.0 (TypeScript)
+   - Used as build-time development dependencies.

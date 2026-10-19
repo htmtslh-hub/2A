@@ -1,0 +1,23 @@
+Vectrus Energy — Scroll-Tied WebCodecs Video Landing Page Template
+Copyright (c) 2026 2A Template Store. All rights reserved.
+
+COMMERCIAL TEMPLATE LICENCE (v1.0.0)
+
+1. GRANT OF LICENCE
+This licence grants the purchaser a non-exclusive, perpetual, worldwide right to use, modify, and deploy the "Vectrus Energy" template ("the Software") for personal or commercial web projects, client deliverables, and production websites.
+
+2. PERMITTED USES
+- Use the template in unlimited personal or client projects after purchase.
+- Modify source code, styles, colors, typography, scroll-video logic, and copy to fit your brand.
+- Compile and deploy the production bundle (`dist/` or `built/`) to any static hosting or cloud platform.
+
+3. RESTRICTIONS
+- You may NOT resell, redistribute, sublicense, or publish the unmodified or lightly modified template as a standalone template, theme, or starter kit on any marketplace or public repository.
+- You may NOT claim exclusive authorship of the underlying template design system in a competing template store.
+
+4. THIRD-PARTY ASSETS & LIBRARIES
+- Open-source packages (`react`, `react-dom`, `lucide-react`, `mp4box`, `tailwindcss`, `vite`) are governed by their respective MIT/ISC/BSD licences listed in `THIRD-PARTY-LICENSES.txt`.
+- Replace demonstration aerial video footage, brand names (`Vectrus`, `Halder | Nordvik`), and copy with your own licensed assets before commercial launch if required by your intellectual property policy.
+
+5. DISCLAIMER OF WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.

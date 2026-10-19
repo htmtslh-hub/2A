@@ -1,0 +1,390 @@
+{
+  "date": "2026-10-19T03:18:36.489Z",
+  "url": "http://127.0.0.1:49670/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": true,
+          "menuBtnVisible": false,
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "dropdownMorph": {
+        "discoverState": {
+          "open": true,
+          "w": "664px",
+          "h": "358px",
+          "panelState": "active",
+          "activeImgIndex": 1
+        },
+        "journeysState": {
+          "open": true,
+          "w": "446px",
+          "h": "308px",
+          "discoverPanelState": "exit-left",
+          "journeysPanelState": "active"
+        },
+        "regionsState": {
+          "w": "232px",
+          "h": "218px",
+          "regionsPanelState": "active"
+        },
+        "afterEscape": {
+          "open": false,
+          "focusedMenu": "regions"
+        }
+      },
+      "mobileSheet": {
+        "sheetOpen": {
+          "open": true,
+          "ariaExpanded": "true"
+        },
+        "sheetClosed": {
+          "open": false,
+          "ariaExpanded": "false"
+        }
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": true,
+          "menuBtnVisible": false,
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "dropdownMorph": {
+        "discoverState": {
+          "open": true,
+          "w": "664px",
+          "h": "358px",
+          "panelState": "active",
+          "activeImgIndex": 1
+        },
+        "journeysState": {
+          "open": true,
+          "w": "446px",
+          "h": "308px",
+          "discoverPanelState": "exit-left",
+          "journeysPanelState": "active"
+        },
+        "regionsState": {
+          "w": "232px",
+          "h": "218px",
+          "regionsPanelState": "active"
+        },
+        "afterEscape": {
+          "open": false,
+          "focusedMenu": "regions"
+        }
+      },
+      "mobileSheet": {
+        "sheetOpen": {
+          "open": true,
+          "ariaExpanded": "true"
+        },
+        "sheetClosed": {
+          "open": false,
+          "ariaExpanded": "false"
+        }
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": true,
+          "menuBtnVisible": false,
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        }
+      },
+      "dropdownMorph": {
+        "discoverState": {
+          "open": true,
+          "w": "664px",
+          "h": "358px",
+          "panelState": "active",
+          "activeImgIndex": 1
+        },
+        "journeysState": {
+          "open": true,
+          "w": "446px",
+          "h": "308px",
+          "discoverPanelState": "exit-left",
+          "journeysPanelState": "active"
+        },
+        "regionsState": {
+          "w": "232px",
+          "h": "218px",
+          "regionsPanelState": "active"
+        },
+        "afterEscape": {
+          "open": false,
+          "focusedMenu": "regions"
+        }
+      },
+      "mobileSheet": {
+        "sheetOpen": {
+          "open": true,
+          "ariaExpanded": "true"
+        },
+        "sheetClosed": {
+          "open": false,
+          "ariaExpanded": "false"
+        }
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": false,
+          "menuBtnVisible": true,
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "title": "Halden — Expeditions to the edge",
+          "scrollCueText": "( scroll down )",
+          "desktopNavVisible": true,
+          "menuBtnVisible": false,
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "pageErrors": []
+        }
+      },
+      "dropdownMorph": {
+        "discoverState": {
+          "open": true,
+          "w": "664px",
+          "h": "358px",
+          "panelState": "active",
+          "activeImgIndex": 1
+        },
+        "journeysState": {
+          "open": true,
+          "w": "446px",
+          "h": "308px",
+          "discoverPanelState": "exit-left",
+          "journeysPanelState": "active"
+        },
+        "regionsState": {
+          "w": "232px",
+          "h": "218px",
+          "regionsPanelState": "active"
+        },
+        "afterEscape": {
+          "open": false,
+          "focusedMenu": "regions"
+        }
+      },
+      "mobileSheet": {
+        "sheetOpen": {
+          "open": true,
+          "ariaExpanded": "true"
+        },
+        "sheetClosed": {
+          "open": false,
+          "ariaExpanded": "false"
+        }
+      }
+    }
+  }
+}

@@ -370,15 +370,10 @@
                 <span style="position:absolute; top:12px; right:12px; padding:6px 12px; border-radius:100px; background:var(--acc); color:#ffffff; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;">{{ hp.badge }}</span>
               </sc-if>
             </div>
-            <div style="padding:16px 20px 18px; display:flex; flex-direction:column; gap:10px; flex:1;">
+            <div style="padding:16px 20px; display:flex; flex-direction:column; justify-content:center; flex:1;">
               <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px;">
                 <h3 style="margin:0; font-family:var(--display); font-weight:700; letter-spacing:-.01em; font-size:22px; line-height:1.15;">{{ hp.name }}</h3>
                 <span style="font-size:15px; font-weight:700; color:var(--gold); white-space:nowrap;">{{ hp.price }}</span>
-              </div>
-              <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:auto;">
-                <sc-for list="{{ hp.tags }}" as="tg" hint-placeholder-count="3">
-                  <span style="padding:5px 11px; border-radius:100px; border:1px solid rgba(236,238,241,.16); font-size:11px; color:#ffffff; letter-spacing:.04em;">{{ tg }}</span>
-                </sc-for>
               </div>
             </div>
           </a>
@@ -460,15 +455,10 @@
                 <span style="position:absolute; top:12px; right:12px; padding:6px 12px; border-radius:100px; background:var(--acc); color:#ffffff; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;">{{ tp.badge }}</span>
               </sc-if>
             </div>
-            <div style="padding:16px 20px 18px; display:flex; flex-direction:column; gap:10px; flex:1;">
+            <div style="padding:16px 20px; display:flex; flex-direction:column; justify-content:center; flex:1;">
               <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px;">
                 <h3 style="margin:0; font-family:var(--display); font-weight:700; letter-spacing:-.01em; font-size:22px; line-height:1.15;">{{ tp.name }}</h3>
                 <span style="font-size:15px; font-weight:700; color:var(--gold); white-space:nowrap;">{{ tp.price }}</span>
-              </div>
-              <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:auto;">
-                <sc-for list="{{ tp.tags }}" as="tg" hint-placeholder-count="3">
-                  <span style="padding:5px 11px; border-radius:100px; border:1px solid rgba(236,238,241,.16); font-size:11px; color:#ffffff; letter-spacing:.04em;">{{ tg }}</span>
-                </sc-for>
               </div>
             </div>
           </a>

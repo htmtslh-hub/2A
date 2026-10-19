@@ -275,7 +275,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                       </>
                                     ) : null}
                                   </div>
-                                  <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", gap: "10px", flex: "1" }}>
+                                  <div style={{ padding: "16px 20px 18px", display: "flex", flexDirection: "column", gap: "10px", flex: "1" }}>
                                     <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
                                       <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "22px", lineHeight: "1.15" }}>
                                         {hp.name}
@@ -284,10 +284,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                         {hp.price}
                                       </span>
                                     </div>
-                                    <p style={{ margin: "0", fontSize: "14px", lineHeight: "1.55", color: "#949ba4", flex: "1" }}>
-                                      {hp.desc}
-                                    </p>
-                                    <div style={{ display: "flex", flexWrap: "wrap", gap: "7px", marginTop: "4px" }}>
+                                    <div style={{ display: "flex", flexWrap: "wrap", gap: "7px", marginTop: "auto" }}>
                                       {(hp.tags ?? []).map((tg: any, tg_i: number) => (
                                             <span key={tg_i} style={{ padding: "5px 11px", borderRadius: "100px", border: "1px solid rgba(236,238,241,.16)", fontSize: "11px", color: "#ffffff", letterSpacing: ".04em" }}>
                                               {tg}
@@ -443,7 +440,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                         </>
                                       ) : null}
                                     </div>
-                                    <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", gap: "10px", flex: "1" }}>
+                                    <div style={{ padding: "16px 20px 18px", display: "flex", flexDirection: "column", gap: "10px", flex: "1" }}>
                                       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
                                         <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "22px", lineHeight: "1.15" }}>
                                           {tp.name}
@@ -452,10 +449,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                           {tp.price}
                                         </span>
                                       </div>
-                                      <p style={{ margin: "0", fontSize: "14px", lineHeight: "1.55", color: "#949ba4", flex: "1" }}>
-                                        {tp.desc}
-                                      </p>
-                                      <div style={{ display: "flex", flexWrap: "wrap", gap: "7px", marginTop: "4px" }}>
+                                      <div style={{ display: "flex", flexWrap: "wrap", gap: "7px", marginTop: "auto" }}>
                                         {(tp.tags ?? []).map((tg: any, tg_i: number) => (
                                               <span key={tg_i} style={{ padding: "5px 11px", borderRadius: "100px", border: "1px solid rgba(236,238,241,.16)", fontSize: "11px", color: "#ffffff", letterSpacing: ".04em" }}>
                                                 {tg}

@@ -1,0 +1,306 @@
+{
+  "date": "2026-10-19T07:09:25.044Z",
+  "url": "http://127.0.0.1:56598/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:37",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "chromium-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:37",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "chromium-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:36",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "chromium-820.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:36",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "chromium-1440.png"
+        }
+      },
+      "interactions": {
+        "slide1Active": true,
+        "slide2Active": true,
+        "slide3Active": true,
+        "accentPeriodChangedOnSlide2": true,
+        "mobileMenuToggle": true,
+        "reducedMotionAnimationName": "none",
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:47",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "firefox-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:46",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "firefox-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:46",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "firefox-820.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:45",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "firefox-1440.png"
+        }
+      },
+      "interactions": {
+        "slide1Active": true,
+        "slide2Active": true,
+        "slide3Active": true,
+        "accentPeriodChangedOnSlide2": true,
+        "mobileMenuToggle": true,
+        "reducedMotionAnimationName": "none",
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:56",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "edge-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:55",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "edge-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:54",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "edge-820.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:09:54",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "edge-1440.png"
+        }
+      },
+      "interactions": {
+        "slide1Active": true,
+        "slide2Active": true,
+        "slide3Active": true,
+        "accentPeriodChangedOnSlide2": true,
+        "mobileMenuToggle": true,
+        "reducedMotionAnimationName": "none",
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:10:03",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "coccoc-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:10:03",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "coccoc-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:10:02",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "coccoc-820.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "videosReady": true,
+          "titleText": "Viktor.",
+          "periodColor": "rgb(245, 152, 242)",
+          "dotBg": "rgb(245, 152, 242)",
+          "clockText": "CUP 14:10:02",
+          "ctaText": "start a project",
+          "consoleErrors": 0,
+          "screenshot": "coccoc-1440.png"
+        }
+      },
+      "interactions": {
+        "slide1Active": true,
+        "slide2Active": true,
+        "slide3Active": true,
+        "accentPeriodChangedOnSlide2": true,
+        "mobileMenuToggle": true,
+        "reducedMotionAnimationName": "none",
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    }
+  }
+}

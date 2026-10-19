@@ -1,0 +1,46 @@
+{
+  "id": "t72",
+  "slug": "designpro",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-19T06:37:19.615Z",
+  "demo": "/demos/designpro/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "4979be832af2",
+  "sha256": "4979be832af2426a094d41bade839e48e992d40f760f558a4e47d96bef436bdf",
+  "demoHtmlSha256": "acfff3e74097b16acaebba02cdd3da4a147204e684d544b224463127d4e4a8d3",
+  "demoSha256": "60ccab55c0e44097d80fb9b3126069c23a40e764526ce60dc8149f0275ebc65b",
+  "bytes": 1000907,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.791,
+      "action": "designpro-open-enroll"
+    },
+    {
+      "seconds": 5.914,
+      "action": "designpro-submit-and-close"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\designpro-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\designpro-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\designpro-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\designpro-return.jpg"
+  ]
+}

@@ -113,8 +113,8 @@ try {
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
-    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden') {
-      for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
+    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper') {
+      for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','images.higgs.ai']) allowedBriefHosts.add(host);
     }
     if (slug === 'toonhub') {
       allowedBriefHosts.add('fifth-gentle-45902158.figma.site');
@@ -149,9 +149,11 @@ try {
     if (slug === 'jack-3d') await page.waitForFunction(() => document.querySelector('.hero-portrait img')?.naturalWidth > 0, null, {timeout:30000});
     if (slug === 'toonhub') await page.waitForFunction(() => { const imgs = Array.from(document.querySelectorAll('[data-carousel-item] img')); return imgs.length === 4 && imgs.every(i => i.complete && i.naturalWidth > 0); }, null, {timeout:45000});
     if (slug === 'halden') await page.waitForFunction(() => { const imgs = Array.from(document.querySelectorAll('#dd img')); return imgs.length === 6 && imgs.every(i => i.complete && i.naturalWidth > 0); }, null, {timeout:45000});
+    if (slug === 'prmpt') await page.waitForFunction(() => { const lv = document.getElementById('left-video'); const rv = document.getElementById('right-video'); const imgs = Array.from(document.querySelectorAll('.bp-card img')); return lv && rv && lv.readyState >= 2 && rv.readyState >= 2 && imgs.length === 10 && imgs.every(i => i.complete && i.naturalWidth > 0); }, null, {timeout:60000});
+    if (slug === 'viktor') await page.waitForFunction(() => { const videos = Array.from(document.querySelectorAll('video')); return videos.length === 3 && videos.every(v => v.readyState >= 2); }, null, {timeout:60000});
     if (slug === 'fennec') await page.waitForFunction(() => document.querySelector('#fox')?.dataset.model === 'ready', null, {timeout:60000});
-    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
-    if (slug === 'monoframe') {
+    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper') {
       await page.waitForTimeout(2000);
     }
     if (slug === 'solaris-gate') {
@@ -165,6 +167,80 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'camper') {
+        const step = actions.filter(a => a.action.startsWith('camper-')).length;
+        if (step === 0) {
+          await page.locator('#links a', { hasText: 'Travel' }).click();
+          await page.locator('a.explore').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'camper-select-travel-and-hover-explore' });
+        } else if (step === 1) {
+          await page.locator('#links a', { hasText: 'Location' }).click();
+          await page.locator('a.signup').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'camper-select-location-and-hover-signup' });
+        } else {
+          await page.locator('#links a', { hasText: 'Home' }).click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'camper-return-home' });
+        }
+        return;
+      }
+      if (slug === 'viktor') {
+        const step = actions.filter(a => a.action.startsWith('viktor-')).length;
+        if (step === 0) {
+          await page.locator('#switcher-btn-1').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'viktor-switch-gridwave' });
+        } else if (step === 1) {
+          await page.locator('#switcher-btn-2').click();
+          await page.locator('#start-project-btn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'viktor-switch-light-tunnel-and-hover-cta' });
+        } else {
+          await page.locator('#switcher-btn-0').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'viktor-switch-water-wave' });
+        }
+        return;
+      }
+      if (slug === 'cinematic') {
+        const step = actions.filter(a => a.action.startsWith('cinematic-')).length;
+        if (step === 0) {
+          await page.locator('#next-btn').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'cinematic-next-slide' });
+        } else {
+          await page.locator('#prev-btn').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'cinematic-prev-slide' });
+        }
+        return;
+      }
+      if (slug === 'designpro') {
+        if (!actions.some(a => a.action === 'designpro-open-enroll')) {
+          await page.locator('#hero-cta').hover();
+          await page.waitForTimeout(250);
+          await page.locator('#hero-cta').click();
+          await page.locator('#enrollment-modal').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'designpro-open-enroll' });
+        } else if (await page.locator('#enrollment-modal').count()) {
+          await page.fill('#applicant-name', 'Alex Rivera');
+          await page.fill('#applicant-email', 'alex@designpro.studio');
+          await page.locator('#enrollment-modal button[type="submit"]').click();
+          await page.waitForTimeout(700);
+          await page.keyboard.press('Escape');
+          await page.locator('#enrollment-modal').waitFor({ state: 'detached' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'designpro-submit-and-close' });
+        } else {
+          await page.locator('#hero-cta').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'designpro-hover-cta' });
+        }
+        return;
+      }
+      if (slug === 'prmpt') {
+        const step = actions.filter(a => a.action.startsWith('prmpt-')).length;
+        if (step === 0) {
+          await page.mouse.move(220, 450, { steps: 18 });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'prmpt-scrub-left' });
+        } else {
+          await page.mouse.move(1220, 450, { steps: 24 });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'prmpt-scrub-right' });
+        }
+        return;
+      }
       if (slug === 'halden') {
         const step = actions.filter(a => a.action.startsWith('halden-')).length;
         if (step === 0) {
@@ -331,7 +407,7 @@ try {
     const scrollHeight = await page.evaluate(() => document.documentElement.scrollHeight);
     const target = slug === 'jack-3d'
       ? await page.locator('#projects').evaluate(e=>Math.max(0,e.getBoundingClientRect().top+220))
-      : Math.min(scrollHeight-900, slug === 'mostar-city' ? 3700 : slug === 'apartment-flow' ? 2400 : 1650);
+      : Math.min(scrollHeight-900, slug === 'prmpt' ? scrollHeight - 900 : slug === 'mostar-city' ? 3700 : slug === 'apartment-flow' ? 2400 : 1650);
     for (let step=1; step<=5; step++) {
       await page.mouse.wheel(0, Math.max(0,target)/5); await page.waitForTimeout(450);
     }

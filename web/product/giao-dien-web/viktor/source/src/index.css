@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@custom-variant mobile (@media (max-width: 809.98px));
+@custom-variant md-tablet (@media (min-width: 810px) and (max-width: 1199.98px));
+
+:root {
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Figtree', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar link underline: slides in from right on hover via scaleX transform */
+.nav-link-underline {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  padding-bottom: 2px;
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.42s var(--ease-spring);
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Video switcher role link: translates 4px right on hover */
+.role-link {
+  transition:
+    transform 0.35s var(--ease-spring),
+    opacity 0.35s var(--ease-spring);
+}
+
+.role-link:hover,
+.role-link:focus-visible {
+  transform: translateX(4px);
+}
+
+/* "start a project" button fill-up hover effect */
+.cta-fill-btn {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  transition:
+    color 0.45s var(--ease-spring),
+    border-color 0.45s var(--ease-spring);
+}
+
+.cta-fill-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #F598F2;
+  transform: translateY(101%);
+  transition: transform 0.45s var(--ease-spring);
+  z-index: 0;
+}
+
+.cta-fill-btn:hover,
+.cta-fill-btn:focus-visible {
+  color: #000000;
+  border-color: #F598F2;
+}
+
+.cta-fill-btn:hover::before,
+.cta-fill-btn:focus-visible::before {
+  transform: translateY(0);
+}
+
+/* Custom CSS Keyframe Animations */
+@keyframes videoFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes dotPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.45);
+  }
+}
+
+.animate-video-fade-in {
+  animation: videoFadeIn 1.2s ease-in-out forwards;
+}
+
+.animate-reveal-up {
+  animation: revealUp 0.9s var(--ease-spring) both;
+}
+
+.animate-reveal-right {
+  animation: revealRight 0.9s var(--ease-spring) both;
+}
+
+.animate-dot-pulse {
+  animation: dotPulse 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-video-fade-in,
+  .animate-reveal-up,
+  .animate-reveal-right,
+  .animate-dot-pulse {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,24 @@
+prmpt — Scroll-Driven Fashion & Archive Collection Landing Page Template
+Copyright (c) 2026 Forge Zone. All rights reserved.
+
+COMMERCIAL TEMPLATE LICENCE (v1.0.0)
+
+1. GRANT OF LICENCE
+This licence grants the user a non-exclusive, perpetual, worldwide right to use, modify, and deploy the "prmpt" template ("the Software") for personal or commercial web projects, client deliverables, and production websites.
+
+2. PERMITTED USES
+- Use the template in unlimited personal or client projects.
+- Modify source code, styles, typography, video scrub logic, gallery layout, and copy to fit your brand.
+- Compile and deploy the production bundle (`dist/` or `built/`) to any static hosting or cloud platform.
+
+3. RESTRICTIONS
+- You may NOT resell, redistribute, sublicense, or publish the unmodified or lightly modified template as a standalone template, theme, or starter kit on any marketplace or public repository.
+- You may NOT claim exclusive authorship of the underlying template design system in a competing template store.
+
+4. THIRD-PARTY ASSETS & LIBRARIES
+- Open-source packages (`react`, `react-dom`, `gsap`, `@gsap/react`, `motion`, `tailwindcss`, `@tailwindcss/vite`, `vite`) are governed by their respective licences listed in `THIRD-PARTY-LICENSES.txt`.
+- Inter Tight is provided via Google Fonts under the SIL Open Font License 1.1 (https://github.com/googlefonts/inter-tight).
+- Demonstration CloudFront videos, `images.higgs.ai` lookbook photographs, and sample brand copy (`prmpt`, `ARCHIVE COLLECTION "PROMPT"`, `$97,33`) are provided for layout preview only; replace them with your own licensed brand assets before commercial publication.
+
+5. DISCLAIMER OF WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.

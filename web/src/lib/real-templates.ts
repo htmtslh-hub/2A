@@ -46,6 +46,466 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t75: {
+    "slug": "camper",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Camper",
+        "desc": "Hero trại qua đêm mùa đông dưới ánh trăng một file HTML độc lập: sân khấu video lặp 1280×960 tự co giãn tỷ lệ --u qua 3 chế độ JS (exact, tablet, compact), tiêu đề serif Gelasio 700 hai tầng Overnight / Camp, hệ chữ Outfit trắng, gạch chân mục đang chọn #7e80d7, nút Sign up viền vuông, CTA Explore màu cam #ec4f30, ngăn kéo mờ bên phải trên tablet/mobile và chuỗi hoạt ảnh vào trang bằng Web Animations API.",
+        "tags": [
+          "Overnight Camp",
+          "3-Mode Stage --u",
+          "Standalone HTML"
+        ]
+      },
+      "en": {
+        "name": "Camper",
+        "desc": "A standalone single-file overnight camp hero section: a 1280×960 moonlit winter camp video stage scaled proportionally via --u across three JS layout modes (exact, tablet, compact), stacked Gelasio 700 Overnight / Camp serif typography, white Outfit UI, a #7e80d7 active nav underline, square-bordered Sign up button, #ec4f30 orange Explore CTA, frosted right drawer on tablet/mobile and a one-shot Web Animations API entrance.",
+        "tags": [
+          "Overnight Camp",
+          "3-Mode Stage --u",
+          "Standalone HTML"
+        ]
+      },
+      "zh": {
+        "name": "Camper",
+        "desc": "单文件月夜冬季露营全屏首屏模板：基于 JS 三模式（exact、tablet、compact）与 --u 比例缩放的 1280×960 篝火雪山木屋循环视频舞台，搭配 Gelasio 700 双行衬线标题 Overnight / Camp、白色 Outfit 界面、#7e80d7 激活导航下划线、直角边框 Sign up 按钮、#ec4f30 橙色 Explore 按钮、平板/移动端右侧磨砂抽屉及 Web Animations API 入场动效。",
+        "tags": [
+          "过夜露营",
+          "三模式比例缩放",
+          "单文件 HTML"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "1 file index.html độc lập (HTML5 + CSS --u + Vanilla JS WAAPI)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "4 file · 11.0 KB ZIP"
+        ],
+        [
+          "Tương tác",
+          "3 chế độ exact/tablet/compact · ngăn kéo mờ · WAAPI entrance"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single standalone index.html (HTML5 + CSS --u + Vanilla JS WAAPI)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "4 files · 11.0 KB ZIP"
+        ],
+        [
+          "Interaction",
+          "3-mode exact/tablet/compact engine · frosted drawer · WAAPI entrance"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件独立 index.html（HTML5 + CSS --u + 原生 JS WAAPI）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "4 个文件 · 11.0 KB ZIP"
+        ],
+        [
+          "交互",
+          "exact/tablet/compact 三模式引擎 · 右侧磨砂抽屉 · WAAPI 入场"
+        ]
+      ]
+    }
+  },
+  t74: {
+    "slug": "viktor",
+    "cat": "portfolio",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Viktor.",
+        "desc": "Hero portfolio sáng tạo toàn màn hình dựng bằng React 18, TypeScript, Vite 6, Tailwind CSS v4 và font Figtree: ba video nền lặp xếp chồng chuyển cảnh crossfade 1200ms kèm nạp trước blob URL, thanh điều hướng đánh số 01–04 với gạch chân trượt từ phải, đồng hồ 24h CUP trực tiếp, chấm trạng thái phát sáng hồng #F598F2 / trắng theo cảnh, chữ Viktor. khổng lồ 200px và nút start a project điền màu hồng từ dưới lên.",
+        "tags": [
+          "Creative Portfolio",
+          "3-Video Crossfade",
+          "React + Tailwind v4"
+        ]
+      },
+      "en": {
+        "name": "Viktor.",
+        "desc": "A full-screen creative portfolio hero section built with React 18, TypeScript, Vite 6, Tailwind CSS v4 and Google Font Figtree: three stacked looping background videos with 1200ms crossfade switching and blob URL preloading, an indexed 01–04 navbar with right-origin scaleX underlines, a live 24-hour CUP clock, a scene-synced #F598F2 pink/white pulsing availability badge, 200px Viktor. typography and a bottom-fill start a project button.",
+        "tags": [
+          "Creative Portfolio",
+          "3-Video Crossfade",
+          "React + Tailwind v4"
+        ]
+      },
+      "zh": {
+        "name": "Viktor.",
+        "desc": "基于 React 18、TypeScript、Vite 6、Tailwind CSS v4 与 Figtree 字体构建的全屏创意作品集首屏：三段全屏循环视频叠加支持 1200ms 交叉淡入淡出切换与 Blob URL 预加载，配备 01–04 编号导航与右侧滑入下划线、实时 24 小时 CUP 时钟、随场景切换 #F598F2 粉色/白色光晕的脉冲状态圆点、200px Viktor. 巨幅标题与自下而上填充粉色的 start a project 按钮。",
+        "tags": [
+          "创意作品集",
+          "三视频交叉渐变",
+          "React + Tailwind v4"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Figtree (kèm built/)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "16 file · 67.1 KB ZIP"
+        ],
+        [
+          "Tương tác",
+          "Chuyển 3 cảnh video 1200ms · đồng hồ CUP 24h · menu Grid 0fr/1fr · nút fill #F598F2"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Figtree (includes built/)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "16 files · 67.1 KB ZIP"
+        ],
+        [
+          "Interaction",
+          "3-video 1200ms crossfade · live 24h CUP clock · 0fr/1fr Grid menu · #F598F2 fill CTA"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Figtree（含 built/）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "16 个文件 · 67.1 KB ZIP"
+        ],
+        [
+          "交互",
+          "三视频 1200ms 交叉切换 · 24h 实时时钟 · 0fr/1fr 移动菜单 · #F598F2 填充按钮"
+        ]
+      ]
+    }
+  },
+  t73: {
+    "slug": "cinematic",
+    "cat": "entertainment",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Cinematic",
+        "desc": "Hero phim ảnh & streaming toàn màn hình dựng bằng React 18, TypeScript, Vite 6, Tailwind CSS v4 và Lucide React: nền video lặp tự động cố định ở z-index 0 kèm lớp phủ làm mờ đáy backdrop-blur-xl dùng mặt nạ tuyến tính (linear-gradient to top 0%–45%, không phủ tối màu), hệ nút kính lỏng .liquid-glass với viền sáng 1.4px mask-composite, hoạt ảnh .animate-blur-fade-up phân tầng 0ms–900ms, menu thả xuống di động và bộ nút Previous / Next chuyển tác phẩm.",
+        "tags": [
+          "Phim & Streaming",
+          "Liquid Glass",
+          "React + Tailwind v4"
+        ]
+      },
+      "en": {
+        "name": "Cinematic",
+        "desc": "A full-viewport movie and streaming hero section built with React 18, TypeScript, Vite 6, Tailwind CSS v4 and Lucide React: a fixed looping video background at z-index 0 paired with a bottom-masked backdrop-blur-xl overlay (linear-gradient to top 0%–45%, no dark gradient), .liquid-glass buttons with a 1.4px mask-composite glowing stroke, staggered 0ms–900ms .animate-blur-fade-up reveals, a mobile dropdown and interactive Previous / Next showcase switching.",
+        "tags": [
+          "Movie & Streaming",
+          "Liquid Glass",
+          "React + Tailwind v4"
+        ]
+      },
+      "zh": {
+        "name": "Cinematic",
+        "desc": "基于 React 18、TypeScript、Vite 6、Tailwind CSS v4 与 Lucide React 构建的全屏电影流媒体首屏：z-index 0 固定全屏循环视频搭配底部 0%–45% 线性遮罩的 backdrop-blur-xl 模糊层（无暗化渐变），配备带 1.4px mask-composite 发光描边的 .liquid-glass 液态玻璃按钮、0ms–900ms 阶梯式 .animate-blur-fade-up 模糊上浮动画、移动端下拉菜单与 Previous / Next 剧集切换。",
+        "tags": [
+          "影视流媒体",
+          "液态玻璃",
+          "React + Tailwind v4"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Lucide React (kèm built/)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "15 file · 83.7 KB ZIP"
+        ],
+        [
+          "Tương tác",
+          "Nút .liquid-glass · blurFadeUp 0ms–900ms · Previous/Next · menu di động <lg"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Lucide React (includes built/)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "15 files · 83.7 KB ZIP"
+        ],
+        [
+          "Interaction",
+          ".liquid-glass pills · 0ms–900ms blurFadeUp · Previous/Next · mobile menu <lg"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Lucide React（含 built/）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "15 个文件 · 83.7 KB ZIP"
+        ],
+        [
+          "交互",
+          ".liquid-glass 液态玻璃 · 0ms–900ms blurFadeUp · Previous/Next · <lg 移动菜单"
+        ]
+      ]
+    }
+  },
+  t72: {
+    "slug": "designpro",
+    "cat": "education",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "DesignPro",
+        "desc": "Hero toàn màn hình cho nền tảng đào tạo thiết kế sản phẩm dựng bằng React 18, TypeScript, Vite 6, Tailwind CSS v4, Framer Motion và Lucide React: nền video lặp tự động trên nền đen #000000, logo tròn viền trắng 2px kèm thanh điều hướng viên thuốc (border-gray-700), khối giới thiệu 2 cột (8000+ Talented Designers Launched !), tiêu đề lớn Inter (text-5xl tới xl:text-9xl, leading-[0.85]) kết hợp component ShinyText quét dải sáng #64CEFB → #ffffff góc 100° chu kỳ 3 giây và hộp thoại đăng ký khóa học.",
+        "tags": [
+          "Đào tạo Thiết kế",
+          "ShinyText + Framer Motion",
+          "React + Tailwind v4"
+        ]
+      },
+      "en": {
+        "name": "DesignPro",
+        "desc": "A full-screen hero section for a product design education platform built with React 18, TypeScript, Vite 6, Tailwind CSS v4, Framer Motion and Lucide React: a looping full-bleed video background on #000000, a 2px white circular brand mark and rounded pill navbar (border-gray-700), a two-column mission & 8000+ alumni sub-header, an oversized Inter headline (text-5xl to xl:text-9xl, leading-[0.85]) with a continuous 3s 100° ShinyText sweep (#64CEFB to #ffffff) and an interactive enrollment dialog.",
+        "tags": [
+          "Design Education",
+          "ShinyText + Framer Motion",
+          "React + Tailwind v4"
+        ]
+      },
+      "zh": {
+        "name": "DesignPro",
+        "desc": "基于 React 18、TypeScript、Vite 6、Tailwind CSS v4、Framer Motion 与 Lucide React 构建的产品设计教育平台全屏首屏：纯黑 #000000 背景搭配全屏自动循环视频、2px 白色双环标志与胶囊导航栏（border-gray-700）、双列使命与 8000+ 学员数据副标、配备 3 秒 100° 连续左向右流光渐变组件 ShinyText（#64CEFB 至 #ffffff）的超大号 Inter 主标题及报名弹窗。",
+        "tags": [
+          "设计教育平台",
+          "ShinyText + Framer Motion",
+          "React + Tailwind v4"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Framer Motion + Lucide React (kèm built/)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "16 file · 127.8 KB ZIP"
+        ],
+        [
+          "Tương tác",
+          "ShinyText 100° 3s liên tục · hộp thoại đăng ký khóa học · menu di động <lg"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Framer Motion + Lucide React (includes built/)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "16 files · 127.8 KB ZIP"
+        ],
+        [
+          "Interaction",
+          "Continuous 3s 100° ShinyText sweep · enrollment modal · mobile menu <lg"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Framer Motion + Lucide React（含 built/）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "16 个文件 · 127.8 KB ZIP"
+        ],
+        [
+          "交互",
+          "3 秒 100° ShinyText 流光渐变 · 课程报名弹窗 · <lg 移动菜单"
+        ]
+      ]
+    }
+  },
+  t71: {
+    "slug": "prmpt",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "prmpt",
+        "desc": "Landing page thời trang lưu trữ (archive fashion) toàn màn hình điều khiển theo cuộn dựng bằng React 19, TypeScript, Vite 6, Tailwind CSS v4, GSAP 3.15 ScrollTrigger và Motion 12: giai đoạn Hero với hai video chân dung đối xứng tua theo tọa độ chuột ngang (kèm vùng đệm ±50px ở tâm), con trỏ tùy chỉnh cùng chữ mix-blend-mode: exclusion, tấm nền đen trượt lên mở lưới 10 ảnh sản phẩm rải rác co giãn theo khung nhìn và màn kết trắng với nút view.",
+        "tags": [
+          "Thời trang Archive",
+          "GSAP ScrollTrigger",
+          "React 19 + Tailwind v4"
+        ]
+      },
+      "en": {
+        "name": "prmpt",
+        "desc": "A full-screen scroll-driven fashion archive landing page built with React 19, TypeScript, Vite 6, Tailwind CSS v4, GSAP 3.15 ScrollTrigger and Motion 12: a dual-video Hero phase scrubbed horizontally by cursor position (with a ±50px center dead zone), exclusion-blended SVG wordmark, custom cursor and randomized symbol badge, a sliding black gallery panel with 10 deterministic scattered product cards scaling on enter/exit, and a white outro overlay with a view CTA.",
+        "tags": [
+          "Fashion Archive",
+          "GSAP ScrollTrigger",
+          "React 19 + Tailwind v4"
+        ]
+      },
+      "zh": {
+        "name": "prmpt",
+        "desc": "基于 React 19、TypeScript、Vite 6、Tailwind CSS v4、GSAP 3.15 ScrollTrigger 与 Motion 12 构建的全屏滚动驱动先锋时装档案着陆页：首屏搭载随鼠标水平位置双向拖拽的双人物视频（含中心 ±50px 缓冲死区）、exclusion 差值混合 SVG 标志、自定义光标与随机符号徽章，向下滚动升起黑色画廊面板呈现 10 张交错进出缩放单品卡片，并以白色谢幕遮罩与 view 按钮收尾。",
+        "tags": [
+          "时装档案",
+          "GSAP ScrollTrigger",
+          "React 19 + Tailwind v4"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 19 + TypeScript + Vite 6 + Tailwind CSS v4 + GSAP 3.15 + Motion 12 (kèm built/)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "15 file · 198.0 KB ZIP"
+        ],
+        [
+          "Tương tác",
+          "Tua 2 video theo chuột X (±50px dead zone) · lưới 10 ảnh GSAP ScrollTrigger · màn kết outro"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 19 + TypeScript + Vite 6 + Tailwind CSS v4 + GSAP 3.15 + Motion 12 (includes built/)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "15 files · 198.0 KB ZIP"
+        ],
+        [
+          "Interaction",
+          "Dual-video X-axis cursor scrub (±50px dead zone) · 10-card GSAP gallery · outro reveal"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 19 + TypeScript + Vite 6 + Tailwind CSS v4 + GSAP 3.15 + Motion 12（含 built/）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "15 个文件 · 198.0 KB ZIP"
+        ],
+        [
+          "交互",
+          "双视频鼠标横向拖拽（±50px 死区）· 10 卡 GSAP 滚动缩放画廊 · 谢幕转场"
+        ]
+      ]
+    }
+  },
   t70: {
     "slug": "halden",
     "cat": "commerce",

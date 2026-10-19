@@ -1,0 +1,46 @@
+{
+  "id": "t74",
+  "slug": "viktor",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-19T07:12:25.656Z",
+  "demo": "/demos/viktor/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "5f94c664d378",
+  "sha256": "5f94c664d37803ccef62cd80061fbab67184d23838e596b816fd8e84e649b6e9",
+  "demoHtmlSha256": "0510537d5ebbf14351cc10b827432e55469bde72b4da5efcc01015fc31dbaf04",
+  "demoSha256": "be1e3b3558b55c33aafdbb3960423266ee5a788d5a86255e5310f12a78a45fb6",
+  "bytes": 2291827,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.463,
+      "action": "viktor-switch-gridwave"
+    },
+    {
+      "seconds": 4.949,
+      "action": "viktor-switch-light-tunnel-and-hover-cta"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\viktor-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\viktor-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\viktor-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\viktor-return.jpg"
+  ]
+}

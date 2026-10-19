@@ -1,0 +1,370 @@
+{
+  "date": "2026-10-19T06:34:36.031Z",
+  "url": "http://127.0.0.1:58850/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "48px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "106.352% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "48px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "20.7602% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "72px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "50.2116% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": true,
+          "mobileBtnVisible": false,
+          "navLinks": 7,
+          "headingFontSize": "128px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "33.3789% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "desktop": {
+          "shinyPos1": "20.0602% center",
+          "shinyPos2": "3.03622% center",
+          "modalSubmittedHeading": "Application Reserved"
+        },
+        "mobile": {
+          "mobileItems": 7
+        }
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "48px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "111.709% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "48px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "20.4289% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "72px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "44.4156% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": true,
+          "mobileBtnVisible": false,
+          "navLinks": 7,
+          "headingFontSize": "128px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "6.75556% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "desktop": {
+          "shinyPos1": "1.15556% center",
+          "shinyPos2": "-15.8778% center",
+          "modalSubmittedHeading": "Application Reserved"
+        },
+        "mobile": {
+          "mobileItems": 7
+        }
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "48px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "-11.6498% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "48px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "39.1236% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "72px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "61.6309% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": true,
+          "mobileBtnVisible": false,
+          "navLinks": 7,
+          "headingFontSize": "128px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "32.7582% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "desktop": {
+          "shinyPos1": "20.5502% center",
+          "shinyPos2": "6.23756% center",
+          "modalSubmittedHeading": "Application Reserved"
+        },
+        "mobile": {
+          "mobileItems": 7
+        }
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 740,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "48px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "3.09222% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 812,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "48px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "50.8229% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 1180,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": false,
+          "mobileBtnVisible": true,
+          "navLinks": 7,
+          "headingFontSize": "72px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "73.5356% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 900,
+          "horizontalOverflow": false,
+          "videoReadyState": 4,
+          "desktopNavVisible": true,
+          "mobileBtnVisible": false,
+          "navLinks": 7,
+          "headingFontSize": "128px",
+          "shinyBaseColor": "#64CEFB",
+          "shinyShineColor": "#ffffff",
+          "shinySpeed": 3,
+          "shinySpread": 100,
+          "shinyBgPosition": "41.8816% center",
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "desktop": {
+          "shinyPos1": "30.3876% center",
+          "shinyPos2": "13.6389% center",
+          "modalSubmittedHeading": "Application Reserved"
+        },
+        "mobile": {
+          "mobileItems": 7
+        }
+      }
+    }
+  }
+}

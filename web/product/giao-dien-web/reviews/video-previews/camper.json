@@ -1,0 +1,46 @@
+{
+  "id": "t75",
+  "slug": "camper",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-19T07:27:28.035Z",
+  "demo": "/demos/camper/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "79ad5224041c",
+  "sha256": "79ad5224041c4564ac1f3a9cab69ccc0021efa51eb1623c26170086938780e9b",
+  "demoHtmlSha256": "26186ede580c6c7d8a7a3830295c364f37884affb10fe9fcf527ca63d40e9190",
+  "demoSha256": "1dc16492c2f45b2302230319f508bb65fb1b164f9e0a5176fb2a899494edfd42",
+  "bytes": 1246487,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.524,
+      "action": "camper-select-travel-and-hover-explore"
+    },
+    {
+      "seconds": 4.904,
+      "action": "camper-select-location-and-hover-signup"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\camper-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\camper-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\camper-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\camper-return.jpg"
+  ]
+}

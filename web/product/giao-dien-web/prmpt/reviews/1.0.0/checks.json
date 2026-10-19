@@ -1,0 +1,362 @@
+{
+  "date": "2026-10-19T06:12:44.937Z",
+  "url": "http://127.0.0.1:57554/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 3456,
+          "horizontalOverflow": false,
+          "logoWidth": 124,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 3918,
+          "horizontalOverflow": false,
+          "logoWidth": 124,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 5630,
+          "horizontalOverflow": false,
+          "logoWidth": 266,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 5940,
+          "horizontalOverflow": false,
+          "logoWidth": 355,
+          "outroOffset": 166,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "leftHover": {
+          "cursorLeft": "220px",
+          "cursorTop": "450px",
+          "leftDisplay": "none",
+          "rightDisplay": "block",
+          "rightTime": 3.33
+        },
+        "deadZoneHover": {
+          "leftDisplay": "none",
+          "rightDisplay": "block",
+          "rightTime": 0
+        },
+        "rightHover": {
+          "leftDisplay": "block",
+          "rightDisplay": "none",
+          "leftTime": 3.33
+        },
+        "galleryState": {
+          "panelTransform": "translateY(0px)",
+          "canvasVisibility": "hidden",
+          "symbol": "$",
+          "maxCardScale": 1,
+          "visibleCards": 3
+        },
+        "outroState": {
+          "overlayOpacity": 1,
+          "infoTransform": "translateY(-166px)",
+          "buyTransform": "scale(1)",
+          "footerOpacity": 1
+        }
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 3456,
+          "horizontalOverflow": false,
+          "logoWidth": 124,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 3918,
+          "horizontalOverflow": false,
+          "logoWidth": 124,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 5630,
+          "horizontalOverflow": false,
+          "logoWidth": 266,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 5940,
+          "horizontalOverflow": false,
+          "logoWidth": 355,
+          "outroOffset": 166,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "leftHover": {
+          "cursorLeft": "220px",
+          "cursorTop": "450px",
+          "leftDisplay": "none",
+          "rightDisplay": "block",
+          "rightTime": 3.33
+        },
+        "deadZoneHover": {
+          "leftDisplay": "none",
+          "rightDisplay": "block",
+          "rightTime": 3.33
+        },
+        "rightHover": {
+          "leftDisplay": "block",
+          "rightDisplay": "none",
+          "leftTime": 3.33
+        },
+        "galleryState": {
+          "panelTransform": "translateY(0px)",
+          "canvasVisibility": "hidden",
+          "symbol": "^^",
+          "maxCardScale": 1,
+          "visibleCards": 3
+        },
+        "outroState": {
+          "overlayOpacity": 1,
+          "infoTransform": "translateY(-166px)",
+          "buyTransform": "scale(1)",
+          "footerOpacity": 1
+        }
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 3456,
+          "horizontalOverflow": false,
+          "logoWidth": 124,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 3918,
+          "horizontalOverflow": false,
+          "logoWidth": 124,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 5630,
+          "horizontalOverflow": false,
+          "logoWidth": 266,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 5940,
+          "horizontalOverflow": false,
+          "logoWidth": 355,
+          "outroOffset": 166,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "leftHover": {
+          "cursorLeft": "220px",
+          "cursorTop": "450px",
+          "leftDisplay": "none",
+          "rightDisplay": "block",
+          "rightTime": 3.33
+        },
+        "deadZoneHover": {
+          "leftDisplay": "none",
+          "rightDisplay": "block",
+          "rightTime": 0
+        },
+        "rightHover": {
+          "leftDisplay": "block",
+          "rightDisplay": "none",
+          "leftTime": 3.33
+        },
+        "galleryState": {
+          "panelTransform": "translateY(0px)",
+          "canvasVisibility": "hidden",
+          "symbol": "^^",
+          "maxCardScale": 1,
+          "visibleCards": 3
+        },
+        "outroState": {
+          "overlayOpacity": 1,
+          "infoTransform": "translateY(-166px)",
+          "buyTransform": "scale(1)",
+          "footerOpacity": 1
+        }
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "innerWidth": 320,
+          "innerHeight": 740,
+          "scrollWidth": 320,
+          "scrollHeight": 3456,
+          "horizontalOverflow": false,
+          "logoWidth": 124,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "375": {
+          "innerWidth": 375,
+          "innerHeight": 812,
+          "scrollWidth": 375,
+          "scrollHeight": 3918,
+          "horizontalOverflow": false,
+          "logoWidth": 124,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "820": {
+          "innerWidth": 820,
+          "innerHeight": 1180,
+          "scrollWidth": 820,
+          "scrollHeight": 5630,
+          "horizontalOverflow": false,
+          "logoWidth": 266,
+          "outroOffset": 132,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        },
+        "1440": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "scrollWidth": 1440,
+          "scrollHeight": 5940,
+          "horizontalOverflow": false,
+          "logoWidth": 355,
+          "outroOffset": 166,
+          "canvasOpacity": 1,
+          "cardCount": 10,
+          "consoleErrors": [],
+          "pageErrors": []
+        }
+      },
+      "interactions": {
+        "leftHover": {
+          "cursorLeft": "220px",
+          "cursorTop": "450px",
+          "leftDisplay": "none",
+          "rightDisplay": "block",
+          "rightTime": 3.33
+        },
+        "deadZoneHover": {
+          "leftDisplay": "none",
+          "rightDisplay": "block",
+          "rightTime": 0
+        },
+        "rightHover": {
+          "leftDisplay": "block",
+          "rightDisplay": "none",
+          "leftTime": 3.33
+        },
+        "galleryState": {
+          "panelTransform": "translateY(0px)",
+          "canvasVisibility": "hidden",
+          "symbol": "^^",
+          "maxCardScale": 1,
+          "visibleCards": 3
+        },
+        "outroState": {
+          "overlayOpacity": 1,
+          "infoTransform": "translateY(-166px)",
+          "buyTransform": "scale(1)",
+          "footerOpacity": 1
+        }
+      }
+    }
+  }
+}

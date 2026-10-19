@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1a2b">
+  <title>Camper — Overnight Camp</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:wght@700&family=Outfit:wght@400;500;600;700&display=block" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #ec4f30;
+      --orange-hi: #f15a3c;
+      --underline: #7e80d7;
+      --ink: #ffffff;
+      --ink-soft: rgba(255, 255, 255, .92);
+      --rule: rgba(255, 255, 255, .92);
+      --night: #0b1a2b;
+      --h1-size: 104.64;
+      --h1-ls: 1.72;
+      --h1-lh: 101;
+      --h1-off: 2.1;
+      --p-size: 16.6;
+      --p-lh: 24.7;
+      --p-w: 322;
+      --p-gap: 32;
+      --btn-gap: 30;
+      --btn-w: 178;
+      --btn-h: 51;
+      --btn-size: 17.48;
+      --nav-size: 13.79;
+      --nav-gap: 93.9;
+      --nav-shift: 3;
+      --logo-size: 23.34;
+      --logo-shift: 1;
+      --su-size: 14.34;
+      --su-w: 122;
+      --su-h: 41;
+      --su-bw: 1.5;
+      --head-top: 25;
+      --head-left: 65.6;
+      --head-right: 69;
+      --ul-w: 37;
+      --ul-h: 2;
+      --ul-top: 31.5;
+      --u: 1;
+      --hero-top: 272px;
+      --s: 1;
+      --tx: 0px;
+      --ty: 0px;
+      --scrim: 0;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #0b1a2b;
+      color: var(--ink);
+      font-family: 'Outfit', 'Century Gothic', 'Poppins', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    #app {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      background: var(--night);
+    }
+
+    #stage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1280px;
+      height: 960px;
+      transform-origin: 0 0;
+      transform: translate(var(--tx), var(--ty)) scale(var(--s));
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #bg {
+      width: 1280px;
+      height: 960px;
+      object-fit: cover;
+      object-position: 50% 58%;
+      pointer-events: none;
+      display: block;
+    }
+
+    #topscrim {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: calc(178px * var(--u));
+      background: linear-gradient(
+        180deg,
+        rgba(8, 17, 29, .88) 0%,
+        rgba(8, 17, 29, .52) 42%,
+        rgba(8, 17, 29, .18) 74%,
+        rgba(8, 17, 29, 0) 100%
+      );
+      opacity: var(--scrim, 0);
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    #scrim {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 12, 22, .5);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.34s cubic-bezier(.4, 0, .2, 1);
+      z-index: 15;
+    }
+
+    /* HEADER (desktop / exact) */
+    #masthead {
+      position: absolute;
+      top: calc(var(--head-top) * 1px * var(--u));
+      left: calc(var(--head-left) * 1px * var(--u));
+      right: calc(var(--head-right) * 1px * var(--u));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 20;
+    }
+
+    a.logo {
+      color: var(--ink);
+      font-family: 'Outfit', 'Century Gothic', 'Poppins', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: calc(var(--logo-size) * 1px * var(--u));
+      line-height: 1;
+      text-decoration: none;
+      transform: translateY(calc(var(--logo-shift) * 1px * var(--u)));
+      white-space: nowrap;
+    }
+
+    .cluster {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--nav-gap) * 1px * var(--u));
+    }
+
+    nav.links {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--nav-gap) * 1px * var(--u));
+    }
+
+    nav.links a {
+      position: relative;
+      font-family: 'Outfit', 'Century Gothic', 'Poppins', system-ui, sans-serif;
+      font-size: calc(var(--nav-size) * 1px * var(--u));
+      font-weight: 600;
+      line-height: 1;
+      color: var(--ink-soft);
+      text-decoration: none;
+      transform: translateY(calc(var(--nav-shift) * 1px * var(--u)));
+      white-space: nowrap;
+      transition: color 0.18s ease;
+    }
+
+    nav.links a:hover,
+    nav.links a.is-active {
+      color: var(--ink);
+    }
+
+    nav.links a.is-active::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: calc(var(--ul-top) * 1px * var(--u));
+      width: calc(var(--ul-w) * 1px * var(--u));
+      height: calc(var(--ul-h) * 1px * var(--u));
+      background: var(--underline);
+      transform: translateX(-50%);
+    }
+
+    a.signup {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(var(--su-w) * 1px * var(--u));
+      height: calc(var(--su-h) * 1px * var(--u));
+      font-family: 'Outfit', 'Century Gothic', 'Poppins', system-ui, sans-serif;
+      font-size: calc(var(--su-size) * 1px * var(--u));
+      font-weight: 500;
+      line-height: 1;
+      color: var(--ink);
+      text-decoration: none;
+      border: calc(var(--su-bw) * 1px * var(--u)) solid var(--rule);
+      border-radius: 0;
+      white-space: nowrap;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    @media (hover: hover) {
+      a.signup:hover {
+        background: var(--ink);
+        color: var(--night);
+      }
+    }
+
+    #menu-btn {
+      display: none;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    /* HERO (desktop / exact & tablet) */
+    #hero {
+      position: absolute;
+      left: calc(72px * var(--u));
+      top: var(--hero-top);
+      width: calc(620px * var(--u));
+      transform-origin: 0 0;
+      z-index: 10;
+    }
+
+    #hero h1 {
+      margin: calc(var(--h1-off) * -1px * var(--u)) 0 0 0;
+      font-family: 'Gelasio', Georgia, 'Times New Roman', serif;
+      font-weight: 700;
+      font-size: calc(var(--h1-size) * 1px * var(--u));
+      line-height: calc(var(--h1-lh) * 1px * var(--u));
+      letter-spacing: calc(var(--h1-ls) * 1px * var(--u));
+      color: var(--ink);
+    }
+
+    #hero h1 .ln {
+      display: block;
+      clip-path: inset(-40% -8% -8% -8%);
+    }
+
+    #hero h1 .ln > span {
+      display: block;
+    }
+
+    #hero p {
+      margin: calc(var(--p-gap) * 1px * var(--u)) 0 0 0;
+      width: calc(var(--p-w) * 1px * var(--u));
+      font-family: 'Outfit', 'Century Gothic', 'Poppins', system-ui, sans-serif;
+      font-size: calc(var(--p-size) * 1px * var(--u));
+      line-height: calc(var(--p-lh) * 1px * var(--u));
+      font-weight: 400;
+      color: var(--ink-soft);
+    }
+
+    a.explore {
+      margin-top: calc(var(--btn-gap) * 1px * var(--u));
+      width: calc(var(--btn-w) * 1px * var(--u));
+      height: calc(var(--btn-h) * 1px * var(--u));
+      background: var(--orange);
+      color: var(--ink);
+      font-family: 'Outfit', 'Century Gothic', 'Poppins', system-ui, sans-serif;
+      font-size: calc(var(--btn-size) * 1px * var(--u));
+      font-weight: 400;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 0;
+      transition: background-color 0.18s ease, transform 0.1s ease;
+    }
+
+    a.explore:hover {
+      background: var(--orange-hi);
+    }
+
+    a.explore:active {
+      transform: translateY(1px);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: calc(2px * var(--u)) solid var(--ink);
+      outline-offset: calc(3px * var(--u));
+    }
+
+    /* COLLAPSED NAV (tablet + compact, i.e. #app:not([data-mode=exact])) */
+    #app:not([data-mode="exact"]) #menu-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      gap: calc(5px * var(--u));
+      width: calc(34px * var(--u));
+      height: calc(34px * var(--u));
+      position: relative;
+      z-index: 30;
+    }
+
+    #app:not([data-mode="exact"]) #menu-btn::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: max(100%, 44px);
+      height: max(100%, 44px);
+      transform: translate(-50%, -50%);
+    }
+
+    #app:not([data-mode="exact"]) #menu-btn span {
+      display: block;
+      height: calc(1.6px * var(--u));
+      background: var(--ink);
+      border-radius: 2px;
+      transform-origin: 50% 50%;
+      transition: transform 0.34s cubic-bezier(.4, 0, .2, 1), width 0.34s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    #app:not([data-mode="exact"]) #menu-btn span:first-child {
+      width: calc(28px * var(--u));
+    }
+
+    #app:not([data-mode="exact"]) #menu-btn span:last-child {
+      width: calc(20px * var(--u));
+    }
+
+    #app:not([data-mode="exact"])[data-menu="open"] #menu-btn span:first-child {
+      width: calc(24px * var(--u));
+      transform: translateY(calc(3.3px * var(--u))) rotate(45deg);
+    }
+
+    #app:not([data-mode="exact"])[data-menu="open"] #menu-btn span:last-child {
+      width: calc(24px * var(--u));
+      transform: translateY(calc(-3.3px * var(--u))) rotate(-45deg);
+    }
+
+    #app:not([data-mode="exact"]) .cluster {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(64vw, 360px);
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: clamp(92px, 13vh, 128px) clamp(28px, 5vw, 44px) clamp(32px, 5vh, 48px);
+      gap: clamp(32px, 4.5vh, 44px);
+      background: rgba(9, 20, 34, .93);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
+      backdrop-filter: blur(16px) saturate(140%);
+      border-left: 1px solid rgba(255, 255, 255, .14);
+      transform: translateX(102%);
+      transition: transform 0.34s cubic-bezier(.4, 0, .2, 1);
+      z-index: 25;
+    }
+
+    #app:not([data-mode="exact"])[data-menu="open"] .cluster {
+      transform: translateX(0);
+    }
+
+    #app:not([data-mode="exact"]) nav.links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: clamp(22px, 3.2vh, 30px);
+      width: 100%;
+    }
+
+    #app:not([data-mode="exact"]) nav.links a {
+      font-size: clamp(19px, 2.3vw, 23px);
+      transform: none;
+      padding-bottom: 8px;
+    }
+
+    #app:not([data-mode="exact"]) nav.links a.is-active::after {
+      left: 0;
+      top: auto;
+      bottom: 0;
+      width: 36px;
+      height: 2px;
+      transform: none;
+    }
+
+    #app:not([data-mode="exact"]) a.signup {
+      width: clamp(126px, 17vw, 158px);
+      height: clamp(44px, 5.2vh, 52px);
+      font-size: clamp(14px, 1.8vw, 16px);
+    }
+
+    #app:not([data-mode="exact"])[data-menu="open"] #scrim {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* COMPACT / MOBILE (vw < 600 or tablet unit too small) */
+    #app[data-mode="compact"] {
+      --u: 1;
+      --mpad: clamp(22px, 5.6vw, 34px);
+      --mgap: clamp(18px, min(6vw, 3.2vh), 34px);
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    #app[data-mode="compact"] #stage {
+      width: 100%;
+      height: 100%;
+      transform: none;
+    }
+
+    #app[data-mode="compact"] #bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 72% 50%;
+    }
+
+    #app[data-mode="compact"] #topscrim {
+      height: clamp(240px, 52vh, 520px);
+      opacity: .55;
+    }
+
+    #app[data-mode="compact"] #masthead {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      margin: calc(clamp(14px, min(4.4vw, 2.6vh), 28px) + env(safe-area-inset-top, 0px)) var(--mpad) 0 var(--mpad);
+    }
+
+    #app[data-mode="compact"] a.logo {
+      font-size: clamp(23px, min(4.4vw, 5.4vh), 34px);
+      transform: none;
+    }
+
+    #app[data-mode="compact"] #hero {
+      position: relative;
+      left: auto;
+      top: auto;
+      width: auto;
+      align-self: start;
+      margin: clamp(20px, min(7.4vh, 8vw), 72px) var(--mpad) calc(clamp(18px, 3vh, 30px) + env(safe-area-inset-bottom, 0px)) var(--mpad);
+    }
+
+    #app[data-mode="compact"] #hero h1 {
+      font-size: clamp(40px, min(14.2vw, 15vh), 112px);
+      line-height: .96;
+      letter-spacing: 0;
+      margin-top: 0;
+      margin-left: -.02em;
+    }
+
+    #app[data-mode="compact"] #hero p {
+      font-size: clamp(14px, min(3.9vw, 2.3vh), 19px);
+      line-height: 1.47;
+      width: min(100%, 38ch);
+      margin-top: var(--mgap);
+    }
+
+    #app[data-mode="compact"] a.explore {
+      width: clamp(150px, 44vw, 196px);
+      height: clamp(46px, min(12vw, 11vh), 58px);
+      font-size: clamp(15px, min(4vw, 3.4vh), 18px);
+      margin-top: var(--mgap);
+    }
+
+    @media (max-height: 520px) {
+      #app[data-mode="compact"] {
+        --mgap: clamp(14px, 2.6vh, 24px);
+      }
+
+      #app[data-mode="compact"] #topscrim {
+        height: 132px;
+        opacity: .5;
+      }
+
+      #app[data-mode="compact"] #hero {
+        max-width: min(60vw, 460px);
+      }
+
+      #app[data-mode="compact"] #hero h1 {
+        font-size: clamp(38px, min(11vw, 13.5vh), 72px);
+      }
+
+      #app[data-mode="compact"] #hero p {
+        width: min(100%, 36ch);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app" data-mode="exact" data-menu="closed">
+    <div id="stage">
+      <video
+        id="bg"
+        autoplay
+        muted
+        loop
+        playsinline
+        disablepictureinpicture
+        preload="auto"
+        width="1280"
+        height="960"
+        aria-label="Moonlit winter camp: a dog watching a campfire beside cabins below snowy peaks"
+      >
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261005_115704_e1b28e05-aef1-477c-924b-0c1d4612f86f.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div id="topscrim" aria-hidden="true"></div>
+    <div id="scrim" aria-hidden="true"></div>
+    <header id="masthead">
+      <a class="logo" href="#">Camper</a>
+      <div class="cluster" id="nav-panel">
+        <nav class="links" id="links" aria-label="Main">
+          <a class="is-active" href="#" aria-current="page">Home</a>
+          <a href="#">Travel</a>
+          <a href="#">Location</a>
+          <a href="#">Companions</a>
+        </nav>
+        <a class="signup" href="#">Sign up</a>
+      </div>
+      <button id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-panel">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+    <section id="hero" aria-label="Overnight Camp Hero">
+      <h1>
+        <span class="ln"><span>Overnight</span></span>
+        <span class="ln"><span>Camp</span></span>
+      </h1>
+      <p>Campers enjoy fun evening programs and sleep in our cabins. All cabins are separated by both age and gender ensuring a fun atmosphere.</p>
+      <a class="explore" href="#">Explore</a>
+    </section>
+  </div>
+
+  <script>
+    (function () {
+      const DW = 1280;
+      const DH = 960;
+      const HERO_H = 411;
+      const HEAD_H = 66;
+      const UI_MIN_H = 560;
+      const U_DESK = 0.874;
+      const PHONE_W = 600;
+      const TAB_REF = 840;
+      const T_MIN = 0.873;
+      const T_MAX = 1.08;
+
+      const app = document.getElementById('app');
+      const bg = document.getElementById('bg');
+      const masthead = document.getElementById('masthead');
+      const hero = document.getElementById('hero');
+      const menuBtn = document.getElementById('menu-btn');
+      const scrim = document.getElementById('scrim');
+      const logo = masthead.querySelector('.logo');
+      const navLinks = Array.from(document.querySelectorAll('#links a'));
+      const signupBtn = masthead.querySelector('.signup');
+      const exploreBtn = hero.querySelector('.explore');
+      const headlineWords = Array.from(hero.querySelectorAll('h1 .ln > span'));
+      const heroParagraph = hero.querySelector('p');
+
+      function setMenu(open) {
+        const next = Boolean(open) && app.dataset.mode !== 'exact';
+        app.dataset.menu = next ? 'open' : 'closed';
+        menuBtn.setAttribute('aria-expanded', next ? 'true' : 'false');
+      }
+
+      function fitHero(vh, u, minHeroTop) {
+        hero.style.transform = '';
+        if (app.dataset.mode !== 'tablet') return;
+        const rect = hero.getBoundingClientRect();
+        const avail = vh - minHeroTop - 28 * u;
+        if (rect.height > avail && rect.height > 0) {
+          const scale = Math.max(0.55, avail / rect.height);
+          hero.style.transform = 'scale(' + scale.toFixed(4) + ')';
+        }
+      }
+
+      function updateLayout() {
+        const vv = window.visualViewport;
+        const vw = vv && vv.width ? vv.width : window.innerWidth;
+        const vh = vv && vv.height ? vv.height : window.innerHeight;
+
+        const uw = vw / DW;
+        const ut = Math.min(Math.min(Math.max(vw / TAB_REF, T_MIN), T_MAX), vh / UI_MIN_H);
+        const mode = uw >= U_DESK ? 'exact' : (vw >= PHONE_W && ut >= T_MIN) ? 'tablet' : 'compact';
+
+        const prevMode = app.dataset.mode;
+        app.dataset.mode = mode;
+        if (mode === 'exact' && app.dataset.menu === 'open') {
+          setMenu(false);
+        } else if (prevMode !== mode && mode !== 'exact') {
+          setMenu(false);
+        }
+
+        const rootStyle = document.documentElement.style;
+
+        if (mode === 'exact') {
+          const s = Math.max(vw / DW, vh / DH);
+          const visW = Math.min(DW, vw / s);
+          const visH = Math.min(DH, vh / s);
+          const k = Math.min(1, visW / DW);
+          const u = Math.min(s * k, vh / UI_MIN_H);
+          let tx = vw / 2 - DW * 0.5 * s;
+          tx = Math.min(0, Math.max(vw - DW * s, tx));
+          const ty = (vh - DH * s) / 2;
+          const scrimVal = Math.min(1, Math.max(0, (DH - visH) / 240)) * 0.45;
+          const heroTop = Math.max(0, vh - HERO_H * u) * 0.495449;
+
+          rootStyle.setProperty('--s', s.toFixed(5));
+          rootStyle.setProperty('--tx', tx.toFixed(2) + 'px');
+          rootStyle.setProperty('--ty', ty.toFixed(2) + 'px');
+          rootStyle.setProperty('--u', u.toFixed(5));
+          rootStyle.setProperty('--scrim', scrimVal.toFixed(4));
+          rootStyle.setProperty('--hero-top', heroTop.toFixed(2) + 'px');
+          hero.style.transform = '';
+        } else if (mode === 'tablet') {
+          const s = Math.max(vw / DW, vh / DH);
+          const visW = Math.min(DW, vw / s);
+          const visH = Math.min(DH, vh / s);
+          const u = ut;
+          const bias = 0.22 * (1 - visW / DW);
+          let tx = vw / 2 - DW * (0.5 + bias) * s;
+          tx = Math.min(0, Math.max(vw - DW * s, tx));
+          const ty = (vh - DH * s) / 2;
+          const scrimVal = Math.min(1, Math.max(0, (DH - visH) / 240)) * 0.45;
+          const minHeroTop = HEAD_H * u + 28 * u;
+          const maxHeroTop = Math.max(minHeroTop, vh - HERO_H * u - 28 * u);
+          const rawHeroTop = Math.max(0, vh - HERO_H * u) * 0.495449;
+          const heroTop = Math.min(maxHeroTop, Math.max(minHeroTop, rawHeroTop));
+
+          rootStyle.setProperty('--s', s.toFixed(5));
+          rootStyle.setProperty('--tx', tx.toFixed(2) + 'px');
+          rootStyle.setProperty('--ty', ty.toFixed(2) + 'px');
+          rootStyle.setProperty('--u', u.toFixed(5));
+          rootStyle.setProperty('--scrim', scrimVal.toFixed(4));
+          rootStyle.setProperty('--hero-top', heroTop.toFixed(2) + 'px');
+          fitHero(vh, u, minHeroTop);
+        } else {
+          rootStyle.setProperty('--u', '1');
+          rootStyle.setProperty('--s', '1');
+          rootStyle.setProperty('--tx', '0px');
+          rootStyle.setProperty('--ty', '0px');
+          hero.style.transform = '';
+        }
+      }
+
+      // Synchronously run layout before first paint
+      updateLayout();
+
+      let rafId = 0;
+      function scheduleLayout() {
+        if (rafId) return;
+        rafId = window.requestAnimationFrame(function () {
+          rafId = 0;
+          updateLayout();
+        });
+      }
+
+      window.addEventListener('resize', scheduleLayout, { passive: true });
+      window.addEventListener('orientationchange', scheduleLayout, { passive: true });
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', scheduleLayout, { passive: true });
+      }
+
+      // Navigation & Drawer interactions
+      menuBtn.addEventListener('click', function () {
+        setMenu(app.dataset.menu !== 'open');
+      });
+
+      scrim.addEventListener('click', function () {
+        setMenu(false);
+      });
+
+      window.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && app.dataset.menu === 'open') {
+          setMenu(false);
+        }
+      });
+
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          navLinks.forEach(function (item) {
+            item.classList.remove('is-active');
+            item.removeAttribute('aria-current');
+          });
+          link.classList.add('is-active');
+          link.setAttribute('aria-current', 'page');
+          if (app.dataset.menu === 'open') {
+            setMenu(false);
+          }
+        });
+      });
+
+      [logo, signupBtn, exploreBtn].forEach(function (el) {
+        if (!el) return;
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (app.dataset.menu === 'open') {
+            setMenu(false);
+          }
+        });
+      });
+
+      // Entrance Animation (Web Animations API, once, then static)
+      const reducedMotion =
+        window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const canAnimate = typeof Element.prototype.animate === 'function';
+
+      const riseTargets =
+        app.dataset.mode === 'exact'
+          ? [logo].concat(navLinks, [signupBtn])
+          : [logo, menuBtn];
+
+      const allAnimated = [masthead, hero, heroParagraph, exploreBtn]
+        .concat(headlineWords, riseTargets)
+        .filter(Boolean);
+
+      function clearInlineStyles() {
+        allAnimated.forEach(function (el) {
+          el.style.opacity = '';
+          el.style.transform = '';
+          el.style.clipPath = '';
+        });
+        updateLayout();
+      }
+
+      if (canAnimate) {
+        if (reducedMotion) {
+          masthead.style.opacity = '0';
+          hero.style.opacity = '0';
+        } else {
+          headlineWords.forEach(function (w) {
+            w.style.transform = 'translateY(112%)';
+          });
+          riseTargets.forEach(function (el) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(9px)';
+          });
+          heroParagraph.style.opacity = '0';
+          heroParagraph.style.transform = 'translateY(12px)';
+          exploreBtn.style.clipPath = 'inset(0 100% 0 0)';
+        }
+      }
+
+      const fontsReady =
+        document.fonts && document.fonts.ready
+          ? document.fonts.ready.then(function () {
+              updateLayout();
+            })
+          : Promise.resolve();
+
+      const videoReady = new Promise(function (resolve) {
+        if (!bg || bg.readyState >= 2) {
+          resolve();
+          return;
+        }
+        const done = function () {
+          bg.removeEventListener('loadeddata', done);
+          bg.removeEventListener('error', done);
+          resolve();
+        };
+        bg.addEventListener('loadeddata', done, { once: true });
+        bg.addEventListener('error', done, { once: true });
+      });
+
+      const timeoutReady = new Promise(function (resolve) {
+        window.setTimeout(resolve, 1000);
+      });
+
+      const safetyTimer = window.setTimeout(clearInlineStyles, 3500);
+
+      Promise.race([Promise.all([fontsReady, videoReady]), timeoutReady]).then(function () {
+        window.requestAnimationFrame(function () {
+          if (!canAnimate) {
+            clearInlineStyles();
+            return;
+          }
+
+          const EXPO = 'cubic-bezier(.16,1,.3,1)';
+          const SOFT = 'cubic-bezier(.22,.75,.2,1)';
+          const animations = [];
+
+          if (reducedMotion) {
+            [masthead, hero].forEach(function (el) {
+              const anim = el.animate([{ opacity: 0 }, { opacity: 1 }], {
+                duration: 240,
+                easing: 'linear',
+                fill: 'forwards',
+              });
+              animations.push(anim.finished.catch(function () {}));
+            });
+          } else {
+            // A. Headline words
+            headlineWords.forEach(function (w, i) {
+              const anim = w.animate(
+                [{ transform: 'translateY(112%)' }, { transform: 'translateY(0)' }],
+                {
+                  duration: 900,
+                  delay: 380 + i * 120,
+                  easing: EXPO,
+                  fill: 'forwards',
+                }
+              );
+              animations.push(anim.finished.catch(function () {}));
+            });
+
+            // B. Soft rise (nav items or logo+menuBtn)
+            riseTargets.forEach(function (el, i) {
+              const computedTransform = getComputedStyle(el).transform;
+              const endTransform =
+                el.classList.contains('logo') && app.dataset.mode !== 'compact'
+                  ? 'translateY(calc(var(--logo-shift) * 1px * var(--u)))'
+                  : el.closest && el.closest('#links') && app.dataset.mode === 'exact'
+                  ? 'translateY(calc(var(--nav-shift) * 1px * var(--u)))'
+                  : computedTransform && computedTransform !== 'none'
+                  ? computedTransform
+                  : 'translateY(0px)';
+
+              const anim = el.animate(
+                [
+                  { opacity: 0, transform: 'translateY(9px)' },
+                  { opacity: 1, transform: endTransform },
+                ],
+                {
+                  duration: 540,
+                  delay: 90 + i * 55,
+                  easing: SOFT,
+                  fill: 'forwards',
+                }
+              );
+              animations.push(anim.finished.catch(function () {}));
+            });
+
+            // Paragraph soft rise
+            const pAnim = heroParagraph.animate(
+              [
+                { opacity: 0, transform: 'translateY(12px)' },
+                { opacity: 1, transform: 'translateY(0)' },
+              ],
+              {
+                duration: 680,
+                delay: 860,
+                easing: SOFT,
+                fill: 'forwards',
+              }
+            );
+            animations.push(pAnim.finished.catch(function () {}));
+
+            // C. Explore edge wipe
+            const exAnim = exploreBtn.animate(
+              [
+                { clipPath: 'inset(0 100% 0 0)' },
+                { clipPath: 'inset(0 0 0 0)' },
+              ],
+              {
+                duration: 600,
+                delay: 1060,
+                easing: EXPO,
+                fill: 'forwards',
+              }
+            );
+            animations.push(exAnim.finished.catch(function () {}));
+          }
+
+          Promise.all(animations).then(function () {
+            window.clearTimeout(safetyTimer);
+            clearInlineStyles();
+          });
+        });
+      });
+
+      if (bg && bg.paused) {
+        bg.play().catch(function () {});
+      }
+    })();
+  </script>
+</body>
+</html>

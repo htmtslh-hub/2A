@@ -1,0 +1,27 @@
+DesignPro Web Template Licence (v1.0.0)
+=======================================
+
+Copyright (c) 2026 2A Template Store. All rights reserved.
+
+1. GRANT OF LICENCE
+This licence grants you a non-exclusive, non-transferable, worldwide right to use,
+modify, and deploy the "DesignPro" template for your own personal, educational, or
+commercial web projects.
+
+2. PERMITTED USES
+- Customise all source code, text, styles, components, and media assets.
+- Deploy the compiled site on unlimited domains owned or operated by you or your
+  direct clients.
+
+3. RESTRICTIONS
+- You may NOT redistribute, resell, lease, sublicense, or publish the unmodified or
+  modified template source package in any template marketplace, open-source repository,
+  or asset library.
+- Remote demonstration media (CloudFront video stream) is provided for layout preview
+  and evaluation; replace demonstration media with your own licensed brand assets
+  prior to commercial launch.
+
+4. DISCLAIMER OF WARRANTY
+THE TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, AND NONINFRINGEMENT.

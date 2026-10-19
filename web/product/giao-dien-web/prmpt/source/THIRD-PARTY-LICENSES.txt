@@ -1,0 +1,24 @@
+THIRD-PARTY SOFTWARE NOTICES AND LICENCES — PRMPT (v1.0.0)
+
+1. React & React DOM (^19.1.0)
+   - Licence: MIT License
+   - Copyright (c) Meta Platforms, Inc. and affiliates.
+   - Upstream: https://github.com/facebook/react
+
+2. Motion (motion ^12.6.2)
+   - Licence: MIT License
+   - Copyright (c) Motion Division
+   - Upstream: https://github.com/motiondivision/motion
+
+3. GSAP & @gsap/react (gsap ^3.15.0, @gsap/react ^2.1.2)
+   - Licence: GreenSock Standard "No Charge" License
+   - Copyright (c) GreenSock, Inc.
+   - Upstream: https://gsap.com/community/standard-license/
+
+4. Tailwind CSS & @tailwindcss/vite (^4.1.0), Vite (^6.4.1), TypeScript (^5.7.3)
+   - Licence: MIT License / Apache-2.0 (TypeScript)
+   - Used as build-time development dependencies.
+
+5. Inter Tight Font
+   - Licence: SIL Open Font License 1.1
+   - Upstream: https://fonts.google.com/specimen/Inter+Tight

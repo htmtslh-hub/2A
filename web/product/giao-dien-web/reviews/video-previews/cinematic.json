@@ -1,0 +1,46 @@
+{
+  "id": "t73",
+  "slug": "cinematic",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-19T06:53:26.370Z",
+  "demo": "/demos/cinematic/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "b0e53a2ce020",
+  "sha256": "b0e53a2ce02047c01f15b4df2e047116750d4efbb5bc9d3053cdf58ee6af6091",
+  "demoHtmlSha256": "c20d39219c64f7fc3af52ef0b32c22804d2a22f4ef287519cdaa19c33c02db69",
+  "demoSha256": "c4d458ac91febb20d39f5520256a4ad2a8c47ceb601ef7a9c4d05c7f96e90ba9",
+  "bytes": 597605,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.538,
+      "action": "cinematic-next-slide"
+    },
+    {
+      "seconds": 4.931,
+      "action": "cinematic-prev-slide"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cinematic-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cinematic-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cinematic-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cinematic-return.jpg"
+  ]
+}

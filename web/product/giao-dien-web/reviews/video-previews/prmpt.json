@@ -1,0 +1,46 @@
+{
+  "id": "t71",
+  "slug": "prmpt",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-19T06:15:17.886Z",
+  "demo": "/demos/prmpt/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "6a6b8a479000",
+  "sha256": "6a6b8a479000dce4b9e9e749b9c08167d358d59079bf191a4842f5a8c5fd9e1d",
+  "demoHtmlSha256": "44b3cd5668f405ba5b5840a2e39c82075cb79d6015d1df828d9585a02282874f",
+  "demoSha256": "8b5884fe5feda322d052cf3604954a9a06628d6497b87afb210b63fb790135d0",
+  "bytes": 284187,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.736,
+      "action": "prmpt-scrub-left"
+    },
+    {
+      "seconds": 5.398,
+      "action": "prmpt-scrub-right"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 5040
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prmpt-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prmpt-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prmpt-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prmpt-return.jpg"
+  ]
+}

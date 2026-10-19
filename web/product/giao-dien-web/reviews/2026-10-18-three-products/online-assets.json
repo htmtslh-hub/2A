@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://forgezone.store/previews/vertex-shops.mp4",
+    "status": 200,
+    "bytes": 460596,
+    "sha256": "81303c817dd8b4fe548555bbbf2f67a889d34ea4842589ee1980839a33e04d4d",
+    "matchLocal": true
+  },
+  {
+    "url": "https://forgezone.store/previews/vertex-shops.webp",
+    "status": 200,
+    "bytes": 53274,
+    "sha256": "a44900f4e9123d42a3b1a94b5ee8361087cb078560da82ffb610f6af2ec79f5e",
+    "matchLocal": true
+  },
+  {
+    "url": "https://forgezone.store/demos/vertex-shops/index.html",
+    "status": 200,
+    "bytes": 45789,
+    "sha256": "c6e5519b7daa73fcccf8d799b484e9158368d4f312fcb489928a85ff1c400e7b",
+    "matchLocal": true
+  },
+  {
+    "url": "https://forgezone.store/previews/veyra.mp4",
+    "status": 200,
+    "bytes": 694673,
+    "sha256": "5deb5c07e716d9f31941733c73bfd30e5d6368065733b535867517f6ed65bad3",
+    "matchLocal": true
+  },
+  {
+    "url": "https://forgezone.store/previews/veyra.webp",
+    "status": 200,
+    "bytes": 50548,
+    "sha256": "fbe7cb1e803634f5e0a5b8e344191c0ec3e398744071333e6fc405d61c690dc0",
+    "matchLocal": true
+  },
+  {
+    "url": "https://forgezone.store/demos/veyra/index.html",
+    "status": 200,
+    "bytes": 587,
+    "sha256": "29bbc251cc42f3f78d0fcae5793b3c3e0638399fe5d6a2aa22f3b5d13b04ef0b",
+    "matchLocal": true
+  },
+  {
+    "url": "https://forgezone.store/previews/cyber-ronin.mp4",
+    "status": 200,
+    "bytes": 409029,
+    "sha256": "7ee559bb209268b94cea58cb4e7cfe8495f4c720cdf4488ca053796ed6683d78",
+    "matchLocal": true
+  },
+  {
+    "url": "https://forgezone.store/previews/cyber-ronin.webp",
+    "status": 200,
+    "bytes": 84330,
+    "sha256": "31565db1cf55efb0ff2e810299c8f55b3174edbcc2f42f458d6b4ddfba23d120",
+    "matchLocal": true
+  },
+  {
+    "url": "https://forgezone.store/demos/cyber-ronin/index.html",
+    "status": 200,
+    "bytes": 18838,
+    "sha256": "d8a469385adb009826c50beb337093d1edb115a0716f6fe09b4dda4b589f9d01",
+    "matchLocal": true
+  }
+]

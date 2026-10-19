@@ -37,4 +37,9 @@ VEYRA retains the original appearance-close focus race and the observed phone de
 
 ## Scope and publication
 
-Changes are limited to the three product folders, their public demos/posters/videos, three catalog/category/manifest additions and isolated packaging/recording support. No application checkout, database, auth, pricing or account configuration was changed. Unrelated untracked work remains unstaged. GitHub and Vercel production results are recorded after publication.
+Changes are limited to the three product folders, their public demos/posters/videos, three catalog/category/manifest additions and isolated packaging/recording support. No application checkout, database, auth, pricing or account configuration was changed. Unrelated untracked work remains unstaged.
+
+- Source commit: `e67e4bf`, pushed to `origin/master`.
+- Production deployment: `dpl_EpZS7p3vLf5TVhVzevFWQaUPdsNR`, READY at `https://web-9pamq4j88-htmtslh-hubs-projects.vercel.app`, aliased to `https://forgezone.store`.
+- Online verification (`store-online-checks.json` & `online-assets.json`, Chromium 153.0.8010.12): `https://forgezone.store/?mau=t63`, `https://forgezone.store/?mau=t64`, `https://forgezone.store/?mau=t65` load with matching versioned videos (`?v=81303c817dd8`, `?v=5deb5c07e716`, `?v=7ee559bb2092`), native autoplay/pause/resume PASS, anonymous `/api/download?id=t63|t64|t65` returns 401, and all 9 public preview/demo assets return HTTP 200 with SHA-256 matching local files byte-for-byte.
+

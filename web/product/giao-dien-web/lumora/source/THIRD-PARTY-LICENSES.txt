@@ -1,0 +1,22 @@
+Third-Party Open-Source & Asset Notices — Lumora (v1.0.0)
+=========================================================
+
+1. React & React DOM (^18.3.1)
+   Licence: MIT
+   Copyright (c) Meta Platforms, Inc. and affiliates.
+
+2. Lucide React (^0.487.0)
+   Licence: ISC
+   Copyright (c) Lucide Contributors.
+
+3. Tailwind CSS (^4.1.0) & @tailwindcss/vite (^4.1.0)
+   Licence: MIT
+   Copyright (c) Tailwind Labs, Inc.
+
+4. Vite (^6.4.1) & @vitejs/plugin-react (^4.3.4)
+   Licence: MIT
+   Copyright (c) Evan You and Vite contributors.
+
+5. Instrument Serif Typeface (Google Fonts)
+   Licence: SIL Open Font License 1.1
+   Copyright (c) The Instrument Serif Project Authors.

@@ -1,0 +1,50 @@
+{
+  "id": "t82",
+  "slug": "oceanpulse",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-20T08:22:02.619Z",
+  "demo": "/demos/oceanpulse/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "06d7ea9a7169",
+  "sha256": "06d7ea9a716950e339ad1d4ada86ca57be79e00bd8dd752551cb29636698db1d",
+  "demoHtmlSha256": "42a5988cbe8794291d8bfd2bcf7024323d2e8b4554b4785f2031f5154f63f6c8",
+  "demoSha256": "c6cbb55de160548816ebb5d859ae3a1ec7d894fe78be1653931774b751ccd918",
+  "bytes": 511895,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 3.355,
+      "action": "oceanpulse-open-navsheet-and-hover-mission"
+    },
+    {
+      "seconds": 5.349,
+      "action": "oceanpulse-hover-programs-and-cta"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 10.755,
+      "action": "oceanpulse-close-navsheet-and-hover-hero-cta"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\oceanpulse-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\oceanpulse-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\oceanpulse-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\oceanpulse-return.jpg"
+  ]
+}

@@ -1,0 +1,40 @@
+NeuralKinetics Web Template Licence (v1.0.0)
+============================================
+
+Copyright (c) 2026 2A Template Store. All rights reserved.
+
+1. GRANT OF LICENCE
+This licence grants you a non-exclusive, non-transferable, worldwide right to use,
+modify, and deploy the "NeuralKinetics" template for your own personal, creative, or
+commercial web projects.
+
+2. PERMITTED USES
+- Customise all source code, text, styles, components, and media assets.
+- Deploy the compiled site on unlimited domains owned or operated by you or your
+  direct clients.
+
+3. RESTRICTIONS
+- You may NOT redistribute, resell, lease, sublicense, or publish the unmodified or
+  modified template source package in any template marketplace, open-source repository,
+  or asset library.
+- Remote demonstration media (CloudFront video stream) is provided for layout preview
+  and evaluation; replace demonstration media with your own licensed brand assets
+  prior to commercial launch.
+
+4. DEMO CONTENT NOTICE
+All brand names ("NeuralKinetics"), financial metrics ("0.38ms", "0% FX", "190+ Countries"),
+and product descriptions are fictional demonstration copy and must be replaced with verified
+information before publishing.
+
+5. FONT LICENCE
+The Inter typeface is loaded from Google Fonts under the SIL Open Font License 1.1
+(https://scripts.sil.org/OFL).
+
+6. OWNERSHIP
+Copyright in the template structure and code remains with the author; this document grants
+a licence to use, not a transfer of title.
+
+7. DISCLAIMER OF WARRANTY
+THE TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, AND NONINFRINGEMENT.

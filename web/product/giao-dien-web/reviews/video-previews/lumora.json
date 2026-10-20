@@ -1,0 +1,50 @@
+{
+  "id": "t78",
+  "slug": "lumora",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-20T07:17:22.187Z",
+  "demo": "/demos/lumora/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "1255e40b1112",
+  "sha256": "1255e40b11123e117d46fbf1c2d048906b601c812b19ddd182c497dee8faef72",
+  "demoHtmlSha256": "eefcc0a0abf1139eac48f0725c86e5b44c9264e8864a288ff90d1257a765f9e1",
+  "demoSha256": "a5093e848250469a02e4360571b3f7803da2471805a60e8fd72049ba740c9674",
+  "bytes": 1821569,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.506,
+      "action": "lumora-switch-deep-woods"
+    },
+    {
+      "seconds": 4.855,
+      "action": "lumora-switch-still-water"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 10.168,
+      "action": "lumora-switch-golden-hour"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lumora-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lumora-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lumora-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lumora-return.jpg"
+  ]
+}

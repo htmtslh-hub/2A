@@ -1,0 +1,22 @@
+Third-Party Open-Source & Asset Notices — NeuralKinetics (v1.0.0)
+=================================================================
+
+1. React & React DOM (^19.1.0)
+   Licence: MIT
+   Copyright (c) Meta Platforms, Inc. and affiliates.
+
+2. Motion / Framer Motion (^12.6.2)
+   Licence: MIT
+   Copyright (c) Framer B.V. / Motion Division.
+
+3. Lucide React (^0.487.0)
+   Licence: ISC
+   Copyright (c) Lucide Contributors.
+
+4. Vite (^6.4.1) & @vitejs/plugin-react (^4.3.4)
+   Licence: MIT
+   Copyright (c) Evan You and Vite contributors.
+
+5. Inter Typeface (Google Fonts)
+   Licence: SIL Open Font License 1.1
+   Copyright (c) The Inter Project Authors (Rasmus Andersson).

@@ -1,0 +1,46 @@
+{
+  "id": "t81",
+  "slug": "synapsex",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-20T08:03:52.068Z",
+  "demo": "/demos/synapsex/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "2ee0aaac2d5e",
+  "sha256": "2ee0aaac2d5e61756bce932ddcda63d944ef5378523fce423fadba844c761160",
+  "demoHtmlSha256": "c26dd569c6fb06cb7819c0bafb51a06eb491ca0c1d702de4dcd509ea22935eb0",
+  "demoSha256": "1d9d334b74a5a13105431029aa7242fff3d545c03ef51663b8020b9d935d9b36",
+  "bytes": 809041,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.902,
+      "action": "synapsex-scrub-hero-and-open-menu"
+    },
+    {
+      "seconds": 5.292,
+      "action": "synapsex-scramble-hover-and-close-menu"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\synapsex-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\synapsex-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\synapsex-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\synapsex-return.jpg"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "t80",
+  "slug": "cozypaws",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-20T07:50:40.316Z",
+  "demo": "/demos/cozypaws/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "ca797f3efdde",
+  "sha256": "ca797f3efddeeda05f5f7eaf0d165290f6431fe584801b325675a30773eb9c5f",
+  "demoHtmlSha256": "06a22076ab3eb78cfa5c56c9428dfddff65212d2477caa3c70d292ff87cbf0cb",
+  "demoSha256": "92af10cbb2c86a0727da2256a99bb30ff6b898008f61adde3b2d52b977cd52d1",
+  "bytes": 247663,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.511,
+      "action": "cozypaws-inspect-and-add-cat-house"
+    },
+    {
+      "seconds": 4.899,
+      "action": "cozypaws-open-video-reviews"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 10.223,
+      "action": "cozypaws-return-hero"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cozypaws-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cozypaws-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cozypaws-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cozypaws-return.jpg"
+  ]
+}

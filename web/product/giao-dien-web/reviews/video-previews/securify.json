@@ -1,0 +1,50 @@
+{
+  "id": "t79",
+  "slug": "securify",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-20T07:36:47.748Z",
+  "demo": "/demos/securify/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0e99ff5ba39e",
+  "sha256": "0e99ff5ba39e2fc9916a32cef2f46ae2ae4d6b659ca01683e936b7bf4008741a",
+  "demoHtmlSha256": "e7a1e3cf6422ad1658e56d638d7185fb88b6822a7feb191dacc1075a05556aae",
+  "demoSha256": "5cdbc8dfb215caadfe839c7f5f5825954d141d1d64a68abe18fe30e6be60e11f",
+  "bytes": 1619228,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.492,
+      "action": "securify-open-platform"
+    },
+    {
+      "seconds": 4.865,
+      "action": "securify-open-get-started"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 10.143,
+      "action": "securify-return-hero"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\securify-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\securify-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\securify-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\securify-return.jpg"
+  ]
+}

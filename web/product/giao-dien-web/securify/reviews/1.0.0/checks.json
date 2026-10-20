@@ -1,0 +1,358 @@
+{
+  "date": "2026-10-20T07:33:43.010Z",
+  "url": "http://127.0.0.1:59679/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": false,
+          "dividersVisible": false,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "chromium-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": false,
+          "dividersVisible": false,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "chromium-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": true,
+          "dividersVisible": true,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "chromium-820.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": true,
+          "dividersVisible": true,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "chromium-1440.png"
+        }
+      },
+      "interactions": {
+        "platformModalOpened": true,
+        "getStartedVaultProvisioned": true,
+        "escapeClosesModal": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": false,
+          "dividersVisible": false,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "Readex Pro, system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "firefox-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": false,
+          "dividersVisible": false,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "Readex Pro, system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "firefox-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": true,
+          "dividersVisible": true,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "Readex Pro, system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "firefox-820.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": true,
+          "dividersVisible": true,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "Readex Pro, system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "firefox-1440.png"
+        }
+      },
+      "interactions": {
+        "platformModalOpened": true,
+        "getStartedVaultProvisioned": true,
+        "escapeClosesModal": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": false,
+          "dividersVisible": false,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "edge-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": false,
+          "dividersVisible": false,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "edge-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": true,
+          "dividersVisible": true,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "edge-820.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": true,
+          "dividersVisible": true,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "edge-1440.png"
+        }
+      },
+      "interactions": {
+        "platformModalOpened": true,
+        "getStartedVaultProvisioned": true,
+        "escapeClosesModal": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "width": 320,
+          "height": 740,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": false,
+          "dividersVisible": false,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "coccoc-320.png"
+        },
+        "375": {
+          "width": 375,
+          "height": 812,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": false,
+          "dividersVisible": false,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "coccoc-375.png"
+        },
+        "820": {
+          "width": 820,
+          "height": 1180,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": true,
+          "dividersVisible": true,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "coccoc-820.png"
+        },
+        "1440": {
+          "width": 1440,
+          "height": 900,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "videoReady": true,
+          "headlines": [
+            "protect",
+            "your",
+            "data"
+          ],
+          "navLinksVisible": true,
+          "dividersVisible": true,
+          "bodyBg": "rgb(0, 0, 0)",
+          "bodyFont": "\"Readex Pro\", system-ui, -apple-system, sans-serif",
+          "consoleErrors": 0,
+          "screenshot": "coccoc-1440.png"
+        }
+      },
+      "interactions": {
+        "platformModalOpened": true,
+        "getStartedVaultProvisioned": true,
+        "escapeClosesModal": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    }
+  }
+}

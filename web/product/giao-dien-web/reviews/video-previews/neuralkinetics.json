@@ -1,0 +1,46 @@
+{
+  "id": "t77",
+  "slug": "neuralkinetics",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-20T07:00:34.767Z",
+  "demo": "/demos/neuralkinetics/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "f09c627ea916",
+  "sha256": "f09c627ea916c407cb8fdcaaf2269b05aef1fbb40e2281ade8d4b60bd5072938",
+  "demoHtmlSha256": "5316a2d043e4e7d4638a2d325e4a76dd5284120de26bd92ecc43d844c9c650b3",
+  "demoSha256": "456f9b026859d7f2b3ff7a56c90aa8e5835df1e500c48f483e11aca2c7d5811a",
+  "bytes": 404065,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.544,
+      "action": "neuralkinetics-open-features-modal"
+    },
+    {
+      "seconds": 6.232,
+      "action": "neuralkinetics-switch-jpy-and-open-menu"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\neuralkinetics-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\neuralkinetics-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\neuralkinetics-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\neuralkinetics-return.jpg"
+  ]
+}

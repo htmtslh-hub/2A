@@ -46,6 +46,546 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t82: {
+    "slug": "oceanpulse",
+    "cat": "education",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "OceanPulse",
+        "desc": "Hero toàn màn hình (100svh, không thanh cuộn) tự chứa trong một file HTML duy nhất cho tổ chức phi lợi nhuận bảo tồn biển OceanPulse với phông Plus Jakarta Sans: bố cục 2 cột đồng bộ thứ tự DOM đặc biệt (.hero__media đứng trước .hero__left không tạo stacking context để nút burger z-index 70 nổi trên ngăn kéo menu z-index 60), tiêu đề Saving Oceans, Uniting The Coastline với chữ Oceans, phủ ảnh mặt nước biển xanh sâu, thẻ video rạn san hô từ trên cao kèm 2 điểm chú thích Pure Waters & Coral Bed, cụm mạng xã hội khuyết góc dưới phải và ngăn kéo menu trượt bất đối xứng tự đo độ tương phản nút đóng X.",
+        "tags": [
+          "Bảo tồn đại dương",
+          "Single-File HTML",
+          "Video & Menu trượt"
+        ]
+      },
+      "en": {
+        "name": "OceanPulse",
+        "desc": "A self-contained single-file HTML full-viewport hero (100svh, zero scroll) for the OceanPulse ocean-conservation nonprofit set in Plus Jakarta Sans: a two-column grid with deliberate DOM ordering (.hero__media before stacking-context-free .hero__left so the z-index 70 burger rises above the z-index 60 nav sheet), a Saving Oceans, Uniting The Coastline headline with an image-filled Oceans, highlight, an aerial reef video card with Pure Waters and Coral Bed callout markers, a notched bottom-right social pill and an asymmetric slide-in menu sheet with live burger contrast detection.",
+        "tags": [
+          "Ocean Conservation",
+          "Single-File HTML",
+          "Video & Slide Sheet"
+        ]
+      },
+      "zh": {
+        "name": "OceanPulse",
+        "desc": "采用 Plus Jakarta Sans 字体的 OceanPulse 海洋保护非营利组织单文件自包含 HTML 全屏首屏（100svh 零滚动）：双列网格配合刻意设计的 DOM 顺序（.hero__media 置于不创建层叠上下文的 .hero__left 之前，使 z-index 70 汉堡按钮浮于 z-index 60 导航抽屉之上）、带深海图像填充“Oceans,”高亮的 Saving Oceans, Uniting The Coastline 主标题、含 Pure Waters 与 Coral Bed 标注点的珊瑚礁航拍视频卡片、右下角内凹社交胶囊，以及具备实时 X 按钮对比度检测的非对称侧滑菜单抽屉。",
+        "tags": [
+          "海洋保护公益",
+          "单文件 HTML",
+          "航拍视频与侧滑菜单"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Gói tải",
+          "4 files"
+        ],
+        [
+          "Phạm vi",
+          "Giao diện tĩnh · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "4 files"
+        ],
+        [
+          "Scope",
+          "Static interface · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / 原生 JS"
+        ],
+        [
+          "下载包",
+          "4 files"
+        ],
+        [
+          "范围",
+          "静态界面 · 无需构建步骤"
+        ]
+      ]
+    }
+  },
+  t81: {
+    "slug": "synapsex",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "SynapseX",
+        "desc": "Trang đích đa phân đoạn cho giao diện thần kinh AI tương lai SynapseX trên nền đen #000000 với chữ trắng toàn bộ bằng font Space Mono (kèm chữ chìm TRANSCENDENCE bằng Anton SC), dựng bằng React 18, TypeScript, Vite 6, Tailwind CSS v4 và Framer Motion: video Hero tua tiến/lùi theo chuột ngang (seeked-chained, độ nhạy 0.8), 4 phân đoạn video lặp toàn màn hình, hiệu ứng giải mã ký tự ScrambleIn / ScrambleText (Brain / And Body — One / Network), logo đối xứng xoay 4 chiều SynapseXLogo, thanh điều hướng viên thuốc mở rộng lò xo (48px → 290px), đoạn văn 3D perspective (rotateX 24deg), lưới Performance Metrics (2.4ms, 99.7%, 140B), Adaptive Intelligence 4 cột và Architecture 3 tầng.",
+        "tags": [
+          "Neural-AI Interface",
+          "Mouse-Scrub Video",
+          "Space Mono + Motion"
+        ]
+      },
+      "en": {
+        "name": "SynapseX",
+        "desc": "A multi-section futuristic neural-AI interface landing site for SynapseX on pure black #000000 with Space Mono typography (and an Anton SC TRANSCENDENCE watermark), built with React 18, TypeScript, Vite 6, Tailwind CSS v4 and Framer Motion: a mouse-scrubbed hero video (seeked-chained delta scrubbing at 0.8 sensitivity), four full-viewport looping video sections, ScrambleIn / ScrambleText character decoding (Brain / And Body — One / Network), a 4-fold rotationally symmetric SynapseXLogo, a spring-expanding menu pill (48px → 290px), scroll-driven 3D perspective text (rotateX 24deg), Performance Metrics (2.4ms, 99.7%, 140B), a 4-column Adaptive Intelligence grid and a 3-layer Architecture stack.",
+        "tags": [
+          "Neural-AI Interface",
+          "Mouse-Scrub Video",
+          "Space Mono + Motion"
+        ]
+      },
+      "zh": {
+        "name": "SynapseX",
+        "desc": "基于 React 18、TypeScript、Vite 6、Tailwind CSS v4 与 Framer Motion 构建的未来感神经 AI 接口（SynapseX）纯黑 #000000 多章节着陆页，全站采用 Space Mono 等宽字体与 Anton SC 巨幅 TRANSCENDENCE 径向水印：涵盖鼠标横向拖拽首屏视频（0.8 灵敏度 seeked 链式寻帧）、四段全屏循环视频章节、ScrambleIn / ScrambleText 字符解码标题（Brain / And Body — One / Network）、四重旋转对称 SynapseXLogo、弹簧伸缩菜单胶囊（48px → 290px）、滚动驱动 3D 透视文字（rotateX 24deg）、性能指标（2.4ms、99.7%、140B）、四列自适应智能网格与三层架构卡片。",
+        "tags": [
+          "神经AI接口",
+          "鼠标拖拽视频",
+          "Space Mono + 动效"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Framer Motion (kèm built/)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "14 file · 114.4 KB ZIP"
+        ],
+        [
+          "Tương tác & Bố cục",
+          "Video Hero tua chuột · ScrambleIn/ScrambleText · 5 phân đoạn + Footer video"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Framer Motion (includes built/)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "14 files · 114.4 KB ZIP"
+        ],
+        [
+          "Interaction & Layout",
+          "Mouse-scrub hero video · ScrambleIn/ScrambleText · 5 sections + video footer"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Framer Motion（含 built/）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "14 个文件 · 114.4 KB ZIP"
+        ],
+        [
+          "交互与布局",
+          "鼠标拖拽首屏视频 · ScrambleIn/ScrambleText · 五大章节 + 视频页脚"
+        ]
+      ]
+    }
+  },
+  t80: {
+    "slug": "cozypaws",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "CozyPaws",
+        "desc": "Hero cửa hàng thú cưng CozyPaws một khung nhìn (h-screen, không cuộn) dựng bằng React 18, TypeScript, Vite 6, Tailwind CSS v4, Lucide React và bộ đôi font DM Serif Display + Inter trên nền xanh bạc hà #EFFDF0, xanh đậm #1a3d1a và cam #E86A10: 3 bố cục đáp ứng chuyên biệt (mobile <md, tablet md–lg, desktop lg+), tiêu đề Everything / Your Pets Love nhảy từng từ (.animate-word-pop), thẻ sản phẩm Cozy Cat House ($49.99), thẻ video đánh giá TikTok/YouTube, cụm 3 ảnh thú cưng đáy (flex-1 / flex-[1.265] / flex-1) kèm lớp phủ 98K+, nút Explore Products và điểm 4.6★.",
+        "tags": [
+          "Pet Store Hero",
+          "3-Tier Responsive",
+          "Staggered Animations"
+        ]
+      },
+      "en": {
+        "name": "CozyPaws",
+        "desc": "A viewport-height (h-screen, no scroll) CozyPaws pet store hero built with React 18, TypeScript, Vite 6, Tailwind CSS v4, Lucide React and Google Fonts DM Serif Display + Inter on a light mint #EFFDF0 canvas with #1a3d1a dark green and #E86A10 orange accents: three dedicated responsive layouts (mobile <md, tablet md–lg, desktop lg+), staggered .animate-word-pop Everything / Your Pets Love typography, a floating Cozy Cat House ($49.99) product card, a TikTok/YouTube review video card, and a 3-panel bottom pet gallery (flex-1 / flex-[1.265] / flex-1) with 98K+, Explore Products and 4.6★ overlays.",
+        "tags": [
+          "Pet Store Hero",
+          "3-Tier Responsive",
+          "Staggered Animations"
+        ]
+      },
+      "zh": {
+        "name": "CozyPaws",
+        "desc": "基于 React 18、TypeScript、Vite 6、Tailwind CSS v4、Lucide React 与 Google Fonts DM Serif Display + Inter 构建的 CozyPaws 宠物商店单屏（h-screen 无滚动）首屏：采用 #EFFDF0 浅薄荷绿背景、#1a3d1a 深绿与 #E86A10 活力橙配色，涵盖移动（<md）、平板（md–lg）与桌面（lg+）三套响应式布局、Everything / Your Pets Love 逐词弹跳标题（.animate-word-pop）、Cozy Cat House ($49.99) 商品卡、TikTok/YouTube 测评视频卡，以及带 98K+、Explore Products 与 4.6★ 浮层的底部三栏宠物画廊（flex-1 / flex-[1.265] / flex-1）。",
+        "tags": [
+          "宠物商店首屏",
+          "三端响应式布局",
+          "错峰关键帧动效"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Lucide React (kèm built/)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "14 file · 68.0 KB ZIP"
+        ],
+        [
+          "Bố cục & Hoạt ảnh",
+          "3 bố cục lg+/md/<md · 9 lớp keyframe 100ms–1200ms · hộp thoại giỏ hàng"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Lucide React (includes built/)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "14 files · 68.0 KB ZIP"
+        ],
+        [
+          "Layout & Motion",
+          "3 breakpoints lg+/md/<md · 9 keyframes 100ms–1200ms · quick-shop modals"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Lucide React（含 built/）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "14 个文件 · 68.0 KB ZIP"
+        ],
+        [
+          "布局与动效",
+          "lg+/md/<md 三端布局 · 9 组 100ms–1200ms 关键帧 · 快速加购弹窗"
+        ]
+      ]
+    }
+  },
+  t79: {
+    "slug": "securify",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "securify",
+        "desc": "Hero trang đích SaaS bảo mật dữ liệu (data-security SaaS) toàn màn hình dựng bằng React 18, TypeScript, Vite 6, Tailwind CSS v4 và font Readex Pro (300–700): video nền lặp toàn khung nhìn kèm dải chuyển sắc đen đáy (h-48), thanh điều hướng viên thuốc nổi bg-neutral-900/90 backdrop-blur với logo SVG 4 góc phần tư trắng 256×256 + chữ thường securify, 4 liên kết trung tâm (platform, solutions, company, support) và nút get started trắng, ba chữ tiêu đề khổng lồ xếp lệch toàn chữ thường protect / your / data (.hero-title 14vw/13vw, tracking -0.04em, line-height 0.95) cùng 3 cụm thống kê vạch chéo (+65k startups use, +1.5b gb data was protected, +300k downloads).",
+        "tags": [
+          "Data Security SaaS",
+          "Staggered Typography",
+          "Monochrome Video Hero"
+        ]
+      },
+      "en": {
+        "name": "securify",
+        "desc": "A fullscreen data-security SaaS landing page hero built with React 18, TypeScript, Vite 6, Tailwind CSS v4 and Google Font Readex Pro (300–700): a looping full-viewport background video with a bottom black fade gradient (h-48), floating bg-neutral-900/90 backdrop-blur navbar pills with a custom 256×256 4-quadrant white SVG mark + lowercase securify brand, four desktop nav links (platform, solutions, company, support) and a white get started pill, three giant staggered lowercase .hero-title words (protect / your / data at 14vw/13vw, -0.04em tracking, 0.95 line-height) and three diagonal-divider stat blocks (+65k startups use, +1.5b gb data was protected, +300k downloads).",
+        "tags": [
+          "Data Security SaaS",
+          "Staggered Typography",
+          "Monochrome Video Hero"
+        ]
+      },
+      "zh": {
+        "name": "securify",
+        "desc": "基于 React 18、TypeScript、Vite 6、Tailwind CSS v4 与 Google Font Readex Pro（300–700）构建的全屏数据安全 SaaS 着陆页首屏：配备全屏循环背景视频与底部黑色渐变遮罩（h-48）、bg-neutral-900/90 backdrop-blur 悬浮胶囊导航栏（含 256×256 四象限纯白 SVG 标志与小写 securify 品牌名、platform / solutions / company / support 导航项及白色 get started 按钮）、三组巨幅错落全小写 .hero-title 主标题（protect / your / data，14vw/13vw，字距 -0.04em，行高 0.95）以及三组带 ±20° 斜线分隔的数据指标块（+65k startups use、+1.5b gb data was protected、+300k downloads）。",
+        "tags": [
+          "数据安全 SaaS",
+          "错落大字排印",
+          "黑白视频首屏"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Readex Pro (kèm built/)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "14 file · 63.6 KB ZIP"
+        ],
+        [
+          "Bố cục & Tương tác",
+          "Tiêu đề xếp lệch protect/your/data · 3 khối số liệu vạch chéo · hộp thoại đơn sắc"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Readex Pro (includes built/)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "14 files · 63.6 KB ZIP"
+        ],
+        [
+          "Layout & Interaction",
+          "Staggered protect/your/data type · 3 diagonal stat blocks · monochrome modals"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Readex Pro（含 built/）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "14 个文件 · 63.6 KB ZIP"
+        ],
+        [
+          "布局与交互",
+          "protect/your/data 错落大字 · 三组斜线统计块 · 单色交互弹窗"
+        ]
+      ]
+    }
+  },
+  t78: {
+    "slug": "lumora",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Lumora",
+        "desc": "Hero ứng dụng chánh niệm và tập trung (Mindfulness & Focus) điện ảnh toàn màn hình dựng bằng React 18, TypeScript, Vite 6, Tailwind CSS v4, Lucide React và font Instrument Serif (ital@0;1): 4 video nền lặp toàn khung nhìn (Golden Hour, Still Water, Deep Woods, Quiet Dawn) chuyển cảnh crossfade 1000ms kèm khóa chống bấm dồn 1000ms, lớp phủ PNG cửa sổ tàu hỏa lắc nhẹ liên tục (train-bob 3s, scale 1.03), bề mặt kính lỏng .liquid-glass viền 1.4px, chế độ chữ tối #182C41 tự động khi chọn Deep Woods, ô nhập email Get Early Access, menu di động phân tầng và dải thống kê đáy.",
+        "tags": [
+          "Mindfulness & Focus",
+          "4-Video Crossfade",
+          "Liquid Glass UI"
+        ]
+      },
+      "en": {
+        "name": "Lumora",
+        "desc": "A fullscreen cinematic mindfulness and focus app hero built with React 18, TypeScript, Vite 6, Tailwind CSS v4, Lucide React and Google Font Instrument Serif (ital@0;1): four stacked looping background videos (Golden Hour, Still Water, Deep Woods, Quiet Dawn) with 1000ms crossfade switching and cooldown locking, a continuous train-bob transparent PNG window overlay (3s, scale 1.03), 1.4px masked .liquid-glass pills, automatic 700ms #182C41 dark text mode on Deep Woods, an inline Get Early Access email pill, a staggered mobile overlay menu and bottom community stats.",
+        "tags": [
+          "Mindfulness & Focus",
+          "4-Video Crossfade",
+          "Liquid Glass UI"
+        ]
+      },
+      "zh": {
+        "name": "Lumora",
+        "desc": "基于 React 18、TypeScript、Vite 6、Tailwind CSS v4、Lucide React 与 Google Font Instrument Serif（ital@0;1）构建的全屏电影级正念与专注应用首屏：配备四段全屏循环视频（Golden Hour、Still Water、Deep Woods、Quiet Dawn）1000ms 交叉渐变与冷却防抖锁、持续 3s 轻柔浮动的 train-bob 透明车窗 PNG 叠加层（scale 1.03）、1.4px 遮罩边框 .liquid-glass 液态玻璃胶囊、Deep Woods 场景 700ms #182C41 深色文字模式、Get Early Access 邮箱胶囊、错峰移动端全屏菜单及底部统计栏。",
+        "tags": [
+          "正念与专注",
+          "四视频交叉渐变",
+          "液态玻璃界面"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Instrument Serif (kèm built/)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "14 file · 66.9 KB ZIP"
+        ],
+        [
+          "Tương tác",
+          "Chuyển 4 cảnh video 1000ms · lớp phủ train-bob · chữ #182C41 ở Deep Woods · menu z-50"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Instrument Serif (includes built/)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "14 files · 66.9 KB ZIP"
+        ],
+        [
+          "Interaction",
+          "4-scene 1000ms video switcher · train-bob PNG overlay · #182C41 Deep Woods mode · z-50 menu"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 18 + TypeScript + Vite 6 + Tailwind CSS v4 + Instrument Serif（含 built/）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "14 个文件 · 66.9 KB ZIP"
+        ],
+        [
+          "交互",
+          "四场景 1000ms 视频切换 · train-bob 叠加层 · Deep Woods #182C41 模式 · 全屏菜单"
+        ]
+      ]
+    }
+  },
+  t77: {
+    "slug": "neuralkinetics",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "NeuralKinetics",
+        "desc": "Hero thẻ ngân hàng số toàn cầu và hệ thống sinh học thần kinh thích ứng tối giản đen-trắng (#ffffff / #000000) dựng bằng React 19, Vite 6, Framer Motion (motion/react), Lucide React, CSS thuần và font Inter (300–600): video nền toàn khung nhìn (80% căn giữa trên mobile, 100% trên desktop 768px+), thanh điều hướng cố định kèm logo SVG hai hình chữ nhật bo góc xoay -35deg, nút Menu viên thuốc đen với icon Plus, cặp nhãn Advanced Bionics / Cognitive AI, cụm Adaptive Systems 4 chấm, tiêu đề hai dòng One Card, Zero / Limits. Worldwide. trên nền gradient trắng, dải telemetry đồng bộ Neuromorphic / AGI / Cybernetics và hộp thoại tương tác See Features & How It Works.",
+        "tags": [
+          "Digital Banking Card",
+          "React 19 + Motion",
+          "Minimal Black & White"
+        ]
+      },
+      "en": {
+        "name": "NeuralKinetics",
+        "desc": "A minimal black-and-white (#ffffff / #000000) global digital banking card and adaptive bionics hero built with React 19, Vite 6, Framer Motion (motion/react), Lucide React, plain CSS and Google Font Inter (300–600): a full-viewport background video (80% centered on mobile, 100% on desktop 768px+), fixed top navbar with a custom -35deg dual-rectangle SVG logo, black Menu pill with Plus icon, Advanced Bionics / Cognitive AI tags pill, 4-dot Adaptive Systems HUD, two-line One Card, Zero / Limits. Worldwide. typography over a white fade-up gradient, live Neuromorphic / AGI / Cybernetics telemetry and interactive See Features & How It Works modals.",
+        "tags": [
+          "Digital Banking Card",
+          "React 19 + Motion",
+          "Minimal Black & White"
+        ]
+      },
+      "zh": {
+        "name": "NeuralKinetics",
+        "desc": "基于 React 19、Vite 6、Framer Motion（motion/react）、Lucide React、纯 CSS 与 Inter（300–600）字体构建的极简黑白（#ffffff / #000000）全球数字银行卡与自适应仿生首屏：配备全屏背景视频（移动端 80% 居中、桌面端 768px+ 100% 铺满）、带 -35deg 双圆角矩形 SVG 标志的固定顶栏、黑色 Menu 胶囊按钮、Advanced Bionics / Cognitive AI 标签胶囊、四点矩阵 Adaptive Systems 面板、白色渐变底栏上的双行 One Card, Zero / Limits. Worldwide. 标题、Neuromorphic / AGI / Cybernetics 实时遥测条及 See Features 与 How It Works 交互弹窗。",
+        "tags": [
+          "数字银行卡",
+          "React 19 + Motion",
+          "极简黑白风"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 19 + TypeScript + Vite 6 + Framer Motion + Plain CSS (kèm built/)"
+        ],
+        [
+          "Phiên bản",
+          "1.0.0"
+        ],
+        [
+          "Gói tải",
+          "14 file · 135.8 KB ZIP"
+        ],
+        [
+          "Tương tác",
+          "Chuyển động motion/react [0.16,1,0.3,1] · Menu & Adaptive HUD · 2 Modal + Telemetry"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 19 + TypeScript + Vite 6 + Framer Motion + Plain CSS (includes built/)"
+        ],
+        [
+          "Version",
+          "1.0.0"
+        ],
+        [
+          "Package",
+          "14 files · 135.8 KB ZIP"
+        ],
+        [
+          "Interaction",
+          "motion/react [0.16,1,0.3,1] choreography · Menu & Adaptive HUD · 2 Modals + Telemetry"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 19 + TypeScript + Vite 6 + Framer Motion + 纯 CSS（含 built/）"
+        ],
+        [
+          "版本",
+          "1.0.0"
+        ],
+        [
+          "下载包",
+          "14 个文件 · 135.8 KB ZIP"
+        ],
+        [
+          "交互",
+          "motion/react [0.16,1,0.3,1] 动效 · Menu 与自适应面板 · 双弹窗 + 实时遥测"
+        ]
+      ]
+    }
+  },
   t76: {
     "slug": "sellix",
     "cat": "commerce",

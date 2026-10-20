@@ -1,0 +1,24 @@
+Third-Party Licenses & Attributions
+
+1. React & React DOM (^18.3.1)
+   License: MIT
+   Copyright (c) Meta Platforms, Inc. and affiliates.
+
+2. Framer Motion (^12.6.2)
+   License: MIT
+   Copyright (c) Framer B.V.
+
+3. Tailwind CSS (^4.1.0)
+   License: MIT
+   Copyright (c) Tailwind Labs, Inc.
+
+4. Bootstrap Icons (^1.11.3)
+   License: MIT
+   Copyright (c) The Bootstrap Authors.
+
+5. Space Mono & Anton SC Fonts
+   Source: Google Fonts (https://fonts.google.com)
+   License: SIL Open Font License 1.1
+
+6. Background Video Streams
+   Source: CloudFront CDN (`d8j0ntlcm91z4.cloudfront.net`) as specified in the product design brief.

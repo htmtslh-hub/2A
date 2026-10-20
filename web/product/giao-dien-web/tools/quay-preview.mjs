@@ -113,8 +113,8 @@ try {
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
-    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix') {
-      for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai']) allowedBriefHosts.add(host);
+    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'lumora' || slug === 'securify' || slug === 'cozypaws' || slug === 'synapsex' || slug === 'oceanpulse') {
+      for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai','soft-zoom-63098134.figma.site','polo-pecan-73837341.figma.site','cdn.jsdelivr.net']) allowedBriefHosts.add(host);
     }
     if (slug === 'toonhub') {
       allowedBriefHosts.add('fifth-gentle-45902158.figma.site');
@@ -151,9 +151,11 @@ try {
     if (slug === 'halden') await page.waitForFunction(() => { const imgs = Array.from(document.querySelectorAll('#dd img')); return imgs.length === 6 && imgs.every(i => i.complete && i.naturalWidth > 0); }, null, {timeout:45000});
     if (slug === 'prmpt') await page.waitForFunction(() => { const lv = document.getElementById('left-video'); const rv = document.getElementById('right-video'); const imgs = Array.from(document.querySelectorAll('.bp-card img')); return lv && rv && lv.readyState >= 2 && rv.readyState >= 2 && imgs.length === 10 && imgs.every(i => i.complete && i.naturalWidth > 0); }, null, {timeout:60000});
     if (slug === 'viktor') await page.waitForFunction(() => { const videos = Array.from(document.querySelectorAll('video')); return videos.length === 3 && videos.every(v => v.readyState >= 2); }, null, {timeout:60000});
+    if (slug === 'lumora') await page.waitForFunction(() => { const v0 = document.getElementById('lumora-video-0'); const v2 = document.getElementById('lumora-video-2'); const ov = document.getElementById('lumora-png-overlay'); return v0 && v2 && v0.readyState >= 2 && v2.readyState >= 2 && ov && ov.complete && ov.naturalWidth > 0; }, null, {timeout:60000});
+    if (slug === 'cozypaws') await page.waitForFunction(() => { const imgs = Array.from(document.querySelectorAll('img')); return imgs.length >= 7 && imgs.every(i => i.complete && i.naturalWidth > 0); }, null, {timeout:60000});
     if (slug === 'fennec') await page.waitForFunction(() => document.querySelector('#fox')?.dataset.model === 'ready', null, {timeout:60000});
-    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
-    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix') {
+    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse') {
       await page.waitForTimeout(2000);
     }
     if (slug === 'solaris-gate') {
@@ -167,6 +169,120 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'oceanpulse') {
+        const step = actions.filter(a => a.action.startsWith('oceanpulse-')).length;
+        if (step === 0) {
+          await page.locator('#navToggle').click();
+          await page.waitForTimeout(450);
+          await page.locator('.navsheet__link').first().hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'oceanpulse-open-navsheet-and-hover-mission' });
+        } else if (step === 1) {
+          await page.locator('.navsheet__link').nth(1).hover();
+          await page.waitForTimeout(300);
+          await page.locator('.navsheet__cta').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'oceanpulse-hover-programs-and-cta' });
+        } else {
+          await page.locator('#navToggle').click();
+          await page.waitForTimeout(500);
+          await page.locator('.cta').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'oceanpulse-close-navsheet-and-hover-hero-cta' });
+        }
+        return;
+      }
+      if (slug === 'synapsex') {
+        const step = actions.filter(a => a.action.startsWith('synapsex-')).length;
+        if (step === 0) {
+          await page.mouse.move(120, 450);
+          await page.mouse.move(1280, 450, { steps: 24 });
+          await page.locator('#synapsex-desktop-menu-btn').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'synapsex-scrub-hero-and-open-menu' });
+        } else if (step === 1) {
+          await page.locator('#synapsex-nav-about').hover();
+          await page.waitForTimeout(300);
+          await page.locator('#synapsex-desktop-menu-btn').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'synapsex-scramble-hover-and-close-menu' });
+        } else {
+          await page.mouse.move(1100, 450);
+          await page.mouse.move(240, 450, { steps: 18 });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'synapsex-scrub-return' });
+        }
+        return;
+      }
+      if (slug === 'cozypaws') {
+        const step = actions.filter(a => a.action.startsWith('cozypaws-')).length;
+        if (step === 0) {
+          await page.locator('#cozypaws-cat-house-btn').click();
+          await page.locator('#cozypaws-modal').waitFor({ state: 'visible' });
+          await page.locator('#cozypaws-add-to-cart-btn').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'cozypaws-inspect-and-add-cat-house' });
+        } else if (step === 1) {
+          await page.keyboard.press('Escape');
+          await page.locator('#cozypaws-modal').waitFor({ state: 'detached' });
+          await page.locator('#cozypaws-video-play-btn').click();
+          await page.locator('#cozypaws-modal').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'cozypaws-open-video-reviews' });
+        } else {
+          await page.keyboard.press('Escape');
+          await page.locator('#cozypaws-modal').waitFor({ state: 'detached' });
+          await page.locator('#cozypaws-favorites-btn').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'cozypaws-return-hero' });
+        }
+        return;
+      }
+      if (slug === 'securify') {
+        const step = actions.filter(a => a.action.startsWith('securify-')).length;
+        if (step === 0) {
+          await page.locator('#securify-nav-platform').click();
+          await page.locator('#securify-modal').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'securify-open-platform' });
+        } else if (step === 1) {
+          await page.keyboard.press('Escape');
+          await page.locator('#securify-modal').waitFor({ state: 'detached' });
+          await page.locator('#securify-get-started-btn').click();
+          await page.locator('#securify-modal').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'securify-open-get-started' });
+        } else {
+          await page.keyboard.press('Escape');
+          await page.locator('#securify-modal').waitFor({ state: 'detached' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'securify-return-hero' });
+        }
+        return;
+      }
+      if (slug === 'lumora') {
+        const step = actions.filter(a => a.action.startsWith('lumora-')).length;
+        if (step === 0) {
+          await page.locator('#lumora-scene-btn-2').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'lumora-switch-deep-woods' });
+        } else if (step === 1) {
+          await page.locator('#lumora-scene-btn-1').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'lumora-switch-still-water' });
+        } else {
+          await page.locator('#lumora-scene-btn-0').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'lumora-switch-golden-hour' });
+        }
+        return;
+      }
+      if (slug === 'neuralkinetics') {
+        const step = actions.filter(a => a.action.startsWith('neuralkinetics-')).length;
+        if (step === 0) {
+          await page.locator('#nk-tag-agi').click();
+          await page.locator('#nk-see-features-btn').click();
+          await page.locator('#nk-features-modal').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'neuralkinetics-open-features-modal' });
+        } else if (step === 1) {
+          await page.locator('.nk-fx-chip', { hasText: 'JPY' }).click();
+          await page.waitForTimeout(450);
+          await page.keyboard.press('Escape');
+          await page.locator('#nk-features-modal').waitFor({ state: 'detached' });
+          await page.locator('#nk-menu-btn').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'neuralkinetics-switch-jpy-and-open-menu' });
+        } else {
+          await page.keyboard.press('Escape');
+          await page.locator('#nk-tag-cybernetics').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'neuralkinetics-select-cybernetics' });
+        }
+        return;
+      }
       if (slug === 'sellix') {
         const step = actions.filter(a => a.action.startsWith('sellix-')).length;
         if (step === 0) {
@@ -427,7 +543,7 @@ try {
     }
     actions.push({ seconds:6.7, action:'scroll', target });
     await at(10); await shot('scroll');
-    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra'].includes(slug)) {
+    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse'].includes(slug)) {
       await next();
     }
     await at(11.5); await page.evaluate(() => window.scrollTo({ top:0, behavior:'smooth' }));

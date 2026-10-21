@@ -1,0 +1,50 @@
+{
+  "id": "t88",
+  "slug": "melli",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-21T02:53:48.681Z",
+  "demo": "/demos/melli/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3fe482b3c1c4",
+  "sha256": "3fe482b3c1c49dd9af287aba800c471d16e57db5289903e25a5c18cf0ef398c2",
+  "demoHtmlSha256": "b6df9f1758afcb0d8faa616857c3ac77c2f41485e2eee3c201092d391ec125ae",
+  "demoSha256": "cc6a6a5f91266ffa45bb266331c5d7d8f07794e75dd105a803a577ff069fc5cd",
+  "bytes": 740950,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 5.04,
+      "action": "melli-hover-hero-cta-and-tilt-bee"
+    },
+    {
+      "seconds": 6.507,
+      "action": "melli-scroll-section-01"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 3600
+    },
+    {
+      "seconds": 11.295,
+      "action": "melli-hover-contact-cta"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\melli-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\melli-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\melli-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\melli-return.jpg"
+  ]
+}

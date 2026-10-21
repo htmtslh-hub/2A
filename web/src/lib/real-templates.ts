@@ -46,6 +46,486 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t88: {
+    "slug": "melli",
+    "cat": "education",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Melli",
+        "desc": "Trang đích 5 phân đoạn điều khiển theo cuộn tự chứa trong một file HTML duy nhất cho khóa học nghệ thuật 3D \"Melli — Master 3D Artistry\" với chú ong mật 3D (BEE_GLB) bay lượn qua toàn trang dựng bằng Three.js 0.160.0: font Poppins (300–800), thanh điều hướng và huy hiệu Made by Melli cố định tự động đổi màu chữ trắng khi cuộn qua Section 02 nền bokeh tím đậm (body.on-dark), 4 bông hoa PNG tách nền hiệu ứng parallax (.flower--cosmos, .flower--hang, .flower--iris, .flower--passion) nghiêng và trôi theo cuộn, đôi cánh trước và cánh sau 3 lớp nhòe chuyển động tạo từ kết cấu WING_TEX vẽ trên canvas 1024×576, ánh sáng môi trường RoomEnvironment PMREM và đường bay nội suy mượt 5 điểm mốc theo cuộn (tự động chuyển sang quỹ đạo dọc riêng trên màn hình < 760px).",
+        "tags": [
+          "Khóa học 3D Artistry",
+          "Three.js 0.160.0",
+          "Ong mật 3D bay theo cuộn"
+        ]
+      },
+      "en": {
+        "name": "Melli",
+        "desc": "A self-contained single-file, five-section scroll-driven HTML landing page for \"Melli — Master 3D Artistry\" featuring an interactive 3D honeybee (BEE_GLB) rendered in Three.js 0.160.0: Poppins (300–800) typography, a fixed navbar and Made by Melli badge that automatically invert to white over the dark violet macro-bokeh Section 02 (body.on-dark), four transparent botanical flower PNGs (.flower--cosmos, .flower--hang, .flower--iris, .flower--passion) with scroll-driven parallax drift and rotation, three-layer motion-blurred forewings and hindwings generated from a 1024×576 canvas-extracted WING_TEX alpha texture, a procedural RoomEnvironment PMREM light rig, and a five-keyframe cubic-eased flight path with dedicated desktop and < 760px mobile trajectories.",
+        "tags": [
+          "3D Artistry Course",
+          "Three.js 0.160.0",
+          "Scroll-Driven 3D Honeybee"
+        ]
+      },
+      "zh": {
+        "name": "Melli",
+        "desc": "《Melli — Master 3D Artistry》3D 艺术大师课单文件自包含五屏滚动驱动 HTML 着陆页模板，内置基于 Three.js 0.160.0 渲染的 3D 蜜蜂（BEE_GLB）：采用 Poppins（300–800）字体排印、在滚入深紫微距散景第二屏（body.on-dark）时自动反色为纯白的固定顶栏与 Made by Melli 徽章、4 朵随滚动视差漂移旋转的透明花卉 PNG（.flower--cosmos、.flower--hang、.flower--iris、.flower--passion）、由 1024×576 Canvas 提取透明通道的 3 层运动模糊前后翅、RoomEnvironment PMREM 环境光照，以及包含桌面端与 < 760px 移动端专属轨迹的五关键帧平滑飞行路径。",
+        "tags": [
+          "3D 艺术课程",
+          "Three.js 0.160.0",
+          "滚动驱动 3D 蜜蜂"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Three.js 0.160.0"
+        ],
+        [
+          "Gói tải",
+          "4 files"
+        ],
+        [
+          "Phạm vi",
+          "Trang đích 3D 5 phân đoạn điều khiển theo cuộn · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Three.js 0.160.0"
+        ],
+        [
+          "Package",
+          "4 files"
+        ],
+        [
+          "Scope",
+          "Five-section scroll-driven 3D landing page · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / Three.js 0.160.0"
+        ],
+        [
+          "下载包",
+          "4 files"
+        ],
+        [
+          "范围",
+          "五屏滚动驱动 3D 着陆页 · 零构建步骤"
+        ]
+      ]
+    }
+  },
+  t87: {
+    "slug": "iris",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Iris",
+        "desc": "Hero nền tối tự chứa trong một file HTML duy nhất cho trợ lý AI thông minh \"Iris\" (\"Introducing a / Smart AI Assistant\") với linh vật robot 3D tương tác dựng bằng Three.js r169: nền đen tuyền #0b0b11, thanh điều hướng kính mờ rgba(18,19,26,0.86), chữ Figtree (400–800), nút viên thuốc tím #8f66ff → #7c4dff, mô hình đầu cầu nối ăng-ten (HEAD_GLB) và hai cánh tay nổi (ARM_GLB) phủ vật liệu MeshPhysicalMaterial cùng viền sáng Fresnel tím oải hương, kính che mặt cong chia lưới cầu (bezel + glass), đôi mắt tím phát sáng theo dõi con trỏ chuột và chớp mắt tự nhiên mỗi 2.5–6 giây, môi trường studio PMREM 6 hộp sáng cầu và hậu kỳ UnrealBloomPass.",
+        "tags": [
+          "Trợ lý AI 3D",
+          "Three.js r169",
+          "Linh vật Robot tương tác"
+        ]
+      },
+      "en": {
+        "name": "Iris",
+        "desc": "A self-contained single-file dark-mode HTML landing hero for the \"Iris\" AI assistant (\"Introducing a / Smart AI Assistant\") featuring an interactive 3D robot mascot rendered in Three.js r169: a #0b0b11 canvas, a blurred rgba(18,19,26,0.86) navbar, Figtree (400–800) typography, a #8f66ff → #7c4dff pill CTA, a spherical head (HEAD_GLB) and two floating arms (ARM_GLB) shaded with MeshPhysicalMaterial and lavender Fresnel rim shells, a tessellated spherical visor (bezel + glass), cursor-tracking violet eyes that blink every 2.5–6s, a six-sphere PMREM dark studio environment, and UnrealBloomPass post-processing.",
+        "tags": [
+          "3D AI Assistant",
+          "Three.js r169",
+          "Interactive Robot Mascot"
+        ]
+      },
+      "zh": {
+        "name": "Iris",
+        "desc": "智能 AI 助手《Iris》（\"Introducing a / Smart AI Assistant\"）单文件自包含暗色模式 HTML 首屏模板，内置基于 Three.js r169 渲染的交互式 3D 机器人吉祥物：采用 #0b0b11 暗黑背景、rgba(18,19,26,0.86) 毛玻璃顶栏、Figtree（400–800）字体与 #8f66ff → #7c4dff 渐变胶囊按钮；球形头部（HEAD_GLB）与双悬浮手臂（ARM_GLB）配备 MeshPhysicalMaterial 材质与薰衣草紫 Fresnel 边缘光着色器、球面细分护目镜（bezel + glass）、实时跟随光标并在 2.5–6 秒间自然眨眼的紫色发光双眼、六球体 PMREM 暗房柔光箱环境及 UnrealBloomPass 辉光后处理。",
+        "tags": [
+          "3D AI 助手",
+          "Three.js r169",
+          "交互式机器人吉祥物"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Three.js r169"
+        ],
+        [
+          "Gói tải",
+          "4 files"
+        ],
+        [
+          "Phạm vi",
+          "Giao diện 3D tương tác một màn hình · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Three.js r169"
+        ],
+        [
+          "Package",
+          "4 files"
+        ],
+        [
+          "Scope",
+          "One-screen interactive 3D hero · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / Three.js r169"
+        ],
+        [
+          "下载包",
+          "4 files"
+        ],
+        [
+          "范围",
+          "单屏交互式 3D 首屏 · 零构建步骤"
+        ]
+      ]
+    }
+  },
+  t86: {
+    "slug": "wander-far",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Wander Far",
+        "desc": "Hero đặt chỗ du lịch biên tập một màn hình tự chứa trong một file HTML duy nhất cho trang du lịch hư cấu \"Wander far. Rest easy.\" trên nền trắng sạch #FEFEFE: bố cục tham chiếu 1446×1088 (--u = min(100vw/1446, max(100dvh/1088, .78px))), tiêu đề hai dòng 90u bằng Inter Display 700 (opsz 32, tracking -0.035em) kết hợp đoạn mở đầu căn phải #727274, 3 tab chuyển đổi có gạch chân xanh navy #0A2A72 (Stays · Flights · Experiences), thanh tìm kiếm 4 ô viền mảnh #E6E6E7 (Where to? · Molde | Dates · Jun 18 – Jun 24 | Travelers · 3 travelers | nút Search xanh vịnh #00286E) và khung ảnh toàn chiều rộng góc vuông chiếm phần cao còn lại của màn hình với ảnh tĩnh 16:9 cùng video lặp 5 giây cảnh vịnh hẹp Na Uy giờ xanh và nhãn vị trí \"Geirangerfjord, Norge · 62.10° N\".",
+        "tags": [
+          "Đặt chỗ du lịch",
+          "Single-File HTML",
+          "Vịnh hẹp Na Uy & Thanh tìm kiếm 4 ô"
+        ]
+      },
+      "en": {
+        "name": "Wander Far",
+        "desc": "A self-contained single-file, one-screen editorial travel-booking landing hero for \"Wander far. Rest easy.\" on a clean #FEFEFE canvas: authored at 1446×1088 (--u = min(100vw/1446, max(100dvh/1088, .78px))), a 90u two-line Inter Display 700 headline (opsz 32, -0.035em tracking) paired with a right-aligned #727274 lede, three line-icon tabs with a #0A2A72 active underline (Stays · Flights · Experiences), a hairline-bordered #E6E6E7 four-cell search bar (Where to? · Molde | Dates · Jun 18 – Jun 24 | Travelers · 3 travelers | #00286E fjord-navy Search button), and a square-cornered full-width photo panel absorbing spare viewport height with a 16:9 blue-hour Norwegian fjord still, a 5s looping video overlay, and a bottom-left location chip (\"Geirangerfjord, Norge · 62.10° N\").",
+        "tags": [
+          "Travel Booking",
+          "Single-File HTML",
+          "Norwegian Fjord & 4-Cell Search Bar"
+        ]
+      },
+      "zh": {
+        "name": "Wander Far",
+        "desc": "《Wander far. Rest easy.》单文件自包含单屏杂志风旅行预订首屏模板，采用纯净 #FEFEFE 白底与 1446×1088 参考比例缩放（--u = min(100vw/1446, max(100dvh/1088, .78px))）：配备 90u 双行 Inter Display 700 紧凑大标题（opsz 32，字距 -0.035em）与右对齐 #727274 导语、带 #0A2A72 激活下划线的三项线性图标标签页（Stays · Flights · Experiences）、#E6E6E7 细线分隔四格搜索栏（Where to? · Molde | Dates · Jun 18 – Jun 24 | Travelers · 3 travelers | #00286E 峡湾深蓝 Search 按钮），以及自动填充剩余视口高度的直角全宽摄影面板（含 16:9 挪威峡湾蓝调时刻底图、5 秒静音循环视频叠加层与左下角 \"Geirangerfjord, Norge · 62.10° N\" 坐标铭牌）。",
+        "tags": [
+          "旅行预订",
+          "单文件 HTML",
+          "挪威峡湾视频与四格搜索栏"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Gói tải",
+          "4 files"
+        ],
+        [
+          "Phạm vi",
+          "Giao diện tĩnh một màn hình · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "4 files"
+        ],
+        [
+          "Scope",
+          "One-screen static interface · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / 原生 JS"
+        ],
+        [
+          "下载包",
+          "4 files"
+        ],
+        [
+          "范围",
+          "单屏静态界面 · 零构建步骤"
+        ]
+      ]
+    }
+  },
+  t85: {
+    "slug": "murmur",
+    "cat": "entertainment",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "murmur",
+        "desc": "Hero trang đích một màn hình tự chứa trong một file HTML duy nhất cho chương trình podcast hàng ngày \"murmur\" (\"Daily Murmur Podcast\") với khung cảnh giờ xanh (blue hour) nhìn qua khung cửa sổ căn hộ đẫm mưa, đường chân trời thành phố mờ ảo sắc tím-hồng và tán lá monstera ở hai góc dưới: khung hình 1440×900 co giãn phủ kín màn hình (--u = max(100vw/1440, 100vh/900)), tấm ảnh nền 16:10 khớp chính xác với video lặp 16:9 đệm gương hai bên (rộng 111.11%, left -5.556%) cùng 2 lớp ánh sáng hòa trộn screen (quầng sáng thành phố thở 5.2s và vệt đèn xe quét ngang 7s), chữ tiêu đề Newsreader 500 139px kết hợp Inter 400/500 và IBM Plex Mono 400, thẻ trình phát kính xanh navy 623.5×190 với 62 thanh sóng âm chuyển sắc #5560FF → #86A2FF → #A083FF và hàng 4 biểu tượng nền tảng podcast.",
+        "tags": [
+          "Podcast hàng ngày",
+          "Single-File HTML",
+          "Cửa sổ mưa & Sóng âm 62 thanh"
+        ]
+      },
+      "en": {
+        "name": "murmur",
+        "desc": "A self-contained single-file, one-screen HTML landing hero for the daily podcast \"murmur\" (\"Daily Murmur Podcast\") set at blue hour through a rain-streaked apartment window with a violet-pink city skyline, warm bokeh lights, and lower-corner monstera leaves: authored on a 1440×900 cover-scaled frame (--u = max(100vw/1440, 100vh/900)), a 16:10 background plate aligned with a mirror-padded 16:9 looping video (111.11% width, left -5.556%) and two screen-blended lighting layers (5.2s breathing city bloom and 7s diagonal headlight sweep), a 139px Newsreader 500 wordmark paired with Inter 400/500 and IBM Plex Mono 400, a 623.5×190 deep navy glass player card with a 62-bar breathing waveform (#5560FF → #86A2FF → #A083FF), and a four-icon podcast directory row.",
+        "tags": [
+          "Daily Podcast",
+          "Single-File HTML",
+          "Rainy Window & 62-Bar Waveform"
+        ]
+      },
+      "zh": {
+        "name": "murmur",
+        "desc": "每日播客节目《murmur》（\"Daily Murmur Podcast\"）单文件自包含单屏 HTML 首屏模板，呈现蓝调时刻透过雨痕公寓窗户望向紫粉城市天际线、温暖散景灯光与底角龟背竹叶的静谧电影感：采用 1440×900 覆盖缩放画布（--u = max(100vw/1440, 100vh/900)）、16:10 背景底图与两侧镜像填充 16:9 循环视频精确重合（宽 111.11%、left -5.556%）及两层滤色混合光效（5.2 秒呼吸城市霓虹光晕与 7 秒斜向扫光）、139px Newsreader 500 衬线字标搭配 Inter 400/500 与 IBM Plex Mono 400、623.5×190 深海军蓝毛玻璃播放器卡片（含 #5560FF → #86A2FF → #A083FF 渐变 62 条呼吸音频波形）以及四枚通用播客平台图标栏。",
+        "tags": [
+          "每日播客",
+          "单文件 HTML",
+          "雨窗视频与 62 轨音频波形"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Gói tải",
+          "4 files"
+        ],
+        [
+          "Phạm vi",
+          "Giao diện tĩnh một màn hình · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "4 files"
+        ],
+        [
+          "Scope",
+          "One-screen static interface · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / 原生 JS"
+        ],
+        [
+          "下载包",
+          "4 files"
+        ],
+        [
+          "范围",
+          "单屏静态界面 · 零构建步骤"
+        ]
+      ]
+    }
+  },
+  t84: {
+    "slug": "eclipsio",
+    "cat": "portfolio",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Eclipsio",
+        "desc": "Hero trang đích một khung nhìn tự chứa trong một file HTML duy nhất cho trình tạo trang thương hiệu cá nhân Eclipsio (\"Launch a Personal Brand That Outshines Every Résumé\") trên nền không gian đen tuyệt đối #000000 với nhật thực toàn phần rực sáng vành nhật hoa cam hổ phách: hệ tỷ lệ tham chiếu 1448×1086 (--u = min(100vw/1448, 100dvh/1086)), tấm ảnh nền 1448×1086 neo đáy khớp tuyệt đối với video lặp 1280×720 đệm gương hai bên (aspect-ratio 1930/1086), huy hiệu kính ấm 43.9u viền cam chiếu sáng từ góc dưới trái kèm chấm đào #f7c69b, tiêu đề hai dòng Inter 750 78.8u/81u, bộ đôi nút CTA 55.4u (#f28a2a → #ec7a1c) và dải kính mờ 892×56u chạy marquee vô tận 46 giây với 5 logo đối tác hư cấu dùng Poppins 600.",
+        "tags": [
+          "Thương hiệu cá nhân",
+          "Single-File HTML",
+          "Nhật thực & Marquee Kính mờ"
+        ]
+      },
+      "en": {
+        "name": "Eclipsio",
+        "desc": "A self-contained single-file, one-screen HTML landing hero for the personal-website builder Eclipsio (\"Launch a Personal Brand That Outshines Every Résumé\") set in pure black #000000 space above a blazing amber-orange total solar eclipse: authored on a 1448×1086 reference (--u = min(100vw/1448, 100dvh/1086)) with a bottom-anchored 1448×1086 eclipse plate aligned with a mirror-padded 1280×720 looping video (aspect-ratio 1930/1086), a 43.9u warm-glass badge with a #f7c69b peach dot and lower-left orange rim, a two-line 78.8u/81u Inter 750 headline, 55.4u dual CTA pills (#f28a2a → #ec7a1c), and an 892×56u frosted-glass 46s infinite marquee of five fictional partner logos in Poppins 600.",
+        "tags": [
+          "Personal Website Builder",
+          "Single-File HTML",
+          "Solar Eclipse & Glass Marquee"
+        ]
+      },
+      "zh": {
+        "name": "Eclipsio",
+        "desc": "Eclipsio 个人品牌建站工具（\"Launch a Personal Brand That Outshines Every Résumé\"）单文件自包含单屏 HTML 首屏模板，呈现纯黑 #000000 太空与底部升起的琥珀橙日全食日冕：采用 1448×1086 参考比例（--u = min(100vw/1448, 100dvh/1086)）、底部锚定的 1448×1086 日食底图与两侧镜像填充 1280×720 循环视频精确对齐（aspect-ratio 1930/1086）、带 #f7c69b 发光桃色圆点与左下橙色描边的 43.9u 暖色玻璃徽章、78.8u/81u 双行 Inter 750 主标题、55.4u 双胶囊按钮（#f28a2a → #ec7a1c）以及 892×56u 磨砂玻璃 46 秒无限滚动 Poppins 600 虚构合作伙伴标志条。",
+        "tags": [
+          "个人品牌建站",
+          "单文件 HTML",
+          "日全食视频与磨砂跑马灯"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Gói tải",
+          "4 files"
+        ],
+        [
+          "Phạm vi",
+          "Giao diện tĩnh một màn hình · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "4 files"
+        ],
+        [
+          "Scope",
+          "One-screen static interface · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / 原生 JS"
+        ],
+        [
+          "下载包",
+          "4 files"
+        ],
+        [
+          "范围",
+          "单屏静态界面 · 零构建步骤"
+        ]
+      ]
+    }
+  },
+  t83: {
+    "slug": "meadowbell",
+    "cat": "entertainment",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Meadowbell",
+        "desc": "Hero trang đích tự chứa trong một file HTML duy nhất cho loạt phim hoạt hình nông trại thiếu nhi \"Hollyoak's Plucky Sprout Squad\" của xưởng phim Meadowbell theo phong cách anime vẽ tay nắng chiều: khung hình 1440×1280 (tỷ lệ 9:8, --u = 100vw/1440), ảnh nền đồi cỏ 2160×1920 khớp chính xác với video lặp vuông 960×960 đệm gương (rộng 100%, cao 112.5%, top -6.25%), chữ tiêu đề tròn trịa Grandstander 900 trắng kết hợp Inter 400/500 và nút xanh lá #5b875c, chuỗi hoạt ảnh vào trang bằng Web Animations API, cùng dải 3 thẻ tập phim CHAPTERS mở hộp thoại xem trước tương tác.",
+        "tags": [
+          "Hoạt hình thiếu nhi",
+          "Single-File HTML",
+          "Video 9:8 & Web Animations"
+        ]
+      },
+      "en": {
+        "name": "Meadowbell",
+        "desc": "A self-contained single-file HTML landing hero for the animated kids' farming series \"Hollyoak's Plucky Sprout Squad\" from Meadowbell Studio with a hand-painted sunny anime hillside aesthetic: a 1440×1280 (9:8) frame (--u = 100vw/1440), a 2160×1920 hillside plate aligned pixel-for-pixel with a mirror-padded 960×960 looping video (100% width, 112.5% height, top -6.25%), white Grandstander 900 display type paired with Inter 400/500 and #5b875c button green, a one-shot Web Animations entrance timeline, and a three-card CHAPTERS row with interactive preview modals.",
+        "tags": [
+          "Animated Kids' Series",
+          "Single-File HTML",
+          "9:8 Video & Web Animations"
+        ]
+      },
+      "zh": {
+        "name": "Meadowbell",
+        "desc": "Meadowbell 动画工作室儿童农场动画剧集《Hollyoak's Plucky Sprout Squad》单文件自包含 HTML 首屏模板，呈现阳光手绘吉卜力风山坡午后景致：采用 1440×1280（9:8，--u = 100vw/1440）比例画布、2160×1920 山坡底图与镜像填充 960×960 循环视频精确对齐（宽 100%、高 112.5%、top -6.25%）、纯白 Grandstander 900 标题字体搭配 Inter 400/500 与 #5b875c 绿字胶囊按钮、一次性 Web Animations 入场时间线，以及带交互预览弹窗的三卡片 CHAPTERS 剧集栏。",
+        "tags": [
+          "儿童农场动画",
+          "单文件 HTML",
+          "9:8 视频与 Web Animations"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Gói tải",
+          "4 files"
+        ],
+        [
+          "Phạm vi",
+          "Giao diện tĩnh · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "4 files"
+        ],
+        [
+          "Scope",
+          "Static interface · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / 原生 JS"
+        ],
+        [
+          "下载包",
+          "4 files"
+        ],
+        [
+          "范围",
+          "静态界面 · 无需构建步骤"
+        ]
+      ]
+    }
+  },
   t82: {
     "slug": "oceanpulse",
     "cat": "education",

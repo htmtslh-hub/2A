@@ -1,0 +1,3814 @@
+{
+  "date": "2026-10-21T01:10:34.296Z",
+  "url": "http://127.0.0.1:59539/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 804,
+            "right": 320
+          },
+          "plateRect": {
+            "x": -105,
+            "y": 0,
+            "w": 905,
+            "h": 804,
+            "right": 800
+          },
+          "videoRect": {
+            "x": -105,
+            "y": -50,
+            "w": 905,
+            "h": 905,
+            "right": 800
+          },
+          "videoRatioToHeroHeight": 1.1256,
+          "videoTopRatioToHeroHeight": -0.0622,
+          "logoRect": {
+            "x": 16,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 177
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 213,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 304
+          },
+          "kickerRect": {
+            "x": 102,
+            "y": 102,
+            "w": 116,
+            "h": 22,
+            "right": 218
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 132,
+            "w": 280,
+            "h": 121,
+            "right": 300
+          },
+          "headlineFontSize": 44,
+          "heroJoinRect": {
+            "x": 92,
+            "y": 382,
+            "w": 136,
+            "h": 50,
+            "right": 228
+          },
+          "heroPreviewRect": {
+            "x": 74,
+            "y": 444,
+            "w": 172,
+            "h": 50,
+            "right": 246
+          },
+          "chapTitleRect": {
+            "x": 16,
+            "y": 522,
+            "w": 105,
+            "h": 24,
+            "right": 121
+          },
+          "chapBrowseRect": {
+            "x": 144,
+            "y": 526,
+            "w": 160,
+            "h": 16,
+            "right": 304
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 250
+            },
+            {
+              "x": 264,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 513
+            },
+            {
+              "x": 527,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 777
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375
+          },
+          "plateRect": {
+            "x": -97,
+            "y": 0,
+            "w": 914,
+            "h": 812,
+            "right": 817
+          },
+          "videoRect": {
+            "x": -97,
+            "y": -51,
+            "w": 914,
+            "h": 914,
+            "right": 817
+          },
+          "videoRatioToHeroHeight": 1.1256,
+          "videoTopRatioToHeroHeight": -0.0628,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 264,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 355
+          },
+          "kickerRect": {
+            "x": 129,
+            "y": 150,
+            "w": 116,
+            "h": 22,
+            "right": 246
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 180,
+            "w": 335,
+            "h": 94,
+            "right": 355
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 28,
+            "y": 402,
+            "w": 136,
+            "h": 50,
+            "right": 164
+          },
+          "heroPreviewRect": {
+            "x": 176,
+            "y": 402,
+            "w": 172,
+            "h": 50,
+            "right": 348
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 528,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 195,
+            "y": 532,
+            "w": 160,
+            "h": 16,
+            "right": 355
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768
+          },
+          "plateRect": {
+            "x": -69,
+            "y": 0,
+            "w": 1152,
+            "h": 1024,
+            "right": 1083
+          },
+          "videoRect": {
+            "x": -69,
+            "y": -64,
+            "w": 1152,
+            "h": 1152,
+            "right": 1083
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 657,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 748
+          },
+          "kickerRect": {
+            "x": 326,
+            "y": 256,
+            "w": 116,
+            "h": 22,
+            "right": 442
+          },
+          "headlineRect": {
+            "x": 217,
+            "y": 286,
+            "w": 335,
+            "h": 94,
+            "right": 551
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 224,
+            "y": 508,
+            "w": 136,
+            "h": 50,
+            "right": 360
+          },
+          "heroPreviewRect": {
+            "x": 372,
+            "y": 508,
+            "w": 172,
+            "h": 50,
+            "right": 544
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 740,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 588,
+            "y": 744,
+            "w": 160,
+            "h": 16,
+            "right": 748
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820
+          },
+          "plateRect": {
+            "x": -91,
+            "y": 0,
+            "w": 1328,
+            "h": 1180,
+            "right": 1236
+          },
+          "videoRect": {
+            "x": -91,
+            "y": -74,
+            "w": 1328,
+            "h": 1328,
+            "right": 1236
+          },
+          "videoRatioToHeroHeight": 1.1254,
+          "videoTopRatioToHeroHeight": -0.0627,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 709,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 800
+          },
+          "kickerRect": {
+            "x": 352,
+            "y": 334,
+            "w": 116,
+            "h": 22,
+            "right": 468
+          },
+          "headlineRect": {
+            "x": 243,
+            "y": 364,
+            "w": 335,
+            "h": 94,
+            "right": 577
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 250,
+            "y": 586,
+            "w": 136,
+            "h": 50,
+            "right": 386
+          },
+          "heroPreviewRect": {
+            "x": 398,
+            "y": 586,
+            "w": 172,
+            "h": 50,
+            "right": 570
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 896,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 640,
+            "y": 900,
+            "w": 160,
+            "h": 16,
+            "right": 800
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 910,
+            "right": 1024
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 910,
+            "right": 1024
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -57,
+            "w": 1024,
+            "h": 1024,
+            "right": 1024
+          },
+          "videoRatioToHeroHeight": 1.1253,
+          "videoTopRatioToHeroHeight": -0.0626,
+          "logoRect": {
+            "x": 22,
+            "y": 16,
+            "w": 140,
+            "h": 21,
+            "right": 162
+          },
+          "navPillRect": {
+            "x": 315,
+            "y": 9,
+            "w": 388,
+            "h": 36,
+            "right": 703
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 932,
+            "y": 10,
+            "w": 75,
+            "h": 32,
+            "right": 1007
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 144,
+            "w": 1024,
+            "h": 29,
+            "right": 1024
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 186,
+            "w": 1024,
+            "h": 168,
+            "right": 1024
+          },
+          "headlineFontSize": 102,
+          "heroJoinRect": {
+            "x": 391,
+            "y": 439,
+            "w": 102,
+            "h": 42,
+            "right": 494
+          },
+          "heroPreviewRect": {
+            "x": 503,
+            "y": 440,
+            "w": 131,
+            "h": 41,
+            "right": 634
+          },
+          "chapTitleRect": {
+            "x": 97,
+            "y": 616,
+            "w": 112,
+            "h": 26,
+            "right": 210
+          },
+          "chapBrowseRect": {
+            "x": 774,
+            "y": 619,
+            "w": 157,
+            "h": 16,
+            "right": 930
+          },
+          "cardRects": [
+            {
+              "x": 95,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 363
+            },
+            {
+              "x": 378,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 646
+            },
+            {
+              "x": 661,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 929
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -80,
+            "w": 1440,
+            "h": 1440,
+            "right": 1440
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 31,
+            "y": 23,
+            "w": 196,
+            "h": 30,
+            "right": 227
+          },
+          "navPillRect": {
+            "x": 443,
+            "y": 13,
+            "w": 546,
+            "h": 50,
+            "right": 989
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 1311,
+            "y": 14,
+            "w": 105,
+            "h": 45,
+            "right": 1416
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 203,
+            "w": 1440,
+            "h": 41,
+            "right": 1440
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 261,
+            "w": 1440,
+            "h": 236,
+            "right": 1440
+          },
+          "headlineFontSize": 144,
+          "heroJoinRect": {
+            "x": 550,
+            "y": 617,
+            "w": 144,
+            "h": 59,
+            "right": 694
+          },
+          "heroPreviewRect": {
+            "x": 707,
+            "y": 619,
+            "w": 184,
+            "h": 58,
+            "right": 891
+          },
+          "chapTitleRect": {
+            "x": 137,
+            "y": 866,
+            "w": 158,
+            "h": 36,
+            "right": 295
+          },
+          "chapBrowseRect": {
+            "x": 1088,
+            "y": 870,
+            "w": 220,
+            "h": 22,
+            "right": 1308
+          },
+          "cardRects": [
+            {
+              "x": 133,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 511
+            },
+            {
+              "x": 531,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 909
+            },
+            {
+              "x": 929,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 1307
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1440x1280": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -80,
+            "w": 1440,
+            "h": 1440,
+            "right": 1440
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 31,
+            "y": 23,
+            "w": 196,
+            "h": 30,
+            "right": 227
+          },
+          "navPillRect": {
+            "x": 443,
+            "y": 13,
+            "w": 546,
+            "h": 50,
+            "right": 989
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 1311,
+            "y": 14,
+            "w": 105,
+            "h": 45,
+            "right": 1416
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 203,
+            "w": 1440,
+            "h": 41,
+            "right": 1440
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 261,
+            "w": 1440,
+            "h": 236,
+            "right": 1440
+          },
+          "headlineFontSize": 144,
+          "heroJoinRect": {
+            "x": 550,
+            "y": 617,
+            "w": 144,
+            "h": 59,
+            "right": 694
+          },
+          "heroPreviewRect": {
+            "x": 707,
+            "y": 619,
+            "w": 184,
+            "h": 58,
+            "right": 891
+          },
+          "chapTitleRect": {
+            "x": 137,
+            "y": 866,
+            "w": 158,
+            "h": 36,
+            "right": 295
+          },
+          "chapBrowseRect": {
+            "x": 1088,
+            "y": 870,
+            "w": 220,
+            "h": 22,
+            "right": 1308
+          },
+          "cardRects": [
+            {
+              "x": 133,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 511
+            },
+            {
+              "x": 531,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 909
+            },
+            {
+              "x": 929,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 1307
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 717,
+            "right": 740
+          },
+          "plateRect": {
+            "x": -12,
+            "y": 0,
+            "w": 806,
+            "h": 717,
+            "right": 794
+          },
+          "videoRect": {
+            "x": -12,
+            "y": -45,
+            "w": 806,
+            "h": 806,
+            "right": 794
+          },
+          "videoRatioToHeroHeight": 1.1241,
+          "videoTopRatioToHeroHeight": -0.0628,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 629,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 720
+          },
+          "kickerRect": {
+            "x": 312,
+            "y": 102,
+            "w": 116,
+            "h": 22,
+            "right": 428
+          },
+          "headlineRect": {
+            "x": 203,
+            "y": 132,
+            "w": 335,
+            "h": 94,
+            "right": 537
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 210,
+            "y": 355,
+            "w": 136,
+            "h": 50,
+            "right": 346
+          },
+          "heroPreviewRect": {
+            "x": 358,
+            "y": 355,
+            "w": 172,
+            "h": 50,
+            "right": 530
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 433,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 560,
+            "y": 437,
+            "w": 160,
+            "h": 16,
+            "right": 720
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "previewModalOpen": {
+          "isOpen": true,
+          "title": "The Heirloom Tomato Stakeout"
+        },
+        "switchedChapter": "Kite-String Weather at Clover Hill",
+        "previewModalClosed": true,
+        "joinStatus": "Welcome to the Sprout Squad! Field notes are on the way.",
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 804,
+            "right": 320
+          },
+          "plateRect": {
+            "x": -105,
+            "y": 0,
+            "w": 905,
+            "h": 804,
+            "right": 800
+          },
+          "videoRect": {
+            "x": -105,
+            "y": -50,
+            "w": 905,
+            "h": 905,
+            "right": 800
+          },
+          "videoRatioToHeroHeight": 1.1256,
+          "videoTopRatioToHeroHeight": -0.0622,
+          "logoRect": {
+            "x": 16,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 177
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 213,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 304
+          },
+          "kickerRect": {
+            "x": 102,
+            "y": 102,
+            "w": 116,
+            "h": 22,
+            "right": 218
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 132,
+            "w": 280,
+            "h": 121,
+            "right": 300
+          },
+          "headlineFontSize": 44,
+          "heroJoinRect": {
+            "x": 92,
+            "y": 382,
+            "w": 136,
+            "h": 50,
+            "right": 228
+          },
+          "heroPreviewRect": {
+            "x": 74,
+            "y": 444,
+            "w": 172,
+            "h": 50,
+            "right": 246
+          },
+          "chapTitleRect": {
+            "x": 16,
+            "y": 522,
+            "w": 105,
+            "h": 24,
+            "right": 121
+          },
+          "chapBrowseRect": {
+            "x": 144,
+            "y": 526,
+            "w": 160,
+            "h": 16,
+            "right": 304
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 250
+            },
+            {
+              "x": 264,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 513
+            },
+            {
+              "x": 527,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 777
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375
+          },
+          "plateRect": {
+            "x": -97,
+            "y": 0,
+            "w": 914,
+            "h": 812,
+            "right": 817
+          },
+          "videoRect": {
+            "x": -97,
+            "y": -51,
+            "w": 914,
+            "h": 914,
+            "right": 817
+          },
+          "videoRatioToHeroHeight": 1.1256,
+          "videoTopRatioToHeroHeight": -0.0628,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 264,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 355
+          },
+          "kickerRect": {
+            "x": 129,
+            "y": 150,
+            "w": 116,
+            "h": 22,
+            "right": 246
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 180,
+            "w": 335,
+            "h": 94,
+            "right": 355
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 28,
+            "y": 402,
+            "w": 136,
+            "h": 50,
+            "right": 164
+          },
+          "heroPreviewRect": {
+            "x": 176,
+            "y": 402,
+            "w": 172,
+            "h": 50,
+            "right": 348
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 528,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 195,
+            "y": 532,
+            "w": 160,
+            "h": 16,
+            "right": 355
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768
+          },
+          "plateRect": {
+            "x": -69,
+            "y": 0,
+            "w": 1152,
+            "h": 1024,
+            "right": 1083
+          },
+          "videoRect": {
+            "x": -69,
+            "y": -64,
+            "w": 1152,
+            "h": 1152,
+            "right": 1083
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 657,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 748
+          },
+          "kickerRect": {
+            "x": 326,
+            "y": 256,
+            "w": 116,
+            "h": 22,
+            "right": 442
+          },
+          "headlineRect": {
+            "x": 217,
+            "y": 286,
+            "w": 335,
+            "h": 94,
+            "right": 551
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 224,
+            "y": 508,
+            "w": 136,
+            "h": 50,
+            "right": 360
+          },
+          "heroPreviewRect": {
+            "x": 372,
+            "y": 508,
+            "w": 172,
+            "h": 50,
+            "right": 544
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 740,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 588,
+            "y": 744,
+            "w": 160,
+            "h": 16,
+            "right": 748
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820
+          },
+          "plateRect": {
+            "x": -91,
+            "y": 0,
+            "w": 1328,
+            "h": 1180,
+            "right": 1236
+          },
+          "videoRect": {
+            "x": -91,
+            "y": -74,
+            "w": 1328,
+            "h": 1328,
+            "right": 1236
+          },
+          "videoRatioToHeroHeight": 1.1254,
+          "videoTopRatioToHeroHeight": -0.0627,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 709,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 800
+          },
+          "kickerRect": {
+            "x": 352,
+            "y": 334,
+            "w": 116,
+            "h": 22,
+            "right": 468
+          },
+          "headlineRect": {
+            "x": 243,
+            "y": 364,
+            "w": 335,
+            "h": 94,
+            "right": 577
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 250,
+            "y": 586,
+            "w": 136,
+            "h": 50,
+            "right": 386
+          },
+          "heroPreviewRect": {
+            "x": 398,
+            "y": 586,
+            "w": 172,
+            "h": 50,
+            "right": 570
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 896,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 640,
+            "y": 900,
+            "w": 160,
+            "h": 16,
+            "right": 800
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 910,
+            "right": 1024
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 910,
+            "right": 1024
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -57,
+            "w": 1024,
+            "h": 1024,
+            "right": 1024
+          },
+          "videoRatioToHeroHeight": 1.1253,
+          "videoTopRatioToHeroHeight": -0.0626,
+          "logoRect": {
+            "x": 22,
+            "y": 16,
+            "w": 139,
+            "h": 21,
+            "right": 162
+          },
+          "navPillRect": {
+            "x": 315,
+            "y": 9,
+            "w": 388,
+            "h": 36,
+            "right": 703
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 932,
+            "y": 10,
+            "w": 75,
+            "h": 32,
+            "right": 1007
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 144,
+            "w": 1024,
+            "h": 29,
+            "right": 1024
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 186,
+            "w": 1024,
+            "h": 168,
+            "right": 1024
+          },
+          "headlineFontSize": 102,
+          "heroJoinRect": {
+            "x": 391,
+            "y": 439,
+            "w": 102,
+            "h": 42,
+            "right": 494
+          },
+          "heroPreviewRect": {
+            "x": 503,
+            "y": 440,
+            "w": 131,
+            "h": 41,
+            "right": 634
+          },
+          "chapTitleRect": {
+            "x": 97,
+            "y": 616,
+            "w": 112,
+            "h": 26,
+            "right": 210
+          },
+          "chapBrowseRect": {
+            "x": 774,
+            "y": 619,
+            "w": 157,
+            "h": 16,
+            "right": 930
+          },
+          "cardRects": [
+            {
+              "x": 95,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 363
+            },
+            {
+              "x": 378,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 646
+            },
+            {
+              "x": 661,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 929
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -80,
+            "w": 1440,
+            "h": 1440,
+            "right": 1440
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 31,
+            "y": 23,
+            "w": 196,
+            "h": 30,
+            "right": 227
+          },
+          "navPillRect": {
+            "x": 443,
+            "y": 13,
+            "w": 546,
+            "h": 50,
+            "right": 989
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 1311,
+            "y": 14,
+            "w": 105,
+            "h": 45,
+            "right": 1416
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 203,
+            "w": 1440,
+            "h": 41,
+            "right": 1440
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 261,
+            "w": 1440,
+            "h": 236,
+            "right": 1440
+          },
+          "headlineFontSize": 144,
+          "heroJoinRect": {
+            "x": 550,
+            "y": 617,
+            "w": 144,
+            "h": 59,
+            "right": 694
+          },
+          "heroPreviewRect": {
+            "x": 707,
+            "y": 619,
+            "w": 184,
+            "h": 58,
+            "right": 891
+          },
+          "chapTitleRect": {
+            "x": 137,
+            "y": 866,
+            "w": 158,
+            "h": 36,
+            "right": 295
+          },
+          "chapBrowseRect": {
+            "x": 1088,
+            "y": 870,
+            "w": 220,
+            "h": 22,
+            "right": 1308
+          },
+          "cardRects": [
+            {
+              "x": 133,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 511
+            },
+            {
+              "x": 531,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 909
+            },
+            {
+              "x": 929,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 1307
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1440x1280": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -80,
+            "w": 1440,
+            "h": 1440,
+            "right": 1440
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 31,
+            "y": 23,
+            "w": 196,
+            "h": 30,
+            "right": 227
+          },
+          "navPillRect": {
+            "x": 443,
+            "y": 13,
+            "w": 546,
+            "h": 50,
+            "right": 989
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 1311,
+            "y": 14,
+            "w": 105,
+            "h": 45,
+            "right": 1416
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 203,
+            "w": 1440,
+            "h": 41,
+            "right": 1440
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 261,
+            "w": 1440,
+            "h": 236,
+            "right": 1440
+          },
+          "headlineFontSize": 144,
+          "heroJoinRect": {
+            "x": 550,
+            "y": 617,
+            "w": 144,
+            "h": 59,
+            "right": 694
+          },
+          "heroPreviewRect": {
+            "x": 707,
+            "y": 619,
+            "w": 184,
+            "h": 58,
+            "right": 891
+          },
+          "chapTitleRect": {
+            "x": 137,
+            "y": 866,
+            "w": 158,
+            "h": 36,
+            "right": 295
+          },
+          "chapBrowseRect": {
+            "x": 1088,
+            "y": 870,
+            "w": 220,
+            "h": 22,
+            "right": 1308
+          },
+          "cardRects": [
+            {
+              "x": 133,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 511
+            },
+            {
+              "x": 531,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 909
+            },
+            {
+              "x": 929,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 1307
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 717,
+            "right": 740
+          },
+          "plateRect": {
+            "x": -12,
+            "y": 0,
+            "w": 806,
+            "h": 717,
+            "right": 794
+          },
+          "videoRect": {
+            "x": -12,
+            "y": -45,
+            "w": 806,
+            "h": 806,
+            "right": 794
+          },
+          "videoRatioToHeroHeight": 1.1241,
+          "videoTopRatioToHeroHeight": -0.0628,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 629,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 720
+          },
+          "kickerRect": {
+            "x": 312,
+            "y": 102,
+            "w": 116,
+            "h": 22,
+            "right": 428
+          },
+          "headlineRect": {
+            "x": 203,
+            "y": 132,
+            "w": 335,
+            "h": 94,
+            "right": 537
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 210,
+            "y": 355,
+            "w": 136,
+            "h": 50,
+            "right": 346
+          },
+          "heroPreviewRect": {
+            "x": 358,
+            "y": 355,
+            "w": 172,
+            "h": 50,
+            "right": 530
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 433,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 560,
+            "y": 437,
+            "w": 160,
+            "h": 16,
+            "right": 720
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "previewModalOpen": {
+          "isOpen": true,
+          "title": "The Heirloom Tomato Stakeout"
+        },
+        "switchedChapter": "Kite-String Weather at Clover Hill",
+        "previewModalClosed": true,
+        "joinStatus": "Welcome to the Sprout Squad! Field notes are on the way.",
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 804,
+            "right": 320
+          },
+          "plateRect": {
+            "x": -105,
+            "y": 0,
+            "w": 905,
+            "h": 804,
+            "right": 800
+          },
+          "videoRect": {
+            "x": -105,
+            "y": -50,
+            "w": 905,
+            "h": 905,
+            "right": 800
+          },
+          "videoRatioToHeroHeight": 1.1256,
+          "videoTopRatioToHeroHeight": -0.0622,
+          "logoRect": {
+            "x": 16,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 177
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 213,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 304
+          },
+          "kickerRect": {
+            "x": 102,
+            "y": 102,
+            "w": 116,
+            "h": 22,
+            "right": 218
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 132,
+            "w": 280,
+            "h": 121,
+            "right": 300
+          },
+          "headlineFontSize": 44,
+          "heroJoinRect": {
+            "x": 92,
+            "y": 382,
+            "w": 136,
+            "h": 50,
+            "right": 228
+          },
+          "heroPreviewRect": {
+            "x": 74,
+            "y": 444,
+            "w": 172,
+            "h": 50,
+            "right": 246
+          },
+          "chapTitleRect": {
+            "x": 16,
+            "y": 522,
+            "w": 105,
+            "h": 24,
+            "right": 121
+          },
+          "chapBrowseRect": {
+            "x": 144,
+            "y": 526,
+            "w": 160,
+            "h": 16,
+            "right": 304
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 250
+            },
+            {
+              "x": 264,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 513
+            },
+            {
+              "x": 527,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 777
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375
+          },
+          "plateRect": {
+            "x": -97,
+            "y": 0,
+            "w": 914,
+            "h": 812,
+            "right": 817
+          },
+          "videoRect": {
+            "x": -97,
+            "y": -51,
+            "w": 914,
+            "h": 914,
+            "right": 817
+          },
+          "videoRatioToHeroHeight": 1.1256,
+          "videoTopRatioToHeroHeight": -0.0628,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 264,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 355
+          },
+          "kickerRect": {
+            "x": 129,
+            "y": 150,
+            "w": 116,
+            "h": 22,
+            "right": 246
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 180,
+            "w": 335,
+            "h": 94,
+            "right": 355
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 28,
+            "y": 402,
+            "w": 136,
+            "h": 50,
+            "right": 164
+          },
+          "heroPreviewRect": {
+            "x": 176,
+            "y": 402,
+            "w": 172,
+            "h": 50,
+            "right": 348
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 528,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 195,
+            "y": 532,
+            "w": 160,
+            "h": 16,
+            "right": 355
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768
+          },
+          "plateRect": {
+            "x": -69,
+            "y": 0,
+            "w": 1152,
+            "h": 1024,
+            "right": 1083
+          },
+          "videoRect": {
+            "x": -69,
+            "y": -64,
+            "w": 1152,
+            "h": 1152,
+            "right": 1083
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 657,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 748
+          },
+          "kickerRect": {
+            "x": 326,
+            "y": 256,
+            "w": 116,
+            "h": 22,
+            "right": 442
+          },
+          "headlineRect": {
+            "x": 217,
+            "y": 286,
+            "w": 335,
+            "h": 94,
+            "right": 551
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 224,
+            "y": 508,
+            "w": 136,
+            "h": 50,
+            "right": 360
+          },
+          "heroPreviewRect": {
+            "x": 372,
+            "y": 508,
+            "w": 172,
+            "h": 50,
+            "right": 544
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 740,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 588,
+            "y": 744,
+            "w": 160,
+            "h": 16,
+            "right": 748
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820
+          },
+          "plateRect": {
+            "x": -91,
+            "y": 0,
+            "w": 1328,
+            "h": 1180,
+            "right": 1236
+          },
+          "videoRect": {
+            "x": -91,
+            "y": -74,
+            "w": 1328,
+            "h": 1328,
+            "right": 1236
+          },
+          "videoRatioToHeroHeight": 1.1254,
+          "videoTopRatioToHeroHeight": -0.0627,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 709,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 800
+          },
+          "kickerRect": {
+            "x": 352,
+            "y": 334,
+            "w": 116,
+            "h": 22,
+            "right": 468
+          },
+          "headlineRect": {
+            "x": 243,
+            "y": 364,
+            "w": 335,
+            "h": 94,
+            "right": 577
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 250,
+            "y": 586,
+            "w": 136,
+            "h": 50,
+            "right": 386
+          },
+          "heroPreviewRect": {
+            "x": 398,
+            "y": 586,
+            "w": 172,
+            "h": 50,
+            "right": 570
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 896,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 640,
+            "y": 900,
+            "w": 160,
+            "h": 16,
+            "right": 800
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 910,
+            "right": 1024
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 910,
+            "right": 1024
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -57,
+            "w": 1024,
+            "h": 1024,
+            "right": 1024
+          },
+          "videoRatioToHeroHeight": 1.1253,
+          "videoTopRatioToHeroHeight": -0.0626,
+          "logoRect": {
+            "x": 22,
+            "y": 16,
+            "w": 140,
+            "h": 21,
+            "right": 162
+          },
+          "navPillRect": {
+            "x": 315,
+            "y": 9,
+            "w": 388,
+            "h": 36,
+            "right": 703
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 932,
+            "y": 10,
+            "w": 75,
+            "h": 32,
+            "right": 1007
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 144,
+            "w": 1024,
+            "h": 29,
+            "right": 1024
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 186,
+            "w": 1024,
+            "h": 168,
+            "right": 1024
+          },
+          "headlineFontSize": 102,
+          "heroJoinRect": {
+            "x": 391,
+            "y": 439,
+            "w": 102,
+            "h": 42,
+            "right": 494
+          },
+          "heroPreviewRect": {
+            "x": 503,
+            "y": 440,
+            "w": 131,
+            "h": 41,
+            "right": 634
+          },
+          "chapTitleRect": {
+            "x": 97,
+            "y": 616,
+            "w": 112,
+            "h": 26,
+            "right": 210
+          },
+          "chapBrowseRect": {
+            "x": 774,
+            "y": 619,
+            "w": 157,
+            "h": 16,
+            "right": 930
+          },
+          "cardRects": [
+            {
+              "x": 95,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 363
+            },
+            {
+              "x": 378,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 646
+            },
+            {
+              "x": 661,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 929
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -80,
+            "w": 1440,
+            "h": 1440,
+            "right": 1440
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 31,
+            "y": 23,
+            "w": 196,
+            "h": 30,
+            "right": 227
+          },
+          "navPillRect": {
+            "x": 443,
+            "y": 13,
+            "w": 546,
+            "h": 50,
+            "right": 989
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 1311,
+            "y": 14,
+            "w": 105,
+            "h": 45,
+            "right": 1416
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 203,
+            "w": 1440,
+            "h": 41,
+            "right": 1440
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 261,
+            "w": 1440,
+            "h": 236,
+            "right": 1440
+          },
+          "headlineFontSize": 144,
+          "heroJoinRect": {
+            "x": 550,
+            "y": 617,
+            "w": 144,
+            "h": 59,
+            "right": 694
+          },
+          "heroPreviewRect": {
+            "x": 707,
+            "y": 619,
+            "w": 184,
+            "h": 58,
+            "right": 891
+          },
+          "chapTitleRect": {
+            "x": 137,
+            "y": 866,
+            "w": 158,
+            "h": 36,
+            "right": 295
+          },
+          "chapBrowseRect": {
+            "x": 1088,
+            "y": 870,
+            "w": 220,
+            "h": 22,
+            "right": 1308
+          },
+          "cardRects": [
+            {
+              "x": 133,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 511
+            },
+            {
+              "x": 531,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 909
+            },
+            {
+              "x": 929,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 1307
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1440x1280": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -80,
+            "w": 1440,
+            "h": 1440,
+            "right": 1440
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 31,
+            "y": 23,
+            "w": 196,
+            "h": 30,
+            "right": 227
+          },
+          "navPillRect": {
+            "x": 443,
+            "y": 13,
+            "w": 546,
+            "h": 50,
+            "right": 989
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 1311,
+            "y": 14,
+            "w": 105,
+            "h": 45,
+            "right": 1416
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 203,
+            "w": 1440,
+            "h": 41,
+            "right": 1440
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 261,
+            "w": 1440,
+            "h": 236,
+            "right": 1440
+          },
+          "headlineFontSize": 144,
+          "heroJoinRect": {
+            "x": 550,
+            "y": 617,
+            "w": 144,
+            "h": 59,
+            "right": 694
+          },
+          "heroPreviewRect": {
+            "x": 707,
+            "y": 619,
+            "w": 184,
+            "h": 58,
+            "right": 891
+          },
+          "chapTitleRect": {
+            "x": 137,
+            "y": 866,
+            "w": 158,
+            "h": 36,
+            "right": 295
+          },
+          "chapBrowseRect": {
+            "x": 1088,
+            "y": 870,
+            "w": 220,
+            "h": 22,
+            "right": 1308
+          },
+          "cardRects": [
+            {
+              "x": 133,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 511
+            },
+            {
+              "x": 531,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 909
+            },
+            {
+              "x": 929,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 1307
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 717,
+            "right": 740
+          },
+          "plateRect": {
+            "x": -12,
+            "y": 0,
+            "w": 806,
+            "h": 717,
+            "right": 794
+          },
+          "videoRect": {
+            "x": -12,
+            "y": -45,
+            "w": 806,
+            "h": 806,
+            "right": 794
+          },
+          "videoRatioToHeroHeight": 1.1241,
+          "videoTopRatioToHeroHeight": -0.0628,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 629,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 720
+          },
+          "kickerRect": {
+            "x": 312,
+            "y": 102,
+            "w": 116,
+            "h": 22,
+            "right": 428
+          },
+          "headlineRect": {
+            "x": 203,
+            "y": 132,
+            "w": 335,
+            "h": 94,
+            "right": 537
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 210,
+            "y": 355,
+            "w": 136,
+            "h": 50,
+            "right": 346
+          },
+          "heroPreviewRect": {
+            "x": 358,
+            "y": 355,
+            "w": 172,
+            "h": 50,
+            "right": 530
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 433,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 560,
+            "y": 437,
+            "w": 160,
+            "h": 16,
+            "right": 720
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "previewModalOpen": {
+          "isOpen": true,
+          "title": "The Heirloom Tomato Stakeout"
+        },
+        "switchedChapter": "Kite-String Weather at Clover Hill",
+        "previewModalClosed": true,
+        "joinStatus": "Welcome to the Sprout Squad! Field notes are on the way.",
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 804,
+            "right": 320
+          },
+          "plateRect": {
+            "x": -105,
+            "y": 0,
+            "w": 905,
+            "h": 804,
+            "right": 800
+          },
+          "videoRect": {
+            "x": -105,
+            "y": -50,
+            "w": 905,
+            "h": 905,
+            "right": 800
+          },
+          "videoRatioToHeroHeight": 1.1256,
+          "videoTopRatioToHeroHeight": -0.0622,
+          "logoRect": {
+            "x": 16,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 177
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 213,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 304
+          },
+          "kickerRect": {
+            "x": 102,
+            "y": 102,
+            "w": 116,
+            "h": 22,
+            "right": 218
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 132,
+            "w": 280,
+            "h": 121,
+            "right": 300
+          },
+          "headlineFontSize": 44,
+          "heroJoinRect": {
+            "x": 92,
+            "y": 382,
+            "w": 136,
+            "h": 50,
+            "right": 228
+          },
+          "heroPreviewRect": {
+            "x": 74,
+            "y": 444,
+            "w": 172,
+            "h": 50,
+            "right": 246
+          },
+          "chapTitleRect": {
+            "x": 16,
+            "y": 522,
+            "w": 105,
+            "h": 24,
+            "right": 121
+          },
+          "chapBrowseRect": {
+            "x": 144,
+            "y": 526,
+            "w": 160,
+            "h": 16,
+            "right": 304
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 250
+            },
+            {
+              "x": 264,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 513
+            },
+            {
+              "x": 527,
+              "y": 560,
+              "w": 250,
+              "h": 206,
+              "right": 777
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375
+          },
+          "plateRect": {
+            "x": -97,
+            "y": 0,
+            "w": 914,
+            "h": 812,
+            "right": 817
+          },
+          "videoRect": {
+            "x": -97,
+            "y": -51,
+            "w": 914,
+            "h": 914,
+            "right": 817
+          },
+          "videoRatioToHeroHeight": 1.1256,
+          "videoTopRatioToHeroHeight": -0.0628,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 264,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 355
+          },
+          "kickerRect": {
+            "x": 129,
+            "y": 150,
+            "w": 116,
+            "h": 22,
+            "right": 246
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 180,
+            "w": 335,
+            "h": 94,
+            "right": 355
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 28,
+            "y": 402,
+            "w": 136,
+            "h": 50,
+            "right": 164
+          },
+          "heroPreviewRect": {
+            "x": 176,
+            "y": 402,
+            "w": 172,
+            "h": 50,
+            "right": 348
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 528,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 195,
+            "y": 532,
+            "w": 160,
+            "h": 16,
+            "right": 355
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 568,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768
+          },
+          "plateRect": {
+            "x": -69,
+            "y": 0,
+            "w": 1152,
+            "h": 1024,
+            "right": 1083
+          },
+          "videoRect": {
+            "x": -69,
+            "y": -64,
+            "w": 1152,
+            "h": 1152,
+            "right": 1083
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 657,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 748
+          },
+          "kickerRect": {
+            "x": 326,
+            "y": 256,
+            "w": 116,
+            "h": 22,
+            "right": 442
+          },
+          "headlineRect": {
+            "x": 217,
+            "y": 286,
+            "w": 335,
+            "h": 94,
+            "right": 551
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 224,
+            "y": 508,
+            "w": 136,
+            "h": 50,
+            "right": 360
+          },
+          "heroPreviewRect": {
+            "x": 372,
+            "y": 508,
+            "w": 172,
+            "h": 50,
+            "right": 544
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 740,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 588,
+            "y": 744,
+            "w": 160,
+            "h": 16,
+            "right": 748
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 780,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820
+          },
+          "plateRect": {
+            "x": -91,
+            "y": 0,
+            "w": 1328,
+            "h": 1180,
+            "right": 1236
+          },
+          "videoRect": {
+            "x": -91,
+            "y": -74,
+            "w": 1328,
+            "h": 1328,
+            "right": 1236
+          },
+          "videoRatioToHeroHeight": 1.1254,
+          "videoTopRatioToHeroHeight": -0.0627,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 709,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 800
+          },
+          "kickerRect": {
+            "x": 352,
+            "y": 334,
+            "w": 116,
+            "h": 22,
+            "right": 468
+          },
+          "headlineRect": {
+            "x": 243,
+            "y": 364,
+            "w": 335,
+            "h": 94,
+            "right": 577
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 250,
+            "y": 586,
+            "w": 136,
+            "h": 50,
+            "right": 386
+          },
+          "heroPreviewRect": {
+            "x": 398,
+            "y": 586,
+            "w": 172,
+            "h": 50,
+            "right": 570
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 896,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 640,
+            "y": 900,
+            "w": 160,
+            "h": 16,
+            "right": 800
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 936,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 910,
+            "right": 1024
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 910,
+            "right": 1024
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -57,
+            "w": 1024,
+            "h": 1024,
+            "right": 1024
+          },
+          "videoRatioToHeroHeight": 1.1253,
+          "videoTopRatioToHeroHeight": -0.0626,
+          "logoRect": {
+            "x": 22,
+            "y": 16,
+            "w": 140,
+            "h": 21,
+            "right": 162
+          },
+          "navPillRect": {
+            "x": 315,
+            "y": 9,
+            "w": 388,
+            "h": 36,
+            "right": 703
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 932,
+            "y": 10,
+            "w": 75,
+            "h": 32,
+            "right": 1007
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 144,
+            "w": 1024,
+            "h": 29,
+            "right": 1024
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 186,
+            "w": 1024,
+            "h": 168,
+            "right": 1024
+          },
+          "headlineFontSize": 102,
+          "heroJoinRect": {
+            "x": 391,
+            "y": 439,
+            "w": 102,
+            "h": 42,
+            "right": 494
+          },
+          "heroPreviewRect": {
+            "x": 503,
+            "y": 440,
+            "w": 131,
+            "h": 41,
+            "right": 634
+          },
+          "chapTitleRect": {
+            "x": 97,
+            "y": 616,
+            "w": 112,
+            "h": 26,
+            "right": 210
+          },
+          "chapBrowseRect": {
+            "x": 774,
+            "y": 619,
+            "w": 157,
+            "h": 16,
+            "right": 930
+          },
+          "cardRects": [
+            {
+              "x": 95,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 363
+            },
+            {
+              "x": 378,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 646
+            },
+            {
+              "x": 661,
+              "y": 649,
+              "w": 269,
+              "h": 194,
+              "right": 929
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -80,
+            "w": 1440,
+            "h": 1440,
+            "right": 1440
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 31,
+            "y": 23,
+            "w": 196,
+            "h": 30,
+            "right": 227
+          },
+          "navPillRect": {
+            "x": 443,
+            "y": 13,
+            "w": 546,
+            "h": 50,
+            "right": 989
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 1311,
+            "y": 14,
+            "w": 105,
+            "h": 45,
+            "right": 1416
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 203,
+            "w": 1440,
+            "h": 41,
+            "right": 1440
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 261,
+            "w": 1440,
+            "h": 236,
+            "right": 1440
+          },
+          "headlineFontSize": 144,
+          "heroJoinRect": {
+            "x": 550,
+            "y": 617,
+            "w": 144,
+            "h": 59,
+            "right": 694
+          },
+          "heroPreviewRect": {
+            "x": 707,
+            "y": 619,
+            "w": 184,
+            "h": 58,
+            "right": 891
+          },
+          "chapTitleRect": {
+            "x": 137,
+            "y": 866,
+            "w": 158,
+            "h": 36,
+            "right": 295
+          },
+          "chapBrowseRect": {
+            "x": 1088,
+            "y": 870,
+            "w": 220,
+            "h": 22,
+            "right": 1308
+          },
+          "cardRects": [
+            {
+              "x": 133,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 511
+            },
+            {
+              "x": 531,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 909
+            },
+            {
+              "x": 929,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 1307
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "1440x1280": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 1280,
+            "right": 1440
+          },
+          "videoRect": {
+            "x": 0,
+            "y": -80,
+            "w": 1440,
+            "h": 1440,
+            "right": 1440
+          },
+          "videoRatioToHeroHeight": 1.125,
+          "videoTopRatioToHeroHeight": -0.0625,
+          "logoRect": {
+            "x": 31,
+            "y": 23,
+            "w": 196,
+            "h": 30,
+            "right": 227
+          },
+          "navPillRect": {
+            "x": 443,
+            "y": 13,
+            "w": 546,
+            "h": 50,
+            "right": 989
+          },
+          "navPillVisible": true,
+          "navJoinRect": {
+            "x": 1311,
+            "y": 14,
+            "w": 105,
+            "h": 45,
+            "right": 1416
+          },
+          "kickerRect": {
+            "x": 0,
+            "y": 203,
+            "w": 1440,
+            "h": 41,
+            "right": 1440
+          },
+          "headlineRect": {
+            "x": 0,
+            "y": 261,
+            "w": 1440,
+            "h": 236,
+            "right": 1440
+          },
+          "headlineFontSize": 144,
+          "heroJoinRect": {
+            "x": 550,
+            "y": 617,
+            "w": 144,
+            "h": 59,
+            "right": 694
+          },
+          "heroPreviewRect": {
+            "x": 707,
+            "y": 619,
+            "w": 184,
+            "h": 58,
+            "right": 891
+          },
+          "chapTitleRect": {
+            "x": 137,
+            "y": 866,
+            "w": 158,
+            "h": 36,
+            "right": 295
+          },
+          "chapBrowseRect": {
+            "x": 1088,
+            "y": 870,
+            "w": 220,
+            "h": 22,
+            "right": 1308
+          },
+          "cardRects": [
+            {
+              "x": 133,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 511
+            },
+            {
+              "x": 531,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 909
+            },
+            {
+              "x": 929,
+              "y": 913,
+              "w": 378,
+              "h": 273,
+              "right": 1307
+            }
+          ],
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "horizontalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 717,
+            "right": 740
+          },
+          "plateRect": {
+            "x": -12,
+            "y": 0,
+            "w": 806,
+            "h": 717,
+            "right": 794
+          },
+          "videoRect": {
+            "x": -12,
+            "y": -45,
+            "w": 806,
+            "h": 806,
+            "right": 794
+          },
+          "videoRatioToHeroHeight": 1.1241,
+          "videoTopRatioToHeroHeight": -0.0628,
+          "logoRect": {
+            "x": 20,
+            "y": 26,
+            "w": 161,
+            "h": 24,
+            "right": 181
+          },
+          "navPillRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0
+          },
+          "navPillVisible": false,
+          "navJoinRect": {
+            "x": 629,
+            "y": 18,
+            "w": 91,
+            "h": 40,
+            "right": 720
+          },
+          "kickerRect": {
+            "x": 312,
+            "y": 102,
+            "w": 116,
+            "h": 22,
+            "right": 428
+          },
+          "headlineRect": {
+            "x": 203,
+            "y": 132,
+            "w": 335,
+            "h": 94,
+            "right": 537
+          },
+          "headlineFontSize": 51,
+          "heroJoinRect": {
+            "x": 210,
+            "y": 355,
+            "w": 136,
+            "h": 50,
+            "right": 346
+          },
+          "heroPreviewRect": {
+            "x": 358,
+            "y": 355,
+            "w": 172,
+            "h": 50,
+            "right": 530
+          },
+          "chapTitleRect": {
+            "x": 20,
+            "y": 433,
+            "w": 105,
+            "h": 24,
+            "right": 125
+          },
+          "chapBrowseRect": {
+            "x": 560,
+            "y": 437,
+            "w": 160,
+            "h": 16,
+            "right": 720
+          },
+          "cardRects": [
+            {
+              "x": 0,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 286
+            },
+            {
+              "x": 300,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 586
+            },
+            {
+              "x": 600,
+              "y": 473,
+              "w": 286,
+              "h": 206,
+              "right": 886
+            }
+          ],
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "previewModalOpen": {
+          "isOpen": true,
+          "title": "The Heirloom Tomato Stakeout"
+        },
+        "switchedChapter": "Kite-String Weather at Clover Hill",
+        "previewModalClosed": true,
+        "joinStatus": "Welcome to the Sprout Squad! Field notes are on the way.",
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "t87",
+  "slug": "iris",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-21T02:26:26.331Z",
+  "demo": "/demos/iris/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "046000b00bb3",
+  "sha256": "046000b00bb3899b9dfd3e890460b99fd3e803e2c4d0b17cd33e1d87680f004e",
+  "demoHtmlSha256": "0f0f9ac680b087286a96d94baf7018d7e4475580fb673b9afb56c6942545f1ed",
+  "demoSha256": "b44c77b90cdaad8966a8194a752b07e5b80d31e8f055a7d05267fb2abb99c212",
+  "bytes": 337721,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.65,
+      "action": "iris-look-left-and-hover-cta"
+    },
+    {
+      "seconds": 13.27,
+      "action": "iris-look-right-and-down"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 20.666,
+      "action": "iris-center-gaze-and-hover-nav"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\iris-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\iris-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\iris-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\iris-return.jpg"
+  ]
+}

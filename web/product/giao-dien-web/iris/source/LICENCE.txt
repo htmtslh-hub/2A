@@ -1,0 +1,17 @@
+STANDARD COMMERCIAL & CLIENT WEBSITE LICENCE
+Product: Iris — Smart AI Assistant Hero (iris / t87)
+Version: 1.0.0
+
+1. GRANT OF LICENCE
+You are granted a non-exclusive, worldwide, perpetual licence to use, modify, and deploy this template for your own personal, commercial, or client websites.
+
+2. PERMITTED USES
+- Use in unlimited personal and commercial web projects.
+- Customise HTML, CSS, JavaScript, 3D shaders, and assets for client deliveries.
+- Host the modified or unmodified template on any static or dynamic web server.
+
+3. RESTRICTIONS
+- You may not resell, redistribute, or sub-license the template source archive as a standalone template, theme, or stock asset in any marketplace or template directory.
+
+4. DISCLAIMER
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.

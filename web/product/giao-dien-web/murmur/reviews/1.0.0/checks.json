@@ -1,0 +1,3702 @@
+{
+  "date": "2026-10-21T01:51:30.113Z",
+  "url": "http://127.0.0.1:56834/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "videoRect": {
+            "x": -498,
+            "y": 0,
+            "w": 1316,
+            "h": 740,
+            "right": 818,
+            "bottom": 740
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 37,
+            "y": 85,
+            "w": 246,
+            "h": 57,
+            "right": 283,
+            "bottom": 142
+          },
+          "subtitleRect": {
+            "x": 62,
+            "y": 148,
+            "w": 195,
+            "h": 19,
+            "right": 258,
+            "bottom": 167
+          },
+          "episodeLabelRect": {
+            "x": 55,
+            "y": 189,
+            "w": 209,
+            "h": 12,
+            "right": 265,
+            "bottom": 201
+          },
+          "playerCardRect": {
+            "x": 20,
+            "y": 213,
+            "w": 280,
+            "h": 178,
+            "right": 300,
+            "bottom": 391
+          },
+          "cardCoverRect": {
+            "x": 36,
+            "y": 232,
+            "w": 88,
+            "h": 88,
+            "right": 124,
+            "bottom": 320
+          },
+          "cardTitleRect": {
+            "x": 138,
+            "y": 229,
+            "w": 146,
+            "h": 64,
+            "right": 284,
+            "bottom": 293
+          },
+          "cardDateRect": {
+            "x": 138,
+            "y": 301,
+            "w": 146,
+            "h": 22,
+            "right": 284,
+            "bottom": 323
+          },
+          "waveformRect": {
+            "x": 36,
+            "y": 340,
+            "w": 196,
+            "h": 32,
+            "right": 232,
+            "bottom": 372
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 246,
+            "y": 337,
+            "w": 38,
+            "h": 38,
+            "right": 284,
+            "bottom": 375
+          },
+          "aboutTitleRect": {
+            "x": 20,
+            "y": 415,
+            "w": 280,
+            "h": 13,
+            "right": 300,
+            "bottom": 428
+          },
+          "platformLabelRect": {
+            "x": 20,
+            "y": 612,
+            "w": 273,
+            "h": 11,
+            "right": 293,
+            "bottom": 623
+          },
+          "platformIconsRect": {
+            "x": 20,
+            "y": 635,
+            "w": 126,
+            "h": 24,
+            "right": 146,
+            "bottom": 659
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "videoRect": {
+            "x": -534,
+            "y": 0,
+            "w": 1444,
+            "h": 812,
+            "right": 909,
+            "bottom": 812
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 64,
+            "y": 134,
+            "w": 246,
+            "h": 57,
+            "right": 311,
+            "bottom": 191
+          },
+          "subtitleRect": {
+            "x": 90,
+            "y": 197,
+            "w": 195,
+            "h": 19,
+            "right": 285,
+            "bottom": 216
+          },
+          "episodeLabelRect": {
+            "x": 83,
+            "y": 238,
+            "w": 209,
+            "h": 12,
+            "right": 292,
+            "bottom": 250
+          },
+          "playerCardRect": {
+            "x": 20,
+            "y": 262,
+            "w": 335,
+            "h": 172,
+            "right": 355,
+            "bottom": 434
+          },
+          "cardCoverRect": {
+            "x": 36,
+            "y": 278,
+            "w": 88,
+            "h": 88,
+            "right": 124,
+            "bottom": 366
+          },
+          "cardTitleRect": {
+            "x": 138,
+            "y": 291,
+            "w": 201,
+            "h": 43,
+            "right": 339,
+            "bottom": 334
+          },
+          "cardDateRect": {
+            "x": 138,
+            "y": 342,
+            "w": 201,
+            "h": 11,
+            "right": 339,
+            "bottom": 353
+          },
+          "waveformRect": {
+            "x": 36,
+            "y": 383,
+            "w": 251,
+            "h": 32,
+            "right": 287,
+            "bottom": 415
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 301,
+            "y": 380,
+            "w": 38,
+            "h": 38,
+            "right": 339,
+            "bottom": 418
+          },
+          "aboutTitleRect": {
+            "x": 20,
+            "y": 458,
+            "w": 335,
+            "h": 13,
+            "right": 355,
+            "bottom": 470
+          },
+          "platformLabelRect": {
+            "x": 20,
+            "y": 635,
+            "w": 273,
+            "h": 11,
+            "right": 293,
+            "bottom": 646
+          },
+          "platformIconsRect": {
+            "x": 20,
+            "y": 658,
+            "w": 126,
+            "h": 24,
+            "right": 146,
+            "bottom": 682
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "videoRect": {
+            "x": -526,
+            "y": 0,
+            "w": 1820,
+            "h": 1024,
+            "right": 1294,
+            "bottom": 1024
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 174,
+            "y": 249,
+            "w": 419,
+            "h": 95,
+            "right": 594,
+            "bottom": 344
+          },
+          "subtitleRect": {
+            "x": 250,
+            "y": 350,
+            "w": 267,
+            "h": 26,
+            "right": 518,
+            "bottom": 376
+          },
+          "episodeLabelRect": {
+            "x": 279,
+            "y": 398,
+            "w": 209,
+            "h": 12,
+            "right": 489,
+            "bottom": 409
+          },
+          "playerCardRect": {
+            "x": 144,
+            "y": 421,
+            "w": 480,
+            "h": 172,
+            "right": 624,
+            "bottom": 593
+          },
+          "cardCoverRect": {
+            "x": 160,
+            "y": 437,
+            "w": 88,
+            "h": 88,
+            "right": 248,
+            "bottom": 525
+          },
+          "cardTitleRect": {
+            "x": 262,
+            "y": 450,
+            "w": 346,
+            "h": 43,
+            "right": 608,
+            "bottom": 493
+          },
+          "cardDateRect": {
+            "x": 262,
+            "y": 501,
+            "w": 346,
+            "h": 11,
+            "right": 608,
+            "bottom": 512
+          },
+          "waveformRect": {
+            "x": 160,
+            "y": 542,
+            "w": 396,
+            "h": 32,
+            "right": 556,
+            "bottom": 574
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 570,
+            "y": 539,
+            "w": 38,
+            "h": 38,
+            "right": 608,
+            "bottom": 577
+          },
+          "aboutTitleRect": {
+            "x": 144,
+            "y": 617,
+            "w": 480,
+            "h": 13,
+            "right": 624,
+            "bottom": 630
+          },
+          "platformLabelRect": {
+            "x": 144,
+            "y": 762,
+            "w": 273,
+            "h": 11,
+            "right": 417,
+            "bottom": 773
+          },
+          "platformIconsRect": {
+            "x": 429,
+            "y": 755,
+            "w": 126,
+            "h": 24,
+            "right": 555,
+            "bottom": 779
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "videoRect": {
+            "x": -639,
+            "y": 0,
+            "w": 2098,
+            "h": 1180,
+            "right": 1459,
+            "bottom": 1180
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 200,
+            "y": 327,
+            "w": 419,
+            "h": 95,
+            "right": 620,
+            "bottom": 422
+          },
+          "subtitleRect": {
+            "x": 276,
+            "y": 428,
+            "w": 267,
+            "h": 26,
+            "right": 544,
+            "bottom": 454
+          },
+          "episodeLabelRect": {
+            "x": 305,
+            "y": 476,
+            "w": 209,
+            "h": 12,
+            "right": 515,
+            "bottom": 487
+          },
+          "playerCardRect": {
+            "x": 170,
+            "y": 499,
+            "w": 480,
+            "h": 172,
+            "right": 650,
+            "bottom": 671
+          },
+          "cardCoverRect": {
+            "x": 186,
+            "y": 515,
+            "w": 88,
+            "h": 88,
+            "right": 274,
+            "bottom": 603
+          },
+          "cardTitleRect": {
+            "x": 288,
+            "y": 528,
+            "w": 346,
+            "h": 43,
+            "right": 634,
+            "bottom": 571
+          },
+          "cardDateRect": {
+            "x": 288,
+            "y": 579,
+            "w": 346,
+            "h": 11,
+            "right": 634,
+            "bottom": 590
+          },
+          "waveformRect": {
+            "x": 186,
+            "y": 620,
+            "w": 396,
+            "h": 32,
+            "right": 582,
+            "bottom": 652
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 596,
+            "y": 617,
+            "w": 38,
+            "h": 38,
+            "right": 634,
+            "bottom": 655
+          },
+          "aboutTitleRect": {
+            "x": 170,
+            "y": 695,
+            "w": 480,
+            "h": 13,
+            "right": 650,
+            "bottom": 708
+          },
+          "platformLabelRect": {
+            "x": 170,
+            "y": 840,
+            "w": 273,
+            "h": 11,
+            "right": 443,
+            "bottom": 851
+          },
+          "platformIconsRect": {
+            "x": 455,
+            "y": 833,
+            "w": 126,
+            "h": 24,
+            "right": 581,
+            "bottom": 857
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": -102,
+            "y": 0,
+            "w": 1229,
+            "h": 768,
+            "right": 1126,
+            "bottom": 768
+          },
+          "plateRect": {
+            "x": -102,
+            "y": 0,
+            "w": 1229,
+            "h": 768,
+            "right": 1126,
+            "bottom": 768
+          },
+          "videoRect": {
+            "x": -171,
+            "y": 0,
+            "w": 1365,
+            "h": 768,
+            "right": 1195,
+            "bottom": 768
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": -102,
+            "y": 113,
+            "w": 1229,
+            "h": 63,
+            "right": 1126,
+            "bottom": 177
+          },
+          "subtitleRect": {
+            "x": -102,
+            "y": 192,
+            "w": 1229,
+            "h": 28,
+            "right": 1126,
+            "bottom": 220
+          },
+          "episodeLabelRect": {
+            "x": 423,
+            "y": 272,
+            "w": 196,
+            "h": 11,
+            "right": 618,
+            "bottom": 283
+          },
+          "playerCardRect": {
+            "x": 250,
+            "y": 299,
+            "w": 532,
+            "h": 162,
+            "right": 782,
+            "bottom": 461
+          },
+          "cardCoverRect": {
+            "x": 265,
+            "y": 312,
+            "w": 135,
+            "h": 133,
+            "right": 400,
+            "bottom": 445
+          },
+          "cardTitleRect": {
+            "x": 422,
+            "y": 327,
+            "w": 258,
+            "h": 44,
+            "right": 680,
+            "bottom": 370
+          },
+          "cardDateRect": {
+            "x": 422,
+            "y": 384,
+            "w": 166,
+            "h": 10,
+            "right": 589,
+            "bottom": 393
+          },
+          "waveformRect": {
+            "x": 423,
+            "y": 416,
+            "w": 286,
+            "h": 29,
+            "right": 709,
+            "bottom": 445
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 733,
+            "y": 415,
+            "w": 32,
+            "h": 32,
+            "right": 765,
+            "bottom": 447
+          },
+          "aboutTitleRect": {
+            "x": 251,
+            "y": 508,
+            "w": 529,
+            "h": 11,
+            "right": 780,
+            "bottom": 519
+          },
+          "platformLabelRect": {
+            "x": 251,
+            "y": 649,
+            "w": 241,
+            "h": 10,
+            "right": 492,
+            "bottom": 658
+          },
+          "platformIconsRect": {
+            "x": 503,
+            "y": 644,
+            "w": 103,
+            "h": 18,
+            "right": 607,
+            "bottom": 663
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "videoRect": {
+            "x": -80,
+            "y": 0,
+            "w": 1600,
+            "h": 900,
+            "right": 1520,
+            "bottom": 900
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 0,
+            "y": 133,
+            "w": 1440,
+            "h": 74,
+            "right": 1440,
+            "bottom": 207
+          },
+          "subtitleRect": {
+            "x": 0,
+            "y": 225,
+            "w": 1440,
+            "h": 33,
+            "right": 1440,
+            "bottom": 258
+          },
+          "episodeLabelRect": {
+            "x": 615,
+            "y": 319,
+            "w": 229,
+            "h": 13,
+            "right": 845,
+            "bottom": 332
+          },
+          "playerCardRect": {
+            "x": 413,
+            "y": 350,
+            "w": 624,
+            "h": 190,
+            "right": 1036,
+            "bottom": 540
+          },
+          "cardCoverRect": {
+            "x": 431,
+            "y": 366,
+            "w": 158,
+            "h": 156,
+            "right": 589,
+            "bottom": 522
+          },
+          "cardTitleRect": {
+            "x": 615,
+            "y": 383,
+            "w": 303,
+            "h": 51,
+            "right": 918,
+            "bottom": 434
+          },
+          "cardDateRect": {
+            "x": 615,
+            "y": 450,
+            "w": 195,
+            "h": 11,
+            "right": 810,
+            "bottom": 461
+          },
+          "waveformRect": {
+            "x": 616,
+            "y": 488,
+            "w": 335,
+            "h": 34,
+            "right": 951,
+            "bottom": 522
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 979,
+            "y": 487,
+            "w": 37,
+            "h": 37,
+            "right": 1016,
+            "bottom": 524
+          },
+          "aboutTitleRect": {
+            "x": 414,
+            "y": 595,
+            "w": 620,
+            "h": 13,
+            "right": 1034,
+            "bottom": 608
+          },
+          "platformLabelRect": {
+            "x": 414,
+            "y": 760,
+            "w": 283,
+            "h": 11,
+            "right": 697,
+            "bottom": 771
+          },
+          "platformIconsRect": {
+            "x": 710,
+            "y": 755,
+            "w": 121,
+            "h": 22,
+            "right": 831,
+            "bottom": 777
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 599,
+            "right": 740,
+            "bottom": 599
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 360,
+            "right": 740,
+            "bottom": 360
+          },
+          "videoRect": {
+            "x": -41,
+            "y": 0,
+            "w": 822,
+            "h": 360,
+            "right": 781,
+            "bottom": 360
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 160,
+            "y": 36,
+            "w": 419,
+            "h": 95,
+            "right": 580,
+            "bottom": 131
+          },
+          "subtitleRect": {
+            "x": 236,
+            "y": 137,
+            "w": 267,
+            "h": 26,
+            "right": 504,
+            "bottom": 163
+          },
+          "episodeLabelRect": {
+            "x": 265,
+            "y": 185,
+            "w": 209,
+            "h": 12,
+            "right": 475,
+            "bottom": 197
+          },
+          "playerCardRect": {
+            "x": 130,
+            "y": 209,
+            "w": 480,
+            "h": 172,
+            "right": 610,
+            "bottom": 381
+          },
+          "cardCoverRect": {
+            "x": 146,
+            "y": 225,
+            "w": 88,
+            "h": 88,
+            "right": 234,
+            "bottom": 313
+          },
+          "cardTitleRect": {
+            "x": 248,
+            "y": 238,
+            "w": 346,
+            "h": 43,
+            "right": 594,
+            "bottom": 280
+          },
+          "cardDateRect": {
+            "x": 248,
+            "y": 288,
+            "w": 346,
+            "h": 11,
+            "right": 594,
+            "bottom": 299
+          },
+          "waveformRect": {
+            "x": 146,
+            "y": 330,
+            "w": 396,
+            "h": 32,
+            "right": 542,
+            "bottom": 362
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 556,
+            "y": 327,
+            "w": 38,
+            "h": 38,
+            "right": 594,
+            "bottom": 365
+          },
+          "aboutTitleRect": {
+            "x": 130,
+            "y": 405,
+            "w": 480,
+            "h": 13,
+            "right": 610,
+            "bottom": 417
+          },
+          "platformLabelRect": {
+            "x": 130,
+            "y": 549,
+            "w": 273,
+            "h": 11,
+            "right": 403,
+            "bottom": 560
+          },
+          "platformIconsRect": {
+            "x": 415,
+            "y": 543,
+            "w": 126,
+            "h": 24,
+            "right": 541,
+            "bottom": 567
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "playPressed": "true",
+        "playUnpressed": "false",
+        "modalOpen": true,
+        "switchedEpisode": "The Quiet Physics of Rain-Streaked Glass",
+        "modalClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "videoRect": {
+            "x": -498,
+            "y": 0,
+            "w": 1316,
+            "h": 740,
+            "right": 818,
+            "bottom": 740
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 37,
+            "y": 85,
+            "w": 246,
+            "h": 57,
+            "right": 283,
+            "bottom": 142
+          },
+          "subtitleRect": {
+            "x": 62,
+            "y": 148,
+            "w": 195,
+            "h": 19,
+            "right": 258,
+            "bottom": 167
+          },
+          "episodeLabelRect": {
+            "x": 55,
+            "y": 189,
+            "w": 210,
+            "h": 12,
+            "right": 265,
+            "bottom": 201
+          },
+          "playerCardRect": {
+            "x": 20,
+            "y": 213,
+            "w": 280,
+            "h": 178,
+            "right": 300,
+            "bottom": 391
+          },
+          "cardCoverRect": {
+            "x": 36,
+            "y": 232,
+            "w": 88,
+            "h": 88,
+            "right": 124,
+            "bottom": 320
+          },
+          "cardTitleRect": {
+            "x": 138,
+            "y": 229,
+            "w": 146,
+            "h": 64,
+            "right": 284,
+            "bottom": 293
+          },
+          "cardDateRect": {
+            "x": 138,
+            "y": 301,
+            "w": 146,
+            "h": 22,
+            "right": 284,
+            "bottom": 323
+          },
+          "waveformRect": {
+            "x": 36,
+            "y": 340,
+            "w": 196,
+            "h": 32,
+            "right": 232,
+            "bottom": 372
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 246,
+            "y": 337,
+            "w": 38,
+            "h": 38,
+            "right": 284,
+            "bottom": 375
+          },
+          "aboutTitleRect": {
+            "x": 20,
+            "y": 415,
+            "w": 280,
+            "h": 13,
+            "right": 300,
+            "bottom": 428
+          },
+          "platformLabelRect": {
+            "x": 20,
+            "y": 612,
+            "w": 273,
+            "h": 11,
+            "right": 293,
+            "bottom": 623
+          },
+          "platformIconsRect": {
+            "x": 20,
+            "y": 635,
+            "w": 126,
+            "h": 24,
+            "right": 146,
+            "bottom": 659
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "videoRect": {
+            "x": -534,
+            "y": 0,
+            "w": 1444,
+            "h": 812,
+            "right": 909,
+            "bottom": 812
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 64,
+            "y": 134,
+            "w": 246,
+            "h": 57,
+            "right": 311,
+            "bottom": 191
+          },
+          "subtitleRect": {
+            "x": 90,
+            "y": 197,
+            "w": 195,
+            "h": 19,
+            "right": 285,
+            "bottom": 216
+          },
+          "episodeLabelRect": {
+            "x": 83,
+            "y": 238,
+            "w": 210,
+            "h": 12,
+            "right": 292,
+            "bottom": 250
+          },
+          "playerCardRect": {
+            "x": 20,
+            "y": 262,
+            "w": 335,
+            "h": 172,
+            "right": 355,
+            "bottom": 434
+          },
+          "cardCoverRect": {
+            "x": 36,
+            "y": 278,
+            "w": 88,
+            "h": 88,
+            "right": 124,
+            "bottom": 366
+          },
+          "cardTitleRect": {
+            "x": 138,
+            "y": 291,
+            "w": 201,
+            "h": 43,
+            "right": 339,
+            "bottom": 334
+          },
+          "cardDateRect": {
+            "x": 138,
+            "y": 342,
+            "w": 201,
+            "h": 11,
+            "right": 339,
+            "bottom": 353
+          },
+          "waveformRect": {
+            "x": 36,
+            "y": 383,
+            "w": 251,
+            "h": 32,
+            "right": 287,
+            "bottom": 415
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 301,
+            "y": 380,
+            "w": 38,
+            "h": 38,
+            "right": 339,
+            "bottom": 418
+          },
+          "aboutTitleRect": {
+            "x": 20,
+            "y": 458,
+            "w": 335,
+            "h": 13,
+            "right": 355,
+            "bottom": 470
+          },
+          "platformLabelRect": {
+            "x": 20,
+            "y": 635,
+            "w": 273,
+            "h": 11,
+            "right": 293,
+            "bottom": 646
+          },
+          "platformIconsRect": {
+            "x": 20,
+            "y": 658,
+            "w": 126,
+            "h": 24,
+            "right": 146,
+            "bottom": 682
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "videoRect": {
+            "x": -526,
+            "y": 0,
+            "w": 1820,
+            "h": 1024,
+            "right": 1294,
+            "bottom": 1024
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 174,
+            "y": 249,
+            "w": 419,
+            "h": 95,
+            "right": 594,
+            "bottom": 344
+          },
+          "subtitleRect": {
+            "x": 251,
+            "y": 350,
+            "w": 267,
+            "h": 26,
+            "right": 517,
+            "bottom": 376
+          },
+          "episodeLabelRect": {
+            "x": 279,
+            "y": 398,
+            "w": 210,
+            "h": 12,
+            "right": 489,
+            "bottom": 409
+          },
+          "playerCardRect": {
+            "x": 144,
+            "y": 421,
+            "w": 480,
+            "h": 172,
+            "right": 624,
+            "bottom": 593
+          },
+          "cardCoverRect": {
+            "x": 160,
+            "y": 437,
+            "w": 88,
+            "h": 88,
+            "right": 248,
+            "bottom": 525
+          },
+          "cardTitleRect": {
+            "x": 262,
+            "y": 450,
+            "w": 346,
+            "h": 43,
+            "right": 608,
+            "bottom": 493
+          },
+          "cardDateRect": {
+            "x": 262,
+            "y": 501,
+            "w": 346,
+            "h": 11,
+            "right": 608,
+            "bottom": 512
+          },
+          "waveformRect": {
+            "x": 160,
+            "y": 542,
+            "w": 396,
+            "h": 32,
+            "right": 556,
+            "bottom": 574
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 570,
+            "y": 539,
+            "w": 38,
+            "h": 38,
+            "right": 608,
+            "bottom": 577
+          },
+          "aboutTitleRect": {
+            "x": 144,
+            "y": 617,
+            "w": 480,
+            "h": 13,
+            "right": 624,
+            "bottom": 630
+          },
+          "platformLabelRect": {
+            "x": 144,
+            "y": 762,
+            "w": 273,
+            "h": 11,
+            "right": 417,
+            "bottom": 773
+          },
+          "platformIconsRect": {
+            "x": 429,
+            "y": 755,
+            "w": 126,
+            "h": 24,
+            "right": 555,
+            "bottom": 779
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "videoRect": {
+            "x": -639,
+            "y": 0,
+            "w": 2098,
+            "h": 1180,
+            "right": 1459,
+            "bottom": 1180
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 200,
+            "y": 327,
+            "w": 419,
+            "h": 95,
+            "right": 620,
+            "bottom": 422
+          },
+          "subtitleRect": {
+            "x": 277,
+            "y": 428,
+            "w": 267,
+            "h": 26,
+            "right": 543,
+            "bottom": 454
+          },
+          "episodeLabelRect": {
+            "x": 305,
+            "y": 476,
+            "w": 210,
+            "h": 12,
+            "right": 515,
+            "bottom": 487
+          },
+          "playerCardRect": {
+            "x": 170,
+            "y": 499,
+            "w": 480,
+            "h": 172,
+            "right": 650,
+            "bottom": 671
+          },
+          "cardCoverRect": {
+            "x": 186,
+            "y": 515,
+            "w": 88,
+            "h": 88,
+            "right": 274,
+            "bottom": 603
+          },
+          "cardTitleRect": {
+            "x": 288,
+            "y": 528,
+            "w": 346,
+            "h": 43,
+            "right": 634,
+            "bottom": 571
+          },
+          "cardDateRect": {
+            "x": 288,
+            "y": 579,
+            "w": 346,
+            "h": 11,
+            "right": 634,
+            "bottom": 590
+          },
+          "waveformRect": {
+            "x": 186,
+            "y": 620,
+            "w": 396,
+            "h": 32,
+            "right": 582,
+            "bottom": 652
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 596,
+            "y": 617,
+            "w": 38,
+            "h": 38,
+            "right": 634,
+            "bottom": 655
+          },
+          "aboutTitleRect": {
+            "x": 170,
+            "y": 695,
+            "w": 480,
+            "h": 13,
+            "right": 650,
+            "bottom": 708
+          },
+          "platformLabelRect": {
+            "x": 170,
+            "y": 840,
+            "w": 273,
+            "h": 11,
+            "right": 443,
+            "bottom": 851
+          },
+          "platformIconsRect": {
+            "x": 455,
+            "y": 833,
+            "w": 126,
+            "h": 24,
+            "right": 581,
+            "bottom": 857
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": -100,
+            "y": 2,
+            "w": 1224,
+            "h": 765,
+            "right": 1124,
+            "bottom": 767
+          },
+          "plateRect": {
+            "x": -100,
+            "y": 2,
+            "w": 1224,
+            "h": 765,
+            "right": 1124,
+            "bottom": 767
+          },
+          "videoRect": {
+            "x": -168,
+            "y": 2,
+            "w": 1360,
+            "h": 765,
+            "right": 1192,
+            "bottom": 767
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": -100,
+            "y": 115,
+            "w": 1224,
+            "h": 63,
+            "right": 1124,
+            "bottom": 177
+          },
+          "subtitleRect": {
+            "x": -100,
+            "y": 193,
+            "w": 1224,
+            "h": 28,
+            "right": 1124,
+            "bottom": 221
+          },
+          "episodeLabelRect": {
+            "x": 423,
+            "y": 273,
+            "w": 195,
+            "h": 11,
+            "right": 618,
+            "bottom": 283
+          },
+          "playerCardRect": {
+            "x": 251,
+            "y": 299,
+            "w": 530,
+            "h": 162,
+            "right": 781,
+            "bottom": 461
+          },
+          "cardCoverRect": {
+            "x": 266,
+            "y": 313,
+            "w": 134,
+            "h": 133,
+            "right": 401,
+            "bottom": 445
+          },
+          "cardTitleRect": {
+            "x": 423,
+            "y": 327,
+            "w": 257,
+            "h": 43,
+            "right": 680,
+            "bottom": 370
+          },
+          "cardDateRect": {
+            "x": 423,
+            "y": 384,
+            "w": 166,
+            "h": 10,
+            "right": 589,
+            "bottom": 393
+          },
+          "waveformRect": {
+            "x": 423,
+            "y": 416,
+            "w": 285,
+            "h": 29,
+            "right": 708,
+            "bottom": 445
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 732,
+            "y": 415,
+            "w": 31,
+            "h": 31,
+            "right": 764,
+            "bottom": 446
+          },
+          "aboutTitleRect": {
+            "x": 252,
+            "y": 507,
+            "w": 527,
+            "h": 11,
+            "right": 779,
+            "bottom": 518
+          },
+          "platformLabelRect": {
+            "x": 252,
+            "y": 648,
+            "w": 241,
+            "h": 10,
+            "right": 493,
+            "bottom": 657
+          },
+          "platformIconsRect": {
+            "x": 504,
+            "y": 643,
+            "w": 103,
+            "h": 18,
+            "right": 606,
+            "bottom": 662
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "videoRect": {
+            "x": -80,
+            "y": 0,
+            "w": 1600,
+            "h": 900,
+            "right": 1520,
+            "bottom": 900
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 0,
+            "y": 133,
+            "w": 1440,
+            "h": 74,
+            "right": 1440,
+            "bottom": 207
+          },
+          "subtitleRect": {
+            "x": 0,
+            "y": 225,
+            "w": 1440,
+            "h": 33,
+            "right": 1440,
+            "bottom": 258
+          },
+          "episodeLabelRect": {
+            "x": 615,
+            "y": 319,
+            "w": 230,
+            "h": 13,
+            "right": 845,
+            "bottom": 332
+          },
+          "playerCardRect": {
+            "x": 413,
+            "y": 350,
+            "w": 624,
+            "h": 190,
+            "right": 1036,
+            "bottom": 540
+          },
+          "cardCoverRect": {
+            "x": 431,
+            "y": 366,
+            "w": 158,
+            "h": 156,
+            "right": 589,
+            "bottom": 522
+          },
+          "cardTitleRect": {
+            "x": 615,
+            "y": 383,
+            "w": 303,
+            "h": 51,
+            "right": 918,
+            "bottom": 434
+          },
+          "cardDateRect": {
+            "x": 615,
+            "y": 450,
+            "w": 195,
+            "h": 11,
+            "right": 810,
+            "bottom": 461
+          },
+          "waveformRect": {
+            "x": 616,
+            "y": 488,
+            "w": 335,
+            "h": 34,
+            "right": 951,
+            "bottom": 522
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 979,
+            "y": 487,
+            "w": 37,
+            "h": 37,
+            "right": 1016,
+            "bottom": 524
+          },
+          "aboutTitleRect": {
+            "x": 414,
+            "y": 595,
+            "w": 620,
+            "h": 13,
+            "right": 1034,
+            "bottom": 608
+          },
+          "platformLabelRect": {
+            "x": 414,
+            "y": 760,
+            "w": 283,
+            "h": 11,
+            "right": 697,
+            "bottom": 771
+          },
+          "platformIconsRect": {
+            "x": 710,
+            "y": 755,
+            "w": 121,
+            "h": 22,
+            "right": 831,
+            "bottom": 777
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 599,
+            "right": 740,
+            "bottom": 599
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 360,
+            "right": 740,
+            "bottom": 360
+          },
+          "videoRect": {
+            "x": -41,
+            "y": 0,
+            "w": 822,
+            "h": 360,
+            "right": 781,
+            "bottom": 360
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 160,
+            "y": 36,
+            "w": 419,
+            "h": 95,
+            "right": 580,
+            "bottom": 131
+          },
+          "subtitleRect": {
+            "x": 237,
+            "y": 137,
+            "w": 267,
+            "h": 26,
+            "right": 503,
+            "bottom": 163
+          },
+          "episodeLabelRect": {
+            "x": 265,
+            "y": 185,
+            "w": 210,
+            "h": 12,
+            "right": 475,
+            "bottom": 197
+          },
+          "playerCardRect": {
+            "x": 130,
+            "y": 209,
+            "w": 480,
+            "h": 172,
+            "right": 610,
+            "bottom": 381
+          },
+          "cardCoverRect": {
+            "x": 146,
+            "y": 225,
+            "w": 88,
+            "h": 88,
+            "right": 234,
+            "bottom": 313
+          },
+          "cardTitleRect": {
+            "x": 248,
+            "y": 238,
+            "w": 346,
+            "h": 43,
+            "right": 594,
+            "bottom": 280
+          },
+          "cardDateRect": {
+            "x": 248,
+            "y": 288,
+            "w": 346,
+            "h": 11,
+            "right": 594,
+            "bottom": 299
+          },
+          "waveformRect": {
+            "x": 146,
+            "y": 330,
+            "w": 396,
+            "h": 32,
+            "right": 542,
+            "bottom": 362
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 556,
+            "y": 327,
+            "w": 38,
+            "h": 38,
+            "right": 594,
+            "bottom": 365
+          },
+          "aboutTitleRect": {
+            "x": 130,
+            "y": 405,
+            "w": 480,
+            "h": 13,
+            "right": 610,
+            "bottom": 417
+          },
+          "platformLabelRect": {
+            "x": 130,
+            "y": 549,
+            "w": 273,
+            "h": 11,
+            "right": 403,
+            "bottom": 560
+          },
+          "platformIconsRect": {
+            "x": 415,
+            "y": 543,
+            "w": 126,
+            "h": 24,
+            "right": 541,
+            "bottom": 567
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "playPressed": "true",
+        "playUnpressed": "false",
+        "modalOpen": true,
+        "switchedEpisode": "The Quiet Physics of Rain-Streaked Glass",
+        "modalClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "videoRect": {
+            "x": -498,
+            "y": 0,
+            "w": 1316,
+            "h": 740,
+            "right": 818,
+            "bottom": 740
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 37,
+            "y": 85,
+            "w": 246,
+            "h": 57,
+            "right": 283,
+            "bottom": 142
+          },
+          "subtitleRect": {
+            "x": 62,
+            "y": 148,
+            "w": 195,
+            "h": 19,
+            "right": 258,
+            "bottom": 167
+          },
+          "episodeLabelRect": {
+            "x": 55,
+            "y": 189,
+            "w": 209,
+            "h": 12,
+            "right": 265,
+            "bottom": 201
+          },
+          "playerCardRect": {
+            "x": 20,
+            "y": 213,
+            "w": 280,
+            "h": 178,
+            "right": 300,
+            "bottom": 391
+          },
+          "cardCoverRect": {
+            "x": 36,
+            "y": 232,
+            "w": 88,
+            "h": 88,
+            "right": 124,
+            "bottom": 320
+          },
+          "cardTitleRect": {
+            "x": 138,
+            "y": 229,
+            "w": 146,
+            "h": 64,
+            "right": 284,
+            "bottom": 293
+          },
+          "cardDateRect": {
+            "x": 138,
+            "y": 301,
+            "w": 146,
+            "h": 22,
+            "right": 284,
+            "bottom": 323
+          },
+          "waveformRect": {
+            "x": 36,
+            "y": 340,
+            "w": 196,
+            "h": 32,
+            "right": 232,
+            "bottom": 372
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 246,
+            "y": 337,
+            "w": 38,
+            "h": 38,
+            "right": 284,
+            "bottom": 375
+          },
+          "aboutTitleRect": {
+            "x": 20,
+            "y": 415,
+            "w": 280,
+            "h": 13,
+            "right": 300,
+            "bottom": 428
+          },
+          "platformLabelRect": {
+            "x": 20,
+            "y": 612,
+            "w": 273,
+            "h": 11,
+            "right": 293,
+            "bottom": 623
+          },
+          "platformIconsRect": {
+            "x": 20,
+            "y": 635,
+            "w": 126,
+            "h": 24,
+            "right": 146,
+            "bottom": 659
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "videoRect": {
+            "x": -534,
+            "y": 0,
+            "w": 1444,
+            "h": 812,
+            "right": 909,
+            "bottom": 812
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 64,
+            "y": 134,
+            "w": 246,
+            "h": 57,
+            "right": 311,
+            "bottom": 191
+          },
+          "subtitleRect": {
+            "x": 90,
+            "y": 197,
+            "w": 195,
+            "h": 19,
+            "right": 285,
+            "bottom": 216
+          },
+          "episodeLabelRect": {
+            "x": 83,
+            "y": 238,
+            "w": 209,
+            "h": 12,
+            "right": 292,
+            "bottom": 250
+          },
+          "playerCardRect": {
+            "x": 20,
+            "y": 262,
+            "w": 335,
+            "h": 172,
+            "right": 355,
+            "bottom": 434
+          },
+          "cardCoverRect": {
+            "x": 36,
+            "y": 278,
+            "w": 88,
+            "h": 88,
+            "right": 124,
+            "bottom": 366
+          },
+          "cardTitleRect": {
+            "x": 138,
+            "y": 291,
+            "w": 201,
+            "h": 43,
+            "right": 339,
+            "bottom": 334
+          },
+          "cardDateRect": {
+            "x": 138,
+            "y": 342,
+            "w": 201,
+            "h": 11,
+            "right": 339,
+            "bottom": 353
+          },
+          "waveformRect": {
+            "x": 36,
+            "y": 383,
+            "w": 251,
+            "h": 32,
+            "right": 287,
+            "bottom": 415
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 301,
+            "y": 380,
+            "w": 38,
+            "h": 38,
+            "right": 339,
+            "bottom": 418
+          },
+          "aboutTitleRect": {
+            "x": 20,
+            "y": 458,
+            "w": 335,
+            "h": 13,
+            "right": 355,
+            "bottom": 470
+          },
+          "platformLabelRect": {
+            "x": 20,
+            "y": 635,
+            "w": 273,
+            "h": 11,
+            "right": 293,
+            "bottom": 646
+          },
+          "platformIconsRect": {
+            "x": 20,
+            "y": 658,
+            "w": 126,
+            "h": 24,
+            "right": 146,
+            "bottom": 682
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "videoRect": {
+            "x": -526,
+            "y": 0,
+            "w": 1820,
+            "h": 1024,
+            "right": 1294,
+            "bottom": 1024
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 174,
+            "y": 249,
+            "w": 419,
+            "h": 95,
+            "right": 594,
+            "bottom": 344
+          },
+          "subtitleRect": {
+            "x": 250,
+            "y": 350,
+            "w": 267,
+            "h": 26,
+            "right": 518,
+            "bottom": 376
+          },
+          "episodeLabelRect": {
+            "x": 279,
+            "y": 398,
+            "w": 209,
+            "h": 12,
+            "right": 489,
+            "bottom": 409
+          },
+          "playerCardRect": {
+            "x": 144,
+            "y": 421,
+            "w": 480,
+            "h": 172,
+            "right": 624,
+            "bottom": 593
+          },
+          "cardCoverRect": {
+            "x": 160,
+            "y": 437,
+            "w": 88,
+            "h": 88,
+            "right": 248,
+            "bottom": 525
+          },
+          "cardTitleRect": {
+            "x": 262,
+            "y": 450,
+            "w": 346,
+            "h": 43,
+            "right": 608,
+            "bottom": 493
+          },
+          "cardDateRect": {
+            "x": 262,
+            "y": 501,
+            "w": 346,
+            "h": 11,
+            "right": 608,
+            "bottom": 512
+          },
+          "waveformRect": {
+            "x": 160,
+            "y": 542,
+            "w": 396,
+            "h": 32,
+            "right": 556,
+            "bottom": 574
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 570,
+            "y": 539,
+            "w": 38,
+            "h": 38,
+            "right": 608,
+            "bottom": 577
+          },
+          "aboutTitleRect": {
+            "x": 144,
+            "y": 617,
+            "w": 480,
+            "h": 13,
+            "right": 624,
+            "bottom": 630
+          },
+          "platformLabelRect": {
+            "x": 144,
+            "y": 762,
+            "w": 273,
+            "h": 11,
+            "right": 417,
+            "bottom": 773
+          },
+          "platformIconsRect": {
+            "x": 429,
+            "y": 755,
+            "w": 126,
+            "h": 24,
+            "right": 555,
+            "bottom": 779
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "videoRect": {
+            "x": -639,
+            "y": 0,
+            "w": 2098,
+            "h": 1180,
+            "right": 1459,
+            "bottom": 1180
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 200,
+            "y": 327,
+            "w": 419,
+            "h": 95,
+            "right": 620,
+            "bottom": 422
+          },
+          "subtitleRect": {
+            "x": 276,
+            "y": 428,
+            "w": 267,
+            "h": 26,
+            "right": 544,
+            "bottom": 454
+          },
+          "episodeLabelRect": {
+            "x": 305,
+            "y": 476,
+            "w": 209,
+            "h": 12,
+            "right": 515,
+            "bottom": 487
+          },
+          "playerCardRect": {
+            "x": 170,
+            "y": 499,
+            "w": 480,
+            "h": 172,
+            "right": 650,
+            "bottom": 671
+          },
+          "cardCoverRect": {
+            "x": 186,
+            "y": 515,
+            "w": 88,
+            "h": 88,
+            "right": 274,
+            "bottom": 603
+          },
+          "cardTitleRect": {
+            "x": 288,
+            "y": 528,
+            "w": 346,
+            "h": 43,
+            "right": 634,
+            "bottom": 571
+          },
+          "cardDateRect": {
+            "x": 288,
+            "y": 579,
+            "w": 346,
+            "h": 11,
+            "right": 634,
+            "bottom": 590
+          },
+          "waveformRect": {
+            "x": 186,
+            "y": 620,
+            "w": 396,
+            "h": 32,
+            "right": 582,
+            "bottom": 652
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 596,
+            "y": 617,
+            "w": 38,
+            "h": 38,
+            "right": 634,
+            "bottom": 655
+          },
+          "aboutTitleRect": {
+            "x": 170,
+            "y": 695,
+            "w": 480,
+            "h": 13,
+            "right": 650,
+            "bottom": 708
+          },
+          "platformLabelRect": {
+            "x": 170,
+            "y": 840,
+            "w": 273,
+            "h": 11,
+            "right": 443,
+            "bottom": 851
+          },
+          "platformIconsRect": {
+            "x": 455,
+            "y": 833,
+            "w": 126,
+            "h": 24,
+            "right": 581,
+            "bottom": 857
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": -102,
+            "y": 0,
+            "w": 1229,
+            "h": 768,
+            "right": 1126,
+            "bottom": 768
+          },
+          "plateRect": {
+            "x": -102,
+            "y": 0,
+            "w": 1229,
+            "h": 768,
+            "right": 1126,
+            "bottom": 768
+          },
+          "videoRect": {
+            "x": -171,
+            "y": 0,
+            "w": 1365,
+            "h": 768,
+            "right": 1195,
+            "bottom": 768
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": -102,
+            "y": 113,
+            "w": 1229,
+            "h": 63,
+            "right": 1126,
+            "bottom": 177
+          },
+          "subtitleRect": {
+            "x": -102,
+            "y": 192,
+            "w": 1229,
+            "h": 28,
+            "right": 1126,
+            "bottom": 220
+          },
+          "episodeLabelRect": {
+            "x": 423,
+            "y": 272,
+            "w": 196,
+            "h": 11,
+            "right": 618,
+            "bottom": 283
+          },
+          "playerCardRect": {
+            "x": 250,
+            "y": 299,
+            "w": 532,
+            "h": 162,
+            "right": 782,
+            "bottom": 461
+          },
+          "cardCoverRect": {
+            "x": 265,
+            "y": 312,
+            "w": 135,
+            "h": 133,
+            "right": 400,
+            "bottom": 445
+          },
+          "cardTitleRect": {
+            "x": 422,
+            "y": 327,
+            "w": 258,
+            "h": 44,
+            "right": 680,
+            "bottom": 370
+          },
+          "cardDateRect": {
+            "x": 422,
+            "y": 384,
+            "w": 166,
+            "h": 10,
+            "right": 589,
+            "bottom": 393
+          },
+          "waveformRect": {
+            "x": 423,
+            "y": 416,
+            "w": 286,
+            "h": 29,
+            "right": 709,
+            "bottom": 445
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 733,
+            "y": 415,
+            "w": 32,
+            "h": 32,
+            "right": 765,
+            "bottom": 447
+          },
+          "aboutTitleRect": {
+            "x": 251,
+            "y": 508,
+            "w": 529,
+            "h": 11,
+            "right": 780,
+            "bottom": 519
+          },
+          "platformLabelRect": {
+            "x": 251,
+            "y": 649,
+            "w": 241,
+            "h": 10,
+            "right": 492,
+            "bottom": 658
+          },
+          "platformIconsRect": {
+            "x": 503,
+            "y": 644,
+            "w": 103,
+            "h": 18,
+            "right": 607,
+            "bottom": 663
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "videoRect": {
+            "x": -80,
+            "y": 0,
+            "w": 1600,
+            "h": 900,
+            "right": 1520,
+            "bottom": 900
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 0,
+            "y": 133,
+            "w": 1440,
+            "h": 74,
+            "right": 1440,
+            "bottom": 207
+          },
+          "subtitleRect": {
+            "x": 0,
+            "y": 225,
+            "w": 1440,
+            "h": 33,
+            "right": 1440,
+            "bottom": 258
+          },
+          "episodeLabelRect": {
+            "x": 615,
+            "y": 319,
+            "w": 229,
+            "h": 13,
+            "right": 845,
+            "bottom": 332
+          },
+          "playerCardRect": {
+            "x": 413,
+            "y": 350,
+            "w": 624,
+            "h": 190,
+            "right": 1036,
+            "bottom": 540
+          },
+          "cardCoverRect": {
+            "x": 431,
+            "y": 366,
+            "w": 158,
+            "h": 156,
+            "right": 589,
+            "bottom": 522
+          },
+          "cardTitleRect": {
+            "x": 615,
+            "y": 383,
+            "w": 303,
+            "h": 51,
+            "right": 918,
+            "bottom": 434
+          },
+          "cardDateRect": {
+            "x": 615,
+            "y": 450,
+            "w": 195,
+            "h": 11,
+            "right": 810,
+            "bottom": 461
+          },
+          "waveformRect": {
+            "x": 616,
+            "y": 488,
+            "w": 335,
+            "h": 34,
+            "right": 951,
+            "bottom": 522
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 979,
+            "y": 487,
+            "w": 37,
+            "h": 37,
+            "right": 1016,
+            "bottom": 524
+          },
+          "aboutTitleRect": {
+            "x": 414,
+            "y": 595,
+            "w": 620,
+            "h": 13,
+            "right": 1034,
+            "bottom": 608
+          },
+          "platformLabelRect": {
+            "x": 414,
+            "y": 760,
+            "w": 283,
+            "h": 11,
+            "right": 697,
+            "bottom": 771
+          },
+          "platformIconsRect": {
+            "x": 710,
+            "y": 755,
+            "w": 121,
+            "h": 22,
+            "right": 831,
+            "bottom": 777
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 599,
+            "right": 740,
+            "bottom": 599
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 360,
+            "right": 740,
+            "bottom": 360
+          },
+          "videoRect": {
+            "x": -41,
+            "y": 0,
+            "w": 822,
+            "h": 360,
+            "right": 781,
+            "bottom": 360
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 160,
+            "y": 36,
+            "w": 419,
+            "h": 95,
+            "right": 580,
+            "bottom": 131
+          },
+          "subtitleRect": {
+            "x": 236,
+            "y": 137,
+            "w": 267,
+            "h": 26,
+            "right": 504,
+            "bottom": 163
+          },
+          "episodeLabelRect": {
+            "x": 265,
+            "y": 185,
+            "w": 209,
+            "h": 12,
+            "right": 475,
+            "bottom": 197
+          },
+          "playerCardRect": {
+            "x": 130,
+            "y": 209,
+            "w": 480,
+            "h": 172,
+            "right": 610,
+            "bottom": 381
+          },
+          "cardCoverRect": {
+            "x": 146,
+            "y": 225,
+            "w": 88,
+            "h": 88,
+            "right": 234,
+            "bottom": 313
+          },
+          "cardTitleRect": {
+            "x": 248,
+            "y": 238,
+            "w": 346,
+            "h": 43,
+            "right": 594,
+            "bottom": 280
+          },
+          "cardDateRect": {
+            "x": 248,
+            "y": 288,
+            "w": 346,
+            "h": 11,
+            "right": 594,
+            "bottom": 299
+          },
+          "waveformRect": {
+            "x": 146,
+            "y": 330,
+            "w": 396,
+            "h": 32,
+            "right": 542,
+            "bottom": 362
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 556,
+            "y": 327,
+            "w": 38,
+            "h": 38,
+            "right": 594,
+            "bottom": 365
+          },
+          "aboutTitleRect": {
+            "x": 130,
+            "y": 405,
+            "w": 480,
+            "h": 13,
+            "right": 610,
+            "bottom": 417
+          },
+          "platformLabelRect": {
+            "x": 130,
+            "y": 549,
+            "w": 273,
+            "h": 11,
+            "right": 403,
+            "bottom": 560
+          },
+          "platformIconsRect": {
+            "x": 415,
+            "y": 543,
+            "w": 126,
+            "h": 24,
+            "right": 541,
+            "bottom": 567
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "playPressed": "true",
+        "playUnpressed": "false",
+        "modalOpen": true,
+        "switchedEpisode": "The Quiet Physics of Rain-Streaked Glass",
+        "modalClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "videoRect": {
+            "x": -498,
+            "y": 0,
+            "w": 1316,
+            "h": 740,
+            "right": 818,
+            "bottom": 740
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 37,
+            "y": 85,
+            "w": 246,
+            "h": 57,
+            "right": 283,
+            "bottom": 142
+          },
+          "subtitleRect": {
+            "x": 62,
+            "y": 148,
+            "w": 195,
+            "h": 19,
+            "right": 258,
+            "bottom": 167
+          },
+          "episodeLabelRect": {
+            "x": 55,
+            "y": 189,
+            "w": 209,
+            "h": 12,
+            "right": 265,
+            "bottom": 201
+          },
+          "playerCardRect": {
+            "x": 20,
+            "y": 213,
+            "w": 280,
+            "h": 178,
+            "right": 300,
+            "bottom": 391
+          },
+          "cardCoverRect": {
+            "x": 36,
+            "y": 232,
+            "w": 88,
+            "h": 88,
+            "right": 124,
+            "bottom": 320
+          },
+          "cardTitleRect": {
+            "x": 138,
+            "y": 229,
+            "w": 146,
+            "h": 64,
+            "right": 284,
+            "bottom": 293
+          },
+          "cardDateRect": {
+            "x": 138,
+            "y": 301,
+            "w": 146,
+            "h": 22,
+            "right": 284,
+            "bottom": 323
+          },
+          "waveformRect": {
+            "x": 36,
+            "y": 340,
+            "w": 196,
+            "h": 32,
+            "right": 232,
+            "bottom": 372
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 246,
+            "y": 337,
+            "w": 38,
+            "h": 38,
+            "right": 284,
+            "bottom": 375
+          },
+          "aboutTitleRect": {
+            "x": 20,
+            "y": 415,
+            "w": 280,
+            "h": 13,
+            "right": 300,
+            "bottom": 428
+          },
+          "platformLabelRect": {
+            "x": 20,
+            "y": 612,
+            "w": 273,
+            "h": 11,
+            "right": 293,
+            "bottom": 623
+          },
+          "platformIconsRect": {
+            "x": 20,
+            "y": 635,
+            "w": 126,
+            "h": 24,
+            "right": 146,
+            "bottom": 659
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "videoRect": {
+            "x": -534,
+            "y": 0,
+            "w": 1444,
+            "h": 812,
+            "right": 909,
+            "bottom": 812
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 64,
+            "y": 134,
+            "w": 246,
+            "h": 57,
+            "right": 311,
+            "bottom": 191
+          },
+          "subtitleRect": {
+            "x": 90,
+            "y": 197,
+            "w": 195,
+            "h": 19,
+            "right": 285,
+            "bottom": 216
+          },
+          "episodeLabelRect": {
+            "x": 83,
+            "y": 238,
+            "w": 209,
+            "h": 12,
+            "right": 292,
+            "bottom": 250
+          },
+          "playerCardRect": {
+            "x": 20,
+            "y": 262,
+            "w": 335,
+            "h": 172,
+            "right": 355,
+            "bottom": 434
+          },
+          "cardCoverRect": {
+            "x": 36,
+            "y": 278,
+            "w": 88,
+            "h": 88,
+            "right": 124,
+            "bottom": 366
+          },
+          "cardTitleRect": {
+            "x": 138,
+            "y": 291,
+            "w": 201,
+            "h": 43,
+            "right": 339,
+            "bottom": 334
+          },
+          "cardDateRect": {
+            "x": 138,
+            "y": 342,
+            "w": 201,
+            "h": 11,
+            "right": 339,
+            "bottom": 353
+          },
+          "waveformRect": {
+            "x": 36,
+            "y": 383,
+            "w": 251,
+            "h": 32,
+            "right": 287,
+            "bottom": 415
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 301,
+            "y": 380,
+            "w": 38,
+            "h": 38,
+            "right": 339,
+            "bottom": 418
+          },
+          "aboutTitleRect": {
+            "x": 20,
+            "y": 458,
+            "w": 335,
+            "h": 13,
+            "right": 355,
+            "bottom": 470
+          },
+          "platformLabelRect": {
+            "x": 20,
+            "y": 635,
+            "w": 273,
+            "h": 11,
+            "right": 293,
+            "bottom": 646
+          },
+          "platformIconsRect": {
+            "x": 20,
+            "y": 658,
+            "w": 126,
+            "h": 24,
+            "right": 146,
+            "bottom": 682
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "videoRect": {
+            "x": -526,
+            "y": 0,
+            "w": 1820,
+            "h": 1024,
+            "right": 1294,
+            "bottom": 1024
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 174,
+            "y": 249,
+            "w": 419,
+            "h": 95,
+            "right": 594,
+            "bottom": 344
+          },
+          "subtitleRect": {
+            "x": 250,
+            "y": 350,
+            "w": 267,
+            "h": 26,
+            "right": 518,
+            "bottom": 376
+          },
+          "episodeLabelRect": {
+            "x": 279,
+            "y": 398,
+            "w": 209,
+            "h": 12,
+            "right": 489,
+            "bottom": 409
+          },
+          "playerCardRect": {
+            "x": 144,
+            "y": 421,
+            "w": 480,
+            "h": 172,
+            "right": 624,
+            "bottom": 593
+          },
+          "cardCoverRect": {
+            "x": 160,
+            "y": 437,
+            "w": 88,
+            "h": 88,
+            "right": 248,
+            "bottom": 525
+          },
+          "cardTitleRect": {
+            "x": 262,
+            "y": 450,
+            "w": 346,
+            "h": 43,
+            "right": 608,
+            "bottom": 493
+          },
+          "cardDateRect": {
+            "x": 262,
+            "y": 501,
+            "w": 346,
+            "h": 11,
+            "right": 608,
+            "bottom": 512
+          },
+          "waveformRect": {
+            "x": 160,
+            "y": 542,
+            "w": 396,
+            "h": 32,
+            "right": 556,
+            "bottom": 574
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 570,
+            "y": 539,
+            "w": 38,
+            "h": 38,
+            "right": 608,
+            "bottom": 577
+          },
+          "aboutTitleRect": {
+            "x": 144,
+            "y": 617,
+            "w": 480,
+            "h": 13,
+            "right": 624,
+            "bottom": 630
+          },
+          "platformLabelRect": {
+            "x": 144,
+            "y": 762,
+            "w": 273,
+            "h": 11,
+            "right": 417,
+            "bottom": 773
+          },
+          "platformIconsRect": {
+            "x": 429,
+            "y": 755,
+            "w": 126,
+            "h": 24,
+            "right": 555,
+            "bottom": 779
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "videoRect": {
+            "x": -639,
+            "y": 0,
+            "w": 2098,
+            "h": 1180,
+            "right": 1459,
+            "bottom": 1180
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 200,
+            "y": 327,
+            "w": 419,
+            "h": 95,
+            "right": 620,
+            "bottom": 422
+          },
+          "subtitleRect": {
+            "x": 276,
+            "y": 428,
+            "w": 267,
+            "h": 26,
+            "right": 544,
+            "bottom": 454
+          },
+          "episodeLabelRect": {
+            "x": 305,
+            "y": 476,
+            "w": 209,
+            "h": 12,
+            "right": 515,
+            "bottom": 487
+          },
+          "playerCardRect": {
+            "x": 170,
+            "y": 499,
+            "w": 480,
+            "h": 172,
+            "right": 650,
+            "bottom": 671
+          },
+          "cardCoverRect": {
+            "x": 186,
+            "y": 515,
+            "w": 88,
+            "h": 88,
+            "right": 274,
+            "bottom": 603
+          },
+          "cardTitleRect": {
+            "x": 288,
+            "y": 528,
+            "w": 346,
+            "h": 43,
+            "right": 634,
+            "bottom": 571
+          },
+          "cardDateRect": {
+            "x": 288,
+            "y": 579,
+            "w": 346,
+            "h": 11,
+            "right": 634,
+            "bottom": 590
+          },
+          "waveformRect": {
+            "x": 186,
+            "y": 620,
+            "w": 396,
+            "h": 32,
+            "right": 582,
+            "bottom": 652
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 596,
+            "y": 617,
+            "w": 38,
+            "h": 38,
+            "right": 634,
+            "bottom": 655
+          },
+          "aboutTitleRect": {
+            "x": 170,
+            "y": 695,
+            "w": 480,
+            "h": 13,
+            "right": 650,
+            "bottom": 708
+          },
+          "platformLabelRect": {
+            "x": 170,
+            "y": 840,
+            "w": 273,
+            "h": 11,
+            "right": 443,
+            "bottom": 851
+          },
+          "platformIconsRect": {
+            "x": 455,
+            "y": 833,
+            "w": 126,
+            "h": 24,
+            "right": 581,
+            "bottom": 857
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": -102,
+            "y": 0,
+            "w": 1229,
+            "h": 768,
+            "right": 1126,
+            "bottom": 768
+          },
+          "plateRect": {
+            "x": -102,
+            "y": 0,
+            "w": 1229,
+            "h": 768,
+            "right": 1126,
+            "bottom": 768
+          },
+          "videoRect": {
+            "x": -171,
+            "y": 0,
+            "w": 1365,
+            "h": 768,
+            "right": 1195,
+            "bottom": 768
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": -102,
+            "y": 113,
+            "w": 1229,
+            "h": 63,
+            "right": 1126,
+            "bottom": 177
+          },
+          "subtitleRect": {
+            "x": -102,
+            "y": 192,
+            "w": 1229,
+            "h": 28,
+            "right": 1126,
+            "bottom": 220
+          },
+          "episodeLabelRect": {
+            "x": 423,
+            "y": 272,
+            "w": 196,
+            "h": 11,
+            "right": 618,
+            "bottom": 283
+          },
+          "playerCardRect": {
+            "x": 250,
+            "y": 299,
+            "w": 532,
+            "h": 162,
+            "right": 782,
+            "bottom": 461
+          },
+          "cardCoverRect": {
+            "x": 265,
+            "y": 312,
+            "w": 135,
+            "h": 133,
+            "right": 400,
+            "bottom": 445
+          },
+          "cardTitleRect": {
+            "x": 422,
+            "y": 327,
+            "w": 258,
+            "h": 44,
+            "right": 680,
+            "bottom": 370
+          },
+          "cardDateRect": {
+            "x": 422,
+            "y": 384,
+            "w": 166,
+            "h": 10,
+            "right": 589,
+            "bottom": 393
+          },
+          "waveformRect": {
+            "x": 423,
+            "y": 416,
+            "w": 286,
+            "h": 29,
+            "right": 709,
+            "bottom": 445
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 733,
+            "y": 415,
+            "w": 32,
+            "h": 32,
+            "right": 765,
+            "bottom": 447
+          },
+          "aboutTitleRect": {
+            "x": 251,
+            "y": 508,
+            "w": 529,
+            "h": 11,
+            "right": 780,
+            "bottom": 519
+          },
+          "platformLabelRect": {
+            "x": 251,
+            "y": 649,
+            "w": 241,
+            "h": 10,
+            "right": 492,
+            "bottom": 658
+          },
+          "platformIconsRect": {
+            "x": 503,
+            "y": 644,
+            "w": 103,
+            "h": 18,
+            "right": 607,
+            "bottom": 663
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "videoRect": {
+            "x": -80,
+            "y": 0,
+            "w": 1600,
+            "h": 900,
+            "right": 1520,
+            "bottom": 900
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 0,
+            "y": 133,
+            "w": 1440,
+            "h": 74,
+            "right": 1440,
+            "bottom": 207
+          },
+          "subtitleRect": {
+            "x": 0,
+            "y": 225,
+            "w": 1440,
+            "h": 33,
+            "right": 1440,
+            "bottom": 258
+          },
+          "episodeLabelRect": {
+            "x": 615,
+            "y": 319,
+            "w": 229,
+            "h": 13,
+            "right": 845,
+            "bottom": 332
+          },
+          "playerCardRect": {
+            "x": 413,
+            "y": 350,
+            "w": 624,
+            "h": 190,
+            "right": 1036,
+            "bottom": 540
+          },
+          "cardCoverRect": {
+            "x": 431,
+            "y": 366,
+            "w": 158,
+            "h": 156,
+            "right": 589,
+            "bottom": 522
+          },
+          "cardTitleRect": {
+            "x": 615,
+            "y": 383,
+            "w": 303,
+            "h": 51,
+            "right": 918,
+            "bottom": 434
+          },
+          "cardDateRect": {
+            "x": 615,
+            "y": 450,
+            "w": 195,
+            "h": 11,
+            "right": 810,
+            "bottom": 461
+          },
+          "waveformRect": {
+            "x": 616,
+            "y": 488,
+            "w": 335,
+            "h": 34,
+            "right": 951,
+            "bottom": 522
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 979,
+            "y": 487,
+            "w": 37,
+            "h": 37,
+            "right": 1016,
+            "bottom": 524
+          },
+          "aboutTitleRect": {
+            "x": 414,
+            "y": 595,
+            "w": 620,
+            "h": 13,
+            "right": 1034,
+            "bottom": 608
+          },
+          "platformLabelRect": {
+            "x": 414,
+            "y": 760,
+            "w": 283,
+            "h": 11,
+            "right": 697,
+            "bottom": 771
+          },
+          "platformIconsRect": {
+            "x": 710,
+            "y": 755,
+            "w": 121,
+            "h": 22,
+            "right": 831,
+            "bottom": 777
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "horizontalOverflow": false,
+          "heroFrameRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 599,
+            "right": 740,
+            "bottom": 599
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 360,
+            "right": 740,
+            "bottom": 360
+          },
+          "videoRect": {
+            "x": -41,
+            "y": 0,
+            "w": 822,
+            "h": 360,
+            "right": 781,
+            "bottom": 360
+          },
+          "bloomBlendMode": "screen",
+          "sweepBlendMode": "screen",
+          "wordmarkRect": {
+            "x": 160,
+            "y": 36,
+            "w": 419,
+            "h": 95,
+            "right": 580,
+            "bottom": 131
+          },
+          "subtitleRect": {
+            "x": 236,
+            "y": 137,
+            "w": 267,
+            "h": 26,
+            "right": 504,
+            "bottom": 163
+          },
+          "episodeLabelRect": {
+            "x": 265,
+            "y": 185,
+            "w": 209,
+            "h": 12,
+            "right": 475,
+            "bottom": 197
+          },
+          "playerCardRect": {
+            "x": 130,
+            "y": 209,
+            "w": 480,
+            "h": 172,
+            "right": 610,
+            "bottom": 381
+          },
+          "cardCoverRect": {
+            "x": 146,
+            "y": 225,
+            "w": 88,
+            "h": 88,
+            "right": 234,
+            "bottom": 313
+          },
+          "cardTitleRect": {
+            "x": 248,
+            "y": 238,
+            "w": 346,
+            "h": 43,
+            "right": 594,
+            "bottom": 280
+          },
+          "cardDateRect": {
+            "x": 248,
+            "y": 288,
+            "w": 346,
+            "h": 11,
+            "right": 594,
+            "bottom": 299
+          },
+          "waveformRect": {
+            "x": 146,
+            "y": 330,
+            "w": 396,
+            "h": 32,
+            "right": 542,
+            "bottom": 362
+          },
+          "barCount": 62,
+          "playBtnRect": {
+            "x": 556,
+            "y": 327,
+            "w": 38,
+            "h": 38,
+            "right": 594,
+            "bottom": 365
+          },
+          "aboutTitleRect": {
+            "x": 130,
+            "y": 405,
+            "w": 480,
+            "h": 13,
+            "right": 610,
+            "bottom": 417
+          },
+          "platformLabelRect": {
+            "x": 130,
+            "y": 549,
+            "w": 273,
+            "h": 11,
+            "right": 403,
+            "bottom": 560
+          },
+          "platformIconsRect": {
+            "x": 415,
+            "y": 543,
+            "w": 126,
+            "h": 24,
+            "right": 541,
+            "bottom": 567
+          },
+          "iconCount": 4,
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "playPressed": "true",
+        "playUnpressed": "false",
+        "modalOpen": true,
+        "switchedEpisode": "The Quiet Physics of Rain-Streaked Glass",
+        "modalClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    }
+  }
+}

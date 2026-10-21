@@ -1,0 +1,17 @@
+COMMERCIAL & CLIENT USE LICENCE — WANDER FAR TEMPLATE
+
+Copyright (c) 2026 2A Template Studio. All rights reserved.
+
+1. GRANT OF LICENCE
+This licence grants the purchaser/downloader a non-exclusive, worldwide, perpetual right to use, modify, and deploy the "Wander Far" web template ("the Software") for personal, commercial, and client websites.
+
+2. PERMITTED USES
+- Use the Software to create unlimited end-products for yourself or your clients.
+- Modify the HTML, CSS, JavaScript, typography, layout coordinates, and media references to suit your project.
+
+3. RESTRICTIONS
+- You may not redistribute, resell, lease, license, or sub-license the unmodified or modified template source files as a standalone template, theme, or UI kit in any marketplace or repository.
+- All cabin listings and itineraries in the demo are fictional and provided for demonstration only.
+
+4. DISCLAIMER
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.

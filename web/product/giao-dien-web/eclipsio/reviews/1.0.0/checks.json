@@ -1,0 +1,3790 @@
+{
+  "date": "2026-10-21T01:30:41.079Z",
+  "url": "http://127.0.0.1:60091/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "plateRect": {
+            "x": -126,
+            "y": 311,
+            "w": 572,
+            "h": 429,
+            "right": 446,
+            "bottom": 740
+          },
+          "videoRect": {
+            "x": -221,
+            "y": 311,
+            "w": 763,
+            "h": 429,
+            "right": 541,
+            "bottom": 740
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 76,
+            "right": 320,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 76,
+            "right": 320,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 29,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 291,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 42,
+            "y": 138,
+            "w": 236,
+            "h": 130,
+            "right": 278,
+            "bottom": 268
+          },
+          "sublineRect": {
+            "x": 20,
+            "y": 282,
+            "w": 280,
+            "h": 90,
+            "right": 300,
+            "bottom": 372
+          },
+          "btnPrimaryRect": {
+            "x": 20,
+            "y": 394,
+            "w": 136,
+            "h": 48,
+            "right": 156,
+            "bottom": 442
+          },
+          "btnOutlineRect": {
+            "x": 166,
+            "y": 394,
+            "w": 134,
+            "h": 48,
+            "right": 300,
+            "bottom": 442
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 466,
+            "w": 320,
+            "h": 44,
+            "right": 320,
+            "bottom": 510
+          },
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "plateRect": {
+            "x": -126,
+            "y": 341,
+            "w": 628,
+            "h": 471,
+            "right": 501,
+            "bottom": 812
+          },
+          "videoRect": {
+            "x": -231,
+            "y": 341,
+            "w": 837,
+            "h": 471,
+            "right": 606,
+            "bottom": 812
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 76,
+            "right": 375,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 76,
+            "right": 375,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 57,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 318,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 58,
+            "y": 138,
+            "w": 259,
+            "h": 143,
+            "right": 317,
+            "bottom": 281
+          },
+          "sublineRect": {
+            "x": 27,
+            "y": 295,
+            "w": 322,
+            "h": 90,
+            "right": 348,
+            "bottom": 385
+          },
+          "btnPrimaryRect": {
+            "x": 20,
+            "y": 407,
+            "w": 164,
+            "h": 48,
+            "right": 184,
+            "bottom": 455
+          },
+          "btnOutlineRect": {
+            "x": 194,
+            "y": 407,
+            "w": 162,
+            "h": 48,
+            "right": 355,
+            "bottom": 455
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 479,
+            "w": 375,
+            "h": 44,
+            "right": 375,
+            "bottom": 523
+          },
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "plateRect": {
+            "x": -12,
+            "y": 430,
+            "w": 792,
+            "h": 594,
+            "right": 780,
+            "bottom": 1024
+          },
+          "videoRect": {
+            "x": -144,
+            "y": 430,
+            "w": 1055,
+            "h": 594,
+            "right": 912,
+            "bottom": 1024
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 76,
+            "right": 768,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 76,
+            "right": 768,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 253,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 515,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 211,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 557,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 223,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 545,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 174,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 380,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 390,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 594,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 768,
+            "h": 44,
+            "right": 768,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "plateRect": {
+            "x": -46,
+            "y": 496,
+            "w": 913,
+            "h": 684,
+            "right": 866,
+            "bottom": 1180
+          },
+          "videoRect": {
+            "x": -198,
+            "y": 496,
+            "w": 1216,
+            "h": 684,
+            "right": 1018,
+            "bottom": 1180
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 76,
+            "right": 820,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 76,
+            "right": 820,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 279,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 541,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 237,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 583,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 249,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 571,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 200,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 406,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 416,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 620,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 820,
+            "h": 44,
+            "right": 820,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "scrollHeight": 768,
+          "clientHeight": 768,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 768,
+            "right": 1024,
+            "bottom": 768
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 768,
+            "right": 1024,
+            "bottom": 768
+          },
+          "videoRect": {
+            "x": -170,
+            "y": 0,
+            "w": 1365,
+            "h": 768,
+            "right": 1194,
+            "bottom": 768
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 88,
+            "right": 1024,
+            "bottom": 88
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 24,
+            "w": 1024,
+            "h": 27,
+            "right": 1024,
+            "bottom": 51
+          },
+          "brandRect": {
+            "x": 48,
+            "y": 27,
+            "w": 99,
+            "h": 21,
+            "right": 147,
+            "bottom": 48
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 881,
+            "y": 24,
+            "w": 99,
+            "h": 27,
+            "right": 980,
+            "bottom": 51
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 399,
+            "y": 98,
+            "w": 226,
+            "h": 31,
+            "right": 625,
+            "bottom": 129
+          },
+          "headlineRect": {
+            "x": 128,
+            "y": 147,
+            "w": 768,
+            "h": 115,
+            "right": 896,
+            "bottom": 262
+          },
+          "sublineRect": {
+            "x": 246,
+            "y": 279,
+            "w": 532,
+            "h": 51,
+            "right": 778,
+            "bottom": 330
+          },
+          "btnPrimaryRect": {
+            "x": 380,
+            "y": 354,
+            "w": 128,
+            "h": 39,
+            "right": 508,
+            "bottom": 393
+          },
+          "btnOutlineRect": {
+            "x": 518,
+            "y": 354,
+            "w": 127,
+            "h": 39,
+            "right": 644,
+            "bottom": 393
+          },
+          "logoStripRect": {
+            "x": 197,
+            "y": 425,
+            "w": 631,
+            "h": 40,
+            "right": 827,
+            "bottom": 465
+          },
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "plateRect": {
+            "x": 120,
+            "y": 0,
+            "w": 1200,
+            "h": 900,
+            "right": 1320,
+            "bottom": 900
+          },
+          "videoRect": {
+            "x": -80,
+            "y": 0,
+            "w": 1599,
+            "h": 900,
+            "right": 1520,
+            "bottom": 900
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 103,
+            "right": 1440,
+            "bottom": 103
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 28,
+            "w": 1440,
+            "h": 31,
+            "right": 1440,
+            "bottom": 59
+          },
+          "brandRect": {
+            "x": 56,
+            "y": 31,
+            "w": 116,
+            "h": 25,
+            "right": 172,
+            "bottom": 56
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 1273,
+            "y": 28,
+            "w": 116,
+            "h": 31,
+            "right": 1389,
+            "bottom": 59
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 588,
+            "y": 115,
+            "w": 265,
+            "h": 36,
+            "right": 852,
+            "bottom": 151
+          },
+          "headlineRect": {
+            "x": 270,
+            "y": 173,
+            "w": 900,
+            "h": 134,
+            "right": 1170,
+            "bottom": 307
+          },
+          "sublineRect": {
+            "x": 408,
+            "y": 327,
+            "w": 623,
+            "h": 60,
+            "right": 1032,
+            "bottom": 386
+          },
+          "btnPrimaryRect": {
+            "x": 565,
+            "y": 415,
+            "w": 149,
+            "h": 46,
+            "right": 715,
+            "bottom": 461
+          },
+          "btnOutlineRect": {
+            "x": 726,
+            "y": 415,
+            "w": 148,
+            "h": 46,
+            "right": 875,
+            "bottom": 461
+          },
+          "logoStripRect": {
+            "x": 350,
+            "y": 499,
+            "w": 739,
+            "h": 46,
+            "right": 1090,
+            "bottom": 545
+          },
+          "consoleErrors": 0
+        },
+        "1448x1086": {
+          "scrollWidth": 1448,
+          "clientWidth": 1448,
+          "scrollHeight": 1086,
+          "clientHeight": 1086,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 1086,
+            "right": 1448,
+            "bottom": 1086
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 1086,
+            "right": 1448,
+            "bottom": 1086
+          },
+          "videoRect": {
+            "x": -241,
+            "y": 0,
+            "w": 1930,
+            "h": 1086,
+            "right": 1689,
+            "bottom": 1086
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 125,
+            "right": 1448,
+            "bottom": 125
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 34,
+            "w": 1448,
+            "h": 38,
+            "right": 1448,
+            "bottom": 72
+          },
+          "brandRect": {
+            "x": 68,
+            "y": 38,
+            "w": 140,
+            "h": 30,
+            "right": 208,
+            "bottom": 68
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 1246,
+            "y": 34,
+            "w": 140,
+            "h": 38,
+            "right": 1386,
+            "bottom": 72
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 564,
+            "y": 139,
+            "w": 320,
+            "h": 44,
+            "right": 884,
+            "bottom": 182
+          },
+          "headlineRect": {
+            "x": 181,
+            "y": 208,
+            "w": 1086,
+            "h": 162,
+            "right": 1267,
+            "bottom": 370
+          },
+          "sublineRect": {
+            "x": 348,
+            "y": 394,
+            "w": 753,
+            "h": 72,
+            "right": 1100,
+            "bottom": 466
+          },
+          "btnPrimaryRect": {
+            "x": 537,
+            "y": 500,
+            "w": 180,
+            "h": 55,
+            "right": 717,
+            "bottom": 556
+          },
+          "btnOutlineRect": {
+            "x": 731,
+            "y": 500,
+            "w": 179,
+            "h": 55,
+            "right": 911,
+            "bottom": 556
+          },
+          "logoStripRect": {
+            "x": 278,
+            "y": 602,
+            "w": 892,
+            "h": 56,
+            "right": 1170,
+            "bottom": 658
+          },
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "scrollHeight": 360,
+          "clientHeight": 360,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 360,
+            "right": 740,
+            "bottom": 360
+          },
+          "plateRect": {
+            "x": 231,
+            "y": 151,
+            "w": 278,
+            "h": 209,
+            "right": 509,
+            "bottom": 360
+          },
+          "videoRect": {
+            "x": 184,
+            "y": 151,
+            "w": 371,
+            "h": 209,
+            "right": 556,
+            "bottom": 360
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 76,
+            "right": 740,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 76,
+            "right": 740,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 239,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 501,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 197,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 543,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 209,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 531,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 160,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 366,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 376,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 580,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 740,
+            "h": 44,
+            "right": 740,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "samplesModalOpen": {
+          "isOpen": true,
+          "name": "Soren Lindqvist — Spatial Interface Monograph"
+        },
+        "switchedSample": "Mireia Valls — Real-Time Shader & WebGL Studio",
+        "samplesModalClosed": true,
+        "createStatus": "Reserved eclipsio.site/soren — your workspace is ready to customise.",
+        "mobileDropdownOpen": true,
+        "mobileDropdownClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "plateRect": {
+            "x": -126,
+            "y": 311,
+            "w": 572,
+            "h": 429,
+            "right": 446,
+            "bottom": 740
+          },
+          "videoRect": {
+            "x": -221,
+            "y": 311,
+            "w": 763,
+            "h": 429,
+            "right": 541,
+            "bottom": 740
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 76,
+            "right": 320,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 76,
+            "right": 320,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 29,
+            "y": 84,
+            "w": 262,
+            "h": 36,
+            "right": 291,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 42,
+            "y": 138,
+            "w": 236,
+            "h": 130,
+            "right": 278,
+            "bottom": 268
+          },
+          "sublineRect": {
+            "x": 20,
+            "y": 282,
+            "w": 280,
+            "h": 90,
+            "right": 300,
+            "bottom": 372
+          },
+          "btnPrimaryRect": {
+            "x": 20,
+            "y": 394,
+            "w": 136,
+            "h": 48,
+            "right": 156,
+            "bottom": 442
+          },
+          "btnOutlineRect": {
+            "x": 166,
+            "y": 394,
+            "w": 134,
+            "h": 48,
+            "right": 300,
+            "bottom": 442
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 466,
+            "w": 320,
+            "h": 44,
+            "right": 320,
+            "bottom": 510
+          },
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "plateRect": {
+            "x": -126,
+            "y": 341,
+            "w": 628,
+            "h": 471,
+            "right": 501,
+            "bottom": 812
+          },
+          "videoRect": {
+            "x": -231,
+            "y": 341,
+            "w": 837,
+            "h": 471,
+            "right": 606,
+            "bottom": 812
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 76,
+            "right": 375,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 76,
+            "right": 375,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 57,
+            "y": 84,
+            "w": 262,
+            "h": 36,
+            "right": 318,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 58,
+            "y": 138,
+            "w": 259,
+            "h": 143,
+            "right": 317,
+            "bottom": 281
+          },
+          "sublineRect": {
+            "x": 27,
+            "y": 295,
+            "w": 322,
+            "h": 90,
+            "right": 348,
+            "bottom": 385
+          },
+          "btnPrimaryRect": {
+            "x": 20,
+            "y": 407,
+            "w": 164,
+            "h": 48,
+            "right": 184,
+            "bottom": 455
+          },
+          "btnOutlineRect": {
+            "x": 194,
+            "y": 407,
+            "w": 162,
+            "h": 48,
+            "right": 355,
+            "bottom": 455
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 479,
+            "w": 375,
+            "h": 44,
+            "right": 375,
+            "bottom": 523
+          },
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "plateRect": {
+            "x": -12,
+            "y": 430,
+            "w": 792,
+            "h": 594,
+            "right": 780,
+            "bottom": 1024
+          },
+          "videoRect": {
+            "x": -144,
+            "y": 430,
+            "w": 1055,
+            "h": 594,
+            "right": 912,
+            "bottom": 1024
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 76,
+            "right": 768,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 76,
+            "right": 768,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 253,
+            "y": 84,
+            "w": 262,
+            "h": 36,
+            "right": 515,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 211,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 557,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 223,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 545,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 174,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 380,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 390,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 594,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 768,
+            "h": 44,
+            "right": 768,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "plateRect": {
+            "x": -46,
+            "y": 496,
+            "w": 913,
+            "h": 684,
+            "right": 866,
+            "bottom": 1180
+          },
+          "videoRect": {
+            "x": -198,
+            "y": 496,
+            "w": 1216,
+            "h": 684,
+            "right": 1018,
+            "bottom": 1180
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 76,
+            "right": 820,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 76,
+            "right": 820,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 279,
+            "y": 84,
+            "w": 262,
+            "h": 36,
+            "right": 541,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 237,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 583,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 249,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 571,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 200,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 406,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 416,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 620,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 820,
+            "h": 44,
+            "right": 820,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "scrollHeight": 768,
+          "clientHeight": 768,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 768,
+            "right": 1024,
+            "bottom": 768
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 768,
+            "right": 1024,
+            "bottom": 768
+          },
+          "videoRect": {
+            "x": -170,
+            "y": 0,
+            "w": 1365,
+            "h": 768,
+            "right": 1194,
+            "bottom": 768
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 87,
+            "right": 1024,
+            "bottom": 87
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 24,
+            "w": 1024,
+            "h": 26,
+            "right": 1024,
+            "bottom": 50
+          },
+          "brandRect": {
+            "x": 48,
+            "y": 26,
+            "w": 98,
+            "h": 21,
+            "right": 145,
+            "bottom": 47
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 883,
+            "y": 24,
+            "w": 98,
+            "h": 26,
+            "right": 981,
+            "bottom": 50
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 400,
+            "y": 97,
+            "w": 224,
+            "h": 31,
+            "right": 624,
+            "bottom": 128
+          },
+          "headlineRect": {
+            "x": 132,
+            "y": 146,
+            "w": 760,
+            "h": 113,
+            "right": 892,
+            "bottom": 259
+          },
+          "sublineRect": {
+            "x": 249,
+            "y": 276,
+            "w": 526,
+            "h": 50,
+            "right": 775,
+            "bottom": 326
+          },
+          "btnPrimaryRect": {
+            "x": 381,
+            "y": 350,
+            "w": 127,
+            "h": 39,
+            "right": 508,
+            "bottom": 389
+          },
+          "btnOutlineRect": {
+            "x": 517,
+            "y": 350,
+            "w": 125,
+            "h": 39,
+            "right": 643,
+            "bottom": 389
+          },
+          "logoStripRect": {
+            "x": 200,
+            "y": 421,
+            "w": 624,
+            "h": 39,
+            "right": 824,
+            "bottom": 460
+          },
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "plateRect": {
+            "x": 120,
+            "y": 0,
+            "w": 1200,
+            "h": 900,
+            "right": 1320,
+            "bottom": 900
+          },
+          "videoRect": {
+            "x": -80,
+            "y": 0,
+            "w": 1599,
+            "h": 900,
+            "right": 1520,
+            "bottom": 900
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 102,
+            "right": 1440,
+            "bottom": 102
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 28,
+            "w": 1440,
+            "h": 31,
+            "right": 1440,
+            "bottom": 59
+          },
+          "brandRect": {
+            "x": 56,
+            "y": 31,
+            "w": 114,
+            "h": 25,
+            "right": 170,
+            "bottom": 55
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 1275,
+            "y": 28,
+            "w": 114,
+            "h": 31,
+            "right": 1389,
+            "bottom": 59
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 589,
+            "y": 113,
+            "w": 261,
+            "h": 36,
+            "right": 851,
+            "bottom": 149
+          },
+          "headlineRect": {
+            "x": 276,
+            "y": 170,
+            "w": 887,
+            "h": 132,
+            "right": 1164,
+            "bottom": 303
+          },
+          "sublineRect": {
+            "x": 413,
+            "y": 322,
+            "w": 615,
+            "h": 59,
+            "right": 1027,
+            "bottom": 381
+          },
+          "btnPrimaryRect": {
+            "x": 567,
+            "y": 409,
+            "w": 147,
+            "h": 45,
+            "right": 715,
+            "bottom": 454
+          },
+          "btnOutlineRect": {
+            "x": 726,
+            "y": 409,
+            "w": 146,
+            "h": 45,
+            "right": 873,
+            "bottom": 454
+          },
+          "logoStripRect": {
+            "x": 356,
+            "y": 491,
+            "w": 728,
+            "h": 46,
+            "right": 1084,
+            "bottom": 537
+          },
+          "consoleErrors": 0
+        },
+        "1448x1086": {
+          "scrollWidth": 1448,
+          "clientWidth": 1448,
+          "scrollHeight": 1086,
+          "clientHeight": 1086,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 1086,
+            "right": 1448,
+            "bottom": 1086
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 1086,
+            "right": 1448,
+            "bottom": 1086
+          },
+          "videoRect": {
+            "x": -241,
+            "y": 0,
+            "w": 1930,
+            "h": 1086,
+            "right": 1689,
+            "bottom": 1086
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 125,
+            "right": 1448,
+            "bottom": 125
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 34,
+            "w": 1448,
+            "h": 38,
+            "right": 1448,
+            "bottom": 72
+          },
+          "brandRect": {
+            "x": 68,
+            "y": 38,
+            "w": 140,
+            "h": 30,
+            "right": 208,
+            "bottom": 68
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 1246,
+            "y": 34,
+            "w": 140,
+            "h": 38,
+            "right": 1386,
+            "bottom": 72
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 564,
+            "y": 139,
+            "w": 320,
+            "h": 44,
+            "right": 884,
+            "bottom": 182
+          },
+          "headlineRect": {
+            "x": 182,
+            "y": 208,
+            "w": 1085,
+            "h": 162,
+            "right": 1266,
+            "bottom": 370
+          },
+          "sublineRect": {
+            "x": 348,
+            "y": 394,
+            "w": 753,
+            "h": 72,
+            "right": 1100,
+            "bottom": 466
+          },
+          "btnPrimaryRect": {
+            "x": 537,
+            "y": 500,
+            "w": 180,
+            "h": 55,
+            "right": 717,
+            "bottom": 556
+          },
+          "btnOutlineRect": {
+            "x": 731,
+            "y": 500,
+            "w": 179,
+            "h": 55,
+            "right": 911,
+            "bottom": 556
+          },
+          "logoStripRect": {
+            "x": 278,
+            "y": 602,
+            "w": 892,
+            "h": 56,
+            "right": 1170,
+            "bottom": 658
+          },
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "scrollHeight": 360,
+          "clientHeight": 360,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 360,
+            "right": 740,
+            "bottom": 360
+          },
+          "plateRect": {
+            "x": 231,
+            "y": 151,
+            "w": 278,
+            "h": 209,
+            "right": 509,
+            "bottom": 360
+          },
+          "videoRect": {
+            "x": 184,
+            "y": 151,
+            "w": 371,
+            "h": 209,
+            "right": 556,
+            "bottom": 360
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 76,
+            "right": 740,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 76,
+            "right": 740,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 239,
+            "y": 84,
+            "w": 262,
+            "h": 36,
+            "right": 501,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 197,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 543,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 209,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 531,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 160,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 366,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 376,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 580,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 740,
+            "h": 44,
+            "right": 740,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "samplesModalOpen": {
+          "isOpen": true,
+          "name": "Soren Lindqvist — Spatial Interface Monograph"
+        },
+        "switchedSample": "Mireia Valls — Real-Time Shader & WebGL Studio",
+        "samplesModalClosed": true,
+        "createStatus": "Reserved eclipsio.site/soren — your workspace is ready to customise.",
+        "mobileDropdownOpen": true,
+        "mobileDropdownClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "plateRect": {
+            "x": -126,
+            "y": 311,
+            "w": 572,
+            "h": 429,
+            "right": 446,
+            "bottom": 740
+          },
+          "videoRect": {
+            "x": -221,
+            "y": 311,
+            "w": 763,
+            "h": 429,
+            "right": 541,
+            "bottom": 740
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 76,
+            "right": 320,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 76,
+            "right": 320,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 29,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 291,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 42,
+            "y": 138,
+            "w": 236,
+            "h": 130,
+            "right": 278,
+            "bottom": 268
+          },
+          "sublineRect": {
+            "x": 20,
+            "y": 282,
+            "w": 280,
+            "h": 90,
+            "right": 300,
+            "bottom": 372
+          },
+          "btnPrimaryRect": {
+            "x": 20,
+            "y": 394,
+            "w": 136,
+            "h": 48,
+            "right": 156,
+            "bottom": 442
+          },
+          "btnOutlineRect": {
+            "x": 166,
+            "y": 394,
+            "w": 134,
+            "h": 48,
+            "right": 300,
+            "bottom": 442
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 466,
+            "w": 320,
+            "h": 44,
+            "right": 320,
+            "bottom": 510
+          },
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "plateRect": {
+            "x": -126,
+            "y": 341,
+            "w": 628,
+            "h": 471,
+            "right": 501,
+            "bottom": 812
+          },
+          "videoRect": {
+            "x": -231,
+            "y": 341,
+            "w": 837,
+            "h": 471,
+            "right": 606,
+            "bottom": 812
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 76,
+            "right": 375,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 76,
+            "right": 375,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 57,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 318,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 58,
+            "y": 138,
+            "w": 259,
+            "h": 143,
+            "right": 317,
+            "bottom": 281
+          },
+          "sublineRect": {
+            "x": 27,
+            "y": 295,
+            "w": 322,
+            "h": 90,
+            "right": 348,
+            "bottom": 385
+          },
+          "btnPrimaryRect": {
+            "x": 20,
+            "y": 407,
+            "w": 164,
+            "h": 48,
+            "right": 184,
+            "bottom": 455
+          },
+          "btnOutlineRect": {
+            "x": 194,
+            "y": 407,
+            "w": 162,
+            "h": 48,
+            "right": 355,
+            "bottom": 455
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 479,
+            "w": 375,
+            "h": 44,
+            "right": 375,
+            "bottom": 523
+          },
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "plateRect": {
+            "x": -12,
+            "y": 430,
+            "w": 792,
+            "h": 594,
+            "right": 780,
+            "bottom": 1024
+          },
+          "videoRect": {
+            "x": -144,
+            "y": 430,
+            "w": 1055,
+            "h": 594,
+            "right": 912,
+            "bottom": 1024
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 76,
+            "right": 768,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 76,
+            "right": 768,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 253,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 515,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 211,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 557,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 223,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 545,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 174,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 380,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 390,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 594,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 768,
+            "h": 44,
+            "right": 768,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "plateRect": {
+            "x": -46,
+            "y": 496,
+            "w": 913,
+            "h": 684,
+            "right": 866,
+            "bottom": 1180
+          },
+          "videoRect": {
+            "x": -198,
+            "y": 496,
+            "w": 1216,
+            "h": 684,
+            "right": 1018,
+            "bottom": 1180
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 76,
+            "right": 820,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 76,
+            "right": 820,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 279,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 541,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 237,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 583,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 249,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 571,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 200,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 406,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 416,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 620,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 820,
+            "h": 44,
+            "right": 820,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "scrollHeight": 768,
+          "clientHeight": 768,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 768,
+            "right": 1024,
+            "bottom": 768
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 768,
+            "right": 1024,
+            "bottom": 768
+          },
+          "videoRect": {
+            "x": -170,
+            "y": 0,
+            "w": 1365,
+            "h": 768,
+            "right": 1194,
+            "bottom": 768
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 88,
+            "right": 1024,
+            "bottom": 88
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 24,
+            "w": 1024,
+            "h": 27,
+            "right": 1024,
+            "bottom": 51
+          },
+          "brandRect": {
+            "x": 48,
+            "y": 27,
+            "w": 99,
+            "h": 21,
+            "right": 147,
+            "bottom": 48
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 881,
+            "y": 24,
+            "w": 99,
+            "h": 27,
+            "right": 980,
+            "bottom": 51
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 399,
+            "y": 98,
+            "w": 226,
+            "h": 31,
+            "right": 625,
+            "bottom": 129
+          },
+          "headlineRect": {
+            "x": 128,
+            "y": 147,
+            "w": 768,
+            "h": 115,
+            "right": 896,
+            "bottom": 262
+          },
+          "sublineRect": {
+            "x": 246,
+            "y": 279,
+            "w": 532,
+            "h": 51,
+            "right": 778,
+            "bottom": 330
+          },
+          "btnPrimaryRect": {
+            "x": 380,
+            "y": 354,
+            "w": 128,
+            "h": 39,
+            "right": 508,
+            "bottom": 393
+          },
+          "btnOutlineRect": {
+            "x": 518,
+            "y": 354,
+            "w": 127,
+            "h": 39,
+            "right": 644,
+            "bottom": 393
+          },
+          "logoStripRect": {
+            "x": 197,
+            "y": 425,
+            "w": 631,
+            "h": 40,
+            "right": 827,
+            "bottom": 465
+          },
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "plateRect": {
+            "x": 120,
+            "y": 0,
+            "w": 1200,
+            "h": 900,
+            "right": 1320,
+            "bottom": 900
+          },
+          "videoRect": {
+            "x": -80,
+            "y": 0,
+            "w": 1599,
+            "h": 900,
+            "right": 1520,
+            "bottom": 900
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 103,
+            "right": 1440,
+            "bottom": 103
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 28,
+            "w": 1440,
+            "h": 31,
+            "right": 1440,
+            "bottom": 59
+          },
+          "brandRect": {
+            "x": 56,
+            "y": 31,
+            "w": 116,
+            "h": 25,
+            "right": 172,
+            "bottom": 56
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 1273,
+            "y": 28,
+            "w": 116,
+            "h": 31,
+            "right": 1389,
+            "bottom": 59
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 588,
+            "y": 115,
+            "w": 265,
+            "h": 36,
+            "right": 852,
+            "bottom": 151
+          },
+          "headlineRect": {
+            "x": 270,
+            "y": 173,
+            "w": 900,
+            "h": 134,
+            "right": 1170,
+            "bottom": 307
+          },
+          "sublineRect": {
+            "x": 408,
+            "y": 327,
+            "w": 623,
+            "h": 60,
+            "right": 1032,
+            "bottom": 386
+          },
+          "btnPrimaryRect": {
+            "x": 565,
+            "y": 415,
+            "w": 149,
+            "h": 46,
+            "right": 715,
+            "bottom": 461
+          },
+          "btnOutlineRect": {
+            "x": 726,
+            "y": 415,
+            "w": 148,
+            "h": 46,
+            "right": 875,
+            "bottom": 461
+          },
+          "logoStripRect": {
+            "x": 350,
+            "y": 499,
+            "w": 739,
+            "h": 46,
+            "right": 1090,
+            "bottom": 545
+          },
+          "consoleErrors": 0
+        },
+        "1448x1086": {
+          "scrollWidth": 1448,
+          "clientWidth": 1448,
+          "scrollHeight": 1086,
+          "clientHeight": 1086,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 1086,
+            "right": 1448,
+            "bottom": 1086
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 1086,
+            "right": 1448,
+            "bottom": 1086
+          },
+          "videoRect": {
+            "x": -241,
+            "y": 0,
+            "w": 1930,
+            "h": 1086,
+            "right": 1689,
+            "bottom": 1086
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 125,
+            "right": 1448,
+            "bottom": 125
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 34,
+            "w": 1448,
+            "h": 38,
+            "right": 1448,
+            "bottom": 72
+          },
+          "brandRect": {
+            "x": 68,
+            "y": 38,
+            "w": 140,
+            "h": 30,
+            "right": 208,
+            "bottom": 68
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 1246,
+            "y": 34,
+            "w": 140,
+            "h": 38,
+            "right": 1386,
+            "bottom": 72
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 564,
+            "y": 139,
+            "w": 320,
+            "h": 44,
+            "right": 884,
+            "bottom": 182
+          },
+          "headlineRect": {
+            "x": 181,
+            "y": 208,
+            "w": 1086,
+            "h": 162,
+            "right": 1267,
+            "bottom": 370
+          },
+          "sublineRect": {
+            "x": 348,
+            "y": 394,
+            "w": 753,
+            "h": 72,
+            "right": 1100,
+            "bottom": 466
+          },
+          "btnPrimaryRect": {
+            "x": 537,
+            "y": 500,
+            "w": 180,
+            "h": 55,
+            "right": 717,
+            "bottom": 556
+          },
+          "btnOutlineRect": {
+            "x": 731,
+            "y": 500,
+            "w": 179,
+            "h": 55,
+            "right": 911,
+            "bottom": 556
+          },
+          "logoStripRect": {
+            "x": 278,
+            "y": 602,
+            "w": 892,
+            "h": 56,
+            "right": 1170,
+            "bottom": 658
+          },
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "scrollHeight": 360,
+          "clientHeight": 360,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 360,
+            "right": 740,
+            "bottom": 360
+          },
+          "plateRect": {
+            "x": 231,
+            "y": 151,
+            "w": 278,
+            "h": 209,
+            "right": 509,
+            "bottom": 360
+          },
+          "videoRect": {
+            "x": 184,
+            "y": 151,
+            "w": 371,
+            "h": 209,
+            "right": 556,
+            "bottom": 360
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 76,
+            "right": 740,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 76,
+            "right": 740,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 239,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 501,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 197,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 543,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 209,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 531,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 160,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 366,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 376,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 580,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 740,
+            "h": 44,
+            "right": 740,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "samplesModalOpen": {
+          "isOpen": true,
+          "name": "Soren Lindqvist — Spatial Interface Monograph"
+        },
+        "switchedSample": "Mireia Valls — Real-Time Shader & WebGL Studio",
+        "samplesModalClosed": true,
+        "createStatus": "Reserved eclipsio.site/soren — your workspace is ready to customise.",
+        "mobileDropdownOpen": true,
+        "mobileDropdownClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 740,
+            "right": 320,
+            "bottom": 740
+          },
+          "plateRect": {
+            "x": -126,
+            "y": 311,
+            "w": 572,
+            "h": 429,
+            "right": 446,
+            "bottom": 740
+          },
+          "videoRect": {
+            "x": -221,
+            "y": 311,
+            "w": 763,
+            "h": 429,
+            "right": 541,
+            "bottom": 740
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 76,
+            "right": 320,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 76,
+            "right": 320,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 29,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 291,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 42,
+            "y": 138,
+            "w": 236,
+            "h": 130,
+            "right": 278,
+            "bottom": 268
+          },
+          "sublineRect": {
+            "x": 20,
+            "y": 282,
+            "w": 280,
+            "h": 90,
+            "right": 300,
+            "bottom": 372
+          },
+          "btnPrimaryRect": {
+            "x": 20,
+            "y": 394,
+            "w": 136,
+            "h": 48,
+            "right": 156,
+            "bottom": 442
+          },
+          "btnOutlineRect": {
+            "x": 166,
+            "y": 394,
+            "w": 134,
+            "h": 48,
+            "right": 300,
+            "bottom": 442
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 466,
+            "w": 320,
+            "h": 44,
+            "right": 320,
+            "bottom": 510
+          },
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 812,
+            "right": 375,
+            "bottom": 812
+          },
+          "plateRect": {
+            "x": -126,
+            "y": 341,
+            "w": 628,
+            "h": 471,
+            "right": 501,
+            "bottom": 812
+          },
+          "videoRect": {
+            "x": -231,
+            "y": 341,
+            "w": 837,
+            "h": 471,
+            "right": 606,
+            "bottom": 812
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 76,
+            "right": 375,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 76,
+            "right": 375,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 57,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 318,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 58,
+            "y": 138,
+            "w": 259,
+            "h": 143,
+            "right": 317,
+            "bottom": 281
+          },
+          "sublineRect": {
+            "x": 27,
+            "y": 295,
+            "w": 322,
+            "h": 90,
+            "right": 348,
+            "bottom": 385
+          },
+          "btnPrimaryRect": {
+            "x": 20,
+            "y": 407,
+            "w": 164,
+            "h": 48,
+            "right": 184,
+            "bottom": 455
+          },
+          "btnOutlineRect": {
+            "x": 194,
+            "y": 407,
+            "w": 162,
+            "h": 48,
+            "right": 355,
+            "bottom": 455
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 479,
+            "w": 375,
+            "h": 44,
+            "right": 375,
+            "bottom": 523
+          },
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "plateRect": {
+            "x": -12,
+            "y": 430,
+            "w": 792,
+            "h": 594,
+            "right": 780,
+            "bottom": 1024
+          },
+          "videoRect": {
+            "x": -144,
+            "y": 430,
+            "w": 1055,
+            "h": 594,
+            "right": 912,
+            "bottom": 1024
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 76,
+            "right": 768,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 76,
+            "right": 768,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 253,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 515,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 211,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 557,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 223,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 545,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 174,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 380,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 390,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 594,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 768,
+            "h": 44,
+            "right": 768,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "plateRect": {
+            "x": -46,
+            "y": 496,
+            "w": 913,
+            "h": 684,
+            "right": 866,
+            "bottom": 1180
+          },
+          "videoRect": {
+            "x": -198,
+            "y": 496,
+            "w": 1216,
+            "h": 684,
+            "right": 1018,
+            "bottom": 1180
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 76,
+            "right": 820,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 76,
+            "right": 820,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 279,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 541,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 237,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 583,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 249,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 571,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 200,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 406,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 416,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 620,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 820,
+            "h": 44,
+            "right": 820,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "scrollHeight": 768,
+          "clientHeight": 768,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 768,
+            "right": 1024,
+            "bottom": 768
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 768,
+            "right": 1024,
+            "bottom": 768
+          },
+          "videoRect": {
+            "x": -170,
+            "y": 0,
+            "w": 1365,
+            "h": 768,
+            "right": 1194,
+            "bottom": 768
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 88,
+            "right": 1024,
+            "bottom": 88
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 24,
+            "w": 1024,
+            "h": 27,
+            "right": 1024,
+            "bottom": 51
+          },
+          "brandRect": {
+            "x": 48,
+            "y": 27,
+            "w": 99,
+            "h": 21,
+            "right": 147,
+            "bottom": 48
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 881,
+            "y": 24,
+            "w": 99,
+            "h": 27,
+            "right": 980,
+            "bottom": 51
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 399,
+            "y": 98,
+            "w": 226,
+            "h": 31,
+            "right": 625,
+            "bottom": 129
+          },
+          "headlineRect": {
+            "x": 128,
+            "y": 147,
+            "w": 768,
+            "h": 115,
+            "right": 896,
+            "bottom": 262
+          },
+          "sublineRect": {
+            "x": 246,
+            "y": 279,
+            "w": 532,
+            "h": 51,
+            "right": 778,
+            "bottom": 330
+          },
+          "btnPrimaryRect": {
+            "x": 380,
+            "y": 354,
+            "w": 128,
+            "h": 39,
+            "right": 508,
+            "bottom": 393
+          },
+          "btnOutlineRect": {
+            "x": 518,
+            "y": 354,
+            "w": 127,
+            "h": 39,
+            "right": 644,
+            "bottom": 393
+          },
+          "logoStripRect": {
+            "x": 197,
+            "y": 425,
+            "w": 631,
+            "h": 40,
+            "right": 827,
+            "bottom": 465
+          },
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 900,
+            "right": 1440,
+            "bottom": 900
+          },
+          "plateRect": {
+            "x": 120,
+            "y": 0,
+            "w": 1200,
+            "h": 900,
+            "right": 1320,
+            "bottom": 900
+          },
+          "videoRect": {
+            "x": -80,
+            "y": 0,
+            "w": 1599,
+            "h": 900,
+            "right": 1520,
+            "bottom": 900
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1440,
+            "h": 103,
+            "right": 1440,
+            "bottom": 103
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 28,
+            "w": 1440,
+            "h": 31,
+            "right": 1440,
+            "bottom": 59
+          },
+          "brandRect": {
+            "x": 56,
+            "y": 31,
+            "w": 116,
+            "h": 25,
+            "right": 172,
+            "bottom": 56
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 1273,
+            "y": 28,
+            "w": 116,
+            "h": 31,
+            "right": 1389,
+            "bottom": 59
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 588,
+            "y": 115,
+            "w": 265,
+            "h": 36,
+            "right": 852,
+            "bottom": 151
+          },
+          "headlineRect": {
+            "x": 270,
+            "y": 173,
+            "w": 900,
+            "h": 134,
+            "right": 1170,
+            "bottom": 307
+          },
+          "sublineRect": {
+            "x": 408,
+            "y": 327,
+            "w": 623,
+            "h": 60,
+            "right": 1032,
+            "bottom": 386
+          },
+          "btnPrimaryRect": {
+            "x": 565,
+            "y": 415,
+            "w": 149,
+            "h": 46,
+            "right": 715,
+            "bottom": 461
+          },
+          "btnOutlineRect": {
+            "x": 726,
+            "y": 415,
+            "w": 148,
+            "h": 46,
+            "right": 875,
+            "bottom": 461
+          },
+          "logoStripRect": {
+            "x": 350,
+            "y": 499,
+            "w": 739,
+            "h": 46,
+            "right": 1090,
+            "bottom": 545
+          },
+          "consoleErrors": 0
+        },
+        "1448x1086": {
+          "scrollWidth": 1448,
+          "clientWidth": 1448,
+          "scrollHeight": 1086,
+          "clientHeight": 1086,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 1086,
+            "right": 1448,
+            "bottom": 1086
+          },
+          "plateRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 1086,
+            "right": 1448,
+            "bottom": 1086
+          },
+          "videoRect": {
+            "x": -241,
+            "y": 0,
+            "w": 1930,
+            "h": 1086,
+            "right": 1689,
+            "bottom": 1086
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1448,
+            "h": 125,
+            "right": 1448,
+            "bottom": 125
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 34,
+            "w": 1448,
+            "h": 38,
+            "right": 1448,
+            "bottom": 72
+          },
+          "brandRect": {
+            "x": 68,
+            "y": 38,
+            "w": 140,
+            "h": 30,
+            "right": 208,
+            "bottom": 68
+          },
+          "navLinksVisible": true,
+          "navCtaRect": {
+            "x": 1246,
+            "y": 34,
+            "w": 140,
+            "h": 38,
+            "right": 1386,
+            "bottom": 72
+          },
+          "menuBtnVisible": false,
+          "badgeRect": {
+            "x": 564,
+            "y": 139,
+            "w": 320,
+            "h": 44,
+            "right": 884,
+            "bottom": 182
+          },
+          "headlineRect": {
+            "x": 181,
+            "y": 208,
+            "w": 1086,
+            "h": 162,
+            "right": 1267,
+            "bottom": 370
+          },
+          "sublineRect": {
+            "x": 348,
+            "y": 394,
+            "w": 753,
+            "h": 72,
+            "right": 1100,
+            "bottom": 466
+          },
+          "btnPrimaryRect": {
+            "x": 537,
+            "y": 500,
+            "w": 180,
+            "h": 55,
+            "right": 717,
+            "bottom": 556
+          },
+          "btnOutlineRect": {
+            "x": 731,
+            "y": 500,
+            "w": 179,
+            "h": 55,
+            "right": 911,
+            "bottom": 556
+          },
+          "logoStripRect": {
+            "x": 278,
+            "y": 602,
+            "w": 892,
+            "h": 56,
+            "right": 1170,
+            "bottom": 658
+          },
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "scrollHeight": 360,
+          "clientHeight": 360,
+          "horizontalOverflow": false,
+          "verticalOverflow": false,
+          "heroRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 360,
+            "right": 740,
+            "bottom": 360
+          },
+          "plateRect": {
+            "x": 231,
+            "y": 151,
+            "w": 278,
+            "h": 209,
+            "right": 509,
+            "bottom": 360
+          },
+          "videoRect": {
+            "x": 184,
+            "y": 151,
+            "w": 371,
+            "h": 209,
+            "right": 556,
+            "bottom": 360
+          },
+          "videoPlaying": true,
+          "navZoneRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 76,
+            "right": 740,
+            "bottom": 76
+          },
+          "navBarRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 76,
+            "right": 740,
+            "bottom": 76
+          },
+          "brandRect": {
+            "x": 20,
+            "y": 25,
+            "w": 113,
+            "h": 26,
+            "right": 133,
+            "bottom": 51
+          },
+          "navLinksVisible": false,
+          "navCtaRect": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "menuBtnVisible": true,
+          "badgeRect": {
+            "x": 239,
+            "y": 84,
+            "w": 261,
+            "h": 36,
+            "right": 501,
+            "bottom": 120
+          },
+          "headlineRect": {
+            "x": 197,
+            "y": 138,
+            "w": 346,
+            "h": 190,
+            "right": 543,
+            "bottom": 328
+          },
+          "sublineRect": {
+            "x": 209,
+            "y": 342,
+            "w": 322,
+            "h": 90,
+            "right": 531,
+            "bottom": 432
+          },
+          "btnPrimaryRect": {
+            "x": 160,
+            "y": 454,
+            "w": 206,
+            "h": 48,
+            "right": 366,
+            "bottom": 502
+          },
+          "btnOutlineRect": {
+            "x": 376,
+            "y": 454,
+            "w": 204,
+            "h": 48,
+            "right": 580,
+            "bottom": 502
+          },
+          "logoStripRect": {
+            "x": 0,
+            "y": 526,
+            "w": 740,
+            "h": 44,
+            "right": 740,
+            "bottom": 570
+          },
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "samplesModalOpen": {
+          "isOpen": true,
+          "name": "Soren Lindqvist — Spatial Interface Monograph"
+        },
+        "switchedSample": "Mireia Valls — Real-Time Shader & WebGL Studio",
+        "samplesModalClosed": true,
+        "createStatus": "Reserved eclipsio.site/soren — your workspace is ready to customise.",
+        "mobileDropdownOpen": true,
+        "mobileDropdownClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    }
+  }
+}

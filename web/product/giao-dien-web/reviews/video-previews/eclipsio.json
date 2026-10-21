@@ -1,0 +1,46 @@
+{
+  "id": "t84",
+  "slug": "eclipsio",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-21T01:32:09.127Z",
+  "demo": "/demos/eclipsio/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "471e87fe40af",
+  "sha256": "471e87fe40af3b21d03b6a2f464df9e9152a3677ea150e5ebff85b58c1b40be7",
+  "demoHtmlSha256": "1dc1d6f965d45e3a3b75063a4a11d48fa66d7f52abcfce5a3276094061ca81c5",
+  "demoSha256": "e94737d895bc9913a987fbe1c8436c4be63b199ed87fb684d498991466011931",
+  "bytes": 620533,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.501,
+      "action": "eclipsio-open-samples-modal"
+    },
+    {
+      "seconds": 5.236,
+      "action": "eclipsio-switch-sample-and-close"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\eclipsio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\eclipsio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\eclipsio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\eclipsio-return.jpg"
+  ]
+}

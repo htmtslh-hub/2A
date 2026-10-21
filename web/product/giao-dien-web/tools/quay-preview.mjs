@@ -113,7 +113,7 @@ try {
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
-    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'lumora' || slug === 'securify' || slug === 'cozypaws' || slug === 'synapsex' || slug === 'oceanpulse') {
+    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'lumora' || slug === 'securify' || slug === 'cozypaws' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'iris' || slug === 'melli') {
       for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai','soft-zoom-63098134.figma.site','polo-pecan-73837341.figma.site','cdn.jsdelivr.net']) allowedBriefHosts.add(host);
     }
     if (slug === 'toonhub') {
@@ -154,8 +154,21 @@ try {
     if (slug === 'lumora') await page.waitForFunction(() => { const v0 = document.getElementById('lumora-video-0'); const v2 = document.getElementById('lumora-video-2'); const ov = document.getElementById('lumora-png-overlay'); return v0 && v2 && v0.readyState >= 2 && v2.readyState >= 2 && ov && ov.complete && ov.naturalWidth > 0; }, null, {timeout:60000});
     if (slug === 'cozypaws') await page.waitForFunction(() => { const imgs = Array.from(document.querySelectorAll('img')); return imgs.length >= 7 && imgs.every(i => i.complete && i.naturalWidth > 0); }, null, {timeout:60000});
     if (slug === 'fennec') await page.waitForFunction(() => document.querySelector('#fox')?.dataset.model === 'ready', null, {timeout:60000});
-    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
-    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse') {
+    if (slug === 'iris') {
+      await page.waitForFunction(() => document.getElementById('stage')?.dataset.ready === 'true', null, {timeout:60000});
+      await page.waitForTimeout(1600);
+    }
+    if (slug === 'melli') {
+      await page.evaluate(() => document.querySelectorAll('img[loading="lazy"]').forEach(i => { i.loading = 'eager'; }));
+      await page.waitForFunction(() => {
+        const bee = document.getElementById('bee');
+        const imgs = Array.from(document.querySelectorAll('.flower'));
+        return bee?.classList.contains('ready') && document.body.classList.contains('loaded') && imgs.length === 4 && imgs.every(i => i.complete && i.naturalWidth > 0);
+      }, null, {timeout:60000});
+      await page.waitForTimeout(1500);
+    }
+    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far') {
       await page.waitForTimeout(2000);
     }
     if (slug === 'solaris-gate') {
@@ -169,6 +182,108 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'melli') {
+        const step = actions.filter(a => a.action.startsWith('melli-')).length;
+        if (step === 0) {
+          await page.mouse.move(1020, 360, { steps: 18 });
+          await page.locator('.hero .join').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'melli-hover-hero-cta-and-tilt-bee' });
+        } else if (step === 1) {
+          await page.locator('#about').scrollIntoViewIfNeeded();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'melli-scroll-section-01' });
+        } else {
+          await page.locator('#contact .join').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'melli-hover-contact-cta' });
+        }
+        return;
+      }
+      if (slug === 'iris') {
+        const step = actions.filter(a => a.action.startsWith('iris-')).length;
+        if (step === 0) {
+          await page.mouse.move(320, 260, { steps: 20 });
+          await page.locator('.btn-try').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'iris-look-left-and-hover-cta' });
+        } else if (step === 1) {
+          await page.mouse.move(1240, 240, { steps: 24 });
+          await page.mouse.move(1160, 680, { steps: 20 });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'iris-look-right-and-down' });
+        } else {
+          await page.mouse.move(980, 440, { steps: 18 });
+          await page.locator('.btn-open').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'iris-center-gaze-and-hover-nav' });
+        }
+        return;
+      }
+      if (slug === 'wander-far') {
+        const step = actions.filter(a => a.action.startsWith('wander-far-')).length;
+        if (step === 0) {
+          await page.locator('[data-tab="experiences"]').click();
+          await page.waitForTimeout(250);
+          await page.locator('[data-tab="stays"]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'wander-far-switch-tabs' });
+        } else if (step === 1) {
+          await page.locator('#searchSubmitBtn').click();
+          await page.locator('#searchModal.is-open').waitFor({ state: 'visible' });
+          await page.locator('#selectWhere').selectOption('Geirangerfjord');
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'wander-far-open-modal-and-select-geiranger' });
+        } else {
+          await page.locator('#applySearchBtn').click();
+          await page.locator('#locationChip').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'wander-far-apply-search-and-hover-chip' });
+        }
+        return;
+      }
+      if (slug === 'murmur') {
+        const step = actions.filter(a => a.action.startsWith('murmur-')).length;
+        if (step === 0) {
+          await page.locator('#playBtn').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'murmur-toggle-play' });
+        } else if (step === 1) {
+          await page.locator('[data-platform="0"]').click();
+          await page.locator('#platformModal.is-open').waitFor({ state: 'visible' });
+          await page.locator('[data-episode="1"]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'murmur-open-platform-and-switch-episode' });
+        } else {
+          await page.keyboard.press('Escape');
+          await page.locator('[data-platform="2"]').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'murmur-close-modal-and-hover-icon' });
+        }
+        return;
+      }
+      if (slug === 'eclipsio') {
+        const step = actions.filter(a => a.action.startsWith('eclipsio-')).length;
+        if (step === 0) {
+          await page.locator('#heroSamplesBtn').click();
+          await page.locator('#samplesModal.is-open').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'eclipsio-open-samples-modal' });
+        } else if (step === 1) {
+          await page.locator('[data-select-sample="1"]').click();
+          await page.waitForTimeout(350);
+          await page.keyboard.press('Escape');
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'eclipsio-switch-sample-and-close' });
+        } else {
+          await page.locator('#heroCreateBtn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'eclipsio-hover-primary-cta' });
+        }
+        return;
+      }
+      if (slug === 'meadowbell') {
+        const step = actions.filter(a => a.action.startsWith('meadowbell-')).length;
+        if (step === 0) {
+          await page.locator('#heroPreview').click();
+          await page.locator('#chapterModal.is-open').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'meadowbell-open-preview-modal' });
+        } else if (step === 1) {
+          await page.locator('[data-select-chapter="1"]').click();
+          await page.waitForTimeout(350);
+          await page.keyboard.press('Escape');
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'meadowbell-switch-chapter-and-close' });
+        } else {
+          await page.locator('.chapter-card--2').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'meadowbell-hover-chapter-card' });
+        }
+        return;
+      }
       if (slug === 'oceanpulse') {
         const step = actions.filter(a => a.action.startsWith('oceanpulse-')).length;
         if (step === 0) {
@@ -537,13 +652,13 @@ try {
     const scrollHeight = await page.evaluate(() => document.documentElement.scrollHeight);
     const target = slug === 'jack-3d'
       ? await page.locator('#projects').evaluate(e=>Math.max(0,e.getBoundingClientRect().top+220))
-      : Math.min(scrollHeight-900, slug === 'prmpt' ? scrollHeight - 900 : slug === 'mostar-city' ? 3700 : slug === 'apartment-flow' ? 2400 : 1650);
+      : Math.min(scrollHeight-900, slug === 'prmpt' || slug === 'melli' ? scrollHeight - 900 : slug === 'mostar-city' ? 3700 : slug === 'apartment-flow' ? 2400 : 1650);
     for (let step=1; step<=5; step++) {
       await page.mouse.wheel(0, Math.max(0,target)/5); await page.waitForTimeout(450);
     }
     actions.push({ seconds:6.7, action:'scroll', target });
     await at(10); await shot('scroll');
-    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse'].includes(slug)) {
+    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli'].includes(slug)) {
       await next();
     }
     await at(11.5); await page.evaluate(() => window.scrollTo({ top:0, behavior:'smooth' }));

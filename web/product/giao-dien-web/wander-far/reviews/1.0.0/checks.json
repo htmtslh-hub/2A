@@ -1,0 +1,3006 @@
+{
+  "date": "2026-10-21T02:10:16.166Z",
+  "url": "http://127.0.0.1:61295/",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 815,
+            "right": 320,
+            "bottom": 815
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 216,
+            "h": 90,
+            "right": 236,
+            "bottom": 118
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 130,
+            "w": 280,
+            "h": 69,
+            "right": 300,
+            "bottom": 199
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 219,
+            "w": 280,
+            "h": 31,
+            "right": 300,
+            "bottom": 250
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 262,
+            "w": 280,
+            "h": 249,
+            "right": 300,
+            "bottom": 511
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 263,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 322
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 322,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 382
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 382,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 442
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 452,
+            "w": 258,
+            "h": 48,
+            "right": 289,
+            "bottom": 500
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 531,
+            "w": 280,
+            "h": 260,
+            "right": 300,
+            "bottom": 791
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 749,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 777
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 815,
+            "right": 375,
+            "bottom": 815
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 216,
+            "h": 90,
+            "right": 236,
+            "bottom": 118
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 130,
+            "w": 335,
+            "h": 69,
+            "right": 355,
+            "bottom": 199
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 219,
+            "w": 335,
+            "h": 31,
+            "right": 355,
+            "bottom": 250
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 262,
+            "w": 335,
+            "h": 249,
+            "right": 355,
+            "bottom": 511
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 263,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 322
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 322,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 382
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 382,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 442
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 452,
+            "w": 313,
+            "h": 48,
+            "right": 344,
+            "bottom": 500
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 531,
+            "w": 335,
+            "h": 260,
+            "right": 355,
+            "bottom": 791
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 749,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 777
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 670,
+            "h": 23,
+            "right": 690,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 728,
+            "h": 31,
+            "right": 748,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 728,
+            "h": 249,
+            "right": 748,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 706,
+            "h": 48,
+            "right": 737,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 728,
+            "h": 466,
+            "right": 748,
+            "bottom": 1000
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 958,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 986
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 670,
+            "h": 23,
+            "right": 690,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 780,
+            "h": 31,
+            "right": 800,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 780,
+            "h": 249,
+            "right": 800,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 758,
+            "h": 48,
+            "right": 789,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 780,
+            "h": 622,
+            "right": 800,
+            "bottom": 1156
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 1114,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 1142
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "scrollHeight": 768,
+          "clientHeight": 768,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 768,
+            "right": 1024,
+            "bottom": 768
+          },
+          "headlineRect": {
+            "x": 45,
+            "y": 31,
+            "w": 312,
+            "h": 130,
+            "right": 357,
+            "bottom": 161
+          },
+          "ledeRect": {
+            "x": 684,
+            "y": 118,
+            "w": 295,
+            "h": 44,
+            "right": 979,
+            "bottom": 161
+          },
+          "tabsRowRect": {
+            "x": 45,
+            "y": 181,
+            "w": 933,
+            "h": 23,
+            "right": 979,
+            "bottom": 205
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 45,
+            "y": 215,
+            "w": 933,
+            "h": 52,
+            "right": 979,
+            "bottom": 267
+          },
+          "cellWhereRect": {
+            "x": 46,
+            "y": 216,
+            "w": 276,
+            "h": 50,
+            "right": 323,
+            "bottom": 266
+          },
+          "cellDatesRect": {
+            "x": 323,
+            "y": 216,
+            "w": 276,
+            "h": 50,
+            "right": 599,
+            "bottom": 266
+          },
+          "cellTravRect": {
+            "x": 599,
+            "y": 216,
+            "w": 240,
+            "h": 50,
+            "right": 839,
+            "bottom": 266
+          },
+          "searchBtnRect": {
+            "x": 845,
+            "y": 221,
+            "w": 127,
+            "h": 39,
+            "right": 972,
+            "bottom": 260
+          },
+          "photoPanelRect": {
+            "x": 45,
+            "y": 284,
+            "w": 933,
+            "h": 459,
+            "right": 979,
+            "bottom": 743
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "50% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "50% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 59,
+            "y": 705,
+            "w": 179,
+            "h": 23,
+            "right": 238,
+            "bottom": 728
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 122,
+            "y": 0,
+            "w": 1196,
+            "h": 900,
+            "right": 1318,
+            "bottom": 900
+          },
+          "headlineRect": {
+            "x": 175,
+            "y": 36,
+            "w": 365,
+            "h": 152,
+            "right": 539,
+            "bottom": 189
+          },
+          "ledeRect": {
+            "x": 924,
+            "y": 137,
+            "w": 341,
+            "h": 51,
+            "right": 1265,
+            "bottom": 189
+          },
+          "tabsRowRect": {
+            "x": 175,
+            "y": 212,
+            "w": 1090,
+            "h": 27,
+            "right": 1265,
+            "bottom": 239
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 175,
+            "y": 251,
+            "w": 1090,
+            "h": 61,
+            "right": 1265,
+            "bottom": 312
+          },
+          "cellWhereRect": {
+            "x": 176,
+            "y": 252,
+            "w": 323,
+            "h": 59,
+            "right": 499,
+            "bottom": 311
+          },
+          "cellDatesRect": {
+            "x": 499,
+            "y": 252,
+            "w": 323,
+            "h": 59,
+            "right": 821,
+            "bottom": 311
+          },
+          "cellTravRect": {
+            "x": 821,
+            "y": 252,
+            "w": 281,
+            "h": 59,
+            "right": 1102,
+            "bottom": 311
+          },
+          "searchBtnRect": {
+            "x": 1109,
+            "y": 258,
+            "w": 149,
+            "h": 46,
+            "right": 1258,
+            "bottom": 304
+          },
+          "photoPanelRect": {
+            "x": 175,
+            "y": 332,
+            "w": 1090,
+            "h": 539,
+            "right": 1265,
+            "bottom": 870
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "50% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "50% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 191,
+            "y": 827,
+            "w": 208,
+            "h": 27,
+            "right": 400,
+            "bottom": 854
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "scrollHeight": 360,
+          "clientHeight": 360,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 818,
+            "right": 740,
+            "bottom": 818
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 670,
+            "h": 23,
+            "right": 690,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 700,
+            "h": 31,
+            "right": 720,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 700,
+            "h": 249,
+            "right": 720,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 678,
+            "h": 48,
+            "right": 709,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 700,
+            "h": 260,
+            "right": 720,
+            "bottom": 794
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 752,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 780
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "expSelected": "true",
+        "expKicker": "EXPERIENCES · KAYAK, GLACIER & WATERFALL TRAILS",
+        "staysKicker": "STAYS · NORWEGIAN FJORD COLLECTION",
+        "modalOpen": true,
+        "updatedDest": "Geirangerfjord",
+        "modalClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 815,
+            "right": 320,
+            "bottom": 815
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 216,
+            "h": 90,
+            "right": 236,
+            "bottom": 118
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 130,
+            "w": 280,
+            "h": 69,
+            "right": 300,
+            "bottom": 199
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 219,
+            "w": 280,
+            "h": 31,
+            "right": 300,
+            "bottom": 250
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 262,
+            "w": 280,
+            "h": 249,
+            "right": 300,
+            "bottom": 511
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 263,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 322
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 322,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 382
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 382,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 442
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 452,
+            "w": 258,
+            "h": 48,
+            "right": 289,
+            "bottom": 500
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 531,
+            "w": 280,
+            "h": 260,
+            "right": 300,
+            "bottom": 791
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 749,
+            "w": 222,
+            "h": 28,
+            "right": 256,
+            "bottom": 777
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 815,
+            "right": 375,
+            "bottom": 815
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 216,
+            "h": 90,
+            "right": 236,
+            "bottom": 118
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 130,
+            "w": 335,
+            "h": 69,
+            "right": 355,
+            "bottom": 199
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 219,
+            "w": 335,
+            "h": 31,
+            "right": 355,
+            "bottom": 250
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 262,
+            "w": 335,
+            "h": 249,
+            "right": 355,
+            "bottom": 511
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 263,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 322
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 322,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 382
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 382,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 442
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 452,
+            "w": 313,
+            "h": 48,
+            "right": 344,
+            "bottom": 500
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 531,
+            "w": 335,
+            "h": 260,
+            "right": 355,
+            "bottom": 791
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 749,
+            "w": 222,
+            "h": 28,
+            "right": 256,
+            "bottom": 777
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 671,
+            "h": 23,
+            "right": 691,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 728,
+            "h": 31,
+            "right": 748,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 728,
+            "h": 249,
+            "right": 748,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 706,
+            "h": 48,
+            "right": 737,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 728,
+            "h": 466,
+            "right": 748,
+            "bottom": 1000
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 958,
+            "w": 222,
+            "h": 28,
+            "right": 256,
+            "bottom": 986
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 671,
+            "h": 23,
+            "right": 691,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 780,
+            "h": 31,
+            "right": 800,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 780,
+            "h": 249,
+            "right": 800,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 758,
+            "h": 48,
+            "right": 789,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 780,
+            "h": 622,
+            "right": 800,
+            "bottom": 1156
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 1114,
+            "w": 222,
+            "h": 28,
+            "right": 256,
+            "bottom": 1142
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "scrollHeight": 768,
+          "clientHeight": 768,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 6,
+            "y": 0,
+            "w": 1012,
+            "h": 768,
+            "right": 1018,
+            "bottom": 768
+          },
+          "headlineRect": {
+            "x": 51,
+            "y": 31,
+            "w": 309,
+            "h": 129,
+            "right": 359,
+            "bottom": 160
+          },
+          "ledeRect": {
+            "x": 682,
+            "y": 116,
+            "w": 291,
+            "h": 43,
+            "right": 973,
+            "bottom": 160
+          },
+          "tabsRowRect": {
+            "x": 51,
+            "y": 179,
+            "w": 923,
+            "h": 23,
+            "right": 973,
+            "bottom": 202
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 51,
+            "y": 212,
+            "w": 923,
+            "h": 52,
+            "right": 973,
+            "bottom": 264
+          },
+          "cellWhereRect": {
+            "x": 52,
+            "y": 213,
+            "w": 273,
+            "h": 50,
+            "right": 325,
+            "bottom": 263
+          },
+          "cellDatesRect": {
+            "x": 325,
+            "y": 213,
+            "w": 273,
+            "h": 50,
+            "right": 598,
+            "bottom": 263
+          },
+          "cellTravRect": {
+            "x": 598,
+            "y": 213,
+            "w": 237,
+            "h": 50,
+            "right": 835,
+            "bottom": 263
+          },
+          "searchBtnRect": {
+            "x": 841,
+            "y": 219,
+            "w": 126,
+            "h": 39,
+            "right": 967,
+            "bottom": 257
+          },
+          "photoPanelRect": {
+            "x": 51,
+            "y": 281,
+            "w": 923,
+            "h": 462,
+            "right": 973,
+            "bottom": 743
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "50% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "50% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 65,
+            "y": 706,
+            "w": 177,
+            "h": 23,
+            "right": 241,
+            "bottom": 729
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 130,
+            "y": 0,
+            "w": 1181,
+            "h": 900,
+            "right": 1310,
+            "bottom": 900
+          },
+          "headlineRect": {
+            "x": 182,
+            "y": 36,
+            "w": 360,
+            "h": 150,
+            "right": 542,
+            "bottom": 186
+          },
+          "ledeRect": {
+            "x": 920,
+            "y": 136,
+            "w": 338,
+            "h": 51,
+            "right": 1258,
+            "bottom": 186
+          },
+          "tabsRowRect": {
+            "x": 182,
+            "y": 209,
+            "w": 1076,
+            "h": 27,
+            "right": 1258,
+            "bottom": 236
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 182,
+            "y": 247,
+            "w": 1076,
+            "h": 60,
+            "right": 1258,
+            "bottom": 308
+          },
+          "cellWhereRect": {
+            "x": 183,
+            "y": 248,
+            "w": 319,
+            "h": 58,
+            "right": 501,
+            "bottom": 307
+          },
+          "cellDatesRect": {
+            "x": 501,
+            "y": 248,
+            "w": 319,
+            "h": 58,
+            "right": 820,
+            "bottom": 307
+          },
+          "cellTravRect": {
+            "x": 820,
+            "y": 248,
+            "w": 277,
+            "h": 58,
+            "right": 1097,
+            "bottom": 307
+          },
+          "searchBtnRect": {
+            "x": 1104,
+            "y": 255,
+            "w": 147,
+            "h": 45,
+            "right": 1251,
+            "bottom": 300
+          },
+          "photoPanelRect": {
+            "x": 182,
+            "y": 327,
+            "w": 1076,
+            "h": 543,
+            "right": 1258,
+            "bottom": 871
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "50% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "50% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 198,
+            "y": 828,
+            "w": 206,
+            "h": 27,
+            "right": 404,
+            "bottom": 854
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "scrollHeight": 360,
+          "clientHeight": 360,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 818,
+            "right": 740,
+            "bottom": 818
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 671,
+            "h": 23,
+            "right": 691,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 700,
+            "h": 31,
+            "right": 720,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 700,
+            "h": 249,
+            "right": 720,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 678,
+            "h": 48,
+            "right": 709,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 700,
+            "h": 260,
+            "right": 720,
+            "bottom": 794
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 752,
+            "w": 222,
+            "h": 28,
+            "right": 256,
+            "bottom": 780
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "expSelected": "true",
+        "expKicker": "EXPERIENCES · KAYAK, GLACIER & WATERFALL TRAILS",
+        "staysKicker": "STAYS · NORWEGIAN FJORD COLLECTION",
+        "modalOpen": true,
+        "updatedDest": "Geirangerfjord",
+        "modalClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "edge": {
+      "version": "155.0.4283.62",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 815,
+            "right": 320,
+            "bottom": 815
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 216,
+            "h": 90,
+            "right": 236,
+            "bottom": 118
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 130,
+            "w": 280,
+            "h": 69,
+            "right": 300,
+            "bottom": 199
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 219,
+            "w": 280,
+            "h": 31,
+            "right": 300,
+            "bottom": 250
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 262,
+            "w": 280,
+            "h": 249,
+            "right": 300,
+            "bottom": 511
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 263,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 322
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 322,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 382
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 382,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 442
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 452,
+            "w": 258,
+            "h": 48,
+            "right": 289,
+            "bottom": 500
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 531,
+            "w": 280,
+            "h": 260,
+            "right": 300,
+            "bottom": 791
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 749,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 777
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 815,
+            "right": 375,
+            "bottom": 815
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 216,
+            "h": 90,
+            "right": 236,
+            "bottom": 118
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 130,
+            "w": 335,
+            "h": 69,
+            "right": 355,
+            "bottom": 199
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 219,
+            "w": 335,
+            "h": 31,
+            "right": 355,
+            "bottom": 250
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 262,
+            "w": 335,
+            "h": 249,
+            "right": 355,
+            "bottom": 511
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 263,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 322
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 322,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 382
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 382,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 442
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 452,
+            "w": 313,
+            "h": 48,
+            "right": 344,
+            "bottom": 500
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 531,
+            "w": 335,
+            "h": 260,
+            "right": 355,
+            "bottom": 791
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 749,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 777
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 670,
+            "h": 23,
+            "right": 690,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 728,
+            "h": 31,
+            "right": 748,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 728,
+            "h": 249,
+            "right": 748,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 706,
+            "h": 48,
+            "right": 737,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 728,
+            "h": 466,
+            "right": 748,
+            "bottom": 1000
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 958,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 986
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 670,
+            "h": 23,
+            "right": 690,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 780,
+            "h": 31,
+            "right": 800,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 780,
+            "h": 249,
+            "right": 800,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 758,
+            "h": 48,
+            "right": 789,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 780,
+            "h": 622,
+            "right": 800,
+            "bottom": 1156
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 1114,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 1142
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "scrollHeight": 768,
+          "clientHeight": 768,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 768,
+            "right": 1024,
+            "bottom": 768
+          },
+          "headlineRect": {
+            "x": 45,
+            "y": 31,
+            "w": 312,
+            "h": 130,
+            "right": 357,
+            "bottom": 161
+          },
+          "ledeRect": {
+            "x": 684,
+            "y": 118,
+            "w": 295,
+            "h": 44,
+            "right": 979,
+            "bottom": 161
+          },
+          "tabsRowRect": {
+            "x": 45,
+            "y": 181,
+            "w": 933,
+            "h": 23,
+            "right": 979,
+            "bottom": 205
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 45,
+            "y": 215,
+            "w": 933,
+            "h": 52,
+            "right": 979,
+            "bottom": 267
+          },
+          "cellWhereRect": {
+            "x": 46,
+            "y": 216,
+            "w": 276,
+            "h": 50,
+            "right": 323,
+            "bottom": 266
+          },
+          "cellDatesRect": {
+            "x": 323,
+            "y": 216,
+            "w": 276,
+            "h": 50,
+            "right": 599,
+            "bottom": 266
+          },
+          "cellTravRect": {
+            "x": 599,
+            "y": 216,
+            "w": 240,
+            "h": 50,
+            "right": 839,
+            "bottom": 266
+          },
+          "searchBtnRect": {
+            "x": 845,
+            "y": 221,
+            "w": 127,
+            "h": 39,
+            "right": 972,
+            "bottom": 260
+          },
+          "photoPanelRect": {
+            "x": 45,
+            "y": 284,
+            "w": 933,
+            "h": 459,
+            "right": 979,
+            "bottom": 743
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "50% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "50% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 59,
+            "y": 705,
+            "w": 179,
+            "h": 23,
+            "right": 238,
+            "bottom": 728
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 122,
+            "y": 0,
+            "w": 1196,
+            "h": 900,
+            "right": 1318,
+            "bottom": 900
+          },
+          "headlineRect": {
+            "x": 175,
+            "y": 36,
+            "w": 365,
+            "h": 152,
+            "right": 539,
+            "bottom": 189
+          },
+          "ledeRect": {
+            "x": 924,
+            "y": 137,
+            "w": 341,
+            "h": 51,
+            "right": 1265,
+            "bottom": 189
+          },
+          "tabsRowRect": {
+            "x": 175,
+            "y": 212,
+            "w": 1090,
+            "h": 27,
+            "right": 1265,
+            "bottom": 239
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 175,
+            "y": 251,
+            "w": 1090,
+            "h": 61,
+            "right": 1265,
+            "bottom": 312
+          },
+          "cellWhereRect": {
+            "x": 176,
+            "y": 252,
+            "w": 323,
+            "h": 59,
+            "right": 499,
+            "bottom": 311
+          },
+          "cellDatesRect": {
+            "x": 499,
+            "y": 252,
+            "w": 323,
+            "h": 59,
+            "right": 821,
+            "bottom": 311
+          },
+          "cellTravRect": {
+            "x": 821,
+            "y": 252,
+            "w": 281,
+            "h": 59,
+            "right": 1102,
+            "bottom": 311
+          },
+          "searchBtnRect": {
+            "x": 1109,
+            "y": 258,
+            "w": 149,
+            "h": 46,
+            "right": 1258,
+            "bottom": 304
+          },
+          "photoPanelRect": {
+            "x": 175,
+            "y": 332,
+            "w": 1090,
+            "h": 539,
+            "right": 1265,
+            "bottom": 870
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "50% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "50% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 191,
+            "y": 827,
+            "w": 208,
+            "h": 27,
+            "right": 400,
+            "bottom": 854
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "scrollHeight": 360,
+          "clientHeight": 360,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 818,
+            "right": 740,
+            "bottom": 818
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 670,
+            "h": 23,
+            "right": 690,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 700,
+            "h": 31,
+            "right": 720,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 700,
+            "h": 249,
+            "right": 720,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 678,
+            "h": 48,
+            "right": 709,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 700,
+            "h": 260,
+            "right": 720,
+            "bottom": 794
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 752,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 780
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "expSelected": "true",
+        "expKicker": "EXPERIENCES · KAYAK, GLACIER & WATERFALL TRAILS",
+        "staysKicker": "STAYS · NORWEGIAN FJORD COLLECTION",
+        "modalOpen": true,
+        "updatedDest": "Geirangerfjord",
+        "modalClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    },
+    "coccoc": {
+      "version": "152.0.7977.124",
+      "viewports": {
+        "320": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "scrollHeight": 740,
+          "clientHeight": 740,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 320,
+            "h": 815,
+            "right": 320,
+            "bottom": 815
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 216,
+            "h": 90,
+            "right": 236,
+            "bottom": 118
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 130,
+            "w": 280,
+            "h": 69,
+            "right": 300,
+            "bottom": 199
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 219,
+            "w": 280,
+            "h": 31,
+            "right": 300,
+            "bottom": 250
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 262,
+            "w": 280,
+            "h": 249,
+            "right": 300,
+            "bottom": 511
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 263,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 322
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 322,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 382
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 382,
+            "w": 278,
+            "h": 60,
+            "right": 299,
+            "bottom": 442
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 452,
+            "w": 258,
+            "h": 48,
+            "right": 289,
+            "bottom": 500
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 531,
+            "w": 280,
+            "h": 260,
+            "right": 300,
+            "bottom": 791
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 749,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 777
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "375": {
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "scrollHeight": 812,
+          "clientHeight": 812,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 815,
+            "right": 375,
+            "bottom": 815
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 216,
+            "h": 90,
+            "right": 236,
+            "bottom": 118
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 130,
+            "w": 335,
+            "h": 69,
+            "right": 355,
+            "bottom": 199
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 219,
+            "w": 335,
+            "h": 31,
+            "right": 355,
+            "bottom": 250
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 262,
+            "w": 335,
+            "h": 249,
+            "right": 355,
+            "bottom": 511
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 263,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 322
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 322,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 382
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 382,
+            "w": 333,
+            "h": 60,
+            "right": 354,
+            "bottom": 442
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 452,
+            "w": 313,
+            "h": 48,
+            "right": 344,
+            "bottom": 500
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 531,
+            "w": 335,
+            "h": 260,
+            "right": 355,
+            "bottom": 791
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 749,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 777
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "768": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "scrollHeight": 1024,
+          "clientHeight": 1024,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1024,
+            "right": 768,
+            "bottom": 1024
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 670,
+            "h": 23,
+            "right": 690,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 728,
+            "h": 31,
+            "right": 748,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 728,
+            "h": 249,
+            "right": 748,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 726,
+            "h": 60,
+            "right": 747,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 706,
+            "h": 48,
+            "right": 737,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 728,
+            "h": 466,
+            "right": 748,
+            "bottom": 1000
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 958,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 986
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "820": {
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "scrollHeight": 1180,
+          "clientHeight": 1180,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 820,
+            "h": 1180,
+            "right": 820,
+            "bottom": 1180
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 670,
+            "h": 23,
+            "right": 690,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 780,
+            "h": 31,
+            "right": 800,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 780,
+            "h": 249,
+            "right": 800,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 778,
+            "h": 60,
+            "right": 799,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 758,
+            "h": 48,
+            "right": 789,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 780,
+            "h": 622,
+            "right": 800,
+            "bottom": 1156
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 1114,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 1142
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "1024": {
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "scrollHeight": 768,
+          "clientHeight": 768,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 768,
+            "right": 1024,
+            "bottom": 768
+          },
+          "headlineRect": {
+            "x": 45,
+            "y": 31,
+            "w": 312,
+            "h": 130,
+            "right": 357,
+            "bottom": 161
+          },
+          "ledeRect": {
+            "x": 684,
+            "y": 118,
+            "w": 295,
+            "h": 44,
+            "right": 979,
+            "bottom": 161
+          },
+          "tabsRowRect": {
+            "x": 45,
+            "y": 181,
+            "w": 933,
+            "h": 23,
+            "right": 979,
+            "bottom": 205
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 45,
+            "y": 215,
+            "w": 933,
+            "h": 52,
+            "right": 979,
+            "bottom": 267
+          },
+          "cellWhereRect": {
+            "x": 46,
+            "y": 216,
+            "w": 276,
+            "h": 50,
+            "right": 323,
+            "bottom": 266
+          },
+          "cellDatesRect": {
+            "x": 323,
+            "y": 216,
+            "w": 276,
+            "h": 50,
+            "right": 599,
+            "bottom": 266
+          },
+          "cellTravRect": {
+            "x": 599,
+            "y": 216,
+            "w": 240,
+            "h": 50,
+            "right": 839,
+            "bottom": 266
+          },
+          "searchBtnRect": {
+            "x": 845,
+            "y": 221,
+            "w": 127,
+            "h": 39,
+            "right": 972,
+            "bottom": 260
+          },
+          "photoPanelRect": {
+            "x": 45,
+            "y": 284,
+            "w": 933,
+            "h": 459,
+            "right": 979,
+            "bottom": 743
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "50% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "50% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 59,
+            "y": 705,
+            "w": 179,
+            "h": 23,
+            "right": 238,
+            "bottom": 728
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "1440": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 900,
+          "clientHeight": 900,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 122,
+            "y": 0,
+            "w": 1196,
+            "h": 900,
+            "right": 1318,
+            "bottom": 900
+          },
+          "headlineRect": {
+            "x": 175,
+            "y": 36,
+            "w": 365,
+            "h": 152,
+            "right": 539,
+            "bottom": 189
+          },
+          "ledeRect": {
+            "x": 924,
+            "y": 137,
+            "w": 341,
+            "h": 51,
+            "right": 1265,
+            "bottom": 189
+          },
+          "tabsRowRect": {
+            "x": 175,
+            "y": 212,
+            "w": 1090,
+            "h": 27,
+            "right": 1265,
+            "bottom": 239
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 175,
+            "y": 251,
+            "w": 1090,
+            "h": 61,
+            "right": 1265,
+            "bottom": 312
+          },
+          "cellWhereRect": {
+            "x": 176,
+            "y": 252,
+            "w": 323,
+            "h": 59,
+            "right": 499,
+            "bottom": 311
+          },
+          "cellDatesRect": {
+            "x": 499,
+            "y": 252,
+            "w": 323,
+            "h": 59,
+            "right": 821,
+            "bottom": 311
+          },
+          "cellTravRect": {
+            "x": 821,
+            "y": 252,
+            "w": 281,
+            "h": 59,
+            "right": 1102,
+            "bottom": 311
+          },
+          "searchBtnRect": {
+            "x": 1109,
+            "y": 258,
+            "w": 149,
+            "h": 46,
+            "right": 1258,
+            "bottom": 304
+          },
+          "photoPanelRect": {
+            "x": 175,
+            "y": 332,
+            "w": 1090,
+            "h": 539,
+            "right": 1265,
+            "bottom": 870
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "50% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "50% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 191,
+            "y": 827,
+            "w": 208,
+            "h": 27,
+            "right": 400,
+            "bottom": 854
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        },
+        "740x360": {
+          "scrollWidth": 740,
+          "clientWidth": 740,
+          "scrollHeight": 360,
+          "clientHeight": 360,
+          "horizontalOverflow": false,
+          "heroShellRect": {
+            "x": 0,
+            "y": 0,
+            "w": 740,
+            "h": 818,
+            "right": 740,
+            "bottom": 818
+          },
+          "headlineRect": {
+            "x": 20,
+            "y": 28,
+            "w": 333,
+            "h": 139,
+            "right": 353,
+            "bottom": 167
+          },
+          "ledeRect": {
+            "x": 20,
+            "y": 179,
+            "w": 670,
+            "h": 23,
+            "right": 690,
+            "bottom": 202
+          },
+          "tabsRowRect": {
+            "x": 20,
+            "y": 222,
+            "w": 700,
+            "h": 31,
+            "right": 720,
+            "bottom": 253
+          },
+          "tabCount": 3,
+          "searchBarRect": {
+            "x": 20,
+            "y": 265,
+            "w": 700,
+            "h": 249,
+            "right": 720,
+            "bottom": 514
+          },
+          "cellWhereRect": {
+            "x": 21,
+            "y": 266,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 325
+          },
+          "cellDatesRect": {
+            "x": 21,
+            "y": 325,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 385
+          },
+          "cellTravRect": {
+            "x": 21,
+            "y": 385,
+            "w": 698,
+            "h": 60,
+            "right": 719,
+            "bottom": 445
+          },
+          "searchBtnRect": {
+            "x": 31,
+            "y": 455,
+            "w": 678,
+            "h": 48,
+            "right": 709,
+            "bottom": 503
+          },
+          "photoPanelRect": {
+            "x": 20,
+            "y": 534,
+            "w": 700,
+            "h": 260,
+            "right": 720,
+            "bottom": 794
+          },
+          "photoPanelRadius": "0px",
+          "stillObjectFit": "cover",
+          "stillObjectPosition": "74% 50%",
+          "videoObjectFit": "cover",
+          "videoObjectPosition": "74% 50%",
+          "videoReady": true,
+          "chipRect": {
+            "x": 34,
+            "y": 752,
+            "w": 223,
+            "h": 28,
+            "right": 257,
+            "bottom": 780
+          },
+          "chipPlaceText": "Geirangerfjord, Norge",
+          "chipCoordText": "62.10° N",
+          "consoleErrors": 0
+        }
+      },
+      "interactions": {
+        "expSelected": "true",
+        "expKicker": "EXPERIENCES · KAYAK, GLACIER & WATERFALL TRAILS",
+        "staysKicker": "STAYS · NORWEGIAN FJORD COLLECTION",
+        "modalOpen": true,
+        "updatedDest": "Geirangerfjord",
+        "modalClosed": true,
+        "totalConsoleErrors": 0,
+        "totalPageErrors": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "t85",
+  "slug": "murmur",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-21T01:52:46.316Z",
+  "demo": "/demos/murmur/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "b848e4f94ae7",
+  "sha256": "b848e4f94ae7e749d0145da46842be44968b1cb6c72314328981be2d451e4ea6",
+  "demoHtmlSha256": "a73e0c50e040d4e2911b58d69e828ca30a684cd4c784e758e2b03ba5866de05b",
+  "demoSha256": "621ed38ff50c1df64ef45ae89b1311eef628412b4b1a537d9e5b41757a877502",
+  "bytes": 464319,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.581,
+      "action": "murmur-toggle-play"
+    },
+    {
+      "seconds": 4.937,
+      "action": "murmur-open-platform-and-switch-episode"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\murmur-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\murmur-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\murmur-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\murmur-return.jpg"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "t83",
+  "slug": "meadowbell",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-21T01:12:14.574Z",
+  "demo": "/demos/meadowbell/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "04d6f2aa1089",
+  "sha256": "04d6f2aa1089310b868bf5a560bc1827faf475bd5822dc2c872c394fba10f6b4",
+  "demoHtmlSha256": "a03f100b93f7a00bbbe14862fcce704ba28ba110cffd6bceceefd77d7f7ffb83",
+  "demoSha256": "ac501fb48d03f4ea04e864e994fa0e9549ae48b67c48db12950dc1b1c1a28f32",
+  "bytes": 1564284,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.457,
+      "action": "meadowbell-open-preview-modal"
+    },
+    {
+      "seconds": 5.254,
+      "action": "meadowbell-switch-chapter-and-close"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 380
+    },
+    {
+      "seconds": 10.115,
+      "action": "meadowbell-hover-chapter-card"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\meadowbell-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\meadowbell-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\meadowbell-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\meadowbell-return.jpg"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "t86",
+  "slug": "wander-far",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-21T02:11:27.763Z",
+  "demo": "/demos/wander-far/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "6c2618d9cd6d",
+  "sha256": "6c2618d9cd6d0b192f7ab72017041fba55782a2425b1a18186679cf812fe990c",
+  "demoHtmlSha256": "288306d4e166bfec61bc9d6969bda681f45b84070f96896a144106dab0d8b706",
+  "demoSha256": "da94b323f95e2551f2bc18a904f58ecbf283709174342dbd67fe523b6a0bf745",
+  "bytes": 793347,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.762,
+      "action": "wander-far-switch-tabs"
+    },
+    {
+      "seconds": 4.847,
+      "action": "wander-far-open-modal-and-select-geiranger"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 10.274,
+      "action": "wander-far-apply-search-and-hover-chip"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wander-far-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wander-far-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wander-far-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wander-far-return.jpg"
+  ]
+}

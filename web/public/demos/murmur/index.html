@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08153e">
+  <title>murmur — Daily Murmur Podcast</title>
+  <meta name="description" content="Every weekday morning, murmur slows the noise down to the four stories worth carrying into your day: twenty quiet minutes of science, designs, cities and culture.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       1. DESIGN TOKENS & 1440×900 COVER-SCALED FRAME
+       ============================================================ */
+    :root {
+      --u: max(calc(100vw / 1440), calc(100vh / 900));
+      --white: #ffffff;
+      --off-white: #f4f6ff;
+      --lavender: #dfe3fb;
+      --label: #b9c4ea;
+      --date: #7583bd;
+      --navy-card: rgba(8, 21, 62, .84);
+      --navy-deep: #08153e;
+      --card-border: rgba(132, 146, 255, .38);
+      --wave-blue: #5560FF;
+      --wave-peri: #86A2FF;
+      --wave-violet: #A083FF;
+      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease-out: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #060d24;
+      color: var(--white);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: geometricPrecision;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img, video, svg {
+      display: block;
+    }
+
+    :where(a, button):focus-visible {
+      outline: 2px solid var(--wave-peri);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 16px;
+      z-index: 200;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--off-white);
+      color: var(--navy-deep);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      transition: top .2s ease;
+    }
+    .skip-link:focus-visible {
+      top: 16px;
+    }
+
+    /* ============================================================
+       2. VIEWPORT STAGE & 1440×900 FRAME
+       ============================================================ */
+    .viewport-stage {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #060d24;
+    }
+
+    .hero-frame {
+      position: relative;
+      width: calc(1440 * var(--u));
+      height: calc(900 * var(--u));
+      flex-shrink: 0;
+      overflow: hidden;
+      isolation: isolate;
+      user-select: none;
+    }
+
+    /* ============================================================
+       3. SCENE: 16:10 PLATE, MIRROR-PADDED 16:9 VIDEO & LIGHTING
+       ============================================================ */
+    .scene {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: -1;
+      background: #060d24;
+    }
+
+    .scene__plate {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Video rendered 16:9 from the 16:10 plate mirror-padded 96/1728 on each side:
+       111.11% width, left -5.556% so its middle sits exactly on the plate */
+    .scene__video {
+      position: absolute;
+      top: 0;
+      left: -5.5556%;
+      width: 111.1111%;
+      height: 100%;
+      max-width: none;
+      object-fit: fill;
+    }
+
+    /* Screen-blended lighting layer 1: Bloom (3 radial glows breathing 35%↔100% over 5.2s) */
+    .scene__bloom {
+      position: absolute;
+      inset: 0;
+      mix-blend-mode: screen;
+      background:
+        radial-gradient(28% 26% at 62% 48%, rgba(255, 118, 188, .34) 0%, rgba(255, 118, 188, 0) 100%),
+        radial-gradient(24% 22% at 77% 58%, rgba(255, 184, 108, .30) 0%, rgba(255, 184, 108, 0) 100%),
+        radial-gradient(34% 30% at 48% 42%, rgba(132, 152, 255, .32) 0%, rgba(132, 152, 255, 0) 100%);
+      animation: cityBloom 5.2s ease-in-out infinite alternate;
+    }
+
+    @keyframes cityBloom {
+      0% { opacity: .35; }
+      100% { opacity: 1; }
+    }
+
+    /* Screen-blended lighting layer 2: Sweep (pale diagonal light band every 7s) */
+    .scene__sweep {
+      position: absolute;
+      inset: -20%;
+      mix-blend-mode: screen;
+      background: linear-gradient(
+        112deg,
+        rgba(205, 220, 255, 0) 38%,
+        rgba(210, 224, 255, .04) 46%,
+        rgba(232, 238, 255, .13) 50%,
+        rgba(210, 224, 255, .04) 54%,
+        rgba(205, 220, 255, 0) 62%
+      );
+      transform: translate3d(-68%, 0, 0);
+      animation: headlightSweep 7s cubic-bezier(.4, 0, .2, 1) infinite;
+    }
+
+    @keyframes headlightSweep {
+      0% { transform: translate3d(-68%, 0, 0); opacity: 0; }
+      12% { opacity: .95; }
+      52% { transform: translate3d(68%, 0, 0); opacity: .95; }
+      65%, 100% { transform: translate3d(68%, 0, 0); opacity: 0; }
+    }
+
+    /* ============================================================
+       4. WORDMARK, SUBTITLE & EPISODE LABEL (FRAME UNITS)
+       ============================================================ */
+    /* Wordmark: "murmur", Newsreader 500, white, 139px, tracking +.05em,
+       centred, x-height top at y = 133 */
+    .wordmark {
+      position: absolute;
+      top: calc(133 * var(--u));
+      left: 0;
+      right: 0;
+      height: calc(74 * var(--u));
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      z-index: 10;
+    }
+
+    .wordmark__text {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: calc(139 * var(--u));
+      line-height: 1;
+      letter-spacing: 0.05em;
+      padding-left: 0.05em;
+      color: var(--white);
+      text-shadow: 0 calc(6 * var(--u)) calc(28 * var(--u)) rgba(6, 15, 48, .62);
+      /* Shift up by the ascender space above lowercase x-height so x-height top sits at y=133 */
+      margin-top: calc(-39 * var(--u));
+      display: block;
+    }
+
+    /* Subtitle: "Daily Murmur Podcast", 33px, centred, at y = 225 */
+    .subtitle {
+      position: absolute;
+      top: calc(225 * var(--u));
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: calc(33 * var(--u));
+      line-height: 1;
+      letter-spacing: -0.01em;
+      color: var(--lavender);
+      text-shadow: 0 calc(3 * var(--u)) calc(16 * var(--u)) rgba(6, 15, 48, .55);
+      z-index: 10;
+    }
+
+    /* Label: "LISTEN TO THE LATEST EPISODE", 12.6px mono, tracking .05em,
+       centred 10px right of centre, at y = 319 */
+    .episode-label {
+      position: absolute;
+      top: calc(319 * var(--u));
+      left: calc(730 * var(--u));
+      transform: translateX(-50%);
+      font-family: var(--font-mono);
+      font-weight: 400;
+      font-size: calc(12.6 * var(--u));
+      line-height: 1;
+      letter-spacing: 0.05em;
+      color: var(--label);
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    /* ============================================================
+       5. PLAYER CARD (623.5×190 at 412.5, 350, radius 16)
+       ============================================================ */
+    .player-card {
+      position: absolute;
+      left: calc(412.5 * var(--u));
+      top: calc(350 * var(--u));
+      width: calc(623.5 * var(--u));
+      height: calc(190 * var(--u));
+      border-radius: calc(16 * var(--u));
+      background: var(--navy-card);
+      backdrop-filter: blur(calc(18 * var(--u)));
+      -webkit-backdrop-filter: blur(calc(18 * var(--u)));
+      box-shadow:
+        inset 0 0 0 1px var(--card-border),
+        0 calc(24 * var(--u)) calc(54 * var(--u)) rgba(3, 8, 28, .72);
+      z-index: 15;
+    }
+
+    /* Cover: 158×156 at (18.5, 16) inside the card, radius 7 */
+    .card-cover {
+      position: absolute;
+      left: calc(18.5 * var(--u));
+      top: calc(16 * var(--u));
+      width: calc(158 * var(--u));
+      height: calc(156 * var(--u));
+      border-radius: calc(7 * var(--u));
+      overflow: hidden;
+      background: #121c42;
+      box-shadow: 0 calc(6 * var(--u)) calc(18 * var(--u)) rgba(0, 0, 0, .42);
+    }
+
+    .card-cover__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* White serif "murmur" over its lower left */
+    .card-cover__mark {
+      position: absolute;
+      left: calc(10 * var(--u));
+      bottom: calc(8 * var(--u));
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: calc(21 * var(--u));
+      line-height: 1;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      text-shadow: 0 calc(2 * var(--u)) calc(8 * var(--u)) rgba(4, 10, 32, .85);
+      pointer-events: none;
+    }
+
+    /* Title: "Why Cities Are Planting Forests / on Rooftops",
+       Inter 500 20.6px on a 25.5px line, at (202.5, 33) */
+    .card-title {
+      position: absolute;
+      left: calc(202.5 * var(--u));
+      top: calc(33 * var(--u));
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: calc(20.6 * var(--u));
+      line-height: calc(25.5 * var(--u));
+      letter-spacing: -0.01em;
+      color: var(--white);
+    }
+
+    .card-title__line {
+      display: block;
+    }
+
+    /* Date line: "Apr 25 · Daily Murmur Podcast", 11.2px mono, at y = 99.5 */
+    .card-date {
+      position: absolute;
+      left: calc(202.5 * var(--u));
+      top: calc(99.5 * var(--u));
+      font-family: var(--font-mono);
+      font-weight: 400;
+      font-size: calc(11.2 * var(--u));
+      line-height: 1;
+      color: var(--date);
+      white-space: nowrap;
+    }
+
+    /* Waveform: 62 thin rounded bars (1.9px) across 335×34 at (203, 138) */
+    .waveform {
+      position: absolute;
+      left: calc(203 * var(--u));
+      top: calc(138 * var(--u));
+      width: calc(335 * var(--u));
+      height: calc(34 * var(--u));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      filter: drop-shadow(0 0 calc(5 * var(--u)) rgba(134, 162, 255, .35));
+      cursor: pointer;
+    }
+
+    .waveform__bar {
+      width: calc(1.9 * var(--u));
+      height: var(--h, 30%);
+      border-radius: 999px;
+      background: var(--c, var(--wave-peri));
+      transform-origin: center center;
+      animation: waveBreathe 1.6s ease-in-out var(--d, 0s) infinite alternate;
+      transition: filter .2s ease, opacity .2s ease;
+    }
+
+    .waveform.is-active .waveform__bar {
+      filter: brightness(1.22);
+    }
+
+    @keyframes waveBreathe {
+      0% { transform: scaleY(.72); }
+      100% { transform: scaleY(1.08); }
+    }
+
+    /* Play button: 37px off-white circle with a navy play triangle at (566.5, 136.5) */
+    .play-btn {
+      position: absolute;
+      left: calc(566.5 * var(--u));
+      top: calc(136.5 * var(--u));
+      width: calc(37 * var(--u));
+      height: calc(37 * var(--u));
+      border-radius: 50%;
+      background: var(--off-white);
+      color: var(--navy-deep);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 calc(4 * var(--u)) calc(14 * var(--u)) rgba(0, 0, 0, .38);
+      transition: transform .24s var(--ease-out), box-shadow .24s ease, background-color .2s ease;
+    }
+
+    .play-btn__icon {
+      width: calc(14 * var(--u));
+      height: calc(14 * var(--u));
+      flex-shrink: 0;
+    }
+
+    @media (hover: hover) {
+      .play-btn:hover {
+        transform: scale(1.08);
+        box-shadow:
+          0 0 0 calc(6 * var(--u)) rgba(223, 227, 251, .22),
+          0 0 calc(22 * var(--u)) rgba(134, 162, 255, .65);
+      }
+    }
+
+    /* ============================================================
+       6. ABOUT BLOCK & PLATFORM ROW
+       ============================================================ */
+    /* About: "ABOUT", 13px mono at (414, 595) */
+    .about-block {
+      position: absolute;
+      left: calc(414 * var(--u));
+      top: calc(595 * var(--u));
+      width: calc(620 * var(--u));
+      z-index: 10;
+    }
+
+    .about-title {
+      font-family: var(--font-mono);
+      font-weight: 400;
+      font-size: calc(13 * var(--u));
+      line-height: 1;
+      letter-spacing: 0.04em;
+      color: var(--label);
+      margin-bottom: calc(12 * var(--u));
+    }
+
+    /* Four mono lines at 13.72px on a 19.3px pitch */
+    .about-lines {
+      font-family: var(--font-mono);
+      font-weight: 400;
+      font-size: calc(13.72 * var(--u));
+      line-height: calc(19.3 * var(--u));
+      color: rgba(223, 227, 251, .92);
+    }
+
+    .about-line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    /* Platform row: "LISTEN ON YOUR FAVORITE PODCAST PLATFORM", 11.4px mono at (414, 760).
+       Four 21.5px round white icons start at x = 710 with an 11.7px gap */
+    .platform-label {
+      position: absolute;
+      left: calc(414 * var(--u));
+      top: calc(760 * var(--u));
+      font-family: var(--font-mono);
+      font-weight: 400;
+      font-size: calc(11.4 * var(--u));
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--label);
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    .platform-icons {
+      position: absolute;
+      left: calc(710 * var(--u));
+      top: calc(755 * var(--u));
+      display: flex;
+      align-items: center;
+      gap: calc(11.7 * var(--u));
+      z-index: 10;
+    }
+
+    .platform-icon {
+      width: calc(21.5 * var(--u));
+      height: calc(21.5 * var(--u));
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--navy-deep);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 calc(3 * var(--u)) calc(10 * var(--u)) rgba(4, 10, 32, .45);
+      transition: transform .22s var(--ease-out), box-shadow .22s ease;
+    }
+
+    .platform-icon svg {
+      width: calc(13 * var(--u));
+      height: calc(13 * var(--u));
+    }
+
+    @media (hover: hover) {
+      .platform-icon:hover {
+        transform: translateY(calc(-2 * var(--u)));
+        box-shadow: 0 calc(6 * var(--u)) calc(16 * var(--u)) rgba(134, 162, 255, .55);
+      }
+    }
+
+    /* ============================================================
+       7. EPISODE & PLATFORM FEED MODAL
+       ============================================================ */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      background: rgba(4, 10, 32, .72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .26s ease;
+    }
+    .modal-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      position: relative;
+      width: min(560px, 100%);
+      border-radius: 20px;
+      background: rgba(8, 21, 62, .94);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 28px 68px rgba(2, 6, 23, .85);
+      padding: 28px;
+      color: var(--white);
+      transform: translateY(12px) scale(.98);
+      transition: transform .28s var(--ease-out);
+    }
+    .modal-backdrop.is-open .modal-card {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(132, 146, 255, .32);
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+    }
+
+    .modal-kicker {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      letter-spacing: 0.06em;
+      color: var(--label);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .modal-title {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .modal-desc {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--lavender);
+      margin-bottom: 18px;
+    }
+
+    .episode-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .episode-pill {
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(132, 146, 255, .28);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--label);
+      transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .episode-pill.is-active {
+      background: rgba(85, 96, 255, .32);
+      border-color: var(--wave-peri);
+      color: var(--white);
+    }
+
+    .rss-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: rgba(4, 10, 32, .65);
+      border: 1px solid rgba(132, 146, 255, .28);
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--lavender);
+    }
+
+    .rss-copy-btn {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--off-white);
+      color: var(--navy-deep);
+      font-family: var(--font-mono);
+      font-weight: 500;
+      font-size: 11.5px;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       8. PHONES (<= 820px)
+       ============================================================ */
+    @media (max-width: 820px) {
+      html, body {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      .viewport-stage {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        align-items: stretch;
+      }
+
+      .hero-frame {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 36px 20px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Background plate & video cover the screen behind everything */
+      .scene {
+        position: fixed;
+        inset: 0;
+      }
+
+      .scene__video {
+        left: 50%;
+        width: auto;
+        height: 100%;
+        min-width: 111.1111%;
+        transform: translateX(-50%);
+        object-fit: cover;
+      }
+
+      /* Copy stacks centred: a 60–100px wordmark, the subtitle and the label */
+      .wordmark {
+        position: static;
+        height: auto;
+        margin-bottom: 6px;
+      }
+
+      .wordmark__text {
+        font-size: clamp(60px, 15vw, 100px);
+        margin-top: 0;
+        line-height: 0.95;
+      }
+
+      .subtitle {
+        position: static;
+        font-size: clamp(19px, 4.8vw, 26px);
+        margin-bottom: 22px;
+      }
+
+      .episode-label {
+        position: static;
+        transform: none;
+        font-size: 11.5px;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+
+      /* Card: compact. Cover sits beside title and date, waveform runs full width below,
+         and play sits at the bottom-right */
+      .player-card {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: min(100%, 480px);
+        height: auto;
+        border-radius: 16px;
+        padding: 16px;
+        display: grid;
+        grid-template-columns: 88px 1fr auto;
+        grid-template-areas:
+          "cover meta meta"
+          "wave  wave play";
+        column-gap: 14px;
+        row-gap: 14px;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      .card-cover {
+        position: relative;
+        left: auto;
+        top: auto;
+        grid-area: cover;
+        width: 88px;
+        height: 88px;
+        border-radius: 7px;
+      }
+
+      .card-cover__mark {
+        left: 7px;
+        bottom: 5px;
+        font-size: 14px;
+      }
+
+      .card-meta {
+        grid-area: meta;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 0;
+      }
+
+      .card-title {
+        position: static;
+        font-size: 17px;
+        line-height: 1.26;
+      }
+      .card-title__line {
+        display: inline;
+      }
+
+      .card-date {
+        position: static;
+        font-size: 11px;
+        white-space: normal;
+      }
+
+      .waveform {
+        position: static;
+        grid-area: wave;
+        width: 100%;
+        height: 32px;
+      }
+
+      .waveform__bar {
+        width: 2px;
+      }
+
+      .play-btn {
+        position: static;
+        grid-area: play;
+        justify-self: end;
+        width: 38px;
+        height: 38px;
+      }
+
+      .play-btn__icon {
+        width: 14px;
+        height: 14px;
+      }
+
+      /* Below the card: About block and platform row, left-aligned */
+      .about-block {
+        position: static;
+        width: min(100%, 480px);
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      .about-title {
+        font-size: 12.5px;
+        margin-bottom: 8px;
+      }
+
+      .about-lines {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .about-line {
+        display: inline;
+        white-space: normal;
+      }
+
+      .platform-group {
+        width: min(100%, 480px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      .platform-label {
+        position: static;
+        font-size: 11px;
+        white-space: normal;
+      }
+
+      .platform-icons {
+        position: static;
+        gap: 10px;
+      }
+
+      .platform-icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      .platform-icon svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    /* ============================================================
+       9. REDUCED MOTION PREFERENCE
+       ============================================================ */
+    @media (prefers-reduced-motion: reduce) {
+      .scene__bloom,
+      .scene__sweep,
+      .waveform__bar {
+        animation: none !important;
+      }
+      .play-btn,
+      .platform-icon {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to podcast player</a>
+
+  <div class="viewport-stage">
+    <main id="main-content" class="hero-frame">
+      <!-- Rainy Window Scene: 16:10 Plate + Mirror-Padded 16:9 Video + Screen-Blended Lighting -->
+      <div class="scene" aria-hidden="true">
+        <img
+          class="scene__plate"
+          id="scenePlate"
+          src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/7a7598ba-a6f8-42b4-ac39-98279dac4192.jpg"
+          alt=""
+          width="1728"
+          height="1080"
+          fetchpriority="high"
+        >
+        <video
+          class="scene__video"
+          id="sceneVideo"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/7a7598ba-a6f8-42b4-ac39-98279dac4192.jpg"
+        >
+          <source src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/d41b8c1d-f175-43b3-af22-7081133aa8de.mp4" type="video/mp4">
+        </video>
+        <div class="scene__bloom" id="sceneBloom"></div>
+        <div class="scene__sweep" id="sceneSweep"></div>
+      </div>
+
+      <!-- Wordmark: "murmur", Newsreader 500, 139px, tracking +.05em, x-height top at y=133 -->
+      <h1 class="wordmark" id="wordmark">
+        <span class="wordmark__text">murmur</span>
+      </h1>
+
+      <!-- Subtitle: "Daily Murmur Podcast", 33px, centred, at y=225 -->
+      <p class="subtitle" id="subtitle">Daily Murmur Podcast</p>
+
+      <!-- Label: "LISTEN TO THE LATEST EPISODE", 12.6px mono, centred 10px right of centre, at y=319 -->
+      <p class="episode-label" id="episodeLabel">LISTEN TO THE LATEST EPISODE</p>
+
+      <!-- Player Card: 623.5×190 at (412.5, 350), radius 16 -->
+      <section class="player-card" id="playerCard" aria-label="Latest episode player">
+        <div class="card-cover" id="cardCover">
+          <img
+            class="card-cover__img"
+            id="cardCoverImg"
+            src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/6f03fd17-7c05-4c28-a079-6c53f2d397e6.webp"
+            alt="Rooftop gardens over a dusk city skyline"
+            width="158"
+            height="156"
+          >
+          <span class="card-cover__mark" aria-hidden="true">murmur</span>
+        </div>
+
+        <div class="card-meta">
+          <h2 class="card-title" id="cardTitle">
+            <span class="card-title__line">Why Cities Are Planting Forests </span>
+            <span class="card-title__line">on Rooftops</span>
+          </h2>
+          <p class="card-date" id="cardDate">Apr 25 · Daily Murmur Podcast</p>
+        </div>
+
+        <!-- 62 thin rounded bars (1.9px) across 335×34 at (203, 138) -->
+        <div
+          class="waveform"
+          id="waveform"
+          role="slider"
+          tabindex="0"
+          aria-label="Episode audio waveform progress"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="25"
+        ></div>
+
+        <!-- Play button: 37px off-white circle with a navy play triangle at (566.5, 136.5) -->
+        <button
+          type="button"
+          class="play-btn"
+          id="playBtn"
+          aria-label="Play episode: Why Cities Are Planting Forests on Rooftops"
+          aria-pressed="false"
+        >
+          <svg class="play-btn__icon" id="playIconSvg" viewBox="0 0 14 14" fill="none" aria-hidden="true" focusable="false">
+            <path id="playIconPath" d="M3.6 2.2C3.1 1.9 2.5 2.25 2.5 2.85V11.15C2.5 11.75 3.1 12.1 3.6 11.8L11.4 7.65C11.9 7.35 11.9 6.65 11.4 6.35L3.6 2.2Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </section>
+
+      <!-- About: "ABOUT", 13px mono at (414, 595), 4 mono lines at 13.72px / 19.3px -->
+      <section class="about-block" id="aboutBlock" aria-labelledby="aboutTitle">
+        <h2 class="about-title" id="aboutTitle">ABOUT</h2>
+        <p class="about-lines" id="aboutLines">
+          <span class="about-line">Every weekday morning, murmur slows the noise down to the four stories </span>
+          <span class="about-line">worth carrying into your day: twenty quiet minutes of science, designs, </span>
+          <span class="about-line">cities and culture, told by hosts who stay so curious about the </span>
+          <span class="about-line">small things that make a city a home.</span>
+        </p>
+      </section>
+
+      <!-- Platform Row: "LISTEN ON YOUR FAVORITE PODCAST PLATFORM", 11.4px mono at (414, 760)
+           + 4 generic 21.5px round white icons starting at x=710 with 11.7px gap -->
+      <div class="platform-group" id="platformGroup">
+        <p class="platform-label" id="platformLabel">LISTEN ON YOUR FAVORITE PODCAST PLATFORM</p>
+        <div class="platform-icons" id="platformIcons" role="group" aria-label="Podcast directories">
+          <!-- 1. Outlined podcast mic -->
+          <button type="button" class="platform-icon" data-platform="0" aria-label="Listen via Podcast Directory">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+              <rect x="6" y="2.5" width="4" height="6.5" rx="2" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M3.8 7.2C3.8 9.5 5.68 11.3 8 11.3C10.32 11.3 12.2 9.5 12.2 7.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M8 11.4V13.6M6 13.6H10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <!-- 2. Sound-bars disc -->
+          <button type="button" class="platform-icon" data-platform="1" aria-label="Listen via Audio Stream">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+              <path d="M4.2 6.2C6.8 5.2 9.8 5.4 12.1 6.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M4.8 8.6C6.9 7.8 9.3 8.0 11.3 9.0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M5.5 10.9C7.1 10.3 8.9 10.4 10.4 11.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <!-- 3. Headphones disc -->
+          <button type="button" class="platform-icon" data-platform="2" aria-label="Listen via Headphone Feed">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+              <path d="M3.5 9V7.8C3.5 5.3 5.5 3.3 8 3.3C10.5 3.3 12.5 5.3 12.5 7.8V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <rect x="2.7" y="8.5" width="2.4" height="4" rx="1.2" fill="currentColor"/>
+              <rect x="10.9" y="8.5" width="2.4" height="4" rx="1.2" fill="currentColor"/>
+            </svg>
+          </button>
+
+          <!-- 4. Equalizer bars disc -->
+          <button type="button" class="platform-icon" data-platform="3" aria-label="Listen via Open RSS Equalizer">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+              <path d="M4.2 9.5V6.5M6.7 11.5V4.5M9.3 10.5V5.5M11.8 8.8V7.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Interactive Podcast Directory & Episode Notes Modal -->
+  <div class="modal-backdrop" id="platformModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true" inert>
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close podcast feed dialog">✕</button>
+      <p class="modal-kicker" id="modalKicker">DAILY MURMUR PODCAST · RSS & ARCHIVE</p>
+      <h2 class="modal-title" id="modalTitle">Why Cities Are Planting Forests on Rooftops</h2>
+      <p class="modal-desc" id="modalDesc">20 min · Urban botanists and structural engineers walk us through high-altitude micro-forests cooling apartment blocks by 4.2°C during summer dusk.</p>
+      <div class="episode-pills" role="tablist" aria-label="Recent episodes">
+        <button type="button" class="episode-pill is-active" data-episode="0">Apr 25 · Rooftop Forests</button>
+        <button type="button" class="episode-pill" data-episode="1">Apr 24 · Rain-Streak Acoustics</button>
+        <button type="button" class="episode-pill" data-episode="2">Apr 23 · Night Train Typography</button>
+      </div>
+      <div class="rss-box">
+        <span id="rssUrl">https://murmur.audio/feed/daily.xml</span>
+        <button type="button" class="rss-copy-btn" id="rssCopyBtn">Copy RSS</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      // 1. Build 62 thin rounded bars (1.9px) across 335×34 at (203, 138)
+      //    Quiet baseline with a tall bright burst at ~25%, softer bumps at 33% and 68%,
+      //    colour drift from #5560FF through #86A2FF to #A083FF.
+      const waveformEl = document.getElementById('waveform');
+      const BAR_COUNT = 62;
+
+      function lerpColor(a, b, t) {
+        const ah = parseInt(a.slice(1), 16);
+        const bh = parseInt(b.slice(1), 16);
+        const ar = (ah >> 16) & 255, ag = (ah >> 8) & 255, ab = ah & 255;
+        const br = (bh >> 16) & 255, bg = (bh >> 8) & 255, bb = bh & 255;
+        const rr = Math.round(ar + (br - ar) * t);
+        const rg = Math.round(ag + (bg - ag) * t);
+        const rb = Math.round(ab + (bb - ab) * t);
+        return `rgb(${rr}, ${rg}, ${rb})`;
+      }
+
+      function barColor(norm) {
+        if (norm <= 0.5) {
+          return lerpColor('#5560FF', '#86A2FF', norm * 2);
+        }
+        return lerpColor('#86A2FF', '#A083FF', (norm - 0.5) * 2);
+      }
+
+      // Deterministic profile matching prompt: quiet baseline, tall burst at ~25%,
+      // softer bumps at 33% and 68%
+      function barHeightPercent(i) {
+        const x = i / (BAR_COUNT - 1);
+        const base = 18 + 7 * Math.abs(Math.sin(i * 1.37));
+        const burst25 = 76 * Math.exp(-Math.pow((x - 0.25) / 0.042, 2));
+        const bump33 = 44 * Math.exp(-Math.pow((x - 0.33) / 0.038, 2));
+        const bump68 = 50 * Math.exp(-Math.pow((x - 0.68) / 0.052, 2));
+        const ripple = 10 * Math.exp(-Math.pow((x - 0.51) / 0.04, 2));
+        return Math.min(98, Math.max(16, Math.round(base + burst25 + bump33 + bump68 + ripple)));
+      }
+
+      if (waveformEl) {
+        const frag = document.createDocumentFragment();
+        for (let i = 0; i < BAR_COUNT; i++) {
+          const span = document.createElement('span');
+          span.className = 'waveform__bar';
+          const norm = i / (BAR_COUNT - 1);
+          const h = barHeightPercent(i);
+          span.style.setProperty('--h', `${h}%`);
+          span.style.setProperty('--c', barColor(norm));
+          span.style.setProperty('--d', `${((i * 0.07) % 1.6).toFixed(2)}s`);
+          frag.appendChild(span);
+        }
+        waveformEl.appendChild(frag);
+      }
+
+      // 2. Reduced motion & query parameter check
+      const params = new URLSearchParams(window.location.search);
+      const reduceMotion =
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+        params.get('motion') === 'off';
+
+      const video = document.getElementById('sceneVideo');
+      if (video) {
+        if (reduceMotion) {
+          video.pause();
+          video.removeAttribute('autoplay');
+        } else {
+          const p = video.play();
+          if (p && typeof p.catch === 'function') p.catch(() => {});
+        }
+      }
+
+      // 3. One-shot Web Animations entrance timeline
+      if (!reduceMotion && typeof Element.prototype.animate === 'function') {
+        const easeOut = 'cubic-bezier(0.22, 1, 0.36, 1)';
+        const wordmark = document.getElementById('wordmark');
+        const subtitle = document.getElementById('subtitle');
+        const episodeLabel = document.getElementById('episodeLabel');
+        const playerCard = document.getElementById('playerCard');
+        const aboutTitle = document.getElementById('aboutTitle');
+        const aboutLines = Array.from(document.querySelectorAll('.about-line'));
+        const platformGroup = document.getElementById('platformGroup');
+
+        function runOnce(el, keyframes, options) {
+          if (!el) return;
+          const anim = el.animate(keyframes, { ...options, fill: 'both' });
+          anim.onfinish = () => anim.cancel();
+        }
+
+        // Wordmark develops out of an 18px blur with a slight scale
+        runOnce(
+          wordmark,
+          [
+            { opacity: 0, filter: 'blur(18px)', transform: 'scale(1.06)' },
+            { opacity: 1, filter: 'blur(0px)', transform: 'scale(1)' },
+          ],
+          { duration: 920, easing: easeOut }
+        );
+
+        // Subtitle rises
+        runOnce(
+          subtitle,
+          [
+            { opacity: 0, transform: 'translateY(14px)' },
+            { opacity: 1, transform: 'translateY(0)' },
+          ],
+          { duration: 760, delay: 180, easing: easeOut }
+        );
+
+        // Label's tracking tightens from .3em to .05em
+        const isMobile = window.matchMedia('(max-width: 820px)').matches;
+        runOnce(
+          episodeLabel,
+          [
+            {
+              opacity: 0,
+              letterSpacing: '0.3em',
+              transform: isMobile ? 'translateY(8px)' : 'translateX(-50%) translateY(8px)',
+            },
+            {
+              opacity: 1,
+              letterSpacing: '0.05em',
+              transform: isMobile ? 'translateY(0)' : 'translateX(-50%) translateY(0)',
+            },
+          ],
+          { duration: 820, delay: 300, easing: easeOut }
+        );
+
+        // Card rises out of a blur
+        runOnce(
+          playerCard,
+          [
+            { opacity: 0, filter: 'blur(14px)', transform: 'translateY(22px)' },
+            { opacity: 1, filter: 'blur(0px)', transform: 'translateY(0)' },
+          ],
+          { duration: 860, delay: 420, easing: easeOut }
+        );
+
+        // Waveform wipes in left to right
+        runOnce(
+          waveformEl,
+          [
+            { clipPath: 'inset(0 100% 0 0)', opacity: 0.4 },
+            { clipPath: 'inset(0 0% 0 0)', opacity: 1 },
+          ],
+          { duration: 960, delay: 580, easing: easeOut }
+        );
+
+        // About title & four lines rise one by one
+        runOnce(
+          aboutTitle,
+          [
+            { opacity: 0, transform: 'translateY(12px)' },
+            { opacity: 1, transform: 'translateY(0)' },
+          ],
+          { duration: 640, delay: 680, easing: easeOut }
+        );
+
+        aboutLines.forEach((line, idx) => {
+          runOnce(
+            line,
+            [
+              { opacity: 0, transform: 'translateY(12px)' },
+              { opacity: 1, transform: 'translateY(0)' },
+            ],
+            { duration: 640, delay: 760 + idx * 95, easing: easeOut }
+          );
+        });
+
+        // Platform row rises last
+        runOnce(
+          platformGroup,
+          [
+            { opacity: 0, transform: 'translateY(12px)' },
+            { opacity: 1, transform: 'translateY(0)' },
+          ],
+          { duration: 680, delay: 1140, easing: easeOut }
+        );
+      }
+
+      // 4. Interactive Play / Pause toggle with subtle Web Audio ambient chord preview
+      const playBtn = document.getElementById('playBtn');
+      const playIconPath = document.getElementById('playIconPath');
+      const PLAY_D = 'M3.6 2.2C3.1 1.9 2.5 2.25 2.5 2.85V11.15C2.5 11.75 3.1 12.1 3.6 11.8L11.4 7.65C11.9 7.35 11.9 6.65 11.4 6.35L3.6 2.2Z';
+      const PAUSE_D = 'M3.2 2.5H5.6V11.5H3.2V2.5ZM8.4 2.5H10.8V11.5H8.4V2.5Z';
+
+      let isPlayingAudio = false;
+      let audioCtx = null;
+      let gainNode = null;
+
+      function togglePlayback() {
+        isPlayingAudio = !isPlayingAudio;
+        playBtn?.setAttribute('aria-pressed', isPlayingAudio ? 'true' : 'false');
+        playBtn?.setAttribute(
+          'aria-label',
+          isPlayingAudio
+            ? 'Pause episode: Why Cities Are Planting Forests on Rooftops'
+            : 'Play episode: Why Cities Are Planting Forests on Rooftops'
+        );
+        if (playIconPath) {
+          playIconPath.setAttribute('d', isPlayingAudio ? PAUSE_D : PLAY_D);
+        }
+        waveformEl?.classList.toggle('is-active', isPlayingAudio);
+
+        try {
+          if (isPlayingAudio) {
+            const Ctx = window.AudioContext || window.webkitAudioContext;
+            if (Ctx && !audioCtx) {
+              audioCtx = new Ctx();
+              gainNode = audioCtx.createGain();
+              gainNode.gain.value = 0.015;
+              gainNode.connect(audioCtx.destination);
+              [220, 277.18, 329.63, 415.3].forEach((freq) => {
+                const osc = audioCtx.createOscillator();
+                osc.type = 'sine';
+                osc.frequency.value = freq;
+                osc.connect(gainNode);
+                osc.start();
+              });
+            } else if (audioCtx && audioCtx.state === 'suspended') {
+              audioCtx.resume();
+            }
+          } else if (audioCtx && audioCtx.state === 'running') {
+            audioCtx.suspend();
+          }
+        } catch {
+          // Ignore audio context autoplay restrictions in headless mode
+        }
+      }
+
+      playBtn?.addEventListener('click', togglePlayback);
+      waveformEl?.addEventListener('click', togglePlayback);
+      waveformEl?.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          togglePlayback();
+        }
+      });
+
+      // 5. Interactive Podcast Platform & Episode Switcher Modal
+      const EPISODES = [
+        {
+          title: 'Why Cities Are Planting Forests on Rooftops',
+          date: 'Apr 25 · Daily Murmur Podcast',
+          desc: '20 min · Urban botanists and structural engineers walk us through high-altitude micro-forests cooling apartment blocks by 4.2°C during summer dusk.',
+        },
+        {
+          title: 'The Quiet Physics of Rain-Streaked Glass',
+          date: 'Apr 24 · Daily Murmur Podcast',
+          desc: '19 min · Why double-pane apartment windows filter street sirens into a warm low-pass hum that helps city dwellers think clearly.',
+        },
+        {
+          title: 'Night Train Typography & Station Clocks',
+          date: 'Apr 23 · Daily Murmur Podcast',
+          desc: '21 min · Meet the sign-painters and industrial designers preserving phosphor-amber departure boards across sleeper-train terminals.',
+        },
+      ];
+
+      const platformModal = document.getElementById('platformModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDesc = document.getElementById('modalDesc');
+      const cardTitle = document.getElementById('cardTitle');
+      const cardDate = document.getElementById('cardDate');
+      const episodePills = Array.from(document.querySelectorAll('[data-episode]'));
+      const rssCopyBtn = document.getElementById('rssCopyBtn');
+      let lastTrigger = null;
+
+      function selectEpisode(index) {
+        const ep = EPISODES[index] || EPISODES[0];
+        if (modalTitle) modalTitle.textContent = ep.title;
+        if (modalDesc) modalDesc.textContent = ep.desc;
+        if (index === 0 && cardTitle) {
+          cardTitle.innerHTML =
+            '<span class="card-title__line">Why Cities Are Planting Forests </span>' +
+            '<span class="card-title__line">on Rooftops</span>';
+        } else if (cardTitle) {
+          cardTitle.textContent = ep.title;
+        }
+        if (cardDate) cardDate.textContent = ep.date;
+        episodePills.forEach((pill, idx) => {
+          pill.classList.toggle('is-active', idx === index);
+        });
+      }
+
+      function openModal(trigger) {
+        if (!platformModal) return;
+        lastTrigger = trigger || document.activeElement;
+        platformModal.removeAttribute('inert');
+        platformModal.setAttribute('aria-hidden', 'false');
+        platformModal.classList.add('is-open');
+        document.getElementById('modalClose')?.focus();
+      }
+
+      function closeModal() {
+        if (!platformModal || !platformModal.classList.contains('is-open')) return;
+        platformModal.classList.remove('is-open');
+        platformModal.setAttribute('aria-hidden', 'true');
+        platformModal.setAttribute('inert', '');
+        if (lastTrigger && typeof lastTrigger.focus === 'function') {
+          lastTrigger.focus();
+        }
+      }
+
+      document.querySelectorAll('[data-platform]').forEach((btn) => {
+        btn.addEventListener('click', () => openModal(btn));
+      });
+
+      episodePills.forEach((pill) => {
+        pill.addEventListener('click', () => {
+          const idx = Number(pill.getAttribute('data-episode')) || 0;
+          selectEpisode(idx);
+        });
+      });
+
+      document.getElementById('modalClose')?.addEventListener('click', closeModal);
+      platformModal?.addEventListener('click', (e) => {
+        if (e.target === platformModal) closeModal();
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      rssCopyBtn?.addEventListener('click', () => {
+        rssCopyBtn.textContent = 'Copied RSS';
+        setTimeout(() => {
+          rssCopyBtn.textContent = 'Copy RSS';
+        }, 2000);
+      });
+    })();
+  </script>
+</body>
+</html>

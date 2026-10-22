@@ -258,12 +258,59 @@ export function buildView(
     en: { add: 'Add to cart', added: 'In cart' },
     zh: { add: '加入购物车', added: '已在购物车' },
   }[lang];
+  const tierActionCopy = {
+    vi: { free: 'Tải miễn phí', premiumDownload: 'Tải sản phẩm', premiumPricing: 'Xem bảng giá Premium' },
+    en: { free: 'Download free', premiumDownload: 'Download product', premiumPricing: 'Explore Premium plans' },
+    zh: { free: '免费下载', premiumDownload: '下载产品', premiumPricing: '查看 Premium 套餐' },
+  }[lang];
+  const triggerTierAction = (id: string, event?: { preventDefault?: () => void; stopPropagation?: () => void }) => {
+    if (!REAL_TEMPLATES[id]) return;
+    if (isFreeProduct(id)) {
+      event?.preventDefault?.();
+      event?.stopPropagation?.();
+      window.location.href = `/api/download?id=${encodeURIComponent(id)}`;
+      return;
+    }
+    if (requiresPremium(id)) {
+      event?.preventDefault?.();
+      event?.stopPropagation?.();
+      if (ctx.signedIn && ctx.downloadIds?.includes(id)) {
+        window.location.href = `/api/download?id=${encodeURIComponent(id)}`;
+      } else {
+        goTab('pricing');
+      }
+    }
+  };
+  const withTierAction = (item: any) => {
+    const canDownloadPremium = Boolean(item.premium && ctx.signedIn && ctx.downloadIds?.includes(item.id));
+    const tierActionLabel = item.free
+      ? tierActionCopy.free
+      : item.premium
+        ? canDownloadPremium
+          ? tierActionCopy.premiumDownload
+          : tierActionCopy.premiumPricing
+        : item.price;
+    const tierHref = item.free || canDownloadPremium
+      ? `/api/download?id=${encodeURIComponent(item.id)}`
+      : item.premium
+        ? '?tab=pricing'
+        : undefined;
+    return {
+      ...item,
+      tierActionLabel,
+      tierHref,
+      onTierClick: (event: MouseEvent<HTMLElement>) => triggerTierAction(item.id, event),
+      onTierKeyDown: (event: { key: string; preventDefault: () => void; stopPropagation: () => void }) => {
+        if (event.key === 'Enter' || event.key === ' ') triggerTierAction(item.id, event);
+      },
+    };
+  };
   const withSave = (m: any) => {
     const saved = ctx.savedIds.includes(m.id);
     const inCart = ctx.cartIds.includes(m.id);
     const saveCount = ctx.saveCounts[m.id];
     return {
-      ...m,
+      ...withTierAction(m),
       saved,
       saveLabel: `${saved ? saveCopy.remove : saveCopy.save}${Number.isSafeInteger(saveCount) ? ` · ${saveCount} ${saveCopy.count}` : ''}`,
       saveCount: Number.isSafeInteger(saveCount) ? saveCount : '…',
@@ -389,7 +436,7 @@ export function buildView(
   const demoUrl = demoPath + (demoVersion ? '?v=' + encodeURIComponent(demoVersion) : '');
   const detail = d
     ? {
-        ...d,
+        ...withTierAction(d),
         demoUrl,
         demoAddress: `${COMPANY.siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')}${demoPath.replace(/\/index\.html$/, '')}`,
         demoTitle: `${d.name} — ${t.dLive}`,
@@ -503,7 +550,7 @@ export function buildView(
     homeThemeKicker: productGroup === 0 ? HOME_SHOWCASE[lang].kicker : groupCopy.labels[productGroup],
     homeBrowseLabel: groupCopy.browse[productGroup],
     homeTemplates: homeTpl.map((m: any) => withSave({
-      ...m,
+      ...withTierAction(m),
       catLabel: t.cats[m.cat],
       badge: m.badge || '',
       href: `?mau=${m.id}`,

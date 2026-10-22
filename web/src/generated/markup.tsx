@@ -280,7 +280,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                         {hp.name}
                                       </h3>
                                       <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
-                                        {hp.premium ? <PremiumWingIcon size={30} /> : hp.free ? <FreeGiftIcon size={30} title={hp.price} /> : hp.price}
+                                        {hp.premium ? <span role="link" tabIndex={0} title={hp.tierActionLabel} aria-label={hp.tierActionLabel} onClick={hp.onTierClick} onKeyDown={hp.onTierKeyDown} style={{ display: "inline-flex", alignItems: "center", cursor: "pointer" }}><PremiumWingIcon size={30} title={hp.tierActionLabel} /></span> : hp.free ? <span role="link" tabIndex={0} title={hp.tierActionLabel} aria-label={hp.tierActionLabel} onClick={hp.onTierClick} onKeyDown={hp.onTierKeyDown} style={{ display: "inline-flex", alignItems: "center", cursor: "pointer" }}><FreeGiftIcon size={30} title={hp.tierActionLabel} /></span> : hp.price}
                                       </span>
                                     </div>
                                     <span style={{ fontSize: "11px", letterSpacing: ".12em", textTransform: "uppercase", color: "#949ba4", lineHeight: "1.35" }}>
@@ -438,7 +438,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                           {tp.name}
                                         </h3>
                                         <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
-                                          {tp.premium ? <PremiumWingIcon size={30} /> : tp.free ? <FreeGiftIcon size={30} title={tp.price} /> : tp.price}
+                                          {tp.premium ? <span role="link" tabIndex={0} title={tp.tierActionLabel} aria-label={tp.tierActionLabel} onClick={tp.onTierClick} onKeyDown={tp.onTierKeyDown} style={{ display: "inline-flex", alignItems: "center", cursor: "pointer" }}><PremiumWingIcon size={30} title={tp.tierActionLabel} /></span> : tp.free ? <span role="link" tabIndex={0} title={tp.tierActionLabel} aria-label={tp.tierActionLabel} onClick={tp.onTierClick} onKeyDown={tp.onTierKeyDown} style={{ display: "inline-flex", alignItems: "center", cursor: "pointer" }}><FreeGiftIcon size={30} title={tp.tierActionLabel} /></span> : tp.price}
                                         </span>
                                       </div>
                                       <span style={{ fontSize: "11px", letterSpacing: ".12em", textTransform: "uppercase", color: "#949ba4", lineHeight: "1.35" }}>
@@ -552,7 +552,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                         </div>
                         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", columnGap: "10px", rowGap: "4px", marginBottom: "24px" }}>
                           <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.02em", fontSize: "clamp(34px,4.4vw,52px)", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
-                            {vm.detail.premium ? <PremiumWingIcon size={54} /> : vm.detail.free ? <FreeGiftIcon size={54} title={vm.detail.price} /> : vm.detail.price}
+                            {vm.detail.premium ? <a href={vm.detail.tierHref} title={vm.detail.tierActionLabel} aria-label={vm.detail.tierActionLabel} onClick={vm.detail.onTierClick} style={{ display: "inline-flex", alignItems: "center", cursor: "pointer" }}><PremiumWingIcon size={54} title={vm.detail.tierActionLabel} /></a> : vm.detail.free ? <a href={vm.detail.tierHref} title={vm.detail.tierActionLabel} aria-label={vm.detail.tierActionLabel} onClick={vm.detail.onTierClick} style={{ display: "inline-flex", alignItems: "center", cursor: "pointer" }}><FreeGiftIcon size={54} title={vm.detail.tierActionLabel} /></a> : vm.detail.price}
                           </span>
                           <span style={{ fontSize: "13px", color: "#949ba4", whiteSpace: "nowrap" }}>
                             {vm.detailPriceUnit}
@@ -621,7 +621,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                       {rp.name}
                                     </h3>
                                     <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
-                                      {rp.premium ? <PremiumWingIcon size={30} /> : rp.free ? <FreeGiftIcon size={30} title={rp.price} /> : rp.price}
+                                      {rp.premium ? <span role="link" tabIndex={0} title={rp.tierActionLabel} aria-label={rp.tierActionLabel} onClick={rp.onTierClick} onKeyDown={rp.onTierKeyDown} style={{ display: "inline-flex", alignItems: "center", cursor: "pointer" }}><PremiumWingIcon size={30} title={rp.tierActionLabel} /></span> : rp.free ? <span role="link" tabIndex={0} title={rp.tierActionLabel} aria-label={rp.tierActionLabel} onClick={rp.onTierClick} onKeyDown={rp.onTierKeyDown} style={{ display: "inline-flex", alignItems: "center", cursor: "pointer" }}><FreeGiftIcon size={30} title={rp.tierActionLabel} /></span> : rp.price}
                                     </span>
                                   </div>
                                   <span style={{ fontSize: "11px", letterSpacing: ".12em", textTransform: "uppercase", color: "#949ba4" }}>

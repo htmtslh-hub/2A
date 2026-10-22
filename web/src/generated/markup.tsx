@@ -775,9 +775,12 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                   </span>
                                 </>
                               ) : null}
-                              <h3 style={{ margin: "0 0 6px", paddingTop: ".06em", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "26px", lineHeight: "1.1" }}>
-                                {tr.name}
-                              </h3>
+                              <div style={{ display: "flex", alignItems: "center", gap: "12px", margin: "0 0 6px" }}>
+                                <PremiumWingIcon size={40} variant={tr.featured ? "gold" : "blue"} title={tr.name} />
+                                <h3 style={{ margin: "0", paddingTop: ".06em", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "26px", lineHeight: "1.1" }}>
+                                  {tr.name}
+                                </h3>
+                              </div>
                               <p style={{ margin: "0 0 20px", fontSize: "13px", opacity: ".7", lineHeight: "1.5" }}>
                                 {tr.note}
                               </p>

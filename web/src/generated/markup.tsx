@@ -5,6 +5,7 @@
 'use client';
 import React from 'react';
 import ImageSlot from '@/components/ImageSlot';
+import PremiumWingIcon from '@/components/PremiumWingIcon';
 import ProductHelp from '@/components/guide/ProductHelp';
 import type { View } from '@/lib/view';
 
@@ -276,12 +277,12 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                     ) : null}
                                   </div>
                                   <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", justifyContent: "center", flex: "1" }}>
-                                    <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
+                                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
                                       <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "22px", lineHeight: "1.15" }}>
                                         {hp.name}
                                       </h3>
-                                      <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap" }}>
-                                        {hp.price}
+                                      <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
+                                        {hp.premium ? <PremiumWingIcon size={30} /> : hp.price}
                                       </span>
                                     </div>
                                   </div>
@@ -434,12 +435,12 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                       ) : null}
                                     </div>
                                     <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", justifyContent: "center", flex: "1" }}>
-                                      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
+                                      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
                                         <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "22px", lineHeight: "1.15" }}>
                                           {tp.name}
                                         </h3>
-                                        <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap" }}>
-                                          {tp.price}
+                                        <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
+                                          {tp.premium ? <PremiumWingIcon size={30} /> : tp.price}
                                         </span>
                                       </div>
                                     </div>
@@ -548,9 +549,9 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                 </span>
                             ))}
                         </div>
-                        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "baseline", columnGap: "8px", rowGap: "2px", marginBottom: "24px" }}>
-                          <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.02em", fontSize: "clamp(34px,4.4vw,52px)", color: "var(--gold)", whiteSpace: "nowrap" }}>
-                            {vm.detail.price}
+                        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", columnGap: "10px", rowGap: "4px", marginBottom: "24px" }}>
+                          <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.02em", fontSize: "clamp(34px,4.4vw,52px)", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
+                            {vm.detail.premium ? <PremiumWingIcon size={54} /> : vm.detail.price}
                           </span>
                           <span style={{ fontSize: "13px", color: "#949ba4", whiteSpace: "nowrap" }}>
                             {vm.detailPriceUnit}
@@ -614,12 +615,12 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                   <ImageSlot id={`agentic-tpl-${rp.id}`} presentation="stage" shape="rect" fit="cover" placeholder="Ảnh preview giao diện" />
                                 </div>
                                 <div style={{ padding: "20px 22px 22px", display: "flex", flexDirection: "column", gap: "8px" }}>
-                                  <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
+                                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
                                     <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "20px", lineHeight: "1.15" }}>
                                       {rp.name}
                                     </h3>
-                                    <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap" }}>
-                                      {rp.price}
+                                    <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
+                                      {rp.premium ? <PremiumWingIcon size={30} /> : rp.price}
                                     </span>
                                   </div>
                                   <span style={{ fontSize: "11px", letterSpacing: ".12em", textTransform: "uppercase", color: "#949ba4" }}>

@@ -2,15 +2,15 @@
   "id": "t87",
   "slug": "iris",
   "browser": "153.0.8010.12",
-  "date": "2026-10-21T02:26:26.331Z",
+  "date": "2026-10-22T01:47:41.604Z",
   "demo": "/demos/iris/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "046000b00bb3",
-  "sha256": "046000b00bb3899b9dfd3e890460b99fd3e803e2c4d0b17cd33e1d87680f004e",
-  "demoHtmlSha256": "0f0f9ac680b087286a96d94baf7018d7e4475580fb673b9afb56c6942545f1ed",
-  "demoSha256": "b44c77b90cdaad8966a8194a752b07e5b80d31e8f055a7d05267fb2abb99c212",
-  "bytes": 337721,
+  "revision": "d8dbcb522022",
+  "sha256": "d8dbcb52202278f29e35367d416200bf4093ab2c53a14cb43eec43cd700beb87",
+  "demoHtmlSha256": "0dc5ea247fa061da8adb46d915906f9b584f1f9d9d7c59fc2d9ab6cd996587d7",
+  "demoSha256": "873bb8506626402cd52ff142818e80c3e78367e3cfe7cdd62db5fa3e2ceeeed7",
+  "bytes": 345389,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,12 +22,12 @@
       "action": "hover hero"
     },
     {
-      "seconds": 6.65,
-      "action": "iris-look-left-and-hover-cta"
+      "seconds": 6.925,
+      "action": "iris-look-left-and-wave-emote"
     },
     {
-      "seconds": 13.27,
-      "action": "iris-look-right-and-down"
+      "seconds": 8.99,
+      "action": "iris-open-modal-and-test-prompt"
     },
     {
       "seconds": 6.7,
@@ -35,8 +35,8 @@
       "target": 0
     },
     {
-      "seconds": 20.666,
-      "action": "iris-center-gaze-and-hover-nav"
+      "seconds": 16.472,
+      "action": "iris-close-modal-and-track-right"
     }
   ],
   "errors": [],

@@ -249,13 +249,40 @@ const BROWSERS = [
       assert.equal(mobileClosed.ariaExpanded, 'false');
       assert.equal(mobileClosed.panelDisplay, 'none');
 
-      // Test pointer tracking at 1440x900
+      // Test pointer tracking & 15% creative interactions at 1440x900
       await page.setViewportSize({ width: 1440, height: 900 });
       await page.waitForTimeout(200);
       await page.mouse.move(280, 260, { steps: 12 });
       await page.waitForTimeout(250);
       await page.mouse.move(1220, 620, { steps: 12 });
       await page.waitForTimeout(250);
+
+      // Test robot wave HUD pill
+      await page.click('#robotHud');
+      await page.waitForTimeout(200);
+      const hudText = await page.textContent('#robotHudText');
+      assert.equal(hudText.includes('Waving'), true, `${b.id}: #robotHud click should trigger wave state`);
+
+      // Test Iris Interactive Modal (#irisModalBackdrop)
+      await page.click('.btn-try');
+      await page.waitForTimeout(220);
+      const modalOpen = await page.evaluate(() => {
+        const m = document.getElementById('irisModalBackdrop');
+        return m && m.classList.contains('is-open');
+      });
+      assert.equal(modalOpen, true, `${b.id}: clicking .btn-try should open #irisModalBackdrop`);
+
+      await page.click('[data-iris-tab="Ecosystem"]');
+      await page.waitForTimeout(150);
+      await page.click('[data-iris-prompt="Optimize our Three.js WebGL shader pipeline"]');
+      await page.waitForTimeout(150);
+      await page.keyboard.press('Escape');
+      await page.waitForTimeout(220);
+      const modalClosed = await page.evaluate(() => {
+        const m = document.getElementById('irisModalBackdrop');
+        return m && !m.classList.contains('is-open');
+      });
+      assert.equal(modalClosed, true, `${b.id}: Escape should close #irisModalBackdrop`);
 
       assert.equal(allConsoleErrors.length, 0, `${b.id}: total console errors: ${allConsoleErrors.join('; ')}`);
       assert.equal(allPageErrors.length, 0, `${b.id}: total page errors: ${allPageErrors.join('; ')}`);

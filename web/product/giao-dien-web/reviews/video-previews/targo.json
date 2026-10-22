@@ -1,0 +1,46 @@
+{
+  "id": "t92",
+  "slug": "targo",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-22T02:48:11.710Z",
+  "demo": "/demos/targo/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3ef959bd79b4",
+  "sha256": "3ef959bd79b44d7cc681a2196ffa876286ae413c0eb1dae6b664cc5a92881b74",
+  "demoHtmlSha256": "7303613d5b10e76f6f1635bdf257a9cb62a5864bd22809e937160414741da2ac",
+  "demoSha256": "ed14f847c90098e9337be6d724316c87d8ea99c2b671d1905debff3933427bde",
+  "bytes": 776265,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.562,
+      "action": "targo-open-pipeline-and-run-suite"
+    },
+    {
+      "seconds": 5.232,
+      "action": "targo-switch-audit-tab-and-close"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 821
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\targo-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\targo-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\targo-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\targo-return.jpg"
+  ]
+}

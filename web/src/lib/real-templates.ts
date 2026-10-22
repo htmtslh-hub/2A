@@ -46,6 +46,246 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t92: {
+    "slug": "targo",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Targo",
+        "desc": "Trang đích một trang hai phân đoạn (Hero + About) tự chứa trong một file HTML duy nhất cho hạ tầng kiểm thử phần mềm \"Targo\" (\"Scaling The Platform For Your Business\"): phông chữ Quantico (400 + 700), nền xám sáng #F2F1F0 chuyển mượt sang #F7F6F8, điểm nhấn xanh cyan #15BCDF (hover #3fd0ef, viền #0fa3c2), tiêu đề 6 bậc thang (SCALING / THE / PLATFORM / FOR / YOUR / BUSINESS), các nút vát góc clip-path polygon kèm vạch ngang 22×1px, hai luồng video tự động phát lại mỗi 1 giây kèm lớp phủ scrim bên trái trên desktop (Hero) và lớp phủ nhuộm màu #15BCDF mix-blend-mode: hue sát mép phải (About), cùng nhãn telemetry trực tiếp và hộp thoại Live QA Pipeline & Request QA Audit tương tác.",
+        "tags": [
+          "Testing Infrastructure",
+          "Chamfered Cyan UI",
+          "Single-File HTML"
+        ]
+      },
+      "en": {
+        "name": "Targo",
+        "desc": "A self-contained single-file, two-section (Hero + About) landing page for the \"Targo\" software testing infrastructure platform (\"Scaling The Platform For Your Business\"): Quantico (400 + 700) typography, #F2F1F0 to #F7F6F8 studio light-grey canvas, #15BCDF cyan accents (hover #3fd0ef, border #0fa3c2), a 6-line staircase hero headline (SCALING / THE / PLATFORM / FOR / YOUR / BUSINESS), chamfered clip-path polygon CTAs with a trailing 22×1px rule, dual autoplay-resilient videos with a desktop left scrim (Hero) and a flush-right #15BCDF mix-blend-mode: hue tint overlay (About), plus a live telemetry pill and an interactive Live QA Pipeline & Request QA Audit modal.",
+        "tags": [
+          "Testing Infrastructure",
+          "Chamfered Cyan UI",
+          "Single-File HTML"
+        ]
+      },
+      "zh": {
+        "name": "Targo",
+        "desc": "软件测试基础设施平台《Targo》（\"Scaling The Platform For Your Business\"）单文件自包含双章节（Hero + About）落地页模板：采用 Quantico（400 + 700）字体、#F2F1F0 至 #F7F6F8 浅灰渐变画布、#15BCDF 青色点缀（悬停 #3fd0ef、边框 #0fa3c2）、六行阶梯式主标题（SCALING / THE / PLATFORM / FOR / YOUR / BUSINESS）、带 22×1px 尾线的切角多边形按钮、每秒自动重试播放的双视频（首屏配桌面端左侧渐变遮罩，关于屏配右对齐 #15BCDF mix-blend-mode: hue 色相染色层），以及实时测试状态胶囊与交互式 QA 流水线及审计预约弹窗。",
+        "tags": [
+          "测试基础设施",
+          "切角青色科技风",
+          "单文件 HTML"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Gói tải",
+          "4 files"
+        ],
+        [
+          "Phạm vi",
+          "Landing page 2 phân đoạn (Hero + About) · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "4 files"
+        ],
+        [
+          "Scope",
+          "Two-section landing page (Hero + About) · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / 原生 JS"
+        ],
+        [
+          "下载包",
+          "4 files"
+        ],
+        [
+          "范围",
+          "双章节落地页（Hero + About）· 零构建步骤"
+        ]
+      ]
+    }
+  },
+  t91: {
+    "slug": "vanguard",
+    "cat": "portfolio",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "VANGUARD",
+        "desc": "Hero trang đích toàn màn hình một khung nhìn (h-screen) cho creative agency \"VANGUARD\" (\"World-Class Digital Collective — Design. Disrupt. Conquer.\") xây dựng bằng React 18, TypeScript, Tailwind CSS, Vite 6 và Lucide React (ArrowUpRight, Award, Crown, X): video nền lặp tự động toàn màn hình (object-cover), phông chữ trưng bày \"FSP DEMO - PODIUM Sharp 4.11\" (font-podium) kết hợp \"Inter\" (font-inter), tiêu đề 3 dòng cỡ clamp(2.8rem,8vw,7rem) xuất hiện phân tầng theo hoạt ảnh @keyframes fade-up (0s → 0.8s), huy hiệu Top-Rated Brand Studio, 3 chỉ số uy tín (250+ Brands Transformed · 95% Client Retention · 10+ Years in the Game), lớp phủ menu di động toàn màn hình (bg-black/95 backdrop-blur-sm) và hộp thoại Selected Works & Start a Brief tương tác.",
+        "tags": [
+          "Creative Agency",
+          "React + Tailwind + Vite",
+          "PODIUM Sharp & Video Hero"
+        ]
+      },
+      "en": {
+        "name": "VANGUARD",
+        "desc": "A fullscreen single-viewport (h-screen) hero landing page for the \"VANGUARD\" creative agency (\"World-Class Digital Collective — Design. Disrupt. Conquer.\") built with React 18, TypeScript, Tailwind CSS, Vite 6, and Lucide React (ArrowUpRight, Award, Crown, X): a looping object-cover background video, \"FSP DEMO - PODIUM Sharp 4.11\" (font-podium) display typography paired with \"Inter\" (font-inter), a three-line clamp(2.8rem,8vw,7rem) headline with staggered @keyframes fade-up entrance delays (0s → 0.8s), a Top-Rated Brand Studio badge, three agency telemetry stats (250+ Brands Transformed · 95% Client Retention · 10+ Years in the Game), a fullscreen staggered mobile menu overlay (bg-black/95 backdrop-blur-sm), and an interactive Selected Works & Start a Brief dossier modal.",
+        "tags": [
+          "Creative Agency",
+          "React + Tailwind + Vite",
+          "PODIUM Sharp & Video Hero"
+        ]
+      },
+      "zh": {
+        "name": "VANGUARD",
+        "desc": "创意设计机构《VANGUARD》（\"World-Class Digital Collective — Design. Disrupt. Conquer.\"）全屏单视口（h-screen）首屏落地页模板，基于 React 18、TypeScript、Tailwind CSS、Vite 6 与 Lucide React（ArrowUpRight、Award、Crown、X）构建：配备全屏 object-cover 循环背景视频、\"FSP DEMO - PODIUM Sharp 4.11\"（font-podium）展示字体搭配 \"Inter\"（font-inter）无衬线字体、带 @keyframes fade-up 阶梯式延迟（0s → 0.8s）的三行 clamp(2.8rem,8vw,7rem) 主标题、Top-Rated Brand Studio 荣誉徽章、三项核心数据（250+ Brands Transformed · 95% Client Retention · 10+ Years in the Game）、全屏毛玻璃移动端菜单（bg-black/95 backdrop-blur-sm），以及交互式作品集与项目简报弹窗。",
+        "tags": [
+          "创意设计机构",
+          "React + Tailwind + Vite",
+          "全屏视频首屏"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "React 18 / TypeScript / Tailwind CSS / Vite 6"
+        ],
+        [
+          "Gói tải",
+          "16 files (kèm bản dựng tĩnh built/)"
+        ],
+        [
+          "Phạm vi",
+          "Fullscreen Agency Hero · Responsive Mobile Menu & Dossier Modal"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "React 18 / TypeScript / Tailwind CSS / Vite 6"
+        ],
+        [
+          "Package",
+          "16 files (includes prebuilt built/ bundle)"
+        ],
+        [
+          "Scope",
+          "Fullscreen Agency Hero · Responsive Mobile Menu & Dossier Modal"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "React 18 / TypeScript / Tailwind CSS / Vite 6"
+        ],
+        [
+          "下载包",
+          "16 files（含预构建 built/ 静态包）"
+        ],
+        [
+          "范围",
+          "全屏创意机构首屏 · 响应式移动菜单与作品集弹窗"
+        ]
+      ]
+    }
+  },
+  t90: {
+    "slug": "cast-and-render",
+    "cat": "portfolio",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Cast & Render",
+        "desc": "Trang đích cuộn tua từng khung hình video tự chứa trong một file HTML duy nhất cho studio đối tượng 3D \"Cast & Render — 3D Object Studio\": tông màu thạch cao ấm #f2f0ec và mực than #0d0c0b, bộ nạp trước toàn bộ video MP4 241 khung hình all-intra vào bộ nhớ Blob (URL.createObjectURL) kèm thanh tiến trình LOADING %, thuật toán nội suy khung hình mượt (seekAt += gap * 0.115), 3 tấm nội dung chuyển cảnh Hermite smoothstep có vùng nghỉ hình tự nhiên (CUES dead zones), thanh HUD nhảy chương & đọc mã khung hình trực tiếp (FRM 001 / 241) cùng bảng thông tin Studio Sheet 3 tab tương tác (Morning Board · Studio & Farm · Start a Brief).",
+        "tags": [
+          "3D Object Studio",
+          "Scroll-Scrubbed Video",
+          "Single-File HTML"
+        ]
+      },
+      "en": {
+        "name": "Cast & Render",
+        "desc": "A self-contained single-file scroll-scrubbed video landing page for the \"Cast & Render — 3D Object Studio\": warm plaster #f2f0ec and charcoal ink #0d0c0b palette, full-blob MP4 preloader (241 all-intra frames via fetch + URL.createObjectURL) with a live LOADING % bar, rAF frame-seeking interpolation (seekAt += gap * 0.115), three cross-fading editorial panels with Hermite smoothstep ramps and video-only dead zones (CUES), a live frame & chapter scrubber HUD (FRM 001 / 241), and an interactive 3-tab Studio Sheet modal (Morning Board · Studio & Farm · Start a Brief).",
+        "tags": [
+          "3D Object Studio",
+          "Scroll-Scrubbed Video",
+          "Single-File HTML"
+        ]
+      },
+      "zh": {
+        "name": "Cast & Render",
+        "desc": "《Cast & Render — 3D Object Studio》单文件自包含滚动逐帧视频擦除落地页：采用暖石膏白 #f2f0ec 与炭墨黑 #0d0c0b 配色，配备将 241 帧全帧内（all-intra）MP4 完整预加载为本地 Blob（URL.createObjectURL）的 LOADING % 进度屏、rAF 平滑帧寻址插值（seekAt += gap * 0.115）、带纯视频留白区（CUES dead zones）的三段 Hermite 平滑渐变文案面板、实时帧号与章节跳转 HUD（FRM 001 / 241），以及包含 Morning Board、Studio & Farm 与 Start a Brief 的三标签交互式工作室面板。",
+        "tags": [
+          "3D 艺术工作室",
+          "滚动逐帧视频",
+          "单文件 HTML"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Gói tải",
+          "4 files"
+        ],
+        [
+          "Phạm vi",
+          "Landing page tua khung hình video theo cuộn · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "4 files"
+        ],
+        [
+          "Scope",
+          "Scroll-scrubbed video landing page · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / 原生 JS"
+        ],
+        [
+          "下载包",
+          "4 files"
+        ],
+        [
+          "范围",
+          "滚动逐帧视频落地页 · 零构建步骤"
+        ]
+      ]
+    }
+  },
   t89: {
     "slug": "reelmark",
     "cat": "commerce",

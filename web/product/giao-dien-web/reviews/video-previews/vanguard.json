@@ -1,0 +1,46 @@
+{
+  "id": "t91",
+  "slug": "vanguard",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-22T02:28:07.619Z",
+  "demo": "/demos/vanguard/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "c0bea34507e2",
+  "sha256": "c0bea34507e2835525b19bb9790e1e77bc19888fe9c4705def1fb2541a03eb1a",
+  "demoHtmlSha256": "6a8fb5639fe8b015d63fd8feacb7de2a4461b36aa63228faa8de1e6794b13065",
+  "demoSha256": "aaeb017edef64813a9b154a69ba5968f99cc75ec22b77a48ce2343e30b52b9b4",
+  "bytes": 812822,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.47,
+      "action": "vanguard-open-selected-works"
+    },
+    {
+      "seconds": 5.321,
+      "action": "vanguard-switch-inquire-and-close"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vanguard-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vanguard-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vanguard-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vanguard-return.jpg"
+  ]
+}

@@ -113,7 +113,7 @@ try {
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
-    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'lumora' || slug === 'securify' || slug === 'cozypaws' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'iris' || slug === 'melli' || slug === 'reelmark') {
+    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'lumora' || slug === 'securify' || slug === 'cozypaws' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'iris' || slug === 'melli' || slug === 'reelmark' || slug === 'cast-and-render' || slug === 'vanguard' || slug === 'targo') {
       for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai','soft-zoom-63098134.figma.site','polo-pecan-73837341.figma.site','cdn.jsdelivr.net']) allowedBriefHosts.add(host);
     }
     if (slug === 'toonhub') {
@@ -167,8 +167,12 @@ try {
       }, null, {timeout:60000});
       await page.waitForTimeout(1500);
     }
-    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far','reelmark'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
-    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'reelmark') {
+    if (slug === 'cast-and-render') {
+      await page.waitForFunction(() => document.getElementById('boot')?.classList.contains('done') && document.getElementById('clip')?.readyState >= 2, null, {timeout:60000});
+      await page.waitForTimeout(1000);
+    }
+    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far','reelmark','vanguard','targo'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'reelmark' || slug === 'vanguard') {
       await page.waitForTimeout(2000);
     }
     if (slug === 'solaris-gate') {
@@ -182,6 +186,60 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'targo') {
+        const step = actions.filter(a => a.action.startsWith('targo-')).length;
+        if (step === 0) {
+          await page.locator('#heroGetStartedBtn').click();
+          await page.locator('#targoModal.is-open').waitFor({ state: 'visible' });
+          await page.locator('#runSuiteBtn').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'targo-open-pipeline-and-run-suite' });
+        } else if (step === 1) {
+          await page.locator('[data-tab-target="contact"]').click();
+          await page.waitForTimeout(350);
+          await page.keyboard.press('Escape');
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'targo-switch-audit-tab-and-close' });
+        } else {
+          await page.locator('#aboutLearnMoreBtn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'targo-hover-learn-more' });
+        }
+        return;
+      }
+      if (slug === 'vanguard') {
+        const step = actions.filter(a => a.action.startsWith('vanguard-')).length;
+        if (step === 0) {
+          await page.locator('#see-our-work-btn').click();
+          await page.locator('#vanguard-dossier-modal').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'vanguard-open-selected-works' });
+        } else if (step === 1) {
+          await page.locator('#switch-inquire-tab').click();
+          await page.waitForTimeout(450);
+          await page.keyboard.press('Escape');
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'vanguard-switch-inquire-and-close' });
+        } else {
+          await page.locator('#desktop-inquire-btn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'vanguard-hover-get-in-touch' });
+        }
+        return;
+      }
+      if (slug === 'cast-and-render') {
+        const step = actions.filter(a => a.action.startsWith('cast-and-render-')).length;
+        if (step === 0) {
+          await page.locator('.scrub-step[data-scrub-target="0.49"]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'cast-and-render-jump-chapter-02-mesh' });
+        } else if (step === 1) {
+          await page.locator('header.chrome a[href="#board"]').click();
+          await page.locator('#studioModal.is-open').waitFor({ state: 'visible' });
+          await page.waitForTimeout(350);
+          await page.locator('.studio-tab[data-sheet-tab="order"]').click();
+          await page.waitForTimeout(450);
+          await page.keyboard.press('Escape');
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'cast-and-render-open-studio-sheet-and-close' });
+        } else {
+          await page.locator('.scrub-step[data-scrub-target="0.92"]').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'cast-and-render-hover-chapter-03' });
+        }
+        return;
+      }
       if (slug === 'reelmark') {
         const step = actions.filter(a => a.action.startsWith('reelmark-')).length;
         if (step === 0) {
@@ -222,17 +280,19 @@ try {
       if (slug === 'iris') {
         const step = actions.filter(a => a.action.startsWith('iris-')).length;
         if (step === 0) {
-          await page.mouse.move(320, 260, { steps: 20 });
-          await page.locator('.btn-try').hover();
-          actions.push({ seconds: (Date.now() - start) / 1000, action: 'iris-look-left-and-hover-cta' });
+          await page.mouse.move(320, 260, { steps: 18 });
+          await page.locator('#robotHud').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'iris-look-left-and-wave-emote' });
         } else if (step === 1) {
-          await page.mouse.move(1240, 240, { steps: 24 });
-          await page.mouse.move(1160, 680, { steps: 20 });
-          actions.push({ seconds: (Date.now() - start) / 1000, action: 'iris-look-right-and-down' });
+          await page.locator('.btn-try').click();
+          await page.locator('#irisModalBackdrop.is-open').waitFor({ state: 'visible' });
+          await page.locator('[data-iris-prompt="Optimize our Three.js WebGL shader pipeline"]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'iris-open-modal-and-test-prompt' });
         } else {
-          await page.mouse.move(980, 440, { steps: 18 });
+          await page.keyboard.press('Escape');
+          await page.mouse.move(1220, 320, { steps: 18 });
           await page.locator('.btn-open').hover();
-          actions.push({ seconds: (Date.now() - start) / 1000, action: 'iris-center-gaze-and-hover-nav' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'iris-close-modal-and-track-right' });
         }
         return;
       }
@@ -674,13 +734,13 @@ try {
     const scrollHeight = await page.evaluate(() => document.documentElement.scrollHeight);
     const target = slug === 'jack-3d'
       ? await page.locator('#projects').evaluate(e=>Math.max(0,e.getBoundingClientRect().top+220))
-      : Math.min(scrollHeight-900, slug === 'prmpt' || slug === 'melli' ? scrollHeight - 900 : slug === 'mostar-city' ? 3700 : slug === 'apartment-flow' ? 2400 : 1650);
+      : Math.min(scrollHeight-900, slug === 'prmpt' || slug === 'melli' || slug === 'cast-and-render' ? scrollHeight - 900 : slug === 'mostar-city' ? 3700 : slug === 'apartment-flow' ? 2400 : 1650);
     for (let step=1; step<=5; step++) {
       await page.mouse.wheel(0, Math.max(0,target)/5); await page.waitForTimeout(450);
     }
     actions.push({ seconds:6.7, action:'scroll', target });
     await at(10); await shot('scroll');
-    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli'].includes(slug)) {
+    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli', 'cast-and-render'].includes(slug)) {
       await next();
     }
     await at(11.5); await page.evaluate(() => window.scrollTo({ top:0, behavior:'smooth' }));

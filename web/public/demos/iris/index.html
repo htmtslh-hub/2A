@@ -52,9 +52,7 @@
       text-decoration: none;
     }
 
-    /* ==================================================
-       NAV
-       ================================================== */
+    /* NAV */
     .nav {
       position: fixed;
       top: 0;
@@ -225,9 +223,7 @@
       display: flex;
     }
 
-    /* ==================================================
-       HERO
-       ================================================== */
+    /* HERO */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -354,9 +350,281 @@
       to { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
-    /* ==================================================
-       RESPONSIVE
-       ================================================== */
+    /* 15% CREATIVE: ROBOT HUD & AI MODAL */
+    .robot-hud {
+      position: absolute;
+      z-index: 3;
+      transform: translate(-50%, -50%);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(18, 19, 28, 0.78);
+      border: 1px solid rgba(143, 102, 255, 0.26);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #e4defc;
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.42);
+      transition: opacity .4s, transform .25s, border-color .25s, background .25s;
+      opacity: 0;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .robot-hud.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .robot-hud:hover {
+      transform: translate(-50%, calc(-50% - 2px));
+      border-color: rgba(143, 102, 255, 0.55);
+      background: rgba(26, 24, 42, 0.88);
+    }
+
+    .robot-hud-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #8f66ff;
+      box-shadow: 0 0 10px #8f66ff;
+      animation: hudPulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes hudPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.65; }
+    }
+
+    .iris-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      background: rgba(6, 6, 12, 0.72);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .28s ease, visibility .28s ease;
+    }
+
+    .iris-modal-backdrop.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .iris-modal {
+      width: min(100%, 560px);
+      max-height: calc(100svh - 40px);
+      overflow-y: auto;
+      background: rgba(18, 19, 28, 0.96);
+      border: 1px solid rgba(143, 102, 255, 0.24);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      transform: translateY(14px) scale(0.98);
+      transition: transform .3s cubic-bezier(.2, .7, .2, 1);
+      color: var(--text);
+    }
+
+    .iris-modal-backdrop.is-open .iris-modal {
+      transform: translateY(0) scale(1);
+    }
+
+    .iris-modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .iris-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .iris-modal-close {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--link);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      line-height: 1;
+      transition: background .2s, color .2s;
+    }
+
+    .iris-modal-close:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .iris-tabs {
+      display: flex;
+      gap: 6px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .iris-tab {
+      padding: 7px 13px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+
+    .iris-tab.active,
+    .iris-tab:hover {
+      background: rgba(124, 77, 255, 0.18);
+      border-color: rgba(143, 102, 255, 0.45);
+      color: #fff;
+    }
+
+    .iris-chat-box {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(11, 11, 17, 0.78);
+      border: 1px solid var(--line);
+    }
+
+    .iris-chat-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #b49cff;
+      margin-bottom: 6px;
+    }
+
+    .iris-chat-reply {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: #e9e9f2;
+      min-height: 44px;
+    }
+
+    .iris-Preset-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .iris-chip {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--link);
+      font-family: inherit;
+      font-size: 12.5px;
+      cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+
+    .iris-chip:hover {
+      background: rgba(143, 102, 255, 0.16);
+      border-color: rgba(143, 102, 255, 0.4);
+      color: #fff;
+    }
+
+    .iris-form {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .iris-input {
+      flex: 1;
+      min-width: 0;
+      height: 42px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.04);
+      color: #fff;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .iris-input:focus {
+      border-color: var(--violet-2);
+    }
+
+    .iris-send {
+      height: 42px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 0;
+      background: linear-gradient(180deg, #8f66ff, #7c4dff);
+      color: #fff;
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: filter .2s;
+    }
+
+    .iris-send:hover {
+      filter: brightness(1.08);
+    }
+
+    .iris-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .iris-card {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--line);
+    }
+
+    .iris-card strong {
+      display: block;
+      font-size: 13.5px;
+      color: #fff;
+      margin-bottom: 3px;
+    }
+
+    .iris-card span {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    /* RESPONSIVE */
     @media (max-width: 1100px) {
       .nav-inner,
       .hero-inner {
@@ -396,6 +664,9 @@
       .btn-try {
         margin-top: 26px;
       }
+      .robot-hud {
+        display: none;
+      }
     }
 
     @media (max-width: 480px) {
@@ -416,6 +687,9 @@
         height: 54px;
         padding: 0 32px;
         font-size: 18px;
+      }
+      .iris-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -454,6 +728,10 @@
   <main class="hero" id="hero">
     <canvas id="stage" aria-hidden="true"></canvas>
     <div class="loader" id="loader"></div>
+    <button class="robot-hud" id="robotHud" type="button" aria-label="Trigger Iris wave emote">
+      <span class="robot-hud-dot"></span>
+      <span id="robotHudText">Iris 3.2 · Click to wave</span>
+    </button>
     <div class="hero-inner">
       <div class="copy">
         <h1 class="reveal d1">Introducing a<br />Smart AI Assistant</h1>
@@ -462,6 +740,47 @@
       </div>
     </div>
   </main>
+
+  <div class="iris-modal-backdrop" id="irisModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="irisModalHeading" aria-hidden="true">
+    <div class="iris-modal">
+      <div class="iris-modal-head">
+        <div class="iris-modal-title" id="irisModalHeading">
+          <span class="brand-orb"></span>
+          <span>Iris — Interactive Assistant</span>
+        </div>
+        <button class="iris-modal-close" id="irisModalClose" type="button" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="iris-tabs" role="tablist" aria-label="Iris sections">
+        <button class="iris-tab active" type="button" data-iris-tab="Overview">Overview</button>
+        <button class="iris-tab" type="button" data-iris-tab="Ecosystem">Ecosystem</button>
+        <button class="iris-tab" type="button" data-iris-tab="Socials">Socials</button>
+        <button class="iris-tab" type="button" data-iris-tab="Help">Help</button>
+      </div>
+      <div class="iris-chat-box">
+        <div class="iris-chat-label" id="irisSectionBadge">Overview · Live Prompt Studio</div>
+        <p class="iris-chat-reply" id="irisChatReply">Hi! I’m Iris. Pick a prompt below or ask me anything—watch my 3D avatar react in real time.</p>
+        <div class="iris-Preset-row">
+          <button class="iris-chip" type="button" data-iris-prompt="Summarize today’s product launch roadmap">Summarize launch roadmap</button>
+          <button class="iris-chip" type="button" data-iris-prompt="Optimize our Three.js WebGL shader pipeline">Optimize WebGL pipeline</button>
+          <button class="iris-chip" type="button" data-iris-prompt="Draft a concise release announcement">Draft release note</button>
+        </div>
+        <form class="iris-form" id="irisPromptForm">
+          <input class="iris-input" id="irisPromptInput" type="text" placeholder="Ask Iris anything..." aria-label="Ask Iris anything" />
+          <button class="iris-send" type="submit">Ask Iris</button>
+        </form>
+      </div>
+      <div class="iris-grid" id="irisTabGrid">
+        <div class="iris-card">
+          <strong>Sub-40ms Voice &amp; Text</strong>
+          <span>Context-aware reasoning across code, docs, and daily workflows.</span>
+        </div>
+        <div class="iris-card">
+          <strong>3D Spatial Presence</strong>
+          <span>Expressive gaze tracking, natural blinking, and real-time emotes.</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script type="module">
     import * as THREE from "three";
@@ -499,6 +818,8 @@
     const heroEl = document.getElementById("hero");
     const canvas = document.getElementById("stage");
     const loaderEl = document.getElementById("loader");
+    const robotHudEl = document.getElementById("robotHud");
+    const robotHudTextEl = document.getElementById("robotHudText");
     const copyEl = heroEl.querySelector(".copy");
 
     const renderer = new THREE.WebGLRenderer({
@@ -720,14 +1041,21 @@
       const s = new THREE.Shape();
       const x0 = -w / 2, x1 = w / 2;
       const y0 = cy - h / 2, y1 = cy + h / 2;
+      const steps = 16;
+      const lineSub = (ax, ay, bx, by) => {
+        for (let i = 1; i <= steps; i++) {
+          const u = i / steps;
+          s.lineTo(ax + (bx - ax) * u, ay + (by - ay) * u);
+        }
+      };
       s.moveTo(x0 + r, y0);
-      s.lineTo(x1 - r, y0);
+      lineSub(x0 + r, y0, x1 - r, y0);
       s.absarc(x1 - r, y0 + r, r, -Math.PI / 2, 0, false);
-      s.lineTo(x1, y1 - r);
+      lineSub(x1, y0 + r, x1, y1 - r);
       s.absarc(x1 - r, y1 - r, r, 0, Math.PI / 2, false);
-      s.lineTo(x0 + r, y1);
+      lineSub(x1 - r, y1, x0 + r, y1);
       s.absarc(x0 + r, y1 - r, r, Math.PI / 2, Math.PI, false);
-      s.lineTo(x0, y0 + r);
+      lineSub(x0, y1 - r, x0, y0 + r);
       s.absarc(x0 + r, y0 + r, r, Math.PI, Math.PI * 1.5, false);
       return s;
     }
@@ -1159,6 +1487,10 @@
 
       loaderEl.style.left = `${anchor.x}px`;
       loaderEl.style.top = `${anchor.y}px`;
+      if (robotHudEl) {
+        robotHudEl.style.left = `${anchor.x}px`;
+        robotHudEl.style.top = `${Math.min(H - 36, anchor.y + robotPx * 0.49)}px`;
+      }
     }
 
     new ResizeObserver(layout).observe(heroEl);
@@ -1208,10 +1540,177 @@
       }
 
       loaderEl.classList.add("hide");
+      if (robotHudEl) robotHudEl.classList.add("visible");
       robot.scale.setScalar(0.001);
       intro = 0;
       ready = true;
       canvas.dataset.ready = "true";
+    });
+
+    // ==================================================
+    // 15% CREATIVE ENHANCEMENTS: EMOTES & MODAL STUDIO
+    // ==================================================
+    let emoteStart = -10;
+    let emoteKind = "wave";
+    let ctaHover = false;
+
+    function triggerEmote(kind = "wave") {
+      emoteKind = kind;
+      emoteStart = performance.now() * 0.001;
+      if (robotHudTextEl) {
+        robotHudTextEl.textContent = kind === "wave" ? "Iris · Waving hello!" : "Iris · Thinking & nodding";
+        clearTimeout(triggerEmote._tid);
+        triggerEmote._tid = setTimeout(() => {
+          if (robotHudTextEl) robotHudTextEl.textContent = "Iris 3.2 · Click to wave";
+        }, 1450);
+      }
+    }
+
+    if (robotHudEl) {
+      robotHudEl.addEventListener("click", () => triggerEmote("wave"));
+    }
+    canvas.addEventListener("click", () => triggerEmote("wave"));
+
+    document.querySelectorAll(".btn-try, .btn-open").forEach((btn) => {
+      btn.addEventListener("pointerenter", () => { ctaHover = true; });
+      btn.addEventListener("pointerleave", () => { ctaHover = false; });
+    });
+
+    const modalBackdrop = document.getElementById("irisModalBackdrop");
+    const modalClose = document.getElementById("irisModalClose");
+    const sectionBadge = document.getElementById("irisSectionBadge");
+    const chatReply = document.getElementById("irisChatReply");
+    const tabGrid = document.getElementById("irisTabGrid");
+    const promptForm = document.getElementById("irisPromptForm");
+    const promptInput = document.getElementById("irisPromptInput");
+    let lastTriggerEl = null;
+
+    const TAB_DATA = {
+      Overview: {
+        badge: "Overview · Live Prompt Studio",
+        reply: "Hi! I’m Iris. Pick a prompt below or ask me anything—watch my 3D avatar react in real time.",
+        cards: [
+          ["Sub-40ms Voice & Text", "Context-aware reasoning across code, docs, and daily workflows."],
+          ["3D Spatial Presence", "Expressive gaze tracking, natural blinking, and real-time emotes."]
+        ]
+      },
+      Ecosystem: {
+        badge: "Ecosystem · Connected Tools",
+        reply: "Iris connects directly to your browser, code editor, calendar, and knowledge base with zero config.",
+        cards: [
+          ["IDE & Terminal Bridge", "Inline diffs, shader debugging, and instant stack-trace explanations."],
+          ["Workspace Memory", "Syncs notes, threads, and action items across desktop and mobile."]
+        ]
+      },
+      Socials: {
+        badge: "Socials · Community & Updates",
+        reply: "Join 85,000+ builders sharing custom Iris workflows, voice packs, and 3D mascot themes.",
+        cards: [
+          ["Discord & X Community", "Daily prompt showcases, plugin drops, and live office hours."],
+          ["Open SDK Releases", "Weekly changelogs and community-built integrations on GitHub."]
+        ]
+      },
+      Help: {
+        badge: "Help · Quick Shortcuts",
+        reply: "Need a hand? Click my 3D avatar anytime to make me wave, or test a prompt right here.",
+        cards: [
+          ["Pointer & Touch Gaze", "Move anywhere on screen—head, torso, and pupils track smoothly."],
+          ["Keyboard Accessible", "Press Escape anytime to close dialogs and return focus cleanly."]
+        ]
+      }
+    };
+
+    const PROMPT_REPLIES = {
+      "Summarize today’s product launch roadmap": "Launch checklist ready: 1) Finalize WebGL hero assets, 2) Verify 4-browser responsive metrics, 3) Ship v3.2 release notes.",
+      "Optimize our Three.js WebGL shader pipeline": "Tip: Use spherical softboxes baked via PMREMGenerator and mergeVertices(1e-3) to eliminate specular facet artifacts.",
+      "Draft a concise release announcement": "Introducing Iris 3.2 — faster reasoning, expressive 3D spatial presence, and seamless ecosystem actions. Start free today."
+    };
+
+    function selectIrisTab(tabName) {
+      const info = TAB_DATA[tabName] || TAB_DATA.Overview;
+      document.querySelectorAll("[data-iris-tab]").forEach((btn) => {
+        btn.classList.toggle("active", btn.getAttribute("data-iris-tab") === tabName);
+      });
+      if (sectionBadge) sectionBadge.textContent = info.badge;
+      if (chatReply) chatReply.textContent = info.reply;
+      if (tabGrid) {
+        tabGrid.innerHTML = info.cards
+          .map(([t, d]) => `<div class="iris-card"><strong>${t}</strong><span>${d}</span></div>`)
+          .join("");
+      }
+    }
+
+    function openIrisModal(tabName = "Overview", triggerEl = null) {
+      lastTriggerEl = triggerEl || document.activeElement;
+      selectIrisTab(tabName);
+      modalBackdrop.classList.add("is-open");
+      modalBackdrop.setAttribute("aria-hidden", "false");
+      triggerEmote("nod");
+      setTimeout(() => {
+        if (promptInput) promptInput.focus();
+      }, 60);
+    }
+
+    function closeIrisModal() {
+      if (!modalBackdrop.classList.contains("is-open")) return;
+      modalBackdrop.classList.remove("is-open");
+      modalBackdrop.setAttribute("aria-hidden", "true");
+      if (lastTriggerEl && typeof lastTriggerEl.focus === "function") {
+        lastTriggerEl.focus();
+      }
+    }
+
+    document.querySelectorAll(".nav-links a, .mobile-panel a").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const label = (link.textContent || "").trim();
+        navEl.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        openIrisModal(TAB_DATA[label] ? label : "Overview", link);
+      });
+    });
+
+    document.querySelectorAll(".btn-open, .btn-try").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        openIrisModal("Overview", btn);
+      });
+    });
+
+    document.querySelectorAll("[data-iris-tab]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        selectIrisTab(btn.getAttribute("data-iris-tab"));
+        triggerEmote("nod");
+      });
+    });
+
+    document.querySelectorAll("[data-iris-prompt]").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        const q = chip.getAttribute("data-iris-prompt");
+        if (promptInput) promptInput.value = q;
+        if (chatReply) chatReply.textContent = PROMPT_REPLIES[q] || `Iris: Ready to help with "${q}".`;
+        triggerEmote("wave");
+      });
+    });
+
+    if (promptForm) {
+      promptForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const q = (promptInput.value || "").trim();
+        if (!q) return;
+        chatReply.textContent = PROMPT_REPLIES[q] || `Iris: Here’s a tailored plan for "${q}" — prioritized into 3 actionable steps with live context.`;
+        triggerEmote("nod");
+      });
+    }
+
+    if (modalClose) modalClose.addEventListener("click", closeIrisModal);
+    if (modalBackdrop) {
+      modalBackdrop.addEventListener("click", (e) => {
+        if (e.target === modalBackdrop) closeIrisModal();
+      });
+    }
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeIrisModal();
     });
 
     // ==================================================
@@ -1294,9 +1793,15 @@
       const bob = Math.sin(t * 1.6) * 0.09 * m;
       robot.position.y = bob;
 
+      const emoteElapsed = t - emoteStart;
+      const emoteActive = emoteElapsed >= 0 && emoteElapsed < 1.3;
+      const emoteEnv = emoteActive ? Math.sin((emoteElapsed / 1.3) * Math.PI) : 0;
+      const nodOffset = emoteActive && emoteKind === "nod" ? Math.sin(emoteElapsed * 14) * 0.14 * emoteEnv : 0;
+      const waveTilt = emoteActive && emoteKind === "wave" ? 0.11 * emoteEnv : 0;
+
       head.rotation.y = look.x * 0.5;
-      head.rotation.x = look.y * 0.42;
-      head.rotation.z = -look.x * 0.06 + Math.sin(t * 1.1) * 0.015 * m;
+      head.rotation.x = look.y * 0.42 + nodOffset;
+      head.rotation.z = -look.x * 0.06 + Math.sin(t * 1.1) * 0.015 * m + waveTilt;
 
       body.rotation.y = look.x * 0.28;
       body.rotation.x = look.y * 0.12;
@@ -1305,9 +1810,12 @@
       for (const a of armEntries) {
         const w = Math.sin(t * 2.0 + a.phase);
         const sgn = Math.sign(a.restX);
-        a.wrap.position.y = a.restY + w * 0.13 * m - bob * 0.35;
+        const isRightWave = emoteActive && emoteKind === "wave" && sgn > 0;
+        const waveLift = isRightWave ? 0.48 * emoteEnv : 0;
+        const waveOsc = isRightWave ? Math.sin(emoteElapsed * 18) * 0.35 * emoteEnv : 0;
+        a.wrap.position.y = a.restY + w * 0.13 * m - bob * 0.35 + waveLift;
         a.wrap.position.x = a.restX + sgn * look.x * -0.04;
-        a.wrap.rotation.z = a.restRz + w * 0.12 * sgn * m;
+        a.wrap.rotation.z = a.restRz + w * 0.12 * sgn * m + waveOsc;
         a.wrap.rotation.x = Math.sin(t * 1.3 + a.phase) * 0.08 * m;
       }
 
@@ -1322,7 +1830,7 @@
       if (blinkStart < 0 && t >= nextBlinkAt) {
         blinkStart = t;
       }
-      let eyeScaleY = 1;
+      let eyeScaleY = ctaHover ? 0.78 : 1;
       if (blinkStart >= 0) {
         const u = (t - blinkStart) / 0.32;
         if (u >= 1) {
@@ -1341,7 +1849,7 @@
       floorGlow.scale.set(3.4 - bob * 3, 0.42 - bob * 0.4, 1);
       floorGlowMat.opacity = 0.7 + (0.09 - bob) * 1.5;
 
-      const antOp = 0.7 * (0.85 + Math.sin(t * 1.6) * 0.15) + 0.15;
+      const antOp = Math.min(1, 0.7 * (0.85 + Math.sin(t * 1.6) * 0.15) + 0.15 + emoteEnv * 0.25);
       for (const ag of antennaGlows) {
         ag.opacity = antOp;
       }

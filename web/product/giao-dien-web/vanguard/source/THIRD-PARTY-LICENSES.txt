@@ -1,0 +1,19 @@
+Third-Party Licenses & Attributions
+
+1. React & React DOM (^18.3.1)
+   License: MIT
+   Copyright (c) Meta Platforms, Inc. and affiliates.
+
+2. Lucide React (^0.469.0)
+   License: ISC
+   Copyright (c) Lucide Contributors.
+
+3. Tailwind CSS (^3.4.17)
+   License: MIT
+   Copyright (c) Tailwind Labs, Inc.
+
+4. FSP DEMO - PODIUM Sharp 4.11 & Inter Fonts
+   Sources: OnlineWebFonts (https://db.onlinewebfonts.com) & Google Fonts (https://fonts.google.com)
+
+5. External Video Asset
+   Source: CloudFront (`https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260606_154941_df1a96e1-a06f-450c-bd02-d863414cc1a0.mp4`) as specified in the product design brief.

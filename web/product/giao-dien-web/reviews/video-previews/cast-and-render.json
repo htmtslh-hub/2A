@@ -1,0 +1,50 @@
+{
+  "id": "t90",
+  "slug": "cast-and-render",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-22T02:05:52.814Z",
+  "demo": "/demos/cast-and-render/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "408895ca2f91",
+  "sha256": "408895ca2f91efa13c450887aeb167a9fdef2a2b959f2579fcc1ff2dc4670945",
+  "demoHtmlSha256": "79546decc37d4730e2dfaa9960dabac03313ea90d5dec6db526158f0ccd6b4aa",
+  "demoSha256": "68f81f1042a9d102c1a39f85bda62d0e453f99c7b467e3ca0889a31b5366f216",
+  "bytes": 680679,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.49,
+      "action": "cast-and-render-jump-chapter-02-mesh"
+    },
+    {
+      "seconds": 5.855,
+      "action": "cast-and-render-open-studio-sheet-and-close"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 4140
+    },
+    {
+      "seconds": 10.152,
+      "action": "cast-and-render-hover-chapter-03"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cast-and-render-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cast-and-render-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cast-and-render-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cast-and-render-return.jpg"
+  ]
+}

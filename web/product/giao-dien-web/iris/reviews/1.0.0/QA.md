@@ -8,8 +8,8 @@
 ## 1. Package & Checksum (`dong-goi.mjs iris --ngoai-le`)
 
 - **Archive:** `web/product/giao-dien-web/iris/iris.zip`
-- **Size:** `16,454` bytes (under the `20,480`-byte `W06` limit)
-- **SHA-256:** `e5132fe4231479dcaa2e05bfb819a39561c53f3c8c78d0ba25e52098eeaf6e22`
+- **Size:** `20,243` bytes (under the `20,480`-byte `W06` limit)
+- **SHA-256:** `8944703d5cbe2f0746c2c6693f2718c5548791b12fe376ec77d48e3f86603685`
 - **Files verified byte-for-byte:**
   - `iris/CUSTOMISE.md`
   - `iris/index.html`
@@ -33,9 +33,9 @@ Executed `node web/product/giao-dien-web/iris/reviews/1.0.0/check.cjs` across 4 
 - **Tablet Preview (`820×1180`):** `web/public/previews/iris-tablet.webp`
 - **Mobile Preview (`375×812`):** `web/public/previews/iris-mobile.webp`
 - **Video Preview (`960×600`, 30fps):** `web/public/previews/iris.mp4`
-  - **Size:** `337,721` bytes
+  - **Size:** `345,389` bytes
   - **Duration:** `14.966667s`
-  - **Revision:** `046000b00bb3`
-  - **SHA-256:** `046000b00bb3899b9dfd3e890460b99fd3e803e2c4d0b17cd33e1d87680f004e`
-  - **Demo HTML SHA-256:** `0f0f9ac680b087286a96d94baf7018d7e4475580fb673b9afb56c6942545f1ed`
-  - **Demo Directory SHA-256:** `b44c77b90cdaad8966a8194a752b07e5b80d31e8f055a7d05267fb2abb99c212`
+  - **Revision:** `d8dbcb522022`
+  - **SHA-256:** `d8dbcb52202278f29e35367d416200bf4093ab2c53a14cb43eec43cd700beb87`
+  - **Demo HTML SHA-256:** `0dc5ea247fa061da8adb46d915906f9b584f1f9d9d7c59fc2d9ab6cd996587d7`
+  - **Demo Directory SHA-256:** `873bb8506626402cd52ff142818e80c3e78367e3cfe7cdd62db5fa3e2ceeeed7`

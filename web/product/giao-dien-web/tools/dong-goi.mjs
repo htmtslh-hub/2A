@@ -31,7 +31,7 @@ const args = process.argv.slice(2);
 const name = args.find(a => !a.startsWith('--'));
 const allowException = args.includes('--ngoai-le');
 
-const INLINE_PRODUCTS = new Set(['spaceedu', 'fennec', 'riverine-ai', 'freight-axis', 'meridian', 'solaris-gate', 'cyber-ronin', 'vertex-shops', 'aethera', 'nexlayer', 'toonhub', 'vectrus-energy', 'halden', 'prmpt', 'designpro', 'cinematic', 'viktor', 'camper', 'sellix', 'neuralkinetics', 'lumora', 'securify', 'cozypaws', 'synapsex', 'oceanpulse', 'meadowbell', 'eclipsio', 'murmur', 'wander-far', 'iris', 'melli', 'reelmark']);
+const INLINE_PRODUCTS = new Set(['spaceedu', 'fennec', 'riverine-ai', 'freight-axis', 'meridian', 'solaris-gate', 'cyber-ronin', 'vertex-shops', 'aethera', 'nexlayer', 'toonhub', 'vectrus-energy', 'halden', 'prmpt', 'designpro', 'cinematic', 'viktor', 'camper', 'sellix', 'neuralkinetics', 'lumora', 'securify', 'cozypaws', 'synapsex', 'oceanpulse', 'meadowbell', 'eclipsio', 'murmur', 'wander-far', 'iris', 'melli', 'reelmark', 'cast-and-render', 'vanguard', 'targo']);
 // These briefs explicitly keep inline code or root-level CSS/JS. The
 // exception flag is still required; all existing products retain their gate.
 const REQUIRED = allowException && (INLINE_PRODUCTS.has(name) || name === 'mostar-city')

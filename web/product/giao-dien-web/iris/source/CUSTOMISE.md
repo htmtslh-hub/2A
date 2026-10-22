@@ -65,27 +65,15 @@ In `tick(nowMs)`, adjust `head.rotation.y = look.x * 0.5`, `head.rotation.x = lo
 
 ## 12 AI Prompts for Rapid Customisation
 
-1. **Rebrand to Cyan/Teal AI Copilot:**
-   > "Update `index.html` so all violet accents (`#7c4dff`, `#8f66ff`, `0x8a5cff`, `0x9a6bff`) become electric cyan (`#00d2ff`, `#38e4ff`), including `.brand-orb`, `.btn-try`, the studio softboxes, Fresnel rim shaders, eye iris gradient, antenna balls, and floor glow."
-2. **Add an Interactive Chat Prompt Bar:**
-   > "Replace `.btn-try` in `.copy` with a pill-shaped prompt input bar containing an `<input placeholder='Ask Iris anything...'>` and a violet submit button that triggers a playful nod animation on `head.rotation.x`."
-3. **Add Speech-Bubble Status Pill Above Robot:**
-   > "Add a floating glassmorphic status pill anchored near `(anchor.x, anchor.y - robotPx * 0.48)` that cycles through short AI status messages every 4 seconds."
-4. **Click-to-Wave Arm Emote:**
-   > "When the user clicks or taps on `#stage` near `anchor`, trigger a 1.2-second wave animation on the right arm (`armEntries[1]`) where it raises and oscillates before returning smoothly to its bobbing pose."
-5. **Add Happy Squint Eye Expression on CTA Hover:**
-   > "When the user hovers `.btn-try` or `.btn-open`, smoothly animate both `eyeGroups` `scale.y` to `0.65` and slightly boost `antennaGlows` opacity."
-6. **Self-Host Three.js & GLB Assets:**
-   > "Update the `<script type='importmap'>` and `HEAD_GLB` / `ARM_GLB` constants to load from `./assets/vendor/three/` and `./assets/models/` for 100% offline deployment."
-7. **Switch Typography to Plus Jakarta Sans:**
-   > "Replace the Google Fonts `Figtree` link and `font-family` declaration in `index.html` with `Plus Jakarta Sans` (weights 400, 500, 600, 700, 800)."
-8. **Add Keyboard Shortcut (`⌘K` / `Ctrl+K`) Command Palette Modal:**
-   > "Add a dark glass command modal triggered by clicking `.btn-try`, `.btn-open`, or pressing `Cmd/Ctrl + K`, with `Escape` key dismissal and accessible focus trapping."
-9. **Adjust Studio Lighting for Warmer Metallic Finish:**
-   > "Update the `envScene` softboxes and `prepareModel` head material (`tint`, `metalness`, `roughness`) to look like brushed warm titanium with amber rim highlights."
-10. **Add Subtle Starfield Particle Layer:**
-    > "Add a `THREE.Points` starfield of 120 soft violet particles behind the robot (`z = -4` to `-8`) that drifts slowly upward and respects `prefers-reduced-motion`."
-11. **Localise Copy into Vietnamese or Japanese:**
-    > "Translate the navbar links, headline, subtitle, and button labels in `index.html` into natural product copy while keeping the exact line breaks and responsive `clamp()` sizing."
-12. **Export Clean Embeddable Web Component:**
-    > "Wrap the Iris Three.js canvas and robot rig into a reusable `<iris-mascot>` custom element that can be dropped into any existing documentation or SaaS marketing page."
+1. **Rebrand to Cyan/Teal AI Copilot:** "Update `index.html` so all violet accents (`#7c4dff`, `#8f66ff`, `0x8a5cff`, `0x9a6bff`) become electric cyan (`#00d2ff`, `#38e4ff`) across `.brand-orb`, `.btn-try`, softboxes, Fresnel rim shaders, eyes, antenna balls, and floor glow."
+2. **Add an Interactive Chat Prompt Bar:** "Add a pill-shaped prompt input bar inside `.copy` that triggers `openIrisModal('Overview')` and a nod animation on `head.rotation.x`."
+3. **Customise Robot HUD Pill (`.robot-hud`):** "Update `#robotHudText` and `triggerEmote('wave')` to cycle through status messages every 4 seconds."
+4. **Tune Click-to-Wave Arm Emote:** "Adjust `waveLift` and `waveOsc` in `tick(nowMs)` to customize the right-arm wave amplitude and duration."
+5. **Tune Happy Squint Eye Expression on CTA Hover:** "Modify `ctaHover ? 0.78 : 1` in `tick(nowMs)` to change how much `eyeGroups` squint when hovering `.btn-try` or `.btn-open`."
+6. **Self-Host Three.js & GLB Assets:** "Update `<script type='importmap'>` and `HEAD_GLB` / `ARM_GLB` to load from `./assets/vendor/three/` and `./assets/models/` for offline deployment."
+7. **Switch Typography to Plus Jakarta Sans:** "Replace the Google Fonts `Figtree` link and `font-family` in `index.html` with `Plus Jakarta Sans` (weights 400–800)."
+8. **Add Keyboard Shortcut (`⌘K` / `Ctrl+K`) for Iris Modal:** "Bind `Cmd/Ctrl + K` in `keydown` to call `openIrisModal('Overview')`."
+9. **Adjust Studio Lighting for Brushed Titanium Finish:** "Update `envScene` softboxes and `prepareModel` head material (`tint`, `metalness`, `roughness`) for warm titanium reflections."
+10. **Add Subtle Starfield Particle Layer:** "Add a `THREE.Points` starfield of 120 soft violet particles behind the robot (`z = -4` to `-8`)."
+11. **Localise Copy into Vietnamese or Japanese:** "Translate navbar links, headline, subtitle, modal tabs, and button labels while keeping responsive `clamp()` sizing."
+12. **Export Clean Embeddable Web Component:** "Wrap the Iris Three.js canvas and robot rig into a reusable `<iris-mascot>` custom element."

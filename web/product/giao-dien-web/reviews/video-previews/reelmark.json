@@ -1,0 +1,46 @@
+{
+  "id": "t89",
+  "slug": "reelmark",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-22T01:04:33.253Z",
+  "demo": "/demos/reelmark/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a7c3c0408760",
+  "sha256": "a7c3c040876000dbd4d613358099f83f6974ee2c83949c1cf84f67de4d1f8df9",
+  "demoHtmlSha256": "3adbe9f9f3358990202b868b2e673a81d5d975359a799aab392eb479a5cc7082",
+  "demoSha256": "53394205e8c52916496028fbdb35d95afe4cbdc93607e3d86a47a44b4aba7830",
+  "bytes": 1026652,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 3.049,
+      "action": "reelmark-drag-carousel-and-open-spotlight"
+    },
+    {
+      "seconds": 5.281,
+      "action": "reelmark-switch-clip-and-close"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\reelmark-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\reelmark-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\reelmark-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\reelmark-return.jpg"
+  ]
+}

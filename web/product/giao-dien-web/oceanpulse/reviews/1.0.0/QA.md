@@ -10,8 +10,8 @@
 ## 1. Package & Checksum Verification (`dong-goi.mjs`)
 
 - **Archive Path:** `web/product/giao-dien-web/oceanpulse/oceanpulse.zip`
-- **Size:** `13,625` bytes (`13.3 KB`, under the `20,480`-byte `ZIP_LIMIT`) — Exception `--ngoai-le` approved for Single-File Self-Contained HTML architecture (`INLINE_PRODUCTS`).
-- **SHA-256:** `727418e95b1cacd65e1076d28c2b6bda887da7ace6032505afdd3a339624136e`
+- **Size:** `13,612` bytes (`13.3 KB`, under the `20,480`-byte `ZIP_LIMIT`) — Exception `--ngoai-le` approved for Single-File Self-Contained HTML architecture (`INLINE_PRODUCTS`).
+- **SHA-256:** `53a65b44164053038c2297a921bcf423c16e333303fa60e50249794e41650113`
 - **File Count:** `4` files (byte-identical with `source/`):
   - `oceanpulse/CUSTOMISE.md`
   - `oceanpulse/index.html`
@@ -37,9 +37,9 @@ Tested against local HTTP server across 4 browsers and 7 viewports (`1440×900`,
   - `web/public/previews/oceanpulse-mobile.webp` (`375×812`)
 - **Recorded Video Preview:**
   - **File:** `web/public/previews/oceanpulse.mp4`
-  - **Size:** `511,895` bytes (`14.97s`, `960×600`, `30 fps`, H.264 `yuv420p`, audio `false`)
-  - **Revision:** `06d7ea9a7169`
-  - **SHA-256:** `06d7ea9a716950e339ad1d4ada86ca57be79e00bd8dd752551cb29636698db1d`
-  - **Demo HTML SHA-256:** `42a5988cbe8794291d8bfd2bcf7024323d2e8b4554b4785f2031f5154f63f6c8`
-  - **Demo Tree SHA-256:** `c6cbb55de160548816ebb5d859ae3a1ec7d894fe78be1653931774b751ccd918`
+  - **Size:** `518,084` bytes (`14.97s`, `960×600`, `30 fps`, H.264 `yuv420p`, audio `false`)
+  - **Revision:** `5b62f431fec2`
+  - **SHA-256:** `5b62f431fec2574bbd3876175d577464b36389f1424f85fd12e1b8439fa2613f`
+  - **Demo HTML SHA-256:** `63e5d6888da877932a4cedd8ef93d8cd098e285d96ad3d4f17d8357197541a36`
+  - **Demo Tree SHA-256:** `00d6316d1bfdbc45a17fc09feb5ed90e83c54405faf2b43040c46961c457a466`
   - **Contact Sheet:** `web/product/giao-dien-web/reviews/video-previews/screenshots/oceanpulse-contact.jpg`

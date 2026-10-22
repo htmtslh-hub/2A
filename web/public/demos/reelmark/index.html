@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F5F8EF">
+  <title>Reelmark — Captivate Crowds with Snackable Reels</title>
+  <meta name="description" content="Grow your brand with short, snappy product clips by our handpicked video makers. Reelmark is the short-form video creator marketplace built for indie makers.">
+  <meta property="og:title" content="Reelmark — Captivate Crowds with Snackable Reels">
+  <meta property="og:description" content="Grow your brand with short, snappy product clips by our handpicked video makers. Our crew is ready to lift your next launch higher.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter+Tight:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       1. DESIGN TOKENS & FRAME SCALING (1440×1080)
+       ============================================================ */
+    :root {
+      --u: min(calc(100vw / 1440), calc(100vh / 1080));
+      --bg: #F5F8EF;
+      --surface: #FFFFFF;
+      --mint: #DAE7C7;
+      --mint-soft: #E8F1DA;
+      --green: #08482D;
+      --green-hover: #0B5C3A;
+      --ink: #101410;
+      --sub: #5E5E61;
+      --line: rgba(8, 72, 45, 0.14);
+      --font-display: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-note: 'Caveat', 'Segoe Print', 'Bradley Hand', cursive;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @supports (height: 100dvh) {
+      :root {
+        --u: min(calc(100vw / 1440), calc(100dvh / 1080));
+      }
+    }
+    @supports (-moz-appearance: none) {
+      :root {
+        --u: min(calc(100.001vw / 1440), calc(100.001dvh / 1080));
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: geometricPrecision;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img, video, svg {
+      display: block;
+    }
+
+    :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+      outline: 2.5px solid var(--green);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 16px;
+      z-index: 300;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--surface);
+      font-weight: 500;
+      font-size: 14px;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus-visible {
+      top: 16px;
+    }
+
+    /* ============================================================
+       2. CONTAINED 1440×1080 HERO FRAME
+       ============================================================ */
+    .frame {
+      position: relative;
+      width: calc(1440 * var(--u));
+      height: calc(1080 * var(--u));
+      background: var(--bg);
+      overflow: hidden;
+      isolation: isolate;
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       3. TOP BAR (LOGO, NAV, LOG IN & SIGN UP PILLS)
+       ============================================================ */
+    .topbar {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: calc(96 * var(--u));
+      z-index: 30;
+    }
+
+    .logo {
+      position: absolute;
+      left: calc(37 * var(--u));
+      top: calc(36 * var(--u));
+      display: inline-flex;
+      align-items: center;
+      gap: calc(8.5 * var(--u));
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: calc(22.5 * var(--u));
+      line-height: 1;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      transition: transform 0.24s var(--ease-out);
+    }
+    .logo:hover {
+      transform: translateY(calc(-1 * var(--u)));
+    }
+    .logo__mark {
+      width: calc(25 * var(--u));
+      height: calc(25 * var(--u));
+      flex-shrink: 0;
+    }
+
+    .nav {
+      position: absolute;
+      left: calc(505 * var(--u));
+      top: calc(40 * var(--u));
+      display: flex;
+      align-items: center;
+      gap: calc(31 * var(--u));
+      list-style: none;
+    }
+
+    .nav__link {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: calc(16.4 * var(--u));
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      white-space: nowrap;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .nav__link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: calc(-4 * var(--u));
+      height: calc(1.8 * var(--u));
+      border-radius: 99px;
+      background: var(--green);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.24s var(--ease-out);
+    }
+    .nav__link:hover {
+      color: var(--green);
+    }
+    .nav__link:hover::after {
+      transform: scaleX(1);
+    }
+
+    .btn-login {
+      position: absolute;
+      left: calc(1211 * var(--u));
+      top: calc(29 * var(--u));
+      width: calc(92 * var(--u));
+      height: calc(40 * var(--u));
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: calc(15.4 * var(--u));
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      box-shadow: 0 calc(2 * var(--u)) calc(8 * var(--u)) rgba(16, 20, 16, 0.04);
+      transition: transform 0.22s var(--ease-out), background-color 0.2s ease;
+    }
+    .btn-login:hover {
+      transform: translateY(calc(-1.5 * var(--u)));
+      background: #FFFFFF;
+    }
+
+    .btn-signup {
+      position: absolute;
+      left: calc(1304 * var(--u));
+      top: calc(29 * var(--u));
+      width: calc(97 * var(--u));
+      height: calc(40 * var(--u));
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--surface);
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: calc(15.4 * var(--u));
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      transition: transform 0.22s var(--ease-out), background-color 0.2s ease;
+    }
+    .btn-signup:hover {
+      transform: translateY(calc(-1.5 * var(--u)));
+      background: var(--green-hover);
+    }
+
+    /* ============================================================
+       4. HERO COPY (BADGE, HEADLINE, SUBLINE)
+       ============================================================ */
+    .hero-copy {
+      position: absolute;
+      inset: 0;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .badge {
+      position: absolute;
+      left: calc(575 * var(--u));
+      top: calc(115 * var(--u));
+      width: calc(292 * var(--u));
+      height: calc(37 * var(--u));
+      border-radius: 999px;
+      background: var(--mint);
+      color: var(--green);
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: calc(16.6 * var(--u));
+      line-height: 1;
+      letter-spacing: -0.012em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      pointer-events: auto;
+    }
+
+    .headline {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(176 * var(--u));
+      text-align: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: calc(88 * var(--u));
+      line-height: calc(92 * var(--u));
+      color: var(--ink);
+      pointer-events: auto;
+    }
+
+    .headline__line {
+      display: block;
+      will-change: transform, opacity, filter;
+    }
+    .headline__line--1 {
+      letter-spacing: -0.035em;
+    }
+    .headline__line--2 {
+      letter-spacing: -0.022em;
+    }
+
+    .subline {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(394 * var(--u));
+      text-align: center;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: calc(20.8 * var(--u));
+      line-height: calc(32 * var(--u));
+      letter-spacing: -0.01em;
+      color: var(--sub);
+      pointer-events: auto;
+    }
+    .subline__line {
+      display: block;
+    }
+
+    /* ============================================================
+       5. HAND-DRAWN NOTES & DOODLES
+       ============================================================ */
+    .doodle-slash {
+      position: absolute;
+      left: calc(263 * var(--u));
+      top: calc(377 * var(--u));
+      width: calc(38 * var(--u));
+      height: calc(36 * var(--u));
+      color: var(--green);
+      z-index: 22;
+      pointer-events: none;
+    }
+
+    .note-beseen {
+      position: absolute;
+      left: calc(1212 * var(--u));
+      top: calc(310 * var(--u));
+      z-index: 22;
+      pointer-events: none;
+      color: var(--green);
+    }
+    .note-beseen__text {
+      display: block;
+      font-family: var(--font-note);
+      font-weight: 600;
+      font-size: calc(26.5 * var(--u));
+      line-height: calc(24.5 * var(--u));
+      color: var(--green);
+      text-align: center;
+      transform: rotate(16deg);
+      transform-origin: center center;
+      white-space: nowrap;
+    }
+    .note-beseen__arrow {
+      position: absolute;
+      left: calc(-26 * var(--u));
+      top: calc(58 * var(--u));
+      width: calc(92 * var(--u));
+      height: calc(128 * var(--u));
+      overflow: visible;
+    }
+
+    .note-zerocost {
+      position: absolute;
+      left: calc(521 * var(--u));
+      top: calc(937 * var(--u));
+      z-index: 25;
+      pointer-events: none;
+      color: var(--green);
+    }
+    .note-zerocost__text {
+      display: block;
+      font-family: var(--font-note);
+      font-weight: 600;
+      font-size: calc(25.5 * var(--u));
+      line-height: 1;
+      color: var(--green);
+      transform: rotate(24deg);
+      transform-origin: left center;
+      white-space: nowrap;
+    }
+    .note-zerocost__arrow {
+      position: absolute;
+      left: calc(46 * var(--u));
+      top: calc(-26 * var(--u));
+      width: calc(58 * var(--u));
+      height: calc(44 * var(--u));
+      overflow: visible;
+    }
+
+    .draw-stroke {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 0;
+    }
+
+    /* ============================================================
+       6. CURVED CYLINDER VIDEO CAROUSEL
+       ============================================================ */
+    .carousel-band {
+      position: absolute;
+      inset: 0;
+      z-index: 15;
+      cursor: grab;
+      touch-action: pan-y;
+    }
+    .carousel-band.is-dragging {
+      cursor: grabbing;
+    }
+
+    .carousel-stage {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .reel-card {
+      position: absolute;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      background: #CBE0B8;
+      pointer-events: auto;
+      cursor: grab;
+      will-change: transform, width, height, clip-path;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .carousel-band.is-dragging .reel-card {
+      cursor: grabbing;
+    }
+
+    .reel-card__media {
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      will-change: transform, width, height;
+    }
+
+    .reel-card__poster {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      pointer-events: none;
+    }
+
+    .reel-card__video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      opacity: 0;
+      transition: opacity 0.45s ease;
+      pointer-events: none;
+    }
+    .reel-card__video.is-ready {
+      opacity: 1;
+    }
+
+    .reel-card__play {
+      position: absolute;
+      left: calc(14 * var(--u));
+      bottom: calc(14 * var(--u));
+      width: calc(32 * var(--u));
+      height: calc(32 * var(--u));
+      border-radius: 50%;
+      background: rgba(245, 248, 239, 0.34);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.48);
+      color: var(--surface);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      transition: transform 0.22s var(--ease-out), background-color 0.2s ease;
+    }
+    .reel-card:hover .reel-card__play {
+      transform: scale(1.08);
+      background: rgba(8, 72, 45, 0.78);
+    }
+    .reel-card__play svg {
+      width: calc(12 * var(--u));
+      height: calc(12 * var(--u));
+      transform: translateX(calc(0.8 * var(--u)));
+    }
+
+    .reel-card__tag {
+      position: absolute;
+      right: calc(12 * var(--u));
+      bottom: calc(15 * var(--u));
+      padding: calc(4 * var(--u)) calc(9 * var(--u));
+      border-radius: 999px;
+      background: rgba(8, 72, 45, 0.76);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      color: var(--surface);
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: calc(11 * var(--u));
+      line-height: 1;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateY(calc(4 * var(--u)));
+      transition: opacity 0.22s ease, transform 0.22s var(--ease-out);
+      z-index: 3;
+      pointer-events: none;
+    }
+    .reel-card:hover .reel-card__tag {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       7. PRIMARY CTA ("Make a Reel" + Dashed Ring)
+       ============================================================ */
+    .cta-ring {
+      position: absolute;
+      left: calc(626 * var(--u));
+      top: calc(901 * var(--u));
+      width: calc(190 * var(--u));
+      height: calc(74 * var(--u));
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 25;
+    }
+
+    .cta-ring__svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    .btn-make {
+      position: relative;
+      width: calc(172 * var(--u));
+      height: calc(58 * var(--u));
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--surface);
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: calc(18 * var(--u));
+      line-height: 1;
+      letter-spacing: -0.015em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      transition: transform 0.24s var(--ease-out), background-color 0.2s ease;
+    }
+    .btn-make:hover {
+      transform: scale(1.03);
+      background: var(--green-hover);
+    }
+    .btn-make:active {
+      transform: scale(0.98);
+    }
+
+    /* ============================================================
+       8. INTERACTIVE MODALS (REEL SPOTLIGHT & BRIEF BUILDER)
+       ============================================================ */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(16, 20, 16, 0.46);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.26s var(--ease-out);
+    }
+    .modal-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      position: relative;
+      width: min(680px, 100%);
+      max-height: 90vh;
+      overflow-y: auto;
+      border-radius: 24px;
+      background: var(--bg);
+      border: 1px solid rgba(8, 72, 45, 0.16);
+      box-shadow: 0 24px 60px rgba(8, 36, 22, 0.22);
+      padding: 28px;
+      color: var(--ink);
+      transform: translateY(14px) scale(0.97);
+      transition: transform 0.28s var(--ease-out);
+    }
+    .modal-backdrop.is-open .modal-card {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .modal-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--mint);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .modal-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .modal-close {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--surface);
+      color: var(--ink);
+      border: 1px solid var(--line);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    .modal-close:hover {
+      background: var(--mint);
+      color: var(--green);
+      transform: rotate(90deg);
+    }
+
+    .spotlight-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .spotlight-viewport {
+      position: relative;
+      width: 200px;
+      height: 281px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #CBE0B8;
+      border: 1px solid var(--line);
+      flex-shrink: 0;
+    }
+
+    .spotlight-sheet {
+      position: absolute;
+      width: 1000px;
+      height: 562px;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+    .spotlight-sheet img,
+    .spotlight-sheet video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    .spotlight-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .spotlight-desc {
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--sub);
+    }
+
+    .spotlight-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .spotlight-stat {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .spotlight-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .spotlight-pill {
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--ink);
+      transition: background-color 0.18s ease, color 0.18s ease;
+    }
+    .spotlight-pill.is-active,
+    .spotlight-pill:hover {
+      background: var(--green);
+      color: var(--surface);
+      border-color: var(--green);
+    }
+
+    .brief-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .brief-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .brief-field label {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .brief-field input,
+    .brief-field select {
+      height: 44px;
+      padding: 0 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(8, 72, 45, 0.22);
+      background: var(--surface);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 15px;
+    }
+
+    .brief-submit {
+      height: 48px;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--surface);
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 4px;
+      transition: background-color 0.2s ease;
+    }
+    .brief-submit:hover {
+      background: var(--green-hover);
+    }
+
+    .brief-status {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--green);
+      min-height: 20px;
+    }
+
+    /* ============================================================
+       9. PHONES (<= 820px)
+       ============================================================ */
+    @media (max-width: 820px) {
+      html, body {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      body {
+        display: block;
+      }
+
+      .frame {
+        width: 100%;
+        height: auto;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0 26px;
+        overflow-x: hidden;
+      }
+
+      #main-content {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .topbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        position: static;
+        font-size: 21px;
+        gap: 8px;
+      }
+      .logo__mark {
+        width: 24px;
+        height: 24px;
+      }
+
+      .nav,
+      .btn-login,
+      .doodle-slash,
+      .note-beseen {
+        display: none !important;
+      }
+
+      .btn-signup {
+        position: static;
+        width: 96px;
+        height: 40px;
+        font-size: 15px;
+      }
+
+      .hero-copy {
+        position: relative;
+        width: 100%;
+        padding: 22px 20px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .badge {
+        position: static;
+        width: auto;
+        max-width: 100%;
+        height: 35px;
+        padding: 0 16px;
+        font-size: 14.5px;
+        margin-bottom: 16px;
+      }
+
+      .headline {
+        position: static;
+        font-size: clamp(38px, 9.2vw, 56px);
+        line-height: 1.05;
+        margin-bottom: 14px;
+      }
+
+      .subline {
+        position: static;
+        font-size: clamp(15.5px, 4vw, 18px);
+        line-height: 1.5;
+        max-width: 460px;
+      }
+      .subline__line {
+        display: inline;
+      }
+
+      .carousel-band {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        margin: 14px 0 18px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .reel-card__play {
+        left: 10px;
+        bottom: 10px;
+        width: 26px;
+        height: 26px;
+      }
+      .reel-card__play svg {
+        width: 10px;
+        height: 10px;
+      }
+      .reel-card__tag {
+        display: none;
+      }
+
+      .cta-ring {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 190px;
+        height: 74px;
+        margin: 2px auto 0;
+      }
+
+      .btn-make {
+        width: 172px;
+        height: 58px;
+        font-size: 18px;
+      }
+
+      .note-zerocost {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 4px auto 0;
+        transform: translateX(-68px);
+      }
+      .note-zerocost__text {
+        font-size: 24px;
+      }
+      .note-zerocost__arrow {
+        left: 48px;
+        top: -22px;
+        width: 52px;
+        height: 38px;
+      }
+
+      .spotlight-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="frame" id="heroFrame">
+    <!-- Top Bar -->
+    <header class="topbar" id="topBar">
+      <a href="#main-content" class="logo" id="navLogo" aria-label="Reelmark home">
+        <svg class="logo__mark" viewBox="0 0 28 28" fill="none" aria-hidden="true" focusable="false">
+          <path d="M23.5 4.5C15.2 4.5 6.5 9.6 5.2 19.4C4.9 21.4 6.6 23.1 8.6 22.8C18.4 21.5 23.5 12.8 23.5 4.5Z" fill="#08482D"/>
+          <path d="M5.5 22.5C9.5 16.8 14.8 12.4 20.6 9.4" stroke="#DAE7C7" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <span>Reelmark</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav" id="navList">
+          <li><a href="#brands" class="nav__link" data-open-spotlight="0">Brands</a></li>
+          <li><a href="#creators" class="nav__link" data-open-spotlight="2">Creators</a></li>
+          <li><a href="#pricing" class="nav__link" data-open-brief="pricing">Pricing</a></li>
+          <li><a href="#use-cases" class="nav__link" data-open-spotlight="6">Use Cases</a></li>
+          <li><a href="#contact" class="nav__link" data-open-brief="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="btn-login" id="loginBtn" data-open-brief="login">Log in</button>
+      <button type="button" class="btn-signup" id="signupBtn" data-open-brief="signup">Sign up</button>
+    </header>
+
+    <!-- Main Hero Copy & Stage -->
+    <main id="main-content">
+      <section class="hero-copy" aria-label="Reelmark hero introduction">
+        <div class="badge" id="heroBadge">Trusted by 120,000+ indie makers</div>
+
+        <h1 class="headline" id="heroHeadline">
+          <span class="headline__line headline__line--1" id="headlineLine1">Captivate Crowds</span>
+          <span class="headline__line headline__line--2" id="headlineLine2">with Snackable Reels</span>
+        </h1>
+
+        <p class="subline" id="heroSubline">
+          <span class="subline__line">Grow your brand with short, snappy product clips by </span>
+          <span class="subline__line">our handpicked video makers. Our crew is ready to </span>
+          <span class="subline__line">lift your next launch higher.</span>
+        </p>
+      </section>
+
+      <!-- Hand-drawn Doodles & Notes -->
+      <svg class="doodle-slash" id="doodleSlash" viewBox="0 0 42 40" fill="none" aria-hidden="true" focusable="false">
+        <path class="draw-stroke" pathLength="1" d="M23 5C17.5 14.5 11.5 23.5 6 33" stroke="#08482D" stroke-width="3.1" stroke-linecap="round"/>
+        <path class="draw-stroke" pathLength="1" d="M36 9C30 18 23.5 26.5 17.5 35" stroke="#08482D" stroke-width="3.1" stroke-linecap="round"/>
+      </svg>
+
+      <div class="note-beseen" id="noteBeSeen" aria-hidden="true">
+        <span class="note-beseen__text">Be seen<br>with clips</span>
+        <svg class="note-beseen__arrow" viewBox="0 0 96 132" fill="none" focusable="false">
+          <path class="draw-stroke" pathLength="1" d="M56 6C66 28 62 56 42 64C24 71 18 53 31 46C46 38 66 56 58 86C53 103 42 115 32 124" stroke="#08482D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="draw-stroke" pathLength="1" d="M28 112L31 125L45 121" stroke="#08482D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- Curved Video Carousel -->
+      <section class="carousel-band" id="carouselBand" aria-label="Featured creator product reels">
+        <div class="carousel-stage" id="carouselStage"></div>
+      </section>
+
+      <!-- Primary CTA Pill inside Dashed Outline Ring -->
+      <div class="cta-ring" id="ctaRing">
+        <svg class="cta-ring__svg" viewBox="0 0 190 74" fill="none" aria-hidden="true" focusable="false">
+          <rect x="1.25" y="1.25" width="187.5" height="71.5" rx="35.75" stroke="#08482D" stroke-width="1.6" stroke-dasharray="5 5"/>
+        </svg>
+        <button type="button" class="btn-make" id="makeReelBtn">Make a Reel</button>
+      </div>
+
+      <!-- Handwritten "Zero cost" Note + Small Arrow -->
+      <div class="note-zerocost" id="noteZeroCost" aria-hidden="true">
+        <span class="note-zerocost__text">Zero cost</span>
+        <svg class="note-zerocost__arrow" viewBox="0 0 60 44" fill="none" focusable="false">
+          <path class="draw-stroke" pathLength="1" d="M4 34C18 38 35 31 50 13" stroke="#08482D" stroke-width="2.3" stroke-linecap="round"/>
+          <path class="draw-stroke" pathLength="1" d="M39 12L51 12L49 24" stroke="#08482D" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </main>
+  </div>
+
+  <!-- Interactive Reel Spotlight Modal -->
+  <div class="modal-backdrop" id="reelModal" role="dialog" aria-modal="true" aria-labelledby="reelModalTitle" aria-hidden="true" inert>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge" id="reelModalBadge">Clip 01 · Handpicked Creator</span>
+          <h2 class="modal-title" id="reelModalTitle">Trail Runner Drop</h2>
+        </div>
+        <button type="button" class="modal-close" id="reelModalClose" aria-label="Close reel preview">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.5 3.5L12.5 12.5M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="spotlight-grid">
+        <div class="spotlight-viewport">
+          <div class="spotlight-sheet" id="spotlightSheet">
+            <img src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/b7ebb74a-8c8a-4f7e-8f80-55e2d74ecd05.webp" alt="">
+            <video id="spotlightVideo" muted loop playsinline preload="auto" src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/04fd3d5f-99d7-476e-98a4-46c08518ffb3.mp4"></video>
+          </div>
+        </div>
+
+        <div class="spotlight-meta">
+          <p class="spotlight-desc" id="reelModalDesc">High-energy studio sneaker reel shot on a soft sage sweep with kinetic camera whip-pans and crisp lighting.</p>
+          <div class="spotlight-stats">
+            <span class="spotlight-stat" id="reelModalCreator">Creator: Milo Vance</span>
+            <span class="spotlight-stat" id="reelModalSpec">9:16 Vertical · 48h Turnaround</span>
+            <span class="spotlight-stat">Full Ad Licensing</span>
+          </div>
+          <div class="spotlight-pills" id="spotlightPills" role="tablist" aria-label="Switch sample clip"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Brief Builder Modal -->
+  <div class="modal-backdrop" id="briefModal" role="dialog" aria-modal="true" aria-labelledby="briefModalTitle" aria-hidden="true" inert>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge">Zero-Cost Brief · 120,000+ Indie Makers</span>
+          <h2 class="modal-title" id="briefModalTitle">Start Your Snackable Reel</h2>
+        </div>
+        <button type="button" class="modal-close" id="briefModalClose" aria-label="Close brief builder">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3.5 3.5L12.5 12.5M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <form class="brief-form" id="briefForm" novalidate>
+        <div class="brief-field">
+          <label for="briefBrand">Brand or Product Name</label>
+          <input type="text" id="briefBrand" name="brand" placeholder="e.g. Verdant Matcha Studio" required>
+        </div>
+        <div class="brief-field">
+          <label for="briefStyle">Clip Aesthetic</label>
+          <select id="briefStyle" name="style">
+            <option value="Botanical Skincare Splash">Botanical Skincare Splash</option>
+            <option value="Footwear Studio Turntable">Footwear Studio Turntable</option>
+            <option value="Specialty Coffee Pour">Specialty Coffee Pour</option>
+            <option value="Minimalist Audio & Desk">Minimalist Audio &amp; Desk</option>
+            <option value="Artisan Ceramics & Florals">Artisan Ceramics &amp; Florals</option>
+          </select>
+        </div>
+        <div class="brief-field">
+          <label for="briefEmail">Work Email</label>
+          <input type="email" id="briefEmail" name="email" placeholder="founder@yourbrand.com" required>
+        </div>
+        <button type="submit" class="brief-submit">Match With 3 Creators — Zero Cost</button>
+        <p class="brief-status" id="briefStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const POSTER_URL = 'https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/b7ebb74a-8c8a-4f7e-8f80-55e2d74ecd05.webp';
+      const VIDEO_URL = 'https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/04fd3d5f-99d7-476e-98a4-46c08518ffb3.mp4';
+
+      const CLIPS = [
+        {
+          title: 'Trail Runner Drop',
+          tag: 'Footwear · 15s',
+          creator: 'Milo Vance',
+          spec: '9:16 · 4.8% CTR',
+          desc: 'Dynamic sage-studio sneaker showcase with low-angle rotation and tactile sole macro cuts.',
+        },
+        {
+          title: 'Botanical Dew Mist',
+          tag: 'Skincare · 12s',
+          creator: 'Sora Lin',
+          spec: '9:16 · 5.2% CTR',
+          desc: 'High-speed water splash and frosted dropper reveal crafted for clean beauty launches.',
+        },
+        {
+          title: 'Oat Matcha Microfoam',
+          tag: 'Beverage · 18s',
+          creator: 'Nico Barista',
+          spec: '9:16 · 6.1% CTR',
+          desc: 'Silky slow-motion latte pour in a ceramic cup with natural morning studio light.',
+        },
+        {
+          title: 'Acoustic Sage Over-Ear',
+          tag: 'Audio · 20s',
+          creator: 'Kaelen Ross',
+          spec: '9:16 · 4.5% CTR',
+          desc: 'Sculptural matte-green headphone profile highlighting anodized hinges and plush ear cushions.',
+        },
+        {
+          title: 'Monstera Conservatory',
+          tag: 'Botanical · 14s',
+          creator: 'Clara Verne',
+          spec: '9:16 · 5.7% CTR',
+          desc: 'Sun-dappled plant shop walkthrough pairing lush foliage with terracotta planters.',
+        },
+        {
+          title: 'Wild Stem Arrangement',
+          tag: 'Florist · 16s',
+          creator: 'Maeve Laurent',
+          spec: '9:16 · 5.4% CTR',
+          desc: 'Hand-tied eucalyptus and meadow stem bouquet wrapped in crisp linen paper.',
+        },
+        {
+          title: 'Stoneware Vessel Throw',
+          tag: 'Ceramics · 22s',
+          creator: 'Jun Takahashi',
+          spec: '9:16 · 6.3% CTR',
+          desc: 'Hypnotic pottery wheel shaping raw sage clay into a ribbed pour-over carafe.',
+        },
+        {
+          title: 'Hyaluronic Green Ampoule',
+          tag: 'Serum · 15s',
+          creator: 'Elena Cho',
+          spec: '9:16 · 5.9% CTR',
+          desc: 'Crisp emerald glass bottle emerging through a crown splash on a mint pedestal.',
+        },
+        {
+          title: 'Rosetta Pour Art',
+          tag: 'Roastery · 13s',
+          creator: 'Mateo Silva',
+          spec: '9:16 · 5.1% CTR',
+          desc: 'Overhead barista pour finishing a crisp fern pattern in a wide stoneware mug.',
+        },
+        {
+          title: 'Studio Desk Setup',
+          tag: 'Hardware · 17s',
+          creator: 'Aria Chen',
+          spec: '9:16 · 4.9% CTR',
+          desc: 'Minimalist wireless headphones resting on a machined stand in a soft-mint workspace.',
+        },
+      ];
+
+      const params = new URLSearchParams(window.location.search);
+      const motionOffParam = params.get('motion') === 'off';
+
+      const carouselBand = document.getElementById('carouselBand');
+      const carouselStage = document.getElementById('carouselStage');
+      const cards = [];
+      const videos = [];
+
+      // Build 10 cards in the 5×2 tile grid (row-major)
+      for (let i = 0; i < 10; i++) {
+        const col = i % 5;
+        const row = Math.floor(i / 5);
+        const meta = CLIPS[i];
+
+        const card = document.createElement('article');
+        card.className = 'reel-card';
+        card.dataset.index = String(i);
+        card.setAttribute('aria-label', `${meta.title} reel by ${meta.creator}`);
+
+        const mediaWrap = document.createElement('div');
+        mediaWrap.className = 'reel-card__media';
+
+        const poster = document.createElement('img');
+        poster.className = 'reel-card__poster';
+        poster.src = POSTER_URL;
+        poster.alt = '';
+        poster.decoding = 'async';
+
+        const video = document.createElement('video');
+        video.className = 'reel-card__video';
+        video.src = VIDEO_URL;
+        video.muted = true;
+        video.defaultMuted = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.preload = 'auto';
+        video.setAttribute('muted', '');
+        video.setAttribute('playsinline', '');
+
+        mediaWrap.appendChild(poster);
+        mediaWrap.appendChild(video);
+
+        const playBtn = document.createElement('button');
+        playBtn.type = 'button';
+        playBtn.className = 'reel-card__play';
+        playBtn.setAttribute('aria-label', `Inspect ${meta.title} clip`);
+        playBtn.innerHTML =
+          '<svg viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false">' +
+          '<path d="M2.6 1.7C2.1 1.4 1.5 1.75 1.5 2.35V9.65C1.5 10.25 2.1 10.6 2.6 10.3L9.4 6.65C9.95 6.35 9.95 5.65 9.4 5.35L2.6 1.7Z" fill="currentColor"/>' +
+          '</svg>';
+
+        const tag = document.createElement('span');
+        tag.className = 'reel-card__tag';
+        tag.textContent = meta.tag;
+
+        card.appendChild(mediaWrap);
+        card.appendChild(playBtn);
+        card.appendChild(tag);
+        carouselStage.appendChild(card);
+
+        cards.push({
+          index: i,
+          col,
+          row,
+          el: card,
+          mediaWrap,
+          video,
+          playBtn,
+        });
+        videos.push(video);
+      }
+
+      // Synchronise all 10 videos to master video[0] and fade in when ready
+      const masterVideo = videos[0];
+      videos.forEach((v) => {
+        const markReady = () => {
+          v.classList.add('is-ready');
+        };
+        v.addEventListener('loadeddata', markReady);
+        v.addEventListener('playing', markReady);
+        if (v.readyState >= 2) markReady();
+
+        if (!motionOffParam) {
+          const p = v.play();
+          if (p && typeof p.catch === 'function') p.catch(() => {});
+        }
+      });
+
+      function syncVideos() {
+        if (!masterVideo || masterVideo.readyState < 2) return;
+        const targetTime = masterVideo.currentTime;
+        for (let i = 1; i < videos.length; i++) {
+          const v = videos[i];
+          if (v.readyState >= 2 && Math.abs(v.currentTime - targetTime) > 0.12) {
+            try {
+              v.currentTime = targetTime;
+            } catch {
+              // Ignore seek restrictions
+            }
+          }
+        }
+      }
+
+      // Compute rounded trapezoid clip-path for each card on the cylinder
+      function buildRoundedQuadPath(wPx, yTL, yTR, yBR, yBL, rPx) {
+        const r = Math.min(rPx, wPx * 0.25, Math.abs(yBL - yTL) * 0.25, Math.abs(yBR - yTR) * 0.25);
+        const dxT = wPx;
+        const dyT = yTR - yTL;
+        const lenT = Math.hypot(dxT, dyT) || 1;
+        const uxT = dxT / lenT;
+        const uyT = dyT / lenT;
+
+        const dxB = -wPx;
+        const dyB = yBL - yBR;
+        const lenB = Math.hypot(dxB, dyB) || 1;
+        const uxB = dxB / lenB;
+        const uyB = dyB / lenB;
+
+        const p0x = 0;
+        const p0y = yTL + r;
+        const p1x = uxT * r;
+        const p1y = yTL + uyT * r;
+        const p2x = wPx - uxT * r;
+        const p2y = yTR - uyT * r;
+        const p3x = wPx;
+        const p3y = yTR + r;
+        const p4x = wPx;
+        const p4y = yBR - r;
+        const p5x = wPx + uxB * r;
+        const p5y = yBR + uyB * r;
+        const p6x = -uxB * r;
+        const p6y = yBL - uyB * r;
+        const p7x = 0;
+        const p7y = yBL - r;
+
+        return (
+          `path("M ${p0x.toFixed(2)} ${p0y.toFixed(2)} ` +
+          `Q 0 ${yTL.toFixed(2)} ${p1x.toFixed(2)} ${p1y.toFixed(2)} ` +
+          `L ${p2x.toFixed(2)} ${p2y.toFixed(2)} ` +
+          `Q ${wPx.toFixed(2)} ${yTR.toFixed(2)} ${p3x.toFixed(2)} ${p3y.toFixed(2)} ` +
+          `L ${p4x.toFixed(2)} ${p4y.toFixed(2)} ` +
+          `Q ${wPx.toFixed(2)} ${yBR.toFixed(2)} ${p5x.toFixed(2)} ${p5y.toFixed(2)} ` +
+          `L ${p6x.toFixed(2)} ${p6y.toFixed(2)} ` +
+          `Q 0 ${yBL.toFixed(2)} ${p7x.toFixed(2)} ${p7y.toFixed(2)} Z")`
+        );
+      }
+
+      // Carousel state & physics
+      const PITCH = 196;
+      const COUNT = 10;
+      const TRACK = PITCH * COUNT; // 1960u
+      const AUTO_SPEED = 50; // 50u per second right -> left
+      const TILE_ASPECT = 384 / 540; // 0.711111...
+
+      let scrollU = 0;
+      let velocityU = 0;
+      let isDragging = false;
+      let dragStartX = 0;
+      let dragLastX = 0;
+      let dragLastTime = 0;
+      let totalDragPx = 0;
+
+      function getScaleMetrics() {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        const isPhone = vw <= 820;
+        if (isPhone) {
+          const u = Math.min(vw / 640, 250 / 365);
+          return {
+            isPhone: true,
+            u,
+            centerX: vw / 2,
+            centerY: 125,
+          };
+        }
+        const u = Math.min(vw / 1440, vh / 1080);
+        return {
+          isPhone: false,
+          u,
+          centerX: 720 * u,
+          centerY: 687 * u,
+        };
+      }
+
+      function layoutCards() {
+        const { u, centerX, centerY } = getScaleMetrics();
+
+        for (let i = 0; i < COUNT; i++) {
+          const item = cards[i];
+          // Wrap t into [-TRACK/2, TRACK/2)
+          let t = (i * PITCH + scrollU) % TRACK;
+          if (t < 0) t += TRACK;
+          if (t >= TRACK / 2) t -= TRACK;
+
+          // Push outward: x = 720 + t * (1 + 0.083 * (t/706)^2)
+          const ratioT = t / 706;
+          const x = 720 + t * (1 + 0.083 * ratioT * ratioT);
+
+          // Normalised distance d = |x - 720| / 706
+          const d = Math.abs(x - 720) / 706;
+          const cardW = 170 + 48 * d * d;
+
+          const xL = x - cardW / 2;
+          const xR = x + cardW / 2;
+
+          const qL = Math.abs(xL - 720) / 706;
+          const qR = Math.abs(xR - 720) / 706;
+
+          const hL = 280 + 92 * Math.pow(qL, 2.6);
+          const hR = 280 + 92 * Math.pow(qR, 2.6);
+
+          const cardH = Math.max(hL, hR);
+          const yOffset = -12 * d * d;
+
+          const wPx = cardW * u;
+          const hPx = cardH * u;
+          const leftPx = centerX + (xL - 720) * u;
+          const topPx = centerY + (yOffset - cardH / 2) * u;
+
+          const yTL = ((cardH - hL) / 2) * u;
+          const yBL = ((cardH + hL) / 2) * u;
+          const yTR = ((cardH - hR) / 2) * u;
+          const yBR = ((cardH + hR) / 2) * u;
+
+          const clipPath = buildRoundedQuadPath(wPx, yTL, yTR, yBR, yBL, 15 * u);
+
+          const el = item.el;
+          el.style.width = `${wPx.toFixed(2)}px`;
+          el.style.height = `${hPx.toFixed(2)}px`;
+          el.style.transform = `translate3d(${leftPx.toFixed(2)}px, ${topPx.toFixed(2)}px, 0)`;
+          el.style.clipPath = clipPath;
+          el.style.webkitClipPath = clipPath;
+
+          // Position play icon aligned to the bottom-left corner of the quad
+          const bottomInsetPx = hPx - yBL + 13 * u;
+          item.playBtn.style.bottom = `${bottomInsetPx.toFixed(2)}px`;
+
+          // Cover-fit tile inside card: tileH = max(cardH, cardW / 0.7111)
+          const tileHu = Math.max(cardH, cardW / TILE_ASPECT) * 1.01;
+          const tileWu = tileHu * TILE_ASPECT;
+          const tileWPx = tileWu * u;
+          const tileHPx = tileHu * u;
+
+          const sheetWPx = 5 * tileWPx;
+          const sheetHPx = 2 * tileHPx;
+          const offsetXPx = -(item.col * tileWPx + (tileWPx - wPx) / 2);
+          const offsetYPx = -(item.row * tileHPx + (tileHPx - hPx) / 2);
+
+          item.mediaWrap.style.width = `${sheetWPx.toFixed(2)}px`;
+          item.mediaWrap.style.height = `${sheetHPx.toFixed(2)}px`;
+          item.mediaWrap.style.transform = `translate3d(${offsetXPx.toFixed(2)}px, ${offsetYPx.toFixed(2)}px, 0)`;
+        }
+      }
+
+      // Pointer & Touch Dragging with 1:1 follow and 95%/s momentum decay
+      carouselBand.addEventListener('pointerdown', (e) => {
+        if (e.button && e.button !== 0) return;
+        isDragging = true;
+        dragStartX = e.clientX;
+        dragLastX = e.clientX;
+        dragLastTime = performance.now();
+        totalDragPx = 0;
+        velocityU = 0;
+        carouselBand.classList.add('is-dragging');
+        if (carouselBand.setPointerCapture) {
+          try {
+            carouselBand.setPointerCapture(e.pointerId);
+          } catch {
+            // Ignore pointer capture errors
+          }
+        }
+      });
+
+      window.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        const now = performance.now();
+        const dxPx = e.clientX - dragLastX;
+        const dt = Math.max((now - dragLastTime) / 1000, 0.001);
+        const { u } = getScaleMetrics();
+        const du = dxPx / (u || 1);
+
+        scrollU += du;
+        totalDragPx += Math.abs(dxPx);
+
+        // Smooth instantaneous drag velocity in u/s
+        const instVel = du / dt;
+        velocityU = velocityU * 0.35 + instVel * 0.65;
+
+        dragLastX = e.clientX;
+        dragLastTime = now;
+        layoutCards();
+      });
+
+      function endDrag() {
+        if (!isDragging) return;
+        isDragging = false;
+        carouselBand.classList.remove('is-dragging');
+      }
+
+      window.addEventListener('pointerup', endDrag);
+      window.addEventListener('pointercancel', endDrag);
+
+      // Drive carousel from a long-running Web Animations clock (duration: 1e9)
+      const masterClock =
+        typeof document.documentElement.animate === 'function'
+          ? document.documentElement.animate([{ opacity: 1 }, { opacity: 1 }], {
+              duration: 1e9,
+              iterations: Infinity,
+            })
+          : null;
+
+      let lastClockMs =
+        masterClock && typeof masterClock.currentTime === 'number'
+          ? Number(masterClock.currentTime)
+          : performance.now();
+      let frameCounter = 0;
+
+      function tick() {
+        const nowMs =
+          masterClock && typeof masterClock.currentTime === 'number'
+            ? Number(masterClock.currentTime)
+            : performance.now();
+        const dt = Math.min(Math.max((nowMs - lastClockMs) / 1000, 0), 0.1);
+        lastClockMs = nowMs;
+
+        if (!isDragging && !motionOffParam) {
+          // Momentum coasting: velocity decays 95% per second (remaining = 0.05^dt)
+          if (Math.abs(velocityU) > 0.4) {
+            scrollU += velocityU * dt;
+            velocityU *= Math.pow(0.05, dt);
+          } else {
+            velocityU = 0;
+          }
+          // Continuous right -> left drift at 50u/s
+          scrollU -= AUTO_SPEED * dt;
+        }
+
+        layoutCards();
+
+        frameCounter++;
+        if (frameCounter % 30 === 0) {
+          syncVideos();
+        }
+        requestAnimationFrame(tick);
+      }
+
+      layoutCards();
+      requestAnimationFrame(tick);
+      window.addEventListener('resize', layoutCards);
+
+      // One-time Web Animations entrance sequence
+      function runEntrance() {
+        if (motionOffParam || typeof Element.prototype.animate !== 'function') return;
+
+        const easeOut = 'cubic-bezier(0.22, 1, 0.36, 1)';
+        const easePop = 'cubic-bezier(0.34, 1.56, 0.64, 1)';
+
+        // 1. Nav drops in
+        const topBar = document.getElementById('topBar');
+        topBar
+          ?.animate(
+            [
+              { opacity: 0, transform: 'translateY(-22px)' },
+              { opacity: 1, transform: 'translateY(0)' },
+            ],
+            { duration: 640, easing: easeOut, fill: 'both' }
+          )
+          .finished.then((a) => a.cancel())
+          .catch(() => {});
+
+        // 2. Badge pops
+        const badge = document.getElementById('heroBadge');
+        badge
+          ?.animate(
+            [
+              { opacity: 0, transform: 'scale(0.84) translateY(8px)' },
+              { opacity: 1, transform: 'scale(1) translateY(0)' },
+            ],
+            { duration: 580, delay: 90, easing: easePop, fill: 'both' }
+          )
+          .finished.then((a) => a.cancel())
+          .catch(() => {});
+
+        // 3. Each headline line rises out of a blur
+        const line1 = document.getElementById('headlineLine1');
+        const line2 = document.getElementById('headlineLine2');
+        [line1, line2].forEach((el, idx) => {
+          el?.animate(
+            [
+              { opacity: 0, filter: 'blur(12px)', transform: 'translateY(26px)' },
+              { opacity: 1, filter: 'blur(0px)', transform: 'translateY(0)' },
+            ],
+            { duration: 760, delay: 160 + idx * 120, easing: easeOut, fill: 'both' }
+          )
+            .finished.then((a) => a.cancel())
+            .catch(() => {});
+        });
+
+        // 4. Subline rises
+        const subline = document.getElementById('heroSubline');
+        subline
+          ?.animate(
+            [
+              { opacity: 0, transform: 'translateY(18px)' },
+              { opacity: 1, transform: 'translateY(0)' },
+            ],
+            { duration: 680, delay: 380, easing: easeOut, fill: 'both' }
+          )
+          .finished.then((a) => a.cancel())
+          .catch(() => {});
+
+        // 5. Card row rises in
+        carouselBand
+          ?.animate(
+            [
+              { opacity: 0, transform: 'translateY(36px)' },
+              { opacity: 1, transform: 'translateY(0)' },
+            ],
+            { duration: 820, delay: 460, easing: easeOut, fill: 'both' }
+          )
+          .finished.then((a) => a.cancel())
+          .catch(() => {});
+
+        // 6. Button scales in
+        const ctaRing = document.getElementById('ctaRing');
+        ctaRing
+          ?.animate(
+            [
+              { opacity: 0, transform: 'scale(0.82)' },
+              { opacity: 1, transform: 'scale(1)' },
+            ],
+            { duration: 640, delay: 580, easing: easePop, fill: 'both' }
+          )
+          .finished.then((a) => a.cancel())
+          .catch(() => {});
+
+        // 7. Doodle strokes draw themselves in & handwritten notes fade in
+        const strokes = document.querySelectorAll('.draw-stroke');
+        strokes.forEach((path, idx) => {
+          path
+            .animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], {
+              duration: 720,
+              delay: 520 + idx * 95,
+              easing: easeOut,
+              fill: 'both',
+            })
+            .finished.then((a) => a.cancel())
+            .catch(() => {});
+        });
+
+        [document.getElementById('noteBeSeen'), document.getElementById('noteZeroCost')].forEach(
+          (note, idx) => {
+            note
+              ?.animate([{ opacity: 0 }, { opacity: 1 }], {
+                duration: 540,
+                delay: 500 + idx * 140,
+                easing: easeOut,
+                fill: 'both',
+              })
+              .finished.then((a) => a.cancel())
+              .catch(() => {});
+          }
+        );
+      }
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(runEntrance).catch(runEntrance);
+      } else {
+        runEntrance();
+      }
+
+      // Interactive Modals: Reel Spotlight & Brief Builder
+      const reelModal = document.getElementById('reelModal');
+      const briefModal = document.getElementById('briefModal');
+      const spotlightSheet = document.getElementById('spotlightSheet');
+      const spotlightVideo = document.getElementById('spotlightVideo');
+      const reelModalBadge = document.getElementById('reelModalBadge');
+      const reelModalTitle = document.getElementById('reelModalTitle');
+      const reelModalDesc = document.getElementById('reelModalDesc');
+      const reelModalCreator = document.getElementById('reelModalCreator');
+      const reelModalSpec = document.getElementById('reelModalSpec');
+      const spotlightPills = document.getElementById('spotlightPills');
+      let lastTrigger = null;
+
+      CLIPS.forEach((clip, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'spotlight-pill';
+        btn.dataset.selectClip = String(idx);
+        btn.textContent = `${idx + 1}. ${clip.title.split(' ')[0]}`;
+        btn.addEventListener('click', () => selectSpotlightClip(idx));
+        spotlightPills?.appendChild(btn);
+      });
+
+      function selectSpotlightClip(index) {
+        const idx = ((index % CLIPS.length) + CLIPS.length) % CLIPS.length;
+        const clip = CLIPS[idx];
+        const col = idx % 5;
+        const row = Math.floor(idx / 5);
+
+        if (reelModalBadge) {
+          reelModalBadge.textContent = `Clip 0${idx + 1}`.replace('010', '10') + ` · ${clip.tag}`;
+        }
+        if (reelModalTitle) reelModalTitle.textContent = clip.title;
+        if (reelModalDesc) reelModalDesc.textContent = clip.desc;
+        if (reelModalCreator) reelModalCreator.textContent = `Creator: ${clip.creator}`;
+        if (reelModalSpec) reelModalSpec.textContent = clip.spec;
+
+        if (spotlightSheet) {
+          spotlightSheet.style.transform = `translate3d(${-col * 200}px, ${-row * 281}px, 0)`;
+        }
+        spotlightPills?.querySelectorAll('.spotlight-pill').forEach((pill, pIdx) => {
+          pill.classList.toggle('is-active', pIdx === idx);
+        });
+      }
+
+      function openModal(modal, trigger) {
+        if (!modal) return;
+        lastTrigger = trigger || document.activeElement;
+        modal.removeAttribute('inert');
+        modal.setAttribute('aria-hidden', 'false');
+        modal.classList.add('is-open');
+        if (modal === reelModal && spotlightVideo && !motionOffParam) {
+          const p = spotlightVideo.play();
+          if (p && typeof p.catch === 'function') p.catch(() => {});
+        }
+        modal.querySelector('.modal-close')?.focus();
+      }
+
+      function closeModal(modal) {
+        if (!modal || !modal.classList.contains('is-open')) return;
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        modal.setAttribute('inert', '');
+        if (lastTrigger && typeof lastTrigger.focus === 'function') {
+          lastTrigger.focus();
+        }
+      }
+
+      cards.forEach((item) => {
+        item.el.addEventListener('click', (e) => {
+          if (totalDragPx > 6) return;
+          e.preventDefault();
+          selectSpotlightClip(item.index);
+          openModal(reelModal, item.playBtn);
+        });
+      });
+
+      document.querySelectorAll('[data-open-spotlight]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const idx = Number(link.getAttribute('data-open-spotlight')) || 0;
+          selectSpotlightClip(idx);
+          openModal(reelModal, link);
+        });
+      });
+
+      [
+        document.getElementById('makeReelBtn'),
+        ...Array.from(document.querySelectorAll('[data-open-brief]')),
+      ].forEach((btn) => {
+        btn?.addEventListener('click', (e) => {
+          e.preventDefault();
+          openModal(briefModal, btn);
+        });
+      });
+
+      document.getElementById('reelModalClose')?.addEventListener('click', () => closeModal(reelModal));
+      document.getElementById('briefModalClose')?.addEventListener('click', () => closeModal(briefModal));
+
+      [reelModal, briefModal].forEach((modal) => {
+        modal?.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal(modal);
+        });
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeModal(reelModal);
+          closeModal(briefModal);
+        }
+      });
+
+      const briefForm = document.getElementById('briefForm');
+      const briefBrand = document.getElementById('briefBrand');
+      const briefEmail = document.getElementById('briefEmail');
+      const briefStatus = document.getElementById('briefStatus');
+
+      briefForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const brandVal = briefBrand?.value.trim() || 'your brand';
+        const emailVal = briefEmail?.value.trim() || '';
+        if (!emailVal || !emailVal.includes('@')) {
+          if (briefStatus) briefStatus.textContent = 'Please enter a valid work email to receive creator matches.';
+          return;
+        }
+        if (briefStatus) {
+          briefStatus.textContent = `Brief created for ${brandVal}! 3 handpicked reel makers have been sent to ${emailVal}.`;
+        }
+        briefForm.reset();
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -46,6 +46,86 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t89: {
+    "slug": "reelmark",
+    "cat": "commerce",
+    "access": "free",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Reelmark",
+        "desc": "Hero trang đích một màn hình tự chứa trong một file HTML duy nhất cho chợ nhà sáng tạo video ngắn \"Reelmark\" (\"Captivate Crowds with Snackable Reels\") theo phong cách Soft Mint Studio (#F5F8EF nền trắng ngà ấm, #08482D xanh rừng đậm, #DAE7C7 huy hiệu bạc hà, #101410 tiêu đề đen đậm): khung 1440×1080 căn giữa (--u = min(100vw/1440, 100vh/1080)), tiêu đề Inter Tight 700 (88u / 92u), ghi chú vẽ tay Caveat 600 (\"Be seen / with clips\", \"Zero cost\") kèm mũi tên và nét gạch \"//\" tự vẽ, cùng băng chuyền 10 thẻ video cao uốn cong như mặt trong hình trụ (tự động trôi phải → trái 50u/s, kéo 1:1 và vẩy quán tính giảm tốc 95%/s) hiển thị đồng bộ 10 ô sản phẩm từ một lưới video MP4 + ảnh tĩnh WebP 5×2 duy nhất.",
+        "tags": [
+          "Creator Marketplace",
+          "Curved Video Carousel",
+          "Soft Mint Studio"
+        ]
+      },
+      "en": {
+        "name": "Reelmark",
+        "desc": "A self-contained single-file, one-screen HTML landing hero for the \"Reelmark\" short-form video creator marketplace (\"Captivate Crowds with Snackable Reels\") in a soft mint studio aesthetic (#F5F8EF warm off-white, #08482D forest green, #DAE7C7 mint badge, #101410 headline): a centred 1440×1080 frame (--u = min(100vw/1440, 100vh/1080)), 88u / 92u Inter Tight 700 display typography, Caveat 600 handwritten notes (\"Be seen / with clips\", \"Zero cost\") with self-drawing SVG arrows and \"//\" strokes, and a curved cylindrical 10-card video carousel (50u/s right-to-left drift, 1:1 pointer drag, and 95%/s momentum decay) playing 10 cover-fitted product clips from a single synced 5×2 MP4 + WebP grid.",
+        "tags": [
+          "Creator Marketplace",
+          "Curved Video Carousel",
+          "Soft Mint Studio"
+        ]
+      },
+      "zh": {
+        "name": "Reelmark",
+        "desc": "《Reelmark》短视频创作者市集（\"Captivate Crowds with Snackable Reels\"）单文件自包含单屏 HTML 首屏模板，采用柔和薄荷绿工作室风格（#F5F8EF 暖白底色、#08482D 深森林绿、#DAE7C7 薄荷绿徽章、#101410 墨黑主标题）：配备居中 1440×1080 画布（--u = min(100vw/1440, 100vh/1080)）、88u / 92u Inter Tight 700 标题排印、带自绘制 SVG 箭头与 \"//\" 笔触的 Caveat 600 手写批注（\"Be seen / with clips\"、\"Zero cost\"），以及如同圆柱内壁般弯曲的 10 卡片视频轮播（50u/s 从右向左平滑漂移、1:1 指针拖拽与 95%/s 惯性衰减），由单一同步的 5×2 MP4 + WebP 网格呈现 10 段不同产品短片。",
+        "tags": [
+          "短视频创作者市集",
+          "曲面圆柱视频轮播",
+          "薄荷绿工作室风"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Gói tải",
+          "4 files"
+        ],
+        [
+          "Phạm vi",
+          "Hero một màn hình · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "4 files"
+        ],
+        [
+          "Scope",
+          "One-screen hero · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / 原生 JS"
+        ],
+        [
+          "下载包",
+          "4 files"
+        ],
+        [
+          "范围",
+          "单屏首屏模板 · 零构建步骤"
+        ]
+      ]
+    }
+  },
   t88: {
     "slug": "melli",
     "cat": "education",

@@ -2,15 +2,15 @@
   "id": "t82",
   "slug": "oceanpulse",
   "browser": "153.0.8010.12",
-  "date": "2026-10-20T08:22:02.619Z",
+  "date": "2026-10-22T01:14:31.975Z",
   "demo": "/demos/oceanpulse/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "06d7ea9a7169",
-  "sha256": "06d7ea9a716950e339ad1d4ada86ca57be79e00bd8dd752551cb29636698db1d",
-  "demoHtmlSha256": "42a5988cbe8794291d8bfd2bcf7024323d2e8b4554b4785f2031f5154f63f6c8",
-  "demoSha256": "c6cbb55de160548816ebb5d859ae3a1ec7d894fe78be1653931774b751ccd918",
-  "bytes": 511895,
+  "revision": "5b62f431fec2",
+  "sha256": "5b62f431fec2574bbd3876175d577464b36389f1424f85fd12e1b8439fa2613f",
+  "demoHtmlSha256": "63e5d6888da877932a4cedd8ef93d8cd098e285d96ad3d4f17d8357197541a36",
+  "demoSha256": "00d6316d1bfdbc45a17fc09feb5ed90e83c54405faf2b43040c46961c457a466",
+  "bytes": 518084,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,11 +22,11 @@
       "action": "hover hero"
     },
     {
-      "seconds": 3.355,
+      "seconds": 3.404,
       "action": "oceanpulse-open-navsheet-and-hover-mission"
     },
     {
-      "seconds": 5.349,
+      "seconds": 5.382,
       "action": "oceanpulse-hover-programs-and-cta"
     },
     {
@@ -35,7 +35,7 @@
       "target": 0
     },
     {
-      "seconds": 10.755,
+      "seconds": 10.722,
       "action": "oceanpulse-close-navsheet-and-hover-hero-cta"
     }
   ],

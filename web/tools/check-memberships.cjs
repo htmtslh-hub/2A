@@ -33,7 +33,7 @@ async function main() {
   eq(productPolicy.productAccessTier({ group: 'skill-prompt' }), 'premium');
   eq(productPolicy.productAccessTier({ group: 'agent' }), 'individual');
   eq(productPolicy.productAccessTier({ access: 'free' }), 'free');
-  const freeIds = ['t1', 't22', 't50', 't53', 't54', 't55', 't56', 't57', 't58', 't59', 't60', 't61', 't62', 't63', 't64', 't65', 't66', 't67', 't68', 't69', 't70', 't71', 't72', 't73', 't74', 't75', 't76', 't77', 't78', 't79', 't80', 't81', 't82', 't83', 't84', 't85', 't86', 't87', 't88'];
+  const freeIds = ['t1', 't22', 't50', 't53', 't54', 't55', 't56', 't57', 't58', 't59', 't60', 't61', 't62', 't63', 't64', 't65', 't66', 't67', 't68', 't69', 't70', 't71', 't72', 't73', 't74', 't75', 't76', 't77', 't78', 't79', 't80', 't81', 't82', 't83', 't84', 't85', 't86', 't87', 't88', 't89'];
   eq(Object.keys(products).filter(productPolicy.isFreeProduct).sort().join(','), freeIds.join(','));
   for (const id of freeIds) {
     eq(productPolicy.requiresPremium(id), false);

@@ -113,7 +113,7 @@ try {
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
-    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'lumora' || slug === 'securify' || slug === 'cozypaws' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'iris' || slug === 'melli') {
+    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'lumora' || slug === 'securify' || slug === 'cozypaws' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'iris' || slug === 'melli' || slug === 'reelmark') {
       for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai','soft-zoom-63098134.figma.site','polo-pecan-73837341.figma.site','cdn.jsdelivr.net']) allowedBriefHosts.add(host);
     }
     if (slug === 'toonhub') {
@@ -167,8 +167,8 @@ try {
       }, null, {timeout:60000});
       await page.waitForTimeout(1500);
     }
-    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
-    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far') {
+    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far','reelmark'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'reelmark') {
       await page.waitForTimeout(2000);
     }
     if (slug === 'solaris-gate') {
@@ -182,6 +182,28 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'reelmark') {
+        const step = actions.filter(a => a.action.startsWith('reelmark-')).length;
+        if (step === 0) {
+          await page.mouse.move(920, 620);
+          await page.mouse.down();
+          await page.mouse.move(580, 620, { steps: 12 });
+          await page.mouse.up();
+          await page.waitForTimeout(250);
+          await page.locator('[data-open-spotlight="0"]').click();
+          await page.locator('#reelModal.is-open').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'reelmark-drag-carousel-and-open-spotlight' });
+        } else if (step === 1) {
+          await page.locator('[data-select-clip="2"]').click();
+          await page.waitForTimeout(400);
+          await page.keyboard.press('Escape');
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'reelmark-switch-clip-and-close' });
+        } else {
+          await page.locator('#makeReelBtn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'reelmark-hover-cta' });
+        }
+        return;
+      }
       if (slug === 'melli') {
         const step = actions.filter(a => a.action.startsWith('melli-')).length;
         if (step === 0) {

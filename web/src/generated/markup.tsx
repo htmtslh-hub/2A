@@ -265,9 +265,6 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                 <a className="product-card hv6" style={{ position: "relative", display: "flex", flex: "1", flexDirection: "column", borderRadius: "24px", overflow: "hidden", background: "linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%)", border: "1px solid rgba(236,238,241,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18)", transition: "border-color .3s ease, transform .3s ease, box-shadow .3s ease" }} href={hp.href} onClick={hp.onDetail}>
                                   <div style={{ position: "relative", aspectRatio: "16/11", overflow: "hidden" }}>
                                     <ImageSlot id={`agentic-home-${hp.id}`} presentation="stage" shape="rect" fit="cover" placeholder="Ảnh preview giao diện" />
-                                    <span className="product-category-badge" style={{ position: "absolute", top: "12px", left: "12px", padding: "6px 12px", borderRadius: "100px", background: "#202733", boxShadow: "inset 0 1px 0 rgba(255,255,255,.24)", fontSize: "11px", fontWeight: "700", letterSpacing: ".1em", textTransform: "uppercase", color: "#ffffff" }}>
-                                      {hp.catLabel}
-                                    </span>
                                     {(hp.badge) ? (
                                       <>
                                         <span style={{ position: "absolute", top: "12px", right: "12px", padding: "6px 12px", borderRadius: "100px", background: "var(--acc)", color: "#ffffff", fontSize: "11px", fontWeight: "700", letterSpacing: ".08em", textTransform: "uppercase" }}>
@@ -276,7 +273,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                       </>
                                     ) : null}
                                   </div>
-                                  <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", justifyContent: "center", flex: "1" }}>
+                                  <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "6px", flex: "1" }}>
                                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
                                       <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "22px", lineHeight: "1.15" }}>
                                         {hp.name}
@@ -285,6 +282,9 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                         {hp.premium ? <PremiumWingIcon size={30} /> : hp.price}
                                       </span>
                                     </div>
+                                    <span style={{ fontSize: "11px", letterSpacing: ".12em", textTransform: "uppercase", color: "#949ba4", lineHeight: "1.35" }}>
+                                      {hp.catLabel}
+                                    </span>
                                   </div>
                                 </a>
                                 <div className="product-card-actions">
@@ -423,9 +423,6 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                   <a className="product-card hv6" style={{ position: "relative", display: "flex", flex: "1", flexDirection: "column", borderRadius: "24px", overflow: "hidden", background: "linear-gradient(152deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.045) 46%, rgba(255,255,255,.028) 100%)", border: "1px solid rgba(236,238,241,.14)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.20), inset 0 -1px 0 rgba(0,0,0,.18)", transition: "border-color .3s ease, transform .3s ease, box-shadow .3s ease" }} href={tp.href} onClick={tp.onDetail}>
                                     <div style={{ position: "relative", aspectRatio: "16/11", overflow: "hidden" }}>
                                       <ImageSlot id={`agentic-tpl-${tp.id}`} presentation="stage" shape="rect" fit="cover" placeholder="Ảnh preview giao diện" />
-                                      <span className="product-category-badge" style={{ position: "absolute", top: "12px", left: "12px", padding: "6px 12px", borderRadius: "100px", background: "#202733", boxShadow: "inset 0 1px 0 rgba(255,255,255,.24)", fontSize: "11px", fontWeight: "700", letterSpacing: ".1em", textTransform: "uppercase", color: "#ffffff" }}>
-                                        {tp.catLabel}
-                                      </span>
                                       {(tp.badge) ? (
                                         <>
                                           <span style={{ position: "absolute", top: "12px", right: "12px", padding: "6px 12px", borderRadius: "100px", background: "var(--acc)", color: "#ffffff", fontSize: "11px", fontWeight: "700", letterSpacing: ".08em", textTransform: "uppercase" }}>
@@ -434,7 +431,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                         </>
                                       ) : null}
                                     </div>
-                                    <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", justifyContent: "center", flex: "1" }}>
+                                    <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "6px", flex: "1" }}>
                                       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
                                         <h3 style={{ margin: "0", fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.01em", fontSize: "22px", lineHeight: "1.15" }}>
                                           {tp.name}
@@ -443,6 +440,9 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                           {tp.premium ? <PremiumWingIcon size={30} /> : tp.price}
                                         </span>
                                       </div>
+                                      <span style={{ fontSize: "11px", letterSpacing: ".12em", textTransform: "uppercase", color: "#949ba4", lineHeight: "1.35" }}>
+                                        {tp.catLabel}
+                                      </span>
                                     </div>
                                   </a>
                                   <div className="product-card-actions">

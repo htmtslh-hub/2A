@@ -1,0 +1,46 @@
+{
+  "id": "t93",
+  "slug": "gridwork-co",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-22T08:21:25.199Z",
+  "demo": "/demos/gridwork-co/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "ba07922a0246",
+  "sha256": "ba07922a02469c238be357c285e43032cd9be18e93f4840003a0aaf04e2fbb58",
+  "demoHtmlSha256": "d225349c8205fe16501b33b995f8b91dcbb5cdcfbccf2b2d6480c01a03aff7f9",
+  "demoSha256": "f497f7a9c4fcd17eb9706cdc41172959ca3d9d7eb1e46e4bf59a6be854b9cf63",
+  "bytes": 2031443,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.899,
+      "action": "gridwork-co-toggle-framer-and-next-testimonial"
+    },
+    {
+      "seconds": 5.309,
+      "action": "gridwork-co-prev-testimonial-and-hover-create"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\gridwork-co-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\gridwork-co-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\gridwork-co-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\gridwork-co-return.jpg"
+  ]
+}

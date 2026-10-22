@@ -46,6 +46,85 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t93: {
+    "slug": "gridwork-co",
+    "cat": "commerce",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Gridwork Co",
+        "desc": "Hero onboarding tạo tài khoản một màn hình tự chứa trong một file HTML duy nhất cho sàn việc làm freelance \"Gridwork Co\" (\"What tools do you use? — We’ll connect you with the best jobs.\"): tỉ lệ artboard 1447×1087 (--u), thẻ ảnh nhà kính 55% bên trái kết hợp luồng video chuyển động lặp 10 giây tự hiện dần (0.8s), họa tiết 4×4 ô 61u ở góc trên-trái (ô cắt màu nền #FDFEFD tại (0,0) và 6 ô kính mờ blur 8u), dải kính mờ đáy 360u (blur 22u) kèm trích dẫn Sofia Hernández và 2 nút mũi tên tròn 59u, cùng biểu mẫu 432u bên phải gồm biểu trưng hai chiếc lá xanh rừng (#1F4D37), lưới 2×3 thẻ công cụ (Figma, Framer, Adobe XD, Webflow, Relume, Canva), nút viên thuốc \"Create account\" (#20513A) và hoạt ảnh xuất hiện ~2 giây bằng Web Animations API.",
+        "tags": [
+          "Freelance Marketplace",
+          "Botanical Onboarding",
+          "Single-File HTML"
+        ]
+      },
+      "en": {
+        "name": "Gridwork Co",
+        "desc": "A self-contained single-file, one-screen create-account onboarding hero for the \"Gridwork Co\" freelance marketplace (\"What tools do you use? — We’ll connect you with the best jobs.\"): 1447×1087 artboard-proportional scale (--u), a 55% sunlit greenhouse photo card on the left overlaid by a 0.8s fade-in 10s camera-orbit video loop, a top-left 61u 4×4 corner tile pattern (#FDFEFD cut-out at (0,0) + six 8u-blur frosted tiles), a 360u bottom frosted forest-tint glass band with Sofia Hernández’s testimonial and two 59u outline arrow buttons, and a centred 432u form on the right with a two-leaf forest-green wordmark (#1F4D37), a 2×3 tool grid (Figma, Framer, Adobe XD, Webflow, Relume, Canva), a \"Create account\" pill (#20513A), and a ~2s Web Animations entrance timeline.",
+        "tags": [
+          "Freelance Marketplace",
+          "Botanical Onboarding",
+          "Single-File HTML"
+        ]
+      },
+      "zh": {
+        "name": "Gridwork Co",
+        "desc": "自由职业市集《Gridwork Co》（\"What tools do you use? — We’ll connect you with the best jobs.\"）单文件自包含单屏注册引导首屏模板：基于 1447×1087 画布比例单位（--u），左侧 55% 阳光温室照片卡片叠加 0.8 秒淡入的 10 秒无缝环绕视频循环、左上角 61u 4×4 网格拼贴图案（(0,0) 处 #FDFEFD 镂空切角与 6 个 8u 磨砂玻璃方块）、底部 360u 森林绿渐变磨砂玻璃带及 Sofia Hernández 客户评价与双 59u 圆形箭头按钮；右侧居中 432u 表单配备双叶森林绿标志（#1F4D37）、2×3 真实工具图标网格（Figma、Framer、Adobe XD、Webflow、Relume、Canva）、\"Create account\" 胶囊按钮（#20513A）及约 2 秒 Web Animations 入场时间线。",
+        "tags": [
+          "自由职业市集",
+          "植物风注册引导",
+          "单文件 HTML"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Gói tải",
+          "4 files"
+        ],
+        [
+          "Phạm vi",
+          "Create-account onboarding hero 1 màn hình · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "4 files"
+        ],
+        [
+          "Scope",
+          "One-screen create-account onboarding hero · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / 原生 JS"
+        ],
+        [
+          "下载包",
+          "4 files"
+        ],
+        [
+          "范围",
+          "单屏注册引导首屏 · 零构建步骤"
+        ]
+      ]
+    }
+  },
   t92: {
     "slug": "targo",
     "cat": "commerce",

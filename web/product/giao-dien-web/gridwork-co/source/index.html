@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Gridwork Co — Create Account Onboarding</title>
+  <meta name="description" content="Create your Gridwork Co freelance marketplace account. Select the design and no-code tools you use—Figma, Framer, Adobe XD, Webflow, Relume, and Canva—to match with the best client projects." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 28'%3E%3Cpath d='M3.5 22.5C2.2 14.2 7.2 5.4 16.8 3.2C18.4 11.4 13.8 20.1 3.5 22.5Z' fill='%231F4D37'/%3E%3Cpath d='M11.5 25.2C11.8 16.6 18.4 9.2 28.8 8.4C28.6 17.2 22.2 24.4 11.5 25.2Z' fill='%232E6F50'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      /* Artboard reference scale: 1447 × 1087 */
+      --u: clamp(0.7px, min(calc(100vw / 1447), calc(100vh / 1087)), 2.4px);
+      --tile-u: var(--u);
+
+      /* Palette */
+      --bg-page: #FDFEFD;
+      --ink: #101A20;
+      --text-secondary: #6E767C;
+      --text-muted: #8A9196;
+      --line: #DCE0DD;
+      --forest: #1F4D37;
+      --forest-selected: #1D4A35;
+      --btn-bg: #20513A;
+      --btn-hover: #2A6247;
+      --sage-tint: #ECF2EC;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg-page);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow: hidden;
+    }
+
+    /* =========================================================================
+       SHELL GRID (1447 × 1087 ARTBOARD PROPORTIONS)
+       ========================================================================= */
+    .onboarding-shell {
+      width: 100vw;
+      height: 100vh;
+      height: 100svh;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) max(calc(508.7 * var(--u)), 45%);
+      padding: calc(11.5 * var(--u)) 0 calc(15.7 * var(--u)) calc(15.6 * var(--u));
+      background-color: var(--bg-page);
+      overflow: hidden;
+    }
+
+    /* =========================================================================
+       PHOTO CARD (LEFT COLUMN)
+       ========================================================================= */
+    .photo-card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      border-radius: 0 calc(24 * var(--u)) calc(24 * var(--u)) calc(24 * var(--u));
+      overflow: hidden;
+      background-color: #1A3326;
+      isolation: isolate;
+      user-select: none;
+    }
+
+    .photo-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 22%;
+      display: block;
+      pointer-events: none;
+    }
+
+    .photo-video {
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      z-index: 1;
+    }
+
+    .photo-video.is-ready {
+      opacity: 1;
+    }
+
+    /* Top-left 4×4 Tile Pattern on a 61u grid */
+    .tile-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(244 * var(--tile-u));
+      height: calc(244 * var(--tile-u));
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .tile-cell {
+      position: absolute;
+      width: calc(61 * var(--tile-u));
+      height: calc(61 * var(--tile-u));
+    }
+
+    /* Page-coloured cut-out at (0,0) */
+    .tile-cutout-origin {
+      left: 0;
+      top: 0;
+      background-color: var(--bg-page);
+      border-radius: 0 0 calc(15 * var(--tile-u)) 0;
+    }
+
+    /* Rounded page-coloured notches along the card edge so the pattern reads
+       as squares punched out of the corner */
+    .tile-notch {
+      position: absolute;
+      width: calc(15 * var(--tile-u));
+      height: calc(15 * var(--tile-u));
+      background: radial-gradient(
+        circle at 100% 100%,
+        transparent calc(15 * var(--tile-u) - 0.5px),
+        var(--bg-page) calc(15 * var(--tile-u))
+      );
+      pointer-events: none;
+    }
+
+    /* Notch in cell (1,0) top-left corner */
+    .tile-notch--top-edge-1 {
+      left: calc(61 * var(--tile-u));
+      top: 0;
+    }
+
+    /* Notch in cell (0,1) top-left corner */
+    .tile-notch--left-edge-1 {
+      left: 0;
+      top: calc(61 * var(--tile-u));
+    }
+
+    /* Notch in cell (1,0) top-right corner before frosted tile (2,0) */
+    .tile-notch--top-edge-2 {
+      left: calc(122 * var(--tile-u) - 15 * var(--tile-u));
+      top: 0;
+      transform: scaleX(-1);
+    }
+
+    /* Notch in cell (3,0) top-left corner after frosted tile (2,0) */
+    .tile-notch--top-edge-3 {
+      left: calc(183 * var(--tile-u));
+      top: 0;
+    }
+
+    /* Notch in cell (0,1) bottom-left corner before frosted tile (0,2) */
+    .tile-notch--left-edge-2 {
+      left: 0;
+      top: calc(122 * var(--tile-u) - 15 * var(--tile-u));
+      transform: scaleY(-1);
+    }
+
+    /* Notch in cell (0,3) top-left corner after frosted tile (0,2) */
+    .tile-notch--left-edge-3 {
+      left: 0;
+      top: calc(183 * var(--tile-u));
+    }
+
+    /* Six frosted tiles: (2,0), (3,1), (0,2), (2,2), (1,3), (3,3) */
+    .tile-frosted {
+      border-radius: calc(15 * var(--tile-u));
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(calc(8 * var(--tile-u)));
+      -webkit-backdrop-filter: blur(calc(8 * var(--tile-u)));
+    }
+
+    .tile-c2-r0 { left: calc(122 * var(--tile-u)); top: 0; }
+    .tile-c3-r1 { left: calc(183 * var(--tile-u)); top: calc(61 * var(--tile-u)); }
+    .tile-c0-r2 { left: 0;                        top: calc(122 * var(--tile-u)); }
+    .tile-c2-r2 { left: calc(122 * var(--tile-u)); top: calc(122 * var(--tile-u)); }
+    .tile-c1-r3 { left: calc(61 * var(--tile-u));  top: calc(183 * var(--tile-u)); }
+    .tile-c3-r3 { left: calc(183 * var(--tile-u)); top: calc(183 * var(--tile-u)); }
+
+    /* Bottom glass: 360u band with 22u backdrop blur & forest tint gradient (0 -> .30 -> .22) */
+    .photo-bottom-glass {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: calc(360 * var(--u));
+      z-index: 2;
+      pointer-events: none;
+      backdrop-filter: blur(calc(22 * var(--u)));
+      -webkit-backdrop-filter: blur(calc(22 * var(--u)));
+      background: linear-gradient(
+        180deg,
+        rgba(31, 77, 55, 0) 0%,
+        rgba(31, 77, 55, 0.30) 55%,
+        rgba(31, 77, 55, 0.22) 100%
+      );
+      -webkit-mask-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.55) 26%,
+        rgba(0, 0, 0, 1) 48%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      mask-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.55) 26%,
+        rgba(0, 0, 0, 1) 48%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
+
+    /* Testimonial overlay */
+    .testimonial {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 4;
+      padding: 0 calc(40 * var(--u)) calc(38 * var(--u));
+      color: #FFFFFF;
+    }
+
+    .testimonial-quote-clip {
+      overflow: hidden;
+    }
+
+    .testimonial-quote {
+      max-width: calc(772 * var(--u));
+      font-weight: 500;
+      font-size: calc(31.35 * var(--u));
+      line-height: calc(45.5 * var(--u));
+      letter-spacing: -0.012em;
+      color: #FFFFFF;
+      text-shadow: 0 1px 12px rgba(16, 26, 32, 0.16);
+    }
+
+    .testimonial-footer {
+      margin-top: calc(28 * var(--u));
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: calc(20 * var(--u));
+    }
+
+    .testimonial-author {
+      display: flex;
+      flex-direction: column;
+      gap: calc(4 * var(--u));
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      font-size: calc(20.5 * var(--u));
+      line-height: 1.25;
+      color: #FFFFFF;
+    }
+
+    .testimonial-role {
+      font-weight: 500;
+      font-size: calc(16.25 * var(--u));
+      line-height: 1.35;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .testimonial-arrows {
+      display: flex;
+      align-items: center;
+      gap: calc(31 * var(--u));
+      flex-shrink: 0;
+    }
+
+    .arrow-btn {
+      width: calc(59 * var(--u));
+      height: calc(59 * var(--u));
+      border-radius: 50%;
+      border: calc(1.5 * var(--u)) solid #FFFFFF;
+      background: transparent;
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.18s ease;
+    }
+
+    .arrow-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .arrow-btn:active {
+      transform: scale(0.96);
+    }
+
+    .arrow-btn:focus-visible {
+      outline: 2px solid #FFFFFF;
+      outline-offset: 3px;
+    }
+
+    .arrow-btn svg {
+      width: calc(22 * var(--u));
+      height: calc(22 * var(--u));
+      stroke: #FFFFFF;
+      stroke-width: 1.5;
+      fill: none;
+    }
+
+    /* =========================================================================
+       FORM COLUMN (RIGHT)
+       ========================================================================= */
+    .form-column {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 calc(24 * var(--u));
+    }
+
+    .form-panel {
+      width: calc(432 * var(--u));
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    /* Wordmark: two-leaf mark + "Gridwork Co" in Inter 600, 24u, forest green */
+    .wordmark {
+      align-self: center;
+      display: inline-flex;
+      align-items: center;
+      gap: calc(9.5 * var(--u));
+      text-decoration: none;
+      color: var(--forest);
+    }
+
+    .wordmark-icon {
+      width: calc(31 * var(--u));
+      height: calc(28 * var(--u));
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .wordmark-text {
+      font-weight: 600;
+      font-size: calc(24 * var(--u));
+      line-height: 1;
+      letter-spacing: calc(-0.45 * var(--u));
+      color: var(--forest);
+    }
+
+    /* Heading & Subline */
+    .heading-wrap {
+      margin-top: calc(50.5 * var(--u));
+      text-align: center;
+    }
+
+    .heading-clip {
+      overflow: hidden;
+    }
+
+    .form-heading {
+      font-weight: 700;
+      font-size: calc(26 * var(--u));
+      line-height: 1.22;
+      letter-spacing: calc(-0.65 * var(--u));
+      color: var(--ink);
+    }
+
+    .form-subline {
+      margin-top: calc(10 * var(--u));
+      font-weight: 400;
+      font-size: calc(17.15 * var(--u));
+      line-height: 1.4;
+      color: var(--text-secondary);
+    }
+
+    /* Tool Grid: 2×3, 34u below subline, gaps 19u × 18u */
+    .tool-grid {
+      margin-top: calc(34 * var(--u));
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      row-gap: calc(19 * var(--u));
+      column-gap: calc(18 * var(--u));
+    }
+
+    .tool-card {
+      position: relative;
+      height: calc(130.5 * var(--u));
+      border-radius: calc(11 * var(--u));
+      background-color: var(--bg-page);
+      box-shadow: inset 0 0 0 calc(1 * var(--u)) var(--line);
+      padding: calc(16 * var(--u)) calc(16 * var(--u)) calc(14 * var(--u));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+      cursor: pointer;
+      user-select: none;
+      border: none;
+      font-family: inherit;
+      transition: background-color 0.18s ease, box-shadow 0.18s ease, transform 0.16s ease;
+    }
+
+    .tool-card:hover {
+      box-shadow: inset 0 0 0 calc(1.5 * var(--u)) #B8C2BA;
+    }
+
+    .tool-card.is-selected {
+      background-color: var(--sage-tint);
+      box-shadow: inset 0 0 0 calc(2 * var(--u)) var(--forest-selected);
+    }
+
+    .tool-card.is-selected:hover {
+      box-shadow: inset 0 0 0 calc(2 * var(--u)) var(--forest-selected);
+    }
+
+    .tool-card:focus-visible {
+      outline: 2px solid var(--forest);
+      outline-offset: 2px;
+    }
+
+    /* 41u App Icon Tile */
+    .tool-icon {
+      width: calc(41 * var(--u));
+      height: calc(41 * var(--u));
+      border-radius: calc(9.5 * var(--u));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .tool-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* 20u Round Checkbox at top right */
+    .tool-check {
+      position: absolute;
+      top: calc(14 * var(--u));
+      right: calc(14 * var(--u));
+      width: calc(20 * var(--u));
+      height: calc(20 * var(--u));
+      border-radius: 50%;
+      background-color: var(--bg-page);
+      box-shadow: inset 0 0 0 calc(1.25 * var(--u)) var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .tool-check svg {
+      width: calc(11.5 * var(--u));
+      height: calc(11.5 * var(--u));
+      opacity: 0;
+      transform: scale(0.75);
+      transition: opacity 0.16s ease, transform 0.16s ease;
+    }
+
+    .tool-card.is-selected .tool-check {
+      background-color: var(--forest-selected);
+      box-shadow: inset 0 0 0 calc(2 * var(--u)) var(--forest-selected);
+    }
+
+    .tool-card.is-selected .tool-check svg {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .tool-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: calc(2 * var(--u));
+      min-width: 0;
+      width: 100%;
+    }
+
+    .tool-name {
+      font-weight: 600;
+      font-size: calc(16.75 * var(--u));
+      line-height: 1.22;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    .tool-domain {
+      display: inline-flex;
+      align-items: center;
+      gap: calc(4 * var(--u));
+      font-weight: 400;
+      font-size: calc(16.75 * var(--u));
+      line-height: 1.22;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+
+    .tool-domain-icon {
+      width: calc(11.5 * var(--u));
+      height: calc(11.5 * var(--u));
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    /* Full-width 53u pill "Create account", 43u below the grid */
+    .create-btn {
+      margin-top: calc(43 * var(--u));
+      width: 100%;
+      height: calc(53 * var(--u));
+      border-radius: 999px;
+      border: none;
+      background-color: var(--btn-bg);
+      color: #FFFFFF;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: calc(16.75 * var(--u));
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .create-btn:hover {
+      background-color: var(--btn-hover);
+    }
+
+    .create-btn:active {
+      transform: scale(0.99);
+    }
+
+    .create-btn:focus-visible {
+      outline: 2px solid var(--forest);
+      outline-offset: 3px;
+    }
+
+    /* Below button: "Already have an account? Log in" */
+    .login-line {
+      margin-top: calc(20 * var(--u));
+      text-align: center;
+      font-weight: 400;
+      font-size: calc(15.5 * var(--u));
+      line-height: 1.4;
+      color: var(--text-secondary);
+    }
+
+    .login-link {
+      color: var(--forest);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: calc(3 * var(--u));
+      cursor: pointer;
+    }
+
+    .login-link:hover {
+      color: var(--btn-hover);
+    }
+
+    /* =========================================================================
+       MODAL DIALOG (FOR CREATE ACCOUNT / LOG IN FEEDBACK)
+       ========================================================================= */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      background: rgba(16, 26, 32, 0.46);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s ease;
+    }
+
+    .modal-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      width: min(100%, 420px);
+      border-radius: 18px;
+      background: var(--bg-page);
+      border: 1px solid var(--line);
+      padding: 26px 24px 22px;
+      box-shadow: 0 24px 48px rgba(16, 26, 32, 0.18);
+      color: var(--ink);
+    }
+
+    .modal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--sage-tint);
+      color: var(--forest);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .modal-title {
+      margin-top: 12px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .modal-desc {
+      margin-top: 8px;
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    .modal-tools {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .modal-tool-pill {
+      padding: 5px 11px;
+      border-radius: 8px;
+      background: var(--sage-tint);
+      border: 1px solid var(--forest-selected);
+      color: var(--forest-selected);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .modal-close-btn {
+      margin-top: 20px;
+      width: 100%;
+      height: 44px;
+      border-radius: 999px;
+      border: none;
+      background: var(--btn-bg);
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 14.5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--btn-hover);
+    }
+
+    /* =========================================================================
+       TABLET (PORTRAIT): Photo card on top, wide form with 3-col tool grid
+       ========================================================================= */
+    @media (max-width: 1024px) and (orientation: portrait), (max-width: 900px) {
+      :root {
+        --u: clamp(0.76px, min(calc(100vw / 920), calc(100vh / 1180)), 1.15px);
+        --tile-u: clamp(0.55px, calc(100vw / 1400), 0.78px);
+      }
+
+      .onboarding-shell {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(250px, 43%) minmax(0, 57%);
+        padding: 14px 18px 18px;
+        gap: 16px;
+      }
+
+      .photo-card {
+        border-radius: 0 20px 20px 20px;
+      }
+
+      .photo-bottom-glass {
+        height: 72%;
+      }
+
+      .testimonial {
+        padding: 0 26px 22px;
+      }
+
+      .testimonial-quote {
+        font-size: clamp(17px, 2.35vw, 22px);
+        line-height: 1.38;
+        max-width: 100%;
+      }
+
+      .testimonial-footer {
+        margin-top: 14px;
+      }
+
+      .testimonial-name {
+        font-size: 16px;
+      }
+
+      .testimonial-role {
+        font-size: 13.5px;
+      }
+
+      .testimonial-arrows {
+        gap: 14px;
+      }
+
+      .arrow-btn {
+        width: 42px;
+        height: 42px;
+      }
+
+      .arrow-btn svg {
+        width: 17px;
+        height: 17px;
+      }
+
+      .form-column {
+        padding: 0 6px;
+      }
+
+      .form-panel {
+        width: min(100%, 700px);
+      }
+
+      .heading-wrap {
+        margin-top: 18px;
+      }
+
+      .form-heading {
+        font-size: 22px;
+      }
+
+      .form-subline {
+        margin-top: 6px;
+        font-size: 15px;
+      }
+
+      .tool-grid {
+        margin-top: 18px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 12px;
+        column-gap: 12px;
+      }
+
+      .tool-card {
+        height: 104px;
+        padding: 12px 14px;
+        border-radius: 10px;
+      }
+
+      .tool-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+      }
+
+      .tool-check {
+        top: 12px;
+        right: 12px;
+        width: 18px;
+        height: 18px;
+      }
+
+      .tool-name {
+        font-size: 14.5px;
+      }
+
+      .tool-domain {
+        font-size: 13.5px;
+      }
+
+      .create-btn {
+        margin-top: 18px;
+        height: 46px;
+        font-size: 15.5px;
+      }
+
+      .login-line {
+        margin-top: 12px;
+        font-size: 14px;
+      }
+    }
+
+    /* =========================================================================
+       PHONE: Short photo card (3-line clamped quote) + compact horizontal
+       tool cards in 2 columns, fitting one screen without scrolling
+       ========================================================================= */
+    @media (max-width: 600px) {
+      :root {
+        --tile-u: 0.38px;
+      }
+
+      .onboarding-shell {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(175px, 33%) minmax(0, 67%);
+        padding: 10px 12px 12px;
+        gap: 10px;
+      }
+
+      .photo-card {
+        border-radius: 0 16px 16px 16px;
+      }
+
+      .photo-bottom-glass {
+        height: 82%;
+      }
+
+      .testimonial {
+        padding: 0 14px 12px;
+      }
+
+      .testimonial-quote {
+        font-size: clamp(12.5px, 3.6vw, 14.5px);
+        line-height: 1.34;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .testimonial-footer {
+        margin-top: 8px;
+        gap: 8px;
+      }
+
+      .testimonial-name {
+        font-size: 13px;
+      }
+
+      .testimonial-role {
+        font-size: 11px;
+      }
+
+      .testimonial-arrows {
+        gap: 8px;
+      }
+
+      .arrow-btn {
+        width: 30px;
+        height: 30px;
+        border-width: 1.2px;
+      }
+
+      .arrow-btn svg {
+        width: 13px;
+        height: 13px;
+      }
+
+      .form-column {
+        padding: 0;
+      }
+
+      .form-panel {
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+      }
+
+      .wordmark-icon {
+        width: 22px;
+        height: 20px;
+      }
+
+      .wordmark-text {
+        font-size: 17px;
+      }
+
+      .heading-wrap {
+        margin-top: 6px;
+      }
+
+      .form-heading {
+        font-size: clamp(17px, 4.8vw, 19.5px);
+      }
+
+      .form-subline {
+        margin-top: 2px;
+        font-size: clamp(12px, 3.4vw, 13.5px);
+      }
+
+      /* Compact horizontal tool cards in 2 columns */
+      .tool-grid {
+        margin-top: 8px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 7px;
+        column-gap: 7px;
+      }
+
+      .tool-card {
+        height: auto;
+        min-height: 52px;
+        padding: 8px 28px 8px 9px;
+        border-radius: 9px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+
+      .tool-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 6.5px;
+      }
+
+      .tool-check {
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+      }
+
+      .tool-check svg {
+        width: 9px;
+        height: 9px;
+      }
+
+      .tool-meta {
+        gap: 1px;
+      }
+
+      .tool-name {
+        font-size: clamp(11.5px, 3.3vw, 13px);
+      }
+
+      .tool-domain {
+        font-size: clamp(10px, 2.8vw, 11.5px);
+        gap: 2px;
+      }
+
+      .tool-domain-icon {
+        width: 9px;
+        height: 9px;
+      }
+
+      .create-btn {
+        margin-top: 8px;
+        height: 40px;
+        font-size: 14px;
+      }
+
+      .login-line {
+        margin-top: 5px;
+        font-size: 12px;
+      }
+    }
+
+    /* Short landscape viewports (e.g. 740×360) */
+    @media (max-height: 500px) and (orientation: landscape) {
+      :root {
+        --u: 0.42px;
+        --tile-u: 0.36px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .photo-video {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="onboarding-shell" id="onboardingShell">
+    <!-- =====================================================================
+         LEFT COLUMN — GREENHOUSE PHOTO CARD
+         ===================================================================== -->
+    <section class="photo-card" aria-label="Featured Freelancer Story">
+      <img
+        class="photo-media"
+        src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/61db05ee-e08b-47b7-8ab6-541c5c510237.jpg"
+        alt="A woman with dark hair in a low bun wearing a cream knit sweater and olive apron tending leafy plants in a sunlit glass greenhouse"
+        width="1356"
+        height="1528"
+      />
+      <video
+        id="greenhouseVideo"
+        class="photo-media photo-video"
+        src="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/221f7a06-5ecc-40b6-9ece-26f1f982db64.mp4"
+        muted
+        loop
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      ></video>
+
+      <!-- Top-left 4×4 Tile Pattern on 61u grid -->
+      <div class="tile-pattern" aria-hidden="true">
+        <div class="tile-cell tile-cutout-origin"></div>
+        <div class="tile-notch tile-notch--top-edge-1"></div>
+        <div class="tile-notch tile-notch--left-edge-1"></div>
+        <div class="tile-notch tile-notch--top-edge-2"></div>
+        <div class="tile-notch tile-notch--top-edge-3"></div>
+        <div class="tile-notch tile-notch--left-edge-2"></div>
+        <div class="tile-notch tile-notch--left-edge-3"></div>
+
+        <div class="tile-cell tile-frosted tile-c2-r0"></div>
+        <div class="tile-cell tile-frosted tile-c3-r1"></div>
+        <div class="tile-cell tile-frosted tile-c0-r2"></div>
+        <div class="tile-cell tile-frosted tile-c2-r2"></div>
+        <div class="tile-cell tile-frosted tile-c1-r3"></div>
+        <div class="tile-cell tile-frosted tile-c3-r3"></div>
+      </div>
+
+      <!-- Bottom 360u Frosted Forest-Tinted Glass Band -->
+      <div class="photo-bottom-glass" aria-hidden="true"></div>
+
+      <!-- Testimonial Overlay -->
+      <div class="testimonial">
+        <div class="testimonial-quote-clip">
+          <blockquote class="testimonial-quote" id="testimonialQuote">
+            “I landed multiple paid projects within a couple of days–way more traction than I ever got elsewhere. Definitely my go-to freelance platform now!”
+          </blockquote>
+        </div>
+
+        <div class="testimonial-footer" id="testimonialFooter">
+          <div class="testimonial-author">
+            <div class="testimonial-name" id="testimonialName">Sofia Hernández</div>
+            <div class="testimonial-role" id="testimonialRole">Garden Designer, Portland, OR</div>
+          </div>
+
+          <div class="testimonial-arrows" role="group" aria-label="Testimonial navigation">
+            <button
+              type="button"
+              class="arrow-btn"
+              id="prevTestimonialBtn"
+              aria-label="Previous testimonial"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 12H5M11 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="arrow-btn"
+              id="nextTestimonialBtn"
+              aria-label="Next testimonial"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         RIGHT COLUMN — ONBOARDING FORM
+         ===================================================================== -->
+    <section class="form-column" aria-labelledby="formHeading">
+      <div class="form-panel">
+        <!-- Wordmark: Two-leaf mark (dark & mid forest green, thin pale vein) + "Gridwork Co" -->
+        <a href="#onboardingShell" class="wordmark" id="brandWordmark" aria-label="Gridwork Co">
+          <svg class="wordmark-icon" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Left / back leaf in dark forest green -->
+            <path
+              d="M3.5 22.5C2.2 14.2 7.2 5.4 16.8 3.2C18.4 11.4 13.8 20.1 3.5 22.5Z"
+              fill="#1F4D37"
+            />
+            <path
+              d="M4.2 21.8C8.3 16.5 11.9 11.2 15.8 4.4"
+              stroke="#ECF2EC"
+              stroke-width="1.25"
+              stroke-linecap="round"
+            />
+            <!-- Right / front leaf in mid forest green -->
+            <path
+              d="M11.5 25.2C11.8 16.6 18.4 9.2 28.8 8.4C28.6 17.2 22.2 24.4 11.5 25.2Z"
+              fill="#2E6F50"
+            />
+            <path
+              d="M12.3 24.5C17.4 20.2 22.1 15.6 27.5 9.4"
+              stroke="#ECF2EC"
+              stroke-width="1.25"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span class="wordmark-text">Gridwork Co</span>
+        </a>
+
+        <!-- Heading & Subline -->
+        <div class="heading-wrap">
+          <div class="heading-clip">
+            <h1 class="form-heading" id="formHeading">What tools do you use?</h1>
+          </div>
+          <p class="form-subline" id="formSubline">We’ll connect you with the best jobs.</p>
+        </div>
+
+        <!-- 2×3 Tool Selection Grid -->
+        <div class="tool-grid" id="toolGrid" role="group" aria-label="Design and development tools">
+          <!-- 1. Figma (selected) -->
+          <button
+            type="button"
+            class="tool-card is-selected"
+            role="checkbox"
+            aria-checked="true"
+            data-tool="Figma"
+          >
+            <span class="tool-icon" aria-hidden="true">
+              <svg viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="41" height="41" rx="9.5" fill="#1E1E1E" />
+                <path d="M16.25 14.5a4.25 4.25 0 0 1 4.25-4.25h4.25v8.5h-4.25a4.25 4.25 0 0 1-4.25-4.25Z" fill="#F24E1E" />
+                <path d="M20.5 10.25h4.25a4.25 4.25 0 0 1 0 8.5H20.5v-8.5Z" fill="#FF7262" />
+                <path d="M16.25 23a4.25 4.25 0 0 1 4.25-4.25h4.25v8.5h-4.25a4.25 4.25 0 0 1-4.25-4.25Z" fill="#A259FF" />
+                <path d="M16.25 31.5a4.25 4.25 0 0 1 4.25-4.25h4.25v4.25a4.25 4.25 0 0 1-8.5 0Z" fill="#0ACF83" />
+                <circle cx="24.75" cy="23" r="4.25" fill="#1ABCFE" />
+              </svg>
+            </span>
+            <span class="tool-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" fill="none">
+                <path d="M2.5 6.2L5 8.7L9.5 3.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="tool-meta">
+              <span class="tool-name">Figma</span>
+              <span class="tool-domain">
+                <span>figma.com</span>
+                <svg class="tool-domain-icon" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <!-- 2. Framer (unselected) -->
+          <button
+            type="button"
+            class="tool-card"
+            role="checkbox"
+            aria-checked="false"
+            data-tool="Framer"
+          >
+            <span class="tool-icon" aria-hidden="true">
+              <svg viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="41" height="41" rx="9.5" fill="#000000" />
+                <path d="M13 10.5h15v7.5h-7.5L13 10.5Zm0 7.5h7.5L28 25.5H13V18Zm0 7.5h7.5V33L13 25.5Z" fill="#FFFFFF" />
+              </svg>
+            </span>
+            <span class="tool-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" fill="none">
+                <path d="M2.5 6.2L5 8.7L9.5 3.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="tool-meta">
+              <span class="tool-name">Framer</span>
+              <span class="tool-domain">
+                <span>framer.com</span>
+                <svg class="tool-domain-icon" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <!-- 3. Adobe XD (unselected) -->
+          <button
+            type="button"
+            class="tool-card"
+            role="checkbox"
+            aria-checked="false"
+            data-tool="Adobe XD"
+          >
+            <span class="tool-icon" aria-hidden="true">
+              <svg viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="41" height="41" rx="9.5" fill="#470137" />
+                <rect x="1" y="1" width="39" height="39" rx="8.5" stroke="#FF61F6" stroke-opacity="0.35" stroke-width="1.2" />
+                <path d="M10.2 13.2h3.1l2.8 5.2 2.8-5.2h3l-4.2 7.2 4.5 7.4h-3.1l-3-5.4-3 5.4H10l4.4-7.4-4.2-7.2Zm17.6 14.8c-2.6 0-4.4-2-4.4-5.2 0-3.1 1.9-5.3 4.6-5.3 1 0 1.8.3 2.3.7v-5h2.7v14.6h-2.5l-.1-1c-.6.8-1.5 1.2-2.6 1.2Zm.5-2.2c1.2 0 2-.8 2-2.2v-1.7c-.5-.4-1.1-.7-1.9-.7-1.4 0-2.3 1.1-2.3 3 0 1.6.8 2.6 2.2 2.6Z" fill="#FF61F6" />
+              </svg>
+            </span>
+            <span class="tool-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" fill="none">
+                <path d="M2.5 6.2L5 8.7L9.5 3.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="tool-meta">
+              <span class="tool-name">Adobe XD</span>
+              <span class="tool-domain">
+                <span>adobe.com</span>
+                <svg class="tool-domain-icon" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <!-- 4. Webflow (selected) -->
+          <button
+            type="button"
+            class="tool-card is-selected"
+            role="checkbox"
+            aria-checked="true"
+            data-tool="Webflow"
+          >
+            <span class="tool-icon" aria-hidden="true">
+              <svg viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="41" height="41" rx="9.5" fill="#146EF5" />
+                <path d="M31.5 13.5L26.6 28.5H22.1L24.3 21.7H24.1C22.3 24.8 19.6 27.2 15.8 28.5V21.8C18.1 21 19.8 19.4 20.6 17.4H15.5V13.5H22.6V17.1L22.8 17.1L24.3 13.5H27.7V17.1H27.9L29.4 13.5H31.5Z" fill="#FFFFFF" />
+                <path d="M9.5 13.5H13.8V28.5H9.5V13.5Z" fill="#FFFFFF" />
+              </svg>
+            </span>
+            <span class="tool-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" fill="none">
+                <path d="M2.5 6.2L5 8.7L9.5 3.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="tool-meta">
+              <span class="tool-name">Webflow</span>
+              <span class="tool-domain">
+                <span>webflow.com</span>
+                <svg class="tool-domain-icon" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <!-- 5. Relume (selected) -->
+          <button
+            type="button"
+            class="tool-card is-selected"
+            role="checkbox"
+            aria-checked="true"
+            data-tool="Relume"
+          >
+            <span class="tool-icon" aria-hidden="true">
+              <svg viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="41" height="41" rx="9.5" fill="#F9B4ED" />
+                <path d="M20.5 9.5L30 15v11l-9.5 5.5L11 26V15l9.5-5.5Z" fill="#101A20" />
+                <path d="M20.5 12.2L27.4 16.2 20.5 20.2 13.6 16.2 20.5 12.2Z" fill="#F9B4ED" />
+                <path d="M13 17.8l6.5 3.8v7.4L13 25.2v-7.4Z" fill="#F9B4ED" fill-opacity="0.82" />
+                <path d="M28 17.8l-6.5 3.8v7.4l6.5-3.8v-7.4Z" fill="#F9B4ED" fill-opacity="0.52" />
+              </svg>
+            </span>
+            <span class="tool-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" fill="none">
+                <path d="M2.5 6.2L5 8.7L9.5 3.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="tool-meta">
+              <span class="tool-name">Relume</span>
+              <span class="tool-domain">
+                <span>relume.io</span>
+                <svg class="tool-domain-icon" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <!-- 6. Canva (unselected) -->
+          <button
+            type="button"
+            class="tool-card"
+            role="checkbox"
+            aria-checked="false"
+            data-tool="Canva"
+          >
+            <span class="tool-icon" aria-hidden="true">
+              <svg viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="41" height="41" rx="9.5" fill="#FFFFFF" />
+                <rect x="0.6" y="0.6" width="39.8" height="39.8" rx="8.9" stroke="#DCE0DD" stroke-width="1.2" />
+                <defs>
+                  <linearGradient id="canvaGrad" x1="6" y1="6" x2="35" y2="35" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#00C4CC" />
+                    <stop offset="52%" stop-color="#4857FF" />
+                    <stop offset="100%" stop-color="#7D2AE8" />
+                  </linearGradient>
+                </defs>
+                <circle cx="20.5" cy="20.5" r="14.5" fill="url(#canvaGrad)" />
+                <path d="M15.1 22.6c-.8.9-1.8 1.4-2.9 1.4-1.8 0-3-1.4-3-3.5 0-2.4 1.6-4.3 3.7-4.3 1.2 0 2 .6 2.2 1.5.1.5-.2 1-.7 1-.4 0-.6-.2-.8-.7-.1-.5-.5-.8-1-.8-1.1 0-1.9 1.2-1.9 2.9 0 1.4.7 2.3 1.8 2.3.8 0 1.5-.4 2.1-1.2" stroke="#FFFFFF" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.2 21.3c.2-1.2 1-2.1 2-2.1.8 0 1.3.5 1.3 1.3 0 1.1-.8 2.1-1.9 2.1-.8 0-1.4-.5-1.4-1.3Zm3.3-1.4l-.3 2.5c-.1.5.1.8.5.8.4 0 .8-.3 1.1-.8m.6-2.4l-.4 3.2m.4-2c.4-.8 1-1.2 1.6-1.2.6 0 .9.4.8 1.1l-.3 2.1m2.1-3.2l.4 3.1 1.5-3.1m1.5 1.9c.2-1.1.9-1.9 1.8-1.9.7 0 1.1.5 1.1 1.2 0 1-.7 1.9-1.6 1.9-.7 0-1.3-.5-1.3-1.2Zm2.9-1.3l-.3 2.4" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="tool-check" aria-hidden="true">
+              <svg viewBox="0 0 12 12" fill="none">
+                <path d="M2.5 6.2L5 8.7L9.5 3.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="tool-meta">
+              <span class="tool-name">Canva</span>
+              <span class="tool-domain">
+                <span>canva.com</span>
+                <svg class="tool-domain-icon" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Primary CTA Button -->
+        <button type="button" class="create-btn" id="createAccountBtn">
+          Create account
+        </button>
+
+        <!-- Secondary Log-in Prompt -->
+        <p class="login-line" id="loginPrompt">
+          Already have an account? <a href="#login" class="login-link" id="loginLink">Log in</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Accessible Feedback Modal -->
+  <div
+    class="modal-backdrop"
+    id="onboardingModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    aria-hidden="true"
+  >
+    <div class="modal-card">
+      <span class="modal-badge" id="modalBadge">Gridwork Co · Onboarding</span>
+      <h2 class="modal-title" id="modalTitle">Your freelancer profile is ready</h2>
+      <p class="modal-desc" id="modalDesc">
+        We’ve matched your workspace stack with open client briefs on Gridwork Co.
+      </p>
+      <div class="modal-tools" id="modalToolsList"></div>
+      <button type="button" class="modal-close-btn" id="modalCloseBtn">Continue to workspace</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var reduceMotion =
+        window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* =====================================================================
+         1. MOTION VIDEO FADE-IN (0.8s) WHEN FIRST FRAME IS READY
+         ===================================================================== */
+      var video = document.getElementById('greenhouseVideo');
+
+      function markVideoReady() {
+        if (video && !video.classList.contains('is-ready')) {
+          video.classList.add('is-ready');
+        }
+      }
+
+      if (video && !reduceMotion) {
+        video.addEventListener('loadeddata', markVideoReady);
+        video.addEventListener('canplay', markVideoReady);
+        video.addEventListener('playing', markVideoReady);
+
+        if (video.readyState >= 2) {
+          markVideoReady();
+        }
+
+        var tryPlayVideo = function () {
+          if (reduceMotion) return;
+          try {
+            video.muted = true;
+            var p = video.play();
+            if (p && typeof p.then === 'function') {
+              p.then(markVideoReady).catch(function () {});
+            }
+          } catch (err) {}
+        };
+
+        tryPlayVideo();
+        document.addEventListener('click', tryPlayVideo, { once: true, passive: true });
+        document.addEventListener('touchstart', tryPlayVideo, { once: true, passive: true });
+      }
+
+      /* =====================================================================
+         2. TOOL SELECTION CARDS (TOGGLE ON CLICK)
+         ===================================================================== */
+      var toolCards = Array.prototype.slice.call(
+        document.querySelectorAll('.tool-card')
+      );
+
+      toolCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          var nextSelected = !card.classList.contains('is-selected');
+          card.classList.toggle('is-selected', nextSelected);
+          card.setAttribute('aria-checked', nextSelected ? 'true' : 'false');
+        });
+      });
+
+      /* =====================================================================
+         3. TESTIMONIAL CAROUSEL ARROWS
+         ===================================================================== */
+      var testimonials = [
+        {
+          quote:
+            '“I landed multiple paid projects within a couple of days–way more traction than I ever got elsewhere. Definitely my go-to freelance platform now!”',
+          name: 'Sofia Hernández',
+          role: 'Garden Designer, Portland, OR'
+        },
+        {
+          quote:
+            '“Matching by my exact Figma, Webflow and Relume workflow meant zero cold pitching. Two retainer clients reached out in my very first week.”',
+          name: 'Marcus Vance',
+          role: 'Interactive Product Designer, Austin, TX'
+        },
+        {
+          quote:
+            '“Gridwork Co connects botanical studios and digital makers with clients who already value craft, clear timelines, and modern design tools.”',
+          name: 'Elena Rostova',
+          role: 'Brand & Spatial Director, Seattle, WA'
+        }
+      ];
+
+      var currentTestimonial = 0;
+      var quoteEl = document.getElementById('testimonialQuote');
+      var nameEl = document.getElementById('testimonialName');
+      var roleEl = document.getElementById('testimonialRole');
+      var prevBtn = document.getElementById('prevTestimonialBtn');
+      var nextBtn = document.getElementById('nextTestimonialBtn');
+
+      function renderTestimonial(nextIndex) {
+        currentTestimonial =
+          (nextIndex + testimonials.length) % testimonials.length;
+        var item = testimonials[currentTestimonial];
+        if (!quoteEl || !nameEl || !roleEl) return;
+
+        quoteEl.textContent = item.quote;
+        nameEl.textContent = item.name;
+        roleEl.textContent = item.role;
+
+        if (!reduceMotion && typeof quoteEl.animate === 'function') {
+          quoteEl.animate(
+            [
+              { opacity: 0.25, transform: 'translateY(8px)' },
+              { opacity: 1, transform: 'translateY(0)' }
+            ],
+            { duration: 320, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' }
+          );
+        }
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          renderTestimonial(currentTestimonial - 1);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          renderTestimonial(currentTestimonial + 1);
+        });
+      }
+
+      /* =====================================================================
+         4. CREATE ACCOUNT & LOG IN MODAL FEEDBACK
+         ===================================================================== */
+      var modal = document.getElementById('onboardingModal');
+      var modalTitle = document.getElementById('modalTitle');
+      var modalDesc = document.getElementById('modalDesc');
+      var modalToolsList = document.getElementById('modalToolsList');
+      var modalCloseBtn = document.getElementById('modalCloseBtn');
+      var createBtn = document.getElementById('createAccountBtn');
+      var loginLink = document.getElementById('loginLink');
+      var brandWordmark = document.getElementById('brandWordmark');
+
+      function openModal(mode) {
+        if (!modal) return;
+        modalToolsList.innerHTML = '';
+
+        if (mode === 'login') {
+          modalTitle.textContent = 'Welcome back to Gridwork Co';
+          modalDesc.textContent =
+            'Sign-in is connected in production deployments. Your selected tools are saved for this session.';
+        } else {
+          var selected = toolCards
+            .filter(function (c) {
+              return c.classList.contains('is-selected');
+            })
+            .map(function (c) {
+              return c.getAttribute('data-tool');
+            });
+
+          modalTitle.textContent = 'Account preferences saved';
+          modalDesc.textContent =
+            selected.length > 0
+              ? 'We’ll prioritize freelance briefs matching your selected tools:'
+              : 'Select one or more tools anytime to personalize your freelance job feed.';
+
+          selected.forEach(function (toolName) {
+            var chip = document.createElement('span');
+            chip.className = 'modal-tool-pill';
+            chip.textContent = toolName;
+            modalToolsList.appendChild(chip);
+          });
+        }
+
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        if (modalCloseBtn) modalCloseBtn.focus();
+      }
+
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+
+      if (createBtn) {
+        createBtn.addEventListener('click', function () {
+          openModal('create');
+        });
+      }
+
+      if (loginLink) {
+        loginLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          openModal('login');
+        });
+      }
+
+      if (brandWordmark) {
+        brandWordmark.addEventListener('click', function (e) {
+          e.preventDefault();
+        });
+      }
+
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModal);
+      }
+
+      if (modal) {
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      window.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+          closeModal();
+        }
+      });
+
+      /* =====================================================================
+         5. WEB ANIMATIONS ENTRANCE TIMELINE (~2s, STARTED WHEN FONTS READY)
+            The photo and its pattern never move.
+         ===================================================================== */
+      function runEntranceTimeline() {
+        if (reduceMotion) return;
+        if (!Element.prototype.animate) return;
+
+        var easeOut = 'cubic-bezier(0.22, 1, 0.36, 1)';
+        var footerEl = document.getElementById('testimonialFooter');
+        var headingEl = document.getElementById('formHeading');
+        var sublineEl = document.getElementById('formSubline');
+        var loginPromptEl = document.getElementById('loginPrompt');
+
+        // 1. Quote wipes up out of a top-down clip; its footer follows
+        if (quoteEl) {
+          quoteEl.animate(
+            [
+              {
+                clipPath: 'inset(0 0 100% 0)',
+                transform: 'translateY(22px)',
+                opacity: 0
+              },
+              {
+                clipPath: 'inset(0 0 0% 0)',
+                transform: 'translateY(0)',
+                opacity: 1
+              }
+            ],
+            { duration: 760, delay: 60, easing: easeOut, fill: 'both' }
+          );
+        }
+
+        if (footerEl) {
+          footerEl.animate(
+            [
+              { transform: 'translateY(18px)', opacity: 0 },
+              { transform: 'translateY(0)', opacity: 1 }
+            ],
+            { duration: 640, delay: 320, easing: easeOut, fill: 'both' }
+          );
+        }
+
+        // 2. Wordmark rises, then heading wipes up and subline rises
+        if (brandWordmark) {
+          brandWordmark.animate(
+            [
+              { transform: 'translateY(16px)', opacity: 0 },
+              { transform: 'translateY(0)', opacity: 1 }
+            ],
+            { duration: 560, delay: 120, easing: easeOut, fill: 'both' }
+          );
+        }
+
+        if (headingEl) {
+          headingEl.animate(
+            [
+              {
+                clipPath: 'inset(0 0 100% 0)',
+                transform: 'translateY(18px)',
+                opacity: 0
+              },
+              {
+                clipPath: 'inset(0 0 0% 0)',
+                transform: 'translateY(0)',
+                opacity: 1
+              }
+            ],
+            { duration: 600, delay: 280, easing: easeOut, fill: 'both' }
+          );
+        }
+
+        if (sublineEl) {
+          sublineEl.animate(
+            [
+              { transform: 'translateY(14px)', opacity: 0 },
+              { transform: 'translateY(0)', opacity: 1 }
+            ],
+            { duration: 540, delay: 430, easing: easeOut, fill: 'both' }
+          );
+        }
+
+        // 3. Tool cards rise row by row (155ms per row, 55ms per column)
+        var isThreeCol =
+          window.matchMedia &&
+          window.matchMedia(
+            '(max-width: 1024px) and (orientation: portrait), (max-width: 900px) and (min-width: 601px)'
+          ).matches;
+        var cols = isThreeCol ? 3 : 2;
+
+        toolCards.forEach(function (card, idx) {
+          var row = Math.floor(idx / cols);
+          var col = idx % cols;
+          var delay = 560 + row * 155 + col * 55;
+
+          card.animate(
+            [
+              { transform: 'translateY(18px)', opacity: 0 },
+              { transform: 'translateY(0)', opacity: 1 }
+            ],
+            { duration: 560, delay: delay, easing: easeOut, fill: 'both' }
+          );
+        });
+
+        // 4. Button rises, then the log-in line
+        if (createBtn) {
+          createBtn.animate(
+            [
+              { transform: 'translateY(16px)', opacity: 0 },
+              { transform: 'translateY(0)', opacity: 1 }
+            ],
+            { duration: 560, delay: 1140, easing: easeOut, fill: 'both' }
+          );
+        }
+
+        if (loginPromptEl) {
+          loginPromptEl.animate(
+            [
+              { transform: 'translateY(12px)', opacity: 0 },
+              { transform: 'translateY(0)', opacity: 1 }
+            ],
+            { duration: 560, delay: 1320, easing: easeOut, fill: 'both' }
+          );
+        }
+      }
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(runEntranceTimeline);
+      } else {
+        window.addEventListener('load', runEntranceTimeline, { once: true });
+      }
+    })();
+  </script>
+</body>
+</html>

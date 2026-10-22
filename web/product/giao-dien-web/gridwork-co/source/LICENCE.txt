@@ -1,0 +1,15 @@
+Single-Site Commercial & Personal Use Licence
+
+Copyright (c) 2026 2A Templates. All rights reserved.
+
+Permission is hereby granted to the purchaser/downloader of this template ("Licensee") to use, modify, and deploy the template source code and compiled assets for personal or commercial web projects, subject to the following conditions:
+
+1. Permitted Use:
+   - Use the template to create end-product websites or applications for yourself or a single client per download.
+   - Modify layout, typography, styles, scripts, and media to suit your project.
+
+2. Restrictions:
+   - You may not redistribute, resell, lease, license, or sub-license the template source or unmodified bundle as a stock template, theme, or starter kit in any template marketplace or repository.
+
+3. Disclaimer:
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.

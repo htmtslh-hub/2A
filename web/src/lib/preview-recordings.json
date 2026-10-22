@@ -1244,5 +1244,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "gridwork-co": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "ba07922a0246",
+    "sha256": "ba07922a02469c238be357c285e43032cd9be18e93f4840003a0aaf04e2fbb58",
+    "demoHtmlSha256": "d225349c8205fe16501b33b995f8b91dcbb5cdcfbccf2b2d6480c01a03aff7f9",
+    "demoSha256": "f497f7a9c4fcd17eb9706cdc41172959ca3d9d7eb1e46e4bf59a6be854b9cf63",
+    "bytes": 2031443,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

@@ -113,7 +113,7 @@ try {
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
-    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'lumora' || slug === 'securify' || slug === 'cozypaws' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'iris' || slug === 'melli' || slug === 'reelmark' || slug === 'cast-and-render' || slug === 'vanguard' || slug === 'targo') {
+    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'lumora' || slug === 'securify' || slug === 'cozypaws' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'iris' || slug === 'melli' || slug === 'reelmark' || slug === 'cast-and-render' || slug === 'vanguard' || slug === 'targo' || slug === 'gridwork-co') {
       for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai','soft-zoom-63098134.figma.site','polo-pecan-73837341.figma.site','cdn.jsdelivr.net']) allowedBriefHosts.add(host);
     }
     if (slug === 'toonhub') {
@@ -171,8 +171,8 @@ try {
       await page.waitForFunction(() => document.getElementById('boot')?.classList.contains('done') && document.getElementById('clip')?.readyState >= 2, null, {timeout:60000});
       await page.waitForTimeout(1000);
     }
-    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far','reelmark','vanguard','targo'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
-    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'reelmark' || slug === 'vanguard') {
+    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far','reelmark','vanguard','targo','gridwork-co'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'reelmark' || slug === 'vanguard' || slug === 'gridwork-co') {
       await page.waitForTimeout(2000);
     }
     if (slug === 'solaris-gate') {
@@ -186,6 +186,24 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'gridwork-co') {
+        const step = actions.filter(a => a.action.startsWith('gridwork-co-')).length;
+        if (step === 0) {
+          await page.locator('[data-tool="Framer"]').click();
+          await page.waitForTimeout(300);
+          await page.locator('#nextTestimonialBtn').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'gridwork-co-toggle-framer-and-next-testimonial' });
+        } else if (step === 1) {
+          await page.locator('#prevTestimonialBtn').click();
+          await page.waitForTimeout(300);
+          await page.locator('#createAccountBtn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'gridwork-co-prev-testimonial-and-hover-create' });
+        } else {
+          await page.locator('[data-tool="Framer"]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'gridwork-co-restore-selected-tools' });
+        }
+        return;
+      }
       if (slug === 'targo') {
         const step = actions.filter(a => a.action.startsWith('targo-')).length;
         if (step === 0) {

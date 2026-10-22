@@ -10,10 +10,10 @@ export interface FreeGiftIconProps {
 export default function FreeGiftIcon({
   size = 30,
   className,
-  title = 'Miễn phí',
+  title = 'Tải miễn phí',
 }: FreeGiftIconProps) {
   const rawId = useId().replace(/[^a-zA-Z0-9_-]/g, '');
-  const id = (name: string) => `fg-${rawId}-${name}`;
+  const id = (name: string) => `dl-${rawId}-${name}`;
 
   return (
     <svg
@@ -29,301 +29,132 @@ export default function FreeGiftIcon({
         display: 'inline-block',
         verticalAlign: 'middle',
         flexShrink: 0,
-        filter: 'drop-shadow(0 2px 8px rgba(52, 211, 153, 0.34))',
+        filter: 'drop-shadow(0 2px 8px rgba(52, 211, 153, 0.36))',
       }}
     >
       <title>{title}</title>
       <defs>
-        <radialGradient id={id('aura')} cx="50%" cy="54%" r="46%">
-          <stop offset="0%" stopColor="#6ee7b7" stopOpacity="0.65" />
-          <stop offset="45%" stopColor="#10b981" stopOpacity="0.28" />
+        <radialGradient id={id('aura')} cx="50%" cy="52%" r="46%">
+          <stop offset="0%" stopColor="#6ee7b7" stopOpacity="0.55" />
+          <stop offset="48%" stopColor="#10b981" stopOpacity="0.22" />
           <stop offset="100%" stopColor="#047857" stopOpacity="0" />
         </radialGradient>
 
-        <linearGradient id={id('box-left')} x1="16" y1="42" x2="50" y2="94" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#6ee7b7" />
-          <stop offset="28%" stopColor="#34d399" />
+        <linearGradient id={id('arrow-left')} x1="22" y1="10" x2="50" y2="66" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="22%" stopColor="#d1fae5" />
+          <stop offset="58%" stopColor="#34d399" />
+          <stop offset="100%" stopColor="#059669" />
+        </linearGradient>
+
+        <linearGradient id={id('arrow-right')} x1="50" y1="10" x2="78" y2="66" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#a7f3d0" />
+          <stop offset="35%" stopColor="#34d399" />
+          <stop offset="75%" stopColor="#059669" />
+          <stop offset="100%" stopColor="#065f46" />
+        </linearGradient>
+
+        <linearGradient id={id('arrow-stroke')} x1="22" y1="10" x2="78" y2="66" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="50%" stopColor="#a7f3d0" />
+          <stop offset="100%" stopColor="#10b981" />
+        </linearGradient>
+
+        <linearGradient id={id('tray-top')} x1="14" y1="60" x2="86" y2="86" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ecfdf5" />
+          <stop offset="30%" stopColor="#6ee7b7" />
           <stop offset="70%" stopColor="#10b981" />
           <stop offset="100%" stopColor="#047857" />
         </linearGradient>
 
-        <linearGradient id={id('facet-light')} x1="16" y1="42" x2="36" y2="85" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#d1fae5" stopOpacity="0.5" />
-          <stop offset="50%" stopColor="#6ee7b7" stopOpacity="0.18" />
+        <linearGradient id={id('tray-front')} x1="14" y1="76" x2="86" y2="90" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#10b981" />
+          <stop offset="50%" stopColor="#047857" />
+          <stop offset="100%" stopColor="#064e3b" />
+        </linearGradient>
+
+        <radialGradient id={id('pool')} cx="50%" cy="74%" r="30%">
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.9" />
+          <stop offset="45%" stopColor="#6ee7b7" stopOpacity="0.55" />
           <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
-        </linearGradient>
-
-        <linearGradient id={id('box-right')} x1="50" y1="42" x2="84" y2="94" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#34d399" />
-          <stop offset="32%" stopColor="#10b981" />
-          <stop offset="75%" stopColor="#047857" />
-          <stop offset="100%" stopColor="#064e3b" />
-        </linearGradient>
-
-        <linearGradient id={id('lid-top')} x1="18" y1="18" x2="82" y2="44" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#f0fdf4" />
-          <stop offset="28%" stopColor="#a7f3d0" />
-          <stop offset="68%" stopColor="#34d399" />
-          <stop offset="100%" stopColor="#059669" />
-        </linearGradient>
-
-        <linearGradient id={id('lid-left')} x1="12" y1="31" x2="50" y2="55" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#a7f3d0" />
-          <stop offset="45%" stopColor="#34d399" />
-          <stop offset="100%" stopColor="#059669" />
-        </linearGradient>
-
-        <linearGradient id={id('lid-right')} x1="50" y1="31" x2="88" y2="55" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#34d399" />
-          <stop offset="50%" stopColor="#059669" />
-          <stop offset="100%" stopColor="#064e3b" />
-        </linearGradient>
-
-        <linearGradient id={id('rib-sun')} x1="25" y1="15" x2="50" y2="90" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="22%" stopColor="#fef9c3" />
-          <stop offset="58%" stopColor="#fde047" />
-          <stop offset="88%" stopColor="#eab308" />
-          <stop offset="100%" stopColor="#ca8a04" />
-        </linearGradient>
-
-        <linearGradient id={id('rib-shade')} x1="50" y1="18" x2="78" y2="90" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#fef08a" />
-          <stop offset="35%" stopColor="#facc15" />
-          <stop offset="78%" stopColor="#ca8a04" />
-          <stop offset="100%" stopColor="#854d0e" />
-        </linearGradient>
-
-        <linearGradient id={id('bow-left')} x1="16" y1="8" x2="50" y2="34" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="25%" stopColor="#fef9c3" />
-          <stop offset="65%" stopColor="#facc15" />
-          <stop offset="100%" stopColor="#ca8a04" />
-        </linearGradient>
-
-        <linearGradient id={id('bow-right')} x1="50" y1="8" x2="84" y2="34" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="22%" stopColor="#fef08a" />
-          <stop offset="62%" stopColor="#eab308" />
-          <stop offset="100%" stopColor="#a16207" />
-        </linearGradient>
-
-        <linearGradient id={id('bow-inner')} x1="24" y1="14" x2="76" y2="30" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#a16207" />
-          <stop offset="50%" stopColor="#713f12" />
-          <stop offset="100%" stopColor="#422006" />
-        </linearGradient>
+        </radialGradient>
       </defs>
 
-      <circle cx="50" cy="54" r="44" fill={`url(#${id('aura')})`} />
+      {/* Ambient Glow */}
+      <circle cx="50" cy="52" r="44" fill={`url(#${id('aura')})`} />
 
-      {/* 3D Crystal Box Body */}
+      {/* 3D Download Tray / Dock */}
       <path
-        d="M16 40.5 L50 54.5 L50 93 L16 77.5 Z"
-        fill={`url(#${id('box-left')})`}
+        d="M14 64 C14 60.5 16.8 58 20.2 58 H25.8 C29.2 58 31.8 60.5 31.8 64 V72.5 C31.8 74.2 33.2 75.5 35 75.5 H65 C66.8 75.5 68.2 74.2 68.2 72.5 V64 C68.2 60.5 70.8 58 74.2 58 H79.8 C83.2 58 86 60.5 86 64 V79 C86 85.2 81.2 90 75 90 H25 C18.8 90 14 85.2 14 79 Z"
+        fill={`url(#${id('tray-front')})`}
+        stroke="#047857"
+        strokeWidth="0.9"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M14 61 C14 57.7 16.7 55 20 55 H25.5 C28.8 55 31.5 57.7 31.5 61 V70 C31.5 72.2 33.3 74 35.5 74 H64.5 C66.7 74 68.5 72.2 68.5 70 V61 C68.5 57.7 71.2 55 74.5 55 H80 C83.3 55 86 57.7 86 61 V75 C86 81.1 81.1 86 75 86 H25 C18.9 86 14 81.1 14 75 Z"
+        fill={`url(#${id('tray-top')})`}
         stroke="#a7f3d0"
-        strokeWidth="0.85"
-        strokeLinejoin="round"
-      />
-      <path d="M16 40.5 L28.2 45.5 L28.2 83.1 L16 77.5 Z" fill={`url(#${id('facet-light')})`} />
-      <path d="M16 40.5 L50 54.5 L37.8 68 L16 56 Z" fill="#ffffff" opacity="0.12" />
-
-      <path
-        d="M50 54.5 L84 40.5 L84 77.5 L50 93 Z"
-        fill={`url(#${id('box-right')})`}
-        stroke="#34d399"
-        strokeWidth="0.85"
-        strokeLinejoin="round"
-      />
-      <path d="M71.8 45.5 L84 40.5 L84 77.5 L71.8 83.1 Z" fill="#022c22" opacity="0.26" />
-      <path d="M50 54.5 L84 40.5 L84 55 L50 70 Z" fill="#a7f3d0" opacity="0.08" />
-
-      {/* Vertical Ribbons on Box Body */}
-      <path
-        d="M28.2 45.5 L38.2 49.6 L38.2 87.6 L28.2 83.1 Z"
-        fill={`url(#${id('rib-sun')})`}
-        stroke="#ca8a04"
-        strokeWidth="0.6"
-        strokeLinejoin="round"
-      />
-      <path d="M29.4 46.2 L29.4 83.4" stroke="#ffffff" strokeWidth="0.75" opacity="0.8" />
-
-      <path
-        d="M61.8 49.6 L71.8 45.5 L71.8 83.1 L61.8 87.6 Z"
-        fill={`url(#${id('rib-shade')})`}
-        stroke="#854d0e"
-        strokeWidth="0.6"
-        strokeLinejoin="round"
-      />
-      <path d="M63 49.4 L63 86.8" stroke="#fef9c3" strokeWidth="0.65" opacity="0.65" />
-
-      {/* Shadow under overhanging lid */}
-      <path
-        d="M16 40.2 L50 54.2 L84 40.2 L84 45.2 L50 59.5 L16 45.2 Z"
-        fill="#022c22"
-        opacity="0.52"
-      />
-
-      {/* 3D Gift Lid */}
-      <path
-        d="M50 17.5 L88 31.5 L50 46 L12 31.5 Z"
-        fill={`url(#${id('lid-top')})`}
-        stroke="#ecfdf5"
-        strokeWidth="0.85"
-        strokeLinejoin="round"
-      />
-      <path d="M50 17.5 L69 24.5 L50 31.7 L31 24.5 Z" fill="#ffffff" opacity="0.28" />
-
-      <path
-        d="M12 31.5 L50 46 L50 54.8 L12 40 Z"
-        fill={`url(#${id('lid-left')})`}
-        stroke="#a7f3d0"
-        strokeWidth="0.8"
+        strokeWidth="1.1"
         strokeLinejoin="round"
       />
 
-      <path
-        d="M50 46 L88 31.5 L88 40 L50 54.8 Z"
-        fill={`url(#${id('lid-right')})`}
-        stroke="#34d399"
-        strokeWidth="0.8"
-        strokeLinejoin="round"
-      />
+      <ellipse cx="50" cy="75" rx="22" ry="4.2" fill={`url(#${id('pool')})`} />
 
-      {/* Cross-Ribbons on Lid */}
       <path
-        d="M27.5 37.4 L65.5 23.2 L75.5 26.9 L38 41.4 Z"
-        fill={`url(#${id('rib-sun')})`}
-        stroke="#ca8a04"
-        strokeWidth="0.55"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M34.5 23.2 L72.5 37.4 L62 41.4 L24.5 26.9 Z"
-        fill={`url(#${id('rib-sun')})`}
-        stroke="#ca8a04"
-        strokeWidth="0.55"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M27.5 37.4 L38 41.4 L38 50.1 L27.5 46 Z"
-        fill={`url(#${id('rib-sun')})`}
-        stroke="#ca8a04"
-        strokeWidth="0.6"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M62 41.4 L72.5 37.4 L72.5 46 L62 50.1 Z"
-        fill={`url(#${id('rib-shade')})`}
-        stroke="#854d0e"
-        strokeWidth="0.6"
-        strokeLinejoin="round"
-      />
-
-      {/* Specular Rim Highlights */}
-      <path
-        d="M13 31.8 L50 46 L87 31.8"
+        d="M17.5 57.5 H25 M75 57.5 H82.5 M24 83.2 H76"
         stroke="#ffffff"
-        strokeWidth="1.25"
+        strokeWidth="1.5"
         strokeLinecap="round"
-        strokeLinejoin="round"
-        opacity="0.95"
-      />
-      <path
-        d="M50 46 L50 92"
-        stroke="#ecfdf5"
-        strokeWidth="1.05"
-        strokeLinecap="round"
-        opacity="0.85"
-      />
-
-      {/* Sculpted 3D Bow */}
-      <path
-        d="M47.5 28.5 L32 39.5 L38 39.8 L40.5 44.8 L50 32.2 Z"
-        fill={`url(#${id('rib-sun')})`}
-        stroke="#a16207"
-        strokeWidth="0.65"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M52.5 28.5 L68 39.5 L62 39.8 L59.5 44.8 L50 32.2 Z"
-        fill={`url(#${id('rib-shade')})`}
-        stroke="#854d0e"
-        strokeWidth="0.65"
-        strokeLinejoin="round"
-      />
-
-      <path
-        d="M49 28.5 C39.5 30 19 26.5 17.5 17 C16 8.2 30.5 5.5 41.5 13.5 C46 16.8 48.5 22.5 49.5 28 Z"
-        fill={`url(#${id('bow-left')})`}
-        stroke="#a16207"
-        strokeWidth="0.75"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M44.2 24.8 C37.2 25.2 25.5 22.5 24.5 17.2 C23.8 13 31.8 11.8 38.8 16.8 C41.8 19 43.5 22 44.2 24.8 Z"
-        fill={`url(#${id('bow-inner')})`}
         opacity="0.88"
       />
 
+      <ellipse cx="50" cy="70.5" rx="11" ry="2.6" fill="#022c22" opacity="0.38" />
+
+      {/* 3D Faceted Download Arrow */}
       <path
-        d="M51 28.5 C60.5 30 81 26.5 82.5 17 C84 8.2 69.5 5.5 58.5 13.5 C54 16.8 51.5 22.5 50.5 28 Z"
-        fill={`url(#${id('bow-right')})`}
-        stroke="#854d0e"
-        strokeWidth="0.75"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M55.8 24.8 C62.8 25.2 74.5 22.5 75.5 17.2 C76.2 13 68.2 11.8 61.2 16.8 C58.2 19 56.5 22 55.8 24.8 Z"
-        fill={`url(#${id('bow-inner')})`}
-        opacity="0.88"
+        d="M50 8 H41 C38.8 8 37 9.8 37 12 V36 H23.5 C20.8 36 19.4 39.2 21.3 41.2 L47.6 67.5 C48.3 68.2 49.1 68.6 50 68.6 Z"
+        fill={`url(#${id('arrow-left')})`}
       />
 
       <path
-        d="M21 14.2 C25.5 9.2 34.5 10 42.5 16.2"
-        stroke="#ffffff"
+        d="M50 8 H59 C61.2 8 63 9.8 63 12 V36 H76.5 C79.2 36 80.6 39.2 78.7 41.2 L52.4 67.5 C51.7 68.2 50.9 68.6 50 68.6 Z"
+        fill={`url(#${id('arrow-right')})`}
+      />
+
+      <path
+        d="M37 36 L50 48 L63 36 Z"
+        fill="#ffffff"
+        opacity="0.18"
+      />
+      <path
+        d="M23.5 38.5 L50 65 L50 54.5 L39.5 44 V10.5 H37 V38.5 Z"
+        fill="#ffffff"
+        opacity="0.24"
+      />
+
+      <path
+        d="M41 8 H59 C61.2 8 63 9.8 63 12 V36 H76.5 C79.2 36 80.6 39.2 78.7 41.2 L52.4 67.5 C51.1 68.8 48.9 68.8 47.6 67.5 L21.3 41.2 C19.4 39.2 20.8 36 23.5 36 H37 V12 C37 9.8 38.8 8 41 8 Z"
+        stroke={`url(#${id('arrow-stroke')})`}
         strokeWidth="1.35"
-        strokeLinecap="round"
-        opacity="0.95"
+        strokeLinejoin="round"
       />
+
       <path
-        d="M79 14.2 C74.5 9.2 65.5 10 57.5 16.2"
-        stroke="#ffffff"
-        strokeWidth="1.25"
+        d="M50 9.2 V67.2"
+        stroke="#ecfdf5"
+        strokeWidth="1.2"
         strokeLinecap="round"
         opacity="0.9"
       />
 
-      <rect
-        x="44.2"
-        y="21.8"
-        width="11.6"
-        height="10.8"
-        rx="4"
-        fill={`url(#${id('rib-sun')})`}
-        stroke="#92400e"
-        strokeWidth="0.8"
-      />
       <path
-        d="M46.5 23.6 H53.5"
+        d="M40 10.5 H50 M24 38.2 H37"
         stroke="#ffffff"
-        strokeWidth="1.3"
+        strokeWidth="1.5"
         strokeLinecap="round"
-        opacity="0.96"
-      />
-
-      {/* Sparkles */}
-      <path
-        d="M10.5 17.5 L12.2 12.8 L16.8 11 L12.2 9.2 L10.5 4.5 L8.8 9.2 L4.2 11 L8.8 12.8 Z"
-        fill="#ffffff"
-      />
-      <path
-        d="M89.5 16.5 L90.9 12.8 L94.5 11.5 L90.9 10.2 L89.5 6.5 L88.1 10.2 L84.5 11.5 L88.1 12.8 Z"
-        fill="#a7f3d0"
-      />
-      <path
-        d="M50 2 L51.2 5.5 L54.8 6.7 L51.2 7.9 L50 11.5 L48.8 7.9 L45.2 6.7 L48.8 5.5 Z"
-        fill="#fef08a"
+        opacity="0.95"
       />
     </svg>
   );

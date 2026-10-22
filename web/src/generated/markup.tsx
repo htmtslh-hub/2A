@@ -5,6 +5,7 @@
 'use client';
 import React from 'react';
 import ImageSlot from '@/components/ImageSlot';
+import FreeGiftIcon from '@/components/FreeGiftIcon';
 import PremiumWingIcon from '@/components/PremiumWingIcon';
 import ProductHelp from '@/components/guide/ProductHelp';
 import type { View } from '@/lib/view';
@@ -279,7 +280,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                         {hp.name}
                                       </h3>
                                       <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
-                                        {hp.premium ? <PremiumWingIcon size={30} /> : hp.price}
+                                        {hp.premium ? <PremiumWingIcon size={30} /> : hp.free ? <FreeGiftIcon size={30} title={hp.price} /> : hp.price}
                                       </span>
                                     </div>
                                     <span style={{ fontSize: "11px", letterSpacing: ".12em", textTransform: "uppercase", color: "#949ba4", lineHeight: "1.35" }}>
@@ -437,7 +438,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                           {tp.name}
                                         </h3>
                                         <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
-                                          {tp.premium ? <PremiumWingIcon size={30} /> : tp.price}
+                                          {tp.premium ? <PremiumWingIcon size={30} /> : tp.free ? <FreeGiftIcon size={30} title={tp.price} /> : tp.price}
                                         </span>
                                       </div>
                                       <span style={{ fontSize: "11px", letterSpacing: ".12em", textTransform: "uppercase", color: "#949ba4", lineHeight: "1.35" }}>
@@ -551,7 +552,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                         </div>
                         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", columnGap: "10px", rowGap: "4px", marginBottom: "24px" }}>
                           <span style={{ fontFamily: "var(--display)", fontWeight: "700", letterSpacing: "-.02em", fontSize: "clamp(34px,4.4vw,52px)", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
-                            {vm.detail.premium ? <PremiumWingIcon size={54} /> : vm.detail.price}
+                            {vm.detail.premium ? <PremiumWingIcon size={54} /> : vm.detail.free ? <FreeGiftIcon size={54} title={vm.detail.price} /> : vm.detail.price}
                           </span>
                           <span style={{ fontSize: "13px", color: "#949ba4", whiteSpace: "nowrap" }}>
                             {vm.detailPriceUnit}
@@ -620,7 +621,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                                       {rp.name}
                                     </h3>
                                     <span style={{ fontSize: "15px", fontWeight: "700", color: "var(--gold)", whiteSpace: "nowrap", display: "inline-flex", alignItems: "center" }}>
-                                      {rp.premium ? <PremiumWingIcon size={30} /> : rp.price}
+                                      {rp.premium ? <PremiumWingIcon size={30} /> : rp.free ? <FreeGiftIcon size={30} title={rp.price} /> : rp.price}
                                     </span>
                                   </div>
                                   <span style={{ fontSize: "11px", letterSpacing: ".12em", textTransform: "uppercase", color: "#949ba4" }}>

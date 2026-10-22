@@ -189,18 +189,18 @@ try {
       if (slug === 'targo') {
         const step = actions.filter(a => a.action.startsWith('targo-')).length;
         if (step === 0) {
-          await page.locator('#heroGetStartedBtn').click();
-          await page.locator('#targoModal.is-open').waitFor({ state: 'visible' });
-          await page.locator('#runSuiteBtn').click();
-          actions.push({ seconds: (Date.now() - start) / 1000, action: 'targo-open-pipeline-and-run-suite' });
+          await page.locator('#heroGetStartedBtn').hover();
+          await page.waitForTimeout(300);
+          await page.locator('#desktopContactBtn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'targo-hover-hero-cta-and-contact' });
         } else if (step === 1) {
-          await page.locator('[data-tab-target="contact"]').click();
+          await page.locator('#about').scrollIntoViewIfNeeded();
           await page.waitForTimeout(350);
-          await page.keyboard.press('Escape');
-          actions.push({ seconds: (Date.now() - start) / 1000, action: 'targo-switch-audit-tab-and-close' });
-        } else {
           await page.locator('#aboutLearnMoreBtn').hover();
-          actions.push({ seconds: (Date.now() - start) / 1000, action: 'targo-hover-learn-more' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'targo-scroll-about-and-hover-learn-more' });
+        } else {
+          await page.locator('#heroGetStartedBtn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'targo-return-hero-cta-hover' });
         }
         return;
       }

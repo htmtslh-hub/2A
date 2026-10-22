@@ -201,40 +201,18 @@ const BROWSERS = [
       );
       assert.equal(mobileMenuClosed, true, `${b.id}: mobile menu should close on second burger click`);
 
-      // Test 15% Creative QA Pipeline & Audit Modal at 1440x900
+      // Test desktop CTA & anchor navigation at 1440x900
       await page.setViewportSize({ width: 1440, height: 900 });
       await page.waitForTimeout(250);
+      await page.hover('#heroGetStartedBtn');
+      await page.waitForTimeout(150);
+      const ctaHoverBg = await page.evaluate(() =>
+        getComputedStyle(document.getElementById('heroGetStartedBtn')).backgroundColor
+      );
       await page.click('#heroGetStartedBtn');
-      await page.waitForTimeout(250);
-      const modalOpen = await page.evaluate(() =>
-        document.getElementById('targoModal').classList.contains('is-open')
-      );
-      assert.equal(modalOpen, true, `${b.id}: clicking GET STARTED should open #targoModal`);
-
-      await page.click('#runSuiteBtn');
-      await page.waitForTimeout(200);
-      const suiteVerified = await page.evaluate(() =>
-        document.getElementById('suiteRunStatus').textContent.includes('VERIFIED SUITE #805')
-      );
-      assert.equal(suiteVerified, true, `${b.id}: clicking RUN VERIFICATION should update suite telemetry`);
-
-      await page.click('[data-tab-target="contact"]');
-      await page.waitForTimeout(200);
-      await page.fill('#auditRepoInput', 'targo-core');
-      await page.fill('#auditEmailInput', 'qa@targo.dev');
-      await page.click('#submitAuditBtn');
-      await page.waitForTimeout(200);
-      const auditLocked = await page.evaluate(() =>
-        document.getElementById('auditStatus').textContent.includes('AUDIT SLOT LOCKED FOR TARGO-CORE')
-      );
-      assert.equal(auditLocked, true, `${b.id}: submitting audit form should lock audit slot`);
-
-      await page.keyboard.press('Escape');
-      await page.waitForTimeout(200);
-      const modalClosed = await page.evaluate(
-        () => !document.getElementById('targoModal').classList.contains('is-open')
-      );
-      assert.equal(modalClosed, true, `${b.id}: Escape should close #targoModal`);
+      await page.waitForTimeout(350);
+      const scrolledToAbout = await page.evaluate(() => window.scrollY > 50);
+      assert.equal(scrolledToAbout, true, `${b.id}: clicking GET STARTED should scroll to #about`);
 
       assert.equal(allConsoleErrors.length, 0, `${b.id}: console errors: ${allConsoleErrors.join('; ')}`);
       assert.equal(allPageErrors.length, 0, `${b.id}: page errors: ${allPageErrors.join('; ')}`);
@@ -242,10 +220,8 @@ const BROWSERS = [
       entry.interactions = {
         mobileMenuOpened,
         mobileMenuClosed,
-        modalOpen,
-        suiteVerified,
-        auditLocked,
-        modalClosed,
+        ctaHoverBg,
+        scrolledToAbout,
         totalConsoleErrors: allConsoleErrors.length,
         totalPageErrors: allPageErrors.length,
       };

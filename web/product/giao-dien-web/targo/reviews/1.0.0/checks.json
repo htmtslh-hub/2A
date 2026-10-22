@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-22T02:47:09.762Z",
-  "url": "http://127.0.0.1:59386/",
+  "date": "2026-10-22T03:28:54.001Z",
+  "url": "http://127.0.0.1:54859/",
   "browsers": {
     "chromium": {
       "version": "153.0.8010.12",
@@ -135,10 +135,8 @@
       "interactions": {
         "mobileMenuOpened": true,
         "mobileMenuClosed": true,
-        "modalOpen": true,
-        "suiteVerified": true,
-        "auditLocked": true,
-        "modalClosed": true,
+        "ctaHoverBg": "rgb(61, 207, 238)",
+        "scrolledToAbout": true,
         "totalConsoleErrors": 0,
         "totalPageErrors": 0
       }
@@ -276,10 +274,8 @@
       "interactions": {
         "mobileMenuOpened": true,
         "mobileMenuClosed": true,
-        "modalOpen": true,
-        "suiteVerified": true,
-        "auditLocked": true,
-        "modalClosed": true,
+        "ctaHoverBg": "rgb(60, 207, 238)",
+        "scrolledToAbout": true,
         "totalConsoleErrors": 0,
         "totalPageErrors": 0
       }
@@ -417,10 +413,8 @@
       "interactions": {
         "mobileMenuOpened": true,
         "mobileMenuClosed": true,
-        "modalOpen": true,
-        "suiteVerified": true,
-        "auditLocked": true,
-        "modalClosed": true,
+        "ctaHoverBg": "rgb(62, 208, 239)",
+        "scrolledToAbout": true,
         "totalConsoleErrors": 0,
         "totalPageErrors": 0
       }
@@ -558,10 +552,8 @@
       "interactions": {
         "mobileMenuOpened": true,
         "mobileMenuClosed": true,
-        "modalOpen": true,
-        "suiteVerified": true,
-        "auditLocked": true,
-        "modalClosed": true,
+        "ctaHoverBg": "rgb(61, 207, 238)",
+        "scrolledToAbout": true,
         "totalConsoleErrors": 0,
         "totalPageErrors": 0
       }

@@ -44,7 +44,7 @@
       color: #000000;
     }
 
-    h1, h2, h3 {
+    h1, h2 {
       margin: 0;
       color: #2b3033;
       text-transform: uppercase;
@@ -61,9 +61,6 @@
       min-height: 100svh;
       background: #F2F1F0;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
 
     .hero-video {
@@ -179,7 +176,7 @@
         12px 100%,
         0 calc(100% - 12px)
       );
-      transition: background 0.22s ease, transform 0.2s ease;
+      transition: background 0.22s ease;
     }
 
     .nav-contact-btn:hover {
@@ -197,15 +194,14 @@
     .mobile-burger {
       display: none;
       margin-left: auto;
-      background: rgba(17, 17, 17, 0.28);
+      background: transparent;
       border: none;
-      padding: 10px 11px;
+      padding: 8px 4px;
       cursor: pointer;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 5px;
-      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
     }
 
     .mobile-burger-bar {
@@ -213,7 +209,6 @@
       height: 2px;
       background: #ffffff;
       display: block;
-      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
     .mobile-menu {
@@ -222,9 +217,8 @@
       flex-direction: column;
       gap: 18px;
       padding: 18px 22px;
-      margin-top: 6px;
+      margin-top: 8px;
       background: rgba(242, 241, 240, 0.96);
-      border-left: 3px solid #15BCDF;
       backdrop-filter: blur(8px);
     }
 
@@ -235,7 +229,7 @@
     .mobile-menu a {
       color: #1a1c1e;
       font-weight: 700;
-      font-size: 15px;
+      font-size: clamp(13px, 3.6vw, 15px);
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
@@ -244,9 +238,6 @@
     .hero-body {
       position: relative;
       z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
     }
 
     .hero-headline {
@@ -274,21 +265,16 @@
     .hero-cta-wrap {
       padding-left: calc(clamp(20px, 9vw, 118px) + min(238px, 28vw));
       padding-bottom: min(clamp(36px, 6vw, 80px), 7vh);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 18px;
     }
 
     .targo-cta-glow {
       display: inline-flex;
       filter: drop-shadow(0 0 1px rgba(21, 188, 223, 0.35)) drop-shadow(0 10px 20px rgba(15, 163, 194, 0.45));
-      transition: filter 0.22s ease, transform 0.2s ease;
+      transition: filter 0.22s ease;
     }
 
     .targo-cta-glow:hover {
       filter: drop-shadow(0 0 2px rgba(21, 188, 223, 0.65)) drop-shadow(0 12px 26px rgba(15, 163, 194, 0.72));
-      transform: translateY(-1px);
     }
 
     .targo-cta {
@@ -330,38 +316,6 @@
       background: #1a1c1e;
       display: inline-block;
       flex-shrink: 0;
-    }
-
-    /* 15% Creative Enhancement: Live Telemetry Pill */
-    .telemetry-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 16px;
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(15, 163, 194, 0.35);
-      color: #2b3033;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
-      cursor: pointer;
-      transition: border-color 0.2s ease, background 0.2s ease;
-    }
-
-    .telemetry-pill:hover {
-      background: #ffffff;
-      border-color: #15BCDF;
-    }
-
-    .telemetry-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #15BCDF;
-      box-shadow: 0 0 8px #15BCDF;
-      display: inline-block;
     }
 
     /* =========================================================================
@@ -442,157 +396,6 @@
     }
 
     /* =========================================================================
-       15% CREATIVE ENHANCEMENT — QA PIPELINE & AUDIT MODAL
-       ========================================================================= */
-    .targo-modal-backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 50;
-      background: rgba(26, 28, 30, 0.72);
-      backdrop-filter: blur(6px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 18px;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: opacity 0.25s ease, visibility 0.25s ease;
-    }
-
-    .targo-modal-backdrop.is-open {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-
-    .targo-modal {
-      width: min(100%, 580px);
-      background: #F7F6F8;
-      border: 1px solid #0fa3c2;
-      padding: clamp(20px, 3.5vw, 32px);
-      color: #2b3033;
-      clip-path: polygon(
-        0 0,
-        calc(100% - 20px) 0,
-        100% 20px,
-        100% 100%,
-        20px 100%,
-        0 calc(100% - 20px)
-      );
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-    }
-
-    .targo-modal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      border-bottom: 1px solid rgba(43, 48, 51, 0.12);
-      padding-bottom: 14px;
-    }
-
-    .targo-modal-title {
-      font-size: 20px;
-      color: #2b3033;
-    }
-
-    .targo-modal-close {
-      background: #2b3033;
-      color: #ffffff;
-      border: none;
-      width: 32px;
-      height: 32px;
-      font-family: inherit;
-      font-weight: 700;
-      font-size: 16px;
-      cursor: pointer;
-      clip-path: polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 7px 100%, 0 calc(100% - 7px));
-    }
-
-    .targo-modal-tabs {
-      display: flex;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .targo-tab-btn {
-      padding: 9px 16px;
-      font-family: inherit;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border: 1px solid rgba(43, 48, 51, 0.2);
-      background: transparent;
-      color: #3a3a3a;
-      cursor: pointer;
-      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
-    }
-
-    .targo-tab-btn.is-active {
-      background: #15BCDF;
-      border-color: #0fa3c2;
-      color: #1a1c1e;
-    }
-
-    .targo-pane {
-      display: none;
-      margin-top: 18px;
-    }
-
-    .targo-pane.is-active {
-      display: block;
-    }
-
-    .suite-list {
-      display: grid;
-      gap: 10px;
-      margin: 14px 0;
-    }
-
-    .suite-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 11px 14px;
-      background: #F2F1F0;
-      border-left: 3px solid #15BCDF;
-      font-size: 13px;
-    }
-
-    .suite-badge {
-      color: #0fa3c2;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-    }
-
-    .audit-form {
-      display: grid;
-      gap: 12px;
-      margin-top: 12px;
-    }
-
-    .audit-input,
-    .audit-select {
-      width: 100%;
-      padding: 11px 14px;
-      font-family: inherit;
-      font-size: 14px;
-      border: 1px solid rgba(43, 48, 51, 0.22);
-      background: #ffffff;
-      color: #2b3033;
-    }
-
-    .audit-status {
-      font-size: 13px;
-      font-weight: 700;
-      color: #0fa3c2;
-      min-height: 18px;
-    }
-
-    /* =========================================================================
        MOBILE BREAKPOINT (<= 700px)
        ========================================================================= */
     @media (max-width: 700px) {
@@ -623,7 +426,7 @@
       }
 
       .hero-cta-wrap {
-        padding-left: min(calc(20px + min(238px, 28vw)), calc(100vw - 240px));
+        padding-left: min(calc(20px + min(238px, 28vw)), calc(100vw - 236px));
         padding-right: 20px;
         padding-bottom: min(clamp(36px, 6vw, 80px), 7vh);
       }
@@ -669,21 +472,20 @@
       <nav class="nav-links" aria-label="Primary Navigation">
         <a href="#home" class="nav-link">HOME</a>
         <a href="#about" class="nav-link">ABOUT</a>
-        <a href="#contact" class="nav-link" data-open-modal="contact">CONTACT US</a>
+        <a href="#about" class="nav-link">CONTACT US</a>
       </nav>
 
-      <button
-        type="button"
+      <a
+        href="#about"
         id="desktopContactBtn"
         class="nav-contact-btn"
-        data-open-modal="contact"
       >
         <svg viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="1" y="1" width="15" height="11" rx="1.5" stroke="#ffffff" stroke-width="1.4" />
           <path d="M1.5 2L8.5 7.2L15.5 2" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <span>Contact us</span>
-      </button>
+      </a>
 
       <button
         type="button"
@@ -701,7 +503,7 @@
       <nav class="mobile-menu" id="mobileNavMenu" aria-label="Mobile Navigation">
         <a href="#home" data-mobile-link>HOME</a>
         <a href="#about" data-mobile-link>ABOUT</a>
-        <a href="#contact" data-mobile-link data-open-modal="contact">CONTACT US</a>
+        <a href="#about" data-mobile-link>CONTACT US</a>
       </nav>
     </header>
 
@@ -717,22 +519,11 @@
 
       <div class="hero-cta-wrap">
         <span class="targo-cta-glow">
-          <a href="#about" id="heroGetStartedBtn" class="targo-cta" data-open-modal="pipeline">
+          <a href="#about" id="heroGetStartedBtn" class="targo-cta">
             <span>GET STARTED</span>
             <span class="targo-cta-line" aria-hidden="true"></span>
           </a>
         </span>
-
-        <button
-          type="button"
-          id="telemetryPill"
-          class="telemetry-pill"
-          data-open-modal="pipeline"
-          title="Open live QA pipeline telemetry"
-        >
-          <span class="telemetry-dot" aria-hidden="true"></span>
-          <span id="telemetryReadout">SUITE #804 · 1,420 PASSED · 0 FLAKES</span>
-        </button>
       </div>
     </div>
   </section>
@@ -753,7 +544,7 @@
 
       <div class="about-cta-wrap">
         <span class="targo-cta-glow">
-          <a href="#contact" id="aboutLearnMoreBtn" class="targo-cta" data-open-modal="pipeline">
+          <a href="#home" id="aboutLearnMoreBtn" class="targo-cta">
             <span>LEARN MORE</span>
             <span class="targo-cta-line" aria-hidden="true"></span>
           </a>
@@ -774,105 +565,6 @@
         preload="auto"
       ></video>
       <div class="about-video-tint" id="aboutVideoTint" aria-hidden="true"></div>
-    </div>
-
-    <!-- 15% Creative Interactive QA Pipeline & Audit Modal -->
-    <div
-      class="targo-modal-backdrop"
-      id="targoModal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="targoModalTitle"
-      aria-hidden="true"
-    >
-      <div class="targo-modal">
-        <div class="targo-modal-header">
-          <h3 class="targo-modal-title" id="targoModalTitle">TARGO QA INFRASTRUCTURE</h3>
-          <button
-            type="button"
-            id="targoModalClose"
-            class="targo-modal-close"
-            aria-label="Close modal"
-          >
-            &times;
-          </button>
-        </div>
-
-        <div class="targo-modal-tabs" role="tablist">
-          <button
-            type="button"
-            class="targo-tab-btn is-active"
-            data-tab-target="pipeline"
-          >
-            LIVE PIPELINE MATRIX
-          </button>
-          <button
-            type="button"
-            class="targo-tab-btn"
-            data-tab-target="contact"
-          >
-            REQUEST QA AUDIT
-          </button>
-        </div>
-
-        <div class="targo-pane is-active" data-tab-pane="pipeline">
-          <div class="suite-list">
-            <div class="suite-item">
-              <span>01 / E2E CHROMIUM + FIREFOX + WEBKIT</span>
-              <span class="suite-badge" id="suiteBadge1">480 / 480 PASS</span>
-            </div>
-            <div class="suite-item">
-              <span>02 / API CONTRACT &amp; SCHEMA FUZZING</span>
-              <span class="suite-badge" id="suiteBadge2">620 / 620 PASS</span>
-            </div>
-            <div class="suite-item">
-              <span>03 / ZERO-FLAKE VISUAL REGRESSION</span>
-              <span class="suite-badge" id="suiteBadge3">320 / 320 PASS</span>
-            </div>
-          </div>
-
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px;flex-wrap:wrap;">
-            <span id="suiteRunStatus" style="font-size:12px;color:#6b6f72;font-weight:700;letter-spacing:0.06em;">
-              READY · AVG EXECUTION 14.2S
-            </span>
-            <button type="button" id="runSuiteBtn" class="targo-cta" style="padding:14px 24px;font-size:13px;">
-              <span>RUN VERIFICATION</span>
-              <span class="targo-cta-line" aria-hidden="true"></span>
-            </button>
-          </div>
-        </div>
-
-        <div class="targo-pane" data-tab-pane="contact">
-          <form class="audit-form" id="auditForm">
-            <input
-              type="text"
-              id="auditRepoInput"
-              class="audit-input"
-              placeholder="Organization or GitHub Org (e.g. acme-cloud)"
-              required
-            />
-            <input
-              type="email"
-              id="auditEmailInput"
-              class="audit-input"
-              placeholder="Engineering Lead Email (lead@company.io)"
-              required
-            />
-            <select id="auditTierSelect" class="audit-select">
-              <option value="Full Automated Pipeline + QA Audit">Full Automated Pipeline + QA Audit</option>
-              <option value="Zero-Flake CI/CD Sharding">Zero-Flake CI/CD Sharding</option>
-              <option value="Pre-Release Load & Chaos Testing">Pre-Release Load &amp; Chaos Testing</option>
-            </select>
-            <div class="audit-status" id="auditStatus" aria-live="polite"></div>
-            <div>
-              <button type="submit" id="submitAuditBtn" class="targo-cta" style="padding:14px 26px;font-size:13px;">
-                <span>SCHEDULE QA AUDIT</span>
-                <span class="targo-cta-line" aria-hidden="true"></span>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -924,7 +616,7 @@
       document.addEventListener('click', tryPlayAll, { once: true, passive: true });
       document.addEventListener('touchstart', tryPlayAll, { once: true, passive: true });
 
-      // Responsive 700px breakpoint sync
+      // Mobile breakpoint (700px) via window.innerWidth + resize listener
       var mobileBurgerBtn = document.getElementById('mobileBurgerBtn');
       var mobileNavMenu = document.getElementById('mobileNavMenu');
 
@@ -955,99 +647,12 @@
         });
       }
 
-      // 15% Creative Modal & Live Suite Runner
-      var targoModal = document.getElementById('targoModal');
-      var targoModalClose = document.getElementById('targoModalClose');
-      var tabBtns = document.querySelectorAll('[data-tab-target]');
-      var tabPanes = document.querySelectorAll('[data-tab-pane]');
-      var runSuiteBtn = document.getElementById('runSuiteBtn');
-      var suiteRunStatus = document.getElementById('suiteRunStatus');
-      var telemetryReadout = document.getElementById('telemetryReadout');
-      var auditForm = document.getElementById('auditForm');
-      var auditStatus = document.getElementById('auditStatus');
-      var runCounter = 804;
-
-      function switchTab(target) {
-        for (var i = 0; i < tabBtns.length; i++) {
-          tabBtns[i].classList.toggle('is-active', tabBtns[i].getAttribute('data-tab-target') === target);
-        }
-        for (var j = 0; j < tabPanes.length; j++) {
-          tabPanes[j].classList.toggle('is-active', tabPanes[j].getAttribute('data-tab-pane') === target);
-        }
-      }
-
-      function openModal(tabName) {
-        if (!targoModal) return;
-        switchTab(tabName || 'pipeline');
-        targoModal.classList.add('is-open');
-        targoModal.setAttribute('aria-hidden', 'false');
-      }
-
-      function closeModal() {
-        if (!targoModal) return;
-        targoModal.classList.remove('is-open');
-        targoModal.setAttribute('aria-hidden', 'true');
-      }
-
-      var triggers = document.querySelectorAll('[data-open-modal]');
-      for (var k = 0; k < triggers.length; k++) {
-        (function (el) {
-          el.addEventListener('click', function (e) {
-            e.preventDefault();
-            openModal(el.getAttribute('data-open-modal'));
-          });
-        })(triggers[k]);
-      }
-
-      for (var t = 0; t < tabBtns.length; t++) {
-        (function (btn) {
-          btn.addEventListener('click', function () {
-            switchTab(btn.getAttribute('data-tab-target'));
-          });
-        })(tabBtns[t]);
-      }
-
-      if (targoModalClose) {
-        targoModalClose.addEventListener('click', closeModal);
-      }
-
-      if (targoModal) {
-        targoModal.addEventListener('click', function (e) {
-          if (e.target === targoModal) closeModal();
-        });
-      }
-
       window.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' || e.key === 'Esc') {
-          closeModal();
           if (mobileNavMenu) mobileNavMenu.classList.remove('is-open');
           if (mobileBurgerBtn) mobileBurgerBtn.setAttribute('aria-expanded', 'false');
         }
       });
-
-      if (runSuiteBtn) {
-        runSuiteBtn.addEventListener('click', function () {
-          runCounter += 1;
-          if (suiteRunStatus) {
-            suiteRunStatus.textContent = 'VERIFIED SUITE #' + runCounter + ' · 1,420 / 1,420 PASSED IN 13.8S';
-            suiteRunStatus.style.color = '#0fa3c2';
-          }
-          if (telemetryReadout) {
-            telemetryReadout.textContent = 'SUITE #' + runCounter + ' · 1,420 PASSED · 0 FLAKES';
-          }
-        });
-      }
-
-      if (auditForm) {
-        auditForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          var repo = document.getElementById('auditRepoInput').value;
-          var tier = document.getElementById('auditTierSelect').value;
-          if (auditStatus) {
-            auditStatus.textContent = 'AUDIT SLOT LOCKED FOR ' + repo.toUpperCase() + ' (' + tier.toUpperCase() + ').';
-          }
-        });
-      }
     })();
   </script>
 </body>

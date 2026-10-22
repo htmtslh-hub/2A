@@ -55,7 +55,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     "copy": {
       "vi": {
         "name": "Targo",
-        "desc": "Trang đích một trang hai phân đoạn (Hero + About) tự chứa trong một file HTML duy nhất cho hạ tầng kiểm thử phần mềm \"Targo\" (\"Scaling The Platform For Your Business\"): phông chữ Quantico (400 + 700), nền xám sáng #F2F1F0 chuyển mượt sang #F7F6F8, điểm nhấn xanh cyan #15BCDF (hover #3fd0ef, viền #0fa3c2), tiêu đề 6 bậc thang (SCALING / THE / PLATFORM / FOR / YOUR / BUSINESS), các nút vát góc clip-path polygon kèm vạch ngang 22×1px, hai luồng video tự động phát lại mỗi 1 giây kèm lớp phủ scrim bên trái trên desktop (Hero) và lớp phủ nhuộm màu #15BCDF mix-blend-mode: hue sát mép phải (About), cùng nhãn telemetry trực tiếp và hộp thoại Live QA Pipeline & Request QA Audit tương tác.",
+        "desc": "Trang đích một trang hai phân đoạn (Hero + About) tự chứa trong một file HTML duy nhất cho hạ tầng kiểm thử phần mềm \"Targo\" (\"Scaling The Platform For Your Business\"): phông chữ Quantico (400 + 700), nền xám sáng #F2F1F0 chuyển mượt sang #F7F6F8, điểm nhấn xanh cyan #15BCDF (hover #3fd0ef, viền #0fa3c2), tiêu đề 6 bậc thang (SCALING / THE / PLATFORM / FOR / YOUR / BUSINESS), các nút vát góc clip-path polygon kèm vạch ngang 22×1px, hai luồng video tự động phát lại mỗi 1 giây kèm lớp phủ scrim bên trái trên desktop (Hero) và lớp phủ nhuộm màu #15BCDF mix-blend-mode: hue sát mép phải (About), cùng thanh điều hướng đáp ứng <= 700px.",
         "tags": [
           "Testing Infrastructure",
           "Chamfered Cyan UI",
@@ -64,7 +64,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       },
       "en": {
         "name": "Targo",
-        "desc": "A self-contained single-file, two-section (Hero + About) landing page for the \"Targo\" software testing infrastructure platform (\"Scaling The Platform For Your Business\"): Quantico (400 + 700) typography, #F2F1F0 to #F7F6F8 studio light-grey canvas, #15BCDF cyan accents (hover #3fd0ef, border #0fa3c2), a 6-line staircase hero headline (SCALING / THE / PLATFORM / FOR / YOUR / BUSINESS), chamfered clip-path polygon CTAs with a trailing 22×1px rule, dual autoplay-resilient videos with a desktop left scrim (Hero) and a flush-right #15BCDF mix-blend-mode: hue tint overlay (About), plus a live telemetry pill and an interactive Live QA Pipeline & Request QA Audit modal.",
+        "desc": "A self-contained single-file, two-section (Hero + About) landing page for the \"Targo\" software testing infrastructure platform (\"Scaling The Platform For Your Business\"): Quantico (400 + 700) typography, #F2F1F0 to #F7F6F8 studio light-grey canvas, #15BCDF cyan accents (hover #3fd0ef, border #0fa3c2), a 6-line staircase hero headline (SCALING / THE / PLATFORM / FOR / YOUR / BUSINESS), chamfered clip-path polygon CTAs with a trailing 22×1px rule, dual autoplay-resilient videos with a desktop left scrim (Hero) and a flush-right #15BCDF mix-blend-mode: hue tint overlay (About), and a <= 700px responsive mobile menu.",
         "tags": [
           "Testing Infrastructure",
           "Chamfered Cyan UI",
@@ -73,7 +73,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       },
       "zh": {
         "name": "Targo",
-        "desc": "软件测试基础设施平台《Targo》（\"Scaling The Platform For Your Business\"）单文件自包含双章节（Hero + About）落地页模板：采用 Quantico（400 + 700）字体、#F2F1F0 至 #F7F6F8 浅灰渐变画布、#15BCDF 青色点缀（悬停 #3fd0ef、边框 #0fa3c2）、六行阶梯式主标题（SCALING / THE / PLATFORM / FOR / YOUR / BUSINESS）、带 22×1px 尾线的切角多边形按钮、每秒自动重试播放的双视频（首屏配桌面端左侧渐变遮罩，关于屏配右对齐 #15BCDF mix-blend-mode: hue 色相染色层），以及实时测试状态胶囊与交互式 QA 流水线及审计预约弹窗。",
+        "desc": "软件测试基础设施平台《Targo》（\"Scaling The Platform For Your Business\"）单文件自包含双章节（Hero + About）落地页模板：采用 Quantico（400 + 700）字体、#F2F1F0 至 #F7F6F8 浅灰渐变画布、#15BCDF 青色点缀（悬停 #3fd0ef、边框 #0fa3c2）、六行阶梯式主标题（SCALING / THE / PLATFORM / FOR / YOUR / BUSINESS）、带 22×1px 尾线的切角多边形按钮、每秒自动重试播放的双视频（首屏配桌面端左侧渐变遮罩，关于屏配右对齐 #15BCDF mix-blend-mode: hue 色相染色层），以及 <= 700px 响应式移动端导航菜单。",
         "tags": [
           "测试基础设施",
           "切角青色科技风",

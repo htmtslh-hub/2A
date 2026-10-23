@@ -1,0 +1,50 @@
+{
+  "id": "t94",
+  "slug": "vaultra",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-23T03:18:22.073Z",
+  "demo": "/demos/vaultra/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0888da5de7ef",
+  "sha256": "0888da5de7ef204a39169666c46bcf54fdb47d39974a31fbf68f00a64a752cbf",
+  "demoHtmlSha256": "2ea918ffe4093372c4a4c35e749bc60831c45f81bd318b3d79c45c5d6eaa7438",
+  "demoSha256": "7fbe3507d61f0b20ed8c6c25e338c79e178772d41498f31c483aec8c5be8ad20",
+  "bytes": 1357061,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 3.101,
+      "action": "vaultra-switch-eur-and-inspect-eth"
+    },
+    {
+      "seconds": 5.394,
+      "action": "vaultra-switch-auth-and-close"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 10.186,
+      "action": "vaultra-hover-get-started"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vaultra-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vaultra-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vaultra-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vaultra-return.jpg"
+  ]
+}

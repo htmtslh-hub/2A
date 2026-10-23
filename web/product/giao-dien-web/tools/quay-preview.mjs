@@ -113,7 +113,7 @@ try {
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
-    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'lumora' || slug === 'securify' || slug === 'cozypaws' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'iris' || slug === 'melli' || slug === 'reelmark' || slug === 'cast-and-render' || slug === 'vanguard' || slug === 'targo' || slug === 'gridwork-co') {
+    if (slug === 'monoframe' || slug === 'aethera' || slug === 'nexlayer' || slug === 'vectrus-energy' || slug === 'halden' || slug === 'prmpt' || slug === 'designpro' || slug === 'cinematic' || slug === 'viktor' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'lumora' || slug === 'securify' || slug === 'cozypaws' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'iris' || slug === 'melli' || slug === 'reelmark' || slug === 'cast-and-render' || slug === 'vanguard' || slug === 'targo' || slug === 'gridwork-co' || slug === 'vaultra' || slug === 'lauberhorn-ridge') {
       for (const host of ['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai','soft-zoom-63098134.figma.site','polo-pecan-73837341.figma.site','cdn.jsdelivr.net']) allowedBriefHosts.add(host);
     }
     if (slug === 'toonhub') {
@@ -171,8 +171,8 @@ try {
       await page.waitForFunction(() => document.getElementById('boot')?.classList.contains('done') && document.getElementById('clip')?.readyState >= 2, null, {timeout:60000});
       await page.waitForTimeout(1000);
     }
-    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far','reelmark','vanguard','targo','gridwork-co'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
-    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'reelmark' || slug === 'vanguard' || slug === 'gridwork-co') {
+    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far','reelmark','vanguard','targo','gridwork-co','vaultra','lauberhorn-ridge'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'reelmark' || slug === 'vanguard' || slug === 'gridwork-co' || slug === 'vaultra' || slug === 'lauberhorn-ridge') {
       await page.waitForTimeout(2000);
     }
     if (slug === 'solaris-gate') {
@@ -186,6 +186,47 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'lauberhorn-ridge') {
+        const step = actions.filter(a => a.action.startsWith('lauberhorn-ridge-')).length;
+        if (step === 0) {
+          await page.locator('[data-tab="seasons"]').click();
+          await page.waitForTimeout(300);
+          await page.locator('#photoPlayBtn').click();
+          await page.locator('#trailModalBackdrop.is-open').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'lauberhorn-ridge-switch-seasons-and-open-reel' });
+        } else if (step === 1) {
+          await page.keyboard.press('Escape');
+          await page.waitForTimeout(300);
+          await page.locator('[data-tab="slopes"]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'lauberhorn-ridge-close-modal-and-switch-slopes' });
+        } else {
+          await page.locator('[data-tab="altitude"]').click();
+          await page.locator('#photoPlayBtn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'lauberhorn-ridge-restore-altitude-and-hover-play' });
+        }
+        return;
+      }
+      if (slug === 'vaultra') {
+        const step = actions.filter(a => a.action.startsWith('vaultra-')).length;
+        if (step === 0) {
+          await page.locator('#langSelectorBtn').click();
+          await page.waitForTimeout(280);
+          await page.locator('[data-lang="EU"]').click();
+          await page.waitForTimeout(250);
+          await page.locator('[data-asset="ETH"]').click();
+          await page.locator('#vaultraModal.is-open').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'vaultra-switch-eur-and-inspect-eth' });
+        } else if (step === 1) {
+          await page.locator('[data-modal-tab="auth"]').click();
+          await page.waitForTimeout(450);
+          await page.keyboard.press('Escape');
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'vaultra-switch-auth-and-close' });
+        } else {
+          await page.locator('#getStartedBtn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'vaultra-hover-get-started' });
+        }
+        return;
+      }
       if (slug === 'gridwork-co') {
         const step = actions.filter(a => a.action.startsWith('gridwork-co-')).length;
         if (step === 0) {
@@ -758,7 +799,7 @@ try {
     }
     actions.push({ seconds:6.7, action:'scroll', target });
     await at(10); await shot('scroll');
-    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli', 'cast-and-render'].includes(slug)) {
+    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli', 'cast-and-render', 'vaultra', 'lauberhorn-ridge'].includes(slug)) {
       await next();
     }
     await at(11.5); await page.evaluate(() => window.scrollTo({ top:0, behavior:'smooth' }));

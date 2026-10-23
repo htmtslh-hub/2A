@@ -1,0 +1,15 @@
+# BRIEF — Vaultra (`vaultra` / `t94`, v1.0.0)
+
+## Mục tiêu sản phẩm
+Xây dựng mẫu giao diện **crypto finance landing hero** một màn hình (`100dvh`, không cuộn ngang/dọc), tự chứa trong một file HTML duy nhất (`index.html`) cho nền tảng tài chính tiền mã hóa giả định **Vaultra** (*"Innovative Crypto Financial Solutions / For Any Investment Challenge"*), sử dụng HTML, CSS và JavaScript thuần không framework hay bước build:
+- **Nền quả cầu hạt phát sáng & Video xoay lặp mượt (`1672×941` + `1280×720`):** Ảnh tĩnh `1672×941` (`#globeStill`, quả cầu hạt điểm với các vòng vĩ độ, viền phát sáng đỏ-xanh-magenta và các đường tia sáng chéo kèm nút điểm trắng) kết hợp luồng video `1280×720` (`#globeVideo`, dài `4s`, tắt tiếng, giây cuối hòa mượt vào giây đầu, không nhảy khung hình và không phát ngược) có hình học khớp tuyệt đối, tự động hiện dần (`0.85s`) khi khung hình đầu tiên sẵn sàng; mặt nạ `.globe-plate` làm mờ hai biên trên màn hình siêu rộng (`min-aspect-ratio: 20/10`) và làm mờ cạnh trên ở điện thoại (`<= 820px`). Không vẽ hay hoạt họa cảnh nền bằng code.
+- **Kiểu chữ & Màu sắc:** Tiêu đề 2 dòng dùng **Inter Display 300** cỡ `~66px` (`Innovative Crypto Financial Solutions / For Any Investment Challenge`) màu trắng ở giữa chuyển sang hồng phấn – tím lilac dịu ở hai đầu (`#f49cd4` → `#deb6ff` → `#ffffff` → `#deb6ff` → `#f49cd4`); phông **Poppins** `400`/`500` cho thanh điều hướng, huy hiệu kính mờ `"⚡ Revolutionizing Crypto Finance"`, đoạn mô tả `"We Don't Just Focus On Investments, We Cover Your Entire / Financial Ecosystem, From Budgeting To Retirement."` và nút viên thuốc trắng `"Get Started →"`.
+- **Thanh điều hướng, Chip đồng tiền kính & Gợi ý cuộn chuột (kèm 15% sáng tạo):** Thanh điều hướng gồm logo hai nét gạch chéo (`//`) + `"Vaultra"`, 6 mục `"Home"` (đang chọn, kèm biểu tượng tròn) · `"Invest"` · `"Communit"` · `"Blog"` · `"For business"` · `"Membership"`, bộ chọn ngôn ngữ/tiền tệ `"EN ⌄"` tương tác, nút viên thuốc trắng `"Sign up"` (đã sửa lỗi chính tả) và nút viền `"Log In"`. Bốn chip kính tròn (`₿`, `Ξ`, `₮` và token lục giác) nằm trên các đường tia sáng ở rìa màn hình, cùng gợi ý cuộn chuột ở đáy có nhãn `"USDT"` và `"ETH"` uốn cong, kết nối với hộp thoại **Vaultra Financial Ecosystem & Yield Simulator** 3 tab tương tác.
+
+## Lý do sử dụng cờ `--ngoai-le` khi đóng gói
+- Đề bài yêu cầu kiến trúc **Single-File HTML** (`index.html`, `CUSTOMISE.md`, `README.md`, `LICENCE.txt`) thuộc danh sách `INLINE_PRODUCTS` trong `dong-goi.mjs`. Dung lượng gói `vaultra.zip` nằm dưới ngưỡng `20,480` byte (`W06`).
+
+## Nguồn tài nguyên bên ngoài theo đặc tả
+- **Google Fonts (`Inter` 300..600 & `Poppins` 400..600):** `https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap`
+- **Globe Still (`1672×941`):** `https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/f1631235-0a76-464d-8f1d-2c4b48a997d5.jpg`
+- **Globe Video (`1280×720`, `4s`, H.264 `yuv420p`):** `https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/e71aea27-a808-4ae3-8231-a469d49285d4.mp4`

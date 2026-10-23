@@ -1,0 +1,2575 @@
+{
+  "slug": "lauberhorn-ridge",
+  "version": "1.0.0",
+  "testedAt": "2026-10-23T03:34:45.151Z",
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "viewports": {
+        "desktop-1440x900": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 62,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 73,
+              "w": 471,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 20,
+              "y": 86,
+              "w": 676,
+              "h": 98
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 198,
+              "w": 436,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 462,
+              "w": 359,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 612,
+              "w": 358,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 383,
+              "y": 612,
+              "w": 336,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 728,
+              "y": 612,
+              "w": 387,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 1126,
+              "y": 12,
+              "w": 303,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 1126,
+              "y": 402,
+              "w": 303,
+              "h": 425
+            }
+          }
+        },
+        "acceptance-1440x960": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 62,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 73,
+              "w": 471,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 20,
+              "y": 86,
+              "w": 676,
+              "h": 98
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 198,
+              "w": 436,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 462,
+              "w": 359,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 612,
+              "w": 358,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 383,
+              "y": 612,
+              "w": 336,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 728,
+              "y": 612,
+              "w": 387,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 1126,
+              "y": 12,
+              "w": 303,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 1126,
+              "y": 402,
+              "w": 303,
+              "h": 425
+            }
+          }
+        },
+        "laptop-1024x768": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 11,
+              "y": 10,
+              "w": 29,
+              "h": 27
+            },
+            "userPill": {
+              "x": 44,
+              "y": 10,
+              "w": 91,
+              "h": 27
+            },
+            "breadcrumb": {
+              "x": 11,
+              "y": 52,
+              "w": 335,
+              "h": 11
+            },
+            "trailTitle": {
+              "x": 14,
+              "y": 61,
+              "w": 480,
+              "h": 70
+            },
+            "heroChips": {
+              "x": 11,
+              "y": 141,
+              "w": 310,
+              "h": 23
+            },
+            "searchCard": {
+              "x": 11,
+              "y": 329,
+              "w": 255,
+              "h": 97
+            },
+            "poiCard": {
+              "x": 11,
+              "y": 435,
+              "w": 255,
+              "h": 153
+            },
+            "photoCard": {
+              "x": 272,
+              "y": 435,
+              "w": 239,
+              "h": 153
+            },
+            "altitudeCard": {
+              "x": 518,
+              "y": 435,
+              "w": 275,
+              "h": 153
+            },
+            "weatherCard": {
+              "x": 801,
+              "y": 9,
+              "w": 215,
+              "h": 270
+            },
+            "trailInfoCard": {
+              "x": 801,
+              "y": 286,
+              "w": 215,
+              "h": 302
+            }
+          }
+        },
+        "tablet-820x1180": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 790,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 790,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 790,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 667,
+              "w": 790,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 816,
+              "w": 790,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 1043,
+              "w": 790,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1270,
+              "w": 790,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1497,
+              "w": 790,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1889,
+              "w": 790,
+              "h": 425
+            }
+          }
+        },
+        "tablet-768x1024": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 738,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 738,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 738,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 579,
+              "w": 738,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 728,
+              "w": 738,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 955,
+              "w": 738,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1182,
+              "w": 738,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1409,
+              "w": 738,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1801,
+              "w": 738,
+              "h": 425
+            }
+          }
+        },
+        "landscape-740x360": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 710,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 710,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 710,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 232,
+              "w": 710,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 381,
+              "w": 710,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 608,
+              "w": 710,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 835,
+              "w": 710,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1062,
+              "w": 710,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1454,
+              "w": 710,
+              "h": 425
+            }
+          }
+        },
+        "phone-375x812": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 345,
+              "h": 36
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 122,
+              "w": 345,
+              "h": 47
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 181,
+              "w": 345,
+              "h": 72
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 461,
+              "w": 345,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 610,
+              "w": 345,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 837,
+              "w": 345,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1064,
+              "w": 345,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1291,
+              "w": 345,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1683,
+              "w": 345,
+              "h": 425
+            }
+          }
+        },
+        "phone-320x740": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 290,
+              "h": 51
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 137,
+              "w": 290,
+              "h": 94
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 243,
+              "w": 290,
+              "h": 72
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 420,
+              "w": 290,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 569,
+              "w": 290,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 796,
+              "w": 290,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1023,
+              "w": 290,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1250,
+              "w": 290,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1642,
+              "w": 290,
+              "h": 425
+            }
+          }
+        }
+      },
+      "reducedMotion": {
+        "pass": true,
+        "videoHidden": true,
+        "tempImmediate": true
+      }
+    },
+    "firefox": {
+      "version": "155.0",
+      "viewports": {
+        "desktop-1440x900": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 62,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 73,
+              "w": 471,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 20,
+              "y": 86,
+              "w": 676,
+              "h": 98
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 198,
+              "w": 436,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 462,
+              "w": 359,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 612,
+              "w": 358,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 383,
+              "y": 612,
+              "w": 336,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 728,
+              "y": 612,
+              "w": 387,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 1126,
+              "y": 12,
+              "w": 303,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 1126,
+              "y": 402,
+              "w": 303,
+              "h": 425
+            }
+          }
+        },
+        "acceptance-1440x960": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 62,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 73,
+              "w": 471,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 20,
+              "y": 86,
+              "w": 676,
+              "h": 98
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 198,
+              "w": 436,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 462,
+              "w": 359,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 612,
+              "w": 358,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 383,
+              "y": 612,
+              "w": 336,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 728,
+              "y": 612,
+              "w": 387,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 1126,
+              "y": 12,
+              "w": 303,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 1126,
+              "y": 402,
+              "w": 303,
+              "h": 425
+            }
+          }
+        },
+        "laptop-1024x768": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 11,
+              "y": 10,
+              "w": 29,
+              "h": 27
+            },
+            "userPill": {
+              "x": 43,
+              "y": 10,
+              "w": 89,
+              "h": 27
+            },
+            "breadcrumb": {
+              "x": 11,
+              "y": 51,
+              "w": 330,
+              "h": 11
+            },
+            "trailTitle": {
+              "x": 14,
+              "y": 60,
+              "w": 473,
+              "h": 69
+            },
+            "heroChips": {
+              "x": 11,
+              "y": 139,
+              "w": 305,
+              "h": 22
+            },
+            "searchCard": {
+              "x": 11,
+              "y": 323,
+              "w": 251,
+              "h": 96
+            },
+            "poiCard": {
+              "x": 11,
+              "y": 428,
+              "w": 251,
+              "h": 151
+            },
+            "photoCard": {
+              "x": 268,
+              "y": 428,
+              "w": 235,
+              "h": 151
+            },
+            "altitudeCard": {
+              "x": 510,
+              "y": 428,
+              "w": 271,
+              "h": 151
+            },
+            "weatherCard": {
+              "x": 788,
+              "y": 8,
+              "w": 212,
+              "h": 266
+            },
+            "trailInfoCard": {
+              "x": 788,
+              "y": 281,
+              "w": 212,
+              "h": 298
+            }
+          }
+        },
+        "tablet-820x1180": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 790,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 790,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 790,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 667,
+              "w": 790,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 816,
+              "w": 790,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 1043,
+              "w": 790,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1270,
+              "w": 790,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1497,
+              "w": 790,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1889,
+              "w": 790,
+              "h": 425
+            }
+          }
+        },
+        "tablet-768x1024": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 738,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 738,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 738,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 579,
+              "w": 738,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 728,
+              "w": 738,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 955,
+              "w": 738,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1182,
+              "w": 738,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1409,
+              "w": 738,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1801,
+              "w": 738,
+              "h": 425
+            }
+          }
+        },
+        "landscape-740x360": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 710,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 710,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 710,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 232,
+              "w": 710,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 381,
+              "w": 710,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 608,
+              "w": 710,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 835,
+              "w": 710,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1062,
+              "w": 710,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1454,
+              "w": 710,
+              "h": 425
+            }
+          }
+        },
+        "phone-375x812": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 345,
+              "h": 36
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 122,
+              "w": 345,
+              "h": 47
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 181,
+              "w": 345,
+              "h": 72
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 461,
+              "w": 345,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 610,
+              "w": 345,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 837,
+              "w": 345,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1064,
+              "w": 345,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1291,
+              "w": 345,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1683,
+              "w": 345,
+              "h": 425
+            }
+          }
+        },
+        "phone-320x740": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 290,
+              "h": 51
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 137,
+              "w": 290,
+              "h": 94
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 243,
+              "w": 290,
+              "h": 72
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 420,
+              "w": 290,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 569,
+              "w": 290,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 796,
+              "w": 290,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1023,
+              "w": 290,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1250,
+              "w": 290,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1642,
+              "w": 290,
+              "h": 425
+            }
+          }
+        }
+      },
+      "reducedMotion": {
+        "pass": true,
+        "videoHidden": true,
+        "tempImmediate": true
+      }
+    },
+    "msedge": {
+      "version": "156.0.4314.42",
+      "viewports": {
+        "desktop-1440x900": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 62,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 73,
+              "w": 471,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 20,
+              "y": 86,
+              "w": 676,
+              "h": 98
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 198,
+              "w": 436,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 462,
+              "w": 359,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 612,
+              "w": 358,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 383,
+              "y": 612,
+              "w": 336,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 728,
+              "y": 612,
+              "w": 387,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 1126,
+              "y": 12,
+              "w": 303,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 1126,
+              "y": 402,
+              "w": 303,
+              "h": 425
+            }
+          }
+        },
+        "acceptance-1440x960": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 62,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 73,
+              "w": 471,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 20,
+              "y": 86,
+              "w": 676,
+              "h": 98
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 198,
+              "w": 436,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 462,
+              "w": 359,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 612,
+              "w": 358,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 383,
+              "y": 612,
+              "w": 336,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 728,
+              "y": 612,
+              "w": 387,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 1126,
+              "y": 12,
+              "w": 303,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 1126,
+              "y": 402,
+              "w": 303,
+              "h": 425
+            }
+          }
+        },
+        "laptop-1024x768": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 11,
+              "y": 10,
+              "w": 29,
+              "h": 27
+            },
+            "userPill": {
+              "x": 44,
+              "y": 10,
+              "w": 91,
+              "h": 27
+            },
+            "breadcrumb": {
+              "x": 11,
+              "y": 52,
+              "w": 335,
+              "h": 11
+            },
+            "trailTitle": {
+              "x": 14,
+              "y": 61,
+              "w": 480,
+              "h": 70
+            },
+            "heroChips": {
+              "x": 11,
+              "y": 141,
+              "w": 310,
+              "h": 23
+            },
+            "searchCard": {
+              "x": 11,
+              "y": 329,
+              "w": 255,
+              "h": 97
+            },
+            "poiCard": {
+              "x": 11,
+              "y": 435,
+              "w": 255,
+              "h": 153
+            },
+            "photoCard": {
+              "x": 272,
+              "y": 435,
+              "w": 239,
+              "h": 153
+            },
+            "altitudeCard": {
+              "x": 518,
+              "y": 435,
+              "w": 275,
+              "h": 153
+            },
+            "weatherCard": {
+              "x": 801,
+              "y": 9,
+              "w": 215,
+              "h": 270
+            },
+            "trailInfoCard": {
+              "x": 801,
+              "y": 286,
+              "w": 215,
+              "h": 302
+            }
+          }
+        },
+        "tablet-820x1180": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 790,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 790,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 790,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 667,
+              "w": 790,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 816,
+              "w": 790,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 1043,
+              "w": 790,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1270,
+              "w": 790,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1497,
+              "w": 790,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1889,
+              "w": 790,
+              "h": 425
+            }
+          }
+        },
+        "tablet-768x1024": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 738,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 738,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 738,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 579,
+              "w": 738,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 728,
+              "w": 738,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 955,
+              "w": 738,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1182,
+              "w": 738,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1409,
+              "w": 738,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1801,
+              "w": 738,
+              "h": 425
+            }
+          }
+        },
+        "landscape-740x360": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 710,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 710,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 710,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 232,
+              "w": 710,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 381,
+              "w": 710,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 608,
+              "w": 710,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 835,
+              "w": 710,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1062,
+              "w": 710,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1454,
+              "w": 710,
+              "h": 425
+            }
+          }
+        },
+        "phone-375x812": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 345,
+              "h": 36
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 122,
+              "w": 345,
+              "h": 47
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 181,
+              "w": 345,
+              "h": 72
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 461,
+              "w": 345,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 610,
+              "w": 345,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 837,
+              "w": 345,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1064,
+              "w": 345,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1291,
+              "w": 345,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1683,
+              "w": 345,
+              "h": 425
+            }
+          }
+        },
+        "phone-320x740": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 290,
+              "h": 51
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 137,
+              "w": 290,
+              "h": 94
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 243,
+              "w": 290,
+              "h": 72
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 420,
+              "w": 290,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 569,
+              "w": 290,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 796,
+              "w": 290,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1023,
+              "w": 290,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1250,
+              "w": 290,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1642,
+              "w": 290,
+              "h": 425
+            }
+          }
+        }
+      },
+      "reducedMotion": {
+        "pass": true,
+        "videoHidden": true,
+        "tempImmediate": true
+      }
+    },
+    "coccoc": {
+      "version": "154.0.8037.106",
+      "viewports": {
+        "desktop-1440x900": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 62,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 73,
+              "w": 471,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 20,
+              "y": 86,
+              "w": 676,
+              "h": 98
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 198,
+              "w": 436,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 462,
+              "w": 359,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 612,
+              "w": 358,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 383,
+              "y": 612,
+              "w": 336,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 728,
+              "y": 612,
+              "w": 387,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 1126,
+              "y": 12,
+              "w": 303,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 1126,
+              "y": 402,
+              "w": 303,
+              "h": 425
+            }
+          }
+        },
+        "acceptance-1440x960": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 62,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 73,
+              "w": 471,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 20,
+              "y": 86,
+              "w": 676,
+              "h": 98
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 198,
+              "w": 436,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 462,
+              "w": 359,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 612,
+              "w": 358,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 383,
+              "y": 612,
+              "w": 336,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 728,
+              "y": 612,
+              "w": 387,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 1126,
+              "y": 12,
+              "w": 303,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 1126,
+              "y": 402,
+              "w": 303,
+              "h": 425
+            }
+          }
+        },
+        "laptop-1024x768": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 11,
+              "y": 10,
+              "w": 29,
+              "h": 27
+            },
+            "userPill": {
+              "x": 44,
+              "y": 10,
+              "w": 91,
+              "h": 27
+            },
+            "breadcrumb": {
+              "x": 11,
+              "y": 52,
+              "w": 335,
+              "h": 11
+            },
+            "trailTitle": {
+              "x": 14,
+              "y": 61,
+              "w": 480,
+              "h": 70
+            },
+            "heroChips": {
+              "x": 11,
+              "y": 141,
+              "w": 310,
+              "h": 23
+            },
+            "searchCard": {
+              "x": 11,
+              "y": 329,
+              "w": 255,
+              "h": 97
+            },
+            "poiCard": {
+              "x": 11,
+              "y": 435,
+              "w": 255,
+              "h": 153
+            },
+            "photoCard": {
+              "x": 272,
+              "y": 435,
+              "w": 239,
+              "h": 153
+            },
+            "altitudeCard": {
+              "x": 518,
+              "y": 435,
+              "w": 275,
+              "h": 153
+            },
+            "weatherCard": {
+              "x": 801,
+              "y": 9,
+              "w": 215,
+              "h": 270
+            },
+            "trailInfoCard": {
+              "x": 801,
+              "y": 286,
+              "w": 215,
+              "h": 302
+            }
+          }
+        },
+        "tablet-820x1180": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 790,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 790,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 790,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 667,
+              "w": 790,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 816,
+              "w": 790,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 1043,
+              "w": 790,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1270,
+              "w": 790,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1497,
+              "w": 790,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1889,
+              "w": 790,
+              "h": 425
+            }
+          }
+        },
+        "tablet-768x1024": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 738,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 738,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 738,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 579,
+              "w": 738,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 728,
+              "w": 738,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 955,
+              "w": 738,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1182,
+              "w": 738,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1409,
+              "w": 738,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1801,
+              "w": 738,
+              "h": 425
+            }
+          }
+        },
+        "landscape-740x360": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 710,
+              "h": 15
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 101,
+              "w": 710,
+              "h": 65
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 178,
+              "w": 710,
+              "h": 32
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 232,
+              "w": 710,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 381,
+              "w": 710,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 608,
+              "w": 710,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 835,
+              "w": 710,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1062,
+              "w": 710,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1454,
+              "w": 710,
+              "h": 425
+            }
+          }
+        },
+        "phone-375x812": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 345,
+              "h": 36
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 122,
+              "w": 345,
+              "h": 47
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 181,
+              "w": 345,
+              "h": 72
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 461,
+              "w": 345,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 610,
+              "w": 345,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 837,
+              "w": 345,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1064,
+              "w": 345,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1291,
+              "w": 345,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1683,
+              "w": 345,
+              "h": 425
+            }
+          }
+        },
+        "phone-320x740": {
+          "pass": true,
+          "consoleErrors": 0,
+          "pageErrors": 0,
+          "horizOverflow": false,
+          "vertOverflow": false,
+          "videoReady": true,
+          "tempText": "19°",
+          "contours": 16,
+          "cardShadowsNone": true,
+          "coords": {
+            "logoTile": {
+              "x": 15,
+              "y": 14,
+              "w": 41,
+              "h": 38
+            },
+            "userPill": {
+              "x": 64,
+              "y": 14,
+              "w": 128,
+              "h": 38
+            },
+            "breadcrumb": {
+              "x": 15,
+              "y": 74,
+              "w": 290,
+              "h": 51
+            },
+            "trailTitle": {
+              "x": 15,
+              "y": 137,
+              "w": 290,
+              "h": 94
+            },
+            "heroChips": {
+              "x": 15,
+              "y": 243,
+              "w": 290,
+              "h": 72
+            },
+            "searchCard": {
+              "x": 15,
+              "y": 420,
+              "w": 290,
+              "h": 137
+            },
+            "poiCard": {
+              "x": 15,
+              "y": 569,
+              "w": 290,
+              "h": 215
+            },
+            "photoCard": {
+              "x": 15,
+              "y": 796,
+              "w": 290,
+              "h": 215
+            },
+            "altitudeCard": {
+              "x": 15,
+              "y": 1023,
+              "w": 290,
+              "h": 215
+            },
+            "weatherCard": {
+              "x": 15,
+              "y": 1250,
+              "w": 290,
+              "h": 380
+            },
+            "trailInfoCard": {
+              "x": 15,
+              "y": 1642,
+              "w": 290,
+              "h": 425
+            }
+          }
+        }
+      },
+      "reducedMotion": {
+        "pass": true,
+        "videoHidden": true,
+        "tempImmediate": true
+      }
+    }
+  }
+}

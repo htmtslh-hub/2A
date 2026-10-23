@@ -46,6 +46,164 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t95: {
+    "slug": "lauberhorn-ridge",
+    "cat": "commerce",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Lauberhorn Ridge",
+        "desc": "Dashboard hướng dẫn cung đường leo núi một màn hình tự chứa trong một file HTML duy nhất cho cung đường \"Lauberhorn Ridge\" (trên Interlaken, Thụy Sĩ) dưới góc nhìn của người leo núi \"Mira Holt\": ảnh nền 16:10 (1728×1080) rừng thông rụng lá vàng cùng hồ băng ngọc lam dưới đỉnh núi tuyết, chồng khít bởi video flycam 10 giây lặp mượt (width 111.11%, left -5.556%, tự hiện dần 0.8s), khung tọa độ 1440×900 (--u), phông Inter Tight 300/400 + JetBrains Mono 500 viết hoa kèm tiền tố \"::\", các thẻ kính kem mờ rgba(244,240,233,.94) (blur 14px, không đổ bóng) gồm ô logo hoa thị 6 cánh (15, 14), viên thuốc Mira Holt (62, 14), tiêu đề 96px (20, 86), thẻ tìm kiếm \"Hey, Mira!\" (15, 462), bản đồ 16 đường đồng mức ::POINTS OF INTEREST (15, 612), thẻ ảnh 211 Photos (383, 612), biểu đồ ::ALTITUDE 4 tab (728, 612), đồng hồ ::WEATHER 19° (1126, 12), 3 ô ::TRAIL INFO (1126, 402) và hoạt ảnh Web Animations 2.8 giây.",
+        "tags": [
+          "Alpine Trail Dashboard",
+          "Cream Glass Telemetry",
+          "Single-File HTML"
+        ]
+      },
+      "en": {
+        "name": "Lauberhorn Ridge",
+        "desc": "A self-contained single-file, one-screen hiking trail guide dashboard hero for the fictional Swiss alpine trail \"Lauberhorn Ridge\" (above Interlaken) seen by signed-in hiker \"Mira Holt\": a full-bleed 16:10 golden larch valley and turquoise glacial lake plate (1728×1080) overlaid by a seamless 10s forward/reverse drone glide video (laid at 111.11% width, left -5.556% with a 0.8s fade-in), a 1440×900 coordinate frame (--u), Inter Tight 300/400 and uppercase JetBrains Mono 500 typography with tight \"::\" prefixes, and shadow-free cream glass widgets (rgba(244,240,233,.94), 14px blur) including a six-spoke logo tile (15, 14), Mira Holt user pill (62, 14), 96px title (20, 86), \"Hey, Mira!\" search card (15, 462), 16-contour ::POINTS OF INTEREST map (15, 612), 211 Photos card (383, 612), 4-tab ::ALTITUDE chart (728, 612), ::WEATHER 19° semicircle gauge (1126, 12), ::TRAIL INFO stack (1126, 402), and a 2.8s Web Animations timeline.",
+        "tags": [
+          "Alpine Trail Dashboard",
+          "Cream Glass Telemetry",
+          "Single-File HTML"
+        ]
+      },
+      "zh": {
+        "name": "Lauberhorn Ridge",
+        "desc": "瑞士因特拉肯上方《Lauberhorn Ridge》高山徒步路线指南仪表盘单文件自包含单屏首屏模板（登录徒步者 Mira Holt 视角）：16:10 金秋落叶松峡谷与碧绿冰川湖满版底图（1728×1080）叠加 0.8 秒淡入的 10 秒正反向无缝航拍视频（宽 111.11%、左偏移 -5.556%），基于 1440×900 坐标帧（--u），采用 Inter Tight 300/400 与带紧凑“::”前缀的 JetBrains Mono 500 大写排版，配备无投影奶油色毛玻璃卡片（rgba(244,240,233,.94)、14px 模糊），涵盖六辐星号标志块（15, 14）、Mira Holt 状态胶囊（62, 14）、96px 主标题（20, 86）、“Hey, Mira!”搜索卡（15, 462）、16 条等高线 ::POINTS OF INTEREST 地形图（15, 612）、211 Photos 照片卡（383, 612）、四标签 ::ALTITUDE 折线图（728, 612）、::WEATHER 19° 半圆仪表盘（1126, 12）、三栏 ::TRAIL INFO 信息卡（1126, 402）及 2.8 秒 Web Animations 入场动画。",
+        "tags": [
+          "徒步路线仪表盘",
+          "奶油毛玻璃组件",
+          "单文件 HTML"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Gói tải",
+          "4 files · 20.4 KB ZIP"
+        ],
+        [
+          "Phạm vi",
+          "Trail guide dashboard hero 1 màn hình (1440×900) · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "4 files · 20.4 KB ZIP"
+        ],
+        [
+          "Scope",
+          "One-screen trail guide dashboard hero (1440×900) · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / 原生 JS"
+        ],
+        [
+          "下载包",
+          "4 files · 20.4 KB ZIP"
+        ],
+        [
+          "范围",
+          "单屏徒步路线仪表盘首屏（1440×900）· 零构建步骤"
+        ]
+      ]
+    }
+  },
+  t94: {
+    "slug": "vaultra",
+    "cat": "commerce",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Vaultra",
+        "desc": "Hero tài chính crypto một màn hình tự chứa trong một file HTML duy nhất cho nền tảng \"Vaultra\" (\"Innovative Crypto Financial Solutions / For Any Investment Challenge\"): bầu trời đêm đen (#030208) với quả cầu hạt chấm bi khổng lồ phát sáng viền đỏ, xanh lam và magenta xoay chậm liên tục qua luồng video 4 giây tự hiện dần (0.85s) khớp khít trên ảnh tĩnh 1672×941, mặt nạ làm mờ hai bên trên màn hình siêu rộng và làm mờ đỉnh trên điện thoại, tiêu đề Inter Display 300 (~66px) trắng ở giữa chuyển sang gradient hồng-tím (#f49cd4 → #deb6ff) ở hai đầu, phông Poppins 400/500, thanh điều hướng kèm logo hai nét chéo \"//\", nút viên thuốc \"Sign up\" và \"Log In\", 4 chip đồng xu kính mờ (₿, Ξ, ₮, Hex) nằm trên đường sáng chéo, gợi ý cuộn chuột kèm nhãn cong \"USDT\"/\"ETH\", cùng bộ chọn tiền tệ EN · USD / EUR / JPY và hộp thoại kính mờ 3 chế độ.",
+        "tags": [
+          "Crypto Finance Hero",
+          "Spinning Particle Globe",
+          "Single-File HTML"
+        ]
+      },
+      "en": {
+        "name": "Vaultra",
+        "desc": "A self-contained single-file, one-screen crypto finance landing hero for \"Vaultra\" (\"Innovative Crypto Financial Solutions / For Any Investment Challenge\"): a black night canvas (#030208) with a huge dotted particle globe rising from the bottom whose red, blue and magenta rim glows shimmer as it slowly spins via a seamless 4s video loop fading in (0.85s) over an identical 1672×941 still plate, ultra-wide side and phone top feather masks, an Inter Display 300 (~66px) headline with soft pink-to-lilac gradient ends (#f49cd4 → #deb6ff), Poppins 400/500 UI and body copy, a top navbar with a double-slash \"//\" mark, \"Sign up\" and \"Log In\" pills, four round glass coin chips (₿, Ξ, ₮, Hex) riding the diagonal light lines, a bottom mouse-scroll hint with curved \"USDT\" and \"ETH\" labels, plus an interactive EN · USD / EUR / JPY selector and 3-mode glassmorphic modal.",
+        "tags": [
+          "Crypto Finance Hero",
+          "Spinning Particle Globe",
+          "Single-File HTML"
+        ]
+      },
+      "zh": {
+        "name": "Vaultra",
+        "desc": "加密金融平台《Vaultra》（\"Innovative Crypto Financial Solutions / For Any Investment Challenge\"）单文件自包含单屏首屏模板：深邃夜空背景（#030208）下巨型点状粒子地球从底部升起，红、蓝、洋红边缘辉光随 4 秒无缝循环视频缓慢旋转并在 1672×941 同构静帧上以 0.85 秒平滑淡入，配超宽屏两侧与手机端顶部羽化遮罩、中心纯白向两端粉紫渐变（#f49cd4 → #deb6ff）的 Inter Display 300（约 66px）主标题、Poppins 400/500 导航与正文、双斜杠“//”标志、\"Sign up\" 与 \"Log In\" 胶囊按钮、沿斜向光线分布的 4 枚圆形毛玻璃代币徽章（₿、Ξ、₮、Hex）、底部弧形“USDT”/“ETH”滚轮提示，以及 EN · USD / EUR / JPY 汇率切换菜单与三模式毛玻璃弹窗。",
+        "tags": [
+          "加密金融首屏",
+          "旋转粒子地球",
+          "单文件 HTML"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Gói tải",
+          "4 files · 20.3 KB ZIP"
+        ],
+        [
+          "Phạm vi",
+          "Landing hero tài chính crypto 1 màn hình · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Single-file HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "4 files · 20.3 KB ZIP"
+        ],
+        [
+          "Scope",
+          "One-screen crypto finance landing hero · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "单文件 HTML5 / CSS3 / 原生 JS"
+        ],
+        [
+          "下载包",
+          "4 files · 20.3 KB ZIP"
+        ],
+        [
+          "范围",
+          "单屏加密金融着陆页首屏 · 零构建步骤"
+        ]
+      ]
+    }
+  },
   t93: {
     "slug": "gridwork-co",
     "cat": "commerce",

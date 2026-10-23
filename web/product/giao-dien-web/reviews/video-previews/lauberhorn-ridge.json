@@ -1,0 +1,50 @@
+{
+  "id": "t95",
+  "slug": "lauberhorn-ridge",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-23T03:39:48.212Z",
+  "demo": "/demos/lauberhorn-ridge/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d1f8e81379dc",
+  "sha256": "d1f8e81379dcf02bf3d03e79a630f66b48f57e8bc5ff179f82e55590f57e9d96",
+  "demoHtmlSha256": "002f9fda8bace8a9e6e2a4e3707375c1015f59c08d4ff10b3db2f212ff95f4f7",
+  "demoSha256": "416b56f3d6911a1facc1c818a025bba2a2fc71ed131968863bec671d89325f80",
+  "bytes": 2033145,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.835,
+      "action": "lauberhorn-ridge-switch-seasons-and-open-reel"
+    },
+    {
+      "seconds": 5.188,
+      "action": "lauberhorn-ridge-close-modal-and-switch-slopes"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    },
+    {
+      "seconds": 10.155,
+      "action": "lauberhorn-ridge-restore-altitude-and-hover-play"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lauberhorn-ridge-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lauberhorn-ridge-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lauberhorn-ridge-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lauberhorn-ridge-return.jpg"
+  ]
+}

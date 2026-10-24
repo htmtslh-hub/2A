@@ -27,3 +27,8 @@ product/giao-dien-web/crimson-folio/scratch/
 node_modules/
 .next/
 *.tsbuildinfo
+product/agent/*/node_modules/
+product/agent/*/release/
+product/agent/*/dist/
+product/agent/*/build/
+product/agent/*/.keys/

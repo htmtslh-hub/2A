@@ -1,0 +1,46 @@
+{
+  "id": "t96",
+  "slug": "atlas",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-24T02:23:34.184Z",
+  "demo": "/demos/atlas/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "bbbbb17b91ea",
+  "sha256": "bbbbb17b91ea2b1f7fde19e4482c67cc94592ccb1b51e68b392ee88f525627ca",
+  "demoHtmlSha256": "254b854b43baa0f2f54a0728bf3949fbbed7ce47894bce216c7d8fb0079e9da8",
+  "demoSha256": "598bfe595b3e46a7cd814177b0717030c413117a1f4201a962a16b4912383f7c",
+  "bytes": 771650,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.986,
+      "action": "atlas-depth-1000m-and-open-map"
+    },
+    {
+      "seconds": 5.219,
+      "action": "atlas-switch-log-02-twilight"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\atlas-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\atlas-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\atlas-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\atlas-return.jpg"
+  ]
+}

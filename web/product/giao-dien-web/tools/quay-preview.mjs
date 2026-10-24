@@ -186,6 +186,24 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'atlas') {
+        const step = actions.filter(a => a.action.startsWith('atlas-')).length;
+        if (step === 0) {
+          await page.locator('[data-depth-stop="1000"]').click();
+          await page.waitForTimeout(350);
+          await page.locator('[data-open-dialog="map-dialog"]').first().click();
+          await page.locator('#map-dialog[open]').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'atlas-depth-1000m-and-open-map' });
+        } else if (step === 1) {
+          await page.locator('[data-dialog-scene="1"]').click();
+          await page.waitForTimeout(350);
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'atlas-switch-log-02-twilight' });
+        } else {
+          await page.locator('[data-morge-next]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'atlas-morge-next-slide' });
+        }
+        return;
+      }
       if (slug === 'lauberhorn-ridge') {
         const step = actions.filter(a => a.action.startsWith('lauberhorn-ridge-')).length;
         if (step === 0) {

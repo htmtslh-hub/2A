@@ -1,0 +1,212 @@
+{
+  "slug": "atlas",
+  "version": "1.0.0",
+  "date": "2026-10-24T01:57:21.048Z",
+  "coccocInstalled": true,
+  "browsers": {
+    "chromium": {
+      "available": true,
+      "version": "153.0.8010.12",
+      "consoleErrors": [],
+      "defaultMotionUnderOSReduced": true,
+      "heroEntrance": {
+        "early": {
+          "opacity": 1,
+          "transform": "matrix(0.9899, 0, 0, 0.9899, 0, 12.09)"
+        },
+        "settled": {
+          "opacity": 1,
+          "transform": "none"
+        }
+      },
+      "scrollWords": {
+        "wordsBefore": 49,
+        "wordsScrolledDown": 49,
+        "wordsPresetAbyss": 49,
+        "wordsPresetSurface": 14,
+        "reversiblePass": true
+      },
+      "morgeCarousel": {
+        "nextMid": {
+          "activeIdx": true,
+          "transform": "matrix(0.978, 0, 0, 0.978, 45.72, 0)"
+        },
+        "wrapForwardMid": {
+          "isSelected": true,
+          "transform": "matrix(0.9782, 0, 0, 0.9782, 45.27, 0)"
+        },
+        "wrapBackwardMid": {
+          "isSelected": true,
+          "transform": "matrix(0.9818, 0, 0, 0.9818, -37.91, 0)"
+        },
+        "activeSlidesCountAfterRapidClick": 1
+      },
+      "depthRulerTween": {
+        "markerMid": "39.02%",
+        "markerEnd": "77%",
+        "pass": true
+      },
+      "storiesFilter": {
+        "visibleWhenOceansFiltered": 1
+      },
+      "pauseToggle": {
+        "pausedState": "true",
+        "resetAfterReload": "false",
+        "sessionOnlyPass": true
+      }
+    },
+    "firefox": {
+      "available": true,
+      "version": "155.0",
+      "consoleErrors": [],
+      "defaultMotionUnderOSReduced": true,
+      "heroEntrance": {
+        "early": {
+          "opacity": 1,
+          "transform": "matrix(0.9981, 0, 0, 0.9981, 0, 2.3)"
+        },
+        "settled": {
+          "opacity": 1,
+          "transform": "none"
+        }
+      },
+      "scrollWords": {
+        "wordsBefore": 49,
+        "wordsScrolledDown": 49,
+        "wordsPresetAbyss": 49,
+        "wordsPresetSurface": 14,
+        "reversiblePass": true
+      },
+      "morgeCarousel": {
+        "nextMid": {
+          "activeIdx": true,
+          "transform": "matrix(0.9816, 0, 0, 0.9816, 38.17, 0)"
+        },
+        "wrapForwardMid": {
+          "isSelected": true,
+          "transform": "matrix(0.982, 0, 0, 0.982, 37.35, 0)"
+        },
+        "wrapBackwardMid": {
+          "isSelected": true,
+          "transform": "matrix(0.9817, 0, 0, 0.9817, -38.02, 0)"
+        },
+        "activeSlidesCountAfterRapidClick": 1
+      },
+      "depthRulerTween": {
+        "markerMid": "39.75%",
+        "markerEnd": "77%",
+        "pass": true
+      },
+      "storiesFilter": {
+        "visibleWhenOceansFiltered": 1
+      },
+      "pauseToggle": {
+        "pausedState": "true",
+        "resetAfterReload": "false",
+        "sessionOnlyPass": true
+      }
+    },
+    "msedge": {
+      "available": true,
+      "version": "156.0.4314.42",
+      "consoleErrors": [],
+      "defaultMotionUnderOSReduced": true,
+      "heroEntrance": {
+        "early": {
+          "opacity": 1,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "settled": {
+          "opacity": 1,
+          "transform": "none"
+        }
+      },
+      "scrollWords": {
+        "wordsBefore": 49,
+        "wordsScrolledDown": 49,
+        "wordsPresetAbyss": 36,
+        "wordsPresetSurface": 14,
+        "reversiblePass": true
+      },
+      "morgeCarousel": {
+        "nextMid": {
+          "activeIdx": true,
+          "transform": "matrix(0.9778, 0, 0, 0.9778, 46.26, 0)"
+        },
+        "wrapForwardMid": {
+          "isSelected": true,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "wrapBackwardMid": {
+          "isSelected": true,
+          "transform": "matrix(0.9777, 0, 0, 0.9777, -46.42, 0)"
+        },
+        "activeSlidesCountAfterRapidClick": 1
+      },
+      "depthRulerTween": {
+        "markerMid": "39.35%",
+        "markerEnd": "77%",
+        "pass": true
+      },
+      "storiesFilter": {
+        "visibleWhenOceansFiltered": 1
+      },
+      "pauseToggle": {
+        "pausedState": "true",
+        "resetAfterReload": "false",
+        "sessionOnlyPass": true
+      }
+    },
+    "coccoc": {
+      "available": true,
+      "version": "154.0.8037.106",
+      "consoleErrors": [],
+      "defaultMotionUnderOSReduced": true,
+      "heroEntrance": {
+        "early": {
+          "opacity": 1,
+          "transform": "matrix(0.9971, 0, 0, 0.9971, 0, 3.47)"
+        },
+        "settled": {
+          "opacity": 1,
+          "transform": "none"
+        }
+      },
+      "scrollWords": {
+        "wordsBefore": 49,
+        "wordsScrolledDown": 49,
+        "wordsPresetAbyss": 36,
+        "wordsPresetSurface": 14,
+        "reversiblePass": true
+      },
+      "morgeCarousel": {
+        "nextMid": {
+          "activeIdx": true,
+          "transform": "matrix(0.978, 0, 0, 0.978, 45.72, 0)"
+        },
+        "wrapForwardMid": {
+          "isSelected": true,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "wrapBackwardMid": {
+          "isSelected": true,
+          "transform": "matrix(0.9779, 0, 0, 0.9779, -45.9, 0)"
+        },
+        "activeSlidesCountAfterRapidClick": 1
+      },
+      "depthRulerTween": {
+        "markerMid": "39.77%",
+        "markerEnd": "77%",
+        "pass": true
+      },
+      "storiesFilter": {
+        "visibleWhenOceansFiltered": 1
+      },
+      "pauseToggle": {
+        "pausedState": "true",
+        "resetAfterReload": "false",
+        "sessionOnlyPass": true
+      }
+    }
+  }
+}

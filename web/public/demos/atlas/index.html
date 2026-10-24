@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATLAS — Small Stories, Vast Oceans | Editorial Ocean Log &amp; Bathymetric Archive</title>
+  <meta name="description" content="An interactive editorial ocean log and bathymetric storytelling archive exploring surface companions, deep-sea silence, scroll-word narratives, and pelagic telemetry.">
+  <meta property="og:title" content="ATLAS — Small Stories, Vast Oceans">
+  <meta property="og:description" content="A tiny boat. A giant companion. Different scales. The same curiosity. Interactive ocean expedition log and bathymetric archive.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <div class="site-header__left">
+        <a class="brand" href="#home" aria-label="ATLAS Ocean Log — Home">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__name">ATLAS</span>
+        </a>
+        <span class="site-header__rule" aria-hidden="true"></span>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="#journey">JOURNEY</a>
+          <a href="#archive">ARCHIVE</a>
+          <a href="#stories">STORIES</a>
+          <a href="#about">ABOUT</a>
+        </nav>
+      </div>
+
+      <div class="site-header__right">
+        <button class="header-coords" type="button" data-open-dialog="map-dialog" aria-label="Open expedition coordinate map: 25.2048 degrees North, 55.2708 degrees East">
+          <span class="header-coords__chip" data-header-coords>25.2048° N &nbsp; 55.2708° E</span>
+        </button>
+        <span class="header-sep" aria-hidden="true">|</span>
+        <button class="status-pill" type="button" data-open-dialog="telemetry-dialog" aria-label="Open live vessel telemetry status">
+          <span class="status-pill__box">
+            <span>ONLINE</span>
+            <span class="status-pill__dot" aria-hidden="true"></span>
+          </span>
+        </button>
+        <button class="soundwave-btn" type="button" data-sound-toggle aria-pressed="true" aria-label="Toggle hydrophone acoustic wave visualizer">
+          <span class="soundwave-btn__box">
+            <svg class="soundwave-svg" viewBox="0 0 28 14" aria-hidden="true" focusable="false">
+              <rect class="wave-bar wave-bar--1" x="1" y="5" width="1.8" height="4" rx="0.9"></rect>
+              <rect class="wave-bar wave-bar--2" x="5" y="3" width="1.8" height="8" rx="0.9"></rect>
+              <rect class="wave-bar wave-bar--3" x="9" y="1" width="1.8" height="12" rx="0.9"></rect>
+              <rect class="wave-bar wave-bar--4" x="13" y="4" width="1.8" height="6" rx="0.9"></rect>
+              <rect class="wave-bar wave-bar--5" x="17" y="2" width="1.8" height="10" rx="0.9"></rect>
+              <rect class="wave-bar wave-bar--6" x="21" y="4" width="1.8" height="6" rx="0.9"></rect>
+              <rect class="wave-bar wave-bar--7" x="25" y="5.5" width="1.8" height="3" rx="0.9"></rect>
+            </svg>
+          </span>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+          <span class="menu-toggle__box">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- =====================================================================
+         01 / HERO — SPLIT WATERLINE OCEAN LOG (940x530 Reference Proportional)
+         ===================================================================== -->
+    <section class="hero" id="home" aria-label="01 Ocean Log Hero">
+      <div class="hero__canvas" data-hero-stage role="region" aria-label="Interactive split-waterline ocean illustration stage">
+        <img
+          class="hero__scene-img"
+          data-hero-image
+          src="assets/img/hero-ocean-01.webp"
+          width="1880"
+          height="1060"
+          alt="Surreal split-level ocean illustration showing a giant crimson whale at the waterline carrying a tiny red-sailed wooden boat with two explorers beneath a full moon and coastal lighthouse, with sunbeams illuminating its pleated underwater belly."
+        >
+      </div>
+
+      <!-- Upper-Left Editorial Block -->
+      <div class="hero__editorial" data-entry>
+        <p class="hero__eyebrow" data-hero-eyebrow>01 / OCEAN LOG</p>
+        <h1 class="hero__title">
+          <span class="hero__title-line">Small Stories</span>
+          <span class="hero__title-line">Vast Oceans</span>
+        </h1>
+        <p class="hero__stanza" data-hero-stanza>
+          <span>A tiny boat.</span>
+          <span>A giant companion.</span>
+          <span>Different scales.</span>
+          <span>The same curiosity.</span>
+        </p>
+        <div class="hero__actions">
+          <a class="hero__cta-primary btn" href="#journey">
+            <span class="hero__cta-box">BEGIN JOURNEY <span class="hero__cta-arrow" aria-hidden="true">→</span></span>
+          </a>
+          <button class="hero__cta-secondary" type="button" data-open-dialog="map-dialog">
+            <span class="hero__cta-ghost">EXPLORE MAP <span class="hero__cta-ring" aria-hidden="true"></span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Upper-Right Index Column -->
+      <aside class="hero__index" aria-label="Compass Story Index">
+        <span class="hero__index-tick" aria-hidden="true"></span>
+        <ul class="hero__index-list">
+          <li><a class="hero__index-link" href="#stories" data-index-topic="people"><span>PEOPLE</span></a></li>
+          <li><a class="hero__index-link" href="#stories" data-index-topic="places"><span>PLACES</span></a></li>
+          <li><a class="hero__index-link" href="#stories" data-index-topic="oceans"><span>OCEANS</span></a></li>
+          <li><a class="hero__index-link" href="#stories" data-index-topic="ideas"><span>IDEAS</span></a></li>
+        </ul>
+      </aside>
+
+      <!-- Lower-Left Underwater Poem & Framed Sonar Telemetry -->
+      <div class="hero__underwater-left">
+        <div class="hero__underwater-poem">
+          <span class="hero__poem-rule" aria-hidden="true"></span>
+          <p class="hero__poem-lines">
+            <span>BENEATH</span>
+            <span>THE SURFACE</span>
+            <span>A LARGER</span>
+            <span>KIND OF SILENCE</span>
+          </p>
+          <span class="hero__poem-rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="hero__sonar-card">
+          <button class="hero__sonar-thumb" type="button" data-open-dialog="map-dialog" aria-label="Inspect bathyal cross-section sonar plate">
+            <span class="hero__sonar-frame">
+              <img
+                src="assets/img/depth-sonar-thumb.webp"
+                width="352"
+                height="252"
+                alt="Miniature underwater cross-section of the whale and sunbeams"
+              >
+            </span>
+          </button>
+          <div class="hero__sonar-meta">
+            <p class="hero__sonar-coords" data-sonar-coords>
+              <span>25.2048° N</span>
+              <span>55.2708° E</span>
+            </p>
+            <span class="hero__sonar-dash" aria-hidden="true"></span>
+            <p class="hero__sonar-status">
+              <span data-hero-depth-readout>DEPTH UNKNOWN</span>
+              <span data-hero-life-readout>LIFE EVERYWHERE</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lower-Right Vertical Depth Ruler -->
+      <aside class="depth-ruler" aria-label="Ocean Depth Scale">
+        <div class="depth-ruler__axis" aria-hidden="true">
+          <span class="depth-ruler__marker" data-depth-marker></span>
+        </div>
+        <div class="depth-ruler__stops">
+          <button class="depth-ruler__stop" type="button" data-depth-stop="0" aria-pressed="true">
+            <span class="depth-ruler__node" aria-hidden="true"></span>
+            <span class="depth-ruler__label">0 m</span>
+          </button>
+          <p class="depth-ruler__caption">
+            <span>EXPLORE</span>
+            <span>THE DEPTHS</span>
+          </p>
+          <button class="depth-ruler__stop" type="button" data-depth-stop="200" aria-pressed="false">
+            <span class="depth-ruler__node" aria-hidden="true"></span>
+            <span class="depth-ruler__label">200 m</span>
+          </button>
+          <button class="depth-ruler__stop" type="button" data-depth-stop="1000" aria-pressed="false">
+            <span class="depth-ruler__node" aria-hidden="true"></span>
+            <span class="depth-ruler__label">1,000 m</span>
+          </button>
+          <button class="depth-ruler__stop" type="button" data-depth-stop="4000" aria-pressed="false">
+            <span class="depth-ruler__node" aria-hidden="true"></span>
+            <span class="depth-ruler__label">4,000 m</span>
+          </button>
+          <button class="depth-ruler__stop" type="button" data-depth-stop="10000" aria-pressed="false">
+            <span class="depth-ruler__node" aria-hidden="true"></span>
+            <span class="depth-ruler__label">10,000 m</span>
+          </button>
+        </div>
+      </aside>
+    </section>
+
+    <!-- =====================================================================
+         02 / JOURNEY — SCROLL WORD MANIFESTO & BATHYMETRIC DESCENT
+         ===================================================================== -->
+    <section class="section section--abyss" id="journey" aria-labelledby="journey-heading">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="section-header__meta">
+            <span class="eyebrow">02 / SCROLL WORD MANIFESTO &amp; BATHYMETRIC LOG</span>
+            <h2 class="section-title" id="journey-heading">Every fathom rewrites the scale of our questions.</h2>
+          </div>
+          <div class="section-header__controls">
+            <button class="motion-toggle button" type="button" data-motion-toggle aria-pressed="false">
+              Pause motion
+            </button>
+          </div>
+        </div>
+
+        <!-- Scroll Word Passage: Each word illuminates smoothly as the user scrolls -->
+        <div class="scroll-word-stage" data-scroll-words data-reveal>
+          <div class="scroll-word-stage__progress" aria-hidden="true">
+            <span class="scroll-word-stage__bar" data-scroll-word-bar></span>
+          </div>
+          <p class="scroll-word-passage" data-scroll-word-text aria-label="At the surface a red sail measures the wind in knots, while two meters below a crimson leviathan measures memory in centuries. When we descend through sunlight into twilight, noise gives way to harmonic resonance—proving that the smallest vessel and the largest creature share the same boundless curiosity.">
+            <span class="scroll-word is-lit" data-word="0">At</span>
+            <span class="scroll-word is-lit" data-word="1">the</span>
+            <span class="scroll-word is-lit" data-word="2">surface,</span>
+            <span class="scroll-word is-lit" data-word="3">a</span>
+            <span class="scroll-word is-lit scroll-word--accent" data-word="4">red</span>
+            <span class="scroll-word is-lit scroll-word--accent" data-word="5">sail</span>
+            <span class="scroll-word" data-word="6">measures</span>
+            <span class="scroll-word" data-word="7">the</span>
+            <span class="scroll-word" data-word="8">wind</span>
+            <span class="scroll-word" data-word="9">in</span>
+            <span class="scroll-word" data-word="10">knots,</span>
+            <span class="scroll-word" data-word="11">while</span>
+            <span class="scroll-word" data-word="12">two</span>
+            <span class="scroll-word" data-word="13">meters</span>
+            <span class="scroll-word" data-word="14">below</span>
+            <span class="scroll-word" data-word="15">a</span>
+            <span class="scroll-word scroll-word--accent" data-word="16">crimson</span>
+            <span class="scroll-word scroll-word--accent" data-word="17">leviathan</span>
+            <span class="scroll-word" data-word="18">measures</span>
+            <span class="scroll-word" data-word="19">memory</span>
+            <span class="scroll-word" data-word="20">in</span>
+            <span class="scroll-word" data-word="21">centuries.</span>
+            <span class="scroll-word" data-word="22">When</span>
+            <span class="scroll-word" data-word="23">we</span>
+            <span class="scroll-word" data-word="24">descend</span>
+            <span class="scroll-word" data-word="25">through</span>
+            <span class="scroll-word scroll-word--cyan" data-word="26">sunlight</span>
+            <span class="scroll-word" data-word="27">into</span>
+            <span class="scroll-word scroll-word--cyan" data-word="28">twilight,</span>
+            <span class="scroll-word" data-word="29">surface</span>
+            <span class="scroll-word" data-word="30">noise</span>
+            <span class="scroll-word" data-word="31">gives</span>
+            <span class="scroll-word" data-word="32">way</span>
+            <span class="scroll-word" data-word="33">to</span>
+            <span class="scroll-word scroll-word--cyan" data-word="34">harmonic</span>
+            <span class="scroll-word scroll-word--cyan" data-word="35">silence—</span>
+            <span class="scroll-word" data-word="36">proving</span>
+            <span class="scroll-word" data-word="37">that</span>
+            <span class="scroll-word" data-word="38">the</span>
+            <span class="scroll-word" data-word="39">smallest</span>
+            <span class="scroll-word" data-word="40">vessel</span>
+            <span class="scroll-word" data-word="41">and</span>
+            <span class="scroll-word" data-word="42">the</span>
+            <span class="scroll-word" data-word="43">vastest</span>
+            <span class="scroll-word" data-word="44">ocean</span>
+            <span class="scroll-word" data-word="45">share</span>
+            <span class="scroll-word" data-word="46">the</span>
+            <span class="scroll-word scroll-word--accent" data-word="47">same</span>
+            <span class="scroll-word scroll-word--accent" data-word="48">curiosity.</span>
+          </p>
+          <div class="scroll-word-stage__footer">
+            <span class="scroll-word-stage__readout" data-scroll-word-readout>SCROLL PROGRESS · 12% ACTIVE</span>
+            <div class="scroll-word-stage__actions">
+              <button class="chip-btn" type="button" data-word-preset="surface">01 Surface Verse</button>
+              <button class="chip-btn" type="button" data-word-preset="twilight">02 Twilight Drift</button>
+              <button class="chip-btn" type="button" data-word-preset="full">03 Full Illumination</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive 5-Stratum Depth Selector (Synced with Hero Depth Scale) -->
+        <div class="strata-explorer" data-reveal>
+          <div class="strata-tabs" role="group" aria-label="Select ocean depth zone">
+            <button class="strata-tab" type="button" data-stratum-btn="0" aria-pressed="true">
+              <span class="strata-tab__depth">0 m</span>
+              <span class="strata-tab__name">Epipelagic Surface</span>
+            </button>
+            <button class="strata-tab" type="button" data-stratum-btn="200" aria-pressed="false">
+              <span class="strata-tab__depth">200 m</span>
+              <span class="strata-tab__name">Twilight Thermocline</span>
+            </button>
+            <button class="strata-tab" type="button" data-stratum-btn="1000" aria-pressed="false">
+              <span class="strata-tab__depth">1,000 m</span>
+              <span class="strata-tab__name">Midnight Bioluminescence</span>
+            </button>
+            <button class="strata-tab" type="button" data-stratum-btn="4000" aria-pressed="false">
+              <span class="strata-tab__depth">4,000 m</span>
+              <span class="strata-tab__name">Abyssal Plain</span>
+            </button>
+            <button class="strata-tab" type="button" data-stratum-btn="10000" aria-pressed="false">
+              <span class="strata-tab__depth">10,000 m</span>
+              <span class="strata-tab__name">Hadal Trench</span>
+            </button>
+          </div>
+
+          <article class="stratum-panel" data-stratum-panel aria-live="polite">
+            <div class="stratum-panel__main">
+              <p class="stratum-panel__code" data-stratum-zone>ZONE 01 · EPIPELAGIC SURFACE (0 m – 200 m)</p>
+              <h3 class="stratum-panel__title" data-stratum-title>Where the Red Sloop Drifts Above the Leviathan</h3>
+              <p class="stratum-panel__desc" data-stratum-desc>
+                Sunlight penetrates the turquoise swell at 25.2048° N, 55.2708° E, casting diagonal shafts across the whale’s pleated slate belly while coastal lighthouse beacons mark the distant horizon.
+              </p>
+            </div>
+            <dl class="stratum-panel__metrics">
+              <div class="metric-box">
+                <dt>HYDROSTATIC PRESSURE</dt>
+                <dd data-stratum-pressure>1.0 ATM · SURFACE</dd>
+              </div>
+              <div class="metric-box">
+                <dt>AMBIENT TEMPERATURE</dt>
+                <dd data-stratum-temp>21.4 °C · SUNLIT</dd>
+              </div>
+              <div class="metric-box">
+                <dt>ACOUSTIC SIGNATURE</dt>
+                <dd data-stratum-acoustic>18 Hz – 42 Hz · WHALE SONG</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         03 / ARCHIVE — SKILL-MORGE DIRECTIONAL EXPEDITION CAROUSEL
+         ===================================================================== -->
+    <section class="section section--deep" id="archive" aria-labelledby="archive-heading">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="section-header__meta">
+            <span class="eyebrow">03 / EXPEDITION ARCHIVE · SKILL-MORGE CHOREOGRAPHY</span>
+            <h2 class="section-title" id="archive-heading">Three companions across three oceanic light regimes.</h2>
+          </div>
+          <p class="section-lead">
+            Navigate forward or backward through the field plates. Wrapping from Log 03 to Log 01 travels directly in the chosen direction without sweeping intermediate plates across the center stage, and syncs the hero canvas above.
+          </p>
+        </div>
+
+        <div class="morge-showcase" data-morge data-reveal>
+          <div class="morge-stage" data-morge-visual tabindex="0" role="region" aria-label="Expedition log plate carousel">
+            <!-- Slide 01 -->
+            <article class="morge-slide is-selected" data-morge-slide="0" aria-hidden="false">
+              <div class="morge-slide__media">
+                <img
+                  src="assets/img/hero-ocean-01.webp"
+                  width="1880"
+                  height="1060"
+                  loading="lazy"
+                  alt="Log 01: Crimson Leviathan and Red Sloop under a pale full moon and coastal lighthouse"
+                >
+                <span class="morge-slide__badge">01 / OCEAN LOG · 25.2048° N, 55.2708° E</span>
+              </div>
+            </article>
+
+            <!-- Slide 02 -->
+            <article class="morge-slide" data-morge-slide="1" aria-hidden="true" inert>
+              <div class="morge-slide__media">
+                <img
+                  src="assets/img/hero-ocean-02.webp"
+                  width="1880"
+                  height="1060"
+                  loading="lazy"
+                  alt="Log 02: Twilight Amber Finback and Lantern Skiff drifting across warm dusk waters"
+                >
+                <span class="morge-slide__badge">02 / TWILIGHT DRIFT · 34.6937° N, 135.5023° E</span>
+              </div>
+            </article>
+
+            <!-- Slide 03 -->
+            <article class="morge-slide" data-morge-slide="2" aria-hidden="true" inert>
+              <div class="morge-slide__media">
+                <img
+                  src="assets/img/hero-ocean-03.webp"
+                  width="1880"
+                  height="1060"
+                  loading="lazy"
+                  alt="Log 03: Abyssal Pelagic Whale and Research Yawl over deep bioluminescent rays"
+                >
+                <span class="morge-slide__badge">03 / ABYSSAL SOUND · 64.1466° N, 21.9426° W</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Centered Controls + Counter Row (skill-morge requirement #7) -->
+          <div class="morge-controls-row">
+            <div class="morge-controls" data-morge-controls role="group" aria-label="Expedition log slide controls">
+              <button class="morge-arrow" type="button" data-morge-prev aria-label="Previous expedition log">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+              <p class="morge-counter" data-morge-count aria-live="polite">01 / 03 · CRIMSON LEVIATHAN</p>
+              <button class="morge-arrow" type="button" data-morge-next aria-label="Next expedition log">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div class="morge-thumbs" role="group" aria-label="Direct expedition log selection">
+              <button class="morge-thumb" type="button" data-morge-select="0" aria-pressed="true">01 Crimson Log</button>
+              <button class="morge-thumb" type="button" data-morge-select="1" aria-pressed="false">02 Twilight Drift</button>
+              <button class="morge-thumb" type="button" data-morge-select="2" aria-pressed="false">03 Abyssal Sound</button>
+            </div>
+          </div>
+
+          <!-- Synchronized Detail Spec Sheet -->
+          <div class="morge-detail" data-morge-detail>
+            <div class="morge-detail__copy">
+              <p class="morge-detail__eyebrow" data-archive-code>LOG 01 · SURFACE COMPANIONSHIP</p>
+              <h3 class="morge-detail__title" data-archive-title>Crimson Leviathan &amp; The Red Sloop</h3>
+              <p class="morge-detail__text" data-archive-desc>
+                Two observers aboard a 4.8-meter wooden sloop keep station above a solitary crimson-backed whale. As moonlight meets the coastal lighthouse beam, volumetric rays reveal the whale’s calm buoyancy above the reef.
+              </p>
+            </div>
+            <div class="morge-detail__specs">
+              <div class="spec-item">
+                <span class="spec-item__label">COORDINATES</span>
+                <strong class="spec-item__value" data-archive-coords>25.2048° N · 55.2708° E</strong>
+              </div>
+              <div class="spec-item">
+                <span class="spec-item__label">SCALE RATIO</span>
+                <strong class="spec-item__value" data-archive-scale>1 : 14.5 (Sloop to Whale)</strong>
+              </div>
+              <div class="spec-item">
+                <span class="spec-item__label">HERO STAGE SYNC</span>
+                <a class="link-quiet" href="#home" data-sync-hero-link>View active plate in Hero ↑</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         04 / STORIES — FOUR COMPASS INDEXES (PEOPLE · PLACES · OCEANS · IDEAS)
+         WITH NEON-ORBIT-BORDER ON SELECTED FIELD DOSSIER
+         ===================================================================== -->
+    <section class="section section--slate" id="stories" aria-labelledby="stories-heading">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="section-header__meta">
+            <span class="eyebrow">04 / COMPASS INDEX · PEOPLE · PLACES · OCEANS · IDEAS</span>
+            <h2 class="section-title" id="stories-heading">Field notes indexed by the four coordinates of curiosity.</h2>
+          </div>
+          <div class="topic-filters" role="group" aria-label="Filter stories by compass index">
+            <button class="topic-filter" type="button" data-topic-btn="all" aria-pressed="true">ALL (4)</button>
+            <button class="topic-filter" type="button" data-topic-btn="people" aria-pressed="false">PEOPLE</button>
+            <button class="topic-filter" type="button" data-topic-btn="places" aria-pressed="false">PLACES</button>
+            <button class="topic-filter" type="button" data-topic-btn="oceans" aria-pressed="false">OCEANS</button>
+            <button class="topic-filter" type="button" data-topic-btn="ideas" aria-pressed="false">IDEAS</button>
+          </div>
+        </div>
+
+        <div class="stories-grid" data-reveal>
+          <!-- Card 1: PEOPLE -->
+          <article class="story-card neon-orbit-card is-active" data-story-card data-topic="people">
+            <div class="story-card__top">
+              <span class="story-card__category">01 · PEOPLE</span>
+              <button class="bookmark-heart" type="button" data-bookmark-btn aria-pressed="true" aria-label="Save story: The Two Watchkeepers">
+                <svg class="bookmark-heart__svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path class="bookmark-heart__path" d="M12 20.4l-1.45-1.32C5.4 14.36 2 11.28 2 7.5 2 4.42 4.42 2 7.5 2c1.74 0 3.41.81 4.5 2.09C13.09 2.81 14.76 2 16.5 2 19.58 2 22 4.42 22 7.5c0 3.78-3.4 6.86-8.55 11.58L12 20.4z"></path>
+                </svg>
+              </button>
+            </div>
+            <h3 class="story-card__title">The Two Watchkeepers in Red Oilskins</h3>
+            <p class="story-card__body">
+              Aboard the 16-foot wooden boat, acoustic cartographer Clara Vance and helmsman Mateo Solis record hydrophone pulses by hand—never starting an engine within three nautical miles of a resting whale.
+            </p>
+            <div class="story-card__footer">
+              <span class="story-card__meta">LOGGED AT 04:18 UTC · DRIFTING</span>
+              <button class="story-card__select" type="button" data-select-card aria-pressed="true">Active Dossier</button>
+            </div>
+          </article>
+
+          <!-- Card 2: PLACES -->
+          <article class="story-card neon-orbit-card" data-story-card data-topic="places">
+            <div class="story-card__top">
+              <span class="story-card__category">02 · PLACES</span>
+              <button class="bookmark-heart" type="button" data-bookmark-btn aria-pressed="false" aria-label="Save story: Cape Meridian Lighthouse">
+                <svg class="bookmark-heart__svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path class="bookmark-heart__path" d="M12 20.4l-1.45-1.32C5.4 14.36 2 11.28 2 7.5 2 4.42 4.42 2 7.5 2c1.74 0 3.41.81 4.5 2.09C13.09 2.81 14.76 2 16.5 2 19.58 2 22 4.42 22 7.5c0 3.78-3.4 6.86-8.55 11.58L12 20.4z"></path>
+                </svg>
+              </button>
+            </div>
+            <h3 class="story-card__title">The Pine Headland &amp; Red Lantern Beacon</h3>
+            <p class="story-card__body">
+              Rising from basalt stacks on the eastern horizon, the headland lighthouse sweeps a crimson Fresnel beam every twelve seconds, guiding night-drifting vessels past the submerged canyon rim.
+            </p>
+            <div class="story-card__footer">
+              <span class="story-card__meta">BEARING 084° E · RANGE 18 NM</span>
+              <button class="story-card__select" type="button" data-select-card aria-pressed="false">Focus Dossier</button>
+            </div>
+          </article>
+
+          <!-- Card 3: OCEANS -->
+          <article class="story-card neon-orbit-card" data-story-card data-topic="oceans">
+            <div class="story-card__top">
+              <span class="story-card__category">03 · OCEANS</span>
+              <button class="bookmark-heart" type="button" data-bookmark-btn aria-pressed="false" aria-label="Save story: Columnar Sunbeams and Deep Silence">
+                <svg class="bookmark-heart__svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path class="bookmark-heart__path" d="M12 20.4l-1.45-1.32C5.4 14.36 2 11.28 2 7.5 2 4.42 4.42 2 7.5 2c1.74 0 3.41.81 4.5 2.09C13.09 2.81 14.76 2 16.5 2 19.58 2 22 4.42 22 7.5c0 3.78-3.4 6.86-8.55 11.58L12 20.4z"></path>
+                </svg>
+              </button>
+            </div>
+            <h3 class="story-card__title">Refracted Sunbeams Through the Thermocline</h3>
+            <p class="story-card__body">
+              Below the thin silver skin of the sea, columns of refracted light pierce 200 meters of Prussian blue water while reef-dwelling schools circle the basalt shelves in near-total stillness.
+            </p>
+            <div class="story-card__footer">
+              <span class="story-card__meta">SALINITY 35.4 PSU · SECCHI 42 M</span>
+              <button class="story-card__select" type="button" data-select-card aria-pressed="false">Focus Dossier</button>
+            </div>
+          </article>
+
+          <!-- Card 4: IDEAS -->
+          <article class="story-card neon-orbit-card" data-story-card data-topic="ideas">
+            <div class="story-card__top">
+              <span class="story-card__category">04 · IDEAS</span>
+              <button class="bookmark-heart" type="button" data-bookmark-btn aria-pressed="false" aria-label="Save story: Asymmetry of Scale">
+                <svg class="bookmark-heart__svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path class="bookmark-heart__path" d="M12 20.4l-1.45-1.32C5.4 14.36 2 11.28 2 7.5 2 4.42 4.42 2 7.5 2c1.74 0 3.41.81 4.5 2.09C13.09 2.81 14.76 2 16.5 2 19.58 2 22 4.42 22 7.5c0 3.78-3.4 6.86-8.55 11.58L12 20.4z"></path>
+                </svg>
+              </button>
+            </div>
+            <h3 class="story-card__title">Different Scales, The Same Unhurried Curiosity</h3>
+            <p class="story-card__body">
+              Why does a sixty-ton mammal pause beneath a fragile cedar hull? Our archive treats marine science not as conquest, but as mutual observation across radically different scales of life.
+            </p>
+            <div class="story-card__footer">
+              <span class="story-card__meta">ESSAY NO. 14 · 6 MIN READ</span>
+              <button class="story-card__select" type="button" data-select-card aria-pressed="false">Focus Dossier</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         05 / ABOUT & DISPATCH — ACOUSTIC LOG & EXPEDITION CONTACT
+         ===================================================================== -->
+    <section class="section section--midnight" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid" data-reveal>
+          <div class="about-card">
+            <span class="eyebrow">05 / ABOUT THE ATLAS OCEAN LOG</span>
+            <h2 class="section-title" id="about-heading">An open monograph of quiet maritime encounters.</h2>
+            <p class="about-card__lead">
+              ATLAS is an independent oceanic journal and bathymetric archive documenting unhurried encounters between small-craft sailors, marine acoustics researchers, and pelagic wildlife.
+            </p>
+            <dl class="telemetry-ledger">
+              <div class="telemetry-ledger__row">
+                <dt>PRIMARY STATION</dt>
+                <dd>25.2048° N · 55.2708° E (Surface to Hadal Transect)</dd>
+              </div>
+              <div class="telemetry-ledger__row">
+                <dt>ACTIVE COMPANION</dt>
+                <dd data-summary-companion>01 / Ocean Log · Crimson Leviathan &amp; Red Sloop</dd>
+              </div>
+              <div class="telemetry-ledger__row">
+                <dt>SELECTED STRATUM</dt>
+                <dd data-summary-depth>0 m · Epipelagic Surface (1.0 ATM)</dd>
+              </div>
+              <div class="telemetry-ledger__row">
+                <dt>SAVED FIELD NOTES</dt>
+                <dd data-summary-saved>1 story bookmarked in current session</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="dispatch-card" id="dispatch">
+            <span class="eyebrow">EXPEDITION DISPATCH &amp; ARCHIVE LICENSING</span>
+            <h3 class="dispatch-card__title">Request full bathymetric plates or contribute a log entry.</h3>
+            <p class="dispatch-card__desc">
+              Send your current configuration (active log plate and depth stratum) directly to the editorial desk via email, or inspect the interactive coordinate map.
+            </p>
+            <div class="dispatch-card__actions">
+              <a
+                class="btn btn--primary"
+                data-dispatch-mailto
+                href="mailto:dispatch@atlas-ocean.example?subject=ATLAS%20Ocean%20Log%20Enquiry%20(01%20Ocean%20Log)"
+              >
+                DISPATCH LOG VIA EMAIL →
+              </a>
+              <button class="btn btn--outline" type="button" data-open-dialog="map-dialog">
+                OPEN BATHYMETRIC MAP ○
+              </button>
+            </div>
+            <p class="dispatch-card__note">
+              Static template showcase (Demo only — no server-side database or automated satellite uplink; email links open your mail client directly).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <span class="brand__dot brand__dot--light" aria-hidden="true"></span>
+        <strong>ATLAS · 01 / OCEAN LOG</strong>
+        <span class="site-footer__coords">25.2048° N &nbsp; 55.2708° E · DEPTH UNKNOWN · LIFE EVERYWHERE</span>
+      </div>
+      <div class="site-footer__links">
+        <a href="#home">Top ↑</a>
+        <a href="#journey">Journey</a>
+        <a href="#archive">Archive</a>
+        <a href="#stories">Stories</a>
+        <a href="mailto:dispatch@atlas-ocean.example">dispatch@atlas-ocean.example</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =======================================================================
+       INTERACTIVE DIALOG 1 — BATHYMETRIC COORDINATE MAP (#map-dialog)
+       ======================================================================= -->
+  <dialog class="modal" id="map-dialog" aria-labelledby="map-dialog-title">
+    <div class="modal__box">
+      <div class="modal__header">
+        <div>
+          <p class="eyebrow">BATHYMETRIC WAYPOINT CHART · DEMO ONLY</p>
+          <h2 class="modal__title" id="map-dialog-title">Interactive Ocean Coordinate &amp; Depth Transect</h2>
+        </div>
+        <button class="modal__close" type="button" data-close-dialog aria-label="Close coordinate map dialog">✕</button>
+      </div>
+      <p class="modal__desc">
+        Select an oceanic waypoint below to synchronize the Hero illustration plate, coordinate telemetry, and depth ruler.
+      </p>
+      <div class="waypoint-grid">
+        <button class="waypoint-card" type="button" data-dialog-scene="0" data-dialog-depth="0">
+          <span class="waypoint-card__code">WAYPOINT 01 · 25.2048° N, 55.2708° E</span>
+          <strong class="waypoint-card__name">Crimson Leviathan &amp; Red Sloop (0 m Surface)</strong>
+          <span class="waypoint-card__meta">Full Moon · Lighthouse Bearing 084° E · Sunlit Thermocline</span>
+        </button>
+        <button class="waypoint-card" type="button" data-dialog-scene="1" data-dialog-depth="200">
+          <span class="waypoint-card__code">WAYPOINT 02 · 34.6937° N, 135.5023° E</span>
+          <strong class="waypoint-card__name">Twilight Ochre Finback &amp; Lantern Skiff (200 m)</strong>
+          <span class="waypoint-card__meta">Mesopelagic Dusk · Warm Amber Horizon · 21.0 ATM</span>
+        </button>
+        <button class="waypoint-card" type="button" data-dialog-scene="2" data-dialog-depth="1000">
+          <span class="waypoint-card__code">WAYPOINT 03 · 64.1466° N, 21.9426° W</span>
+          <strong class="waypoint-card__name">Abyssal Pelagic Whale &amp; Research Yawl (1,000 m)</strong>
+          <span class="waypoint-card__meta">Midnight Zone · Bioluminescent Upwelling · 101.0 ATM</span>
+        </button>
+      </div>
+      <div class="modal__footer">
+        <a class="btn btn--primary" href="mailto:dispatch@atlas-ocean.example?subject=ATLAS%20Chart%20Coordinates%20Request">Request Full Nautical Chart</a>
+        <button class="btn btn--outline" type="button" data-close-dialog>Close Chart</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- =======================================================================
+       INTERACTIVE DIALOG 2 — LIVE TELEMETRY & HYDROPHONE STATUS (#telemetry-dialog)
+       ======================================================================= -->
+  <dialog class="modal" id="telemetry-dialog" aria-labelledby="telemetry-dialog-title">
+    <div class="modal__box">
+      <div class="modal__header">
+        <div>
+          <p class="eyebrow">HYDROPHONE BUOY STATUS · ONLINE ●</p>
+          <h2 class="modal__title" id="telemetry-dialog-title">Acoustic &amp; Environmental Telemetry</h2>
+        </div>
+        <button class="modal__close" type="button" data-close-dialog aria-label="Close telemetry status dialog">✕</button>
+      </div>
+      <p class="modal__desc">
+        This static template demonstrates an expedition telemetry readout (Demo only — no live satellite stream). Use the controls below to jump directly to any depth stratum:
+      </p>
+      <div class="waypoint-grid">
+        <button class="waypoint-card" type="button" data-dialog-depth="0">
+          <span class="waypoint-card__code">0 m · SURFACE LOG</span>
+          <strong class="waypoint-card__name">Epipelagic Zone · 1.0 ATM · 21.4 °C</strong>
+        </button>
+        <button class="waypoint-card" type="button" data-dialog-depth="1000">
+          <span class="waypoint-card__code">1,000 m · MIDNIGHT LOG</span>
+          <strong class="waypoint-card__name">Bathypelagic Zone · 101.0 ATM · 4.1 °C</strong>
+        </button>
+        <button class="waypoint-card" type="button" data-dialog-depth="10000">
+          <span class="waypoint-card__code">10,000 m · HADAL TRENCH</span>
+          <strong class="waypoint-card__name">Hadalpelagic Floor · 1,086 ATM · 1.9 °C</strong>
+        </button>
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn--outline" type="button" data-close-dialog>Return to Log</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

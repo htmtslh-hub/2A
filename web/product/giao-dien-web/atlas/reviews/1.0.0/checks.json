@@ -1,0 +1,2475 @@
+{
+  "slug": "atlas",
+  "version": "1.0.0",
+  "date": "2026-10-24T01:43:59.527Z",
+  "os": "win32",
+  "zipBytes": 530144,
+  "sha256": "359f1d58bc4c70390df6d745b921633da0dd8ad3137e961bd90e9ee7152c46eb",
+  "exception": true,
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#main"
+          },
+          {
+            "label": "ATLAS Ocean Log — Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#home"
+          },
+          {
+            "label": "JOURNEY",
+            "href": "#journey",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#journey"
+          },
+          {
+            "label": "ARCHIVE",
+            "href": "#archive",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#archive"
+          },
+          {
+            "label": "STORIES",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "ABOUT",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#about"
+          },
+          {
+            "label": "BEGIN JOURNEY →",
+            "href": "#journey",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#journey"
+          },
+          {
+            "label": "PEOPLE",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "PLACES",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "OCEANS",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "IDEAS",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "View active plate in Hero ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#home"
+          },
+          {
+            "label": "DISPATCH LOG VIA EMAIL →",
+            "href": "mailto:dispatch@atlas-ocean.example?subject=ATLAS%20Ocean%20Log%20Enquiry%20(01%20Ocean%20Log)",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:dispatch@atlas-ocean.example?subject=ATLAS%20Ocean%20Log%20Enquiry%20(01%20Ocean%20Log)"
+          },
+          {
+            "label": "Top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#home"
+          },
+          {
+            "label": "Journey",
+            "href": "#journey",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#journey"
+          },
+          {
+            "label": "Archive",
+            "href": "#archive",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#archive"
+          },
+          {
+            "label": "Stories",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "dispatch@atlas-ocean.example",
+            "href": "mailto:dispatch@atlas-ocean.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:dispatch@atlas-ocean.example"
+          },
+          {
+            "label": "Request Full Nautical Chart",
+            "href": "mailto:dispatch@atlas-ocean.example?subject=ATLAS%20Chart%20Coordinates%20Request",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:dispatch@atlas-ocean.example?subject=ATLAS%20Chart%20Coordinates%20Request"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 860,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              20,
+              19,
+              17
+            ],
+            "ratio": 16.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "ATLAS",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              216,
+              210,
+              200
+            ],
+            "ratio": 12.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "01 / OCEAN LOG",
+            "colour": "rgb(36, 34, 31)",
+            "background": [
+              192,
+              184,
+              173
+            ],
+            "ratio": 8.08,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__title-line",
+            "text": "Small Stories",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              186,
+              182,
+              170
+            ],
+            "ratio": 9.16,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__title-line",
+            "text": "Vast Oceans",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              190,
+              183,
+              172
+            ],
+            "ratio": 9.34,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "A tiny boat.",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              193,
+              182,
+              167
+            ],
+            "ratio": 9.3,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "A giant companion.",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              218,
+              205,
+              187
+            ],
+            "ratio": 11.88,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "Different scales.",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              222,
+              205,
+              181
+            ],
+            "ratio": 11.94,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "The same curiosity.",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              221,
+              205,
+              181
+            ],
+            "ratio": 11.91,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__cta-box",
+            "text": "BEGIN JOURNEY →",
+            "colour": "rgb(244, 241, 234)",
+            "background": [
+              23,
+              21,
+              18
+            ],
+            "ratio": 16.15,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__cta-ghost",
+            "text": "EXPLORE MAP",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              210,
+              198,
+              177
+            ],
+            "ratio": 11.01,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "PEOPLE",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              156,
+              157,
+              152
+            ],
+            "ratio": 6.8,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "PLACES",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              167,
+              164,
+              156
+            ],
+            "ratio": 7.46,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "OCEANS",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              177,
+              172,
+              162
+            ],
+            "ratio": 8.22,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "IDEAS",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              183,
+              178,
+              166
+            ],
+            "ratio": 8.78,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "BENEATH",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              66,
+              83,
+              89
+            ],
+            "ratio": 7.06,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "THE SURFACE",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              40,
+              58,
+              64
+            ],
+            "ratio": 10.42,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "A LARGER",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              14,
+              25,
+              31
+            ],
+            "ratio": 15.66,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "KIND OF SILENCE",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              28,
+              40,
+              46
+            ],
+            "ratio": 13.24,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "25.2048° N",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              29,
+              36,
+              40
+            ],
+            "ratio": 13.81,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "55.2708° E",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              71,
+              93,
+              96
+            ],
+            "ratio": 6.14,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "DEPTH UNKNOWN",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              70,
+              78,
+              83
+            ],
+            "ratio": 7.45,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "LIFE EVERYWHERE",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              2,
+              6,
+              12
+            ],
+            "ratio": 17.83,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "depth-ruler__label",
+            "text": "0 m",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              25,
+              74,
+              89
+            ],
+            "ratio": 8.52,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "EXPLORE",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              27,
+              71,
+              82
+            ],
+            "ratio": 6.8,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "THE DEPTHS",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              21,
+              65,
+              75
+            ],
+            "ratio": 7.45,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "depth-ruler__label",
+            "text": "200 m",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              9,
+              46,
+              54
+            ],
+            "ratio": 12.67,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "depth-ruler__label",
+            "text": "1,000 m",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              13,
+              47,
+              54
+            ],
+            "ratio": 12.49,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "depth-ruler__label",
+            "text": "4,000 m",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              3,
+              7,
+              11
+            ],
+            "ratio": 17.75,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "depth-ruler__label",
+            "text": "10,000 m",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              6,
+              17,
+              23
+            ],
+            "ratio": 16.76,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "02 / SCROLL WORD MANIFESTO & BATHYMETRIC",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 12.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-title",
+            "text": "Every fathom rewrites the scale of our q",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 16.16,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle button",
+            "text": "Pause motion",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 13.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "scroll-word is-lit",
+            "text": "At",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 13.27,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "scroll-word is-lit scroll-word--accent",
+            "text": "red",
+            "colour": "rgb(255, 150, 135)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 7.17,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "scroll-word scroll-word--cyan is-lit",
+            "text": "sunlight",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 10.19,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "scroll-word-stage__readout",
+            "text": "SCROLL PROGRESS · 100% ACTIVE",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 10.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "chip-btn",
+            "text": "01 Surface Verse",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 16.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "strata-tab__depth",
+            "text": "0 m",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              16,
+              51,
+              69
+            ],
+            "ratio": 8.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "strata-tab__name",
+            "text": "Epipelagic Surface",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              16,
+              51,
+              69
+            ],
+            "ratio": 8.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "strata-tab__depth",
+            "text": "200 m",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 10.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "stratum-panel__code",
+            "text": "ZONE 01 · EPIPELAGIC SURFACE (0 m – 200 ",
+            "colour": "rgb(240, 202, 120)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 9.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "03 / EXPEDITION ARCHIVE · SKILL-MORGE CH",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              7,
+              29,
+              40
+            ],
+            "ratio": 11.65,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-title",
+            "text": "Three companions across three oceanic li",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              7,
+              29,
+              40
+            ],
+            "ratio": 15.17,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-lead",
+            "text": "Navigate forward or backward through the",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              7,
+              29,
+              40
+            ],
+            "ratio": 11.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "morge-slide__badge",
+            "text": "01 / OCEAN LOG · 25.2048° N, 55.2708° E",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              4,
+              18,
+              25
+            ],
+            "ratio": 16.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "morge-counter",
+            "text": "01 / 03 · CRIMSON LEVIATHAN",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              7,
+              29,
+              40
+            ],
+            "ratio": 15.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "morge-thumb",
+            "text": "01 Crimson Log",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              16,
+              51,
+              69
+            ],
+            "ratio": 11.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "morge-detail__eyebrow",
+            "text": "LOG 01 · SURFACE COMPANIONSHIP",
+            "colour": "rgb(255, 150, 135)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 7.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "spec-item__label",
+            "text": "COORDINATES",
+            "colour": "rgb(152, 184, 196)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 8.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "04 / COMPASS INDEX · PEOPLE · PLACES · O",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              9,
+              34,
+              46
+            ],
+            "ratio": 11.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-title",
+            "text": "Field notes indexed by the four coordina",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              9,
+              34,
+              46
+            ],
+            "ratio": 14.41,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "story-card__category",
+            "text": "01 · PEOPLE",
+            "colour": "rgb(240, 202, 120)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 9.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "story-card__title",
+            "text": "The Two Watchkeepers in Red Oilskins",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 13.27,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "story-card__body",
+            "text": "Aboard the 16-foot wooden boat, acoustic",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 10.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "story-card__meta",
+            "text": "LOGGED AT 04:18 UTC · DRIFTING",
+            "colour": "rgb(152, 184, 196)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 7.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "story-card__select",
+            "text": "Active Dossier",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 12.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "story-card__select",
+            "text": "Focus Dossier",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 16.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--primary",
+            "text": "DISPATCH LOG VIA EMAIL →",
+            "colour": "rgb(4, 18, 25)",
+            "background": [
+              108,
+              229,
+              245
+            ],
+            "ratio": 12.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "dispatch-card__note",
+            "text": "Static template showcase (Demo only — no",
+            "colour": "rgb(152, 184, 196)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 7.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-footer__coords",
+            "text": "25.2048° N   55.2708° E · DEPTH UNKNOWN ",
+            "colour": "rgb(152, 184, 196)",
+            "background": [
+              4,
+              18,
+              25
+            ],
+            "ratio": 9.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Top ↑",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              4,
+              18,
+              25
+            ],
+            "ratio": 12.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "BEGIN JOURNEY →",
+          "colour": "rgb(20, 19, 17)",
+          "width": "3px",
+          "ratio": 12.35
+        },
+        "overImageNeedsManualCheck": [
+          "01 / OCEAN LOG",
+          "Small Stories",
+          "Vast Oceans",
+          "A tiny boat.",
+          "A giant companion.",
+          "Different scales.",
+          "The same curiosity.",
+          "BEGIN JOURNEY →",
+          "EXPLORE MAP",
+          "PEOPLE",
+          "PLACES",
+          "OCEANS",
+          "IDEAS",
+          "BENEATH",
+          "THE SURFACE",
+          "A LARGER",
+          "KIND OF SILENCE",
+          "25.2048° N",
+          "55.2708° E",
+          "DEPTH UNKNOWN",
+          "LIFE EVERYWHERE",
+          "0 m",
+          "EXPLORE",
+          "THE DEPTHS",
+          "200 m",
+          "1,000 m",
+          "4,000 m",
+          "10,000 m"
+        ]
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".link-quiet",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    },
+    "firefox": {
+      "version": "155.0",
+      "structure": {
+        "lang": "en",
+        "h1": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "duplicateIds": [],
+        "headingJumps": [],
+        "badSvg": 0,
+        "links": [
+          {
+            "label": "Skip to main content",
+            "href": "#main",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#main"
+          },
+          {
+            "label": "ATLAS Ocean Log — Home",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#home"
+          },
+          {
+            "label": "JOURNEY",
+            "href": "#journey",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#journey"
+          },
+          {
+            "label": "ARCHIVE",
+            "href": "#archive",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#archive"
+          },
+          {
+            "label": "STORIES",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "ABOUT",
+            "href": "#about",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#about"
+          },
+          {
+            "label": "BEGIN JOURNEY →",
+            "href": "#journey",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#journey"
+          },
+          {
+            "label": "PEOPLE",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "PLACES",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "OCEANS",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "IDEAS",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "View active plate in Hero ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#home"
+          },
+          {
+            "label": "DISPATCH LOG VIA EMAIL →",
+            "href": "mailto:dispatch@atlas-ocean.example?subject=ATLAS%20Ocean%20Log%20Enquiry%20(01%20Ocean%20Log)",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:dispatch@atlas-ocean.example?subject=ATLAS%20Ocean%20Log%20Enquiry%20(01%20Ocean%20Log)"
+          },
+          {
+            "label": "Top ↑",
+            "href": "#home",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#home"
+          },
+          {
+            "label": "Journey",
+            "href": "#journey",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#journey"
+          },
+          {
+            "label": "Archive",
+            "href": "#archive",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#archive"
+          },
+          {
+            "label": "Stories",
+            "href": "#stories",
+            "ok": true,
+            "sameOrigin": true,
+            "url": "http://127.0.0.1:4328/atlas/index.html#stories"
+          },
+          {
+            "label": "dispatch@atlas-ocean.example",
+            "href": "mailto:dispatch@atlas-ocean.example",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:dispatch@atlas-ocean.example"
+          },
+          {
+            "label": "Request Full Nautical Chart",
+            "href": "mailto:dispatch@atlas-ocean.example?subject=ATLAS%20Chart%20Coordinates%20Request",
+            "ok": true,
+            "sameOrigin": false,
+            "url": "mailto:dispatch@atlas-ocean.example?subject=ATLAS%20Chart%20Coordinates%20Request"
+          }
+        ]
+      },
+      "viewports": [
+        {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "height": 900,
+          "smallTargets": []
+        },
+        {
+          "width": 820,
+          "scrollWidth": 820,
+          "clientWidth": 820,
+          "height": 1180,
+          "smallTargets": []
+        },
+        {
+          "width": 375,
+          "scrollWidth": 375,
+          "clientWidth": 375,
+          "height": 812,
+          "smallTargets": []
+        },
+        {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "height": 740,
+          "smallTargets": []
+        }
+      ],
+      "menu": {
+        "breakpoint": 860,
+        "ariaControls": true,
+        "open": true,
+        "openNoOverflow": true,
+        "escapeClosesAndFocuses": true,
+        "linkCloses": true,
+        "resetOnDesktop": true,
+        "closedBackOnMobile": true
+      },
+      "keyboard": {
+        "hiddenMenuSkipped": true,
+        "shiftTabBack": true,
+        "skipVisible": true,
+        "skipLandsInMain": true
+      },
+      "fallbacks": {
+        "zoom200": {
+          "width": 720,
+          "scrollWidth": 720,
+          "clientWidth": 720
+        },
+        "reducedMotion": {
+          "allVisible": true,
+          "runningAnimations": 0
+        },
+        "motionAfter5s": [],
+        "file": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "allVisible": true,
+          "styled": true
+        },
+        "noJsNoFont320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true,
+          "navLinksVisible": true
+        },
+        "offlineFile320": {
+          "width": 320,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "allVisible": true
+        }
+      },
+      "contrast": {
+        "pairs": [
+          {
+            "element": "skip-link",
+            "text": "Skip to main content",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              20,
+              19,
+              17
+            ],
+            "ratio": 16.3,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "brand__name",
+            "text": "ATLAS",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              216,
+              210,
+              200
+            ],
+            "ratio": 12.35,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "hero__eyebrow",
+            "text": "01 / OCEAN LOG",
+            "colour": "rgb(36, 34, 31)",
+            "background": [
+              192,
+              184,
+              173
+            ],
+            "ratio": 8.08,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__title-line",
+            "text": "Small Stories",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              190,
+              182,
+              168
+            ],
+            "ratio": 9.24,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__title-line",
+            "text": "Vast Oceans",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              190,
+              183,
+              172
+            ],
+            "ratio": 9.34,
+            "threshold": 3,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "A tiny boat.",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              192,
+              182,
+              166
+            ],
+            "ratio": 9.27,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "A giant companion.",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              222,
+              205,
+              181
+            ],
+            "ratio": 11.94,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "The same curiosity.",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              221,
+              204,
+              180
+            ],
+            "ratio": 11.82,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__cta-box",
+            "text": "BEGIN JOURNEY →",
+            "colour": "rgb(244, 241, 234)",
+            "background": [
+              23,
+              21,
+              18
+            ],
+            "ratio": 16.15,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "hero__cta-ghost",
+            "text": "EXPLORE MAP",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              209,
+              197,
+              176
+            ],
+            "ratio": 10.9,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "PEOPLE",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              160,
+              158,
+              154
+            ],
+            "ratio": 6.94,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "PLACES",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              168,
+              164,
+              156
+            ],
+            "ratio": 7.48,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "OCEANS",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              177,
+              172,
+              163
+            ],
+            "ratio": 8.22,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "IDEAS",
+            "colour": "rgb(20, 19, 17)",
+            "background": [
+              182,
+              178,
+              166
+            ],
+            "ratio": 8.76,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "BENEATH",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              74,
+              91,
+              99
+            ],
+            "ratio": 6.21,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "THE SURFACE",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              32,
+              54,
+              58
+            ],
+            "ratio": 11.17,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "A LARGER",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              15,
+              25,
+              31
+            ],
+            "ratio": 15.64,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "KIND OF SILENCE",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              33,
+              45,
+              51
+            ],
+            "ratio": 12.39,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "25.2048° N",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              32,
+              38,
+              43
+            ],
+            "ratio": 13.43,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "55.2708° E",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              81,
+              102,
+              107
+            ],
+            "ratio": 5.33,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "DEPTH UNKNOWN",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              62,
+              79,
+              84
+            ],
+            "ratio": 7.52,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "LIFE EVERYWHERE",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              1,
+              6,
+              13
+            ],
+            "ratio": 17.85,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "depth-ruler__label",
+            "text": "0 m",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              25,
+              74,
+              89
+            ],
+            "ratio": 8.52,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "EXPLORE",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              27,
+              72,
+              82
+            ],
+            "ratio": 6.72,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "SPAN",
+            "text": "THE DEPTHS",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              21,
+              65,
+              75
+            ],
+            "ratio": 7.45,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "depth-ruler__label",
+            "text": "200 m",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              10,
+              47,
+              55
+            ],
+            "ratio": 12.5,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "depth-ruler__label",
+            "text": "1,000 m",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              16,
+              49,
+              56
+            ],
+            "ratio": 12.14,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "depth-ruler__label",
+            "text": "4,000 m",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              3,
+              7,
+              11
+            ],
+            "ratio": 17.75,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "depth-ruler__label",
+            "text": "10,000 m",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              4,
+              15,
+              21
+            ],
+            "ratio": 17.01,
+            "threshold": 4.5,
+            "overImage": true,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "02 / SCROLL WORD MANIFESTO & BATHYMETRIC",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 12.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-title",
+            "text": "Every fathom rewrites the scale of our q",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 16.16,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "motion-toggle button",
+            "text": "Pause motion",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 13.27,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "scroll-word is-lit",
+            "text": "At",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 13.27,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "scroll-word is-lit scroll-word--accent",
+            "text": "red",
+            "colour": "rgb(255, 150, 135)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 7.17,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "scroll-word scroll-word--cyan is-lit",
+            "text": "sunlight",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 10.19,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "scroll-word-stage__readout",
+            "text": "SCROLL PROGRESS · 100% ACTIVE",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 10.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "chip-btn",
+            "text": "01 Surface Verse",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 16.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "strata-tab__depth",
+            "text": "0 m",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              16,
+              51,
+              69
+            ],
+            "ratio": 8.96,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "strata-tab__name",
+            "text": "Epipelagic Surface",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              16,
+              51,
+              69
+            ],
+            "ratio": 8.9,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "strata-tab__depth",
+            "text": "200 m",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 10.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "stratum-panel__code",
+            "text": "ZONE 01 · EPIPELAGIC SURFACE (0 m – 200 ",
+            "colour": "rgb(240, 202, 120)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 9.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "03 / EXPEDITION ARCHIVE · SKILL-MORGE CH",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              7,
+              29,
+              40
+            ],
+            "ratio": 11.65,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-title",
+            "text": "Three companions across three oceanic li",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              7,
+              29,
+              40
+            ],
+            "ratio": 15.17,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-lead",
+            "text": "Navigate forward or backward through the",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              7,
+              29,
+              40
+            ],
+            "ratio": 11.58,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "morge-slide__badge",
+            "text": "01 / OCEAN LOG · 25.2048° N, 55.2708° E",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              4,
+              18,
+              25
+            ],
+            "ratio": 16.68,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "morge-counter",
+            "text": "01 / 03 · CRIMSON LEVIATHAN",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              7,
+              29,
+              40
+            ],
+            "ratio": 15.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "morge-thumb",
+            "text": "01 Crimson Log",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              16,
+              51,
+              69
+            ],
+            "ratio": 11.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "morge-detail__eyebrow",
+            "text": "LOG 01 · SURFACE COMPANIONSHIP",
+            "colour": "rgb(255, 150, 135)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 7.17,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "spec-item__label",
+            "text": "COORDINATES",
+            "colour": "rgb(152, 184, 196)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 8.75,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "eyebrow",
+            "text": "04 / COMPASS INDEX · PEOPLE · PLACES · O",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              9,
+              34,
+              46
+            ],
+            "ratio": 11.07,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "section-title",
+            "text": "Field notes indexed by the four coordina",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              9,
+              34,
+              46
+            ],
+            "ratio": 14.41,
+            "threshold": 3,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "story-card__category",
+            "text": "01 · PEOPLE",
+            "colour": "rgb(240, 202, 120)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 9.66,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "story-card__title",
+            "text": "The Two Watchkeepers in Red Oilskins",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 13.27,
+            "threshold": 3,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "story-card__body",
+            "text": "Aboard the 16-foot wooden boat, acoustic",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 10.13,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "story-card__meta",
+            "text": "LOGGED AT 04:18 UTC · DRIFTING",
+            "colour": "rgb(152, 184, 196)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 7.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "story-card__select",
+            "text": "Active Dossier",
+            "colour": "rgb(108, 229, 245)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 12.41,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "story-card__select",
+            "text": "Focus Dossier",
+            "colour": "rgb(243, 240, 232)",
+            "background": [
+              5,
+              22,
+              31
+            ],
+            "ratio": 16.16,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "pixels",
+            "pass": true
+          },
+          {
+            "element": "btn btn--primary",
+            "text": "DISPATCH LOG VIA EMAIL →",
+            "colour": "rgb(4, 18, 25)",
+            "background": [
+              108,
+              229,
+              245
+            ],
+            "ratio": 12.81,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "dispatch-card__note",
+            "text": "Static template showcase (Demo only — no",
+            "colour": "rgb(152, 184, 196)",
+            "background": [
+              12,
+              41,
+              56
+            ],
+            "ratio": 7.19,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "site-footer__coords",
+            "text": "25.2048° N   55.2708° E · DEPTH UNKNOWN ",
+            "colour": "rgb(152, 184, 196)",
+            "background": [
+              4,
+              18,
+              25
+            ],
+            "ratio": 9.03,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          },
+          {
+            "element": "A",
+            "text": "Top ↑",
+            "colour": "rgb(194, 215, 223)",
+            "background": [
+              4,
+              18,
+              25
+            ],
+            "ratio": 12.73,
+            "threshold": 4.5,
+            "overImage": false,
+            "method": "css",
+            "pass": true
+          }
+        ],
+        "focus": {
+          "element": "BEGIN JOURNEY →",
+          "colour": "rgb(20, 19, 17)",
+          "width": "3px",
+          "ratio": 12.35
+        },
+        "overImageNeedsManualCheck": [
+          "01 / OCEAN LOG",
+          "Small Stories",
+          "Vast Oceans",
+          "A tiny boat.",
+          "A giant companion.",
+          "The same curiosity.",
+          "BEGIN JOURNEY →",
+          "EXPLORE MAP",
+          "PEOPLE",
+          "PLACES",
+          "OCEANS",
+          "IDEAS",
+          "BENEATH",
+          "THE SURFACE",
+          "A LARGER",
+          "KIND OF SILENCE",
+          "25.2048° N",
+          "55.2708° E",
+          "DEPTH UNKNOWN",
+          "LIFE EVERYWHERE",
+          "0 m",
+          "EXPLORE",
+          "THE DEPTHS",
+          "200 m",
+          "1,000 m",
+          "4,000 m",
+          "10,000 m"
+        ]
+      },
+      "hover": [
+        {
+          "selector": ".btn",
+          "failing": []
+        },
+        {
+          "selector": ".button",
+          "failing": []
+        },
+        {
+          "selector": ".site-nav a",
+          "failing": []
+        },
+        {
+          "selector": ".link-quiet",
+          "failing": []
+        },
+        {
+          "selector": ".site-footer a",
+          "failing": []
+        }
+      ],
+      "axe": [],
+      "console": [],
+      "network": []
+    }
+  },
+  "zipEntries": [
+    "atlas/assets/css/style.css",
+    "atlas/assets/img/depth-sonar-thumb.webp",
+    "atlas/assets/img/hero-ocean-01.webp",
+    "atlas/assets/img/hero-ocean-02.webp",
+    "atlas/assets/img/hero-ocean-03.webp",
+    "atlas/assets/js/main.js",
+    "atlas/CUSTOMISE.md",
+    "atlas/index.html",
+    "atlas/LICENCE.txt",
+    "atlas/README.md"
+  ],
+  "files": [
+    "CUSTOMISE.md",
+    "LICENCE.txt",
+    "README.md",
+    "assets/css/style.css",
+    "assets/img/depth-sonar-thumb.webp",
+    "assets/img/hero-ocean-01.webp",
+    "assets/img/hero-ocean-02.webp",
+    "assets/img/hero-ocean-03.webp",
+    "assets/js/main.js",
+    "index.html"
+  ],
+  "sourceMatchesExtracted": true,
+  "docs": {
+    "steps": 10,
+    "prompts": 12,
+    "unfilledMarkers": [],
+    "countErrors": []
+  },
+  "failures": []
+}

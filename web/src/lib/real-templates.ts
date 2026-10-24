@@ -46,6 +46,97 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t96: {
+    "slug": "atlas",
+    "cat": "education",
+    "version": "1.0.0",
+    "video": true,
+    "copy": {
+      "vi": {
+        "name": "Atlas Ocean Log",
+        "desc": "Tạp chí thám hiểm đại dương & hải dương học chia hai tầng mặt nước \"01 / OCEAN LOG — Small Stories / Vast Oceans\" với 4 tranh minh họa WebP tự tạo (cá voi đỏ thẫm cõng thuyền buồm đỏ dưới trăng tròn và ngọn hải đăng, cá voi hoàng hôn và cá voi biển sâu), thanh tọa độ 25.2048° N 55.2708° E | ONLINE kèm sóng âm, thước đo độ sâu thẳng đứng 0 m → 10,000 m, đoạn văn Scroll Word sáng dần từng chữ theo cuộn (#journey), băng chuyền nhật ký chuyển hướng hai chiều skill-morge (#archive) và hồ sơ la bàn PEOPLE · PLACES · OCEANS · IDEAS viền sáng xoay neon-orbit-border (#stories).",
+        "tags": [
+          "Oceanographic Journal",
+          "Scroll Word & Morge",
+          "Original WebP Art"
+        ]
+      },
+      "en": {
+        "name": "Atlas Ocean Log",
+        "desc": "An editorial split-waterline maritime expedition and oceanographic storytelling template (\"01 / OCEAN LOG — Small Stories / Vast Oceans\") featuring 4 original WebP illustrations (crimson whale & red-sailed boat beneath a full moon and coastal lighthouse, twilight finback, and abyssal pelagic whale), live 25.2048° N 55.2708° E | ONLINE telemetry, an interactive 0 m → 10,000 m vertical depth ruler, a 49-word Scroll Word illumination manifesto (#journey), a directional skill-morge expedition archive carousel (#archive), and PEOPLE · PLACES · OCEANS · IDEAS field dossiers with a rotating neon-orbit-border (#stories).",
+        "tags": [
+          "Oceanographic Journal",
+          "Scroll Word & Morge",
+          "Original WebP Art"
+        ]
+      },
+      "zh": {
+        "name": "Atlas Ocean Log",
+        "desc": "双层海平面海洋科考与叙事专题模板《01 / OCEAN LOG — Small Stories / Vast Oceans》，配备 4 张原创 WebP 插画（满月与海岸灯塔下托起红帆木船的绯红巨鲸、暮色长须鲸与深海鲸群）、25.2048° N 55.2708° E | ONLINE 遥测顶栏、0 m 至 10,000 m 垂直深度标尺、49 词随滚动逐词点亮的 Scroll Word 宣言（#journey）、skill-morge 双向科考档案轮播（#archive）及带 neon-orbit-border 流光边框的 PEOPLE · PLACES · OCEANS · IDEAS 指南针档案（#stories）。",
+        "tags": [
+          "海洋科考日志",
+          "逐词滚动与双向轮播",
+          "原创 WebP 插画"
+        ]
+      }
+    },
+    "specs": {
+      "vi": [
+        [
+          "Định dạng",
+          "HTML5 / CSS3 / Vanilla JS thuần"
+        ],
+        [
+          "Gói tải",
+          "10 files · 4 ảnh WebP tự tạo (518 KB ZIP)"
+        ],
+        [
+          "Tương tác",
+          "Thước độ sâu 0–10,000 m · Scroll Word · Morge carousel · Neon Orbit"
+        ],
+        [
+          "Phạm vi",
+          "Tạp chí hải dương học & nhật ký thám hiểm · không cần bước build"
+        ]
+      ],
+      "en": [
+        [
+          "Format",
+          "Plain HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "Package",
+          "10 files · 4 original WebP plates (518 KB ZIP)"
+        ],
+        [
+          "Interaction",
+          "0–10,000 m depth ruler · Scroll Word · Morge carousel · Neon Orbit"
+        ],
+        [
+          "Scope",
+          "Oceanographic journal & field archive · zero build step"
+        ]
+      ],
+      "zh": [
+        [
+          "格式",
+          "原生 HTML5 / CSS3 / Vanilla JS"
+        ],
+        [
+          "下载包",
+          "10 个文件 · 4 张原创 WebP 插画（518 KB ZIP）"
+        ],
+        [
+          "交互",
+          "0–10,000 m 深度标尺 · 逐词点亮 · Morge 轮播 · 流光边框"
+        ],
+        [
+          "范围",
+          "海洋科考与故事专题 · 零构建步骤"
+        ]
+      ]
+    }
+  },
   t95: {
     "slug": "lauberhorn-ridge",
     "cat": "commerce",

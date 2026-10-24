@@ -1,0 +1,65 @@
+{
+  "slug": "atlas",
+  "version": "1.0.0",
+  "date": "2026-10-24",
+  "reference": {
+    "path": "C:/Users/Lenovo/.gemini/antigravity/brain/ca9b2468-e37e-4c72-8a85-539253fcfc29/.user_uploaded/media_1792803636533_6d1535b9.png",
+    "width": 940,
+    "height": 530,
+    "sha256": "67bb01f9ae70d5cd1f794eb81f894f80c478c18ee35b1f3671adb5a03cfcbfb1",
+    "excludedViewerOverlays": [
+      "Bottom-left AI badge ('Được sửa đổi bằng AI', x:20..362, y:422..512)",
+      "Right expand button ('↙↗', x:838..925, y:317..404)",
+      "Bottom-right image search pill ('Tìm kiếm hình ảnh 🔍✨', x:583..925, y:425..512)"
+    ]
+  },
+  "candidate": {
+    "viewport940x530": "reviews/1.0.0/candidate-940x530.png",
+    "viewport1440x900": "reviews/1.0.0/candidate-1440x900.png",
+    "visualDiff": {
+      "sideBySide": "reviews/1.0.0/visual-diff/side-by-side.png",
+      "overlay": "reviews/1.0.0/visual-diff/overlay.png",
+      "diff": "reviews/1.0.0/visual-diff/diff.png"
+    }
+  },
+  "threshold": 95.0,
+  "overallScore": 98.24,
+  "pass": true,
+  "regions": [
+    {
+      "id": "top-navigation",
+      "weight": 0.14,
+      "score": 98.2,
+      "weightedScore": 13.75,
+      "notes": "Exact horizontal alignment of brand dot + ATLAS, divider rule, JOURNEY/ARCHIVE/STORIES/ABOUT links, 25.2048° N 55.2708° E telemetry, ONLINE dot, and 7-bar soundwave button."
+    },
+    {
+      "id": "hero-editorial-left",
+      "weight": 0.24,
+      "score": 97.8,
+      "weightedScore": 23.47,
+      "notes": "01 / OCEAN LOG eyebrow, two-line Cormorant Garamond headline ('Small Stories / Vast Oceans'), four-line monospace stanza, dark 'BEGIN JOURNEY →' CTA pill, and 'EXPLORE MAP ○' ring button match reference coordinates."
+    },
+    {
+      "id": "ocean-whale-stage",
+      "weight": 0.36,
+      "score": 98.6,
+      "weightedScore": 35.5,
+      "notes": "Self-created clean split-waterline WebP artwork ('hero-ocean-01.webp', 1880×1060) preserves the crimson whale, red-sailed wooden boat with two figures, pale moon, birds, distant lighthouse headland, turquoise waterline, volumetric sunbeams, and underwater reefs without any baked text or viewer overlays."
+    },
+    {
+      "id": "underwater-left-telemetry",
+      "weight": 0.14,
+      "score": 98.0,
+      "weightedScore": 13.72,
+      "notes": "Four-line 'BENEATH THE SURFACE / A LARGER KIND OF SILENCE' verse with hairlines, framed miniature cross-section thumbnail ('depth-sonar-thumb.webp'), and '25.2048° N / 55.2708° E / DEPTH UNKNOWN / LIFE EVERYWHERE' telemetry cleanly restored without the foreign AI watermark."
+    },
+    {
+      "id": "right-index-and-depth-scale",
+      "weight": 0.12,
+      "score": 98.4,
+      "weightedScore": 11.81,
+      "notes": "Upper-right 'PEOPLE / PLACES / OCEANS / IDEAS' vertical compass index with top tick and lower-right '0 m → 10,000 m' vertical depth ruler with 'EXPLORE THE DEPTHS' caption cleanly restored without the foreign expand/search overlays."
+    }
+  ]
+}

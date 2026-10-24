@@ -1,0 +1,108 @@
+{
+  "slug": "atlas",
+  "catalogId": "t96",
+  "version": "1.0.0",
+  "gitCommit": "c03790ded0e6538cc650cffaa515347634b022cd",
+  "deploymentId": "dpl_Dm7hoHTp62nqbiZ8WdnRa3AZAaN6",
+  "deploymentUrl": "https://web-a5o2kyrkf-htmtslh-hubs-projects.vercel.app",
+  "productionAlias": "https://forgezone.store",
+  "verifiedAt": "2026-10-24T02:30:57.054Z",
+  "allAssetsMatchByteForByte": true,
+  "allGuardsBlocked": true,
+  "verified": [
+    {
+      "path": "/demos/atlas/index.html",
+      "status": 200,
+      "bytes": 40166,
+      "sha256": "254b854b43baa0f2f54a0728bf3949fbbed7ce47894bce216c7d8fb0079e9da8",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/atlas/assets/css/style.css",
+      "status": 200,
+      "bytes": 36276,
+      "sha256": "d20d8982f30560d387a7d7f6b87fa3cb818512fb8960137ad9887d5ce1476481",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/atlas/assets/js/main.js",
+      "status": 200,
+      "bytes": 29959,
+      "sha256": "9a34b47bce923be699278e10c6c464620f8c322c580fdd0d2b4f43f7c38230a4",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/atlas/assets/img/hero-ocean-01.webp",
+      "status": 200,
+      "bytes": 148648,
+      "sha256": "7409866e882c93c5ee824b913aede1d8eeb8467ead06b7d0e593b8b18c3613c9",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/atlas/assets/img/hero-ocean-02.webp",
+      "status": 200,
+      "bytes": 135346,
+      "sha256": "4c3c8512070ce606b7a7b741dddfeffefd20fe172690f652d06df4b397eccab9",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/atlas/assets/img/hero-ocean-03.webp",
+      "status": 200,
+      "bytes": 198190,
+      "sha256": "a876d076d8ca6ccd5807745ac5e75071cbf6788b2c5f81bc3368b3e6ef95646b",
+      "matchesLocal": true
+    },
+    {
+      "path": "/demos/atlas/assets/img/depth-sonar-thumb.webp",
+      "status": 200,
+      "bytes": 15126,
+      "sha256": "c9953697a3255b321588b302f983fa6c3f6f00c1e124678ac76597b402be70bc",
+      "matchesLocal": true
+    },
+    {
+      "path": "/previews/atlas.webp?v=1.0.0",
+      "status": 200,
+      "bytes": 110200,
+      "sha256": "e980896dbf0dd3ff82b266afc7453e5dec0946bf0a5f7fc14a31674ca65ab49c",
+      "matchesLocal": true
+    },
+    {
+      "path": "/previews/atlas-tablet.webp?v=1.0.0",
+      "status": 200,
+      "bytes": 61412,
+      "sha256": "42cfa03114950b654790c04007117c7aee32cf0e129d8e1c56366c43bc54aa0a",
+      "matchesLocal": true
+    },
+    {
+      "path": "/previews/atlas-mobile.webp?v=1.0.0",
+      "status": 200,
+      "bytes": 31030,
+      "sha256": "f7ee9800005eec251af5b2bcc52c6d2d43545c95f73fc1031a6f2a87ade4f990",
+      "matchesLocal": true
+    },
+    {
+      "path": "/previews/atlas.mp4?v=1.0.0",
+      "status": 200,
+      "bytes": 771650,
+      "sha256": "bbbbb17b91ea2b1f7fde19e4482c67cc94592ccb1b51e68b392ee88f525627ca",
+      "matchesLocal": true
+    }
+  ],
+  "guards": [
+    {
+      "path": "/demos/atlas/CUSTOMISE.md",
+      "status": 404,
+      "blocked": true
+    },
+    {
+      "path": "/product/giao-dien-web/atlas/atlas.zip",
+      "status": 404,
+      "blocked": true
+    },
+    {
+      "path": "/api/download?templateId=t96",
+      "status": 401,
+      "blocked": true
+    }
+  ]
+}

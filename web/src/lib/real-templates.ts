@@ -159,6 +159,7 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
   t97: {
     slug: 'aetheris-voyage',
     cat: 'portfolio',
+    access: 'free',
     version: '1.0.0',
     video: true,
     copy: {

@@ -5,7 +5,8 @@
  * builds a Single-File Self-Contained HTML5/CSS3/Vanilla JS template with +15–20%
  * creative enhancements (interactive telemetry/switcher, session motion toggle, and
  * accessible modal dialog), syncs public demo, packages .zip via dong-goi.mjs,
- * registers catalog entries, records previews, and commits/pushes when quota is reached.
+ * registers catalog entries (1 Free + 2 Premium daily rule), records previews,
+ * and commits/pushes/deploys when quota is reached.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -158,10 +159,11 @@ export function buildSingleFileHtml(spec) {
 </html>\n`;
 }
 
-export async function compileAndIntegratePrompt(slug) {
+export async function compileAndIntegratePrompt(slug, options = {}) {
   const dataPath = path.resolve(__dirname, `data/${slug}.json`);
   if (!fs.existsSync(dataPath)) throw new Error(`Missing prompt data: ${dataPath}`);
   const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  const accessTier = options.tier || data.assignedTier || 'premium';
 
   const productDir = path.resolve(root, `web/product/giao-dien-web/${slug}`);
   const sourceHtmlPath = path.resolve(productDir, 'source/index.html');
@@ -181,7 +183,7 @@ export async function compileAndIntegratePrompt(slug) {
   // Scaffold if needed
   if (!fs.existsSync(sourceHtmlPath)) {
     const { scaffoldTemplate } = await import('./scaffold-template.mjs');
-    scaffoldTemplate(slug);
+    scaffoldTemplate(slug, { tier: accessTier });
     const spec = extractSpecFromPrompt(data);
     const html = buildSingleFileHtml(spec);
     fs.writeFileSync(sourceHtmlPath, html, 'utf8');
@@ -208,13 +210,14 @@ export async function compileAndIntegratePrompt(slug) {
     fs.writeFileSync(catPath, catContent, 'utf8');
   }
 
-  // Register in real-templates.ts if missing
+  // Register in real-templates.ts if missing (respecting 1 Free + 2 Premium rule)
   realTpl = fs.readFileSync(realTplPath, 'utf8');
   if (!realTpl.includes(`slug: '${slug}'`) && !realTpl.includes(`"slug": "${slug}"`)) {
+    const accessLine = accessTier === 'free' ? `    access: 'free',\n` : '';
     const entry = `  ${catalogId}: {
     slug: '${slug}',
     cat: 'commerce',
-    version: '1.0.0',
+${accessLine}    version: '1.0.0',
     video: true,
     copy: {
       vi: {
@@ -247,5 +250,5 @@ export async function compileAndIntegratePrompt(slug) {
     stdio: 'inherit'
   });
 
-  return { slug, catalogId, title: data.title };
+  return { slug, catalogId, title: data.title, accessTier };
 }

@@ -1,11 +1,6 @@
 @echo off
-cd /d "D:\2A"
 echo ========================================================
-echo Running MotionSites Daily Agent
+echo Running Forge Zone MotionSites Daily Agent (06:00 AM Pipeline)
 echo ========================================================
-
-node "D:\2A\web\tools\agent-motionsites\daily-orchestrator.mjs"
-
-echo.
-echo Agent finished. Check logs at: D:\2A\web\tools\agent-motionsites\logs\
-pause
+cd /d D:\2A
+powershell -NoProfile -ExecutionPolicy Bypass -File "D:\2A\web\tools\agent-motionsites\run-scheduled-agent.ps1"

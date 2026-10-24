@@ -122,7 +122,19 @@
         "t97",
         "t98",
         "t99"
-      ]
+      ],
+      "tiers": {
+        "aetheris-voyage": "free",
+        "digital-epoch": "premium",
+        "rivr": "premium"
+      }
     }
+  ],
+  "todayFreeCount": 1,
+  "todayPremiumCount": 2,
+  "processedPromptHashes": [
+    "aa5f58f6ac4d3806dcbc1d54c34773bfaa8d8e37d80579513ccaad8135239694",
+    "98a578e9d85ce3e6d4a80b5fc09a94e31a8796088975de98245db90e56bfd3fb",
+    "44771c0ba6fedb5aec274e001a93b1569b743749f45fa49a1c990c84efb6b1e9"
   ]
 }

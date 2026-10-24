@@ -13,15 +13,16 @@ export function getNextCatalogId() {
   return `t${maxId + 1}`;
 }
 
-export function scaffoldTemplate(slug) {
+export function scaffoldTemplate(slug, options = {}) {
   const dataPath = resolve(__dirname, `data/${slug}.json`);
   if (!existsSync(dataPath)) {
     throw new Error(`Data file not found: ${dataPath}`);
   }
 
   const data = JSON.parse(readFileSync(dataPath, 'utf8'));
+  const accessTier = options.tier || data.assignedTier || 'premium';
   const catalogId = getNextCatalogId();
-  console.log(`Scaffolding template: ${data.title} (${slug}) with Catalog ID: ${catalogId}`);
+  console.log(`Scaffolding template: ${data.title} (${slug}) with Catalog ID: ${catalogId} [tier=${accessTier}]`);
 
   const productDir = resolve(root, `web/product/giao-dien-web/${slug}`);
   const sourceDir = resolve(productDir, 'source');
@@ -39,6 +40,7 @@ export function scaffoldTemplate(slug) {
 
 ## Mục tiêu sản phẩm
 Xây dựng mẫu giao diện Landing Page tự chứa trong một file HTML duy nhất (\`index.html\`) cho thương hiệu **${data.title}**, tuân thủ nghiêm ngặt hồ sơ **WEB-STATIC-1** (kèm ngoại lệ \`INLINE_PRODUCTS\` trong \`dong-goi.mjs\`).
+- **Phân hạng truy cập:** \`${accessTier}\` (theo quy tắc 1 Miễn phí + 2 Premium mỗi ngày).
 
 ## 15-20% Sáng tạo mở rộng (Creative Enhancements)
 1. **Interactive Chapter & Section Jump HUD**: Thanh định vị chương trực quan góc màn hình với số thứ tự và nút nhảy mượt giữa các phân đoạn.
@@ -98,8 +100,8 @@ and display the template for personal or commercial projects.
 - **Date:** ${new Date().toISOString().slice(0, 10)}
 - **Product Slug:** \`${slug}\`
 - **Catalog ID:** \`${catalogId}\`
-- **Category:** \`${data.category.toLowerCase().includes('hero') ? 'portfolio' : 'startup'}\`
-- **Access Tier:** \`free\`
+- **Category:** \`${data.category.toLowerCase().includes('hero') ? 'portfolio' : 'commerce'}\`
+- **Access Tier:** \`${accessTier}\`
 - **Version:** \`1.0.0\`
 `, 'utf8');
 
@@ -116,14 +118,15 @@ and display the template for personal or commercial projects.
   }
 
   console.log(`Scaffolding complete for ${slug}. Ready for HTML implementation.`);
-  return { slug, catalogId, productDir, sourceDir, reviewDir, data };
+  return { slug, catalogId, accessTier, productDir, sourceDir, reviewDir, data };
 }
 
 if (process.argv[1] && process.argv[1].endsWith('scaffold-template.mjs')) {
   const slug = process.argv[2];
+  const tier = process.argv[3];
   if (!slug) {
-    console.error('Usage: node scaffold-template.mjs <slug>');
+    console.error('Usage: node scaffold-template.mjs <slug> [free|premium]');
     process.exit(1);
   }
-  scaffoldTemplate(slug);
+  scaffoldTemplate(slug, { tier });
 }

@@ -1,18 +1,22 @@
 import { execSync } from 'node:child_process';
+import { existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '../../../');
+const webRoot = resolve(root, 'web');
+const codexVercelConfig = 'C:\\Users\\htmts\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Roaming\\com.vercel.cli\\Data';
 
 export async function pushAndDeploy(slugs, summaryLabel) {
   const list = Array.isArray(slugs) ? slugs : [slugs];
   console.log(`\n=== PUSH & DEPLOY: ${summaryLabel || list.join(', ')} ===`);
 
-  // 1. Verify TypeScript & Memberships
-  console.log('--> Checking membership policy & TypeScript typecheck...');
+  // 1. Verify TypeScript, Memberships & Preview Recordings
+  console.log('--> Checking membership policy, preview recordings & TypeScript typecheck...');
   execSync('node web/tools/check-memberships.cjs', { cwd: root, stdio: 'inherit' });
-  execSync('npm.cmd run typecheck', { cwd: resolve(root, 'web'), stdio: 'inherit' });
+  execSync('node web/tools/check-preview-recordings.mjs', { cwd: root, stdio: 'inherit' });
+  execSync('npm.cmd run typecheck', { cwd: webRoot, stdio: 'inherit' });
 
   // 2. Stage product files & catalog
   console.log('--> Staging files for git commit...');
@@ -54,8 +58,17 @@ export async function pushAndDeploy(slugs, summaryLabel) {
     console.log('Nothing to commit or already committed.');
   }
 
-  // 4. Push to remote master (triggers Vercel production deployment)
+  // 4. Push to remote master
   console.log('--> Pushing to origin master...');
   execSync('git push origin master', { cwd: root, stdio: 'inherit' });
-  console.log('--> Successfully pushed to GitHub master. Vercel deployment triggered automatically!');
+
+  // 5. Deploy directly to Vercel Production (https://forgezone.store)
+  console.log('--> Deploying to Vercel Production (https://forgezone.store)...');
+  const globalConfigFlag = existsSync(codexVercelConfig) ? ` -Q "${codexVercelConfig}"` : '';
+  if (!existsSync(resolve(webRoot, '.vercel/project.json'))) {
+    execSync(`npx.cmd vercel link --project web --yes${globalConfigFlag}`, { cwd: webRoot, stdio: 'inherit' });
+  }
+  execSync(`npx.cmd vercel deploy --prod --yes${globalConfigFlag}`, { cwd: webRoot, stdio: 'inherit' });
+  console.log('--> Successfully pushed to GitHub master and deployed to https://forgezone.store!');
 }
+

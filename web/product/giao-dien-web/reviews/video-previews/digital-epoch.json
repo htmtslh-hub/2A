@@ -1,0 +1,50 @@
+{
+  "id": "t98",
+  "slug": "digital-epoch",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-24T13:52:20.015Z",
+  "demo": "/demos/digital-epoch/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "f29c9a7f675c",
+  "sha256": "f29c9a7f675c481bebdea73d0e09000f0a300e5125d7f4282fe485181f7d22f6",
+  "demoHtmlSha256": "fd2f36ae38a0cd69d6886c4a0f369c9377f0eecf1e33554de7dd03f20373cd68",
+  "demoSha256": "1a48bd9d42ced4f1f405d7fd252e440c61f631a7fa32a6de38a912ac57fce0d9",
+  "bytes": 656217,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.479,
+      "action": "digital-epoch-open-contact-modal"
+    },
+    {
+      "seconds": 5.18,
+      "action": "digital-epoch-close-modal-and-hover-marquee"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 498
+    },
+    {
+      "seconds": 10.069,
+      "action": "digital-epoch-switch-builder-sdk"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digital-epoch-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digital-epoch-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digital-epoch-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digital-epoch-return.jpg"
+  ]
+}

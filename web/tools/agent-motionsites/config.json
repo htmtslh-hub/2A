@@ -1,0 +1,12 @@
+{
+  "motionsitesUrl": "https://motionsites.ai",
+  "supabaseUrl": "https://xgdzyqfalbibzelpdpvr.supabase.co",
+  "anonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnZHp5cWZhbGJpYnplbHBkcHZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE4MzUwMDYsImV4cCI6MjA4NzQxMTAwNn0.u8lH5Y14xx2WxrNEBp8ngkJlijIYHJASq_gOzTaINZY",
+  "dailyLimit": 3,
+  "remote": "origin",
+  "branch": "master",
+  "scheduleTime": "07:05",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "autoPush": true,
+  "autoDeploy": true
+}

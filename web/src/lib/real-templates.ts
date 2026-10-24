@@ -46,6 +46,171 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t99: {
+    slug: 'rivr',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'RIVR',
+        desc: 'Hero dashboard DeFi Fluid Staking tự chứa trong một file HTML duy nhất với khung video 3rem nền sóng lỏng 3D, góc cắt lõm phải dưới kèm hai mặt nạ SVG 56×56, thẻ 5.2K Active Yielders kính mờ, bộ chuyển chiến lược Smart Vault trực tiếp (stRIVR, NFT Floor, Delta-Neutral) và hộp thoại đặt lịch demo tổ chức.',
+        tags: [
+          'DeFi Staking',
+          'Smart Vaults',
+          'Glassmorphism'
+        ]
+      },
+      en: {
+        name: 'RIVR',
+        desc: 'A single-file glassmorphic DeFi Fluid Staking dashboard hero featuring a 3rem rounded 3D fluid video stage, a bottom-right faux-cutout corner with dual 56×56 concave SVG masks, a frosted 5.2K Active Yielders card, an interactive Smart Vault strategy switcher (stRIVR, NFT Floor, Delta-Neutral), and an institutional demo modal.',
+        tags: [
+          'DeFi Staking',
+          'Smart Vaults',
+          'Glassmorphism'
+        ]
+      },
+      zh: {
+        name: 'RIVR 流动质押',
+        desc: '单文件自包含 DeFi 流动质押与智能金库首屏仪表盘，配备 3rem 圆角 3D 流体视频舞台、带双 56×56 内凹 SVG 遮罩的右下角挖空文档角标、5.2K 活跃收益者毛玻璃卡片、实时智能金库策略切换器及机构演示预约弹窗。',
+        tags: [
+          'DeFi 质押',
+          '智能金库',
+          '毛玻璃美学'
+        ]
+      }
+    },
+    specs: {
+      vi: [
+        ['Định dạng', 'Single-file HTML5 / CSS3 / Vanilla JS'],
+        ['Gói tải', '4 files · Single-file self-contained (11 KB ZIP)'],
+        ['Tương tác', 'Smart Vault Switcher · Faux-Cutout SVG Masks · Institutional Modal'],
+        ['Phạm vi', 'Dashboard DeFi Fluid Staking · không cần bước build']
+      ],
+      en: [
+        ['Format', 'Single-file HTML5 / CSS3 / Vanilla JS'],
+        ['Package', '4 files · Single-file self-contained (11 KB ZIP)'],
+        ['Interactions', 'Smart Vault Switcher · Faux-Cutout SVG Masks · Institutional Modal'],
+        ['Scope', 'DeFi Fluid Staking hero · zero build step required']
+      ],
+      zh: [
+        ['格式', 'Single-file HTML5 / CSS3 / 原生 JS'],
+        ['交付包', '4 个文件 · 单文件自包含架构（11 KB ZIP）'],
+        ['交互特性', '智能金库切换 · 双 56×56 内凹 SVG 遮罩 · 机构预约弹窗'],
+        ['适用场景', 'DeFi 流动质押首屏 · 无需编译即开即用']
+      ]
+    }
+  },
+  t98: {
+    slug: 'digital-epoch',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'Digital Epoch',
+        desc: 'Landing page nền tảng web phi tập trung tự chứa trong một file HTML duy nhất với khung Hero bo tròn 48px nền video 3D sáng, thanh điều hướng kính mờ nổi ở đáy, băng chuyền vô tận 8 thương hiệu đối tác chuyển màu gradient khi di chuột, trình khám phá kiến trúc 3 tầng (Core Protocol, Builder SDK, Enterprise Mesh) và hộp thoại đối tác.',
+        tags: [
+          'Decentralized Web',
+          'Infinite Marquee',
+          'Enterprise SDK'
+        ]
+      },
+      en: {
+        name: 'Digital Epoch',
+        desc: 'A single-file decentralized web foundation landing page featuring a 48px rounded video hero container, a floating frosted bottom navbar, a seamless 8-brand CSS marquee with hover gradient cards, a 3-layer modular architecture & SDK inspector, and an enterprise inquiry dialog.',
+        tags: [
+          'Decentralized Web',
+          'Infinite Marquee',
+          'Enterprise SDK'
+        ]
+      },
+      zh: {
+        name: 'Digital Epoch 数字纪元',
+        desc: '单文件自包含去中心化网络基金会着陆页，配备 48px 圆角 3D 视频首屏容器、底部悬浮毛玻璃胶囊导航栏、悬停呈现多彩渐变的 8 品牌无缝跑马灯、三层模块化架构与 SDK 检视器以及企业合作咨询弹窗。',
+        tags: [
+          '去中心化网络',
+          '无缝跑马灯',
+          '企业级 SDK'
+        ]
+      }
+    },
+    specs: {
+      vi: [
+        ['Định dạng', 'Single-file HTML5 / CSS3 / Vanilla JS'],
+        ['Gói tải', '4 files · Single-file self-contained (13 KB ZIP)'],
+        ['Tương tác', 'Seamless Gradient Marquee · 3-Layer SDK Inspector · Partner Modal'],
+        ['Phạm vi', 'Landing page hệ sinh thái Web3 & doanh nghiệp · không cần bước build']
+      ],
+      en: [
+        ['Format', 'Single-file HTML5 / CSS3 / Vanilla JS'],
+        ['Package', '4 files · Single-file self-contained (13 KB ZIP)'],
+        ['Interactions', 'Seamless Gradient Marquee · 3-Layer SDK Inspector · Partner Modal'],
+        ['Scope', 'Decentralized web & enterprise showcase · zero build step required']
+      ],
+      zh: [
+        ['格式', 'Single-file HTML5 / CSS3 / 原生 JS'],
+        ['交付包', '4 个文件 · 单文件自包含架构（13 KB ZIP）'],
+        ['交互特性', '无缝渐变跑马灯 · 三层架构与 SDK 检视器 · 合作伙伴弹窗'],
+        ['适用场景', '去中心化生态与企业平台 · 无需编译即开即用']
+      ]
+    }
+  },
+  t97: {
+    slug: 'aetheris-voyage',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: 'Aetheris Voyage',
+        desc: 'Mẫu giao diện không gian điện ảnh với hai phân đoạn toàn màn hình Hero & Capabilities nền video độ phân giải cao, giao diện kính mờ Liquid Glass, hiệu ứng xuất hiện BlurText mượt mà, thanh viền trạng thái âm thanh trực tiếp và hộp thoại điều phối chuyến bay quỹ đạo tương tác.',
+        tags: [
+          'Cinematic Space',
+          'Liquid Glass',
+          'Video Crossfade'
+        ]
+      },
+      en: {
+        name: 'Aetheris Voyage',
+        desc: 'A cinematic space-travel landing page with looping background videos, custom requestAnimationFrame crossfades, a shared liquid-glass design system, word-by-word blur-in typography, interactive audio telemetry, and an orbital flight dispatch dialog.',
+        tags: [
+          'Cinematic Space',
+          'Liquid Glass',
+          'Video Crossfade'
+        ]
+      },
+      zh: {
+        name: 'Aetheris Voyage 太空探索',
+        desc: '电影级太空探索着陆页，配备高清循环背景视频与 rAF 渐变转场、液态毛玻璃 Liquid Glass 设计系统、逐词高斯模糊淡入排版、实时太空遥测音频指示器以及交互式轨道飞船预约弹窗。',
+        tags: [
+          '电影级航天',
+          '液态毛玻璃',
+          '视频平滑转场'
+        ]
+      }
+    },
+    specs: {
+      vi: [
+        ['Định dạng', 'Single-file HTML5 / CSS3 / Vanilla JS'],
+        ['Gói tải', '4 files · Single-file self-contained (8 KB ZIP)'],
+        ['Tương tác', 'Fading Video · Liquid Glass · Telemetry Visualizer · Orbital Dialog'],
+        ['Phạm vi', 'Landing page không gian điện ảnh · không cần bước build']
+      ],
+      en: [
+        ['Format', 'Single-file HTML5 / CSS3 / Vanilla JS'],
+        ['Package', '4 files · Single-file self-contained (8 KB ZIP)'],
+        ['Interactions', 'Fading Video · Liquid Glass · Telemetry Visualizer · Orbital Dialog'],
+        ['Scope', 'Cinematic space-travel showcase · zero build step required']
+      ],
+      zh: [
+        ['格式', 'Single-file HTML5 / CSS3 / 原生 JS'],
+        ['交付包', '4 个文件 · 单文件自包含架构（8 KB ZIP）'],
+        ['交互特性', 'Fading Video · 液态毛玻璃 · 实时音频电台 · 预定弹窗'],
+        ['适用场景', '电影级深空着陆页 · 无需编译即开即用']
+      ]
+    }
+  },
   t96: {
     "slug": "atlas",
     "cat": "education",

@@ -1,0 +1,50 @@
+{
+  "id": "t97",
+  "slug": "aetheris-voyage",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-24T13:50:55.397Z",
+  "demo": "/demos/aetheris-voyage/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "c775bc14e2c4",
+  "sha256": "c775bc14e2c4e71d3b2ea00343c55bd39d93e32d61e532f703db78a6165ac462",
+  "demoHtmlSha256": "7e11becaf7159a8cf1d9c0acf5dbccc48aa80d6c7d3690ca554d0c4cb792ae83",
+  "demoSha256": "25fec6a5874843468b0dc0e4754b542d6a80a35c2af027e7fd6689d438db3581",
+  "bytes": 1124271,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.466,
+      "action": "aetheris-open-claim-modal"
+    },
+    {
+      "seconds": 5.243,
+      "action": "aetheris-view-specs-and-close"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1400
+    },
+    {
+      "seconds": 10.155,
+      "action": "aetheris-switch-lunar-sector"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aetheris-voyage-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aetheris-voyage-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aetheris-voyage-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aetheris-voyage-return.jpg"
+  ]
+}

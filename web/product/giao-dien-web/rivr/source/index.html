@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f0f0f0">
+  <title>RIVR — Fluid Asset Streams &amp; Smart Vaults DeFi Dashboard</title>
+  <meta name="description" content="Access Smart Vaults, stake RIVR, NFTs, transform rigid holdings into liquid cash instantly with RIVR Fluid Staking.">
+  <meta property="og:title" content="RIVR — Fluid Asset Streams &amp; Smart Vaults DeFi Dashboard">
+  <meta property="og:description" content="Fluid Staking DeFi protocol featuring Smart Vaults, instant NFT liquidity streams, and glassmorphism telemetry.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%231e325a'/%3E%3Ctext x='16' y='21' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-size='14'%3ER%3C/text%3E%3C/svg%3E">
+  <style>
+    @font-face {
+      font-family: "Helvetica Regular";
+      src: url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.eot");
+      src: url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.eot?#iefix") format("embedded-opentype"),
+           url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.woff2") format("woff2"),
+           url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.woff") format("woff"),
+           url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.ttf") format("truetype"),
+           url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.svg#Helvetica Regular") format("svg");
+      font-display: swap;
+    }
+
+    :root {
+      --font-helvetica: "Helvetica Regular", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --bg-canvas: #f0f0f0;
+      --ink-slate: #5E6470;
+      --ink-navy-90: rgba(30, 50, 90, 0.9);
+      --ink-navy-80: rgba(30, 50, 90, 0.8);
+      --ink-navy-60: rgba(30, 50, 90, 0.6);
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      font-family: var(--font-helvetica);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background-color: var(--bg-canvas);
+      font-family: var(--font-helvetica);
+      color: var(--ink-slate);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 16px;
+      z-index: 200;
+      background: rgba(30, 50, 90, 0.95);
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 9999px;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+      outline: 2px solid rgba(30, 50, 90, 0.9);
+      outline-offset: 3px;
+    }
+
+    /* Outer Wrapper & Hero Section */
+    .rivr-main {
+      min-height: 100vh;
+      background-color: var(--bg-canvas);
+    }
+
+    .hero-outer {
+      width: 100%;
+      height: 100vh;
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      background-color: var(--bg-canvas);
+    }
+    @media (min-width: 768px) {
+      .hero-outer {
+        padding: 20px;
+      }
+    }
+
+    .hero-card {
+      position: relative;
+      width: 100%;
+      max-width: 1536px;
+      height: 100%;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    @media (min-width: 768px) {
+      .hero-card {
+        border-radius: 3rem;
+      }
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 65% center;
+      z-index: 0;
+      pointer-events: none;
+    }
+    @media (min-width: 1024px) {
+      .hero-video {
+        object-position: center;
+      }
+    }
+
+    .hero-layer {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* 4. Navbar Component */
+    .rivr-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 24px;
+      width: 100%;
+      position: relative;
+      z-index: 10;
+    }
+    @media (min-width: 768px) {
+      .rivr-nav {
+        padding: 24px 40px;
+      }
+    }
+
+    .nav-spacer {
+      flex: 1;
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .nav-spacer {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .nav-brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      font-size: 13px;
+      color: var(--ink-navy-90);
+      cursor: pointer;
+    }
+
+    .nav-menu {
+      display: none;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+      color: rgb(45, 45, 45);
+      font-size: 14px;
+      font-weight: 400;
+    }
+    @media (min-width: 768px) {
+      .nav-menu {
+        display: flex;
+      }
+    }
+
+    .nav-menu-item {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: transparent;
+      border: none;
+      font-family: var(--font-helvetica);
+      font-size: 14px;
+      color: rgb(45, 45, 45);
+      transition: opacity 0.2s ease;
+    }
+    .nav-menu-item:hover {
+      opacity: 0.7;
+    }
+    .nav-menu-item svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.2s ease;
+    }
+    .nav-menu-item:hover svg {
+      transform: translateX(2px);
+    }
+
+    .mobile-logo {
+      display: block;
+      font-size: 20px;
+      letter-spacing: -0.04em;
+      color: var(--ink-navy-90);
+    }
+    @media (min-width: 768px) {
+      .mobile-logo {
+        display: none;
+      }
+    }
+
+    .nav-right {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .btn-book-demo {
+      display: inline-flex;
+      align-items: center;
+      background: var(--ink-navy-80);
+      color: #ffffff;
+      border-radius: 9999px;
+      padding: 6px 16px 6px 8px;
+      gap: 8px;
+      border: none;
+      font-family: var(--font-helvetica);
+      font-size: 12px;
+      font-weight: 400;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.2s var(--ease-out);
+    }
+    @media (min-width: 768px) {
+      .btn-book-demo {
+        padding: 8px 24px 8px 8px;
+        gap: 12px;
+        font-size: 14px;
+      }
+    }
+    .btn-book-demo:hover {
+      background: rgba(30, 50, 90, 1);
+      transform: scale(1.02);
+    }
+    .btn-book-demo:active {
+      transform: scale(0.98);
+    }
+
+    .btn-book-demo__icon {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 5px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Text Container & HeroBadge */
+    .hero-text-container {
+      width: 100%;
+      max-width: 896px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 24px 0;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin: 0 auto 12px;
+      width: fit-content;
+      animation: badgeFadeUp 0.6s ease-out both;
+    }
+    .hero-badge span {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--ink-navy-90);
+    }
+
+    @keyframes badgeFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-h1 {
+      font-size: clamp(36px, 6vw, 80px);
+      font-weight: 400;
+      color: #5E6470;
+      margin-bottom: 8px;
+      letter-spacing: -0.025em;
+      line-height: 1.05;
+      animation: titleScaleIn 0.8s var(--ease-out) 0.2s both;
+    }
+
+    @keyframes titleScaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .hero-subtitle {
+      font-size: clamp(14px, 1.4vw, 18px);
+      color: #5E6470;
+      opacity: 0.8;
+      line-height: 1.6;
+      max-width: 576px;
+      font-weight: 400;
+      animation: fadeInSimple 0.8s ease 0.4s both;
+    }
+
+    @keyframes fadeInSimple {
+      from { opacity: 0; }
+      to { opacity: 0.8; }
+    }
+
+    /* Interactive Smart Vault Pill Switcher (+15–20% Creative Enhancement) */
+    .vault-switcher {
+      margin-top: 20px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 6px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.48);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      animation: badgeFadeUp 0.7s var(--ease-out) 0.45s both;
+    }
+    .vault-pill {
+      padding: 7px 14px;
+      border-radius: 9999px;
+      border: none;
+      background: transparent;
+      font-family: var(--font-helvetica);
+      font-size: 12px;
+      color: var(--ink-navy-80);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .vault-pill.is-active {
+      background: #ffffff;
+      color: var(--ink-navy-90);
+      box-shadow: 0 2px 10px rgba(30, 50, 90, 0.08);
+    }
+
+    .vault-readout-bar {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      font-size: 12px;
+      color: var(--ink-navy-90);
+    }
+
+    /* 6. BottomLeftCard Component */
+    .bottom-left-card {
+      position: absolute;
+      bottom: 112px;
+      right: 16px;
+      left: auto;
+      padding: 12px;
+      border-radius: 1.2rem;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 140px;
+      width: fit-content;
+      animation: cardSlideRight 0.8s var(--ease-out) 0.2s both;
+    }
+    @media (min-width: 768px) {
+      .bottom-left-card {
+        left: 24px;
+        right: auto;
+        bottom: 24px;
+        padding: 16px;
+        border-radius: 1.5rem;
+        min-width: 150px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .bottom-left-card {
+        bottom: 40px;
+        left: 40px;
+        padding: 20px;
+        border-radius: 2.2rem;
+        gap: 12px;
+        min-width: 180px;
+      }
+    }
+
+    @keyframes cardSlideRight {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .yielders-count {
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--ink-navy-90);
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+    }
+    .yielders-label {
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--ink-navy-60);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 2px;
+    }
+
+    .btn-discord {
+      display: inline-flex;
+      align-items: center;
+      background: #ffffff;
+      border-radius: 9999px;
+      padding: 6px 20px 6px 6px;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: transform 0.2s var(--ease-out), background 0.2s ease;
+    }
+    .btn-discord:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: scale(1.02);
+    }
+    .btn-discord:active {
+      transform: scale(0.98);
+    }
+    .btn-discord__icon {
+      background: rgba(30, 50, 90, 0.1);
+      padding: 4px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-navy-90);
+    }
+    .btn-discord__text {
+      font-family: var(--font-helvetica);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--ink-navy-90);
+    }
+
+    /* 7. BottomRightCorner Component (faux-cutout with two 56x56 SVG masks) */
+    .bottom-right-cutout {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 20px 12px 12px 32px;
+      background-color: var(--bg-canvas);
+      border-top-left-radius: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: badgeFadeUp 0.8s var(--ease-out) 0.4s both;
+    }
+    @media (min-width: 640px) {
+      .bottom-right-cutout {
+        padding: 24px 16px 16px 40px;
+        border-top-left-radius: 2rem;
+        gap: 16px;
+      }
+    }
+    @media (min-width: 768px) {
+      .bottom-right-cutout {
+        padding: 32px 24px 24px 56px;
+        border-top-left-radius: 3.5rem;
+        gap: 24px;
+      }
+    }
+
+    .cutout-mask-top {
+      position: absolute;
+      top: -1.5rem;
+      right: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      pointer-events: none;
+    }
+    .cutout-mask-left {
+      position: absolute;
+      bottom: 0;
+      left: -1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      pointer-events: none;
+    }
+    @media (min-width: 640px) {
+      .cutout-mask-top {
+        top: -2rem;
+        width: 2rem;
+        height: 2rem;
+      }
+      .cutout-mask-left {
+        left: -2rem;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    @media (min-width: 768px) {
+      .cutout-mask-top {
+        top: -3.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+      .cutout-mask-left {
+        left: -3.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+
+    .doc-circle-btn {
+      background: rgba(30, 50, 90, 0.05);
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(30, 50, 90, 0.1);
+      color: var(--ink-navy-80);
+      cursor: pointer;
+      transition: transform 0.2s var(--ease-out), background 0.2s ease;
+    }
+    @media (min-width: 768px) {
+      .doc-circle-btn {
+        width: 56px;
+        height: 56px;
+      }
+    }
+    .doc-circle-btn:hover {
+      background: rgba(30, 50, 90, 0.12);
+      transform: scale(1.05);
+    }
+
+    .doc-title {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(30, 50, 90, 0.95);
+    }
+    @media (min-width: 768px) {
+      .doc-title {
+        font-size: 20px;
+      }
+    }
+
+    .doc-library-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--ink-navy-60);
+      font-family: var(--font-helvetica);
+      font-size: 12px;
+      font-weight: 400;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin-top: 2px;
+      transition: color 0.2s ease;
+    }
+    @media (min-width: 768px) {
+      .doc-library-link {
+        font-size: 15px;
+      }
+    }
+    .doc-library-link:hover {
+      color: var(--ink-navy-80);
+    }
+
+    /* Interactive Protocol Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(30, 50, 90, 0.35);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .modal-backdrop.is-open {
+      display: flex;
+    }
+    .modal-card {
+      max-width: 520px;
+      width: 100%;
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 32px 80px rgba(30, 50, 90, 0.18);
+      padding: 32px;
+      position: relative;
+      color: var(--ink-navy-90);
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 38px;
+      height: 38px;
+      border-radius: 9999px;
+      border: 1px solid rgba(30, 50, 90, 0.12);
+      background: #ffffff;
+      color: var(--ink-navy-90);
+      cursor: pointer;
+    }
+    .modal-field {
+      margin-bottom: 14px;
+    }
+    .modal-field label {
+      display: block;
+      font-size: 12px;
+      color: var(--ink-navy-80);
+      margin-bottom: 6px;
+    }
+    .modal-field input,
+    .modal-field select {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(30, 50, 90, 0.18);
+      font-family: var(--font-helvetica);
+      font-size: 14px;
+      color: var(--ink-navy-90);
+      background: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content" class="rivr-main">
+    <div class="hero-outer">
+      <section class="hero-card" aria-label="RIVR Fluid Asset Streams Hero">
+        <!-- Video Background -->
+        <video
+          id="rivrVideo"
+          class="hero-video"
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260428_193507_4286c423-2fd9-4efd-92bd-91a939453fc1.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+        ></video>
+
+        <!-- Content Layer -->
+        <div class="hero-layer">
+          <!-- 4. Navbar Component -->
+          <nav class="rivr-nav" aria-label="Primary Navigation">
+            <div class="nav-spacer">
+              <button type="button" class="nav-brand-pill" id="motionToggleBtn" aria-pressed="false" title="Toggle stream motion">
+                <span>RIVR · STREAM LIVE</span>
+              </button>
+            </div>
+
+            <ul class="nav-menu">
+              <li>
+                <button type="button" class="nav-menu-item" data-open-modal="ecosystem">
+                  <span>Ecosystem</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="nav-menu-item" data-open-modal="economics">
+                  <span>Economics</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="nav-menu-item" data-open-modal="developers">
+                  <span>Developers</span>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="nav-menu-item" data-open-modal="governance">
+                  <span>Governance</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </li>
+            </ul>
+
+            <div class="mobile-logo">
+              <span>RIVR</span>
+            </div>
+
+            <div class="nav-right">
+              <button type="button" class="btn-book-demo" id="bookDemoBtn">
+                <span class="btn-book-demo__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+                  </svg>
+                </span>
+                <span>Book Demo</span>
+              </button>
+            </div>
+          </nav>
+
+          <!-- Text Container -->
+          <div class="hero-text-container">
+            <!-- 5. HeroBadge Component -->
+            <div class="hero-badge" id="heroBadge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(30,50,90,0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l5.813-1.912a2 2 0 0 0 1.275-1.275L12 3Z"/>
+              </svg>
+              <span>Fluid Staking</span>
+            </div>
+
+            <h1 class="hero-h1" id="heroHeadline">Fluid Asset Streams</h1>
+
+            <p class="hero-subtitle">
+              Access Smart Vaults, stake RIVR, NFTs, transform rigid holdings into liquid cash instantly.
+            </p>
+
+            <!-- +15–20% Creative Enhancement: Interactive Smart Vault Simulator -->
+            <div class="vault-switcher" role="tablist" aria-label="Smart Vault Strategies">
+              <button type="button" class="vault-pill is-active" data-vault="strivr" role="tab" aria-selected="true">stRIVR Liquid Vault</button>
+              <button type="button" class="vault-pill" data-vault="nft" role="tab" aria-selected="false">NFT Floor Stream</button>
+              <button type="button" class="vault-pill" data-vault="treasury" role="tab" aria-selected="false">Delta-Neutral Treasury</button>
+            </div>
+
+            <div class="vault-readout-bar" id="vaultReadoutBar">
+              <span>Net APY: <strong id="vaultApy">14.8%</strong></span>
+              <span>·</span>
+              <span>Vault TVL: <strong id="vaultTvl">$184.2M</strong></span>
+              <span>·</span>
+              <span>Unstake Latency: <strong id="vaultLatency">&lt; 1.2s</strong></span>
+            </div>
+          </div>
+
+          <!-- 6. BottomLeftCard Component -->
+          <div class="bottom-left-card" id="bottomLeftCard">
+            <div>
+              <div class="yielders-count" id="yieldersCount">5.2K</div>
+              <div class="yielders-label">Active Yielders</div>
+            </div>
+            <button type="button" class="btn-discord" id="joinDiscordBtn">
+              <span class="btn-discord__icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+                </svg>
+              </span>
+              <span class="btn-discord__text">Join Discord</span>
+            </button>
+          </div>
+
+          <!-- 7. BottomRightCorner Component (faux-cutout with two 56x56 SVG masks) -->
+          <div class="bottom-right-cutout" id="bottomRightCorner">
+            <!-- Top intersection mask -->
+            <div class="cutout-mask-top" aria-hidden="true">
+              <svg width="100%" height="100%" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M56 56V0C56 30.9279 30.9279 56 0 56H56Z" fill="#f0f0f0"/>
+              </svg>
+            </div>
+            <!-- Left intersection mask -->
+            <div class="cutout-mask-left" aria-hidden="true">
+              <svg width="100%" height="100%" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M56 56H0C30.9279 56 56 30.9279 56 0V56Z" fill="#f0f0f0"/>
+              </svg>
+            </div>
+
+            <button type="button" class="doc-circle-btn" id="docCircleBtn" aria-label="Open RIVR Documentation">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </button>
+
+            <div>
+              <div class="doc-title">Documentation</div>
+              <button type="button" class="doc-library-link" id="docLibraryBtn">
+                <span>Library</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Interactive RIVR Demo & Smart Vault Modal -->
+  <div id="rivrModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="rivrModalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="rivrModalClose" aria-label="Close modal">✕</button>
+      <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-navy-60);">RIVR Fluid Staking Protocol · v1.0</p>
+      <h2 id="rivrModalTitle" style="font-size: 28px; font-weight: 400; margin: 6px 0 18px;">Book Institutional Vault Demo</h2>
+
+      <form id="rivrDemoForm">
+        <div class="modal-field">
+          <label for="rivrFundName">Fund / Treasury Name</label>
+          <input type="text" id="rivrFundName" required placeholder="Aether Liquidity Partners">
+        </div>
+        <div class="modal-field">
+          <label for="rivrEmail">Institutional Email</label>
+          <input type="email" id="rivrEmail" required placeholder="treasury@rivr-protocol.example">
+        </div>
+        <div class="modal-field">
+          <label for="rivrVaultSelect">Target Smart Vault Stream</label>
+          <select id="rivrVaultSelect">
+            <option value="strivr">stRIVR Liquid Staking (14.8% APY)</option>
+            <option value="nft">NFT Floor Liquidity Stream (21.4% APY)</option>
+            <option value="treasury">Delta-Neutral Stable Vault (9.6% APY)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-book-demo" style="width: 100%; justify-content: center; padding: 12px 24px; margin-top: 6px;">
+          <span>Request Smart Vault Sandbox (Demo Only)</span>
+        </button>
+        <p id="rivrFormFeedback" style="display: none; margin-top: 12px; font-size: 12.5px; color: var(--ink-navy-80); line-height: 1.5;">
+          Demo mode — no live wallet or form payload is transmitted from this static template. Connect your DeFi RPC or contact <a href="mailto:protocol@rivr.example" style="color: var(--ink-navy-90); text-decoration: underline;">protocol@rivr.example</a>.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var video = document.getElementById('rivrVideo');
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var motionPaused = false;
+
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.querySelector('span').textContent = motionPaused ? 'RIVR · PAUSED' : 'RIVR · STREAM LIVE';
+          if (video) {
+            if (motionPaused) video.pause();
+            else {
+              var p = video.play();
+              if (p && typeof p.catch === 'function') p.catch(function () {});
+            }
+          }
+        });
+      }
+
+      /* Smart Vault Strategy Switcher (+15–20% Creative Enhancement) */
+      var VAULTS = {
+        strivr: { apy: '14.8%', tvl: '$184.2M', latency: '< 1.2s', yielders: '5.2K' },
+        nft: { apy: '21.4%', tvl: '$62.9M', latency: '< 2.0s', yielders: '1.9K' },
+        treasury: { apy: '9.6%', tvl: '$310.5M', latency: 'Instant', yielders: '8.4K' }
+      };
+
+      var vaultPills = document.querySelectorAll('.vault-pill');
+      vaultPills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          var key = pill.getAttribute('data-vault');
+          var v = VAULTS[key];
+          if (!v) return;
+          vaultPills.forEach(function (p) {
+            p.classList.toggle('is-active', p === pill);
+            p.setAttribute('aria-selected', String(p === pill));
+          });
+          document.getElementById('vaultApy').textContent = v.apy;
+          document.getElementById('vaultTvl').textContent = v.tvl;
+          document.getElementById('vaultLatency').textContent = v.latency;
+          document.getElementById('yieldersCount').textContent = v.yielders;
+        });
+      });
+
+      /* Modal Dialog */
+      var modal = document.getElementById('rivrModal');
+      var closeBtn = document.getElementById('rivrModalClose');
+      var lastFocus = null;
+
+      function openModal() {
+        if (!modal) return;
+        lastFocus = document.activeElement;
+        modal.classList.add('is-open');
+        if (closeBtn) closeBtn.focus();
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+        if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+      }
+
+      ['bookDemoBtn', 'joinDiscordBtn', 'docCircleBtn', 'docLibraryBtn'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener('click', openModal);
+      });
+      document.querySelectorAll('[data-open-modal]').forEach(function (btn) {
+        btn.addEventListener('click', openModal);
+      });
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (modal) {
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      var form = document.getElementById('rivrDemoForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var fb = document.getElementById('rivrFormFeedback');
+          if (fb) fb.style.display = 'block';
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+          closeModal();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

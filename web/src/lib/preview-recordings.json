@@ -1300,5 +1300,47 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "aetheris-voyage": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "c775bc14e2c4",
+    "sha256": "c775bc14e2c4e71d3b2ea00343c55bd39d93e32d61e532f703db78a6165ac462",
+    "demoHtmlSha256": "7e11becaf7159a8cf1d9c0acf5dbccc48aa80d6c7d3690ca554d0c4cb792ae83",
+    "demoSha256": "25fec6a5874843468b0dc0e4754b542d6a80a35c2af027e7fd6689d438db3581",
+    "bytes": 1124271,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "digital-epoch": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "f29c9a7f675c",
+    "sha256": "f29c9a7f675c481bebdea73d0e09000f0a300e5125d7f4282fe485181f7d22f6",
+    "demoHtmlSha256": "fd2f36ae38a0cd69d6886c4a0f369c9377f0eecf1e33554de7dd03f20373cd68",
+    "demoSha256": "1a48bd9d42ced4f1f405d7fd252e440c61f631a7fa32a6de38a912ac57fce0d9",
+    "bytes": 656217,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "rivr": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "669f653a9d93",
+    "sha256": "669f653a9d935382a0e2754126876423b73efb44555a3120e9732f38e6816538",
+    "demoHtmlSha256": "3a0dfdf56fd3d7c272015fa849d71776ed9a673990fab79d3efdd14e12896f4e",
+    "demoSha256": "6e9f1ac737589b7931d632e99c0148648a8a7ad566a3a6d35b69c5f5319f7e0d",
+    "bytes": 783549,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

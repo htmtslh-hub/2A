@@ -1,0 +1,28 @@
+FORGE ZONE TEMPLATE LICENCE (v1.0)
+==================================
+
+Copyright (c) 2026 Forge Zone. All rights reserved.
+
+1. PERMITTED USE
+----------------
+You are granted a non-exclusive, worldwide, perpetual licence to use, modify,
+and publish this template ("Aetheris Voyage" / aetheris-voyage) for personal,
+commercial, or client website projects, provided that the template is deployed
+as part of a customised website or web application.
+
+2. RESTRICTIONS
+---------------
+- You may NOT resell, redistribute, sublicense, or offer the unmodified or
+  minimally modified template source files (HTML, CSS, JS, or documentation)
+  as a standalone template, theme, UI kit, or starter pack on any marketplace
+  or repository.
+- Remote demonstration video streams referenced via CDN URLs are provided for
+  layout preview and demonstration purposes. Replace sample copy, fictional
+  aerospace telemetry ("Aetheris Voyage"), and demonstration media with your
+  own licensed assets before commercial deployment.
+
+3. DISCLAIMER OF WARRANTY
+-------------------------
+THE TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.

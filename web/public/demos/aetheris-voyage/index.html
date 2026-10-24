@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>Aetheris Voyage — Venture Past Our Sky Across the Universe</title>
+  <meta name="description" content="Cinematic space-travel expeditions and AI-evolved orbital production capabilities. Maiden Crewed Voyage to Mars Arrives 2026.">
+  <meta property="og:title" content="Aetheris Voyage — Venture Past Our Sky Across the Universe">
+  <meta property="og:description" content="Cinematic space-travel landing experience featuring rAF crossfading video stages, Liquid Glass UI, and orbital flight manifest.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23050507' stroke='rgba(255,255,255,0.35)'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='%23ffffff' font-family='Georgia,serif' font-style='italic' font-size='20'%3Ea%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --white: #ffffff;
+      --white-90: rgba(255, 255, 255, 0.9);
+      --white-80: rgba(255, 255, 255, 0.8);
+      --white-65: rgba(255, 255, 255, 0.65);
+      --white-40: rgba(255, 255, 255, 0.4);
+      --white-15: rgba(255, 255, 255, 0.15);
+      --font-heading: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+      --font-body: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg);
+      color: var(--white);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--white);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      overflow-x: clip;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 16px;
+      z-index: 200;
+      background: #ffffff;
+      color: #000000;
+      padding: 10px 18px;
+      border-radius: 9999px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 3px;
+    }
+
+    /* Liquid-glass utilities per exact prompt spec */
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.01);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .liquid-glass::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.45) 0%,
+        rgba(255, 255, 255, 0.15) 20%,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(255, 255, 255, 0.15) 80%,
+        rgba(255, 255, 255, 0.45) 100%
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .liquid-glass-strong {
+      background: rgba(255, 255, 255, 0.04);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(50px);
+      border: none;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    .liquid-glass-strong::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.2) 20%,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(255, 255, 255, 0.2) 80%,
+        rgba(255, 255, 255, 0.5) 100%
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    /* Fixed Navbar */
+    .site-navbar {
+      position: fixed;
+      top: 16px;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    @media (min-width: 1024px) {
+      .site-navbar {
+        padding: 0 64px;
+      }
+    }
+    @media (max-width: 640px) {
+      .site-navbar {
+        padding: 0 16px;
+      }
+    }
+
+    .brand-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 28px;
+      color: var(--white);
+      text-decoration: none;
+      flex-shrink: 0;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .brand-circle:hover {
+      transform: scale(1.06);
+    }
+
+    .nav-pill {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      padding: 6px;
+      border-radius: 9999px;
+    }
+    @media (max-width: 900px) {
+      .nav-pill {
+        display: none;
+      }
+    }
+
+    .nav-link {
+      padding: 8px 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white-90);
+      text-decoration: none;
+      border-radius: 9999px;
+      white-space: nowrap;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+    .nav-link:hover {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .btn-claim {
+      margin-left: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      color: #000000;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: transform 0.2s var(--ease-out), background 0.2s ease;
+    }
+    .btn-claim:hover {
+      background: rgba(255, 255, 255, 0.92);
+      transform: translateY(-1px);
+    }
+
+    .nav-right-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hud-btn {
+      min-height: 44px;
+      padding: 0 14px;
+      border-radius: 9999px;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .hud-btn:hover {
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .wave-bars {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      height: 14px;
+    }
+    .wave-bar {
+      width: 2px;
+      height: 6px;
+      background: #ffffff;
+      border-radius: 9999px;
+      animation: wavePulse 0.9s infinite ease-in-out alternate;
+    }
+    .wave-bar:nth-child(1) { animation-delay: 0.05s; }
+    .wave-bar:nth-child(2) { animation-delay: 0.25s; }
+    .wave-bar:nth-child(3) { animation-delay: 0.45s; }
+    .wave-bar:nth-child(4) { animation-delay: 0.15s; }
+    .wave-bar:nth-child(5) { animation-delay: 0.35s; }
+    body.motion-paused .wave-bar {
+      animation-play-state: paused;
+    }
+    @keyframes wavePulse {
+      0% { height: 4px; opacity: 0.55; }
+      100% { height: 14px; opacity: 1; }
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border-radius: 9999px;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      cursor: pointer;
+    }
+    @media (max-width: 900px) {
+      .mobile-menu-toggle {
+        display: inline-flex;
+      }
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 74px;
+      left: 16px;
+      right: 16px;
+      z-index: 49;
+      border-radius: 24px;
+      padding: 18px;
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      background: rgba(8, 8, 12, 0.92);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .mobile-drawer.is-open {
+      display: flex;
+    }
+
+    /* Stages & Videos */
+    .stage-section {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      background-color: #000000;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-video-wrap {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    /* Hero video: 120% width/height, top-aligned, centered horizontally */
+    .hero-video {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 120%;
+      height: 120%;
+      object-fit: cover;
+      object-position: top center;
+      opacity: 0;
+    }
+
+    .cap-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Hero Foreground */
+    .hero-foreground {
+      position: relative;
+      z-index: 10;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 96px 16px 32px;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .hero-center {
+      margin: auto 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px 0;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 4px 14px 4px 4px;
+      border-radius: 9999px;
+      margin-bottom: 24px;
+      animation: fadeBlurUp 0.7s var(--ease-out) 0.2s both;
+    }
+    .hero-badge__chip {
+      background: #ffffff;
+      color: #000000;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 9999px;
+    }
+    .hero-badge__text {
+      font-size: 14px;
+      color: var(--white-90);
+      font-weight: 400;
+    }
+
+    /* BlurText word-by-word heading */
+    .hero-headline {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(46px, 7.2vw, 96px);
+      line-height: 0.94;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      max-width: 960px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 0.08em;
+      margin-bottom: 20px;
+    }
+    .blur-word {
+      display: inline-block;
+      margin-right: 0.26em;
+      opacity: 0;
+      filter: blur(10px);
+      transform: translateY(36px);
+      animation: wordBlurKeyframes 0.7s var(--ease-out) forwards;
+    }
+    @keyframes wordBlurKeyframes {
+      0% {
+        filter: blur(10px);
+        opacity: 0;
+        transform: translateY(36px);
+      }
+      50% {
+        filter: blur(5px);
+        opacity: 0.55;
+        transform: translateY(-4px);
+      }
+      100% {
+        filter: blur(0px);
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeBlurUp {
+      from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0);
+      }
+    }
+
+    .hero-subtitle {
+      font-size: clamp(16px, 1.5vw, 19px);
+      font-weight: 300;
+      color: var(--white-80);
+      max-width: 540px;
+      line-height: 1.5;
+      animation: fadeBlurUp 0.75s var(--ease-out) 0.65s both;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 24px;
+      animation: fadeBlurUp 0.75s var(--ease-out) 0.85s both;
+    }
+
+    .btn-primary-glass {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 9999px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s var(--ease-out), background 0.2s ease;
+    }
+    .btn-primary-glass:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-secondary-bare {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 9999px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+    .btn-secondary-bare:hover {
+      opacity: 0.8;
+    }
+
+    /* Stats Row */
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 32px;
+      animation: fadeBlurUp 0.75s var(--ease-out) 1.05s both;
+    }
+    .stat-card {
+      width: 220px;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    @media (max-width: 500px) {
+      .stat-card {
+        width: calc(50% - 8px);
+        min-width: 140px;
+        padding: 16px;
+      }
+    }
+    .stat-card__value {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 36px;
+      line-height: 1;
+      letter-spacing: -1px;
+      color: var(--white);
+    }
+    .stat-card__label {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--white);
+      margin-top: 8px;
+    }
+
+    /* Partners Row */
+    .partners-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 12px;
+      animation: fadeBlurUp 0.75s var(--ease-out) 1.2s both;
+    }
+    .partners-chip {
+      padding: 5px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--white);
+      text-align: center;
+    }
+    .partners-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 32px 56px;
+      list-style: none;
+    }
+    .partners-list li {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: clamp(22px, 2.4vw, 30px);
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+
+    /* Section 2 — Capabilities */
+    .cap-content {
+      position: relative;
+      z-index: 10;
+      min-height: 100vh;
+      max-width: 1360px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 96px 32px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @media (min-width: 1024px) {
+      .cap-content {
+        padding: 96px 80px 48px;
+      }
+    }
+    @media (max-width: 640px) {
+      .cap-content {
+        padding: 80px 16px 40px;
+      }
+    }
+
+    .cap-kicker {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--white-80);
+      margin-bottom: 24px;
+    }
+    .cap-heading {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(54px, 6.8vw, 96px);
+      line-height: 0.9;
+      letter-spacing: -3px;
+      color: var(--white);
+    }
+
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 64px;
+    }
+    @media (max-width: 960px) {
+      .cap-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .cap-card {
+      border-radius: 20px;
+      padding: 24px;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s var(--ease-out);
+      cursor: pointer;
+    }
+    .cap-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .cap-card__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .cap-card__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--white);
+    }
+    .cap-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 6px;
+      max-width: 72%;
+    }
+    .cap-tag {
+      border-radius: 9999px;
+      padding: 4px 12px;
+      font-size: 11px;
+      color: var(--white-90);
+      white-space: nowrap;
+    }
+
+    .cap-card__bottom {
+      margin-top: 24px;
+    }
+    .cap-card__title {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(28px, 2.6vw, 36px);
+      letter-spacing: -1px;
+      line-height: 1;
+      color: var(--white);
+    }
+    .cap-card__body {
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.45;
+      color: var(--white-90);
+      max-width: 32ch;
+    }
+
+    /* Section 3 — Interactive Mission Telemetry & Worlds Strip (15% Creative Enhancement) */
+    .worlds-section {
+      position: relative;
+      z-index: 10;
+      background: #040406;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 72px 32px;
+    }
+    @media (max-width: 640px) {
+      .worlds-section {
+        padding: 56px 16px;
+      }
+    }
+    .worlds-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .worlds-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .worlds-title {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(36px, 4.5vw, 56px);
+      line-height: 0.96;
+    }
+    .world-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .world-tab {
+      min-height: 44px;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--white-80);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .world-tab.is-active,
+    .world-tab:hover {
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+    }
+
+    .world-Readout {
+      border-radius: 24px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .world-Readout {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+    }
+    .world-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 500px) {
+      .world-metrics {
+        grid-template-columns: 1fr;
+      }
+    }
+    .metric-box {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .metric-box__label {
+      font-size: 11px;
+      color: var(--white-65);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .metric-box__val {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 26px;
+      margin-top: 4px;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #000000;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 32px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--white-65);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1360px;
+      margin: 0 auto;
+    }
+
+    /* Interactive Modal Dialog */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .modal-backdrop.is-open {
+      display: flex;
+    }
+    .modal-card {
+      max-width: 540px;
+      width: 100%;
+      border-radius: 28px;
+      padding: 28px;
+      background: rgba(12, 12, 16, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.8);
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .modal-tabs {
+      display: flex;
+      gap: 8px;
+      margin: 16px 0 20px;
+    }
+    .modal-tab {
+      padding: 8px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--white-80);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      cursor: pointer;
+    }
+    .modal-tab.is-active {
+      background: #ffffff;
+      color: #000000;
+    }
+    .form-field {
+      margin-bottom: 14px;
+    }
+    .form-field label {
+      display: block;
+      font-size: 12px;
+      color: var(--white-80);
+      margin-bottom: 6px;
+    }
+    .form-field input,
+    .form-field select {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 14px;
+    }
+    .form-field select option {
+      background: #0b0b0f;
+      color: #ffffff;
+    }
+
+    @media print {
+      .site-navbar, .skip-link, .modal-backdrop { display: none !important; }
+      body { background: #ffffff; color: #000000; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Fixed Top Navbar -->
+  <header class="site-navbar">
+    <a href="#hero" class="brand-circle liquid-glass" id="brandLogo" aria-label="Aetheris Voyage Home">a</a>
+
+    <nav class="nav-pill liquid-glass" aria-label="Primary Navigation">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#capabilities" class="nav-link">Voyages</a>
+      <a href="#worlds" class="nav-link">Worlds</a>
+      <a href="#capabilities" class="nav-link">Innovation</a>
+      <a href="#worlds" class="nav-link">Plan Launch</a>
+      <button type="button" class="btn-claim" id="navClaimBtn">
+        <span>Claim a Spot</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M7 17L17 7"/><path d="M7 7h10v10"/>
+        </svg>
+      </button>
+    </nav>
+
+    <div class="nav-right-controls">
+      <button type="button" class="hud-btn liquid-glass" id="motionToggleBtn" aria-pressed="false" title="Pause or resume motion">
+        <span class="wave-bars" aria-hidden="true">
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+          <span class="wave-bar"></span>
+        </span>
+        <span id="motionStatusLabel">ORBIT LIVE</span>
+      </button>
+
+      <button type="button" class="mobile-menu-toggle liquid-glass" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenuDrawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileMenuDrawer" class="mobile-drawer" role="region" aria-label="Mobile Navigation">
+    <a href="#hero" class="nav-link">Home</a>
+    <a href="#capabilities" class="nav-link">Voyages</a>
+    <a href="#worlds" class="nav-link">Worlds</a>
+    <a href="#capabilities" class="nav-link">Innovation</a>
+    <a href="#worlds" class="nav-link">Plan Launch</a>
+    <button type="button" class="btn-claim" id="mobileClaimBtn" style="margin-top: 6px; justify-content: center;">
+      <span>Claim a Spot</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M7 17L17 7"/><path d="M7 7h10v10"/>
+      </svg>
+    </button>
+  </div>
+
+  <main id="main-content">
+    <!-- SECTION 1 — HERO -->
+    <section id="hero" class="stage-section" aria-label="Deep Space Hero">
+      <div class="hero-video-wrap">
+        <video
+          id="heroVideo"
+          class="hero-video"
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4"
+          autoplay
+          muted
+          playsinline
+          preload="auto"
+        ></video>
+      </div>
+
+      <div class="hero-foreground">
+        <div class="hero-center">
+          <div class="hero-badge liquid-glass" id="heroBadge">
+            <span class="hero-badge__chip">New</span>
+            <span class="hero-badge__text">Maiden Crewed Voyage to Mars Arrives 2026</span>
+          </div>
+
+          <h1 class="hero-headline" id="heroHeadline">
+            <span class="blur-word" style="animation-delay: 0.08s;">Venture</span>
+            <span class="blur-word" style="animation-delay: 0.16s;">Past</span>
+            <span class="blur-word" style="animation-delay: 0.24s;">Our</span>
+            <span class="blur-word" style="animation-delay: 0.32s;">Sky</span>
+            <span class="blur-word" style="animation-delay: 0.40s;">Across</span>
+            <span class="blur-word" style="animation-delay: 0.48s;">the</span>
+            <span class="blur-word" style="animation-delay: 0.56s;">Universe</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Embark on the most ambitious deep-space expedition in human history.
+          </p>
+
+          <div class="hero-ctas">
+            <button type="button" class="btn-primary-glass liquid-glass-strong" id="startVoyageBtn">
+              <span>Start Your Voyage</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M7 17L17 7"/><path d="M7 7h10v10"/>
+              </svg>
+            </button>
+
+            <a href="#capabilities" class="btn-secondary-bare" id="viewLiftoffLink">
+              <span>View Liftoff</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <polygon points="6 4 20 12 6 20 6 4"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-card liquid-glass">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <div>
+                <div class="stat-card__value">34.5 Min</div>
+                <div class="stat-card__label">Average Videos Watch Time</div>
+              </div>
+            </div>
+
+            <div class="stat-card liquid-glass">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <div>
+                <div class="stat-card__value">2.8B+</div>
+                <div class="stat-card__label">Users Across the Globe</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="partners-footer">
+          <div class="partners-chip liquid-glass">
+            Collaborating with top aerospace pioneers globally
+          </div>
+          <ul class="partners-list" aria-label="Aerospace Partners">
+            <li>Aeon</li>
+            <li>Vela</li>
+            <li>Apex</li>
+            <li>Orbit</li>
+            <li>Zeno</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — CAPABILITIES -->
+    <section id="capabilities" class="stage-section" aria-label="Production Capabilities">
+      <video
+        id="capVideo"
+        class="cap-video"
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_094631_d30ab262-45ee-4b7d-99f3-5d5848c8ef13.mp4"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+      ></video>
+
+      <div class="cap-content">
+        <div>
+          <p class="cap-kicker">// Capabilities</p>
+          <h2 class="cap-heading">Production<br>evolved</h2>
+        </div>
+
+        <div class="cap-grid">
+          <!-- Card 1: AI Scenery -->
+          <article class="cap-card liquid-glass" data-open-modal="scenery">
+            <div class="cap-card__top">
+              <div class="cap-card__icon liquid-glass">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21H5Zm1-4h12l-3.75-5-3 4L9 13l-3 4Z"/>
+                </svg>
+              </div>
+              <div class="cap-card__tags">
+                <span class="cap-tag liquid-glass">Natural Context</span>
+                <span class="cap-tag liquid-glass">Photo Realism</span>
+                <span class="cap-tag liquid-glass">Infinite Settings</span>
+                <span class="cap-tag liquid-glass">Eco-Vibe</span>
+              </div>
+            </div>
+            <div class="cap-card__bottom">
+              <h3 class="cap-card__title">AI Scenery</h3>
+              <p class="cap-card__body">
+                AI analyzes your product to create indistinguishable natural environments — from Icelandic cliffs to misty forests.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 2: Batch Production -->
+          <article class="cap-card liquid-glass" data-open-modal="batch">
+            <div class="cap-card__top">
+              <div class="cap-card__icon liquid-glass">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M4 6.47 5.76 10H20v8H4V6.47M22 4h-4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.89-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4Z"/>
+                </svg>
+              </div>
+              <div class="cap-card__tags">
+                <span class="cap-tag liquid-glass">Scale Fast</span>
+                <span class="cap-tag liquid-glass">Visual Consistency</span>
+                <span class="cap-tag liquid-glass">Time Saver</span>
+                <span class="cap-tag liquid-glass">Ready to Post</span>
+              </div>
+            </div>
+            <div class="cap-card__bottom">
+              <h3 class="cap-card__title">Batch Production</h3>
+              <p class="cap-card__body">
+                Style your entire product line in minutes. Create a unified visual identity for catalogues and social media without weeks of retouching.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 3: Smart Lighting -->
+          <article class="cap-card liquid-glass" data-open-modal="lighting">
+            <div class="cap-card__top">
+              <div class="cap-card__icon liquid-glass">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1Zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7Z"/>
+                </svg>
+              </div>
+              <div class="cap-card__tags">
+                <span class="cap-tag liquid-glass">Ray Tracing</span>
+                <span class="cap-tag liquid-glass">Physical Shadows</span>
+                <span class="cap-tag liquid-glass">Studio Quality</span>
+                <span class="cap-tag liquid-glass">Sunlight Sync</span>
+              </div>
+            </div>
+            <div class="cap-card__bottom">
+              <h3 class="cap-card__title">Smart Lighting</h3>
+              <p class="cap-card__body">
+                Automatic lighting and material adjustment. Achieve flawless integration with realistic shadows and sunlight.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — INTERACTIVE ORBITAL WORLDS TELEMETRY (15% Creative Enhancement) -->
+    <section id="worlds" class="worlds-section" aria-label="Orbital Destinations">
+      <div class="worlds-inner">
+        <div class="worlds-header">
+          <div>
+            <p class="cap-kicker" style="margin-bottom: 8px;">// 03 Destination Telemetry</p>
+            <h2 class="worlds-title">Select Orbital Sector</h2>
+          </div>
+          <div class="world-tabs" role="tablist" aria-label="Orbital Sectors">
+            <button type="button" class="world-tab is-active" data-world="mars" role="tab" aria-selected="true">Mars Chryse Planitia</button>
+            <button type="button" class="world-tab" data-world="luna" role="tab" aria-selected="false">Lunar Shackleton</button>
+            <button type="button" class="world-tab" data-world="europa" role="tab" aria-selected="false">Europa Clipper Relay</button>
+          </div>
+        </div>
+
+        <div class="world-Readout liquid-glass" id="worldReadoutPanel">
+          <div>
+            <h3 class="cap-card__title" id="worldTitle">Mars Chryse Planitia — Window Q4 2026</h3>
+            <p class="cap-card__body" id="worldDesc" style="max-width: 54ch; margin-top: 10px;">
+              Maiden crewed interplanetary transfer aboard Aetheris Heavy Mark IV. Pressurized habitat domes and AI-guided atmospheric entry corridors verified.
+            </p>
+          </div>
+          <div class="world-metrics">
+            <div class="metric-box">
+              <div class="metric-box__label">Transit Delta-V</div>
+              <div class="metric-box__val" id="worldDeltaV">6.4 km/s</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-box__label">Flight Duration</div>
+              <div class="metric-box__val" id="worldDuration">194 Days</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-box__label">Berths Open</div>
+              <div class="metric-box__val" id="worldBerths">12 / 48</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Aetheris Voyage Aerospace Corp. Fictional concept demo for commercial customisation.</span>
+    <a href="mailto:flightdeck@aetheris-voyage.example" style="color: #ffffff; text-decoration: underline;">flightdeck@aetheris-voyage.example</a>
+  </footer>
+
+  <!-- Interactive Claim / Mission Manifest Modal -->
+  <div id="claimModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.6);">Aetheris Flight Deck · Demo Preview</p>
+      <h2 id="modalTitle" style="font-family: var(--font-heading); font-style: italic; font-size: 36px; font-weight: 400; margin-top: 4px;">Claim Your Orbital Spot</h2>
+
+      <div class="modal-tabs" role="tablist">
+        <button type="button" class="modal-tab is-active" data-modal-tab="reserve">01 Reserve Berth</button>
+        <button type="button" class="modal-tab" data-modal-tab="specs">02 Vessel Telemetry</button>
+      </div>
+
+      <div id="modalPanelReserve">
+        <form id="claimForm">
+          <div class="form-field">
+            <label for="commanderName">Passenger Name / Callsign</label>
+            <input type="text" id="commanderName" required placeholder="Commander Elena Vance">
+          </div>
+          <div class="form-field">
+            <label for="commanderEmail">Dispatch Email</label>
+            <input type="email" id="commanderEmail" required placeholder="vance@aetheris.example">
+          </div>
+          <div class="form-field">
+            <label for="sectorSelect">Mission Sector</label>
+            <select id="sectorSelect">
+              <option value="mars">Mars Chryse Planitia (2026)</option>
+              <option value="luna">Lunar Shackleton Crater</option>
+              <option value="europa">Europa Deep Relay</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-claim" style="width: 100%; justify-content: center; padding: 12px; margin: 8px 0 0;">
+            <span>Preview Dispatch Request (Demo Only)</span>
+          </button>
+          <p id="formFeedback" style="font-size: 12px; color: rgba(255,255,255,0.75); margin-top: 10px; display: none;">
+            Demo only — no live telemetry or reservation data is transmitted from this static template. Connect your booking endpoint or use <a href="mailto:flightdeck@aetheris-voyage.example" style="color: #fff;">flightdeck@aetheris-voyage.example</a>.
+          </p>
+        </form>
+      </div>
+
+      <div id="modalPanelSpecs" style="display: none; font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.6;">
+        <p><strong>Propulsion:</strong> Dual-mode Magnetoplasmadynamic (MPD) Fusion Thrusters.</p>
+        <p style="margin-top: 8px;"><strong>Artificial Gravity:</strong> 0.38g Mars-standard centrifugal ring hab.</p>
+        <p style="margin-top: 8px;"><strong>Optical Production Suite:</strong> Onboard AI Scenery, Batch Production, and Smart Ray-Traced Lighting arrays.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* 1. FadingVideo component (rAF-driven crossfade per exact prompt specification) */
+      var FADE_MS = 500;
+      var FADE_OUT_LEAD = 0.55;
+      var motionPaused = false;
+
+      function setupFadingVideo(videoEl) {
+        if (!videoEl) return;
+        var rafId = null;
+        var fadingOut = false;
+
+        function fadeTo(target, duration) {
+          if (rafId) cancelAnimationFrame(rafId);
+          var startOpacity = parseFloat(videoEl.style.opacity);
+          if (isNaN(startOpacity)) startOpacity = 0;
+          var startTime = performance.now();
+
+          function tick(now) {
+            var p = Math.min(1, (now - startTime) / duration);
+            var current = startOpacity + (target - startOpacity) * p;
+            videoEl.style.opacity = String(current);
+            if (p < 1) {
+              rafId = requestAnimationFrame(tick);
+            }
+          }
+          rafId = requestAnimationFrame(tick);
+        }
+
+        function startPlayback() {
+          videoEl.style.opacity = '0';
+          var p = videoEl.play();
+          if (p && typeof p.catch === 'function') p.catch(function () {});
+          fadeTo(1, FADE_MS);
+        }
+
+        if (videoEl.readyState >= 2) {
+          startPlayback();
+        } else {
+          videoEl.addEventListener('loadeddata', startPlayback, { once: true });
+        }
+
+        videoEl.addEventListener('timeupdate', function () {
+          if (motionPaused) return;
+          var dur = videoEl.duration;
+          if (!fadingOut && dur && isFinite(dur) && (dur - videoEl.currentTime <= FADE_OUT_LEAD) && (dur - videoEl.currentTime > 0)) {
+            fadingOut = true;
+            fadeTo(0, FADE_MS);
+          }
+        });
+
+        videoEl.addEventListener('ended', function () {
+          videoEl.style.opacity = '0';
+          setTimeout(function () {
+            videoEl.currentTime = 0;
+            fadingOut = false;
+            if (!motionPaused) {
+              var p = videoEl.play();
+              if (p && typeof p.catch === 'function') p.catch(function () {});
+            }
+            fadeTo(1, FADE_MS);
+          }, 100);
+        });
+      }
+
+      var heroVideo = document.getElementById('heroVideo');
+      var capVideo = document.getElementById('capVideo');
+      setupFadingVideo(heroVideo);
+      setupFadingVideo(capVideo);
+
+      /* 2. Session Motion Toggle (respects 05/10/2026 default-on animation rule) */
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var motionLabel = document.getElementById('motionStatusLabel');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          if (motionLabel) motionLabel.textContent = motionPaused ? 'PAUSED' : 'ORBIT LIVE';
+          [heroVideo, capVideo].forEach(function (v) {
+            if (!v) return;
+            if (motionPaused) v.pause();
+            else {
+              var p = v.play();
+              if (p && typeof p.catch === 'function') p.catch(function () {});
+            }
+          });
+        });
+      }
+
+      /* 3. Mobile Menu Drawer */
+      var mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      var mobileDrawer = document.getElementById('mobileMenuDrawer');
+      function closeMobileMenu() {
+        if (!mobileDrawer || !mobileMenuBtn) return;
+        mobileDrawer.classList.remove('is-open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      }
+      if (mobileMenuBtn && mobileDrawer) {
+        mobileMenuBtn.addEventListener('click', function () {
+          var open = mobileDrawer.classList.toggle('is-open');
+          mobileMenuBtn.setAttribute('aria-expanded', String(open));
+        });
+        mobileDrawer.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', closeMobileMenu);
+        });
+      }
+
+      /* 4. Interactive Worlds Sector Switcher (15% Creative Enhancement) */
+      var WORLDS = {
+        mars: {
+          title: 'Mars Chryse Planitia — Window Q4 2026',
+          desc: 'Maiden crewed interplanetary transfer aboard Aetheris Heavy Mark IV. Pressurized habitat domes and AI-guided atmospheric entry corridors verified.',
+          deltaV: '6.4 km/s',
+          duration: '194 Days',
+          berths: '12 / 48'
+        },
+        luna: {
+          title: 'Lunar Shackleton Rim — Bi-Weekly Shuttle',
+          desc: 'Continuous solar-peak illumination outpost at the Lunar South Pole. Direct cislunar tether transfer with full optical studio production bays.',
+          deltaV: '3.9 km/s',
+          duration: '3.2 Days',
+          berths: '28 / 60'
+        },
+        europa: {
+          title: 'Europa Clipper Relay — Deep Science Charter',
+          desc: 'High-radiation shielded orbital observatory above the Galilean ice crust. Autonomous ray-traced telemetry and subsurface sonar mapping.',
+          deltaV: '14.2 km/s',
+          duration: '610 Days',
+          berths: '4 / 16'
+        }
+      };
+
+      var worldTabs = document.querySelectorAll('.world-tab');
+      worldTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var key = tab.getAttribute('data-world');
+          var data = WORLDS[key];
+          if (!data) return;
+          worldTabs.forEach(function (t) {
+            t.classList.toggle('is-active', t === tab);
+            t.setAttribute('aria-selected', String(t === tab));
+          });
+          document.getElementById('worldTitle').textContent = data.title;
+          document.getElementById('worldDesc').textContent = data.desc;
+          document.getElementById('worldDeltaV').textContent = data.deltaV;
+          document.getElementById('worldDuration').textContent = data.duration;
+          document.getElementById('worldBerths').textContent = data.berths;
+        });
+      });
+
+      /* 5. Interactive Modal Dialog */
+      var modal = document.getElementById('claimModal');
+      var modalCloseBtn = document.getElementById('modalCloseBtn');
+      var lastTrigger = null;
+
+      function openModal() {
+        if (!modal) return;
+        lastTrigger = document.activeElement;
+        modal.classList.add('is-open');
+        closeMobileMenu();
+        if (modalCloseBtn) modalCloseBtn.focus();
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+        if (lastTrigger && typeof lastTrigger.focus === 'function') lastTrigger.focus();
+      }
+
+      ['navClaimBtn', 'mobileClaimBtn', 'startVoyageBtn'].forEach(function (id) {
+        var btn = document.getElementById(id);
+        if (btn) btn.addEventListener('click', openModal);
+      });
+      document.querySelectorAll('[data-open-modal]').forEach(function (card) {
+        card.addEventListener('click', openModal);
+      });
+      if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+      if (modal) {
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      var modalTabs = document.querySelectorAll('[data-modal-tab]');
+      modalTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var mode = tab.getAttribute('data-modal-tab');
+          modalTabs.forEach(function (t) { t.classList.toggle('is-active', t === tab); });
+          document.getElementById('modalPanelReserve').style.display = mode === 'reserve' ? 'block' : 'none';
+          document.getElementById('modalPanelSpecs').style.display = mode === 'specs' ? 'block' : 'none';
+        });
+      });
+
+      var claimForm = document.getElementById('claimForm');
+      if (claimForm) {
+        claimForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var fb = document.getElementById('formFeedback');
+          if (fb) fb.style.display = 'block';
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else closeMobileMenu();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

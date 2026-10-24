@@ -109,7 +109,7 @@ try {
     }
     if (!existsSync(resolve(publicRoot, `demos/${slug}/index.html`))) throw Error(`${slug}: no released demo`);
     const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, recordVideo: { dir: resolve(evidence, 'recordings'), size: { width: 1440, height: 900 } } });
-    const allowedBriefHosts = new Set();
+    const allowedBriefHosts = new Set(['db.onlinewebfonts.com','d8j0ntlcm91z4.cloudfront.net','d2ol7oe51mr4n9.cloudfront.net','images.higgs.ai']);
     if (slug === 'jack-3d') {
       for (const host of ['shrug-person-78902957.figma.site','motionsites.ai','images.higgs.ai','d8j0ntlcm91z4.cloudfront.net']) allowedBriefHosts.add(host);
     }
@@ -171,8 +171,8 @@ try {
       await page.waitForFunction(() => document.getElementById('boot')?.classList.contains('done') && document.getElementById('clip')?.readyState >= 2, null, {timeout:60000});
       await page.waitForTimeout(1000);
     }
-    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far','reelmark','vanguard','targo','gridwork-co','vaultra','lauberhorn-ridge'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
-    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'reelmark' || slug === 'vanguard' || slug === 'gridwork-co' || slug === 'vaultra' || slug === 'lauberhorn-ridge') {
+    if (['meridian','freight-axis','riverine-ai','monoframe','nexlayer','vectrus-energy','designpro','cinematic','camper','sellix','neuralkinetics','securify','synapsex','oceanpulse','meadowbell','eclipsio','murmur','wander-far','reelmark','vanguard','targo','gridwork-co','vaultra','lauberhorn-ridge','aetheris-voyage','digital-epoch','rivr'].includes(slug)) await page.waitForFunction(() => document.querySelector('video')?.readyState >= 2, null, {timeout:30000});
+    if (slug === 'monoframe' || slug === 'cinematic' || slug === 'camper' || slug === 'sellix' || slug === 'neuralkinetics' || slug === 'synapsex' || slug === 'oceanpulse' || slug === 'meadowbell' || slug === 'eclipsio' || slug === 'murmur' || slug === 'wander-far' || slug === 'reelmark' || slug === 'vanguard' || slug === 'gridwork-co' || slug === 'vaultra' || slug === 'lauberhorn-ridge' || slug === 'aetheris-voyage' || slug === 'digital-epoch' || slug === 'rivr') {
       await page.waitForTimeout(2000);
     }
     if (slug === 'solaris-gate') {
@@ -186,6 +186,60 @@ try {
       await page.screenshot({ path: file, type:'jpeg', quality:82 }); frames.push(file);
     };
     const next = async () => {
+      if (slug === 'aetheris-voyage') {
+        const step = actions.filter(a => a.action.startsWith('aetheris-')).length;
+        if (step === 0) {
+          await page.locator('#startVoyageBtn').click();
+          await page.locator('#claimModal.is-open').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'aetheris-open-claim-modal' });
+        } else if (step === 1) {
+          await page.locator('[data-modal-tab="specs"]').click();
+          await page.waitForTimeout(350);
+          await page.keyboard.press('Escape');
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'aetheris-view-specs-and-close' });
+        } else {
+          await page.locator('[data-world="luna"]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'aetheris-switch-lunar-sector' });
+        }
+        return;
+      }
+      if (slug === 'digital-epoch') {
+        const step = actions.filter(a => a.action.startsWith('digital-epoch-')).length;
+        if (step === 0) {
+          await page.locator('#contactHeroBtn').click();
+          await page.locator('#epochModal.is-open').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'digital-epoch-open-contact-modal' });
+        } else if (step === 1) {
+          await page.keyboard.press('Escape');
+          await page.waitForTimeout(300);
+          await page.locator('#navTouchBtn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'digital-epoch-close-modal-and-hover-marquee' });
+        } else {
+          await page.locator('[data-layer="sdk"]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'digital-epoch-switch-builder-sdk' });
+        }
+        return;
+      }
+      if (slug === 'rivr') {
+        const step = actions.filter(a => a.action.startsWith('rivr-')).length;
+        if (step === 0) {
+          await page.locator('[data-vault="nft"]').click();
+          await page.waitForTimeout(300);
+          await page.locator('#bookDemoBtn').click();
+          await page.locator('#rivrModal.is-open').waitFor({ state: 'visible' });
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'rivr-switch-nft-vault-and-open-demo' });
+        } else if (step === 1) {
+          await page.keyboard.press('Escape');
+          await page.waitForTimeout(300);
+          await page.locator('[data-vault="treasury"]').click();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'rivr-close-modal-and-switch-treasury' });
+        } else {
+          await page.locator('[data-vault="strivr"]').click();
+          await page.locator('#joinDiscordBtn').hover();
+          actions.push({ seconds: (Date.now() - start) / 1000, action: 'rivr-restore-strivr-and-hover-discord' });
+        }
+        return;
+      }
       if (slug === 'atlas') {
         const step = actions.filter(a => a.action.startsWith('atlas-')).length;
         if (step === 0) {
@@ -817,7 +871,7 @@ try {
     }
     actions.push({ seconds:6.7, action:'scroll', target });
     await at(10); await shot('scroll');
-    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli', 'cast-and-render', 'vaultra', 'lauberhorn-ridge'].includes(slug)) {
+    if (['solaris-gate', 'monoframe', 'cyber-ronin', 'veyra', 'lumora', 'securify', 'cozypaws', 'oceanpulse', 'meadowbell', 'wander-far', 'iris', 'melli', 'cast-and-render', 'vaultra', 'lauberhorn-ridge', 'aetheris-voyage', 'digital-epoch', 'rivr'].includes(slug)) {
       await next();
     }
     await at(11.5); await page.evaluate(() => window.scrollTo({ top:0, behavior:'smooth' }));

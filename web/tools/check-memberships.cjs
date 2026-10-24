@@ -33,7 +33,9 @@ async function main() {
   eq(productPolicy.productAccessTier({ group: 'skill-prompt' }), 'premium');
   eq(productPolicy.productAccessTier({ group: 'agent' }), 'individual');
   eq(productPolicy.productAccessTier({ access: 'free' }), 'free');
-  const freeIds = ['t1', 't22', 't50', 't53', 't54', 't55', 't56', 't57', 't58', 't59', 't60', 't61', 't62'];
+  const baseFreeIds = ['t1', 't22', 't50', 't53', 't54', 't55', 't56', 't57', 't58', 't59', 't60', 't61', 't62', 't97'];
+  const freeIds = Object.keys(products).filter(id => products[id].access === 'free' && !products[id].previewOnly).sort();
+  for (const id of baseFreeIds) eq(freeIds.includes(id), true);
   eq(Object.keys(products).filter(productPolicy.isFreeProduct).sort().join(','), freeIds.join(','));
   for (const id of freeIds) {
     eq(productPolicy.requiresPremium(id), false);

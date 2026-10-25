@@ -2,15 +2,15 @@
   "id": "t110",
   "slug": "price-calculator",
   "browser": "153.0.8010.12",
-  "date": "2026-10-25T23:01:56.002Z",
+  "date": "2026-10-25T23:26:02.612Z",
   "demo": "/demos/price-calculator/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "3d3245c2e1f3",
-  "sha256": "3d3245c2e1f3d44a4e3d55dddd78c1051c89af0cac06f421ca8fa201f774b0fb",
-  "demoHtmlSha256": "879d07d571109ff8631ca896962e47017d64497623a293bc57668a2cb6bc9a59",
-  "demoSha256": "dd32b66c45cd9e761fd64bb57f64520489206c3dc724cee100ce3e3a15821e35",
-  "bytes": 591764,
+  "revision": "7740d5270009",
+  "sha256": "7740d5270009fe78e69bb8a1b69b95cbe49a5b809aaf456a3de80823a2b6dbd2",
+  "demoHtmlSha256": "27e3f2253354e99ecbec6451f798743a531cd034bc9db25854bdfb2fce0288f0",
+  "demoSha256": "f50205fb0ec424e9e0e370f9778b4c631b2d2e7273eca94b5ea44a57bd397c86",
+  "bytes": 338170,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.472,
+      "seconds": 2.457,
       "action": "click",
-      "selector": "#openModalBtn"
+      "selector": "#openBreakdownBtn"
     },
     {
-      "seconds": 4.904,
+      "seconds": 4.834,
       "action": "click",
-      "selector": "#openModalBtn"
+      "selector": "#openBreakdownBtn"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 0
+      "target": 286
     }
   ],
   "errors": [],

@@ -54,18 +54,18 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Price Calculator",
-        desc: "Giao diện web Price Calculator tự chứa trong một file HTML duy nhất với nền video lặp mượt, bề mặt kính mờ, bảng điều khiển tương tác và hộp thoại thông số.",
-        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+        desc: "Công cụ tính chi phí dự án tương tác 2 cột (Project Estimation Calculator) với thanh trượt số trang 1–30, tuỳ chọn dịch vụ/tiến độ và 3 thẻ so sánh giá thời gian thực.",
+        tags: ['Pricing Calculator', 'Interactive Slider', 'SaaS Estimator']
       },
       en: {
         name: "Price Calculator",
-        desc: "Single-file self-contained Price Calculator landing experience featuring looping background video, glassmorphic UI, interactive telemetry, and an accessible modal dialog.",
-        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+        desc: "Interactive 2-column project estimation calculator featuring a 1–30 page range slider, service and timeline toggles, and real-time Agency vs. Freelancer vs. Studio cost cards.",
+        tags: ['Pricing Calculator', 'Interactive Slider', 'SaaS Estimator']
       },
       zh: {
         name: "Price Calculator",
-        desc: "单文件自包含 Price Calculator 着陆页模板，配备自动循环背景视频、毛玻璃交互组件与详情弹窗。",
-        tags: ['动态视频', '毛玻璃', '交互首屏']
+        desc: "双栏交互式项目预算计算器，配备 1–30 页滑块、服务与周期切换及实时价格对比卡片。",
+        tags: ['价格计算器', '交互滑块', 'SaaS 报价']
       }
     }
   },
@@ -78,18 +78,18 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Kresna Footer",
-        desc: "Giao diện web Kresna Footer tự chứa trong một file HTML duy nhất với nền video lặp mượt, bề mặt kính mờ, bảng điều khiển tương tác và hộp thoại thông số.",
-        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+        desc: "Chân trang SaaS Kresna hai thẻ đối xứng với thẻ video nền bên trái, khối lập phương 3D 'Feeling lucky?', chữ viết tay Caveat, ô đăng ký email và watermark SVG tràn viền.",
+        tags: ['SaaS Footer', '3D Lucky Cube', 'SVG Watermark']
       },
       en: {
         name: "Kresna Footer",
-        desc: "Single-file self-contained Kresna Footer landing experience featuring looping background video, glassmorphic UI, interactive telemetry, and an accessible modal dialog.",
-        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+        desc: "Dual-card Kresna AI sales-automation footer featuring a looping video brand card, floating 3D rotated lucky cube, Caveat handwritten accents, and fluid getBBox() SVG watermark.",
+        tags: ['SaaS Footer', '3D Lucky Cube', 'SVG Watermark']
       },
       zh: {
         name: "Kresna Footer",
-        desc: "单文件自包含 Kresna Footer 着陆页模板，配备自动循环背景视频、毛玻璃交互组件与详情弹窗。",
-        tags: ['动态视频', '毛玻璃', '交互首屏']
+        desc: "Kresna AI 销售自动化双卡片页脚组件，配备循环视频品牌卡、3D 旋转幸运方块、手写字体点缀与自适应 SVG 水印。",
+        tags: ['SaaS 页脚', '3D 幸运方块', '自适应水印']
       }
     }
   },
@@ -103,18 +103,18 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     copy: {
       vi: {
         name: "Glow Features",
-        desc: "Giao diện web Glow Features tự chứa trong một file HTML duy nhất với nền video lặp mượt, bề mặt kính mờ, bảng điều khiển tương tác và hộp thoại thông số.",
-        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+        desc: "Bộ 3 thẻ tính năng nền tối (#0A0A0B) với viền chuyển sắc 8px (background-clip border-box), quầng sáng mờ 45px, bộ chuyển đổi bảng màu và thanh tinh chỉnh độ nhoè trực tiếp.",
+        tags: ['Gradient Border', 'Ambient Glow', 'Features Grid']
       },
       en: {
         name: "Glow Features",
-        desc: "Single-file self-contained Glow Features landing experience featuring looping background video, glassmorphic UI, interactive telemetry, and an accessible modal dialog.",
-        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+        desc: "Dark-themed 3-card feature showcase (#0A0A0B) using 8px background-clip border-box gradients, 45px blurred ambient halos, live palette presets, and a CSS border inspector.",
+        tags: ['Gradient Border', 'Ambient Glow', 'Features Grid']
       },
       zh: {
         name: "Glow Features",
-        desc: "单文件自包含 Glow Features 着陆页模板，配备自动循环背景视频、毛玻璃交互组件与详情弹窗。",
-        tags: ['动态视频', '毛玻璃', '交互首屏']
+        desc: "深色霓虹光晕三卡特性展示组件，采用 8px 渐变裁剪边框、45px 模糊光晕与实时配色调节器。",
+        tags: ['渐变边框', '氛围光晕', '特性网格']
       }
     }
   },

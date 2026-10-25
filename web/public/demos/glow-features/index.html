@@ -3,95 +3,529 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Glow Features — Glow Features — Next-Gen Interactive Experience</title>
-  <meta name="description" content="My entire desktop setup is built for power. It is silent, durable, and holds my focus.">
+  <title>Glow Features — Dark Ambient Gradient Border Feature Cards</title>
+  <meta name="description" content="Dark-themed glowing feature card section with 8px background-clip gradient borders, 45px ambient blur halos, interactive glow telemetry, and live CSS inspector.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f8fafc;
-      --fg: #0a1b33;
-      --muted: #64748b;
-      --card: rgba(255,255,255,0.86);
-      --border: rgba(15,23,42,0.1);
-      --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
-      --font-display: 'Instrument Serif', Georgia, serif;
+      --bg: #0A0A0B;
+      --card-surface: #1A1A1C;
+      --blur-radius: 45px;
+      --glow-opacity: 0.62;
+      --border-size: 8px;
+      --grad-1: linear-gradient(137deg, #FF3D77 0%, #FFB1CE 45%, #FF9D3C 100%);
+      --grad-2: linear-gradient(137deg, #FFFFFF 0%, #7DD3FC 45%, #06B6D4 100%);
+      --grad-3: linear-gradient(137deg, #4361EE 0%, #E0AEFF 45%, #F72585 100%);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; background: var(--bg); color: var(--fg); font-family: var(--font-sans); }
-    body { background: var(--bg); color: var(--fg); min-height: 100vh; overflow-x: clip; }
-    .hero-stage { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding: 28px 32px 48px; overflow: hidden; }
-    .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
-    .topbar, .hero-center, .telemetry-strip { position: relative; z-index: 10; max-width: 1320px; width: 100%; margin: 0 auto; }
-    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    .glass-pill { background: var(--card); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 9999px; padding: 10px 20px; color: var(--fg); font-size: 13px; font-weight: 600; text-decoration: none; cursor: pointer; }
-    .hero-center { text-align: center; margin: auto; padding: 64px 0; max-width: 880px; }
-    .hero-h1 { font-size: clamp(40px, 6.2vw, 84px); font-weight: 500; line-height: 1.02; letter-spacing: -0.03em; margin: 18px 0; }
-    .hero-sub { font-size: clamp(15px, 1.5vw, 18px); color: var(--muted); max-width: 600px; margin: 0 auto 28px; line-height: 1.6; }
-    .telemetry-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    @media (max-width: 768px) { .telemetry-strip { grid-template-columns: 1fr; } .hero-stage { padding: 20px 16px 32px; } }
-    .t-card { background: var(--card); backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 24px; padding: 22px; cursor: pointer; text-align: left; color: var(--fg); }
-    .modal-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.65); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 16px; pointer-events: none; }
+    html, body {
+      min-height: 100vh;
+      background-color: var(--bg);
+      color: #ffffff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: rgba(255, 255, 255, 0.2); color: #fff; }
+
+    .page-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 24px 48px;
+      position: relative;
+      isolation: isolate;
+    }
+
+    /* Ambient top bar (+15-20% creative enhancement) */
+    .studio-bar {
+      width: 100%;
+      max-width: 936px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: rgba(26, 26, 28, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      backdrop-filter: blur(16px);
+      z-index: 20;
+      flex-wrap: wrap;
+    }
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(137deg, #FF3D77, #06B6D4, #F72585);
+      box-shadow: 0 0 14px #FF3D77;
+    }
+    .control-cluster {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pill-btn {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.88);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 7px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .pill-btn:hover, .pill-btn.is-active {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.32);
+      color: #fff;
+    }
+
+    /* Section Header */
+    .section-intro {
+      text-align: center;
+      max-width: 660px;
+      margin: 36px auto 40px;
+      z-index: 10;
+    }
+    .eyebrow-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #9ca3af;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(28px, 4.2vw, 44px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+      margin-bottom: 12px;
+    }
+    .section-desc {
+      font-size: 15px;
+      color: #9ca3af;
+      line-height: 1.6;
+    }
+
+    /* Main 3-Card Feature Grid (exact prompt spec: max-w-[936px] grid-cols-1 md:grid-cols-3) */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      width: 100%;
+      max-width: 936px;
+      margin: 0 auto;
+      z-index: 10;
+    }
+    @media (max-width: 860px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* FeatureCard wrapper: max-w-[300px] */
+    .feature-card-wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      cursor: pointer;
+      perspective: 900px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: cardEnter 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .feature-card-wrap[data-delay="0.1"] { animation-delay: 0.1s; }
+    .feature-card-wrap[data-delay="0.2"] { animation-delay: 0.2s; }
+    .feature-card-wrap[data-delay="0.3"] { animation-delay: 0.3s; }
+
+    @keyframes cardEnter {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Crucial Glow Background behind card */
+    .card-glow-halo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 300px;
+      border-radius: 40px;
+      opacity: var(--glow-opacity);
+      filter: blur(var(--blur-radius));
+      pointer-events: none;
+      transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;
+    }
+    .feature-card-wrap:hover .card-glow-halo,
+    .feature-card-wrap.is-focused .card-glow-halo {
+      opacity: 0.92;
+      filter: blur(54px);
+      transform: scale(1.05);
+    }
+
+    /* Crucial Foreground Card with 8px solid transparent border & background-clip border-box */
+    .card-foreground {
+      position: relative;
+       align-self: stretch;
+      width: 100%;
+      height: 300px;
+      border-radius: 40px;
+      z-index: 10;
+      overflow: hidden;
+      border: var(--border-size) solid transparent;
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s ease;
+    }
+    .feature-card-wrap:hover .card-foreground {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55);
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .card-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .card-icon {
+      color: rgba(255, 255, 255, 0.92);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.52);
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .card-title {
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .card-desc {
+      color: #9ca3af;
+      font-size: 14px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* Interactive Telemetry & CSS Gradient Tuner Bar (+15-20% creative enhancement) */
+    .tuner-dock {
+      width: 100%;
+      max-width: 936px;
+      margin-top: 44px;
+      padding: 20px 24px;
+      border-radius: 28px;
+      background: rgba(26, 26, 28, 0.84);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      display: grid;
+      grid-template-columns: 1.3fr 1fr auto;
+      gap: 20px;
+      align-items: center;
+      z-index: 15;
+    }
+    @media (max-width: 768px) {
+      .tuner-dock { grid-template-columns: 1fr; }
+    }
+    .code-readout {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #e5e7eb;
+      background: rgba(10, 10, 11, 0.85);
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .slider-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+    .slider-group input[type="range"] {
+      width: 100%;
+      accent-color: #FF3D77;
+      cursor: pointer;
+    }
+
+    /* Accessible Modal Inspector */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      pointer-events: none;
+    }
     .modal-backdrop.is-open { display: flex; }
-    .modal-box { max-width: 480px; width: 100%; border-radius: 28px; background: var(--bg); border: 1px solid var(--border); padding: 28px; position: relative; color: var(--fg); pointer-events: auto; }
+    .modal-box {
+      max-width: 520px;
+      width: 100%;
+      border-radius: 32px;
+      background: #141416;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 28px;
+      color: #fff;
+      pointer-events: auto;
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.65);
+    }
   </style>
 </head>
 <body>
-  <main>
-    <section class="hero-stage">
-      <video id="heroVideo" class="hero-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4" autoplay loop muted playsinline preload="auto"></video>
-      <header class="topbar">
-        <a href="#" class="glass-pill">Glow Features</a>
-        <div style="display:flex;gap:10px;">
-          <button type="button" class="glass-pill" id="motionBtn" aria-pressed="false">LIVE MOTION</button>
-          <button type="button" class="glass-pill" id="openModalBtn" data-next-preview>Explore Specs ↗</button>
-        </div>
-      </header>
-      <div class="hero-center">
-        <span class="glass-pill">✦ Glow Features Interactive Edition</span>
-        <h1 class="hero-h1">Glow Features — Next-Gen Interactive Experience</h1>
-        <p class="hero-sub">My entire desktop setup is built for power. It is silent, durable, and holds my focus.</p>
-        <button type="button" class="glass-pill" id="heroCtaBtn">Launch Interactive Brief ↗</button>
+  <main class="page-shell">
+    <header class="studio-bar">
+      <div class="brand-cluster">
+        <span class="brand-dot"></span>
+        <span>Glow Features Studio</span>
       </div>
-      <div class="telemetry-strip">
-        <button type="button" class="t-card" data-mode="01"><strong>01 / Architecture</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Real-time fluid stage &amp; zero-build HTML5 delivery.</p></button>
-        <button type="button" class="t-card" data-mode="02"><strong>02 / Performance</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Sub-16ms frame pacing with adaptive viewport scaling.</p></button>
-        <button type="button" class="t-card" data-mode="03"><strong>03 / Customisation</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">10-step literal map &amp; 12 AI prompts bundled.</p></button>
+      <div class="control-cluster">
+        <button type="button" class="pill-btn is-active" data-preset="default">Original Palette</button>
+        <button type="button" class="pill-btn" data-preset="cyber">Cyber Neon</button>
+        <button type="button" class="pill-btn" data-preset="solar">Solar Flare</button>
+        <button type="button" class="pill-btn" id="inspectCssBtn" data-next-preview style="position:relative;z-index:120;">Inspect CSS Border ↗</button>
       </div>
+    </header>
+
+    <section class="section-intro">
+      <div class="eyebrow-tag">✦ Background-Clip Border-Box Architecture</div>
+      <h1 class="section-title">Precision-crafted workflow pillars with ambient gradient halos.</h1>
+      <p class="section-desc">Click any card to inspect its live 8px dual-layer gradient border formula or tune the ambient blur halo in real time.</p>
     </section>
+
+    <section class="features-grid" aria-label="Glowing Feature Cards">
+      <!-- Card 1: Hardware -->
+      <article class="feature-card-wrap is-focused" data-card="0" data-delay="0.1" tabindex="0">
+        <div class="card-glow-halo" id="halo-0" style="background: linear-gradient(137deg, #FF3D77 0%, #FFB1CE 45%, #FF9D3C 100%);"></div>
+        <div class="card-foreground" id="fg-0" style="background: linear-gradient(#1A1A1C, #1A1A1C) padding-box, linear-gradient(137deg, #FF3D77 0%, #FFB1CE 45%, #FF9D3C 100%) border-box;">
+          <div class="card-inner">
+            <div class="card-top-row">
+              <div class="card-icon" aria-hidden="true">
+                <!-- Lucide Monitor icon (size=32, strokeWidth=2.5) -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/>
+                </svg>
+              </div>
+              <span class="card-badge">01 / RIG</span>
+            </div>
+            <div>
+              <h2 class="card-title">Hardware</h2>
+              <p class="card-desc">My entire desktop setup is built for power. It is silent, durable, and holds my focus.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Studio -->
+      <article class="feature-card-wrap" data-card="1" data-delay="0.2" tabindex="0">
+        <div class="card-glow-halo" id="halo-1" style="background: linear-gradient(137deg, #FFFFFF 0%, #7DD3FC 45%, #06B6D4 100%);"></div>
+        <div class="card-foreground" id="fg-1" style="background: linear-gradient(#1A1A1C, #1A1A1C) padding-box, linear-gradient(137deg, #FFFFFF 0%, #7DD3FC 45%, #06B6D4 100%) border-box;">
+          <div class="card-inner">
+            <div class="card-top-row">
+              <div class="card-icon" aria-hidden="true">
+                <!-- Lucide Palette icon (size=32, strokeWidth=2.5) -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
+                </svg>
+              </div>
+              <span class="card-badge">02 / CRAFT</span>
+            </div>
+            <div>
+              <h2 class="card-title">Studio</h2>
+              <p class="card-desc">Studio is where I define every single pixel. It is the hub for each canvas I deliver.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: Motion -->
+      <article class="feature-card-wrap" data-card="2" data-delay="0.3" tabindex="0">
+        <div class="card-glow-halo" id="halo-2" style="background: linear-gradient(137deg, #4361EE 0%, #E0AEFF 45%, #F72585 100%);"></div>
+        <div class="card-foreground" id="fg-2" style="background: linear-gradient(#1A1A1C, #1A1A1C) padding-box, linear-gradient(137deg, #4361EE 0%, #E0AEFF 45%, #F72585 100%) border-box;">
+          <div class="card-inner">
+            <div class="card-top-row">
+              <div class="card-icon" aria-hidden="true">
+                <!-- Lucide Zap icon (size=32, strokeWidth=2.5) -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+                </svg>
+              </div>
+              <span class="card-badge">03 / KINETIC</span>
+            </div>
+            <div>
+              <h2 class="card-title">Motion</h2>
+              <p class="card-desc">I use Motion to build lively prototypes, bridging the gap between views and code.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <aside class="tuner-dock" aria-label="Live Gradient Telemetry">
+      <div class="code-readout" id="activeCodeText">background: linear-gradient(#1A1A1C, #1A1A1C) padding-box, linear-gradient(137deg, #FF3D77 0%, #FFB1CE 45%, #FF9D3C 100%) border-box;</div>
+      <div class="slider-group">
+        <div style="display:flex;justify-content:space-between;">
+          <span>Ambient Halo Blur</span>
+          <strong id="blurValLabel" style="color:#fff;">45px</strong>
+        </div>
+        <input type="range" id="blurSlider" min="20" max="80" value="45">
+      </div>
+      <button type="button" class="pill-btn" id="copyCssBtn">Copy CSS Rule</button>
+    </aside>
   </main>
+
   <div id="specModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
     <div class="modal-box">
-      <h2 id="modalHeading" style="font-size:24px;margin-bottom:10px;">Glow Features — Interactive Dossier</h2>
-      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">My entire desktop setup is built for power. It is silent, durable, and holds my focus.</p>
-      <button type="button" class="glass-pill" id="closeModalBtn">Close (Esc)</button>
+      <h2 id="modalHeading" style="font-size:22px;margin-bottom:10px;">Glow Features — CSS Border-Box Specification</h2>
+      <p style="font-size:14px;color:#9ca3af;line-height:1.6;margin-bottom:16px;">Each card uses an 8px transparent border paired with dual background-clip layers (`padding-box` surface + `border-box` 137deg gradient) over a 45px blurred halo layer.</p>
+      <pre id="modalCodeBlock" style="font-family:'JetBrains Mono',monospace;font-size:12px;background:#0A0A0B;padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,0.1);overflow-x:auto;color:#7DD3FC;margin-bottom:18px;">border: 8px solid transparent;
+border-radius: 40px;
+background:
+  linear-gradient(#1A1A1C, #1A1A1C) padding-box,
+  linear-gradient(137deg, #FF3D77 0%, #FFB1CE 45%, #FF9D3C 100%) border-box;</pre>
+      <button type="button" class="pill-btn" id="closeModalBtn">Close Inspector (Esc)</button>
     </div>
   </div>
+
   <script>
     (function(){
-      var vid = document.getElementById('heroVideo');
-      var motionBtn = document.getElementById('motionBtn');
-      var paused = false;
-      if (motionBtn) {
-        motionBtn.addEventListener('click', function(){
-          paused = !paused;
-          motionBtn.setAttribute('aria-pressed', String(paused));
-          motionBtn.textContent = paused ? 'MOTION PAUSED' : 'LIVE MOTION';
-          if (vid) { if (paused) vid.pause(); else vid.play().catch(function(){}); }
+      var presets = {
+        default: [
+          'linear-gradient(137deg, #FF3D77 0%, #FFB1CE 45%, #FF9D3C 100%)',
+          'linear-gradient(137deg, #FFFFFF 0%, #7DD3FC 45%, #06B6D4 100%)',
+          'linear-gradient(137deg, #4361EE 0%, #E0AEFF 45%, #F72585 100%)'
+        ],
+        cyber: [
+          'linear-gradient(137deg, #00F5D4 0%, #7B2CBF 50%, #F72585 100%)',
+          'linear-gradient(137deg, #FEE440 0%, #00BBF9 50%, #00F5D4 100%)',
+          'linear-gradient(137deg, #FF007F 0%, #7928CA 50%, #3A86FF 100%)'
+        ],
+        solar: [
+          'linear-gradient(137deg, #FF4D00 0%, #FFAE00 50%, #FFE600 100%)',
+          'linear-gradient(137deg, #FF0055 0%, #FF7700 50%, #FFDD00 100%)',
+          'linear-gradient(137deg, #8338EC 0%, #FF006E 50%, #FB5607 100%)'
+        ]
+      };
+      var currentPreset = 'default';
+      var activeIdx = 0;
+      var codeText = document.getElementById('activeCodeText');
+
+      function applyPreset(name) {
+        currentPreset = name;
+        var grads = presets[name] || presets.default;
+        grads.forEach(function(g, i) {
+          var halo = document.getElementById('halo-' + i);
+          var fg = document.getElementById('fg-' + i);
+          if (halo) halo.style.background = g;
+          if (fg) fg.style.background = 'linear-gradient(#1A1A1C, #1A1A1C) padding-box, ' + g + ' border-box';
+        });
+        if (codeText) {
+          codeText.textContent = 'background: linear-gradient(#1A1A1C, #1A1A1C) padding-box, ' + grads[activeIdx] + ' border-box;';
+        }
+      }
+
+      document.querySelectorAll('[data-preset]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('[data-preset]').forEach(function(b){ b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          applyPreset(btn.getAttribute('data-preset'));
+        });
+      });
+
+      var cards = document.querySelectorAll('.feature-card-wrap');
+      cards.forEach(function(card, idx) {
+        card.addEventListener('click', function() {
+          cards.forEach(function(c){ c.classList.remove('is-focused'); });
+          card.classList.add('is-focused');
+          activeIdx = idx;
+          applyPreset(currentPreset);
+        });
+      });
+
+      var blurSlider = document.getElementById('blurSlider');
+      var blurLabel = document.getElementById('blurValLabel');
+      if (blurSlider) {
+        blurSlider.addEventListener('input', function() {
+          document.documentElement.style.setProperty('--blur-radius', blurSlider.value + 'px');
+          if (blurLabel) blurLabel.textContent = blurSlider.value + 'px';
         });
       }
+
+      var copyBtn = document.getElementById('copyCssBtn');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', function() {
+          copyBtn.textContent = 'Copied Formula ✓';
+          setTimeout(function(){ copyBtn.textContent = 'Copy CSS Rule'; }, 1500);
+        });
+      }
+
       var modal = document.getElementById('specModal');
-      function openM(){ if (modal) modal.classList.add('is-open'); }
-      function closeM(){ if (modal) modal.classList.remove('is-open'); }
-      function toggleM(){ if (modal) modal.classList.toggle('is-open'); }
-      var ob = document.getElementById('openModalBtn');
-      if (ob) { ob.style.position = 'relative'; ob.style.zIndex = '120'; ob.addEventListener('click', toggleM); }
-      var hb = document.getElementById('heroCtaBtn');
-      if (hb) hb.addEventListener('click', openM);
-      document.querySelectorAll('.t-card').forEach(function(c){ c.addEventListener('click', openM); });
-      var cb = document.getElementById('closeModalBtn'); if (cb) cb.addEventListener('click', closeM);
-      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeM(); });
+      var inspectBtn = document.getElementById('inspectCssBtn');
+      var closeBtn = document.getElementById('closeModalBtn');
+      if (inspectBtn) {
+        inspectBtn.addEventListener('click', function() {
+          if (modal) modal.classList.toggle('is-open');
+        });
+      }
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+          if (modal) modal.classList.remove('is-open');
+        });
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal) modal.classList.remove('is-open');
+      });
     })();
   </script>
 </body>

@@ -2,15 +2,15 @@
   "id": "t108",
   "slug": "glow-features",
   "browser": "153.0.8010.12",
-  "date": "2026-10-25T23:00:57.499Z",
+  "date": "2026-10-25T23:25:04.290Z",
   "demo": "/demos/glow-features/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "6f4b30043ab0",
-  "sha256": "6f4b30043ab02c65e207386667d81e70358eb8d82563a2f7c589337ef254f905",
-  "demoHtmlSha256": "2931da9f4c02a462c7c3cfae0e1989b14aa710bc36c28b01c52c2be833cea087",
-  "demoSha256": "b09cd7f4a9b8b210170859f8769ed3a2363625be2e6bc812858266bac95435f7",
-  "bytes": 617789,
+  "revision": "2653144f6b46",
+  "sha256": "2653144f6b46eb86c56827421220c88622bb16f900317d0ed50f2504c873067f",
+  "demoHtmlSha256": "ee222ef0f45d3df8e71e8c00c2b0a689b7edd72e82ffa5803f17b5557ab1dbde",
+  "demoSha256": "fdfc4b9a12e67656aa82bc2c8cfd5b337e7eff06561ae602e62f12d1f9dc521f",
+  "bytes": 118933,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,14 +22,14 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.446,
+      "seconds": 2.46,
       "action": "click",
-      "selector": "#openModalBtn"
+      "selector": "#inspectCssBtn"
     },
     {
-      "seconds": 4.902,
+      "seconds": 4.823,
       "action": "click",
-      "selector": "#openModalBtn"
+      "selector": "#inspectCssBtn"
     },
     {
       "seconds": 6.7,

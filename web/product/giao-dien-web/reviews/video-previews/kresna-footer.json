@@ -2,15 +2,15 @@
   "id": "t109",
   "slug": "kresna-footer",
   "browser": "153.0.8010.12",
-  "date": "2026-10-25T23:01:27.103Z",
+  "date": "2026-10-25T23:25:33.189Z",
   "demo": "/demos/kresna-footer/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "713774472299",
-  "sha256": "713774472299f9b7c3109b4cfce28207e4e5b107976bb826da2d955bc03ba6af",
-  "demoHtmlSha256": "2019351c763bb6299a69bbcc93d0f2f07ed1556727b5b85f11f7f431527b0fc9",
-  "demoSha256": "721bc21d74c6ad78564a70591b57441e9b27c1661a72c4bed075f37056efb3a6",
-  "bytes": 802361,
+  "revision": "cb1d40420150",
+  "sha256": "cb1d40420150a3a27ea035d0b6f19c9ef7a64b178d602ab9ab070f36961996b2",
+  "demoHtmlSha256": "2f05564a0606c0f8c9fd15dd6b12097aaa7a225dc744b0981f31bbf79eaa7e38",
+  "demoSha256": "127170428996c6c4e3b2d70f2465a602968ca867ebeb67d2e273c4f3041624ee",
+  "bytes": 284900,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.458,
+      "seconds": 2.46,
       "action": "click",
       "selector": "#openModalBtn"
     },
     {
-      "seconds": 4.866,
+      "seconds": 4.89,
       "action": "click",
       "selector": "#openModalBtn"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 0
+      "target": 241
     }
   ],
   "errors": [],

@@ -3,95 +3,702 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Price Calculator — Try project estimation calculator</title>
-  <meta name="description" content="Engineered for high-velocity digital teams with real-time telemetry, fluid glassmorphic surfaces, and responsive precision.">
+  <title>Price Calculator — Interactive Project Estimation Calculator</title>
+  <meta name="description" content="Interactive project estimation calculator comparing Typical Agency, Regular Freelancer, and Webfluin Studio pricing in real time across service type, page count, add-ons, and delivery speed.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f8fafc;
-      --fg: #0a1b33;
-      --muted: #64748b;
-      --card: rgba(255,255,255,0.86);
-      --border: rgba(15,23,42,0.1);
-      --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
-      --font-display: 'Instrument Serif', Georgia, serif;
+      --bg: #070708;
+      --panel-left: #0D0D0D;
+      --panel-right: #111113;
+      --divider: #1E1E1E;
+      --accent: #FF5656;
+      --muted: #9ca3af;
+      --border: rgba(255, 255, 255, 0.1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; background: var(--bg); color: var(--fg); font-family: var(--font-sans); }
-    body { background: var(--bg); color: var(--fg); min-height: 100vh; overflow-x: clip; }
-    .hero-stage { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding: 28px 32px 48px; overflow: hidden; }
-    .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
-    .topbar, .hero-center, .telemetry-strip { position: relative; z-index: 10; max-width: 1320px; width: 100%; margin: 0 auto; }
-    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    .glass-pill { background: var(--card); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 9999px; padding: 10px 20px; color: var(--fg); font-size: 13px; font-weight: 600; text-decoration: none; cursor: pointer; }
-    .hero-center { text-align: center; margin: auto; padding: 64px 0; max-width: 880px; }
-    .hero-h1 { font-size: clamp(40px, 6.2vw, 84px); font-weight: 500; line-height: 1.02; letter-spacing: -0.03em; margin: 18px 0; }
-    .hero-sub { font-size: clamp(15px, 1.5vw, 18px); color: var(--muted); max-width: 600px; margin: 0 auto 28px; line-height: 1.6; }
-    .telemetry-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    @media (max-width: 768px) { .telemetry-strip { grid-template-columns: 1fr; } .hero-stage { padding: 20px 16px 32px; } }
-    .t-card { background: var(--card); backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 24px; padding: 22px; cursor: pointer; text-align: left; color: var(--fg); }
-    .modal-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.65); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 16px; pointer-events: none; }
+    html, body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: #ffffff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #calculator-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 24px 72px;
+    }
+
+    /* Top utility bar (+15-20% creative enhancement) */
+    .calc-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 36px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .studio-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .studio-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+    }
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .chip-btn {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.04);
+      color: #e5e7eb;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 7px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .chip-btn:hover, .chip-btn.is-active {
+      border-color: var(--accent);
+      background: rgba(255, 86, 86, 0.14);
+      color: #fff;
+    }
+
+    /* Header: Centered mono label + h2 */
+    .calc-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 40px;
+    }
+    .calc-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .calc-h2 {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1.12;
+    }
+
+    /* 2-Column Grid: rounded-2xl overflow-hidden, no gap */
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--panel-left);
+      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.55);
+    }
+    @media (max-width: 960px) {
+      .calc-grid { grid-template-columns: 1fr; }
+    }
+
+    /* LEFT COLUMN (Calculator Form) */
+    .calc-left {
+      background: var(--panel-left);
+      padding: 40px 44px;
+      display: flex;
+      flex-direction: column;
+    }
+    @media (max-width: 640px) {
+      .calc-left, .calc-right { padding: 28px 20px; }
+    }
+    .form-section {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--divider);
+    }
+    .form-section:first-child { padding-top: 0; }
+    .form-section:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .section-h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .accent-val {
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+    }
+
+    /* Custom Radio & Checkbox Controls */
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .option-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease;
+      user-select: none;
+    }
+    .option-row:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.14);
+    }
+    .option-row.is-selected {
+      border-color: rgba(255, 86, 86, 0.45);
+      background: rgba(255, 86, 86, 0.06);
+    }
+    .option-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: #f3f4f6;
+    }
+    .radio-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: border-color 0.2s ease;
+    }
+    .option-row.is-selected .radio-circle {
+      border-color: var(--accent);
+    }
+    .radio-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      transform: scale(0);
+      transition: transform 0.18s ease;
+    }
+    .option-row.is-selected .radio-dot {
+      transform: scale(1);
+    }
+
+    .check-box {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+    .option-row.is-selected .check-box {
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+    .check-box svg {
+      width: 12px;
+      height: 12px;
+      stroke: #fff;
+      stroke-width: 3;
+      fill: none;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+    .option-row.is-selected .check-box svg { opacity: 1; }
+
+    .price-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    /* Slider */
+    .slider-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .pages-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: #262626;
+      outline: none;
+      cursor: pointer;
+    }
+    .pages-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 14px rgba(255, 86, 86, 0.65);
+      cursor: pointer;
+    }
+    .slider-Scale {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* RIGHT COLUMN (Cost Estimation) */
+    .calc-right {
+      background: var(--panel-right);
+      padding: 40px 44px;
+      border-left: 1px solid var(--border);
+      min-height: 718px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @media (max-width: 960px) {
+      .calc-right { border-left: none; border-top: 1px solid var(--border); min-height: auto; }
+    }
+    .right-intro h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .right-intro p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 24px;
+    }
+
+    .cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cost-card {
+      border-radius: 16px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .cost-card.studio-highlight {
+      background: linear-gradient(90deg, #ec4899 0%, #f97316 100%);
+      border: none;
+      color: #ffffff;
+      box-shadow: 0 20px 44px rgba(236, 72, 153, 0.28);
+    }
+    .cost-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cost-value {
+      font-size: clamp(30px, 3.5vw, 40px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .cost-card.studio-highlight .cost-value {
+      font-size: clamp(36px, 4.2vw, 48px);
+    }
+    .cost-sub {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .savings-footer {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .savings-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #34d399;
+      background: rgba(52, 211, 153, 0.1);
+      border: 1px solid rgba(52, 211, 153, 0.25);
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+
+    /* Accessible Modal Breakdown */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.74);
+      backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      pointer-events: none;
+    }
     .modal-backdrop.is-open { display: flex; }
-    .modal-box { max-width: 480px; width: 100%; border-radius: 28px; background: var(--bg); border: 1px solid var(--border); padding: 28px; position: relative; color: var(--fg); pointer-events: auto; }
+    .modal-box {
+      max-width: 500px;
+      width: 100%;
+      border-radius: 24px;
+      background: #141417;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 28px;
+      color: #fff;
+      pointer-events: auto;
+    }
   </style>
 </head>
 <body>
-  <main>
-    <section class="hero-stage">
-      <video id="heroVideo" class="hero-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4" autoplay loop muted playsinline preload="auto"></video>
-      <header class="topbar">
-        <a href="#" class="glass-pill">Price Calculator</a>
-        <div style="display:flex;gap:10px;">
-          <button type="button" class="glass-pill" id="motionBtn" aria-pressed="false">LIVE MOTION</button>
-          <button type="button" class="glass-pill" id="openModalBtn" data-next-preview>Explore Specs ↗</button>
+  <section id="calculator-section">
+    <header class="calc-topbar">
+      <div class="studio-badge">
+        <span class="studio-dot"></span>
+        <span>Webfluin Studio — Project Estimation Engine</span>
+      </div>
+      <div class="top-actions">
+        <button type="button" class="chip-btn" id="presetStartupBtn">SaaS Preset (8p)</button>
+        <button type="button" class="chip-btn" id="presetScaleBtn">Enterprise Preset (18p)</button>
+        <button type="button" class="chip-btn" id="openBreakdownBtn" data-next-preview style="position:relative;z-index:120;">View Itemized Quote ↗</button>
+      </div>
+    </header>
+
+    <div class="calc-header">
+      <p class="calc-eyebrow">Try project estimation calculator</p>
+      <h2 class="calc-h2">Get premium website within your budget</h2>
+    </div>
+
+    <div class="calc-grid">
+      <!-- LEFT COLUMN (Calculator Form) -->
+      <div class="calc-left">
+        <!-- 1. Service Type -->
+        <div class="form-section">
+          <h3 class="section-h3">What kind of service do you need?</h3>
+          <div class="options-list" role="radiogroup" aria-label="Service Type">
+            <div class="option-row" data-service="design" tabindex="0">
+              <div class="option-left">
+                <span class="radio-circle"><span class="radio-dot"></span></span>
+                <span>Only Design</span>
+              </div>
+              <span class="price-tag">$399 base</span>
+            </div>
+            <div class="option-row" data-service="development" tabindex="0">
+              <div class="option-left">
+                <span class="radio-circle"><span class="radio-dot"></span></span>
+                <span>Only Development</span>
+              </div>
+              <span class="price-tag">$199 base</span>
+            </div>
+            <div class="option-row is-selected" data-service="both" tabindex="0">
+              <div class="option-left">
+                <span class="radio-circle"><span class="radio-dot"></span></span>
+                <span>Design + Development</span>
+              </div>
+              <span class="price-tag">$499 base</span>
+            </div>
+          </div>
         </div>
-      </header>
-      <div class="hero-center">
-        <span class="glass-pill">✦ Price Calculator Interactive Edition</span>
-        <h1 class="hero-h1">Try project estimation calculator</h1>
-        <p class="hero-sub">Engineered for high-velocity digital teams with real-time telemetry, fluid glassmorphic surfaces, and responsive precision.</p>
-        <button type="button" class="glass-pill" id="heroCtaBtn">Launch Interactive Brief ↗</button>
+
+        <!-- 2. Number of Pages -->
+        <div class="form-section">
+          <h3 class="section-h3">
+            <span>Number of Pages</span>
+            <span class="accent-val" id="pagesReadout">5 Pages</span>
+          </h3>
+          <div class="slider-wrap">
+            <input type="range" id="pagesSlider" class="pages-slider" min="1" max="30" step="1" value="5" aria-label="Number of Pages">
+            <div class="slider-Scale">
+              <span>1</span>
+              <span>15</span>
+              <span>30</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Add-ons -->
+        <div class="form-section">
+          <h3 class="section-h3">Add-ons &amp; Optimization</h3>
+          <div class="options-list">
+            <div class="option-row" id="addonContentRow" data-addon="content" tabindex="0">
+              <div class="option-left">
+                <span class="check-box">
+                  <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>I will need help with content</span>
+              </div>
+              <span class="price-tag">+$50/pages</span>
+            </div>
+            <div class="option-row" id="addonSeoRow" data-addon="seo" tabindex="0">
+              <div class="option-left">
+                <span class="check-box">
+                  <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>I want to optimize my website for SEO</span>
+              </div>
+              <span class="price-tag">+$50/pages</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Timeline -->
+        <div class="form-section">
+          <h3 class="section-h3">How fast do you need this?</h3>
+          <div class="options-list" role="radiogroup" aria-label="Timeline">
+            <div class="option-row" data-timeline="rush" tabindex="0">
+              <div class="option-left">
+                <span class="radio-circle"><span class="radio-dot"></span></span>
+                <span>Within 7 Days</span>
+              </div>
+              <span class="price-tag">+$100/pages</span>
+            </div>
+            <div class="option-row" data-timeline="fast" tabindex="0">
+              <div class="option-left">
+                <span class="radio-circle"><span class="radio-dot"></span></span>
+                <span>Within 14 Days</span>
+              </div>
+              <span class="price-tag">+$25/pages</span>
+            </div>
+            <div class="option-row is-selected" data-timeline="regular" tabindex="0">
+              <div class="option-left">
+                <span class="radio-circle"><span class="radio-dot"></span></span>
+                <span>Regular Speed (Based on discussion)</span>
+              </div>
+              <span class="price-tag">No extra cost</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="telemetry-strip">
-        <button type="button" class="t-card" data-mode="01"><strong>01 / Architecture</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Real-time fluid stage &amp; zero-build HTML5 delivery.</p></button>
-        <button type="button" class="t-card" data-mode="02"><strong>02 / Performance</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Sub-16ms frame pacing with adaptive viewport scaling.</p></button>
-        <button type="button" class="t-card" data-mode="03"><strong>03 / Customisation</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">10-step literal map &amp; 12 AI prompts bundled.</p></button>
+
+      <!-- RIGHT COLUMN (Cost Estimation) -->
+      <div class="calc-right">
+        <div>
+          <div class="right-intro">
+            <h3>Estimated Cost</h3>
+            <p>Instant transparent benchmark comparing traditional agencies, solo freelancers, and Webfluin Studio's productized delivery.</p>
+          </div>
+
+          <div class="cards-stack">
+            <!-- Agency card -->
+            <article class="cost-card">
+              <div class="cost-label">
+                <span>Typical Agency charges minimum</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9ca3af;">4–8 WEEKS</span>
+              </div>
+              <div class="cost-value" id="agencyPriceText">$12,000</div>
+              <div class="cost-sub">+ Too much extra time &amp; additional cost</div>
+            </article>
+
+            <!-- Freelancer card -->
+            <article class="cost-card">
+              <div class="cost-label">
+                <span>Regular Freelancer charges minimum</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9ca3af;">VARIABLE</span>
+              </div>
+              <div class="cost-value" id="freelancerPriceText">$5,000</div>
+              <div class="cost-sub">+ Too much headache &amp; back-and-forth</div>
+            </article>
+
+            <!-- Your price card -->
+            <article class="cost-card studio-highlight">
+              <div class="cost-label">
+                <span>With Webfluin Studio</span>
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;background:rgba(0,0,0,0.22);padding:4px 10px;border-radius:999px;">GUARANTEED</span>
+              </div>
+              <div class="cost-value" id="studioPriceText">$1,299</div>
+              <div class="cost-sub">Save your money, time &amp; headache</div>
+            </article>
+          </div>
+        </div>
+
+        <div class="savings-footer">
+          <span class="savings-pill" id="savingsBadge">You save $10,701 vs. Typical Agency</span>
+          <button type="button" class="chip-btn" id="copyQuoteBtn">Lock In Estimate ↗</button>
+        </div>
       </div>
-    </section>
-  </main>
-  <div id="specModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    </div>
+  </section>
+
+  <div id="quoteModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-box">
-      <h2 id="modalHeading" style="font-size:24px;margin-bottom:10px;">Price Calculator — Interactive Dossier</h2>
-      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">Engineered for high-velocity digital teams with real-time telemetry, fluid glassmorphic surfaces, and responsive precision.</p>
-      <button type="button" class="glass-pill" id="closeModalBtn">Close (Esc)</button>
+      <h3 id="modalTitle" style="font-size:22px;margin-bottom:10px;">Itemized Project Estimate</h3>
+      <p id="modalSummaryText" style="font-size:14px;color:#9ca3af;line-height:1.6;margin-bottom:18px;">Service: Design + Development (5 pages) — Total Webfluin Studio Estimate: $1,299.</p>
+      <button type="button" class="chip-btn" id="closeModalBtn">Close Breakdown (Esc)</button>
     </div>
   </div>
+
   <script>
     (function(){
-      var vid = document.getElementById('heroVideo');
-      var motionBtn = document.getElementById('motionBtn');
-      var paused = false;
-      if (motionBtn) {
-        motionBtn.addEventListener('click', function(){
-          paused = !paused;
-          motionBtn.setAttribute('aria-pressed', String(paused));
-          motionBtn.textContent = paused ? 'MOTION PAUSED' : 'LIVE MOTION';
-          if (vid) { if (paused) vid.pause(); else vid.play().catch(function(){}); }
+      var state = {
+        serviceType: 'both',
+        pages: 5,
+        needContent: false,
+        needSEO: false,
+        timeline: 'regular'
+      };
+
+      function calculatePrice() {
+        var base = 499, perPage = 200;
+        if (state.serviceType === 'design') { base = 399; perPage = 100; }
+        else if (state.serviceType === 'development') { base = 199; perPage = 100; }
+        var total = Math.max(base, base + (state.pages - 1) * perPage);
+        if (state.needContent) total += state.pages * 50;
+        if (state.needSEO) total += state.pages * 50;
+        if (state.timeline === 'rush') total += state.pages * 100;
+        if (state.timeline === 'fast') total += state.pages * 25;
+        return total;
+      }
+
+      function calculateAgencyCost() {
+        var perPage = state.serviceType === 'both' ? 1000 : 400;
+        return 8000 + (state.pages - 1) * perPage;
+      }
+
+      function calculateFreelancerCost() {
+        var perPage = state.serviceType === 'both' ? 500 : 200;
+        return 3000 + (state.pages - 1) * perPage;
+      }
+
+      function render() {
+        var studio = calculatePrice();
+        var agency = calculateAgencyCost();
+        var freelancer = calculateFreelancerCost();
+        var saved = Math.max(0, agency - studio);
+
+        document.getElementById('pagesReadout').textContent = state.pages + (state.pages === 1 ? ' Page' : ' Pages');
+        document.getElementById('studioPriceText').textContent = '$' + studio.toLocaleString('en-US');
+        document.getElementById('agencyPriceText').textContent = '$' + agency.toLocaleString('en-US');
+        document.getElementById('freelancerPriceText').textContent = '$' + freelancer.toLocaleString('en-US');
+        document.getElementById('savingsBadge').textContent = 'You save $' + saved.toLocaleString('en-US') + ' vs. Typical Agency';
+        var modalSum = document.getElementById('modalSummaryText');
+        if (modalSum) {
+          modalSum.textContent = 'Service: ' + state.serviceType.toUpperCase() + ' | Pages: ' + state.pages + ' | Timeline: ' + state.timeline.toUpperCase() + ' — Webfluin Studio Total: $' + studio.toLocaleString('en-US') + ' (Agency benchmark: $' + agency.toLocaleString('en-US') + ').';
+        }
+      }
+
+      document.querySelectorAll('[data-service]').forEach(function(row) {
+        row.addEventListener('click', function() {
+          document.querySelectorAll('[data-service]').forEach(function(r){ r.classList.remove('is-selected'); });
+          row.classList.add('is-selected');
+          state.serviceType = row.getAttribute('data-service');
+          render();
+        });
+      });
+
+      document.querySelectorAll('[data-timeline]').forEach(function(row) {
+        row.addEventListener('click', function() {
+          document.querySelectorAll('[data-timeline]').forEach(function(r){ r.classList.remove('is-selected'); });
+          row.classList.add('is-selected');
+          state.timeline = row.getAttribute('data-timeline');
+          render();
+        });
+      });
+
+      var contentRow = document.getElementById('addonContentRow');
+      if (contentRow) {
+        contentRow.addEventListener('click', function() {
+          state.needContent = !state.needContent;
+          contentRow.classList.toggle('is-selected', state.needContent);
+          render();
         });
       }
-      var modal = document.getElementById('specModal');
-      function openM(){ if (modal) modal.classList.add('is-open'); }
-      function closeM(){ if (modal) modal.classList.remove('is-open'); }
-      function toggleM(){ if (modal) modal.classList.toggle('is-open'); }
-      var ob = document.getElementById('openModalBtn');
-      if (ob) { ob.style.position = 'relative'; ob.style.zIndex = '120'; ob.addEventListener('click', toggleM); }
-      var hb = document.getElementById('heroCtaBtn');
-      if (hb) hb.addEventListener('click', openM);
-      document.querySelectorAll('.t-card').forEach(function(c){ c.addEventListener('click', openM); });
-      var cb = document.getElementById('closeModalBtn'); if (cb) cb.addEventListener('click', closeM);
-      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeM(); });
+
+      var seoRow = document.getElementById('addonSeoRow');
+      if (seoRow) {
+        seoRow.addEventListener('click', function() {
+          state.needSEO = !state.needSEO;
+          seoRow.classList.toggle('is-selected', state.needSEO);
+          render();
+        });
+      }
+
+      var slider = document.getElementById('pagesSlider');
+      if (slider) {
+        slider.addEventListener('input', function() {
+          state.pages = Number(slider.value) || 1;
+          render();
+        });
+      }
+
+      var startupBtn = document.getElementById('presetStartupBtn');
+      if (startupBtn) {
+        startupBtn.addEventListener('click', function() {
+          state.pages = 8;
+          state.needSEO = true;
+          slider.value = '8';
+          if (seoRow) seoRow.classList.add('is-selected');
+          render();
+        });
+      }
+
+      var scaleBtn = document.getElementById('presetScaleBtn');
+      if (scaleBtn) {
+        scaleBtn.addEventListener('click', function() {
+          state.pages = 18;
+          state.needContent = true;
+          state.needSEO = true;
+          slider.value = '18';
+          if (contentRow) contentRow.classList.add('is-selected');
+          if (seoRow) seoRow.classList.add('is-selected');
+          render();
+        });
+      }
+
+      var modal = document.getElementById('quoteModal');
+      var openBtn = document.getElementById('openBreakdownBtn');
+      var copyBtn = document.getElementById('copyQuoteBtn');
+      var closeBtn = document.getElementById('closeModalBtn');
+      if (openBtn) openBtn.addEventListener('click', function(){ if (modal) modal.classList.toggle('is-open'); });
+      if (copyBtn) copyBtn.addEventListener('click', function(){ if (modal) modal.classList.add('is-open'); });
+      if (closeBtn) closeBtn.addEventListener('click', function(){ if (modal) modal.classList.remove('is-open'); });
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && modal) modal.classList.remove('is-open'); });
+
+      render();
     })();
   </script>
 </body>

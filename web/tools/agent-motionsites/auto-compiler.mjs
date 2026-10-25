@@ -75,6 +75,8 @@ export function extractSpecFromPrompt(data) {
     archetype,
     heroVideo,
     hasCustomVideo: Boolean(videos[0]),
+    previewMedia: data.image || data.poster || null,
+    posterMedia: data.poster || data.image || null,
     accent,
     gradients,
     isLight,
@@ -270,9 +272,12 @@ function buildSplitEditorialHtml(spec) {
       <h1 style="font-family:'Instrument Serif',serif;font-size:clamp(38px,5vw,68px);font-weight:400;line-height:1.05;margin-bottom:18px;">${spec.headline}</h1>
       <p style="color:#94a3b8;font-size:16px;line-height:1.65;">${spec.subheadline}</p>
     </section>
-    <aside class="pane" style="background:linear-gradient(145deg, ${spec.accent}22, rgba(255,255,255,0.02));">
-      <h2 style="font-size:20px;margin-bottom:14px;">Interactive Telemetry</h2>
-      <p style="color:#94a3b8;font-size:14px;line-height:1.6;">Responsive asymmetric architecture with adaptive color tokens.</p>
+    <aside class="pane" style="background:linear-gradient(145deg, ${spec.accent}22, rgba(255,255,255,0.02));display:flex;flex-direction:column;justify-content:space-between;gap:18px;">
+      ${spec.previewMedia ? `<div style="border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,0.12);background:#000;"><img src="${spec.previewMedia}" alt="${spec.title} preview" style="width:100%;height:260px;object-fit:cover;display:block;"></div>` : ''}
+      <div>
+        <h2 style="font-size:20px;margin-bottom:10px;">Interactive Telemetry</h2>
+        <p style="color:#94a3b8;font-size:14px;line-height:1.6;">Responsive asymmetric architecture with adaptive color tokens.</p>
+      </div>
     </aside>
   </main>
   <div id="specModal" class="modal-backdrop" role="dialog" aria-modal="true">

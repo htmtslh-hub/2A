@@ -37,8 +37,11 @@ export async function pushAndDeploy(slugs, summaryLabel) {
     'web/src/lib/preview-recordings.json',
     'web/product/giao-dien-web/tools/dong-goi.mjs',
     'web/product/giao-dien-web/tools/quay-preview.mjs',
+    'web/tools/check-memberships.cjs',
     'web/tools/agent-motionsites/',
-    'run-agent-now.bat'
+    'web/tools/agent-pinterest/',
+    'run-agent-now.bat',
+    'run-pinterest-agent-now.bat'
   ];
 
   for (const f of filesToStage) {

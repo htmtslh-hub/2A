@@ -46,6 +46,79 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t110: {
+    slug: 'price-calculator',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Price Calculator",
+        desc: "Giao diện web Price Calculator tự chứa trong một file HTML duy nhất với nền video lặp mượt, bề mặt kính mờ, bảng điều khiển tương tác và hộp thoại thông số.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      en: {
+        name: "Price Calculator",
+        desc: "Single-file self-contained Price Calculator landing experience featuring looping background video, glassmorphic UI, interactive telemetry, and an accessible modal dialog.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      zh: {
+        name: "Price Calculator",
+        desc: "单文件自包含 Price Calculator 着陆页模板，配备自动循环背景视频、毛玻璃交互组件与详情弹窗。",
+        tags: ['动态视频', '毛玻璃', '交互首屏']
+      }
+    }
+  },
+
+  t109: {
+    slug: 'kresna-footer',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Kresna Footer",
+        desc: "Giao diện web Kresna Footer tự chứa trong một file HTML duy nhất với nền video lặp mượt, bề mặt kính mờ, bảng điều khiển tương tác và hộp thoại thông số.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      en: {
+        name: "Kresna Footer",
+        desc: "Single-file self-contained Kresna Footer landing experience featuring looping background video, glassmorphic UI, interactive telemetry, and an accessible modal dialog.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      zh: {
+        name: "Kresna Footer",
+        desc: "单文件自包含 Kresna Footer 着陆页模板，配备自动循环背景视频、毛玻璃交互组件与详情弹窗。",
+        tags: ['动态视频', '毛玻璃', '交互首屏']
+      }
+    }
+  },
+
+  t108: {
+    slug: 'glow-features',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Glow Features",
+        desc: "Giao diện web Glow Features tự chứa trong một file HTML duy nhất với nền video lặp mượt, bề mặt kính mờ, bảng điều khiển tương tác và hộp thoại thông số.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      en: {
+        name: "Glow Features",
+        desc: "Single-file self-contained Glow Features landing experience featuring looping background video, glassmorphic UI, interactive telemetry, and an accessible modal dialog.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      zh: {
+        name: "Glow Features",
+        desc: "单文件自包含 Glow Features 着陆页模板，配备自动循环背景视频、毛玻璃交互组件与详情弹窗。",
+        tags: ['动态视频', '毛玻璃', '交互首屏']
+      }
+    }
+  },
+
   t107: {
     slug: 'designer-portfolio',
     cat: 'portfolio',

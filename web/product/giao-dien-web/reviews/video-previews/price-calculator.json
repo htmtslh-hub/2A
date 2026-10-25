@@ -1,0 +1,48 @@
+{
+  "id": "t110",
+  "slug": "price-calculator",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-25T23:01:56.002Z",
+  "demo": "/demos/price-calculator/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3d3245c2e1f3",
+  "sha256": "3d3245c2e1f3d44a4e3d55dddd78c1051c89af0cac06f421ca8fa201f774b0fb",
+  "demoHtmlSha256": "879d07d571109ff8631ca896962e47017d64497623a293bc57668a2cb6bc9a59",
+  "demoSha256": "dd32b66c45cd9e761fd64bb57f64520489206c3dc724cee100ce3e3a15821e35",
+  "bytes": 591764,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.472,
+      "action": "click",
+      "selector": "#openModalBtn"
+    },
+    {
+      "seconds": 4.904,
+      "action": "click",
+      "selector": "#openModalBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\price-calculator-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\price-calculator-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\price-calculator-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\price-calculator-return.jpg"
+  ]
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Glow Features — Glow Features — Next-Gen Interactive Experience</title>
+  <meta name="description" content="My entire desktop setup is built for power. It is silent, durable, and holds my focus.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --fg: #0a1b33;
+      --muted: #64748b;
+      --card: rgba(255,255,255,0.86);
+      --border: rgba(15,23,42,0.1);
+      --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      --font-display: 'Instrument Serif', Georgia, serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--fg); font-family: var(--font-sans); }
+    body { background: var(--bg); color: var(--fg); min-height: 100vh; overflow-x: clip; }
+    .hero-stage { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding: 28px 32px 48px; overflow: hidden; }
+    .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
+    .topbar, .hero-center, .telemetry-strip { position: relative; z-index: 10; max-width: 1320px; width: 100%; margin: 0 auto; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .glass-pill { background: var(--card); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 9999px; padding: 10px 20px; color: var(--fg); font-size: 13px; font-weight: 600; text-decoration: none; cursor: pointer; }
+    .hero-center { text-align: center; margin: auto; padding: 64px 0; max-width: 880px; }
+    .hero-h1 { font-size: clamp(40px, 6.2vw, 84px); font-weight: 500; line-height: 1.02; letter-spacing: -0.03em; margin: 18px 0; }
+    .hero-sub { font-size: clamp(15px, 1.5vw, 18px); color: var(--muted); max-width: 600px; margin: 0 auto 28px; line-height: 1.6; }
+    .telemetry-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 768px) { .telemetry-strip { grid-template-columns: 1fr; } .hero-stage { padding: 20px 16px 32px; } }
+    .t-card { background: var(--card); backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 24px; padding: 22px; cursor: pointer; text-align: left; color: var(--fg); }
+    .modal-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.65); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 16px; pointer-events: none; }
+    .modal-backdrop.is-open { display: flex; }
+    .modal-box { max-width: 480px; width: 100%; border-radius: 28px; background: var(--bg); border: 1px solid var(--border); padding: 28px; position: relative; color: var(--fg); pointer-events: auto; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero-stage">
+      <video id="heroVideo" class="hero-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4" autoplay loop muted playsinline preload="auto"></video>
+      <header class="topbar">
+        <a href="#" class="glass-pill">Glow Features</a>
+        <div style="display:flex;gap:10px;">
+          <button type="button" class="glass-pill" id="motionBtn" aria-pressed="false">LIVE MOTION</button>
+          <button type="button" class="glass-pill" id="openModalBtn" data-next-preview>Explore Specs ↗</button>
+        </div>
+      </header>
+      <div class="hero-center">
+        <span class="glass-pill">✦ Glow Features Interactive Edition</span>
+        <h1 class="hero-h1">Glow Features — Next-Gen Interactive Experience</h1>
+        <p class="hero-sub">My entire desktop setup is built for power. It is silent, durable, and holds my focus.</p>
+        <button type="button" class="glass-pill" id="heroCtaBtn">Launch Interactive Brief ↗</button>
+      </div>
+      <div class="telemetry-strip">
+        <button type="button" class="t-card" data-mode="01"><strong>01 / Architecture</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Real-time fluid stage &amp; zero-build HTML5 delivery.</p></button>
+        <button type="button" class="t-card" data-mode="02"><strong>02 / Performance</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Sub-16ms frame pacing with adaptive viewport scaling.</p></button>
+        <button type="button" class="t-card" data-mode="03"><strong>03 / Customisation</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">10-step literal map &amp; 12 AI prompts bundled.</p></button>
+      </div>
+    </section>
+  </main>
+  <div id="specModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <div class="modal-box">
+      <h2 id="modalHeading" style="font-size:24px;margin-bottom:10px;">Glow Features — Interactive Dossier</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">My entire desktop setup is built for power. It is silent, durable, and holds my focus.</p>
+      <button type="button" class="glass-pill" id="closeModalBtn">Close (Esc)</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var vid = document.getElementById('heroVideo');
+      var motionBtn = document.getElementById('motionBtn');
+      var paused = false;
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function(){
+          paused = !paused;
+          motionBtn.setAttribute('aria-pressed', String(paused));
+          motionBtn.textContent = paused ? 'MOTION PAUSED' : 'LIVE MOTION';
+          if (vid) { if (paused) vid.pause(); else vid.play().catch(function(){}); }
+        });
+      }
+      var modal = document.getElementById('specModal');
+      function openM(){ if (modal) modal.classList.add('is-open'); }
+      function closeM(){ if (modal) modal.classList.remove('is-open'); }
+      function toggleM(){ if (modal) modal.classList.toggle('is-open'); }
+      var ob = document.getElementById('openModalBtn');
+      if (ob) { ob.style.position = 'relative'; ob.style.zIndex = '120'; ob.addEventListener('click', toggleM); }
+      var hb = document.getElementById('heroCtaBtn');
+      if (hb) hb.addEventListener('click', openM);
+      document.querySelectorAll('.t-card').forEach(function(c){ c.addEventListener('click', openM); });
+      var cb = document.getElementById('closeModalBtn'); if (cb) cb.addEventListener('click', closeM);
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeM(); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-10-25",
+  "lastRunDate": "2026-10-26",
   "todayCopiedCount": 3,
   "processedSlugs": [
     "aeris",
@@ -45,6 +45,7 @@
     "freight-axis",
     "fresh-reddy",
     "galaxy-edge",
+    "glow-features",
     "gridwork-co",
     "halden",
     "haul",
@@ -53,6 +54,7 @@
     "japan-trails",
     "keystead",
     "kinetiq",
+    "kresna-footer",
     "laila",
     "lauberhorn-ridge",
     "lawyer-justicia",
@@ -79,6 +81,7 @@
     "oceanpulse",
     "orbit-academy",
     "pinehaven",
+    "price-calculator",
     "prmpt",
     "puro-amor",
     "reelmark",
@@ -122,7 +125,10 @@
     "rivr-hero",
     "lumina-footer",
     "haul-footer",
-    "vize-footer"
+    "vize-footer",
+    "glow-features",
+    "kresna-footer",
+    "price-calculator"
   ],
   "history": [
     {
@@ -160,6 +166,24 @@
         "haul": "premium",
         "vize-footer": "premium"
       }
+    },
+    {
+      "date": "2026-10-26",
+      "built": [
+        "glow-features",
+        "kresna-footer",
+        "price-calculator"
+      ],
+      "catalogIds": [
+        "t108",
+        "t109",
+        "t110"
+      ],
+      "tiers": {
+        "glow-features": "free",
+        "kresna-footer": "premium",
+        "price-calculator": "premium"
+      }
     }
   ],
   "todayFreeCount": 1,
@@ -170,6 +194,9 @@
     "44771c0ba6fedb5aec274e001a93b1569b743749f45fa49a1c990c84efb6b1e9",
     "1f3e869d6a286531d480e298d4ca98e24877ec1d50b315ef341944502a9b5177",
     "beb34a74f829f70f04c9cf562fcc0f9d3950bb3988e980ec1bba2bd1621ae33a",
-    "55229c936a8706f64190196b08207c4ef6d1deed9026ec26285debe43b4fe8eb"
+    "55229c936a8706f64190196b08207c4ef6d1deed9026ec26285debe43b4fe8eb",
+    "1b1e95aaa8416abbbdafaf591b94df2011e39558118e5d40695b20e00389e3ea",
+    "4104ca9bfced3612a974801f7c96614dd8121d2f264744568f3109af3e7ad2a2",
+    "bb7da53a5ec5dce674d46754cb7fc0271496c84569bf1998deff2d16f24af08d"
   ]
 }

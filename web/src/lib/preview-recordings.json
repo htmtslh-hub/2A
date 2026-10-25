@@ -1454,5 +1454,47 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "glow-features": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "6f4b30043ab0",
+    "sha256": "6f4b30043ab02c65e207386667d81e70358eb8d82563a2f7c589337ef254f905",
+    "demoHtmlSha256": "2931da9f4c02a462c7c3cfae0e1989b14aa710bc36c28b01c52c2be833cea087",
+    "demoSha256": "b09cd7f4a9b8b210170859f8769ed3a2363625be2e6bc812858266bac95435f7",
+    "bytes": 617789,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "kresna-footer": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "713774472299",
+    "sha256": "713774472299f9b7c3109b4cfce28207e4e5b107976bb826da2d955bc03ba6af",
+    "demoHtmlSha256": "2019351c763bb6299a69bbcc93d0f2f07ed1556727b5b85f11f7f431527b0fc9",
+    "demoSha256": "721bc21d74c6ad78564a70591b57441e9b27c1661a72c4bed075f37056efb3a6",
+    "bytes": 802361,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "price-calculator": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "3d3245c2e1f3",
+    "sha256": "3d3245c2e1f3d44a4e3d55dddd78c1051c89af0cac06f421ca8fa201f774b0fb",
+    "demoHtmlSha256": "879d07d571109ff8631ca896962e47017d64497623a293bc57668a2cb6bc9a59",
+    "demoSha256": "dd32b66c45cd9e761fd64bb57f64520489206c3dc724cee100ce3e3a15821e35",
+    "bytes": 591764,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

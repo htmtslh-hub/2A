@@ -1,0 +1,48 @@
+{
+  "id": "t109",
+  "slug": "kresna-footer",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-25T23:01:27.103Z",
+  "demo": "/demos/kresna-footer/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "713774472299",
+  "sha256": "713774472299f9b7c3109b4cfce28207e4e5b107976bb826da2d955bc03ba6af",
+  "demoHtmlSha256": "2019351c763bb6299a69bbcc93d0f2f07ed1556727b5b85f11f7f431527b0fc9",
+  "demoSha256": "721bc21d74c6ad78564a70591b57441e9b27c1661a72c4bed075f37056efb3a6",
+  "bytes": 802361,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.458,
+      "action": "click",
+      "selector": "#openModalBtn"
+    },
+    {
+      "seconds": 4.866,
+      "action": "click",
+      "selector": "#openModalBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kresna-footer-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kresna-footer-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kresna-footer-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kresna-footer-return.jpg"
+  ]
+}

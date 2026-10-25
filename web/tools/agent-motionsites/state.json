@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-10-24",
+  "lastRunDate": "2026-10-25",
   "todayCopiedCount": 3,
   "processedSlugs": [
     "aeris",
@@ -30,6 +30,7 @@
     "designpro",
     "diginest",
     "digital-epoch",
+    "docs",
     "dualplay",
     "eclipsio",
     "ember-arcade",
@@ -42,6 +43,7 @@
     "galaxy-edge",
     "gridwork-co",
     "halden",
+    "haul",
     "iris",
     "jack-3d",
     "japan-trails",
@@ -50,6 +52,8 @@
     "laila",
     "lauberhorn-ridge",
     "leaflit",
+    "lingoglass",
+    "lumina",
     "lumora",
     "maldives-escape",
     "manganresto",
@@ -89,6 +93,7 @@
     "synapsex",
     "targo",
     "tidal",
+    "tools",
     "toonhub",
     "vanguard",
     "vaultra",
@@ -99,6 +104,7 @@
     "vesper-ai",
     "veyra",
     "viktor",
+    "vize-footer",
     "volt-hoodie",
     "vybe",
     "wander-far",
@@ -108,7 +114,10 @@
   "processedPromptIds": [
     "aetheris-voyage-hero",
     "digital-epoch-hero",
-    "rivr-hero"
+    "rivr-hero",
+    "lumina-footer",
+    "haul-footer",
+    "vize-footer"
   ],
   "history": [
     {
@@ -128,6 +137,24 @@
         "digital-epoch": "premium",
         "rivr": "premium"
       }
+    },
+    {
+      "date": "2026-10-25",
+      "built": [
+        "lumina",
+        "haul",
+        "vize-footer"
+      ],
+      "catalogIds": [
+        "t100",
+        "t101",
+        "t102"
+      ],
+      "tiers": {
+        "lumina": "free",
+        "haul": "premium",
+        "vize-footer": "premium"
+      }
     }
   ],
   "todayFreeCount": 1,
@@ -135,6 +162,9 @@
   "processedPromptHashes": [
     "aa5f58f6ac4d3806dcbc1d54c34773bfaa8d8e37d80579513ccaad8135239694",
     "98a578e9d85ce3e6d4a80b5fc09a94e31a8796088975de98245db90e56bfd3fb",
-    "44771c0ba6fedb5aec274e001a93b1569b743749f45fa49a1c990c84efb6b1e9"
+    "44771c0ba6fedb5aec274e001a93b1569b743749f45fa49a1c990c84efb6b1e9",
+    "1f3e869d6a286531d480e298d4ca98e24877ec1d50b315ef341944502a9b5177",
+    "beb34a74f829f70f04c9cf562fcc0f9d3950bb3988e980ec1bba2bd1621ae33a",
+    "55229c936a8706f64190196b08207c4ef6d1deed9026ec26285debe43b4fe8eb"
   ]
 }

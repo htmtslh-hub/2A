@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>vize — Strategic Brand Architecture &amp; Layered Glass Experience</title>
+  <meta name="description" content="Premium strategic solutions designed to elevate your brand presence through advanced marketing, layered card architecture, and handcrafted SVG glass typography.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+      --vize-blue: #31A8FF;
+      --slate-900: #0F172A;
+      --slate-800: #1E293B;
+      --slate-500: #64748B;
+      --slate-400: #94A3B8;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-sans);
+      background-color: #F0F1F3;
+      color: #141414;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: #F0F1F3;
+      color: #141414;
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+    }
+
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.01);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .liquid-glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg,
+        rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+        rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+        rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .app-shell {
+      min-height: 100vh;
+      background-color: #F0F1F3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 28px 16px 40px;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .app-shell {
+        padding: 36px 24px 48px;
+      }
+    }
+
+    /* +15-20% Creative Enhancement: Strategic Telemetry & SVG Refraction Bar */
+    .strategy-console {
+      width: 100%;
+      max-width: 1152px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 20px 24px;
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    }
+
+    @media (min-width: 768px) {
+      .strategy-console {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 28px;
+      }
+    }
+
+    .console-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .pillar-btn {
+      padding: 9px 16px;
+      border-radius: 9999px;
+      border: 1px solid #E2E8F0;
+      background: #ffffff;
+      color: var(--slate-500);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .pillar-btn:hover,
+    .pillar-btn.is-active {
+      border-color: var(--vize-blue);
+      background: var(--vize-blue);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(49, 168, 255, 0.25);
+    }
+
+    .audit-cta {
+      padding: 10px 20px;
+      border-radius: 9999px;
+      border: none;
+      background: var(--slate-900);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .audit-cta:hover {
+      background: var(--vize-blue);
+      transform: translateY(-1px);
+    }
+
+    /* Component 2: FooterCard */
+    .vize-footer-root {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .footer-card-container {
+      width: 100%;
+      max-width: 1152px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    .outer-gray-body {
+      background-color: #E9EBEE;
+      border-radius: 48px;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .inner-white-box {
+      background-color: #ffffff;
+      border-radius: 40px;
+      margin: 8px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .content-grid-space {
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    @media (min-width: 768px) {
+      .content-grid-space {
+        padding: 40px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .content-grid-space {
+        padding: 48px;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+      .brand-info-col {
+        grid-column: span 2 / span 2;
+      }
+    }
+
+    .brand-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon-box {
+      width: 32px;
+      height: 32px;
+      background-color: #31A8FF;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .brand-wordmark {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #0F172A;
+    }
+
+    .brand-description {
+      color: #64748B;
+      line-height: 1.625;
+      font-size: 16px;
+      font-weight: 400;
+      max-width: 320px;
+    }
+
+    .socials-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .social-btn {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      border: 1px solid #F1F5F9;
+      background-color: #ffffff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      color: #1E293B;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .social-btn:hover {
+      background-color: #F8FAFC;
+      border-color: #31A8FF;
+      color: #31A8FF;
+    }
+
+    .social-btn:active {
+      transform: scale(0.95);
+    }
+
+    .nav-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .nav-col h4 {
+      font-size: 14px;
+      font-weight: 500;
+      color: #94A3B8;
+    }
+
+    .nav-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .nav-col a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1E293B;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-col a:hover {
+      color: #31A8FF;
+    }
+
+    /* Bottom Legal Bar (Inside Gray Outer Wrap, OUTSIDE of White Box) */
+    .bottom-legal-bar {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      font-size: 15px;
+    }
+
+    @media (min-width: 640px) {
+      .bottom-legal-bar {
+        padding-left: 48px;
+        padding-right: 48px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .bottom-legal-bar {
+        flex-direction: row;
+        padding-left: 64px;
+        padding-right: 64px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .bottom-legal-bar {
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+    }
+
+    .legal-copy {
+      color: #64748B;
+      font-weight: 500;
+    }
+
+    .legal-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      color: #64748B;
+      font-weight: 500;
+    }
+
+    .legal-links a {
+      color: #64748B;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .legal-links a:hover {
+      color: #1E293B;
+    }
+
+    .legal-divider {
+      width: 1px;
+      height: 16px;
+      background-color: #CBD5E1;
+    }
+
+    /* Component 3: GlassText */
+    .glass-text-stage {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      padding-top: 0;
+      margin-top: -12px;
+    }
+
+    .hidden-svg-defs {
+      position: absolute;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+    }
+
+    .glass-wordmark-wrap {
+      position: relative;
+      opacity: 0;
+      transform: scale(0.98);
+      animation: glassReveal 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.15s;
+    }
+
+    @keyframes glassReveal {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .glass-wordmark {
+      font-size: min(25vw, 400px);
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 0.92;
+      user-select: none;
+      color: #ffffff;
+      padding: 0 16px;
+      filter: url(#glass-effect);
+      transition: color 0.35s ease;
+    }
+
+    /* Audit Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      pointer-events: none;
+    }
+
+    .modal-backdrop.is-open {
+      display: flex;
+    }
+
+    .modal-box {
+      width: 100%;
+      max-width: 480px;
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 32px;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 24px 48px rgba(15, 23, 42, 0.14);
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Strategic Telemetry & Refraction Console (+15-20% Creative Enhancement) -->
+    <section class="strategy-console" aria-label="Vize Brand Strategy Console">
+      <div class="console-left">
+        <button type="button" class="pillar-btn is-active" data-pillar="architecture">01 / Brand Architecture</button>
+        <button type="button" class="pillar-btn" data-pillar="science">02 / Attribution Science</button>
+        <button type="button" class="pillar-btn" data-pillar="velocity">03 / Pipeline Velocity</button>
+      </div>
+      <button type="button" class="audit-cta" id="navTouchBtn" data-next-preview>Book Strategic Audit ↗</button>
+    </section>
+
+    <!-- Main Footer Component -->
+    <footer class="vize-footer-root">
+      <!-- Component 2: FooterCard -->
+      <div class="footer-card-container">
+        <div class="outer-gray-body">
+          <div class="inner-white-box">
+            <div class="content-grid-space">
+              <!-- Brand Info (lg:col-span-2) -->
+              <div class="brand-info-col">
+                <div class="logo-row">
+                  <div class="logo-icon-box" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 20C4 20 4 14 10 10C16 6 20 4 20 4C20 4 18 8 14 14C10 20 4 20 4 20Z" fill="white" />
+                      <path d="M4 20L10 14" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <span class="brand-wordmark">vize</span>
+                </div>
+
+                <p id="pillarDescription" class="brand-description">
+                  Premium strategic solutions designed to elevate your brand presence through advanced marketing.
+                </p>
+
+                <div class="socials-group">
+                  <!-- LinkedIn -->
+                  <button type="button" class="social-btn" aria-label="LinkedIn" data-modal-trigger="Vize on LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                  </button>
+                  <!-- Twitter -->
+                  <button type="button" class="social-btn" aria-label="Twitter" data-modal-trigger="Vize Research Feed">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                  </button>
+                  <!-- Instagram -->
+                  <button type="button" class="social-btn" aria-label="Instagram" data-modal-trigger="Vize Design Systems">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Product Column -->
+              <div class="nav-col">
+                <h4>Product</h4>
+                <ul>
+                  <li><a href="#features" data-modal-trigger="Vize Features">Features</a></li>
+                  <li><a href="#solutions" data-modal-trigger="Enterprise Solutions">Solutions</a></li>
+                  <li><a href="#pricing" data-modal-trigger="Strategic Retainer Pricing">Pricing</a></li>
+                  <li><a href="#updates" data-modal-trigger="Platform Release Notes">Updates</a></li>
+                </ul>
+              </div>
+
+              <!-- Science Column -->
+              <div class="nav-col">
+                <h4>Science</h4>
+                <ul>
+                  <li><a href="#approach" data-modal-trigger="Scientific Approach">Approach</a></li>
+                  <li><a href="#identity" data-modal-trigger="Brand Identity Systems">Identity</a></li>
+                  <li><a href="#research" data-modal-trigger="Market Research Lab">Research</a></li>
+                  <li><a href="#metrics" data-modal-trigger="Attribution Metrics">Metrics</a></li>
+                </ul>
+              </div>
+
+              <!-- Company Column -->
+              <div class="nav-col">
+                <h4>Company</h4>
+                <ul>
+                  <li><a href="#about" data-modal-trigger="About Vize">About Us</a></li>
+                  <li><a href="#partners" data-modal-trigger="Global Partners">Partners</a></li>
+                  <li><a href="#careers" data-modal-trigger="Careers at Vize">Careers</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Legal Bar (Inside Gray Outer Wrap, OUTSIDE of White Box) -->
+          <div class="bottom-legal-bar">
+            <p class="legal-copy">© 2025 Vize. All rights reserved.</p>
+            <div class="legal-links">
+              <a href="#legal" data-modal-trigger="Vize Legal Center">Legal Center</a>
+              <div class="legal-divider" aria-hidden="true"></div>
+              <a href="#agreement" data-modal-trigger="Vize User Agreement">User Agreement</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Component 3: GlassText -->
+      <div class="glass-text-stage">
+        <svg class="hidden-svg-defs" aria-hidden="true" focusable="false">
+          <defs>
+            <filter id="glass-effect" x="-50%" y="-50%" width="200%" height="200%">
+              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25" result="outer-shadow" />
+              <feComponentTransfer in="SourceAlpha" result="alpha">
+                <feFuncA type="linear" slope="1" />
+              </feComponentTransfer>
+              <feOffset in="alpha" dx="0" dy="4" result="offset-white" />
+              <feGaussianBlur in="offset-white" stdDeviation="4" result="blur-white" />
+              <feComposite in="alpha" in2="blur-white" operator="out" result="inner-white-mask" />
+              <feFlood flood-color="#ffffff" flood-opacity="0.25" result="white-fill" />
+              <feComposite in="white-fill" in2="inner-white-mask" operator="in" result="inner-white-final" />
+              <feGaussianBlur in="alpha" stdDeviation="6" result="blur-black" />
+              <feComposite in="alpha" in2="blur-black" operator="out" result="inner-black-mask" />
+              <feFlood flood-color="#000000" flood-opacity="0.25" result="black-fill" />
+              <feComposite in="black-fill" in2="inner-black-mask" operator="in" result="inner-black-final" />
+              <feMerge>
+                <feMergeNode in="outer-shadow" />
+                <feMergeNode in="SourceGraphic" />
+                <feMergeNode in="inner-white-final" />
+                <feMergeNode in="inner-black-final" />
+              </feMerge>
+            </filter>
+          </defs>
+        </svg>
+        <div class="glass-wordmark-wrap">
+          <h1 id="glassWordmark" class="glass-wordmark">vize</h1>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Strategic Audit Modal -->
+  <div id="auditModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+        <span style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#31A8FF;">VIZE STRATEGY ADVISORY</span>
+        <button type="button" id="closeModalBtn" style="border:1px solid #E2E8F0;background:#fff;border-radius:9999px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;">Close (Esc)</button>
+      </div>
+      <h2 id="modalTitle" style="font-size:22px;font-weight:700;color:#0F172A;margin-bottom:10px;">Book Strategic Brand Audit</h2>
+      <p style="font-size:14px;line-height:1.65;color:#64748B;margin-bottom:20px;">
+        Partner with Vize's attribution scientists and design directors to benchmark your conversion funnel, visual equity, and multi-channel velocity.
+      </p>
+      <button type="button" class="audit-cta" id="confirmAuditBtn" style="width:100%;background:#31A8FF;">Request Executive Dossier ↗</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var pillars = {
+        architecture: {
+          desc: 'Premium strategic solutions designed to elevate your brand presence through advanced marketing.',
+          wordColor: '#ffffff'
+        },
+        science: {
+          desc: 'Multi-touch econometric attribution and predictive lift modeling engineered for category leaders.',
+          wordColor: '#EBF6FF'
+        },
+        velocity: {
+          desc: 'High-cadence creative experimentation and conversion architecture that compounds pipeline growth.',
+          wordColor: '#F4F6FA'
+        }
+      };
+
+      var btns = document.querySelectorAll('.pillar-btn');
+      var descEl = document.getElementById('pillarDescription');
+      var wordmarkEl = document.getElementById('glassWordmark');
+
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btns.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var data = pillars[btn.getAttribute('data-pillar')];
+          if (data) {
+            if (descEl) descEl.textContent = data.desc;
+            if (wordmarkEl) wordmarkEl.style.color = data.wordColor;
+          }
+        });
+      });
+
+      var modal = document.getElementById('auditModal');
+      var modalTitle = document.getElementById('modalTitle');
+      var openBtn = document.getElementById('navTouchBtn');
+      var closeBtn = document.getElementById('closeModalBtn');
+      var confirmBtn = document.getElementById('confirmAuditBtn');
+
+      function openModal(heading) {
+        if (modalTitle && heading) modalTitle.textContent = heading;
+        if (modal) modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (modal) modal.classList.remove('is-open');
+      }
+
+      if (openBtn) {
+        openBtn.style.position = 'relative';
+        openBtn.style.zIndex = '120';
+        openBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal('Book Strategic Brand Audit');
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+
+      document.querySelectorAll('[data-modal-trigger]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          openModal(el.getAttribute('data-modal-trigger'));
+        });
+      });
+
+      if (modal) {
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) closeModal();
+        });
+      }
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

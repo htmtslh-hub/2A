@@ -13,21 +13,18 @@ using System.Runtime.InteropServices;
 public static class PowerKeepAwake {
     [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
     public static extern uint SetThreadExecutionState(uint esFlags);
-    public const uint ES_CONTINUOUS = 0x80000000;
-    public const uint ES_SYSTEM_REQUIRED = 0x00000001;
-    public const uint ES_DISPLAY_REQUIRED = 0x00000002;
-    public const uint ES_AWAYMODE_REQUIRED = 0x00000040;
+    public static void Hold() {
+        SetThreadExecutionState(0x80000043u);
+    }
+    public static void Release() {
+        SetThreadExecutionState(0x80000000u);
+    }
 }
 "@
 
 try {
     Add-Type -TypeDefinition $PowerCode -ErrorAction SilentlyContinue
-    [PowerKeepAwake]::SetThreadExecutionState(
-        [PowerKeepAwake]::ES_CONTINUOUS -bor
-        [PowerKeepAwake]::ES_SYSTEM_REQUIRED -bor
-        [PowerKeepAwake]::ES_DISPLAY_REQUIRED -bor
-        [PowerKeepAwake]::ES_AWAYMODE_REQUIRED
-    ) | Out-Null
+    [PowerKeepAwake]::Hold()
     Write-Host "[Power] Keep-Awake lock acquired for daily agent execution." -ForegroundColor Cyan
 
     # 2. Chạy Daily Orchestrator (Lấy 3 mẫu miễn phí: 1 Free + 2 Premium, sáng tạo thêm 15-20%, đóng gói, quay preview, push GitHub & deploy Vercel)
@@ -36,7 +33,7 @@ try {
 } finally {
     # 3. Giải phóng Keep-Awake lock
     try {
-        [PowerKeepAwake]::SetThreadExecutionState([PowerKeepAwake]::ES_CONTINUOUS) | Out-Null
+        [PowerKeepAwake]::Release()
         Write-Host "[Power] Keep-Awake lock released." -ForegroundColor Cyan
     } catch {}
 

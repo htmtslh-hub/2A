@@ -97,9 +97,9 @@ export function buildSingleFileHtml(spec) {
     .telemetry-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     @media (max-width: 768px) { .telemetry-strip { grid-template-columns: 1fr; } .hero-stage { padding: 20px 16px 32px; } }
     .t-card { background: var(--card); backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 24px; padding: 22px; cursor: pointer; text-align: left; color: var(--fg); }
-    .modal-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.65); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 16px; }
+    .modal-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.65); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 16px; pointer-events: none; }
     .modal-backdrop.is-open { display: flex; }
-    .modal-box { max-width: 480px; width: 100%; border-radius: 28px; background: var(--bg); border: 1px solid var(--border); padding: 28px; position: relative; color: var(--fg); }
+    .modal-box { max-width: 480px; width: 100%; border-radius: 28px; background: var(--bg); border: 1px solid var(--border); padding: 28px; position: relative; color: var(--fg); pointer-events: auto; }
   </style>
 </head>
 <body>
@@ -149,7 +149,11 @@ export function buildSingleFileHtml(spec) {
       var modal = document.getElementById('specModal');
       function openM(){ if (modal) modal.classList.add('is-open'); }
       function closeM(){ if (modal) modal.classList.remove('is-open'); }
-      ['openModalBtn','heroCtaBtn'].forEach(function(id){ var b=document.getElementById(id); if(b) b.addEventListener('click', openM); });
+      function toggleM(){ if (modal) modal.classList.toggle('is-open'); }
+      var ob = document.getElementById('openModalBtn');
+      if (ob) { ob.style.position = 'relative'; ob.style.zIndex = '120'; ob.addEventListener('click', toggleM); }
+      var hb = document.getElementById('heroCtaBtn');
+      if (hb) hb.addEventListener('click', openM);
       document.querySelectorAll('.t-card').forEach(function(c){ c.addEventListener('click', openM); });
       var cb = document.getElementById('closeModalBtn'); if (cb) cb.addEventListener('click', closeM);
       document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeM(); });

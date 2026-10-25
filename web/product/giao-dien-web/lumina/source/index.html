@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LUMINA — Cosmic Clarity &amp; Liquid Glass Experience</title>
+  <meta name="description" content="Lumina provides premium clarity on global events and cosmic wonders — featuring an immersive cosmic video stage, interactive observatory telemetry, and a crafted liquid-glass footer.">
+  <style>
+    @font-face {
+      font-family: "Helvetica Regular";
+      src: url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.eot");
+      src: url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.eot?#iefix") format("embedded-opentype"),
+           url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.woff2") format("woff2"),
+           url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.woff") format("woff"),
+           url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.ttf") format("truetype");
+      font-display: swap;
+    }
+
+    :root {
+      --font-sans: "Helvetica Regular", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-sans);
+      background: #04060b;
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: #04060b;
+      color: #ffffff;
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      min-height: 115vh;
+    }
+
+    ::selection {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+
+    /* Exact Liquid Glass Specular Bordering */
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.01);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .liquid-glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg,
+        rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
+        rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+        rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .page-main {
+      position: relative;
+      width: 100%;
+      min-height: 115vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 20px 44px;
+    }
+
+    @media (min-width: 768px) {
+      .page-main {
+        padding: 36px 40px 56px;
+      }
+    }
+
+    .bg-video {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      pointer-events: none;
+      transition: filter 0.6s ease, transform 0.8s ease;
+    }
+
+    .bg-vignette {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% 35%, rgba(4, 6, 11, 0.12) 0%, rgba(4, 6, 11, 0.62) 100%);
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+    }
+
+    /* Upper Topbar & Cosmic CTA Console (+15-20% Creative Enhancement) */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 9999px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .glass-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 9999px;
+      color: rgba(255, 255, 255, 0.88);
+      font-family: inherit;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+    }
+
+    .glass-btn:hover {
+      color: #ffffff;
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .upper-cta-stage {
+      margin-top: 72px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 720px;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .upper-cta-stage {
+        margin-top: 108px;
+      }
+    }
+
+    .eyebrow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 9999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #7dd3fc;
+      box-shadow: 0 0 10px #7dd3fc;
+    }
+
+    .hero-title {
+      font-size: clamp(34px, 5.4vw, 68px);
+      font-weight: 500;
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(14px, 1.4vw, 17px);
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 560px;
+    }
+
+    .channel-switcher {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .channel-pill {
+      padding: 9px 16px;
+      border-radius: 9999px;
+      font-family: inherit;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .channel-pill.is-active {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    /* Exact Liquid Glass Footer */
+    .lumina-footer {
+      width: 100%;
+      border-radius: 24px;
+      padding: 24px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 128px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: footerEnter 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+    }
+
+    @media (min-width: 768px) {
+      .lumina-footer {
+        padding: 40px;
+        margin-top: 256px;
+      }
+    }
+
+    @keyframes footerEnter {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .footer-top-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-top-grid {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 48px;
+      }
+      .footer-brand-col {
+        grid-column: span 5 / span 5;
+      }
+      .footer-links-col {
+        grid-column: span 7 / span 7;
+      }
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .brand-name {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+    }
+
+    .brand-desc {
+      font-size: 14px;
+      line-height: 1.65;
+      max-width: 384px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    @media (min-width: 480px) {
+      .links-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+    }
+
+    .link-col-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .link-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .link-list a {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .link-list a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom-bar {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom-bar {
+        flex-direction: row;
+        gap: 16px;
+      }
+    }
+
+    .curated-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      opacity: 0.5;
+      color: #ffffff;
+    }
+
+    .social-Cluster {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .social-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .social-link {
+      color: #ffffff;
+      opacity: 0.7;
+      transition: opacity 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-link:hover {
+      opacity: 1;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    /* Interactive Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(4, 6, 11, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      pointer-events: none;
+    }
+
+    .modal-backdrop.is-open {
+      display: flex;
+    }
+
+    .modal-card {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 24px;
+      padding: 32px;
+      color: #ffffff;
+      background: rgba(12, 16, 28, 0.82);
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <main class="page-main">
+    <video
+      id="bgVideo"
+      class="bg-video"
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_114316_1c7889ad-2885-410e-b493-98119fee0ddb.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+    ></video>
+    <div class="bg-vignette" aria-hidden="true"></div>
+
+    <div class="content-wrapper">
+      <!-- Top Bar -->
+      <header class="top-nav">
+        <a href="#top" class="liquid-glass brand-pill">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+            <path d="M 4.688 136 C 68.373 136 120 187.627 120 251.312 C 120 252.883 119.967 254.445 119.905 256 L 0 256 L 0 136.096 C 1.555 136.034 3.117 136 4.688 136 Z M 251.312 136 C 252.883 136 254.445 136.034 256 136.096 L 256 256 L 136.095 256 C 136.032 254.438 136.001 252.875 136 251.312 C 136 187.627 187.627 136 251.312 136 Z M 119.905 0 C 119.967 1.555 120 3.117 120 4.688 C 120 68.373 68.373 120 4.687 120 C 3.117 120 1.555 119.967 0 119.905 L 0 0 Z M 256 119.905 C 254.445 119.967 252.883 120 251.312 120 C 187.627 120 136 68.373 136 4.687 C 136 3.117 136.033 1.555 136.095 0 L 256 0 Z" />
+          </svg>
+          <span>LUMINA</span>
+        </a>
+
+        <div class="nav-actions">
+          <button type="button" class="liquid-glass glass-btn" id="motionToggleBtn" aria-pressed="false">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span id="motionLabel">LIVE COSMIC STREAM</span>
+          </button>
+          <button type="button" class="liquid-glass glass-btn" id="navTouchBtn" data-next-preview>
+            <span>Resource Vault ↗</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Upper CTA & Observatory Console -->
+      <section class="upper-cta-stage" aria-labelledby="heroHeading">
+        <div class="liquid-glass eyebrow-badge">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span id="telemetryReadout">OBSERVATORY TELEMETRY • 99.4% CLARITY INDEX</span>
+        </div>
+        <h1 id="heroHeading" class="hero-title">Premium clarity on global events and cosmic wonders.</h1>
+        <p id="heroDesc" class="hero-subtitle">
+          Lumina synthesizes deep-space interferometry, planetary climate signals, and open scientific archives into a single liquid-glass sanctuary — shared with all for free.
+        </p>
+        <div class="channel-switcher" role="group" aria-label="Observatory Feeds">
+          <button type="button" class="liquid-glass channel-pill is-active" data-feed="solar">01 / Orbital Horizon</button>
+          <button type="button" class="liquid-glass channel-pill" data-feed="deep">02 / Deep Dive Series</button>
+          <button type="button" class="liquid-glass channel-pill" data-feed="circle">03 / Global Circle</button>
+        </div>
+      </section>
+
+      <!-- Stylized Liquid Glass Footer -->
+      <footer class="liquid-glass lumina-footer">
+        <div class="footer-top-grid">
+          <!-- Column 1 (md:col-span-5) -->
+          <div class="footer-brand-col">
+            <div class="brand-row">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                <path d="M 4.688 136 C 68.373 136 120 187.627 120 251.312 C 120 252.883 119.967 254.445 119.905 256 L 0 256 L 0 136.096 C 1.555 136.034 3.117 136 4.688 136 Z M 251.312 136 C 252.883 136 254.445 136.034 256 136.096 L 256 256 L 136.095 256 C 136.032 254.438 136.001 252.875 136 251.312 C 136 187.627 187.627 136 251.312 136 Z M 119.905 0 C 119.967 1.555 120 3.117 120 4.688 C 120 68.373 68.373 120 4.687 120 C 3.117 120 1.555 119.967 0 119.905 L 0 0 Z M 256 119.905 C 254.445 119.967 252.883 120 251.312 120 C 187.627 120 136 68.373 136 4.687 C 136 3.117 136.033 1.555 136.095 0 L 256 0 Z" />
+              </svg>
+              <span class="brand-name">LUMINA</span>
+            </div>
+            <p class="brand-desc">
+              Lumina provides premium clarity on global events and cosmic wonders - shared with all for free.
+            </p>
+          </div>
+
+          <!-- Column 2 (md:col-span-7) -->
+          <div class="footer-links-col">
+            <div class="links-grid">
+              <div>
+                <h2 class="link-col-title">Discover</h2>
+                <ul class="link-list">
+                  <li><a href="#labs" data-modal-trigger="Labs &amp; Workshops">Labs &amp; Workshops</a></li>
+                  <li><a href="#deep-dive" data-modal-trigger="Deep Dive Series">Deep Dive Series</a></li>
+                  <li><a href="#global-circle" data-modal-trigger="Global Circle">Global Circle</a></li>
+                  <li><a href="#resource-vault" data-modal-trigger="Resource Vault">Resource Vault</a></li>
+                  <li><a href="#roadmap" data-modal-trigger="Future Roadmap">Future Roadmap</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="link-col-title">The Mission</h2>
+                <ul class="link-list">
+                  <li><a href="#origin" data-modal-trigger="Origin Story">Origin Story</a></li>
+                  <li><a href="#collective" data-modal-trigger="The Collective">The Collective</a></li>
+                  <li><a href="#newsroom" data-modal-trigger="Newsroom Hub">Newsroom Hub</a></li>
+                  <li><a href="#join" data-modal-trigger="Join the Team">Join the Team</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 class="link-col-title">Concierge</h2>
+                <ul class="link-list">
+                  <li><a href="#contact" data-modal-trigger="Get in Touch">Get in Touch</a></li>
+                  <li><a href="#privacy" data-modal-trigger="Legal Privacy">Legal Privacy</a></li>
+                  <li><a href="#agreement" data-modal-trigger="User Agreement">User Agreement</a></li>
+                  <li><a href="#report" data-modal-trigger="Report Concern">Report Concern</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom-bar">
+          <p class="curated-label">Curated by @GotInGeorgiG</p>
+          <div class="social-Cluster">
+            <span class="curated-label">Join the Journey:</span>
+            <div class="social-row">
+              <!-- Music2 -->
+              <a href="#music" class="social-link" aria-label="Music2" data-modal-trigger="Lumina Sonic Archive">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="18" r="4"/><path d="M12 18V2l7 4"/></svg>
+              </a>
+              <!-- Facebook -->
+              <a href="#facebook" class="social-link" aria-label="Facebook" data-modal-trigger="Lumina Community">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <!-- Twitter -->
+              <a href="#twitter" class="social-link" aria-label="Twitter" data-modal-trigger="Lumina Live Dispatch">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+              </a>
+              <!-- Youtube -->
+              <a href="#youtube" class="social-link" aria-label="YouTube" data-modal-trigger="Lumina 4K Broadcasts">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+              </a>
+              <!-- Instagram -->
+              <a href="#instagram" class="social-link" aria-label="Instagram" data-modal-trigger="Lumina Visual Observatory">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Accessible Cosmic Vault Modal -->
+  <div id="vaultModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="liquid-glass modal-card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+        <span style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#7dd3fc;">LUMINA OPEN ACCESS</span>
+        <button type="button" class="liquid-glass glass-btn" id="closeModalBtn" style="padding:6px 14px;">Close (Esc)</button>
+      </div>
+      <h2 id="modalTitle" style="font-size:24px;font-weight:500;margin-bottom:10px;">Lumina Resource Vault</h2>
+      <p id="modalCopy" style="font-size:14px;line-height:1.65;color:rgba(255,255,255,0.75);margin-bottom:20px;">
+        Access open-source orbital telemetry, high-dynamic-range cosmic captures, and global event briefings curated for researchers and creators worldwide.
+      </p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button type="button" class="liquid-glass glass-btn" id="confirmVaultBtn">Enter Open Archive ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var video = document.getElementById('bgVideo');
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var motionLabel = document.getElementById('motionLabel');
+      var paused = false;
+
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          paused = !paused;
+          motionBtn.setAttribute('aria-pressed', String(paused));
+          if (motionLabel) {
+            motionLabel.textContent = paused ? 'STREAM PAUSED' : 'LIVE COSMIC STREAM';
+          }
+          if (video) {
+            if (paused) video.pause();
+            else video.play().catch(function () {});
+          }
+        });
+      }
+
+      var feeds = {
+        solar: {
+          readout: 'OBSERVATORY TELEMETRY • 99.4% CLARITY INDEX',
+          title: 'Premium clarity on global events and cosmic wonders.',
+          desc: 'Lumina synthesizes deep-space interferometry, planetary climate signals, and open scientific archives into a single liquid-glass sanctuary — shared with all for free.',
+          filter: 'none'
+        },
+        deep: {
+          readout: 'DEEP DIVE SERIES • SPECTRAL ARCHIVE 04',
+          title: 'Unfiltered cosmic phenomena at orbital resolution.',
+          desc: 'Explore long-exposure stellar nurseries, magnetospheric aurora streams, and synchronized earth-observation datasets in real time.',
+          filter: 'hue-rotate(18deg) contrast(1.06)'
+        },
+        circle: {
+          readout: 'GLOBAL CIRCLE • 142 SYNCHRONIZED NODES',
+          title: 'A borderless collective decoding our planetary future.',
+          desc: 'Connect with independent observatories, citizen scientists, and visual archivists sharing verified dispatches across every continent.',
+          filter: 'saturate(1.18) brightness(1.04)'
+        }
+      };
+
+      var pills = document.querySelectorAll('.channel-pill');
+      var readoutEl = document.getElementById('telemetryReadout');
+      var titleEl = document.getElementById('heroHeading');
+      var descEl = document.getElementById('heroDesc');
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('is-active'); });
+          pill.classList.add('is-active');
+          var key = pill.getAttribute('data-feed');
+          var data = feeds[key];
+          if (data) {
+            if (readoutEl) readoutEl.textContent = data.readout;
+            if (titleEl) titleEl.textContent = data.title;
+            if (descEl) descEl.textContent = data.desc;
+            if (video) video.style.filter = data.filter;
+          }
+        });
+      });
+
+      var modal = document.getElementById('vaultModal');
+      var modalTitle = document.getElementById('modalTitle');
+      var openBtn = document.getElementById('navTouchBtn');
+      var closeBtn = document.getElementById('closeModalBtn');
+      var confirmBtn = document.getElementById('confirmVaultBtn');
+
+      function openModal(heading) {
+        if (modalTitle && heading) modalTitle.textContent = heading;
+        if (modal) modal.classList.add('is-open');
+      }
+
+      function closeModal() {
+        if (modal) modal.classList.remove('is-open');
+      }
+
+      if (openBtn) {
+        openBtn.style.position = 'relative';
+        openBtn.style.zIndex = '120';
+        openBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal('Lumina Resource Vault');
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+
+      document.querySelectorAll('[data-modal-trigger]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          openModal(el.getAttribute('data-modal-trigger'));
+        });
+      });
+
+      if (modal) {
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

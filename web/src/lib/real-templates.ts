@@ -46,6 +46,79 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t102: {
+    slug: 'vize-footer',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Vize Footer",
+        desc: "Giao diện web Vize Footer tự chứa trong một file HTML duy nhất với nền video lặp mượt, bề mặt kính mờ, bảng điều khiển tương tác và hộp thoại thông số.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      en: {
+        name: "Vize Footer",
+        desc: "Single-file self-contained Vize Footer landing experience featuring looping background video, glassmorphic UI, interactive telemetry, and an accessible modal dialog.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      zh: {
+        name: "Vize Footer",
+        desc: "单文件自包含 Vize Footer 着陆页模板，配备自动循环背景视频、毛玻璃交互组件与详情弹窗。",
+        tags: ['动态视频', '毛玻璃', '交互首屏']
+      }
+    }
+  },
+
+  t101: {
+    slug: 'haul',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "HAUL!",
+        desc: "Giao diện web HAUL! tự chứa trong một file HTML duy nhất với nền video lặp mượt, bề mặt kính mờ, bảng điều khiển tương tác và hộp thoại thông số.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      en: {
+        name: "HAUL!",
+        desc: "Single-file self-contained HAUL! landing experience featuring looping background video, glassmorphic UI, interactive telemetry, and an accessible modal dialog.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      zh: {
+        name: "HAUL!",
+        desc: "单文件自包含 HAUL! 着陆页模板，配备自动循环背景视频、毛玻璃交互组件与详情弹窗。",
+        tags: ['动态视频', '毛玻璃', '交互首屏']
+      }
+    }
+  },
+
+  t100: {
+    slug: 'lumina',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Lumina",
+        desc: "Giao diện web Lumina tự chứa trong một file HTML duy nhất với nền video lặp mượt, bề mặt kính mờ, bảng điều khiển tương tác và hộp thoại thông số.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      en: {
+        name: "Lumina",
+        desc: "Single-file self-contained Lumina landing experience featuring looping background video, glassmorphic UI, interactive telemetry, and an accessible modal dialog.",
+        tags: ['Motion Video', 'Liquid Glass', 'Interactive Hero']
+      },
+      zh: {
+        name: "Lumina",
+        desc: "单文件自包含 Lumina 着陆页模板，配备自动循环背景视频、毛玻璃交互组件与详情弹窗。",
+        tags: ['动态视频', '毛玻璃', '交互首屏']
+      }
+    }
+  },
+
   t99: {
     slug: 'rivr',
     cat: 'commerce',

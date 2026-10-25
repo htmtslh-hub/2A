@@ -1,0 +1,48 @@
+{
+  "id": "t102",
+  "slug": "vize-footer",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-25T00:07:22.175Z",
+  "demo": "/demos/vize-footer/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "c98f2f327ab9",
+  "sha256": "c98f2f327ab99b006c91a7a7c04be65681914c9a305856fccf8ce5a9fb717980",
+  "demoHtmlSha256": "02740a87f9275f17d16c375d7bfd2946239c266bb5a3813b0d0deeaa186a278b",
+  "demoSha256": "fb003ea73f4826c35ab2d6c5c9ad221663f5534bb7d0122a32117ca26a4bb158",
+  "bytes": 103092,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.457,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 4.832,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vize-footer-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vize-footer-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vize-footer-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vize-footer-return.jpg"
+  ]
+}

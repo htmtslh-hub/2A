@@ -1,0 +1,48 @@
+{
+  "id": "t101",
+  "slug": "haul",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-25T00:06:52.937Z",
+  "demo": "/demos/haul/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "2cb026679e56",
+  "sha256": "2cb026679e56b87ae701d7f52f25ece7541c29491cebb521c5cdfac35af9dbb1",
+  "demoHtmlSha256": "e5b48bb0c88923c0f0c99df13acc0b45194a075856ab7f75609c1b1f3d6b2097",
+  "demoSha256": "bb8f102ddbfc429040b3b6459b88ac8e1abd18e88e2bd96c6580a533f7e499a9",
+  "bytes": 365003,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.459,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 4.838,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 468
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\haul-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\haul-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\haul-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\haul-return.jpg"
+  ]
+}

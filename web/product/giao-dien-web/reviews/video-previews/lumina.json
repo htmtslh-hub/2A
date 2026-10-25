@@ -1,0 +1,48 @@
+{
+  "id": "t100",
+  "slug": "lumina",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-25T00:06:21.756Z",
+  "demo": "/demos/lumina/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a709627410af",
+  "sha256": "a709627410af644044fbd80523a3e323e3898e232413bbcce87bd944d965848e",
+  "demoHtmlSha256": "9f0a3865882944d037c93e3bcffb13cf5bcd093cd6bca8a5f622afaa06191713",
+  "demoSha256": "a3206928c50b54558fbb5a7de97032c790fdadd4882d8c5a89a20b53887f6973",
+  "bytes": 753345,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.458,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 4.919,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 316
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lumina-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lumina-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lumina-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lumina-return.jpg"
+  ]
+}

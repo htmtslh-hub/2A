@@ -22,8 +22,14 @@ export function sha256Text(text) {
 function collectExistingStoreIdentity() {
   const slugs = new Set();
   const names = new Set();
+  const brandTokens = new Set();
   const videos = new Set();
   const htmlCorpus = [];
+
+  const genericWords = new Set([
+    'docs', 'tools', 'reviews', 'design', 'atlas', 'iris', 'tidal', 'verdant',
+    'free-sample', 'music-app', 'Portfolio', 'agency', 'studio', 'landing', 'modern'
+  ]);
 
   // 1. Check web/product/giao-dien-web directories + source HTML videos & text
   const prodRoot = resolve(root, 'web/product/giao-dien-web');
@@ -32,11 +38,15 @@ function collectExistingStoreIdentity() {
       if (!d.isDirectory()) continue;
       const s = d.name.toLowerCase();
       slugs.add(s);
+      if (s.length >= 5 && !genericWords.has(s)) {
+        brandTokens.add(s);
+        brandTokens.add(s.replace(/-/g, ' '));
+      }
       const srcHtml = resolve(prodRoot, d.name, 'source/index.html');
       if (existsSync(srcHtml)) {
         try {
           const html = readFileSync(srcHtml, 'utf8');
-          htmlCorpus.push(html.toLowerCase());
+          htmlCorpus.push({ slug: s, html: html.toLowerCase() });
           for (const vm of html.matchAll(/https?:\/\/[^\s"'`<>)]+\.mp4/gi)) {
             const fname = vm[0].split('/').pop()?.toLowerCase();
             if (fname) videos.add(fname);
@@ -65,115 +75,145 @@ function collectExistingStoreIdentity() {
       slugs.add(m[1].toLowerCase());
     }
     for (const m of content.matchAll(/name:\s*['"]([^'"]+)['"]/g)) {
-      names.add(slugify(m[1]));
+      const nSlug = slugify(m[1]);
+      names.add(nSlug);
+      if (m[1].length >= 5 && !genericWords.has(nSlug)) {
+        brandTokens.add(m[1].toLowerCase());
+      }
     }
     for (const m of content.matchAll(/"name":\s*"([^"]+)"/g)) {
-      names.add(slugify(m[1]));
-    }
-  }
-
-  return { slugs, names, videos, htmlCorpus };
-}
-
-export async function fetchMotionsitesPrompts(options = {}) {
-  const includePremium = options.includePremium ?? false;
-  console.log(`[1/4] Connecting to ${config.motionsitesUrl}...`);
-  const htmlRes = await fetch(config.motionsitesUrl);
-  if (!htmlRes.ok) throw new Error(`Failed to load ${config.motionsitesUrl}: ${htmlRes.statusText}`);
-  const html = await htmlRes.text();
-
-  // Find index script
-  const scriptRegex = /src=["'](\/assets\/index-[^"']+\.js)["']/g;
-  let match;
-  let indexScriptUrl = null;
-  while ((match = scriptRegex.exec(html)) !== null) {
-    indexScriptUrl = `${config.motionsitesUrl}${match[1]}`;
-  }
-  if (!indexScriptUrl) throw new Error('Could not find main bundle script on motionsites.ai');
-
-  console.log(`[1/4] Found bundle: ${indexScriptUrl}`);
-  const indexJsRes = await fetch(indexScriptUrl);
-  const indexJs = await indexJsRes.text();
-
-  // Find prompts-*.js bundle
-  const promptBundleMatch = indexJs.match(/assets\/prompts-[a-zA-Z0-9_\-]+\.js/);
-  if (!promptBundleMatch) throw new Error('Could not find prompts bundle in main script');
-  const promptsUrl = `${config.motionsitesUrl}/${promptBundleMatch[0]}`;
-  console.log(`[1/4] Found prompts data bundle: ${promptsUrl}`);
-
-  const promptsRes = await fetch(promptsUrl);
-  const promptsJs = await promptsRes.text();
-
-  // Extract array: [{id:...}]
-  const arrayStart = promptsJs.indexOf('[{id:');
-  if (arrayStart === -1) throw new Error('Could not locate prompt items array');
-
-  // Resolve asset variable declarations at top of prompts-*.js (e.g. nr=`/assets/hero-shamoni-preview.gif`)
-  const headerPart = promptsJs.slice(0, arrayStart);
-  const varMap = {};
-  for (const vm of headerPart.matchAll(/([a-zA-Z0-9_$]+)=`([^`]+)`/g)) {
-    varMap[vm[1]] = vm[2].startsWith('/') ? `${config.motionsitesUrl}${vm[2]}` : vm[2];
-  }
-
-  let depth = 0;
-  let arrayEnd = -1;
-  for (let i = arrayStart; i < promptsJs.length; i++) {
-    if (promptsJs[i] === '[') depth++;
-    else if (promptsJs[i] === ']') {
-      depth--;
-      if (depth === 0) {
-        arrayEnd = i + 1;
-        break;
+      const nSlug = slugify(m[1]);
+      names.add(nSlug);
+      if (m[1].length >= 5 && !genericWords.has(nSlug)) {
+        brandTokens.add(m[1].toLowerCase());
       }
     }
   }
 
-  const arrayRaw = promptsJs.slice(arrayStart, arrayEnd);
-  const itemRegex = /\{id:`([^`]+)`,title:`([^`]+)`([\s\S]*?)(?=\},\{id:|\}\])/g;
-  const items = [];
-  const seenIdsInFeed = new Set();
-  const seenSlugsInFeed = new Set();
-  let itemMatch;
+  return { slugs, names, brandTokens, videos, htmlCorpus };
+}
 
-  while ((itemMatch = itemRegex.exec(arrayRaw)) !== null) {
-    const [_, id, title, rest] = itemMatch;
-    const isFree = rest.includes('free:!0') || rest.includes('free:true');
-    if (!isFree && !includePremium) continue;
+export async function fetchMotionsitesPrompts(options = {}) {
+  const includePremium = options.includePremium ?? true;
+  console.log(`[1/4] Querying live Supabase catalog & bundle on ${config.motionsitesUrl}...`);
 
-    const slug = slugify(title);
-    if (seenIdsInFeed.has(id) || seenSlugsInFeed.has(slug)) continue;
-    seenIdsInFeed.add(id);
-    seenSlugsInFeed.add(slug);
+  const mergedMap = new Map();
 
-    const imgRaw = rest.match(/image:(`[^`]+`|[a-zA-Z0-9_$]+)/)?.[1] || '';
-    const posterRaw = rest.match(/poster:(`[^`]+`|[a-zA-Z0-9_$]+)/)?.[1] || '';
-    const image = imgRaw.startsWith('`')
-      ? (imgRaw.slice(1, -1).startsWith('/') ? `${config.motionsitesUrl}${imgRaw.slice(1, -1)}` : imgRaw.slice(1, -1))
-      : (varMap[imgRaw] || null);
-    const poster = posterRaw.startsWith('`')
-      ? (posterRaw.slice(1, -1).startsWith('/') ? `${config.motionsitesUrl}${posterRaw.slice(1, -1)}` : posterRaw.slice(1, -1))
-      : (varMap[posterRaw] || null);
-    const muxPlaybackId = (image || poster || '').match(/image\.mux\.com\/([a-zA-Z0-9]+)\//)?.[1] || null;
-    const muxStreamUrl = muxPlaybackId ? `https://stream.mux.com/${muxPlaybackId}.m3u8` : null;
-
-    const catMatch = rest.match(/category:`([^`]+)`/);
-    const typeMatch = rest.match(/type:`([^`]+)`/);
-
-    items.push({
-      id,
-      title,
-      slug,
-      isFree,
-      category: catMatch ? catMatch[1] : 'Hero Section',
-      type: typeMatch ? typeMatch[1] : 'hero',
-      image,
-      poster,
-      muxStreamUrl
+  // Source A: Live Supabase `prompts` table (665+ items: 244 Free + 421 Premium with video_preview_url & image_preview_url)
+  try {
+    const cols = 'id,title,category,sort_order,type,types,created_at,page_type,row_span,is_free,image_preview_url,video_preview_url,has_assets,natural_ratio,github_url';
+    const supRes = await fetch(`${config.supabaseUrl}/rest/v1/prompts?select=${encodeURIComponent(cols)}&order=sort_order.asc&limit=1000`, {
+      headers: {
+        'apikey': config.anonKey,
+        'Authorization': `Bearer ${config.anonKey}`
+      }
     });
+    if (supRes.ok) {
+      const rows = await supRes.json();
+      if (Array.isArray(rows)) {
+        for (const r of rows) {
+          const isFree = Boolean(r.is_free);
+          if (!isFree && !includePremium) continue;
+          const id = String(r.id);
+          const title = String(r.title || r.id).trim();
+          const slug = slugify(title);
+          mergedMap.set(id, {
+            id,
+            title,
+            slug,
+            isFree,
+            category: r.category || 'Hero Section',
+            type: r.type || r.page_type || 'hero',
+            image: r.video_preview_url || r.image_preview_url || null,
+            poster: r.image_preview_url || null,
+            videoPreviewUrl: r.video_preview_url || null,
+            githubUrl: r.github_url || null
+          });
+        }
+        console.log(`[1/4] Loaded ${rows.length} live templates from Supabase 'prompts' table (Free: ${rows.filter(x => x.is_free).length}, Premium: ${rows.filter(x => !x.is_free).length}).`);
+      }
+    }
+  } catch (err) {
+    console.warn(`[1/4] Warning querying live Supabase prompts table: ${err.message}`);
   }
 
-  console.log(`[2/4] Discovered ${items.length} unique templates on motionsites.ai (includePremium=${includePremium}).`);
-  return items;
+  // Source B: Static prompts-*.js bundle fallback/enrichment
+  try {
+    const htmlRes = await fetch(config.motionsitesUrl);
+    if (htmlRes.ok) {
+      const html = await htmlRes.text();
+      const scriptRegex = /src=["'](\/assets\/index-[^"']+\.js)["']/g;
+      let match;
+      let indexScriptUrl = null;
+      while ((match = scriptRegex.exec(html)) !== null) {
+        indexScriptUrl = `${config.motionsitesUrl}${match[1]}`;
+      }
+      if (indexScriptUrl) {
+        const indexJs = await (await fetch(indexScriptUrl)).text();
+        const promptBundleMatch = indexJs.match(/assets\/prompts-[a-zA-Z0-9_\-]+\.js/);
+        if (promptBundleMatch) {
+          const promptsJs = await (await fetch(`${config.motionsitesUrl}/${promptBundleMatch[0]}`)).text();
+          const arrayStart = promptsJs.indexOf('[{id:');
+          if (arrayStart !== -1) {
+            const headerPart = promptsJs.slice(0, arrayStart);
+            const varMap = {};
+            for (const vm of headerPart.matchAll(/([a-zA-Z0-9_$]+)=`([^`]+)`/g)) {
+              varMap[vm[1]] = vm[2].startsWith('/') ? `${config.motionsitesUrl}${vm[2]}` : vm[2];
+            }
+            let depth = 0, arrayEnd = -1;
+            for (let i = arrayStart; i < promptsJs.length; i++) {
+              if (promptsJs[i] === '[') depth++;
+              else if (promptsJs[i] === ']') {
+                depth--;
+                if (depth === 0) { arrayEnd = i + 1; break; }
+              }
+            }
+            const arrayRaw = promptsJs.slice(arrayStart, arrayEnd);
+            const itemRegex = /\{id:`([^`]+)`,title:`([^`]+)`([\s\S]*?)(?=\},\{id:|\}\])/g;
+            let itemMatch;
+            while ((itemMatch = itemRegex.exec(arrayRaw)) !== null) {
+              const [, id, title, rest] = itemMatch;
+              const isFree = rest.includes('free:!0') || rest.includes('free:true');
+              if (!isFree && !includePremium) continue;
+              const imgRaw = rest.match(/image:(`[^`]+`|[a-zA-Z0-9_$]+)/)?.[1] || '';
+              const posterRaw = rest.match(/poster:(`[^`]+`|[a-zA-Z0-9_$]+)/)?.[1] || '';
+              const image = imgRaw.startsWith('`')
+                ? (imgRaw.slice(1, -1).startsWith('/') ? `${config.motionsitesUrl}${imgRaw.slice(1, -1)}` : imgRaw.slice(1, -1))
+                : (varMap[imgRaw] || null);
+              const poster = posterRaw.startsWith('`')
+                ? (posterRaw.slice(1, -1).startsWith('/') ? `${config.motionsitesUrl}${posterRaw.slice(1, -1)}` : posterRaw.slice(1, -1))
+                : (varMap[posterRaw] || null);
+
+              if (!mergedMap.has(id)) {
+                mergedMap.set(id, {
+                  id,
+                  title,
+                  slug: slugify(title),
+                  isFree,
+                  category: rest.match(/category:`([^`]+)`/)?.[1] || 'Hero Section',
+                  type: rest.match(/type:`([^`]+)`/)?.[1] || 'hero',
+                  image,
+                  poster,
+                  videoPreviewUrl: image,
+                  githubUrl: null
+                });
+              } else {
+                const existing = mergedMap.get(id);
+                if (!existing.image && image) existing.image = image;
+                if (!existing.poster && poster) existing.poster = poster;
+              }
+            }
+          }
+        }
+      }
+    }
+  } catch (err) {
+    console.warn(`[1/4] Warning reading static bundle: ${err.message}`);
+  }
+
+  const allItems = [...mergedMap.values()];
+  console.log(`[2/4] Total merged templates on motionsites.ai: ${allItems.length} (Free: ${allItems.filter(i => i.isFree).length}, Premium: ${allItems.filter(i => !i.isFree).length}).`);
+  return allItems;
 }
 
 export async function fetchPromptContent(promptId) {
@@ -207,8 +247,7 @@ export async function runFetchPipeline(options = {}) {
   const processedPromptIds = new Set(state.processedPromptIds || []);
   const processedPromptHashes = new Set(state.processedPromptHashes || []);
 
-  // Multi-layer deduplication filter: ID, slug, stripped-hero ID, and normalized store title
-  // Order: unused Free items first, followed by unused Premium items (with preview video + poster)
+  // Prioritize unused Free items first, then unused Premium items with video/poster previews
   const sortedItems = [
     ...allItems.filter(i => i.isFree),
     ...allItems.filter(i => !i.isFree)
@@ -255,25 +294,20 @@ export async function runFetchPipeline(options = {}) {
 
       if (candidate.isFree) {
         const result = await fetchPromptContent(candidate.id);
-        if (result.code === 'daily_limit_reached') {
-          console.log(`[!] Motionsites returned daily_limit_reached for free prompt API; falling back to visual preview & poster spec.`);
-        }
         promptText = result.prompt_text || '';
         sections = result.sections || [];
         dailyState = result.daily_state || null;
       }
 
-      // If Premium (paid_only) or free API limit reached, synthesize spec from Motionsites preview video/GIF + high-res poster
       if (!promptText) {
-        if (!candidate.image && !candidate.poster) {
+        if (!candidate.image && !candidate.poster && !candidate.videoPreviewUrl) {
           console.warn(`[?] No prompt_text and no preview/poster for ${candidate.id}. Skipping.`);
           continue;
         }
         promptText = [
-          `Recreate ${candidate.title} (${candidate.category} / ${candidate.type}) from MotionSites Premium Preview.`,
+          `Recreate ${candidate.title} (${candidate.category} / ${candidate.type}) from MotionSites Preview.`,
           `Headline: "${candidate.title} — Next-Gen ${candidate.category} Experience"`,
-          candidate.muxStreamUrl ? `Mux Stream: ${candidate.muxStreamUrl}` : '',
-          candidate.image ? `Preview Video/Animation: ${candidate.image}` : '',
+          candidate.videoPreviewUrl ? `Preview Video/Animation: ${candidate.videoPreviewUrl}` : '',
           candidate.poster ? `High-Res Poster: ${candidate.poster}` : ''
         ].filter(Boolean).join('\n');
       }
@@ -301,13 +335,27 @@ export async function runFetchPipeline(options = {}) {
         continue;
       }
 
-      // Layer 7 deduplication: Check if any distinctive quoted headline (>= 18 chars) in prompt was ALREADY used in any 2A template
+      // Layer 7 deduplication: Check if prompt mentions a brand name (`called "X"`, `brand "X"`, `for "X"`) that matches an existing 2A store product!
+      const brandMentions = [
+        ...promptText.matchAll(/(?:called|named|brand|agency|for|titled)\s+(?:\*\*|["'`])([a-zA-Z0-9 _.-]{4,32})(?:\*\*|["'`])/gi)
+      ].map(m => slugify(m[1]));
+      const matchedBrandSlug = brandMentions.find(b => b.length >= 4 && storeIdentity.slugs.has(b));
+      if (matchedBrandSlug) {
+        console.warn(`[!] Prompt ${candidate.id} ("${candidate.title}") is for brand "${matchedBrandSlug}" which ALREADY exists in 2A! Marking processed & skipping.`);
+        processedPromptIds.add(candidate.id);
+        processedSlugs.add(candidate.slug);
+        state.processedPromptIds = [...processedPromptIds];
+        state.processedSlugs = [...processedSlugs].sort();
+        continue;
+      }
+
+      // Layer 8 deduplication: Check if any distinctive quoted headline (>= 18 chars) in prompt was ALREADY used in any 2A template
       const distinctiveQuotes = [...promptText.matchAll(/"([^"\n]{18,80})"/g)]
         .map(m => m[1].trim().toLowerCase())
         .filter(s => !/https?:|flex|grid|rounded|padding|border|font-|text-|bg-|rgba|linear-gradient|instrument serif|helvetica|plus jakarta|inter|dm sans|enter your email|all rights reserved|preserveaspectratio|get started|learn more|contact us|privacy policy/i.test(s));
-      const matchedExistingQuote = distinctiveQuotes.find(q => storeIdentity.htmlCorpus.some(html => html.includes(q)));
-      if (matchedExistingQuote) {
-        console.warn(`[!] Headline quote "${matchedExistingQuote}" from ${candidate.id} was ALREADY used in an existing 2A template! Marking processed & skipping.`);
+      const matchedDoc = storeIdentity.htmlCorpus.find(doc => distinctiveQuotes.some(q => doc.html.includes(q)));
+      if (matchedDoc) {
+        console.warn(`[!] Headline quote from ${candidate.id} was ALREADY used in 2A template "${matchedDoc.slug}"! Marking processed & skipping.`);
         processedPromptIds.add(candidate.id);
         processedSlugs.add(candidate.slug);
         state.processedPromptIds = [...processedPromptIds];

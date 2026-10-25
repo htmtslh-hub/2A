@@ -46,6 +46,128 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t107: {
+    slug: 'designer-portfolio',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Designer Portfolio",
+        desc: "Giao diện web Designer Portfolio lấy cảm hứng từ thiết kế website design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#fafafa, #4353ff).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      en: {
+        name: "Designer Portfolio",
+        desc: "Interactive Designer Portfolio web template inspired by website design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#fafafa, #4353ff).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      zh: {
+        name: "Designer Portfolio",
+        desc: "源自 website design 视觉灵感的 Designer Portfolio 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
+        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+      }
+    }
+  },
+
+  t106: {
+    slug: 'flexible-spark',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Flexible Spark",
+        desc: "Giao diện web Flexible Spark lấy cảm hứng từ thiết kế website design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#fafafa, #e24919).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      en: {
+        name: "Flexible Spark",
+        desc: "Interactive Flexible Spark web template inspired by website design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#fafafa, #e24919).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      zh: {
+        name: "Flexible Spark",
+        desc: "源自 website design 视觉灵感的 Flexible Spark 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
+        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+      }
+    }
+  },
+
+  t105: {
+    slug: 'lawyer-justicia',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Lawyer Justicia",
+        desc: "Giao diện web Lawyer Justicia lấy cảm hứng từ thiết kế website design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #4353ff).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      en: {
+        name: "Lawyer Justicia",
+        desc: "Interactive Lawyer Justicia web template inspired by website design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #4353ff).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      zh: {
+        name: "Lawyer Justicia",
+        desc: "源自 website design 视觉灵感的 Lawyer Justicia 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
+        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+      }
+    }
+  },
+
+  t104: {
+    slug: 'ecommerce-omorfia',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Ecommerce Omorfia",
+        desc: "Giao diện web Ecommerce Omorfia lấy cảm hứng từ thiết kế website design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#f8f8f8, #4353ff).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      en: {
+        name: "Ecommerce Omorfia",
+        desc: "Interactive Ecommerce Omorfia web template inspired by website design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#f8f8f8, #4353ff).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      zh: {
+        name: "Ecommerce Omorfia",
+        desc: "源自 website design 视觉灵感的 Ecommerce Omorfia 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
+        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+      }
+    }
+  },
+
+  t103: {
+    slug: 'amazing-agency',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Amazing Agency",
+        desc: "Giao diện web Amazing Agency lấy cảm hứng từ thiết kế website design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #88614b).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      en: {
+        name: "Amazing Agency",
+        desc: "Interactive Amazing Agency web template inspired by website design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #88614b).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      zh: {
+        name: "Amazing Agency",
+        desc: "源自 website design 视觉灵感的 Amazing Agency 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
+        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+      }
+    }
+  },
+
   t102: {
     slug: 'vize-footer',
     cat: 'commerce',

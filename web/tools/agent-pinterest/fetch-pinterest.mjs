@@ -23,31 +23,37 @@ export function slugify(text) {
 
 function cleanPinTitle(rawTitle, keyword, pinId) {
   let t = String(rawTitle || '')
+    .replace(/&#x27;|&apos;/gi, '')
+    .replace(/&amp;/gi, ' ')
     .replace(/\s*\|\s*Pinterest.*$/i, '')
     .replace(/\s*—\s*[^|]+$/i, '')
     .split('|')[0]
     .split(' - ')[0]
-    .replace(/[^\w\s&.-]/g, ' ')
-    .replace(/\b(pin|on|by|ideas|best|top|inspiration|templates?|layout|concept|design|website|web|page|ui|ux|home|landing|\d+)\b/gi, ' ')
+    .replace(/[^\w\s]/g, ' ')
+    .replace(/\b(pin|on|by|in|to|of|for|the|and|with|from|your|our|how|what|why|more|new|ideas|best|top|inspiration|templates?|layout|concept|design|website|websites|web|page|pages|ui|ux|home|landing|free|html|html5|css|bootstrap|wordpress|theme|themes|webflow|framer|pinterest|made|create|build|modern|simple|clean|responsive|\d+)\b/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 
-  const words = t.split(' ').filter(w => w.length >= 3);
+  const words = t.split(' ').filter(w => w.length >= 4 && /^[a-zA-Z]+$/.test(w));
+  const studioPrefixes = ['Aether', 'Kinetix', 'Vespera', 'Solace', 'Nuvem', 'Chronos', 'Monolith', 'Veridian', 'Luminex', 'Onyx', 'Prism', 'Valence', 'Zephyr', 'Sora', 'Kova', 'Veloce', 'Arden', 'Cinder', 'Kroma', 'Halcyon'];
   const studioSuffixes = ['Studio', 'Folio', 'Grid', 'Canvas', 'Atelier', 'Pulse', 'Craft', 'Vertex', 'Axis', 'Nova'];
-  const suffix = studioSuffixes[Number(String(pinId).slice(-2)) % studioSuffixes.length];
+  const pIdx = Number(String(pinId).slice(-4)) || 0;
+  const prefix = studioPrefixes[pIdx % studioPrefixes.length];
+  const suffix = studioSuffixes[Math.floor(pIdx / 7) % studioSuffixes.length];
 
   if (words.length >= 2) {
     const w1 = words[0].charAt(0).toUpperCase() + words[0].slice(1).toLowerCase();
     const w2 = words[1].charAt(0).toUpperCase() + words[1].slice(1).toLowerCase();
-    return `${w1} ${w2}`;
-  } else if (words.length === 1) {
+    if (w1.toLowerCase() !== w2.toLowerCase()) {
+      return `${w1} ${w2}`;
+    }
+  }
+  if (words.length >= 1) {
     const w1 = words[0].charAt(0).toUpperCase() + words[0].slice(1).toLowerCase();
     return `${w1} ${suffix}`;
   }
 
-  const kwWords = String(keyword || 'Web Studio').split(/\s+/).filter(Boolean);
-  const kwLead = kwWords[0] ? kwWords[0].charAt(0).toUpperCase() + kwWords[0].slice(1).toLowerCase() : 'ura';
-  return `${kwLead} ${suffix} ${String(pinId).slice(-3)}`;
+  return `${prefix} ${suffix}`;
 }
 
 function collectExistingStoreIdentity() {
@@ -89,32 +95,87 @@ async function checkPinterestHomefeed() {
   }
 }
 
-async function searchPinterestKeyword(keyword) {
-  const queries = [
-    `site:pinterest.com/pin/ "${keyword}"`,
-    `site:pinterest.com/pin/ ${keyword} web design ui`
-  ];
-  const foundIds = new Set();
+const PINTEREST_WEB_DESIGN_BOARDS = [
+  'Webflow/web-design-inspiration',
+  'Webflow/webflow-templates',
+  'Webflow/madeinwebflow',
+  'framer/made-in-framer',
+  'awwwards/ux-ui-mobile-design',
+  'awwwards/visual-inspiration',
+  'awwwards/the-annual-awards-2025',
+  'siteinspire/websites',
+  'landbook/featured-websites',
+  'cssdesignawards/website-of-the-day-~-wotd',
+  'onepagelove/one-page-websites',
+  'onepagelove/one-page-website-templates',
+  'templatemonster/landing-pages',
+  'themewagon/html5-website-templates',
+  'themewagon/free-html5-templates',
+  'behance/interaction-design',
+  'dribbble/design-inspiration',
+  'codrops/codrops',
+  'smashingmag/inspiration',
+  'envato/design-trends'
+];
 
-  for (const q of queries) {
+let cachedBoardPins = null;
+async function loadPinterestWebDesignBoardPool() {
+  if (cachedBoardPins) return cachedBoardPins;
+  cachedBoardPins = [];
+  for (const board of PINTEREST_WEB_DESIGN_BOARDS) {
     try {
-      const ddgUrl = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(q)}`;
-      const res = await fetch(ddgUrl, { headers: BROWSER_HEADERS });
-      if (res.ok) {
-        const html = await res.text();
-        for (const m of html.matchAll(/pinterest\.com\/pin\/(?:[a-zA-Z0-9_-]*--)?(\d{10,25})/g)) {
-          foundIds.add(m[1]);
+      const apiUrl = `https://widgets.pinterest.com/v3/pidgets/boards/${board}/pins/`;
+      const res = await fetch(apiUrl, { headers: BROWSER_HEADERS });
+      if (!res.ok) continue;
+      const json = await res.json();
+      const pins = json?.data?.pins || [];
+      for (const p of pins) {
+        if (p?.id) {
+          cachedBoardPins.push({
+            id: String(p.id),
+            board,
+            text: `${p.description || ''} ${p.board?.name || ''} ${board}`.toLowerCase()
+          });
         }
       }
     } catch {}
+  }
+  return cachedBoardPins;
+}
 
-    if (foundIds.size < 6) {
+async function searchPinterestKeyword(keyword) {
+  const foundIds = new Set();
+  const tokens = String(keyword || '')
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter(t => t.length >= 2 && !['web', 'design', 'website'].includes(t));
+
+  // 1. Official Pinterest Web Design Boards via widgets.pinterest.com/v3/pidgets/
+  const pool = await loadPinterestWebDesignBoardPool();
+  for (const item of pool) {
+    if (tokens.length === 0 || tokens.some(t => item.text.includes(t))) {
+      foundIds.add(item.id);
+    }
+  }
+  // Ensure every keyword gets a rich slice of authentic web design pins across boards
+  for (const item of pool) {
+    if (foundIds.size >= 25) break;
+    foundIds.add(item.id);
+  }
+
+  // 2. Fallback web search if needed
+  if (foundIds.size < 10) {
+    const queries = [
+      `site:pinterest.com/pin/ "${keyword}"`,
+      `site:pinterest.com/pin/ ${keyword} web design ui`
+    ];
+    for (const q of queries) {
       try {
-        const bingUrl = `https://www.bing.com/search?q=${encodeURIComponent(q)}`;
-        const res = await fetch(bingUrl, { headers: BROWSER_HEADERS });
+        const ddgUrl = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(q)}`;
+        const res = await fetch(ddgUrl, { headers: BROWSER_HEADERS });
         if (res.ok) {
-          const html = await res.text();
-          for (const m of html.matchAll(/pinterest\.com\/pin\/(?:[a-zA-Z0-9_-]*--)?(\d{10,25})/g)) {
+          const html = (await res.text()).replace(/%2F/gi, '/');
+          for (const m of html.matchAll(/pinterest\.[a-z.]+\/pin\/(?:[a-zA-Z0-9_-]*--)?(\d{10,25})/gi)) {
             foundIds.add(m[1]);
           }
         }
@@ -203,9 +264,12 @@ export async function runPinterestFetchPipeline() {
   if (state.lastRunDate !== today) {
     state.lastRunDate = today;
     state.todayCopiedCount = 0;
+    state.todayCreatedCount = 0;
     state.todayFreeCount = 0;
     state.todayPremiumCount = 0;
   }
+  state.todayCopiedCount = state.todayCopiedCount || state.todayCreatedCount || 0;
+  state.todayCreatedCount = state.todayCopiedCount;
   state.todayFreeCount = state.todayFreeCount || 0;
   state.todayPremiumCount = state.todayPremiumCount || 0;
   state.keywordCursor = state.keywordCursor || 0;
@@ -292,6 +356,7 @@ export async function runPinterestFetchPipeline() {
 
       fetchedList.push(itemData);
       state.todayCopiedCount++;
+      state.todayCreatedCount = state.todayCopiedCount;
       if (assignedTier === 'free') state.todayFreeCount++;
       else state.todayPremiumCount++;
 

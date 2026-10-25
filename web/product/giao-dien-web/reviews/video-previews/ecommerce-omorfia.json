@@ -1,0 +1,48 @@
+{
+  "id": "t104",
+  "slug": "ecommerce-omorfia",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-25T01:50:23.241Z",
+  "demo": "/demos/ecommerce-omorfia/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "b1c1a398b382",
+  "sha256": "b1c1a398b3829c81144731ca653930e906246a9a526936c4e5a3a26d25bab49c",
+  "demoHtmlSha256": "03311831ecf46a9c5f862e011ea4da4be689786a4feaadca2b0a58553dc8820b",
+  "demoSha256": "a1ac6edf763aafa2f5c41e71e2dcc608b2dee2c440002a376e2b7b70a1570e7a",
+  "bytes": 486633,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.471,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 4.816,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 781
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ecommerce-omorfia-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ecommerce-omorfia-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ecommerce-omorfia-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ecommerce-omorfia-return.jpg"
+  ]
+}

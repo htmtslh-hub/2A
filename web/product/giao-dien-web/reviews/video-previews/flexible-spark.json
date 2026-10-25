@@ -1,0 +1,48 @@
+{
+  "id": "t106",
+  "slug": "flexible-spark",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-25T01:51:27.636Z",
+  "demo": "/demos/flexible-spark/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "95e0678b7f5a",
+  "sha256": "95e0678b7f5ad7d7cf9d3990668dedcbee9af780ea3153888e851d61499a67c7",
+  "demoHtmlSha256": "1b3da066988040a5bdce531ef8c3b1fa6c898b706fc7311b69480478e95429bd",
+  "demoSha256": "f96a33f4d62c3a129be0c7bbf5fbbb1cf859241d3214e977ec6e4885ab6ea362",
+  "bytes": 507079,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.451,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 4.83,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 776
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\flexible-spark-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\flexible-spark-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\flexible-spark-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\flexible-spark-return.jpg"
+  ]
+}

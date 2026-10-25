@@ -1140,3 +1140,16 @@ ${accessLine}    version: '1.0.0',
 
   return { slug, catalogId, title: data.title, accessTier, category: webCat };
 }
+
+if (process.argv[1] && process.argv[1].endsWith('pinterest-compiler.mjs')) {
+  const slugArg = process.argv[2];
+  const tierArg = process.argv.find(a => a.startsWith('--tier='))?.split('=')[1];
+  if (slugArg) {
+    compilePinterestTemplate(slugArg, { tier: tierArg }).then(res => {
+      console.log('Compiled Pinterest template:', res);
+    }).catch(err => {
+      console.error(err);
+      process.exit(1);
+    });
+  }
+}

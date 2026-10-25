@@ -1,0 +1,48 @@
+{
+  "id": "t107",
+  "slug": "designer-portfolio",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-25T01:51:59.659Z",
+  "demo": "/demos/designer-portfolio/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "2c2d52b2bbef",
+  "sha256": "2c2d52b2bbef836f49b906e34c7fbe11d3ab7fa492ecd6acd4ae9dd31878d8fd",
+  "demoHtmlSha256": "5559879e95b92db7efbd820e09e9236f1f5b8672b698a517ca5e36d95f2c9ad9",
+  "demoSha256": "7e7386a739d1c7dc22598136330997e5f0f51bdfcccef82e8926a1b0fa48d361",
+  "bytes": 487734,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.448,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 4.829,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 781
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\designer-portfolio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\designer-portfolio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\designer-portfolio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\designer-portfolio-return.jpg"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "t103",
+  "slug": "amazing-agency",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-25T01:49:12.038Z",
+  "demo": "/demos/amazing-agency/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "07dd965760ac",
+  "sha256": "07dd965760ace8d588af4165d368273031d900a60ec19156222c974cdc24976b",
+  "demoHtmlSha256": "71d35ffbebf5f3e01baea2ced9d2fd6e4bed501d14144db464698c1fac5cc19d",
+  "demoSha256": "d5d411b9ffc838c0c9322e28676ca6ac04344206e73229287b71501534a450d1",
+  "bytes": 450324,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.459,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 4.839,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 781
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\amazing-agency-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\amazing-agency-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\amazing-agency-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\amazing-agency-return.jpg"
+  ]
+}

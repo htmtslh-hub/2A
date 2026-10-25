@@ -1,0 +1,48 @@
+{
+  "id": "t105",
+  "slug": "lawyer-justicia",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-25T01:50:55.481Z",
+  "demo": "/demos/lawyer-justicia/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "74e90304cbe3",
+  "sha256": "74e90304cbe317c399d5d3b4ed15d099ccb3fd9e8f2b037b3651aa9e8000ca54",
+  "demoHtmlSha256": "891edbc5f8062d52a8e64653315a004f00a2b812c9750137f936b4d127bf60fd",
+  "demoSha256": "ca1fefe9b7ce75e90addba7e2438137bd5cdcd04dd92c47b48cc4317cfe121a3",
+  "bytes": 465131,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.466,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 4.844,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 781
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lawyer-justicia-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lawyer-justicia-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lawyer-justicia-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\lawyer-justicia-return.jpg"
+  ]
+}

@@ -15,12 +15,21 @@
 - **Chống trùng tuyệt đối (`Strict Deduplication`):** Không bao giờ dùng lại `id`, `slug`, `promptHash`, `videoPreviewUrl` đã có trong `state.json` hoặc trong 110 mẫu hiện có của `web/product/giao-dien-web/`.
 - **Chống lặp khung giao diện (`Anti-Clone DOM Gate`):** Hai mẫu liên tiếp không được dùng chung một bộ khung HTML/CSS. Trước khi đóng gói, so khớp tập class CSS và cấu trúc thẻ `<section>` với các mẫu đã tạo; nếu độ tương đồng cấu trúc DOM `> 45%` thì từ chối xuất bản và bắt buộc dựng lại theo đúng kiến trúc riêng của prompt.
 - **Quy tắc Animation ngày 05/10/2026:** Toàn bộ animation mặc định **BẬT** trên mọi trình duyệt (kể cả khi OS bật `prefers-reduced-motion`). Có nút `Pause/Play Motion` cho phiên hiện tại và dùng `requestAnimationFrame` hữu hạn có hủy lượt cũ khi thao tác mới tới.
-- **Quy tắc Sáng tạo +15–20% & Tích hợp Skill trong máy:**
-  1. `D:\2A\skill\forgeframe\SKILL.md`: Phân tích bố cục, màu sắc, typography và tách trạng thái từ `prompt_text` + `videoPreviewUrl` / `imagePreviewUrl`.
-  2. `D:\2A\skill\skill-morge\SKILL.md`: Áp dụng chuyển cảnh hữu hạn theo scroll/progress, carousel 2 chiều wrap trực tiếp (cuối → đầu đi thẳng), không khóa wheel/touch.
-  3. `D:\2A\skill\neon-orbit-border\SKILL.md`: Áp dụng viền neon xoay `@property` (`1.8s` orbit) cho thẻ tiêu điểm/pricing/CTA phù hợp bảng màu từng mẫu.
-  4. `C:\Users\htmts\.gemini\config\plugins\uiverse-galaxy\skills\uiverse-galaxy\SKILL.md`: Tra cứu component thật bằng `python "C:\Users\htmts\.gemini\config\plugins\uiverse-galaxy\scripts\search.py"` để bổ sung nút bấm, thẻ, switch hoặc input độc đáo (+15–20% sáng tạo).
-  5. `C:\Users\htmts\.gemini\skills\hyperframes-animation\SKILL.md`: Căn chỉnh easing (`cubic-bezier(0.22, 1, 0.36, 1)`), staggered text pull-up, 3D tilt hover và scroll parallax.
+- **Quy tắc Sáng tạo +15–20% & Ma trận Phối hợp 6 Skill Tạo Web trong máy:**
+  1. **`hallmark` (`D:\2A\skill\hallmark\SKILL.md` — Anti-AI-Slop & 21 Macrostructures / 48 Themes):**
+     - Dùng `node D:\2A\skill\hallmark\scripts\theme.mjs deal` & `theme.mjs draw` để xoay vòng **21 Macrostructures** (`Bento Grid`, `Workbench`, `Manifesto`, `Photographic`, `Specimen`, `Catalogue`, `Narrative Workflow`, `Split Studio`, `Feature Stack`, `Portfolio Grid`, `Component Playground`...) và **6 trục Fingerprint** (`Heading placement | Body composition | Divider language | Button voice | Image treatment | Reveal pattern`) nhằm triệt tiêu 100% hiện tượng các trang web có bố cục lặp lại.
+     - Áp dụng kỷ luật **The Floor của Hallmark**: Mọi màu/font đi qua `:root` token; cấm `transition: all`; cấm animate `width/height/top/left` (chỉ dùng `transform` và `opacity`); `overflow-x: clip` trên cả `html` và `body`; lưới chứa ảnh luôn dùng `minmax(0, 1fr)`; mọi nút có `:focus-visible` hiện tức thì.
+     - *Lưu ý ưu tiên quy chuẩn dự án:* Theo quy tắc chủ sản phẩm ngày `05/10/2026`, animation trong Forge Zone vẫn **mặc định BẬT trên mọi trình duyệt** (kể cả khi OS bật `prefers-reduced-motion`) kèm nút `Pause/Play Motion`.
+  2. **`forgeframe` (`D:\2A\skill\forgeframe\SKILL.md` — Reference Fidelity >95%):**
+     - Giữ vai trò chủ đạo khi dựng phần gốc từ Prompt/Video của MotionSites hoặc ảnh Pinterest: bám sát bố cục, bảng màu, font chữ và video/ảnh gốc của mẫu tham chiếu trước khi mở rộng thêm 15–20% bằng `hallmark`.
+  3. **`skill-morge` (`D:\2A\skill\skill-morge\SKILL.md` — Finite RAF & Scroll Choreography):**
+     - Phối hợp cùng `hallmark/references/scroll-choreography.md` (`Pinned chapter`, `Scrub-linked headline`, `Progress spine`, `Sticky diptych`) và dùng `requestAnimationFrame` hữu hạn (tự hủy lượt cũ khi có thao tác mới) cho các chuyển cảnh phức tạp và carousel 2 chiều wrap trực tiếp.
+  4. **`neon-orbit-border` (`D:\2A\skill\neon-orbit-border\SKILL.md` — Conic-Gradient `@property`):**
+     - Tạo viền xoay `1.8s–2.4s` cho thẻ tiêu điểm, gói Pricing hoặc trạng thái đang chọn.
+  5. **`uiverse-galaxy` (`C:\Users\htmts\.gemini\config\plugins\uiverse-galaxy\skills\uiverse-galaxy\SKILL.md` — 3.800+ Components):**
+     - Tra cứu bằng `search.py` để lấy ý tưởng nút bấm, công tắc, thẻ tương tác cho phần +15–20% sáng tạo, sau đó chuẩn hóa toàn bộ màu/font về `:root` token theo chuẩn `hallmark`.
+  6. **`hyperframes-animation` & `a11y-debugging` (`C:\Users\htmts\.gemini\skills\hyperframes-animation\SKILL.md`):**
+     - Kiểm soát thời lượng (`--dur-micro: 120ms`, `--dur-short: 220ms`, `--dur-long: 420ms`), đường cong easing và kiểm thử tương phản / bàn phím trên 4 viewport.
 
 ## Review Focus
 

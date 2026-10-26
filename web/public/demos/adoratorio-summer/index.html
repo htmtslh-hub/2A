@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Adoratorio Summer Club — Interactive 3D Hero &amp; Motion Showcase</title>
+  <meta name="description" content="Interactive retrofuture summer sound club — zero-gravity 3D pool inflatables, spatial synth bingo, and kinetic typography.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* hallmark · v2.0.0 · blueprint=retrofuture-club · slug=adoratorio-summer */
+    :root {
+      --bg: #0c0c0e;
+      --surface: #18181c;
+      --glass: rgba(28, 28, 34, 0.78);
+      --fg: #ffffff;
+      --muted: #f472b6;
+      --border: rgba(255, 255, 255, 0.16);
+      --accent: #ff5522;
+      --accent-2: #ec4899;
+      --font-display: 'Anton', Impact, sans-serif;
+      --font-serif: 'Anton', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      overflow-x: clip;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Group 2.5: Custom Follower Cursor with Blend-Mode Difference */
+    .ado51-cursor-ring,
+    .ado51-cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      border-radius: 50%;
+      transform: translate3d(-100px, -100px, 0);
+      transition: width 0.24s ease, height 0.24s ease, background-color 0.24s ease;
+      mix-blend-mode: difference;
+    }
+    .ado51-cursor-ring {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid #ffffff;
+      margin-left: -18px;
+      margin-top: -18px;
+    }
+    .ado51-cursor-ring.is-hovered {
+      width: 64px;
+      height: 64px;
+      margin-left: -32px;
+      margin-top: -32px;
+      background: #ffffff;
+    }
+    .ado51-cursor-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      margin-left: -3.5px;
+      margin-top: -3.5px;
+    }
+    @media (max-width: 900px) {
+      .ado51-cursor-ring, .ado51-cursor-dot { display: none; }
+    }
+
+    /* Criterion 6: Minimalist Edge Navigation */
+    .ado51-edge-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 220;
+      padding: 18px clamp(18px, 4vw, 52px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      pointer-events: none;
+    }
+    .ado51-edge-top > * { pointer-events: auto; }
+    .ado51-brand {
+      text-decoration: none;
+      color: var(--fg);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .ado51-brand-mark {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px var(--accent);
+    }
+    .ado51-nav-links {
+      display: none;
+      list-style: none;
+      gap: 24px;
+      padding: 8px 20px;
+      border-radius: 999px;
+      background: var(--glass);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+    }
+    @media (min-width: 900px) {
+      .ado51-nav-links { display: flex; }
+    }
+    .ado51-nav-links a {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0.82;
+      transition: opacity 0.2s ease;
+    }
+    .ado51-nav-links a:hover { opacity: 1; }
+    .ado51-edge-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .ado51-pill-btn {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      color: var(--fg);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .ado51-cta-magnetic {
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: var(--accent);
+      color: #090b10;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Left & Right Minimalist Edge Slide Rails */
+    .ado51-edge-left,
+    .ado51-edge-right {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 130;
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+    }
+    @media (min-width: 1120px) {
+      .ado51-edge-left { display: flex; left: 22px; }
+      .ado51-edge-right { display: flex; right: 22px; }
+    }
+    .ado51-slide-dot {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      color: var(--fg);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .ado51-slide-dot.is-active {
+      background: var(--accent);
+      color: #090b10;
+      border-color: var(--accent);
+    }
+    .ado51-telemetry-rail {
+      writing-mode: vertical-rl;
+      padding: 14px 8px;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* Hero Stage */
+    .ado51-hero {
+      position: relative;
+      min-height: 100vh;
+      padding: 104px clamp(20px, 5vw, 84px) 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      isolation: isolate;
+      background: radial-gradient(circle at 50% 48%, rgba(236, 72, 153, 0.24) 0%, rgba(255, 85, 34, 0.16) 44%, #0c0c0e 100%);
+    }
+    .ado51-smoke-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      pointer-events: none;
+    }
+    .ado51-marquee-band {
+      position: absolute;
+      bottom: 8%;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+      opacity: 0.10;
+      white-space: nowrap;
+    }
+    .ado51-marquee-track {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: clamp(64px, 11vw, 156px);
+      font-weight: 800;
+      color: transparent;
+      -webkit-text-stroke: 1.5px #ffffff;
+      animation: ado51Marquee 24s linear infinite;
+    }
+    @keyframes ado51Marquee {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* Shared Typography & Split-Text */
+    .ado51-tag-chip {
+      display: inline-flex;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .ado51-display-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(44px, 7.8vw, 108px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      overflow-wrap: break-word;
+    }
+    .ado51-serif-accent {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--accent);
+      display: block;
+    }
+    .ado51-lead {
+      font-size: clamp(15px, 1.35vw, 18px);
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 18px 0 26px;
+    }
+    .ado51-split-word {
+      display: inline-block;
+      opacity: 0;
+      transform: translate3d(0, 32px, 0);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ado51-split-word.is-in {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* 3D Cutout Subject Styling (Out-of-bounds Pop-out & Drop Shadow) */
+    .ado51-cutout-3d-img {
+      width: 100%;
+      height: auto;
+      max-height: 390px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 28px 42px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 26px rgba(255, 255, 255, 0.14));
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* Blueprint 0 Specific: Asymmetric Carbon Bike Atelier */
+    .ado51-hero-grid-bike {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 980px) {
+      .ado51-hero-grid-bike {
+        grid-template-columns: 0.92fr 1.08fr;
+      }
+    }
+    .ado51-popout-rig {
+      position: relative;
+      padding: 20px 14px 28px;
+      border-radius: 32px;
+      background: radial-gradient(circle at 52% 48%, rgba(212,149,106,0.22), rgba(20,18,16,0.40) 72%);
+      border: 1px solid var(--border);
+      animation: ado51Float 5.5s ease-in-out infinite;
+      overflow: visible;
+    }
+    .ado51-popout-rig .ado51-cutout-3d-img {
+      max-height: 380px;
+      transform: scale(1.09) translateX(-14px);
+    }
+    .ado51-cutout-pill {
+      position: absolute;
+      top: -14px;
+      right: 24px;
+      z-index: 8;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #090b10;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .ado51-floating-pair {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: -32px;
+      position: relative;
+      z-index: 6;
+    }
+
+    /* Blueprint 1 Specific: Sky Aircraft Pop-Out */
+    .ado51-hero-sky {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .ado51-sky-h1 {
+      font-size: clamp(54px, 10vw, 138px);
+      letter-spacing: 0.02em;
+      position: relative;
+      z-index: 1;
+    }
+    .ado51-sky-plane-popout {
+      max-width: 780px;
+      margin: -58px auto -10px;
+      position: relative;
+      z-index: 5;
+      animation: ado51Float 6s ease-in-out infinite;
+    }
+    .ado51-sky-plane-popout .ado51-cutout-3d-img {
+      max-height: 350px;
+      transform: scale(1.06);
+    }
+    .ado51-sky-destinations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      text-align: left;
+      position: relative;
+      z-index: 6;
+    }
+    .ado51-pill-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-radius: 999px !important;
+      padding: 14px 24px !important;
+    }
+    .ado51-pill-avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    /* Blueprint 2 Specific: Vibrant Orange/Cyan Poster Stage */
+    .ado51-poster-stage {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 78vh;
+    }
+    .ado51-poster-top-meta { text-align: center; }
+    .ado51-poster-stack {
+      position: relative;
+      text-align: center;
+      padding: 12px 0;
+    }
+    .ado51-poster-giant-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(64px, 13.5vw, 184px);
+      line-height: 0.88;
+      color: #ffffff;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    .ado51-poster-figure-popout {
+      position: relative;
+      z-index: 4;
+      width: min(360px, 72vw);
+      margin: -255px auto -18px;
+      animation: ado51Float 5s ease-in-out infinite;
+    }
+    .ado51-poster-figure-popout .ado51-cutout-3d-img {
+      max-height: 430px;
+      width: auto;
+    }
+    .ado51-poster-bottom-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      z-index: 6;
+    }
+    .ado51-poster-replay-card {
+      max-width: 340px;
+    }
+    .ado51-circle-fab {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #090b10;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    }
+
+    /* Blueprint 3 Specific: Lunar Oasis Villa Editorial Split */
+    .ado51-villa-grid {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 980px) {
+      .ado51-villa-grid {
+        grid-template-columns: 1.12fr 0.88fr;
+      }
+    }
+    .ado51-villa-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(50px, 7.2vw, 102px);
+      font-weight: 400;
+      line-height: 0.94;
+    }
+    .ado51-villa-Elevation .ado51-cutout-3d-img {
+      max-height: 290px;
+      transform: scale(1.04);
+    }
+    .ado51-villa-right-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .ado51-cutout-tab-pill {
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #090b10;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* Blueprint 4 Specific: AquaCosmos Orbital HUD */
+    .ado51-hud-stage {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .ado51-hud-orbital-ring {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: center;
+      margin-top: 12px;
+    }
+    @media (min-width: 1024px) {
+      .ado51-hud-orbital-ring {
+        grid-template-columns: 290px 1fr 290px;
+      }
+    }
+    .ado51-hud-planet-center {
+      animation: ado51Float 6.5s ease-in-out infinite;
+    }
+    .ado51-orbital-pod {
+      text-align: left;
+      border-radius: 36px;
+    }
+
+    @keyframes ado51Float {
+      0%, 100% { transform: translate3d(0, 0px, 0); }
+      50% { transform: translate3d(0, -12px, 0); }
+    }
+
+    /* Glassmorphism Cards & Counters */
+    .ado51-glass-card {
+      position: relative;
+      border-radius: 26px;
+      background: var(--glass);
+      backdrop-filter: blur(22px) saturate(160%);
+      -webkit-backdrop-filter: blur(22px) saturate(160%);
+      border: 1px solid var(--border);
+      padding: 22px;
+      cursor: pointer;
+      transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.24s ease;
+      overflow: hidden;
+    }
+    .ado51-glass-card:hover {
+      border-color: var(--accent);
+    }
+    .ado51-card-kicker {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .ado51-glass-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .ado51-glass-card p {
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+    .ado51-counters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+    .ado51-counter-box strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3vw, 38px);
+      color: var(--fg);
+    }
+    .ado51-counter-box span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Group 1.3 & 1.5: Sticky Pinned 001-003 Telemetry Section */
+    .ado51-pinned-section {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 88px clamp(20px, 5vw, 84px);
+    }
+    .ado51-pinned-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: start;
+      margin-top: 40px;
+    }
+    @media (min-width: 980px) {
+      .ado51-pinned-grid {
+        grid-template-columns: 1fr 1.1fr 1fr;
+      }
+    }
+    .ado51-sticky-center {
+      position: relative;
+      top: 110px;
+      padding: 28px;
+      border-radius: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    @media (min-width: 980px) {
+      .ado51-sticky-center { position: sticky; }
+    }
+    .ado51-scrub-stage {
+      transition: transform 0.12s linear;
+      will-change: transform;
+    }
+    .ado51-spec-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    .ado51-spec-card.is-active {
+      border-color: var(--accent);
+    }
+
+    /* Group 1.4: Horizontal Scroll Projects Section */
+    .ado51-hscroll-section {
+      padding: 72px clamp(20px, 5vw, 84px);
+      border-top: 1px solid var(--border);
+    }
+    .ado51-hscroll-track {
+      max-width: 1320px;
+      margin: 32px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(260px, 1fr));
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+    .ado51-project-card {
+      padding: 24px;
+      border-radius: 26px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .ado51-project-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+    }
+    .ado51-project-visual {
+      height: 140px;
+      border-radius: 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    /* Group 1.2: Scroll Reveal */
+    .ado51-reveal {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .ado51-reveal.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* Group 3.3: Seamless Fullscreen Page Transition Overlay */
+    .ado51-seamless-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 190;
+      background: rgba(5, 8, 15, 0.88);
+      backdrop-filter: blur(22px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      pointer-events: none;
+    }
+    .ado51-seamless-overlay.is-open { display: flex; }
+    .ado51-seamless-box {
+      width: 100%;
+      max-width: 760px;
+      border-radius: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 36px;
+      pointer-events: auto;
+    }
+
+    .ado51-footer {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 40px clamp(20px, 5vw, 84px);
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    body.is-motion-paused * {
+      animation-play-state: paused !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Group 2.4: SVG Liquid Ripple Filter -->
+  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="ado51LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="4" />
+        <feDisplacementMap id="ado51Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div id="cursorRing" class="ado51-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="ado51-cursor-dot" aria-hidden="true"></div>
+
+  <header class="ado51-edge-top">
+    <a href="#heroStage" class="ado51-brand">
+      <span class="ado51-brand-mark"></span>
+      <span>Adoratorio Summer Club</span>
+    </a>
+    <ul class="ado51-nav-links" aria-label="Primary Navigation">
+      <li><a href="#heroStage">01 / Showcase</a></li>
+      <li><a href="#pinnedSpecs">02 / Pinned Telemetry</a></li>
+      <li><a href="#motionProjects">03 / Motion Archive</a></li>
+    </ul>
+    <div class="ado51-edge-controls">
+      <button type="button" id="motionToggleBtn" class="ado51-pill-btn" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="ado51-cta-magnetic" data-magnetic data-next-preview>
+        Explore Spec
+      </button>
+    </div>
+  </header>
+
+  <aside class="ado51-edge-left" aria-label="Slide Numbers">
+    <a href="#heroStage" class="ado51-slide-dot is-active" data-slide-link="0">01</a>
+    <a href="#pinnedSpecs" class="ado51-slide-dot" data-slide-link="1">02</a>
+    <a href="#motionProjects" class="ado51-slide-dot" data-slide-link="2">03</a>
+  </aside>
+
+  <aside class="ado51-edge-right" aria-label="Scroll Scrub Readout">
+    <div class="ado51-telemetry-rail" id="scrollScrubReadout">SCRUB 0% • 0.0°</div>
+  </aside>
+
+  <main id="main">
+    <section id="heroStage" class="ado51-hero">
+      <canvas id="ambientSmokeCanvas" class="ado51-smoke-canvas" aria-hidden="true"></canvas>
+      <div class="ado51-marquee-band" aria-hidden="true">
+        <div class="ado51-marquee-track">ADORA SUMMER • TORIO CLUB • RETROFUTURE SOUND EXPERIMENT • PLAY NOW • ADORA SUMMER • TORIO CLUB • RETROFUTURE SOUND EXPERIMENT • PLAY NOW • </div>
+      </div>
+
+      
+      <div class="ado51-poster-stage">
+        <div class="ado51-poster-top-meta">
+          <span class="ado51-tag-chip" id="activeHeroTag" style="background:rgba(0,0,0,0.28);color:#fff;">SHOOTING BIOMECHANICS • 240HZ MOCAP</span>
+        </div>
+
+        <div class="ado51-poster-stack">
+          <!-- Layer 1: Giant White Block Typography Behind Subject -->
+          <h1 class="ado51-poster-giant-h1" id="oversizedHeadline" data-parallax="0.10">
+            <span class="ado51-split-word is-in">ADORA SUMMER</span><br>
+            <span class="ado51-split-word is-in" style="transition-delay:90ms;">TORIO CLUB</span>
+          </h1>
+
+          <!-- Layer 2: 3D Glossy Cyan Athlete Pop-Out Overlapping the Giant Letters (Text Masking) -->
+          <div id="heroPopoutRig" class="ado51-poster-figure-popout" data-tilt-card style="filter: url(#ado51LiquidFilter);">
+            <img class="ado51-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/adoratorio-summer/assets/cutout.webp'" alt="Adoratorio Summer Club 3D Cutout Subject" loading="eager" decoding="async" />
+          </div>
+        </div>
+
+        <div class="ado51-poster-bottom-bar">
+          <!-- Bottom-Left Floating Replay Card -->
+          <article class="ado51-glass-card ado51-poster-replay-card" data-tilt-card data-seamless-trigger="Flamingo Poolside Synthwave">
+            <span class="ado51-card-kicker">1998 FINALS • FADEAWAY KINEMATICS</span>
+            <h3>Flamingo Poolside Synthwave</h3>
+            <p>Release angle 54.2° • Apex hang-time 0.92s • Click for full 3D frame analysis.</p>
+          </article>
+
+          <!-- Center Decade & Counters -->
+          <div class="ado51-counters">
+            <div class="ado51-counter-box"><strong data-counter-target="240" data-counter-suffix="Hz">240Hz</strong><span>Optical Mocap</span></div>
+            <div class="ado51-counter-box"><strong data-counter-target="48" data-counter-suffix=".2&quot;">48.2"</strong><span>Vertical Leap</span></div>
+            <div class="ado51-counter-box"><strong data-counter-target="1000" data-counter-suffix="+">1000+</strong><span>Kinematic Vectors</span></div>
+          </div>
+
+          <!-- Bottom-Right Circular Magnetic Action Buttons -->
+          <div style="display:flex;gap:12px;">
+            <button type="button" class="ado51-circle-fab" data-magnetic data-seamless-trigger="360° Orbital Camera Replay" aria-label="Open 360 Replay">360°</button>
+            <a href="#pinnedSpecs" class="ado51-circle-fab" data-magnetic aria-label="Scroll to Biomechanics">↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky Pinned Center Subject + 001/002/003 Telemetry -->
+    <section id="pinnedSpecs" class="ado51-pinned-section">
+      <div class="ado51-reveal" style="text-align:center;max-width:680px;margin:0 auto;">
+        <span class="ado51-tag-chip">Sticky Pinned &amp; Scroll Scrubbing</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(28px,4vw,48px);">Adoratorio Summer Club — 001 to 003 Engineering</h2>
+      </div>
+
+      <div class="ado51-pinned-grid">
+        <div>
+          <article class="ado51-spec-card ado51-reveal is-active" data-spec-index="001">
+            <span class="ado51-card-kicker">001 / SYNTH ENGINE</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">128 BPM</div>
+            <h3>WebAudio Retrofuture Sequencer</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Interactive spatial audio stems synchronized to 3D inflatable physics.</p>
+          </article>
+          <article class="ado51-spec-card ado51-reveal" data-spec-index="002">
+            <span class="ado51-card-kicker">002 / SOFT-BODY 3D</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">240Hz Sim</div>
+            <h3>Zero-G Vinyl Pool Floats</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Specular PVC shaders with real-time collision and depth-of-field bokeh.</p>
+          </article>
+        </div>
+
+        <div class="ado51-sticky-center">
+          <div id="scrubCenterStage" class="ado51-scrub-stage">
+            <img class="ado51-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/adoratorio-summer/assets/cutout.webp'" alt="Adoratorio Summer Club 3D Cutout Subject" loading="eager" decoding="async" />
+          </div>
+          <div id="scrubDialText" style="margin-top:14px;font-size:12px;color:var(--accent);font-weight:700;">
+            SCROLL SCRUB ANGLE: 0.0°
+          </div>
+        </div>
+
+        <div>
+          <article class="ado51-spec-card ado51-reveal" data-spec-index="003">
+            <span class="ado51-card-kicker">003 / KINETIC TYPE</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">4x Stacked</div>
+            <h3>Outline & Solid Strobe Header</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">High-contrast brutalist club typography with magnetic cursor distortion.</p>
+          </article>
+          <article class="ado51-spec-card ado51-reveal" data-seamless-trigger="Adoratorio Summer Club Full Specification Sheet" style="cursor:pointer;">
+            <span class="ado51-card-kicker">004 / INTERACTIVE DOSSIER</span>
+            <div style="font-family:var(--font-display);font-size:28px;font-weight:800;margin:6px 0;color:var(--accent);">Expand View</div>
+            <h3>Seamless Page Transition</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Click to expand full specification view without page reload.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horizontal Scroll Track -->
+    <section id="motionProjects" class="ado51-hscroll-section">
+      <div style="max-width:1320px;margin:0 auto;">
+        <span class="ado51-tag-chip">Featured Motion Projects</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(26px,3.5vw,42px);">Horizontal Scroll Showcase</h2>
+      </div>
+      <div id="hScrollTrack" class="ado51-hscroll-track">
+        
+        <article class="ado51-project-card ado51-reveal" data-tilt-card data-seamless-trigger="Flamingo Poolside Synthwave">
+          <div class="ado51-project-visual" style="background:radial-gradient(circle at 50% 50%, #ec489933, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#ec4899;">01 // Play Now ↗</span>
+          </div>
+          <span class="ado51-card-kicker">TRACK 01</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Flamingo Poolside Synthwave</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="ado51-project-card ado51-reveal" data-tilt-card data-seamless-trigger="Inflatable Gator Bassline">
+          <div class="ado51-project-visual" style="background:radial-gradient(circle at 50% 50%, #ff552233, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#ff5522;">02 // 128 BPM Live</span>
+          </div>
+          <span class="ado51-card-kicker">TRACK 02</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Inflatable Gator Bassline</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="ado51-project-card ado51-reveal" data-tilt-card data-seamless-trigger="Frosted Donut Disco Dub">
+          <div class="ado51-project-visual" style="background:radial-gradient(circle at 50% 50%, #f472b633, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#f472b6;">03 // 360° Visuals</span>
+          </div>
+          <span class="ado51-card-kicker">TRACK 03</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Frosted Donut Disco Dub</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="ado51-project-card ado51-reveal" data-tilt-card data-seamless-trigger="Italo-Disco Midnight Oasis">
+          <div class="ado51-project-visual" style="background:radial-gradient(circle at 50% 50%, #fb923c33, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#fb923c;">04 // VIP Pass</span>
+          </div>
+          <span class="ado51-card-kicker">TRACK 04</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Italo-Disco Midnight Oasis</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ado51-footer">
+    <p>© 2026 Adoratorio Summer Club — Bespoke Blueprint (retrofuture-club).</p>
+    <p>Parallax • Sticky Scrub 001-003 • 3D Card Tilt • Liquid Wave • Particle Smoke</p>
+  </footer>
+
+  <div id="seamlessModal" class="ado51-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="ado51-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span class="ado51-tag-chip" style="margin-bottom:0;">Seamless Detail Transition</span>
+        <button type="button" id="closeSeamlessBtn" class="ado51-pill-btn">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:12px;">Adoratorio Summer Club</h2>
+      <p style="font-size:15px;line-height:1.65;color:var(--muted);margin-bottom:20px;">Interactive retrofuture summer sound club — zero-gravity 3D pool inflatables, spatial synth bingo, and kinetic typography.</p>
+      <div style="max-height:220px;overflow:hidden;border-radius:18px;border:1px solid var(--border);margin-bottom:20px;padding:12px;background:var(--bg);">
+        <img class="ado51-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/adoratorio-summer/assets/cutout.webp'" alt="Adoratorio Summer Club 3D Cutout Subject" loading="eager" decoding="async" />
+      </div>
+      <button type="button" id="confirmSeamlessBtn" class="ado51-cta-magnetic" style="width:100%;">Return to Live Stage</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var slideLinks = document.querySelectorAll('[data-slide-link]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+
+        var activeIdx = progress < 0.34 ? 0 : progress < 0.72 ? 1 : 2;
+        slideLinks.forEach(function (l, i) { l.classList.toggle('is-active', i === activeIdx); });
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      var revealEls = document.querySelectorAll('.ado51-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.26;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.26;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / r.width - 0.5;
+          var ny = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 9).toFixed(2) + 'deg) rotateX(' + (-ny * 9).toFixed(2) + 'deg)';
+        });
+        card.addEventListener('mouseleave', function () { card.style.transform = ''; });
+      });
+
+      var displacement = document.getElementById('ado51Displacement');
+      var heroRig = document.getElementById('heroPopoutRig');
+      if (heroRig && displacement) {
+        heroRig.addEventListener('mouseenter', function () { if (!motionPaused) displacement.setAttribute('scale', '16'); });
+        heroRig.addEventListener('mouseleave', function () { displacement.setAttribute('scale', '0'); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var openBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(heading) {
+        if (modalTitle && heading) modalTitle.textContent = heading;
+        if (modal) modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (modal) modal.classList.remove('is-open');
+      }
+      if (openBtn) {
+        openBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless('Adoratorio Summer Club — Specification View');
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () { openSeamless(el.getAttribute('data-seamless-trigger')); });
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSeamless(); });
+
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var pts = [];
+        for (var i = 0; i < 24; i++) {
+          pts.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, r: 1.5 + Math.random() * 3, vx: (Math.random() - 0.5) * 0.4, vy: -0.2 - Math.random() * 0.4, a: 0.15 + Math.random() * 0.35 });
+        }
+        var f = 0;
+        function loop() {
+          if (!motionPaused && f < 900) {
+            f++;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (var j = 0; j < pts.length; j++) {
+              var pt = pts[j];
+              pt.x += pt.vx; pt.y += pt.vy;
+              if (pt.y < 0) pt.y = canvas.height;
+              ctx.beginPath();
+              ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(255,255,255,' + pt.a.toFixed(2) + ')';
+              ctx.fill();
+            }
+            window.requestAnimationFrame(loop);
+          }
+        }
+        window.requestAnimationFrame(loop);
+      }
+    })();
+  </script>
+</body>
+</html>

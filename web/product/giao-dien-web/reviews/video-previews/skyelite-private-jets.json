@@ -1,0 +1,48 @@
+{
+  "id": "t119",
+  "slug": "skyelite-private-jets",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T22:20:00.983Z",
+  "demo": "/demos/skyelite-private-jets/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "72330887a6a3",
+  "sha256": "72330887a6a3775c5b475d7e064d863fb8eb443a874f32026359f15b8ec6c1f8",
+  "demoHtmlSha256": "0d90832f2ca2284974152b57ecea43d67177a2e9022c406f23efc904311a46ab",
+  "demoSha256": "22e752c2759f5fc5f6db1595033f5f1fa0c31d9a2b774f67019abb11f3c523a8",
+  "bytes": 857541,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.49,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.89,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1025
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\skyelite-private-jets-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\skyelite-private-jets-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\skyelite-private-jets-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\skyelite-private-jets-return.jpg"
+  ]
+}

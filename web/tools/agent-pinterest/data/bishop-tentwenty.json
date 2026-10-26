@@ -1,0 +1,61 @@
+{
+  "pinId": "500603314827690151",
+  "keyword": "Futuristic 3D Landing Page Concept",
+  "board": "cssdesignawards/website-of-the-day-~-wotd",
+  "title": "Bishop Tentwenty",
+  "slug": "bishop-tentwenty",
+  "assignedTier": "free",
+  "pageUrl": "https://www.pinterest.com/pin/500603314827690151/",
+  "rawTitle": "Website Of The Day 12 November 2018\nBishop Design by TenTwenty Digital Agency | Black and white website design inspiration, Monochrome website design, Web design trends",
+  "rawDesc": "",
+  "imageUrl": "https://i.pinimg.com/originals/44/38/fb/4438fbc168f90cd50b75f001b5a8be67.jpg",
+  "previewUrl": "https://i.pinimg.com/736x/44/38/fb/4438fbc168f90cd50b75f001b5a8be67.jpg",
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-27\\pin-500603314827690151.jpg",
+  "imageBytes": 77442,
+  "imageSha256": "1da719eaa7385562a2cead188ba85a282bc6fa57150334fa077a6aab54588b8d",
+  "criteriaEvaluation": {
+    "accepted": true,
+    "totalScore": 100,
+    "criteriaMatchPercent": 100,
+    "passedCriteriaCount": 6,
+    "width": 1068,
+    "height": 646,
+    "aspectRatio": 1.65,
+    "fullBleedRatio": 1,
+    "dofRatio": 1.52,
+    "criteriaChecks": {
+      "formatDesktopHeroShowcase": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "visualHookFullBleed3DDepth": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "floatingGlassPillCards": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "outOfBounds3DPopOut": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "oversizedHeadlineTypography": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "minimalistEdgeNavigation": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      }
+    },
+    "reason": "PASSED (100/100, 6/6 criteria = 100%)"
+  },
+  "fetchedAt": "2026-10-26T22:21:22.603Z"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "t122",
+  "slug": "cinder-axis",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T22:27:53.874Z",
+  "demo": "/demos/cinder-axis/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "68446aa6a1c1",
+  "sha256": "68446aa6a1c1e6e09b86ace5fce199a16206129cd9dfee0d98931cf31ae0255d",
+  "demoHtmlSha256": "1bae339fd56c9008433cee4ad55f5709faca1605b3f96f0d433f002c95ecebe4",
+  "demoSha256": "9b9af9aa4338b28649bafcf6a630a2cbe9e0d8b911fddbc767fe5ca10d6d0eb5",
+  "bytes": 1020762,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.553,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.931,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1473
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cinder-axis-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cinder-axis-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cinder-axis-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cinder-axis-return.jpg"
+  ]
+}

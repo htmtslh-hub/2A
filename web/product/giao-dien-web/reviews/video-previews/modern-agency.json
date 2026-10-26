@@ -1,0 +1,48 @@
+{
+  "id": "t120",
+  "slug": "modern-agency",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T22:20:30.318Z",
+  "demo": "/demos/modern-agency/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "51e9939f11fb",
+  "sha256": "51e9939f11fb2962b8d8c3a1eabd1bdf360d98a6403d1ce427cda2ddfb23dd3c",
+  "demoHtmlSha256": "f9dfef7c49157765bb0787ad078eb1e961e59ae3450f2cfa94a2952d8603494e",
+  "demoSha256": "6f0695418fdd2b036e2b21f732061736bc96bdd667bde3105104389366bed738",
+  "bytes": 621446,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.49,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.896,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\modern-agency-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\modern-agency-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\modern-agency-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\modern-agency-return.jpg"
+  ]
+}

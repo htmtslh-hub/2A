@@ -130,14 +130,160 @@ function getSlugPrefix(slug) {
  */
 function selectBlueprintIndex(data) {
   const s = String(data.slug || '').toLowerCase();
-  if (s === 'forest-pulse') return 0;
-  if (s === 'startup-devkit') return 1;
-  if (s === 'break-code') return 2;
-  if (s === 'launch-video') return 3;
-  if (s === 'geospace-canvas') return 4;
+  if (s === 'forest-pulse' || s === 'cinder-axis') return 0;
+  if (s === 'startup-devkit' || s === 'fishfinger-creative') return 1;
+  if (s === 'break-code' || s === 'adoratorio-summer') return 2;
+  if (s === 'launch-video' || s === 'bishop-tentwenty') return 3;
+  if (s === 'geospace-canvas' || s === 'micai-aristide') return 4;
   let sum = 0;
   for (let i = 0; i < s.length; i++) sum += s.charCodeAt(i);
   return sum % 5;
+}
+
+const SLUG_BLUEPRINT_OVERRIDES = {
+  'cinder-axis': {
+    id: 'terracotta-collage',
+    brandTitle: 'Cinder Axis Studio',
+    bg: '#1c0f0b',
+    surface: '#2b1712',
+    glass: 'rgba(43, 23, 18, 0.76)',
+    fg: '#fff7ed',
+    muted: '#fdba74',
+    accent: '#ea580c',
+    accent2: '#fb923c',
+    heroBgGrad: 'linear-gradient(135deg, #d97354 0%, #7c2d12 52%, #180d0a 100%)',
+    marqueeText: 'CINDER AXIS DOCUMENTARY • URBAN COLLAGE SPLIT • MEDIUM FORMAT RIG • 02/13 ARCHIVE • ',
+    headlineTop: 'WORKING',
+    headlineBottom: 'IN MOTION',
+    headlineSub: 'Urban documentary cinema rig and splitscreen collage storytelling — capturing kinetic street portraits with medium-format optical precision.',
+    specs: [
+      { code: '001', label: 'OPTICAL MOUNT', metric: '80mm f/1.9', title: 'Medium-Format Cinema Glass', desc: 'Anamorphic street flare profile with zero-distortion edge geometry.' },
+      { code: '002', label: 'CHASSIS RIG', metric: '1,140g', title: 'Terracotta Anodized Cage', desc: 'CNC-milled aerospace aluminum with brushed brass knurled follow-focus.' },
+      { code: '003', label: 'ARCHIVE SERIES', metric: '13 Films', title: 'Splitscreen Urban Anthology', desc: 'Interactive documentary chapters with live frame-accurate scrub telemetry.' }
+    ],
+    projects: [
+      { tag: 'CHAPTER 01', title: 'Harlem Morning Transit Study', stat: '65mm Raw', color: '#ea580c' },
+      { tag: 'CHAPTER 02', title: 'Chicago Elevated Rail Acoustic', stat: '120 FPS', color: '#f97316' },
+      { tag: 'CHAPTER 03', title: 'London Brutalist Concrete Portrait', stat: '4:3 Split', color: '#fb923c' },
+      { tag: 'CHAPTER 04', title: 'Tokyo Midnight Neon Bokeh', stat: 'ISO 3200', color: '#fdba74' }
+    ]
+  },
+  'bishop-tentwenty': {
+    id: 'monochrome-architect',
+    brandTitle: 'Bishop Design Rogue',
+    bg: '#0b0b0d',
+    surface: '#16161a',
+    glass: 'rgba(24, 24, 28, 0.78)',
+    fg: '#fafafa',
+    muted: '#a1a1aa',
+    accent: '#e4e4e7',
+    accent2: '#71717a',
+    heroBgGrad: 'linear-gradient(90deg, #27272a 0%, #18181b 49.8%, #09090b 50.2%, #09090b 100%)',
+    marqueeText: 'BISHOP DESIGN BY PAUL BISHOP • REVOLUTIONARY MONOCHROME ARCHITECTURE • ROGUE ATELIER • ',
+    headlineTop: 'Revolutionary',
+    headlineBottom: 'Design',
+    headlineSub: 'Carved black basalt monoliths and avant-garde spatial hospitality interiors engineered across Dubai, London, and Milan.',
+    specs: [
+      { code: '001', label: 'MONOLITH STONE', metric: '3.4 Tons', title: 'Hand-Carved Basalt Lounge', desc: 'Sculpted volcanic stone cantilevered on brushed platinum bearings.' },
+      { code: '002', label: 'SPATIAL GRID', metric: '140 Awards', title: 'Rogue Hospitality Division', desc: 'Bespoke acoustic shadow-gap architecture with zero visible hardware.' },
+      { code: '003', label: 'LIGHTING ENGINE', metric: '2700K CRI99', title: 'Chiaroscuro Rim Illumination', desc: 'Programmable linear grazing optics accentuating raw concrete grain.' }
+    ],
+    projects: [
+      { tag: 'RESIDENCE 01', title: 'SLS Dubai Penthouse Atrium', stat: '4,800 m²', color: '#e4e4e7' },
+      { tag: 'RESIDENCE 02', title: 'Torno Subito Monochrome Club', stat: 'Michelin Star', color: '#a1a1aa' },
+      { tag: 'RESIDENCE 03', title: 'Rogue Basalt Pavilion', stat: 'Milan Salone', color: '#d4d4d8' },
+      { tag: 'RESIDENCE 04', title: 'TenTwenty Digital Flagship', stat: 'WOTD Winner', color: '#fafafa' }
+    ]
+  },
+  'fishfinger-creative': {
+    id: 'kraken-odyssey',
+    brandTitle: 'Fishfinger Creative',
+    bg: '#160d29',
+    surface: '#24153d',
+    glass: 'rgba(38, 22, 66, 0.74)',
+    fg: '#fef3c7',
+    muted: '#d8b4fe',
+    accent: '#f59e0b',
+    accent2: '#c084fc',
+    heroBgGrad: 'radial-gradient(circle at 50% 24%, rgba(245, 158, 11, 0.34) 0%, rgba(88, 28, 135, 0.78) 54%, #120924 100%)',
+    marqueeText: 'FISHFINGER CREATIVE AGENCY • BESPOKE 3D ANIMATION & STORYTELLING • KRAKEN ODYSSEY • ',
+    headlineTop: 'UNLEASH THE',
+    headlineBottom: 'IMAGINATION',
+    headlineSub: 'Award-winning interactive storytelling studio crafting 3D character worlds, WebGL ocean shaders, and cinematic brand campaigns.',
+    specs: [
+      { code: '001', label: '3D RIGGING', metric: '148 Bones', title: 'Procedural Kraken Tentacles', desc: 'Inverse-kinematic spline physics reacting in real time to cursor velocity.' },
+      { code: '002', label: 'OCEAN SHADER', metric: '60 FPS WebGL', title: 'Gerstner Wave Crest Simulation', desc: 'Multi-layered sunset subsurface scattering across foam and golden sails.' },
+      { code: '003', label: 'STORY ENGINE', metric: '100% WOTD', title: 'Interactive Brand Narratives', desc: 'Gamified scroll chapters built for global entertainment and lifestyle icons.' }
+    ],
+    projects: [
+      { tag: 'VOYAGE 01', title: 'Kraken & Golden Galleon WebGL', stat: 'Site of the Day', color: '#f59e0b' },
+      { tag: 'VOYAGE 02', title: 'Sunset Archipelago 3D Map', stat: '120FPS Shader', color: '#c084fc' },
+      { tag: 'VOYAGE 03', title: 'Culinary Pirate Character Rig', stat: 'Octane Render', color: '#fbbf24' },
+      { tag: 'VOYAGE 04', title: 'Bioluminescent Trench Soundscape', stat: 'Spatial Audio', color: '#a855f7' }
+    ]
+  },
+  'adoratorio-summer': {
+    id: 'retrofuture-club',
+    brandTitle: 'Adoratorio Summer Club',
+    bg: '#0c0c0e',
+    surface: '#18181c',
+    glass: 'rgba(28, 28, 34, 0.78)',
+    fg: '#ffffff',
+    muted: '#f472b6',
+    accent: '#ff5522',
+    accent2: '#ec4899',
+    heroBgGrad: 'radial-gradient(circle at 50% 48%, rgba(236, 72, 153, 0.24) 0%, rgba(255, 85, 34, 0.16) 44%, #0c0c0e 100%)',
+    marqueeText: 'ADORA SUMMER • TORIO CLUB • RETROFUTURE SOUND EXPERIMENT • PLAY NOW • ',
+    headlineTop: 'ADORA SUMMER',
+    headlineBottom: 'TORIO CLUB',
+    headlineSub: 'Interactive retrofuture summer sound club — zero-gravity 3D pool inflatables, spatial synth bingo, and kinetic typography.',
+    specs: [
+      { code: '001', label: 'SYNTH ENGINE', metric: '128 BPM', title: 'WebAudio Retrofuture Sequencer', desc: 'Interactive spatial audio stems synchronized to 3D inflatable physics.' },
+      { code: '002', label: 'SOFT-BODY 3D', metric: '240Hz Sim', title: 'Zero-G Vinyl Pool Floats', desc: 'Specular PVC shaders with real-time collision and depth-of-field bokeh.' },
+      { code: '003', label: 'KINETIC TYPE', metric: '4x Stacked', title: 'Outline & Solid Strobe Header', desc: 'High-contrast brutalist club typography with magnetic cursor distortion.' }
+    ],
+    projects: [
+      { tag: 'TRACK 01', title: 'Flamingo Poolside Synthwave', stat: 'Play Now ↗', color: '#ec4899' },
+      { tag: 'TRACK 02', title: 'Inflatable Gator Bassline', stat: '128 BPM Live', color: '#ff5522' },
+      { tag: 'TRACK 03', title: 'Frosted Donut Disco Dub', stat: '360° Visuals', color: '#f472b6' },
+      { tag: 'TRACK 04', title: 'Italo-Disco Midnight Oasis', stat: 'VIP Pass', color: '#fb923c' }
+    ]
+  },
+  'micai-aristide': {
+    id: 'crypto-wealth-hud',
+    brandTitle: 'MiCai Crypto Wealth',
+    bg: '#070e22',
+    surface: '#0f1b3d',
+    glass: 'rgba(15, 27, 61, 0.78)',
+    fg: '#f8fafc',
+    muted: '#93c5fd',
+    accent: '#2563eb',
+    accent2: '#38bdf8',
+    heroBgGrad: 'radial-gradient(circle at 30% 25%, rgba(37, 99, 235, 0.42) 0%, rgba(15, 23, 42, 0.92) 62%, #060b19 100%)',
+    marqueeText: 'MICAI PRIVATE WEALTH • AI BLOCKCHAIN PORTFOLIO • REGISTER FOR ICO • 21D : 15H : 54M • ',
+    headlineTop: 'CRYPTO WEALTH',
+    headlineBottom: 'MANAGEMENT',
+    headlineSub: 'MiCai is the world’s first private wealth management platform powered by AI and built on institutional quantum-resistant blockchain.',
+    specs: [
+      { code: '001', label: 'ROBO-ADVISORY', metric: '+34.8% APY', title: 'Autonomous AI Rebalancing', desc: 'Millisecond cross-chain liquidity routing and institutional risk hedging.' },
+      { code: '002', label: 'ICO COUNTDOWN', metric: '21D : 15H', title: 'Tier-1 Token Allocation', desc: 'Audited smart-contract treasury with hardware multi-sig custody.' },
+      { code: '003', label: 'QUANTUM VAULT', metric: '256-Bit ZK', title: 'Zero-Knowledge Wealth Privacy', desc: 'Private institutional portfolio verification without exposing wallet balances.' }
+    ],
+    projects: [
+      { tag: 'VAULT 01', title: 'AI Robo-Advisory Alpha Fund', stat: '$420M TVL', color: '#2563eb' },
+      { tag: 'VAULT 02', title: 'Zero-Knowledge Institutional Custody', stat: 'AAA Audited', color: '#38bdf8' },
+      { tag: 'VAULT 03', title: 'Cross-Chain Treasury Yield Matrix', stat: '0.02s Finality', color: '#60a5fa' },
+      { tag: 'VAULT 04', title: 'Private Family Office Token Desk', stat: '24/7 Concierge', color: '#93c5fd' }
+    ]
+  }
+};
+
+function getBlueprintForData(data) {
+  const base = BLUEPRINTS[selectBlueprintIndex(data)];
+  const s = String(data.slug || '').toLowerCase();
+  const ov = SLUG_BLUEPRINT_OVERRIDES[s];
+  if (!ov) return base;
+  return { ...base, ...ov };
 }
 
 const BLUEPRINTS = [
@@ -631,8 +777,7 @@ function renderHeroByBlueprint(bp, p, data, evalScore) {
 
 export function buildPinterestInspiredHtml(data, palette) {
   const p = getSlugPrefix(data.slug);
-  const bpIndex = selectBlueprintIndex(data);
-  const bp = BLUEPRINTS[bpIndex];
+  const bp = getBlueprintForData(data);
   const evalScore = data.criteriaEvaluation?.totalScore || 98;
   const svgCenter = get3DCutoutMarkup(bp, p, data);
 
@@ -1739,7 +1884,7 @@ export async function compilePinterestTemplate(slug, options = {}) {
   const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
   const accessTier = options.tier || data.assignedTier || 'premium';
   const webCat = detectWebCategory(data);
-  const bp = BLUEPRINTS[selectBlueprintIndex(data)];
+  const bp = getBlueprintForData(data);
   const evalScore = data.criteriaEvaluation?.totalScore || 98;
 
   const productDir = path.resolve(root, `web/product/giao-dien-web/${slug}`);
@@ -1831,6 +1976,12 @@ ${accessLine}    version: '1.0.0',
   const existingBlockRegex = new RegExp(`  ${catalogId}:\\s*\\{[\\s\\S]*?\\n  \\},`, 'm');
   if (existingBlockRegex.test(realTpl)) {
     realTpl = realTpl.replace(existingBlockRegex, entryBlock);
+    fs.writeFileSync(realTplPath, realTpl, 'utf8');
+  } else if (!realTpl.includes(`slug: '${slug}'`)) {
+    realTpl = realTpl.replace(
+      'export const REAL_TEMPLATES: Record<string, RealTemplate> = {',
+      `export const REAL_TEMPLATES: Record<string, RealTemplate> = {\n${entryBlock}`
+    );
     fs.writeFileSync(realTplPath, realTpl, 'utf8');
   }
 

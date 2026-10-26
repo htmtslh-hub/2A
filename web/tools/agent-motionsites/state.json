@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-10-26",
+  "lastRunDate": "2026-10-27",
   "todayCopiedCount": 6,
   "processedSlugs": [
     "aeris",
@@ -11,6 +11,7 @@
     "ais-folio",
     "amazing-agency",
     "apartment-flow",
+    "asme",
     "astra-interior",
     "astro-armor",
     "atlas",
@@ -19,6 +20,7 @@
     "backbest-800",
     "beetbuh",
     "beyond-voyages",
+    "break-code",
     "camper",
     "cast-and-render",
     "chain-warden",
@@ -41,14 +43,17 @@
     "firepower",
     "fitclub-food",
     "flexible-spark",
+    "forest-pulse",
     "free-sample",
     "freight-axis",
     "fresh-reddy",
     "galaxy-edge",
+    "geospace-canvas",
     "glow-features",
     "gridwork-co",
     "halden",
     "haul",
+    "innovation",
     "interactive-discovery",
     "iris",
     "jack-3d",
@@ -58,6 +63,7 @@
     "kresna-footer",
     "laila",
     "lauberhorn-ridge",
+    "launch-video",
     "lawyer-justicia",
     "leaflit",
     "lingoglass",
@@ -70,6 +76,7 @@
     "melt-muse",
     "meridian",
     "mint-atlas",
+    "modern-agency",
     "monoframe",
     "mostar-city",
     "motora",
@@ -80,8 +87,10 @@
     "nourish-bowl",
     "novatrend",
     "oceanpulse",
+    "orbis-nft",
     "orbit-academy",
     "pinehaven",
+    "portfolio-cosmic",
     "price-calculator",
     "prisma-creative-studio",
     "prmpt",
@@ -95,11 +104,13 @@
     "semaan",
     "shirtline",
     "shopluxe",
+    "skyelite-private-jets",
     "solaris-gate",
     "solenne",
     "sonicore",
     "soniq",
     "spaceedu",
+    "startup-devkit",
     "synapsex",
     "targo",
     "tidal",
@@ -120,12 +131,7 @@
     "vybe",
     "wander-far",
     "watchroom",
-    "yellow-beast",
-    "forest-pulse",
-    "startup-devkit",
-    "break-code",
-    "launch-video",
-    "geospace-canvas"
+    "yellow-beast"
   ],
   "processedPromptIds": [
     "aetheris-voyage-hero",
@@ -190,7 +196,13 @@
     "gridwork-co",
     "prisma-landing",
     "interactive-discovery",
-    "vex-ventures-hero"
+    "vex-ventures-hero",
+    "skyelite-hero",
+    "modern-agency",
+    "asme-hero",
+    "innovation-landing",
+    "orbis-nft-landing",
+    "portfolio-cosmic-hero"
   ],
   "history": [
     {
@@ -246,6 +258,44 @@
         "kresna-footer": "premium",
         "price-calculator": "premium"
       }
+    },
+    {
+      "date": "2026-10-27",
+      "shift": 1,
+      "built": [
+        "skyelite-private-jets",
+        "modern-agency",
+        "asme"
+      ],
+      "catalogIds": [
+        "t119",
+        "t120",
+        "t121"
+      ],
+      "tiers": {
+        "skyelite-private-jets": "free",
+        "modern-agency": "premium",
+        "asme": "premium"
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "shift": 2,
+      "built": [
+        "innovation",
+        "orbis-nft",
+        "portfolio-cosmic"
+      ],
+      "catalogIds": [
+        "t127",
+        "t128",
+        "t129"
+      ],
+      "tiers": {
+        "innovation": "free",
+        "orbis-nft": "premium",
+        "portfolio-cosmic": "premium"
+      }
     }
   ],
   "todayFreeCount": 2,
@@ -262,6 +312,12 @@
     "bb7da53a5ec5dce674d46754cb7fc0271496c84569bf1998deff2d16f24af08d",
     "4fc7f6c5021dfbf0662047d5ca32bd83291f7d06645f539c0ec99766c56c5128",
     "c81bf5235d39099e553f989415057fc9610a0e5184bf127b563fed79712b4829",
-    "5b43ab2865b587b541447a0ac44d601d0b10fb80eabaf72f11b8e799a5953a7b"
+    "5b43ab2865b587b541447a0ac44d601d0b10fb80eabaf72f11b8e799a5953a7b",
+    "ecfa79a15e0566ef1308a639507f2c8e1107364074a514ee3b413c301d86f015",
+    "311cb3608bae2caa7b62823ed61d031165af19f9386316849f521ef74f61ed22",
+    "1127da6eb24f5c40f392c09df4ecc39dd435fee5475f28b4aa64a91472a46a2c",
+    "f14388869a6bb45e2b3d28a0e49d14cbd45f9477825c47316361278a1efd64af",
+    "014b9381a9779a6acdf1e8f1c03acbe30689afe2d1ce2c2f0b48f0df87a28acc",
+    "4f53cb27436233bf7799ac3a425d39b808f46a6da6928b099b11f9d3ad31d8e3"
   ]
 }

@@ -46,6 +46,269 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t129: {
+    slug: 'portfolio-cosmic',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Portfolio Cosmic",
+        desc: "Giao diện web Portfolio Cosmic với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Portfolio Cosmic",
+        desc: "Bespoke Portfolio Cosmic web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Portfolio", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Portfolio Cosmic",
+        desc: "单文件自包含 Portfolio Cosmic 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t128: {
+    slug: 'orbis-nft',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Orbis NFT",
+        desc: "Giao diện web Orbis NFT với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Orbis NFT",
+        desc: "Bespoke Orbis NFT web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Orbis NFT",
+        desc: "单文件自包含 Orbis NFT 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t127: {
+    slug: 'innovation',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Innovation",
+        desc: "Giao diện web Innovation với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Innovation",
+        desc: "Bespoke Innovation web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Innovation",
+        desc: "单文件自包含 Innovation 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t126: {
+    slug: 'micai-aristide',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "MiCai Crypto Wealth",
+        desc: "MiCai Crypto Wealth (crypto-wealth-hud) — MiCai is the world’s first private wealth management platform powered by AI and built on institutional quantum-resistant blockchain.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "MiCai Crypto Wealth",
+        desc: "MiCai Crypto Wealth (crypto-wealth-hud) — MiCai is the world’s first private wealth management platform powered by AI and built on institutional quantum-resistant blockchain.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "MiCai Crypto Wealth",
+        desc: "MiCai Crypto Wealth (crypto-wealth-hud) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t125: {
+    slug: 'adoratorio-summer',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Adoratorio Summer Club",
+        desc: "Adoratorio Summer Club (retrofuture-club) — Interactive retrofuture summer sound club — zero-gravity 3D pool inflatables, spatial synth bingo, and kinetic typography.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Adoratorio Summer Club",
+        desc: "Adoratorio Summer Club (retrofuture-club) — Interactive retrofuture summer sound club — zero-gravity 3D pool inflatables, spatial synth bingo, and kinetic typography.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Adoratorio Summer Club",
+        desc: "Adoratorio Summer Club (retrofuture-club) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t124: {
+    slug: 'fishfinger-creative',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Fishfinger Creative",
+        desc: "Fishfinger Creative (kraken-odyssey) — Award-winning interactive storytelling studio crafting 3D character worlds, WebGL ocean shaders, and cinematic brand campaigns.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Fishfinger Creative",
+        desc: "Fishfinger Creative (kraken-odyssey) — Award-winning interactive storytelling studio crafting 3D character worlds, WebGL ocean shaders, and cinematic brand campaigns.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Fishfinger Creative",
+        desc: "Fishfinger Creative (kraken-odyssey) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t123: {
+    slug: 'bishop-tentwenty',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Bishop Design Rogue",
+        desc: "Bishop Design Rogue (monochrome-architect) — Carved black basalt monoliths and avant-garde spatial hospitality interiors engineered across Dubai, London, and Milan.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Bishop Design Rogue",
+        desc: "Bishop Design Rogue (monochrome-architect) — Carved black basalt monoliths and avant-garde spatial hospitality interiors engineered across Dubai, London, and Milan.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Bishop Design Rogue",
+        desc: "Bishop Design Rogue (monochrome-architect) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t122: {
+    slug: 'cinder-axis',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Cinder Axis Studio",
+        desc: "Cinder Axis Studio (terracotta-collage) — Urban documentary cinema rig and splitscreen collage storytelling — capturing kinetic street portraits with medium-format optical precision.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Cinder Axis Studio",
+        desc: "Cinder Axis Studio (terracotta-collage) — Urban documentary cinema rig and splitscreen collage storytelling — capturing kinetic street portraits with medium-format optical precision.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Cinder Axis Studio",
+        desc: "Cinder Axis Studio (terracotta-collage) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t121: {
+    slug: 'asme',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Asme",
+        desc: "Giao diện web Asme với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Asme",
+        desc: "Bespoke Asme web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Asme",
+        desc: "单文件自包含 Asme 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t120: {
+    slug: 'modern-agency',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Modern Agency",
+        desc: "Giao diện web Modern Agency với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Agency", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Modern Agency",
+        desc: "Bespoke Modern Agency web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Agency", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Modern Agency",
+        desc: "单文件自包含 Modern Agency 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t119: {
+    slug: 'skyelite-private-jets',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "SkyElite Private Jets",
+        desc: "Giao diện web SkyElite Private Jets với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "SkyElite Private Jets",
+        desc: "Bespoke SkyElite Private Jets web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "SkyElite Private Jets",
+        desc: "单文件自包含 SkyElite Private Jets 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t118: {
     slug: 'geospace-canvas',
     cat: 'commerce',

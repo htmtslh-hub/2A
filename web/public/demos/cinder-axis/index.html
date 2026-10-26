@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cinder Axis Studio — Interactive 3D Hero &amp; Motion Showcase</title>
+  <meta name="description" content="Urban documentary cinema rig and splitscreen collage storytelling — capturing kinetic street portraits with medium-format optical precision.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* hallmark · v2.0.0 · blueprint=terracotta-collage · slug=cinder-axis */
+    :root {
+      --bg: #1c0f0b;
+      --surface: #2b1712;
+      --glass: rgba(43, 23, 18, 0.76);
+      --fg: #fff7ed;
+      --muted: #fdba74;
+      --border: rgba(255, 255, 255, 0.16);
+      --accent: #ea580c;
+      --accent-2: #fb923c;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Space Grotesk', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      overflow-x: clip;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Group 2.5: Custom Follower Cursor with Blend-Mode Difference */
+    .cin90-cursor-ring,
+    .cin90-cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      border-radius: 50%;
+      transform: translate3d(-100px, -100px, 0);
+      transition: width 0.24s ease, height 0.24s ease, background-color 0.24s ease;
+      mix-blend-mode: difference;
+    }
+    .cin90-cursor-ring {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid #ffffff;
+      margin-left: -18px;
+      margin-top: -18px;
+    }
+    .cin90-cursor-ring.is-hovered {
+      width: 64px;
+      height: 64px;
+      margin-left: -32px;
+      margin-top: -32px;
+      background: #ffffff;
+    }
+    .cin90-cursor-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      margin-left: -3.5px;
+      margin-top: -3.5px;
+    }
+    @media (max-width: 900px) {
+      .cin90-cursor-ring, .cin90-cursor-dot { display: none; }
+    }
+
+    /* Criterion 6: Minimalist Edge Navigation */
+    .cin90-edge-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 220;
+      padding: 18px clamp(18px, 4vw, 52px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      pointer-events: none;
+    }
+    .cin90-edge-top > * { pointer-events: auto; }
+    .cin90-brand {
+      text-decoration: none;
+      color: var(--fg);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cin90-brand-mark {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px var(--accent);
+    }
+    .cin90-nav-links {
+      display: none;
+      list-style: none;
+      gap: 24px;
+      padding: 8px 20px;
+      border-radius: 999px;
+      background: var(--glass);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+    }
+    @media (min-width: 900px) {
+      .cin90-nav-links { display: flex; }
+    }
+    .cin90-nav-links a {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0.82;
+      transition: opacity 0.2s ease;
+    }
+    .cin90-nav-links a:hover { opacity: 1; }
+    .cin90-edge-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cin90-pill-btn {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      color: var(--fg);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .cin90-cta-magnetic {
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: var(--accent);
+      color: #090b10;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Left & Right Minimalist Edge Slide Rails */
+    .cin90-edge-left,
+    .cin90-edge-right {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 130;
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+    }
+    @media (min-width: 1120px) {
+      .cin90-edge-left { display: flex; left: 22px; }
+      .cin90-edge-right { display: flex; right: 22px; }
+    }
+    .cin90-slide-dot {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      color: var(--fg);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .cin90-slide-dot.is-active {
+      background: var(--accent);
+      color: #090b10;
+      border-color: var(--accent);
+    }
+    .cin90-telemetry-rail {
+      writing-mode: vertical-rl;
+      padding: 14px 8px;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* Hero Stage */
+    .cin90-hero {
+      position: relative;
+      min-height: 100vh;
+      padding: 104px clamp(20px, 5vw, 84px) 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      isolation: isolate;
+      background: linear-gradient(135deg, #d97354 0%, #7c2d12 52%, #180d0a 100%);
+    }
+    .cin90-smoke-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      pointer-events: none;
+    }
+    .cin90-marquee-band {
+      position: absolute;
+      bottom: 8%;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+      opacity: 0.10;
+      white-space: nowrap;
+    }
+    .cin90-marquee-track {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: clamp(64px, 11vw, 156px);
+      font-weight: 800;
+      color: transparent;
+      -webkit-text-stroke: 1.5px #ffffff;
+      animation: cin90Marquee 24s linear infinite;
+    }
+    @keyframes cin90Marquee {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* Shared Typography & Split-Text */
+    .cin90-tag-chip {
+      display: inline-flex;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .cin90-display-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(44px, 7.8vw, 108px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      overflow-wrap: break-word;
+    }
+    .cin90-serif-accent {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--accent);
+      display: block;
+    }
+    .cin90-lead {
+      font-size: clamp(15px, 1.35vw, 18px);
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 18px 0 26px;
+    }
+    .cin90-split-word {
+      display: inline-block;
+      opacity: 0;
+      transform: translate3d(0, 32px, 0);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cin90-split-word.is-in {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* 3D Cutout Subject Styling (Out-of-bounds Pop-out & Drop Shadow) */
+    .cin90-cutout-3d-img {
+      width: 100%;
+      height: auto;
+      max-height: 390px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 28px 42px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 26px rgba(255, 255, 255, 0.14));
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* Blueprint 0 Specific: Asymmetric Carbon Bike Atelier */
+    .cin90-hero-grid-bike {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 980px) {
+      .cin90-hero-grid-bike {
+        grid-template-columns: 0.92fr 1.08fr;
+      }
+    }
+    .cin90-popout-rig {
+      position: relative;
+      padding: 20px 14px 28px;
+      border-radius: 32px;
+      background: radial-gradient(circle at 52% 48%, rgba(212,149,106,0.22), rgba(20,18,16,0.40) 72%);
+      border: 1px solid var(--border);
+      animation: cin90Float 5.5s ease-in-out infinite;
+      overflow: visible;
+    }
+    .cin90-popout-rig .cin90-cutout-3d-img {
+      max-height: 380px;
+      transform: scale(1.09) translateX(-14px);
+    }
+    .cin90-cutout-pill {
+      position: absolute;
+      top: -14px;
+      right: 24px;
+      z-index: 8;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #090b10;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .cin90-floating-pair {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: -32px;
+      position: relative;
+      z-index: 6;
+    }
+
+    /* Blueprint 1 Specific: Sky Aircraft Pop-Out */
+    .cin90-hero-sky {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cin90-sky-h1 {
+      font-size: clamp(54px, 10vw, 138px);
+      letter-spacing: 0.02em;
+      position: relative;
+      z-index: 1;
+    }
+    .cin90-sky-plane-popout {
+      max-width: 780px;
+      margin: -58px auto -10px;
+      position: relative;
+      z-index: 5;
+      animation: cin90Float 6s ease-in-out infinite;
+    }
+    .cin90-sky-plane-popout .cin90-cutout-3d-img {
+      max-height: 350px;
+      transform: scale(1.06);
+    }
+    .cin90-sky-destinations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      text-align: left;
+      position: relative;
+      z-index: 6;
+    }
+    .cin90-pill-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-radius: 999px !important;
+      padding: 14px 24px !important;
+    }
+    .cin90-pill-avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    /* Blueprint 2 Specific: Vibrant Orange/Cyan Poster Stage */
+    .cin90-poster-stage {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 78vh;
+    }
+    .cin90-poster-top-meta { text-align: center; }
+    .cin90-poster-stack {
+      position: relative;
+      text-align: center;
+      padding: 12px 0;
+    }
+    .cin90-poster-giant-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(64px, 13.5vw, 184px);
+      line-height: 0.88;
+      color: #ffffff;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    .cin90-poster-figure-popout {
+      position: relative;
+      z-index: 4;
+      width: min(360px, 72vw);
+      margin: -255px auto -18px;
+      animation: cin90Float 5s ease-in-out infinite;
+    }
+    .cin90-poster-figure-popout .cin90-cutout-3d-img {
+      max-height: 430px;
+      width: auto;
+    }
+    .cin90-poster-bottom-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      z-index: 6;
+    }
+    .cin90-poster-replay-card {
+      max-width: 340px;
+    }
+    .cin90-circle-fab {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #090b10;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    }
+
+    /* Blueprint 3 Specific: Lunar Oasis Villa Editorial Split */
+    .cin90-villa-grid {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 980px) {
+      .cin90-villa-grid {
+        grid-template-columns: 1.12fr 0.88fr;
+      }
+    }
+    .cin90-villa-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(50px, 7.2vw, 102px);
+      font-weight: 400;
+      line-height: 0.94;
+    }
+    .cin90-villa-Elevation .cin90-cutout-3d-img {
+      max-height: 290px;
+      transform: scale(1.04);
+    }
+    .cin90-villa-right-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .cin90-cutout-tab-pill {
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #090b10;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* Blueprint 4 Specific: AquaCosmos Orbital HUD */
+    .cin90-hud-stage {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cin90-hud-orbital-ring {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: center;
+      margin-top: 12px;
+    }
+    @media (min-width: 1024px) {
+      .cin90-hud-orbital-ring {
+        grid-template-columns: 290px 1fr 290px;
+      }
+    }
+    .cin90-hud-planet-center {
+      animation: cin90Float 6.5s ease-in-out infinite;
+    }
+    .cin90-orbital-pod {
+      text-align: left;
+      border-radius: 36px;
+    }
+
+    @keyframes cin90Float {
+      0%, 100% { transform: translate3d(0, 0px, 0); }
+      50% { transform: translate3d(0, -12px, 0); }
+    }
+
+    /* Glassmorphism Cards & Counters */
+    .cin90-glass-card {
+      position: relative;
+      border-radius: 26px;
+      background: var(--glass);
+      backdrop-filter: blur(22px) saturate(160%);
+      -webkit-backdrop-filter: blur(22px) saturate(160%);
+      border: 1px solid var(--border);
+      padding: 22px;
+      cursor: pointer;
+      transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.24s ease;
+      overflow: hidden;
+    }
+    .cin90-glass-card:hover {
+      border-color: var(--accent);
+    }
+    .cin90-card-kicker {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .cin90-glass-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .cin90-glass-card p {
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+    .cin90-counters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+    .cin90-counter-box strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3vw, 38px);
+      color: var(--fg);
+    }
+    .cin90-counter-box span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Group 1.3 & 1.5: Sticky Pinned 001-003 Telemetry Section */
+    .cin90-pinned-section {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 88px clamp(20px, 5vw, 84px);
+    }
+    .cin90-pinned-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: start;
+      margin-top: 40px;
+    }
+    @media (min-width: 980px) {
+      .cin90-pinned-grid {
+        grid-template-columns: 1fr 1.1fr 1fr;
+      }
+    }
+    .cin90-sticky-center {
+      position: relative;
+      top: 110px;
+      padding: 28px;
+      border-radius: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    @media (min-width: 980px) {
+      .cin90-sticky-center { position: sticky; }
+    }
+    .cin90-scrub-stage {
+      transition: transform 0.12s linear;
+      will-change: transform;
+    }
+    .cin90-spec-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    .cin90-spec-card.is-active {
+      border-color: var(--accent);
+    }
+
+    /* Group 1.4: Horizontal Scroll Projects Section */
+    .cin90-hscroll-section {
+      padding: 72px clamp(20px, 5vw, 84px);
+      border-top: 1px solid var(--border);
+    }
+    .cin90-hscroll-track {
+      max-width: 1320px;
+      margin: 32px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(260px, 1fr));
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+    .cin90-project-card {
+      padding: 24px;
+      border-radius: 26px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .cin90-project-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+    }
+    .cin90-project-visual {
+      height: 140px;
+      border-radius: 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    /* Group 1.2: Scroll Reveal */
+    .cin90-reveal {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .cin90-reveal.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* Group 3.3: Seamless Fullscreen Page Transition Overlay */
+    .cin90-seamless-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 190;
+      background: rgba(5, 8, 15, 0.88);
+      backdrop-filter: blur(22px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      pointer-events: none;
+    }
+    .cin90-seamless-overlay.is-open { display: flex; }
+    .cin90-seamless-box {
+      width: 100%;
+      max-width: 760px;
+      border-radius: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 36px;
+      pointer-events: auto;
+    }
+
+    .cin90-footer {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 40px clamp(20px, 5vw, 84px);
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    body.is-motion-paused * {
+      animation-play-state: paused !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Group 2.4: SVG Liquid Ripple Filter -->
+  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="cin90LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="4" />
+        <feDisplacementMap id="cin90Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div id="cursorRing" class="cin90-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="cin90-cursor-dot" aria-hidden="true"></div>
+
+  <header class="cin90-edge-top">
+    <a href="#heroStage" class="cin90-brand">
+      <span class="cin90-brand-mark"></span>
+      <span>Cinder Axis Studio</span>
+    </a>
+    <ul class="cin90-nav-links" aria-label="Primary Navigation">
+      <li><a href="#heroStage">01 / Showcase</a></li>
+      <li><a href="#pinnedSpecs">02 / Pinned Telemetry</a></li>
+      <li><a href="#motionProjects">03 / Motion Archive</a></li>
+    </ul>
+    <div class="cin90-edge-controls">
+      <button type="button" id="motionToggleBtn" class="cin90-pill-btn" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="cin90-cta-magnetic" data-magnetic data-next-preview>
+        Explore Spec
+      </button>
+    </div>
+  </header>
+
+  <aside class="cin90-edge-left" aria-label="Slide Numbers">
+    <a href="#heroStage" class="cin90-slide-dot is-active" data-slide-link="0">01</a>
+    <a href="#pinnedSpecs" class="cin90-slide-dot" data-slide-link="1">02</a>
+    <a href="#motionProjects" class="cin90-slide-dot" data-slide-link="2">03</a>
+  </aside>
+
+  <aside class="cin90-edge-right" aria-label="Scroll Scrub Readout">
+    <div class="cin90-telemetry-rail" id="scrollScrubReadout">SCRUB 0% • 0.0°</div>
+  </aside>
+
+  <main id="main">
+    <section id="heroStage" class="cin90-hero">
+      <canvas id="ambientSmokeCanvas" class="cin90-smoke-canvas" aria-hidden="true"></canvas>
+      <div class="cin90-marquee-band" aria-hidden="true">
+        <div class="cin90-marquee-track">CINDER AXIS DOCUMENTARY • URBAN COLLAGE SPLIT • MEDIUM FORMAT RIG • 02/13 ARCHIVE • CINDER AXIS DOCUMENTARY • URBAN COLLAGE SPLIT • MEDIUM FORMAT RIG • 02/13 ARCHIVE • </div>
+      </div>
+
+      
+      <div class="cin90-hero-grid-bike">
+        <div class="cin90-bike-copy" data-parallax="0.08">
+          <div class="cin90-tag-chip" id="activeHeroTag">Cinder Axis Studio • 95% Hero UI Match</div>
+          <h1 class="cin90-display-h1" id="oversizedHeadline">
+            <span class="cin90-split-word is-in">WORKING</span>
+            <span class="cin90-split-word is-in cin90-serif-accent" style="transition-delay:90ms;">IN MOTION</span>
+          </h1>
+          <p class="cin90-lead">Urban documentary cinema rig and splitscreen collage storytelling — capturing kinetic street portraits with medium-format optical precision.</p>
+          <div class="cin90-counters">
+            <div class="cin90-counter-box"><strong data-counter-target="680" data-counter-suffix="g">680g</strong><span>Frame Weight</span></div>
+            <div class="cin90-counter-box"><strong data-counter-target="120" data-counter-suffix="+">120+</strong><span>CFD Tunnel Hrs</span></div>
+            <div class="cin90-counter-box"><strong data-counter-target="1000" data-counter-suffix="+">1000+</strong><span>Torsional N·m</span></div>
+          </div>
+        </div>
+
+        <div class="cin90-bike-stage">
+          <div id="heroPopoutRig" class="cin90-popout-rig" data-tilt-card style="filter: url(#cin90LiquidFilter);">
+            <span class="cin90-cutout-pill">AUTOCLAVE MONOCOQUE • VENETO</span>
+            <div class="cin90-svg-popout"><img class="cin90-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/cinder-axis/assets/cutout.webp'" alt="Cinder Axis Studio 3D Cutout Subject" loading="eager" decoding="async" /></div>
+          </div>
+          <div class="cin90-floating-pair">
+            <article class="cin90-glass-card" data-tilt-card data-seamless-trigger="Harlem Morning Transit Study">
+              <span class="cin90-card-kicker">01 / AERODYNAMIC WAKE</span>
+              <h3>Harlem Morning Transit Study</h3>
+              <p>Click to expand wind-tunnel drag polar &amp; carbon layup dossier (65mm Raw).</p>
+            </article>
+            <article class="cin90-glass-card" data-tilt-card data-seamless-trigger="Chicago Elevated Rail Acoustic">
+              <span class="cin90-card-kicker">02 / BESPOKE GEOMETRY</span>
+              <h3>Chicago Elevated Rail Acoustic</h3>
+              <p>Sub-millimeter custom tube mitering (120 FPS).</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky Pinned Center Subject + 001/002/003 Telemetry -->
+    <section id="pinnedSpecs" class="cin90-pinned-section">
+      <div class="cin90-reveal" style="text-align:center;max-width:680px;margin:0 auto;">
+        <span class="cin90-tag-chip">Sticky Pinned &amp; Scroll Scrubbing</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(28px,4vw,48px);">Cinder Axis Studio — 001 to 003 Engineering</h2>
+      </div>
+
+      <div class="cin90-pinned-grid">
+        <div>
+          <article class="cin90-spec-card cin90-reveal is-active" data-spec-index="001">
+            <span class="cin90-card-kicker">001 / OPTICAL MOUNT</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">80mm f/1.9</div>
+            <h3>Medium-Format Cinema Glass</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Anamorphic street flare profile with zero-distortion edge geometry.</p>
+          </article>
+          <article class="cin90-spec-card cin90-reveal" data-spec-index="002">
+            <span class="cin90-card-kicker">002 / CHASSIS RIG</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">1,140g</div>
+            <h3>Terracotta Anodized Cage</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">CNC-milled aerospace aluminum with brushed brass knurled follow-focus.</p>
+          </article>
+        </div>
+
+        <div class="cin90-sticky-center">
+          <div id="scrubCenterStage" class="cin90-scrub-stage">
+            <img class="cin90-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/cinder-axis/assets/cutout.webp'" alt="Cinder Axis Studio 3D Cutout Subject" loading="eager" decoding="async" />
+          </div>
+          <div id="scrubDialText" style="margin-top:14px;font-size:12px;color:var(--accent);font-weight:700;">
+            SCROLL SCRUB ANGLE: 0.0°
+          </div>
+        </div>
+
+        <div>
+          <article class="cin90-spec-card cin90-reveal" data-spec-index="003">
+            <span class="cin90-card-kicker">003 / ARCHIVE SERIES</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">13 Films</div>
+            <h3>Splitscreen Urban Anthology</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Interactive documentary chapters with live frame-accurate scrub telemetry.</p>
+          </article>
+          <article class="cin90-spec-card cin90-reveal" data-seamless-trigger="Cinder Axis Studio Full Specification Sheet" style="cursor:pointer;">
+            <span class="cin90-card-kicker">004 / INTERACTIVE DOSSIER</span>
+            <div style="font-family:var(--font-display);font-size:28px;font-weight:800;margin:6px 0;color:var(--accent);">Expand View</div>
+            <h3>Seamless Page Transition</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Click to expand full specification view without page reload.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horizontal Scroll Track -->
+    <section id="motionProjects" class="cin90-hscroll-section">
+      <div style="max-width:1320px;margin:0 auto;">
+        <span class="cin90-tag-chip">Featured Motion Projects</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(26px,3.5vw,42px);">Horizontal Scroll Showcase</h2>
+      </div>
+      <div id="hScrollTrack" class="cin90-hscroll-track">
+        
+        <article class="cin90-project-card cin90-reveal" data-tilt-card data-seamless-trigger="Harlem Morning Transit Study">
+          <div class="cin90-project-visual" style="background:radial-gradient(circle at 50% 50%, #ea580c33, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#ea580c;">01 // 65mm Raw</span>
+          </div>
+          <span class="cin90-card-kicker">CHAPTER 01</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Harlem Morning Transit Study</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="cin90-project-card cin90-reveal" data-tilt-card data-seamless-trigger="Chicago Elevated Rail Acoustic">
+          <div class="cin90-project-visual" style="background:radial-gradient(circle at 50% 50%, #f9731633, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#f97316;">02 // 120 FPS</span>
+          </div>
+          <span class="cin90-card-kicker">CHAPTER 02</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Chicago Elevated Rail Acoustic</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="cin90-project-card cin90-reveal" data-tilt-card data-seamless-trigger="London Brutalist Concrete Portrait">
+          <div class="cin90-project-visual" style="background:radial-gradient(circle at 50% 50%, #fb923c33, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#fb923c;">03 // 4:3 Split</span>
+          </div>
+          <span class="cin90-card-kicker">CHAPTER 03</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">London Brutalist Concrete Portrait</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="cin90-project-card cin90-reveal" data-tilt-card data-seamless-trigger="Tokyo Midnight Neon Bokeh">
+          <div class="cin90-project-visual" style="background:radial-gradient(circle at 50% 50%, #fdba7433, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#fdba74;">04 // ISO 3200</span>
+          </div>
+          <span class="cin90-card-kicker">CHAPTER 04</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Tokyo Midnight Neon Bokeh</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cin90-footer">
+    <p>© 2026 Cinder Axis Studio — Bespoke Blueprint (terracotta-collage).</p>
+    <p>Parallax • Sticky Scrub 001-003 • 3D Card Tilt • Liquid Wave • Particle Smoke</p>
+  </footer>
+
+  <div id="seamlessModal" class="cin90-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="cin90-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span class="cin90-tag-chip" style="margin-bottom:0;">Seamless Detail Transition</span>
+        <button type="button" id="closeSeamlessBtn" class="cin90-pill-btn">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:12px;">Cinder Axis Studio</h2>
+      <p style="font-size:15px;line-height:1.65;color:var(--muted);margin-bottom:20px;">Urban documentary cinema rig and splitscreen collage storytelling — capturing kinetic street portraits with medium-format optical precision.</p>
+      <div style="max-height:220px;overflow:hidden;border-radius:18px;border:1px solid var(--border);margin-bottom:20px;padding:12px;background:var(--bg);">
+        <img class="cin90-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/cinder-axis/assets/cutout.webp'" alt="Cinder Axis Studio 3D Cutout Subject" loading="eager" decoding="async" />
+      </div>
+      <button type="button" id="confirmSeamlessBtn" class="cin90-cta-magnetic" style="width:100%;">Return to Live Stage</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var slideLinks = document.querySelectorAll('[data-slide-link]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+
+        var activeIdx = progress < 0.34 ? 0 : progress < 0.72 ? 1 : 2;
+        slideLinks.forEach(function (l, i) { l.classList.toggle('is-active', i === activeIdx); });
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      var revealEls = document.querySelectorAll('.cin90-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.26;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.26;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / r.width - 0.5;
+          var ny = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 9).toFixed(2) + 'deg) rotateX(' + (-ny * 9).toFixed(2) + 'deg)';
+        });
+        card.addEventListener('mouseleave', function () { card.style.transform = ''; });
+      });
+
+      var displacement = document.getElementById('cin90Displacement');
+      var heroRig = document.getElementById('heroPopoutRig');
+      if (heroRig && displacement) {
+        heroRig.addEventListener('mouseenter', function () { if (!motionPaused) displacement.setAttribute('scale', '16'); });
+        heroRig.addEventListener('mouseleave', function () { displacement.setAttribute('scale', '0'); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var openBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(heading) {
+        if (modalTitle && heading) modalTitle.textContent = heading;
+        if (modal) modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (modal) modal.classList.remove('is-open');
+      }
+      if (openBtn) {
+        openBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless('Cinder Axis Studio — Specification View');
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () { openSeamless(el.getAttribute('data-seamless-trigger')); });
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSeamless(); });
+
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var pts = [];
+        for (var i = 0; i < 24; i++) {
+          pts.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, r: 1.5 + Math.random() * 3, vx: (Math.random() - 0.5) * 0.4, vy: -0.2 - Math.random() * 0.4, a: 0.15 + Math.random() * 0.35 });
+        }
+        var f = 0;
+        function loop() {
+          if (!motionPaused && f < 900) {
+            f++;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (var j = 0; j < pts.length; j++) {
+              var pt = pts[j];
+              pt.x += pt.vx; pt.y += pt.vy;
+              if (pt.y < 0) pt.y = canvas.height;
+              ctx.beginPath();
+              ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(255,255,255,' + pt.a.toFixed(2) + ')';
+              ctx.fill();
+            }
+            window.requestAnimationFrame(loop);
+          }
+        }
+        window.requestAnimationFrame(loop);
+      }
+    })();
+  </script>
+</body>
+</html>

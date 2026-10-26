@@ -1,11 +1,12 @@
 /**
- * Autonomous MotionSites Prompt-to-Product Compiler & Catalog Integrator
+ * Autonomous MotionSites Prompt-to-Product Compiler & Catalog Integrator (v2.0 Hallmark + 4 Motion Groups + 3D Cutout)
  * Parses a MotionSites prompt JSON (from web/tools/agent-motionsites/data/<slug>.json),
- * detects the exact prompt archetype (Features Section, Pricing/Calculator, Footer Section,
- * Editorial/Portfolio, or Video Hero), extracts colors, gradients, typography, copy, and videos,
- * builds a prompt-faithful Single-File HTML5/CSS3/Vanilla JS template with +15–20%
- * creative enhancements, syncs public demo, packages .zip via dong-goi.mjs,
- * registers catalog entries (1 Free + 2 Premium daily rule), and records previews.
+ * builds a bespoke, prompt-faithful Single-File HTML5/CSS3/Vanilla JS template with:
+ *   - 3D Studio Product/Subject Cutout (Out-of-bounds Pop-out & Text Masking when cutout-<slug>.webp is present)
+ *   - Group 1 (Scroll): Parallax layers, Scroll-Triggered Reveal, Sticky 001-003 Pinned Telemetry + Scroll Scrubbing, Horizontal Scroll Track
+ *   - Group 2 (Hover & Cursor): Magnetic Buttons, 3D Card Tilt with Specular Glare, Liquid Ripple SVG Filter, Custom Blend-Mode Follower Cursor
+ *   - Group 3 (Text & Transitions): Split-Text Staggered Reveal, Animated Number Counters, Seamless Fullscreen Modal, Infinite Marquee
+ *   - Group 4 (Ambient): Zero-gravity Floating + Canvas Particle/Smoke System
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -20,14 +21,19 @@ const DISTINCT_VIDEO_POOL = [
   'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4',
   'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260503_104800_bc43ae09-f494-43e3-97d7-2f8c1692cfd7.mp4',
   'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5d68-4780-8832-691ef6fb0725.mp4',
-  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260419_024949_c2df2ce2-00c2-4c26-84c6-210c14f3b98e.mp4',
-  'https://assets.mixkit.co/videos/preview/mixkit-abstract-purple-and-blue-digital-waves-41499-large.mp4'
+  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260419_024949_c2df2ce2-00c2-4c26-84c6-210c14f3b98e.mp4'
 ];
 
 function hashSlug(str) {
   let h = 0;
   for (let i = 0; i < str.length; i++) h = ((h << 5) - h + str.charCodeAt(i)) | 0;
   return Math.abs(h);
+}
+
+function getSlugPrefix(slug) {
+  const clean = String(slug || 'ms').replace(/[^a-z0-9]/gi, '').toLowerCase();
+  const h = hashSlug(clean);
+  return `${clean.slice(0, 3)}${(h % 89) + 10}`;
 }
 
 export function extractSpecFromPrompt(data) {
@@ -37,275 +43,1503 @@ export function extractSpecFromPrompt(data) {
   const catRaw = `${data.category || ''} ${data.type || ''} ${title}`.toLowerCase();
   const h = hashSlug(slug);
 
-  // Extract MP4 video URLs from prompt
   const videos = [...new Set([...p.matchAll(/https?:\/\/[^\s"'`<>)]+\.mp4/gi)].map(m => m[0]))];
   const heroVideo = videos[0] || DISTINCT_VIDEO_POOL[h % DISTINCT_VIDEO_POOL.length];
 
-  // Extract hex colors & linear-gradients from prompt
   const hexColors = [...new Set([...p.matchAll(/#(?:[0-9a-fA-F]{6})\b/g)].map(m => m[0]))];
   const gradients = [...new Set([...p.matchAll(/linear-gradient\([^)]+\)/gi)].map(m => m[0]))];
 
-  const accentPalette = ['#FF3D77', '#06B6D4', '#FF5656', '#6366F1', '#10B981', '#F59E0B', '#EC4899', '#3B82F6'];
-  const accent = hexColors.find(c => !/^#(000000|ffffff|0a0a0b|0d0d0d|1a1a1c|1e1e1e|111827)$/i.test(c)) || accentPalette[h % accentPalette.length];
+  const accentPalette = ['#F26522', '#38bdf8', '#f59e0b', '#a855f7', '#10b981', '#ec4899', '#6366f1'];
+  const accent = hexColors.find(c => !/^#(000000|ffffff|efefef|f5f5f5|0a0a0b|0d0d0d|1a1a1c|1e1e1e|111827)$/i.test(c)) || accentPalette[h % accentPalette.length];
 
-  // Detect archetype from prompt content & category
-  let archetype = 'cinematic-hero';
-  if (/calculator|pricing|estimation|slider|perpage|cost/i.test(p) || /calculator|pricing/i.test(catRaw)) {
-    archetype = 'calculator-pricing';
-  } else if (/footer|watermark|stay in touch|subscribe/i.test(p) || /footer/i.test(catRaw)) {
-    archetype = 'footer-architectural';
-  } else if (/featurecard|features|cards|bento|border-box/i.test(p) || /feature/i.test(catRaw)) {
-    archetype = 'features-glow';
-  } else if (!videos[0] && h % 2 === 1) {
-    archetype = 'split-editorial';
-  }
+  const isLight = (slug === 'skyelite-private-jets' || slug === 'modern-agency') ||
+    (/bg-gray-50|bg-\[#EFEFEF\]|bg-white/i.test(p) && !/bg-black|bg-\[#0/i.test(p));
 
-  const isLight = /bg-\[#f|background:\s*#fff|bg-white/i.test(p) && !/bg-\[#0|bg-black|#0A0A0B|#0D0D0D/i.test(p);
-
-  const quoted = [...p.matchAll(/"([^"\n]{4,90})"/g)]
+  const quoted = [...p.matchAll(/"([^"\n]{4,95})"/g)]
     .map(m => m[1].trim())
-    .filter(s => !/^https?:|^@|^\.|^#|flex|grid|relative|absolute|text-|bg-|px-|py-|rounded|blur\(/i.test(s));
+    .filter(s => !/^https?:|^@|^\.|^#|flex|grid|relative|absolute|text-|bg-|px-|py-|rounded|blur\(|Instrument Serif|Inter/i.test(s));
 
-  const headline = quoted.find(s => s.length >= 12 && s.length <= 68) || `${title} — Interactive Studio System`;
-  const subheadline = quoted.find(s => s.length > 48 && s !== headline) || `Precision-built ${title} web component with real-time interactive state, responsive grid geometry, and custom visual telemetry.`;
+  const headline = quoted.find(s => s.length >= 14 && s.length <= 76) || `${title} — Next-Gen Interactive System`;
+  const subheadline = quoted.find(s => s.length > 42 && s !== headline) || `Precision-engineered ${title} web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.`;
+
+  const cutoutPath = path.resolve(root, `web/tools/agent-pinterest/pinterest-assets/cutout-${slug}.webp`);
+  const hasCutout = fs.existsSync(cutoutPath);
 
   return {
     title,
     slug,
-    archetype,
+    catRaw,
     heroVideo,
+    secondaryVideos: videos.slice(1),
     hasCustomVideo: Boolean(videos[0]),
     previewMedia: data.image || data.poster || null,
-    posterMedia: data.poster || data.image || null,
     accent,
     gradients,
     isLight,
     headline: headline.replace(/<br\s*\/?>/gi, ' '),
     subheadline,
-    quoted
+    quoted,
+    hasCutout,
+    promptText: p
   };
 }
 
-export function buildSingleFileHtml(spec) {
-  if (spec.archetype === 'calculator-pricing') {
-    return buildCalculatorHtml(spec);
-  }
-  if (spec.archetype === 'features-glow') {
-    return buildFeaturesGlowHtml(spec);
-  }
-  if (spec.archetype === 'footer-architectural') {
-    return buildFooterStageHtml(spec);
-  }
-  if (spec.archetype === 'split-editorial') {
-    return buildSplitEditorialHtml(spec);
-  }
-  return buildCinematicHeroHtml(spec);
-}
-
-function buildFeaturesGlowHtml(spec) {
-  const g1 = spec.gradients[0] || `linear-gradient(137deg, ${spec.accent} 0%, #FFB1CE 45%, #FF9D3C 100%)`;
-  const g2 = spec.gradients[1] || 'linear-gradient(137deg, #FFFFFF 0%, #7DD3FC 45%, #06B6D4 100%)';
-  const g3 = spec.gradients[2] || 'linear-gradient(137deg, #4361EE 0%, #E0AEFF 45%, #F72585 100%)';
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>${spec.title} — Glowing Feature Architecture</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root { --bg: #0A0A0B; --blur: 45px; }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { min-height: 100vh; background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; padding: 32px 24px 56px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; overflow-x: clip; }
-    .topbar { width: 100%; max-width: 936px; display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; border-radius: 999px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); gap: 12px; flex-wrap: wrap; }
-    .pill { appearance: none; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.06); color: #fff; padding: 8px 16px; border-radius: 999px; font-size: 12px; font-weight: 600; cursor: pointer; }
-    .intro { text-align: center; max-width: 680px; margin: 40px auto; }
-    .intro h1 { font-size: clamp(28px, 4vw, 46px); letter-spacing: -0.03em; margin-bottom: 12px; }
-    .intro p { color: #9ca3af; font-size: 15px; line-height: 1.6; }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%; max-width: 936px; }
-    @media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
-    .card-wrap { position: relative; max-width: 300px; width: 100%; margin: 0 auto; cursor: pointer; }
-    .halo { position: absolute; inset: 0; height: 290px; border-radius: 40px; opacity: 0.62; filter: blur(var(--blur)); pointer-events: none; transition: all 0.3s ease; }
-    .card-wrap:hover .halo { opacity: 0.92; transform: scale(1.05); }
-    .fg { position: relative; height: 290px; border-radius: 40px; border: 8px solid transparent; padding: 26px; display: flex; flex-direction: column; justify-content: space-between; z-index: 2; transition: transform 0.25s ease; }
-    .card-wrap:hover .fg { transform: translateY(-6px); }
-    .modal-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.72); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 16px; pointer-events: none; }
-    .modal-backdrop.is-open { display: flex; }
-    .modal-box { max-width: 480px; width: 100%; border-radius: 28px; background: #141416; border: 1px solid rgba(255,255,255,0.16); padding: 28px; pointer-events: auto; }
-  </style>
-</head>
-<body>
-  <header class="topbar">
-    <strong>✦ ${spec.title}</strong>
-    <button type="button" class="pill" id="openModalBtn" data-next-preview style="position:relative;z-index:120;">Inspect Gradient Specs ↗</button>
-  </header>
-  <section class="intro">
-    <h1>${spec.headline}</h1>
-    <p>${spec.subheadline}</p>
-  </section>
-  <section class="grid">
-    <article class="card-wrap"><div class="halo" style="background:${g1}"></div><div class="fg" style="background:linear-gradient(#1A1A1C,#1A1A1C) padding-box, ${g1} border-box"><strong>01 / Core</strong><div><h2 style="font-size:20px;margin-bottom:8px;">Hardware</h2><p style="font-size:14px;color:#9ca3af;line-height:1.6;">Silent, durable desktop power engineered for deep focus.</p></div></div></article>
-    <article class="card-wrap"><div class="halo" style="background:${g2}"></div><div class="fg" style="background:linear-gradient(#1A1A1C,#1A1A1C) padding-box, ${g2} border-box"><strong>02 / Craft</strong><div><h2 style="font-size:20px;margin-bottom:8px;">Studio</h2><p style="font-size:14px;color:#9ca3af;line-height:1.6;">Pixel-accurate design systems and fluid visual canvases.</p></div></div></article>
-    <article class="card-wrap"><div class="halo" style="background:${g3}"></div><div class="fg" style="background:linear-gradient(#1A1A1C,#1A1A1C) padding-box, ${g3} border-box"><strong>03 / Kinetic</strong><div><h2 style="font-size:20px;margin-bottom:8px;">Motion</h2><p style="font-size:14px;color:#9ca3af;line-height:1.6;">Lively interactive prototypes bridging views and production code.</p></div></div></article>
-  </section>
-  <div id="specModal" class="modal-backdrop" role="dialog" aria-modal="true">
-    <div class="modal-box">
-      <h2 style="margin-bottom:10px;">${spec.title} — Border-Box Inspector</h2>
-      <p style="color:#9ca3af;font-size:14px;line-height:1.6;margin-bottom:16px;">8px transparent border with dual padding-box and border-box gradients over a 45px blurred glow layer.</p>
-      <button type="button" class="pill" id="closeModalBtn">Close (Esc)</button>
-    </div>
-  </div>
+function renderSharedMotionRuntime(p) {
+  return `
   <script>
-    (function(){
-      var m = document.getElementById('specModal');
-      var o = document.getElementById('openModalBtn');
-      var c = document.getElementById('closeModalBtn');
-      if (o) o.addEventListener('click', function(){ m.classList.toggle('is-open'); });
-      if (c) c.addEventListener('click', function(){ m.classList.remove('is-open'); });
-    })();
-  </script>
-</body>
-</html>`;
-}
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
 
-function buildCalculatorHtml(spec) {
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>${spec.title} — Interactive Cost Estimator</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { min-height: 100vh; background: #070708; color: #fff; font-family: 'Inter', sans-serif; padding: 36px 24px; }
-    .wrap { max-width: 1180px; margin: 0 auto; }
-    .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; padding: 12px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.1); }
-    .btn { appearance: none; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); color: #fff; padding: 8px 16px; border-radius: 999px; font-size: 12px; cursor: pointer; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); background: #0D0D0D; }
-    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
-    .col { padding: 36px; }
-    .card { padding: 22px; border-radius: 16px; background: rgba(255,255,255,0.04); margin-bottom: 14px; }
-    .card.highlight { background: linear-gradient(90deg, #ec4899, #f97316); }
-    .modal-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.72); display: none; align-items: center; justify-content: center; padding: 16px; pointer-events: none; }
-    .modal-backdrop.is-open { display: flex; }
-    .modal-box { max-width: 460px; width: 100%; border-radius: 24px; background: #141416; border: 1px solid rgba(255,255,255,0.16); padding: 28px; pointer-events: auto; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header class="topbar">
-      <strong>${spec.title}</strong>
-      <button type="button" class="btn" id="openModalBtn" data-next-preview style="position:relative;z-index:120;">View Itemized Quote ↗</button>
-    </header>
-    <div class="grid">
-      <div class="col">
-        <h1 style="font-size:28px;margin-bottom:16px;">${spec.headline}</h1>
-        <label style="display:block;margin:20px 0 8px;">Pages: <strong id="pVal" style="color:#FF5656;">5</strong></label>
-        <input type="range" id="pRange" min="1" max="30" value="5" style="width:100%;accent-color:#FF5656;">
-      </div>
-      <div class="col" style="border-left:1px solid rgba(255,255,255,0.08);">
-        <div class="card"><div>Typical Agency</div><strong id="aPrice" style="font-size:32px;">$12,000</strong></div>
-        <div class="card highlight"><div>Studio Estimate</div><strong id="sPrice" style="font-size:38px;">$1,299</strong></div>
-      </div>
-    </div>
-  </div>
-  <div id="specModal" class="modal-backdrop" role="dialog" aria-modal="true">
-    <div class="modal-box">
-      <h2 style="margin-bottom:10px;">${spec.title} Breakdown</h2>
-      <p style="color:#9ca3af;font-size:14px;margin-bottom:16px;">Real-time transparent project estimation.</p>
-      <button type="button" class="btn" id="closeModalBtn">Close (Esc)</button>
-    </div>
-  </div>
-  <script>
-    (function(){
-      var r = document.getElementById('pRange');
-      if (r) r.addEventListener('input', function(){
-        var p = Number(r.value) || 1;
-        document.getElementById('pVal').textContent = p;
-        document.getElementById('sPrice').textContent = '$' + (499 + (p - 1) * 200).toLocaleString();
-        document.getElementById('aPrice').textContent = '$' + (8000 + (p - 1) * 1000).toLocaleString();
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.${p}-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
       });
-      var m = document.getElementById('specModal');
-      var o = document.getElementById('openModalBtn');
-      var c = document.getElementById('closeModalBtn');
-      if (o) o.addEventListener('click', function(){ m.classList.toggle('is-open'); });
-      if (c) c.addEventListener('click', function(){ m.classList.remove('is-open'); });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('${p}Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
     })();
-  </script>
-</body>
-</html>`;
+  </script>`;
 }
 
-function buildFooterStageHtml(spec) {
-  return buildSplitEditorialHtml(spec);
-}
+export function buildSingleFileHtml(spec) {
+  const p = getSlugPrefix(spec.slug);
+  const cutoutImg = spec.hasCutout
+    ? `<img class="${p}-cutout-3d" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/${spec.slug}/assets/cutout.webp'" alt="${spec.title} 3D Cutout" loading="eager" decoding="async" />`
+    : `<svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="${spec.accent}" stop-opacity="0.75"/><stop offset="100%" stop-color="${spec.accent}" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="${spec.accent}" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>`;
 
-function buildSplitEditorialHtml(spec) {
-  return `<!DOCTYPE html>
+  // SPECIAL BESPOKE TEMPLATE 1: SkyElite Private Jets (Light Sky-Slate Aviation + Video Hero + 3D Private Jet Cutout Pop-Out)
+  if (spec.slug === 'skyelite-private-jets') {
+    return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>${spec.title} — Editorial Split Studio</title>
+  <title>SkyElite Private Jets — Premium Accessible Aviation</title>
+  <meta name="description" content="Your dedication deserves recognition. Private jet charter and fractional ownership engineered for effortless global mobility.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --glass: rgba(255, 255, 255, 0.78);
+      --fg: #202A36;
+      --muted: #64748b;
+      --border: rgba(32, 42, 54, 0.12);
+      --accent: #202A36;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .${p}-cursor-ring, .${p}-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
+    .${p}-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: #38bdf8; margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 220;
+      max-width: 1280px; margin: 14px auto 0; padding: 14px 28px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      border-radius: 999px; background: rgba(255,255,255,0.86); backdrop-filter: blur(20px);
+      border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(32,42,54,0.06);
+    }
+    .${p}-brand { font-size: 22px; font-weight: 700; color: #111827; text-decoration: none; letter-spacing: -0.03em; }
+    .${p}-nav-links { display: none; list-style: none; gap: 28px; }
+    @media (min-width: 768px) { .${p}-nav-links { display: flex; } }
+    .${p}-nav-links a { color: #111827; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .${p}-nav-links a:hover { color: #4b5563; }
+    .${p}-btn-discover { padding: 9px 18px; border-radius: 999px; background: #d1d5db; color: #1f2937; font-size: 13px; font-weight: 600; border: none; cursor: pointer; }
+    .${p}-btn-book { padding: 9px 20px; border-radius: 999px; background: #202A36; color: #ffffff; font-size: 13px; font-weight: 600; border: none; cursor: pointer; }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; padding: 112px 24px 56px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden; isolation: isolate;
+    }
+    .${p}-hero-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      z-index: -3; opacity: 0.34; pointer-events: none;
+    }
+    .${p}-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
+    .${p}-marquee { position: absolute; bottom: 6%; left: 0; width: 100%; z-index: -1; overflow: hidden; opacity: 0.08; white-space: nowrap; pointer-events: none; }
+    .${p}-marquee-track { display: inline-block; font-size: clamp(64px,11vw,140px); font-weight: 800; color: #202A36; animation: ${p}Marq 24s linear infinite; }
+    @keyframes ${p}Marq { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
+
+    .${p}-kicker { font-size: 13px; font-weight: 700; color: #4b5563; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px; }
+    .${p}-h1-line1 { display: block; font-size: clamp(52px, 8.5vw, 104px); font-weight: 400; color: #6b7280; line-height: 0.96; letter-spacing: -0.04em; }
+    .${p}-h1-line2 { display: block; font-size: clamp(52px, 8.5vw, 104px); font-weight: 600; color: #202A36; line-height: 0.96; letter-spacing: -0.04em; margin-top: -12px; }
+    .${p}-subtitle { font-size: clamp(16px, 1.6vw, 20px); color: #4b5563; max-width: 580px; margin: 16px auto 22px; }
+
+    .${p}-jet-popout {
+      position: relative; z-index: 5; max-width: 780px; width: 100%;
+      margin: -22px auto 12px; animation: ${p}Float 6s ease-in-out infinite;
+    }
+    .${p}-cutout-3d {
+      width: 100%; height: auto; max-height: 330px; object-fit: contain; display: block; margin: 0 auto;
+      filter: drop-shadow(0 28px 38px rgba(32, 42, 54, 0.32));
+    }
+    @keyframes ${p}Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
+
+    .${p}-counters { display: flex; flex-wrap: wrap; justify-content: center; gap: 36px; margin-top: 18px; }
+    .${p}-counter strong { display: block; font-size: 32px; font-weight: 800; color: #202A36; }
+    .${p}-counter span { font-size: 12px; color: #64748b; font-weight: 600; }
+
+    .${p}-section { max-width: 1240px; margin: 0 auto; padding: 80px 24px; }
+    .${p}-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start; margin-top: 36px; }
+    @media (min-width: 960px) { .${p}-pinned-grid { grid-template-columns: 1fr 1.15fr 1fr; } }
+    .${p}-sticky-box { position: sticky; top: 100px; padding: 28px; border-radius: 28px; background: #fff; border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(32,42,54,0.06); text-align: center; }
+    .${p}-spec-card { padding: 24px; border-radius: 24px; background: var(--glass); border: 1px solid var(--border); margin-bottom: 18px; }
+    .${p}-spec-card.is-active { border-color: #202A36; box-shadow: 0 12px 28px rgba(32,42,54,0.08); }
+    .${p}-hscroll-track { display: grid; grid-template-columns: repeat(4, minmax(260px, 1fr)); gap: 20px; overflow-x: auto; padding-bottom: 12px; margin-top: 28px; }
+    .${p}-route-card { padding: 24px; border-radius: 24px; background: #fff; border: 1px solid var(--border); cursor: pointer; transition: transform 0.25s; }
+    .${p}-route-card:hover { transform: translateY(-6px); }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(15,23,42,0.76); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 680px; width: 100%; border-radius: 28px; background: #ffffff; color: #202A36; padding: 32px; pointer-events: auto; box-shadow: 0 25px 60px rgba(0,0,0,0.25); }
+    body.is-motion-paused * { animation-play-state: paused !important; }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+    <defs>
+      <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="3" />
+        <feDisplacementMap id="${p}Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <header class="${p}-navbar">
+    <a href="#heroStage" class="${p}-brand">SkyElite</a>
+    <ul class="${p}-nav-links">
+      <li><a href="#heroStage">Start</a></li>
+      <li><a href="#pinnedSpecs">Story</a></li>
+      <li><a href="#pinnedSpecs">Rates</a></li>
+      <li><a href="#motionProjects">Benefits</a></li>
+      <li><a href="#motionProjects">FAQ</a></li>
+    </ul>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="${p}-btn-discover" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-book" data-magnetic data-next-preview>Book Now</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="heroStage" class="${p}-hero">
+      <video id="heroBgVideo" class="${p}-hero-video" src="${spec.heroVideo}" autoplay loop muted playsinline preload="auto"></video>
+      <canvas id="ambientSmokeCanvas" class="${p}-smoke-canvas" aria-hidden="true"></canvas>
+      <div class="${p}-marquee" aria-hidden="true">
+        <div class="${p}-marquee-track">SKYELITE PRIVATE JETS • GLOBAL ULTRA-LONG RANGE • MACH 0.925 • </div>
+      </div>
+
+      <div data-parallax="0.08">
+        <p class="${p}-kicker">PRIVATE JETS</p>
+        <h1 id="oversizedHeadline">
+          <span class="${p}-h1-line1">Premium.</span>
+          <span class="${p}-h1-line2">Accessible.</span>
+        </h1>
+        <p class="${p}-subtitle">Your dedication deserves recognition.</p>
+        <div style="display:flex;gap:12px;justify-content:center;margin-bottom:10px;">
+          <button type="button" class="${p}-btn-discover" data-magnetic data-seamless-trigger="Discover SkyElite Fleet">Discover</button>
+          <button type="button" class="${p}-btn-book" data-magnetic data-seamless-trigger="Instant Private Jet Charter Quote">Book Now</button>
+        </div>
+      </div>
+
+      <div id="heroPopoutRig" class="${p}-jet-popout" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+        ${cutoutImg}
+      </div>
+
+      <div class="${p}-counters">
+        <div class="${p}-counter"><strong data-counter-target="8000" data-counter-suffix=" NM">8000 NM</strong><span>Nonstop Range</span></div>
+        <div class="${p}-counter"><strong data-counter-target="120" data-counter-suffix="+">120+</strong><span>FBO Terminals</span></div>
+        <div class="${p}-counter"><strong data-counter-target="15" data-counter-suffix=" Min">15 Min</strong><span>Boarding Ramp</span></div>
+      </div>
+    </section>
+
+    <section id="pinnedSpecs" class="${p}-section">
+      <div class="${p}-reveal" style="text-align:center;max-width:640px;margin:0 auto;">
+        <p class="${p}-kicker">001 — 003 FLEET TELEMETRY</p>
+        <h2 style="font-size:clamp(28px,4vw,44px);">Flagship Aviation Specifications</h2>
+      </div>
+      <div class="${p}-pinned-grid">
+        <div>
+          <article class="${p}-spec-card ${p}-reveal is-active" data-spec-index="001">
+            <span class="${p}-kicker">001 / PROPULSION</span>
+            <h3 style="font-size:22px;margin:6px 0;">Mach 0.925 Cruise</h3>
+            <p style="font-size:14px;color:var(--muted);">Twin Pearl 700 high-bypass turbofans delivering whisper-quiet transoceanic speed.</p>
+          </article>
+          <article class="${p}-spec-card ${p}-reveal" data-spec-index="002">
+            <span class="${p}-kicker">002 / PRESSURIZATION</span>
+            <h3 style="font-size:22px;margin:6px 0;">2,916 ft Cabin Altitude</h3>
+            <p style="font-size:14px;color:var(--muted);">100% fresh plasma-ionized air renewal every two minutes at FL510.</p>
+          </article>
+        </div>
+        <div class="${p}-sticky-box">
+          <div id="scrubCenterStage">${cutoutImg}</div>
+          <p id="scrubDialText" style="margin-top:12px;font-size:12px;font-weight:700;color:#202A36;">SCROLL SCRUB ANGLE: 0.0°</p>
+        </div>
+        <div>
+          <article class="${p}-spec-card ${p}-reveal" data-spec-index="003">
+            <span class="${p}-kicker">003 / TRANSPARENT RATES</span>
+            <h3 style="font-size:22px;margin:6px 0;">$6,400 / Flight Hr</h3>
+            <p style="font-size:14px;color:var(--muted);">Zero hidden positioning fees across 120+ executive terminals worldwide.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="motionProjects" class="${p}-section">
+      <h2 style="font-size:clamp(26px,3.5vw,38px);">Popular Private Corridors</h2>
+      <div class="${p}-hscroll-track">
+        <article class="${p}-route-card ${p}-reveal" data-tilt-card data-seamless-trigger="Geneva to Teterboro Corridor">
+          <span class="${p}-kicker">CORRIDOR 01</span>
+          <h3 style="margin:8px 0;">Geneva ✈ Teterboro</h3>
+          <p style="font-size:13px;color:var(--muted);">7h 40m Nonstop • Gulfstream G800</p>
+        </article>
+        <article class="${p}-route-card ${p}-reveal" data-tilt-card data-seamless-trigger="London Farnborough to Dubai">
+          <span class="${p}-kicker">CORRIDOR 02</span>
+          <h3 style="margin:8px 0;">London ✈ Dubai DWC</h3>
+          <p style="font-size:13px;color:var(--muted);">6h 15m Nonstop • Global 7500</p>
+        </article>
+        <article class="${p}-route-card ${p}-reveal" data-tilt-card data-seamless-trigger="Tokyo Haneda to Singapore">
+          <span class="${p}-kicker">CORRIDOR 03</span>
+          <h3 style="margin:8px 0;">Tokyo ✈ Singapore</h3>
+          <p style="font-size:13px;color:var(--muted);">6h 30m Nonstop • Praetor 600</p>
+        </article>
+        <article class="${p}-route-card ${p}-reveal" data-tilt-card data-seamless-trigger="Miami Opa-Locka to Aspen">
+          <span class="${p}-kicker">CORRIDOR 04</span>
+          <h3 style="margin:8px 0;">Miami ✈ Aspen</h3>
+          <p style="font-size:13px;color:var(--muted);">3h 55m Nonstop • Challenger 3500</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span class="${p}-kicker" style="margin:0;">SkyElite Charter Dossier</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-discover">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:26px;margin-bottom:10px;">SkyElite Private Jets</h2>
+      <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:16px;">Your dedication deserves recognition. Instant tail-number assignment and private ramp clearance in 15 minutes.</p>
+      <div style="margin-bottom:16px;">${cutoutImg}</div>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-book" style="width:100%;">Confirm Flight Brief</button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // SPECIAL BESPOKE TEMPLATE 2: Modern Agency (Axion Studio — Light Gray #EFEFEF + Orange #F26522 Text-Roll Hover + Live London Clock + 3 Sections)
+  if (spec.slug === 'modern-agency') {
+    const imgSmall = 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260516_090123_74be96d4-9c1b-40cf-932a-96f4f4babed3.png&w=1280&q=85';
+    const imgLarge = 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260516_090133_c157d30b-a99a-4477-bec1-a446149ec3f2.png&w=1280&q=85';
+    const vidNarrativ = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260516_122702_390f5305-8719-41d5-ae80-d23ab3796c28.mp4';
+    const vidLuminar = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260516_123323_f909c2b8-ff6c-4edf-882b-8ebcdbe389b5.mp4';
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Axion Studio — Modern Agency &amp; Digital Experiences</title>
+  <meta name="description" content="We craft digital experiences for brands ready to dominate their category online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #EFEFEF;
+      --fg: #111827;
+      --muted: #4b5563;
+      --accent: #F26522;
+      --border: rgba(17, 24, 39, 0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .${p}-cursor-ring, .${p}-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
+    .${p}-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: #F26522; margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    /* Pill White Navbar */
+    .${p}-nav-wrap { position: fixed; top: 12px; left: 0; right: 0; z-index: 220; max-width: 1440px; margin: 0 auto; padding: 0 16px; }
+    .${p}-navbar {
+      background: #ffffff; border-radius: 999px; padding: 6px 10px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .${p}-logo-circle {
+      width: 38px; height: 38px; border-radius: 50%; background: #111827; color: #fff;
+      font-size: 11px; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; text-decoration: none;
+    }
+    .${p}-nav-links { display: none; list-style: none; gap: 24px; }
+    @media (min-width: 768px) { .${p}-nav-links { display: flex; } }
+    .${p}-nav-links a { font-size: 14px; color: #111827; text-decoration: none; font-weight: 500; }
+    .${p}-nav-right { display: flex; align-items: center; gap: 14px; }
+    .${p}-meta-text { display: none; font-size: 13px; color: #4b5563; }
+    @media (min-width: 1024px) { .${p}-meta-text { display: inline-flex; align-items: center; gap: 6px; } }
+
+    /* Text-Roll Button */
+    .${p}-roll-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #111827; color: #fff; border: none; border-radius: 999px;
+      padding: 7px 8px 7px 18px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none;
+    }
+    .${p}-roll-btn.orange { background: #F26522; padding: 9px 10px 9px 22px; font-size: 14px; }
+    .${p}-roll-window { height: 20px; overflow: hidden; display: inline-block; }
+    .${p}-roll-track { display: flex; flex-direction: column; transition: transform 0.5s cubic-bezier(0.25,0.1,0.25,1); }
+    .${p}-roll-btn:hover .${p}-roll-track { transform: translateY(-50%); }
+    .${p}-roll-arrow {
+      width: 26px; height: 26px; border-radius: 50%; background: #fff; color: #111827;
+      display: inline-flex; align-items: center; justify-content: center;
+      transition: transform 0.5s cubic-bezier(0.25,0.1,0.25,1);
+    }
+    .${p}-roll-btn.orange .${p}-roll-arrow { color: #F26522; }
+    .${p}-roll-btn:hover .${p}-roll-arrow { transform: rotate(-45deg); }
+
+    /* Section 1: Hero with ChromaFlow Orange Shader Gradient */
+    .${p}-hero {
+      position: relative; min-height: 100vh; padding: 110px clamp(20px,4vw,48px) 64px;
+      display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; isolation: isolate;
+      background:
+        radial-gradient(circle at 72% 28%, rgba(255, 95, 3, 0.34) 0%, rgba(255, 95, 3, 0.08) 38%, transparent 68%),
+        radial-gradient(circle at 24% 62%, rgba(255, 255, 255, 0.9) 0%, transparent 55%),
+        #EFEFEF;
+    }
+    .${p}-fluted-overlay {
+      position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background: repeating-linear-gradient(121deg, rgba(255,255,255,0.24) 0px, rgba(255,255,255,0.24) 12px, rgba(0,0,0,0.02) 12px, rgba(0,0,0,0.02) 24px);
+    }
+    .${p}-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+    .${p}-hero-inner { max-width: 1440px; width: 100%; margin: 0 auto; }
+    .${p}-hero-h1 {
+      font-size: clamp(36px, 5.2vw, 68px); font-weight: 500; line-height: 1.08;
+      letter-spacing: -0.03em; color: #111827; max-width: 980px;
+    }
+    .${p}-cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 32px; }
+    .${p}-partner-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #ffffff; padding: 10px 16px; border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 13px; font-weight: 600;
+    }
+
+    /* Section 2: About (White Background, 3-Column Asymmetric Grid) */
+    .${p}-about { background: #ffffff; padding: 96px clamp(20px,4vw,48px); }
+    .${p}-container { max-width: 1440px; margin: 0 auto; }
+    .${p}-badge-row { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+    .${p}-num-circle { width: 28px; height: 28px; border-radius: 50%; background: #111827; color: #fff; font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+    .${p}-pill-label { padding: 5px 14px; border-radius: 999px; border: 1px solid #e5e7eb; font-size: 13px; font-weight: 500; }
+    .${p}-about-h2 { font-size: clamp(28px, 4vw, 52px); font-weight: 500; line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 56px; max-width: 780px; }
+    .${p}-about-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: end; }
+    @media (min-width: 1024px) { .${p}-about-grid { grid-template-columns: 26% 1fr 48%; } }
+    .${p}-about-img { width: 100%; border-radius: 18px; object-fit: cover; display: block; }
+
+    /* Section 3: Case Studies (#F5F5F5 Background, 2-Column Video Cards) */
+    .${p}-cases { background: #F5F5F5; padding: 96px clamp(20px,4vw,48px); }
+    .${p}-cases-grid { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 40px; }
+    @media (min-width: 768px) { .${p}-cases-grid { grid-template-columns: 1fr 1fr; } }
+    .${p}-case-media { position: relative; border-radius: 20px; overflow: hidden; background: #1a1d2e; aspect-ratio: 4/3; cursor: pointer; }
+    .${p}-case-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .${p}-case-fab {
+      position: absolute; bottom: 16px; left: 16px; padding: 8px 16px;
+      border-radius: 999px; background: #ffffff; color: #111827; font-size: 13px; font-weight: 600;
+    }
+
+    /* Sticky 001-003 Telemetry Section */
+    .${p}-pinned-sec { background: #ffffff; padding: 80px clamp(20px,4vw,48px); border-top: 1px solid var(--border); }
+    .${p}-pinned-grid { max-width: 1440px; margin: 32px auto 0; display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 960px) { .${p}-pinned-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .${p}-spec-card { padding: 24px; border-radius: 20px; background: #F5F5F5; border: 1px solid var(--border); }
+    .${p}-spec-card.is-active { border-color: #F26522; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(17,24,39,0.72); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 640px; width: 100%; border-radius: 24px; background: #ffffff; color: #111827; padding: 32px; pointer-events: auto; }
+  </style>
+</head>
+<body>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <div class="${p}-nav-wrap">
+    <header class="${p}-navbar">
+      <div style="display:flex;align-items:center;gap:24px;">
+        <a href="#heroStage" class="${p}-logo-circle">AX</a>
+        <ul class="${p}-nav-links">
+          <li><a href="#caseStudies">Projects</a></li>
+          <li><a href="#aboutStudio">Studio</a></li>
+          <li><a href="#pinnedSpecs">Journal</a></li>
+          <li><a href="#caseStudies">Connect</a></li>
+        </ul>
+      </div>
+      <div class="${p}-nav-right">
+        <span class="${p}-meta-text">Taking on projects for Q1 2026</span>
+        <span class="${p}-meta-text">🕒 <span id="londonClock">14:30 in London</span></span>
+        <button type="button" id="motionToggleBtn" class="${p}-pill-label" style="background:#fff;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-roll-btn" data-magnetic data-next-preview>
+          <span class="${p}-roll-window"><span class="${p}-roll-track"><span>Book a strategy call</span><span>Book a strategy call</span></span></span>
+          <span class="${p}-roll-arrow">↗</span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section id="heroStage" class="${p}-hero">
+      <div class="${p}-fluted-overlay" aria-hidden="true"></div>
+      <canvas id="ambientSmokeCanvas" class="${p}-smoke-canvas" aria-hidden="true"></canvas>
+      <div class="${p}-hero-inner" data-parallax="0.06">
+        <p style="font-size:14px;font-weight:600;margin-bottom:20px;">Axion Studio</p>
+        <h1 class="${p}-hero-h1" id="oversizedHeadline">
+          We craft digital experiences for brands ready to dominate their category online.
+        </h1>
+        <div class="${p}-cta-row">
+          <button type="button" class="${p}-roll-btn orange" data-magnetic data-seamless-trigger="Start a Project with Axion Studio">
+            <span class="${p}-roll-window"><span class="${p}-roll-track"><span>Start a project</span><span>Start a project</span></span></span>
+            <span class="${p}-roll-arrow">→</span>
+          </button>
+          <div class="${p}-partner-badge" data-tilt-card>
+            <span style="color:#E8704E;font-size:18px;">✦</span>
+            <span>Certified Partner</span>
+            <span style="background:#111827;color:#fff;font-size:11px;padding:2px 8px;border-radius:4px;">Featured</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aboutStudio" class="${p}-about">
+      <div class="${p}-container">
+        <div class="${p}-badge-row">
+          <span class="${p}-num-circle">1</span>
+          <span class="${p}-pill-label">Introducing Axion</span>
+        </div>
+        <h2 class="${p}-about-h2">Strategy-led creatives, delivering results in digital and beyond.</h2>
+        <div class="${p}-about-grid">
+          <img src="${imgSmall}" alt="Axion Studio Craft" class="${p}-about-img" style="aspect-ratio:438/346;" loading="lazy" />
+          <div style="padding:12px 0;">
+            <p style="font-size:17px;line-height:1.65;font-weight:500;margin-bottom:24px;">Through research, creative thinking and iteration we help growing brands realize their digital full potential.</p>
+            <button type="button" class="${p}-roll-btn orange" data-magnetic data-seamless-trigger="About Axion Studio">
+              <span class="${p}-roll-window"><span class="${p}-roll-track"><span>About our studio</span><span>About our studio</span></span></span>
+              <span class="${p}-roll-arrow">→</span>
+            </button>
+          </div>
+          <img src="${imgLarge}" alt="Axion Studio Direction" class="${p}-about-img" style="aspect-ratio:3/2;" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="caseStudies" class="${p}-cases">
+      <div class="${p}-container">
+        <div class="${p}-badge-row">
+          <span class="${p}-num-circle">2</span>
+          <span class="${p}-pill-label">Featured client work</span>
+        </div>
+        <h2 class="${p}-about-h2" style="margin-bottom:16px;">Our projects</h2>
+        <div class="${p}-cases-grid">
+          <article class="${p}-reveal" data-tilt-card data-seamless-trigger="Narrativ — Site of the Month 2025">
+            <div class="${p}-case-media">
+              <video src="${vidNarrativ}" autoplay muted loop playsinline preload="metadata"></video>
+              <span class="${p}-case-fab">🔗 Learn more</span>
+            </div>
+            <p style="font-size:14px;color:#4b5563;margin-top:14px;">Winner of Site of the Month 2025 - an interactive 3D showcase driving record engagement</p>
+            <h3 style="font-size:16px;font-weight:700;margin-top:4px;">Narrativ</h3>
+          </article>
+          <article class="${p}-reveal" data-tilt-card data-seamless-trigger="Luminar — Brand Conversion Platform">
+            <div class="${p}-case-media">
+              <video src="${vidLuminar}" autoplay muted loop playsinline preload="metadata"></video>
+              <span class="${p}-case-fab" style="background:#111827;color:#fff;">View case study →</span>
+            </div>
+            <p style="font-size:14px;color:#4b5563;margin-top:14px;">Transforming a dated platform into a conversion-focused brand experience</p>
+            <h3 style="font-size:16px;font-weight:700;margin-top:4px;">Luminar</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pinnedSpecs" class="${p}-pinned-sec">
+      <div class="${p}-container">
+        <div class="${p}-pinned-grid">
+          <div class="${p}-spec-card is-active" data-spec-index="001">
+            <strong data-counter-target="120" data-counter-suffix="+" style="font-size:36px;color:#F26522;">120+</strong>
+            <h3 style="margin:6px 0;">001 / Category Leaders</h3>
+            <p style="font-size:14px;color:#4b5563;">Global design systems and WebGL shader experiences shipped since 2021.</p>
+          </div>
+          <div class="${p}-spec-card" id="scrubCenterStage" data-spec-index="002">
+            <strong data-counter-target="98" data-counter-suffix="%" style="font-size:36px;color:#111827;">98%</strong>
+            <h3 style="margin:6px 0;">002 / Conversion Uplift</h3>
+            <p id="scrubDialText" style="font-size:13px;color:#F26522;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
+          </div>
+          <div class="${p}-spec-card" data-spec-index="003">
+            <strong data-counter-target="14" data-counter-suffix=" SOTD" style="font-size:36px;color:#111827;">14 SOTD</strong>
+            <h3 style="margin:6px 0;">003 / Awwwards &amp; FWA</h3>
+            <p style="font-size:14px;color:#4b5563;">Recognized for real-time ChromaFlow shaders and tactile micro-interactions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span class="${p}-pill-label">Axion Studio Strategy Call</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill-label" style="background:#fff;cursor:pointer;">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:26px;margin-bottom:10px;">Book a Q1 2026 Strategy Call</h2>
+      <p style="font-size:14px;color:#4b5563;line-height:1.6;margin-bottom:18px;">We partner with ambitious founders and marketing teams to design category-defining websites and design systems.</p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-roll-btn orange">Confirm Discovery Slot →</button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // SPECIAL BESPOKE TEMPLATE 3: Asme ("Built for the curious" — Dark Cinematic Video + Liquid Glass Mask-Composite Border + 3D Curiosity Core Cutout)
+  if (spec.slug === 'asme') {
+    const asmeVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Asme — Built for the Curious</title>
+  <meta name="description" content="Stay updated with the latest news and insights. Liquid glass spatial interface built for the curious.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #000000;
+      --fg: #ffffff;
+      --muted: rgba(255, 255, 255, 0.72);
+      --accent: #f59e0b;
+    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { min-height: 100vh; background: #0c0d10; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; padding: 28px 32px; }
-    .nav { max-width: 1240px; margin: 0 auto 40px; display: flex; justify-content: space-between; align-items: center; }
-    .pill { border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.06); color: #fff; padding: 9px 18px; border-radius: 999px; font-size: 13px; cursor: pointer; }
-    .split { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 28px; align-items: stretch; }
-    @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
-    .pane { border-radius: 28px; padding: 40px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03); }
-    .modal-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.72); display: none; align-items: center; justify-content: center; padding: 16px; pointer-events: none; }
-    .modal-backdrop.is-open { display: flex; }
-    .modal-box { max-width: 460px; width: 100%; border-radius: 24px; background: #14151a; border: 1px solid rgba(255,255,255,0.16); padding: 28px; pointer-events: auto; }
+    html, body { background: #000; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .${p}-cursor-ring, .${p}-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
+    .${p}-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: #f59e0b; margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    /* Authentic Liquid Glass CSS from Asme Specification */
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.04);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.14);
+      position: relative;
+      overflow: hidden;
+    }
+    .liquid-glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.48) 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.48) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; display: flex; flex-direction: column;
+      justify-content: space-between; overflow: hidden; isolation: isolate; padding: 24px;
+    }
+    .${p}-bg-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      transform: translateY(17%); z-index: -3; pointer-events: none; opacity: 0.72;
+    }
+    .${p}-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
+
+    .${p}-nav {
+      position: relative; z-index: 220; width: 100%; max-width: 1024px; margin: 0 auto;
+      border-radius: 999px; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-nav-links { display: none; list-style: none; gap: 32px; }
+    @media (min-width: 768px) { .${p}-nav-links { display: flex; } }
+    .${p}-nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .${p}-nav-links a:hover { color: #fff; }
+
+    .${p}-center {
+      position: relative; z-index: 10; max-width: 680px; width: 100%; margin: auto;
+      text-align: center; padding: 28px 0;
+    }
+    .${p}-serif-h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(48px, 7.5vw, 86px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.02;
+      margin-bottom: 18px;
+    }
+    .${p}-cutout-wrap {
+      max-width: 280px; margin: -18px auto 16px;
+      animation: ${p}Float 5.5s ease-in-out infinite;
+    }
+    .${p}-cutout-3d {
+      width: 100%; height: auto; max-height: 240px; object-fit: contain; display: block; margin: 0 auto;
+      filter: drop-shadow(0 24px 36px rgba(0,0,0,0.75)) drop-shadow(0 0 24px rgba(245,158,11,0.28));
+    }
+    @keyframes ${p}Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-10px,0); } }
+
+    .${p}-email-bar {
+      border-radius: 999px; padding: 8px 8px 8px 24px;
+      display: flex; align-items: center; gap: 12px; max-width: 540px; margin: 0 auto 14px;
+    }
+    .${p}-email-input {
+      flex: 1; background: transparent; border: none; color: #fff; font-size: 15px; outline: none;
+    }
+    .${p}-email-submit {
+      width: 42px; height: 42px; border-radius: 50%; background: #ffffff; color: #000000;
+      border: none; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+    }
+
+    .${p}-section { max-width: 1180px; margin: 0 auto; padding: 80px 24px; }
+    .${p}-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; margin-top: 32px; }
+    @media (min-width: 960px) { .${p}-pinned-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .${p}-card { padding: 24px; border-radius: 28px; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(0,0,0,0.84); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 620px; width: 100%; border-radius: 32px; background: #0c0c0e; border: 1px solid rgba(255,255,255,0.18); padding: 36px; pointer-events: auto; }
   </style>
 </head>
 <body>
-  <header class="nav">
-    <strong>${spec.title}</strong>
-    <button type="button" class="pill" id="openModalBtn" data-next-preview style="position:relative;z-index:120;">Explore Dossier ↗</button>
-  </header>
-  <main class="split">
-    <section class="pane">
-      <h1 style="font-family:'Instrument Serif',serif;font-size:clamp(38px,5vw,68px);font-weight:400;line-height:1.05;margin-bottom:18px;">${spec.headline}</h1>
-      <p style="color:#94a3b8;font-size:16px;line-height:1.65;">${spec.subheadline}</p>
-    </section>
-    <aside class="pane" style="background:linear-gradient(145deg, ${spec.accent}22, rgba(255,255,255,0.02));display:flex;flex-direction:column;justify-content:space-between;gap:18px;">
-      ${spec.previewMedia ? `<div style="border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,0.12);background:#000;"><img src="${spec.previewMedia}" alt="${spec.title} preview" style="width:100%;height:260px;object-fit:cover;display:block;"></div>` : ''}
-      <div>
-        <h2 style="font-size:20px;margin-bottom:10px;">Interactive Telemetry</h2>
-        <p style="color:#94a3b8;font-size:14px;line-height:1.6;">Responsive asymmetric architecture with adaptive color tokens.</p>
+  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+    <defs>
+      <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="7" />
+        <feDisplacementMap id="${p}Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <main>
+    <section id="heroStage" class="${p}-hero">
+      <video id="heroBgVideo" class="${p}-bg-video" src="${asmeVideo}" autoplay loop muted playsinline preload="auto"></video>
+      <canvas id="ambientSmokeCanvas" class="${p}-smoke-canvas" aria-hidden="true"></canvas>
+
+      <header class="${p}-nav liquid-glass">
+        <div style="display:flex;align-items:center;gap:28px;">
+          <a href="#heroStage" style="color:#fff;text-decoration:none;font-weight:600;font-size:18px;display:inline-flex;align-items:center;gap:8px;">🌐 Asme</a>
+          <ul class="${p}-nav-links">
+            <li><a href="#pinnedSpecs">Features</a></li>
+            <li><a href="#pinnedSpecs">Pricing</a></li>
+            <li><a href="#motionProjects">About</a></li>
+          </ul>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <button type="button" id="motionToggleBtn" class="liquid-glass" style="color:#fff;padding:8px 16px;border-radius:999px;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+          <button type="button" id="exploreMagneticBtn" class="liquid-glass" style="color:#fff;padding:9px 22px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;" data-magnetic data-next-preview>Login</button>
+        </div>
+      </header>
+
+      <div class="${p}-center" data-parallax="0.07">
+        <h1 class="${p}-serif-h1" id="oversizedHeadline">Built for the curious</h1>
+        <div id="heroPopoutRig" class="${p}-cutout-wrap" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+          ${cutoutImg}
+        </div>
+        <form class="${p}-email-bar liquid-glass" onsubmit="event.preventDefault();">
+          <input type="email" class="${p}-email-input" placeholder="Enter your email" aria-label="Enter your email" />
+          <button type="submit" class="${p}-email-submit" data-magnetic data-seamless-trigger="Subscribed to Asme Curiosity Dispatch" aria-label="Subscribe">→</button>
+        </form>
+        <p style="font-size:14px;color:var(--muted);line-height:1.6;max-width:480px;margin:0 auto 18px;">
+          Stay updated with the latest news and insights. Subscribe to our newsletter today and never miss out on exciting updates.
+        </p>
+        <button type="button" class="liquid-glass" style="color:#fff;padding:12px 32px;border-radius:999px;font-size:14px;font-weight:500;cursor:pointer;" data-magnetic data-seamless-trigger="The Asme Curiosity Manifesto">
+          Manifesto
+        </button>
       </div>
-    </aside>
+
+      <div style="position:relative;z-index:10;display:flex;justify-content:center;gap:16px;padding-bottom:8px;">
+        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Instagram" data-magnetic>IG</button>
+        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Twitter" data-magnetic>𝕏</button>
+        <button type="button" class="liquid-glass" style="width:48px;height:48px;border-radius:50%;color:#fff;cursor:pointer;" aria-label="Globe" data-magnetic>🌐</button>
+      </div>
+    </section>
+
+    <section id="pinnedSpecs" class="${p}-section">
+      <div class="${p}-pinned-grid">
+        <article class="${p}-card liquid-glass ${p}-reveal" data-tilt-card data-spec-index="001">
+          <span style="font-size:11px;color:#f59e0b;font-weight:700;">001 / LIQUID GLASS OPTICS</span>
+          <strong data-counter-target="120" data-counter-suffix="Hz" style="display:block;font-size:34px;margin:6px 0;">120Hz</strong>
+          <p style="font-size:13px;color:var(--muted);">Luminosity blend-mode refraction with 1.4px mask-composite specular border.</p>
+        </article>
+        <div class="${p}-card liquid-glass" id="scrubCenterStage" style="text-align:center;">
+          ${cutoutImg}
+          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:#f59e0b;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
+        </div>
+        <article class="${p}-card liquid-glass ${p}-reveal" data-tilt-card data-spec-index="003">
+          <span style="font-size:11px;color:#f59e0b;font-weight:700;">002 / CURIOSITY NETWORK</span>
+          <strong data-counter-target="50" data-counter-suffix="K+" style="display:block;font-size:34px;margin:6px 0;">50K+</strong>
+          <p style="font-size:13px;color:var(--muted);">Researchers, engineers, and designers receiving weekly spatial dispatches.</p>
+        </article>
+      </div>
+    </section>
   </main>
-  <div id="specModal" class="modal-backdrop" role="dialog" aria-modal="true">
-    <div class="modal-box">
-      <h2 style="margin-bottom:10px;">${spec.title}</h2>
-      <p style="color:#94a3b8;font-size:14px;margin-bottom:16px;">${spec.subheadline}</p>
-      <button type="button" class="pill" id="closeModalBtn">Close (Esc)</button>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-size:12px;color:#f59e0b;font-weight:700;">ASME MANIFESTO</span>
+        <button type="button" id="closeSeamlessBtn" class="liquid-glass" style="color:#fff;padding:6px 14px;border-radius:999px;cursor:pointer;">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:'Instrument Serif',serif;font-size:36px;font-weight:400;margin-bottom:12px;">Built for the curious</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:18px;">We believe software should feel like physical optics — responsive to light, curiosity, and human intuition.</p>
+      <div style="margin-bottom:18px;">${cutoutImg}</div>
+      <button type="button" id="confirmSeamlessBtn" class="liquid-glass" style="width:100%;color:#fff;padding:12px;border-radius:999px;cursor:pointer;">Return to Experience</button>
     </div>
   </div>
-  <script>
-    (function(){
-      var m = document.getElementById('specModal');
-      var o = document.getElementById('openModalBtn');
-      var c = document.getElementById('closeModalBtn');
-      if (o) o.addEventListener('click', function(){ m.classList.toggle('is-open'); });
-      if (c) c.addEventListener('click', function(){ m.classList.remove('is-open'); });
-    })();
-  </script>
+  ${renderSharedMotionRuntime(p)}
 </body>
 </html>`;
-}
+  }
 
-function buildCinematicHeroHtml(spec) {
-  const bg = spec.isLight ? '#f8fafc' : '#050508';
-  const fg = spec.isLight ? '#0a1b33' : '#ffffff';
-  const muted = spec.isLight ? '#64748b' : 'rgba(255,255,255,0.74)';
-  const cardBg = spec.isLight ? 'rgba(255,255,255,0.86)' : 'rgba(255,255,255,0.05)';
-  const borderCol = spec.isLight ? 'rgba(15,23,42,0.1)' : 'rgba(255,255,255,0.16)';
+  // SPECIAL BESPOKE TEMPLATE 4: Innovation ("Know it all." — Liquid Glass Dark Optical Prism + Two-Tier Header + 5 Partner Strip)
+  if (spec.slug === 'innovation') {
+    const innoVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_091829_e74072b4-b466-4919-835f-f9ac2c0ef8ef.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>INNOVATION — Know it all.</title>
+  <meta name="description" content="Precision optical intelligence and liquid-glass enterprise telemetry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #000000; --fg: #ffffff; --muted: rgba(255,255,255,0.68); --accent: #38bdf8; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .${p}-cursor-ring, .${p}-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
+    .${p}-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: #38bdf8; margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.015);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .liquid-glass::before {
+      content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1.4px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .${p}-hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding: 24px clamp(18px,4vw,48px); overflow: hidden; isolation: isolate; }
+    .${p}-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: 0.72; pointer-events: none; }
+    .${p}-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
+    .${p}-header { position: relative; z-index: 220; max-width: 1280px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+    .${p}-top-bar { display: flex; align-items: center; justify-content: space-between; }
+    .${p}-pill-bar { border-radius: 999px; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .${p}-nav-links { display: none; gap: 28px; list-style: none; }
+    @media (min-width: 768px) { .${p}-nav-links { display: flex; } }
+    .${p}-nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; }
+    .${p}-center { position: relative; z-index: 10; text-align: center; max-width: 760px; margin: auto; padding: 24px 0; }
+    .${p}-h1 { font-family: 'Instrument Serif', serif; font-size: clamp(56px, 9vw, 118px); font-weight: 400; letter-spacing: -0.03em; line-height: 0.96; }
+    .${p}-cutout-3d { width: 100%; max-width: 310px; max-height: 245px; object-fit: contain; display: block; margin: -12px auto 12px; filter: drop-shadow(0 24px 40px rgba(0,0,0,0.8)) drop-shadow(0 0 28px rgba(56,189,248,0.34)); animation: ${p}Float 5.5s ease-in-out infinite; }
+    @keyframes ${p}Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
+    .${p}-partners { position: relative; z-index: 10; max-width: 1120px; width: 100%; margin: 0 auto; padding-top: 20px; text-align: center; }
+    .${p}-partner-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 36px; margin-top: 14px; color: rgba(255,255,255,0.82); font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+    .${p}-section { max-width: 1200px; margin: 0 auto; padding: 80px 24px; }
+    .${p}-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
+    @media (min-width: 960px) { .${p}-pinned-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .${p}-card { padding: 26px; border-radius: 28px; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0,22px,0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(0,0,0,0.86); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 600px; width: 100%; border-radius: 30px; background: #0b0d13; border: 1px solid rgba(255,255,255,0.16); padding: 34px; pointer-events: auto; }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+    <defs>
+      <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="9" />
+        <feDisplacementMap id="${p}Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <main>
+    <section id="heroStage" class="${p}-hero">
+      <video id="heroBgVideo" class="${p}-bg-video" src="${innoVideo}" autoplay loop muted playsinline preload="auto"></video>
+      <canvas id="ambientSmokeCanvas" class="${p}-smoke-canvas" aria-hidden="true"></canvas>
+
+      <header class="${p}-header">
+        <div class="${p}-top-bar">
+          <strong style="font-size:22px;letter-spacing:-0.04em;">INNOVATION</strong>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <button type="button" id="motionToggleBtn" class="liquid-glass" style="color:#fff;padding:8px 16px;border-radius:999px;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;" data-magnetic>𝕏</button>
+            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;" data-magnetic>in</button>
+          </div>
+        </div>
+        <nav class="${p}-pill-bar liquid-glass" aria-label="Primary">
+          <ul class="${p}-nav-links">
+            <li><a href="#heroStage">Home</a></li>
+            <li><a href="#pinnedSpecs">Services</a></li>
+            <li><a href="#pinnedSpecs">Why Us</a></li>
+            <li><a href="#pinnedSpecs">Reviews</a></li>
+            <li><a href="#pinnedSpecs">Contact Us</a></li>
+          </ul>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <span style="font-size:13px;color:var(--muted);">1(800)234-23-34</span>
+            <button type="button" id="exploreMagneticBtn" class="liquid-glass" style="color:#fff;padding:8px 20px;border-radius:999px;font-size:13px;cursor:pointer;" data-magnetic data-next-preview>Call Me Back</button>
+          </div>
+        </nav>
+      </header>
+
+      <div class="${p}-center" data-parallax="0.07">
+        <h1 class="${p}-h1" id="oversizedHeadline">Know it all.</h1>
+        <div id="heroPopoutRig" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+          ${cutoutImg}
+        </div>
+        <button type="button" class="liquid-glass" style="color:#fff;padding:15px 44px;border-radius:999px;font-size:16px;cursor:pointer;margin-top:8px;" data-magnetic data-seamless-trigger="Innovation Optical Telemetry Dossier">
+          Book a Free Call
+        </button>
+      </div>
+
+      <div class="${p}-partners">
+        <span style="font-size:12px;color:rgba(255,255,255,0.5);">Relied on by brands framing the future</span>
+        <div class="${p}-partner-row">
+          <span>Vortex</span><span>Nimbus</span><span>Prysma</span><span>Kinetix</span><span>Stratum</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="pinnedSpecs" class="${p}-section">
+      <div class="${p}-pinned-grid">
+        <article class="${p}-card liquid-glass ${p}-reveal" data-tilt-card data-spec-index="001">
+          <span style="font-size:11px;color:#38bdf8;font-weight:700;">001 / REFRACTIVE CORE</span>
+          <strong data-counter-target="99" data-counter-suffix=".9%" style="display:block;font-size:34px;margin:6px 0;">99.9%</strong>
+          <p style="font-size:13px;color:var(--muted);">Real-time optical synthesis and neural decision telemetry.</p>
+        </article>
+        <div class="${p}-card liquid-glass" id="scrubCenterStage" style="text-align:center;">
+          ${cutoutImg}
+          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:#38bdf8;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
+        </div>
+        <article class="${p}-card liquid-glass ${p}-reveal" data-tilt-card data-spec-index="003">
+          <span style="font-size:11px;color:#38bdf8;font-weight:700;">002 / GLOBAL ENTERPRISE</span>
+          <strong data-counter-target="240" data-counter-suffix="+" style="display:block;font-size:34px;margin:6px 0;">240+</strong>
+          <p style="font-size:13px;color:var(--muted);">Category-leading teams powered by Innovation spatial analytics.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-size:12px;color:#38bdf8;font-weight:700;">INNOVATION DOSSIER</span>
+        <button type="button" id="closeSeamlessBtn" class="liquid-glass" style="color:#fff;padding:6px 14px;border-radius:999px;cursor:pointer;">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:'Instrument Serif',serif;font-size:36px;font-weight:400;margin-bottom:10px;">Know it all.</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">Schedule a direct executive briefing with our optical intelligence architects.</p>
+      <div style="margin-bottom:18px;">${cutoutImg}</div>
+      <button type="button" id="confirmSeamlessBtn" class="liquid-glass" style="width:100%;color:#fff;padding:12px;border-radius:999px;cursor:pointer;">Confirm Executive Call</button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // SPECIAL BESPOKE TEMPLATE 5: Orbis NFT (#010828 Deep Space + #6FFF00 Neon Green Anton + Condiment Script + 3-Col NFT Video Showcase + 3D Space Object Cutout)
+  if (spec.slug === 'orbis-nft') {
+    const vidLeft = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5d68-4780-8832-691ef6fb0725.mp4';
+    const vidCenter = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170938_066feb72-6fd3-4ed9-a0c9-a6dc83dc1f2f.mp4';
+    const vidRight = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_171656_8364784d-0d1f-4c76-ac59-4f7c1fb4f4e4.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ORBIS NFT — Next-Gen Space Artifacts</title>
+  <meta name="description" content="ORBIS NFT Creation — Web3 space artifacts, interactive 3D chrome-iridescent collectibles, and live on-chain auctions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Condiment&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #010828; --fg: #ffffff; --neon: #6FFF00; --pink: #FF36AB; --cyan: #08FDFD; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #010828; color: #fff; font-family: 'Space Grotesk', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .${p}-cursor-ring, .${p}-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #6FFF00; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
+    .${p}-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #6FFF00; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: #FF36AB; margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; padding: 20px clamp(16px,4vw,44px) 48px;
+      display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; isolation: isolate;
+      background:
+        radial-gradient(circle at 22% 45%, rgba(255,54,171,0.22) 0%, transparent 45%),
+        radial-gradient(circle at 78% 45%, rgba(8,253,253,0.22) 0%, transparent 45%),
+        radial-gradient(circle at 50% 35%, rgba(111,255,0,0.16) 0%, transparent 50%),
+        #010828;
+    }
+    .${p}-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+    .${p}-nav { position: relative; z-index: 220; max-width: 1400px; width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
+    .${p}-nav-links { display: none; gap: 36px; list-style: none; }
+    @media (min-width: 768px) { .${p}-nav-links { display: flex; } }
+    .${p}-nav-links a { color: #fff; text-decoration: none; font-size: 15px; font-weight: 500; }
+    .${p}-nav-links a.active { color: #6FFF00; font-weight: 700; }
+    .${p}-neon-btn { background: #6FFF00; color: #010828; border: none; border-radius: 999px; padding: 10px 24px; font-weight: 700; font-size: 14px; cursor: pointer; box-shadow: 0 0 24px rgba(111,255,0,0.45); }
+
+    .${p}-title-stage { position: relative; text-align: center; margin: 12px auto 18px; }
+    .${p}-anton { font-family: 'Anton', sans-serif; font-size: clamp(64px, 11vw, 152px); line-height: 0.92; letter-spacing: 0.04em; text-transform: uppercase; color: #fff; }
+    .${p}-anton .neon { color: #6FFF00; }
+    .${p}-script {
+      font-family: 'Condiment', cursive; font-size: clamp(46px, 7.5vw, 108px); color: #fff;
+      position: absolute; left: 50%; bottom: -26px; transform: translateX(-50%) rotate(-3deg);
+      text-shadow: 0 4px 24px rgba(255,54,171,0.9), 0 0 45px rgba(255,54,171,0.55); pointer-events: none; white-space: nowrap;
+    }
+
+    .${p}-showcase-grid {
+      max-width: 1360px; width: 100%; margin: 18px auto 0;
+      display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center;
+    }
+    @media (min-width: 1024px) { .${p}-showcase-grid { grid-template-columns: 1fr 1.15fr 1fr; } }
+
+    .${p}-nft-card {
+      background: rgba(255,255,255,0.08); backdrop-filter: blur(22px);
+      border: 1.5px solid rgba(255,255,255,0.28); border-radius: 24px; padding: 18px;
+    }
+    .${p}-nft-media { position: relative; border-radius: 16px; overflow: hidden; height: 210px; background: #060f3a; margin-bottom: 14px; }
+    .${p}-nft-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .${p}-center-portal { text-align: center; position: relative; }
+    .${p}-cutout-3d {
+      width: 100%; max-width: 310px; max-height: 270px; object-fit: contain; display: block; margin: 0 auto 12px;
+      filter: drop-shadow(0 24px 36px rgba(0,0,0,0.75)) drop-shadow(0 0 28px rgba(111,255,0,0.35));
+      animation: ${p}Float 5.4s ease-in-out infinite;
+    }
+    @keyframes ${p}Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
+    .${p}-section { max-width: 1320px; margin: 0 auto; padding: 72px 24px; }
+    .${p}-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
+    @media (min-width: 960px) { .${p}-pinned-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .${p}-reveal { opacity: 0; transform: translate3d(0,22px,0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(1,8,40,0.88); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 600px; width: 100%; border-radius: 28px; background: #050f38; border: 1.5px solid #6FFF00; padding: 32px; pointer-events: auto; }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+    <defs>
+      <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="11" />
+        <feDisplacementMap id="${p}Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <main>
+    <section id="heroStage" class="${p}-hero">
+      <canvas id="ambientSmokeCanvas" class="${p}-smoke-canvas" aria-hidden="true"></canvas>
+      <header class="${p}-nav">
+        <strong style="font-size:24px;letter-spacing:0.06em;">✦ ORBIS</strong>
+        <ul class="${p}-nav-links">
+          <li><a href="#heroStage" class="active">Home</a></li>
+          <li><a href="#pinnedSpecs">About</a></li>
+          <li><a href="#pinnedSpecs">Creation</a></li>
+          <li><a href="#pinnedSpecs"> Price</a></li>
+        </ul>
+        <div style="display:flex;gap:10px;align-items:center;">
+          <button type="button" id="motionToggleBtn" style="background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.25);padding:8px 14px;border-radius:999px;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+          <button type="button" id="exploreMagneticBtn" class="${p}-neon-btn" data-magnetic data-next-preview>Sign Up</button>
+        </div>
+      </header>
+
+      <div class="${p}-title-stage" data-parallax="0.06">
+        <h1 class="${p}-anton" id="oversizedHeadline">ORBIS <span class="neon">NFT</span></h1>
+        <span class="${p}-script">Creation</span>
+      </div>
+
+      <div class="${p}-showcase-grid">
+        <article class="${p}-nft-card ${p}-reveal" data-tilt-card data-seamless-trigger="NFT #2419 — Orbis Genesis Artifact">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <strong>NFT #2419</strong>
+            <span style="font-size:13px;color:#FF36AB;">♥ 206</span>
+          </div>
+          <div class="${p}-nft-media">
+            <video id="heroBgVideo" src="${vidLeft}" autoplay loop muted playsinline preload="metadata"></video>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:18px;font-weight:700;color:#6FFF00;">◆ 10 ETH</span>
+            <button type="button" class="${p}-neon-btn" style="padding:7px 18px;font-size:12px;">Buy Now</button>
+          </div>
+        </article>
+
+        <div class="${p}-center-portal" id="heroPopoutRig" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+          ${cutoutImg}
+          <button type="button" class="${p}-neon-btn" style="padding:13px 34px;font-size:15px;" data-magnetic data-seamless-trigger="Orbis Live Genesis Drop">
+            Explore Now ↗
+          </button>
+        </div>
+
+        <article class="${p}-nft-card ${p}-reveal" data-tilt-card data-seamless-trigger="NFT #1079 — Cyber Chrome Helmet">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <strong>NFT #1079</strong>
+            <span style="font-size:13px;color:#08FDFD;">♥ 165</span>
+          </div>
+          <div class="${p}-nft-media">
+            <video src="${vidRight}" autoplay loop muted playsinline preload="metadata"></video>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:18px;font-weight:700;color:#6FFF00;">◆ 8 ETH</span>
+            <button type="button" class="${p}-neon-btn" style="padding:7px 18px;font-size:12px;">Buy Now</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pinnedSpecs" class="${p}-section">
+      <div class="${p}-pinned-grid">
+        <article class="${p}-nft-card ${p}-reveal" data-tilt-card data-spec-index="001">
+          <span style="font-size:11px;color:#6FFF00;font-weight:700;">001 / TOTAL VOLUME</span>
+          <strong data-counter-target="42" data-counter-suffix="K ETH" style="display:block;font-size:34px;margin:6px 0;">42K ETH</strong>
+          <p style="font-size:13px;color:rgba(255,255,255,0.72);">Zero-gas Layer-2 minting with instant royalty settlement.</p>
+        </article>
+        <div class="${p}-nft-card" id="scrubCenterStage" style="text-align:center;">
+          ${cutoutImg}
+          <p id="scrubDialText" style="margin-top:8px;font-size:12px;color:#6FFF00;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
+        </div>
+        <article class="${p}-nft-card ${p}-reveal" data-tilt-card data-spec-index="003">
+          <span style="font-size:11px;color:#08FDFD;font-weight:700;">002 / HOLDERS</span>
+          <strong data-counter-target="12" data-counter-suffix=".4K" style="display:block;font-size:34px;margin:6px 0;">12.4K</strong>
+          <p style="font-size:13px;color:rgba(255,255,255,0.72);">Verified collectors governing the Orbis Spatial DAO.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="color:#6FFF00;font-size:12px;font-weight:700;">ORBIS MINT PORTAL</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);padding:6px 14px;border-radius:999px;cursor:pointer;">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:'Anton',sans-serif;font-size:32px;letter-spacing:0.04em;margin-bottom:10px;">ORBIS NFT GENESIS</h2>
+      <p style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.6;margin-bottom:16px;">Each Orbis space artifact includes full 4K GLTF/USDZ geometry and on-chain provenance.</p>
+      <div style="margin-bottom:16px;">${cutoutImg}</div>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-neon-btn" style="width:100%;">Place Bid in ETH</button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // SPECIAL BESPOKE TEMPLATE 6: Portfolio Cosmic ("Michael Smith" — #0a0a0a Dark + #89AACC Steel-Blue Cosmic Glow + Bento Grid + Bottom Floating Pill Nav + 3D Cosmic Astrolabe Cutout)
+  if (spec.slug === 'portfolio-cosmic') {
+    const cosmicVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260419_024949_c2df2ce2-00c2-4c26-84c6-210c14f3b98e.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Michael Smith — Web3 Product Designer &amp; Cosmic Portfolio</title>
+  <meta name="description" content="Web3 Product Designer crafting atmospheric digital products, Bento design systems, and spatial interfaces.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #0a0a0a; --fg: #f0f4f8; --muted: rgba(240,244,248,0.62); --steel: #89AACC; --blue: #4E85BF; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #0a0a0a; color: var(--fg); font-family: 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .${p}-cursor-ring, .${p}-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #89AACC; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
+    .${p}-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #89AACC; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: #89AACC; margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; padding: 28px clamp(20px,5vw,64px) 96px;
+      display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; isolation: isolate;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(137,170,204,0.22) 0%, rgba(78,133,191,0.06) 55%, transparent 80%),
+        #0a0a0a;
+    }
+    .${p}-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: 0.28; pointer-events: none; }
+    .${p}-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
+
+    .${p}-top-bar { display: flex; justify-content: space-between; align-items: center; max-width: 1280px; width: 100%; margin: 0 auto; z-index: 20; }
+    .${p}-pill-tag { display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid rgba(137,170,204,0.24); font-size: 12px; color: #89AACC; }
+    .${p}-hero-grid { max-width: 1280px; width: 100%; margin: auto; display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; padding: 36px 0; }
+    @media (min-width: 960px) { .${p}-hero-grid { grid-template-columns: 1.15fr 0.85fr; } }
+
+    .${p}-syne-h1 {
+      font-family: 'Syne', sans-serif; font-size: clamp(46px, 7.2vw, 94px); font-weight: 700;
+      line-height: 0.96; letter-spacing: -0.03em; margin: 14px 0 18px;
+      background: linear-gradient(135deg, #ffffff 25%, #89AACC 70%, #4E85BF 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .${p}-cta-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, #89AACC 0%, #4E85BF 100%);
+      color: #06090e; border: none; border-radius: 999px; padding: 12px 28px;
+      font-weight: 600; font-size: 14px; cursor: pointer;
+    }
+    .${p}-cutout-3d {
+      width: 100%; max-width: 340px; max-height: 310px; object-fit: contain; display: block; margin: 0 auto;
+      filter: drop-shadow(0 28px 44px rgba(0,0,0,0.85)) drop-shadow(0 0 28px rgba(137,170,204,0.34));
+      animation: ${p}Float 5.8s ease-in-out infinite;
+    }
+    @keyframes ${p}Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
+
+    /* Fixed Bottom Floating Glass Pill Navbar (Signature Cosmic Portfolio UI) */
+    .${p}-bottom-nav {
+      position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 220;
+      background: rgba(14,18,26,0.82); backdrop-filter: blur(20px);
+      border: 1px solid rgba(137,170,204,0.28); border-radius: 999px;
+      padding: 6px 8px 6px 20px; display: flex; align-items: center; gap: 20px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.65);
+    }
+    .${p}-bottom-nav a { color: rgba(240,244,248,0.78); text-decoration: none; font-size: 13px; font-weight: 500; }
+    .${p}-bottom-nav a:hover { color: #fff; }
+
+    /* Bento Grid Section */
+    .${p}-section { max-width: 1280px; margin: 0 auto; padding: 80px clamp(20px,5vw,64px) 120px; }
+    .${p}-bento-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 32px; }
+    @media (min-width: 960px) { .${p}-bento-grid { grid-template-columns: 1.2fr 1fr 1fr; } }
+    .${p}-bento-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.015) 100%);
+      border: 1px solid rgba(137,170,204,0.18); border-radius: 26px; padding: 28px;
+      backdrop-filter: blur(16px);
+    }
+    .${p}-stat-big { font-family: 'Syne', sans-serif; font-size: clamp(38px, 4.5vw, 56px); font-weight: 700; color: #89AACC; display: block; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0,22px,0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 240; background: rgba(6,8,12,0.88); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 600px; width: 100%; border-radius: 28px; background: #10151f; border: 1px solid rgba(137,170,204,0.32); padding: 32px; pointer-events: auto; }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+    <defs>
+      <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="14" />
+        <feDisplacementMap id="${p}Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <nav class="${p}-bottom-nav" aria-label="Floating Cosmic Navigation">
+    <a href="#heroStage">Home</a>
+    <a href="#pinnedSpecs">Work</a>
+    <a href="#pinnedSpecs">About</a>
+    <button type="button" id="exploreMagneticBtn" class="${p}-cta-btn" style="padding:8px 18px;font-size:12px;" data-magnetic data-next-preview>Contact for work</button>
+  </nav>
+
+  <main>
+    <section id="heroStage" class="${p}-hero">
+      <video id="heroBgVideo" class="${p}-bg-video" src="${cosmicVideo}" autoplay loop muted playsinline preload="auto"></video>
+      <canvas id="ambientSmokeCanvas" class="${p}-smoke-canvas" aria-hidden="true"></canvas>
+
+      <header class="${p}-top-bar">
+        <span class="${p}-pill-tag">✦ Web3 Product Designer</span>
+        <button type="button" id="motionToggleBtn" class="${p}-pill-tag" style="cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      </header>
+
+      <div class="${p}-hero-grid">
+        <div data-parallax="0.07">
+          <span style="font-size:13px;color:#89AACC;letter-spacing:0.08em;text-transform:uppercase;">Available for Q2 Select Commissions</span>
+          <h1 class="${p}-syne-h1" id="oversizedHeadline">Michael Smith</h1>
+          <p style="font-size:16px;color:var(--muted);line-height:1.65;max-width:520px;margin-bottom:26px;">
+            Principal Web3 Product Designer architecting spatial interfaces, token ecosystems, and high-converting interactive Webflow systems.
+          </p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <button type="button" class="${p}-cta-btn" data-magnetic data-seamless-trigger="001 / Nova Relay Case Study">Explore Selected Works ↗</button>
+          </div>
+        </div>
+        <div id="heroPopoutRig" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+          ${cutoutImg}
+        </div>
+      </div>
+    </section>
+
+    <section id="pinnedSpecs" class="${p}-section">
+      <h2 style="font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,44px);">Cosmic Bento Telemetry</h2>
+      <div class="${p}-bento-grid">
+        <article class="${p}-bento-card ${p}-reveal" data-tilt-card data-spec-index="001" data-seamless-trigger="001 / Nova Relay Protocol">
+          <span style="font-size:12px;color:#89AACC;">001 /CAPITAL ASSISTED</span>
+          <strong class="${p}-stat-big" data-counter-target="23" data-counter-suffix="M+">$23M+</strong>
+          <p style="font-size:14px;color:var(--muted);margin-top:8px;">Seed &amp; Series A funding raised by Web3 protocols launched with bespoke interactive design systems.</p>
+        </article>
+        <div class="${p}-bento-card" id="scrubCenterStage" style="text-align:center;">
+          ${cutoutImg}
+          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:#89AACC;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
+        </div>
+        <article class="${p}-bento-card ${p}-reveal" data-tilt-card data-spec-index="003" data-seamless-trigger="002 / Pulse Board Analytics">
+          <span style="font-size:12px;color:#89AACC;">002 / CLIENT SATISFACTION</span>
+          <strong class="${p}-stat-big" data-counter-target="97" data-counter-suffix="%">97%</strong>
+          <p style="font-size:14px;color:var(--muted);margin-top:8px;">17+ international design awards across Webflow, Awwwards, and FWA showcases.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span class="${p}-pill-tag">Michael Smith • Case Study</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill-tag" style="cursor:pointer;">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:'Syne',sans-serif;font-size:28px;margin-bottom:10px;">001 / Nova Relay</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">Complete spatial brand architecture, 3D astrolabe telemetry, and interactive WebGL design system.</p>
+      <div style="margin-bottom:18px;">${cutoutImg}</div>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-cta-btn" style="width:100%;justify-content:center;">Book Commission Slot</button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // GENERAL BESPOKE HALLMARK COMPILER FOR ALL OTHER MOTIONSITES TEMPLATES (with 3D Cutout + 4 Mandatory Motion Groups)
+  const bg = spec.isLight ? '#f8fafc' : '#06070b';
+  const surface = spec.isLight ? '#ffffff' : '#10131c';
+  const glass = spec.isLight ? 'rgba(255,255,255,0.82)' : 'rgba(16,19,28,0.72)';
+  const fg = spec.isLight ? '#0f172a' : '#f8fafc';
+  const muted = spec.isLight ? '#64748b' : '#94a3b8';
+  const borderCol = spec.isLight ? 'rgba(15,23,42,0.12)' : 'rgba(255,255,255,0.14)';
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -316,93 +1550,136 @@ function buildCinematicHeroHtml(spec) {
   <meta name="description" content="${spec.subheadline.replace(/"/g, '&quot;')}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: ${bg};
+      --surface: ${surface};
+      --glass: ${glass};
       --fg: ${fg};
       --muted: ${muted};
-      --card: ${cardBg};
       --border: ${borderCol};
-      --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      --accent: ${spec.accent};
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); min-height: 100vh; overflow-x: clip; }
-    .hero-stage { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding: 28px 32px 48px; overflow: hidden; }
-    .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; pointer-events: none; }
-    .topbar, .hero-center, .telemetry-strip { position: relative; z-index: 10; max-width: 1320px; width: 100%; margin: 0 auto; }
-    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    .glass-pill { background: var(--card); backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 9999px; padding: 10px 20px; color: var(--fg); font-size: 13px; font-weight: 600; text-decoration: none; cursor: pointer; }
-    .hero-center { text-align: center; margin: auto; padding: 64px 0; max-width: 880px; }
-    .hero-h1 { font-size: clamp(40px, 6.2vw, 84px); font-weight: 500; line-height: 1.02; letter-spacing: -0.03em; margin: 18px 0; }
-    .hero-sub { font-size: clamp(15px, 1.5vw, 18px); color: var(--muted); max-width: 600px; margin: 0 auto 28px; line-height: 1.6; }
-    .telemetry-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    @media (max-width: 768px) { .telemetry-strip { grid-template-columns: 1fr; } .hero-stage { padding: 20px 16px 32px; } }
-    .t-card { background: var(--card); backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 24px; padding: 22px; cursor: pointer; text-align: left; color: var(--fg); }
-    .modal-backdrop { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.65); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 16px; pointer-events: none; }
-    .modal-backdrop.is-open { display: flex; }
-    .modal-box { max-width: 480px; width: 100%; border-radius: 28px; background: var(--bg); border: 1px solid var(--border); padding: 28px; position: relative; color: var(--fg); pointer-events: auto; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .${p}-cursor-ring, .${p}-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
+    .${p}-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-navbar {
+      position: fixed; top: 14px; left: 0; right: 0; z-index: 220;
+      max-width: 1280px; margin: 0 auto; padding: 12px 24px;
+      border-radius: 999px; background: var(--glass); backdrop-filter: blur(20px);
+      border: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .${p}-pill-btn { padding: 8px 18px; border-radius: 999px; background: var(--glass); border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 700; cursor: pointer; }
+    .${p}-cta-btn { padding: 9px 22px; border-radius: 999px; background: var(--accent); color: #090b10; border: none; font-size: 13px; font-weight: 800; cursor: pointer; }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; padding: 112px clamp(20px,5vw,72px) 64px;
+      display: flex; flex-direction: column; justify-content: center; overflow: hidden; isolation: isolate;
+    }
+    .${p}-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: 0.36; pointer-events: none; }
+    .${p}-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
+    .${p}-hero-grid { max-width: 1280px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
+    @media (min-width: 960px) { .${p}-hero-grid { grid-template-columns: 1.05fr 0.95fr; } }
+    .${p}-h1 { font-family: 'Instrument Serif', serif; font-size: clamp(46px, 7vw, 96px); font-weight: 400; line-height: 0.96; margin: 14px 0 18px; }
+    .${p}-cutout-3d { width: 100%; height: auto; max-height: 360px; object-fit: contain; display: block; margin: 0 auto; filter: drop-shadow(0 26px 40px rgba(0,0,0,0.55)); }
+    .${p}-popout-wrap { animation: ${p}Float 5.8s ease-in-out infinite; }
+    @keyframes ${p}Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
+
+    .${p}-section { max-width: 1280px; margin: 0 auto; padding: 80px clamp(20px,5vw,72px); }
+    .${p}-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 32px; align-items: center; }
+    @media (min-width: 960px) { .${p}-pinned-grid { grid-template-columns: 1fr 1.1fr 1fr; } }
+    .${p}-card { padding: 24px; border-radius: 26px; background: var(--glass); border: 1px solid var(--border); backdrop-filter: blur(18px); }
+    .${p}-hscroll-track { display: grid; grid-template-columns: repeat(3, minmax(260px, 1fr)); gap: 20px; overflow-x: auto; margin-top: 28px; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(5,8,15,0.84); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 640px; width: 100%; border-radius: 28px; background: var(--surface); border: 1px solid var(--border); padding: 32px; pointer-events: auto; }
   </style>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+    <defs>
+      <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="5" />
+        <feDisplacementMap id="${p}Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <header class="${p}-navbar">
+    <strong style="font-size:17px;">✦ ${spec.title}</strong>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="${p}-pill-btn" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-cta-btn" data-magnetic data-next-preview>Explore Dossier ↗</button>
+    </div>
+  </header>
+
   <main>
-    <section class="hero-stage">
-      <video id="heroVideo" class="hero-video" src="${spec.heroVideo}" autoplay loop muted playsinline preload="auto"></video>
-      <header class="topbar">
-        <a href="#" class="glass-pill">${spec.title}</a>
-        <div style="display:flex;gap:10px;">
-          <button type="button" class="glass-pill" id="motionBtn" aria-pressed="false">LIVE MOTION</button>
-          <button type="button" class="glass-pill" id="openModalBtn" data-next-preview>Explore Specs ↗</button>
+    <section id="heroStage" class="${p}-hero">
+      <video id="heroBgVideo" class="${p}-bg-video" src="${spec.heroVideo}" autoplay loop muted playsinline preload="auto"></video>
+      <canvas id="ambientSmokeCanvas" class="${p}-smoke-canvas" aria-hidden="true"></canvas>
+      <div class="${p}-hero-grid">
+        <div data-parallax="0.08">
+          <span class="${p}-pill-btn" style="color:var(--accent);">${spec.title} • Interactive Edition</span>
+          <h1 class="${p}-h1" id="oversizedHeadline">${spec.headline}</h1>
+          <p style="font-size:16px;color:var(--muted);line-height:1.65;max-width:540px;margin-bottom:24px;">${spec.subheadline}</p>
+          <div style="display:flex;gap:28px;flex-wrap:wrap;">
+            <div><strong data-counter-target="120" data-counter-suffix="FPS" style="font-size:30px;">120FPS</strong><span style="display:block;font-size:12px;color:var(--muted);">Motion Pipeline</span></div>
+            <div><strong data-counter-target="10" data-counter-suffix="K+" style="font-size:30px;">10K+</strong><span style="display:block;font-size:12px;color:var(--muted);">Active Nodes</span></div>
+            <div><strong data-counter-target="99" data-counter-suffix="%" style="font-size:30px;">99%</strong><span style="display:block;font-size:12px;color:var(--muted);">Visual Fidelity</span></div>
+          </div>
         </div>
-      </header>
-      <div class="hero-center">
-        <span class="glass-pill">✦ ${spec.title} Interactive Edition</span>
-        <h1 class="hero-h1">${spec.headline}</h1>
-        <p class="hero-sub">${spec.subheadline}</p>
-        <button type="button" class="glass-pill" id="heroCtaBtn">Launch Interactive Brief ↗</button>
+        <div id="heroPopoutRig" class="${p}-popout-wrap" data-tilt-card style="filter:url(#${p}LiquidFilter);">
+          ${cutoutImg}
+        </div>
       </div>
-      <div class="telemetry-strip">
-        <button type="button" class="t-card" data-mode="01"><strong>01 / Architecture</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Real-time fluid stage &amp; zero-build HTML5 delivery.</p></button>
-        <button type="button" class="t-card" data-mode="02"><strong>02 / Performance</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Sub-16ms frame pacing with adaptive viewport scaling.</p></button>
-        <button type="button" class="t-card" data-mode="03"><strong>03 / Customisation</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">10-step literal map &amp; 12 AI prompts bundled.</p></button>
+    </section>
+
+    <section id="pinnedSpecs" class="${p}-section">
+      <div class="${p}-pinned-grid">
+        <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="001">
+          <span style="font-size:11px;color:var(--accent);font-weight:700;">001 / ARCHITECTURE</span>
+          <h3 style="font-size:20px;margin:8px 0;">Zero-Build Single File</h3>
+          <p style="font-size:13px;color:var(--muted);">Self-contained HTML5/CSS3/JS architecture with responsive 4-viewport layout.</p>
+        </article>
+        <div class="${p}-card" id="scrubCenterStage" style="text-align:center;">
+          ${cutoutImg}
+          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:var(--accent);font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
+        </div>
+        <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="002">
+          <span style="font-size:11px;color:var(--accent);font-weight:700;">002 / INTERACTION</span>
+          <h3 style="font-size:20px;margin:8px 0;">3D Tilt &amp; Liquid Wave</h3>
+          <p style="font-size:13px;color:var(--muted);">Interactive perspective cards and SVG displacement filters.</p>
+        </article>
       </div>
     </section>
   </main>
-  <div id="specModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
-    <div class="modal-box">
-      <h2 id="modalHeading" style="font-size:24px;margin-bottom:10px;">${spec.title} — Interactive Dossier</h2>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span class="${p}-pill-btn">${spec.title} Specification</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill-btn">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">${spec.title}</h2>
       <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">${spec.subheadline}</p>
-      <button type="button" class="glass-pill" id="closeModalBtn">Close (Esc)</button>
+      <div style="margin-bottom:18px;">${cutoutImg}</div>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-cta-btn" style="width:100%;">Return to Live Stage</button>
     </div>
   </div>
-  <script>
-    (function(){
-      var vid = document.getElementById('heroVideo');
-      var motionBtn = document.getElementById('motionBtn');
-      var paused = false;
-      if (motionBtn) {
-        motionBtn.addEventListener('click', function(){
-          paused = !paused;
-          motionBtn.setAttribute('aria-pressed', String(paused));
-          motionBtn.textContent = paused ? 'MOTION PAUSED' : 'LIVE MOTION';
-          if (vid) { if (paused) vid.pause(); else vid.play().catch(function(){}); }
-        });
-      }
-      var modal = document.getElementById('specModal');
-      function openM(){ if (modal) modal.classList.add('is-open'); }
-      function closeM(){ if (modal) modal.classList.remove('is-open'); }
-      function toggleM(){ if (modal) modal.classList.toggle('is-open'); }
-      var ob = document.getElementById('openModalBtn');
-      if (ob) { ob.style.position = 'relative'; ob.style.zIndex = '120'; ob.addEventListener('click', toggleM); }
-      var hb = document.getElementById('heroCtaBtn');
-      if (hb) hb.addEventListener('click', openM);
-      document.querySelectorAll('.t-card').forEach(function(c){ c.addEventListener('click', openM); });
-      var cb = document.getElementById('closeModalBtn'); if (cb) cb.addEventListener('click', closeM);
-      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeM(); });
-    })();
-  </script>
+  ${renderSharedMotionRuntime(p)}
 </body>
-</html>\n`;
+</html>`;
 }
 
 export async function compileAndIntegratePrompt(slug, options = {}) {
@@ -425,63 +1702,82 @@ export async function compileAndIntegratePrompt(slug, options = {}) {
     catalogId = getNextCatalogId();
   }
 
+  const { scaffoldTemplate } = await import('./scaffold-template.mjs');
   if (!fs.existsSync(sourceHtmlPath) || options.forceRebuild) {
-    const { scaffoldTemplate } = await import('./scaffold-template.mjs');
     scaffoldTemplate(slug, { tier: accessTier });
-    const spec = extractSpecFromPrompt(data);
-    const html = buildSingleFileHtml(spec);
-    fs.writeFileSync(sourceHtmlPath, html, 'utf8');
   }
+
+  const spec = extractSpecFromPrompt(data);
+  const html = buildSingleFileHtml(spec);
+  fs.writeFileSync(sourceHtmlPath, html, 'utf8');
 
   fs.mkdirSync(path.dirname(demoHtmlPath), { recursive: true });
   fs.copyFileSync(sourceHtmlPath, demoHtmlPath);
+
+  const cutoutAssetSrc = path.resolve(root, `web/tools/agent-pinterest/pinterest-assets/cutout-${slug}.webp`);
+  if (fs.existsSync(cutoutAssetSrc)) {
+    const sourceAssetPath = path.resolve(productDir, 'source/assets/cutout.webp');
+    const demoAssetPath = path.resolve(root, `web/public/demos/${slug}/assets/cutout.webp`);
+    fs.mkdirSync(path.dirname(sourceAssetPath), { recursive: true });
+    fs.mkdirSync(path.dirname(demoAssetPath), { recursive: true });
+    fs.copyFileSync(cutoutAssetSrc, sourceAssetPath);
+    fs.copyFileSync(cutoutAssetSrc, demoAssetPath);
+  }
 
   execFileSync('node', ['web/product/giao-dien-web/tools/dong-goi.mjs', slug, '--ngoai-le'], {
     cwd: root,
     stdio: 'inherit'
   });
 
+  const webCat = /portfolio|agency|hero/i.test(data.category || '') ? 'portfolio' : 'commerce';
   const catPath = path.resolve(root, 'web/src/lib/template-categories.ts');
   let catContent = fs.readFileSync(catPath, 'utf8');
   if (!catContent.includes(`'${slug}':`)) {
     catContent = catContent.replace(
       'export const TEMPLATE_CATEGORIES = {',
-      `export const TEMPLATE_CATEGORIES = {\n  '${slug}': 'commerce',`
+      `export const TEMPLATE_CATEGORIES = {\n  '${slug}': '${webCat}',`
     );
     fs.writeFileSync(catPath, catContent, 'utf8');
   }
 
   realTpl = fs.readFileSync(realTplPath, 'utf8');
-  if (!realTpl.includes(`slug: '${slug}'`) && !realTpl.includes(`"slug": "${slug}"`)) {
-    const accessLine = accessTier === 'free' ? `    access: 'free',\n` : '';
-    const entry = `  ${catalogId}: {
+  const accessLine = accessTier === 'free' ? `    access: 'free',\n` : '';
+  const entry = `  ${catalogId}: {
     slug: '${slug}',
-    cat: 'commerce',
+    cat: '${webCat}',
 ${accessLine}    version: '1.0.0',
     video: true,
     copy: {
       vi: {
         name: ${JSON.stringify(data.title)},
-        desc: ${JSON.stringify(`Giao diện web ${data.title} tự chứa trong một file HTML duy nhất với kiến trúc ${data.category || 'hiện đại'}, hiệu ứng tương tác thời gian thực và hộp thoại thông số.`)},
-        tags: [${JSON.stringify(data.category || 'Interactive UI')}, 'Responsive HTML5', 'Motion UI']
+        desc: ${JSON.stringify(`Giao diện web ${data.title} với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).`)},
+        tags: [${JSON.stringify(data.category || 'Interactive UI')}, '3D Pop-Out & Motion', 'Hallmark UI']
       },
       en: {
         name: ${JSON.stringify(data.title)},
-        desc: ${JSON.stringify(`Single-file self-contained ${data.title} web experience featuring ${data.category || 'modern'} architecture, real-time interactive state, and an accessible modal dialog.`)},
-        tags: [${JSON.stringify(data.category || 'Interactive UI')}, 'Responsive HTML5', 'Motion UI']
+        desc: ${JSON.stringify(`Bespoke ${data.title} web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).`)},
+        tags: [${JSON.stringify(data.category || 'Interactive UI')}, '3D Pop-Out & Motion', 'Hallmark UI']
       },
       zh: {
         name: ${JSON.stringify(data.title)},
-        desc: ${JSON.stringify(`单文件自包含 ${data.title} 网页模板，配备实时交互组件与详情弹窗。`)},
-        tags: ['交互组件', '响应式设计', '动态视觉']
+        desc: ${JSON.stringify(`单文件自包含 ${data.title} 网页模板，配备 3D 悬浮视觉与四组动态交互。`)},
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
-  },\n`;
+  },`;
+
+  if (!realTpl.includes(`slug: '${slug}'`) && !realTpl.includes(`"slug": "${slug}"`)) {
     realTpl = realTpl.replace(
       'export const REAL_TEMPLATES: Record<string, RealTemplate> = {',
-      `export const REAL_TEMPLATES: Record<string, RealTemplate> = {\n${entry}`
+      `export const REAL_TEMPLATES: Record<string, RealTemplate> = {\n${entry}\n`
     );
     fs.writeFileSync(realTplPath, realTpl, 'utf8');
+  } else {
+    const existingBlockRegex = new RegExp(`  ${catalogId}:\\s*\\{[\\s\\S]*?\\n  \\},`, 'm');
+    if (existingBlockRegex.test(realTpl)) {
+      realTpl = realTpl.replace(existingBlockRegex, entry);
+      fs.writeFileSync(realTplPath, realTpl, 'utf8');
+    }
   }
 
   execFileSync('node', ['web/tools/agent-motionsites/generate-previews.mjs', slug], {

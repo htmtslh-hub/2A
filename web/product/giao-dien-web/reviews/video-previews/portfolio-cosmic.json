@@ -1,0 +1,48 @@
+{
+  "id": "t129",
+  "slug": "portfolio-cosmic",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T22:39:32.072Z",
+  "demo": "/demos/portfolio-cosmic/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a42f80443338",
+  "sha256": "a42f80443338c4fe8be427aa3c2cfbe10cb766b9225d35599993f9de9bb0fadb",
+  "demoHtmlSha256": "77d0fedbb162d84deebb6364aaa562644e243375cc844d8e81e7de382d63ea86",
+  "demoSha256": "21767d2f3d50c6097addabd1650d7c08224b36857a16e833bee35b1505104c53",
+  "bytes": 459399,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.564,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.955,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 649
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portfolio-cosmic-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portfolio-cosmic-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portfolio-cosmic-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portfolio-cosmic-return.jpg"
+  ]
+}

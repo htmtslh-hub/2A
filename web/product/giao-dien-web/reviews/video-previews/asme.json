@@ -1,0 +1,48 @@
+{
+  "id": "t121",
+  "slug": "asme",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T22:20:59.861Z",
+  "demo": "/demos/asme/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "9d06140bb5f1",
+  "sha256": "9d06140bb5f10e2b899d1584bbce573f12c355a4d2920a6a6d0549cd2ed4a7f8",
+  "demoHtmlSha256": "6ac6ad956f4bb2d0c3aa7727c45b643d21c65ca8d55bfeddd0024d0080b95a14",
+  "demoSha256": "b4814d6b168fd8808649e845401cfa9d5f57c208f50e7903fecedb733e5b7fb8",
+  "bytes": 1269421,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.528,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.926,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 505
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\asme-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\asme-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\asme-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\asme-return.jpg"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "pinId": "500603314827650590",
+  "keyword": "Desktop Web Concept Dribbble",
+  "board": "cssdesignawards/website-of-the-day-~-wotd",
+  "title": "Micai Aristide",
+  "slug": "micai-aristide",
+  "assignedTier": "premium",
+  "pageUrl": "https://www.pinterest.com/pin/500603314827650590/",
+  "rawTitle": "Website Of The Day 9 November 2018\nMicai by Aristide Benoist &amp; Julien Renvoye | Blockchain crypto management, Blockchain finance platforms, Blockchain trading platform website design",
+  "rawDesc": "",
+  "imageUrl": "https://i.pinimg.com/originals/5e/15/31/5e1531f18ced8f697fe20380f6dbb21c.jpg",
+  "previewUrl": "https://i.pinimg.com/736x/5e/15/31/5e1531f18ced8f697fe20380f6dbb21c.jpg",
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-27\\pin-500603314827650590.jpg",
+  "imageBytes": 83577,
+  "imageSha256": "1f07ce19c320720f6858e3215b66a3590c2de72563979a7a686f437c230ef192",
+  "criteriaEvaluation": {
+    "accepted": true,
+    "totalScore": 95,
+    "criteriaMatchPercent": 83,
+    "passedCriteriaCount": 5,
+    "width": 1068,
+    "height": 646,
+    "aspectRatio": 1.65,
+    "fullBleedRatio": 0.87,
+    "dofRatio": 0.9,
+    "criteriaChecks": {
+      "formatDesktopHeroShowcase": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "visualHookFullBleed3DDepth": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "floatingGlassPillCards": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "outOfBounds3DPopOut": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "oversizedHeadlineTypography": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "minimalistEdgeNavigation": {
+        "score": 10,
+        "max": 15,
+        "passed": false
+      }
+    },
+    "reason": "PASSED (95/100, 5/6 criteria = 83%)"
+  },
+  "fetchedAt": "2026-10-26T22:21:25.971Z",
+  "category": "commerce",
+  "prompt_text": "MiCai is the world’s first private wealth management platform powered by AI and built on institutional quantum-resistant blockchain."
+}

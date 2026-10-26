@@ -28,7 +28,7 @@ export async function runDailyOrchestrator(options = {}) {
   const startTime = new Date();
   const dateStr = startTime.toLocaleDateString('sv-SE', { timeZone: config.timezone || 'Asia/Ho_Chi_Minh' });
   const logFile = resolve(logsDir, `run-${dateStr}.log`);
-  const shouldSleep = options.sleepAfterRun ?? (process.argv.includes('--sleep') || process.argv.includes('--scheduled'));
+  const shouldSleep = false;
 
   function log(msg) {
     const timestamp = new Date().toISOString();

@@ -1,0 +1,48 @@
+{
+  "id": "t124",
+  "slug": "fishfinger-creative",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T22:28:58.143Z",
+  "demo": "/demos/fishfinger-creative/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "45d7373bad54",
+  "sha256": "45d7373bad54dbb30dd8a689368093bac74c7958e9b94e27a0868d0621d4912a",
+  "demoHtmlSha256": "9feefd31491034b53bd2b7599701f28bdecef9e499d6208a976a7dfb096cfc74",
+  "demoSha256": "bef40ac4e92d30470e8d3941277178ff28ec4f811799d5f2e6fbaba0f11cbaaf",
+  "bytes": 1082779,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.538,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.969,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1474
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fishfinger-creative-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fishfinger-creative-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fishfinger-creative-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fishfinger-creative-return.jpg"
+  ]
+}

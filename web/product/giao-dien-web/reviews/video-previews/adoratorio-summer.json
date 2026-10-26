@@ -1,0 +1,48 @@
+{
+  "id": "t125",
+  "slug": "adoratorio-summer",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T22:29:49.653Z",
+  "demo": "/demos/adoratorio-summer/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "b557edab053e",
+  "sha256": "b557edab053e1b5f8386bb408b6d24dbf6bba7d387c79c46ed6414ebab6e4214",
+  "demoHtmlSha256": "4b53be771f556ef18b8712bad805e888bc6777df531d9e3a07e1344d85e87966",
+  "demoSha256": "1736e146f8887e03f5a7a28fe2181cb96cd4659fb72234ac3b9bd97ad440309e",
+  "bytes": 794432,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.494,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.913,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1544
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\adoratorio-summer-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\adoratorio-summer-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\adoratorio-summer-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\adoratorio-summer-return.jpg"
+  ]
+}

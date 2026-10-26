@@ -1,0 +1,48 @@
+{
+  "id": "t128",
+  "slug": "orbis-nft",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T22:37:32.104Z",
+  "demo": "/demos/orbis-nft/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "1d12c4dd9445",
+  "sha256": "1d12c4dd9445875fe7031e5e1a7597d4e1ec2913eaa01b6a65bdfabcd6227d3b",
+  "demoHtmlSha256": "627c162e18a363ecf082f5b08d1936586d5be4ee7354615035adcc8fd8a53309",
+  "demoSha256": "adfa2cf77d0ebf45c7bc14ec8128962acb936b1dee9b933fb378278243daaec9",
+  "bytes": 824241,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.572,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.985,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 480
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbis-nft-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbis-nft-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbis-nft-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbis-nft-return.jpg"
+  ]
+}

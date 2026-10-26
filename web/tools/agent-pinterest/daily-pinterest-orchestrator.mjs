@@ -27,7 +27,7 @@ export async function runDailyPinterestOrchestrator(options = {}) {
   const startTime = new Date();
   const dateStr = startTime.toLocaleDateString('sv-SE', { timeZone: config.timezone || 'Asia/Ho_Chi_Minh' });
   const logFile = resolve(logsDir, `run-${dateStr}.log`);
-  const shouldShutdown = options.shutdownAfterRun ?? (process.argv.includes('--shutdown') || process.argv.includes('--scheduled'));
+  const shouldShutdown = false;
 
   function log(msg) {
     const timestamp = new Date().toISOString();

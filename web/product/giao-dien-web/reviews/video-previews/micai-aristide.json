@@ -1,0 +1,48 @@
+{
+  "id": "t126",
+  "slug": "micai-aristide",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T22:30:21.932Z",
+  "demo": "/demos/micai-aristide/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0680be6db7de",
+  "sha256": "0680be6db7dec41da51cba1584a1be8caf59fe6e1a77c21fe09b0829f0589c4b",
+  "demoHtmlSha256": "e661db7e913b7902aba0f702679fbb2ad248e6b9314b4359a35fef9151c19f69",
+  "demoSha256": "aa036d7f9071e1878dff5b996a657ed75bf8dd9ec51a425d1bb0d2167c0c1e52",
+  "bytes": 955638,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.511,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.913,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1467
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\micai-aristide-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\micai-aristide-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\micai-aristide-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\micai-aristide-return.jpg"
+  ]
+}

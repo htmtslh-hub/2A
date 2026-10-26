@@ -1,0 +1,48 @@
+{
+  "id": "t127",
+  "slug": "innovation",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T22:35:23.012Z",
+  "demo": "/demos/innovation/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "8c6715333d5d",
+  "sha256": "8c6715333d5d3f365528fa848f34bc8d1d105d0b5d3f21d11686459731081910",
+  "demoHtmlSha256": "ce742eb309a552b47380562918b963908dbf106f98a77502e09dad4039e88168",
+  "demoSha256": "dae9bf9347192bb44fb6d499b56439ff11b4eef7eb342833d4b7e4f7ed9596f1",
+  "bytes": 240592,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.505,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.909,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 472
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\innovation-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\innovation-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\innovation-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\innovation-return.jpg"
+  ]
+}

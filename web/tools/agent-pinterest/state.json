@@ -1,24 +1,35 @@
 {
-  "lastRunDate": "2026-10-26",
+  "lastRunDate": "2026-10-27",
   "todayCopiedCount": 5,
   "todayFreeCount": 2,
   "todayPremiumCount": 3,
-  "keywordCursor": 6,
+  "keywordCursor": 7,
   "processedPinIds": [
     "500603314827787472",
     "500603314827762488",
     "500603314827750633",
     "500603314827726479",
-    "500603314827714178"
+    "500603314827714178",
+    "500603314827702997",
+    "500603314827690151",
+    "500603314827675888",
+    "500603314827664805",
+    "500603314827650590"
   ],
   "processedImageHashes": [
     "ecb0eb8a36263a9bd80e535321f1f5161c76d6b70a0bf9ea3d6ab2462886f512",
     "e5408c488bccaf222bdb24f826407038c6282a270f5031c34c8159dca2a2d262",
     "ecf50f3ed47389871b938ae5eb4bd2ca82362c208b14fc1204791e228a809644",
     "88b59cac7ba3e165cf23e419e9d122d57443cffe7fd84c37e07d3609d858dafc",
-    "655e00751fd630348eef30e2334741fffae4973cdfc85d83b4d92df2df0adf13"
+    "655e00751fd630348eef30e2334741fffae4973cdfc85d83b4d92df2df0adf13",
+    "a58aa490352b246bb0ffd41d4cea4c452aa7b2ab3cd6b6b3dbd4721f7dd1fcc8",
+    "1da719eaa7385562a2cead188ba85a282bc6fa57150334fa077a6aab54588b8d",
+    "1896aaf356b5f45d27137e53789d0c502561d798b82cde7fb05d3f63b8aad9d8",
+    "d6528288a681bb296dc194265e8d10a376cf35385bed59c1ab6e36faf4deefc2",
+    "1f07ce19c320720f6858e3215b66a3590c2de72563979a7a686f437c230ef192"
   ],
   "processedSlugs": [
+    "adoratorio-summer",
     "aeris",
     "aerosix",
     "aerox-studio",
@@ -28,6 +39,7 @@
     "ais-folio",
     "amazing-agency",
     "apartment-flow",
+    "asme",
     "astra-interior",
     "astro-armor",
     "atlas",
@@ -36,11 +48,13 @@
     "backbest-800",
     "beetbuh",
     "beyond-voyages",
+    "bishop-tentwenty",
     "break-code",
     "camper",
     "cast-and-render",
     "chain-warden",
     "chronoform",
+    "cinder-axis",
     "cinematic",
     "cozypaws",
     "crimson-folio",
@@ -57,6 +71,7 @@
     "ember-arcade",
     "fennec",
     "firepower",
+    "fishfinger-creative",
     "fitclub-food",
     "flexible-spark",
     "forest-pulse",
@@ -90,7 +105,9 @@
     "melli",
     "melt-muse",
     "meridian",
+    "micai-aristide",
     "mint-atlas",
+    "modern-agency",
     "monoframe",
     "mostar-city",
     "motora",
@@ -116,6 +133,7 @@
     "semaan",
     "shirtline",
     "shopluxe",
+    "skyelite-private-jets",
     "solaris-gate",
     "solenne",
     "sonicore",
@@ -198,6 +216,30 @@
         "break-code": "premium",
         "launch-video": "premium",
         "geospace-canvas": "premium"
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "built": [
+        "cinder-axis",
+        "bishop-tentwenty",
+        "fishfinger-creative",
+        "adoratorio-summer",
+        "micai-aristide"
+      ],
+      "catalogIds": [
+        "t122",
+        "t123",
+        "t124",
+        "t125",
+        "t126"
+      ],
+      "tiers": {
+        "cinder-axis": "free",
+        "bishop-tentwenty": "free",
+        "fishfinger-creative": "premium",
+        "adoratorio-summer": "premium",
+        "micai-aristide": "premium"
       }
     }
   ],

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>INNOVATION — Know it all.</title>
+  <meta name="description" content="Precision optical intelligence and liquid-glass enterprise telemetry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #000000; --fg: #ffffff; --muted: rgba(255,255,255,0.68); --accent: #38bdf8; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .inn67-cursor-ring, .inn67-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
+    .inn67-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
+    .inn67-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
+    .inn67-cursor-dot { width: 6px; height: 6px; background: #38bdf8; margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .inn67-cursor-ring, .inn67-cursor-dot { display: none; } }
+
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.015);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .liquid-glass::before {
+      content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1.4px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .inn67-hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding: 24px clamp(18px,4vw,48px); overflow: hidden; isolation: isolate; }
+    .inn67-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: 0.72; pointer-events: none; }
+    .inn67-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
+    .inn67-header { position: relative; z-index: 220; max-width: 1280px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+    .inn67-top-bar { display: flex; align-items: center; justify-content: space-between; }
+    .inn67-pill-bar { border-radius: 999px; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .inn67-nav-links { display: none; gap: 28px; list-style: none; }
+    @media (min-width: 768px) { .inn67-nav-links { display: flex; } }
+    .inn67-nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; }
+    .inn67-center { position: relative; z-index: 10; text-align: center; max-width: 760px; margin: auto; padding: 24px 0; }
+    .inn67-h1 { font-family: 'Instrument Serif', serif; font-size: clamp(56px, 9vw, 118px); font-weight: 400; letter-spacing: -0.03em; line-height: 0.96; }
+    .inn67-cutout-3d { width: 100%; max-width: 310px; max-height: 245px; object-fit: contain; display: block; margin: -12px auto 12px; filter: drop-shadow(0 24px 40px rgba(0,0,0,0.8)) drop-shadow(0 0 28px rgba(56,189,248,0.34)); animation: inn67Float 5.5s ease-in-out infinite; }
+    @keyframes inn67Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
+    .inn67-partners { position: relative; z-index: 10; max-width: 1120px; width: 100%; margin: 0 auto; padding-top: 20px; text-align: center; }
+    .inn67-partner-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 36px; margin-top: 14px; color: rgba(255,255,255,0.82); font-size: 20px; font-weight: 600; letter-spacing: -0.02em; }
+    .inn67-section { max-width: 1200px; margin: 0 auto; padding: 80px 24px; }
+    .inn67-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: center; }
+    @media (min-width: 960px) { .inn67-pinned-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .inn67-card { padding: 26px; border-radius: 28px; }
+    .inn67-reveal { opacity: 0; transform: translate3d(0,22px,0); transition: opacity 0.6s, transform 0.6s; }
+    .inn67-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+    .inn67-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(0,0,0,0.86); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
+    .inn67-seamless-overlay.is-open { display: flex; }
+    .inn67-seamless-box { max-width: 600px; width: 100%; border-radius: 30px; background: #0b0d13; border: 1px solid rgba(255,255,255,0.16); padding: 34px; pointer-events: auto; }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+    <defs>
+      <filter id="inn67LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="9" />
+        <feDisplacementMap id="inn67Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+  <div id="cursorRing" class="inn67-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="inn67-cursor-dot" aria-hidden="true"></div>
+
+  <main>
+    <section id="heroStage" class="inn67-hero">
+      <video id="heroBgVideo" class="inn67-bg-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_091829_e74072b4-b466-4919-835f-f9ac2c0ef8ef.mp4" autoplay loop muted playsinline preload="auto"></video>
+      <canvas id="ambientSmokeCanvas" class="inn67-smoke-canvas" aria-hidden="true"></canvas>
+
+      <header class="inn67-header">
+        <div class="inn67-top-bar">
+          <strong style="font-size:22px;letter-spacing:-0.04em;">INNOVATION</strong>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <button type="button" id="motionToggleBtn" class="liquid-glass" style="color:#fff;padding:8px 16px;border-radius:999px;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;" data-magnetic>𝕏</button>
+            <button type="button" class="liquid-glass" style="width:40px;height:40px;border-radius:50%;color:#fff;cursor:pointer;" data-magnetic>in</button>
+          </div>
+        </div>
+        <nav class="inn67-pill-bar liquid-glass" aria-label="Primary">
+          <ul class="inn67-nav-links">
+            <li><a href="#heroStage">Home</a></li>
+            <li><a href="#pinnedSpecs">Services</a></li>
+            <li><a href="#pinnedSpecs">Why Us</a></li>
+            <li><a href="#pinnedSpecs">Reviews</a></li>
+            <li><a href="#pinnedSpecs">Contact Us</a></li>
+          </ul>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <span style="font-size:13px;color:var(--muted);">1(800)234-23-34</span>
+            <button type="button" id="exploreMagneticBtn" class="liquid-glass" style="color:#fff;padding:8px 20px;border-radius:999px;font-size:13px;cursor:pointer;" data-magnetic data-next-preview>Call Me Back</button>
+          </div>
+        </nav>
+      </header>
+
+      <div class="inn67-center" data-parallax="0.07">
+        <h1 class="inn67-h1" id="oversizedHeadline">Know it all.</h1>
+        <div id="heroPopoutRig" data-tilt-card style="filter:url(#inn67LiquidFilter);">
+          <img class="inn67-cutout-3d" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/innovation/assets/cutout.webp'" alt="Innovation 3D Cutout" loading="eager" decoding="async" />
+        </div>
+        <button type="button" class="liquid-glass" style="color:#fff;padding:15px 44px;border-radius:999px;font-size:16px;cursor:pointer;margin-top:8px;" data-magnetic data-seamless-trigger="Innovation Optical Telemetry Dossier">
+          Book a Free Call
+        </button>
+      </div>
+
+      <div class="inn67-partners">
+        <span style="font-size:12px;color:rgba(255,255,255,0.5);">Relied on by brands framing the future</span>
+        <div class="inn67-partner-row">
+          <span>Vortex</span><span>Nimbus</span><span>Prysma</span><span>Kinetix</span><span>Stratum</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="pinnedSpecs" class="inn67-section">
+      <div class="inn67-pinned-grid">
+        <article class="inn67-card liquid-glass inn67-reveal" data-tilt-card data-spec-index="001">
+          <span style="font-size:11px;color:#38bdf8;font-weight:700;">001 / REFRACTIVE CORE</span>
+          <strong data-counter-target="99" data-counter-suffix=".9%" style="display:block;font-size:34px;margin:6px 0;">99.9%</strong>
+          <p style="font-size:13px;color:var(--muted);">Real-time optical synthesis and neural decision telemetry.</p>
+        </article>
+        <div class="inn67-card liquid-glass" id="scrubCenterStage" style="text-align:center;">
+          <img class="inn67-cutout-3d" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/innovation/assets/cutout.webp'" alt="Innovation 3D Cutout" loading="eager" decoding="async" />
+          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:#38bdf8;font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
+        </div>
+        <article class="inn67-card liquid-glass inn67-reveal" data-tilt-card data-spec-index="003">
+          <span style="font-size:11px;color:#38bdf8;font-weight:700;">002 / GLOBAL ENTERPRISE</span>
+          <strong data-counter-target="240" data-counter-suffix="+" style="display:block;font-size:34px;margin:6px 0;">240+</strong>
+          <p style="font-size:13px;color:var(--muted);">Category-leading teams powered by Innovation spatial analytics.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="inn67-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="inn67-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-size:12px;color:#38bdf8;font-weight:700;">INNOVATION DOSSIER</span>
+        <button type="button" id="closeSeamlessBtn" class="liquid-glass" style="color:#fff;padding:6px 14px;border-radius:999px;cursor:pointer;">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:'Instrument Serif',serif;font-size:36px;font-weight:400;margin-bottom:10px;">Know it all.</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">Schedule a direct executive briefing with our optical intelligence architects.</p>
+      <div style="margin-bottom:18px;"><img class="inn67-cutout-3d" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/innovation/assets/cutout.webp'" alt="Innovation 3D Cutout" loading="eager" decoding="async" /></div>
+      <button type="button" id="confirmSeamlessBtn" class="liquid-glass" style="width:100%;color:#fff;padding:12px;border-radius:999px;cursor:pointer;">Confirm Executive Call</button>
+    </div>
+  </div>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.inn67-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('inn67Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

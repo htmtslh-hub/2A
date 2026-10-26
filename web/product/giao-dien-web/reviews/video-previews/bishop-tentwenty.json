@@ -1,0 +1,48 @@
+{
+  "id": "t123",
+  "slug": "bishop-tentwenty",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T22:28:25.938Z",
+  "demo": "/demos/bishop-tentwenty/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "5db572ecbb89",
+  "sha256": "5db572ecbb89a80dada76822490c3878c00f11a99ae05a7bd47cd5cdcc71c4b3",
+  "demoHtmlSha256": "2ffbef59dd0d250ab5630e084df3a4002611836d42f0d4368fc486a338206a97",
+  "demoSha256": "6b3a2aaa6417ee7bddabccd2385a54e296fe69a27661e65f89335112d815bc4d",
+  "bytes": 612815,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.495,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.903,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1534
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bishop-tentwenty-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bishop-tentwenty-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bishop-tentwenty-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bishop-tentwenty-return.jpg"
+  ]
+}

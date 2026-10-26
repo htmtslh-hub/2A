@@ -240,17 +240,33 @@ export async function fetchPromptContent(promptId) {
 
 export async function runFetchPipeline(options = {}) {
   const state = JSON.parse(readFileSync(statePath, 'utf8'));
-  const allItems = await fetchMotionsitesPrompts({ includePremium: true });
+  const bankPath = resolve(__dirname, 'motionsites-master-bank.json');
   const storeIdentity = collectExistingStoreIdentity();
 
   const processedSlugs = new Set([...(state.processedSlugs || []), ...storeIdentity.slugs]);
   const processedPromptIds = new Set(state.processedPromptIds || []);
   const processedPromptHashes = new Set(state.processedPromptHashes || []);
 
-  // Prioritize unused Free items first, then unused Premium items with video/poster previews
+  // Load from pre-harvested local master bank (motionsites-master-bank.json) first, or fallback to live fetch
+  let bankData = null;
+  let allItems = [];
+  if (existsSync(bankPath)) {
+    bankData = JSON.parse(readFileSync(bankPath, 'utf8'));
+    allItems = (bankData.items || []).map(it => ({
+      ...it,
+      isFree: it.isFreeOnMotionsites ?? it.isFree,
+      image: it.videoPreviewUrl || it.imagePreviewUrl || null,
+      poster: it.imagePreviewUrl || null
+    }));
+    console.log(`[Bank] Loaded ${allItems.length} templates from local motionsites-master-bank.json.`);
+  } else {
+    allItems = await fetchMotionsitesPrompts({ includePremium: true });
+  }
+
+  // Prioritize unused Free items (with pre-harvested prompt_text) first, then unused Premium items
   const sortedItems = [
-    ...allItems.filter(i => i.isFree),
-    ...allItems.filter(i => !i.isFree)
+    ...allItems.filter(i => i.isFree && i.status !== 'already_used_in_2A' && i.status !== 'built_in_2A'),
+    ...allItems.filter(i => !i.isFree && i.status !== 'already_used_in_2A' && i.status !== 'built_in_2A')
   ];
 
   const candidates = sortedItems.filter(item => {
@@ -266,7 +282,7 @@ export async function runFetchPipeline(options = {}) {
     );
   });
 
-  console.log(`Found ${candidates.length} candidate templates not yet built into 2A (${candidates.filter(c => c.isFree).length} Free + ${candidates.filter(c => !c.isFree).length} Premium with preview videos).`);
+  console.log(`Found ${candidates.length} candidate templates in master bank ready to build (${candidates.filter(c => c.isFree).length} Free with full prompt + ${candidates.filter(c => !c.isFree).length} Premium with preview videos).`);
   const fetchedList = [];
   const today = new Date().toLocaleDateString('sv-SE', { timeZone: config.timezone || 'Asia/Ho_Chi_Minh' });
 
@@ -286,13 +302,13 @@ export async function runFetchPipeline(options = {}) {
       break;
     }
 
-    console.log(`--> Checking candidate: "${candidate.title}" (${candidate.id}, free=${candidate.isFree})...`);
+    console.log(`--> Selecting from bank: "${candidate.title}" (${candidate.id}, free=${candidate.isFree})...`);
     try {
-      let promptText = '';
-      let sections = [];
+      let promptText = candidate.prompt_text || '';
+      let sections = candidate.sections || [];
       let dailyState = null;
 
-      if (candidate.isFree) {
+      if (!promptText && candidate.isFree) {
         const result = await fetchPromptContent(candidate.id);
         promptText = result.prompt_text || '';
         sections = result.sections || [];
@@ -349,10 +365,14 @@ export async function runFetchPipeline(options = {}) {
         continue;
       }
 
-      // Layer 8 deduplication: Check if any distinctive quoted headline (>= 18 chars) in prompt was ALREADY used in any 2A template
-      const distinctiveQuotes = [...promptText.matchAll(/"([^"\n]{18,80})"/g)]
+      // Layer 8 deduplication: Check if any distinctive quoted headline (>= 22 chars) in prompt was ALREADY used in any 2A template
+      const distinctiveQuotes = [...promptText.matchAll(/"([^"\n]{22,80})"/g)]
         .map(m => m[1].trim().toLowerCase())
-        .filter(s => !/https?:|flex|grid|rounded|padding|border|font-|text-|bg-|rgba|linear-gradient|instrument serif|helvetica|plus jakarta|inter|dm sans|enter your email|all rights reserved|preserveaspectratio|get started|learn more|contact us|privacy policy/i.test(s));
+        .filter(s =>
+          /^[a-z0-9\s.,!?'"&—–-]+$/i.test(s) &&
+          s.split(/\s+/).length >= 4 &&
+          !/https?:|flex|grid|rounded|padding|border|font-|text-|bg-|rgba|linear-gradient|instrument serif|helvetica|plus jakarta|inter|dm sans|jetbrains|monospace|sans-serif|system-ui|blinkmacsystemfont|initial-scale|device-width|enter your email|all rights reserved|preserveaspectratio|get started|learn more|contact us|privacy policy|autoplay muted|open navigation|subscribe to our|start a conversation/i.test(s)
+        );
       const matchedDoc = storeIdentity.htmlCorpus.find(doc => distinctiveQuotes.some(q => doc.html.includes(q)));
       if (matchedDoc) {
         console.warn(`[!] Headline quote from ${candidate.id} was ALREADY used in 2A template "${matchedDoc.slug}"! Marking processed & skipping.`);
@@ -393,11 +413,19 @@ export async function runFetchPipeline(options = {}) {
       state.processedPromptIds = [...processedPromptIds];
       state.processedSlugs = [...processedSlugs].sort();
       state.processedPromptHashes = [...processedPromptHashes];
+
+      if (bankData && Array.isArray(bankData.items)) {
+        const bItem = bankData.items.find(x => x.id === candidate.id);
+        if (bItem) bItem.status = 'built_in_2A';
+      }
     } catch (err) {
       console.error(`[-] Error fetching ${candidate.id}:`, err.message);
     }
   }
 
+  if (bankData) {
+    writeFileSync(bankPath, JSON.stringify(bankData, null, 2), 'utf8');
+  }
   writeFileSync(statePath, JSON.stringify(state, null, 2), 'utf8');
   return fetchedList;
 }

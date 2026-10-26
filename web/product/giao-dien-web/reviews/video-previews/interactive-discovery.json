@@ -1,0 +1,38 @@
+{
+  "id": "t112",
+  "slug": "interactive-discovery",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T00:38:47.747Z",
+  "demo": "/demos/interactive-discovery/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "6380d50e5381",
+  "sha256": "6380d50e5381132a56491faa662cfee95cb2351ef7345bf962b65477ce91b8f3",
+  "demoHtmlSha256": "16168490d25220220b084b1afebdae78d398dfac3dd63d75fdcd5257f3ea7ed9",
+  "demoSha256": "a6bdee1d474274b9f28321a86cd612f74273bf70fbb0735fcf208eb762730986",
+  "bytes": 683847,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 601
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\interactive-discovery-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\interactive-discovery-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\interactive-discovery-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\interactive-discovery-return.jpg"
+  ]
+}

@@ -1496,5 +1496,47 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "prisma-creative-studio": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "537c32761492",
+    "sha256": "537c32761492af6e0fdde021b60d8c2a0a1ad2df7ecb3a12d00518eb8f11a23c",
+    "demoHtmlSha256": "25c050035d67872aed391a4c74cf89d2042b2505a0d325ee45d6e4f11a51dd61",
+    "demoSha256": "602f7251760144cae15651a783978f534e9b752f6facdc430658ced83cfe34fa",
+    "bytes": 756267,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "interactive-discovery": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "6380d50e5381",
+    "sha256": "6380d50e5381132a56491faa662cfee95cb2351ef7345bf962b65477ce91b8f3",
+    "demoHtmlSha256": "16168490d25220220b084b1afebdae78d398dfac3dd63d75fdcd5257f3ea7ed9",
+    "demoSha256": "a6bdee1d474274b9f28321a86cd612f74273bf70fbb0735fcf208eb762730986",
+    "bytes": 683847,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "vex-ventures": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "8236d98d22bc",
+    "sha256": "8236d98d22bce85fd0e7198c8e033eda6d9bf04162bdf348739826c5e1a6c2cc",
+    "demoHtmlSha256": "0ee43e78476cdd99f0f552a0cecc63a2381294e233be63ce82eb1c8b1530d992",
+    "demoSha256": "ef81c7e68f8cd69d3e9e098da8cfb98bf0e2c2cca2e409f171bdd8e76714c428",
+    "bytes": 1064253,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

@@ -1,0 +1,38 @@
+{
+  "id": "t113",
+  "slug": "vex-ventures",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T00:39:17.266Z",
+  "demo": "/demos/vex-ventures/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "8236d98d22bc",
+  "sha256": "8236d98d22bce85fd0e7198c8e033eda6d9bf04162bdf348739826c5e1a6c2cc",
+  "demoHtmlSha256": "0ee43e78476cdd99f0f552a0cecc63a2381294e233be63ce82eb1c8b1530d992",
+  "demoSha256": "ef81c7e68f8cd69d3e9e098da8cfb98bf0e2c2cca2e409f171bdd8e76714c428",
+  "bytes": 1064253,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 626
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vex-ventures-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vex-ventures-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vex-ventures-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\vex-ventures-return.jpg"
+  ]
+}

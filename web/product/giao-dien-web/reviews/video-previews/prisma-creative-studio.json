@@ -1,0 +1,38 @@
+{
+  "id": "t111",
+  "slug": "prisma-creative-studio",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T00:38:16.904Z",
+  "demo": "/demos/prisma-creative-studio/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "537c32761492",
+  "sha256": "537c32761492af6e0fdde021b60d8c2a0a1ad2df7ecb3a12d00518eb8f11a23c",
+  "demoHtmlSha256": "25c050035d67872aed391a4c74cf89d2042b2505a0d325ee45d6e4f11a51dd61",
+  "demoSha256": "602f7251760144cae15651a783978f534e9b752f6facdc430658ced83cfe34fa",
+  "bytes": 756267,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prisma-creative-studio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prisma-creative-studio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prisma-creative-studio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prisma-creative-studio-return.jpg"
+  ]
+}

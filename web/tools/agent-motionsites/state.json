@@ -1,6 +1,6 @@
 {
   "lastRunDate": "2026-10-26",
-  "todayCopiedCount": 3,
+  "todayCopiedCount": 6,
   "processedSlugs": [
     "aeris",
     "aerosix",
@@ -49,6 +49,7 @@
     "gridwork-co",
     "halden",
     "haul",
+    "interactive-discovery",
     "iris",
     "jack-3d",
     "japan-trails",
@@ -82,6 +83,7 @@
     "orbit-academy",
     "pinehaven",
     "price-calculator",
+    "prisma-creative-studio",
     "prmpt",
     "puro-amor",
     "reelmark",
@@ -110,6 +112,7 @@
     "verdant",
     "vertex-shops",
     "vesper-ai",
+    "vex-ventures",
     "veyra",
     "viktor",
     "vize-footer",
@@ -179,7 +182,10 @@
     "murmur",
     "reelmark-v2",
     "lauberhorn-ridge",
-    "gridwork-co"
+    "gridwork-co",
+    "prisma-landing",
+    "interactive-discovery",
+    "vex-ventures-hero"
   ],
   "history": [
     {
@@ -237,8 +243,8 @@
       }
     }
   ],
-  "todayFreeCount": 1,
-  "todayPremiumCount": 2,
+  "todayFreeCount": 2,
+  "todayPremiumCount": 4,
   "processedPromptHashes": [
     "aa5f58f6ac4d3806dcbc1d54c34773bfaa8d8e37d80579513ccaad8135239694",
     "98a578e9d85ce3e6d4a80b5fc09a94e31a8796088975de98245db90e56bfd3fb",
@@ -248,6 +254,9 @@
     "55229c936a8706f64190196b08207c4ef6d1deed9026ec26285debe43b4fe8eb",
     "1b1e95aaa8416abbbdafaf591b94df2011e39558118e5d40695b20e00389e3ea",
     "4104ca9bfced3612a974801f7c96614dd8121d2f264744568f3109af3e7ad2a2",
-    "bb7da53a5ec5dce674d46754cb7fc0271496c84569bf1998deff2d16f24af08d"
+    "bb7da53a5ec5dce674d46754cb7fc0271496c84569bf1998deff2d16f24af08d",
+    "4fc7f6c5021dfbf0662047d5ca32bd83291f7d06645f539c0ec99766c56c5128",
+    "c81bf5235d39099e553f989415057fc9610a0e5184bf127b563fed79712b4829",
+    "5b43ab2865b587b541447a0ac44d601d0b10fb80eabaf72f11b8e799a5953a7b"
   ]
 }

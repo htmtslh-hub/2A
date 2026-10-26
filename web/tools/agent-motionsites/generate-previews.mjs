@@ -26,6 +26,46 @@ const publicRoot = path.resolve(root, 'web/public');
 const previewsDir = path.resolve(publicRoot, 'previews');
 fs.mkdirSync(previewsDir, { recursive: true });
 
+function extractDomClassTokens(html) {
+  const classes = new Set();
+  for (const m of html.matchAll(/class=["']([^"']+)["']/g)) {
+    for (const tok of m[1].split(/\s+/)) {
+      if (tok && tok.length > 2) classes.add(tok.toLowerCase());
+    }
+  }
+  return classes;
+}
+
+function verifyDomUniqueness(targetSlug) {
+  const targetFile = path.resolve(publicRoot, `demos/${targetSlug}/index.html`);
+  if (!fs.existsSync(targetFile)) return;
+  const targetTokens = extractDomClassTokens(fs.readFileSync(targetFile, 'utf8'));
+  if (targetTokens.size === 0) return;
+
+  const demosRoot = path.resolve(publicRoot, 'demos');
+  const recentSiblings = ['glow-features', 'kresna-footer', 'price-calculator', 'prisma-creative-studio', 'interactive-discovery', 'vex-ventures']
+    .filter(s => s !== targetSlug && fs.existsSync(path.resolve(demosRoot, `${s}/index.html`)));
+
+  for (const sib of recentSiblings) {
+    const sibTokens = extractDomClassTokens(fs.readFileSync(path.resolve(demosRoot, `${sib}/index.html`), 'utf8'));
+    if (sibTokens.size === 0) continue;
+    let intersection = 0;
+    for (const t of targetTokens) {
+      if (sibTokens.has(t)) intersection++;
+    }
+    const union = new Set([...targetTokens, ...sibTokens]).size;
+    const jaccard = union > 0 ? intersection / union : 0;
+    console.log(`[DOM-Gate] ${targetSlug} vs ${sib}: Jaccard class similarity = ${(jaccard * 100).toFixed(1)}% (threshold < 45%)`);
+    if (jaccard > 0.45) {
+      throw new Error(`[DOM-Gate FAIL] ${targetSlug} shares ${(jaccard * 100).toFixed(1)}% DOM/CSS class overlap with ${sib}! Rejecting cloned layout.`);
+    }
+  }
+}
+
+for (const s of slugs) {
+  verifyDomUniqueness(s);
+}
+
 const mime = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',

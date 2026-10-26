@@ -14,6 +14,9 @@ export const WEB_CATEGORY_LABELS: Record<LangCode, Record<WebCategory, string>> 
  * conservation programmes and public research belong to education.
  */
 export const TEMPLATE_CATEGORIES = {
+  'vex-ventures': 'commerce',
+  'interactive-discovery': 'commerce',
+  'prisma-creative-studio': 'commerce',
   'price-calculator': 'commerce',
   'kresna-footer': 'commerce',
   'glow-features': 'commerce',

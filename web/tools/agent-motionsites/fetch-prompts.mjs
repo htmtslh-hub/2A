@@ -296,7 +296,15 @@ export async function runFetchPipeline(options = {}) {
   state.todayPremiumCount = state.todayPremiumCount || 0;
   state.processedPromptHashes = state.processedPromptHashes || [];
 
+  const batchLimit = options.batchLimit || config.batchLimit || 3;
+  const batchFreeQuota = config.batchFreeQuota ?? 1;
+  let batchFreeCount = 0;
+
   for (const candidate of candidates) {
+    if (fetchedList.length >= batchLimit) {
+      console.log(`[!] Shift batch limit of ${batchLimit} prompts reached.`);
+      break;
+    }
     if (state.todayCopiedCount >= config.dailyLimit) {
       console.log(`[!] Daily limit of ${config.dailyLimit} prompts reached for today (${today}).`);
       break;
@@ -383,9 +391,10 @@ export async function runFetchPipeline(options = {}) {
         continue;
       }
 
-      // Quota allocation: 1 Free + 2 Premium per day
-      const dailyFreeQuota = config.dailyFreeQuota ?? 1;
-      const assignedTier = state.todayFreeCount < dailyFreeQuota ? 'free' : 'premium';
+      // Quota allocation: 1 Free + 2 Premium per shift batch (2 Free + 4 Premium per day)
+      const dailyFreeQuota = config.dailyFreeQuota ?? 2;
+      const assignedTier = (batchFreeCount < batchFreeQuota && state.todayFreeCount < dailyFreeQuota) ? 'free' : 'premium';
+      if (assignedTier === 'free') batchFreeCount++;
 
       const itemData = {
         ...candidate,

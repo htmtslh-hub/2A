@@ -46,6 +46,79 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t113: {
+    slug: 'vex-ventures',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "VEX Ventures",
+        desc: "Giao diện web VEX Ventures tự chứa trong một file HTML duy nhất với kiến trúc Hero Section, hiệu ứng tương tác thời gian thực và hộp thoại thông số.",
+        tags: ["Hero Section", 'Responsive HTML5', 'Motion UI']
+      },
+      en: {
+        name: "VEX Ventures",
+        desc: "Single-file self-contained VEX Ventures web experience featuring Hero Section architecture, real-time interactive state, and an accessible modal dialog.",
+        tags: ["Hero Section", 'Responsive HTML5', 'Motion UI']
+      },
+      zh: {
+        name: "VEX Ventures",
+        desc: "单文件自包含 VEX Ventures 网页模板，配备实时交互组件与详情弹窗。",
+        tags: ['交互组件', '响应式设计', '动态视觉']
+      }
+    }
+  },
+
+  t112: {
+    slug: 'interactive-discovery',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Interactive Discovery",
+        desc: "Giao diện web Interactive Discovery tự chứa trong một file HTML duy nhất với kiến trúc Hero, hiệu ứng tương tác thời gian thực và hộp thoại thông số.",
+        tags: ["Hero", 'Responsive HTML5', 'Motion UI']
+      },
+      en: {
+        name: "Interactive Discovery",
+        desc: "Single-file self-contained Interactive Discovery web experience featuring Hero architecture, real-time interactive state, and an accessible modal dialog.",
+        tags: ["Hero", 'Responsive HTML5', 'Motion UI']
+      },
+      zh: {
+        name: "Interactive Discovery",
+        desc: "单文件自包含 Interactive Discovery 网页模板，配备实时交互组件与详情弹窗。",
+        tags: ['交互组件', '响应式设计', '动态视觉']
+      }
+    }
+  },
+
+  t111: {
+    slug: 'prisma-creative-studio',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Prisma Creative Studio",
+        desc: "Giao diện web Prisma Creative Studio tự chứa trong một file HTML duy nhất với kiến trúc Landing Page, hiệu ứng tương tác thời gian thực và hộp thoại thông số.",
+        tags: ["Landing Page", 'Responsive HTML5', 'Motion UI']
+      },
+      en: {
+        name: "Prisma Creative Studio",
+        desc: "Single-file self-contained Prisma Creative Studio web experience featuring Landing Page architecture, real-time interactive state, and an accessible modal dialog.",
+        tags: ["Landing Page", 'Responsive HTML5', 'Motion UI']
+      },
+      zh: {
+        name: "Prisma Creative Studio",
+        desc: "单文件自包含 Prisma Creative Studio 网页模板，配备实时交互组件与详情弹窗。",
+        tags: ['交互组件', '响应式设计', '动态视觉']
+      }
+    }
+  },
+
   t110: {
     slug: 'price-calculator',
     cat: 'commerce',

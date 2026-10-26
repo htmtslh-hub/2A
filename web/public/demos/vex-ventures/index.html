@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>VEX Ventures — Investing. Building. Advisory.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: #000000; color: #ffffff; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #000000;
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: clip;
+    }
+
+    /* LIQUID GLASS SPECIFICATION FROM PROMPT */
+    .liquid-glass {
+      background: rgba(0, 0, 0, 0.4);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .liquid-glass::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg,
+        rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 20%,
+        rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
+        rgba(255,255,255,0.1) 80%, rgba(255,255,255,0.3) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    /* RAW VIDEO HERO SECTION */
+    .vex-hero-viewport {
+      position: relative;
+      width: 100%;
+      height: 100dvh;
+      min-height: 640px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      background: #000000;
+    }
+    .vex-raw-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    /* Top Liquid-Glass Navbar */
+    .vex-nav-shell {
+      position: relative;
+      z-index: 20;
+      padding: 24px clamp(20px, 4.5vw, 64px) 0;
+    }
+    .vex-navbar {
+      border-radius: 12px;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .vex-logo {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .vex-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .vex-nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      transition: color 0.2s ease;
+    }
+    .vex-nav-links a:hover {
+      color: #d1d5db;
+    }
+    .vex-nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .vex-chat-btn-sm {
+      background: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    .vex-chat-btn-sm:hover {
+      background: #f3f4f6;
+      transform: translateY(-1px);
+    }
+
+    /* Bottom Hero Content */
+    .vex-hero-bottom {
+      position: relative;
+      z-index: 20;
+      padding: 0 clamp(20px, 4.5vw, 64px) clamp(40px, 5vw, 64px);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 28px;
+      align-items: end;
+    }
+    .vex-heading {
+      font-size: clamp(2.35rem, 5.2vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    .vex-char {
+      display: inline-block;
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .vex-subheading {
+      font-size: clamp(16px, 1.25vw, 18px);
+      color: #d1d5db;
+      line-height: 1.5;
+      margin-bottom: 22px;
+      max-width: 540px;
+    }
+    .vex-btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .vex-btn-primary {
+      background: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 32px;
+      font-size: 15px;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    .vex-btn-primary:hover {
+      background: #f3f4f6;
+      transform: translateY(-2px);
+    }
+    .vex-btn-glass {
+      border-radius: 8px;
+      padding: 12px 32px;
+      font-size: 15px;
+      font-weight: 500;
+      font-family: inherit;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+    }
+    .vex-btn-glass:hover {
+      background: #ffffff;
+      color: #000000;
+      transform: translateY(-2px);
+    }
+    .vex-right-tag-wrap {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    .vex-right-tag {
+      border-radius: 12px;
+      padding: 14px 24px;
+      font-size: clamp(18px, 1.8vw, 24px);
+      font-weight: 300;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    /* SECTION 2 (+15-20% ENHANCEMENT): VENTURE CAPITAL THESIS & PORTFOLIO MATRIX */
+    .vex-thesis-section {
+      background: #050505;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding: clamp(56px, 7vw, 96px) clamp(20px, 4.5vw, 64px);
+    }
+    .vex-thesis-container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .vex-thesis-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 36px;
+    }
+    .vex-filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .vex-filter-btn {
+      background: rgba(255, 255, 255, 0.06);
+      color: #d1d5db;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .vex-filter-btn.is-active, .vex-filter-btn:hover {
+      background: #ffffff;
+      color: #000000;
+      font-weight: 500;
+    }
+    .vex-capital-calc {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-size: 13px;
+    }
+    .vex-capital-calc input[type="range"] {
+      width: 130px;
+      accent-color: #ffffff;
+      cursor: pointer;
+    }
+    .vex-portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .vex-venture-card {
+      background: #0E0E0E;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease;
+    }
+    .vex-venture-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 255, 255, 0.45);
+    }
+    .vex-pillar-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #9ca3af;
+    }
+    .vex-metric-row {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+      color: #d1d5db;
+    }
+
+    /* Chat Modal */
+    .vex-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .vex-modal-backdrop.is-open { display: flex; }
+    .vex-modal-card {
+      background: #111111;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 16px;
+      max-width: 480px;
+      width: 100%;
+      padding: 32px;
+    }
+
+    @media (max-width: 1024px) {
+      .vex-hero-bottom { grid-template-columns: 1fr; }
+      .vex-right-tag-wrap { justify-content: flex-start; }
+      .vex-portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .vex-nav-links { display: none; }
+      .vex-portfolio-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="vex-hero-viewport" id="story">
+    <video id="vexHeroVideo" class="vex-raw-video" autoplay loop muted playsinline preload="metadata" poster="https://motionsites.ai/assets/hero-vex-ventures-poster-WLKoWe6y.png">
+      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260403_050628_c4e32401-fab4-4a27-b7a8-6e9291cd5959.mp4" type="video/mp4">
+    </video>
+
+    <div class="vex-nav-shell">
+      <nav class="vex-navbar liquid-glass" aria-label="VEX Primary Navigation">
+        <a href="#story" class="vex-logo">VEX</a>
+        <div class="vex-nav-links">
+          <a href="#story">Story</a>
+          <a href="#investing">Investing</a>
+          <a href="#investing">Building</a>
+          <a href="#investing">Advisory</a>
+        </div>
+        <div class="vex-nav-right">
+          <button type="button" class="vex-filter-btn" id="vexMotionToggle" aria-pressed="false" style="padding:6px 12px;font-size:12px;">Video: Live</button>
+          <button type="button" class="vex-chat-btn-sm" id="navChatBtn">Start a Chat</button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="vex-hero-bottom">
+      <div>
+        <h1 class="vex-heading" id="vexAnimatedHeading">Shaping tomorrow<br>with vision and action.</h1>
+        <p class="vex-subheading">We back visionaries and craft ventures that define what comes next.</p>
+        <div class="vex-btn-row">
+          <button type="button" class="vex-btn-primary" id="heroChatBtn">Start a Chat</button>
+          <button type="button" class="vex-btn-glass liquid-glass" id="heroExploreBtn">Explore Now</button>
+        </div>
+      </div>
+
+      <div class="vex-right-tag-wrap">
+        <div class="vex-right-tag liquid-glass">Investing. Building. Advisory.</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="vex-thesis-section" id="investing" aria-labelledby="thesisHeading">
+      <div class="vex-thesis-container">
+        <div class="vex-thesis-toolbar">
+          <div>
+            <span class="vex-pillar-tag">VEX Capital Architecture</span>
+            <h2 id="thesisHeading" style="font-size:clamp(1.75rem,3.2vw,2.5rem);font-weight:400;letter-spacing:-0.03em;margin-top:6px;">
+              Active Venture Pillars &amp; Deployment
+            </h2>
+          </div>
+
+          <div class="vex-capital-calc">
+            <label for="vexCheckSlider">Check Size: <strong id="vexCheckOut">$4.5M</strong></label>
+            <input type="range" id="vexCheckSlider" min="1" max="15" step="0.5" value="4.5">
+            <span>Target Equity: <strong id="vexEquityOut">14.2%</strong></span>
+          </div>
+        </div>
+
+        <div class="vex-filter-pills" role="tablist" aria-label="Filter Venture Pillars" style="margin-bottom:24px;">
+          <button type="button" class="vex-filter-btn is-active" data-pillar="all">All Pillars (03)</button>
+          <button type="button" class="vex-filter-btn" data-pillar="investing">01 / Investing</button>
+          <button type="button" class="vex-filter-btn" data-pillar="building">02 / Building</button>
+          <button type="button" class="vex-filter-btn" data-pillar="advisory">03 / Advisory</button>
+        </div>
+
+        <div class="vex-portfolio-grid" id="vexPortfolioGrid">
+          <article class="vex-venture-card" data-category="investing">
+            <div>
+              <span class="vex-pillar-tag">01 / Investing</span>
+              <h3 style="font-size:21px;font-weight:500;margin:10px 0 8px;">Frontier Compute &amp; Autonomous Systems</h3>
+              <p style="font-size:14px;color:#9ca3af;line-height:1.55;">
+                Lead seed and Series A checks into sovereign AI infrastructure, deterministic silicon, and zero-latency robotics protocols.
+              </p>
+            </div>
+            <div class="vex-metric-row">
+              <span>Initial Ticket</span>
+              <strong>$1.5M – $8.0M</strong>
+            </div>
+          </article>
+
+          <article class="vex-venture-card" data-category="building">
+            <div>
+              <span class="vex-pillar-tag">02 / Building</span>
+              <h3 style="font-size:21px;font-weight:500;margin:10px 0 8px;">Co-Founding Studio &amp; Zero-to-One</h3>
+              <p style="font-size:14px;color:#9ca3af;line-height:1.55;">
+                Embedded principal engineers, design systems directors, and GTM operators building category-defining ventures from day zero.
+              </p>
+            </div>
+            <div class="vex-metric-row">
+              <span>Studio Speed</span>
+              <strong>90-Day MVP Launch</strong>
+            </div>
+          </article>
+
+          <article class="vex-venture-card" data-category="advisory">
+            <div>
+              <span class="vex-pillar-tag">03 / Advisory</span>
+              <h3 style="font-size:21px;font-weight:500;margin:10px 0 8px;">Strategic M&amp;A &amp; Global Expansion</h3>
+              <p style="font-size:14px;color:#9ca3af;line-height:1.55;">
+                Board-level capital structuring, cross-border enterprise distribution, and institutional liquidity advisory for growth founders.
+              </p>
+            </div>
+            <div class="vex-metric-row">
+              <span>Network Reach</span>
+              <strong>42 Global Markets</strong>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="vex-modal-backdrop" id="vexChatModal" role="dialog" aria-modal="true" aria-labelledby="vexModalHeading">
+    <div class="vex-modal-card">
+      <span class="vex-pillar-tag">Direct Partner Desk</span>
+      <h2 id="vexModalHeading" style="font-size:24px;font-weight:500;margin:8px 0 10px;">Start a Conversation with VEX</h2>
+      <p style="font-size:14px;color:#9ca3af;line-height:1.6;margin-bottom:22px;">
+        Share your deck or thesis directly with our investing and venture-building partners. Typical response within 24 hours.
+      </p>
+      <button type="button" class="vex-btn-primary" id="closeVexModalBtn" style="width:100%;">Close Window (Esc)</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      // 1. Character-by-character staggered entrance animation (30ms per char)
+      var heading = document.getElementById('vexAnimatedHeading');
+      if (heading) {
+        var lines = ['Shaping tomorrow', 'with vision and action.'];
+        heading.innerHTML = '';
+        lines.forEach(function (line, lineIdx) {
+          var lineWrap = document.createElement('span');
+          lineWrap.style.display = 'block';
+          for (var c = 0; c < line.length; c++) {
+            var ch = document.createElement('span');
+            ch.className = 'vex-char';
+            ch.textContent = line[c] === ' ' ? '\u00A0' : line[c];
+            ch.style.opacity = '0';
+            ch.style.transform = 'translateX(-18px)';
+            var delayMs = 120 + (lineIdx * line.length * 22) + (c * 22);
+            ch.style.transitionDelay = delayMs + 'ms';
+            lineWrap.appendChild(ch);
+          }
+          heading.appendChild(lineWrap);
+        });
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            document.querySelectorAll('.vex-char').forEach(function (el) {
+              el.style.opacity = '1';
+              el.style.transform = 'translateX(0)';
+            });
+          });
+        });
+      }
+
+      // 2. Check Size & Equity Calculator
+      var slider = document.getElementById('vexCheckSlider');
+      var checkOut = document.getElementById('vexCheckOut');
+      var eqOut = document.getElementById('vexEquityOut');
+      if (slider) {
+        slider.addEventListener('input', function () {
+          var v = parseFloat(slider.value);
+          if (checkOut) checkOut.textContent = '$' + v.toFixed(1) + 'M';
+          var eq = Math.min(28, 7.5 + v * 1.48);
+          if (eqOut) eqOut.textContent = eq.toFixed(1) + '%';
+        });
+      }
+
+      // 3. Pillar Filter Tabs
+      var filterBtns = document.querySelectorAll('.vex-filter-btn[data-pillar]');
+      var cards = document.querySelectorAll('.vex-venture-card');
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var p = btn.getAttribute('data-pillar');
+          cards.forEach(function (c) {
+            c.style.display = (p === 'all' || c.getAttribute('data-category') === p) ? 'flex' : 'none';
+          });
+        });
+      });
+
+      // 4. Video Play/Pause & Modal
+      var vid = document.getElementById('vexHeroVideo');
+      var mBtn = document.getElementById('vexMotionToggle');
+      var paused = false;
+      if (mBtn) {
+        mBtn.addEventListener('click', function () {
+          paused = !paused;
+          mBtn.setAttribute('aria-pressed', String(paused));
+          mBtn.textContent = paused ? 'Video: Paused' : 'Video: Live';
+          if (vid) { if (paused) vid.pause(); else vid.play().catch(function () {}); }
+        });
+      }
+
+      var modal = document.getElementById('vexChatModal');
+      function openM() { if (modal) modal.classList.add('is-open'); }
+      function closeM() { if (modal) modal.classList.remove('is-open'); }
+      var b1 = document.getElementById('navChatBtn'); if (b1) b1.addEventListener('click', openM);
+      var b2 = document.getElementById('heroChatBtn'); if (b2) b2.addEventListener('click', openM);
+      var b3 = document.getElementById('heroExploreBtn');
+      if (b3) b3.addEventListener('click', function () {
+        var el = document.getElementById('investing');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      });
+      var cb = document.getElementById('closeVexModalBtn'); if (cb) cb.addEventListener('click', closeM);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeM(); });
+    })();
+  </script>
+</body>
+</html>

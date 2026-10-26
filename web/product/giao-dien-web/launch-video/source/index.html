@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Sticky Boundaries — SURREAL DIGITAL PRODUCTION Interactive Showcase</title>
-  <meta name="description" content="Hyper-real freeze-frame art direction and rebellious interactive web experiences engineered with zero-gravity physics and bold typography.">
+  <title>Lunar Oasis Villa — Interactive 3D Hero &amp; Motion Showcase</title>
+  <meta name="description" content="Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    /* hallmark · v2.0.0 · blueprint=lunar-villa · slug=launch-video */
     :root {
-      --bg: #0a0d0b;
-      --surface: #181e1f;
-      --glass: rgba(16, 21, 34, 0.62);
-      --glass-strong: rgba(12, 16, 28, 0.84);
+      --bg: #0c1116;
+      --surface: #151e26;
+      --glass: rgba(255, 255, 255, 0.10);
       --fg: #f8fafc;
-      --muted: #94a3b8;
-      --border: rgba(255, 255, 255, 0.14);
-      --accent: #de870a;
-      --accent-2: #dd880b;
-      --font-display: 'Syne', 'Plus Jakarta Sans', sans-serif;
-      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --muted: #cbd5e1;
+      --border: rgba(255, 255, 255, 0.16);
+      --accent: #eab308;
+      --accent-2: #2dd4bf;
+      --font-display: 'Instrument Serif', Georgia, serif;
       --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
     }
 
     *, *::before, *::after {
@@ -30,20 +30,13 @@
       padding: 0;
     }
 
-    html {
+    html, body {
+      overflow-x: clip;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
       scroll-behavior: smooth;
-      background-color: var(--bg);
-      color: var(--fg);
-      font-family: var(--font-sans);
       -webkit-font-smoothing: antialiased;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--fg);
-      overflow-x: hidden;
-      min-height: 100vh;
-      position: relative;
     }
 
     /* Group 2.5: Custom Follower Cursor with Blend-Mode Difference */
@@ -56,237 +49,175 @@
       z-index: 9999;
       border-radius: 50%;
       transform: translate3d(-100px, -100px, 0);
-      transition: width 0.25s ease, height 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+      transition: width 0.24s ease, height 0.24s ease, background-color 0.24s ease;
       mix-blend-mode: difference;
     }
     .lau62-cursor-ring {
-      width: 38px;
-      height: 38px;
-      border: 1.5px solid rgba(255, 255, 255, 0.85);
-      background: rgba(255, 255, 255, 0.04);
-      margin-left: -19px;
-      margin-top: -19px;
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid #ffffff;
+      margin-left: -18px;
+      margin-top: -18px;
     }
     .lau62-cursor-ring.is-hovered {
-      width: 68px;
-      height: 68px;
-      margin-left: -34px;
-      margin-top: -34px;
+      width: 64px;
+      height: 64px;
+      margin-left: -32px;
+      margin-top: -32px;
       background: #ffffff;
-      border-color: #ffffff;
     }
     .lau62-cursor-dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       background: var(--accent);
-      margin-left: -4px;
-      margin-top: -4px;
+      margin-left: -3.5px;
+      margin-top: -3.5px;
     }
     @media (max-width: 900px) {
       .lau62-cursor-ring, .lau62-cursor-dot { display: none; }
     }
 
-    /* Criterion 6: Minimalist Edge Navigation (Top Bar + Left Slide Numbers + Right Telemetry Rail) */
+    /* Criterion 6: Minimalist Edge Navigation */
     .lau62-edge-top {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 220;
-      padding: 16px clamp(16px, 3.5vw, 44px);
+      padding: 18px clamp(18px, 4vw, 52px);
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      background: linear-gradient(180deg, rgba(7, 9, 15, 0.82) 0%, rgba(7, 9, 15, 0) 100%);
       pointer-events: none;
     }
-    .lau62-edge-top > * {
-      pointer-events: auto;
-    }
+    .lau62-edge-top > * { pointer-events: auto; }
     .lau62-brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
       text-decoration: none;
       color: var(--fg);
       font-family: var(--font-display);
       font-weight: 800;
-      font-size: 16px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .lau62-brand-orb {
-      width: 30px;
-      height: 30px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      font-size: 18px;
+      letter-spacing: 0.04em;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      color: #fff;
-      box-shadow: 0 0 20px #de870a66;
+      gap: 10px;
     }
-    .lau62-edge-menu {
+    .lau62-brand-mark {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px var(--accent);
+    }
+    .lau62-nav-links {
       display: none;
-      align-items: center;
-      gap: 6px;
       list-style: none;
-      padding: 6px 10px;
+      gap: 24px;
+      padding: 8px 20px;
       border-radius: 999px;
       background: var(--glass);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(18px);
       border: 1px solid var(--border);
     }
-    @media (min-width: 920px) {
-      .lau62-edge-menu { display: flex; }
+    @media (min-width: 900px) {
+      .lau62-nav-links { display: flex; }
     }
-    .lau62-edge-menu a {
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 7px 14px;
-      border-radius: 999px;
-      transition: color 0.2s ease, background 0.2s ease;
-    }
-    .lau62-edge-menu a:hover {
+    .lau62-nav-links a {
       color: var(--fg);
-      background: rgba(255, 255, 255, 0.08);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0.82;
+      transition: opacity 0.2s ease;
     }
-    .lau62-edge-actions {
+    .lau62-nav-links a:hover { opacity: 1; }
+    .lau62-edge-controls {
       display: flex;
       align-items: center;
       gap: 10px;
     }
-    .lau62-motion-btn {
-      padding: 8px 14px;
+    .lau62-pill-btn {
+      padding: 9px 16px;
       border-radius: 999px;
       border: 1px solid var(--border);
       background: var(--glass);
       backdrop-filter: blur(16px);
       color: var(--fg);
       font-family: inherit;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-    .lau62-magnetic-btn {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 22px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #ffffff;
-      font-family: inherit;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
       cursor: pointer;
-      box-shadow: 0 10px 28px #de870a44;
-      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease;
-      will-change: transform;
+    }
+    .lau62-cta-magnetic {
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: var(--accent);
+      color: #090b10;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Left & Right Minimalist Edge Rails */
+    /* Left & Right Minimalist Edge Slide Rails */
     .lau62-edge-left,
     .lau62-edge-right {
       position: fixed;
       top: 50%;
       transform: translateY(-50%);
-      z-index: 120;
+      z-index: 130;
       display: none;
       flex-direction: column;
-      align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
-    @media (min-width: 1100px) {
-      .lau62-edge-left { display: flex; left: 20px; }
-      .lau62-edge-right { display: flex; right: 20px; }
+    @media (min-width: 1120px) {
+      .lau62-edge-left { display: flex; left: 22px; }
+      .lau62-edge-right { display: flex; right: 22px; }
     }
-    .lau62-slide-idx {
+    .lau62-slide-dot {
       width: 34px;
       height: 34px;
       border-radius: 999px;
       border: 1px solid var(--border);
       background: var(--glass);
-      backdrop-filter: blur(14px);
-      color: var(--muted);
+      color: var(--fg);
       font-size: 11px;
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      transition: all 0.25s ease;
     }
-    .lau62-slide-idx.is-active {
+    .lau62-slide-dot.is-active {
       background: var(--accent);
-      color: #ffffff;
+      color: #090b10;
       border-color: var(--accent);
-      box-shadow: 0 0 18px #de870a77;
-      transform: scale(1.1);
     }
-    .lau62-rail-pill {
+    .lau62-telemetry-rail {
       writing-mode: vertical-rl;
-      text-orientation: mixed;
       padding: 14px 8px;
       border-radius: 999px;
-      border: 1px solid var(--border);
       background: var(--glass);
-      backdrop-filter: blur(14px);
-      font-size: 10px;
+      border: 1px solid var(--border);
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
     }
 
-    /* Criterion 1, 2, 3, 4, 5: Full-Bleed Hero Section with Text Masking, 3D Pop-Out & Floating Glass/Pill Cards */
+    /* Hero Stage */
     .lau62-hero {
       position: relative;
       min-height: 100vh;
-      width: 100%;
-      padding: 108px clamp(18px, 5vw, 76px) 64px;
+      padding: 104px clamp(20px, 5vw, 84px) 56px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       overflow: hidden;
       isolation: isolate;
+      background: linear-gradient(135deg, #0b131b 0%, #172a3a 48%, #292218 100%);
     }
-
-    /* Layer 0: Full-Bleed Background Visual Hook + Parallax */
-    .lau62-hero-bg {
-      position: absolute;
-      inset: -6%;
-      z-index: -4;
-      background-image: url('https://i.pinimg.com/originals/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg');
-      background-size: cover;
-      background-position: center;
-      filter: brightness(0.42) contrast(1.12) saturate(1.18);
-      transform: translate3d(0, 0, 0) scale(1.06);
-      will-change: transform;
-    }
-    .lau62-hero-vignette {
-      position: absolute;
-      inset: 0;
-      z-index: -3;
-      background:
-        radial-gradient(circle at 50% 42%, transparent 18%, rgba(7, 9, 15, 0.78) 78%),
-        linear-gradient(180deg, rgba(7, 9, 15, 0.55) 0%, rgba(7, 9, 15, 0.25) 45%, var(--bg) 100%);
-    }
-
-    /* Group 4.2: Ambient Particle / Smoke Canvas System */
     .lau62-smoke-canvas {
       position: absolute;
       inset: 0;
@@ -294,292 +225,356 @@
       height: 100%;
       z-index: -2;
       pointer-events: none;
-      opacity: 0.75;
     }
-
-    /* Group 3.4: Infinite Background Marquee Loop */
     .lau62-marquee-band {
       position: absolute;
-      top: 52%;
+      bottom: 8%;
       left: 0;
       width: 100%;
-      transform: translateY(-50%);
       z-index: -1;
       overflow: hidden;
       pointer-events: none;
-      opacity: 0.11;
+      opacity: 0.10;
       white-space: nowrap;
     }
     .lau62-marquee-track {
       display: inline-block;
       font-family: var(--font-display);
-      font-size: clamp(72px, 13vw, 180px);
+      font-size: clamp(64px, 11vw, 156px);
       font-weight: 800;
-      letter-spacing: -0.04em;
-      text-transform: uppercase;
       color: transparent;
       -webkit-text-stroke: 1.5px #ffffff;
-      animation: lau62Marquee 26s linear infinite;
+      animation: lau62Marquee 24s linear infinite;
     }
     @keyframes lau62Marquee {
       0% { transform: translate3d(0, 0, 0); }
       100% { transform: translate3d(-50%, 0, 0); }
     }
 
-    /* Criterion 5 + Group 3.1: Oversized Split-Text Headline Masked Behind 3D Pop-Out Subject */
-    .lau62-hero-center {
-      position: relative;
-      width: 100%;
-      max-width: 1320px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-      align-items: center;
-    }
-    .lau62-oversized-wrap {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      pointer-events: none;
-      margin-bottom: -36px;
-    }
-    .lau62-eyebrow-pill {
-      pointer-events: auto;
+    /* Shared Typography & Split-Text */
+    .lau62-tag-chip {
       display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
+      padding: 6px 14px;
       border-radius: 999px;
       background: var(--glass);
-      backdrop-filter: blur(16px);
       border: 1px solid var(--border);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
       color: var(--accent);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
-    .lau62-oversized-title {
+    .lau62-display-h1 {
       font-family: var(--font-display);
-      font-size: clamp(40px, 8.2vw, 112px);
+      font-size: clamp(44px, 7.8vw, 108px);
       font-weight: 800;
-      line-height: 0.94;
-      letter-spacing: -0.04em;
-      text-transform: uppercase;
-      color: #ffffff;
-      text-shadow: 0 18px 48px rgba(0, 0, 0, 0.65);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      overflow-wrap: break-word;
     }
-    .lau62-oversized-title em {
+    .lau62-serif-accent {
       font-family: var(--font-serif);
       font-style: italic;
-      font-weight: 400;
       color: var(--accent);
-      padding: 0 6px;
+      display: block;
+    }
+    .lau62-lead {
+      font-size: clamp(15px, 1.35vw, 18px);
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 18px 0 26px;
     }
     .lau62-split-word {
       display: inline-block;
       opacity: 0;
-      transform: translate3d(0, 38px, 0) rotateX(20deg);
+      transform: translate3d(0, 32px, 0);
       transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .lau62-split-word.is-in {
       opacity: 1;
-      transform: translate3d(0, 0, 0) rotateX(0deg);
+      transform: translate3d(0, 0, 0);
     }
 
-    /* Criterion 4 + Group 2.4 + Group 4.1: Out-of-Bounds 3D Pop-Out Stage overlapping headline & clouds */
-    .lau62-popout-stage {
-      position: relative;
-      z-index: 5;
+    /* 3D Cutout Subject Styling (Out-of-bounds Pop-out & Drop Shadow) */
+    .lau62-cutout-3d-img {
+      width: 100%;
+      height: auto;
+      max-height: 390px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 28px 42px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 26px rgba(255, 255, 255, 0.14));
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* Blueprint 0 Specific: Asymmetric Carbon Bike Atelier */
+    .lau62-hero-grid-bike {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr;
-      gap: 22px;
+      gap: 36px;
       align-items: center;
     }
-    @media (min-width: 1024px) {
-      .lau62-popout-stage {
-        grid-template-columns: 290px 1fr 290px;
-        gap: 24px;
+    @media (min-width: 980px) {
+      .lau62-hero-grid-bike {
+        grid-template-columns: 0.92fr 1.08fr;
       }
     }
-
-    .lau62-popout-centerpiece {
+    .lau62-popout-rig {
+      position: relative;
+      padding: 20px 14px 28px;
+      border-radius: 32px;
+      background: radial-gradient(circle at 52% 48%, rgba(212,149,106,0.22), rgba(20,18,16,0.40) 72%);
+      border: 1px solid var(--border);
+      animation: lau62Float 5.5s ease-in-out infinite;
+      overflow: visible;
+    }
+    .lau62-popout-rig .lau62-cutout-3d-img {
+      max-height: 380px;
+      transform: scale(1.09) translateX(-14px);
+    }
+    .lau62-cutout-pill {
+      position: absolute;
+      top: -14px;
+      right: 24px;
+      z-index: 8;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #090b10;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .lau62-floating-pair {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: -32px;
       position: relative;
       z-index: 6;
-      perspective: 1400px;
-      margin: 0 auto;
+    }
+
+    /* Blueprint 1 Specific: Sky Aircraft Pop-Out */
+    .lau62-hero-sky {
+      max-width: 1320px;
       width: 100%;
-      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
     }
-    .lau62-floating-rig {
+    .lau62-sky-h1 {
+      font-size: clamp(54px, 10vw, 138px);
+      letter-spacing: 0.02em;
       position: relative;
-      border-radius: 32px;
-      padding: 12px;
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.03));
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      box-shadow:
-        0 36px 80px rgba(0, 0, 0, 0.65),
-        0 0 50px #de870a33;
-      transform-style: preserve-3d;
-      animation: lau62ZeroGravity 6s ease-in-out infinite;
-      transition: transform 0.22s ease-out;
+      z-index: 1;
     }
-    @keyframes lau62ZeroGravity {
+    .lau62-sky-plane-popout {
+      max-width: 780px;
+      margin: -58px auto -10px;
+      position: relative;
+      z-index: 5;
+      animation: lau62Float 6s ease-in-out infinite;
+    }
+    .lau62-sky-plane-popout .lau62-cutout-3d-img {
+      max-height: 350px;
+      transform: scale(1.06);
+    }
+    .lau62-sky-destinations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      text-align: left;
+      position: relative;
+      z-index: 6;
+    }
+    .lau62-pill-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-radius: 999px !important;
+      padding: 14px 24px !important;
+    }
+    .lau62-pill-avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    /* Blueprint 2 Specific: Vibrant Orange/Cyan Poster Stage */
+    .lau62-poster-stage {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 78vh;
+    }
+    .lau62-poster-top-meta { text-align: center; }
+    .lau62-poster-stack {
+      position: relative;
+      text-align: center;
+      padding: 12px 0;
+    }
+    .lau62-poster-giant-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(64px, 13.5vw, 184px);
+      line-height: 0.88;
+      color: #ffffff;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    .lau62-poster-figure-popout {
+      position: relative;
+      z-index: 4;
+      width: min(360px, 72vw);
+      margin: -255px auto -18px;
+      animation: lau62Float 5s ease-in-out infinite;
+    }
+    .lau62-poster-figure-popout .lau62-cutout-3d-img {
+      max-height: 430px;
+      width: auto;
+    }
+    .lau62-poster-bottom-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      z-index: 6;
+    }
+    .lau62-poster-replay-card {
+      max-width: 340px;
+    }
+    .lau62-circle-fab {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #090b10;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    }
+
+    /* Blueprint 3 Specific: Lunar Oasis Villa Editorial Split */
+    .lau62-villa-grid {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 980px) {
+      .lau62-villa-grid {
+        grid-template-columns: 1.12fr 0.88fr;
+      }
+    }
+    .lau62-villa-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(50px, 7.2vw, 102px);
+      font-weight: 400;
+      line-height: 0.94;
+    }
+    .lau62-villa-Elevation .lau62-cutout-3d-img {
+      max-height: 290px;
+      transform: scale(1.04);
+    }
+    .lau62-villa-right-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .lau62-cutout-tab-pill {
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #090b10;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* Blueprint 4 Specific: AquaCosmos Orbital HUD */
+    .lau62-hud-stage {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .lau62-hud-orbital-ring {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: center;
+      margin-top: 12px;
+    }
+    @media (min-width: 1024px) {
+      .lau62-hud-orbital-ring {
+        grid-template-columns: 290px 1fr 290px;
+      }
+    }
+    .lau62-hud-planet-center {
+      animation: lau62Float 6.5s ease-in-out infinite;
+    }
+    .lau62-orbital-pod {
+      text-align: left;
+      border-radius: 36px;
+    }
+
+    @keyframes lau62Float {
       0%, 100% { transform: translate3d(0, 0px, 0); }
       50% { transform: translate3d(0, -12px, 0); }
     }
 
-    /* Out-of-bounds 3D Orbital Overlay breaking outside the frame */
-    .lau62-outofbounds-halo {
-      position: absolute;
-      inset: -24px -18px;
-      pointer-events: none;
-      z-index: 12;
-      overflow: visible;
-    }
-    .lau62-cutout-badge {
-      position: absolute;
-      top: -16px;
-      left: 28px;
-      z-index: 15;
-      padding: 7px 18px;
-      border-radius: 999px;
-      background: var(--bg);
-      border: 1px solid var(--accent);
-      color: var(--fg);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
-    }
-    .lau62-cutout-badge-right {
-      position: absolute;
-      bottom: -16px;
-      right: 28px;
-      z-index: 15;
-      padding: 7px 18px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #ffffff;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      box-shadow: 0 10px 24px #de870a55;
-    }
-
-    .lau62-showcase-mask {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      border-radius: 24px;
-      overflow: hidden;
-      background: var(--surface);
-    }
-    .lau62-showcase-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: transform, filter;
-    }
-    .lau62-floating-rig:hover .lau62-showcase-img {
-      transform: scale(1.06);
-    }
-
-    /* Criterion 3 + Group 2.2 + Group 2.3: Floating Glassmorphism & Pill-Shaped / Cutout-Tab Cards */
+    /* Glassmorphism Cards & Counters */
     .lau62-glass-card {
       position: relative;
-      border-radius: 28px;
+      border-radius: 26px;
       background: var(--glass);
-      backdrop-filter: blur(22px) saturate(165%);
-      -webkit-backdrop-filter: blur(22px) saturate(165%);
+      backdrop-filter: blur(22px) saturate(160%);
+      -webkit-backdrop-filter: blur(22px) saturate(160%);
       border: 1px solid var(--border);
       padding: 22px;
-      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.36);
-      transform-style: preserve-3d;
-      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
-      overflow: hidden;
       cursor: pointer;
-    }
-    .lau62-glass-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(320px circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.22), transparent 65%);
-      opacity: 0;
-      transition: opacity 0.25s ease;
-      pointer-events: none;
+      transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.24s ease;
+      overflow: hidden;
     }
     .lau62-glass-card:hover {
       border-color: var(--accent);
     }
-    .lau62-glass-card:hover::before {
-      opacity: 1;
-    }
-
-    .lau62-pill-tab {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 12px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.09);
-      border: 1px solid var(--border);
-      font-size: 10px;
+    .lau62-card-kicker {
+      display: block;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent-2);
-      margin-bottom: 12px;
+      color: var(--accent);
+      margin-bottom: 6px;
     }
     .lau62-glass-card h3 {
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 800;
-      margin-bottom: 8px;
-      line-height: 1.25;
+      margin-bottom: 6px;
     }
     .lau62-glass-card p {
       font-size: 13px;
       line-height: 1.55;
       color: var(--muted);
-      margin-bottom: 14px;
-    }
-    .lau62-pill-thumb {
-      position: relative;
-      height: 104px;
-      border-radius: 999px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-    .lau62-pill-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .lau62-glass-card:hover .lau62-pill-thumb img {
-      transform: scale(1.12);
-    }
-
-    /* Hero Bottom Bar: Counters (Group 3.2) + Mode Switcher */
-    .lau62-hero-bottom {
-      position: relative;
-      z-index: 8;
-      width: 100%;
-      max-width: 1320px;
-      margin: 28px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
     }
     .lau62-counters {
       display: flex;
@@ -589,585 +584,359 @@
     .lau62-counter-box strong {
       display: block;
       font-family: var(--font-display);
-      font-size: clamp(24px, 3vw, 36px);
-      font-weight: 800;
-      color: #ffffff;
+      font-size: clamp(26px, 3vw, 38px);
+      color: var(--fg);
     }
     .lau62-counter-box span {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-    }
-
-    .lau62-mode-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .lau62-mode-btn {
-      padding: 9px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--glass);
-      color: var(--muted);
-      font-family: inherit;
       font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.22s ease;
-    }
-    .lau62-mode-btn.is-active,
-    .lau62-mode-btn:hover {
-      background: var(--accent);
-      color: #ffffff;
-      border-color: var(--accent);
+      color: var(--muted);
     }
 
-    /* Group 1.3 & 1.5: Sticky / Pinned Center Subject + Scroll Scrubbing Section (001, 002, 003) */
+    /* Group 1.3 & 1.5: Sticky Pinned 001-003 Telemetry Section */
     .lau62-pinned-section {
-      position: relative;
-      padding: 88px clamp(18px, 5vw, 76px);
-      max-width: 1360px;
+      max-width: 1320px;
       margin: 0 auto;
-    }
-    .lau62-section-head {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 56px;
-    }
-    .lau62-section-head h2 {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 4.2vw, 52px);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-top: 10px;
+      padding: 88px clamp(20px, 5vw, 84px);
     }
     .lau62-pinned-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 32px;
+      gap: 28px;
       align-items: start;
+      margin-top: 40px;
     }
     @media (min-width: 980px) {
       .lau62-pinned-grid {
-        grid-template-columns: 1fr 1.15fr 1fr;
-        gap: 28px;
+        grid-template-columns: 1fr 1.1fr 1fr;
       }
     }
-    .lau62-sticky-visual {
+    .lau62-sticky-center {
       position: relative;
       top: 110px;
-      padding: 24px;
+      padding: 28px;
       border-radius: 32px;
-      background: var(--glass-strong);
+      background: var(--surface);
       border: 1px solid var(--border);
       text-align: center;
-      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.45);
     }
     @media (min-width: 980px) {
-      .lau62-sticky-visual {
-        position: sticky;
-      }
+      .lau62-sticky-center { position: sticky; }
     }
-    .lau62-scrub-turntable {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      border-radius: 22px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      margin-bottom: 16px;
-    }
-    .lau62-scrub-turntable img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .lau62-scrub-stage {
       transition: transform 0.12s linear;
       will-change: transform;
     }
-    .lau62-scrub-dial {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--border);
-      font-size: 12px;
-      font-family: monospace;
-      color: var(--accent-2);
-    }
-    .lau62-spec-col {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
     .lau62-spec-card {
-      padding: 26px;
-      border-radius: 26px;
+      padding: 24px;
+      border-radius: 24px;
       background: var(--glass);
       border: 1px solid var(--border);
-      transition: transform 0.3s ease, border-color 0.3s ease;
+      margin-bottom: 20px;
     }
     .lau62-spec-card.is-active {
       border-color: var(--accent);
-      box-shadow: 0 16px 40px #de870a26;
-    }
-    .lau62-spec-num {
-      font-family: monospace;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: 0.14em;
-      display: block;
-      margin-bottom: 8px;
-    }
-    .lau62-spec-metric {
-      font-family: var(--font-display);
-      font-size: 32px;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 6px;
     }
 
-    /* Group 1.4: Horizontal Scroll Section (Featured Motion Projects) */
+    /* Group 1.4: Horizontal Scroll Projects Section */
     .lau62-hscroll-section {
-      padding: 72px clamp(18px, 5vw, 76px);
+      padding: 72px clamp(20px, 5vw, 84px);
       border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.015);
-      overflow: hidden;
     }
-    .lau62-hscroll-head {
+    .lau62-hscroll-track {
       max-width: 1320px;
-      margin: 0 auto 32px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .lau62-hscroll-viewport {
-      max-width: 1320px;
-      margin: 0 auto;
+      margin: 32px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(260px, 1fr));
+      gap: 20px;
       overflow-x: auto;
-      scrollbar-width: none;
       padding-bottom: 12px;
     }
-    .lau62-hscroll-viewport::-webkit-scrollbar { display: none; }
-    .lau62-hscroll-track {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(280px, 1fr));
-      gap: 22px;
-      transition: transform 0.2s ease-out;
-      will-change: transform;
-    }
     .lau62-project-card {
-      position: relative;
-      border-radius: 28px;
-      background: var(--glass);
+      padding: 24px;
+      border-radius: 26px;
+      background: var(--surface);
       border: 1px solid var(--border);
-      padding: 20px;
       cursor: pointer;
-      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
+      transition: transform 0.25s ease, border-color 0.25s ease;
     }
     .lau62-project-card:hover {
       transform: translateY(-6px);
       border-color: var(--accent);
     }
-    .lau62-project-img-wrap {
-      height: 180px;
-      border-radius: 20px;
-      overflow: hidden;
+    .lau62-project-visual {
+      height: 140px;
+      border-radius: 18px;
       margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
       border: 1px solid var(--border);
     }
-    .lau62-project-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .lau62-project-card:hover .lau62-project-img-wrap img {
-      transform: scale(1.09);
-    }
 
-    /* Group 1.2: Scroll-Triggered Reveal (Slide-up, Fade-in, Scale-up) */
+    /* Group 1.2: Scroll Reveal */
     .lau62-reveal {
       opacity: 0;
-      transform: translate3d(0, 28px, 0) scale(0.97);
-      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translate3d(0, 24px, 0);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
     .lau62-reveal.is-visible {
       opacity: 1;
-      transform: translate3d(0, 0, 0) scale(1);
+      transform: translate3d(0, 0, 0);
     }
 
-    /* Group 3.3: Seamless Fullscreen Page Transition Overlay (No page reload / No white flash) */
+    /* Group 3.3: Seamless Fullscreen Page Transition Overlay */
     .lau62-seamless-overlay {
       position: fixed;
       inset: 0;
       z-index: 190;
-      background: rgba(7, 9, 15, 0.88);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
+      background: rgba(5, 8, 15, 0.88);
+      backdrop-filter: blur(22px);
       display: none;
       align-items: center;
       justify-content: center;
       padding: 24px;
       pointer-events: none;
     }
-    .lau62-seamless-overlay.is-open {
-      display: flex;
-      animation: lau62FadeIn 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-    @keyframes lau62FadeIn {
-      from { opacity: 0; transform: scale(0.94); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    .lau62-seamless-stage {
+    .lau62-seamless-overlay.is-open { display: flex; }
+    .lau62-seamless-box {
       width: 100%;
-      max-width: 960px;
+      max-width: 760px;
       border-radius: 32px;
       background: var(--surface);
       border: 1px solid var(--border);
-      overflow: hidden;
-      box-shadow: 0 36px 90px rgba(0, 0, 0, 0.7);
-      display: grid;
-      grid-template-columns: 1fr;
+      padding: 36px;
       pointer-events: auto;
     }
-    @media (min-width: 820px) {
-      .lau62-seamless-stage {
-        grid-template-columns: 1.15fr 0.85fr;
-      }
-    }
-    .lau62-seamless-visual {
-      min-height: 280px;
-      background: #000;
-      position: relative;
-    }
-    .lau62-seamless-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .lau62-seamless-body {
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 18px;
-    }
 
-    /* Footer */
     .lau62-footer {
       max-width: 1320px;
       margin: 0 auto;
-      padding: 44px clamp(18px, 5vw, 76px) 56px;
+      padding: 40px clamp(20px, 5vw, 84px);
+      border-top: 1px solid var(--border);
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       justify-content: space-between;
       gap: 16px;
-      color: var(--muted);
       font-size: 13px;
+      color: var(--muted);
     }
 
-    /* Pause state when user clicks Motion Pause toggle */
-    body.is-motion-paused .lau62-marquee-track,
-    body.is-motion-paused .lau62-floating-rig {
+    body.is-motion-paused * {
       animation-play-state: paused !important;
     }
   </style>
 </head>
 <body>
-  <!-- Group 2.4: SVG Liquid / Ripple Distortion Filter -->
+  <!-- Group 2.4: SVG Liquid Ripple Filter -->
   <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true" focusable="false">
     <defs>
       <filter id="lau62LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence id="lau62Turbulence" type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="4" />
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="4" />
         <feDisplacementMap id="lau62Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
       </filter>
     </defs>
   </svg>
 
-  <!-- Group 2.5: Custom Follower Cursor -->
   <div id="cursorRing" class="lau62-cursor-ring" aria-hidden="true"></div>
   <div id="cursorDot" class="lau62-cursor-dot" aria-hidden="true"></div>
 
-  <!-- Criterion 6: Minimalist Edge Navigation -->
   <header class="lau62-edge-top">
     <a href="#heroStage" class="lau62-brand">
-      <span class="lau62-brand-orb">S</span>
-      <span>Sticky Boundaries</span>
+      <span class="lau62-brand-mark"></span>
+      <span>Lunar Oasis Villa</span>
     </a>
-    <ul class="lau62-edge-menu" aria-label="Section Navigation">
-      <li><a href="#heroStage">01 / Hero UI</a></li>
-      <li><a href="#pinnedSpecs">02 / 3D Scrub Specs</a></li>
-      <li><a href="#motionProjects">03 / Horizontal Track</a></li>
+    <ul class="lau62-nav-links" aria-label="Primary Navigation">
+      <li><a href="#heroStage">01 / Showcase</a></li>
+      <li><a href="#pinnedSpecs">02 / Pinned Telemetry</a></li>
+      <li><a href="#motionProjects">03 / Motion Archive</a></li>
     </ul>
-    <div class="lau62-edge-actions">
-      <button type="button" id="motionToggleBtn" class="lau62-motion-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="lau62-magnetic-btn" data-magnetic data-next-preview>
-        <span>Explore 3D Spec ↗</span>
+    <div class="lau62-edge-controls">
+      <button type="button" id="motionToggleBtn" class="lau62-pill-btn" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="lau62-cta-magnetic" data-magnetic data-next-preview>
+        Explore Spec
       </button>
     </div>
   </header>
 
-  <aside class="lau62-edge-left" aria-label="Slide Index">
-    <a href="#heroStage" class="lau62-slide-idx is-active" data-slide-link="0">01</a>
-    <a href="#pinnedSpecs" class="lau62-slide-idx" data-slide-link="1">02</a>
-    <a href="#motionProjects" class="lau62-slide-idx" data-slide-link="2">03</a>
+  <aside class="lau62-edge-left" aria-label="Slide Numbers">
+    <a href="#heroStage" class="lau62-slide-dot is-active" data-slide-link="0">01</a>
+    <a href="#pinnedSpecs" class="lau62-slide-dot" data-slide-link="1">02</a>
+    <a href="#motionProjects" class="lau62-slide-dot" data-slide-link="2">03</a>
   </aside>
 
-  <aside class="lau62-edge-right" aria-label="Live Telemetry">
-    <div class="lau62-rail-pill" id="scrollScrubReadout">SCRUB 000° • 100% SCORE</div>
+  <aside class="lau62-edge-right" aria-label="Scroll Scrub Readout">
+    <div class="lau62-telemetry-rail" id="scrollScrubReadout">SCRUB 0% • 0.0°</div>
   </aside>
 
   <main id="main">
-    <!-- HERO SECTION: Full-Bleed Hook + Oversized Split-Text + 3D Pop-Out + Floating Glass/Pill Cards -->
     <section id="heroStage" class="lau62-hero">
-      <div id="heroParallaxBg" class="lau62-hero-bg" data-parallax="-0.18" aria-hidden="true"></div>
-      <div class="lau62-hero-vignette" aria-hidden="true"></div>
       <canvas id="ambientSmokeCanvas" class="lau62-smoke-canvas" aria-hidden="true"></canvas>
-
-      <!-- Group 3.4: Infinite Background Marquee Loop -->
       <div class="lau62-marquee-band" aria-hidden="true">
-        <div class="lau62-marquee-track">
-          DIGITAL REBELLION • STICKY BOUNDARIES • 3D PARALLAX &amp; LIQUID SHADER • DIGITAL REBELLION • STICKY BOUNDARIES •
-        </div>
+        <div class="lau62-marquee-track">NEW WAY OF LIVING • LUNAR OASIS PAVILION • CANTILEVER INFINITY POOL • BIOCLIMATIC GLASS • NEW WAY OF LIVING • LUNAR OASIS PAVILION • CANTILEVER INFINITY POOL • BIOCLIMATIC GLASS • </div>
       </div>
 
-      <div class="lau62-hero-center">
-        <!-- Criterion 5 & Group 3.1: Oversized Split-Text Headline with Text Masking behind 3D subject -->
-        <div class="lau62-oversized-wrap" data-parallax="0.10">
-          <span class="lau62-eyebrow-pill" id="activeHeroTag">✦ SURREAL DIGITAL PRODUCTION • 100/100 HERO SCORE</span>
-          <h1 class="lau62-oversized-title" id="oversizedHeadline">
-            <span class="lau62-split-word is-in">DIGITAL</span>
-            <em><span class="lau62-split-word is-in" style="transition-delay:90ms;">Sticky Boundaries</span></em>
-            <span class="lau62-split-word is-in" style="transition-delay:180ms;">REBELLION</span>
+      
+      <div class="lau62-villa-grid">
+        <div class="lau62-villa-left" data-parallax="0.06">
+          <span class="lau62-tag-chip" id="activeHeroTag">Lunar Oasis Villa • Desert &amp; Sea Architecture</span>
+          <h1 class="lau62-villa-h1" id="oversizedHeadline">
+            <span class="lau62-split-word is-in">New Way</span><br>
+            <em><span class="lau62-split-word is-in" style="color:var(--accent);transition-delay:90ms;">Of Living</span></em>
           </h1>
+          <p class="lau62-lead">Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.</p>
+
+          <div id="heroPopoutRig" class="lau62-villa-Elevation" data-tilt-card style="filter: url(#lau62LiquidFilter);">
+            <img class="lau62-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/launch-video/assets/cutout.webp'" alt="Lunar Oasis Villa 3D Cutout Subject" loading="eager" decoding="async" />
+          </div>
+
+          <div class="lau62-counters" style="margin-top:24px;">
+            <div class="lau62-counter-box"><strong data-counter-target="120" data-counter-suffix="+">120+</strong><span>Private Acres</span></div>
+            <div class="lau62-counter-box"><strong data-counter-target="10" data-counter-suffix="K+">10K+</strong><span>Solar Louvers</span></div>
+            <div class="lau62-counter-box"><strong data-counter-target="1000" data-counter-suffix="m²">1000m²</strong><span>Infinity Mirror Pool</span></div>
+          </div>
         </div>
 
-        <!-- Criterion 3 & 4: Floating Glassmorphism Cards + Out-of-Bounds 3D Pop-Out Centerpiece -->
-        <div class="lau62-popout-stage">
-          <!-- Left Floating Glassmorphism / Pill Card -->
-          <article class="lau62-glass-card lau62-reveal is-visible" data-tilt-card data-seamless-trigger="Zero-G Culinary Explosion">
-            <span class="lau62-pill-tab">● 01 / FLOATING GLASS CARD</span>
-            <h3>Zero-G Culinary Explosion</h3>
-            <p>Hyper-real freeze-frame art direction and rebellious interactive web experiences engineered with zero-gra...</p>
-            <div class="lau62-pill-thumb">
-              <img src="https://i.pinimg.com/originals/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg" alt="Sticky Boundaries Detail Preview" loading="eager">
+        <div class="lau62-villa-right-stack">
+          
+          <article class="lau62-glass-card lau62-villa-cutout-card" data-tilt-card data-seamless-trigger="Lunar Oasis Cliffside Villa">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <span class="lau62-card-kicker">RESIDENCE 01</span>
+              <span class="lau62-cutout-tab-pill">$14.8M • 5 Bed</span>
             </div>
+            <h3>Lunar Oasis Cliffside Villa</h3>
+            <p>3D perspective glassmorphism card with interactive specular border shine &amp; seamless floorplan expansion.</p>
           </article>
-
-          <!-- Center 3D Pop-Out Showcase with Out-of-Bounds Cutout Badges & Liquid Ripple Hover -->
-          <div class="lau62-popout-centerpiece">
-            <div id="heroPopoutRig" class="lau62-floating-rig" data-tilt-card>
-              <span class="lau62-cutout-badge">HYPER-REAL VFX • 8K RAW</span>
-              <span class="lau62-cutout-badge-right">AWWWARDS WOTD • AMSTERDAM</span>
-              <svg class="lau62-outofbounds-halo" viewBox="0 0 700 440" fill="none" aria-hidden="true" focusable="false">
-                <ellipse cx="350" cy="220" rx="342" ry="195" stroke="#de870a" stroke-opacity="0.38" stroke-width="1.5" stroke-dasharray="10 8" />
-                <circle cx="48" cy="90" r="6" fill="#dd880b" />
-                <circle cx="652" cy="340" r="6" fill="#de870a" />
-              </svg>
-              <div class="lau62-showcase-mask">
-                <img
-                  id="heroLiquidImg"
-                  class="lau62-showcase-img"
-                  src="https://i.pinimg.com/originals/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg"
-                  alt="Sticky Boundaries — Full-Bleed 3D Hero Showcase"
-                  style="filter: url(#lau62LiquidFilter);"
-                  loading="eager"
-                >
-              </div>
+          <article class="lau62-glass-card lau62-villa-cutout-card" data-tilt-card data-seamless-trigger="Dune Mirage Glass Pavilion">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <span class="lau62-card-kicker">RESIDENCE 02</span>
+              <span class="lau62-cutout-tab-pill">$11.2M • 4 Bed</span>
             </div>
-          </div>
-
-          <!-- Right Floating Glassmorphism / Pill Card -->
-          <article class="lau62-glass-card lau62-reveal is-visible" data-tilt-card data-seamless-trigger="Van Kaam IP Digital Launch">
-            <span class="lau62-pill-tab">● 02 / CUTOUT PILL TELEMETRY</span>
-            <h3>Van Kaam IP Digital Launch</h3>
-            <p>Interactive 3D perspective tilt, specular border glare, and seamless full-screen card expansion.</p>
-            <div class="lau62-pill-thumb">
-              <img src="https://i.pinimg.com/originals/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg" alt="Sticky Boundaries Secondary Layer" loading="eager">
-            </div>
+            <h3>Dune Mirage Glass Pavilion</h3>
+            <p>3D perspective glassmorphism card with interactive specular border shine &amp; seamless floorplan expansion.</p>
           </article>
-        </div>
-      </div>
-
-      <!-- Bottom Bar: Group 3.2 Animated Number Counters + Interactive Mode Switcher -->
-      <div class="lau62-hero-bottom">
-        <div class="lau62-counters">
-          <div class="lau62-counter-box">
-            <strong data-counter-target="120" data-counter-suffix="+">120+</strong>
-            <span>3D Parallax Layers</span>
-          </div>
-          <div class="lau62-counter-box">
-            <strong data-counter-target="10" data-counter-suffix="K+">10K+</strong>
-            <span>Particle &amp; Shader Nodes</span>
-          </div>
-          <div class="lau62-counter-box">
-            <strong data-counter-target="1000" data-counter-suffix="+">1000+</strong>
-            <span>60FPS Scrub Samples</span>
-          </div>
-        </div>
-
-        <div class="lau62-mode-pills" role="group" aria-label="Interactive Physics Modes">
-          <button type="button" class="lau62-mode-btn is-active" data-mode="parallax" data-magnetic>01 / Parallax &amp; 3D Pop-out</button>
-          <button type="button" class="lau62-mode-btn" data-mode="liquid" data-magnetic>02 / Liquid Wave Shader</button>
-          <button type="button" class="lau62-mode-btn" data-mode="scrub" data-magnetic>03 / Scroll Scrub Telemetry</button>
+          <article class="lau62-glass-card lau62-villa-cutout-card" data-tilt-card data-seamless-trigger="Atoll Floating Water House">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <span class="lau62-card-kicker">RESIDENCE 03</span>
+              <span class="lau62-cutout-tab-pill">$18.5M • 6 Bed</span>
+            </div>
+            <h3>Atoll Floating Water House</h3>
+            <p>3D perspective glassmorphism card with interactive specular border shine &amp; seamless floorplan expansion.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- GROUP 1.3 & 1.5: STICKY / PINNED CENTER SUBJECT + SCROLL SCRUBBING (001, 002, 003) -->
+    <!-- Sticky Pinned Center Subject + 001/002/003 Telemetry -->
     <section id="pinnedSpecs" class="lau62-pinned-section">
-      <div class="lau62-section-head lau62-reveal">
-        <span class="lau62-eyebrow-pill">✦ Sticky Pinned &amp; Scroll Scrubbing Architecture</span>
-        <h2>Pinned 3D Centerpiece with Synchronized 001–003 Telemetry</h2>
+      <div class="lau62-reveal" style="text-align:center;max-width:680px;margin:0 auto;">
+        <span class="lau62-tag-chip">Sticky Pinned &amp; Scroll Scrubbing</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(28px,4vw,48px);">Lunar Oasis Villa — 001 to 003 Engineering</h2>
       </div>
 
       <div class="lau62-pinned-grid">
-        <div class="lau62-spec-col">
+        <div>
           <article class="lau62-spec-card lau62-reveal is-active" data-spec-index="001">
-            <span class="lau62-spec-num">001 / PRIMARY VECTOR</span>
-            <div class="lau62-spec-metric">1000fps</div>
-            <h3 style="font-size:19px;font-weight:800;margin-bottom:8px;">High-Speed Phantom Optics</h3>
-            <p style="font-size:14px;line-height:1.6;color:var(--muted);">Explosive mid-air prop choreography frozen at 1/10,000s shutter speed and composited into interactive WebGL planes.</p>
+            <span class="lau62-card-kicker">001 / SUBTERRANEAN SPA</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">1,240 m²</div>
+            <h3>Geothermal Limestone Cavern</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Carved into the coastal cliffside with natural acoustic water reflection chambers.</p>
           </article>
-
           <article class="lau62-spec-card lau62-reveal" data-spec-index="002">
-            <span class="lau62-spec-num">002 / AERODYNAMIC CORE</span>
-            <div class="lau62-spec-metric">WebGL2</div>
-            <h3 style="font-size:19px;font-weight:800;margin-bottom:8px;">Liquid Shader Distortion</h3>
-            <p style="font-size:14px;line-height:1.6;color:var(--muted);">Real-time SVG & canvas turbulence displacement reacting to cursor velocity and touch ripples.</p>
+            <span class="lau62-card-kicker">002 / CANTILEVER DECK</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">18.5 m</div>
+            <h3>Frameless Triple-Glazed Horizon</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Motorized glass walls retract into the floor slab to merge indoor living with the infinity pool.</p>
           </article>
         </div>
 
-        <!-- Center Pinned Subject that Scrubs/Rotates on Scroll -->
-        <div class="lau62-sticky-visual">
-          <div class="lau62-scrub-turntable">
-            <img id="scrubCenterImg" src="https://i.pinimg.com/originals/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg" alt="Sticky Boundaries Pinned 3D Turntable">
+        <div class="lau62-sticky-center">
+          <div id="scrubCenterStage" class="lau62-scrub-stage">
+            <img class="lau62-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/launch-video/assets/cutout.webp'" alt="Lunar Oasis Villa 3D Cutout Subject" loading="eager" decoding="async" />
           </div>
-          <div class="lau62-scrub-dial" id="scrubDialText">
-            <span>● SCROLL SCRUB ANGLE: 0.0°</span>
-            <span>|</span>
-            <span>AR 1.65:1</span>
+          <div id="scrubDialText" style="margin-top:14px;font-size:12px;color:var(--accent);font-weight:700;">
+            SCROLL SCRUB ANGLE: 0.0°
           </div>
         </div>
 
-        <div class="lau62-spec-col">
+        <div>
           <article class="lau62-spec-card lau62-reveal" data-spec-index="003">
-            <span class="lau62-spec-num">003 / PRECISION CALIBRATION</span>
-            <div class="lau62-spec-metric">0.02s</div>
-            <h3 style="font-size:19px;font-weight:800;margin-bottom:8px;">Kinetic Editorial Systems</h3>
-            <p style="font-size:14px;line-height:1.6;color:var(--muted);">Instant FLIP layout transitions expanding corner announcement cards into full-viewport campaign dossiers.</p>
+            <span class="lau62-card-kicker">003 / SOLAR SKIN</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">100% Net-0</div>
+            <h3>Photovoltaic Alabaster Louvers</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Autonomous sun-tracking roof fins generate 42 kWh daily while casting kinetic shadow patterns.</p>
           </article>
-
-          <article class="lau62-spec-card lau62-reveal" data-seamless-trigger="Sticky Boundaries Full Palette &amp; Spec Dossier" style="cursor:pointer;">
-            <span class="lau62-spec-num">004 / EXTRACTED TOKENS</span>
-            <div class="lau62-spec-metric" style="color:var(--accent);">#de870a</div>
-            <h3 style="font-size:19px;font-weight:800;margin-bottom:8px;">Seamless Dossier Expansion</h3>
-            <p style="font-size:14px;line-height:1.6;color:var(--muted);">Click any card to trigger a seamless FLIP full-screen transition without page reload.</p>
+          <article class="lau62-spec-card lau62-reveal" data-seamless-trigger="Lunar Oasis Villa Full Specification Sheet" style="cursor:pointer;">
+            <span class="lau62-card-kicker">004 / INTERACTIVE DOSSIER</span>
+            <div style="font-family:var(--font-display);font-size:28px;font-weight:800;margin:6px 0;color:var(--accent);">Expand View</div>
+            <h3>Seamless Page Transition</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Click to expand full specification view without page reload.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- GROUP 1.4: HORIZONTAL SCROLL SECTION (Featured Motion Projects) -->
+    <!-- Horizontal Scroll Track -->
     <section id="motionProjects" class="lau62-hscroll-section">
-      <div class="lau62-hscroll-head lau62-reveal">
-        <div>
-          <span class="lau62-eyebrow-pill">✦ Featured Motion Projects • Horizontal Scroll Track</span>
-          <h2 style="font-family:var(--font-display);font-size:clamp(26px,3.6vw,44px);font-weight:800;">Scroll or drag across interactive showcase shots</h2>
-        </div>
-        <div style="display:flex;gap:10px;">
-          <button type="button" id="hScrollPrev" class="lau62-motion-btn" data-magnetic aria-label="Scroll Left">← Prev</button>
-          <button type="button" id="hScrollNext" class="lau62-motion-btn" data-magnetic aria-label="Scroll Right">Next →</button>
-        </div>
+      <div style="max-width:1320px;margin:0 auto;">
+        <span class="lau62-tag-chip">Featured Motion Projects</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(26px,3.5vw,42px);">Horizontal Scroll Showcase</h2>
       </div>
-
-      <div id="hScrollViewport" class="lau62-hscroll-viewport">
-        <div id="hScrollTrack" class="lau62-hscroll-track">
-          
-          <article class="lau62-project-card lau62-reveal" data-tilt-card data-seamless-trigger="Zero-G Culinary Explosion">
-            <div class="lau62-project-img-wrap">
-              <img src="https://i.pinimg.com/originals/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg" alt="Zero-G Culinary Explosion">
-            </div>
-            <span class="lau62-pill-tab">01 / CAMPAIGN VFX</span>
-            <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Zero-G Culinary Explosion</h3>
-            <p style="font-size:13px;color:var(--muted);display:flex;justify-content:space-between;">
-              <span>Seamless Expand View</span>
-              <strong style="color:var(--accent);">120+ Layers</strong>
-            </p>
-          </article>
-          <article class="lau62-project-card lau62-reveal" data-tilt-card data-seamless-trigger="Van Kaam IP Digital Launch">
-            <div class="lau62-project-img-wrap">
-              <img src="https://i.pinimg.com/originals/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg" alt="Van Kaam IP Digital Launch">
-            </div>
-            <span class="lau62-pill-tab">02 / INTERACTIVE FILM</span>
-            <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Van Kaam IP Digital Launch</h3>
-            <p style="font-size:13px;color:var(--muted);display:flex;justify-content:space-between;">
-              <span>Seamless Expand View</span>
-              <strong style="color:var(--accent);">10K+ Daily Plays</strong>
-            </p>
-          </article>
-          <article class="lau62-project-card lau62-reveal" data-tilt-card data-seamless-trigger="Sonic Identity & Web Audio">
-            <div class="lau62-project-img-wrap">
-              <img src="https://i.pinimg.com/originals/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg" alt="Sonic Identity & Web Audio">
-            </div>
-            <span class="lau62-pill-tab">03 / SOUND DESIGN</span>
-            <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Sonic Identity & Web Audio</h3>
-            <p style="font-size:13px;color:var(--muted);display:flex;justify-content:space-between;">
-              <span>Seamless Expand View</span>
-              <strong style="color:var(--accent);">1000+ Samples</strong>
-            </p>
-          </article>
-          <article class="lau62-project-card lau62-reveal" data-tilt-card data-seamless-trigger="Neon Editorial Design Tokens">
-            <div class="lau62-project-img-wrap">
-              <img src="https://i.pinimg.com/originals/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg" alt="Neon Editorial Design Tokens">
-            </div>
-            <span class="lau62-pill-tab">04 / BRAND SYSTEM</span>
-            <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Neon Editorial Design Tokens</h3>
-            <p style="font-size:13px;color:var(--muted);display:flex;justify-content:space-between;">
-              <span>Seamless Expand View</span>
-              <strong style="color:var(--accent);">99.8% Lighthouse</strong>
-            </p>
-          </article>
-        </div>
+      <div id="hScrollTrack" class="lau62-hscroll-track">
+        
+        <article class="lau62-project-card lau62-reveal" data-tilt-card data-seamless-trigger="Lunar Oasis Cliffside Villa">
+          <div class="lau62-project-visual" style="background:radial-gradient(circle at 50% 50%, #eab30833, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#eab308;">01 // $14.8M • 5 Bed</span>
+          </div>
+          <span class="lau62-card-kicker">RESIDENCE 01</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Lunar Oasis Cliffside Villa</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="lau62-project-card lau62-reveal" data-tilt-card data-seamless-trigger="Dune Mirage Glass Pavilion">
+          <div class="lau62-project-visual" style="background:radial-gradient(circle at 50% 50%, #2dd4bf33, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#2dd4bf;">02 // $11.2M • 4 Bed</span>
+          </div>
+          <span class="lau62-card-kicker">RESIDENCE 02</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Dune Mirage Glass Pavilion</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="lau62-project-card lau62-reveal" data-tilt-card data-seamless-trigger="Atoll Floating Water House">
+          <div class="lau62-project-visual" style="background:radial-gradient(circle at 50% 50%, #38bdf833, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#38bdf8;">03 // $18.5M • 6 Bed</span>
+          </div>
+          <span class="lau62-card-kicker">RESIDENCE 03</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Atoll Floating Water House</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="lau62-project-card lau62-reveal" data-tilt-card data-seamless-trigger="Observatory Sky Penthouse">
+          <div class="lau62-project-visual" style="background:radial-gradient(circle at 50% 50%, #f59e0b33, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#f59e0b;">04 // $9.6M • 3 Bed</span>
+          </div>
+          <span class="lau62-card-kicker">RESIDENCE 04</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Observatory Sky Penthouse</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="lau62-footer">
-    <p>© 2026 Sticky Boundaries — Crafted for Forge Zone Store (Glassmorphism Floating Cards Web UI • 100% Criteria Verified).</p>
-    <p>4-Group Motion Engine: Parallax • Sticky Scrub • 3D Tilt • Liquid Ripple • Particle Canvas</p>
+    <p>© 2026 Lunar Oasis Villa — Bespoke Blueprint (lunar-villa).</p>
+    <p>Parallax • Sticky Scrub 001-003 • 3D Card Tilt • Liquid Wave • Particle Smoke</p>
   </footer>
 
-  <!-- GROUP 3.3: SEAMLESS FULLSCREEN PAGE TRANSITION OVERLAY -->
   <div id="seamlessModal" class="lau62-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
-    <div class="lau62-seamless-stage">
-      <div class="lau62-seamless-visual">
-        <img src="https://i.pinimg.com/originals/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg" alt="Sticky Boundaries Expanded Fullscreen View">
+    <div class="lau62-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span class="lau62-tag-chip" style="margin-bottom:0;">Seamless Detail Transition</span>
+        <button type="button" id="closeSeamlessBtn" class="lau62-pill-btn">Close (Esc)</button>
       </div>
-      <div class="lau62-seamless-body">
-        <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;">
-            <span class="lau62-pill-tab" style="margin-bottom:0;">● SEAMLESS TRANSITION VIEW</span>
-            <button type="button" id="closeSeamlessBtn" class="lau62-motion-btn">Close (Esc)</button>
-          </div>
-          <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:26px;font-weight:800;margin-bottom:12px;">Sticky Boundaries — Interactive Showcase</h2>
-          <p style="font-size:14px;line-height:1.65;color:var(--muted);margin-bottom:18px;">
-            Hyper-real freeze-frame art direction and rebellious interactive web experiences engineered with zero-gravity physics and bold typography. Extracted palette tokens: <code>#0a0d0b</code>, <code>#de870a</code>, <code>#dd880b</code>.
-          </p>
-        </div>
-        <button type="button" id="confirmSeamlessBtn" class="lau62-magnetic-btn" style="width:100%;justify-content:center;">
-          <span>Return to Live Stage ↗</span>
-        </button>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:12px;">Lunar Oasis Villa</h2>
+      <p style="font-size:15px;line-height:1.65;color:var(--muted);margin-bottom:20px;">Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.</p>
+      <div style="max-height:220px;overflow:hidden;border-radius:18px;border:1px solid var(--border);margin-bottom:20px;padding:12px;background:var(--bg);">
+        <img class="lau62-cutout-3d-img" src="assets/cutout.webp" onerror="this.onerror=null;this.src='/demos/launch-video/assets/cutout.webp'" alt="Lunar Oasis Villa 3D Cutout Subject" loading="eager" decoding="async" />
       </div>
+      <button type="button" id="confirmSeamlessBtn" class="lau62-cta-magnetic" style="width:100%;">Return to Live Stage</button>
     </div>
   </div>
 
@@ -1184,116 +953,66 @@
         });
       }
 
-      // 1. Group 1.1, 1.3, 1.4, 1.5, 1.6: Smooth Scroll Lerp + Parallax + Sticky Scrub + Horizontal Scroll
-      var targetScroll = window.scrollY || 0;
-      var currentScroll = targetScroll;
-      var scrubImg = document.getElementById('scrubCenterImg');
+      var scrubStage = document.getElementById('scrubCenterStage');
       var scrubDial = document.getElementById('scrubDialText');
       var scrubReadout = document.getElementById('scrollScrubReadout');
-      var hTrack = document.getElementById('hScrollTrack');
       var parallaxEls = document.querySelectorAll('[data-parallax]');
       var slideLinks = document.querySelectorAll('[data-slide-link]');
       var specCards = document.querySelectorAll('[data-spec-index]');
 
-      function updateScrollPhysics() {
-        targetScroll = window.scrollY || document.documentElement.scrollTop || 0;
-        currentScroll += (targetScroll - currentScroll) * 0.18;
-
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
         var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-        var progress = Math.min(1, Math.max(0, currentScroll / docHeight));
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
         var deg = (progress * 360).toFixed(1);
-        var tiltAngle = ((progress - 0.5) * 16).toFixed(2);
-        var scaleVal = (1 + Math.sin(progress * Math.PI) * 0.08).toFixed(3);
 
         if (!motionPaused) {
           parallaxEls.forEach(function (el) {
-            var speed = parseFloat(el.getAttribute('data-parallax') || '0.1');
-            var offset = (currentScroll * speed).toFixed(1);
-            if (el.id === 'heroParallaxBg') {
-              el.style.transform = 'translate3d(0, ' + offset + 'px, 0) scale(1.06)';
-            } else {
-              el.style.transform = 'translate3d(0, ' + offset + 'px, 0)';
-            }
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
           });
-
-          if (scrubImg) {
-            scrubImg.style.transform = 'scale(' + scaleVal + ') rotate(' + (progress * 8 - 4).toFixed(2) + 'deg)';
-          }
-          if (hTrack && window.innerWidth >= 960) {
-            var shiftX = Math.max(-180, Math.min(0, (0.5 - progress) * 160));
-            hTrack.style.transform = 'translate3d(' + shiftX.toFixed(1) + 'px, 0, 0)';
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
           }
         }
-
-        if (scrubDial) {
-          scrubDial.innerHTML = '<span>● SCROLL SCRUB ANGLE: ' + deg + '°</span><span>|</span><span>TILT ' + tiltAngle + '°</span>';
-        }
-        if (scrubReadout) {
-          scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
-        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
 
         var activeIdx = progress < 0.34 ? 0 : progress < 0.72 ? 1 : 2;
-        slideLinks.forEach(function (link, i) {
-          link.classList.toggle('is-active', i === activeIdx);
-        });
-        specCards.forEach(function (card, i) {
-          card.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3));
-        });
+        slideLinks.forEach(function (l, i) { l.classList.toggle('is-active', i === activeIdx); });
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
       }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
 
-      window.addEventListener('scroll', function () {
-        window.requestAnimationFrame(updateScrollPhysics);
-      }, { passive: true });
-      updateScrollPhysics();
-
-      // Horizontal Scroll Buttons
-      var hViewport = document.getElementById('hScrollViewport');
-      var hPrev = document.getElementById('hScrollPrev');
-      var hNext = document.getElementById('hScrollNext');
-      if (hPrev && hViewport) hPrev.addEventListener('click', function () { hViewport.scrollBy({ left: -320, behavior: 'smooth' }); });
-      if (hNext && hViewport) hNext.addEventListener('click', function () { hViewport.scrollBy({ left: 320, behavior: 'smooth' }); });
-
-      // 2. Group 1.2 & Group 3.2: Scroll-Triggered Reveal + Animated Number Counters
       var revealEls = document.querySelectorAll('.lau62-reveal');
       var counterEls = document.querySelectorAll('[data-counter-target]');
-
       function animateCounter(el) {
         if (el.getAttribute('data-counted') === 'true') return;
         el.setAttribute('data-counted', 'true');
         var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
         var suffix = el.getAttribute('data-counter-suffix') || '';
         var start = performance.now();
-        var duration = 1100;
         function tick(now) {
-          var t = Math.min(1, (now - start) / duration);
-          var eased = 1 - Math.pow(1 - t, 3);
-          el.textContent = Math.round(target * eased) + suffix;
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
           if (t < 1) window.requestAnimationFrame(tick);
         }
         window.requestAnimationFrame(tick);
       }
-
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-            }
-          });
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
         }, { threshold: 0.12 });
         revealEls.forEach(function (el) { io.observe(el); });
-
         var cio = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) animateCounter(entry.target);
-          });
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
         }, { threshold: 0.2 });
         counterEls.forEach(function (el) { cio.observe(el); });
       } else {
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
       }
 
-      // 3. Group 2.1, 2.2, 2.4, 2.5: Custom Follower Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Ripple
       var cursorRing = document.getElementById('cursorRing');
       var cursorDot = document.getElementById('cursorDot');
       window.addEventListener('mousemove', function (e) {
@@ -1307,68 +1026,35 @@
         el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
       });
 
-      // Magnetic Buttons
       document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
         btn.addEventListener('mousemove', function (e) {
           if (motionPaused) return;
           var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.28;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.28;
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.26;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.26;
           btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
         });
-        btn.addEventListener('mouseleave', function () {
-          btn.style.transform = 'translate3d(0, 0, 0)';
-        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
       });
 
-      // 3D Card Tilt & Specular Border Shine
       document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
         card.addEventListener('mousemove', function (e) {
           if (motionPaused) return;
           var r = card.getBoundingClientRect();
           var nx = (e.clientX - r.left) / r.width - 0.5;
           var ny = (e.clientY - r.top) / r.height - 0.5;
-          card.style.setProperty('--gx', (e.clientX - r.left) + 'px');
-          card.style.setProperty('--gy', (e.clientY - r.top) + 'px');
-          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 10).toFixed(2) + 'deg) rotateX(' + (-ny * 10).toFixed(2) + 'deg)';
+          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 9).toFixed(2) + 'deg) rotateX(' + (-ny * 9).toFixed(2) + 'deg)';
         });
-        card.addEventListener('mouseleave', function () {
-          card.style.transform = '';
-        });
+        card.addEventListener('mouseleave', function () { card.style.transform = ''; });
       });
 
-      // SVG Liquid / Ripple Distortion on Hero Showcase Hover
       var displacement = document.getElementById('lau62Displacement');
       var heroRig = document.getElementById('heroPopoutRig');
       if (heroRig && displacement) {
-        heroRig.addEventListener('mouseenter', function () {
-          if (motionPaused) return;
-          displacement.setAttribute('scale', '18');
-        });
-        heroRig.addEventListener('mouseleave', function () {
-          displacement.setAttribute('scale', '0');
-        });
+        heroRig.addEventListener('mouseenter', function () { if (!motionPaused) displacement.setAttribute('scale', '16'); });
+        heroRig.addEventListener('mouseleave', function () { displacement.setAttribute('scale', '0'); });
       }
 
-      // 4. Interactive Physics Mode Switcher
-      var modeBtns = document.querySelectorAll('.lau62-mode-btn');
-      var heroTag = document.getElementById('activeHeroTag');
-      var modeLabels = {
-        parallax: '✦ SURREAL DIGITAL PRODUCTION • MULTI-LAYER 3D PARALLAX ACTIVE',
-        liquid: '✦ LIQUID SHADER & RIPPLE DISTORTION ACTIVE',
-        scrub: '✦ 60FPS SCROLL SCRUBBING & PINNED TELEMETRY ACTIVE'
-      };
-      modeBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          modeBtns.forEach(function (b) { b.classList.remove('is-active'); });
-          btn.classList.add('is-active');
-          var m = btn.getAttribute('data-mode');
-          if (heroTag && modeLabels[m]) heroTag.textContent = modeLabels[m];
-          if (displacement) displacement.setAttribute('scale', m === 'liquid' ? '22' : '0');
-        });
-      });
-
-      // 5. Group 3.3: Seamless Fullscreen Page Transition (Compatible with 2-click preview recorder)
       var modal = document.getElementById('seamlessModal');
       var modalTitle = document.getElementById('seamlessTitle');
       var openBtn = document.getElementById('exploreMagneticBtn');
@@ -1382,69 +1068,46 @@
       function closeSeamless() {
         if (modal) modal.classList.remove('is-open');
       }
-
       if (openBtn) {
         openBtn.addEventListener('click', function () {
           if (modal && modal.classList.contains('is-open')) closeSeamless();
-          else openSeamless('Sticky Boundaries — Fullscreen 3D Telemetry View');
+          else openSeamless('Lunar Oasis Villa — Specification View');
         });
       }
       if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
       if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
-
       document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
-        el.addEventListener('click', function () {
-          openSeamless(el.getAttribute('data-seamless-trigger'));
-        });
+        el.addEventListener('click', function () { openSeamless(el.getAttribute('data-seamless-trigger')); });
       });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeSeamless();
-      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSeamless(); });
 
-      // 6. Group 4.2: Ambient Particle / Smoke Canvas System (Bounded & Pause-aware)
       var canvas = document.getElementById('ambientSmokeCanvas');
       if (canvas && canvas.getContext) {
         var ctx = canvas.getContext('2d');
-        var particles = [];
-        function resizeCanvas() {
-          canvas.width = canvas.clientWidth || window.innerWidth;
-          canvas.height = canvas.clientHeight || window.innerHeight;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var pts = [];
+        for (var i = 0; i < 24; i++) {
+          pts.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, r: 1.5 + Math.random() * 3, vx: (Math.random() - 0.5) * 0.4, vy: -0.2 - Math.random() * 0.4, a: 0.15 + Math.random() * 0.35 });
         }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas, { passive: true });
-
-        for (var i = 0; i < 28; i++) {
-          particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            r: 1.5 + Math.random() * 3.5,
-            vx: (Math.random() - 0.5) * 0.45,
-            vy: -0.25 - Math.random() * 0.45,
-            a: 0.15 + Math.random() * 0.45
-          });
-        }
-
-        var frameCount = 0;
-        function renderParticles() {
-          if (!motionPaused && frameCount < 900) {
-            frameCount++;
+        var f = 0;
+        function loop() {
+          if (!motionPaused && f < 900) {
+            f++;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (var j = 0; j < particles.length; j++) {
-              var pt = particles[j];
-              pt.x += pt.vx;
-              pt.y += pt.vy;
+            for (var j = 0; j < pts.length; j++) {
+              var pt = pts[j];
+              pt.x += pt.vx; pt.y += pt.vy;
               if (pt.y < 0) pt.y = canvas.height;
-              if (pt.x < 0) pt.x = canvas.width;
-              if (pt.x > canvas.width) pt.x = 0;
               ctx.beginPath();
               ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2);
-              ctx.fillStyle = 'rgba(255, 255, 255, ' + pt.a.toFixed(2) + ')';
+              ctx.fillStyle = 'rgba(255,255,255,' + pt.a.toFixed(2) + ')';
               ctx.fill();
             }
-            window.requestAnimationFrame(renderParticles);
+            window.requestAnimationFrame(loop);
           }
         }
-        window.requestAnimationFrame(renderParticles);
+        window.requestAnimationFrame(loop);
       }
     })();
   </script>

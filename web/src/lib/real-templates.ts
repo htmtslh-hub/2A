@@ -53,18 +53,18 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "Fohse Craft",
-        desc: "Giao diện Hero UI Fohse Craft (đạt 97% tiêu chuẩn thị giác) với vật thể 3D Pop-out lấn khung, thẻ kính mờ Glassmorphism, cuộn thị sai Parallax, ghim cố định Sticky Scrub 001-003 và hiệu ứng sóng chất lỏng.",
+        name: "AquaCosmos Zero-G",
+        desc: "AquaCosmos Zero-G (aquacosmos-hud) — Where abyssal ocean optics meet zero-gravity orbital habitats — interactive WebGL fluid waves, floating celestial spheres, and bioluminescent photonics.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Fohse Craft",
-        desc: "Interactive Fohse Craft Desktop Hero UI (97% criteria match) — featuring 3D pop-out subject layering, Glassmorphism & pill cutout cards, sticky scroll-scrubbed 001-003 telemetry, and liquid wave hover distortion.",
+        name: "AquaCosmos Zero-G",
+        desc: "AquaCosmos Zero-G (aquacosmos-hud) — Where abyssal ocean optics meet zero-gravity orbital habitats — interactive WebGL fluid waves, floating celestial spheres, and bioluminescent photonics.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Fohse Craft",
-        desc: "Fohse Craft 桌面级 3D 视觉英雄界面（符合 97% 严选标准），融合 3D 破界悬浮主体、毛玻璃胶囊卡片、001-003 粘性滚动擦除与流体波纹交互。",
+        name: "AquaCosmos Zero-G",
+        desc: "AquaCosmos Zero-G (aquacosmos-hud) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
@@ -77,18 +77,18 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "Sticky Boundaries",
-        desc: "Giao diện Hero UI Sticky Boundaries (đạt 100% tiêu chuẩn thị giác) với vật thể 3D Pop-out lấn khung, thẻ kính mờ Glassmorphism, cuộn thị sai Parallax, ghim cố định Sticky Scrub 001-003 và hiệu ứng sóng chất lỏng.",
+        name: "Lunar Oasis Villa",
+        desc: "Lunar Oasis Villa (lunar-villa) — Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Sticky Boundaries",
-        desc: "Interactive Sticky Boundaries Desktop Hero UI (100% criteria match) — featuring 3D pop-out subject layering, Glassmorphism & pill cutout cards, sticky scroll-scrubbed 001-003 telemetry, and liquid wave hover distortion.",
+        name: "Lunar Oasis Villa",
+        desc: "Lunar Oasis Villa (lunar-villa) — Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Sticky Boundaries",
-        desc: "Sticky Boundaries 桌面级 3D 视觉英雄界面（符合 100% 严选标准），融合 3D 破界悬浮主体、毛玻璃胶囊卡片、001-003 粘性滚动擦除与流体波纹交互。",
+        name: "Lunar Oasis Villa",
+        desc: "Lunar Oasis Villa (lunar-villa) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
@@ -101,18 +101,18 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "Espn Signature",
-        desc: "Giao diện Hero UI Espn Signature (đạt 100% tiêu chuẩn thị giác) với vật thể 3D Pop-out lấn khung, thẻ kính mờ Glassmorphism, cuộn thị sai Parallax, ghim cố định Sticky Scrub 001-003 và hiệu ứng sóng chất lỏng.",
+        name: "Apex 240Hz Signature",
+        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Espn Signature",
-        desc: "Interactive Espn Signature Desktop Hero UI (100% criteria match) — featuring 3D pop-out subject layering, Glassmorphism & pill cutout cards, sticky scroll-scrubbed 001-003 telemetry, and liquid wave hover distortion.",
+        name: "Apex 240Hz Signature",
+        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Espn Signature",
-        desc: "Espn Signature 桌面级 3D 视觉英雄界面（符合 100% 严选标准），融合 3D 破界悬浮主体、毛玻璃胶囊卡片、001-003 粘性滚动擦除与流体波纹交互。",
+        name: "Apex 240Hz Signature",
+        desc: "Apex 240Hz Signature (kinetic-poster) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
@@ -126,18 +126,18 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "Gluckauf WebVR",
-        desc: "Giao diện Hero UI Gluckauf WebVR (đạt 96% tiêu chuẩn thị giác) với vật thể 3D Pop-out lấn khung, thẻ kính mờ Glassmorphism, cuộn thị sai Parallax, ghim cố định Sticky Scrub 001-003 và hiệu ứng sóng chất lỏng.",
+        name: "AetherJet Supersonic",
+        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Gluckauf WebVR",
-        desc: "Interactive Gluckauf WebVR Desktop Hero UI (96% criteria match) — featuring 3D pop-out subject layering, Glassmorphism & pill cutout cards, sticky scroll-scrubbed 001-003 telemetry, and liquid wave hover distortion.",
+        name: "AetherJet Supersonic",
+        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Gluckauf WebVR",
-        desc: "Gluckauf WebVR 桌面级 3D 视觉英雄界面（符合 96% 严选标准），融合 3D 破界悬浮主体、毛玻璃胶囊卡片、001-003 粘性滚动擦除与流体波纹交互。",
+        name: "AetherJet Supersonic",
+        desc: "AetherJet Supersonic (sky-aviation) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
@@ -151,18 +151,18 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "Sarto Bikes",
-        desc: "Giao diện Hero UI Sarto Bikes (đạt 100% tiêu chuẩn thị giác) với vật thể 3D Pop-out lấn khung, thẻ kính mờ Glassmorphism, cuộn thị sai Parallax, ghim cố định Sticky Scrub 001-003 và hiệu ứng sóng chất lỏng.",
+        name: "Sarto Monza Atelier",
+        desc: "Sarto Monza Atelier (carbon-atelier) — Hand-laminated T1100G carbon monocoque chassis sculpted in Veneto — engineered with wind-tunnel smoke telemetry and sub-millimeter laser mitering.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Sarto Bikes",
-        desc: "Interactive Sarto Bikes Desktop Hero UI (100% criteria match) — featuring 3D pop-out subject layering, Glassmorphism & pill cutout cards, sticky scroll-scrubbed 001-003 telemetry, and liquid wave hover distortion.",
+        name: "Sarto Monza Atelier",
+        desc: "Sarto Monza Atelier (carbon-atelier) — Hand-laminated T1100G carbon monocoque chassis sculpted in Veneto — engineered with wind-tunnel smoke telemetry and sub-millimeter laser mitering.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Sarto Bikes",
-        desc: "Sarto Bikes 桌面级 3D 视觉英雄界面（符合 100% 严选标准），融合 3D 破界悬浮主体、毛玻璃胶囊卡片、001-003 粘性滚动擦除与流体波纹交互。",
+        name: "Sarto Monza Atelier",
+        desc: "Sarto Monza Atelier (carbon-atelier) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }

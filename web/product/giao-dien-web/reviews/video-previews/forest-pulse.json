@@ -2,15 +2,15 @@
   "id": "t114",
   "slug": "forest-pulse",
   "browser": "153.0.8010.12",
-  "date": "2026-10-26T12:44:01.659Z",
+  "date": "2026-10-26T13:40:40.277Z",
   "demo": "/demos/forest-pulse/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "754540474154",
-  "sha256": "7545404741548b81358fdb86ef3420b22e5fc7092d9dc67a41fb1d93bea8029d",
-  "demoHtmlSha256": "d83f9c6ff9b1bebc15134df149850fbdb76cc04b48d58c704605f73272a94093",
-  "demoSha256": "2bda830bbc2e2459641eeb69e2a181ceb0f01a403c50a50601faf19ca3770097",
-  "bytes": 680900,
+  "revision": "ca41914b5f25",
+  "sha256": "ca41914b5f253eb9bd40dc4e6efdc31c6ef77a7074c0ee501a22fb1c1a01eda4",
+  "demoHtmlSha256": "746ecf3485b062ff4818a60ee0fc6a703408834baeea78f19db7c07bf5ce4dbf",
+  "demoSha256": "99d09c05cdd82d26128e1fb33d20c3f0364e99088a3fd251454c8824c1cf5cc9",
+  "bytes": 811140,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.498,
+      "seconds": 2.503,
       "action": "click",
       "selector": "#exploreMagneticBtn"
     },
     {
-      "seconds": 4.949,
+      "seconds": 4.904,
       "action": "click",
       "selector": "#exploreMagneticBtn"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 1650
+      "target": 1486
     }
   ],
   "errors": [],

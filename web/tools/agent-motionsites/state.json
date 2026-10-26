@@ -120,7 +120,12 @@
     "vybe",
     "wander-far",
     "watchroom",
-    "yellow-beast"
+    "yellow-beast",
+    "forest-pulse",
+    "startup-devkit",
+    "break-code",
+    "launch-video",
+    "geospace-canvas"
   ],
   "processedPromptIds": [
     "aetheris-voyage-hero",

@@ -1,0 +1,48 @@
+{
+  "id": "t116",
+  "slug": "break-code",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-26T02:02:08.392Z",
+  "demo": "/demos/break-code/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "c7738cee9f45",
+  "sha256": "c7738cee9f45426d1e71b0b0ae5115c001040ccefd6ef375baf262355daaadfb",
+  "demoHtmlSha256": "126ff867e62caee673313ebf88c262885138c285be28ea4b57ccf59fb3d12fa3",
+  "demoSha256": "f286a9038021c1b99d51fb34985d1872352e745157a6cb5e376ba40af4a6fe98",
+  "bytes": 454591,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.447,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 4.825,
+      "action": "click",
+      "selector": "#navTouchBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 776
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\break-code-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\break-code-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\break-code-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\break-code-return.jpg"
+  ]
+}

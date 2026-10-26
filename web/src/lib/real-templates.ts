@@ -46,6 +46,128 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t118: {
+    slug: 'geospace-canvas',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Geospace Canvas",
+        desc: "Giao diện web Geospace Canvas lấy cảm hứng từ thiết kế web UX UI design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #00a2bc).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      en: {
+        name: "Geospace Canvas",
+        desc: "Interactive Geospace Canvas web template inspired by web UX UI design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #00a2bc).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      zh: {
+        name: "Geospace Canvas",
+        desc: "源自 web UX UI design 视觉灵感的 Geospace Canvas 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
+        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+      }
+    }
+  },
+
+  t117: {
+    slug: 'launch-video',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Launch Video",
+        desc: "Giao diện web Launch Video lấy cảm hứng từ thiết kế web UX UI design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #907ad5).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      en: {
+        name: "Launch Video",
+        desc: "Interactive Launch Video web template inspired by web UX UI design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #907ad5).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      zh: {
+        name: "Launch Video",
+        desc: "源自 web UX UI design 视觉灵感的 Launch Video 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
+        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+      }
+    }
+  },
+
+  t116: {
+    slug: 'break-code',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Break Code",
+        desc: "Giao diện web Break Code lấy cảm hứng từ thiết kế web UX UI design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #ff465c).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      en: {
+        name: "Break Code",
+        desc: "Interactive Break Code web template inspired by web UX UI design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #ff465c).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      zh: {
+        name: "Break Code",
+        desc: "源自 web UX UI design 视觉灵感的 Break Code 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
+        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+      }
+    }
+  },
+
+  t115: {
+    slug: 'startup-devkit',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Startup Devkit",
+        desc: "Giao diện web Startup Devkit lấy cảm hứng từ thiết kế web UX UI design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#f9f9f9, #4353ff).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      en: {
+        name: "Startup Devkit",
+        desc: "Interactive Startup Devkit web template inspired by web UX UI design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#f9f9f9, #4353ff).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      zh: {
+        name: "Startup Devkit",
+        desc: "源自 web UX UI design 视觉灵感的 Startup Devkit 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
+        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+      }
+    }
+  },
+
+  t114: {
+    slug: 'forest-pulse',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Forest Pulse",
+        desc: "Giao diện web Forest Pulse lấy cảm hứng từ thiết kế web UX UI design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #edb40d).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      en: {
+        name: "Forest Pulse",
+        desc: "Interactive Forest Pulse web template inspired by web UX UI design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #edb40d).",
+        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+      },
+      zh: {
+        name: "Forest Pulse",
+        desc: "源自 web UX UI design 视觉灵感的 Forest Pulse 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
+        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+      }
+    }
+  },
+
   t113: {
     slug: 'vex-ventures',
     cat: 'commerce',

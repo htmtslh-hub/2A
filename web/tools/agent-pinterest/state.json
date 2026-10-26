@@ -1,22 +1,32 @@
 {
-  "lastRunDate": "2026-10-25",
+  "lastRunDate": "2026-10-26",
   "todayCopiedCount": 5,
   "todayFreeCount": 2,
   "todayPremiumCount": 3,
-  "keywordCursor": 1,
+  "keywordCursor": 2,
   "processedPinIds": [
     "330803535131254458",
     "330803535135965925",
     "330803535135072400",
     "330803535134995170",
-    "330803535134937335"
+    "330803535134937335",
+    "330803535134625775",
+    "330803535134321924",
+    "330803535131158665",
+    "330803535131158131",
+    "330803535113051981"
   ],
   "processedImageHashes": [
     "a94b5b2407613d4f5b475d64e5453e9b427ac0dac554142dc4dd2dd01f83f553",
     "5dfc1f732e4329aceb754184c2e48fe7a3f58a93c34ed6e46eb8ee065f8f20d8",
     "e9e689fcc7d285b631daa7c97614d315e5f86516c0395048472214134f9f4fa4",
     "b4c24492f80d4a259bd8791dbb32c645bf1c77695efba94950890247dc7a7d29",
-    "5f70921e21162dac6e7ba0588aeca9d5c900a86cfe169eac0f6cac09e34b35da"
+    "5f70921e21162dac6e7ba0588aeca9d5c900a86cfe169eac0f6cac09e34b35da",
+    "f869876fcd3ed9868c2bd12dc95586ed03c96950b05f6ee4bf5d052df25e654f",
+    "e713c51fc075ca732414bb2281d22b417a3d309e632b7021b512568b4ed2ac0d",
+    "c6a187cb5cb80d11fe739c00818141bdeebd447337bcd72d7e05648d2a66497c",
+    "1092ea885a2e76a161f0f7ca1c36d6ec6025239da9a196c21aa5b682171914c4",
+    "2b435032a2da5aae22b54d21eb1043feb286e0386e9c82a8a31ef3161c31558d"
   ],
   "processedSlugs": [
     "aeris",
@@ -36,6 +46,7 @@
     "backbest-800",
     "beetbuh",
     "beyond-voyages",
+    "break-code",
     "camper",
     "cast-and-render",
     "chain-warden",
@@ -58,20 +69,26 @@
     "firepower",
     "fitclub-food",
     "flexible-spark",
+    "forest-pulse",
     "free-sample",
     "freight-axis",
     "fresh-reddy",
     "galaxy-edge",
+    "geospace-canvas",
+    "glow-features",
     "gridwork-co",
     "halden",
     "haul",
+    "interactive-discovery",
     "iris",
     "jack-3d",
     "japan-trails",
     "keystead",
     "kinetiq",
+    "kresna-footer",
     "laila",
     "lauberhorn-ridge",
+    "launch-video",
     "lawyer-justicia",
     "leaflit",
     "lingoglass",
@@ -96,6 +113,8 @@
     "oceanpulse",
     "orbit-academy",
     "pinehaven",
+    "price-calculator",
+    "prisma-creative-studio",
     "prmpt",
     "puro-amor",
     "reelmark",
@@ -112,6 +131,7 @@
     "sonicore",
     "soniq",
     "spaceedu",
+    "startup-devkit",
     "synapsex",
     "targo",
     "tidal",
@@ -124,6 +144,7 @@
     "verdant",
     "vertex-shops",
     "vesper-ai",
+    "vex-ventures",
     "veyra",
     "viktor",
     "vize-footer",
@@ -156,6 +177,37 @@
         "lawyer-justicia": "premium",
         "flexible-spark": "premium",
         "designer-portfolio": "premium"
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "built": [
+        "forest-pulse",
+        "startup-devkit",
+        "break-code",
+        "launch-video",
+        "geospace-canvas"
+      ],
+      "catalogIds": [
+        "t114",
+        "t115",
+        "t116",
+        "t117",
+        "t118"
+      ],
+      "pinIds": [
+        "330803535134625775",
+        "330803535134321924",
+        "330803535131158665",
+        "330803535131158131",
+        "330803535113051981"
+      ],
+      "tiers": {
+        "forest-pulse": "free",
+        "startup-devkit": "free",
+        "break-code": "premium",
+        "launch-video": "premium",
+        "geospace-canvas": "premium"
       }
     }
   ],

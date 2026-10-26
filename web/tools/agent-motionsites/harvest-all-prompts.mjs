@@ -233,34 +233,53 @@ ${item.githubUrl ? `- **Reference GitHub Repository:** ${item.githubUrl}\n` : ''
   console.log(`\n[+] Wrote master prompt bank to: ${bankJsonPath}`);
   console.log(`    Total: ${masterEntries.length} | Already Used in 2A: ${usedCount} | Ready Unused Free (full prompt): ${unusedFreeCount} | Ready Unused Premium (video/poster preview): ${unusedPremiumCount}`);
 
-  // Also write a clean Markdown summary index
-  const usedListMd = masterEntries
-    .filter(e => e.status === 'already_used_in_2A')
+  // Also write the FULL prompt text for every template directly into MOTIONSITES-PROMPT-BANK.md
+  const usedEntries = masterEntries.filter(e => e.status === 'already_used_in_2A');
+  const unusedFreeEntries = masterEntries.filter(e => e.status === 'queued_unused' && e.isFreeOnMotionsites && e.prompt_text);
+  const unusedPremEntries = masterEntries.filter(e => e.status === 'queued_unused' && !e.isFreeOnMotionsites);
+
+  const usedListMd = usedEntries
     .map((e, i) => `| ${i + 1} | \`${e.id}\` | ${e.title} | ${e.isFreeOnMotionsites ? 'Free' : 'Premium'} | \`${e.matched2ASlug}\` | ${e.matchReason} |`)
     .join('\n');
 
-  const unusedFreeMd = masterEntries
-    .filter(e => e.status === 'queued_unused' && e.isFreeOnMotionsites && e.prompt_text)
-    .map((e, i) => `| ${i + 1} | \`${e.id}\` | ${e.title} | ${e.category} | ${e.promptLength.toLocaleString()} chars | ${e.videoPreviewUrl ? '[Video](' + e.videoPreviewUrl + ')' : '—'} |`)
-    .join('\n');
+  const unusedFreeFullMd = unusedFreeEntries
+    .map((e, i) => [
+      `### [FREE-${String(i + 1).padStart(3, '0')}] ${e.title} (\`${e.id}\`)`,
+      `- **Danh mục:** ${e.category} | **Loại:** ${e.type} | **Độ dài:** ${e.promptLength.toLocaleString()} ký tự`,
+      `- **Video Preview:** ${e.videoPreviewUrl || '—'}`,
+      `- **Poster 1280px:** ${e.imagePreviewUrl || '—'}`,
+      ``,
+      `\`\`\`markdown`,
+      (e.prompt_text || '').replace(/```/g, '~~~'),
+      `\`\`\``
+    ].join('\n'))
+    .join('\n\n---\n\n');
 
-  const unusedPremMd = masterEntries
-    .filter(e => e.status === 'queued_unused' && !e.isFreeOnMotionsites)
-    .slice(0, 100)
-    .map((e, i) => `| ${i + 1} | \`${e.id}\` | ${e.title} | ${e.category} | ${e.videoPreviewUrl ? '[Preview](' + e.videoPreviewUrl + ')' : '—'} | ${e.imagePreviewUrl ? '[Poster](' + e.imagePreviewUrl + ')' : '—'} |`)
-    .join('\n');
+  const unusedPremFullMd = unusedPremEntries
+    .map((e, i) => [
+      `### [PREMIUM-${String(i + 1).padStart(3, '0')}] ${e.title} (\`${e.id}\`)`,
+      `- **Danh mục:** ${e.category} | **Loại:** ${e.type} | **Nguồn Prompt:** \`${e.promptSource}\``,
+      `- **Video Preview:** ${e.videoPreviewUrl || '—'}`,
+      `- **Poster 1280px:** ${e.imagePreviewUrl || '—'}`,
+      e.githubUrl ? `- **GitHub Repo:** ${e.githubUrl}` : null,
+      ``,
+      `\`\`\`markdown`,
+      (e.prompt_text || '').replace(/```/g, '~~~'),
+      `\`\`\``
+    ].filter(Boolean).join('\n'))
+    .join('\n\n---\n\n');
 
-  const mdContent = `# Kho Dữ Liệu Tổng Hợp MotionSites.ai (\`motionsites-master-bank.json\`)
+  const mdContent = `# Kho Dữ Liệu Toàn Văn Prompt MotionSites.ai (\`MOTIONSITES-PROMPT-BANK.md\`)
 
 - **Thời điểm cập nhật:** \`${bankPayload.generatedAt}\`
 - **Tổng số mẫu trên MotionSites.ai:** **${masterEntries.length} mẫu**
 - **Đã sử dụng trong kho 2A (Đã khóa chống trùng):** **${usedCount} mẫu**
-- **Mẫu Free chưa dùng (Đã tải sẵn toàn văn \`prompt_text\`):** **${unusedFreeCount} mẫu**
-- **Mẫu Premium chưa dùng (Đã lấy sẵn \`video_preview_url\` & \`image_preview_url\`):** **${unusedPremiumCount} mẫu**
+- **Mẫu Free chưa dùng (Đầy đủ toàn văn \`prompt_text\` gốc từ MotionSites):** **${unusedFreeCount} mẫu**
+- **Mẫu Premium chưa dùng (Đầy đủ \`prompt_text\` kiến trúc + \`video_preview_url\` + \`image_preview_url\`):** **${unusedPremiumCount} mẫu**
 
 ---
 
-## 1. Danh sách ${usedCount} mẫu đã từng sử dụng trong dự án 2A (Đã loại trừ tự động)
+## PHẦN 1: Danh sách ${usedCount} mẫu đã từng sử dụng trong dự án 2A (Đã khóa tự động để không bao giờ làm trùng)
 
 | # | MotionSites ID | Tên trên MotionSites | Phân loại | Slug trong kho 2A | Lý do phát hiện trùng |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -268,23 +287,19 @@ ${usedListMd}
 
 ---
 
-## 2. Danh sách ${unusedFreeCount} mẫu Free chưa dùng (Đã lưu trọn bộ \`prompt_text\` trong \`motionsites-master-bank.json\`)
+## PHẦN 2: Toàn văn Prompt của ${unusedFreeCount} mẫu Free chưa dùng (Nguyên văn từ MotionSites API)
 
-| # | MotionSites ID | Tên mẫu | Danh mục | Độ dài Prompt | Video Preview |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-${unusedFreeMd}
+${unusedFreeFullMd}
 
 ---
 
-## 3. Danh sách mẫu Premium chưa dùng (Kèm Video Preview & Poster — Hiển thị 100/${unusedPremiumCount} mẫu đầu)
+## PHẦN 3: Toàn văn Prompt & Video Preview của ${unusedPremiumCount} mẫu Premium chưa dùng
 
-| # | MotionSites ID | Tên mẫu | Danh mục | Video Preview | Poster 1280px |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-${unusedPremMd}
+${unusedPremFullMd}
 `;
 
   writeFileSync(bankMdPath, mdContent, 'utf8');
-  console.log(`[+] Wrote Markdown catalog index to: ${bankMdPath}`);
+  console.log(`[+] Wrote FULL Markdown prompt bank to: ${bankMdPath}`);
 }
 
 main().catch(err => {

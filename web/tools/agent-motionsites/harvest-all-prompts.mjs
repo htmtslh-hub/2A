@@ -94,7 +94,9 @@ async function main() {
   console.log(`Harvesting full prompt_text for all ${freeItems.length} Free templates (using cached bank where available)...`);
   const existingBank = existsSync(bankJsonPath) ? JSON.parse(readFileSync(bankJsonPath, 'utf8')) : null;
   const cachedPromptMap = new Map(
-    (existingBank?.items || []).filter(x => x.prompt_text).map(x => [x.id, { prompt_text: x.prompt_text, sections: x.sections || [] }])
+    (existingBank?.items || [])
+      .filter(x => x.prompt_text && (!x.promptSource || x.promptSource === 'official_api') && x.isFreeOnMotionsites)
+      .map(x => [x.id, { prompt_text: x.prompt_text, sections: x.sections || [] }])
   );
   const resultsMap = new Map();
   let cursor = 0;
@@ -121,16 +123,67 @@ async function main() {
 
   await Promise.all(Array.from({ length: 8 }, () => worker()));
 
+  function synthesizePremiumPrompt(item) {
+    const mediaUrl = item.videoPreviewUrl || item.image || item.poster || '';
+    const posterUrl = item.poster || item.image || '';
+    const cat = item.category || 'SaaS & Web';
+    const isLight = /light|editorial|minimal|fashion|warm|studio|wellness|wedding|real estate|architecture|agency/i.test(`${item.title} ${cat}`);
+    const bgHex = isLight ? '#F8F7F4' : '#090A0F';
+    const surfaceHex = isLight ? '#EFECE6' : '#12151E';
+    const textHex = isLight ? '#141413' : '#F5F7FA';
+    const accentHex = /finance|crypto|web3/i.test(cat)
+      ? '#10B981'
+      : /ai|tech|saas|developer/i.test(cat)
+      ? '#6366F1'
+      : /design|agency|portfolio/i.test(cat)
+      ? '#FF5656'
+      : '#38BDF8';
+
+    return `Create a high-craft, production-ready ${item.type === 'section' ? 'UI section & interactive showcase' : 'full-page web template'} for **"${item.title}"** in the **${cat}** category.
+
+### 1. Visual Direction & Reference Assets
+- **Template ID:** \`${item.id}\`
+- **Category:** ${cat} (${item.type || 'hero'})
+- **Reference Video / Motion Preview:** ${mediaUrl || 'N/A'}
+- **High-Res Reference Poster (1280px):** ${posterUrl || 'N/A'}
+${item.githubUrl ? `- **Reference GitHub Repository:** ${item.githubUrl}\n` : ''}- **Design Paradigm:** Kinetic typography & neo-brutalist Swiss grids blended with atmospheric minimalism andchoreographed motion.
+
+### 2. Color & Atmospheric Polarity
+- **Primary Background Surface:** \`${bgHex}\`
+- **Elevated Card / Module Surface:** \`${surfaceHex}\`
+- **Primary Typography Ink:** \`${textHex}\`
+- **Primary Accent & Interactive Highlight:** \`${accentHex}\`
+- **Border & Hairline Token:** \`1px solid ${isLight ? 'rgba(20,20,19,0.10)' : 'rgba(255,255,255,0.08)'}\`
+
+### 3. Typography & Scannable Hierarchy
+- **Display / Headline Font:** \`'Instrument Serif'\`, \`'Playfair Display'\`, or \`'Plus Jakarta Sans'\` (` + '`clamp(2.5rem, 5vw, 4.75rem)`' + `, line-height \`0.98\`, letter-spacing \`-0.03em\`)
+- **UI & Body Font:** \`'Inter'\` or \`'Plus Jakarta Sans'\` (400, 500, 600)
+- **Technical / Numeric Meta Font:** \`'JetBrains Mono'\` with \`font-variant-numeric: tabular-nums\`
+
+### 4. Layout, Spatial Architecture & Interactive Functional Requirements
+1. **Top Navigation Bar:** Glassmorphic sticky header with brand wordmark **"${item.title}"**, section anchors, interactive theme/mode or live status pill, and primary CTA button.
+2. **Primary Hero / Focal Showcase:**
+   - Incorporate the motion preview asset (${mediaUrl || posterUrl}) with smooth parallax depth, subtle ambient glow, and crisp frame border.
+   - Headline copy tailored to **"${item.title}"** (${cat}) with dual action triggers and live telemetry/metrics strip.
+3. **Interactive Bento / Feature Architecture:**
+   - 3-to-4 interactive cards or live calculator/filter controls depending on the archetype of **"${item.title}"**.
+   - Micro-interactions on hover (\`cubic-bezier(0.22, 1, 0.36, 1)\`), live tab switching, and responsive 4-viewport adaptation (\`1440px\`, \`1024px\`, \`768px\`, \`375px\`).`;
+  }
+
   const masterEntries = [];
   const newlyDetectedUsedIds = new Set(processedPromptIds);
 
   for (const item of allItems) {
     const fetched = resultsMap.get(item.id) || null;
-    const promptText = fetched?.prompt_text || null;
-    const sections = fetched?.sections || [];
-    const promptHash = promptText ? sha256Text(promptText) : sha256Text(`${item.id}:${item.videoPreviewUrl || item.image || ''}`);
+    const officialPromptText = fetched?.prompt_text || null;
+    const promptSource = officialPromptText ? 'official_api' : 'visual_architectural_spec';
+    const promptText = officialPromptText || synthesizePremiumPrompt(item);
+    const sections = fetched?.sections?.length
+      ? fetched.sections
+      : [{ title: `${item.title} — Master Specification`, content: promptText }];
+    const promptHash = sha256Text(officialPromptText || `${item.id}:${item.videoPreviewUrl || item.image || ''}`);
 
-    const check = checkIfUsedIn2A(item, promptText, store, processedPromptIds);
+    const check = checkIfUsedIn2A(item, officialPromptText, store, processedPromptIds);
     if (check.used) {
       newlyDetectedUsedIds.add(item.id);
     }
@@ -140,6 +193,7 @@ async function main() {
       title: item.title,
       slug: item.slug,
       isFreeOnMotionsites: item.isFree,
+      promptSource,
       category: item.category,
       type: item.type,
       status: check.used ? 'already_used_in_2A' : 'queued_unused',

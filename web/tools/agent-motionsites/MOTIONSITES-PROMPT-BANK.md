@@ -1,9 +1,9 @@
 # Kho Dữ Liệu Tổng Hợp MotionSites.ai (`motionsites-master-bank.json`)
 
-- **Thời điểm cập nhật:** `2026-10-26T00:01:55.921Z`
+- **Thời điểm cập nhật:** `2026-10-26T00:14:10.261Z`
 - **Tổng số mẫu trên MotionSites.ai:** **665 mẫu**
 - **Đã sử dụng trong kho 2A (Đã khóa chống trùng):** **60 mẫu**
-- **Mẫu Free chưa dùng (Đã tải sẵn toàn văn `prompt_text`):** **189 mẫu**
+- **Mẫu Free chưa dùng (Đã tải sẵn toàn văn `prompt_text`):** **190 mẫu**
 - **Mẫu Premium chưa dùng (Đã lấy sẵn `video_preview_url` & `image_preview_url`):** **415 mẫu**
 
 ---
@@ -75,7 +75,7 @@
 
 ---
 
-## 2. Danh sách 189 mẫu Free chưa dùng (Đã lưu trọn bộ `prompt_text` trong `motionsites-master-bank.json`)
+## 2. Danh sách 190 mẫu Free chưa dùng (Đã lưu trọn bộ `prompt_text` trong `motionsites-master-bank.json`)
 
 | # | MotionSites ID | Tên mẫu | Danh mục | Độ dài Prompt | Video Preview |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -143,131 +143,132 @@
 | 62 | `vaultshield` | VaultShield | Hero | 4,734 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(64).webp) |
 | 63 | `visual-hero` | Visual Hero | Hero | 8,275 chars | [Video](https://stream.mux.com/i9kUFJpB6GrWoe2UXRZG4lIP02g00LGulS1GTVrMMwZI00.m3u8) |
 | 64 | `koru-tech-footer` | Koru Tech Footer | Footer | 5,034 chars | — |
-| 65 | `no-code-waitlist` | No-Code Waitlist | Waitlist | 6,532 chars | [Video](https://stream.mux.com/iY611PYuZ02AKpIzYB4Q1BMpl7W2O3UwqjQm9p01xlmVg.m3u8) |
-| 66 | `rocket-pricing` | Rocket Pricing | Pricing | 8,841 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(55).webp) |
-| 67 | `nexacore-control` | NexaCore Control | Features | 8,666 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(33).webp) |
-| 68 | `wellness-balance` | Wellness Balance | Hero | 7,840 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(11).webp) |
-| 69 | `404-planet` | 404 Planet | 404 | 7,598 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(7).webp) |
-| 70 | `axion-about` | Axion About | About | 4,393 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(29).webp) |
-| 71 | `guardnet-benefits` | Guardnet Benefits | Benefits | 4,108 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(34).webp) |
-| 72 | `liquid-glass-cta` | Liquid Glass CTA | CTA | 10,077 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(17).webp) |
-| 73 | `launchex-about` | LaunchEx About | About | 6,908 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(49).webp) |
-| 74 | `ai-image-generator-ui` | AI Image Generator UI | AI | 4,480 chars | [Video](https://res.cloudinary.com/dsdhxhhqh/image/upload/v1778221760/CleanShot_2026-05-08_at_13.28.55_2x_swwnfd.png) |
-| 75 | `intelligentx` | IntelligentX | Hero | 4,182 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(61).webp) |
-| 76 | `fun-404-page` | Fun 404 Page | Education Website | 6,085 chars | [Video](https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260714_015111_b6301eeb-0a2c-4b2d-b9d2-238eaa3c099e.mp4) |
-| 77 | `saas-value` | SaaS Value | SaaS | 8,755 chars | [Video](https://res.cloudinary.com/dsdhxhhqh/image/upload/v1781539562/CleanShot_2026-06-15_at_15.31.34_2x_ckhjmj.png) |
-| 78 | `blog-showcase` | Blog Showcase | Blog | 4,151 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(22).webp) |
-| 79 | `equilibrium` | Equilibrium | Hero | 4,787 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(93).webp) |
-| 80 | `vision-reveal` | Vision Reveal | Hero | 16,723 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/newpsotArea.mp4) |
-| 81 | `pixel-grid-hover` | Pixel Grid Hover | Case Studies | 8,672 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(15).webp) |
-| 82 | `404` | Nexto 404 | 404 | 5,689 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/CleanShot_2026-05-15_at_15.46.24_2x_i163nd.png) |
-| 83 | `beauty-categories` | Beauty Categories | Categories | 4,038 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(67).webp) |
-| 84 | `immersive-ocean` | Immersive Ocean | Hero | 4,030 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(14).webp) |
-| 85 | `tech-noir-about` | Tech-Noir About | About | 3,555 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(48).webp) |
-| 86 | `audio-showcase` | Audio Showcase | Hero | 6,927 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(70).webp) |
-| 87 | `digital-experiences` | Digital Experiences | Landing Page | 8,994 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(40).webp) |
-| 88 | `aurora-onboard` | Aurora Onboard | Sign Up | 4,770 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/CleanShot_2026-05-07_at_15.40.21_2x_kfgapx.png) |
-| 89 | `build-with-us` | Build With Us | Contact us | 6,253 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(45).webp) |
-| 90 | `wellness-device` | Wellness Devicex | Health | 6,903 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/Wellness%20Device%20.mp4) |
-| 91 | `iris-assistant` | Iris Assistant | AI Assistant | 3,695 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/iris-assistant.mp4) |
-| 92 | `elo-one-results` | Elo One Results | Agency | 3,558 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/elo-one-results.mp4) |
-| 93 | `atlas-lab` | Atlas Lab Features | AI Research | 3,933 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/atlas-lab.mp4) |
-| 94 | `vertex3d-login` | Vertex3D Login | Login Page | 2,992 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vertex3d-login.mp4) |
-| 95 | `zapline-cta` | Zapline | Trading App | 4,334 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/zapline-cta.mp4) |
-| 96 | `vexor-cta` | Vexor CTA | Fintech | 3,432 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vexor-cta.mp4) |
-| 97 | `maren-hero` | MAREN Hero | Fashion | 3,785 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/maren-hero.mp4) |
-| 98 | `halora` | Halora | Wearables | 4,190 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/halora.mp4) |
-| 99 | `vocari-hero` | Vocari Hero | AI Hero | 4,064 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vocari-hero.mp4) |
-| 100 | `petalyx` | Petalyx | Creative | 21,617 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/petalyx-nature-landing.mp4) |
-| 101 | `freight-services-hero` | Freight Services Hero | Logistics | 7,659 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/freight-services-hero.mp4) |
-| 102 | `norva-staffing-hero` | Norva Staffing Hero | Staffing | 6,557 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/norva-staffing-hero.mp4) |
-| 103 | `maya-lind-profile` | Maya Lind Profile | Portfolio | 6,857 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/maya-lind-profile.mp4) |
-| 104 | `vela-terms-hero` | Vela Terms Hero | Crypto | 6,657 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vela-terms-hero.mp4) |
-| 105 | `church-community` | Church Community | Church | 5,380 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/churchserice.mp4) |
-| 106 | `wellness-hero` | Wellness Hero | Hero | 4,719 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(32).webp) |
-| 107 | `arceage-stats` | Arceage Stats | Stats | 7,826 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(59).webp) |
-| 108 | `cognitra-feature` | Cognitra Feature | Feature | 3,241 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(72).webp) |
-| 109 | `coffee-rewards` | Coffee Rewards | Loyalty App | 5,054 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/uploaded/coffeorangeArea.mp4) |
-| 110 | `faq-cta` | FAQ CTA | CTA | 9,456 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(61).webp) |
-| 111 | `email-landing-page` | Email Landing Page | Landing page | 19,431 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(59).webp) |
-| 112 | `creative-studio` | Creative Studio | Agency | 5,481 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(71).webp) |
-| 113 | `creative-portfolio` | Creative Portfolio | Hero | 5,639 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(89).webp) |
-| 114 | `daisy-wild` | Daisy Wild | Product | 10,292 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(32).webp) |
-| 115 | `adhd-planner` | ADHD Planner | App | 8,810 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/the%20frisArea.mp4) |
-| 116 | `ai-trip-planner` | AI Trip Planner | Travel | 6,398 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/where%20willArea.mp4) |
-| 117 | `personal-showcase` | Personal Showcase | Portfolio | 6,948 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/showcaseareaArea.mp4) |
-| 118 | `trustflow` | TrustFlow | Finance | 6,275 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/trustflowginArea.mp4) |
-| 119 | `forecast-center` | Forecast Center | Utility | 11,253 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/wetherappArea.mp4) |
-| 120 | `neo-museum` | Neo Museum | Website | 15,036 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(75).webp) |
-| 121 | `digital-director` | Digital Director | Portfolio | 8,947 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/digitaldirector.mp4) |
-| 122 | `intelligent-operations` | Intelligent Operations | Agency | 10,447 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/preview.mp4) |
-| 123 | `skybridge-404` | Skybridge 404 | 404 | 7,104 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/Skybridge%20404Area.mp4) |
-| 124 | `synth-mode` | Synth Mode | Fashion | 10,533 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/synthArea.mp4) |
-| 125 | `agent-grove` | Agent Grove | SaaS | 7,959 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/Agent%20Grove.mp4) |
-| 126 | `sparkform` | Sparkform | Creative | 6,724 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/sparkformcreative.mp4) |
-| 127 | `macos-widget` | macOS widget | SaaS | 11,140 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/driftbar-footer.mp4) |
-| 128 | `signal-id` | Signal ID | Technology | 11,588 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/signalIDD.mp4) |
-| 129 | `talent-collective` | Talent Collective | Agency | 9,583 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/teamcollectiveasian.mp4) |
-| 130 | `task-engine` | Task Engine | SaaS | 14,503 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/Task%20Engine.mp4) |
-| 131 | `autonomous-ops` | Autonomous Ops | SaaS | 18,222 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/autonomusopsArea.mp4) |
-| 132 | `orbit-flora` | Orbit Flora | AI | 9,402 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/Orbit%20Flora.mp4) |
-| 133 | `data-signal` | Data Signal | Analytics | 12,007 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/dataflower.mp4) |
-| 134 | `cyber-layer` | Cyber Layer | Cybersecurity | 14,235 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/hackerredhero.mp4) |
-| 135 | `ai-runtime` | AI Runtime | AI | 9,593 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/circlishdotsArea.mp4) |
-| 136 | `deepthink` | DeepThink | AI Assistant | 13,695 chars | [Video](https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260812_064245_32c4f7ee-fcde-4c4f-93fe-d729a1ba7a84.png&w=1280&q=85) |
-| 137 | `real-time-alerts` | Real-Time Alerts | Sign in | 21,771 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/falcinsignin.mp4) |
-| 138 | `pet-diagnostics` | Pet Diagnostics | Healthcare | 18,711 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/comparehumanvsdog.mp4) |
-| 139 | `growth-decisions` | Growth Decisions | SaaS | 11,164 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/mountainsfreesaas.mp4) |
-| 140 | `planetary-pulse` | Planetary Pulse | Science | 26,446 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/liquidbulbwebjl.mp4) |
-| 141 | `aurex-finance` | Aurex Finance | Fintech | 29,337 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/AurexFinance_Financial_Technology.mp4) |
-| 142 | `quantum-core` | Quantum Core | Data Intelligence | 27,320 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/QuantumCore_Data_Intelligence.mp4) |
-| 143 | `palomar-labs` | Palomar Labs | AI | 7,574 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/palomar_labs_ai_infrastructure.mp4) |
-| 144 | `rare-gallery` | Rare Gallery | Curated | 4,964 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/rare_gallery_curated_collections.mp4) |
-| 145 | `3d-character-studio` | 3D Character Studio | 3D | 5,726 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/3dcha.mp4) |
-| 146 | `quantum-lucid` | Quantum Lucid | SaaS | 20,249 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/quantum_lucid_ai_saas.mp4) |
-| 147 | `fastshot` | Fastshot | AI | 15,844 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/fastshot_launchpad_ai_app_buil.mp4) |
-| 148 | `vela-ul` | Vela Ul | Features | 25,889 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/vela_ui_data_platform.mp4) |
-| 149 | `northstar` | Northstar | Agency | 11,589 chars | [Video](https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260826_181950_e071b218-88a0-41e7-91bf-24735ff520a7.png&w=1280&q=85) |
-| 150 | `junglemind` | JungleMind | SaaS | 36,531 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/jungle-mind-ai-saas.mp4) |
-| 151 | `heritage-grove` | Heritage Grove | Footer | 12,893 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/heritage-grove-crafts.mp4) |
-| 152 | `intelligent-performance` | Intelligent Performance | SaaS | 26,839 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/intelligent_performance_saas_t.mp4) |
-| 153 | `playful-idea` | Playful Idea | Creative Agency | 30,665 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/stopfollowupArea.mp4) |
-| 154 | `ltx-video` | LTX Video | E-coommerce | 21,298 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/bg-video-switch.mp4) |
-| 155 | `vinyl` | Vinyl | Music | 18,878 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/vinyl-music-record.mp4) |
-| 156 | `veyra-electric` | Veyra Electric | Automative | 12,080 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/veyra-electric.mp4) |
-| 157 | `cordex` | Cordex | Manufacturing | 29,696 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/cordex-cabel.mp4) |
-| 158 | `mind-ai` | Mind AI | 3D | 37,004 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/mind-ai-hero-3d.mp4) |
-| 159 | `nature-portfolio` | Nature Portfolio | Photography | 29,795 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/ethan-vale-portfolio.mp4) |
-| 160 | `nebula-hero` | Nebula Hero | Space | 14,322 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/orbit-recording.mp4) |
-| 161 | `monolith-hero` | Monolith Hero | Architecture | 68,381 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/ibCJ6vtSfiGj1Pto5Xn3ug.mp4) |
-| 162 | `gold-standard` | Gold Standard | Portfolio | 32,024 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/soscale-recording.mp4) |
-| 163 | `nival-cyberspace` | ConSentinel | Motion | 31,116 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/consentinel-hero-section.mp4) |
-| 164 | `future-machine` | Future Machine | Robotics | 14,420 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/future-machine-hero.mp4) |
-| 165 | `neural-pathway` | Neural Pathway | Agency | 31,164 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/neural-pathway-vidoe.mp4) |
-| 166 | `consentinel` | Nival Cyberspace | Personal | 30,647 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/nival-cyberspace-hero.mp4) |
-| 167 | `space-voyage` | Space Voyage | Creative | 23,849 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/space-voyage-video.mp4) |
-| 168 | `atelier-unit` | Atelier Unit | Portfolio | 12,035 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/Atelier-Unit-Digital-Design.mp4) |
-| 169 | `vexela` | Vexel | SaaS | 7,140 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/Vexel-Conversational-SaaS.mp4) |
-| 170 | `parallex` | Parallex | Portfolio | 38,008 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/parallex-fashion.mp4) |
-| 171 | `anveril` | Anveril | SaaS | 9,742 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/Anveril-Future-Computing.mp4) |
-| 172 | `ridgeai` | RidgeAI | AI Builder | 4,433 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/ridgeai-hero-v2.mp4) |
-| 173 | `keylight` | Keylight | Authentication | 47,030 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/keylight-signin.mp4) |
-| 174 | `kairn` | KAIRN | Ski Gear | 4,151 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/kairn-hero.mp4) |
-| 175 | `corvana-ai` | Corvana AI | Healthcare AI | 5,692 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/corvana-hero.mp4) |
-| 176 | `skyprompt` | Skyprompt | AI Course | 5,717 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/skyprompt-hero.mp4) |
-| 177 | `lumora-skyranger` | Lumora Skyranger | 3D Character | 5,998 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/lumora-hero.mp4) |
-| 178 | `cutora` | Cutora | Login Page | 5,309 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/cutora-hero.mp4) |
-| 179 | `halden-stories` | Halden Stories | Interactive Map | 8,841 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/halden-hero.mp4) |
-| 180 | `zentrade-faq` | ZENTRADE FAQ | FAQ Page | 5,956 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/zentrade-faq.mp4) |
-| 181 | `vantix-footer` | Vantix Footer | Footer | 4,746 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vantix-footer.mp4) |
-| 182 | `capabilities` | Capabilities | Features | 3,339 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/capabilities.mp4) |
-| 183 | `rovin-footer` | Rovin Footer | Travel Fintech | 2,859 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/rovin-footer.mp4) |
-| 184 | `synthora-hero` | Synthora Hero | AI SaaS | 3,238 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/synthora-hero.mp4) |
-| 185 | `shipcraft-footer` | Shipcraft Footer | Footer | 3,672 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/shipcraft-footer.mp4) |
-| 186 | `mindora-hero` | Mindora Hero | Mental Health | 3,931 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/mindora-hero.mp4) |
-| 187 | `nuvo-landing` | nuvo | Fintech Landing | 4,621 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/nuvo-landing.mp4) |
-| 188 | `mk-consulting-hero` | MK Consulting | Legal Studio | 4,141 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/mk-consulting-hero.mp4) |
-| 189 | `veilguard-cta` | VeilGuard CTA | Cybersecurity | 3,346 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/veilguard-cta.mp4) |
+| 65 | `feathers-atlas` | Feathers Atlas | 3D | 2,336 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/feathers-atlas-3d.mp4) |
+| 66 | `no-code-waitlist` | No-Code Waitlist | Waitlist | 6,532 chars | [Video](https://stream.mux.com/iY611PYuZ02AKpIzYB4Q1BMpl7W2O3UwqjQm9p01xlmVg.m3u8) |
+| 67 | `rocket-pricing` | Rocket Pricing | Pricing | 8,841 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(55).webp) |
+| 68 | `nexacore-control` | NexaCore Control | Features | 8,666 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(33).webp) |
+| 69 | `wellness-balance` | Wellness Balance | Hero | 7,840 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(11).webp) |
+| 70 | `404-planet` | 404 Planet | 404 | 7,598 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(7).webp) |
+| 71 | `axion-about` | Axion About | About | 4,393 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(29).webp) |
+| 72 | `guardnet-benefits` | Guardnet Benefits | Benefits | 4,108 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(34).webp) |
+| 73 | `liquid-glass-cta` | Liquid Glass CTA | CTA | 10,077 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(17).webp) |
+| 74 | `launchex-about` | LaunchEx About | About | 6,908 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(49).webp) |
+| 75 | `ai-image-generator-ui` | AI Image Generator UI | AI | 4,480 chars | [Video](https://res.cloudinary.com/dsdhxhhqh/image/upload/v1778221760/CleanShot_2026-05-08_at_13.28.55_2x_swwnfd.png) |
+| 76 | `intelligentx` | IntelligentX | Hero | 4,182 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(61).webp) |
+| 77 | `fun-404-page` | Fun 404 Page | Education Website | 6,085 chars | [Video](https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260714_015111_b6301eeb-0a2c-4b2d-b9d2-238eaa3c099e.mp4) |
+| 78 | `saas-value` | SaaS Value | SaaS | 8,755 chars | [Video](https://res.cloudinary.com/dsdhxhhqh/image/upload/v1781539562/CleanShot_2026-06-15_at_15.31.34_2x_ckhjmj.png) |
+| 79 | `blog-showcase` | Blog Showcase | Blog | 4,151 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(22).webp) |
+| 80 | `equilibrium` | Equilibrium | Hero | 4,787 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(93).webp) |
+| 81 | `vision-reveal` | Vision Reveal | Hero | 16,723 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/newpsotArea.mp4) |
+| 82 | `pixel-grid-hover` | Pixel Grid Hover | Case Studies | 8,672 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(15).webp) |
+| 83 | `404` | Nexto 404 | 404 | 5,689 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/CleanShot_2026-05-15_at_15.46.24_2x_i163nd.png) |
+| 84 | `beauty-categories` | Beauty Categories | Categories | 4,038 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(67).webp) |
+| 85 | `immersive-ocean` | Immersive Ocean | Hero | 4,030 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(14).webp) |
+| 86 | `tech-noir-about` | Tech-Noir About | About | 3,555 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(48).webp) |
+| 87 | `audio-showcase` | Audio Showcase | Hero | 6,927 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(70).webp) |
+| 88 | `digital-experiences` | Digital Experiences | Landing Page | 8,994 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(40).webp) |
+| 89 | `aurora-onboard` | Aurora Onboard | Sign Up | 4,770 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/CleanShot_2026-05-07_at_15.40.21_2x_kfgapx.png) |
+| 90 | `build-with-us` | Build With Us | Contact us | 6,253 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(45).webp) |
+| 91 | `wellness-device` | Wellness Devicex | Health | 6,903 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/Wellness%20Device%20.mp4) |
+| 92 | `iris-assistant` | Iris Assistant | AI Assistant | 3,695 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/iris-assistant.mp4) |
+| 93 | `elo-one-results` | Elo One Results | Agency | 3,558 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/elo-one-results.mp4) |
+| 94 | `atlas-lab` | Atlas Lab Features | AI Research | 3,933 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/atlas-lab.mp4) |
+| 95 | `vertex3d-login` | Vertex3D Login | Login Page | 2,992 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vertex3d-login.mp4) |
+| 96 | `zapline-cta` | Zapline | Trading App | 4,334 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/zapline-cta.mp4) |
+| 97 | `vexor-cta` | Vexor CTA | Fintech | 3,432 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vexor-cta.mp4) |
+| 98 | `maren-hero` | MAREN Hero | Fashion | 3,785 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/maren-hero.mp4) |
+| 99 | `halora` | Halora | Wearables | 4,190 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/halora.mp4) |
+| 100 | `vocari-hero` | Vocari Hero | AI Hero | 4,064 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vocari-hero.mp4) |
+| 101 | `petalyx` | Petalyx | Creative | 21,617 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/petalyx-nature-landing.mp4) |
+| 102 | `freight-services-hero` | Freight Services Hero | Logistics | 7,659 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/freight-services-hero.mp4) |
+| 103 | `norva-staffing-hero` | Norva Staffing Hero | Staffing | 6,557 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/norva-staffing-hero.mp4) |
+| 104 | `maya-lind-profile` | Maya Lind Profile | Portfolio | 6,857 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/maya-lind-profile.mp4) |
+| 105 | `vela-terms-hero` | Vela Terms Hero | Crypto | 6,657 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vela-terms-hero.mp4) |
+| 106 | `church-community` | Church Community | Church | 5,380 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/churchserice.mp4) |
+| 107 | `wellness-hero` | Wellness Hero | Hero | 4,719 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(32).webp) |
+| 108 | `arceage-stats` | Arceage Stats | Stats | 7,826 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(59).webp) |
+| 109 | `cognitra-feature` | Cognitra Feature | Feature | 3,241 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(72).webp) |
+| 110 | `coffee-rewards` | Coffee Rewards | Loyalty App | 5,054 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/uploaded/coffeorangeArea.mp4) |
+| 111 | `faq-cta` | FAQ CTA | CTA | 9,456 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(61).webp) |
+| 112 | `email-landing-page` | Email Landing Page | Landing page | 19,431 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(59).webp) |
+| 113 | `creative-studio` | Creative Studio | Agency | 5,481 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(71).webp) |
+| 114 | `creative-portfolio` | Creative Portfolio | Hero | 5,639 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(89).webp) |
+| 115 | `daisy-wild` | Daisy Wild | Product | 10,292 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/animated%20(32).webp) |
+| 116 | `adhd-planner` | ADHD Planner | App | 8,810 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/the%20frisArea.mp4) |
+| 117 | `ai-trip-planner` | AI Trip Planner | Travel | 6,398 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/where%20willArea.mp4) |
+| 118 | `personal-showcase` | Personal Showcase | Portfolio | 6,948 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/showcaseareaArea.mp4) |
+| 119 | `trustflow` | TrustFlow | Finance | 6,275 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/trustflowginArea.mp4) |
+| 120 | `forecast-center` | Forecast Center | Utility | 11,253 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/wetherappArea.mp4) |
+| 121 | `neo-museum` | Neo Museum | Website | 15,036 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/hero%20sections/animated%20(75).webp) |
+| 122 | `digital-director` | Digital Director | Portfolio | 8,947 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/digitaldirector.mp4) |
+| 123 | `intelligent-operations` | Intelligent Operations | Agency | 10,447 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/preview.mp4) |
+| 124 | `skybridge-404` | Skybridge 404 | 404 | 7,104 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/Skybridge%20404Area.mp4) |
+| 125 | `synth-mode` | Synth Mode | Fashion | 10,533 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/synthArea.mp4) |
+| 126 | `agent-grove` | Agent Grove | SaaS | 7,959 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/Agent%20Grove.mp4) |
+| 127 | `sparkform` | Sparkform | Creative | 6,724 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/sparkformcreative.mp4) |
+| 128 | `macos-widget` | macOS widget | SaaS | 11,140 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/driftbar-footer.mp4) |
+| 129 | `signal-id` | Signal ID | Technology | 11,588 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/signalIDD.mp4) |
+| 130 | `talent-collective` | Talent Collective | Agency | 9,583 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/teamcollectiveasian.mp4) |
+| 131 | `task-engine` | Task Engine | SaaS | 14,503 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/Task%20Engine.mp4) |
+| 132 | `autonomous-ops` | Autonomous Ops | SaaS | 18,222 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/autonomusopsArea.mp4) |
+| 133 | `orbit-flora` | Orbit Flora | AI | 9,402 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/Orbit%20Flora.mp4) |
+| 134 | `data-signal` | Data Signal | Analytics | 12,007 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/dataflower.mp4) |
+| 135 | `cyber-layer` | Cyber Layer | Cybersecurity | 14,235 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/hackerredhero.mp4) |
+| 136 | `ai-runtime` | AI Runtime | AI | 9,593 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/circlishdotsArea.mp4) |
+| 137 | `deepthink` | DeepThink | AI Assistant | 13,695 chars | [Video](https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260812_064245_32c4f7ee-fcde-4c4f-93fe-d729a1ba7a84.png&w=1280&q=85) |
+| 138 | `real-time-alerts` | Real-Time Alerts | Sign in | 21,771 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/falcinsignin.mp4) |
+| 139 | `pet-diagnostics` | Pet Diagnostics | Healthcare | 18,711 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/comparehumanvsdog.mp4) |
+| 140 | `growth-decisions` | Growth Decisions | SaaS | 11,164 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/mountainsfreesaas.mp4) |
+| 141 | `planetary-pulse` | Planetary Pulse | Science | 26,446 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/liquidbulbwebjl.mp4) |
+| 142 | `aurex-finance` | Aurex Finance | Fintech | 29,337 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/AurexFinance_Financial_Technology.mp4) |
+| 143 | `quantum-core` | Quantum Core | Data Intelligence | 27,320 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/QuantumCore_Data_Intelligence.mp4) |
+| 144 | `palomar-labs` | Palomar Labs | AI | 7,574 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/palomar_labs_ai_infrastructure.mp4) |
+| 145 | `rare-gallery` | Rare Gallery | Curated | 4,964 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/rare_gallery_curated_collections.mp4) |
+| 146 | `3d-character-studio` | 3D Character Studio | 3D | 5,726 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/a/3dcha.mp4) |
+| 147 | `quantum-lucid` | Quantum Lucid | SaaS | 20,249 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/quantum_lucid_ai_saas.mp4) |
+| 148 | `fastshot` | Fastshot | AI | 15,844 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/fastshot_launchpad_ai_app_buil.mp4) |
+| 149 | `vela-ul` | Vela Ul | Features | 25,889 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/vela_ui_data_platform.mp4) |
+| 150 | `northstar` | Northstar | Agency | 11,589 chars | [Video](https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260826_181950_e071b218-88a0-41e7-91bf-24735ff520a7.png&w=1280&q=85) |
+| 151 | `junglemind` | JungleMind | SaaS | 36,531 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/jungle-mind-ai-saas.mp4) |
+| 152 | `heritage-grove` | Heritage Grove | Footer | 12,893 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/heritage-grove-crafts.mp4) |
+| 153 | `intelligent-performance` | Intelligent Performance | SaaS | 26,839 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/intelligent_performance_saas_t.mp4) |
+| 154 | `playful-idea` | Playful Idea | Creative Agency | 30,665 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/stopfollowupArea.mp4) |
+| 155 | `ltx-video` | LTX Video | E-coommerce | 21,298 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/bg-video-switch.mp4) |
+| 156 | `vinyl` | Vinyl | Music | 18,878 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/vinyl-music-record.mp4) |
+| 157 | `veyra-electric` | Veyra Electric | Automative | 12,080 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/veyra-electric.mp4) |
+| 158 | `cordex` | Cordex | Manufacturing | 29,696 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/cordex-cabel.mp4) |
+| 159 | `mind-ai` | Mind AI | 3D | 37,004 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/mind-ai-hero-3d.mp4) |
+| 160 | `nature-portfolio` | Nature Portfolio | Photography | 29,795 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/ethan-vale-portfolio.mp4) |
+| 161 | `nebula-hero` | Nebula Hero | Space | 14,322 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/orbit-recording.mp4) |
+| 162 | `monolith-hero` | Monolith Hero | Architecture | 68,381 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/ibCJ6vtSfiGj1Pto5Xn3ug.mp4) |
+| 163 | `gold-standard` | Gold Standard | Portfolio | 32,024 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/soscale-recording.mp4) |
+| 164 | `nival-cyberspace` | ConSentinel | Motion | 31,116 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/consentinel-hero-section.mp4) |
+| 165 | `future-machine` | Future Machine | Robotics | 14,420 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/future-machine-hero.mp4) |
+| 166 | `neural-pathway` | Neural Pathway | Agency | 31,164 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/neural-pathway-vidoe.mp4) |
+| 167 | `consentinel` | Nival Cyberspace | Personal | 30,647 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/nival-cyberspace-hero.mp4) |
+| 168 | `space-voyage` | Space Voyage | Creative | 23,849 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/space-voyage-video.mp4) |
+| 169 | `atelier-unit` | Atelier Unit | Portfolio | 12,035 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/Atelier-Unit-Digital-Design.mp4) |
+| 170 | `vexela` | Vexel | SaaS | 7,140 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/Vexel-Conversational-SaaS.mp4) |
+| 171 | `parallex` | Parallex | Portfolio | 38,008 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/parallex-fashion.mp4) |
+| 172 | `anveril` | Anveril | SaaS | 9,742 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/Anveril-Future-Computing.mp4) |
+| 173 | `ridgeai` | RidgeAI | AI Builder | 4,433 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/ridgeai-hero-v2.mp4) |
+| 174 | `keylight` | Keylight | Authentication | 47,030 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/keylight-signin.mp4) |
+| 175 | `kairn` | KAIRN | Ski Gear | 4,151 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/kairn-hero.mp4) |
+| 176 | `corvana-ai` | Corvana AI | Healthcare AI | 5,692 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/corvana-hero.mp4) |
+| 177 | `skyprompt` | Skyprompt | AI Course | 5,717 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/skyprompt-hero.mp4) |
+| 178 | `lumora-skyranger` | Lumora Skyranger | 3D Character | 5,998 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/lumora-hero.mp4) |
+| 179 | `cutora` | Cutora | Login Page | 5,309 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/cutora-hero.mp4) |
+| 180 | `halden-stories` | Halden Stories | Interactive Map | 8,841 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/halden-hero.mp4) |
+| 181 | `zentrade-faq` | ZENTRADE FAQ | FAQ Page | 5,956 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/zentrade-faq.mp4) |
+| 182 | `vantix-footer` | Vantix Footer | Footer | 4,746 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/vantix-footer.mp4) |
+| 183 | `capabilities` | Capabilities | Features | 3,339 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/capabilities.mp4) |
+| 184 | `rovin-footer` | Rovin Footer | Travel Fintech | 2,859 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/rovin-footer.mp4) |
+| 185 | `synthora-hero` | Synthora Hero | AI SaaS | 3,238 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/synthora-hero.mp4) |
+| 186 | `shipcraft-footer` | Shipcraft Footer | Footer | 3,672 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/shipcraft-footer.mp4) |
+| 187 | `mindora-hero` | Mindora Hero | Mental Health | 3,931 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/mindora-hero.mp4) |
+| 188 | `nuvo-landing` | nuvo | Fintech Landing | 4,621 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/nuvo-landing.mp4) |
+| 189 | `mk-consulting-hero` | MK Consulting | Legal Studio | 4,141 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/mk-consulting-hero.mp4) |
+| 190 | `veilguard-cta` | VeilGuard CTA | Cybersecurity | 3,346 chars | [Video](https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/aaaf/veilguard-cta.mp4) |
 
 ---
 

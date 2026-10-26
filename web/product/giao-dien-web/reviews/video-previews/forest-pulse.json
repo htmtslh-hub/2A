@@ -2,15 +2,15 @@
   "id": "t114",
   "slug": "forest-pulse",
   "browser": "153.0.8010.12",
-  "date": "2026-10-26T02:01:04.961Z",
+  "date": "2026-10-26T12:44:01.659Z",
   "demo": "/demos/forest-pulse/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "8367ce613820",
-  "sha256": "8367ce613820d63ec5f167fc5717b57312f3dcd8ca03c23663990700a05df924",
-  "demoHtmlSha256": "4d420d741aac3bdd8b2a7696e4f9a1aef8f331b2d1a7c5fb86b5565f46ebb155",
-  "demoSha256": "38186084d33613cf38be05c44f30a6cebb7fc523996b73dda3386fb7c4911da6",
-  "bytes": 520589,
+  "revision": "754540474154",
+  "sha256": "7545404741548b81358fdb86ef3420b22e5fc7092d9dc67a41fb1d93bea8029d",
+  "demoHtmlSha256": "d83f9c6ff9b1bebc15134df149850fbdb76cc04b48d58c704605f73272a94093",
+  "demoSha256": "2bda830bbc2e2459641eeb69e2a181ceb0f01a403c50a50601faf19ca3770097",
+  "bytes": 680900,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.466,
+      "seconds": 2.498,
       "action": "click",
-      "selector": "#navTouchBtn"
+      "selector": "#exploreMagneticBtn"
     },
     {
-      "seconds": 4.845,
+      "seconds": 4.949,
       "action": "click",
-      "selector": "#navTouchBtn"
+      "selector": "#exploreMagneticBtn"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 776
+      "target": 1650
     }
   ],
   "errors": [],

@@ -2,13 +2,15 @@
   "id": "t7",
   "slug": "astra-interior",
   "browser": "153.0.8010.12",
-  "date": "2026-10-13T02:14:35.569Z",
+  "date": "2026-10-26T13:03:11.351Z",
   "demo": "/demos/astra-interior/index.html",
+  "status": "recorded",
   "productVersion": "2.1.0",
-  "revision": "5a2a70509ca6",
-  "sha256": "5a2a70509ca6fe219459fa948eb52b715e5e329885a36414f13c8960b082f8bf",
-  "demoHtmlSha256": "ff97cf1f8077034aeeea4c08f311ca2c3c889f83fcdf8eb0e57c513fa1fffd86",
-  "bytes": 714664,
+  "revision": "e22f4707bc04",
+  "sha256": "e22f4707bc049f6f5c7a84613194a858191b51c5f3f91f7517136e0753823a43",
+  "demoHtmlSha256": "6c415c93b1d621f4868be862cedb59100a8f30a99469fcddfe06f493b9bd7963",
+  "demoSha256": "903f2d8a1b7f04d17452f7c628dc922c2b10f557bbc87d69fcbb14e687662eee",
+  "bytes": 926215,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -20,12 +22,12 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.507,
+      "seconds": 2.493,
       "action": "click",
       "selector": "<button class=\"arrow\" type=\"button\" data-step=\"1\" aria-label=\"Next favourite\">→</button>"
     },
     {
-      "seconds": 4.854,
+      "seconds": 4.83,
       "action": "click",
       "selector": "<button class=\"arrow\" type=\"button\" data-step=\"1\" aria-label=\"Next favourite\">→</button>"
     },
@@ -42,8 +44,5 @@
     "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\astra-interior-interaction.jpg",
     "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\astra-interior-scroll.jpg",
     "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\astra-interior-return.jpg"
-  ],
-  "demoSha256": "92a5526c28b74be665e87ed33aa030cae3807dc951ee6bbd4355273ba2036f52",
-  "codec": "h264",
-  "pixelFormat": "yuv420p"
+  ]
 }

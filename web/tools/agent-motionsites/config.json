@@ -14,7 +14,7 @@
   "scheduleTimes": ["06:00", "15:00"],
   "timezone": "Asia/Ho_Chi_Minh",
   "wakeFromSleep": true,
-  "sleepAfterRun": true,
+  "sleepAfterRun": false,
   "autoPush": true,
   "autoDeploy": true
 }

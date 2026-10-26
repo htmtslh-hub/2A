@@ -1,16 +1,61 @@
 {
-  "pinId": "330803535131158131",
-  "keyword": "web UX UI design",
-  "title": "Launch Video",
+  "pinId": "500603314827726479",
+  "keyword": "Glassmorphism Floating Cards Web UI",
+  "board": "cssdesignawards/website-of-the-day-~-wotd",
+  "title": "Sticky Boundaries",
   "slug": "launch-video",
   "assignedTier": "premium",
-  "pageUrl": "https://www.pinterest.com/pin/330803535131158131/",
-  "rawTitle": "Design. Build. Launch [Video] | Purple aesthetic website, Manifestation hack text, Collaborative design platform",
+  "pageUrl": "https://www.pinterest.com/pin/500603314827726479/",
+  "rawTitle": "Sticky Boundaries - Web Design | Разработка интерфейса, Веб дизайн",
   "rawDesc": "",
-  "imageUrl": "https://i.pinimg.com/originals/e8/11/f1/e811f1072eb410ac6fd278f732958258.png",
-  "previewUrl": "https://i.pinimg.com/736x/e8/11/f1/e811f1072eb410ac6fd278f732958258.jpg",
-  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-26\\pin-330803535131158131.png",
-  "imageBytes": 129851,
-  "imageSha256": "1092ea885a2e76a161f0f7ca1c36d6ec6025239da9a196c21aa5b682171914c4",
-  "fetchedAt": "2026-10-26T02:00:21.522Z"
+  "imageUrl": "https://i.pinimg.com/originals/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg",
+  "previewUrl": "https://i.pinimg.com/736x/87/5a/b4/875ab46737bbbac8cc32843d2932d981.jpg",
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-26\\pin-500603314827726479.jpg",
+  "imageBytes": 79589,
+  "imageSha256": "88b59cac7ba3e165cf23e419e9d122d57443cffe7fd84c37e07d3609d858dafc",
+  "criteriaEvaluation": {
+    "accepted": true,
+    "totalScore": 100,
+    "criteriaMatchPercent": 100,
+    "passedCriteriaCount": 6,
+    "width": 1068,
+    "height": 646,
+    "aspectRatio": 1.65,
+    "fullBleedRatio": 1,
+    "dofRatio": 1.78,
+    "criteriaChecks": {
+      "formatDesktopHeroShowcase": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "visualHookFullBleed3DDepth": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "floatingGlassPillCards": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "outOfBounds3DPopOut": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "oversizedHeadlineTypography": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "minimalistEdgeNavigation": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      }
+    },
+    "reason": "PASSED (100/100, 6/6 criteria = 100%)"
+  },
+  "fetchedAt": "2026-10-26T12:34:23.273Z"
 }

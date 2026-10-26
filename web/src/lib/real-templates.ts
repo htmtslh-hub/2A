@@ -53,19 +53,19 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "Geospace Canvas",
-        desc: "Giao diện web Geospace Canvas lấy cảm hứng từ thiết kế web UX UI design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #00a2bc).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+        name: "Fohse Craft",
+        desc: "Giao diện Hero UI Fohse Craft (đạt 97% tiêu chuẩn thị giác) với vật thể 3D Pop-out lấn khung, thẻ kính mờ Glassmorphism, cuộn thị sai Parallax, ghim cố định Sticky Scrub 001-003 và hiệu ứng sóng chất lỏng.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Geospace Canvas",
-        desc: "Interactive Geospace Canvas web template inspired by web UX UI design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #00a2bc).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+        name: "Fohse Craft",
+        desc: "Interactive Fohse Craft Desktop Hero UI (97% criteria match) — featuring 3D pop-out subject layering, Glassmorphism & pill cutout cards, sticky scroll-scrubbed 001-003 telemetry, and liquid wave hover distortion.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Geospace Canvas",
-        desc: "源自 web UX UI design 视觉灵感的 Geospace Canvas 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
-        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+        name: "Fohse Craft",
+        desc: "Fohse Craft 桌面级 3D 视觉英雄界面（符合 97% 严选标准），融合 3D 破界悬浮主体、毛玻璃胶囊卡片、001-003 粘性滚动擦除与流体波纹交互。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
   },
@@ -77,68 +77,68 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "Launch Video",
-        desc: "Giao diện web Launch Video lấy cảm hứng từ thiết kế web UX UI design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #907ad5).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+        name: "Sticky Boundaries",
+        desc: "Giao diện Hero UI Sticky Boundaries (đạt 100% tiêu chuẩn thị giác) với vật thể 3D Pop-out lấn khung, thẻ kính mờ Glassmorphism, cuộn thị sai Parallax, ghim cố định Sticky Scrub 001-003 và hiệu ứng sóng chất lỏng.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Launch Video",
-        desc: "Interactive Launch Video web template inspired by web UX UI design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #907ad5).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+        name: "Sticky Boundaries",
+        desc: "Interactive Sticky Boundaries Desktop Hero UI (100% criteria match) — featuring 3D pop-out subject layering, Glassmorphism & pill cutout cards, sticky scroll-scrubbed 001-003 telemetry, and liquid wave hover distortion.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Launch Video",
-        desc: "源自 web UX UI design 视觉灵感的 Launch Video 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
-        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+        name: "Sticky Boundaries",
+        desc: "Sticky Boundaries 桌面级 3D 视觉英雄界面（符合 100% 严选标准），融合 3D 破界悬浮主体、毛玻璃胶囊卡片、001-003 粘性滚动擦除与流体波纹交互。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
   },
 
   t116: {
     slug: 'break-code',
-    cat: 'commerce',
+    cat: 'portfolio',
     version: '1.0.0',
     video: true,
     copy: {
       vi: {
-        name: "Break Code",
-        desc: "Giao diện web Break Code lấy cảm hứng từ thiết kế web UX UI design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #ff465c).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+        name: "Espn Signature",
+        desc: "Giao diện Hero UI Espn Signature (đạt 100% tiêu chuẩn thị giác) với vật thể 3D Pop-out lấn khung, thẻ kính mờ Glassmorphism, cuộn thị sai Parallax, ghim cố định Sticky Scrub 001-003 và hiệu ứng sóng chất lỏng.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Break Code",
-        desc: "Interactive Break Code web template inspired by web UX UI design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #ff465c).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+        name: "Espn Signature",
+        desc: "Interactive Espn Signature Desktop Hero UI (100% criteria match) — featuring 3D pop-out subject layering, Glassmorphism & pill cutout cards, sticky scroll-scrubbed 001-003 telemetry, and liquid wave hover distortion.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Break Code",
-        desc: "源自 web UX UI design 视觉灵感的 Break Code 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
-        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+        name: "Espn Signature",
+        desc: "Espn Signature 桌面级 3D 视觉英雄界面（符合 100% 严选标准），融合 3D 破界悬浮主体、毛玻璃胶囊卡片、001-003 粘性滚动擦除与流体波纹交互。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
   },
 
   t115: {
     slug: 'startup-devkit',
-    cat: 'commerce',
+    cat: 'portfolio',
     access: 'free',
     version: '1.0.0',
     video: true,
     copy: {
       vi: {
-        name: "Startup Devkit",
-        desc: "Giao diện web Startup Devkit lấy cảm hứng từ thiết kế web UX UI design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#f9f9f9, #4353ff).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+        name: "Gluckauf WebVR",
+        desc: "Giao diện Hero UI Gluckauf WebVR (đạt 96% tiêu chuẩn thị giác) với vật thể 3D Pop-out lấn khung, thẻ kính mờ Glassmorphism, cuộn thị sai Parallax, ghim cố định Sticky Scrub 001-003 và hiệu ứng sóng chất lỏng.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Startup Devkit",
-        desc: "Interactive Startup Devkit web template inspired by web UX UI design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#f9f9f9, #4353ff).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+        name: "Gluckauf WebVR",
+        desc: "Interactive Gluckauf WebVR Desktop Hero UI (96% criteria match) — featuring 3D pop-out subject layering, Glassmorphism & pill cutout cards, sticky scroll-scrubbed 001-003 telemetry, and liquid wave hover distortion.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Startup Devkit",
-        desc: "源自 web UX UI design 视觉灵感的 Startup Devkit 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
-        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+        name: "Gluckauf WebVR",
+        desc: "Gluckauf WebVR 桌面级 3D 视觉英雄界面（符合 96% 严选标准），融合 3D 破界悬浮主体、毛玻璃胶囊卡片、001-003 粘性滚动擦除与流体波纹交互。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
   },
@@ -151,19 +151,19 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "Forest Pulse",
-        desc: "Giao diện web Forest Pulse lấy cảm hứng từ thiết kế web UX UI design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #edb40d).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+        name: "Sarto Bikes",
+        desc: "Giao diện Hero UI Sarto Bikes (đạt 100% tiêu chuẩn thị giác) với vật thể 3D Pop-out lấn khung, thẻ kính mờ Glassmorphism, cuộn thị sai Parallax, ghim cố định Sticky Scrub 001-003 và hiệu ứng sóng chất lỏng.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Forest Pulse",
-        desc: "Interactive Forest Pulse web template inspired by web UX UI design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #edb40d).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
+        name: "Sarto Bikes",
+        desc: "Interactive Sarto Bikes Desktop Hero UI (100% criteria match) — featuring 3D pop-out subject layering, Glassmorphism & pill cutout cards, sticky scroll-scrubbed 001-003 telemetry, and liquid wave hover distortion.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Forest Pulse",
-        desc: "源自 web UX UI design 视觉灵感的 Forest Pulse 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
-        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
+        name: "Sarto Bikes",
+        desc: "Sarto Bikes 桌面级 3D 视觉英雄界面（符合 100% 严选标准），融合 3D 破界悬浮主体、毛玻璃胶囊卡片、001-003 粘性滚动擦除与流体波纹交互。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
   },

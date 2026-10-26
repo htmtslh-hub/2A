@@ -27,12 +27,11 @@ $Action = New-ScheduledTaskAction `
 # 3. Tạo Trigger: 06:00 AM mỗi ngày
 $Trigger = New-ScheduledTaskTrigger -Daily -At "06:00AM"
 
-# 4. Thiết lập Settings: Bật -WakeToRun để tự đánh thức máy từ chế độ Sleep lúc 06:00 AM
+# 4. Thiết lập Settings: Bật -WakeToRun (Tắt StartWhenAvailable để không tự bật bù khi người dùng khởi động máy)
 $Settings = New-ScheduledTaskSettingsSet `
     -WakeToRun `
     -AllowStartIfOnBatteries `
     -DontStopIfGoingOnBatteries `
-    -StartWhenAvailable `
     -ExecutionTimeLimit (New-TimeSpan -Hours 2)
 
 # 5. Đăng ký Task

@@ -1,16 +1,61 @@
 {
-  "pinId": "330803535134625775",
-  "keyword": "web UX UI design",
-  "title": "Forest Pulse",
+  "pinId": "500603314827787472",
+  "keyword": "Website Hero Section UI",
+  "board": "cssdesignawards/website-of-the-day-~-wotd",
+  "title": "Sarto Bikes",
   "slug": "forest-pulse",
   "assignedTier": "free",
-  "pageUrl": "https://www.pinterest.com/pin/330803535134625775/",
-  "rawTitle": "UI Kit Website Template — Forest | Design system website, Web design system, Userflows website",
+  "pageUrl": "https://www.pinterest.com/pin/500603314827787472/",
+  "rawTitle": "Sarto Bikes by we-go - Website Of The Day 20 November 2024 | Cycle website design, Bike website design ideas, Cycling website design ideas",
   "rawDesc": "",
-  "imageUrl": "https://i.pinimg.com/originals/6a/e9/0e/6ae90e0a1a07f241219ebd8fa847e374.png",
-  "previewUrl": "https://i.pinimg.com/736x/6a/e9/0e/6ae90e0a1a07f241219ebd8fa847e374.jpg",
-  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-26\\pin-330803535134625775.png",
-  "imageBytes": 514013,
-  "imageSha256": "f869876fcd3ed9868c2bd12dc95586ed03c96950b05f6ee4bf5d052df25e654f",
-  "fetchedAt": "2026-10-26T02:00:17.665Z"
+  "imageUrl": "https://i.pinimg.com/originals/c2/91/5a/c2915af7d9cd45d0afa1f54f6a6f34f0.jpg",
+  "previewUrl": "https://i.pinimg.com/736x/c2/91/5a/c2915af7d9cd45d0afa1f54f6a6f34f0.jpg",
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-26\\pin-500603314827787472.jpg",
+  "imageBytes": 44611,
+  "imageSha256": "ecb0eb8a36263a9bd80e535321f1f5161c76d6b70a0bf9ea3d6ab2462886f512",
+  "criteriaEvaluation": {
+    "accepted": true,
+    "totalScore": 100,
+    "criteriaMatchPercent": 100,
+    "passedCriteriaCount": 6,
+    "width": 1068,
+    "height": 646,
+    "aspectRatio": 1.65,
+    "fullBleedRatio": 1,
+    "dofRatio": 2.09,
+    "criteriaChecks": {
+      "formatDesktopHeroShowcase": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "visualHookFullBleed3DDepth": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "floatingGlassPillCards": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "outOfBounds3DPopOut": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "oversizedHeadlineTypography": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "minimalistEdgeNavigation": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      }
+    },
+    "reason": "PASSED (100/100, 6/6 criteria = 100%)"
+  },
+  "fetchedAt": "2026-10-26T12:34:21.228Z"
 }

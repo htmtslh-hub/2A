@@ -1,16 +1,61 @@
 {
-  "pinId": "330803535131158665",
-  "keyword": "web UX UI design",
-  "title": "Break Code",
+  "pinId": "500603314827750633",
+  "keyword": "3D Pop-out Website Hero Design",
+  "board": "cssdesignawards/website-of-the-day-~-wotd",
+  "title": "Espn Signature",
   "slug": "break-code",
   "assignedTier": "premium",
-  "pageUrl": "https://www.pinterest.com/pin/330803535131158665/",
-  "rawTitle": "Break the code barrier. [Video] | Html coding resources online, Html code web design tutorials, Html coding practice online",
+  "pageUrl": "https://www.pinterest.com/pin/500603314827750633/",
+  "rawTitle": "Website Of The Day 17 November 2018\nESPN NBA&#x27;s Signature Moves by Kasper Laigaard Studio, ESPN &amp; Jo | Colorful sports project, World basketball festival, Sports award presentation inspiration",
   "rawDesc": "",
-  "imageUrl": "https://i.pinimg.com/originals/e4/f9/f2/e4f9f25077cf567f317508659d354635.png",
-  "previewUrl": "https://i.pinimg.com/736x/e4/f9/f2/e4f9f25077cf567f317508659d354635.jpg",
-  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-26\\pin-330803535131158665.png",
-  "imageBytes": 378566,
-  "imageSha256": "c6a187cb5cb80d11fe739c00818141bdeebd447337bcd72d7e05648d2a66497c",
-  "fetchedAt": "2026-10-26T02:00:20.353Z"
+  "imageUrl": "https://i.pinimg.com/originals/be/dc/3c/bedc3ce695987410b3cce200032f313c.jpg",
+  "previewUrl": "https://i.pinimg.com/736x/be/dc/3c/bedc3ce695987410b3cce200032f313c.jpg",
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-26\\pin-500603314827750633.jpg",
+  "imageBytes": 40480,
+  "imageSha256": "ecf50f3ed47389871b938ae5eb4bd2ca82362c208b14fc1204791e228a809644",
+  "criteriaEvaluation": {
+    "accepted": true,
+    "totalScore": 100,
+    "criteriaMatchPercent": 100,
+    "passedCriteriaCount": 6,
+    "width": 1068,
+    "height": 646,
+    "aspectRatio": 1.65,
+    "fullBleedRatio": 0.99,
+    "dofRatio": 3.29,
+    "criteriaChecks": {
+      "formatDesktopHeroShowcase": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "visualHookFullBleed3DDepth": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "floatingGlassPillCards": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "outOfBounds3DPopOut": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "oversizedHeadlineTypography": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "minimalistEdgeNavigation": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      }
+    },
+    "reason": "PASSED (100/100, 6/6 criteria = 100%)"
+  },
+  "fetchedAt": "2026-10-26T12:34:22.533Z"
 }

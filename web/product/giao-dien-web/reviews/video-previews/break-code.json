@@ -2,15 +2,15 @@
   "id": "t116",
   "slug": "break-code",
   "browser": "153.0.8010.12",
-  "date": "2026-10-26T02:02:08.392Z",
+  "date": "2026-10-26T12:45:06.679Z",
   "demo": "/demos/break-code/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "c7738cee9f45",
-  "sha256": "c7738cee9f45426d1e71b0b0ae5115c001040ccefd6ef375baf262355daaadfb",
-  "demoHtmlSha256": "126ff867e62caee673313ebf88c262885138c285be28ea4b57ccf59fb3d12fa3",
-  "demoSha256": "f286a9038021c1b99d51fb34985d1872352e745157a6cb5e376ba40af4a6fe98",
-  "bytes": 454591,
+  "revision": "8902921c0dce",
+  "sha256": "8902921c0dce5f0ce8767d01d407f2799c7544e3365c120a48f5775f53f5007c",
+  "demoHtmlSha256": "ce929bb061472029d37dd224dadb49cd803219a13cd39210a292cba912bc0c72",
+  "demoSha256": "365e14056137b66cfcaa11ce6ce9d0525acecb8c59e2039fbbfea3e4454a2a49",
+  "bytes": 757127,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.447,
+      "seconds": 2.502,
       "action": "click",
-      "selector": "#navTouchBtn"
+      "selector": "#exploreMagneticBtn"
     },
     {
-      "seconds": 4.825,
+      "seconds": 4.914,
       "action": "click",
-      "selector": "#navTouchBtn"
+      "selector": "#exploreMagneticBtn"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 776
+      "target": 1650
     }
   ],
   "errors": [],

@@ -1,41 +1,60 @@
 {
-  "homefeedUrl": "https://www.pinterest.com/homefeed/",
+  "agentName": "pinterest-web-design-2a-agent",
+  "version": "2.0.0",
+  "scheduleTime": "09:00",
+  "timezone": "Asia/Ho_Chi_Minh",
   "dailyLimit": 5,
   "dailyFreeQuota": 2,
   "dailyPremiumQuota": 3,
-  "remote": "origin",
-  "branch": "master",
-  "scheduleTime": "09:00",
-  "timezone": "Asia/Ho_Chi_Minh",
-  "wakeFromSleep": true,
-  "shutdownAfterRun": true,
-  "autoPush": true,
-  "autoDeploy": true,
+  "minCriteriaScore": 80,
+  "shutdownAfterRun": false,
+  "homefeedUrl": "https://www.pinterest.com/homefeed/",
   "keywords": [
-    "website design",
-    "web UX UI design",
-    "portfolio design website",
-    "landing page design ui",
-    "saas website design",
-    "dark mode website ui",
-    "creative agency website design",
-    "ecommerce website design ui",
-    "fintech website design",
-    "ai startup landing page design",
-    "minimalist website design",
-    "bento grid web design",
-    "architecture portfolio website design",
-    "luxury brand website design",
-    "3d interactive website design",
-    "dashboard ui ux design web",
-    "modern blog website design",
-    "crypto web3 landing page design",
-    "fashion ecommerce web design",
-    "product studio website design",
-    "digital agency portfolio ui",
-    "automotive website ui design",
-    "interior design website layout",
-    "photography portfolio website design",
-    "mobile app landing page design"
-  ]
+    "Website Hero Section UI",
+    "Desktop Web Concept Dribbble",
+    "3D Pop-out Website Hero Design",
+    "Glassmorphism Floating Cards Web UI",
+    "Oversized Typography Hero Website",
+    "Behance Showcase Interactive Web UI",
+    "Futuristic 3D Landing Page Concept",
+    "Luxury Minimalist Edge Navigation Web UI"
+  ],
+  "selectionCriteria": {
+    "minMatchPercent": 80,
+    "criteria": [
+      "1. Format: Website Hero Section UI, Desktop Web Concept, Dribbble/Behance Showcase Shot (widescreen/desktop aspect ratio, high-res)",
+      "2. Visual Hook: Full-bleed background or isolated 3D object, depth of field or surreal photo manipulation",
+      "3. UI Components: Floating Cards with Glassmorphism or Pill-shaped / Inverted rounded corners / Cutout tabs",
+      "4. Out-of-bounds / 3D Pop-out: Main subject overlapping dividers, clouds, or typography for 3D depth",
+      "5. Typography: Oversized Headline with high contrast & Text masking behind the subject",
+      "6. Navigation: Minimalist edge navigation (top horizontal menu bar, social icons, vertical slide numbers)"
+    ]
+  },
+  "animationStandards": {
+    "scroll": [
+      "Parallax Scrolling (multi-layer speed differentiation)",
+      "Scroll-Triggered Reveal (Slide-up, Fade-in, Scale-up)",
+      "Sticky / Pinned Elements (center subject pinned while 001/002/003 specs scroll on sides)",
+      "Horizontal Scroll (Featured Motion Projects vertical-to-horizontal track)",
+      "Scroll Scrubbing (scroll percentage rotates/tilts/scales 3D showcase proportionally)",
+      "Smooth Scrolling (inertia lerp momentum)"
+    ],
+    "hoverAndCursor": [
+      "Magnetic Buttons (Explore & circular arrow buttons pull toward cursor)",
+      "3D Card Tilt / Perspective Hover (Glassmorphism cards tilt with specular border shine)",
+      "Image Zoom & Mask Reveal (smooth zoom inside super-rounded/pill masks)",
+      "Liquid / Ripple Distortion (interactive SVG feTurbulence + feDisplacementMap wave filter on hover)",
+      "Custom / Follower Cursor (glowing ring + dot with mix-blend-mode: difference over oversized text)"
+    ],
+    "textAndTransitions": [
+      "Split-Text / Staggered Reveal (character/word staggered entrance on oversized headlines)",
+      "Number Counter (120+, 10K+, 1000+ animated count-up on viewport entry)",
+      "Seamless Page Transition (clicking a corner/destination card expands smoothly to full-screen detail view without reload)",
+      "Marquee / Infinite Text Loop (continuous background kinetic typography loop)"
+    ],
+    "ambientMotion": [
+      "Floating Animation (zero-gravity sinusoidal bobbing on 3D subject, clouds, planets & badges)",
+      "Particle / Smoke System (HTML5 canvas drifting smoke & cosmic dust particles behind subject)"
+    ]
+  }
 }

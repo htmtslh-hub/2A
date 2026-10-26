@@ -2,13 +2,15 @@
   "id": "t10",
   "slug": "soniq",
   "browser": "153.0.8010.12",
-  "date": "2026-10-13T02:11:58.507Z",
+  "date": "2026-10-26T13:02:52.113Z",
   "demo": "/demos/soniq/index.html",
+  "status": "recorded",
   "productVersion": "1.1.0",
-  "revision": "d552d41543a6",
-  "sha256": "d552d41543a6ab4c5cbfd671f314774fde70cc550e80731d4ef02d7325f0442e",
-  "demoHtmlSha256": "8fc38f7fea9634297e148b02ec050e84f94179a70c9c26607965e7e92a3764fa",
-  "bytes": 513680,
+  "revision": "d80d976a7c0a",
+  "sha256": "d80d976a7c0a91a2c9dd329a1228c628991929ad351b99ed70c6cfe109f2bc85",
+  "demoHtmlSha256": "c2ddde1127722b9e3170f345bdfdcc91392634e1c059d9a593a987448e17295d",
+  "demoSha256": "233269b10ca934e039f6f2bb262350f29f25dc393ee614b672c6b473b614e719",
+  "bytes": 705585,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -20,12 +22,12 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.491,
+      "seconds": 2.454,
       "action": "click",
       "selector": "<button type=\"button\" data-step=\"1\" aria-label=\"Next colour\">→</button>"
     },
     {
-      "seconds": 4.853,
+      "seconds": 4.836,
       "action": "click",
       "selector": "<button type=\"button\" data-step=\"1\" aria-label=\"Next colour\">→</button>"
     },
@@ -42,8 +44,5 @@
     "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\soniq-interaction.jpg",
     "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\soniq-scroll.jpg",
     "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\soniq-return.jpg"
-  ],
-  "demoSha256": "fc42308aaa5274a832a28ea88e6a3167bc4312487088c4e84c8d2b47b41fbb08",
-  "codec": "h264",
-  "pixelFormat": "yuv420p"
+  ]
 }

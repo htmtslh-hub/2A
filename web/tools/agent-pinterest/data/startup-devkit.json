@@ -1,16 +1,61 @@
 {
-  "pinId": "330803535134321924",
-  "keyword": "web UX UI design",
-  "title": "Startup Devkit",
+  "pinId": "500603314827762488",
+  "keyword": "Desktop Web Concept Dribbble",
+  "board": "cssdesignawards/website-of-the-day-~-wotd",
+  "title": "Gluckauf WebVR",
   "slug": "startup-devkit",
   "assignedTier": "free",
-  "pageUrl": "https://www.pinterest.com/pin/330803535134321924/",
-  "rawTitle": "Startup Website Template — DevKit | Website layout inspiration for startups, Startup website design ideas, Business web design",
+  "pageUrl": "https://www.pinterest.com/pin/500603314827762488/",
+  "rawTitle": "Website Of The Day 18 November 2018\nWDR Glückauf | WebVR Coal Mine by Kubikfoto³ | 1967 coal mine design, Coal mining statistics graphic, Coal mining presentation design",
   "rawDesc": "",
-  "imageUrl": "https://i.pinimg.com/originals/e8/24/24/e8242479b281cd862419c774388d21fb.png",
-  "previewUrl": "https://i.pinimg.com/736x/e8/24/24/e8242479b281cd862419c774388d21fb.jpg",
-  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-26\\pin-330803535134321924.png",
-  "imageBytes": 437419,
-  "imageSha256": "e713c51fc075ca732414bb2281d22b417a3d309e632b7021b512568b4ed2ac0d",
-  "fetchedAt": "2026-10-26T02:00:18.864Z"
+  "imageUrl": "https://i.pinimg.com/originals/7c/8a/df/7c8adfa66c744cacd148b8e13e4e8e03.jpg",
+  "previewUrl": "https://i.pinimg.com/736x/7c/8a/df/7c8adfa66c744cacd148b8e13e4e8e03.jpg",
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-26\\pin-500603314827762488.jpg",
+  "imageBytes": 122883,
+  "imageSha256": "e5408c488bccaf222bdb24f826407038c6282a270f5031c34c8159dca2a2d262",
+  "criteriaEvaluation": {
+    "accepted": true,
+    "totalScore": 96,
+    "criteriaMatchPercent": 100,
+    "passedCriteriaCount": 6,
+    "width": 1068,
+    "height": 646,
+    "aspectRatio": 1.65,
+    "fullBleedRatio": 1,
+    "dofRatio": 1.38,
+    "criteriaChecks": {
+      "formatDesktopHeroShowcase": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "visualHookFullBleed3DDepth": {
+        "score": 18,
+        "max": 20,
+        "passed": true
+      },
+      "floatingGlassPillCards": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "outOfBounds3DPopOut": {
+        "score": 13,
+        "max": 15,
+        "passed": true
+      },
+      "oversizedHeadlineTypography": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "minimalistEdgeNavigation": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      }
+    },
+    "reason": "PASSED (96/100, 6/6 criteria = 100%)"
+  },
+  "fetchedAt": "2026-10-26T12:34:21.919Z"
 }

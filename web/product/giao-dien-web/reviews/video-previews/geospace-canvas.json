@@ -2,15 +2,15 @@
   "id": "t118",
   "slug": "geospace-canvas",
   "browser": "153.0.8010.12",
-  "date": "2026-10-26T02:03:12.393Z",
+  "date": "2026-10-26T12:46:11.989Z",
   "demo": "/demos/geospace-canvas/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "adb80d34be07",
-  "sha256": "adb80d34be07382b159480334c01fba6ce301942b2366dbcdfe560bb94cddfa6",
-  "demoHtmlSha256": "47a2c52a02a87ca143683fc3ba7dcc96a081b366df0d67f40897adc443f6a15e",
-  "demoSha256": "e1e654836304cfe6a69aa2534cdc7ba5ba5c5660ef15835a9bb2af3260ad230b",
-  "bytes": 476168,
+  "revision": "6e1da034a57a",
+  "sha256": "6e1da034a57afb7e7b37db6d3f05fdaff7326bf7039bb2b5dfe869e63efc0817",
+  "demoHtmlSha256": "e0acb06ac57a8142e24fe1ffcd01ea08ba6498108a89b481045a9c0c97f8e8ff",
+  "demoSha256": "ec8be8888c056443c1479b88207a8ecf1a13289de5aab7726699636f861f058d",
+  "bytes": 633678,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.447,
+      "seconds": 2.499,
       "action": "click",
-      "selector": "#navTouchBtn"
+      "selector": "#exploreMagneticBtn"
     },
     {
-      "seconds": 4.826,
+      "seconds": 4.942,
       "action": "click",
-      "selector": "#navTouchBtn"
+      "selector": "#exploreMagneticBtn"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 781
+      "target": 1650
     }
   ],
   "errors": [],

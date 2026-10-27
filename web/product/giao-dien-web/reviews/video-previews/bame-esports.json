@@ -1,0 +1,38 @@
+{
+  "id": "t134",
+  "slug": "bame-esports",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T12:10:04.868Z",
+  "demo": "/demos/bame-esports/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "f98a94130326",
+  "sha256": "f98a9413032685de33e96f2fd244e7b41a7ecf5ab8afc1eddc1268007a6ec4b6",
+  "demoHtmlSha256": "28b4359d36e054a01559dfb9971890693c2c4a738b2de72403c314e292bbe429",
+  "demoSha256": "641f4f6352f32f4d43013c77c18524f37f0e9b89e40984d83d454acca40ce978",
+  "bytes": 606336,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 628
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bame-esports-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bame-esports-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bame-esports-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bame-esports-return.jpg"
+  ]
+}

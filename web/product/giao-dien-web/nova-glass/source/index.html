@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NOVA GLASS — Digital Designer &amp; Experience Architect</title>
+  <meta name="description" content="High-key pearl-ice glassmorphism UI/UX portfolio with 3D crystal visor bust cutout, animated skill progress bars, 3x3 tech stack matrix, and liquid refraction.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-grad: linear-gradient(135deg, #eef4fb 0%, #dce8f7 50%, #e4ecfa 100%);
+      --glass: rgba(255, 255, 255, 0.58);
+      --glass-strong: rgba(255, 255, 255, 0.76);
+      --border: rgba(255, 255, 255, 0.85);
+      --fg: #0f172a;
+      --muted: #475569;
+      --blue: #2563eb;
+      --indigo: #4f46e5;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg-grad); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .font-syne { font-family: 'Syne', sans-serif; }
+
+    .nov26-frosted {
+      background: var(--glass); backdrop-filter: blur(22px) saturate(160%);
+      -webkit-backdrop-filter: blur(22px) saturate(160%);
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 50px rgba(30, 58, 138, 0.08), inset 0 1px 1px #ffffff;
+    }
+    .nov26-nav {
+      max-width: 1320px; margin: 18px auto 0; padding: 14px 28px; border-radius: 999px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nov26-btn-blue {
+      padding: 10px 24px; border-radius: 999px;
+      background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+      color: #fff; font-size: 13px; font-weight: 700; border: none; cursor: pointer;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+    }
+
+    .nov26-hero {
+      max-width: 1320px; margin: 24px auto 0; padding: 36px; border-radius: 36px;
+      display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; position: relative;
+    }
+    @media (min-width: 980px) {
+      .nov26-hero { grid-template-columns: 1.1fr 0.9fr; }
+    }
+    .nov26-h1 {
+      font-size: clamp(48px, 7.2vw, 96px); font-weight: 800; line-height: 0.94; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #0f172a 0%, #2563eb 55%, #6366f1 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin: 14px 0 18px;
+    }
+    .nov26-bust-img {
+      width: 100%; max-width: 390px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      filter: drop-shadow(0 24px 40px rgba(37,99,235,0.22));
+    }
+
+    .nov26-stats-row {
+      max-width: 1320px; margin: 22px auto 0; display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
+    }
+    .nov26-sec { max-width: 1320px; margin: 48px auto 0; }
+    .nov26-case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 22px; }
+    .nov26-bento-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 20px; margin-top: 22px; }
+    .nov26-bar-track { height: 8px; background: rgba(37,99,235,0.12); border-radius: 99px; overflow: hidden; margin-top: 6px; }
+    .nov26-bar-fill { height: 100%; background: linear-gradient(90deg, #2563eb, #6366f1); border-radius: 99px; transition: width 1s ease; }
+    .nov26-tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+    .nov26-tech-chip {
+      padding: 12px 8px; border-radius: 14px; background: var(--glass-strong);
+      border: 1px solid #fff; text-align: center; font-size: 12px; font-weight: 700; color: var(--fg);
+    }
+    .nov26-modal { position: fixed; inset: 0; z-index: 900; background: rgba(15,23,42,0.55); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .nov26-modal.is-open { display: flex; }
+  </style>
+</head>
+<body style="padding: 0 18px 64px;">
+  <header class="nov26-nav nov26-frosted">
+    <strong class="font-syne" style="font-size:18px;letter-spacing:0.06em;color:var(--blue);">✦ NOVA GLASS</strong>
+    <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+      <a href="#caseStudies" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;">Case Studies</a>
+      <a href="#skillsMatrix" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;">Skills &amp; Stack</a>
+      <a href="#skillsMatrix" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;">Philosophy</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="nov26-frosted" style="padding:7px 14px;border-radius:999px;font-size:12px;font-weight:600;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="nov26-btn-blue">Hire Me ↗</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="nov26-hero nov26-frosted">
+      <div>
+        <span style="display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(37,99,235,0.1);color:var(--blue);font-size:12px;font-weight:700;">
+          DESIGNING THE FUTURE • SPATIAL UI/UX
+        </span>
+        <h1 class="nov26-h1 font-syne">NOVA<br>GLASS</h1>
+        <p style="font-size:17px;color:var(--muted);max-width:480px;line-height:1.6;margin-bottom:26px;">
+          Digital Designer &amp; Experience Architect crafting refractive spatial interfaces, tactile 3D design systems, and flagship consumer apps.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="nov26-btn-blue" onclick="document.getElementById('novaModal').classList.add('is-open')">Explore Portfolio ↗</button>
+          <a href="#skillsMatrix" class="nov26-frosted" style="padding:10px 22px;border-radius:999px;text-decoration:none;color:var(--fg);font-size:13px;font-weight:700;">View Tech Stack</a>
+        </div>
+      </div>
+      <div>
+        <img src="assets/cutout.webp" alt="Nova Glass 3D Crystal Visor Sculpture" class="nov26-bust-img" data-tilt-card />
+      </div>
+    </section>
+
+    <!-- 4-COLUMN GLASS STATS BAR -->
+    <div class="nov26-stats-row">
+      <div class="nov26-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+        <strong class="font-syne" style="font-size:32px;color:var(--blue);">5+</strong>
+        <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Years Experience</span>
+      </div>
+      <div class="nov26-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+        <strong class="font-syne" style="font-size:32px;color:var(--blue);">40+</strong>
+        <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Shipped Products</span>
+      </div>
+      <div class="nov26-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+        <strong class="font-syne" style="font-size:32px;color:var(--blue);">25+</strong>
+        <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Global Clients</span>
+      </div>
+      <div class="nov26-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+        <strong class="font-syne" style="font-size:32px;color:var(--blue);">18</strong>
+        <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Design Awards</span>
+      </div>
+    </div>
+
+    <!-- FEATURED CASE STUDIES -->
+    <section id="caseStudies" class="nov26-sec">
+      <h2 class="font-syne" style="font-size:26px;">FEATURED CASE STUDIES</h2>
+      <div class="nov26-case-grid">
+        <article class="nov26-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+          <span style="font-size:11px;font-weight:700;color:var(--blue);">01 // VISION OS INTERFACE</span>
+          <h3 class="font-syne" style="font-size:20px;margin:10px 0 8px;">Aether Spatial Workspace</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Refractive eye-tracked windowing system and glassmorphic widget library.</p>
+        </article>
+        <article class="nov26-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+          <span style="font-size:11px;font-weight:700;color:var(--blue);">02 // FINTECH SUPER-APP</span>
+          <h3 class="font-syne" style="font-size:20px;margin:10px 0 8px;">Prism Private Banking</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Real-time 3D card configurator and biometric wealth analytics dashboard.</p>
+        </article>
+        <article class="nov26-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+          <span style="font-size:11px;font-weight:700;color:var(--blue);">03 // AI WEARABLE COMPANION</span>
+          <h3 class="font-syne" style="font-size:20px;margin:10px 0 8px;">Lumina Neural Optics</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">HUD typography and micro-interaction system for AR smart glasses.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3-COLUMN SKILLS & EXPERTISE / TECH STACK / DESIGN PHILOSOPHY -->
+    <section id="skillsMatrix" class="nov26-sec">
+      <div class="nov26-bento-3">
+        <div class="nov26-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+          <h3 class="font-syne" style="font-size:18px;margin-bottom:16px;">SKILLS &amp; EXPERTISE</h3>
+          <div style="margin-bottom:12px;">
+            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;"><span>Spatial UI/UX Design</span><span>96%</span></div>
+            <div class="nov26-bar-track"><div class="nov26-bar-fill" style="width:96%;"></div></div>
+          </div>
+          <div style="margin-bottom:12px;">
+            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;"><span>3D &amp; Interactive Motion</span><span>92%</span></div>
+            <div class="nov26-bar-track"><div class="nov26-bar-fill" style="width:92%;"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;"><span>Design Systems &amp; Tokens</span><span>95%</span></div>
+            <div class="nov26-bar-track"><div class="nov26-bar-fill" style="width:95%;"></div></div>
+          </div>
+        </div>
+
+        <div class="nov26-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+          <h3 class="font-syne" style="font-size:18px;">TECH STACK</h3>
+          <div class="nov26-tech-grid">
+            <span class="nov26-tech-chip">Figma</span><span class="nov26-tech-chip">Spline</span><span class="nov26-tech-chip">Blender</span>
+            <span class="nov26-tech-chip">React</span><span class="nov26-tech-chip">Three.js</span><span class="nov26-tech-chip">GSAP</span>
+            <span class="nov26-tech-chip">Framer</span><span class="nov26-tech-chip">Next.js</span><span class="nov26-tech-chip">WebGL</span>
+          </div>
+        </div>
+
+        <div class="nov26-frosted" style="padding:26px;border-radius:26px;display:flex;flex-direction:column;justify-content:space-between;" data-tilt-card>
+          <div>
+            <h3 class="font-syne" style="font-size:18px;margin-bottom:10px;">DESIGN PHILOSOPHY</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.65;">
+              “Clarity through refraction — every glass layer should guide attention effortlessly while rewarding curiosity with tactile depth.”
+            </p>
+          </div>
+          <button type="button" class="nov26-btn-blue" style="margin-top:16px;width:100%;" onclick="document.getElementById('novaModal').classList.add('is-open')">
+            Let's Create Something Extraordinary
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="novaModal" class="nov26-modal" role="dialog" aria-modal="true" aria-labelledby="novaModalTitle">
+    <div class="nov26-frosted" style="max-width:520px;width:100%;padding:32px;border-radius:28px;background:rgba(255,255,255,0.92);">
+      <h2 id="novaModalTitle" class="font-syne" style="font-size:26px;margin-bottom:10px;">Commission Nova Glass Studio</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Available for Q2/Q3 spatial product design, 3D brand systems, and executive design advisory.</p>
+      <button type="button" class="nov26-btn-blue" style="width:100%;" onclick="document.getElementById('novaModal').classList.remove('is-open')">Send Project Brief</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      document.querySelectorAll('[data-tilt-card]').forEach(function(card){
+        card.addEventListener('mousemove', function(e){
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / r.width - 0.5;
+          var ny = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = 'perspective(900px) rotateX(' + (-ny * 8).toFixed(2) + 'deg) rotateY(' + (nx * 10).toFixed(2) + 'deg)';
+        });
+        card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
+      });
+      var expBtn = document.getElementById('exploreMagneticBtn');
+      if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('novaModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>

@@ -53,3 +53,11 @@ web/product/giao-dien-web/tools/.anh-tam/
 *.blend1
 # Domain report email attachments are not project source.
 /google.com!*.zip
+
+
+# Thư mục nhận ảnh mẫu hàng ngày của chủ sản phẩm (chỉ giữ file hướng dẫn và cấu trúc thư mục)
+/anh-mau-pinterest/*
+!/anh-mau-pinterest/HUONG-DAN.md
+!/anh-mau-pinterest/da-lam/
+/anh-mau-pinterest/da-lam/*
+!/anh-mau-pinterest/da-lam/.gitkeep

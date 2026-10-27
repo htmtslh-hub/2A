@@ -46,6 +46,269 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t140: {
+    slug: 'luminex',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Luminex",
+        desc: "Giao diện web Luminex với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Luminex",
+        desc: "Bespoke Luminex web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Luminex",
+        desc: "单文件自包含 Luminex 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t139: {
+    slug: 'bloom-ai',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Bloom AI",
+        desc: "Giao diện web Bloom AI với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Bloom AI",
+        desc: "Bespoke Bloom AI web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Bloom AI",
+        desc: "单文件自包含 Bloom AI 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t138: {
+    slug: 'power-ai',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Power AI",
+        desc: "Giao diện web Power AI với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Power AI",
+        desc: "Bespoke Power AI web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Power AI",
+        desc: "单文件自包含 Power AI 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t137: {
+    slug: 'alex-carter-ui',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Alex Carter UI/UX",
+        desc: "Alex Carter UI/UX (neon-cyan-glass-dev) — Deep teal-obsidian and neon-cyan glassmorphic developer portfolio with zero-gravity 3D tesseract cube, hexagonal skill matrix, and interactive 01–05 process timeline.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Alex Carter UI/UX",
+        desc: "Alex Carter UI/UX (neon-cyan-glass-dev) — Deep teal-obsidian and neon-cyan glassmorphic developer portfolio with zero-gravity 3D tesseract cube, hexagonal skill matrix, and interactive 01–05 process timeline.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Alex Carter UI/UX",
+        desc: "Alex Carter UI/UX (neon-cyan-glass-dev) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t136: {
+    slug: 'nova-glass',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Nova Glass Studio",
+        desc: "Nova Glass Studio (iridescent-crystal-portfolio) — High-key pearl-ice glassmorphism UI/UX portfolio with 3D crystal visor bust cutout, animated skill progress bars, 3x3 tech stack matrix, and liquid refraction.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Nova Glass Studio",
+        desc: "Nova Glass Studio (iridescent-crystal-portfolio) — High-key pearl-ice glassmorphism UI/UX portfolio with 3D crystal visor bust cutout, animated skill progress bars, 3x3 tech stack matrix, and liquid refraction.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Nova Glass Studio",
+        desc: "Nova Glass Studio (iridescent-crystal-portfolio) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t135: {
+    slug: 'apex-upheaval',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Apex Upheaval Hub",
+        desc: "Apex Upheaval Hub (tactical-legend-roster) — Futuristic battle-royale landing page with diagonal crimson slash hero, 6-platform bar, 4-column squad directives, and interactive skewed parallelogram Legend roster.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Apex Upheaval Hub",
+        desc: "Apex Upheaval Hub (tactical-legend-roster) — Futuristic battle-royale landing page with diagonal crimson slash hero, 6-platform bar, 4-column squad directives, and interactive skewed parallelogram Legend roster.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Apex Upheaval Hub",
+        desc: "Apex Upheaval Hub (tactical-legend-roster) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t134: {
+    slug: 'bame-esports',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Bame eSports Arena",
+        desc: "Bame eSports Arena (esports-polygon-arena) — Shaping the Future of eSports — neon-green polygon HUD, 3D Cyber-Wukong champion cutout, kinetic diagonal marquee, and inverted-corner tournament arena.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Bame eSports Arena",
+        desc: "Bame eSports Arena (esports-polygon-arena) — Shaping the Future of eSports — neon-green polygon HUD, 3D Cyber-Wukong champion cutout, kinetic diagonal marquee, and inverted-corner tournament arena.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Bame eSports Arena",
+        desc: "Bame eSports Arena (esports-polygon-arena) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t133: {
+    slug: 'digital-kensei',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Nexon Digital Kensei",
+        desc: "Nexon Digital Kensei (cyber-samurai-nft) — Cyber-Samurai NFT showcase with crimson sun 3D warrior pop-out, overlapping rounded editorial card with inline pill imagery, and dark 4-card Bento legacy grid.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Nexon Digital Kensei",
+        desc: "Nexon Digital Kensei (cyber-samurai-nft) — Cyber-Samurai NFT showcase with crimson sun 3D warrior pop-out, overlapping rounded editorial card with inline pill imagery, and dark 4-card Bento legacy grid.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Nexon Digital Kensei",
+        desc: "Nexon Digital Kensei (cyber-samurai-nft) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t132: {
+    slug: 'codenest-coding-platform',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "CodeNest Coding Platform",
+        desc: "Giao diện web CodeNest Coding Platform với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "CodeNest Coding Platform",
+        desc: "Bespoke CodeNest Coding Platform web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "CodeNest Coding Platform",
+        desc: "单文件自包含 CodeNest Coding Platform 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t131: {
+    slug: 'mindloop-landing',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Mindloop Landing",
+        desc: "Giao diện web Mindloop Landing với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Mindloop Landing",
+        desc: "Bespoke Mindloop Landing web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Mindloop Landing",
+        desc: "单文件自包含 Mindloop Landing 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t130: {
+    slug: 'max-reed-portfolio',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Max Reed Portfolio",
+        desc: "Giao diện web Max Reed Portfolio với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Max Reed Portfolio",
+        desc: "Bespoke Max Reed Portfolio web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Max Reed Portfolio",
+        desc: "单文件自包含 Max Reed Portfolio 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t129: {
     slug: 'portfolio-cosmic',
     cat: 'portfolio',

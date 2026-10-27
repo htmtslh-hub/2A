@@ -1,0 +1,30 @@
+{
+  "id": "luminex-hero",
+  "title": "Luminex",
+  "slug": "luminex",
+  "isFreeOnMotionsites": true,
+  "promptSource": "official_api",
+  "category": "Hero Section",
+  "type": "hero",
+  "status": "queued_unused",
+  "matched2ASlug": null,
+  "matchReason": null,
+  "videoPreviewUrl": "https://motionsites.ai/assets/hero-luminex-preview-CxOP7ce6.gif",
+  "imagePreviewUrl": "https://motionsites.ai/assets/hero-luminex-poster-9lhDX6Fl.png",
+  "githubUrl": null,
+  "promptHash": "d0acf3c4f3d521af4b44ed5b7fc036f4d002aa435d2bea497fb5d2455a633550",
+  "promptLength": 162,
+  "prompt_text": "Create a modern React landing page with a full-screen HLS video background, glassmorphic navigation header, and hero content positioned in the bottom-left corner.",
+  "sections": [
+    {
+      "title": "Luminex — Master Specification",
+      "content": "Create a modern React landing page with a full-screen HLS video background, glassmorphic navigation header, and hero content positioned in the bottom-left corner."
+    }
+  ],
+  "isFree": true,
+  "image": "https://motionsites.ai/assets/hero-luminex-preview-CxOP7ce6.gif",
+  "poster": "https://motionsites.ai/assets/hero-luminex-poster-9lhDX6Fl.png",
+  "assignedTier": "premium",
+  "fetchedAt": "2026-10-27T11:55:14.428Z",
+  "daily_state": null
+}

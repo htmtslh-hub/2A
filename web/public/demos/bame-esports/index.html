@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>BAME — Shaping the Future of eSports &amp; Pro Gaming</title>
+  <meta name="description" content="Shaping the Future of eSports — neon-green polygon HUD, 3D Cyber-Wukong champion cutout, kinetic diagonal marquee, and inverted-corner tournament arena.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0e13;
+      --surface: #141923;
+      --neon: #45f882;
+      --gold: #ffbe18;
+      --fg: #ffffff;
+      --muted: #94a3b8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .esports-font { font-family: 'Chakra Petch', sans-serif; text-transform: uppercase; }
+
+    .bam59-hud-nav {
+      max-width: 1360px; margin: 0 auto; padding: 18px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid rgba(69,248,130,0.2); background: rgba(11,14,19,0.88); backdrop-filter: blur(14px);
+    }
+    .bam59-poly-btn {
+      padding: 13px 28px; background: var(--neon); color: #07110b;
+      font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase;
+      letter-spacing: 0.06em; border: none; cursor: pointer;
+      clip-path: polygon(14px 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .bam59-poly-btn:hover { background: var(--gold); }
+    .bam59-poly-outline {
+      padding: 13px 26px; background: rgba(69,248,130,0.1); color: var(--neon);
+      font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase;
+      border: 1px solid var(--neon); cursor: pointer;
+      clip-path: polygon(14px 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+    }
+
+    .bam59-hero {
+      max-width: 1360px; margin: 0 auto; padding: 48px 24px 64px;
+      display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center;
+    }
+    @media (min-width: 980px) {
+      .bam59-hero { grid-template-columns: 1.05fr 0.95fr; }
+    }
+    .bam59-h1 {
+      font-size: clamp(44px, 6.5vw, 84px); line-height: 0.96; margin: 14px 0 20px;
+    }
+    .bam59-arena-card {
+      position: relative; background: radial-gradient(circle at 50% 35%, rgba(69,248,130,0.25), #141923 72%);
+      border: 1px solid rgba(69,248,130,0.35); padding: 28px;
+      clip-path: polygon(24px 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px);
+      text-align: center;
+    }
+    .bam59-wukong-img {
+      width: 100%; max-width: 410px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      filter: drop-shadow(0 24px 36px rgba(0,0,0,0.85));
+    }
+
+    /* Kinetic Neon Marquee Strip */
+    .bam59-marquee-bar {
+      background: var(--neon); color: #06100a; padding: 14px 0; overflow: hidden;
+      border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold);
+    }
+    .bam59-marquee-track {
+      display: flex; gap: 32px; width: max-content; font-family: 'Chakra Petch', sans-serif;
+      font-size: 18px; font-weight: 700; letter-spacing: 0.08em; animation: bam59EsportsMarquee 20s linear infinite;
+    }
+    @keyframes bam59EsportsMarquee { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
+
+    .bam59-sec { max-width: 1360px; margin: 0 auto; padding: 80px 24px; }
+    .bam59-game-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; margin-top: 36px; }
+    .bam59-game-card {
+      background: var(--surface); border: 1px solid rgba(255,255,255,0.1); padding: 26px;
+      clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .bam59-game-card:hover { border-color: var(--neon); transform: translateY(-5px); }
+    .bam59-modal { position: fixed; inset: 0; z-index: 900; background: rgba(11,14,19,0.9); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .bam59-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <header class="bam59-hud-nav">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="width:14px;height:14px;background:var(--neon);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);"></span>
+      <strong class="esports-font" style="font-size:24px;letter-spacing:0.08em;">BAME<span style="color:var(--neon);">.GG</span></strong>
+    </div>
+    <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+      <a href="#forgingLegends" class="esports-font" style="color:var(--neon);text-decoration:none;font-size:14px;">Home</a>
+      <a href="#forgingLegends" class="esports-font" style="color:var(--fg);text-decoration:none;font-size:14px;">About Us</a>
+      <a href="#ourGames" class="esports-font" style="color:var(--fg);text-decoration:none;font-size:14px;">Tournament</a>
+      <a href="#ourGames" class="esports-font" style="color:var(--fg);text-decoration:none;font-size:14px;">Games</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="bam59-poly-outline" style="padding:8px 16px;font-size:12px;" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="bam59-poly-btn" data-magnetic>JOIN TOURNAMENT ↗</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="bam59-hero">
+      <div>
+        <span class="esports-font" style="color:var(--neon);font-size:14px;letter-spacing:0.16em;">✦ WORLD CYBER ARENA SEASON IX</span>
+        <h1 class="bam59-h1 esports-font">
+          SHAPING THE FUTURE OF <span style="color:var(--neon);">ESPORTS</span>
+        </h1>
+        <p style="font-size:16px;color:var(--muted);max-width:520px;line-height:1.65;margin-bottom:28px;">
+          Enter high-stakes global brackets with real-time anti-cheat telemetry, instant smart-contract prize payouts, and 240Hz cloud spectator arenas.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <button type="button" class="bam59-poly-btn" data-magnetic onclick="document.getElementById('bameModal').classList.add('is-open')">EXPLORE MORE ↗</button>
+          <a href="#ourGames" class="bam59-poly-outline" style="text-decoration:none;">VIEW BRACKETS</a>
+        </div>
+      </div>
+
+      <div class="bam59-arena-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <span class="esports-font" style="color:var(--gold);font-size:13px;">★ JOIN THE BIG TOURNAMENTS</span>
+          <span class="esports-font" style="background:rgba(69,248,130,0.16);color:var(--neon);padding:4px 10px;font-size:12px;">PRIZE POOL: $250,000</span>
+        </div>
+        <img src="assets/cutout.webp" alt="Cyber-Wukong eSports Champion" class="bam59-wukong-img" />
+      </div>
+    </section>
+
+    <!-- KINETIC MARQUEE -->
+    <div class="bam59-marquee-bar" aria-label="eSports Highlights">
+      <div class="bam59-marquee-track">
+        <span>✦ GAMING SPANING</span><span>✦ ACTION - PACKED</span><span>✦ MIND - BENDING</span><span>✦ COLLECTION OG GAMES</span>
+        <span>✦ GAMING SPANING</span><span>✦ ACTION - PACKED</span><span>✦ MIND - BENDING</span><span>✦ COLLECTION OG GAMES</span>
+      </div>
+    </div>
+
+    <!-- ABOUT US: FORGING LEGENDS IN THE GAMING UNIVERSE -->
+    <section id="forgingLegends" class="bam59-sec">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:center;">
+        <div>
+          <span class="esports-font" style="color:var(--neon);font-size:13px;letter-spacing:0.14em;"># ABOUT OUR ARENA</span>
+          <h2 class="esports-font" style="font-size:clamp(32px,4.2vw,52px);margin:10px 0 18px;">
+            FORGING LEGENDS IN THE <span style="color:var(--gold);">GAMING UNIVERSE</span>
+          </h2>
+          <p style="font-size:15px;color:var(--muted);line-height:1.65;">
+            From grassroots 5v5 qualifiers to stadium-packed Masters finals, Bame powers pro rosters with sub-millisecond server mesh and automated tournament operations.
+          </p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+          <div class="bam59-game-card" style="text-align:center;">
+            <strong class="esports-font" style="font-size:34px;color:var(--neon);">10K+</strong>
+            <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Live Streams</span>
+          </div>
+          <div class="bam59-game-card" style="text-align:center;">
+            <strong class="esports-font" style="font-size:34px;color:var(--gold);">50+</strong>
+            <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Pro Leagues</span>
+          </div>
+          <div class="bam59-game-card" style="text-align:center;">
+            <strong class="esports-font" style="font-size:34px;color:#fff;">99.9%</strong>
+            <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Anti-Cheat</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR GAME SHOWCASE -->
+    <section id="ourGames" class="bam59-sec" style="padding-top:0;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span class="esports-font" style="color:var(--neon);font-size:13px;"># OFFICIAL TITLES</span>
+          <h2 class="esports-font" style="font-size:clamp(30px,3.8vw,46px);margin-top:6px;">OUR FEATURED GAMES</h2>
+        </div>
+      </div>
+      <div class="bam59-game-grid">
+        <article class="bam59-game-card">
+          <span class="esports-font" style="color:var(--neon);font-size:12px;">ENTRY FEE: FREE • 5V5 ARENA</span>
+          <h3 class="esports-font" style="font-size:24px;margin:10px 0;">THE HUNTER KILLER</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Tactical cyber-assault bracket with $50,000 weekly prize pool.</p>
+        </article>
+        <article class="bam59-game-card">
+          <span class="esports-font" style="color:var(--gold);font-size:12px;">ENTRY FEE: 10 USDT • CHAMPIONSHIP</span>
+          <h3 class="esports-font" style="font-size:24px;margin:10px 0;">NETLAND CHAMPIONS</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Mythic MOBA showdown featuring Cyber-Wukong division qualifiers.</p>
+        </article>
+        <article class="bam59-game-card">
+          <span class="esports-font" style="color:var(--neon);font-size:12px;">ENTRY FEE: VIP PASS • BATTLE ROYALE</span>
+          <h3 class="esports-font" style="font-size:24px;margin:10px 0;">CYBERPUNK ROYALE</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">60-squad neon drop-zone with live twitch telemetry overlays.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="bameModal" class="bam59-modal" role="dialog" aria-modal="true" aria-labelledby="bameModalTitle">
+    <div class="bam59-arena-card" style="max-width:520px;width:100%;text-align:left;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span class="esports-font" style="color:var(--neon);font-size:13px;">BAME TOURNAMENT LOBBY</span>
+        <button type="button" class="bam59-poly-outline" style="padding:6px 12px;font-size:11px;" onclick="document.getElementById('bameModal').classList.remove('is-open')">CLOSE</button>
+      </div>
+      <h2 id="bameModalTitle" class="esports-font" style="font-size:28px;margin-bottom:10px;">REGISTER YOUR 5V5 ROSTER</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Lock in your team seed for the $250,000 World Cyber Arena qualifier.</p>
+      <button type="button" class="bam59-poly-btn" style="width:100%;" onclick="document.getElementById('bameModal').classList.remove('is-open')">CONFIRM SQUAD SEED</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var paused = false;
+      var btn = document.getElementById('motionToggleBtn');
+      if (btn) btn.addEventListener('click', function(){
+        paused = !paused;
+        btn.textContent = paused ? 'Motion: PAUSED' : 'Motion: ON';
+      });
+      document.querySelectorAll('[data-magnetic]').forEach(function(el){
+        el.addEventListener('mousemove', function(e){
+          if (paused) return;
+          var r = el.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.22;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.22;
+          el.style.transform = 'translate3d(' + dx.toFixed(1) + 'px,' + dy.toFixed(1) + 'px,0)';
+        });
+        el.addEventListener('mouseleave', function(){ el.style.transform = ''; });
+      });
+      var expBtn = document.getElementById('exploreMagneticBtn');
+      if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('bameModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>

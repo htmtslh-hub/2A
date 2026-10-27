@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ALEX CARTER — Futuristic Glassmorphism Web Developer &amp; UI/UX Portfolio</title>
+  <meta name="description" content="Deep teal-obsidian and neon-cyan glassmorphic developer portfolio with zero-gravity 3D tesseract cube, hexagonal skill matrix, and interactive 01–05 process timeline.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #061116;
+      --glass: rgba(10, 28, 36, 0.68);
+      --cyan: #00e5ff;
+      --cyan-soft: rgba(0, 229, 255, 0.28);
+      --fg: #ecfeff;
+      --muted: #94a3b8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: radial-gradient(circle at 50% 0%, #0c2631 0%, #061116 70%); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .font-space { font-family: 'Space Grotesk', sans-serif; }
+
+    .ale79-cyan-card {
+      background: var(--glass); backdrop-filter: blur(20px);
+      border: 1px solid var(--cyan-soft); border-radius: 22px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), inset 0 0 18px rgba(0, 229, 255, 0.06);
+      padding: 24px; transition: border-color 0.25s, transform 0.25s;
+    }
+    .ale79-cyan-card:hover { border-color: var(--cyan); }
+    .ale79-btn-cyan {
+      padding: 11px 24px; border-radius: 999px; background: var(--cyan); color: #041014;
+      font-size: 13px; font-weight: 800; border: none; cursor: pointer;
+      box-shadow: 0 0 24px rgba(0, 229, 255, 0.45);
+    }
+
+    .ale79-wrap { max-width: 1340px; margin: 0 auto; padding: 20px 24px 80px; }
+    .ale79-nav {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px;
+      padding: 14px 24px; border-radius: 999px;
+    }
+    .ale79-hero {
+      display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; margin-bottom: 28px;
+    }
+    @media (min-width: 980px) {
+      .ale79-hero { grid-template-columns: 1.1fr 0.9fr; }
+    }
+    .ale79-h1 {
+      font-size: clamp(42px, 6vw, 76px); font-weight: 700; line-height: 1.02; margin: 12px 0 16px;
+    }
+    .ale79-cube-img {
+      width: 100%; max-width: 360px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      animation: ale79CubeFloat 6s ease-in-out infinite;
+      filter: drop-shadow(0 24px 44px rgba(0,229,255,0.28));
+    }
+    @keyframes ale79CubeFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+    .ale79-dashboard {
+      display: grid; grid-template-columns: 1fr; gap: 20px;
+    }
+    @media (min-width: 980px) {
+      .ale79-dashboard { grid-template-columns: 1fr 1fr; }
+    }
+    .ale79-hex-wrap { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .ale79-hex-chip {
+      padding: 8px 16px; border-radius: 999px; background: rgba(0,229,255,0.1);
+      border: 1px solid var(--cyan-soft); color: var(--cyan); font-size: 12px; font-weight: 700;
+    }
+    .ale79-step-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 18px;
+    }
+    .ale79-step-node {
+      padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.03);
+      border: 1px solid var(--cyan-soft); cursor: pointer; text-align: left; color: var(--fg);
+    }
+    .ale79-step-node.is-active { background: rgba(0,229,255,0.16); border-color: var(--cyan); }
+    .ale79-modal { position: fixed; inset: 0; z-index: 900; background: rgba(6,17,22,0.88); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .ale79-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <div class="ale79-wrap">
+    <header class="ale79-nav ale79-cyan-card">
+      <strong class="font-space" style="font-size:18px;color:var(--cyan);letter-spacing:0.08em;">◈ ALEX CARTER</strong>
+      <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+        <a href="#dashboardGrid" style="color:var(--muted);text-decoration:none;font-size:13px;">About</a>
+        <a href="#dashboardGrid" style="color:var(--muted);text-decoration:none;font-size:13px;">Projects</a>
+        <a href="#workProcess" style="color:var(--muted);text-decoration:none;font-size:13px;">Process 01–05</a>
+      </nav>
+      <button type="button" id="exploreMagneticBtn" class="ale79-btn-cyan">Hire Alex ↗</button>
+    </header>
+
+    <main>
+      <section class="ale79-hero ale79-cyan-card">
+        <div>
+          <span style="font-size:12px;color:var(--cyan);letter-spacing:0.14em;font-weight:700;">FUTURISTIC GLASSMORPHISM ARCHITECT</span>
+          <h1 class="ale79-h1 font-space">ALEX <span style="color:var(--cyan);">CARTER</span></h1>
+          <p style="font-size:16px;color:var(--muted);max-width:520px;line-height:1.6;margin-bottom:24px;">
+            Full-Stack Creative Technologist &amp; UI/UX Engineer building holographic WebGL dashboards, spatial design systems, and low-latency AI interfaces.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <button type="button" class="ale79-btn-cyan" onclick="document.getElementById('carterModal').classList.add('is-open')">Explore Projects ↗</button>
+            <a href="#workProcess" style="padding:11px 22px;border-radius:999px;border:1px solid var(--cyan-soft);color:var(--fg);text-decoration:none;font-size:13px;font-weight:600;">Work Process</a>
+          </div>
+        </div>
+        <div>
+          <img src="assets/cutout.webp" alt="3D Neon Cyan Glassmorphic Tesseract Cube" class="ale79-cube-img" />
+        </div>
+      </section>
+
+      <!-- ASYMMETRIC GLASSMORPHIC DASHBOARD -->
+      <section id="dashboardGrid" class="ale79-dashboard">
+        <article class="ale79-cyan-card">
+          <span style="font-size:11px;color:var(--cyan);font-weight:700;">01 // ABOUT &amp; TECHNICAL MATRIX</span>
+          <h2 class="font-space" style="font-size:22px;margin:8px 0;">Full-Stack UI/UX Engineering</h2>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">
+            8+ years bridging high-craft glassmorphic Figma systems with 60FPS React, Three.js, and Rust WebAssembly runtimes.
+          </p>
+          <div class="ale79-hex-wrap">
+            <span class="ale79-hex-chip">React 19</span><span class="ale79-hex-chip">TypeScript</span><span class="ale79-hex-chip">Three.js / R3F</span>
+            <span class="ale79-hex-chip">GLSL Shaders</span><span class="ale79-hex-chip">Next.js</span><span class="ale79-hex-chip">Figma Tokens</span>
+          </div>
+        </article>
+
+        <article class="ale79-cyan-card">
+          <span style="font-size:11px;color:var(--cyan);font-weight:700;">02 // FEATURED DEPLOYMENTS</span>
+          <h2 class="font-space" style="font-size:22px;margin:8px 0;">Selected Spatial Interfaces</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+            <div style="padding:14px;border-radius:14px;background:rgba(0,229,255,0.06);border:1px solid var(--cyan-soft);">
+              <strong style="font-size:15px;display:block;">HoloTrade DEX</strong>
+              <span style="font-size:12px;color:var(--muted);">$1.2B Volume Terminal</span>
+            </div>
+            <div style="padding:14px;border-radius:14px;background:rgba(0,229,255,0.06);border:1px solid var(--cyan-soft);">
+              <strong style="font-size:15px;display:block;">NeuroSynth OS</strong>
+              <span style="font-size:12px;color:var(--muted);">Spatial Audio DAW</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- WORK PROCESS 01-05 INTERACTIVE STEPPER -->
+      <section id="workProcess" class="ale79-cyan-card" style="margin-top:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;">
+          <div>
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">03 // INTERACTIVE WORKFLOW PIPELINE</span>
+            <h2 class="font-space" style="font-size:22px;margin-top:4px;">WORK PROCESS 01 — 05</h2>
+          </div>
+          <p id="processDetailText" style="font-size:13px;color:var(--cyan);">Step 01: Deep architecture discovery, KPI telemetry mapping, and user journey blueprinting.</p>
+        </div>
+        <div class="ale79-step-row">
+          <button type="button" class="ale79-step-node is-active" data-step="Step 01: Deep architecture discovery, KPI telemetry mapping, and user journey blueprinting.">
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">01</span>
+            <strong style="display:block;font-size:14px;margin-top:4px;">Discovery</strong>
+          </button>
+          <button type="button" class="ale79-step-node" data-step="Step 02: Interactive spatial wireframing and glassmorphic component token architecture.">
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">02</span>
+            <strong style="display:block;font-size:14px;margin-top:4px;">Wireframing</strong>
+          </button>
+          <button type="button" class="ale79-step-node" data-step="Step 03: Custom 3D Octane/Spline modeling, shader authoring, and micro-interaction choreography.">
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">03</span>
+            <strong style="display:block;font-size:14px;margin-top:4px;">3D &amp; Visual UI</strong>
+          </button>
+          <button type="button" class="ale79-step-node" data-step="Step 04: Clean production TypeScript, WebGL canvas optimization, and accessible DOM engineering.">
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">04</span>
+            <strong style="display:block;font-size:14px;margin-top:4px;">Full-Stack Code</strong>
+          </button>
+          <button type="button" class="ale79-step-node" data-step="Step 05: Multi-viewport 120FPS performance auditing and edge deployment.">
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">05</span>
+            <strong style="display:block;font-size:14px;margin-top:4px;">QA &amp; Launch</strong>
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="carterModal" class="ale79-modal" role="dialog" aria-modal="true" aria-labelledby="carterModalTitle">
+    <div class="ale79-cyan-card" style="max-width:500px;width:100%;background:#081820;">
+      <h2 id="carterModalTitle" class="font-space" style="font-size:24px;margin-bottom:10px;color:var(--cyan);">Initiate Project Transmission</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Direct engineering &amp; UI/UX consulting availability for Q2/Q3.</p>
+      <button type="button" class="ale79-btn-cyan" style="width:100%;" onclick="document.getElementById('carterModal').classList.remove('is-open')">Transmit Specification</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var nodes = document.querySelectorAll('.ale79-step-node');
+      var detail = document.getElementById('processDetailText');
+      nodes.forEach(function(n){
+        n.addEventListener('click', function(){
+          nodes.forEach(function(x){ x.classList.remove('is-active'); });
+          n.classList.add('is-active');
+          if (detail) detail.textContent = n.getAttribute('data-step');
+        });
+      });
+      var expBtn = document.getElementById('exploreMagneticBtn');
+      if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('carterModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>

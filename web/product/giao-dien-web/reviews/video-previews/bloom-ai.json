@@ -1,0 +1,38 @@
+{
+  "id": "t139",
+  "slug": "bloom-ai",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T12:13:27.206Z",
+  "demo": "/demos/bloom-ai/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "5bc4d7b47a74",
+  "sha256": "5bc4d7b47a74f3ec72b0e46e7b02e716af3085f21d13cc43ae09e5d7615d076e",
+  "demoHtmlSha256": "b716a47718584d16a8b54bd13f7c43b6dce1e3cf2f634ebb2fca6d2e09bdc93b",
+  "demoSha256": "e3c86532a147e1b6e62da93f9b688946932f72e93014d86b2a18a91003bfe72f",
+  "bytes": 276985,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bloom-ai-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bloom-ai-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bloom-ai-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\bloom-ai-return.jpg"
+  ]
+}

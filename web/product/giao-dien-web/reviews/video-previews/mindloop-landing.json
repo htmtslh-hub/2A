@@ -1,0 +1,38 @@
+{
+  "id": "t131",
+  "slug": "mindloop-landing",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T12:03:45.668Z",
+  "demo": "/demos/mindloop-landing/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "8b8d42e0a06e",
+  "sha256": "8b8d42e0a06ed678f910ca4ef9ea73928916fcfd4f357cd6d903451f0f464f72",
+  "demoHtmlSha256": "61f6d92fb63f520a79a5d41f3c6546c98c82ecb5b487ef971eb22f3ec8b3d6d7",
+  "demoSha256": "56d6b785610dd762b6798d8ec3b6ebf316ea6bb9fc9fa4198536f21d2a76a819",
+  "bytes": 587980,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mindloop-landing-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mindloop-landing-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mindloop-landing-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\mindloop-landing-return.jpg"
+  ]
+}

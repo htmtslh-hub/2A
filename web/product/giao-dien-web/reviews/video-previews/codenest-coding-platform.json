@@ -1,0 +1,38 @@
+{
+  "id": "t132",
+  "slug": "codenest-coding-platform",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T12:05:45.684Z",
+  "demo": "/demos/codenest-coding-platform/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3e30efd0763a",
+  "sha256": "3e30efd0763a245e5436f7918597de21aa123b7284d7137a1493d27f705e9d7c",
+  "demoHtmlSha256": "71479d1aef55efa25e63b792b690608a87fd7bb1f06ef7836ddec4642da6f771",
+  "demoSha256": "788454517dd3458c51f89cd048b29945c6865a38181ad2d28096e8d7fd49505a",
+  "bytes": 216735,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 491
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\codenest-coding-platform-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\codenest-coding-platform-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\codenest-coding-platform-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\codenest-coding-platform-return.jpg"
+  ]
+}

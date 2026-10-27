@@ -1,0 +1,38 @@
+{
+  "id": "t137",
+  "slug": "alex-carter-ui",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T12:11:39.754Z",
+  "demo": "/demos/alex-carter-ui/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "27e9b43bd725",
+  "sha256": "27e9b43bd725558d22ca8621e75b0b827c21b713871a25603bb5773cb90e9703",
+  "demoHtmlSha256": "829634213a6cc6f0faad1718f2e1536d21fc8f20ccbed1c4ccfea2e7eaf6210a",
+  "demoSha256": "b644cf49b14dcf80bd5e88c6f32d4b4edd5de52e1b32bbc792c1c95f32bb7fea",
+  "bytes": 556604,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 187
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\alex-carter-ui-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\alex-carter-ui-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\alex-carter-ui-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\alex-carter-ui-return.jpg"
+  ]
+}

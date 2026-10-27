@@ -1,0 +1,38 @@
+{
+  "id": "t133",
+  "slug": "digital-kensei",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T12:09:33.341Z",
+  "demo": "/demos/digital-kensei/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "24397428f540",
+  "sha256": "24397428f54074e97e42c6eb6bdeac5ec9d96a2cc45f2977a448cd19bb18793f",
+  "demoHtmlSha256": "39ac5bdaf23e5ecfc292e7048f53da57af43eaa0740e9038f3d1e47147935c98",
+  "demoSha256": "455279c536442e8e16edf37e76f9c8f49c887071a6d0db475fb948b69ef46c08",
+  "bytes": 465944,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1030
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digital-kensei-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digital-kensei-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digital-kensei-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digital-kensei-return.jpg"
+  ]
+}

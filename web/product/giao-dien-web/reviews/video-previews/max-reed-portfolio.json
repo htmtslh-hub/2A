@@ -1,0 +1,38 @@
+{
+  "id": "t130",
+  "slug": "max-reed-portfolio",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T12:12:26.401Z",
+  "demo": "/demos/max-reed-portfolio/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "b59b8d0bde10",
+  "sha256": "b59b8d0bde105ec5e72e9b1e59722eb4bd3a6593b298cc81a3f48b30dd58040f",
+  "demoHtmlSha256": "00762f02c6939481669b5b1ba87dfed331e4eedf7517413b8818a20bcb282156",
+  "demoSha256": "9a5088e64f6a00bcaaa5f7e2955896a016abdf568200aa6ca6ee215b40c9279c",
+  "bytes": 476937,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 390
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\max-reed-portfolio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\max-reed-portfolio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\max-reed-portfolio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\max-reed-portfolio-return.jpg"
+  ]
+}

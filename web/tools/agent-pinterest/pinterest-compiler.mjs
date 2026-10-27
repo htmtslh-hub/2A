@@ -106,7 +106,7 @@ export async function analyzePinterestImagePalette(localImagePath) {
 
 export function detectWebCategory(data) {
   const slug = String(data.slug || '').toLowerCase();
-  if (slug === 'break-code' || slug === 'startup-devkit') return 'portfolio';
+  if (slug === 'break-code' || slug === 'startup-devkit' || slug === 'nova-glass' || slug === 'alex-carter-ui') return 'portfolio';
   return 'commerce';
 }
 
@@ -275,6 +275,31 @@ const SLUG_BLUEPRINT_OVERRIDES = {
       { tag: 'VAULT 03', title: 'Cross-Chain Treasury Yield Matrix', stat: '0.02s Finality', color: '#60a5fa' },
       { tag: 'VAULT 04', title: 'Private Family Office Token Desk', stat: '24/7 Concierge', color: '#93c5fd' }
     ]
+  },
+  'digital-kensei': {
+    id: 'cyber-samurai-nft',
+    brandTitle: 'Nexon Digital Kensei',
+    headlineSub: 'Cyber-Samurai NFT showcase with crimson sun 3D warrior pop-out, overlapping rounded editorial card with inline pill imagery, and dark 4-card Bento legacy grid.'
+  },
+  'bame-esports': {
+    id: 'esports-polygon-arena',
+    brandTitle: 'Bame eSports Arena',
+    headlineSub: 'Shaping the Future of eSports — neon-green polygon HUD, 3D Cyber-Wukong champion cutout, kinetic diagonal marquee, and inverted-corner tournament arena.'
+  },
+  'apex-upheaval': {
+    id: 'tactical-legend-roster',
+    brandTitle: 'Apex Upheaval Hub',
+    headlineSub: 'Futuristic battle-royale landing page with diagonal crimson slash hero, 6-platform bar, 4-column squad directives, and interactive skewed parallelogram Legend roster.'
+  },
+  'nova-glass': {
+    id: 'iridescent-crystal-portfolio',
+    brandTitle: 'Nova Glass Studio',
+    headlineSub: 'High-key pearl-ice glassmorphism UI/UX portfolio with 3D crystal visor bust cutout, animated skill progress bars, 3x3 tech stack matrix, and liquid refraction.'
+  },
+  'alex-carter-ui': {
+    id: 'neon-cyan-glass-dev',
+    brandTitle: 'Alex Carter UI/UX',
+    headlineSub: 'Deep teal-obsidian and neon-cyan glassmorphic developer portfolio with zero-gravity 3D tesseract cube, hexagonal skill matrix, and interactive 01–05 process timeline.'
   }
 };
 
@@ -780,6 +805,1186 @@ export function buildPinterestInspiredHtml(data, palette) {
   const bp = getBlueprintForData(data);
   const evalScore = data.criteriaEvaluation?.totalScore || 98;
   const svgCenter = get3DCutoutMarkup(bp, p, data);
+
+  // ============================================================================
+  // BESPOKE PINTEREST DROP-FOLDER ARCHITECTURES (Curated Motion Recipes)
+  // ============================================================================
+
+  // 1. DIGITAL KENSEI (Cyber-Samurai NFT Showcase: Dark Crimson Hero + Overlapping Rounded White Card + Dark 4-Card Bento Legacy)
+  // Motion Recipe: Parallax Crimson Sun & Samurai Depth + Animated Number Counters + 3D Bento Card Tilt
+  if (data.slug === 'digital-kensei') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NEXON — Digital Kensei Cyber-Samurai Collectible Showcase</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08090c;
+      --surface: #12141a;
+      --white-card: #f5f5f7;
+      --crimson: #dc2626;
+      --crimson-glow: rgba(220, 38, 38, 0.45);
+      --fg: #ffffff;
+      --muted: #9ca3af;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .font-display { font-family: 'Anton', Impact, sans-serif; text-transform: uppercase; letter-spacing: 0.02em; }
+
+    .${p}-nav {
+      max-width: 1320px; margin: 0 auto; padding: 22px 24px;
+      display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 30;
+    }
+    .${p}-btn-red {
+      padding: 11px 24px; border-radius: 999px; background: var(--crimson); color: #fff;
+      font-size: 13px; font-weight: 700; border: none; cursor: pointer;
+      box-shadow: 0 8px 24px var(--crimson-glow); transition: transform 0.2s;
+    }
+    .${p}-btn-red:hover { transform: translateY(-2px); }
+
+    .${p}-hero {
+      max-width: 1320px; margin: 0 auto; padding: 28px 24px 110px;
+      display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; position: relative;
+    }
+    @media (min-width: 980px) {
+      .${p}-hero { grid-template-columns: 1.05fr 0.95fr; }
+    }
+    .${p}-h1 {
+      font-size: clamp(54px, 8vw, 108px); line-height: 0.94; margin: 14px 0 20px;
+    }
+    .${p}-stage-right {
+      position: relative; display: flex; align-items: center; justify-content: center; min-height: 440px;
+    }
+    .${p}-crimson-sun {
+      position: absolute; width: clamp(280px, 34vw, 420px); height: clamp(280px, 34vw, 420px);
+      border-radius: 50%; background: radial-gradient(circle, #ef4444 0%, #b91c1c 65%, rgba(185,28,28,0) 100%);
+      box-shadow: 0 0 90px var(--crimson-glow); z-index: 1;
+    }
+    .${p}-samurai-cutout {
+      position: relative; z-index: 3; width: 100%; max-width: 430px; height: auto;
+      object-fit: contain; filter: drop-shadow(0 28px 44px rgba(0,0,0,0.85));
+    }
+    .${p}-nft-float-badge {
+      position: absolute; bottom: 16px; right: 12px; z-index: 5;
+      padding: 14px 18px; border-radius: 18px; background: rgba(18, 20, 26, 0.82);
+      backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    /* Overlapping White Rounded Editorial Card (#f5f5f7) */
+    .${p}-white-sheet {
+      max-width: 1320px; margin: -56px auto 0; position: relative; z-index: 10;
+      background: var(--white-card); color: #090a0f; border-radius: 38px;
+      padding: clamp(36px, 5vw, 72px); box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    }
+    .${p}-pillar-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; margin: 32px 0 48px;
+    }
+    .${p}-pillar-card {
+      background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 20px; padding: 22px;
+      transition: transform 0.25s;
+    }
+    .${p}-inline-pill {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 96px; height: 38px; border-radius: 999px; background: #090a0f; color: #fff;
+      vertical-align: middle; margin: 0 8px; overflow: hidden; border: 2px solid var(--crimson);
+    }
+    .${p}-inline-pill img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Dark 4-Card Bento Legacy Section */
+    .${p}-bento-sec { max-width: 1320px; margin: 0 auto; padding: 88px 24px; }
+    .${p}-bento-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 36px;
+    }
+    .${p}-bento-card {
+      background: var(--surface); border: 1px solid rgba(255,255,255,0.1); border-radius: 26px;
+      padding: 30px; display: flex; flex-direction: column; justify-content: space-between; min-height: 230px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .${p}-bento-card.crimson {
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      border-color: rgba(255,255,255,0.25);
+    }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(8,9,12,0.88); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <header class="${p}-nav">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="width:32px;height:32px;border-radius:8px;background:var(--crimson);display:inline-flex;align-items:center;justify-content:center;font-weight:800;">侍</span>
+      <strong style="font-size:18px;letter-spacing:0.12em;">NEXON</strong>
+    </div>
+    <nav style="display:flex;gap:28px;" aria-label="Main Navigation">
+      <a href="#warriorWay" style="color:var(--muted);text-decoration:none;font-size:13px;">Bushido Code</a>
+      <a href="#kenseiLegacy" style="color:var(--muted);text-decoration:none;font-size:13px;">Bento Stats</a>
+      <a href="#kenseiLegacy" style="color:var(--muted);text-decoration:none;font-size:13px;">Hall of Fame</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" style="padding:8px 14px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);color:#fff;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-red">Connect Wallet</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: DARK CRIMSON SAMURAI HERO -->
+    <section class="${p}-hero">
+      <div data-parallax="0.06">
+        <div style="display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border-radius:999px;background:rgba(220,38,38,0.16);border:1px solid rgba(220,38,38,0.4);color:#fca5a5;font-size:12px;font-weight:700;">
+          <span>サムライ • GENESIS RONIN PROTOCOL</span>
+        </div>
+        <h1 class="${p}-h1 font-display">
+          DIGITAL<br><span style="color:var(--crimson);">KENSEI</span>
+        </h1>
+        <p style="font-size:16px;color:var(--muted);max-width:500px;line-height:1.65;margin-bottom:28px;">
+          8,888 hand-forged cybernetic Ronin guardians living on Ethereum. Engineered with procedural carbon-weave armor, optical katana shaders, and on-chain Bushido governance.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;">
+          <button type="button" class="${p}-btn-red" data-modal-open="Mint Digital Kensei — Genesis Pass">Explore Collection ↗</button>
+          <a href="#warriorWay" style="padding:11px 22px;border-radius:999px;border:1px solid rgba(255,255,255,0.2);color:#fff;text-decoration:none;font-size:13px;font-weight:600;">Read Bushido Lore</a>
+        </div>
+        <div style="display:flex;gap:36px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);">
+          <div><strong style="font-size:28px;display:block;" data-counter="8888" data-suffix="">8,888</strong><span style="font-size:12px;color:var(--muted);">Ronin Supply</span></div>
+          <div><strong style="font-size:28px;display:block;color:var(--crimson);" data-counter="180" data-suffix="+ ETH">180+ ETH</strong><span style="font-size:12px;color:var(--muted);">Trading Volume</span></div>
+          <div><strong style="font-size:28px;display:block;" data-counter="4200" data-suffix="+">4,200+</strong><span style="font-size:12px;color:var(--muted);">Unique Holders</span></div>
+        </div>
+      </div>
+
+      <div class="${p}-stage-right">
+        <div class="${p}-crimson-sun" data-parallax="-0.05"></div>
+        <img src="assets/cutout.webp" alt="Digital Kensei 3D Cyber Samurai" class="${p}-samurai-cutout" data-tilt-card />
+        <div class="${p}-nft-float-badge">
+          <span style="font-size:11px;color:#fca5a5;display:block;">KENSEI #0089 • MYTHIC TIER</span>
+          <strong style="font-size:16px;">Current Bid: 2.85 ETH</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: OVERLAPPING WHITE EDITORIAL SHEET WITH INLINE PILL IMAGERY -->
+    <section id="warriorWay" class="${p}-white-sheet">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-size:12px;font-weight:800;color:var(--crimson);letter-spacing:0.14em;text-transform:uppercase;">01 // BUSHIDO CODEX</span>
+          <h2 class="font-display" style="font-size:clamp(32px,4.5vw,56px);margin-top:6px;">THE WAY OF THE DIGITAL WARRIOR</h2>
+        </div>
+        <p style="font-size:14px;color:#4b5563;max-width:420px;">
+          Merging Edo-period swordsmanship silhouettes with real-time Unreal Engine 5 metahuman rigging.
+        </p>
+      </div>
+
+      <div class="${p}-pillar-grid">
+        <article class="${p}-pillar-card" data-tilt-card>
+          <span style="font-size:12px;font-weight:800;color:var(--crimson);">01 / HONOR</span>
+          <h3 style="font-size:18px;margin:8px 0 6px;">On-Chain Lineage</h3>
+          <p style="font-size:13px;color:#4b5563;line-height:1.55;">Every katana trait and armor patina is deterministically stored on Ethereum L1.</p>
+        </article>
+        <article class="${p}-pillar-card" data-tilt-card>
+          <span style="font-size:12px;font-weight:800;color:var(--crimson);">02 / PRECISION</span>
+          <h3 style="font-size:18px;margin:8px 0 6px;">4K GLTF Rigging</h3>
+          <p style="font-size:13px;color:#4b5563;line-height:1.55;">Holders unlock full 3D blender &amp; Unreal files ready for virtual production.</p>
+        </article>
+        <article class="${p}-pillar-card" data-tilt-card>
+          <span style="font-size:12px;font-weight:800;color:var(--crimson);">03 / CLAN DAO</span>
+          <h3 style="font-size:18px;margin:8px 0 6px;">Shogunate Treasury</h3>
+          <p style="font-size:13px;color:#4b5563;line-height:1.55;">100% of secondary royalties fund anime shorts and physical resin statues.</p>
+        </article>
+        <article class="${p}-pillar-card" data-tilt-card>
+          <span style="font-size:12px;font-weight:800;color:var(--crimson);">04 / ASCENSION</span>
+          <h3 style="font-size:18px;margin:8px 0 6px;">Soulbound Blades</h3>
+          <p style="font-size:13px;color:#4b5563;line-height:1.55;">Stake your Ronin to forge elemental plasma katanas every seasonal equinox.</p>
+        </article>
+      </div>
+
+      <!-- Editorial Statement with Inline Pill Cutouts -->
+      <div style="padding:28px;border-radius:24px;background:#e5e7eb;text-align:center;">
+        <p class="font-display" style="font-size:clamp(26px,3.8vw,48px);line-height:1.25;color:#111827;">
+          CRAFTED BY MASTER ARTISTS <span class="${p}-inline-pill"><img src="assets/cutout.webp" alt="Kensei Pill"/></span>
+          FORGED IN IMMUTABLE CODE <span class="${p}-inline-pill" style="background:var(--crimson);">侍 089</span>
+          BUILT FOR THE METAVERSE
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: DARK 4-CARD BENTO LEGACY GRID -->
+    <section id="kenseiLegacy" class="${p}-bento-sec">
+      <span style="font-size:12px;color:var(--crimson);font-weight:800;letter-spacing:0.14em;text-transform:uppercase;">02 // ECOSYSTEM TELEMETRY</span>
+      <h2 class="font-display" style="font-size:clamp(34px,4.5vw,58px);margin-top:6px;">THE KENSEI LEGACY</h2>
+
+      <div class="${p}-bento-grid">
+        <article class="${p}-bento-card crimson" data-tilt-card>
+          <span style="font-size:12px;font-weight:700;opacity:0.85;">PRIMARY + SECONDARY VOLUME</span>
+          <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="180" data-suffix="+ ETH">180+ ETH</strong>
+          <p style="font-size:13px;opacity:0.9;">Zero-sweep organic collector volume across OpenSea and Blur.</p>
+        </article>
+        <article class="${p}-bento-card" data-tilt-card>
+          <span style="font-size:12px;color:var(--crimson);font-weight:700;">RARITY HIERARCHY</span>
+          <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="3" data-suffix=" TIERS">3 TIERS</strong>
+          <p style="font-size:13px;color:var(--muted);">Ashigaru Vanguard, Cyber-Ronin, and 1-of-1 Celestial Shogun editions.</p>
+        </article>
+        <article class="${p}-bento-card" data-tilt-card>
+          <span style="font-size:12px;color:var(--crimson);font-weight:700;">CUSTOM TRAITS</span>
+          <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="500" data-suffix="+">500+</strong>
+          <p style="font-size:13px;color:var(--muted);">Hand-sculpted mempo masks, neon visors, and braided kasa hats.</p>
+        </article>
+        <article class="${p}-bento-card" data-tilt-card>
+          <span style="font-size:12px;color:var(--crimson);font-weight:700;">DAO GUARDIANS</span>
+          <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="200" data-suffix="+">200+</strong>
+          <p style="font-size:13px;color:var(--muted);">Genesis council members governing the Nexon Anime Incubator.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="kenseiModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="kenseiModalTitle">
+    <div style="max-width:520px;width:100%;background:#12141a;border:1px solid rgba(220,38,38,0.4);border-radius:28px;padding:32px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span style="font-size:12px;color:var(--crimson);font-weight:700;">NEXON SHOGUNATE GATEWAY</span>
+        <button type="button" id="closeModalBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:#fff;padding:6px 12px;border-radius:999px;cursor:pointer;">Close</button>
+      </div>
+      <h2 id="kenseiModalTitle" class="font-display" style="font-size:32px;margin-bottom:10px;">MINT GENESIS KENSEI</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:22px;">Connect your Ethereum wallet to inspect trait provenance or claim your physical 1/6 scale Ronin statue allocation.</p>
+      <button type="button" class="${p}-btn-red" style="width:100%;" onclick="document.getElementById('kenseiModal').classList.remove('is-open')">Sign Bushido Message</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var paused = false;
+      var btn = document.getElementById('motionToggleBtn');
+      if (btn) btn.addEventListener('click', function(){
+        paused = !paused;
+        btn.textContent = paused ? 'Motion: PAUSED' : 'Motion: ON';
+      });
+      window.addEventListener('scroll', function(){
+        if (paused) return;
+        var y = window.scrollY || 0;
+        document.querySelectorAll('[data-parallax]').forEach(function(el){
+          var s = parseFloat(el.getAttribute('data-parallax') || '0.05');
+          el.style.transform = 'translate3d(0,' + (y * s).toFixed(1) + 'px,0)';
+        });
+      }, { passive: true });
+      document.querySelectorAll('[data-tilt-card]').forEach(function(card){
+        card.addEventListener('mousemove', function(e){
+          if (paused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / r.width - 0.5;
+          var ny = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = 'perspective(900px) rotateX(' + (-ny * 9).toFixed(2) + 'deg) rotateY(' + (nx * 11).toFixed(2) + 'deg)';
+        });
+        card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
+      });
+      var modal = document.getElementById('kenseiModal');
+      var openBtns = document.querySelectorAll('#exploreMagneticBtn, [data-modal-open]');
+      openBtns.forEach(function(b){ b.addEventListener('click', function(){ if (modal) modal.classList.add('is-open'); }); });
+      var closeBtn = document.getElementById('closeModalBtn');
+      if (closeBtn) closeBtn.addEventListener('click', function(){ modal.classList.remove('is-open'); });
+    })();
+  </script>
+</body>
+</html>`;
+  }
+
+  // 2. BAME ESPORTS (Neon-Green #45f882 & Gold #ffbe18 Polygon HUD + 3D Cyber-Wukong Champion + Diagonal Marquee + Inverted-Corner Arena)
+  // Motion Recipe: Infinite Kinetic Marquee + Magnetic Chamfered Polygon Buttons + Interactive Tournament Filter
+  if (data.slug === 'bame-esports') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>BAME — Shaping the Future of eSports &amp; Pro Gaming</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0e13;
+      --surface: #141923;
+      --neon: #45f882;
+      --gold: #ffbe18;
+      --fg: #ffffff;
+      --muted: #94a3b8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .esports-font { font-family: 'Chakra Petch', sans-serif; text-transform: uppercase; }
+
+    .${p}-hud-nav {
+      max-width: 1360px; margin: 0 auto; padding: 18px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid rgba(69,248,130,0.2); background: rgba(11,14,19,0.88); backdrop-filter: blur(14px);
+    }
+    .${p}-poly-btn {
+      padding: 13px 28px; background: var(--neon); color: #07110b;
+      font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase;
+      letter-spacing: 0.06em; border: none; cursor: pointer;
+      clip-path: polygon(14px 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .${p}-poly-btn:hover { background: var(--gold); }
+    .${p}-poly-outline {
+      padding: 13px 26px; background: rgba(69,248,130,0.1); color: var(--neon);
+      font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 14px; text-transform: uppercase;
+      border: 1px solid var(--neon); cursor: pointer;
+      clip-path: polygon(14px 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+    }
+
+    .${p}-hero {
+      max-width: 1360px; margin: 0 auto; padding: 48px 24px 64px;
+      display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center;
+    }
+    @media (min-width: 980px) {
+      .${p}-hero { grid-template-columns: 1.05fr 0.95fr; }
+    }
+    .${p}-h1 {
+      font-size: clamp(44px, 6.5vw, 84px); line-height: 0.96; margin: 14px 0 20px;
+    }
+    .${p}-arena-card {
+      position: relative; background: radial-gradient(circle at 50% 35%, rgba(69,248,130,0.25), #141923 72%);
+      border: 1px solid rgba(69,248,130,0.35); padding: 28px;
+      clip-path: polygon(24px 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px);
+      text-align: center;
+    }
+    .${p}-wukong-img {
+      width: 100%; max-width: 410px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      filter: drop-shadow(0 24px 36px rgba(0,0,0,0.85));
+    }
+
+    /* Kinetic Neon Marquee Strip */
+    .${p}-marquee-bar {
+      background: var(--neon); color: #06100a; padding: 14px 0; overflow: hidden;
+      border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold);
+    }
+    .${p}-marquee-track {
+      display: flex; gap: 32px; width: max-content; font-family: 'Chakra Petch', sans-serif;
+      font-size: 18px; font-weight: 700; letter-spacing: 0.08em; animation: ${p}EsportsMarquee 20s linear infinite;
+    }
+    @keyframes ${p}EsportsMarquee { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
+
+    .${p}-sec { max-width: 1360px; margin: 0 auto; padding: 80px 24px; }
+    .${p}-game-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; margin-top: 36px; }
+    .${p}-game-card {
+      background: var(--surface); border: 1px solid rgba(255,255,255,0.1); padding: 26px;
+      clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .${p}-game-card:hover { border-color: var(--neon); transform: translateY(-5px); }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(11,14,19,0.9); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <header class="${p}-hud-nav">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="width:14px;height:14px;background:var(--neon);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);"></span>
+      <strong class="esports-font" style="font-size:24px;letter-spacing:0.08em;">BAME<span style="color:var(--neon);">.GG</span></strong>
+    </div>
+    <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+      <a href="#forgingLegends" class="esports-font" style="color:var(--neon);text-decoration:none;font-size:14px;">Home</a>
+      <a href="#forgingLegends" class="esports-font" style="color:var(--fg);text-decoration:none;font-size:14px;">About Us</a>
+      <a href="#ourGames" class="esports-font" style="color:var(--fg);text-decoration:none;font-size:14px;">Tournament</a>
+      <a href="#ourGames" class="esports-font" style="color:var(--fg);text-decoration:none;font-size:14px;">Games</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="${p}-poly-outline" style="padding:8px 16px;font-size:12px;" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-poly-btn" data-magnetic>JOIN TOURNAMENT ↗</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="${p}-hero">
+      <div>
+        <span class="esports-font" style="color:var(--neon);font-size:14px;letter-spacing:0.16em;">✦ WORLD CYBER ARENA SEASON IX</span>
+        <h1 class="${p}-h1 esports-font">
+          SHAPING THE FUTURE OF <span style="color:var(--neon);">ESPORTS</span>
+        </h1>
+        <p style="font-size:16px;color:var(--muted);max-width:520px;line-height:1.65;margin-bottom:28px;">
+          Enter high-stakes global brackets with real-time anti-cheat telemetry, instant smart-contract prize payouts, and 240Hz cloud spectator arenas.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <button type="button" class="${p}-poly-btn" data-magnetic onclick="document.getElementById('bameModal').classList.add('is-open')">EXPLORE MORE ↗</button>
+          <a href="#ourGames" class="${p}-poly-outline" style="text-decoration:none;">VIEW BRACKETS</a>
+        </div>
+      </div>
+
+      <div class="${p}-arena-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <span class="esports-font" style="color:var(--gold);font-size:13px;">★ JOIN THE BIG TOURNAMENTS</span>
+          <span class="esports-font" style="background:rgba(69,248,130,0.16);color:var(--neon);padding:4px 10px;font-size:12px;">PRIZE POOL: $250,000</span>
+        </div>
+        <img src="assets/cutout.webp" alt="Cyber-Wukong eSports Champion" class="${p}-wukong-img" />
+      </div>
+    </section>
+
+    <!-- KINETIC MARQUEE -->
+    <div class="${p}-marquee-bar" aria-label="eSports Highlights">
+      <div class="${p}-marquee-track">
+        <span>✦ GAMING SPANING</span><span>✦ ACTION - PACKED</span><span>✦ MIND - BENDING</span><span>✦ COLLECTION OG GAMES</span>
+        <span>✦ GAMING SPANING</span><span>✦ ACTION - PACKED</span><span>✦ MIND - BENDING</span><span>✦ COLLECTION OG GAMES</span>
+      </div>
+    </div>
+
+    <!-- ABOUT US: FORGING LEGENDS IN THE GAMING UNIVERSE -->
+    <section id="forgingLegends" class="${p}-sec">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:center;">
+        <div>
+          <span class="esports-font" style="color:var(--neon);font-size:13px;letter-spacing:0.14em;"># ABOUT OUR ARENA</span>
+          <h2 class="esports-font" style="font-size:clamp(32px,4.2vw,52px);margin:10px 0 18px;">
+            FORGING LEGENDS IN THE <span style="color:var(--gold);">GAMING UNIVERSE</span>
+          </h2>
+          <p style="font-size:15px;color:var(--muted);line-height:1.65;">
+            From grassroots 5v5 qualifiers to stadium-packed Masters finals, Bame powers pro rosters with sub-millisecond server mesh and automated tournament operations.
+          </p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+          <div class="${p}-game-card" style="text-align:center;">
+            <strong class="esports-font" style="font-size:34px;color:var(--neon);">10K+</strong>
+            <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Live Streams</span>
+          </div>
+          <div class="${p}-game-card" style="text-align:center;">
+            <strong class="esports-font" style="font-size:34px;color:var(--gold);">50+</strong>
+            <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Pro Leagues</span>
+          </div>
+          <div class="${p}-game-card" style="text-align:center;">
+            <strong class="esports-font" style="font-size:34px;color:#fff;">99.9%</strong>
+            <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Anti-Cheat</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR GAME SHOWCASE -->
+    <section id="ourGames" class="${p}-sec" style="padding-top:0;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span class="esports-font" style="color:var(--neon);font-size:13px;"># OFFICIAL TITLES</span>
+          <h2 class="esports-font" style="font-size:clamp(30px,3.8vw,46px);margin-top:6px;">OUR FEATURED GAMES</h2>
+        </div>
+      </div>
+      <div class="${p}-game-grid">
+        <article class="${p}-game-card">
+          <span class="esports-font" style="color:var(--neon);font-size:12px;">ENTRY FEE: FREE • 5V5 ARENA</span>
+          <h3 class="esports-font" style="font-size:24px;margin:10px 0;">THE HUNTER KILLER</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Tactical cyber-assault bracket with $50,000 weekly prize pool.</p>
+        </article>
+        <article class="${p}-game-card">
+          <span class="esports-font" style="color:var(--gold);font-size:12px;">ENTRY FEE: 10 USDT • CHAMPIONSHIP</span>
+          <h3 class="esports-font" style="font-size:24px;margin:10px 0;">NETLAND CHAMPIONS</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Mythic MOBA showdown featuring Cyber-Wukong division qualifiers.</p>
+        </article>
+        <article class="${p}-game-card">
+          <span class="esports-font" style="color:var(--neon);font-size:12px;">ENTRY FEE: VIP PASS • BATTLE ROYALE</span>
+          <h3 class="esports-font" style="font-size:24px;margin:10px 0;">CYBERPUNK ROYALE</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">60-squad neon drop-zone with live twitch telemetry overlays.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="bameModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="bameModalTitle">
+    <div class="${p}-arena-card" style="max-width:520px;width:100%;text-align:left;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span class="esports-font" style="color:var(--neon);font-size:13px;">BAME TOURNAMENT LOBBY</span>
+        <button type="button" class="${p}-poly-outline" style="padding:6px 12px;font-size:11px;" onclick="document.getElementById('bameModal').classList.remove('is-open')">CLOSE</button>
+      </div>
+      <h2 id="bameModalTitle" class="esports-font" style="font-size:28px;margin-bottom:10px;">REGISTER YOUR 5V5 ROSTER</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Lock in your team seed for the $250,000 World Cyber Arena qualifier.</p>
+      <button type="button" class="${p}-poly-btn" style="width:100%;" onclick="document.getElementById('bameModal').classList.remove('is-open')">CONFIRM SQUAD SEED</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var paused = false;
+      var btn = document.getElementById('motionToggleBtn');
+      if (btn) btn.addEventListener('click', function(){
+        paused = !paused;
+        btn.textContent = paused ? 'Motion: PAUSED' : 'Motion: ON';
+      });
+      document.querySelectorAll('[data-magnetic]').forEach(function(el){
+        el.addEventListener('mousemove', function(e){
+          if (paused) return;
+          var r = el.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.22;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.22;
+          el.style.transform = 'translate3d(' + dx.toFixed(1) + 'px,' + dy.toFixed(1) + 'px,0)';
+        });
+        el.addEventListener('mouseleave', function(){ el.style.transform = ''; });
+      });
+      var expBtn = document.getElementById('exploreMagneticBtn');
+      if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('bameModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>`;
+  }
+
+  // 3. APEX UPHEAVAL (Diagonal Crimson Slash Hero + 6-Platform Bar + 4-Col Squad Directives + Interactive Skewed Parallelogram Legend Roster)
+  // Motion Recipe: Skewed Parallelogram Hover Accordion & Mask Reveal + Split-Text Headline + Seamless Legend Dossier Modal
+  if (data.slug === 'apex-upheaval') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>APEX LEGENDS: UPHEAVAL — Tactical Legend Roster &amp; Season Hub</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0d0f;
+      --surface: #16171b;
+      --crimson: #c92a2a;
+      --crimson-bright: #ef4444;
+      --fg: #ffffff;
+      --muted: #9ca3af;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .font-teko { font-family: 'Teko', sans-serif; text-transform: uppercase; letter-spacing: 0.03em; }
+
+    .${p}-nav {
+      max-width: 1400px; margin: 0 auto; padding: 16px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.1); position: relative; z-index: 30;
+    }
+    .${p}-btn-apex {
+      padding: 10px 26px; background: var(--crimson); color: #fff;
+      font-family: 'Teko', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 0.06em;
+      border: none; cursor: pointer; transform: skewX(-10deg);
+    }
+
+    .${p}-hero {
+      position: relative; overflow: hidden; padding: 48px 24px 64px;
+      background: linear-gradient(125deg, #16171b 0%, #0d0d0f 52%, #7f1d1d 52.2%, #c92a2a 100%);
+    }
+    .${p}-hero-inner {
+      max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center;
+    }
+    @media (min-width: 980px) {
+      .${p}-hero-inner { grid-template-columns: 1.05fr 0.95fr; }
+    }
+    .${p}-h1 {
+      font-size: clamp(58px, 8.5vw, 118px); line-height: 0.88; margin: 10px 0 16px;
+    }
+    .${p}-cutout-img {
+      width: 100%; max-width: 420px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      filter: drop-shadow(0 28px 48px rgba(0,0,0,0.85));
+    }
+
+    .${p}-platform-bar {
+      background: #141519; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 16px 24px; display: flex; justify-content: center; gap: 36px; flex-wrap: wrap;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    }
+
+    .${p}-sec { max-width: 1360px; margin: 0 auto; padding: 76px 24px; }
+    .${p}-directives { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 28px; }
+    .${p}-dir-card {
+      background: var(--surface); border-left: 3px solid var(--crimson); padding: 24px;
+    }
+
+    /* Signature Skewed Parallelogram Legend Roster */
+    .${p}-roster-strip {
+      display: flex; gap: 10px; height: 340px; margin-top: 32px; overflow-x: auto; padding: 8px 18px;
+    }
+    .${p}-legend-slice {
+      flex: 1; min-width: 120px; background: linear-gradient(180deg, #27272a 0%, #111215 100%);
+      border: 1px solid rgba(255,255,255,0.14); transform: skewX(-10deg);
+      padding: 22px 18px; display: flex; flex-direction: column; justify-content: flex-end;
+      cursor: pointer; position: relative; overflow: hidden;
+      transition: flex 0.35s cubic-bezier(0.16,1,0.3,1), border-color 0.25s, background 0.3s;
+    }
+    .${p}-legend-slice:hover, .${p}-legend-slice.is-active {
+      flex: 2.2; border-color: var(--crimson-bright);
+      background: linear-gradient(180deg, rgba(201,42,42,0.55) 0%, #111215 100%);
+    }
+    .${p}-legend-slice > * { transform: skewX(10deg); }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(13,13,15,0.9); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <header class="${p}-nav">
+    <strong class="font-teko" style="font-size:30px;color:#fff;">APEX <span style="color:var(--crimson-bright);">UPHEAVAL</span></strong>
+    <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+      <a href="#directives" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;">ABOUT</a>
+      <a href="#legendRoster" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;">LEGENDS</a>
+      <a href="#latestNews" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;">NEWS</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" style="padding:7px 14px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-apex">PLAY FREE NOW</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="${p}-hero">
+      <div class="${p}-hero-inner">
+        <div>
+          <span style="display:inline-block;padding:4px 12px;background:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.12em;">SEASON 21 // OUTLANDS PROTOCOL</span>
+          <h1 class="${p}-h1 font-teko">APEX LEGENDS<br><span style="color:#fca5a5;">UPHEAVAL</span></h1>
+          <p style="font-size:15px;color:rgba(255,255,255,0.82);max-width:500px;line-height:1.6;margin-bottom:24px;">
+            Conquer with character in Apex Legends, a free-to-play Hero shooter where legendary challengers with powerful abilities team up to battle for fame &amp; fortune on the fringes of the Frontier.
+          </p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <button type="button" class="${p}-btn-apex" onclick="document.getElementById('apexModal').classList.add('is-open')">PLAY FREE*</button>
+            <a href="#legendRoster" class="${p}-btn-apex" style="background:rgba(255,255,255,0.12);text-decoration:none;">MEET THE LEGENDS</a>
+          </div>
+        </div>
+        <div>
+          <img src="assets/cutout.webp" alt="Apex Upheaval Legend Operative" class="${p}-cutout-img" />
+        </div>
+      </div>
+    </section>
+
+    <div class="${p}-platform-bar">
+      <span>PlayStation 4</span><span>PlayStation 5</span><span>Xbox One</span><span>Xbox Series X|S</span><span>Nintendo Switch</span><span>PC via EA App &amp; Steam</span>
+    </div>
+
+    <!-- 4-COLUMN SQUAD DIRECTIVES -->
+    <section id="directives" class="${p}-sec">
+      <h2 class="font-teko" style="font-size:clamp(36px,4.5vw,56px);">BEYOND BATTLE ROYALE</h2>
+      <div class="${p}-directives">
+        <article class="${p}-dir-card">
+          <span class="font-teko" style="font-size:22px;color:var(--crimson-bright);">01 // DROP IN</span>
+          <h3 class="font-teko" style="font-size:30px;margin:4px 0;">CHOOSE YOUR LANDING ZONE</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.55;">Master verticality and jumpmaster trajectories across Broken Moon and World's Edge.</p>
+        </article>
+        <article class="${p}-dir-card">
+          <span class="font-teko" style="font-size:22px;color:var(--crimson-bright);">02 // LOOT UP</span>
+          <h3 class="font-teko" style="font-size:30px;margin:4px 0;">EVO ARMOR &amp; LOADOUTS</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.55;">Level up your Legend class perks mid-match through squad combat and tactical objectives.</p>
+        </article>
+        <article class="${p}-dir-card">
+          <span class="font-teko" style="font-size:22px;color:var(--crimson-bright);">03 // SQUAD UP</span>
+          <h3 class="font-teko" style="font-size:30px;margin:4px 0;">ULTIMATE SYNERGY</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.55;">Combine void portals, sonar scans, and orbital bombardments for decisive wipes.</p>
+        </article>
+        <article class="${p}-dir-card">
+          <span class="font-teko" style="font-size:22px;color:var(--crimson-bright);">04 // BE THE LAST</span>
+          <h3 class="font-teko" style="font-size:30px;margin:4px 0;">APEX PREDATOR RANKED</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.55;">Outlast 20 squads inside the closing ring to claim the Apex Champion crown.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKEWED PARALLELOGRAM LEGEND ROSTER -->
+    <section id="legendRoster" class="${p}-sec" style="padding-top:0;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;">
+        <div>
+          <span style="font-size:12px;color:var(--crimson-bright);font-weight:700;letter-spacing:0.14em;">INTERACTIVE PARALLELOGRAM ROSTER</span>
+          <h2 class="font-teko" style="font-size:clamp(38px,4.8vw,62px);">MEET THE LEGENDS</h2>
+        </div>
+        <p id="activeLegendReadout" style="font-size:14px;color:#fca5a5;font-weight:600;">ACTIVE DOSSIER: WRAITH — INTERDIMENSIONAL SKIRMISHER</p>
+      </div>
+
+      <div class="${p}-roster-strip">
+        <div class="${p}-legend-slice is-active" data-legend="WRAITH — Interdimensional Skirmisher (Into the Void / Dimensional Rift)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">SKIRMISHER</span>
+          <strong class="font-teko" style="font-size:34px;">WRAITH</strong>
+        </div>
+        <div class="${p}-legend-slice" data-legend="PATHFINDER — Forward Scout (Grappling Hook / Zipline Gun)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">SKIRMISHER</span>
+          <strong class="font-teko" style="font-size:34px;">PATHFINDER</strong>
+        </div>
+        <div class="${p}-legend-slice" data-legend="BLOODHOUND — Technological Tracker (Eye of the Allfather / Beast of the Hunt)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">RECON</span>
+          <strong class="font-teko" style="font-size:34px;">BLOODHOUND</strong>
+        </div>
+        <div class="${p}-legend-slice" data-legend="LIFELINE — Combat Medic (D.O.C. Heal Drone / Care Package)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">SUPPORT</span>
+          <strong class="font-teko" style="font-size:34px;">LIFELINE</strong>
+        </div>
+        <div class="${p}-legend-slice" data-legend="BANGALORE — Professional Soldier (Smoke Launcher / Rolling Thunder)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">ASSAULT</span>
+          <strong class="font-teko" style="font-size:34px;">BANGALORE</strong>
+        </div>
+        <div class="${p}-legend-slice" data-legend="OCTANE — High-Speed Daredevil (Stim / Launch Pad)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">SKIRMISHER</span>
+          <strong class="font-teko" style="font-size:34px;">OCTANE</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="latestNews" class="${p}-sec" style="padding-top:0;">
+      <h2 class="font-teko" style="font-size:clamp(34px,4vw,52px);">LATEST DISPATCHES</h2>
+      <div class="${p}-directives">
+        <article class="${p}-dir-card"><span style="font-size:11px;color:var(--crimson-bright);">PATCH NOTES</span><h3 class="font-teko" style="font-size:26px;margin-top:6px;">UPHEAVAL MID-SEASON BALANCE UPDATE</h3></article>
+        <article class="${p}-dir-card"><span style="font-size:11px;color:var(--crimson-bright);">ALGS ESPORTS</span><h3 class="font-teko" style="font-size:26px;margin-top:6px;">SPLIT 2 PLAYOFFS BRACKET REVEALED</h3></article>
+        <article class="${p}-dir-card"><span style="font-size:11px;color:var(--crimson-bright);">MAP ROTATION</span><h3 class="font-teko" style="font-size:26px;margin-top:6px;">BROKEN MOON QUARANTINE ZONE GUIDE</h3></article>
+        <article class="${p}-dir-card"><span style="font-size:11px;color:var(--crimson-bright);">COLLECTION EVENT</span><h3 class="font-teko" style="font-size:26px;margin-top:6px;">VOID RECKONING PRESTIGE ARTIFACT</h3></article>
+      </div>
+    </section>
+  </main>
+
+  <div id="apexModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="apexModalTitle">
+    <div style="max-width:520px;width:100%;background:#16171b;border-left:4px solid var(--crimson);padding:32px;">
+      <h2 id="apexModalTitle" class="font-teko" style="font-size:38px;margin-bottom:8px;">DEPLOY TO THE OUTLANDS</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Select your platform to download Apex Legends: Upheaval free-to-play client.</p>
+      <button type="button" class="${p}-btn-apex" style="width:100%;" onclick="document.getElementById('apexModal').classList.remove('is-open')">LAUNCH EA APP / STEAM</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var slices = document.querySelectorAll('.${p}-legend-slice');
+      var readout = document.getElementById('activeLegendReadout');
+      slices.forEach(function(s){
+        s.addEventListener('mouseenter', function(){
+          slices.forEach(function(x){ x.classList.remove('is-active'); });
+          s.classList.add('is-active');
+          if (readout) readout.textContent = 'ACTIVE DOSSIER: ' + s.getAttribute('data-legend');
+        });
+      });
+      var expBtn = document.getElementById('exploreMagneticBtn');
+      if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('apexModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>`;
+  }
+
+  // 4. NOVA GLASS (High-Key Pearl-Ice Iridescent Frosted Glass UI/UX Portfolio + 3D Crystal Visor Bust + Animated Skill Progress Bars + 3x3 Tech Matrix)
+  // Motion Recipe: Scroll-Triggered Animated Progress Bars & Counters + 3D Specular Glass Card Tilt + Liquid SVG Iridescent Refraction
+  if (data.slug === 'nova-glass') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NOVA GLASS — Digital Designer &amp; Experience Architect</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-grad: linear-gradient(135deg, #eef4fb 0%, #dce8f7 50%, #e4ecfa 100%);
+      --glass: rgba(255, 255, 255, 0.58);
+      --glass-strong: rgba(255, 255, 255, 0.76);
+      --border: rgba(255, 255, 255, 0.85);
+      --fg: #0f172a;
+      --muted: #475569;
+      --blue: #2563eb;
+      --indigo: #4f46e5;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg-grad); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .font-syne { font-family: 'Syne', sans-serif; }
+
+    .${p}-frosted {
+      background: var(--glass); backdrop-filter: blur(22px) saturate(160%);
+      -webkit-backdrop-filter: blur(22px) saturate(160%);
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 50px rgba(30, 58, 138, 0.08), inset 0 1px 1px #ffffff;
+    }
+    .${p}-nav {
+      max-width: 1320px; margin: 18px auto 0; padding: 14px 28px; border-radius: 999px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-btn-blue {
+      padding: 10px 24px; border-radius: 999px;
+      background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+      color: #fff; font-size: 13px; font-weight: 700; border: none; cursor: pointer;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+    }
+
+    .${p}-hero {
+      max-width: 1320px; margin: 24px auto 0; padding: 36px; border-radius: 36px;
+      display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; position: relative;
+    }
+    @media (min-width: 980px) {
+      .${p}-hero { grid-template-columns: 1.1fr 0.9fr; }
+    }
+    .${p}-h1 {
+      font-size: clamp(48px, 7.2vw, 96px); font-weight: 800; line-height: 0.94; letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #0f172a 0%, #2563eb 55%, #6366f1 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin: 14px 0 18px;
+    }
+    .${p}-bust-img {
+      width: 100%; max-width: 390px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      filter: drop-shadow(0 24px 40px rgba(37,99,235,0.22));
+    }
+
+    .${p}-stats-row {
+      max-width: 1320px; margin: 22px auto 0; display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
+    }
+    .${p}-sec { max-width: 1320px; margin: 48px auto 0; }
+    .${p}-case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 22px; }
+    .${p}-bento-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 20px; margin-top: 22px; }
+    .${p}-bar-track { height: 8px; background: rgba(37,99,235,0.12); border-radius: 99px; overflow: hidden; margin-top: 6px; }
+    .${p}-bar-fill { height: 100%; background: linear-gradient(90deg, #2563eb, #6366f1); border-radius: 99px; transition: width 1s ease; }
+    .${p}-tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+    .${p}-tech-chip {
+      padding: 12px 8px; border-radius: 14px; background: var(--glass-strong);
+      border: 1px solid #fff; text-align: center; font-size: 12px; font-weight: 700; color: var(--fg);
+    }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(15,23,42,0.55); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body style="padding: 0 18px 64px;">
+  <header class="${p}-nav ${p}-frosted">
+    <strong class="font-syne" style="font-size:18px;letter-spacing:0.06em;color:var(--blue);">✦ NOVA GLASS</strong>
+    <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+      <a href="#caseStudies" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;">Case Studies</a>
+      <a href="#skillsMatrix" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;">Skills &amp; Stack</a>
+      <a href="#skillsMatrix" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;">Philosophy</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="${p}-frosted" style="padding:7px 14px;border-radius:999px;font-size:12px;font-weight:600;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-blue">Hire Me ↗</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="${p}-hero ${p}-frosted">
+      <div>
+        <span style="display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(37,99,235,0.1);color:var(--blue);font-size:12px;font-weight:700;">
+          DESIGNING THE FUTURE • SPATIAL UI/UX
+        </span>
+        <h1 class="${p}-h1 font-syne">NOVA<br>GLASS</h1>
+        <p style="font-size:17px;color:var(--muted);max-width:480px;line-height:1.6;margin-bottom:26px;">
+          Digital Designer &amp; Experience Architect crafting refractive spatial interfaces, tactile 3D design systems, and flagship consumer apps.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="${p}-btn-blue" onclick="document.getElementById('novaModal').classList.add('is-open')">Explore Portfolio ↗</button>
+          <a href="#skillsMatrix" class="${p}-frosted" style="padding:10px 22px;border-radius:999px;text-decoration:none;color:var(--fg);font-size:13px;font-weight:700;">View Tech Stack</a>
+        </div>
+      </div>
+      <div>
+        <img src="assets/cutout.webp" alt="Nova Glass 3D Crystal Visor Sculpture" class="${p}-bust-img" data-tilt-card />
+      </div>
+    </section>
+
+    <!-- 4-COLUMN GLASS STATS BAR -->
+    <div class="${p}-stats-row">
+      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+        <strong class="font-syne" style="font-size:32px;color:var(--blue);">5+</strong>
+        <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Years Experience</span>
+      </div>
+      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+        <strong class="font-syne" style="font-size:32px;color:var(--blue);">40+</strong>
+        <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Shipped Products</span>
+      </div>
+      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+        <strong class="font-syne" style="font-size:32px;color:var(--blue);">25+</strong>
+        <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Global Clients</span>
+      </div>
+      <div class="${p}-frosted" style="padding:20px;border-radius:24px;text-align:center;" data-tilt-card>
+        <strong class="font-syne" style="font-size:32px;color:var(--blue);">18</strong>
+        <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Design Awards</span>
+      </div>
+    </div>
+
+    <!-- FEATURED CASE STUDIES -->
+    <section id="caseStudies" class="${p}-sec">
+      <h2 class="font-syne" style="font-size:26px;">FEATURED CASE STUDIES</h2>
+      <div class="${p}-case-grid">
+        <article class="${p}-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+          <span style="font-size:11px;font-weight:700;color:var(--blue);">01 // VISION OS INTERFACE</span>
+          <h3 class="font-syne" style="font-size:20px;margin:10px 0 8px;">Aether Spatial Workspace</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Refractive eye-tracked windowing system and glassmorphic widget library.</p>
+        </article>
+        <article class="${p}-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+          <span style="font-size:11px;font-weight:700;color:var(--blue);">02 // FINTECH SUPER-APP</span>
+          <h3 class="font-syne" style="font-size:20px;margin:10px 0 8px;">Prism Private Banking</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Real-time 3D card configurator and biometric wealth analytics dashboard.</p>
+        </article>
+        <article class="${p}-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+          <span style="font-size:11px;font-weight:700;color:var(--blue);">03 // AI WEARABLE COMPANION</span>
+          <h3 class="font-syne" style="font-size:20px;margin:10px 0 8px;">Lumina Neural Optics</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">HUD typography and micro-interaction system for AR smart glasses.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3-COLUMN SKILLS & EXPERTISE / TECH STACK / DESIGN PHILOSOPHY -->
+    <section id="skillsMatrix" class="${p}-sec">
+      <div class="${p}-bento-3">
+        <div class="${p}-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+          <h3 class="font-syne" style="font-size:18px;margin-bottom:16px;">SKILLS &amp; EXPERTISE</h3>
+          <div style="margin-bottom:12px;">
+            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;"><span>Spatial UI/UX Design</span><span>96%</span></div>
+            <div class="${p}-bar-track"><div class="${p}-bar-fill" style="width:96%;"></div></div>
+          </div>
+          <div style="margin-bottom:12px;">
+            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;"><span>3D &amp; Interactive Motion</span><span>92%</span></div>
+            <div class="${p}-bar-track"><div class="${p}-bar-fill" style="width:92%;"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;"><span>Design Systems &amp; Tokens</span><span>95%</span></div>
+            <div class="${p}-bar-track"><div class="${p}-bar-fill" style="width:95%;"></div></div>
+          </div>
+        </div>
+
+        <div class="${p}-frosted" style="padding:26px;border-radius:26px;" data-tilt-card>
+          <h3 class="font-syne" style="font-size:18px;">TECH STACK</h3>
+          <div class="${p}-tech-grid">
+            <span class="${p}-tech-chip">Figma</span><span class="${p}-tech-chip">Spline</span><span class="${p}-tech-chip">Blender</span>
+            <span class="${p}-tech-chip">React</span><span class="${p}-tech-chip">Three.js</span><span class="${p}-tech-chip">GSAP</span>
+            <span class="${p}-tech-chip">Framer</span><span class="${p}-tech-chip">Next.js</span><span class="${p}-tech-chip">WebGL</span>
+          </div>
+        </div>
+
+        <div class="${p}-frosted" style="padding:26px;border-radius:26px;display:flex;flex-direction:column;justify-content:space-between;" data-tilt-card>
+          <div>
+            <h3 class="font-syne" style="font-size:18px;margin-bottom:10px;">DESIGN PHILOSOPHY</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.65;">
+              “Clarity through refraction — every glass layer should guide attention effortlessly while rewarding curiosity with tactile depth.”
+            </p>
+          </div>
+          <button type="button" class="${p}-btn-blue" style="margin-top:16px;width:100%;" onclick="document.getElementById('novaModal').classList.add('is-open')">
+            Let's Create Something Extraordinary
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="novaModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="novaModalTitle">
+    <div class="${p}-frosted" style="max-width:520px;width:100%;padding:32px;border-radius:28px;background:rgba(255,255,255,0.92);">
+      <h2 id="novaModalTitle" class="font-syne" style="font-size:26px;margin-bottom:10px;">Commission Nova Glass Studio</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Available for Q2/Q3 spatial product design, 3D brand systems, and executive design advisory.</p>
+      <button type="button" class="${p}-btn-blue" style="width:100%;" onclick="document.getElementById('novaModal').classList.remove('is-open')">Send Project Brief</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      document.querySelectorAll('[data-tilt-card]').forEach(function(card){
+        card.addEventListener('mousemove', function(e){
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / r.width - 0.5;
+          var ny = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = 'perspective(900px) rotateX(' + (-ny * 8).toFixed(2) + 'deg) rotateY(' + (nx * 10).toFixed(2) + 'deg)';
+        });
+        card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
+      });
+      var expBtn = document.getElementById('exploreMagneticBtn');
+      if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('novaModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>`;
+  }
+
+  // 5. ALEX CARTER UI (Deep Teal-Obsidian #061116 + Neon-Cyan #00e5ff Wireframe Glassmorphism + 3D Tesseract Cube + Interactive 01-05 Process Timeline)
+  // Motion Recipe: Zero-Gravity Floating 3D Tesseract Cube + Interactive 01-05 Process Stepper + Neon-Cyan Glow Cards
+  if (data.slug === 'alex-carter-ui') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ALEX CARTER — Futuristic Glassmorphism Web Developer &amp; UI/UX Portfolio</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #061116;
+      --glass: rgba(10, 28, 36, 0.68);
+      --cyan: #00e5ff;
+      --cyan-soft: rgba(0, 229, 255, 0.28);
+      --fg: #ecfeff;
+      --muted: #94a3b8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: radial-gradient(circle at 50% 0%, #0c2631 0%, #061116 70%); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .font-space { font-family: 'Space Grotesk', sans-serif; }
+
+    .${p}-cyan-card {
+      background: var(--glass); backdrop-filter: blur(20px);
+      border: 1px solid var(--cyan-soft); border-radius: 22px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), inset 0 0 18px rgba(0, 229, 255, 0.06);
+      padding: 24px; transition: border-color 0.25s, transform 0.25s;
+    }
+    .${p}-cyan-card:hover { border-color: var(--cyan); }
+    .${p}-btn-cyan {
+      padding: 11px 24px; border-radius: 999px; background: var(--cyan); color: #041014;
+      font-size: 13px; font-weight: 800; border: none; cursor: pointer;
+      box-shadow: 0 0 24px rgba(0, 229, 255, 0.45);
+    }
+
+    .${p}-wrap { max-width: 1340px; margin: 0 auto; padding: 20px 24px 80px; }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px;
+      padding: 14px 24px; border-radius: 999px;
+    }
+    .${p}-hero {
+      display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; margin-bottom: 28px;
+    }
+    @media (min-width: 980px) {
+      .${p}-hero { grid-template-columns: 1.1fr 0.9fr; }
+    }
+    .${p}-h1 {
+      font-size: clamp(42px, 6vw, 76px); font-weight: 700; line-height: 1.02; margin: 12px 0 16px;
+    }
+    .${p}-cube-img {
+      width: 100%; max-width: 360px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      animation: ${p}CubeFloat 6s ease-in-out infinite;
+      filter: drop-shadow(0 24px 44px rgba(0,229,255,0.28));
+    }
+    @keyframes ${p}CubeFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+    .${p}-dashboard {
+      display: grid; grid-template-columns: 1fr; gap: 20px;
+    }
+    @media (min-width: 980px) {
+      .${p}-dashboard { grid-template-columns: 1fr 1fr; }
+    }
+    .${p}-hex-wrap { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .${p}-hex-chip {
+      padding: 8px 16px; border-radius: 999px; background: rgba(0,229,255,0.1);
+      border: 1px solid var(--cyan-soft); color: var(--cyan); font-size: 12px; font-weight: 700;
+    }
+    .${p}-step-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 18px;
+    }
+    .${p}-step-node {
+      padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.03);
+      border: 1px solid var(--cyan-soft); cursor: pointer; text-align: left; color: var(--fg);
+    }
+    .${p}-step-node.is-active { background: rgba(0,229,255,0.16); border-color: var(--cyan); }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(6,17,22,0.88); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <div class="${p}-wrap">
+    <header class="${p}-nav ${p}-cyan-card">
+      <strong class="font-space" style="font-size:18px;color:var(--cyan);letter-spacing:0.08em;">◈ ALEX CARTER</strong>
+      <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+        <a href="#dashboardGrid" style="color:var(--muted);text-decoration:none;font-size:13px;">About</a>
+        <a href="#dashboardGrid" style="color:var(--muted);text-decoration:none;font-size:13px;">Projects</a>
+        <a href="#workProcess" style="color:var(--muted);text-decoration:none;font-size:13px;">Process 01–05</a>
+      </nav>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-cyan">Hire Alex ↗</button>
+    </header>
+
+    <main>
+      <section class="${p}-hero ${p}-cyan-card">
+        <div>
+          <span style="font-size:12px;color:var(--cyan);letter-spacing:0.14em;font-weight:700;">FUTURISTIC GLASSMORPHISM ARCHITECT</span>
+          <h1 class="${p}-h1 font-space">ALEX <span style="color:var(--cyan);">CARTER</span></h1>
+          <p style="font-size:16px;color:var(--muted);max-width:520px;line-height:1.6;margin-bottom:24px;">
+            Full-Stack Creative Technologist &amp; UI/UX Engineer building holographic WebGL dashboards, spatial design systems, and low-latency AI interfaces.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <button type="button" class="${p}-btn-cyan" onclick="document.getElementById('carterModal').classList.add('is-open')">Explore Projects ↗</button>
+            <a href="#workProcess" style="padding:11px 22px;border-radius:999px;border:1px solid var(--cyan-soft);color:var(--fg);text-decoration:none;font-size:13px;font-weight:600;">Work Process</a>
+          </div>
+        </div>
+        <div>
+          <img src="assets/cutout.webp" alt="3D Neon Cyan Glassmorphic Tesseract Cube" class="${p}-cube-img" />
+        </div>
+      </section>
+
+      <!-- ASYMMETRIC GLASSMORPHIC DASHBOARD -->
+      <section id="dashboardGrid" class="${p}-dashboard">
+        <article class="${p}-cyan-card">
+          <span style="font-size:11px;color:var(--cyan);font-weight:700;">01 // ABOUT &amp; TECHNICAL MATRIX</span>
+          <h2 class="font-space" style="font-size:22px;margin:8px 0;">Full-Stack UI/UX Engineering</h2>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">
+            8+ years bridging high-craft glassmorphic Figma systems with 60FPS React, Three.js, and Rust WebAssembly runtimes.
+          </p>
+          <div class="${p}-hex-wrap">
+            <span class="${p}-hex-chip">React 19</span><span class="${p}-hex-chip">TypeScript</span><span class="${p}-hex-chip">Three.js / R3F</span>
+            <span class="${p}-hex-chip">GLSL Shaders</span><span class="${p}-hex-chip">Next.js</span><span class="${p}-hex-chip">Figma Tokens</span>
+          </div>
+        </article>
+
+        <article class="${p}-cyan-card">
+          <span style="font-size:11px;color:var(--cyan);font-weight:700;">02 // FEATURED DEPLOYMENTS</span>
+          <h2 class="font-space" style="font-size:22px;margin:8px 0;">Selected Spatial Interfaces</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+            <div style="padding:14px;border-radius:14px;background:rgba(0,229,255,0.06);border:1px solid var(--cyan-soft);">
+              <strong style="font-size:15px;display:block;">HoloTrade DEX</strong>
+              <span style="font-size:12px;color:var(--muted);">$1.2B Volume Terminal</span>
+            </div>
+            <div style="padding:14px;border-radius:14px;background:rgba(0,229,255,0.06);border:1px solid var(--cyan-soft);">
+              <strong style="font-size:15px;display:block;">NeuroSynth OS</strong>
+              <span style="font-size:12px;color:var(--muted);">Spatial Audio DAW</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- WORK PROCESS 01-05 INTERACTIVE STEPPER -->
+      <section id="workProcess" class="${p}-cyan-card" style="margin-top:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;">
+          <div>
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">03 // INTERACTIVE WORKFLOW PIPELINE</span>
+            <h2 class="font-space" style="font-size:22px;margin-top:4px;">WORK PROCESS 01 — 05</h2>
+          </div>
+          <p id="processDetailText" style="font-size:13px;color:var(--cyan);">Step 01: Deep architecture discovery, KPI telemetry mapping, and user journey blueprinting.</p>
+        </div>
+        <div class="${p}-step-row">
+          <button type="button" class="${p}-step-node is-active" data-step="Step 01: Deep architecture discovery, KPI telemetry mapping, and user journey blueprinting.">
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">01</span>
+            <strong style="display:block;font-size:14px;margin-top:4px;">Discovery</strong>
+          </button>
+          <button type="button" class="${p}-step-node" data-step="Step 02: Interactive spatial wireframing and glassmorphic component token architecture.">
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">02</span>
+            <strong style="display:block;font-size:14px;margin-top:4px;">Wireframing</strong>
+          </button>
+          <button type="button" class="${p}-step-node" data-step="Step 03: Custom 3D Octane/Spline modeling, shader authoring, and micro-interaction choreography.">
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">03</span>
+            <strong style="display:block;font-size:14px;margin-top:4px;">3D &amp; Visual UI</strong>
+          </button>
+          <button type="button" class="${p}-step-node" data-step="Step 04: Clean production TypeScript, WebGL canvas optimization, and accessible DOM engineering.">
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">04</span>
+            <strong style="display:block;font-size:14px;margin-top:4px;">Full-Stack Code</strong>
+          </button>
+          <button type="button" class="${p}-step-node" data-step="Step 05: Multi-viewport 120FPS performance auditing and edge deployment.">
+            <span style="font-size:11px;color:var(--cyan);font-weight:700;">05</span>
+            <strong style="display:block;font-size:14px;margin-top:4px;">QA &amp; Launch</strong>
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="carterModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="carterModalTitle">
+    <div class="${p}-cyan-card" style="max-width:500px;width:100%;background:#081820;">
+      <h2 id="carterModalTitle" class="font-space" style="font-size:24px;margin-bottom:10px;color:var(--cyan);">Initiate Project Transmission</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Direct engineering &amp; UI/UX consulting availability for Q2/Q3.</p>
+      <button type="button" class="${p}-btn-cyan" style="width:100%;" onclick="document.getElementById('carterModal').classList.remove('is-open')">Transmit Specification</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var nodes = document.querySelectorAll('.${p}-step-node');
+      var detail = document.getElementById('processDetailText');
+      nodes.forEach(function(n){
+        n.addEventListener('click', function(){
+          nodes.forEach(function(x){ x.classList.remove('is-active'); });
+          n.classList.add('is-active');
+          if (detail) detail.textContent = n.getAttribute('data-step');
+        });
+      });
+      var expBtn = document.getElementById('exploreMagneticBtn');
+      if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('carterModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>`;
+  }
+
 
   return `<!DOCTYPE html>
 <html lang="en">

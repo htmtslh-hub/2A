@@ -1,0 +1,38 @@
+{
+  "id": "t136",
+  "slug": "nova-glass",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T12:11:08.271Z",
+  "demo": "/demos/nova-glass/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "c39180abcfd1",
+  "sha256": "c39180abcfd1b6bfe90f2c7e669c5776145d1b304f2dbc0b53011a32465bc9f3",
+  "demoHtmlSha256": "ff7d82e5dc4ea6c242487383d438f39cc6e900aa2a1791d5f6aa0df265e4922c",
+  "demoSha256": "056138c56c5e37a55aa0e60fd4e2e1020a6558536d24eff57d740587d1a05dec",
+  "bytes": 395297,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 450
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nova-glass-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nova-glass-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nova-glass-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nova-glass-return.jpg"
+  ]
+}

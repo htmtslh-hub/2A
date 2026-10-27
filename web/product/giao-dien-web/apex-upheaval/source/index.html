@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>APEX LEGENDS: UPHEAVAL — Tactical Legend Roster &amp; Season Hub</title>
+  <meta name="description" content="Futuristic battle-royale landing page with diagonal crimson slash hero, 6-platform bar, 4-column squad directives, and interactive skewed parallelogram Legend roster.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0d0f;
+      --surface: #16171b;
+      --crimson: #c92a2a;
+      --crimson-bright: #ef4444;
+      --fg: #ffffff;
+      --muted: #9ca3af;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .font-teko { font-family: 'Teko', sans-serif; text-transform: uppercase; letter-spacing: 0.03em; }
+
+    .ape50-nav {
+      max-width: 1400px; margin: 0 auto; padding: 16px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.1); position: relative; z-index: 30;
+    }
+    .ape50-btn-apex {
+      padding: 10px 26px; background: var(--crimson); color: #fff;
+      font-family: 'Teko', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 0.06em;
+      border: none; cursor: pointer; transform: skewX(-10deg);
+    }
+
+    .ape50-hero {
+      position: relative; overflow: hidden; padding: 48px 24px 64px;
+      background: linear-gradient(125deg, #16171b 0%, #0d0d0f 52%, #7f1d1d 52.2%, #c92a2a 100%);
+    }
+    .ape50-hero-inner {
+      max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center;
+    }
+    @media (min-width: 980px) {
+      .ape50-hero-inner { grid-template-columns: 1.05fr 0.95fr; }
+    }
+    .ape50-h1 {
+      font-size: clamp(58px, 8.5vw, 118px); line-height: 0.88; margin: 10px 0 16px;
+    }
+    .ape50-cutout-img {
+      width: 100%; max-width: 420px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      filter: drop-shadow(0 28px 48px rgba(0,0,0,0.85));
+    }
+
+    .ape50-platform-bar {
+      background: #141519; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 16px 24px; display: flex; justify-content: center; gap: 36px; flex-wrap: wrap;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    }
+
+    .ape50-sec { max-width: 1360px; margin: 0 auto; padding: 76px 24px; }
+    .ape50-directives { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 28px; }
+    .ape50-dir-card {
+      background: var(--surface); border-left: 3px solid var(--crimson); padding: 24px;
+    }
+
+    /* Signature Skewed Parallelogram Legend Roster */
+    .ape50-roster-strip {
+      display: flex; gap: 10px; height: 340px; margin-top: 32px; overflow-x: auto; padding: 8px 18px;
+    }
+    .ape50-legend-slice {
+      flex: 1; min-width: 120px; background: linear-gradient(180deg, #27272a 0%, #111215 100%);
+      border: 1px solid rgba(255,255,255,0.14); transform: skewX(-10deg);
+      padding: 22px 18px; display: flex; flex-direction: column; justify-content: flex-end;
+      cursor: pointer; position: relative; overflow: hidden;
+      transition: flex 0.35s cubic-bezier(0.16,1,0.3,1), border-color 0.25s, background 0.3s;
+    }
+    .ape50-legend-slice:hover, .ape50-legend-slice.is-active {
+      flex: 2.2; border-color: var(--crimson-bright);
+      background: linear-gradient(180deg, rgba(201,42,42,0.55) 0%, #111215 100%);
+    }
+    .ape50-legend-slice > * { transform: skewX(10deg); }
+    .ape50-modal { position: fixed; inset: 0; z-index: 900; background: rgba(13,13,15,0.9); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .ape50-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <header class="ape50-nav">
+    <strong class="font-teko" style="font-size:30px;color:#fff;">APEX <span style="color:var(--crimson-bright);">UPHEAVAL</span></strong>
+    <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+      <a href="#directives" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;">ABOUT</a>
+      <a href="#legendRoster" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;">LEGENDS</a>
+      <a href="#latestNews" style="color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;">NEWS</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" style="padding:7px 14px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="ape50-btn-apex">PLAY FREE NOW</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="ape50-hero">
+      <div class="ape50-hero-inner">
+        <div>
+          <span style="display:inline-block;padding:4px 12px;background:var(--crimson);font-size:12px;font-weight:700;letter-spacing:0.12em;">SEASON 21 // OUTLANDS PROTOCOL</span>
+          <h1 class="ape50-h1 font-teko">APEX LEGENDS<br><span style="color:#fca5a5;">UPHEAVAL</span></h1>
+          <p style="font-size:15px;color:rgba(255,255,255,0.82);max-width:500px;line-height:1.6;margin-bottom:24px;">
+            Conquer with character in Apex Legends, a free-to-play Hero shooter where legendary challengers with powerful abilities team up to battle for fame &amp; fortune on the fringes of the Frontier.
+          </p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <button type="button" class="ape50-btn-apex" onclick="document.getElementById('apexModal').classList.add('is-open')">PLAY FREE*</button>
+            <a href="#legendRoster" class="ape50-btn-apex" style="background:rgba(255,255,255,0.12);text-decoration:none;">MEET THE LEGENDS</a>
+          </div>
+        </div>
+        <div>
+          <img src="assets/cutout.webp" alt="Apex Upheaval Legend Operative" class="ape50-cutout-img" />
+        </div>
+      </div>
+    </section>
+
+    <div class="ape50-platform-bar">
+      <span>PlayStation 4</span><span>PlayStation 5</span><span>Xbox One</span><span>Xbox Series X|S</span><span>Nintendo Switch</span><span>PC via EA App &amp; Steam</span>
+    </div>
+
+    <!-- 4-COLUMN SQUAD DIRECTIVES -->
+    <section id="directives" class="ape50-sec">
+      <h2 class="font-teko" style="font-size:clamp(36px,4.5vw,56px);">BEYOND BATTLE ROYALE</h2>
+      <div class="ape50-directives">
+        <article class="ape50-dir-card">
+          <span class="font-teko" style="font-size:22px;color:var(--crimson-bright);">01 // DROP IN</span>
+          <h3 class="font-teko" style="font-size:30px;margin:4px 0;">CHOOSE YOUR LANDING ZONE</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.55;">Master verticality and jumpmaster trajectories across Broken Moon and World's Edge.</p>
+        </article>
+        <article class="ape50-dir-card">
+          <span class="font-teko" style="font-size:22px;color:var(--crimson-bright);">02 // LOOT UP</span>
+          <h3 class="font-teko" style="font-size:30px;margin:4px 0;">EVO ARMOR &amp; LOADOUTS</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.55;">Level up your Legend class perks mid-match through squad combat and tactical objectives.</p>
+        </article>
+        <article class="ape50-dir-card">
+          <span class="font-teko" style="font-size:22px;color:var(--crimson-bright);">03 // SQUAD UP</span>
+          <h3 class="font-teko" style="font-size:30px;margin:4px 0;">ULTIMATE SYNERGY</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.55;">Combine void portals, sonar scans, and orbital bombardments for decisive wipes.</p>
+        </article>
+        <article class="ape50-dir-card">
+          <span class="font-teko" style="font-size:22px;color:var(--crimson-bright);">04 // BE THE LAST</span>
+          <h3 class="font-teko" style="font-size:30px;margin:4px 0;">APEX PREDATOR RANKED</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.55;">Outlast 20 squads inside the closing ring to claim the Apex Champion crown.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKEWED PARALLELOGRAM LEGEND ROSTER -->
+    <section id="legendRoster" class="ape50-sec" style="padding-top:0;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;">
+        <div>
+          <span style="font-size:12px;color:var(--crimson-bright);font-weight:700;letter-spacing:0.14em;">INTERACTIVE PARALLELOGRAM ROSTER</span>
+          <h2 class="font-teko" style="font-size:clamp(38px,4.8vw,62px);">MEET THE LEGENDS</h2>
+        </div>
+        <p id="activeLegendReadout" style="font-size:14px;color:#fca5a5;font-weight:600;">ACTIVE DOSSIER: WRAITH — INTERDIMENSIONAL SKIRMISHER</p>
+      </div>
+
+      <div class="ape50-roster-strip">
+        <div class="ape50-legend-slice is-active" data-legend="WRAITH — Interdimensional Skirmisher (Into the Void / Dimensional Rift)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">SKIRMISHER</span>
+          <strong class="font-teko" style="font-size:34px;">WRAITH</strong>
+        </div>
+        <div class="ape50-legend-slice" data-legend="PATHFINDER — Forward Scout (Grappling Hook / Zipline Gun)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">SKIRMISHER</span>
+          <strong class="font-teko" style="font-size:34px;">PATHFINDER</strong>
+        </div>
+        <div class="ape50-legend-slice" data-legend="BLOODHOUND — Technological Tracker (Eye of the Allfather / Beast of the Hunt)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">RECON</span>
+          <strong class="font-teko" style="font-size:34px;">BLOODHOUND</strong>
+        </div>
+        <div class="ape50-legend-slice" data-legend="LIFELINE — Combat Medic (D.O.C. Heal Drone / Care Package)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">SUPPORT</span>
+          <strong class="font-teko" style="font-size:34px;">LIFELINE</strong>
+        </div>
+        <div class="ape50-legend-slice" data-legend="BANGALORE — Professional Soldier (Smoke Launcher / Rolling Thunder)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">ASSAULT</span>
+          <strong class="font-teko" style="font-size:34px;">BANGALORE</strong>
+        </div>
+        <div class="ape50-legend-slice" data-legend="OCTANE — High-Speed Daredevil (Stim / Launch Pad)">
+          <span style="font-size:11px;color:#fca5a5;font-weight:700;">SKIRMISHER</span>
+          <strong class="font-teko" style="font-size:34px;">OCTANE</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="latestNews" class="ape50-sec" style="padding-top:0;">
+      <h2 class="font-teko" style="font-size:clamp(34px,4vw,52px);">LATEST DISPATCHES</h2>
+      <div class="ape50-directives">
+        <article class="ape50-dir-card"><span style="font-size:11px;color:var(--crimson-bright);">PATCH NOTES</span><h3 class="font-teko" style="font-size:26px;margin-top:6px;">UPHEAVAL MID-SEASON BALANCE UPDATE</h3></article>
+        <article class="ape50-dir-card"><span style="font-size:11px;color:var(--crimson-bright);">ALGS ESPORTS</span><h3 class="font-teko" style="font-size:26px;margin-top:6px;">SPLIT 2 PLAYOFFS BRACKET REVEALED</h3></article>
+        <article class="ape50-dir-card"><span style="font-size:11px;color:var(--crimson-bright);">MAP ROTATION</span><h3 class="font-teko" style="font-size:26px;margin-top:6px;">BROKEN MOON QUARANTINE ZONE GUIDE</h3></article>
+        <article class="ape50-dir-card"><span style="font-size:11px;color:var(--crimson-bright);">COLLECTION EVENT</span><h3 class="font-teko" style="font-size:26px;margin-top:6px;">VOID RECKONING PRESTIGE ARTIFACT</h3></article>
+      </div>
+    </section>
+  </main>
+
+  <div id="apexModal" class="ape50-modal" role="dialog" aria-modal="true" aria-labelledby="apexModalTitle">
+    <div style="max-width:520px;width:100%;background:#16171b;border-left:4px solid var(--crimson);padding:32px;">
+      <h2 id="apexModalTitle" class="font-teko" style="font-size:38px;margin-bottom:8px;">DEPLOY TO THE OUTLANDS</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Select your platform to download Apex Legends: Upheaval free-to-play client.</p>
+      <button type="button" class="ape50-btn-apex" style="width:100%;" onclick="document.getElementById('apexModal').classList.remove('is-open')">LAUNCH EA APP / STEAM</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var slices = document.querySelectorAll('.ape50-legend-slice');
+      var readout = document.getElementById('activeLegendReadout');
+      slices.forEach(function(s){
+        s.addEventListener('mouseenter', function(){
+          slices.forEach(function(x){ x.classList.remove('is-active'); });
+          s.classList.add('is-active');
+          if (readout) readout.textContent = 'ACTIVE DOSSIER: ' + s.getAttribute('data-legend');
+        });
+      });
+      var expBtn = document.getElementById('exploreMagneticBtn');
+      if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('apexModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>

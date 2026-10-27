@@ -1,0 +1,38 @@
+{
+  "id": "t138",
+  "slug": "power-ai",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T12:12:55.617Z",
+  "demo": "/demos/power-ai/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "93297d2c4ffc",
+  "sha256": "93297d2c4ffc59f4f4afb05913f4b62e8b329fc889b9849b1f2d656107c8fddf",
+  "demoHtmlSha256": "6f359a7f6c9332afd39d4f63b8f75a5be9b7d024ea42fc85e04096a63c53c502",
+  "demoSha256": "a2b6b9a02d85b279e62e27421b269472ba6f518434297de742613c129a8cef78",
+  "bytes": 490162,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 488
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\power-ai-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\power-ai-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\power-ai-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\power-ai-return.jpg"
+  ]
+}

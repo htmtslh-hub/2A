@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
-import { resolve, dirname, extname } from 'node:path';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, copyFileSync, renameSync } from 'node:fs';
+import { resolve, dirname, extname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
@@ -502,6 +502,55 @@ async function downloadAndVerifyPinImage(pinInfo, keyword, dateStr) {
   };
 }
 
+const CREATIVE_MOTION_RECIPES = [
+  {
+    id: 'recipe-parallax-magnetic',
+    name: 'Parallax Depth + 3D Pop-Out + Magnetic CTA',
+    focus: ['parallax-layers', 'magnetic-buttons', 'floating-3d-cutout'],
+    description: 'Tập trung vào chiều sâu thị sai nhiều lớp (Parallax), vật thể 3D nổi lấn khung và nút bấm từ tính nhẹ nhàng.'
+  },
+  {
+    id: 'recipe-tilt-splittext',
+    name: 'Split-Text Staggered Reveal + 3D Card Tilt + Blend Cursor',
+    focus: ['split-text-reveal', '3d-card-tilt', 'image-zoom-mask', 'custom-blend-cursor'],
+    description: 'Tập trung vào nghệ thuật chữ tách ký tự (Split-Text), thẻ kính mờ nghiêng 3D khi rê chuột và con trỏ Blend-mode.'
+  },
+  {
+    id: 'recipe-horizontal-liquid',
+    name: 'Horizontal Showcase Scroll + Liquid Wave Filter + Seamless Modal',
+    focus: ['horizontal-scroll', 'liquid-ripple-distortion', 'seamless-modal-transition'],
+    description: 'Tập trung vào cuộn ngang bộ sưu tập (Horizontal Scroll), hiệu ứng gợn sóng chất lỏng SVG/WebGL và chuyển cảnh phóng to mượt mà.'
+  },
+  {
+    id: 'recipe-sticky-counters',
+    name: 'Sticky Pinned Storytelling + Scroll Scrubbing + Number Counters',
+    focus: ['sticky-pinned-stage', 'scroll-scrub-rotation', 'number-counters'],
+    description: 'Tập trung vào ghim cố định chủ thể ở giữa màn hình xoay theo thanh cuộn (Scroll Scrubbing) kết hợp đếm số tự động.'
+  },
+  {
+    id: 'recipe-ambient-marquee',
+    name: 'Ambient Particle Canvas + Kinetic Marquee + Cutout Glass Tabs',
+    focus: ['ambient-smoke-particles', 'infinite-marquee', 'inverted-cutout-tabs'],
+    description: 'Tập trung vào hệ thống hạt bụi/khói chuyển động nền (Ambient Canvas), chữ chạy vô tận (Marquee) và thẻ bo góc Cutout.'
+  }
+];
+
+function parseFilenameHint(filename, index) {
+  const base = basename(filename, extname(filename));
+  let tierHint = null;
+  let cleanBase = base;
+  if (/^free[-_\s]+/i.test(cleanBase)) {
+    tierHint = 'free';
+    cleanBase = cleanBase.replace(/^free[-_\s]+/i, '');
+  } else if (/^premium[-_\s]+/i.test(cleanBase)) {
+    tierHint = 'premium';
+    cleanBase = cleanBase.replace(/^premium[-_\s]+/i, '');
+  }
+  const title = cleanPinTitle(cleanBase.replace(/[-_]+/g, ' '), 'Hero Showcase', 1000 + index);
+  const slug = slugify(title);
+  return { title, slug, tierHint };
+}
+
 export async function runPinterestFetchPipeline(options = {}) {
   const state = JSON.parse(readFileSync(statePath, 'utf8'));
   const replaceSlugs = Array.isArray(options.replaceSlugs) ? options.replaceSlugs : [];
@@ -524,101 +573,107 @@ export async function runPinterestFetchPipeline(options = {}) {
   state.todayCreatedCount = state.todayCopiedCount;
   state.todayFreeCount = state.todayFreeCount || 0;
   state.todayPremiumCount = state.todayPremiumCount || 0;
-  state.keywordCursor = state.keywordCursor || 0;
 
-  await checkPinterestHomefeed();
+  // Read reference images directly from the user's daily drop-folder: D:\2A\anh-mau-pinterest
+  const inboxDir = resolve(root, 'anh-mau-pinterest');
+  const archiveDir = resolve(inboxDir, 'da-lam', today);
+  const downloadsDir = resolve(__dirname, 'downloads', today);
+  mkdirSync(inboxDir, { recursive: true });
+  mkdirSync(archiveDir, { recursive: true });
+  mkdirSync(downloadsDir, { recursive: true });
 
-  const keywords = config.keywords || ['Website Hero Section UI', 'Desktop Web Concept Dribbble', '3D Pop-out Website Hero Design'];
-  const candidateQueue = [];
+  const entries = readdirSync(inboxDir, { withFileTypes: true })
+    .filter(e => e.isFile() && /\.(png|jpe?g|webp)$/i.test(e.name))
+    .sort((a, b) => a.name.localeCompare(b.name));
 
-  const kw = keywords[state.keywordCursor % keywords.length];
-  state.keywordCursor = (state.keywordCursor + 1) % keywords.length;
-  console.log(`[Step 2] Searching Pinterest Hero UI keyword: "${kw}"...`);
-  const ids = await searchPinterestKeyword(kw);
-  console.log(`  -> Found ${ids.length} candidate Desktop Hero UI Pin IDs.`);
-  for (let i = 0; i < ids.length; i++) {
-    const id = ids[i];
-    if (!processedPinIds.has(id)) {
-      candidateQueue.push({ pinId: id, keyword: keywords[i % keywords.length] });
-    }
+  if (entries.length === 0) {
+    console.log(`[Inbox Empty] Chưa có ảnh mới trong thư mục ${inboxDir}. Hãy bỏ ảnh (.png, .jpg, .webp) vào D:\\2A\\anh-mau-pinterest để Agent thực hiện.`);
+    return [];
   }
+
+  console.log(`[Inbox] Tìm thấy ${entries.length} ảnh mẫu trong ${inboxDir}. Bắt đầu phân tích thị giác & phối tổ hợp hiệu ứng sáng tạo...`);
 
   const fetchedList = [];
   const targetCount = replaceSlugs.length > 0 ? replaceSlugs.length : config.dailyLimit;
 
-  for (const cand of candidateQueue) {
+  for (let i = 0; i < entries.length; i++) {
     if (fetchedList.length >= targetCount || state.todayCopiedCount >= config.dailyLimit) {
       break;
     }
 
-    if (processedPinIds.has(cand.pinId)) continue;
+    const fileEntry = entries[i];
+    const srcPath = resolve(inboxDir, fileEntry.name);
+    const buf = readFileSync(srcPath);
+    const sha256 = createHash('sha256').update(buf).digest('hex');
 
-    try {
-      const pinInfo = await resolvePublicPin(cand.pinId);
-      const dl = await downloadAndVerifyPinImage(pinInfo, cand.keyword, today);
-
-      if (processedImageHashes.has(dl.sha256)) {
-        console.log(`[!] Duplicate Pinterest image hash detected for Pin ${cand.pinId}. Skipping.`);
-        processedPinIds.add(cand.pinId);
-        continue;
-      }
-
-      const slotIndex = fetchedList.length;
-      const forcedSlug = replaceSlugs[slotIndex] || null;
-      let title = cleanPinTitle(pinInfo.rawTitle, cand.keyword, cand.pinId);
-      let slug = forcedSlug || slugify(title);
-
-      if (!forcedSlug && (!slug || processedSlugs.has(slug) || storeIdentity.names.has(slug))) {
-        title = `${title} ${String(cand.pinId).slice(-3)}`;
-        slug = slugify(title);
-      }
-
-      const dailyFreeQuota = config.dailyFreeQuota ?? 2;
-      const assignedTier = state.todayFreeCount < dailyFreeQuota ? 'free' : 'premium';
-
-      const itemData = {
-        pinId: cand.pinId,
-        keyword: cand.keyword,
-        board: pinInfo.board,
-        title,
-        slug,
-        assignedTier,
-        pageUrl: pinInfo.pageUrl,
-        rawTitle: pinInfo.rawTitle,
-        rawDesc: pinInfo.rawDesc,
-        imageUrl: pinInfo.imageUrl,
-        previewUrl: pinInfo.previewUrl,
-        localImagePath: dl.localPath,
-        imageBytes: dl.bytes,
-        imageSha256: dl.sha256,
-        criteriaEvaluation: dl.evaluation,
-        fetchedAt: new Date().toISOString()
-      };
-
-      const dataOutPath = resolve(__dirname, `data/${slug}.json`);
-      writeFileSync(dataOutPath, JSON.stringify(itemData, null, 2), 'utf8');
-      console.log(
-        `[Step 3] ACCEPTED Pin ${cand.pinId} [${pinInfo.board}] -> "${title}" (${slug}, ${dl.evaluation.width}x${dl.evaluation.height}, AR=${dl.evaluation.aspectRatio}, Score=${dl.evaluation.totalScore}/100 [${dl.evaluation.passedCriteriaCount}/6 criteria], tier=${assignedTier})`
-      );
-
-      fetchedList.push(itemData);
-      state.todayCopiedCount++;
-      state.todayCreatedCount = state.todayCopiedCount;
-      if (assignedTier === 'free') state.todayFreeCount++;
-      else state.todayPremiumCount++;
-
-      processedPinIds.add(cand.pinId);
-      processedImageHashes.add(dl.sha256);
-      processedSlugs.add(slug);
-
-      state.processedPinIds = [...processedPinIds];
-      state.processedImageHashes = [...processedImageHashes];
-      state.processedSlugs = [...processedSlugs].sort();
-    } catch (err) {
-      console.warn(`[-] Rejected Pin ${cand.pinId}: ${err.message}`);
-      processedPinIds.add(cand.pinId);
-      state.processedPinIds = [...processedPinIds];
+    if (processedImageHashes.has(sha256)) {
+      console.log(`[!] Ảnh "${fileEntry.name}" (hash ${sha256.slice(0, 10)}) đã từng được làm trước đó -> Chuyển vào da-lam/${today}/.`);
+      try { renameSync(srcPath, resolve(archiveDir, fileEntry.name)); } catch {}
+      continue;
     }
+
+    const evaluation = await evaluateImageAgainst6Criteria(buf, { rawTitle: fileEntry.name }, 'User Curated Hero UI');
+    const slotIndex = fetchedList.length;
+    const forcedSlug = replaceSlugs[slotIndex] || null;
+    const hint = parseFilenameHint(fileEntry.name, state.todayCopiedCount + i);
+
+    let title = hint.title;
+    let slug = forcedSlug || hint.slug;
+    if (!forcedSlug && (!slug || processedSlugs.has(slug) || storeIdentity.names.has(slug))) {
+      title = `${title} ${sha256.slice(0, 3).toUpperCase()}`;
+      slug = slugify(title);
+    }
+
+    const dailyFreeQuota = config.dailyFreeQuota ?? 2;
+    const assignedTier = hint.tierHint || (state.todayFreeCount < dailyFreeQuota ? 'free' : 'premium');
+    const recipe = CREATIVE_MOTION_RECIPES[(state.todayCopiedCount + i) % CREATIVE_MOTION_RECIPES.length];
+
+    const ext = extname(fileEntry.name).toLowerCase() === '.jpeg' ? '.jpg' : extname(fileEntry.name).toLowerCase();
+    const pinId = `local-${sha256.slice(0, 12)}`;
+    const savedDownloadPath = resolve(downloadsDir, `${slug}${ext}`);
+    copyFileSync(srcPath, savedDownloadPath);
+
+    // Move processed image from D:\2A\anh-mau-pinterest to D:\2A\anh-mau-pinterest\da-lam\<today>\
+    const archivedPath = resolve(archiveDir, fileEntry.name);
+    try {
+      renameSync(srcPath, archivedPath);
+    } catch {}
+
+    const itemData = {
+      pinId,
+      sourceType: 'local-inbox-folder',
+      originalFilename: fileEntry.name,
+      archivedImagePath: archivedPath,
+      title,
+      slug,
+      assignedTier,
+      motionRecipe: recipe,
+      localImagePath: savedDownloadPath,
+      imageBytes: buf.length,
+      imageSha256: sha256,
+      criteriaEvaluation: evaluation,
+      fetchedAt: new Date().toISOString()
+    };
+
+    const dataOutPath = resolve(__dirname, `data/${slug}.json`);
+    writeFileSync(dataOutPath, JSON.stringify(itemData, null, 2), 'utf8');
+    console.log(
+      `[Inbox Accepted] "${fileEntry.name}" -> "${title}" (${slug}, tier=${assignedTier}, recipe=${recipe.id} [${recipe.name}])`
+    );
+
+    fetchedList.push(itemData);
+    state.todayCopiedCount++;
+    state.todayCreatedCount = state.todayCopiedCount;
+    if (assignedTier === 'free') state.todayFreeCount++;
+    else state.todayPremiumCount++;
+
+    processedPinIds.add(pinId);
+    processedImageHashes.add(sha256);
+    processedSlugs.add(slug);
+
+    state.processedPinIds = [...processedPinIds];
+    state.processedImageHashes = [...processedImageHashes];
+    state.processedSlugs = [...processedSlugs].sort();
   }
 
   writeFileSync(statePath, JSON.stringify(state, null, 2), 'utf8');
@@ -629,6 +684,6 @@ if (process.argv[1] && process.argv[1].endsWith('fetch-pinterest.mjs')) {
   const replaceArg = process.argv.find(a => a.startsWith('--replace-slugs='))?.split('=')[1];
   const replaceSlugs = replaceArg ? replaceArg.split(',').map(s => s.trim()).filter(Boolean) : [];
   runPinterestFetchPipeline({ replaceSlugs }).then(list => {
-    console.log(`Done. Accepted & downloaded ${list.length} Pinterest Hero UI references (>= 80% criteria match).`);
+    console.log(`Done. Processed ${list.length} reference images from D:\\2A\\anh-mau-pinterest.`);
   }).catch(console.error);
 }

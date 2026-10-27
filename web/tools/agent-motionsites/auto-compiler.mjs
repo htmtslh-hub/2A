@@ -1533,6 +1533,1336 @@ export function buildSingleFileHtml(spec) {
 </html>`;
   }
 
+  // 12. MAX REED PORTFOLIO (Dark 3-Column Bento Grid + #324444 Teal-Slate Cards + Dual Software Icon Marquee + 10M+ Raised)
+  if (spec.slug === 'max-reed-portfolio') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>MAX REED — Interactive UI/UX Designer Portfolio</title>
+  <meta name="description" content="Max Reed — UI/UX Designer based in LA with 6+ years of experience, 12+ design awards, and $10M+ raised for startups.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: #131313;
+      --teal: #324444;
+      --fg: #ffffff;
+      --muted: #8a8a8a;
+      --border: #262626;
+      --green: #51c72b;
+      --gold: #f5c518;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .${p}-cursor-ring, .${p}-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
+    .${p}-cursor-ring.is-hovered { width: 56px; height: 56px; margin: -28px 0 0 -28px; background: #fff; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--green); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-bento-stage {
+      max-width: 1440px; width: 100%; margin: 0 auto; padding: 14px; min-height: 100vh;
+      display: grid; grid-template-columns: 1fr; gap: 12px;
+    }
+    @media (min-width: 1024px) {
+      .${p}-bento-stage { grid-template-columns: minmax(0, 28fr) minmax(0, 44fr) minmax(0, 28fr); height: 100vh; max-height: 960px; }
+    }
+    .${p}-col { display: flex; flex-direction: column; gap: 12px; min-height: 0; min-width: 0; }
+    .${p}-card-dark {
+      background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+      padding: 24px; display: flex; flex-direction: column; justify-content: space-between;
+      position: relative; overflow: hidden; transition: border-color 0.25s, transform 0.3s;
+    }
+    .${p}-card-teal {
+      background: var(--teal); border: 1px solid rgba(255,255,255,0.14); border-radius: 18px;
+      padding: 24px; display: flex; flex-direction: column; justify-content: space-between;
+      position: relative; overflow: hidden; transition: transform 0.3s;
+    }
+    .${p}-pill {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px;
+      border-radius: 999px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14);
+      color: var(--fg); font-size: 12px; font-weight: 600; text-decoration: none; cursor: pointer;
+    }
+    .${p}-marquee-box { overflow: hidden; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
+    .${p}-marquee-track { display: flex; gap: 10px; width: max-content; animation: ${p}MarqueeR 22s linear infinite; }
+    .${p}-marquee-track.rev { animation: ${p}MarqueeL 22s linear infinite; }
+    @keyframes ${p}MarqueeR { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
+    @keyframes ${p}MarqueeL { 0% { transform: translate3d(-50%,0,0); } 100% { transform: translate3d(0,0,0); } }
+    .${p}-app-icon {
+      width: 48px; height: 48px; border-radius: 12px; background: #1c1c1c; border: 1px solid var(--border);
+      display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #d4d4d4;
+      flex-shrink: 0;
+    }
+    .${p}-portrait-card {
+      flex: 1; min-height: 420px; border-radius: 18px; border: 1px solid var(--border);
+      position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px;
+      background: #161818;
+    }
+    .${p}-portrait-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.68;
+      filter: contrast(1.06) grayscale(0.15); transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);
+    }
+    .${p}-portrait-card:hover .${p}-portrait-video { transform: scale(1.04); }
+    .${p}-portrait-grad {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.45) 55%, rgba(10,10,10,0.92) 100%);
+    }
+    .${p}-work-preview {
+      flex: 1; min-height: 220px; border-radius: 12px; background: radial-gradient(circle at 30% 20%, #324444, #0d1111 75%);
+      border: 1px solid rgba(255,255,255,0.1); position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: space-between; padding: 18px; margin-top: 14px;
+    }
+    .${p}-avatar-stack { display: flex; align-items: center; }
+    .${p}-avatar {
+      width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--teal);
+      margin-left: -10px; display: inline-flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 800; color: #fff;
+    }
+    .${p}-avatar:first-child { margin-left: 0; }
+    .${p}-case-section { max-width: 1440px; margin: 0 auto; padding: 56px 14px 80px; }
+    .${p}-case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 24px; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 20px, 0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(10,10,10,0.86); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 620px; width: 100%; border-radius: 22px; background: #131313; border: 1px solid var(--border); padding: 32px; }
+  </style>
+</head>
+<body>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <main>
+    <section class="${p}-bento-stage" aria-label="Max Reed Bento Portfolio">
+      <!-- LEFT COLUMN (28%) -->
+      <div class="${p}-col">
+        <article class="${p}-card-teal" style="flex: 0 0 42%;" data-tilt-card>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="${p}-pill">✦ 12+ Design Awards</span>
+            <button type="button" id="motionToggleBtn" class="${p}-pill" aria-pressed="false">Motion: ON</button>
+          </div>
+          <div style="margin: 18px 0;">
+            <h2 style="font-size: clamp(22px, 2vw, 28px); font-weight: 500; line-height: 1.2; letter-spacing: -0.02em;">
+              UI/UX Designer with 6+ years of experience.
+            </h2>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid rgba(255,255,255,0.14);">
+            <span style="font-size:13px;color:rgba(255,255,255,0.85);">max@studio.com</span>
+            <button type="button" class="${p}-pill" data-seamless-trigger="Contact Max Reed — Direct Studio Inquiry" data-magnetic>Copy Email ↗</button>
+          </div>
+        </article>
+
+        <article class="${p}-card-dark" style="flex: 1;" data-tilt-card>
+          <div>
+            <span style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);">Interactive Craft &amp; Stack</span>
+            <p style="font-size: 16px; font-weight: 500; line-height: 1.45; color: #ededed; margin-top: 10px;">
+              Over a decade of experience in interactive design and working with some of the most talented people in the business
+            </p>
+          </div>
+          <div class="${p}-marquee-box" aria-label="Design and Engineering Stack">
+            <div class="${p}-marquee-track">
+              <span class="${p}-app-icon">Figma</span><span class="${p}-app-icon">Framer</span><span class="${p}-app-icon">Spline</span><span class="${p}-app-icon">WebGL</span><span class="${p}-app-icon">React</span><span class="${p}-app-icon">GSAP</span><span class="${p}-app-icon">Three</span>
+              <span class="${p}-app-icon">Figma</span><span class="${p}-app-icon">Framer</span><span class="${p}-app-icon">Spline</span><span class="${p}-app-icon">WebGL</span><span class="${p}-app-icon">React</span><span class="${p}-app-icon">GSAP</span><span class="${p}-app-icon">Three</span>
+            </div>
+            <div class="${p}-marquee-track rev">
+              <span class="${p}-app-icon">AE</span><span class="${p}-app-icon">C4D</span><span class="${p}-app-icon">Next</span><span class="${p}-app-icon">Lenis</span><span class="${p}-app-icon">Rive</span><span class="${p}-app-icon">Shader</span><span class="${p}-app-icon">Node</span>
+              <span class="${p}-app-icon">AE</span><span class="${p}-app-icon">C4D</span><span class="${p}-app-icon">Next</span><span class="${p}-app-icon">Lenis</span><span class="${p}-app-icon">Rive</span><span class="${p}-app-icon">Shader</span><span class="${p}-app-icon">Node</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- CENTER COLUMN (44%) -->
+      <div class="${p}-col">
+        <header class="${p}-card-dark" style="flex: 0 0 auto; padding: 18px 24px; flex-direction: row; align-items: center;">
+          <strong style="font-size: 16px; font-weight: 800; letter-spacing: 0.04em;">MAX REED</strong>
+          <nav style="display:flex;gap:22px;align-items:center;" aria-label="Primary Navigation">
+            <a href="#workShowcase" style="color:var(--fg);text-decoration:none;font-size:14px;font-weight:500;">Work</a>
+            <a href="#workShowcase" style="color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;">About</a>
+            <a href="#workShowcase" data-seamless-trigger="Book a Discovery Call with Max Reed" style="color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;">Contact</a>
+          </nav>
+        </header>
+
+        <div class="${p}-portrait-card" data-tilt-card>
+          <video id="heroBgVideo" class="${p}-portrait-video" src="${spec.heroVideo}" autoplay loop muted playsinline preload="auto"></video>
+          <div class="${p}-portrait-grad"></div>
+          <div style="position:relative;z-index:2;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;">
+            <div>
+              <h1 style="font-size: clamp(34px, 3.6vw, 44px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.05;">
+                Max Reed
+                <span style="display:block;font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;font-size:clamp(24px,2.4vw,30px);color:#d4d4d4;margin-top:4px;">
+                  Based in LA
+                </span>
+              </h1>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(19,19,19,0.82);border:1px solid var(--border);backdrop-filter:blur(12px);">
+              <span style="width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);"></span>
+              <span style="font-size:13px;color:var(--muted);font-weight:500;">Available for full-time</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN (28%) -->
+      <div class="${p}-col">
+        <article class="${p}-card-dark" style="flex: 1;" data-tilt-card>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:16px;font-weight:600;">Work</span>
+            <a href="#workShowcase" style="font-size:13px;color:var(--muted);text-decoration:none;">Show more ↗</a>
+          </div>
+          <div class="${p}-work-preview">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span class="${p}-pill" style="background:rgba(0,0,0,0.45);">Interactive Web Design</span>
+              <span style="font-size:11px;color:rgba(255,255,255,0.6);">2026</span>
+            </div>
+            <div style="text-align:center;margin:18px 0;">
+              <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:46px;letter-spacing:-0.02em;">Nola</span>
+            </div>
+            <div style="display:flex;justify-content:flex-end;">
+              <button type="button" id="exploreMagneticBtn" class="${p}-pill" data-magnetic data-seamless-trigger="Nola — Interactive Web Design Case Study">
+                View Project ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="${p}-card-teal" style="flex: 0 0 38%;" data-tilt-card>
+          <div>
+            <strong style="font-size: clamp(40px, 3.8vw, 52px); font-weight: 700; line-height: 1; display: block;" data-counter-target="10" data-counter-suffix="M+">10M+</strong>
+            <span style="font-size: 14px; color: rgba(255,255,255,0.8); margin-top: 6px; display: block;">Raised for startups</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:18px;">
+            <div class="${p}-avatar-stack">
+              <span class="${p}-avatar" style="background:#1f2937;">AK</span>
+              <span class="${p}-avatar" style="background:#0f766e;">SL</span>
+              <span class="${p}-avatar" style="background:#4338ca;">MR</span>
+              <span class="${p}-avatar" style="background:#b45309;">JD</span>
+            </div>
+            <div style="text-align:right;">
+              <div style="color:var(--gold);font-size:13px;letter-spacing:1px;">★★★★★</div>
+              <span style="font-size:11px;color:rgba(255,255,255,0.75);">38+ Founder Reviews</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- BELOW THE FOLD: INTERACTIVE CASE ARCHIVE -->
+    <section id="workShowcase" class="${p}-case-section">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;">
+        <div>
+          <span style="font-size:12px;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);">Selected Index (2023–2026)</span>
+          <h2 style="font-size:clamp(28px,3.2vw,40px);font-weight:600;margin-top:6px;">Featured Product &amp; Brand Systems</h2>
+        </div>
+        <span id="scrollScrubReadout" class="${p}-pill">SCRUB 0% • 0.0°</span>
+      </div>
+      <div class="${p}-case-grid">
+        <article class="${p}-card-dark ${p}-reveal" data-tilt-card data-spec-index="001" data-seamless-trigger="01 / Nola Spatial Commerce">
+          <span style="font-size:12px;color:var(--green);">001 / SPATIAL COMMERCE</span>
+          <h3 style="font-size:22px;margin:10px 0 6px;">Nola Interactive Flagship</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.55;">Led design systems and WebGL product storytelling, lifting checkout conversion by 41%.</p>
+        </article>
+        <article class="${p}-card-dark ${p}-reveal" data-tilt-card data-spec-index="002" data-seamless-trigger="02 / Kinetix AI OS">
+          <span style="font-size:12px;color:var(--green);">002 / SERIES A FINTECH</span>
+          <h3 style="font-size:22px;margin:10px 0 6px;">Kinetix Treasury OS</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.55;">Zero-latency bento workspace that helped secure $6.4M seed-to-Series-A institutional backing.</p>
+        </article>
+        <article class="${p}-card-dark ${p}-reveal" data-tilt-card data-spec-index="003" data-seamless-trigger="03 / Vespera Audio Synth">
+          <span style="font-size:12px;color:var(--green);">003 / HARDWARE INTERFACE</span>
+          <h3 style="font-size:22px;margin:10px 0 6px;">Vespera Spatial Synth</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.55;">Tactile browser companion app recognized with FWA &amp; Awwwards Site of the Day.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span class="${p}-pill">Max Reed Studio — LA</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:26px;margin-bottom:10px;">Nola — Interactive Web Design</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        Full case study breakdown including interactive Figma prototypes, motion token choreography, and startup fundraising metrics.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill" style="background:var(--teal);width:100%;justify-content:center;padding:12px;">
+        Send Direct Message to max@studio.com
+      </button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // 13. MINDLOOP LANDING (Pure Monochrome #000 Newsletter Growth Platform + AI Search SVG Cards + Word-by-Word Scroll Reveal)
+  if (spec.slug === 'mindloop-landing') {
+    const mlVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_065045_c44942da-53c6-4804-b734-f9e07fc22e08.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>MindLoop — Turn Your Expertise Into a Newsletter That Runs Itself</title>
+  <meta name="description" content="Get Inspired with Us. Turn your expertise into a newsletter written in your voice, building authority in AI search and converting readers into clients.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --card: #0f0f0f;
+      --fg: #ffffff;
+      --muted: rgba(255,255,255,0.62);
+      --border: rgba(255,255,255,0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .serif-italic { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+
+    .${p}-nav {
+      position: fixed; top: 16px; left: 0; right: 0; z-index: 200;
+      max-width: 1180px; margin: 0 auto; padding: 12px 24px;
+      border-radius: 999px; background: rgba(10,10,10,0.72); backdrop-filter: blur(18px);
+      border: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-btn-white {
+      padding: 10px 22px; border-radius: 999px; background: #ffffff; color: #000000;
+      font-size: 13px; font-weight: 600; border: none; cursor: pointer; transition: transform 0.2s, opacity 0.2s;
+    }
+    .${p}-btn-white:hover { opacity: 0.92; transform: translateY(-1px); }
+    .${p}-badge {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px;
+      border-radius: 999px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px); font-size: 12px; color: rgba(255,255,255,0.85);
+    }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; padding: 140px 20px 64px;
+      display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+      text-align: center; overflow: hidden; isolation: isolate;
+    }
+    .${p}-hero-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; opacity: 0.55;
+    }
+    .${p}-hero-overlay {
+      position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.68) 65%, #000000 100%);
+    }
+    .${p}-h1 {
+      font-size: clamp(46px, 7vw, 84px); font-weight: 500; letter-spacing: -0.04em; line-height: 1.04;
+      max-width: 820px; margin: 20px auto 18px;
+    }
+    .${p}-email-bar {
+      display: flex; align-items: center; gap: 8px; max-width: 460px; width: 100%;
+      margin: 28px auto 18px; padding: 6px 6px 6px 20px; border-radius: 999px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); backdrop-filter: blur(12px);
+    }
+    .${p}-email-bar input {
+      flex: 1; background: transparent; border: none; color: #fff; font-size: 14px; outline: none;
+    }
+    .${p}-section { max-width: 1200px; margin: 0 auto; padding: 96px 20px; }
+    .${p}-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 24px; margin-top: 48px; }
+    .${p}-grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 48px; }
+    .${p}-card {
+      background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px;
+      padding: 28px; display: flex; flex-direction: column; justify-content: space-between;
+      transition: border-color 0.25s, transform 0.3s;
+    }
+    .${p}-card:hover { border-color: rgba(255,255,255,0.22); }
+    .${p}-mission-word { opacity: 0.22; transition: opacity 0.35s ease; }
+    .${p}-mission-word.is-lit { opacity: 1; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(0,0,0,0.88); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 560px; width: 100%; border-radius: 24px; background: #0f0f0f; border: 1px solid var(--border); padding: 32px; }
+  </style>
+</head>
+<body>
+  <header class="${p}-nav">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="width:10px;height:10px;border-radius:50%;background:#fff;display:inline-block;"></span>
+      <strong style="font-size:16px;letter-spacing:-0.02em;">MindLoop</strong>
+    </div>
+    <nav style="display:flex;gap:24px;align-items:center;" aria-label="Main Navigation">
+      <a href="#whyMindloop" style="color:var(--muted);text-decoration:none;font-size:13px;">How It Works</a>
+      <a href="#missionStatement" style="color:var(--muted);text-decoration:none;font-size:13px;">Mission</a>
+      <a href="#solutionGrid" style="color:var(--muted);text-decoration:none;font-size:13px;">Solutions</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="${p}-badge" style="cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-white" data-magnetic>Book A Call</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO -->
+    <section class="${p}-hero">
+      <video id="heroBgVideo" class="${p}-hero-video" src="${mlVideo}" autoplay loop muted playsinline preload="auto"></video>
+      <div class="${p}-hero-overlay"></div>
+
+      <div style="max-width:860px;margin:auto 0;" data-parallax="0.06">
+        <span class="${p}-badge">✦ Stay Ahead. Always.</span>
+        <h1 class="${p}-h1">Get <span class="serif-italic">Inspired</span> with Us</h1>
+        <p style="font-size:clamp(16px,1.4vw,18px);color:rgba(255,255,255,0.72);max-width:600px;margin:0 auto;line-height:1.6;">
+          Turn your expertise into a newsletter that runs itself — written in your voice, sent on your schedule, growing your business every week.
+        </p>
+        <form class="${p}-email-bar" onsubmit="event.preventDefault();document.getElementById('exploreMagneticBtn').click();">
+          <input type="email" placeholder="Enter your founder email..." aria-label="Email address">
+          <button type="submit" class="${p}-btn-white">Subscribe Now</button>
+        </form>
+        <div style="display:flex;align-items:center;justify-content:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.65);">
+          <span style="letter-spacing:2px;color:#fff;">★★★★★</span>
+          <span>Trusted by <strong style="color:#fff;" data-counter-target="2400" data-counter-suffix="+">2,400+</strong> creators &amp; founders</span>
+        </div>
+      </div>
+
+      <div style="width:100%;max-width:1040px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px;opacity:0.45;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">
+        <span>Substack</span><span>Beehiiv</span><span>ConvertKit</span><span>Ghost</span><span>Mailchimp</span><span>Notion</span>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WHY MINDLOOP (3 AI & SEARCH CARDS) -->
+    <section id="whyMindloop" class="${p}-section">
+      <div style="text-align:center;">
+        <span class="${p}-badge">Why MindLoop</span>
+        <h2 style="font-size:clamp(34px,4.5vw,56px);font-weight:500;letter-spacing:-0.03em;margin-top:16px;">
+          Search has changed. <span class="serif-italic">Have you?</span>
+        </h2>
+      </div>
+
+      <div class="${p}-grid-3">
+        <!-- Card 1: Bar Chart -->
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <div style="height:170px;display:flex;align-items:flex-end;justify-content:space-around;padding:20px 16px;background:rgba(255,255,255,0.03);border-radius:14px;margin-bottom:22px;">
+            <div style="text-align:center;width:24%;">
+              <div style="height:110px;background:rgba(255,255,255,0.85);border-radius:6px 6px 0 0;"></div>
+              <span style="font-size:11px;color:var(--muted);display:block;margin-top:6px;">2024 • 100%</span>
+            </div>
+            <div style="text-align:center;width:24%;">
+              <div style="height:64px;background:rgba(255,255,255,0.45);border-radius:6px 6px 0 0;"></div>
+              <span style="font-size:11px;color:var(--muted);display:block;margin-top:6px;">2025 • 58%</span>
+            </div>
+            <div style="text-align:center;width:24%;">
+              <div style="height:30px;background:rgba(255,255,255,0.2);border-radius:6px 6px 0 0;"></div>
+              <span style="font-size:11px;color:var(--muted);display:block;margin-top:6px;">2026 • 27%</span>
+            </div>
+          </div>
+          <div>
+            <h3 style="font-size:20px;font-weight:600;margin-bottom:8px;">Organic Reach Is Collapsing</h3>
+            <p style="font-size:14px;color:var(--muted);line-height:1.6;">Zero-click AI answers now intercept traditional search traffic before prospects ever visit a blog.</p>
+          </div>
+        </article>
+
+        <!-- Card 2: AI Platform Nodes -->
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <div style="height:170px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;background:rgba(255,255,255,0.03);border-radius:14px;margin-bottom:22px;padding:16px;">
+            <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+              <span class="${p}-badge">ChatGPT</span><span class="${p}-badge">Perplexity</span><span class="${p}-badge">Claude</span><span class="${p}-badge">Gemini</span>
+            </div>
+            <div style="width:1px;height:22px;background:rgba(255,255,255,0.3);"></div>
+            <span class="${p}-btn-white" style="padding:6px 16px;font-size:12px;">Your Brand Authority</span>
+          </div>
+          <div>
+            <h3 style="font-size:20px;font-weight:600;margin-bottom:8px;">AI Recommends Who It Knows</h3>
+            <p style="font-size:14px;color:var(--muted);line-height:1.6;">Consistent long-form citations train LLMs to surface your name when buyers ask for category leaders.</p>
+          </div>
+        </article>
+
+        <!-- Card 3: Channel Comparison -->
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <div style="height:170px;display:flex;flex-direction:column;justify-content:center;gap:10px;background:rgba(255,255,255,0.03);border-radius:14px;margin-bottom:22px;padding:18px;">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;"><span>Email Newsletter</span><strong>42.0%</strong></div>
+              <div style="height:8px;background:rgba(255,255,255,0.1);border-radius:99px;"><div style="width:88%;height:100%;background:#fff;border-radius:99px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:4px;"><span>Social Feed</span><span>3.2%</span></div>
+              <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:99px;"><div style="width:14%;height:100%;background:rgba(255,255,255,0.35);border-radius:99px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:4px;"><span>Cold Outreach</span><span>0.9%</span></div>
+              <div style="height:6px;background:rgba(255,255,255,0.1);border-radius:99px;"><div style="width:6%;height:100%;background:rgba(255,255,255,0.2);border-radius:99px;"></div></div>
+            </div>
+          </div>
+          <div>
+            <h3 style="font-size:20px;font-weight:600;margin-bottom:8px;">Newsletters Build Direct Trust</h3>
+            <p style="font-size:14px;color:var(--muted);line-height:1.6;">Own your distribution outright with an inbox relationship no algorithm update can throttle.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SCROLL WORD-BY-WORD REVEAL MISSION STATEMENT -->
+    <section id="missionStatement" class="${p}-section" style="text-align:center;">
+      <span class="${p}-badge">Our Philosophy</span>
+      <p id="mindloopWordReveal" style="font-size:clamp(26px,3.8vw,46px);font-weight:500;line-height:1.32;letter-spacing:-0.025em;max-width:960px;margin:28px auto 0;">
+        You didn't build your expertise to spend hours staring at a blank page. We capture your best thinking in a single 20-minute conversation each month — then turn it into <span class="serif-italic" style="color:#fff;">weekly newsletters</span> that sound unmistakably like you, build authority in AI search, and turn quiet readers into paying clients.
+      </p>
+    </section>
+
+    <!-- SECTION 4: 4-COLUMN SOLUTION GRID -->
+    <section id="solutionGrid" class="${p}-section">
+      <div style="text-align:center;">
+        <span class="${p}-badge">The Solution</span>
+        <h2 style="font-size:clamp(32px,4.2vw,52px);font-weight:500;letter-spacing:-0.03em;margin-top:16px;">
+          How We Turn Your <span class="serif-italic">Voice</span> Into Growth
+        </h2>
+      </div>
+      <div class="${p}-grid-4">
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <span style="font-size:12px;color:var(--muted);">01 / EXTRACTION</span>
+          <h3 style="font-size:19px;margin:14px 0 8px;">Voice Capture Call</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">One 20-minute recorded interview per month extracts your contrarian stories, frameworks, and client wins.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <span style="font-size:12px;color:var(--muted);">02 / SYNTHESIS</span>
+          <h3 style="font-size:19px;margin:14px 0 8px;">Voice-Matched Drafting</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Editorial strategists + custom style models craft 4 deep-dive issues calibrated to your exact cadence.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <span style="font-size:12px;color:var(--muted);">03 / CITATION</span>
+          <h3 style="font-size:19px;margin:14px 0 8px;">AI Search Indexing</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Structured schema and cross-syndication ensure ChatGPT and Perplexity cite your domain first.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <span style="font-size:12px;color:var(--muted);">04 / MONETIZATION</span>
+          <h3 style="font-size:19px;margin:14px 0 8px;">Pipeline Conversion</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Soft-CTA conversion loops route high-intent subscribers straight onto your calendar.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span class="${p}-badge">MindLoop Onboarding</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-badge" style="cursor:pointer;">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:26px;margin-bottom:10px;">Book Your 20-Minute Voice Audit</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:22px;">
+        We'll analyze your current AI search visibility and draft your first sample newsletter issue free of charge.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-white" style="width:100%;padding:13px;">Confirm Strategy Session</button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var pEl = document.getElementById('mindloopWordReveal');
+      if (pEl) {
+        var words = pEl.innerText.split(/\\s+/);
+        pEl.innerHTML = words.map(function(w){ return '<span class="${p}-mission-word">' + w + '</span>'; }).join(' ');
+        var spans = pEl.querySelectorAll('.${p}-mission-word');
+        window.addEventListener('scroll', function(){
+          var rect = pEl.getBoundingClientRect();
+          var vh = window.innerHeight || 800;
+          var prog = Math.min(1, Math.max(0, (vh * 0.85 - rect.top) / (rect.height + vh * 0.35)));
+          var litCount = Math.floor(prog * spans.length);
+          spans.forEach(function(s, idx){ s.classList.toggle('is-lit', idx <= litCount); });
+        }, { passive: true });
+      }
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // 14. CODENEST CODING PLATFORM (#070b0a Forest Dark + #5ed29c Emerald + 3 Vertical Grid Lines at 25/50/75% + Floating 200x200 Glass Card)
+  if (spec.slug === 'codenest-coding-platform') {
+    const cnVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260319_015952_e1de2b27-process-f325-44c7-a636-0f63b7d31f2e.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CODENEST — Launch Your Coding Career</title>
+  <meta name="description" content="Master modern software engineering through real-world projects, live code reviews, and direct mentorship from engineers at top tech companies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070b0a;
+      --emerald: #5ed29c;
+      --fg: #ffffff;
+      --muted: rgba(255,255,255,0.72);
+      --line: rgba(255,255,255,0.07);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+
+    /* Signature 3 Vertical Structural Grid Lines at 25%, 50%, 75% */
+    .${p}-grid-lines { position: fixed; inset: 0; pointer-events: none; z-index: 5; }
+    .${p}-vline { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--line); }
+    .${p}-vline.l25 { left: 25%; }
+    .${p}-vline.l50 { left: 50%; }
+    .${p}-vline.l75 { left: 75%; }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; width: 100%; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 28px clamp(20px, 4vw, 56px) 52px; isolation: isolate;
+    }
+    .${p}-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; opacity: 0.58;
+    }
+    .${p}-overlay {
+      position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(180deg, rgba(7,11,10,0.4) 0%, rgba(7,11,10,0.55) 55%, rgba(7,11,10,0.94) 100%);
+    }
+
+    .${p}-nav {
+      position: relative; z-index: 20; display: flex; justify-content: space-between; align-items: flex-start;
+    }
+    .${p}-logo { font-size: 20px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; }
+    .${p}-nav-links {
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    @media (min-width: 1024px) {
+      .${p}-nav-links { position: absolute; left: 75%; transform: translateX(-50%); }
+    }
+    .${p}-nav-links a { color: rgba(255,255,255,0.82); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    .${p}-nav-links a:hover { color: var(--emerald); }
+
+    /* Floating 200x200px Liquid Glass Card at 75% Grid Line */
+    .${p}-glass-square {
+      width: 200px; height: 200px; border-radius: 18px; padding: 18px;
+      background: rgba(255,255,255,0.06); backdrop-filter: blur(22px);
+      border: 1px solid rgba(255,255,255,0.16);
+      display: flex; flex-direction: column; justify-content: space-between;
+      margin: 36px auto; position: relative; z-index: 15;
+    }
+    @media (min-width: 1024px) {
+      .${p}-glass-square { margin: 0; position: absolute; top: 30%; left: 75%; transform: translateX(-50%); }
+    }
+    .${p}-play-circle {
+      width: 44px; height: 44px; border-radius: 50%; background: rgba(94,210,156,0.18);
+      border: 1px solid var(--emerald); display: flex; align-items: center; justify-content: center;
+      margin: 0 auto; cursor: pointer; transition: transform 0.25s;
+    }
+    .${p}-play-circle:hover { transform: scale(1.1); }
+
+    .${p}-bottom-grid {
+      position: relative; z-index: 15; display: grid; grid-template-columns: 1fr; gap: 28px; align-items: flex-end;
+      margin-top: auto;
+    }
+    @media (min-width: 1024px) {
+      .${p}-bottom-grid { grid-template-columns: 72fr 28fr; }
+    }
+    .${p}-h1 {
+      font-size: clamp(2.6rem, 6.2vw, 6.4rem); font-weight: 800; text-transform: uppercase;
+      line-height: 0.96; letter-spacing: -0.03em;
+    }
+    .${p}-cta-emerald {
+      display: inline-flex; align-items: center; gap: 14px; padding: 8px 8px 8px 24px;
+      border-radius: 999px; background: var(--emerald); color: #070b0a;
+      font-size: 15px; font-weight: 700; border: none; cursor: pointer; margin-top: 22px;
+    }
+    .${p}-cta-circle {
+      width: 38px; height: 38px; border-radius: 50%; background: #070b0a; color: #fff;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+
+    .${p}-tracks { position: relative; z-index: 15; max-width: 1360px; margin: 0 auto; padding: 88px clamp(20px,4vw,56px); }
+    .${p}-track-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin-top: 36px; }
+    .${p}-track-card {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px; padding: 28px; backdrop-filter: blur(14px);
+    }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(7,11,10,0.88); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 580px; width: 100%; border-radius: 24px; background: #0d1512; border: 1px solid rgba(94,210,156,0.3); padding: 32px; }
+  </style>
+</head>
+<body>
+  <div class="${p}-grid-lines" aria-hidden="true">
+    <div class="${p}-vline l25"></div>
+    <div class="${p}-vline l50"></div>
+    <div class="${p}-vline l75"></div>
+  </div>
+
+  <main>
+    <section class="${p}-hero">
+      <video id="heroBgVideo" class="${p}-video" src="${cnVideo}" autoplay loop muted playsinline preload="auto"></video>
+      <div class="${p}-overlay"></div>
+
+      <header class="${p}-nav">
+        <div class="${p}-logo">CODENEST</div>
+        <nav class="${p}-nav-links" aria-label="Primary Navigation">
+          <a href="#engineeringTracks">Courses</a>
+          <a href="#engineeringTracks">Mentors</a>
+          <a href="#engineeringTracks">Pricing</a>
+          <a href="#engineeringTracks" data-seamless-trigger="Sign In to CodeNest IDE">Sign In</a>
+        </nav>
+        <button type="button" id="motionToggleBtn" style="padding:7px 14px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);color:#fff;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      </header>
+
+      <!-- Floating 200x200px Liquid Glass Card at 75% Grid Line -->
+      <aside class="${p}-glass-square" data-tilt-card>
+        <span style="font-size:12px;color:rgba(255,255,255,0.65);font-family:monospace;">[ 2025 ]</span>
+        <button type="button" class="${p}-play-circle" data-seamless-trigger="Watch Cohort Live Code Review Demo" aria-label="Play Demo Video">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#5ed29c"><polygon points="6,4 20,12 6,20"/></svg>
+        </button>
+        <p style="font-size:13px;font-weight:600;line-height:1.35;text-align:center;">Taught by Industry Professionals</p>
+      </aside>
+
+      <!-- Bottom-Anchored Hero Content -->
+      <div class="${p}-bottom-grid">
+        <div data-parallax="0.05">
+          <h1 class="${p}-h1">LAUNCH YOUR<br>CODING CAREER.</h1>
+        </div>
+        <div>
+          <p style="font-size:15px;color:var(--muted);line-height:1.65;">
+            Master modern software engineering through real-world projects, live code reviews, and direct mentorship from engineers at top tech companies.
+          </p>
+          <button type="button" id="exploreMagneticBtn" class="${p}-cta-emerald" data-magnetic>
+            <span>Explore Courses</span>
+            <span class="${p}-cta-circle">↗</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="engineeringTracks" class="${p}-tracks">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-size:12px;color:var(--emerald);letter-spacing:0.14em;text-transform:uppercase;font-weight:700;">Production Engineering Tracks</span>
+          <h2 style="font-size:clamp(28px,3.6vw,44px);font-weight:800;margin-top:8px;">Ship Real Systems. Get Hired.</h2>
+        </div>
+        <div style="display:flex;gap:28px;">
+          <div><strong style="font-size:28px;color:var(--emerald);" data-counter-target="94" data-counter-suffix="%">94%</strong><span style="display:block;font-size:12px;color:var(--muted);">Placement Rate</span></div>
+          <div><strong style="font-size:28px;color:var(--emerald);" data-counter-target="148" data-counter-suffix="K">$148K</strong><span style="display:block;font-size:12px;color:var(--muted);">Avg Base Offer</span></div>
+        </div>
+      </div>
+
+      <div class="${p}-track-grid">
+        <article class="${p}-track-card ${p}-reveal" data-tilt-card>
+          <span style="font-size:12px;color:var(--emerald);font-family:monospace;">[ TRACK 01 • 16 WEEKS ]</span>
+          <h3 style="font-size:22px;margin:12px 0 8px;">Distributed Cloud &amp; Go</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Build high-throughput Raft consensus clusters, eBPF observability agents, and multi-region Kubernetes engines.</p>
+        </article>
+        <article class="${p}-track-card ${p}-reveal" data-tilt-card>
+          <span style="font-size:12px;color:var(--emerald);font-family:monospace;">[ TRACK 02 • 14 WEEKS ]</span>
+          <h3 style="font-size:22px;margin:12px 0 8px;">AI Systems &amp; CUDA Kernels</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Architect low-latency LLM inference servers, vector retrieval pipelines, and multi-agent production harnesses.</p>
+        </article>
+        <article class="${p}-track-card ${p}-reveal" data-tilt-card>
+          <span style="font-size:12px;color:var(--emerald);font-family:monospace;">[ TRACK 03 • 12 WEEKS ]</span>
+          <h3 style="font-size:22px;margin:12px 0 8px;">Full-Stack TypeScript &amp; Edge</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Ship real-time collaborative canvases, WebGL interfaces, and zero-downtime Postgres replication.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span style="font-size:12px;color:var(--emerald);font-family:monospace;">[ CODENEST SYLLABUS 2025 ]</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:#fff;padding:6px 12px;border-radius:999px;cursor:pointer;">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:26px;margin-bottom:10px;">Explore Cohort Curriculum</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:22px;">
+        Every module is reviewed line-by-line by Senior Staff Engineers from Stripe, Vercel, and Linear.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-cta-emerald" style="width:100%;justify-content:center;margin-top:0;">
+        <span>Download Full Syllabus PDF</span>
+      </button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // 15. POWER AI (Deep Indigo Void hsl(260,87%,3%) + Gradient "AI" Headline + Flipped Video + Liquid Glass Marquee)
+  if (spec.slug === 'power-ai') {
+    const paiVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260325_120549_0cd82c36-56b3-4dd9-b190-069cfc3a623f.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Power AI — Next-Gen Talent Intelligence</title>
+  <meta name="description" content="The most powerful AI ever deployed in talent acquisition. Autonomous sourcing, neural skill graphs, and predictive hiring.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: hsl(260, 87%, 3%);
+      --indigo: #6366f1;
+      --purple: #a855f7;
+      --amber: #fcd34d;
+      --fg: #ffffff;
+      --muted: rgba(255,255,255,0.7);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+
+    .${p}-liquid-glass {
+      background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+      backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.12);
+    }
+    .${p}-nav {
+      position: fixed; top: 20px; left: 16px; right: 16px; z-index: 200;
+      max-width: 780px; margin: 0 auto; padding: 10px 18px; border-radius: 999px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .${p}-btn-indigo {
+      padding: 10px 22px; border-radius: 999px; background: var(--indigo); color: #fff;
+      font-size: 13px; font-weight: 700; border: none; cursor: pointer;
+      box-shadow: 0 0 24px rgba(99,102,241,0.45); transition: transform 0.2s, background 0.2s;
+    }
+    .${p}-btn-indigo:hover { background: #818cf8; transform: translateY(-1px); }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; padding: 132px 20px 44px;
+      display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+      text-align: center; overflow: hidden; isolation: isolate;
+    }
+    .${p}-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      transform: scaleY(-1); z-index: -2; opacity: 0.62;
+    }
+    .${p}-vignette {
+      position: absolute; inset: 0; z-index: -1;
+      background: radial-gradient(ellipse at center, rgba(5,1,14,0.25) 0%, rgba(5,1,14,0.88) 78%, hsl(260,87%,3%) 100%);
+    }
+    .${p}-h1 {
+      font-size: clamp(3.5rem, 9vw, 7.2rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1;
+      margin: 22px 0 16px;
+    }
+    .${p}-ai-grad {
+      background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #fcd34d 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .${p}-marquee-wrap {
+      width: 100%; max-width: 960px; overflow: hidden; margin-top: 36px;
+      mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+    }
+    .${p}-marquee-track {
+      display: flex; gap: 14px; width: max-content; animation: ${p}Scroll 25s linear infinite;
+    }
+    @keyframes ${p}Scroll { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
+
+    .${p}-section { max-width: 1200px; margin: 0 auto; padding: 88px 20px; }
+    .${p}-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin-top: 36px; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(5,1,14,0.88); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 560px; width: 100%; border-radius: 24px; padding: 32px; }
+  </style>
+</head>
+<body>
+  <header class="${p}-nav ${p}-liquid-glass">
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span style="color:#818cf8;font-size:18px;">✦</span>
+      <strong style="font-size:15px;letter-spacing:-0.02em;">Power AI</strong>
+    </div>
+    <nav style="display:flex;gap:20px;" aria-label="Main Navigation">
+      <a href="#talentEngine" style="color:var(--muted);text-decoration:none;font-size:13px;">Features</a>
+      <a href="#talentEngine" style="color:var(--muted);text-decoration:none;font-size:13px;">Solutions</a>
+      <a href="#talentEngine" style="color:var(--muted);text-decoration:none;font-size:13px;">Pricing</a>
+      <a href="#talentEngine" style="color:var(--muted);text-decoration:none;font-size:13px;">Docs</a>
+    </nav>
+    <div style="display:flex;gap:8px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="${p}-liquid-glass" style="padding:7px 12px;border-radius:999px;color:#fff;font-size:11px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" class="${p}-btn-indigo" data-seamless-trigger="Get Started with Power AI">Get Started</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="${p}-hero">
+      <video id="heroBgVideo" class="${p}-video" src="${paiVideo}" autoplay loop muted playsinline preload="auto"></video>
+      <div class="${p}-vignette"></div>
+
+      <div style="max-width:820px;margin:auto 0;" data-parallax="0.06">
+        <div class="${p}-liquid-glass" style="display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;font-size:12px;color:rgba(255,255,255,0.85);">
+          <span style="width:8px;height:8px;border-radius:50%;background:#818cf8;box-shadow:0 0 10px #818cf8;"></span>
+          <span>Next-Gen Talent Intelligence</span>
+        </div>
+
+        <h1 class="${p}-h1">Power <span class="${p}-ai-grad">AI</span></h1>
+        <p style="font-size:clamp(17px,2.2vw,22px);color:var(--muted);max-width:600px;margin:0 auto 30px;line-height:1.5;">
+          The most powerful AI ever deployed in talent acquisition
+        </p>
+
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+          <button type="button" id="exploreMagneticBtn" class="${p}-btn-indigo" style="padding:14px 28px;font-size:14px;" data-magnetic>
+            Schedule a Consult →
+          </button>
+          <button type="button" class="${p}-liquid-glass" style="padding:14px 26px;border-radius:999px;color:#fff;font-size:14px;font-weight:600;cursor:pointer;" data-seamless-trigger="Power AI Live Neural Sourcing Demo">
+            ▶ Watch Demo
+          </button>
+        </div>
+      </div>
+
+      <div style="width:100%;display:flex;flex-direction:column;align-items:center;">
+        <span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Trusted by industry leaders</span>
+        <div class="${p}-marquee-wrap">
+          <div class="${p}-marquee-track">
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Vortex</span>
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Nimbus</span>
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Prysma</span>
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Cirrus</span>
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Kynder</span>
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Halcyn</span>
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Vortex</span>
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Nimbus</span>
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Prysma</span>
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Cirrus</span>
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Kynder</span>
+            <span class="${p}-liquid-glass" style="padding:8px 22px;border-radius:999px;font-size:14px;font-weight:600;color:rgba(255,255,255,0.65);">Halcyn</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="talentEngine" class="${p}-section">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-size:12px;color:#818cf8;text-transform:uppercase;letter-spacing:0.14em;font-weight:700;">Neural Recruiting Engine</span>
+          <h2 style="font-size:clamp(28px,3.6vw,44px);font-weight:700;margin-top:8px;">Autonomous Talent Precision</h2>
+        </div>
+        <div style="display:flex;gap:28px;">
+          <div><strong style="font-size:28px;color:#fcd34d;" data-counter-target="14" data-counter-suffix="x">14x</strong><span style="display:block;font-size:12px;color:var(--muted);">Faster Shortlisting</span></div>
+          <div><strong style="font-size:28px;color:#a855f7;" data-counter-target="96" data-counter-suffix="%">96%</strong><span style="display:block;font-size:12px;color:var(--muted);">12-Month Retention</span></div>
+        </div>
+      </div>
+
+      <div class="${p}-grid">
+        <article class="${p}-liquid-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+          <span style="font-size:12px;color:#818cf8;font-weight:700;">01 / DEEP GRAPH SOURCING</span>
+          <h3 style="font-size:20px;margin:12px 0 8px;">240M+ Verified Builder Profiles</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Evaluates open-source commits, architectural patents, and production impact beyond static resumes.</p>
+        </article>
+        <article class="${p}-liquid-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+          <span style="font-size:12px;color:#a855f7;font-weight:700;">02 / AUTONOMOUS OUTREACH</span>
+          <h3 style="font-size:20px;margin:12px 0 8px;">Hyper-Contextual Calibration</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Crafts technical outreach referencing each candidate's actual repositories, achieving 64% reply rates.</p>
+        </article>
+        <article class="${p}-liquid-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+          <span style="font-size:12px;color:#fcd34d;font-weight:700;">03 / PREDICTIVE FIT</span>
+          <h3 style="font-size:20px;margin:12px 0 8px;">Team Velocity Simulation</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Models how prospective hires complement your engineering org's existing skill topology.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box ${p}-liquid-glass">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span style="font-size:12px;color:#818cf8;font-weight:700;">Power AI Enterprise</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:#fff;padding:6px 12px;border-radius:999px;cursor:pointer;">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:26px;margin-bottom:10px;">Schedule Your Talent Intelligence Consult</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:22px;">
+        Deploy custom sourcing agents calibrated to your open engineering and executive roles in under 15 minutes.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-indigo" style="width:100%;padding:13px;">Launch Live Workspace</button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // 16. BLOOM AI (Two-Panel Split [52% / 48%] Monochrome Liquid Glass + "Innovating the spirit of bloom AI" + "Advanced Plant Sculpting")
+  if (spec.slug === 'bloom-ai') {
+    const bloomVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260315_073750_51473149-4350-4920-ae24-c8214286f323.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>bloom — Innovating the Spirit of Bloom AI</title>
+  <meta name="description" content="Explore the algorithmic synthesis of organic forms through neural networks, bridging natural morphology and digital precision.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080808;
+      --fg: #ffffff;
+      --muted: rgba(255,255,255,0.68);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Poppins', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .serif-em { font-family: 'Source Serif 4', serif; font-style: italic; font-weight: 400; }
+
+    .${p}-liquid {
+      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 100%);
+      backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.45), inset 0 1px 1px rgba(255,255,255,0.22);
+    }
+    .${p}-pill {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px;
+      border-radius: 999px; color: #fff; font-size: 12px; font-weight: 500;
+      text-decoration: none; cursor: pointer;
+    }
+
+    .${p}-stage {
+      position: relative; min-height: 100vh; width: 100%; overflow: hidden;
+      display: grid; grid-template-columns: 1fr; gap: 20px; padding: 18px; isolation: isolate;
+    }
+    @media (min-width: 1024px) {
+      .${p}-stage { grid-template-columns: 52fr 48fr; min-height: 100vh; padding: 24px; }
+    }
+    .${p}-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      filter: saturate(0) contrast(1.08); z-index: -2; opacity: 0.58;
+    }
+    .${p}-overlay {
+      position: absolute; inset: 0; z-index: -1; background: rgba(0,0,0,0.38);
+    }
+
+    .${p}-left-panel {
+      border-radius: 28px; padding: clamp(24px, 3.5vw, 44px);
+      display: flex; flex-direction: column; justify-content: space-between; gap: 36px;
+    }
+    .${p}-right-panel {
+      display: flex; flex-direction: column; justify-content: space-between; gap: 16px;
+    }
+    .${p}-feature-strip {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.16);
+    }
+    .${p}-avatar {
+      width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.5);
+      margin-left: -12px; background: rgba(255,255,255,0.16); display: inline-flex;
+      align-items: center; justify-content: center; font-size: 11px; font-weight: 600;
+    }
+    .${p}-avatar:first-child { margin-left: 0; }
+
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(0,0,0,0.86); backdrop-filter: blur(22px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 560px; width: 100%; border-radius: 28px; padding: 32px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="${p}-stage">
+      <video id="heroBgVideo" class="${p}-video" src="${bloomVideo}" autoplay loop muted playsinline preload="auto"></video>
+      <div class="${p}-overlay"></div>
+
+      <!-- LEFT PANEL (52%) -->
+      <div class="${p}-left-panel ${p}-liquid" data-tilt-card>
+        <header style="display:flex;justify-content:space-between;align-items:center;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:20px;">✿</span>
+            <strong style="font-size:22px;font-weight:600;letter-spacing:-0.03em;">bloom</strong>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <button type="button" id="motionToggleBtn" class="${p}-pill ${p}-liquid" aria-pressed="false">Motion: ON</button>
+            <button type="button" id="exploreMagneticBtn" class="${p}-pill ${p}-liquid" data-magnetic>
+              <span>Get started</span>
+              <span style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.18);display:inline-flex;align-items:center;justify-content:center;">↗</span>
+            </button>
+          </div>
+        </header>
+
+        <div style="my:auto;" data-parallax="0.05">
+          <p class="serif-em" style="font-size:17px;color:rgba(255,255,255,0.82);">“A design isn't finished until someone is using it.”</p>
+          <span style="display:block;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin:6px 0 22px;">MARCUS AURELIO</span>
+          <h1 style="font-size:clamp(34px,4.2vw,60px);font-weight:500;line-height:1.08;letter-spacing:-0.03em;">
+            Innovating the <span class="serif-em">spirit</span> of <span class="serif-em">bloom</span> AI
+          </h1>
+        </div>
+
+        <div class="${p}-feature-strip">
+          <div>
+            <span style="font-size:11px;color:rgba(255,255,255,0.5);">01</span>
+            <h2 style="font-size:14px;font-weight:600;margin-top:4px;">Raw Generation</h2>
+            <p style="font-size:12px;color:var(--muted);margin-top:2px;">Algorithmic botanical seeds</p>
+          </div>
+          <div style="border-left:1px solid rgba(255,255,255,0.14);padding-left:14px;">
+            <span style="font-size:11px;color:rgba(255,255,255,0.5);">02</span>
+            <h2 style="font-size:14px;font-weight:600;margin-top:4px;">Contextual Twist</h2>
+            <p style="font-size:12px;color:var(--muted);margin-top:2px;">Morphological refraction</p>
+          </div>
+          <div style="border-left:1px solid rgba(255,255,255,0.14);padding-left:14px;">
+            <span style="font-size:11px;color:rgba(255,255,255,0.5);">03</span>
+            <h2 style="font-size:14px;font-weight:600;margin-top:4px;">Natural Adaptation</h2>
+            <p style="font-size:12px;color:var(--muted);margin-top:2px;">Cellular surface shaders</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL (48%) -->
+      <div class="${p}-right-panel">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+          <div class="${p}-pill ${p}-liquid">
+            <span>@bloom_design</span>
+            <span style="padding:4px 10px;border-radius:999px;background:#fff;color:#000;font-weight:600;font-size:11px;">Follow Us</span>
+          </div>
+          <div class="${p}-pill ${p}-liquid" style="cursor:pointer;" data-seamless-trigger="Enter the Bloom AI Botanical Ecosystem">
+            <span>Enter our ecosystem</span>
+            <span>→</span>
+          </div>
+        </div>
+
+        <!-- Processing Pill -->
+        <div class="${p}-liquid" style="padding:14px 20px;border-radius:999px;display:flex;justify-content:space-between;align-items:center;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="font-size:14px;">✦</span>
+            <span style="font-size:13px;font-weight:500;">Processing Neural Flora</span>
+          </div>
+          <span style="font-size:12px;color:var(--muted);"><strong style="color:#fff;" data-counter-target="2650" data-counter-suffix="">2650</strong> / 3000 • 75%</span>
+        </div>
+
+        <!-- Main Feature Card: Growth Archive / Advanced Plant Sculpting -->
+        <article class="${p}-liquid" style="border-radius:28px;padding:28px;flex:1;display:flex;flex-direction:column;justify-content:space-between;" data-tilt-card>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="${p}-pill ${p}-liquid">✦ Growth Archive</span>
+            <span style="font-size:12px;color:var(--muted);">VOL. 04</span>
+          </div>
+
+          <div style="margin:24px 0;">
+            <h2 style="font-size:26px;font-weight:500;letter-spacing:-0.02em;margin-bottom:10px;">Advanced Plant Sculpting</h2>
+            <p style="font-size:14px;color:var(--muted);line-height:1.65;">
+              Explore the algorithmic synthesis of organic forms through neural networks, bridging natural morphology and digital precision.
+            </p>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid rgba(255,255,255,0.14);">
+            <div style="display:flex;align-items:center;">
+              <span class="${p}-avatar">❀</span>
+              <span class="${p}-avatar">❁</span>
+              <span class="${p}-avatar">❃</span>
+            </div>
+            <button type="button" class="${p}-pill ${p}-liquid" data-seamless-trigger="Advanced Plant Sculpting — Research Paper">
+              Read more ↗
+            </button>
+          </div>
+        </article>
+
+        <!-- Bottom Bar -->
+        <div class="${p}-liquid" style="padding:14px 20px;border-radius:999px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:12px;color:var(--muted);">Morphology Synthesis</span>
+          <div style="flex:1;max-width:220px;height:6px;background:rgba(255,255,255,0.14);border-radius:99px;margin:0 14px;overflow:hidden;">
+            <div style="width:88%;height:100%;background:#fff;border-radius:99px;"></div>
+          </div>
+          <span style="font-size:12px;font-weight:600;">Sculpting • 88%</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box ${p}-liquid">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span class="${p}-pill ${p}-liquid">✿ Bloom AI Lab</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill ${p}-liquid">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Advanced Plant Sculpting</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        Interactive monochrome botanical synthesis powered by cellular automata and real-time surface displacement.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill ${p}-liquid" style="width:100%;justify-content:center;padding:12px;background:#fff;color:#000;font-weight:600;">
+        Launch Generative Studio
+      </button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // 17. LUMINEX (Full-Screen Video Background + Glassmorphic Header + Bottom-Left Positioned Editorial Hero Content)
+  if (spec.slug === 'luminex') {
+    const lumVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LUMINEX — Spatial Photonics &amp; Architectural Light</title>
+  <meta name="description" content="Modern architectural photonics platform with full-screen cinematic video background, glassmorphic navigation header, and bottom-left anchored hero showcase.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050608;
+      --fg: #ffffff;
+      --muted: rgba(255,255,255,0.7);
+      --accent: #38bdf8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .serif-italic { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+
+    .${p}-glass {
+      background: rgba(12, 16, 24, 0.58);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+    .${p}-nav {
+      position: fixed; top: 20px; left: 24px; right: 24px; z-index: 200;
+      max-width: 1360px; margin: 0 auto; padding: 14px 28px; border-radius: 999px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-hero {
+      position: relative; min-height: 100vh; width: 100%; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 120px clamp(24px, 5vw, 72px) clamp(44px, 6vh, 72px); isolation: isolate;
+    }
+    .${p}-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; opacity: 0.78;
+    }
+    .${p}-grad {
+      position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(180deg, rgba(5,6,8,0.25) 0%, rgba(5,6,8,0.4) 50%, rgba(5,6,8,0.92) 100%);
+    }
+    .${p}-bottom-wrap {
+      max-width: 1360px; width: 100%; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 32px;
+    }
+    .${p}-bottom-left { max-width: 720px; }
+    .${p}-h1 {
+      font-size: clamp(44px, 6.4vw, 88px); font-weight: 600; line-height: 0.98; letter-spacing: -0.03em;
+      margin: 16px 0 18px;
+    }
+    .${p}-btn-primary {
+      display: inline-flex; align-items: center; gap: 10px; padding: 13px 26px;
+      border-radius: 999px; background: #ffffff; color: #050608;
+      font-size: 14px; font-weight: 700; border: none; cursor: pointer;
+    }
+    .${p}-section { max-width: 1360px; margin: 0 auto; padding: 88px clamp(24px,5vw,72px); }
+    .${p}-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; margin-top: 36px; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(5,6,8,0.88); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 560px; width: 100%; border-radius: 24px; padding: 32px; }
+  </style>
+</head>
+<body>
+  <header class="${p}-nav ${p}-glass">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent);"></span>
+      <strong style="font-size:16px;letter-spacing:0.14em;">LUMINEX</strong>
+    </div>
+    <nav style="display:flex;gap:28px;" aria-label="Main Navigation">
+      <a href="#installations" style="color:var(--muted);text-decoration:none;font-size:13px;">Architecture</a>
+      <a href="#installations" style="color:var(--muted);text-decoration:none;font-size:13px;">Optical Systems</a>
+      <a href="#installations" style="color:var(--muted);text-decoration:none;font-size:13px;">Installations</a>
+      <a href="#installations" style="color:var(--muted);text-decoration:none;font-size:13px;">Studio</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="${p}-glass" style="padding:8px 14px;border-radius:999px;color:#fff;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" class="${p}-btn-primary" style="padding:9px 20px;font-size:12px;" data-seamless-trigger="Request Luminex Optical Specification">Request Spec ↗</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="${p}-hero">
+      <video id="heroBgVideo" class="${p}-video" src="${lumVideo}" autoplay loop muted playsinline preload="auto"></video>
+      <div class="${p}-grad"></div>
+
+      <div class="${p}-bottom-wrap">
+        <!-- Bottom-Left Positioned Hero Content -->
+        <div class="${p}-bottom-left" data-parallax="0.05">
+          <span class="${p}-glass" style="display:inline-block;padding:6px 14px;border-radius:999px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);">
+            VOL. 09 — ARCHITECTURAL PHOTONICS
+          </span>
+          <h1 class="${p}-h1">
+            Sculpting <span class="serif-italic">Living Light</span> in Spatial Form
+          </h1>
+          <p style="font-size:16px;color:var(--muted);max-width:540px;line-height:1.65;margin-bottom:26px;">
+            Precision kinetic luminaires and real-time HLS projection fields engineered for landmark museums, aviation terminals, and flagship pavilions.
+          </p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <button type="button" id="exploreMagneticBtn" class="${p}-btn-primary" data-magnetic>
+              Explore Installations ↗
+            </button>
+            <button type="button" class="${p}-glass" style="padding:13px 24px;border-radius:999px;color:#fff;font-size:14px;font-weight:600;cursor:pointer;" data-seamless-trigger="Luminex Spectral Showreel 2026">
+              ▶ Watch Showreel
+            </button>
+          </div>
+        </div>
+
+        <!-- Bottom-Right Glass Telemetry Card -->
+        <aside class="${p}-glass" style="padding:22px 26px;border-radius:22px;display:flex;gap:28px;" data-tilt-card>
+          <div>
+            <strong style="font-size:26px;display:block;" data-counter-target="99" data-counter-suffix=".4%">99.4%</strong>
+            <span style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">CRI Spectral Fidelity</span>
+          </div>
+          <div style="border-left:1px solid rgba(255,255,255,0.14);padding-left:24px;">
+            <strong style="font-size:26px;display:block;color:var(--accent);" data-counter-target="140" data-counter-suffix="+">140+</strong>
+            <span style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">Global Commissions</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="installations" class="${p}-section">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:0.14em;">Selected Commissions</span>
+          <h2 style="font-size:clamp(28px,3.6vw,44px);font-weight:600;margin-top:6px;">Kinetic Light Installations</h2>
+        </div>
+      </div>
+      <div class="${p}-grid">
+        <article class="${p}-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+          <span style="font-size:11px;color:var(--accent);letter-spacing:0.1em;">01 / ZURICH KUNSTHALLE</span>
+          <h3 style="font-size:21px;margin:10px 0 8px;">Helios Refraction Canopy</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">4,800 motorizeddichroic prisms synchronized to solar telemetry and visitor movement.</p>
+        </article>
+        <article class="${p}-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+          <span style="font-size:11px;color:var(--accent);letter-spacing:0.1em;">02 / TOKYO GINZA ATRIUM</span>
+          <h3 style="font-size:21px;margin:10px 0 8px;">Monolith Pulse Façade</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">12-story micro-LED acoustic membrane reacting in real time to urban wind harmonics.</p>
+        </article>
+        <article class="${p}-glass ${p}-reveal" style="padding:28px;border-radius:22px;" data-tilt-card>
+          <span style="font-size:11px;color:var(--accent);letter-spacing:0.1em;">03 / REYKJAVIK PAVILION</span>
+          <h3 style="font-size:21px;margin:10px 0 8px;">Aurora Borealis Chamber</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Volumetric laser-phosphor mist projection recreating geomagnetic solar storms indoors.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box ${p}-glass">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span style="font-size:12px;color:var(--accent);">LUMINEX ARCHITECTURAL DESK</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:#fff;padding:6px 12px;border-radius:999px;cursor:pointer;">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Request Luminex Optical Specification</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        Download IES photometric files, CAD/BIM families, and DMX/Art-Net control schematics.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-primary" style="width:100%;justify-content:center;">Download Architectural Pack</button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
   // GENERAL BESPOKE HALLMARK COMPILER FOR ALL OTHER MOTIONSITES TEMPLATES (with 3D Cutout + 4 Mandatory Motion Groups)
   const bg = spec.isLight ? '#f8fafc' : '#06070b';
   const surface = spec.isLight ? '#ffffff' : '#10131c';

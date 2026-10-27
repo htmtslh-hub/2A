@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NEXON — Digital Kensei Cyber-Samurai Collectible Showcase</title>
+  <meta name="description" content="Cyber-Samurai NFT showcase with crimson sun 3D warrior pop-out, overlapping rounded editorial card with inline pill imagery, and dark 4-card Bento legacy grid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08090c;
+      --surface: #12141a;
+      --white-card: #f5f5f7;
+      --crimson: #dc2626;
+      --crimson-glow: rgba(220, 38, 38, 0.45);
+      --fg: #ffffff;
+      --muted: #9ca3af;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .font-display { font-family: 'Anton', Impact, sans-serif; text-transform: uppercase; letter-spacing: 0.02em; }
+
+    .dig95-nav {
+      max-width: 1320px; margin: 0 auto; padding: 22px 24px;
+      display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 30;
+    }
+    .dig95-btn-red {
+      padding: 11px 24px; border-radius: 999px; background: var(--crimson); color: #fff;
+      font-size: 13px; font-weight: 700; border: none; cursor: pointer;
+      box-shadow: 0 8px 24px var(--crimson-glow); transition: transform 0.2s;
+    }
+    .dig95-btn-red:hover { transform: translateY(-2px); }
+
+    .dig95-hero {
+      max-width: 1320px; margin: 0 auto; padding: 28px 24px 110px;
+      display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; position: relative;
+    }
+    @media (min-width: 980px) {
+      .dig95-hero { grid-template-columns: 1.05fr 0.95fr; }
+    }
+    .dig95-h1 {
+      font-size: clamp(54px, 8vw, 108px); line-height: 0.94; margin: 14px 0 20px;
+    }
+    .dig95-stage-right {
+      position: relative; display: flex; align-items: center; justify-content: center; min-height: 440px;
+    }
+    .dig95-crimson-sun {
+      position: absolute; width: clamp(280px, 34vw, 420px); height: clamp(280px, 34vw, 420px);
+      border-radius: 50%; background: radial-gradient(circle, #ef4444 0%, #b91c1c 65%, rgba(185,28,28,0) 100%);
+      box-shadow: 0 0 90px var(--crimson-glow); z-index: 1;
+    }
+    .dig95-samurai-cutout {
+      position: relative; z-index: 3; width: 100%; max-width: 430px; height: auto;
+      object-fit: contain; filter: drop-shadow(0 28px 44px rgba(0,0,0,0.85));
+    }
+    .dig95-nft-float-badge {
+      position: absolute; bottom: 16px; right: 12px; z-index: 5;
+      padding: 14px 18px; border-radius: 18px; background: rgba(18, 20, 26, 0.82);
+      backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    /* Overlapping White Rounded Editorial Card (#f5f5f7) */
+    .dig95-white-sheet {
+      max-width: 1320px; margin: -56px auto 0; position: relative; z-index: 10;
+      background: var(--white-card); color: #090a0f; border-radius: 38px;
+      padding: clamp(36px, 5vw, 72px); box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    }
+    .dig95-pillar-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; margin: 32px 0 48px;
+    }
+    .dig95-pillar-card {
+      background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 20px; padding: 22px;
+      transition: transform 0.25s;
+    }
+    .dig95-inline-pill {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 96px; height: 38px; border-radius: 999px; background: #090a0f; color: #fff;
+      vertical-align: middle; margin: 0 8px; overflow: hidden; border: 2px solid var(--crimson);
+    }
+    .dig95-inline-pill img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Dark 4-Card Bento Legacy Section */
+    .dig95-bento-sec { max-width: 1320px; margin: 0 auto; padding: 88px 24px; }
+    .dig95-bento-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 36px;
+    }
+    .dig95-bento-card {
+      background: var(--surface); border: 1px solid rgba(255,255,255,0.1); border-radius: 26px;
+      padding: 30px; display: flex; flex-direction: column; justify-content: space-between; min-height: 230px;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .dig95-bento-card.crimson {
+      background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+      border-color: rgba(255,255,255,0.25);
+    }
+    .dig95-modal { position: fixed; inset: 0; z-index: 900; background: rgba(8,9,12,0.88); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .dig95-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <header class="dig95-nav">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span style="width:32px;height:32px;border-radius:8px;background:var(--crimson);display:inline-flex;align-items:center;justify-content:center;font-weight:800;">侍</span>
+      <strong style="font-size:18px;letter-spacing:0.12em;">NEXON</strong>
+    </div>
+    <nav style="display:flex;gap:28px;" aria-label="Main Navigation">
+      <a href="#warriorWay" style="color:var(--muted);text-decoration:none;font-size:13px;">Bushido Code</a>
+      <a href="#kenseiLegacy" style="color:var(--muted);text-decoration:none;font-size:13px;">Bento Stats</a>
+      <a href="#kenseiLegacy" style="color:var(--muted);text-decoration:none;font-size:13px;">Hall of Fame</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" style="padding:8px 14px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);color:#fff;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="dig95-btn-red">Connect Wallet</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: DARK CRIMSON SAMURAI HERO -->
+    <section class="dig95-hero">
+      <div data-parallax="0.06">
+        <div style="display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border-radius:999px;background:rgba(220,38,38,0.16);border:1px solid rgba(220,38,38,0.4);color:#fca5a5;font-size:12px;font-weight:700;">
+          <span>サムライ • GENESIS RONIN PROTOCOL</span>
+        </div>
+        <h1 class="dig95-h1 font-display">
+          DIGITAL<br><span style="color:var(--crimson);">KENSEI</span>
+        </h1>
+        <p style="font-size:16px;color:var(--muted);max-width:500px;line-height:1.65;margin-bottom:28px;">
+          8,888 hand-forged cybernetic Ronin guardians living on Ethereum. Engineered with procedural carbon-weave armor, optical katana shaders, and on-chain Bushido governance.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;">
+          <button type="button" class="dig95-btn-red" data-modal-open="Mint Digital Kensei — Genesis Pass">Explore Collection ↗</button>
+          <a href="#warriorWay" style="padding:11px 22px;border-radius:999px;border:1px solid rgba(255,255,255,0.2);color:#fff;text-decoration:none;font-size:13px;font-weight:600;">Read Bushido Lore</a>
+        </div>
+        <div style="display:flex;gap:36px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);">
+          <div><strong style="font-size:28px;display:block;" data-counter="8888" data-suffix="">8,888</strong><span style="font-size:12px;color:var(--muted);">Ronin Supply</span></div>
+          <div><strong style="font-size:28px;display:block;color:var(--crimson);" data-counter="180" data-suffix="+ ETH">180+ ETH</strong><span style="font-size:12px;color:var(--muted);">Trading Volume</span></div>
+          <div><strong style="font-size:28px;display:block;" data-counter="4200" data-suffix="+">4,200+</strong><span style="font-size:12px;color:var(--muted);">Unique Holders</span></div>
+        </div>
+      </div>
+
+      <div class="dig95-stage-right">
+        <div class="dig95-crimson-sun" data-parallax="-0.05"></div>
+        <img src="assets/cutout.webp" alt="Digital Kensei 3D Cyber Samurai" class="dig95-samurai-cutout" data-tilt-card />
+        <div class="dig95-nft-float-badge">
+          <span style="font-size:11px;color:#fca5a5;display:block;">KENSEI #0089 • MYTHIC TIER</span>
+          <strong style="font-size:16px;">Current Bid: 2.85 ETH</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: OVERLAPPING WHITE EDITORIAL SHEET WITH INLINE PILL IMAGERY -->
+    <section id="warriorWay" class="dig95-white-sheet">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-size:12px;font-weight:800;color:var(--crimson);letter-spacing:0.14em;text-transform:uppercase;">01 // BUSHIDO CODEX</span>
+          <h2 class="font-display" style="font-size:clamp(32px,4.5vw,56px);margin-top:6px;">THE WAY OF THE DIGITAL WARRIOR</h2>
+        </div>
+        <p style="font-size:14px;color:#4b5563;max-width:420px;">
+          Merging Edo-period swordsmanship silhouettes with real-time Unreal Engine 5 metahuman rigging.
+        </p>
+      </div>
+
+      <div class="dig95-pillar-grid">
+        <article class="dig95-pillar-card" data-tilt-card>
+          <span style="font-size:12px;font-weight:800;color:var(--crimson);">01 / HONOR</span>
+          <h3 style="font-size:18px;margin:8px 0 6px;">On-Chain Lineage</h3>
+          <p style="font-size:13px;color:#4b5563;line-height:1.55;">Every katana trait and armor patina is deterministically stored on Ethereum L1.</p>
+        </article>
+        <article class="dig95-pillar-card" data-tilt-card>
+          <span style="font-size:12px;font-weight:800;color:var(--crimson);">02 / PRECISION</span>
+          <h3 style="font-size:18px;margin:8px 0 6px;">4K GLTF Rigging</h3>
+          <p style="font-size:13px;color:#4b5563;line-height:1.55;">Holders unlock full 3D blender &amp; Unreal files ready for virtual production.</p>
+        </article>
+        <article class="dig95-pillar-card" data-tilt-card>
+          <span style="font-size:12px;font-weight:800;color:var(--crimson);">03 / CLAN DAO</span>
+          <h3 style="font-size:18px;margin:8px 0 6px;">Shogunate Treasury</h3>
+          <p style="font-size:13px;color:#4b5563;line-height:1.55;">100% of secondary royalties fund anime shorts and physical resin statues.</p>
+        </article>
+        <article class="dig95-pillar-card" data-tilt-card>
+          <span style="font-size:12px;font-weight:800;color:var(--crimson);">04 / ASCENSION</span>
+          <h3 style="font-size:18px;margin:8px 0 6px;">Soulbound Blades</h3>
+          <p style="font-size:13px;color:#4b5563;line-height:1.55;">Stake your Ronin to forge elemental plasma katanas every seasonal equinox.</p>
+        </article>
+      </div>
+
+      <!-- Editorial Statement with Inline Pill Cutouts -->
+      <div style="padding:28px;border-radius:24px;background:#e5e7eb;text-align:center;">
+        <p class="font-display" style="font-size:clamp(26px,3.8vw,48px);line-height:1.25;color:#111827;">
+          CRAFTED BY MASTER ARTISTS <span class="dig95-inline-pill"><img src="assets/cutout.webp" alt="Kensei Pill"/></span>
+          FORGED IN IMMUTABLE CODE <span class="dig95-inline-pill" style="background:var(--crimson);">侍 089</span>
+          BUILT FOR THE METAVERSE
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: DARK 4-CARD BENTO LEGACY GRID -->
+    <section id="kenseiLegacy" class="dig95-bento-sec">
+      <span style="font-size:12px;color:var(--crimson);font-weight:800;letter-spacing:0.14em;text-transform:uppercase;">02 // ECOSYSTEM TELEMETRY</span>
+      <h2 class="font-display" style="font-size:clamp(34px,4.5vw,58px);margin-top:6px;">THE KENSEI LEGACY</h2>
+
+      <div class="dig95-bento-grid">
+        <article class="dig95-bento-card crimson" data-tilt-card>
+          <span style="font-size:12px;font-weight:700;opacity:0.85;">PRIMARY + SECONDARY VOLUME</span>
+          <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="180" data-suffix="+ ETH">180+ ETH</strong>
+          <p style="font-size:13px;opacity:0.9;">Zero-sweep organic collector volume across OpenSea and Blur.</p>
+        </article>
+        <article class="dig95-bento-card" data-tilt-card>
+          <span style="font-size:12px;color:var(--crimson);font-weight:700;">RARITY HIERARCHY</span>
+          <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="3" data-suffix=" TIERS">3 TIERS</strong>
+          <p style="font-size:13px;color:var(--muted);">Ashigaru Vanguard, Cyber-Ronin, and 1-of-1 Celestial Shogun editions.</p>
+        </article>
+        <article class="dig95-bento-card" data-tilt-card>
+          <span style="font-size:12px;color:var(--crimson);font-weight:700;">CUSTOM TRAITS</span>
+          <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="500" data-suffix="+">500+</strong>
+          <p style="font-size:13px;color:var(--muted);">Hand-sculpted mempo masks, neon visors, and braided kasa hats.</p>
+        </article>
+        <article class="dig95-bento-card" data-tilt-card>
+          <span style="font-size:12px;color:var(--crimson);font-weight:700;">DAO GUARDIANS</span>
+          <strong class="font-display" style="font-size:56px;line-height:1;" data-counter="200" data-suffix="+">200+</strong>
+          <p style="font-size:13px;color:var(--muted);">Genesis council members governing the Nexon Anime Incubator.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="kenseiModal" class="dig95-modal" role="dialog" aria-modal="true" aria-labelledby="kenseiModalTitle">
+    <div style="max-width:520px;width:100%;background:#12141a;border:1px solid rgba(220,38,38,0.4);border-radius:28px;padding:32px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span style="font-size:12px;color:var(--crimson);font-weight:700;">NEXON SHOGUNATE GATEWAY</span>
+        <button type="button" id="closeModalBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:#fff;padding:6px 12px;border-radius:999px;cursor:pointer;">Close</button>
+      </div>
+      <h2 id="kenseiModalTitle" class="font-display" style="font-size:32px;margin-bottom:10px;">MINT GENESIS KENSEI</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:22px;">Connect your Ethereum wallet to inspect trait provenance or claim your physical 1/6 scale Ronin statue allocation.</p>
+      <button type="button" class="dig95-btn-red" style="width:100%;" onclick="document.getElementById('kenseiModal').classList.remove('is-open')">Sign Bushido Message</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var paused = false;
+      var btn = document.getElementById('motionToggleBtn');
+      if (btn) btn.addEventListener('click', function(){
+        paused = !paused;
+        btn.textContent = paused ? 'Motion: PAUSED' : 'Motion: ON';
+      });
+      window.addEventListener('scroll', function(){
+        if (paused) return;
+        var y = window.scrollY || 0;
+        document.querySelectorAll('[data-parallax]').forEach(function(el){
+          var s = parseFloat(el.getAttribute('data-parallax') || '0.05');
+          el.style.transform = 'translate3d(0,' + (y * s).toFixed(1) + 'px,0)';
+        });
+      }, { passive: true });
+      document.querySelectorAll('[data-tilt-card]').forEach(function(card){
+        card.addEventListener('mousemove', function(e){
+          if (paused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / r.width - 0.5;
+          var ny = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = 'perspective(900px) rotateX(' + (-ny * 9).toFixed(2) + 'deg) rotateY(' + (nx * 11).toFixed(2) + 'deg)';
+        });
+        card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
+      });
+      var modal = document.getElementById('kenseiModal');
+      var openBtns = document.querySelectorAll('#exploreMagneticBtn, [data-modal-open]');
+      openBtns.forEach(function(b){ b.addEventListener('click', function(){ if (modal) modal.classList.add('is-open'); }); });
+      var closeBtn = document.getElementById('closeModalBtn');
+      if (closeBtn) closeBtn.addEventListener('click', function(){ modal.classList.remove('is-open'); });
+    })();
+  </script>
+</body>
+</html>

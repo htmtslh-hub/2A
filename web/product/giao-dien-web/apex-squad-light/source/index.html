@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>APEX LEGENDS — Are You Ready To Be A Legend?</title>
+  <meta name="description" content="Light tactical bone-stone arena with glowing crimson-orange triangular emblem, 3D squad duo cutout, parallelogram navigation tabs, and squad loadout selector.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #d6d1c7;
+      --stage: #eae6df;
+      --red: #ff2a00;
+      --fg: #111111;
+      --muted: #57534e;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; }
+    .font-teko { font-family: 'Teko', sans-serif; text-transform: uppercase; }
+
+    .ape60-frame {
+      max-width: 1360px; margin: 28px auto; background: var(--stage);
+      border: 1px solid rgba(0,0,0,0.12); box-shadow: 0 32px 80px rgba(0,0,0,0.22);
+      padding: 24px clamp(24px, 4vw, 56px) 36px; position: relative; overflow: hidden;
+    }
+    .ape60-nav {
+      display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.12); padding-bottom: 16px;
+    }
+    .ape60-tab-red {
+      display: inline-block; padding: 6px 20px; background: var(--red); color: #fff;
+      transform: skewX(-18deg); font-size: 12px; font-weight: 800; text-decoration: none;
+    }
+    .ape60-hero-grid {
+      display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; padding: 44px 0 28px;
+    }
+    @media (min-width: 980px) {
+      .ape60-hero-grid { grid-template-columns: 0.95fr 1.05fr; }
+    }
+    .ape60-h1 {
+      font-size: clamp(54px, 7.5vw, 96px); line-height: 0.9; letter-spacing: 0.01em; margin-bottom: 18px;
+    }
+    .ape60-triangle-stage {
+      position: relative; display: flex; align-items: center; justify-content: center; min-height: 440px;
+    }
+    .ape60-apex-tri {
+      position: absolute; width: 380px; height: 340px;
+      background: linear-gradient(135deg, #ff2a00 0%, #ea580c 100%);
+      clip-path: polygon(50% 0%, 100% 100%, 72% 100%, 50% 46%, 28% 100%, 0% 100%);
+      filter: drop-shadow(0 20px 40px rgba(255,42,0,0.4)); z-index: 1;
+    }
+    .ape60-squad-img {
+      position: relative; z-index: 3; width: 100%; max-width: 450px; height: auto; object-fit: contain;
+      filter: drop-shadow(0 24px 36px rgba(0,0,0,0.45));
+    }
+    .ape60-play-parallelogram {
+      display: inline-block; padding: 12px 48px; border: 1.5px solid #111;
+      background: transparent; color: #111; font-family: 'Teko', sans-serif; font-size: 22px; font-weight: 700;
+      letter-spacing: 0.12em; transform: skewX(-18deg); cursor: pointer; transition: background 0.2s, color 0.2s;
+    }
+    .ape60-play-parallelogram:hover { background: var(--red); border-color: var(--red); color: #fff; }
+    .ape60-modal { position: fixed; inset: 0; z-index: 900; background: rgba(17,17,17,0.8); backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .ape60-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="ape60-frame">
+      <header class="ape60-nav">
+        <strong class="font-teko" style="font-size:32px;line-height:0.9;">APEX<br><span style="font-size:14px;letter-spacing:0.2em;">LEGENDS</span></strong>
+        <nav style="display:flex;gap:24px;align-items:center;" aria-label="Main Navigation">
+          <a href="#top" class="ape60-tab-red">HOME</a>
+          <a href="#top" style="color:#111;text-decoration:none;font-size:12px;font-weight:800;">LEGENDS</a>
+          <a href="#top" style="color:#111;text-decoration:none;font-size:12px;font-weight:800;">NEWS</a>
+          <a href="#top" style="color:#111;text-decoration:none;font-size:12px;font-weight:800;">MEDIA</a>
+          <a href="#top" style="color:#111;text-decoration:none;font-size:12px;font-weight:800;">FORUMS</a>
+        </nav>
+        <div style="border:1px solid rgba(0,0,0,0.25);padding:6px 12px;font-size:11px;font-weight:800;text-align:center;">
+          FREE TO PLAY<br><span style="color:var(--red);">▼</span>
+        </div>
+      </header>
+
+      <section class="ape60-hero-grid">
+        <div>
+          <h1 class="ape60-h1 font-teko">
+            ARE YOU<br>READY TO BE<br>A LEGEND?
+          </h1>
+          <p style="font-size:15px;color:var(--muted);max-width:390px;line-height:1.6;">
+            Pick your character. Round up your squad. Show everyone what Legends are made of.
+          </p>
+        </div>
+
+        <div class="ape60-triangle-stage">
+          <div class="ape60-apex-tri"></div>
+          <img src="assets/cutout.webp" alt="Apex Squad Duo" class="ape60-squad-img" data-tilt-card />
+        </div>
+      </section>
+
+      <footer style="display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid rgba(0,0,0,0.12);">
+        <div style="display:flex;gap:14px;font-size:13px;font-weight:800;">
+          <span>f</span><span>𝕏</span><span>◎</span>
+        </div>
+        <button type="button" id="exploreMagneticBtn" class="ape60-play-parallelogram">PLAY NOW</button>
+        <strong style="font-size:20px;font-weight:900;letter-spacing:0.06em;">EA</strong>
+      </footer>
+    </div>
+  </main>
+
+  <div id="apexLightModal" class="ape60-modal" role="dialog" aria-modal="true" aria-labelledby="apexLightTitle">
+    <div style="max-width:480px;width:100%;background:var(--stage);padding:32px;border-left:5px solid var(--red);">
+      <h2 id="apexLightTitle" class="font-teko" style="font-size:38px;margin-bottom:8px;">SQUAD DROP READY</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Download Apex Legends free on PC, PlayStation, Xbox, and Switch.</p>
+      <button type="button" class="ape60-play-parallelogram" style="width:100%;" onclick="document.getElementById('apexLightModal').classList.remove('is-open')">LAUNCH GAME</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var btn = document.getElementById('exploreMagneticBtn');
+      if (btn) btn.addEventListener('click', function(){ document.getElementById('apexLightModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>

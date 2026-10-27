@@ -39,8 +39,8 @@ export async function removeBackgroundToTransparentWebp(inputPath, outputPath, o
   bgG = Math.round(bgG / sampleOffsets.length);
   bgB = Math.round(bgB / sampleOffsets.length);
 
-  const isGreenScreen = bgG > 140 && bgG > bgR * 1.35 && bgG > bgB * 1.35;
-  const isMagentaScreen = bgR > 140 && bgB > 140 && bgG < Math.min(bgR, bgB) * 0.65;
+  const isGreenScreen = bgG >= 110 && bgG > bgR * 1.35 && bgG > bgB * 1.35;
+  const isMagentaScreen = bgR >= 110 && bgB >= 110 && bgG < Math.min(bgR, bgB) * 0.65;
 
   // Step 1: Global chroma distance + specialized green/magenta dominance matting
   for (let i = 0; i < out.length; i += channels) {
@@ -56,14 +56,14 @@ export async function removeBackgroundToTransparentWebp(inputPath, outputPath, o
     let alpha = 255;
 
     if (isGreenScreen) {
-      // Green dominance metric: how much green exceeds the max of R and B
+      // Green dominance metric: how much green exceeds the max of R and B (plus green-over-red for warm sun halos)
       const maxRB = Math.max(r, b);
-      const greenExcess = g - maxRB;
-      if (dist < tolerance || (greenExcess > 42 && g > 95)) {
+      const greenExcess = Math.max(g - maxRB, (g > b + 40 ? g - r : -999));
+      if (dist < tolerance || (greenExcess > 28 && g > 85)) {
         alpha = 0;
-      } else if (dist < tolerance + softEdge || greenExcess > 15) {
+      } else if (dist < tolerance + softEdge || greenExcess > 6) {
         const ratioDist = Math.max(0, Math.min(1, (dist - tolerance) / softEdge));
-        const ratioGreen = greenExcess > 15 ? Math.max(0, Math.min(1, 1 - (greenExcess - 15) / 35)) : 1;
+        const ratioGreen = greenExcess > 6 ? Math.max(0, Math.min(1, 1 - (greenExcess - 6) / 22)) : 1;
         alpha = Math.round(255 * Math.min(ratioDist, ratioGreen));
       }
       // Despill green fringe on semi-transparent and edge pixels

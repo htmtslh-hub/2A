@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Litera — Interactive Bookstore &amp; Gift Concierge</title>
+  <meta name="description" content="Warm cream editorial bookstore UI with 9 category icons, 5 hardcover ribbon cards, 3D floating collector book stack cutout, and live interactive Chat concierge sidebar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #dfd3c3;
+      --panel: #faf6f0;
+      --cream: #efe8dec4;
+      --coral: #f43f5e;
+      --purple: #7c69ef;
+      --fg: #1e1b18;
+      --muted: #78716c;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; padding: 14px; }
+    .font-serif { font-family: 'Fraunces', serif; }
+
+    .lit83-app {
+      max-width: 1400px; margin: 0 auto; background: var(--panel); border-radius: 32px;
+      box-shadow: 0 28px 70px rgba(30,27,24,0.14); display: grid; grid-template-columns: 1fr; overflow: hidden;
+    }
+    @media (min-width: 1024px) {
+      .lit83-app { grid-template-columns: 1fr 340px; }
+    }
+    .lit83-main { padding: 28px; }
+    .lit83-top-bar { display: flex; gap: 14px; align-items: center; margin-bottom: 26px; }
+    .lit83-search-box {
+      flex: 1; background: #f3ede4; border-radius: 999px; padding: 12px 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .lit83-search-box input { border: none; background: transparent; width: 100%; outline: none; font-size: 14px; }
+    .lit83-rainbow-btn {
+      padding: 12px 28px; border-radius: 999px; border: none; color: #fff; font-weight: 700; font-size: 14px; cursor: pointer;
+      background: linear-gradient(90deg, #6366f1 0%, #10b981 48%, #f43f5e 100%);
+    }
+
+    .lit83-cats {
+      display: flex; gap: 14px; overflow-x: auto; padding-bottom: 12px; margin-bottom: 24px;
+    }
+    .lit83-cat-pill {
+      display: flex; flex-direction: column; align-items: center; gap: 6px; cursor: pointer;
+      padding: 10px 14px; border-radius: 16px; background: #f3ede4; border: 1px solid transparent; flex-shrink: 0;
+    }
+    .lit83-cat-pill.is-active { border-color: var(--coral); background: #fff; }
+
+    .lit83-books-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 16px 0 28px;
+    }
+    .lit83-book-card {
+      padding: 18px 14px; border-radius: 18px; color: #fff; min-height: 210px;
+      display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;
+      transition: transform 0.25s ease; position: relative;
+    }
+    .lit83-book-card:hover { transform: translateY(-6px); }
+
+    .lit83-bestseller-box {
+      background: #efe8de; border-radius: 26px; padding: 24px;
+      display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center;
+    }
+    @media (min-width: 860px) {
+      .lit83-bestseller-box { grid-template-columns: 180px 1fr 1fr; }
+    }
+    .lit83-stack-cutout { width: 100%; max-width: 175px; height: auto; object-fit: contain; margin: 0 auto; display: block; }
+
+    /* Right Live Chat Concierge Sidebar */
+    .lit83-chat-col {
+      background: #f3ede4; border-left: 1px solid rgba(0,0,0,0.06); padding: 24px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .lit83-bubble-user {
+      background: var(--purple); color: #fff; padding: 12px 16px; border-radius: 18px 18px 4px 18px;
+      font-size: 13px; line-height: 1.5; margin-bottom: 12px; align-self: flex-end; max-width: 88%;
+    }
+    .lit83-bubble-bot {
+      background: #ffffff; color: var(--fg); padding: 14px 16px; border-radius: 18px 18px 18px 4px;
+      font-size: 13px; line-height: 1.5; margin-bottom: 12px; align-self: flex-start; max-width: 92%;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="lit83-app">
+      <!-- MAIN BOOKSTORE VIEW -->
+      <div class="lit83-main">
+        <header class="lit83-top-bar">
+          <div class="lit83-search-box">
+            <span>🔍</span>
+            <input type="text" placeholder="Search for books, authors, or collector editions..." aria-label="Search for books">
+          </div>
+          <button type="button" id="exploreMagneticBtn" class="lit83-rainbow-btn">search</button>
+        </header>
+
+        <!-- 9 CATEGORY BOOK ICONS -->
+        <div class="lit83-cats" aria-label="Book Categories">
+          <button type="button" class="lit83-cat-pill is-active"><span style="font-size:20px;">📚</span><strong style="font-size:11px;">All</strong></button>
+          <button type="button" class="lit83-cat-pill"><span style="font-size:20px;">📱</span><strong style="font-size:11px;">eBooks</strong></button>
+          <button type="button" class="lit83-cat-pill"><span style="font-size:20px;">📕</span><strong style="font-size:11px;">New</strong></button>
+          <button type="button" class="lit83-cat-pill"><span style="font-size:20px;">👑</span><strong style="font-size:11px;">Bestsellers</strong></button>
+          <button type="button" class="lit83-cat-pill"><span style="font-size:20px;">🎧</span><strong style="font-size:11px;">Audiobooks</strong></button>
+          <button type="button" class="lit83-cat-pill"><span style="font-size:20px;">🔮</span><strong style="font-size:11px;">Fiction</strong></button>
+          <button type="button" class="lit83-cat-pill"><span style="font-size:20px;">💌</span><strong style="font-size:11px;">Romance</strong></button>
+          <button type="button" class="lit83-cat-pill"><span style="font-size:20px;">🐉</span><strong style="font-size:11px;">Fantasy</strong></button>
+        </div>
+
+        <h1 class="font-serif" style="font-size:22px;">Popular Collector Hardcovers</h1>
+
+        <!-- 5 HARDCOVER BOOK CARDS -->
+        <div class="lit83-books-row">
+          <article class="lit83-book-card" style="background:linear-gradient(145deg,#1e3a5f,#0f172a);" data-book="Fairy Tale by Stephen King">
+            <span style="font-size:10px;letter-spacing:0.12em;opacity:0.8;">STEPHEN KING</span>
+            <strong class="font-serif" style="font-size:18px;">FAIRY TALE</strong>
+            <span style="font-size:11px;color:#fbbf24;">★ 4.9 • Add to Chat</span>
+          </article>
+          <article class="lit83-book-card" style="background:linear-gradient(145deg,#7c69ef,#4c1d95);" data-book="Never After by Stephanie Garber">
+            <span style="font-size:10px;letter-spacing:0.12em;opacity:0.8;">STEPHANIE GARBER</span>
+            <strong class="font-serif" style="font-size:18px;">NEVER AFTER</strong>
+            <span style="font-size:11px;color:#fbbf24;">★ 4.8 • Add to Chat</span>
+          </article>
+          <article class="lit83-book-card" style="background:linear-gradient(145deg,#e11d48,#881337);" data-book="Klara and the Sun by Kazuo Ishiguro">
+            <span style="font-size:10px;letter-spacing:0.12em;opacity:0.8;">KAZUO ISHIGURO</span>
+            <strong class="font-serif" style="font-size:18px;">KLARA &amp; THE SUN</strong>
+            <span style="font-size:11px;color:#fbbf24;">★ 4.9 • Add to Chat</span>
+          </article>
+          <article class="lit83-book-card" style="background:linear-gradient(145deg,#10b981,#064e3b);" data-book="A Court of Mist and Fury by Sarah J. Maas">
+            <span style="font-size:10px;letter-spacing:0.12em;opacity:0.8;">SARAH J. MAAS</span>
+            <strong class="font-serif" style="font-size:18px;">MIST AND FURY</strong>
+            <span style="font-size:11px;color:#fbbf24;">★ 5.0 • Add to Chat</span>
+          </article>
+          <article class="lit83-book-card" style="background:linear-gradient(145deg,#0284c7,#1e3a8a);" data-book="Hamnet by Maggie O'Farrell">
+            <span style="font-size:10px;letter-spacing:0.12em;opacity:0.8;">MAGGIE O'FARRELL</span>
+            <strong class="font-serif" style="font-size:18px;">HAMNET</strong>
+            <span style="font-size:11px;color:#fbbf24;">★ 4.9 • Add to Chat</span>
+          </article>
+        </div>
+
+        <!-- BOTTOM 50 MOST POPULAR BESTSELLERS WITH 3D CUTOUT -->
+        <section class="lit83-bestseller-box">
+          <img src="assets/cutout.webp" alt="3D Collector Book Stack" class="lit83-stack-cutout" />
+          <div>
+            <h2 class="font-serif" style="font-size:24px;margin-bottom:8px;">2026 Year 50 Most Popular Bestsellers</h2>
+            <p style="font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:14px;">
+              List of the most interesting books of the year based on customer &amp; critic reviews.
+            </p>
+            <button type="button" style="padding:8px 18px;border-radius:999px;background:var(--coral);color:#fff;border:none;font-size:12px;font-weight:700;cursor:pointer;">👁 view all 50</button>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="background:#fff;padding:10px 14px;border-radius:14px;font-size:12px;"><strong>Top 50 books for kids</strong><span style="display:block;color:var(--muted);font-size:11px;">Illustrated chapter books</span></div>
+            <div style="background:#fff;padding:10px 14px;border-radius:14px;font-size:12px;"><strong>Top 50 Classic books</strong><span style="display:block;color:var(--muted);font-size:11px;">Timeless literary editions</span></div>
+            <div style="background:#fff;padding:10px 14px;border-radius:14px;font-size:12px;"><strong>Top 50 Sci-Fi books</strong><span style="display:block;color:var(--muted);font-size:11px;">Time &amp; space odysseys</span></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT INTERACTIVE CHAT CONCIERGE SIDEBAR -->
+      <aside class="lit83-chat-col" aria-label="Book Concierge Chat">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+            <strong class="font-serif" style="font-size:20px;">Chat</strong>
+            <span style="font-size:11px;background:#fff;padding:4px 10px;border-radius:999px;">● Concierge Online</span>
+          </div>
+          <div id="chatLog" style="display:flex;flex-direction:column;">
+            <div class="lit83-bubble-user">Good Day! I'm looking for collector gift editions. Do you have them?</div>
+            <div class="lit83-bubble-bot">Good Day! Click any book cover on the left and I'll check signed first-edition availability for your cart.</div>
+          </div>
+        </div>
+        <form onsubmit="event.preventDefault();" style="display:flex;gap:8px;margin-top:16px;">
+          <input id="chatInput" type="text" placeholder="Write a message..." style="flex:1;padding:10px 14px;border-radius:999px;border:1px solid rgba(0,0,0,0.1);outline:none;font-size:13px;">
+          <button type="submit" id="chatSendBtn" style="width:38px;height:38px;border-radius:50%;background:var(--coral);color:#fff;border:none;cursor:pointer;">➤</button>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      var log = document.getElementById('chatLog');
+      document.querySelectorAll('[data-book]').forEach(function(card){
+        card.addEventListener('click', function(){
+          var title = card.getAttribute('data-book');
+          var b = document.createElement('div');
+          b.className = 'lit83-bubble-bot';
+          b.textContent = 'Added "' + title + '" (Collector Hardcover with ribbon bookmark) to your gift reservation!';
+          if (log) log.appendChild(b);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

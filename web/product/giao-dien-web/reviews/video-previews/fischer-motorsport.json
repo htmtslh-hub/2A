@@ -1,0 +1,38 @@
+{
+  "id": "t150",
+  "slug": "fischer-motorsport",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T23:43:13.652Z",
+  "demo": "/demos/fischer-motorsport/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "76f87c32b5af",
+  "sha256": "76f87c32b5af2f8bb80b75fdae4e6879a8758b49671eb44f8618befdabd39155",
+  "demoHtmlSha256": "5c9c4fcd549d254a489001208210a8f0b130390851acdfb5abd06ab49a76fd67",
+  "demoSha256": "78207df7bdeaa814428d63b9412d766b6919215345634ae98988f9a7084cdc49",
+  "bytes": 226526,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 76
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fischer-motorsport-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fischer-motorsport-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fischer-motorsport-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\fischer-motorsport-return.jpg"
+  ]
+}

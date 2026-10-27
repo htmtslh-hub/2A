@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Stellar.ai — Work Smarter. Move Faster. AI Powers You Up.</title>
+  <meta name="description" content="Intelligent automation syncs with the tools you love to streamline tasks, boost output, and save time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0a0a0a;
+      --muted: #52525b;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; overflow-x: clip; }
+
+    .ste86-nav {
+      max-width: 1280px; margin: 0 auto; padding: 18px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .ste86-btn-black {
+      background: #000; color: #fff; padding: 11px 24px; border-radius: 999px;
+      font-size: 14px; font-weight: 500; border: none; cursor: pointer;
+    }
+    .ste86-hero {
+      max-width: 1280px; margin: 0 auto; padding: 56px 24px 80px; text-align: center;
+    }
+    .ste86-h1 {
+      font-size: clamp(44px, 6.2vw, 78px); font-weight: 500; line-height: 1.08;
+      letter-spacing: -0.03em; margin: 22px auto 18px; max-width: 920px;
+    }
+    .ste86-grad-line {
+      background: linear-gradient(90deg, #000000 0%, #6b7280 55%, #9ca3af 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+
+    /* 4-Tab Bar (Analyse | Train | Testing | Deploy) */
+    .ste86-tab-bar {
+      display: inline-flex; align-items: center; gap: 6px; padding: 6px;
+      background: #f4f4f5; border-radius: 12px; margin: 32px auto 24px; flex-wrap: wrap; justify-content: center;
+    }
+    .ste86-tab-btn {
+      padding: 10px 22px; border-radius: 8px; border: none; background: transparent;
+      color: #52525b; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+    }
+    .ste86-tab-btn.is-active {
+      background: #ffffff; color: #000000; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Video + Conditional Overlay Stage */
+    .ste86-video-stage {
+      position: relative; max-width: 1120px; margin: 0 auto; height: 460px;
+      border-radius: 28px; overflow: hidden; background: #18181b;
+      display: flex; align-items: center; justify-content: center; padding: 24px;
+    }
+    .ste86-video-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.82;
+    }
+    .ste86-overlay-card {
+      position: relative; z-index: 10; max-width: 460px; width: 100%;
+      background: rgba(255,255,255,0.94); backdrop-filter: blur(20px);
+      border-radius: 22px; padding: 28px; text-align: left; color: #09090b;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.28);
+    }
+    .ste86-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(0,0,0,0.55); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .ste86-seamless-overlay.is-open { display: flex; }
+    .ste86-seamless-box { max-width: 500px; width: 100%; border-radius: 24px; background: #fff; padding: 32px; }
+  </style>
+</head>
+<body>
+  <header class="ste86-nav">
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span style="font-size:18px;">★</span>
+      <strong style="font-size:18px;font-weight:600;">Stellar.ai</strong>
+    </div>
+    <nav style="display:flex;gap:28px;" aria-label="Main Navigation">
+      <a href="#stellarStage" style="color:var(--muted);text-decoration:none;font-size:14px;">Solutions ▾</a>
+      <a href="#stellarStage" style="color:var(--muted);text-decoration:none;font-size:14px;">For Teams ▾</a>
+      <a href="#stellarStage" style="color:var(--muted);text-decoration:none;font-size:14px;">About Us</a>
+      <a href="#stellarStage" style="color:var(--muted);text-decoration:none;font-size:14px;">Learn Hub</a>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <button type="button" id="motionToggleBtn" style="padding:8px 14px;border-radius:999px;background:#f4f4f5;border:none;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="ste86-btn-black" data-magnetic>Get started free</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="ste86-hero">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:8px;border:1px solid #e4e4e7;font-size:13px;font-weight:500;">
+        <span style="width:22px;height:22px;border-radius:4px;border:1px solid #d4d4d8;display:inline-flex;align-items:center;justify-content:center;">★</span>
+        <span>4.9 rating from 18.3K+ users</span>
+      </div>
+
+      <h1 class="ste86-h1">
+        Work Smarter. Move Faster.<br>
+        <span class="ste86-grad-line">AI Powers You Up.</span>
+      </h1>
+
+      <p style="font-size:18px;color:var(--muted);max-width:640px;margin:0 auto 28px;line-height:1.6;">
+        Intelligent automation syncs with the tools you love to streamline tasks, boost output, and save time.
+      </p>
+
+      <div>
+        <button type="button" class="ste86-btn-black" style="padding:14px 32px;font-size:15px;" data-seamless-trigger="Begin Stellar.ai Free Trial">
+          Begin Free Trial
+        </button>
+      </div>
+
+      <!-- INTERACTIVE 4-TAB BAR -->
+      <div class="ste86-tab-bar" role="tablist">
+        <button type="button" class="ste86-tab-btn is-active" data-tab-title="Set Up Your AI Workspace" data-tab-bar="25%" data-tab-color="#7c3aed" data-tab-desc="Step 1 of 4: Connecting workspace repositories, Slack channels, and automated workflow triggers.">📊 Analyse</button>
+        <button type="button" class="ste86-tab-btn" data-tab-title="AI Model Training" data-tab-bar="67%" data-tab-color="#f97316" data-tab-desc="Epoch 14/20 • 67% Complete • Fine-tuning custom context weights with zero data retention.">📖 Train</button>
+        <button type="button" class="ste86-tab-btn" data-tab-title="Test Suite Results" data-tab-bar="100%" data-tab-color="#10b981" data-tab-desc="127 / 127 Automated Evaluation Benchmarks Passed • 99.8% Hallucination Guardrail Score.">👥 Testing</button>
+        <button type="button" class="ste86-tab-btn" data-tab-title="Deploy to Production" data-tab-bar="92%" data-tab-color="#2563eb" data-tab-desc="Multi-region edge inference ready • SOC2 Type II verified • One-click production rollout.">🚀 Deploy</button>
+      </div>
+
+      <!-- VIDEO + CONDITIONAL OVERLAY STAGE -->
+      <div id="stellarStage" class="ste86-video-stage">
+        <video id="heroBgVideo" class="ste86-video-bg" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260319_165750_358b1e72-c921-48b7-aaac-f200994f32fb.mp4" autoplay loop muted playsinline preload="auto"></video>
+        <div class="ste86-overlay-card" data-tilt-card>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <strong id="stellarCardTitle" style="font-size:19px;">Set Up Your AI Workspace</strong>
+            <span id="stellarCardPct" style="font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:#f3e8ff;color:#7c3aed;">25%</span>
+          </div>
+          <div style="height:8px;background:#e4e4e7;border-radius:99px;overflow:hidden;margin-bottom:14px;">
+            <div id="stellarCardBar" style="width:25%;height:100%;background:#7c3aed;border-radius:99px;transition:width 0.4s ease, background 0.4s ease;"></div>
+          </div>
+          <p id="stellarCardDesc" style="font-size:13px;color:#52525b;line-height:1.6;">
+            Step 1 of 4: Connecting workspace repositories, Slack channels, and automated workflow triggers.
+          </p>
+        </div>
+      </div>
+
+      <!-- PARTNER LOGOS -->
+      <div style="margin-top:64px;display:flex;justify-content:center;gap:clamp(28px,5vw,72px);flex-wrap:wrap;color:#71717a;font-weight:700;font-size:15px;letter-spacing:0.06em;">
+        <span>INTERSCOPE</span><span>SPOTIFY</span><span>Nexera</span><span style="font-family:Georgia,serif;font-style:italic;">M3</span><span>LAURA COLE</span><span>vertex</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="ste86-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="ste86-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <strong>★ Stellar.ai Onboarding</strong>
+        <button type="button" id="closeSeamlessBtn" style="padding:6px 12px;border-radius:999px;border:1px solid #d4d4d8;background:#fff;cursor:pointer;">Close</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Begin Your 14-Day Free Trial</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Connect your team tools and deploy your first AI workflow in under 3 minutes.</p>
+      <button type="button" id="confirmSeamlessBtn" class="ste86-btn-black" style="width:100%;">Create Workspace</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var tabs = document.querySelectorAll('.ste86-tab-btn');
+      var tTitle = document.getElementById('stellarCardTitle');
+      var tPct = document.getElementById('stellarCardPct');
+      var tBar = document.getElementById('stellarCardBar');
+      var tDesc = document.getElementById('stellarCardDesc');
+      function activate(btn) {
+        tabs.forEach(function(b){ b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        var bw = btn.getAttribute('data-tab-bar');
+        var col = btn.getAttribute('data-tab-color');
+        if (tTitle) tTitle.textContent = btn.getAttribute('data-tab-title');
+        if (tPct) { tPct.textContent = bw; tPct.style.color = col; }
+        if (tBar) { tBar.style.width = bw; tBar.style.background = col; }
+        if (tDesc) tDesc.textContent = btn.getAttribute('data-tab-desc');
+      }
+      tabs.forEach(function(b){ b.addEventListener('click', function(){ activate(b); }); });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.ste86-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('ste86Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

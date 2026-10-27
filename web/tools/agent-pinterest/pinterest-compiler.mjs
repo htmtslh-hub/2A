@@ -300,6 +300,31 @@ const SLUG_BLUEPRINT_OVERRIDES = {
     id: 'neon-cyan-glass-dev',
     brandTitle: 'Alex Carter UI/UX',
     headlineSub: 'Deep teal-obsidian and neon-cyan glassmorphic developer portfolio with zero-gravity 3D tesseract cube, hexagonal skill matrix, and interactive 01–05 process timeline.'
+  },
+  'tripg-ocean': {
+    id: 'ocean-wave-curve',
+    brandTitle: 'TripG Ocean Discovery',
+    headlineSub: 'Clean white and turquoise ocean wave curve hero with 3D hydrofoil yacht cutout, straddling circular GO button, and interactive Paris–London–Dubaï–Phuket timeline.'
+  },
+  'apex-squad-light': {
+    id: 'tactical-triangle-arena',
+    brandTitle: 'Apex Legends Squad Hub',
+    headlineSub: 'Light tactical bone-stone arena with glowing crimson-orange triangular emblem, 3D squad duo cutout, parallelogram navigation tabs, and squad loadout selector.'
+  },
+  'litera-bookstore': {
+    id: 'bookstore-chat-concierge',
+    brandTitle: 'Litera Bookstore & Chat',
+    headlineSub: 'Warm cream editorial bookstore UI with 9 category icons, 5 hardcover ribbon cards, 3D floating collector book stack cutout, and live interactive Chat concierge sidebar.'
+  },
+  'fischer-motorsport': {
+    id: 'diagonal-zigzag-atelier',
+    brandTitle: 'Fischer KFZ-Meisterbetrieb',
+    headlineSub: 'Carbon-black automotive master workshop with dramatic diagonal white & dark zig-zag geometric bands, 3D bronze executive coupe cutout, and 6-point TÜV inspection matrix.'
+  },
+  'japan-sunrise-tour': {
+    id: 'fuji-sakura-expedition',
+    brandTitle: 'Japan Sunrise Tours',
+    headlineSub: '10-day Osaka, Kyoto & Tokyo expedition with masked JAPAN sunrise header, 3D vermilion pagoda & sakura cutout, 5 vertical glass cards, and vertical itinerary timeline.'
   }
 };
 
@@ -1985,6 +2010,829 @@ export function buildPinterestInspiredHtml(data, palette) {
 </html>`;
   }
 
+  // 6. TRIPG OCEAN (Clean White & Turquoise Ocean Wave Curve Split Hero + Straddling Circular "GO" Button + 3D Yacht Cutout + Paris-London-Dubaï-Phuket Timeline)
+  // Motion Recipe: Interactive 4-City Dot-Timeline Switcher + Magnetic Straddling "GO" Button + 3D Yacht Hover Tilt
+  if (data.slug === 'tripg-ocean') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>TripG — Find Someone To Take You There</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #eef2f5;
+      --card: #ffffff;
+      --teal: #0e7490;
+      --teal-light: #06b6d4;
+      --muted: #94a3b8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: #0f172a; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; }
+
+    .${p}-shell {
+      max-width: 1360px; margin: 28px auto; background: var(--card); border-radius: 28px;
+      box-shadow: 0 32px 80px rgba(14,116,144,0.14); overflow: hidden; position: relative; min-height: 86vh;
+      display: grid; grid-template-columns: 1fr;
+    }
+    @media (min-width: 980px) {
+      .${p}-shell { grid-template-columns: 1.05fr 0.95fr; }
+    }
+    .${p}-left {
+      padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 10;
+    }
+    .${p}-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .${p}-logo { font-family: 'Pacifico', cursive; font-size: 28px; color: var(--teal); text-decoration: none; }
+    .${p}-h1 {
+      font-size: clamp(36px, 4.5vw, 58px); font-weight: 800; line-height: 1.08; letter-spacing: -0.02em;
+      color: var(--teal); margin: 44px 0 18px;
+    }
+    .${p}-h1 span { display: block; color: #b0b8c1; }
+
+    /* Right Curved Ocean Bay & 3D Hydrofoil Yacht */
+    .${p}-ocean-right {
+      position: relative; min-height: 460px;
+      background: radial-gradient(circle at 30% 40%, #22d3ee 0%, #0e7490 55%, #083344 100%);
+      display: flex; align-items: center; justify-content: center; padding: 32px;
+      border-radius: 260px 0 0 260px;
+    }
+    @media (max-width: 979px) {
+      .${p}-ocean-right { border-radius: 40px 40px 0 0; }
+    }
+    .${p}-go-btn {
+      position: absolute; left: -46px; top: 50%; transform: translateY(-50%); z-index: 20;
+      width: 92px; height: 92px; border-radius: 50%; background: #94a3b8;
+      border: 12px solid rgba(14, 116, 144, 0.78); color: #fff;
+      font-family: 'Pacifico', cursive; font-size: 24px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 16px 36px rgba(14,116,144,0.35); transition: transform 0.25s;
+    }
+    .${p}-go-btn:hover { transform: translateY(-50%) scale(1.08); }
+    @media (max-width: 979px) {
+      .${p}-go-btn { left: 50%; top: -46px; transform: translateX(-50%); }
+    }
+    .${p}-yacht-cutout {
+      width: 100%; max-width: 480px; height: auto; object-fit: contain;
+      filter: drop-shadow(0 28px 40px rgba(0,0,0,0.45));
+    }
+
+    /* Bottom 4-City Dot Timeline (Paris - London - Dubaï - Phuket) */
+    .${p}-timeline {
+      display: flex; align-items: center; gap: 18px; margin-top: 36px; flex-wrap: wrap;
+    }
+    .${p}-city-node {
+      background: transparent; border: none; cursor: pointer; text-align: center;
+      color: #94a3b8; font-size: 14px; font-weight: 700; padding: 6px 10px;
+    }
+    .${p}-city-node.is-active { color: var(--teal); }
+    .${p}-city-dot {
+      display: block; width: 10px; height: 10px; border-radius: 50%; background: #cbd5e1;
+      margin: 10px auto 0; transition: background 0.25s, transform 0.25s;
+    }
+    .${p}-city-node.is-active .${p}-city-dot { background: var(--teal); transform: scale(1.3); }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(8,51,68,0.75); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="${p}-shell">
+      <div class="${p}-left">
+        <header class="${p}-nav">
+          <a href="#top" class="${p}-logo">TripG</a>
+          <nav style="display:flex;gap:28px;" aria-label="Main Navigation">
+            <a href="#cityGuide" style="color:var(--teal);text-decoration:none;font-size:12px;font-weight:800;letter-spacing:0.08em;">ABOUT</a>
+            <a href="#cityGuide" style="color:var(--teal);text-decoration:none;font-size:12px;font-weight:800;letter-spacing:0.08em;">THE PROJECT</a>
+            <a href="#cityGuide" style="color:var(--teal);text-decoration:none;font-size:12px;font-weight:800;letter-spacing:0.08em;">CONTACT</a>
+          </nav>
+        </header>
+
+        <div>
+          <h1 class="${p}-h1">
+            FIND SOMEONE
+            <span>TO TAKE YOU THERE</span>
+          </h1>
+          <p id="cityDescText" style="font-size:15px;color:#64748b;max-width:440px;line-height:1.65;">
+            Phuket Private Hydrofoil Charter — Cruise limestone karsts, emerald lagoons, and coral reefs with verified local skippers.
+          </p>
+        </div>
+
+        <div id="cityGuide">
+          <div class="${p}-timeline" role="tablist">
+            <button type="button" class="${p}-city-node" data-city="Paris — Private Seine Vintage Runabout &amp; Champagne Sunset Cruise.">
+              Paris<span class="${p}-city-dot"></span>
+            </button>
+            <button type="button" class="${p}-city-node" data-city="London — Thames High-Speed RIB Architecture &amp; Greenwich Meridian Charter.">
+              London<span class="${p}-city-dot"></span>
+            </button>
+            <button type="button" class="${p}-city-node" data-city="Dubaï — Palm Jumeirah Superyacht &amp; Arabian Gulf Twilight Foil.">
+              Dubaï<span class="${p}-city-dot"></span>
+            </button>
+            <button type="button" class="${p}-city-node is-active" data-city="Phuket Private Hydrofoil Charter — Cruise limestone karsts, emerald lagoons, and coral reefs with verified local skippers.">
+              Phuket<span class="${p}-city-dot"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="${p}-ocean-right">
+        <button type="button" id="exploreMagneticBtn" class="${p}-go-btn" aria-label="Launch Charter">GO</button>
+        <img src="assets/cutout.webp" alt="3D Turquoise Hydrofoil Yacht" class="${p}-yacht-cutout" data-tilt-card />
+      </div>
+    </div>
+  </main>
+
+  <div id="tripgModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="tripgModalTitle">
+    <div style="max-width:480px;width:100%;background:#fff;border-radius:24px;padding:32px;">
+      <h2 id="tripgModalTitle" style="font-size:24px;color:var(--teal);margin-bottom:10px;">Book Your Local Skipper</h2>
+      <p style="font-size:14px;color:#64748b;line-height:1.6;margin-bottom:20px;">Connect directly with certified yacht captains in Paris, London, Dubaï, and Phuket.</p>
+      <button type="button" style="width:100%;padding:12px;border-radius:999px;background:var(--teal);color:#fff;font-weight:700;border:none;cursor:pointer;" onclick="document.getElementById('tripgModal').classList.remove('is-open')">Confirm Destination</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var nodes = document.querySelectorAll('.${p}-city-node');
+      var desc = document.getElementById('cityDescText');
+      nodes.forEach(function(n){
+        n.addEventListener('click', function(){
+          nodes.forEach(function(x){ x.classList.remove('is-active'); });
+          n.classList.add('is-active');
+          if (desc) desc.textContent = n.getAttribute('data-city');
+        });
+      });
+      var goBtn = document.getElementById('exploreMagneticBtn');
+      if (goBtn) goBtn.addEventListener('click', function(){ document.getElementById('tripgModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>`;
+  }
+
+  // 7. APEX SQUAD LIGHT (Light Stone/Bone Canvas #e6e2d8 + Glowing Crimson-Orange Triangle Emblem #ff2a00 + 3D Squad Duo Cutout + Parallelogram Nav & PLAY NOW Button)
+  // Motion Recipe: 3D Triangle & Squad Parallax Depth + Skewed Parallelogram Magnetic CTA + Squad Loadout Switcher
+  if (data.slug === 'apex-squad-light') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>APEX LEGENDS — Are You Ready To Be A Legend?</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #d6d1c7;
+      --stage: #eae6df;
+      --red: #ff2a00;
+      --fg: #111111;
+      --muted: #57534e;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; }
+    .font-teko { font-family: 'Teko', sans-serif; text-transform: uppercase; }
+
+    .${p}-frame {
+      max-width: 1360px; margin: 28px auto; background: var(--stage);
+      border: 1px solid rgba(0,0,0,0.12); box-shadow: 0 32px 80px rgba(0,0,0,0.22);
+      padding: 24px clamp(24px, 4vw, 56px) 36px; position: relative; overflow: hidden;
+    }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.12); padding-bottom: 16px;
+    }
+    .${p}-tab-red {
+      display: inline-block; padding: 6px 20px; background: var(--red); color: #fff;
+      transform: skewX(-18deg); font-size: 12px; font-weight: 800; text-decoration: none;
+    }
+    .${p}-hero-grid {
+      display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; padding: 44px 0 28px;
+    }
+    @media (min-width: 980px) {
+      .${p}-hero-grid { grid-template-columns: 0.95fr 1.05fr; }
+    }
+    .${p}-h1 {
+      font-size: clamp(54px, 7.5vw, 96px); line-height: 0.9; letter-spacing: 0.01em; margin-bottom: 18px;
+    }
+    .${p}-triangle-stage {
+      position: relative; display: flex; align-items: center; justify-content: center; min-height: 440px;
+    }
+    .${p}-apex-tri {
+      position: absolute; width: 380px; height: 340px;
+      background: linear-gradient(135deg, #ff2a00 0%, #ea580c 100%);
+      clip-path: polygon(50% 0%, 100% 100%, 72% 100%, 50% 46%, 28% 100%, 0% 100%);
+      filter: drop-shadow(0 20px 40px rgba(255,42,0,0.4)); z-index: 1;
+    }
+    .${p}-squad-img {
+      position: relative; z-index: 3; width: 100%; max-width: 450px; height: auto; object-fit: contain;
+      filter: drop-shadow(0 24px 36px rgba(0,0,0,0.45));
+    }
+    .${p}-play-parallelogram {
+      display: inline-block; padding: 12px 48px; border: 1.5px solid #111;
+      background: transparent; color: #111; font-family: 'Teko', sans-serif; font-size: 22px; font-weight: 700;
+      letter-spacing: 0.12em; transform: skewX(-18deg); cursor: pointer; transition: background 0.2s, color 0.2s;
+    }
+    .${p}-play-parallelogram:hover { background: var(--red); border-color: var(--red); color: #fff; }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(17,17,17,0.8); backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="${p}-frame">
+      <header class="${p}-nav">
+        <strong class="font-teko" style="font-size:32px;line-height:0.9;">APEX<br><span style="font-size:14px;letter-spacing:0.2em;">LEGENDS</span></strong>
+        <nav style="display:flex;gap:24px;align-items:center;" aria-label="Main Navigation">
+          <a href="#top" class="${p}-tab-red">HOME</a>
+          <a href="#top" style="color:#111;text-decoration:none;font-size:12px;font-weight:800;">LEGENDS</a>
+          <a href="#top" style="color:#111;text-decoration:none;font-size:12px;font-weight:800;">NEWS</a>
+          <a href="#top" style="color:#111;text-decoration:none;font-size:12px;font-weight:800;">MEDIA</a>
+          <a href="#top" style="color:#111;text-decoration:none;font-size:12px;font-weight:800;">FORUMS</a>
+        </nav>
+        <div style="border:1px solid rgba(0,0,0,0.25);padding:6px 12px;font-size:11px;font-weight:800;text-align:center;">
+          FREE TO PLAY<br><span style="color:var(--red);">▼</span>
+        </div>
+      </header>
+
+      <section class="${p}-hero-grid">
+        <div>
+          <h1 class="${p}-h1 font-teko">
+            ARE YOU<br>READY TO BE<br>A LEGEND?
+          </h1>
+          <p style="font-size:15px;color:var(--muted);max-width:390px;line-height:1.6;">
+            Pick your character. Round up your squad. Show everyone what Legends are made of.
+          </p>
+        </div>
+
+        <div class="${p}-triangle-stage">
+          <div class="${p}-apex-tri"></div>
+          <img src="assets/cutout.webp" alt="Apex Squad Duo" class="${p}-squad-img" data-tilt-card />
+        </div>
+      </section>
+
+      <footer style="display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid rgba(0,0,0,0.12);">
+        <div style="display:flex;gap:14px;font-size:13px;font-weight:800;">
+          <span>f</span><span>𝕏</span><span>◎</span>
+        </div>
+        <button type="button" id="exploreMagneticBtn" class="${p}-play-parallelogram">PLAY NOW</button>
+        <strong style="font-size:20px;font-weight:900;letter-spacing:0.06em;">EA</strong>
+      </footer>
+    </div>
+  </main>
+
+  <div id="apexLightModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="apexLightTitle">
+    <div style="max-width:480px;width:100%;background:var(--stage);padding:32px;border-left:5px solid var(--red);">
+      <h2 id="apexLightTitle" class="font-teko" style="font-size:38px;margin-bottom:8px;">SQUAD DROP READY</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Download Apex Legends free on PC, PlayStation, Xbox, and Switch.</p>
+      <button type="button" class="${p}-play-parallelogram" style="width:100%;" onclick="document.getElementById('apexLightModal').classList.remove('is-open')">LAUNCH GAME</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var btn = document.getElementById('exploreMagneticBtn');
+      if (btn) btn.addEventListener('click', function(){ document.getElementById('apexLightModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>`;
+  }
+
+  // 8. LITERA BOOKSTORE (Warm Cream #f5efe6 Bookstore UI + 9 Category Book Icons + 5 Hardcover Cards + 3D Floating Book Stack Cutout + Live Interactive Chat Concierge)
+  // Motion Recipe: Interactive Category Filter + 3D Book Spine Hover Lift + Live Interactive Bookstore Chat Concierge
+  if (data.slug === 'litera-bookstore') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Litera — Interactive Bookstore &amp; Gift Concierge</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #dfd3c3;
+      --panel: #faf6f0;
+      --cream: #efe8dec4;
+      --coral: #f43f5e;
+      --purple: #7c69ef;
+      --fg: #1e1b18;
+      --muted: #78716c;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; padding: 14px; }
+    .font-serif { font-family: 'Fraunces', serif; }
+
+    .${p}-app {
+      max-width: 1400px; margin: 0 auto; background: var(--panel); border-radius: 32px;
+      box-shadow: 0 28px 70px rgba(30,27,24,0.14); display: grid; grid-template-columns: 1fr; overflow: hidden;
+    }
+    @media (min-width: 1024px) {
+      .${p}-app { grid-template-columns: 1fr 340px; }
+    }
+    .${p}-main { padding: 28px; }
+    .${p}-top-bar { display: flex; gap: 14px; align-items: center; margin-bottom: 26px; }
+    .${p}-search-box {
+      flex: 1; background: #f3ede4; border-radius: 999px; padding: 12px 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .${p}-search-box input { border: none; background: transparent; width: 100%; outline: none; font-size: 14px; }
+    .${p}-rainbow-btn {
+      padding: 12px 28px; border-radius: 999px; border: none; color: #fff; font-weight: 700; font-size: 14px; cursor: pointer;
+      background: linear-gradient(90deg, #6366f1 0%, #10b981 48%, #f43f5e 100%);
+    }
+
+    .${p}-cats {
+      display: flex; gap: 14px; overflow-x: auto; padding-bottom: 12px; margin-bottom: 24px;
+    }
+    .${p}-cat-pill {
+      display: flex; flex-direction: column; align-items: center; gap: 6px; cursor: pointer;
+      padding: 10px 14px; border-radius: 16px; background: #f3ede4; border: 1px solid transparent; flex-shrink: 0;
+    }
+    .${p}-cat-pill.is-active { border-color: var(--coral); background: #fff; }
+
+    .${p}-books-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin: 16px 0 28px;
+    }
+    .${p}-book-card {
+      padding: 18px 14px; border-radius: 18px; color: #fff; min-height: 210px;
+      display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;
+      transition: transform 0.25s ease; position: relative;
+    }
+    .${p}-book-card:hover { transform: translateY(-6px); }
+
+    .${p}-bestseller-box {
+      background: #efe8de; border-radius: 26px; padding: 24px;
+      display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center;
+    }
+    @media (min-width: 860px) {
+      .${p}-bestseller-box { grid-template-columns: 180px 1fr 1fr; }
+    }
+    .${p}-stack-cutout { width: 100%; max-width: 175px; height: auto; object-fit: contain; margin: 0 auto; display: block; }
+
+    /* Right Live Chat Concierge Sidebar */
+    .${p}-chat-col {
+      background: #f3ede4; border-left: 1px solid rgba(0,0,0,0.06); padding: 24px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .${p}-bubble-user {
+      background: var(--purple); color: #fff; padding: 12px 16px; border-radius: 18px 18px 4px 18px;
+      font-size: 13px; line-height: 1.5; margin-bottom: 12px; align-self: flex-end; max-width: 88%;
+    }
+    .${p}-bubble-bot {
+      background: #ffffff; color: var(--fg); padding: 14px 16px; border-radius: 18px 18px 18px 4px;
+      font-size: 13px; line-height: 1.5; margin-bottom: 12px; align-self: flex-start; max-width: 92%;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="${p}-app">
+      <!-- MAIN BOOKSTORE VIEW -->
+      <div class="${p}-main">
+        <header class="${p}-top-bar">
+          <div class="${p}-search-box">
+            <span>🔍</span>
+            <input type="text" placeholder="Search for books, authors, or collector editions..." aria-label="Search for books">
+          </div>
+          <button type="button" id="exploreMagneticBtn" class="${p}-rainbow-btn">search</button>
+        </header>
+
+        <!-- 9 CATEGORY BOOK ICONS -->
+        <div class="${p}-cats" aria-label="Book Categories">
+          <button type="button" class="${p}-cat-pill is-active"><span style="font-size:20px;">📚</span><strong style="font-size:11px;">All</strong></button>
+          <button type="button" class="${p}-cat-pill"><span style="font-size:20px;">📱</span><strong style="font-size:11px;">eBooks</strong></button>
+          <button type="button" class="${p}-cat-pill"><span style="font-size:20px;">📕</span><strong style="font-size:11px;">New</strong></button>
+          <button type="button" class="${p}-cat-pill"><span style="font-size:20px;">👑</span><strong style="font-size:11px;">Bestsellers</strong></button>
+          <button type="button" class="${p}-cat-pill"><span style="font-size:20px;">🎧</span><strong style="font-size:11px;">Audiobooks</strong></button>
+          <button type="button" class="${p}-cat-pill"><span style="font-size:20px;">🔮</span><strong style="font-size:11px;">Fiction</strong></button>
+          <button type="button" class="${p}-cat-pill"><span style="font-size:20px;">💌</span><strong style="font-size:11px;">Romance</strong></button>
+          <button type="button" class="${p}-cat-pill"><span style="font-size:20px;">🐉</span><strong style="font-size:11px;">Fantasy</strong></button>
+        </div>
+
+        <h1 class="font-serif" style="font-size:22px;">Popular Collector Hardcovers</h1>
+
+        <!-- 5 HARDCOVER BOOK CARDS -->
+        <div class="${p}-books-row">
+          <article class="${p}-book-card" style="background:linear-gradient(145deg,#1e3a5f,#0f172a);" data-book="Fairy Tale by Stephen King">
+            <span style="font-size:10px;letter-spacing:0.12em;opacity:0.8;">STEPHEN KING</span>
+            <strong class="font-serif" style="font-size:18px;">FAIRY TALE</strong>
+            <span style="font-size:11px;color:#fbbf24;">★ 4.9 • Add to Chat</span>
+          </article>
+          <article class="${p}-book-card" style="background:linear-gradient(145deg,#7c69ef,#4c1d95);" data-book="Never After by Stephanie Garber">
+            <span style="font-size:10px;letter-spacing:0.12em;opacity:0.8;">STEPHANIE GARBER</span>
+            <strong class="font-serif" style="font-size:18px;">NEVER AFTER</strong>
+            <span style="font-size:11px;color:#fbbf24;">★ 4.8 • Add to Chat</span>
+          </article>
+          <article class="${p}-book-card" style="background:linear-gradient(145deg,#e11d48,#881337);" data-book="Klara and the Sun by Kazuo Ishiguro">
+            <span style="font-size:10px;letter-spacing:0.12em;opacity:0.8;">KAZUO ISHIGURO</span>
+            <strong class="font-serif" style="font-size:18px;">KLARA &amp; THE SUN</strong>
+            <span style="font-size:11px;color:#fbbf24;">★ 4.9 • Add to Chat</span>
+          </article>
+          <article class="${p}-book-card" style="background:linear-gradient(145deg,#10b981,#064e3b);" data-book="A Court of Mist and Fury by Sarah J. Maas">
+            <span style="font-size:10px;letter-spacing:0.12em;opacity:0.8;">SARAH J. MAAS</span>
+            <strong class="font-serif" style="font-size:18px;">MIST AND FURY</strong>
+            <span style="font-size:11px;color:#fbbf24;">★ 5.0 • Add to Chat</span>
+          </article>
+          <article class="${p}-book-card" style="background:linear-gradient(145deg,#0284c7,#1e3a8a);" data-book="Hamnet by Maggie O'Farrell">
+            <span style="font-size:10px;letter-spacing:0.12em;opacity:0.8;">MAGGIE O'FARRELL</span>
+            <strong class="font-serif" style="font-size:18px;">HAMNET</strong>
+            <span style="font-size:11px;color:#fbbf24;">★ 4.9 • Add to Chat</span>
+          </article>
+        </div>
+
+        <!-- BOTTOM 50 MOST POPULAR BESTSELLERS WITH 3D CUTOUT -->
+        <section class="${p}-bestseller-box">
+          <img src="assets/cutout.webp" alt="3D Collector Book Stack" class="${p}-stack-cutout" />
+          <div>
+            <h2 class="font-serif" style="font-size:24px;margin-bottom:8px;">2026 Year 50 Most Popular Bestsellers</h2>
+            <p style="font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:14px;">
+              List of the most interesting books of the year based on customer &amp; critic reviews.
+            </p>
+            <button type="button" style="padding:8px 18px;border-radius:999px;background:var(--coral);color:#fff;border:none;font-size:12px;font-weight:700;cursor:pointer;">👁 view all 50</button>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="background:#fff;padding:10px 14px;border-radius:14px;font-size:12px;"><strong>Top 50 books for kids</strong><span style="display:block;color:var(--muted);font-size:11px;">Illustrated chapter books</span></div>
+            <div style="background:#fff;padding:10px 14px;border-radius:14px;font-size:12px;"><strong>Top 50 Classic books</strong><span style="display:block;color:var(--muted);font-size:11px;">Timeless literary editions</span></div>
+            <div style="background:#fff;padding:10px 14px;border-radius:14px;font-size:12px;"><strong>Top 50 Sci-Fi books</strong><span style="display:block;color:var(--muted);font-size:11px;">Time &amp; space odysseys</span></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT INTERACTIVE CHAT CONCIERGE SIDEBAR -->
+      <aside class="${p}-chat-col" aria-label="Book Concierge Chat">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+            <strong class="font-serif" style="font-size:20px;">Chat</strong>
+            <span style="font-size:11px;background:#fff;padding:4px 10px;border-radius:999px;">● Concierge Online</span>
+          </div>
+          <div id="chatLog" style="display:flex;flex-direction:column;">
+            <div class="${p}-bubble-user">Good Day! I'm looking for collector gift editions. Do you have them?</div>
+            <div class="${p}-bubble-bot">Good Day! Click any book cover on the left and I'll check signed first-edition availability for your cart.</div>
+          </div>
+        </div>
+        <form onsubmit="event.preventDefault();" style="display:flex;gap:8px;margin-top:16px;">
+          <input id="chatInput" type="text" placeholder="Write a message..." style="flex:1;padding:10px 14px;border-radius:999px;border:1px solid rgba(0,0,0,0.1);outline:none;font-size:13px;">
+          <button type="submit" id="chatSendBtn" style="width:38px;height:38px;border-radius:50%;background:var(--coral);color:#fff;border:none;cursor:pointer;">➤</button>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      var log = document.getElementById('chatLog');
+      document.querySelectorAll('[data-book]').forEach(function(card){
+        card.addEventListener('click', function(){
+          var title = card.getAttribute('data-book');
+          var b = document.createElement('div');
+          b.className = '${p}-bubble-bot';
+          b.textContent = 'Added "' + title + '" (Collector Hardcover with ribbon bookmark) to your gift reservation!';
+          if (log) log.appendChild(b);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>`;
+  }
+
+  // 9. FISCHER MOTORSPORT (Dark Carbon #151619 Automotive Workshop + Diagonal White & Dark Zig-Zag Slash Bands + 3D Bronze Executive Coupe Cutout + 6-Point Inspection Matrix)
+  // Motion Recipe: Scroll-Scrubbed Diagonal Car Trajectory + 3D Specular Card Tilt + Interactive TÜV Service Selector
+  if (data.slug === 'fischer-motorsport') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>FISCHER KFZ-MEISTERBETRIEB — Precision Automotive Engineering</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #151619;
+      --panel: #1f2126;
+      --red: #dc2626;
+      --amber: #f59e0b;
+      --fg: #ffffff;
+      --muted: #9ca3af;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; }
+    .font-tech { font-family: 'Chakra Petch', sans-serif; text-transform: uppercase; }
+
+    .${p}-top-bar {
+      max-width: 1320px; margin: 0 auto; padding: 18px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 2px solid var(--red);
+    }
+
+    /* Dramatic Diagonal White & Dark Zig-Zag Slash Stage */
+    .${p}-diag-hero {
+      position: relative; overflow: hidden; padding: 64px 24px 88px;
+      background: linear-gradient(148deg, #ffffff 0%, #ffffff 46%, #181a1f 46.2%, #151619 100%);
+    }
+    .${p}-hero-inner {
+      max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center;
+    }
+    @media (min-width: 980px) {
+      .${p}-hero-inner { grid-template-columns: 0.95fr 1.05fr; }
+    }
+    .${p}-white-box {
+      background: rgba(255,255,255,0.92); color: #111827; padding: 28px; border-left: 4px solid var(--red);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+    }
+    .${p}-coupe-cutout {
+      width: 100%; max-width: 560px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      filter: drop-shadow(0 28px 40px rgba(0,0,0,0.75)); transition: transform 0.2s ease-out;
+    }
+
+    .${p}-sec { max-width: 1320px; margin: 0 auto; padding: 72px 24px; }
+    .${p}-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 28px; }
+    .${p}-service-card {
+      background: var(--panel); border: 1px solid rgba(255,255,255,0.1); padding: 26px;
+      border-top: 3px solid var(--amber);
+    }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(21,22,25,0.9); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <header class="${p}-top-bar">
+    <div>
+      <strong class="font-tech" style="font-size:28px;color:var(--red);letter-spacing:0.06em;">FISCHER</strong>
+      <span style="display:block;font-size:11px;color:var(--muted);">KFZ-MEISTERBETRIEB • NEUDIETENDORF</span>
+    </div>
+    <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+      <a href="#leistungen" class="font-tech" style="color:var(--amber);text-decoration:none;font-size:14px;">Über Uns</a>
+      <a href="#leistungen" class="font-tech" style="color:#fff;text-decoration:none;font-size:14px;">Leistungen</a>
+      <a href="#leistungen" class="font-tech" style="color:#fff;text-decoration:none;font-size:14px;">Specials</a>
+    </nav>
+    <button type="button" id="exploreMagneticBtn" style="padding:10px 22px;background:var(--red);color:#fff;border:none;font-weight:700;font-size:13px;cursor:pointer;">TERMIN BUCHEN ↗</button>
+  </header>
+
+  <main>
+    <section class="${p}-diag-hero">
+      <div class="${p}-hero-inner">
+        <div class="${p}-white-box">
+          <span style="font-size:11px;font-weight:800;color:var(--red);letter-spacing:0.12em;">IHRE AUTOWERKSTATT ZWISCHEN ERFURT, GOTHA &amp; ARNSTADT</span>
+          <h1 class="font-tech" style="font-size:clamp(30px,3.8vw,46px);line-height:1.05;margin:10px 0 14px;color:#111827;">
+            FISCHER KFZ-MEISTERBETRIEB
+          </h1>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;font-weight:600;color:#374151;margin-bottom:20px;">
+            <span>✓ KFZ-Reparaturen</span><span>✓ Klimaanlagenservice</span>
+            <span>✓ Unfallinstandsetzung</span><span>✓ TÜV / AU Abnahme</span>
+            <span>✓ Achsvermessung 3D</span><span>✓ Bremsenservice</span>
+          </div>
+          <button type="button" style="padding:11px 24px;background:#111827;color:#fff;border:none;font-weight:700;font-size:13px;cursor:pointer;" onclick="document.getElementById('fischerModal').classList.add('is-open')">
+            Zum Kontaktformular →
+          </button>
+        </div>
+
+        <div>
+          <img id="fischerCarImg" src="assets/cutout.webp" alt="3D Bronze Executive Coupe" class="${p}-coupe-cutout" />
+        </div>
+      </div>
+    </section>
+
+    <section id="leistungen" class="${p}-sec">
+      <span class="font-tech" style="color:var(--amber);font-size:13px;letter-spacing:0.14em;">UNSERE LEISTUNGEN // MEISTERQUALITÄT</span>
+      <h2 class="font-tech" style="font-size:clamp(30px,3.8vw,44px);margin-top:6px;">DIAGNOSE, FAHRWERK &amp; MOTORSPORT-SERVICE</h2>
+      <div class="${p}-grid-3">
+        <article class="${p}-service-card">
+          <strong class="font-tech" style="font-size:20px;color:var(--amber);">01 // 3D ACHSVERMESSUNG</strong>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-top:8px;">Lasergestützte Fahrwerksgeometrie und Spurkorrektur auf 0,01 Grad Genauigkeit.</p>
+        </article>
+        <article class="${p}-service-card">
+          <strong class="font-tech" style="font-size:20px;color:var(--amber);">02 // BREMSEN ZUM AKTIONSPREIS</strong>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-top:8px;">OEM Hochleistungs-Bremsscheiben und Keramikbeläge inklusive Bremsflüssigkeitswechsel.</p>
+        </article>
+        <article class="${p}-service-card">
+          <strong class="font-tech" style="font-size:20px;color:var(--amber);">03 // HAUPTUNTERSUCHUNG (TÜV/AU)</strong>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-top:8px;">Tägliche Prüfingenieur-Abnahme direkt im Haus inklusive Vorab-Diagnosecheck.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="fischerModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="fischerModalTitle">
+    <div style="max-width:480px;width:100%;background:var(--panel);border-top:4px solid var(--red);padding:32px;">
+      <h2 id="fischerModalTitle" class="font-tech" style="font-size:28px;margin-bottom:10px;">WERKSTATT-TERMIN VEREINBAREN</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Kirchstraße 48, 99192 Nesse-Apfelstädt • Sofort-Rückruf durch KFZ-Meister Christian Fischer.</p>
+      <button type="button" style="width:100%;padding:12px;background:var(--red);color:#fff;border:none;font-weight:700;cursor:pointer;" onclick="document.getElementById('fischerModal').classList.remove('is-open')">Anfrage Absenden</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var car = document.getElementById('fischerCarImg');
+      window.addEventListener('scroll', function(){
+        var y = window.scrollY || 0;
+        if (car) car.style.transform = 'translate3d(' + (-y * 0.08).toFixed(1) + 'px, 0, 0)';
+      }, { passive: true });
+      var btn = document.getElementById('exploreMagneticBtn');
+      if (btn) btn.addEventListener('click', function(){ document.getElementById('fischerModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>`;
+  }
+
+  // 10. JAPAN SUNRISE TOUR (Masked "JAPAN" Golden Sunrise Hero + 3D Vermilion Pagoda & Sakura Cutout + 5 Vertical Glass Cards + Vertical Osaka-Kyoto-Tokyo Timeline + 4 "What's Included" Cards)
+  // Motion Recipe: Parallax Masked "JAPAN" Sunrise Header + 5-Card Hover Accordion + Vertical Itinerary Timeline
+  if (data.slug === 'japan-sunrise-tour') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>JAPAN TOURS — 10-Day Osaka, Kyoto &amp; Tokyo Expedition</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --gold: #fcd34d;
+      --sakura: #f43f5e;
+      --fg: #ffffff;
+      --muted: #9ca3af;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; padding: 24px clamp(20px, 5vw, 64px) 72px;
+      background: linear-gradient(180deg, #fef08a 0%, #f59e0b 32%, #312e81 68%, #0b0c10 100%);
+      display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; isolation: isolate;
+    }
+    .${p}-nav {
+      max-width: 1280px; width: 100%; margin: 0 auto; padding: 12px 22px; border-radius: 999px;
+      background: rgba(255,255,255,0.22); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.4);
+      display: flex; align-items: center; justify-content: space-between; color: #111827;
+    }
+    .${p}-giant-japan {
+      font-size: clamp(72px, 16vw, 210px); font-weight: 800; letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.88); text-align: center; line-height: 0.86; margin: 28px 0 10px;
+      text-shadow: 0 18px 48px rgba(0,0,0,0.18);
+    }
+
+    .${p}-hero-mid {
+      max-width: 1280px; width: 100%; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr; gap: 28px; align-items: end;
+    }
+    @media (min-width: 980px) {
+      .${p}-hero-mid { grid-template-columns: 1.25fr 0.75fr; }
+    }
+    .${p}-cards-5 {
+      display: grid; grid-template-columns: repeat(5, minmax(95px, 1fr)); gap: 12px; overflow-x: auto;
+    }
+    .${p}-vcard {
+      height: 210px; border-radius: 16px; padding: 14px;
+      background: rgba(15, 23, 42, 0.68); backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.24); display: flex; flex-direction: column; justify-content: flex-end;
+      transition: transform 0.25s;
+    }
+    .${p}-vcard:hover { transform: translateY(-6px); border-color: var(--gold); }
+    .${p}-pagoda-img {
+      width: 100%; max-width: 360px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      filter: drop-shadow(0 24px 40px rgba(0,0,0,0.55));
+      -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 52%, #000 70%, transparent 100%);
+      mask-image: radial-gradient(ellipse 50% 50% at 50% 52%, #000 70%, transparent 100%);
+    }
+
+    .${p}-sec { max-width: 1200px; margin: 0 auto; padding: 80px 24px; }
+    .${p}-line-head {
+      display: flex; align-items: center; gap: 20px; margin-bottom: 44px;
+    }
+    .${p}-line-head::before, .${p}-line-head::after {
+      content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.22);
+    }
+    .${p}-inc-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px;
+    }
+    .${p}-inc-card {
+      padding: 26px; border-radius: 20px; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(11,12,16,0.88); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="${p}-hero">
+      <header class="${p}-nav">
+        <strong style="font-size:14px;letter-spacing:0.12em;">🌐 JAPAN TOURS</strong>
+        <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+          <a href="#aboutTour" style="color:#111827;text-decoration:none;font-size:13px;font-weight:600;">About</a>
+          <a href="#whatsIncluded" style="color:#111827;text-decoration:none;font-size:13px;font-weight:600;">Included</a>
+          <a href="#whatsIncluded" style="color:#111827;text-decoration:none;font-size:13px;font-weight:600;">Contacts</a>
+        </nav>
+        <button type="button" id="exploreMagneticBtn" style="padding:7px 20px;border-radius:999px;border:1px solid #111827;background:rgba(255,255,255,0.6);font-weight:700;font-size:12px;cursor:pointer;">Book</button>
+      </header>
+
+      <h1 class="${p}-giant-japan" data-parallax="0.08">JAPAN</h1>
+
+      <div class="${p}-hero-mid">
+        <div class="${p}-cards-5">
+          <article class="${p}-vcard"><span style="font-size:18px;margin-bottom:auto;">🏯</span><strong style="font-size:13px;">3 cities<br>in Japan</strong></article>
+          <article class="${p}-vcard"><span style="font-size:18px;margin-bottom:auto;">🗓️</span><strong style="font-size:13px;">10 days<br>itinerary</strong></article>
+          <article class="${p}-vcard"><span style="font-size:18px;margin-bottom:auto;">📸</span><strong style="font-size:13px;">gigabytes<br>of photos</strong></article>
+          <article class="${p}-vcard"><span style="font-size:18px;margin-bottom:auto;">🍜</span><strong style="font-size:13px;">eat authentic<br>ramen</strong></article>
+          <article class="${p}-vcard"><span style="font-size:18px;margin-bottom:auto;">🌸</span><strong style="font-size:13px;">enjoy<br>the vibe</strong></article>
+        </div>
+
+        <div style="text-align:center;">
+          <img src="assets/cutout.webp" alt="3D Chureito Pagoda &amp; Sakura" class="${p}-pagoda-img" data-tilt-card />
+          <button type="button" onclick="document.getElementById('japanModal').classList.add('is-open')" style="margin-top:12px;width:100%;max-width:240px;padding:12px;border-radius:10px;background:rgba(255,255,255,0.88);color:#111827;font-weight:700;border:none;cursor:pointer;">
+            Book Expedition
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT THE TOUR TIMELINE -->
+    <section id="aboutTour" class="${p}-sec">
+      <div class="${p}-line-head">
+        <h2 style="font-size:clamp(28px,3.8vw,44px);font-weight:500;letter-spacing:0.08em;">ABOUT THE TOUR</h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:center;">
+        <div>
+          <p style="font-size:16px;color:var(--muted);line-height:1.7;margin-bottom:20px;">
+            We've planned a simple and convenient 10-day itinerary for your trip to Japan. You'll visit three iconic cities:
+            <strong style="color:var(--gold);">Osaka, Kyoto, and Tokyo.</strong>
+          </p>
+          <p style="font-size:15px;color:var(--muted);line-height:1.7;">
+            No need to worry about Shinkansen routes, schedules, or finding hidden temples — everything is already organized so you can simply <span style="color:var(--gold);">enjoy the journey.</span>
+          </p>
+        </div>
+
+        <div style="border-left:2px solid rgba(255,255,255,0.22);padding-left:28px;display:flex;flex-direction:column;gap:28px;">
+          <div>
+            <span style="font-size:12px;color:var(--gold);">● Days 1–3</span>
+            <h3 style="font-size:22px;margin:4px 0;">Osaka</h3>
+            <p style="font-size:13px;color:var(--muted);">Dotonbori neon canal street food, Osaka Castle keep, and Shinsekai night walk.</p>
+          </div>
+          <div>
+            <span style="font-size:12px;color:var(--gold);">● Days 4–6</span>
+            <h3 style="font-size:22px;margin:4px 0;">Kyoto</h3>
+            <p style="font-size:13px;color:var(--muted);">Fushimi Inari torii gates at dawn, Arashiyama bamboo grove, and Gion tea ceremony.</p>
+          </div>
+          <div>
+            <span style="font-size:12px;color:var(--gold);">● Days 7–10</span>
+            <h3 style="font-size:22px;margin:4px 0;">Tokyo</h3>
+            <p style="font-size:13px;color:var(--muted);">Shibuya Sky sunset, teamLab Planets digital art, and Mount Fuji Chureito Pagoda day trip.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section id="whatsIncluded" class="${p}-sec" style="padding-top:0;">
+      <div class="${p}-line-head">
+        <h2 style="font-size:clamp(28px,3.8vw,44px);font-weight:500;letter-spacing:0.08em;">WHAT'S INCLUDED</h2>
+      </div>
+      <div class="${p}-inc-grid">
+        <article class="${p}-inc-card"><strong style="font-size:18px;color:var(--gold);display:block;margin-bottom:8px;">✦ Guides</strong><p style="font-size:13px;color:var(--muted);line-height:1.6;">2 bilingual cultural guides who know every hidden alley in Japan.</p></article>
+        <article class="${p}-inc-card"><strong style="font-size:18px;color:var(--gold);display:block;margin-bottom:8px;">✈ Flights &amp; Rail</strong><p style="font-size:13px;color:var(--muted);line-height:1.6;">International round-trip flights plus Green-Car Shinkansen bullet train passes.</p></article>
+        <article class="${p}-inc-card"><strong style="font-size:18px;color:var(--gold);display:block;margin-bottom:8px;">🚐 Transfers</strong><p style="font-size:13px;color:var(--muted);line-height:1.6;">Private airport limousine transfers and luggage forwarding between cities.</p></article>
+        <article class="${p}-inc-card"><strong style="font-size:18px;color:var(--gold);display:block;margin-bottom:8px;">🏯 Boutique Hotels</strong><p style="font-size:13px;color:var(--muted);line-height:1.6;">4-star boutique hotels &amp; Kyoto ryokan stay (2 people per room, breakfasts included).</p></article>
+      </div>
+    </section>
+  </main>
+
+  <div id="japanModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="japanModalTitle">
+    <div style="max-width:480px;width:100%;background:#161822;border:1px solid rgba(255,255,255,0.2);border-radius:24px;padding:32px;">
+      <h2 id="japanModalTitle" style="font-size:24px;margin-bottom:8px;">Want to join us? Leave a request</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:18px;">Autumn Momiji &amp; Spring Sakura 10-day small-group departures.</p>
+      <button type="button" style="width:100%;padding:12px;border-radius:10px;background:#fff;color:#111827;font-weight:700;border:none;cursor:pointer;" onclick="document.getElementById('japanModal').classList.remove('is-open')">Send Booking Request</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var expBtn = document.getElementById('exploreMagneticBtn');
+      if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('japanModal').classList.add('is-open'); });
+    })();
+  </script>
+</body>
+</html>`;
+  }
+
+
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -3087,7 +3935,7 @@ export async function compilePinterestTemplate(slug, options = {}) {
   const dataPath = path.resolve(__dirname, `data/${slug}.json`);
   if (!fs.existsSync(dataPath)) throw new Error(`Missing Pinterest data file: ${dataPath}`);
   const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-  const accessTier = options.tier || data.assignedTier || 'premium';
+  const accessTier = typeof options === 'string' ? options : (options.tier || data.assignedTier || data.tier || 'premium');
   const webCat = detectWebCategory(data);
   const bp = getBlueprintForData(data);
   const evalScore = data.criteriaEvaluation?.totalScore || 98;

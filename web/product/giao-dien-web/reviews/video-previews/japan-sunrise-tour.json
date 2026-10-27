@@ -1,0 +1,38 @@
+{
+  "id": "t151",
+  "slug": "japan-sunrise-tour",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T23:50:00.310Z",
+  "demo": "/demos/japan-sunrise-tour/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "bcecee8a8a43",
+  "sha256": "bcecee8a8a438cf5268ed6a5678a6b2596c1e5f9e7bf0a83e3d7aa21cb7d4bda",
+  "demoHtmlSha256": "77ef96c27182f078afa7cf998d91e5f147d68a633af7d9fc3c6eac6629fe2453",
+  "demoSha256": "a004860f7a758a42710930f34ae570e6be8fe8206242b5fb13918fff4f7ef640",
+  "bytes": 411655,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 879
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\japan-sunrise-tour-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\japan-sunrise-tour-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\japan-sunrise-tour-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\japan-sunrise-tour-return.jpg"
+  ]
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Taskly — Work Smarter, Achieve Faster</title>
+  <meta name="description" content="Effortlessly manage your projects, collaborate with your team, and achieve your goals with our intuitive Liquid Glass task management tool.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0b1120;
+      --muted: #475569;
+      --blue: #0084ff;
+      --star: #FF801E;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+    .font-fustat { font-family: 'Fustat', sans-serif; }
+
+    /* Top-left layered blue glow ellipses (#60B1FF and #319AFF) */
+    .tas10-glow-1 {
+      position: fixed; top: -140px; left: -120px; width: 560px; height: 560px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(96,177,255,0.42) 0%, rgba(49,154,255,0.18) 50%, transparent 72%);
+      filter: blur(50px); pointer-events: none; z-index: 0;
+    }
+    .tas10-glow-2 {
+      position: fixed; top: 80px; right: -100px; width: 520px; height: 520px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(49,154,255,0.28) 0%, transparent 70%);
+      filter: blur(60px); pointer-events: none; z-index: 0;
+    }
+
+    /* Sticky "Strong Liquid Glass" Navbar */
+    .tas10-glass-nav {
+      position: sticky; top: 26px; z-index: 100; width: fit-content; max-width: 94vw; margin: 24px auto 0;
+      padding: 12px 24px; border-radius: 16px;
+      background: rgba(255, 255, 255, 0.38); backdrop-filter: blur(50px); -webkit-backdrop-filter: blur(50px);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06), inset 0px 4px 4px 0px rgba(255, 255, 255, 0.45);
+      display: flex; align-items: center; gap: 32px; flex-wrap: wrap;
+    }
+    .tas10-signup-glass {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 12px;
+      background: rgba(255,255,255,0.65); border: 1px solid rgba(0,0,0,0.1);
+      font-size: 13px; font-weight: 600; color: var(--fg); cursor: pointer;
+    }
+
+    .tas10-hero {
+      position: relative; z-index: 10; max-width: 1440px; margin: 0 auto; padding: 48px clamp(24px, 5vw, 72px) 64px;
+      display: grid; grid-template-columns: 1fr; gap: 44px; align-items: center;
+    }
+    @media (min-width: 980px) {
+      .tas10-hero { grid-template-columns: 1.08fr 0.92fr; }
+    }
+    .tas10-h1 {
+      font-family: 'Fustat', sans-serif; font-size: clamp(46px, 5.5vw, 75px); font-weight: 700;
+      line-height: 1.05; letter-spacing: -2px; margin: 18px 0 20px; color: #0b1120;
+    }
+    .tas10-cta-blue {
+      display: inline-flex; align-items: center; gap: 14px; padding: 14px 26px; border-radius: 16px;
+      background: rgba(0, 132, 255, 0.86); backdrop-filter: blur(4px); color: #fff;
+      font-size: 16px; font-weight: 600; border: 1px solid rgba(255,255,255,0.35);
+      box-shadow: 0 16px 36px rgba(0,132,255,0.28), inset 0px 4px 4px 0px rgba(255,255,255,0.35);
+      cursor: pointer; transition: transform 0.25s ease;
+    }
+    .tas10-cta-blue:hover { transform: scale(1.02); }
+
+    /* Electric Blue Glassy Orb Stage */
+    .tas10-orb-stage {
+      position: relative; min-height: 440px; border-radius: 32px; overflow: hidden;
+      background: radial-gradient(circle at 50% 50%, #e0f2fe 0%, #eff6ff 60%, #ffffff 100%);
+      border: 1px solid rgba(0,132,255,0.16); display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 24px 60px rgba(0,132,255,0.12);
+    }
+    .tas10-orb-video {
+      width: 118%; height: 118%; object-fit: cover;
+      filter: hue-rotate(-55deg) saturate(250%) brightness(1.15) contrast(1.1);
+      opacity: 0.85;
+    }
+    .tas10-float-task {
+      position: absolute; padding: 14px 18px; border-radius: 16px;
+      background: rgba(255,255,255,0.78); backdrop-filter: blur(24px);
+      border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 16px 32px rgba(15,23,42,0.08);
+    }
+
+    .tas10-logos {
+      max-width: 1280px; margin: 24px auto 80px; padding: 28px 24px; text-align: center;
+      border-top: 1px solid rgba(15,23,42,0.08);
+    }
+    .tas10-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(15,23,42,0.45); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .tas10-seamless-overlay.is-open { display: flex; }
+    .tas10-seamless-box { max-width: 520px; width: 100%; border-radius: 24px; background: #fff; padding: 32px; box-shadow: 0 24px 60px rgba(0,0,0,0.18); }
+  </style>
+</head>
+<body>
+  <div class="tas10-glow-1" aria-hidden="true"></div>
+  <div class="tas10-glow-2" aria-hidden="true"></div>
+
+  <!-- STICKY STRONG LIQUID GLASS NAVBAR -->
+  <header class="tas10-glass-nav">
+    <strong class="font-fustat" style="font-size:20px;letter-spacing:-0.03em;">Taskly</strong>
+    <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+      <a href="#heroStage" style="color:var(--fg);text-decoration:none;font-size:14px;font-weight:500;">Home</a>
+      <a href="#trustedLogos" style="color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;">Features</a>
+      <a href="#trustedLogos" style="color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;">Company</a>
+      <a href="#trustedLogos" style="color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;">Pricing</a>
+    </nav>
+    <div style="display:flex;gap:8px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="tas10-signup-glass" aria-pressed="false">Motion: ON</button>
+      <button type="button" class="tas10-signup-glass" data-seamless-trigger="Create Your Taskly Workspace">
+        <span>SignUp</span>
+        <span>↗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="heroStage" class="tas10-hero">
+      <div data-parallax="0.05">
+        <div style="display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,0.75);border:1px solid rgba(0,0,0,0.08);box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <span style="color:var(--star);letter-spacing:2px;font-size:14px;">★★★★★</span>
+          <span style="font-size:13px;font-weight:600;color:var(--fg);">Rated 4.9/5 by 2700+ customers</span>
+        </div>
+
+        <h1 class="tas10-h1">Work smarter,<br>achieve faster</h1>
+        <p style="font-size:18px;color:var(--muted);letter-spacing:-0.5px;line-height:1.6;max-width:520px;margin-bottom:32px;">
+          Effortlessly manage your projects, collaborate with your team, and achieve your goals with our intuitive task management tool.
+        </p>
+
+        <button type="button" id="exploreMagneticBtn" class="tas10-cta-blue" data-magnetic>
+          <span>Get Started Now</span>
+          <span style="width:28px;height:28px;border-radius:50%;background:#fff;color:var(--blue);display:inline-flex;align-items:center;justify-content:center;font-weight:700;">→</span>
+        </button>
+      </div>
+
+      <!-- ELECTRIC BLUE GLASSY ORB (HERO RIGHT) -->
+      <div class="tas10-orb-stage" data-tilt-card>
+        <video id="heroBgVideo" class="tas10-orb-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4" autoplay loop muted playsinline preload="auto"></video>
+        <div class="tas10-float-task" style="top:22px;left:22px;">
+          <span style="font-size:11px;font-weight:700;color:var(--blue);display:block;">SPRINT VELOCITY</span>
+          <strong style="font-size:18px;">+42% Faster Delivery</strong>
+        </div>
+        <div class="tas10-float-task" style="bottom:22px;right:22px;">
+          <span style="font-size:11px;font-weight:700;color:#10b981;display:block;">● AUTO-TRIAGE ACTIVE</span>
+          <strong style="font-size:15px;">18 Tasks Assigned</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="trustedLogos" class="tas10-logos">
+      <p style="font-size:13px;color:var(--muted);font-weight:500;margin-bottom:24px;">Trusted by Top-tier product companies</p>
+      <div style="display:flex;justify-content:center;align-items:center;gap:clamp(32px,6vw,96px);flex-wrap:wrap;opacity:0.55;font-family:'Fustat',sans-serif;font-size:18px;font-weight:700;">
+        <span>LINEAR</span><span>VERCEL</span><span>RAYCAST</span><span>NOTION</span><span>FIGMA</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="tas10-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="tas10-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <strong class="font-fustat" style="color:var(--blue);">Taskly Liquid Workspace</strong>
+        <button type="button" id="closeSeamlessBtn" class="tas10-signup-glass">Close</button>
+      </div>
+      <h2 id="seamlessTitle" class="font-fustat" style="font-size:26px;margin-bottom:10px;">Start Your Free 14-Day Trial</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Import your boards from Jira, Linear, or Notion in one click.</p>
+      <button type="button" id="confirmSeamlessBtn" class="tas10-cta-blue" style="width:100%;justify-content:center;">Launch Taskly Board</button>
+    </div>
+  </div>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.tas10-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('tas10Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

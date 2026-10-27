@@ -2863,6 +2863,1178 @@ export function buildSingleFileHtml(spec) {
 </html>`;
   }
 
+  // 18. USD HALO (#F5F5F5 Fintech Stablecoin Platform + Interlocking Halo SVG Logo + Rounded-2XL Video Hero + Dual Marquees + #2B2644 Bento Cards + Commerce Video Section)
+  if (spec.slug === 'usd-halo') {
+    const haloVid1 = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260423_161253_c72b1869-400f-45ed-ac0c-52f68c2ed5bd.mp4';
+    const haloVid2 = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260423_183428_ab5e672a-f608-4dcb-b319-f3e040f02e2d.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Halo / USD Halo — Your Wealth Works</title>
+  <meta name="description" content="An automated, reward-powered digital dollar built for native passive earnings and effortless connection into DeFi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F5F5F5;
+      --fg: #0a0a0a;
+      --muted: rgba(0,0,0,0.65);
+      --plum: #2B2644;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+
+    .${p}-top-frame { min-height: 100vh; display: flex; flex-direction: column; padding: 0 24px 24px; max-width: 1408px; margin: 0 auto; position: relative; }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; padding: 20px 0; z-index: 20;
+    }
+    .${p}-btn-black {
+      display: inline-flex; align-items: center; gap: 12px; background: #000; color: #fff;
+      font-size: 15px; font-weight: 500; padding: 10px 26px; border-radius: 999px; border: none; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .${p}-btn-black:hover { background: #262626; }
+    .${p}-btn-join {
+      display: inline-flex; align-items: center; gap: 12px; background: #000; color: #fff;
+      font-size: 16px; font-weight: 500; padding: 8px 8px 8px 28px; border-radius: 999px; border: none; cursor: pointer;
+    }
+    .${p}-arrow-circle {
+      width: 36px; height: 36px; border-radius: 50%; background: #fff; color: #000;
+      display: inline-flex; align-items: center; justify-content: center; font-weight: 700;
+    }
+
+    .${p}-hero-card {
+      position: relative; flex: 1; min-height: calc(100vh - 96px); border-radius: 24px;
+      overflow: hidden; display: flex; flex-direction: column; justify-content: flex-start;
+      padding: clamp(32px, 5vw, 56px); padding-top: clamp(72px, 11vh, 136px); isolation: isolate;
+      background: #e2e8f0;
+    }
+    .${p}-hero-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;
+    }
+    .${p}-h1 {
+      font-size: clamp(44px, 5.5vw, 64px); font-weight: 600; line-height: 1.06; letter-spacing: -0.04em;
+      max-width: 520px; margin-bottom: 16px; color: #000;
+    }
+    .${p}-marquee-wrap {
+      margin-top: auto; padding-top: 48px; width: 100%; max-width: 460px; overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    }
+    .${p}-marquee-track { display: flex; width: max-content; animation: ${p}Marquee 22s linear infinite; }
+    @keyframes ${p}Marquee { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
+
+    .${p}-sec { max-width: 1408px; margin: 0 auto; padding: 88px 24px; }
+    .${p}-bento-4 {
+      display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 48px;
+    }
+    @media (min-width: 1024px) {
+      .${p}-bento-4 { grid-template-columns: 2fr 1fr 1fr; }
+    }
+    .${p}-card-bloom {
+      min-height: 320px; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;
+      background: radial-gradient(circle at 75% 30%, #c7d2fe 0%, #e0e7ff 45%, #dbeafe 100%);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .${p}-card-plum {
+      min-height: 320px; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;
+      background: var(--plum); color: #ffffff;
+    }
+    .${p}-use-grid {
+      display: grid; grid-template-columns: 1fr; gap: 32px; align-items: start;
+    }
+    @media (min-width: 980px) {
+      .${p}-use-grid { grid-template-columns: 1fr 1.15fr; }
+    }
+    .${p}-commerce-card {
+      position: relative; min-height: 540px; border-radius: 28px; overflow: hidden;
+      padding: 44px; display: flex; flex-direction: column; justify-content: flex-start; isolation: isolate;
+      background: #cbd5e1;
+    }
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(0,0,0,0.65); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 520px; width: 100%; border-radius: 24px; background: #fff; padding: 32px; color: #000; }
+  </style>
+</head>
+<body>
+  <div class="${p}-top-frame">
+    <!-- 1. NAVBAR -->
+    <header class="${p}-nav">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <svg width="28" height="28" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+          <path d="M 128.005 191.173 C 128.448 156.208 156.93 128 192 128 L 192 64 L 128 64 C 128 99.346 99.346 128 64 128 L 64 192 L 128 192 Z M 192 256 L 64 256 C 28.654 256 0 227.346 0 192 L 0 64 L 64 64 L 64 0 L 192 0 C 227.346 0 256 28.654 256 64 L 256 192 L 192 192 Z"/>
+        </svg>
+        <strong style="font-size:24px;font-weight:600;letter-spacing:-0.03em;">Halo</strong>
+      </div>
+      <nav style="display:flex;gap:32px;" aria-label="Main Navigation">
+        <a href="#meetHalo" style="color:#374151;text-decoration:none;font-size:15px;font-weight:500;">Network</a>
+        <a href="#meetHalo" style="color:#374151;text-decoration:none;font-size:15px;font-weight:500;">Ecosystem</a>
+        <a href="#useModes" style="color:#374151;text-decoration:none;font-size:15px;font-weight:500;">Rewards</a>
+        <a href="#useModes" style="color:#374151;text-decoration:none;font-size:15px;font-weight:500;">Help</a>
+        <a href="#useModes" style="color:#374151;text-decoration:none;font-size:15px;font-weight:500;">News</a>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" style="padding:8px 14px;border-radius:999px;background:rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.12);font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-black" data-magnetic>Open Wallet</button>
+      </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="${p}-hero-card">
+      <video id="heroBgVideo" class="${p}-hero-video" src="${haloVid1}" autoplay muted loop playsinline preload="auto"></video>
+      <div data-parallax="0.05">
+        <h1 class="${p}-h1">Your Wealth<br>Works</h1>
+        <p style="font-size:17px;color:rgba(0,0,0,0.72);max-width:420px;line-height:1.6;margin-bottom:28px;">
+          An automated, reward-powered digital dollar built for native passive earnings and effortless connection into DeFi.
+        </p>
+        <button type="button" class="${p}-btn-join" data-seamless-trigger="Mint USD Halo — Native Yield Stablecoin" data-magnetic>
+          <span>Join us</span>
+          <span class="${p}-arrow-circle">→</span>
+        </button>
+      </div>
+
+      <div class="${p}-marquee-wrap" aria-label="Ecosystem Partners">
+        <div class="${p}-marquee-track">
+          <span style="margin:0 24px;font-family:Georgia,serif;font-weight:700;font-size:15px;color:rgba(0,0,0,0.6);">Stripe</span>
+          <span style="margin:0 24px;font-weight:900;letter-spacing:0.08em;font-size:13px;color:rgba(0,0,0,0.6);">COINBASE</span>
+          <span style="margin:0 24px;font-style:italic;font-weight:600;font-size:15px;color:rgba(0,0,0,0.6);">Uniswap</span>
+          <span style="margin:0 24px;font-family:monospace;font-weight:700;letter-spacing:0.12em;font-size:13px;color:rgba(0,0,0,0.6);">AAVE</span>
+          <span style="margin:0 24px;font-family:Georgia,serif;font-size:16px;color:rgba(0,0,0,0.6);">Compound</span>
+          <span style="margin:0 24px;font-weight:700;letter-spacing:0.04em;font-size:14px;color:rgba(0,0,0,0.6);">MakerDAO</span>
+          <span style="margin:0 24px;font-weight:700;font-size:13px;color:rgba(0,0,0,0.6);">Chainlink</span>
+          <span style="margin:0 24px;font-family:Georgia,serif;font-weight:700;font-size:15px;color:rgba(0,0,0,0.6);">Stripe</span>
+          <span style="margin:0 24px;font-weight:900;letter-spacing:0.08em;font-size:13px;color:rgba(0,0,0,0.6);">COINBASE</span>
+          <span style="margin:0 24px;font-style:italic;font-weight:600;font-size:15px;color:rgba(0,0,0,0.6);">Uniswap</span>
+          <span style="margin:0 24px;font-family:monospace;font-weight:700;letter-spacing:0.12em;font-size:13px;color:rgba(0,0,0,0.6);">AAVE</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <main>
+    <!-- 3. INFO SECTION ("Meet USD Halo.") -->
+    <section id="meetHalo" class="${p}-sec">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:start;">
+        <div>
+          <h2 style="font-size:clamp(36px,4vw,52px);font-weight:600;letter-spacing:-0.03em;margin-bottom:24px;">Meet USD Halo.</h2>
+          <button type="button" class="${p}-btn-join" data-seamless-trigger="Discover USD Halo Architecture">
+            <span>Discover it</span>
+            <span class="${p}-arrow-circle">→</span>
+          </button>
+        </div>
+        <p style="font-size:clamp(22px,2.4vw,30px);color:rgba(0,0,0,0.72);line-height:1.45;">
+          USD Halo is a reward-earning dollar coin that lets your savings grow while remaining tied to the U.S. dollar.
+        </p>
+      </div>
+
+      <div class="${p}-bento-4">
+        <article class="${p}-card-bloom" data-tilt-card>
+          <h3 style="font-size:26px;font-weight:600;letter-spacing:-0.02em;">Savings that bloom</h3>
+          <p style="font-size:16px;color:rgba(0,0,0,0.72);max-width:340px;line-height:1.55;">
+            Gain steady returns as your dollar tokens are routed into top-performing DeFi strategies.
+          </p>
+        </article>
+        <article class="${p}-card-plum" data-tilt-card>
+          <h3 style="font-size:24px;font-weight:500;line-height:1.2;">Always fluid,<br>always pegged.</h3>
+          <p style="font-size:15px;color:rgba(255,255,255,0.65);line-height:1.55;">
+            Keep fully dollar-anchored with on-demand access to funds — no lockups or waits.
+          </p>
+        </article>
+        <article class="${p}-card-plum" data-tilt-card>
+          <h3 style="font-size:24px;font-weight:500;line-height:1.2;">Fully<br>automated</h3>
+          <p style="font-size:15px;color:rgba(255,255,255,0.65);line-height:1.55;">
+            Skip the task of tuning positions yourself. USD Halo runs in the background for you.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. USE CASES SECTION -->
+    <section id="useModes" class="${p}-sec" style="padding-top:0;">
+      <div class="${p}-use-grid">
+        <div>
+          <span style="font-size:13px;color:rgba(0,0,0,0.6);display:block;margin-bottom:8px;">USD Halo in Practice</span>
+          <h2 style="font-size:clamp(42px,5vw,64px);font-weight:600;letter-spacing:-0.04em;line-height:1;margin-bottom:22px;">Use modes</h2>
+          <p style="font-size:16px;color:rgba(0,0,0,0.62);line-height:1.65;max-width:380px;">
+            USD Halo powers a wide range of modes for builders, companies and treasuries wanting safe and rewarding stablecoin integrations plus more.
+          </p>
+        </div>
+        <div class="${p}-commerce-card" data-tilt-card>
+          <video class="${p}-hero-video" src="${haloVid2}" autoplay muted loop playsinline preload="auto"></video>
+          <h3 style="font-size:clamp(34px,3.8vw,48px);font-weight:600;letter-spacing:-0.03em;margin-bottom:16px;color:#000;">Commerce</h3>
+          <p style="font-size:16px;color:rgba(0,0,0,0.74);max-width:420px;line-height:1.6;margin-bottom:28px;">
+            Lift customer retention by offering USD Halo, a trusted dollar-backed stablecoin with strong yields, letting your patrons earn with zero effort on your platform.
+          </p>
+          <div style="display:inline-flex;align-items:center;gap:12px;cursor:pointer;" data-seamless-trigger="USD Halo Commerce SDK">
+            <span style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.85);display:inline-flex;align-items:center;justify-content:center;">→</span>
+            <strong style="font-size:15px;">Know more</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <strong style="font-size:14px;">USD Halo Treasury Gateway</strong>
+        <button type="button" id="closeSeamlessBtn" style="padding:6px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.15);background:transparent;cursor:pointer;">Close</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:26px;margin-bottom:10px;">Connect Institutional Wallet</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:22px;">Mint USD Halo 1:1 with USDC/USD and begin earning automated DeFi treasury yield immediately.</p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-black" style="width:100%;justify-content:center;">Launch Halo Vault</button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // 19. TASKLY (High-Fidelity "Liquid Glass" Hero Section on Pure White + #60B1FF/#319AFF Glow Ellipses + Sticky Blur-50px Navbar + Electric Blue Glassy Orb)
+  if (spec.slug === 'taskly') {
+    const tasklyOrb = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Taskly — Work Smarter, Achieve Faster</title>
+  <meta name="description" content="Effortlessly manage your projects, collaborate with your team, and achieve your goals with our intuitive Liquid Glass task management tool.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fustat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0b1120;
+      --muted: #475569;
+      --blue: #0084ff;
+      --star: #FF801E;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+    .font-fustat { font-family: 'Fustat', sans-serif; }
+
+    /* Top-left layered blue glow ellipses (#60B1FF and #319AFF) */
+    .${p}-glow-1 {
+      position: fixed; top: -140px; left: -120px; width: 560px; height: 560px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(96,177,255,0.42) 0%, rgba(49,154,255,0.18) 50%, transparent 72%);
+      filter: blur(50px); pointer-events: none; z-index: 0;
+    }
+    .${p}-glow-2 {
+      position: fixed; top: 80px; right: -100px; width: 520px; height: 520px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(49,154,255,0.28) 0%, transparent 70%);
+      filter: blur(60px); pointer-events: none; z-index: 0;
+    }
+
+    /* Sticky "Strong Liquid Glass" Navbar */
+    .${p}-glass-nav {
+      position: sticky; top: 26px; z-index: 100; width: fit-content; max-width: 94vw; margin: 24px auto 0;
+      padding: 12px 24px; border-radius: 16px;
+      background: rgba(255, 255, 255, 0.38); backdrop-filter: blur(50px); -webkit-backdrop-filter: blur(50px);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06), inset 0px 4px 4px 0px rgba(255, 255, 255, 0.45);
+      display: flex; align-items: center; gap: 32px; flex-wrap: wrap;
+    }
+    .${p}-signup-glass {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 12px;
+      background: rgba(255,255,255,0.65); border: 1px solid rgba(0,0,0,0.1);
+      font-size: 13px; font-weight: 600; color: var(--fg); cursor: pointer;
+    }
+
+    .${p}-hero {
+      position: relative; z-index: 10; max-width: 1440px; margin: 0 auto; padding: 48px clamp(24px, 5vw, 72px) 64px;
+      display: grid; grid-template-columns: 1fr; gap: 44px; align-items: center;
+    }
+    @media (min-width: 980px) {
+      .${p}-hero { grid-template-columns: 1.08fr 0.92fr; }
+    }
+    .${p}-h1 {
+      font-family: 'Fustat', sans-serif; font-size: clamp(46px, 5.5vw, 75px); font-weight: 700;
+      line-height: 1.05; letter-spacing: -2px; margin: 18px 0 20px; color: #0b1120;
+    }
+    .${p}-cta-blue {
+      display: inline-flex; align-items: center; gap: 14px; padding: 14px 26px; border-radius: 16px;
+      background: rgba(0, 132, 255, 0.86); backdrop-filter: blur(4px); color: #fff;
+      font-size: 16px; font-weight: 600; border: 1px solid rgba(255,255,255,0.35);
+      box-shadow: 0 16px 36px rgba(0,132,255,0.28), inset 0px 4px 4px 0px rgba(255,255,255,0.35);
+      cursor: pointer; transition: transform 0.25s ease;
+    }
+    .${p}-cta-blue:hover { transform: scale(1.02); }
+
+    /* Electric Blue Glassy Orb Stage */
+    .${p}-orb-stage {
+      position: relative; min-height: 440px; border-radius: 32px; overflow: hidden;
+      background: radial-gradient(circle at 50% 50%, #e0f2fe 0%, #eff6ff 60%, #ffffff 100%);
+      border: 1px solid rgba(0,132,255,0.16); display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 24px 60px rgba(0,132,255,0.12);
+    }
+    .${p}-orb-video {
+      width: 118%; height: 118%; object-fit: cover;
+      filter: hue-rotate(-55deg) saturate(250%) brightness(1.15) contrast(1.1);
+      opacity: 0.85;
+    }
+    .${p}-float-task {
+      position: absolute; padding: 14px 18px; border-radius: 16px;
+      background: rgba(255,255,255,0.78); backdrop-filter: blur(24px);
+      border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 16px 32px rgba(15,23,42,0.08);
+    }
+
+    .${p}-logos {
+      max-width: 1280px; margin: 24px auto 80px; padding: 28px 24px; text-align: center;
+      border-top: 1px solid rgba(15,23,42,0.08);
+    }
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(15,23,42,0.45); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 520px; width: 100%; border-radius: 24px; background: #fff; padding: 32px; box-shadow: 0 24px 60px rgba(0,0,0,0.18); }
+  </style>
+</head>
+<body>
+  <div class="${p}-glow-1" aria-hidden="true"></div>
+  <div class="${p}-glow-2" aria-hidden="true"></div>
+
+  <!-- STICKY STRONG LIQUID GLASS NAVBAR -->
+  <header class="${p}-glass-nav">
+    <strong class="font-fustat" style="font-size:20px;letter-spacing:-0.03em;">Taskly</strong>
+    <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+      <a href="#heroStage" style="color:var(--fg);text-decoration:none;font-size:14px;font-weight:500;">Home</a>
+      <a href="#trustedLogos" style="color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;">Features</a>
+      <a href="#trustedLogos" style="color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;">Company</a>
+      <a href="#trustedLogos" style="color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;">Pricing</a>
+    </nav>
+    <div style="display:flex;gap:8px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="${p}-signup-glass" aria-pressed="false">Motion: ON</button>
+      <button type="button" class="${p}-signup-glass" data-seamless-trigger="Create Your Taskly Workspace">
+        <span>SignUp</span>
+        <span>↗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="heroStage" class="${p}-hero">
+      <div data-parallax="0.05">
+        <div style="display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,0.75);border:1px solid rgba(0,0,0,0.08);box-shadow:0 4px 12px rgba(0,0,0,0.03);">
+          <span style="color:var(--star);letter-spacing:2px;font-size:14px;">★★★★★</span>
+          <span style="font-size:13px;font-weight:600;color:var(--fg);">Rated 4.9/5 by 2700+ customers</span>
+        </div>
+
+        <h1 class="${p}-h1">Work smarter,<br>achieve faster</h1>
+        <p style="font-size:18px;color:var(--muted);letter-spacing:-0.5px;line-height:1.6;max-width:520px;margin-bottom:32px;">
+          Effortlessly manage your projects, collaborate with your team, and achieve your goals with our intuitive task management tool.
+        </p>
+
+        <button type="button" id="exploreMagneticBtn" class="${p}-cta-blue" data-magnetic>
+          <span>Get Started Now</span>
+          <span style="width:28px;height:28px;border-radius:50%;background:#fff;color:var(--blue);display:inline-flex;align-items:center;justify-content:center;font-weight:700;">→</span>
+        </button>
+      </div>
+
+      <!-- ELECTRIC BLUE GLASSY ORB (HERO RIGHT) -->
+      <div class="${p}-orb-stage" data-tilt-card>
+        <video id="heroBgVideo" class="${p}-orb-video" src="${tasklyOrb}" autoplay loop muted playsinline preload="auto"></video>
+        <div class="${p}-float-task" style="top:22px;left:22px;">
+          <span style="font-size:11px;font-weight:700;color:var(--blue);display:block;">SPRINT VELOCITY</span>
+          <strong style="font-size:18px;">+42% Faster Delivery</strong>
+        </div>
+        <div class="${p}-float-task" style="bottom:22px;right:22px;">
+          <span style="font-size:11px;font-weight:700;color:#10b981;display:block;">● AUTO-TRIAGE ACTIVE</span>
+          <strong style="font-size:15px;">18 Tasks Assigned</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="trustedLogos" class="${p}-logos">
+      <p style="font-size:13px;color:var(--muted);font-weight:500;margin-bottom:24px;">Trusted by Top-tier product companies</p>
+      <div style="display:flex;justify-content:center;align-items:center;gap:clamp(32px,6vw,96px);flex-wrap:wrap;opacity:0.55;font-family:'Fustat',sans-serif;font-size:18px;font-weight:700;">
+        <span>LINEAR</span><span>VERCEL</span><span>RAYCAST</span><span>NOTION</span><span>FIGMA</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <strong class="font-fustat" style="color:var(--blue);">Taskly Liquid Workspace</strong>
+        <button type="button" id="closeSeamlessBtn" class="${p}-signup-glass">Close</button>
+      </div>
+      <h2 id="seamlessTitle" class="font-fustat" style="font-size:26px;margin-bottom:10px;">Start Your Free 14-Day Trial</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Import your boards from Jira, Linear, or Notion in one click.</p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-cta-blue" style="width:100%;justify-content:center;">Launch Taskly Board</button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // 20. STELLAR AI (White Centered Hero + "Work Smarter. Move Faster. AI Powers You Up." + Interactive 4-Tab Bar Analyse/Train/Testing/Deploy Over Video Stage)
+  if (spec.slug === 'stellar-ai') {
+    const stellarVid = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260319_165750_358b1e72-c921-48b7-aaac-f200994f32fb.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Stellar.ai — Work Smarter. Move Faster. AI Powers You Up.</title>
+  <meta name="description" content="Intelligent automation syncs with the tools you love to streamline tasks, boost output, and save time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0a0a0a;
+      --muted: #52525b;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; overflow-x: clip; }
+
+    .${p}-nav {
+      max-width: 1280px; margin: 0 auto; padding: 18px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-btn-black {
+      background: #000; color: #fff; padding: 11px 24px; border-radius: 999px;
+      font-size: 14px; font-weight: 500; border: none; cursor: pointer;
+    }
+    .${p}-hero {
+      max-width: 1280px; margin: 0 auto; padding: 56px 24px 80px; text-align: center;
+    }
+    .${p}-h1 {
+      font-size: clamp(44px, 6.2vw, 78px); font-weight: 500; line-height: 1.08;
+      letter-spacing: -0.03em; margin: 22px auto 18px; max-width: 920px;
+    }
+    .${p}-grad-line {
+      background: linear-gradient(90deg, #000000 0%, #6b7280 55%, #9ca3af 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+
+    /* 4-Tab Bar (Analyse | Train | Testing | Deploy) */
+    .${p}-tab-bar {
+      display: inline-flex; align-items: center; gap: 6px; padding: 6px;
+      background: #f4f4f5; border-radius: 12px; margin: 32px auto 24px; flex-wrap: wrap; justify-content: center;
+    }
+    .${p}-tab-btn {
+      padding: 10px 22px; border-radius: 8px; border: none; background: transparent;
+      color: #52525b; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+    }
+    .${p}-tab-btn.is-active {
+      background: #ffffff; color: #000000; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Video + Conditional Overlay Stage */
+    .${p}-video-stage {
+      position: relative; max-width: 1120px; margin: 0 auto; height: 460px;
+      border-radius: 28px; overflow: hidden; background: #18181b;
+      display: flex; align-items: center; justify-content: center; padding: 24px;
+    }
+    .${p}-video-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.82;
+    }
+    .${p}-overlay-card {
+      position: relative; z-index: 10; max-width: 460px; width: 100%;
+      background: rgba(255,255,255,0.94); backdrop-filter: blur(20px);
+      border-radius: 22px; padding: 28px; text-align: left; color: #09090b;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.28);
+    }
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(0,0,0,0.55); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 500px; width: 100%; border-radius: 24px; background: #fff; padding: 32px; }
+  </style>
+</head>
+<body>
+  <header class="${p}-nav">
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span style="font-size:18px;">★</span>
+      <strong style="font-size:18px;font-weight:600;">Stellar.ai</strong>
+    </div>
+    <nav style="display:flex;gap:28px;" aria-label="Main Navigation">
+      <a href="#stellarStage" style="color:var(--muted);text-decoration:none;font-size:14px;">Solutions ▾</a>
+      <a href="#stellarStage" style="color:var(--muted);text-decoration:none;font-size:14px;">For Teams ▾</a>
+      <a href="#stellarStage" style="color:var(--muted);text-decoration:none;font-size:14px;">About Us</a>
+      <a href="#stellarStage" style="color:var(--muted);text-decoration:none;font-size:14px;">Learn Hub</a>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <button type="button" id="motionToggleBtn" style="padding:8px 14px;border-radius:999px;background:#f4f4f5;border:none;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-black" data-magnetic>Get started free</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="${p}-hero">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:8px;border:1px solid #e4e4e7;font-size:13px;font-weight:500;">
+        <span style="width:22px;height:22px;border-radius:4px;border:1px solid #d4d4d8;display:inline-flex;align-items:center;justify-content:center;">★</span>
+        <span>4.9 rating from 18.3K+ users</span>
+      </div>
+
+      <h1 class="${p}-h1">
+        Work Smarter. Move Faster.<br>
+        <span class="${p}-grad-line">AI Powers You Up.</span>
+      </h1>
+
+      <p style="font-size:18px;color:var(--muted);max-width:640px;margin:0 auto 28px;line-height:1.6;">
+        Intelligent automation syncs with the tools you love to streamline tasks, boost output, and save time.
+      </p>
+
+      <div>
+        <button type="button" class="${p}-btn-black" style="padding:14px 32px;font-size:15px;" data-seamless-trigger="Begin Stellar.ai Free Trial">
+          Begin Free Trial
+        </button>
+      </div>
+
+      <!-- INTERACTIVE 4-TAB BAR -->
+      <div class="${p}-tab-bar" role="tablist">
+        <button type="button" class="${p}-tab-btn is-active" data-tab-title="Set Up Your AI Workspace" data-tab-bar="25%" data-tab-color="#7c3aed" data-tab-desc="Step 1 of 4: Connecting workspace repositories, Slack channels, and automated workflow triggers.">📊 Analyse</button>
+        <button type="button" class="${p}-tab-btn" data-tab-title="AI Model Training" data-tab-bar="67%" data-tab-color="#f97316" data-tab-desc="Epoch 14/20 • 67% Complete • Fine-tuning custom context weights with zero data retention.">📖 Train</button>
+        <button type="button" class="${p}-tab-btn" data-tab-title="Test Suite Results" data-tab-bar="100%" data-tab-color="#10b981" data-tab-desc="127 / 127 Automated Evaluation Benchmarks Passed • 99.8% Hallucination Guardrail Score.">👥 Testing</button>
+        <button type="button" class="${p}-tab-btn" data-tab-title="Deploy to Production" data-tab-bar="92%" data-tab-color="#2563eb" data-tab-desc="Multi-region edge inference ready • SOC2 Type II verified • One-click production rollout.">🚀 Deploy</button>
+      </div>
+
+      <!-- VIDEO + CONDITIONAL OVERLAY STAGE -->
+      <div id="stellarStage" class="${p}-video-stage">
+        <video id="heroBgVideo" class="${p}-video-bg" src="${stellarVid}" autoplay loop muted playsinline preload="auto"></video>
+        <div class="${p}-overlay-card" data-tilt-card>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <strong id="stellarCardTitle" style="font-size:19px;">Set Up Your AI Workspace</strong>
+            <span id="stellarCardPct" style="font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:#f3e8ff;color:#7c3aed;">25%</span>
+          </div>
+          <div style="height:8px;background:#e4e4e7;border-radius:99px;overflow:hidden;margin-bottom:14px;">
+            <div id="stellarCardBar" style="width:25%;height:100%;background:#7c3aed;border-radius:99px;transition:width 0.4s ease, background 0.4s ease;"></div>
+          </div>
+          <p id="stellarCardDesc" style="font-size:13px;color:#52525b;line-height:1.6;">
+            Step 1 of 4: Connecting workspace repositories, Slack channels, and automated workflow triggers.
+          </p>
+        </div>
+      </div>
+
+      <!-- PARTNER LOGOS -->
+      <div style="margin-top:64px;display:flex;justify-content:center;gap:clamp(28px,5vw,72px);flex-wrap:wrap;color:#71717a;font-weight:700;font-size:15px;letter-spacing:0.06em;">
+        <span>INTERSCOPE</span><span>SPOTIFY</span><span>Nexera</span><span style="font-family:Georgia,serif;font-style:italic;">M3</span><span>LAURA COLE</span><span>vertex</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <strong>★ Stellar.ai Onboarding</strong>
+        <button type="button" id="closeSeamlessBtn" style="padding:6px 12px;border-radius:999px;border:1px solid #d4d4d8;background:#fff;cursor:pointer;">Close</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Begin Your 14-Day Free Trial</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Connect your team tools and deploy your first AI workflow in under 3 minutes.</p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-black" style="width:100%;">Create Workspace</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var tabs = document.querySelectorAll('.${p}-tab-btn');
+      var tTitle = document.getElementById('stellarCardTitle');
+      var tPct = document.getElementById('stellarCardPct');
+      var tBar = document.getElementById('stellarCardBar');
+      var tDesc = document.getElementById('stellarCardDesc');
+      function activate(btn) {
+        tabs.forEach(function(b){ b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        var bw = btn.getAttribute('data-tab-bar');
+        var col = btn.getAttribute('data-tab-color');
+        if (tTitle) tTitle.textContent = btn.getAttribute('data-tab-title');
+        if (tPct) { tPct.textContent = bw; tPct.style.color = col; }
+        if (tBar) { tBar.style.width = bw; tBar.style.background = col; }
+        if (tDesc) tDesc.textContent = btn.getAttribute('data-tab-desc');
+      }
+      tabs.forEach(function(b){ b.addEventListener('click', function(){ activate(b); }); });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // 21. DATACORE BOOKING (Full-Screen Opaque Video Hero + Purple #7b39fc & #2b2344 + "Say Hello to Datacore v3.2" + "Book your perfect stay instantly and hassle-free")
+  if (spec.slug === 'datacore-booking') {
+    const dcVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260210_031346_d87182fb-b0af-4273-84d1-c6fd17d6bf0f.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Datacore v3.2 — Book Your Perfect Stay Instantly and Hassle-Free</title>
+  <meta name="description" content="Discover handpicked hotels, resorts, and stays across your favorite destinations. Enjoy exclusive deals, fast booking, and 24/7 support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0918;
+      --purple: #7b39fc;
+      --dark-purple: #2b2344;
+      --fg: #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; width: 100%; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: space-between; isolation: isolate;
+    }
+    .${p}-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;
+    }
+    .${p}-nav {
+      max-width: 1400px; width: 100%; margin: 0 auto; padding: 18px clamp(24px, 6vw, 100px);
+      display: flex; align-items: center; justify-content: space-between; font-family: 'Manrope', sans-serif;
+    }
+    .${p}-btn-signin {
+      background: #ffffff; color: #171717; border: 1px solid #d4d4d4; border-radius: 8px;
+      padding: 9px 18px; font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-btn-purple {
+      background: var(--purple); color: #fafafa; border: none; border-radius: 10px;
+      padding: 13px 26px; font-family: 'Cabin', sans-serif; font-size: 16px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 10px 28px rgba(123,57,252,0.38);
+    }
+    .${p}-btn-dark {
+      background: var(--dark-purple); color: #f6f7f9; border: 1px solid rgba(164,132,215,0.35); border-radius: 10px;
+      padding: 13px 26px; font-family: 'Cabin', sans-serif; font-size: 16px; font-weight: 500; cursor: pointer;
+    }
+
+    .${p}-center {
+      max-width: 960px; margin: auto; padding: 64px 20px 96px; text-align: center;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .${p}-tag-pill {
+      display: inline-flex; align-items: center; gap: 10px; height: 38px; padding: 0 14px 0 8px;
+      border-radius: 10px; background: rgba(85, 80, 110, 0.45); backdrop-filter: blur(14px);
+      border: 1px solid rgba(164, 132, 215, 0.5); font-family: 'Cabin', sans-serif; font-size: 14px;
+    }
+    .${p}-h1 {
+      font-family: 'Instrument Serif', serif; font-weight: 400;
+      font-size: clamp(48px, 7vw, 92px); line-height: 1.08; margin: 22px 0 18px;
+    }
+
+    .${p}-stays { max-width: 1280px; margin: 0 auto; padding: 80px 24px; }
+    .${p}-stay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; margin-top: 32px; }
+    .${p}-stay-card {
+      background: rgba(43,35,68,0.55); border: 1px solid rgba(164,132,215,0.25);
+      border-radius: 20px; padding: 26px; backdrop-filter: blur(14px);
+    }
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(12,9,24,0.86); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 520px; width: 100%; border-radius: 20px; background: #1a142c; border: 1px solid rgba(164,132,215,0.4); padding: 32px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="${p}-hero">
+      <video id="heroBgVideo" class="${p}-video" src="${dcVideo}" autoplay loop muted playsinline preload="auto"></video>
+
+      <header class="${p}-nav">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="#ffffff"><path d="M2 7L14 1L26 7V21L14 27L2 21V7Z"/></svg>
+          <strong style="font-size:18px;letter-spacing:-0.02em;">Datacore</strong>
+        </div>
+        <nav style="display:flex;gap:28px;" aria-label="Main Navigation">
+          <a href="#featuredStays" style="color:#fff;text-decoration:none;font-size:14px;font-weight:500;">Home</a>
+          <a href="#featuredStays" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;font-weight:500;">Services ▾</a>
+          <a href="#featuredStays" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;font-weight:500;">Reviews</a>
+          <a href="#featuredStays" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;font-weight:500;">Contact us</a>
+        </nav>
+        <div style="display:flex;gap:10px;align-items:center;">
+          <button type="button" id="motionToggleBtn" class="${p}-btn-dark" style="padding:8px 14px;font-size:12px;" aria-pressed="false">Motion: ON</button>
+          <button type="button" class="${p}-btn-signin" data-seamless-trigger="Sign In to Datacore">Sign In</button>
+          <button type="button" class="${p}-btn-purple" style="padding:9px 18px;font-size:14px;" data-seamless-trigger="Get Started with Datacore v3.2">Get Started</button>
+        </div>
+      </header>
+
+      <div class="${p}-center" data-parallax="0.06">
+        <div class="${p}-tag-pill">
+          <span style="background:var(--purple);padding:2px 8px;border-radius:6px;font-size:12px;font-weight:600;">New</span>
+          <span>Say Hello to Datacore v3.2</span>
+        </div>
+
+        <h1 class="${p}-h1">
+          Book your perfect stay<br>instantly <em style="font-style:italic;padding:0 6px;">and</em> hassle-free
+        </h1>
+
+        <p style="font-size:18px;color:rgba(255,255,255,0.75);max-width:662px;line-height:1.6;margin-bottom:32px;">
+          Discover handpicked hotels, resorts, and stays across your favorite destinations. Enjoy exclusive deals, fast booking, and 24/7 support.
+        </p>
+
+        <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
+          <button type="button" id="exploreMagneticBtn" class="${p}-btn-purple" data-magnetic>Book a Free Demo</button>
+          <button type="button" class="${p}-btn-dark" data-seamless-trigger="Explore Instant Stays">Get Started Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="featuredStays" class="${p}-stays">
+      <h2 style="font-family:'Instrument Serif',serif;font-size:clamp(34px,4vw,52px);font-weight:400;">Handpicked Luxury Destinations</h2>
+      <div class="${p}-stay-grid">
+        <article class="${p}-stay-card" data-tilt-card>
+          <span style="font-size:12px;color:#c084fc;">AMALFI COAST • ITALY</span>
+          <h3 style="font-size:20px;margin:8px 0;">Villa Miramare Cliffside</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;">Instant confirmation • Private infinity terrace • $480 / night.</p>
+        </article>
+        <article class="${p}-stay-card" data-tilt-card>
+          <span style="font-size:12px;color:#c084fc;">KYOTO • JAPAN</span>
+          <h3 style="font-size:20px;margin:8px 0;">Arashiyama Cedar Ryokan</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;">Private thermal onsen • Kaiseki dining included • $620 / night.</p>
+        </article>
+        <article class="${p}-stay-card" data-tilt-card>
+          <span style="font-size:12px;color:#c084fc;">ZERMATT • SWITZERLAND</span>
+          <h3 style="font-size:20px;margin:8px 0;">Matterhorn Glass Chalet</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;">Ski-in panoramic dome • 24/7 concierge • $790 / night.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-size:12px;color:#c084fc;">DATACORE V3.2 CONCIERGE</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-dark" style="padding:6px 12px;font-size:12px;">Close</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:'Instrument Serif',serif;font-size:32px;font-weight:400;margin-bottom:10px;">Book Your Perfect Stay</h2>
+      <p style="font-size:14px;color:rgba(255,255,255,0.72);line-height:1.6;margin-bottom:20px;">Zero booking fees and instant room key provisioning across 14,000+ luxury properties.</p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-purple" style="width:100%;">Confirm Instant Reservation</button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // 22. SAAS SOFTWARE ("Convix Software" PR-Agency SaaS: #ededed Outer Frame + #ef4d23 Orange Flower Pill Nav + "Shaping Agencies of tomorrow" + 3-Col Dashboard Tray with 40-Tick 180° Arc Gauges)
+  if (spec.slug === 'saas-software') {
+    const convixVid = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260424_064411_9e9d7f84-9277-41f4-ab10-59172d89e6be.mp4';
+    const makeTicks = (pct, activeCol) => {
+      const activeCount = Math.round((pct / 100) * 40);
+      let lines = '';
+      for (let i = 0; i < 40; i++) {
+        const angle = Math.PI + (i / 39) * Math.PI;
+        const x1 = (100 + 68 * Math.cos(angle)).toFixed(1);
+        const y1 = (100 + 68 * Math.sin(angle)).toFixed(1);
+        const x2 = (100 + 80 * Math.cos(angle)).toFixed(1);
+        const y2 = (100 + 80 * Math.sin(angle)).toFixed(1);
+        const col = i < activeCount ? activeCol : '#d4d4d8';
+        lines += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="2.5" stroke-linecap="round"/>`;
+      }
+      return `<svg viewBox="0 0 200 120" style="width:100%;max-width:220px;margin:0 auto;display:block;">${lines}<text x="100" y="102" text-anchor="middle" font-size="22" font-weight="600" fill="#0b0f1a">${pct}%</text></svg>`;
+    };
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Convix Software — Shaping Agencies of Tomorrow</title>
+  <meta name="description" content="The All-In-One Software Powering the Future of PR Agencies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --outer: #ededed;
+      --orange: #ef4d23;
+      --dark: #0b0f1a;
+      --tray: #f5f2ee;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--outer); color: var(--dark); font-family: 'Inter', sans-serif; overflow-x: clip; padding: 8px; }
+    .serif-it { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+
+    .${p}-hero-frame {
+      position: relative; width: 100%; min-height: calc(100vh - 16px); border-radius: 26px;
+      overflow: hidden; background: #d9d9d9; padding: 20px 16px 40px;
+      display: flex; flex-direction: column; justify-content: space-between; isolation: isolate;
+    }
+    .${p}-bg-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; pointer-events: none;
+    }
+    .${p}-bg-tint {
+      position: absolute; inset: 0; background: rgba(255,255,255,0.12); z-index: -1; pointer-events: none;
+    }
+
+    .${p}-pill-nav {
+      max-width: 760px; width: 100%; margin: 0 auto; padding: 8px 10px 8px 14px;
+      border-radius: 999px; background: #ffffff; border: 1px solid #e5e5e5;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04); display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-btn-orange {
+      display: inline-flex; align-items: center; gap: 10px; background: var(--orange); color: #fff;
+      border: none; border-radius: 999px; padding: 8px 10px 8px 18px; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-btn-dark {
+      display: inline-flex; align-items: center; gap: 12px; background: var(--dark); color: #fff;
+      border: none; border-radius: 999px; padding: 10px 10px 10px 26px; font-size: 14px; font-weight: 500; cursor: pointer;
+    }
+
+    .${p}-center-copy { text-align: center; max-width: 820px; margin: 28px auto 24px; }
+    .${p}-h1 {
+      font-size: clamp(36px, 6.5vw, 72px); line-height: 1.04; font-weight: 500; letter-spacing: -0.02em; margin: 16px 0 12px;
+    }
+
+    /* 3-Column Dashboard Preview Tray (#f5f2ee) */
+    .${p}-tray {
+      max-width: 920px; width: 100%; margin: 0 auto; background: var(--tray);
+      border-radius: 26px; padding: 20px; display: grid; grid-template-columns: 1fr; gap: 16px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+    }
+    @media (min-width: 900px) {
+      .${p}-tray { grid-template-columns: repeat(3, 1fr); }
+    }
+    .${p}-dcard {
+      background: #ffffff; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(11,15,26,0.6); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 500px; width: 100%; border-radius: 24px; background: #fff; padding: 32px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="${p}-hero-frame">
+      <video id="heroBgVideo" class="${p}-bg-video" src="${convixVid}" autoplay loop muted playsinline preload="auto"></video>
+      <div class="${p}-bg-tint"></div>
+
+      <!-- FLOATING PILL NAVBAR -->
+      <header class="${p}-pill-nav">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="#ef4d23" aria-hidden="true">
+            <circle cx="16" cy="16" r="3.5"/><circle cx="26" cy="16" r="3.5"/><circle cx="6" cy="16" r="3.5"/>
+            <circle cx="16" cy="26" r="3.5"/><circle cx="16" cy="6" r="3.5"/><circle cx="23" cy="23" r="3.5"/>
+            <circle cx="9" cy="9" r="3.5"/><circle cx="23" cy="9" r="3.5"/><circle cx="9" cy="23" r="3.5"/>
+          </svg>
+          <strong style="font-size:14px;">Convix</strong>
+        </div>
+        <nav style="display:flex;gap:22px;align-items:center;" aria-label="Main Navigation">
+          <a href="#dashboardTray" style="color:var(--dark);text-decoration:none;font-size:13px;font-weight:600;">• Home</a>
+          <a href="#dashboardTray" style="color:#52525b;text-decoration:none;font-size:13px;">Features</a>
+          <a href="#dashboardTray" style="color:#52525b;text-decoration:none;font-size:13px;">About</a>
+          <a href="#dashboardTray" style="color:var(--orange);text-decoration:none;font-size:13px;font-weight:600;">Pages ▾</a>
+        </nav>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <button type="button" id="motionToggleBtn" style="padding:6px 10px;border-radius:999px;border:1px solid #e5e5e5;background:#fff;font-size:11px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+          <button type="button" class="${p}-btn-orange" data-seamless-trigger="Get Early Access to Convix PR OS">
+            <span>Get early access</span>
+            <span style="width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,0.22);display:inline-flex;align-items:center;justify-content:center;">›</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- HERO CENTER CONTENT -->
+      <div class="${p}-center-copy">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:#fff;padding:6px 16px;border-radius:999px;font-size:13px;font-weight:500;box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+          <span style="width:8px;height:8px;border-radius:50%;background:var(--orange);"></span>
+          <span>Convix Software</span>
+        </div>
+        <h1 class="${p}-h1">
+          Shaping <span class="serif-it">Agencies</span><br>of tomorrow
+        </h1>
+        <p style="font-size:15px;color:#404040;margin-bottom:22px;">
+          The All-In-One Software Powering the Future of PR Agencies
+        </p>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-dark" data-magnetic>
+          <span>Get Started</span>
+          <span style="width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,0.16);display:inline-flex;align-items:center;justify-content:center;">›</span>
+        </button>
+      </div>
+
+      <!-- 3-COLUMN DASHBOARD PREVIEW TRAY -->
+      <div id="dashboardTray" class="${p}-tray">
+        <!-- Card 1: Clicks + 92% Gauge -->
+        <article class="${p}-dcard" data-tilt-card>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;">
+              <span style="color:var(--orange);">Clicks</span>
+              <span style="color:#737373;">This Month</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:8px;">
+              <strong style="font-size:28px;">6,896</strong>
+              <span style="background:#fef2f2;color:#dc2626;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;">↘ -3,382 (33%)</span>
+            </div>
+            <span style="font-size:11px;color:#737373;">Compared to yesterday</span>
+          </div>
+          <div style="margin:10px 0;">
+            <p style="text-align:center;font-size:11px;color:#52525b;margin-bottom:4px;">Month Target achieved</p>
+            ${makeTicks(92, '#ef4d23')}
+            <div style="display:flex;justify-content:space-between;font-size:11px;color:#737373;padding:0 12px;"><span>389K</span><span>425K</span></div>
+          </div>
+          <div style="background:#f5f5f5;border-radius:999px;padding:4px;display:flex;font-size:12px;font-weight:600;">
+            <span style="flex:1;text-align:center;background:#fff;padding:5px;border-radius:999px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Impressions</span>
+            <span style="flex:1;text-align:center;padding:5px;color:#737373;">Clicks</span>
+          </div>
+        </article>
+
+        <!-- Card 2: Target Configuration Form -->
+        <article class="${p}-dcard" data-tilt-card>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div>
+              <label style="font-size:11px;color:#52525b;display:block;margin-bottom:4px;">Show figures for</label>
+              <div style="border:1px solid #e5e5e5;border-radius:8px;padding:7px 10px;font-size:12px;display:flex;justify-content:space-between;"><span>This month</span><span>▾</span></div>
+            </div>
+            <div>
+              <label style="font-size:11px;color:#52525b;display:block;margin-bottom:4px;">Compare period by</label>
+              <div style="border:1px solid #e5e5e5;border-radius:8px;padding:7px 10px;font-size:12px;display:flex;justify-content:space-between;"><span>Month-to-date (MTD)</span><span>▾</span></div>
+            </div>
+            <div>
+              <label style="font-size:11px;color:#52525b;display:block;margin-bottom:4px;">Site targets (This month)</label>
+              <div style="border:1px solid #e5e5e5;border-radius:8px;padding:7px 10px;font-size:12px;"># 10</div>
+            </div>
+            <div>
+              <label style="font-size:11px;color:#52525b;display:block;margin-bottom:4px;">Site targets (This year)</label>
+              <div style="border:1px solid #e5e5e5;border-radius:8px;padding:7px 10px;font-size:12px;"># 100</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:12px;">
+            <button type="button" style="background:var(--orange);color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:12px;font-weight:600;cursor:pointer;" data-seamless-trigger="Targets Saved">Save</button>
+            <span style="font-size:12px;text-decoration:underline;color:#52525b;cursor:pointer;">Cancel</span>
+            <span style="margin-left:auto;color:#737373;">✕</span>
+          </div>
+        </article>
+
+        <!-- Card 3: Video Starts + 68% Gauge -->
+        <article class="${p}-dcard" data-tilt-card>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;">
+              <span style="color:var(--orange);">Video Starts</span>
+              <span style="color:#737373;">today</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:8px;">
+              <strong style="font-size:28px;">1,420</strong>
+              <span style="background:#f5f5f5;color:#404040;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;">↗ +18%</span>
+            </div>
+            <span style="font-size:11px;color:#737373;">Compared to yesterday</span>
+          </div>
+          <div style="margin:10px 0;">
+            ${makeTicks(68, '#9ca3af')}
+          </div>
+          <div style="background:#f5f5f5;border-radius:999px;padding:4px;display:flex;font-size:12px;font-weight:600;">
+            <span style="flex:1;text-align:center;background:#fff;padding:5px;border-radius:999px;box-shadow:0 1px 4px rgba(0,0,0,0.06);">Video Clicks</span>
+            <span style="flex:1;text-align:center;padding:5px;color:#737373;">Video Starts</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <strong style="color:var(--orange);">Convix PR Agency OS</strong>
+        <button type="button" id="closeSeamlessBtn" style="padding:6px 12px;border-radius:999px;border:1px solid #d4d4d8;background:#fff;cursor:pointer;">Close</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Launch Your Agency Workspace</h2>
+      <p style="font-size:14px;color:#52525b;line-height:1.6;margin-bottom:20px;">Real-time PR campaign attribution, media placement gauges, and automated client reporting.</p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-orange" style="width:100%;justify-content:center;padding:12px;">Activate Early Access</button>
+    </div>
+  </div>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // 23. NEURALYN (Pure #000000 Dark Analytics SaaS + "Say Hello to Corewave v3.2" Liquid Glass Pill + "Your Insights. One Clear Overview." + Luminosity Video Dashboard + Scroll Word-by-Word Reveal Testimonial)
+  if (spec.slug === 'neuralyn') {
+    const neuVid = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Neuralyn — Your Insights. One Clear Overview.</title>
+  <meta name="description" content="Neuralyn helps teams track metrics, goals, and progress with precision.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --fg: #ffffff;
+      --muted: hsl(0, 0%, 65%);
+      --card: hsl(0, 0%, 6%);
+      --border: hsl(0, 0%, 20%);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .serif-italic { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+
+    .${p}-liquid-glass {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.14);
+    }
+    .${p}-nav {
+      max-width: 1360px; margin: 0 auto; padding: 18px clamp(24px, 6vw, 96px);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-btn-white {
+      background: #ffffff; color: #000000; border: none; border-radius: 999px;
+      padding: 13px 30px; font-size: 15px; font-weight: 500; cursor: pointer;
+    }
+
+    .${p}-hero {
+      text-align: center; padding: 56px 20px 0;
+    }
+    .${p}-h1 {
+      font-size: clamp(44px, 6.2vw, 72px); font-weight: 500; letter-spacing: -2px;
+      line-height: 1.12; margin: 22px auto 14px; max-width: 820px;
+    }
+    .${p}-video-band {
+      position: relative; width: 100%; min-height: 520px; margin-top: 44px;
+      display: flex; align-items: center; justify-content: center; padding: 36px 20px 80px; overflow: hidden;
+    }
+    .${p}-video-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.78;
+    }
+    .${p}-dash-mock {
+      position: relative; z-index: 2; max-width: 1024px; width: 100%;
+      background: rgba(12, 12, 14, 0.86); backdrop-filter: blur(22px);
+      border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 28px;
+      mix-blend-mode: luminosity; box-shadow: 0 32px 80px rgba(0,0,0,0.85);
+      text-align: left;
+    }
+    .${p}-fade-bottom {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 140px;
+      background: linear-gradient(0deg, #000000 0%, transparent 100%); z-index: 3; pointer-events: none;
+    }
+
+    /* Section 2: Scroll-Driven Word Reveal Testimonial */
+    .${p}-testi {
+      max-width: 920px; margin: 0 auto; padding: 110px 24px;
+    }
+    .${p}-word {
+      color: hsl(0, 0%, 32%); transition: color 0.3s ease;
+    }
+    .${p}-word.is-lit { color: #ffffff; }
+
+    .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(0,0,0,0.86); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box { max-width: 500px; width: 100%; border-radius: 20px; background: #111; border: 1px solid var(--border); padding: 32px; }
+  </style>
+</head>
+<body>
+  <header class="${p}-nav">
+    <div style="display:flex;align-items:center;gap:48px;">
+      <strong style="font-size:20px;letter-spacing:-0.03em;">◈ Neuralyn</strong>
+      <nav style="display:flex;gap:24px;" aria-label="Main Navigation">
+        <a href="#dashArea" style="color:#fff;text-decoration:none;font-size:14px;">Home</a>
+        <a href="#dashArea" style="color:var(--muted);text-decoration:none;font-size:14px;">Services ▾</a>
+        <a href="#testimonialSec" style="color:var(--muted);text-decoration:none;font-size:14px;">Reviews</a>
+        <a href="#testimonialSec" style="color:var(--muted);text-decoration:none;font-size:14px;">Contact us</a>
+      </nav>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="${p}-liquid-glass" style="padding:7px 14px;border-radius:8px;color:#fff;font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+      <button type="button" class="${p}-btn-white" style="padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;" data-seamless-trigger="Sign In to Neuralyn Corewave">Sign In</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="${p}-hero">
+      <div class="${p}-liquid-glass" style="display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 8px;border-radius:10px;">
+        <span style="background:#fff;color:#000;padding:2px 8px;border-radius:6px;font-size:12px;font-weight:600;">New</span>
+        <span style="font-size:13px;color:var(--muted);font-weight:500;">Say Hello to Corewave v3.2</span>
+      </div>
+
+      <h1 class="${p}-h1">
+        Your Insights.<br>
+        One Clear <span class="serif-italic">Overview.</span>
+      </h1>
+
+      <p style="font-size:17px;color:#edf2f7;opacity:0.9;line-height:1.55;margin-bottom:28px;">
+        Neuralyn helps teams track metrics, goals,<br>and progress with precision.
+      </p>
+
+      <button type="button" id="exploreMagneticBtn" class="${p}-btn-white" data-magnetic>
+        Get Started for Free
+      </button>
+
+      <!-- FULL-WIDTH VIDEO + LUMINOSITY DASHBOARD AREA -->
+      <div id="dashArea" class="${p}-video-band">
+        <video id="heroBgVideo" class="${p}-video-bg" src="${neuVid}" autoplay loop muted playsinline preload="auto"></video>
+        <div class="${p}-dash-mock" data-parallax="-0.08" data-tilt-card>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,0.12);">
+            <div>
+              <span style="font-size:11px;color:var(--muted);letter-spacing:0.1em;">COREWAVE V3.2 TELEMETRY</span>
+              <h2 style="font-size:20px;margin-top:4px;">Executive Revenue &amp; Retention Matrix</h2>
+            </div>
+            <span class="${p}-liquid-glass" style="padding:6px 12px;border-radius:999px;font-size:12px;">● Live Sync</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:20px;">
+            <div style="padding:18px;border-radius:14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);">
+              <span style="font-size:12px;color:var(--muted);">Net Recurring ARR</span>
+              <strong style="display:block;font-size:28px;margin-top:6px;" data-counter-target="48" data-counter-suffix=".6M">$48.6M</strong>
+            </div>
+            <div style="padding:18px;border-radius:14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);">
+              <span style="font-size:12px;color:var(--muted);">Net Dollar Retention</span>
+              <strong style="display:block;font-size:28px;margin-top:6px;" data-counter-target="138" data-counter-suffix="%">138%</strong>
+            </div>
+            <div style="padding:18px;border-radius:14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);">
+              <span style="font-size:12px;color:var(--muted);">Query P99 Latency</span>
+              <strong style="display:block;font-size:28px;margin-top:6px;" data-counter-target="12" data-counter-suffix="ms">12ms</strong>
+            </div>
+          </div>
+        </div>
+        <div class="${p}-fade-bottom"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: SCROLL-DRIVEN WORD REVEAL TESTIMONIAL -->
+    <section id="testimonialSec" class="${p}-testi">
+      <div style="font-size:48px;line-height:1;color:var(--muted);margin-bottom:18px;">“</div>
+      <p id="neuralynQuote" style="font-size:clamp(28px,4vw,46px);font-weight:500;line-height:1.25;">
+        Neuralyn revolutionized how we handle financial insights using smart analytics. We are now driving better outcomes quicker than we ever imagined!
+      </p>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:36px;">
+        <div style="width:54px;height:54px;border-radius:50%;border:3px solid #fff;background:#262626;display:flex;align-items:center;justify-content:center;font-weight:700;">BS</div>
+        <div>
+          <strong style="display:block;font-size:16px;">Brooklyn Simmons</strong>
+          <span style="font-size:14px;color:var(--muted);">Product Manager</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <strong>◈ Neuralyn Corewave v3.2</strong>
+        <button type="button" id="closeSeamlessBtn" style="padding:6px 12px;border-radius:8px;border:1px solid var(--border);background:transparent;color:#fff;cursor:pointer;">Close</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Get Started with Neuralyn</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">Connect Snowflake, BigQuery, or Postgres and generate executive overview boards in seconds.</p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-white" style="width:100%;">Create Free Account</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var qEl = document.getElementById('neuralynQuote');
+      if (qEl) {
+        var words = qEl.innerText.split(/\\s+/);
+        qEl.innerHTML = words.map(function(w){ return '<span class="${p}-word">' + w + '</span>'; }).join(' ');
+        var spans = qEl.querySelectorAll('.${p}-word');
+        window.addEventListener('scroll', function(){
+          var r = qEl.getBoundingClientRect();
+          var vh = window.innerHeight || 800;
+          var prog = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.35)));
+          var lit = Math.floor(prog * spans.length);
+          spans.forEach(function(s, i){ s.classList.toggle('is-lit', i <= lit); });
+        }, { passive: true });
+      }
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
   // GENERAL BESPOKE HALLMARK COMPILER FOR ALL OTHER MOTIONSITES TEMPLATES (with 3D Cutout + 4 Mandatory Motion Groups)
   const bg = spec.isLight ? '#f8fafc' : '#06070b';
   const surface = spec.isLight ? '#ffffff' : '#10131c';

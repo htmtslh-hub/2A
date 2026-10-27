@@ -1,0 +1,38 @@
+{
+  "id": "t153",
+  "slug": "saas-software",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T23:46:11.629Z",
+  "demo": "/demos/saas-software/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "14bf54350d04",
+  "sha256": "14bf54350d048567f76111a11a38f03cf0e1732cbfb5fd3be5208b4655a12a67",
+  "demoHtmlSha256": "2a2974fb9c0481c1aea4a2190436a5c0015a924115b19a397cadfc5992904e15",
+  "demoSha256": "38fefa813838cbc4a47e50c15f16f8d6f69bdbe73b7bfdf1d461092c56cb81bf",
+  "bytes": 655092,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 16
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\saas-software-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\saas-software-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\saas-software-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\saas-software-return.jpg"
+  ]
+}

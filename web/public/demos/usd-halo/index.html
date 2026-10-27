@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Halo / USD Halo — Your Wealth Works</title>
+  <meta name="description" content="An automated, reward-powered digital dollar built for native passive earnings and effortless connection into DeFi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F5F5F5;
+      --fg: #0a0a0a;
+      --muted: rgba(0,0,0,0.65);
+      --plum: #2B2644;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+
+    .usd97-top-frame { min-height: 100vh; display: flex; flex-direction: column; padding: 0 24px 24px; max-width: 1408px; margin: 0 auto; position: relative; }
+    .usd97-nav {
+      display: flex; align-items: center; justify-content: space-between; padding: 20px 0; z-index: 20;
+    }
+    .usd97-btn-black {
+      display: inline-flex; align-items: center; gap: 12px; background: #000; color: #fff;
+      font-size: 15px; font-weight: 500; padding: 10px 26px; border-radius: 999px; border: none; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .usd97-btn-black:hover { background: #262626; }
+    .usd97-btn-join {
+      display: inline-flex; align-items: center; gap: 12px; background: #000; color: #fff;
+      font-size: 16px; font-weight: 500; padding: 8px 8px 8px 28px; border-radius: 999px; border: none; cursor: pointer;
+    }
+    .usd97-arrow-circle {
+      width: 36px; height: 36px; border-radius: 50%; background: #fff; color: #000;
+      display: inline-flex; align-items: center; justify-content: center; font-weight: 700;
+    }
+
+    .usd97-hero-card {
+      position: relative; flex: 1; min-height: calc(100vh - 96px); border-radius: 24px;
+      overflow: hidden; display: flex; flex-direction: column; justify-content: flex-start;
+      padding: clamp(32px, 5vw, 56px); padding-top: clamp(72px, 11vh, 136px); isolation: isolate;
+      background: #e2e8f0;
+    }
+    .usd97-hero-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;
+    }
+    .usd97-h1 {
+      font-size: clamp(44px, 5.5vw, 64px); font-weight: 600; line-height: 1.06; letter-spacing: -0.04em;
+      max-width: 520px; margin-bottom: 16px; color: #000;
+    }
+    .usd97-marquee-wrap {
+      margin-top: auto; padding-top: 48px; width: 100%; max-width: 460px; overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    }
+    .usd97-marquee-track { display: flex; width: max-content; animation: usd97Marquee 22s linear infinite; }
+    @keyframes usd97Marquee { 0% { transform: translate3d(0,0,0); } 100% { transform: translate3d(-50%,0,0); } }
+
+    .usd97-sec { max-width: 1408px; margin: 0 auto; padding: 88px 24px; }
+    .usd97-bento-4 {
+      display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 48px;
+    }
+    @media (min-width: 1024px) {
+      .usd97-bento-4 { grid-template-columns: 2fr 1fr 1fr; }
+    }
+    .usd97-card-bloom {
+      min-height: 320px; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;
+      background: radial-gradient(circle at 75% 30%, #c7d2fe 0%, #e0e7ff 45%, #dbeafe 100%);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .usd97-card-plum {
+      min-height: 320px; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;
+      background: var(--plum); color: #ffffff;
+    }
+    .usd97-use-grid {
+      display: grid; grid-template-columns: 1fr; gap: 32px; align-items: start;
+    }
+    @media (min-width: 980px) {
+      .usd97-use-grid { grid-template-columns: 1fr 1.15fr; }
+    }
+    .usd97-commerce-card {
+      position: relative; min-height: 540px; border-radius: 28px; overflow: hidden;
+      padding: 44px; display: flex; flex-direction: column; justify-content: flex-start; isolation: isolate;
+      background: #cbd5e1;
+    }
+    .usd97-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(0,0,0,0.65); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .usd97-seamless-overlay.is-open { display: flex; }
+    .usd97-seamless-box { max-width: 520px; width: 100%; border-radius: 24px; background: #fff; padding: 32px; color: #000; }
+  </style>
+</head>
+<body>
+  <div class="usd97-top-frame">
+    <!-- 1. NAVBAR -->
+    <header class="usd97-nav">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <svg width="28" height="28" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+          <path d="M 128.005 191.173 C 128.448 156.208 156.93 128 192 128 L 192 64 L 128 64 C 128 99.346 99.346 128 64 128 L 64 192 L 128 192 Z M 192 256 L 64 256 C 28.654 256 0 227.346 0 192 L 0 64 L 64 64 L 64 0 L 192 0 C 227.346 0 256 28.654 256 64 L 256 192 L 192 192 Z"/>
+        </svg>
+        <strong style="font-size:24px;font-weight:600;letter-spacing:-0.03em;">Halo</strong>
+      </div>
+      <nav style="display:flex;gap:32px;" aria-label="Main Navigation">
+        <a href="#meetHalo" style="color:#374151;text-decoration:none;font-size:15px;font-weight:500;">Network</a>
+        <a href="#meetHalo" style="color:#374151;text-decoration:none;font-size:15px;font-weight:500;">Ecosystem</a>
+        <a href="#useModes" style="color:#374151;text-decoration:none;font-size:15px;font-weight:500;">Rewards</a>
+        <a href="#useModes" style="color:#374151;text-decoration:none;font-size:15px;font-weight:500;">Help</a>
+        <a href="#useModes" style="color:#374151;text-decoration:none;font-size:15px;font-weight:500;">News</a>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" style="padding:8px 14px;border-radius:999px;background:rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.12);font-size:12px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="usd97-btn-black" data-magnetic>Open Wallet</button>
+      </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="usd97-hero-card">
+      <video id="heroBgVideo" class="usd97-hero-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260423_161253_c72b1869-400f-45ed-ac0c-52f68c2ed5bd.mp4" autoplay muted loop playsinline preload="auto"></video>
+      <div data-parallax="0.05">
+        <h1 class="usd97-h1">Your Wealth<br>Works</h1>
+        <p style="font-size:17px;color:rgba(0,0,0,0.72);max-width:420px;line-height:1.6;margin-bottom:28px;">
+          An automated, reward-powered digital dollar built for native passive earnings and effortless connection into DeFi.
+        </p>
+        <button type="button" class="usd97-btn-join" data-seamless-trigger="Mint USD Halo — Native Yield Stablecoin" data-magnetic>
+          <span>Join us</span>
+          <span class="usd97-arrow-circle">→</span>
+        </button>
+      </div>
+
+      <div class="usd97-marquee-wrap" aria-label="Ecosystem Partners">
+        <div class="usd97-marquee-track">
+          <span style="margin:0 24px;font-family:Georgia,serif;font-weight:700;font-size:15px;color:rgba(0,0,0,0.6);">Stripe</span>
+          <span style="margin:0 24px;font-weight:900;letter-spacing:0.08em;font-size:13px;color:rgba(0,0,0,0.6);">COINBASE</span>
+          <span style="margin:0 24px;font-style:italic;font-weight:600;font-size:15px;color:rgba(0,0,0,0.6);">Uniswap</span>
+          <span style="margin:0 24px;font-family:monospace;font-weight:700;letter-spacing:0.12em;font-size:13px;color:rgba(0,0,0,0.6);">AAVE</span>
+          <span style="margin:0 24px;font-family:Georgia,serif;font-size:16px;color:rgba(0,0,0,0.6);">Compound</span>
+          <span style="margin:0 24px;font-weight:700;letter-spacing:0.04em;font-size:14px;color:rgba(0,0,0,0.6);">MakerDAO</span>
+          <span style="margin:0 24px;font-weight:700;font-size:13px;color:rgba(0,0,0,0.6);">Chainlink</span>
+          <span style="margin:0 24px;font-family:Georgia,serif;font-weight:700;font-size:15px;color:rgba(0,0,0,0.6);">Stripe</span>
+          <span style="margin:0 24px;font-weight:900;letter-spacing:0.08em;font-size:13px;color:rgba(0,0,0,0.6);">COINBASE</span>
+          <span style="margin:0 24px;font-style:italic;font-weight:600;font-size:15px;color:rgba(0,0,0,0.6);">Uniswap</span>
+          <span style="margin:0 24px;font-family:monospace;font-weight:700;letter-spacing:0.12em;font-size:13px;color:rgba(0,0,0,0.6);">AAVE</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <main>
+    <!-- 3. INFO SECTION ("Meet USD Halo.") -->
+    <section id="meetHalo" class="usd97-sec">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:start;">
+        <div>
+          <h2 style="font-size:clamp(36px,4vw,52px);font-weight:600;letter-spacing:-0.03em;margin-bottom:24px;">Meet USD Halo.</h2>
+          <button type="button" class="usd97-btn-join" data-seamless-trigger="Discover USD Halo Architecture">
+            <span>Discover it</span>
+            <span class="usd97-arrow-circle">→</span>
+          </button>
+        </div>
+        <p style="font-size:clamp(22px,2.4vw,30px);color:rgba(0,0,0,0.72);line-height:1.45;">
+          USD Halo is a reward-earning dollar coin that lets your savings grow while remaining tied to the U.S. dollar.
+        </p>
+      </div>
+
+      <div class="usd97-bento-4">
+        <article class="usd97-card-bloom" data-tilt-card>
+          <h3 style="font-size:26px;font-weight:600;letter-spacing:-0.02em;">Savings that bloom</h3>
+          <p style="font-size:16px;color:rgba(0,0,0,0.72);max-width:340px;line-height:1.55;">
+            Gain steady returns as your dollar tokens are routed into top-performing DeFi strategies.
+          </p>
+        </article>
+        <article class="usd97-card-plum" data-tilt-card>
+          <h3 style="font-size:24px;font-weight:500;line-height:1.2;">Always fluid,<br>always pegged.</h3>
+          <p style="font-size:15px;color:rgba(255,255,255,0.65);line-height:1.55;">
+            Keep fully dollar-anchored with on-demand access to funds — no lockups or waits.
+          </p>
+        </article>
+        <article class="usd97-card-plum" data-tilt-card>
+          <h3 style="font-size:24px;font-weight:500;line-height:1.2;">Fully<br>automated</h3>
+          <p style="font-size:15px;color:rgba(255,255,255,0.65);line-height:1.55;">
+            Skip the task of tuning positions yourself. USD Halo runs in the background for you.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. USE CASES SECTION -->
+    <section id="useModes" class="usd97-sec" style="padding-top:0;">
+      <div class="usd97-use-grid">
+        <div>
+          <span style="font-size:13px;color:rgba(0,0,0,0.6);display:block;margin-bottom:8px;">USD Halo in Practice</span>
+          <h2 style="font-size:clamp(42px,5vw,64px);font-weight:600;letter-spacing:-0.04em;line-height:1;margin-bottom:22px;">Use modes</h2>
+          <p style="font-size:16px;color:rgba(0,0,0,0.62);line-height:1.65;max-width:380px;">
+            USD Halo powers a wide range of modes for builders, companies and treasuries wanting safe and rewarding stablecoin integrations plus more.
+          </p>
+        </div>
+        <div class="usd97-commerce-card" data-tilt-card>
+          <video class="usd97-hero-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260423_183428_ab5e672a-f608-4dcb-b319-f3e040f02e2d.mp4" autoplay muted loop playsinline preload="auto"></video>
+          <h3 style="font-size:clamp(34px,3.8vw,48px);font-weight:600;letter-spacing:-0.03em;margin-bottom:16px;color:#000;">Commerce</h3>
+          <p style="font-size:16px;color:rgba(0,0,0,0.74);max-width:420px;line-height:1.6;margin-bottom:28px;">
+            Lift customer retention by offering USD Halo, a trusted dollar-backed stablecoin with strong yields, letting your patrons earn with zero effort on your platform.
+          </p>
+          <div style="display:inline-flex;align-items:center;gap:12px;cursor:pointer;" data-seamless-trigger="USD Halo Commerce SDK">
+            <span style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.85);display:inline-flex;align-items:center;justify-content:center;">→</span>
+            <strong style="font-size:15px;">Know more</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="usd97-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="usd97-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <strong style="font-size:14px;">USD Halo Treasury Gateway</strong>
+        <button type="button" id="closeSeamlessBtn" style="padding:6px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.15);background:transparent;cursor:pointer;">Close</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:26px;margin-bottom:10px;">Connect Institutional Wallet</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:22px;">Mint USD Halo 1:1 with USDC/USD and begin earning automated DeFi treasury yield immediately.</p>
+      <button type="button" id="confirmSeamlessBtn" class="usd97-btn-black" style="width:100%;justify-content:center;">Launch Halo Vault</button>
+    </div>
+  </div>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.usd97-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('usd97Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

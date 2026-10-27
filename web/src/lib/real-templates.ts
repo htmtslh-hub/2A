@@ -46,6 +46,269 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t154: {
+    slug: 'neuralyn',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Neuralyn",
+        desc: "Giao diện web Neuralyn với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Neuralyn",
+        desc: "Bespoke Neuralyn web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Neuralyn",
+        desc: "单文件自包含 Neuralyn 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t153: {
+    slug: 'saas-software',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "SAAS Software",
+        desc: "Giao diện web SAAS Software với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "SAAS Software",
+        desc: "Bespoke SAAS Software web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "SAAS Software",
+        desc: "单文件自包含 SAAS Software 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t152: {
+    slug: 'datacore-booking',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Datacore Booking",
+        desc: "Giao diện web Datacore Booking với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Datacore Booking",
+        desc: "Bespoke Datacore Booking web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Datacore Booking",
+        desc: "单文件自包含 Datacore Booking 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t151: {
+    slug: 'japan-sunrise-tour',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Japan Sunrise Tours",
+        desc: "Japan Sunrise Tours (fuji-sakura-expedition) — 10-day Osaka, Kyoto & Tokyo expedition with masked JAPAN sunrise header, 3D vermilion pagoda & sakura cutout, 5 vertical glass cards, and vertical itinerary timeline.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Japan Sunrise Tours",
+        desc: "Japan Sunrise Tours (fuji-sakura-expedition) — 10-day Osaka, Kyoto & Tokyo expedition with masked JAPAN sunrise header, 3D vermilion pagoda & sakura cutout, 5 vertical glass cards, and vertical itinerary timeline.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Japan Sunrise Tours",
+        desc: "Japan Sunrise Tours (fuji-sakura-expedition) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t150: {
+    slug: 'fischer-motorsport',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Fischer KFZ-Meisterbetrieb",
+        desc: "Fischer KFZ-Meisterbetrieb (diagonal-zigzag-atelier) — Carbon-black automotive master workshop with dramatic diagonal white & dark zig-zag geometric bands, 3D bronze executive coupe cutout, and 6-point TÜV inspection matrix.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Fischer KFZ-Meisterbetrieb",
+        desc: "Fischer KFZ-Meisterbetrieb (diagonal-zigzag-atelier) — Carbon-black automotive master workshop with dramatic diagonal white & dark zig-zag geometric bands, 3D bronze executive coupe cutout, and 6-point TÜV inspection matrix.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Fischer KFZ-Meisterbetrieb",
+        desc: "Fischer KFZ-Meisterbetrieb (diagonal-zigzag-atelier) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t149: {
+    slug: 'litera-bookstore',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Litera Bookstore & Chat",
+        desc: "Litera Bookstore & Chat (bookstore-chat-concierge) — Warm cream editorial bookstore UI with 9 category icons, 5 hardcover ribbon cards, 3D floating collector book stack cutout, and live interactive Chat concierge sidebar.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Litera Bookstore & Chat",
+        desc: "Litera Bookstore & Chat (bookstore-chat-concierge) — Warm cream editorial bookstore UI with 9 category icons, 5 hardcover ribbon cards, 3D floating collector book stack cutout, and live interactive Chat concierge sidebar.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Litera Bookstore & Chat",
+        desc: "Litera Bookstore & Chat (bookstore-chat-concierge) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t148: {
+    slug: 'apex-squad-light',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Apex Legends Squad Hub",
+        desc: "Apex Legends Squad Hub (tactical-triangle-arena) — Light tactical bone-stone arena with glowing crimson-orange triangular emblem, 3D squad duo cutout, parallelogram navigation tabs, and squad loadout selector.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Apex Legends Squad Hub",
+        desc: "Apex Legends Squad Hub (tactical-triangle-arena) — Light tactical bone-stone arena with glowing crimson-orange triangular emblem, 3D squad duo cutout, parallelogram navigation tabs, and squad loadout selector.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Apex Legends Squad Hub",
+        desc: "Apex Legends Squad Hub (tactical-triangle-arena) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t147: {
+    slug: 'tripg-ocean',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "TripG Ocean Discovery",
+        desc: "TripG Ocean Discovery (ocean-wave-curve) — Clean white and turquoise ocean wave curve hero with 3D hydrofoil yacht cutout, straddling circular GO button, and interactive Paris–London–Dubaï–Phuket timeline.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "TripG Ocean Discovery",
+        desc: "TripG Ocean Discovery (ocean-wave-curve) — Clean white and turquoise ocean wave curve hero with 3D hydrofoil yacht cutout, straddling circular GO button, and interactive Paris–London–Dubaï–Phuket timeline.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "TripG Ocean Discovery",
+        desc: "TripG Ocean Discovery (ocean-wave-curve) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t146: {
+    slug: 'stellar-ai',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Stellar AI",
+        desc: "Giao diện web Stellar AI với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Stellar AI",
+        desc: "Bespoke Stellar AI web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Stellar AI",
+        desc: "单文件自包含 Stellar AI 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t145: {
+    slug: 'taskly',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Taskly",
+        desc: "Giao diện web Taskly với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Taskly",
+        desc: "Bespoke Taskly web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Taskly",
+        desc: "单文件自包含 Taskly 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t144: {
+    slug: 'usd-halo',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "USD Halo",
+        desc: "Giao diện web USD Halo với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "USD Halo",
+        desc: "Bespoke USD Halo web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "USD Halo",
+        desc: "单文件自包含 USD Halo 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t143: {
     slug: 'transform-data',
     cat: 'portfolio',

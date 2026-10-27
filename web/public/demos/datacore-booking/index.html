@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Datacore v3.2 — Book Your Perfect Stay Instantly and Hassle-Free</title>
+  <meta name="description" content="Discover handpicked hotels, resorts, and stays across your favorite destinations. Enjoy exclusive deals, fast booking, and 24/7 support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0918;
+      --purple: #7b39fc;
+      --dark-purple: #2b2344;
+      --fg: #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+
+    .dat12-hero {
+      position: relative; min-height: 100vh; width: 100%; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: space-between; isolation: isolate;
+    }
+    .dat12-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;
+    }
+    .dat12-nav {
+      max-width: 1400px; width: 100%; margin: 0 auto; padding: 18px clamp(24px, 6vw, 100px);
+      display: flex; align-items: center; justify-content: space-between; font-family: 'Manrope', sans-serif;
+    }
+    .dat12-btn-signin {
+      background: #ffffff; color: #171717; border: 1px solid #d4d4d4; border-radius: 8px;
+      padding: 9px 18px; font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .dat12-btn-purple {
+      background: var(--purple); color: #fafafa; border: none; border-radius: 10px;
+      padding: 13px 26px; font-family: 'Cabin', sans-serif; font-size: 16px; font-weight: 500; cursor: pointer;
+      box-shadow: 0 10px 28px rgba(123,57,252,0.38);
+    }
+    .dat12-btn-dark {
+      background: var(--dark-purple); color: #f6f7f9; border: 1px solid rgba(164,132,215,0.35); border-radius: 10px;
+      padding: 13px 26px; font-family: 'Cabin', sans-serif; font-size: 16px; font-weight: 500; cursor: pointer;
+    }
+
+    .dat12-center {
+      max-width: 960px; margin: auto; padding: 64px 20px 96px; text-align: center;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .dat12-tag-pill {
+      display: inline-flex; align-items: center; gap: 10px; height: 38px; padding: 0 14px 0 8px;
+      border-radius: 10px; background: rgba(85, 80, 110, 0.45); backdrop-filter: blur(14px);
+      border: 1px solid rgba(164, 132, 215, 0.5); font-family: 'Cabin', sans-serif; font-size: 14px;
+    }
+    .dat12-h1 {
+      font-family: 'Instrument Serif', serif; font-weight: 400;
+      font-size: clamp(48px, 7vw, 92px); line-height: 1.08; margin: 22px 0 18px;
+    }
+
+    .dat12-stays { max-width: 1280px; margin: 0 auto; padding: 80px 24px; }
+    .dat12-stay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; margin-top: 32px; }
+    .dat12-stay-card {
+      background: rgba(43,35,68,0.55); border: 1px solid rgba(164,132,215,0.25);
+      border-radius: 20px; padding: 26px; backdrop-filter: blur(14px);
+    }
+    .dat12-seamless-overlay { position: fixed; inset: 0; z-index: 900; background: rgba(12,9,24,0.86); backdrop-filter: blur(18px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .dat12-seamless-overlay.is-open { display: flex; }
+    .dat12-seamless-box { max-width: 520px; width: 100%; border-radius: 20px; background: #1a142c; border: 1px solid rgba(164,132,215,0.4); padding: 32px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="dat12-hero">
+      <video id="heroBgVideo" class="dat12-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260210_031346_d87182fb-b0af-4273-84d1-c6fd17d6bf0f.mp4" autoplay loop muted playsinline preload="auto"></video>
+
+      <header class="dat12-nav">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="#ffffff"><path d="M2 7L14 1L26 7V21L14 27L2 21V7Z"/></svg>
+          <strong style="font-size:18px;letter-spacing:-0.02em;">Datacore</strong>
+        </div>
+        <nav style="display:flex;gap:28px;" aria-label="Main Navigation">
+          <a href="#featuredStays" style="color:#fff;text-decoration:none;font-size:14px;font-weight:500;">Home</a>
+          <a href="#featuredStays" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;font-weight:500;">Services ▾</a>
+          <a href="#featuredStays" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;font-weight:500;">Reviews</a>
+          <a href="#featuredStays" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;font-weight:500;">Contact us</a>
+        </nav>
+        <div style="display:flex;gap:10px;align-items:center;">
+          <button type="button" id="motionToggleBtn" class="dat12-btn-dark" style="padding:8px 14px;font-size:12px;" aria-pressed="false">Motion: ON</button>
+          <button type="button" class="dat12-btn-signin" data-seamless-trigger="Sign In to Datacore">Sign In</button>
+          <button type="button" class="dat12-btn-purple" style="padding:9px 18px;font-size:14px;" data-seamless-trigger="Get Started with Datacore v3.2">Get Started</button>
+        </div>
+      </header>
+
+      <div class="dat12-center" data-parallax="0.06">
+        <div class="dat12-tag-pill">
+          <span style="background:var(--purple);padding:2px 8px;border-radius:6px;font-size:12px;font-weight:600;">New</span>
+          <span>Say Hello to Datacore v3.2</span>
+        </div>
+
+        <h1 class="dat12-h1">
+          Book your perfect stay<br>instantly <em style="font-style:italic;padding:0 6px;">and</em> hassle-free
+        </h1>
+
+        <p style="font-size:18px;color:rgba(255,255,255,0.75);max-width:662px;line-height:1.6;margin-bottom:32px;">
+          Discover handpicked hotels, resorts, and stays across your favorite destinations. Enjoy exclusive deals, fast booking, and 24/7 support.
+        </p>
+
+        <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
+          <button type="button" id="exploreMagneticBtn" class="dat12-btn-purple" data-magnetic>Book a Free Demo</button>
+          <button type="button" class="dat12-btn-dark" data-seamless-trigger="Explore Instant Stays">Get Started Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="featuredStays" class="dat12-stays">
+      <h2 style="font-family:'Instrument Serif',serif;font-size:clamp(34px,4vw,52px);font-weight:400;">Handpicked Luxury Destinations</h2>
+      <div class="dat12-stay-grid">
+        <article class="dat12-stay-card" data-tilt-card>
+          <span style="font-size:12px;color:#c084fc;">AMALFI COAST • ITALY</span>
+          <h3 style="font-size:20px;margin:8px 0;">Villa Miramare Cliffside</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;">Instant confirmation • Private infinity terrace • $480 / night.</p>
+        </article>
+        <article class="dat12-stay-card" data-tilt-card>
+          <span style="font-size:12px;color:#c084fc;">KYOTO • JAPAN</span>
+          <h3 style="font-size:20px;margin:8px 0;">Arashiyama Cedar Ryokan</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;">Private thermal onsen • Kaiseki dining included • $620 / night.</p>
+        </article>
+        <article class="dat12-stay-card" data-tilt-card>
+          <span style="font-size:12px;color:#c084fc;">ZERMATT • SWITZERLAND</span>
+          <h3 style="font-size:20px;margin:8px 0;">Matterhorn Glass Chalet</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;">Ski-in panoramic dome • 24/7 concierge • $790 / night.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="dat12-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="dat12-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-size:12px;color:#c084fc;">DATACORE V3.2 CONCIERGE</span>
+        <button type="button" id="closeSeamlessBtn" class="dat12-btn-dark" style="padding:6px 12px;font-size:12px;">Close</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:'Instrument Serif',serif;font-size:32px;font-weight:400;margin-bottom:10px;">Book Your Perfect Stay</h2>
+      <p style="font-size:14px;color:rgba(255,255,255,0.72);line-height:1.6;margin-bottom:20px;">Zero booking fees and instant room key provisioning across 14,000+ luxury properties.</p>
+      <button type="button" id="confirmSeamlessBtn" class="dat12-btn-purple" style="width:100%;">Confirm Instant Reservation</button>
+    </div>
+  </div>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.dat12-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('dat12Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

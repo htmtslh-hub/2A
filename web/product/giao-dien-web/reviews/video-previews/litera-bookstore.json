@@ -1,0 +1,38 @@
+{
+  "id": "t149",
+  "slug": "litera-bookstore",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T23:42:42.004Z",
+  "demo": "/demos/litera-bookstore/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3e233578f734",
+  "sha256": "3e233578f734d1213f265674436ed05bc64e8cbd6d2961798fb5b7a4d2a77412",
+  "demoHtmlSha256": "d05da5424092fb9065b7f3eb0a54ba0b908e08fde4c36be6a33f8c239d27e465",
+  "demoSha256": "fdd5c9b50087b1ada7b948d0a317ace60f27ce53caeb06557dfe790a2f19af9b",
+  "bytes": 114074,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\litera-bookstore-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\litera-bookstore-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\litera-bookstore-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\litera-bookstore-return.jpg"
+  ]
+}

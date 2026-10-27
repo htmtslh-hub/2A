@@ -1,0 +1,38 @@
+{
+  "id": "t152",
+  "slug": "datacore-booking",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T23:45:41.882Z",
+  "demo": "/demos/datacore-booking/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0da637d587b9",
+  "sha256": "0da637d587b94af3ab3dcaa3ddc0a46b178059c83fc760abc8ee7cd0dd074c16",
+  "demoHtmlSha256": "7d0136948de9f1fb1d73dbb9dc85e687ac9860aa1758df50a703ef41e7e463fa",
+  "demoSha256": "b80a0ca9b75d66c137c221b4fcac0d186e4bb94ce0c4a1ab5ffdaf1183e3160e",
+  "bytes": 828575,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 418
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\datacore-booking-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\datacore-booking-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\datacore-booking-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\datacore-booking-return.jpg"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "t146",
+  "slug": "stellar-ai",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T23:37:09.406Z",
+  "demo": "/demos/stellar-ai/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "e65f2ee711b8",
+  "sha256": "e65f2ee711b8c1c9d131e86e3459310abd5d21286a050f3358736e43393199da",
+  "demoHtmlSha256": "fe1b839267a6752bc9cd05f609a09fff04aac6d315e68e5ad78547bf3dd562c5",
+  "demoSha256": "ae59d42aba0857ced8ed4ca92c2f3e1a7daff1e63b824aaaea04ac68a285b092",
+  "bytes": 510506,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 419
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\stellar-ai-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\stellar-ai-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\stellar-ai-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\stellar-ai-return.jpg"
+  ]
+}

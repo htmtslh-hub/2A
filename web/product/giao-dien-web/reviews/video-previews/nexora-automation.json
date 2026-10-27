@@ -1,0 +1,48 @@
+{
+  "id": "t142",
+  "slug": "nexora-automation",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T23:01:16.761Z",
+  "demo": "/demos/nexora-automation/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "88189d7d332b",
+  "sha256": "88189d7d332b5d0afbe8747e0e24c65ac89765652939ba2a3e5c563cc98665c7",
+  "demoHtmlSha256": "4a542439c4f05687e99d70aa25942ead56ade0f0b1e20bfda42f10363abfe211",
+  "demoSha256": "4e78b820cf206184cc0d43ea28f4463fdf493fde4dd85b99f96588e390faefd8",
+  "bytes": 1087296,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.518,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.983,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 439
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexora-automation-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexora-automation-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexora-automation-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexora-automation-return.jpg"
+  ]
+}

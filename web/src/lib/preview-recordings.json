@@ -1916,5 +1916,47 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "sentinel-ai": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "7018dda08045",
+    "sha256": "7018dda0804505ffc097b33e40c2607da313b183df9a0b66fd0204f5edb2ce70",
+    "demoHtmlSha256": "9be4419d9b95d5e96d7f9393edd41915ba955541aa8b9d41f726c4df83fe00cc",
+    "demoSha256": "c85341f8630c934931328662f4a1f35dbb0adc1c4e6208b1e077af5950b1fc21",
+    "bytes": 612042,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "nexora-automation": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "88189d7d332b",
+    "sha256": "88189d7d332b5d0afbe8747e0e24c65ac89765652939ba2a3e5c563cc98665c7",
+    "demoHtmlSha256": "4a542439c4f05687e99d70aa25942ead56ade0f0b1e20bfda42f10363abfe211",
+    "demoSha256": "4e78b820cf206184cc0d43ea28f4463fdf493fde4dd85b99f96588e390faefd8",
+    "bytes": 1087296,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "transform-data": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "07f53300b3ff",
+    "sha256": "07f53300b3ff7ebfeab2113432a1ca96f103fab2320c091a0cb83bb75293d68b",
+    "demoHtmlSha256": "2ddfc1d07c863d453173eaded53348857585905ee566623bffc7f6cf23cef40d",
+    "demoSha256": "9c7bbeab9cb42500acc066a2b40a0195b4db3695d756da11858ad80baf5c3caf",
+    "bytes": 550150,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

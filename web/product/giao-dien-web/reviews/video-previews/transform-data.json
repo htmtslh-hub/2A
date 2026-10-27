@@ -1,0 +1,48 @@
+{
+  "id": "t143",
+  "slug": "transform-data",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T23:01:47.216Z",
+  "demo": "/demos/transform-data/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "07f53300b3ff",
+  "sha256": "07f53300b3ff7ebfeab2113432a1ca96f103fab2320c091a0cb83bb75293d68b",
+  "demoHtmlSha256": "2ddfc1d07c863d453173eaded53348857585905ee566623bffc7f6cf23cef40d",
+  "demoSha256": "9c7bbeab9cb42500acc066a2b40a0195b4db3695d756da11858ad80baf5c3caf",
+  "bytes": 550150,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.521,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.913,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 439
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\transform-data-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\transform-data-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\transform-data-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\transform-data-return.jpg"
+  ]
+}

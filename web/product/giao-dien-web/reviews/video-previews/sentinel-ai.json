@@ -1,0 +1,48 @@
+{
+  "id": "t141",
+  "slug": "sentinel-ai",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-27T23:00:46.179Z",
+  "demo": "/demos/sentinel-ai/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "7018dda08045",
+  "sha256": "7018dda0804505ffc097b33e40c2607da313b183df9a0b66fd0204f5edb2ce70",
+  "demoHtmlSha256": "9be4419d9b95d5e96d7f9393edd41915ba955541aa8b9d41f726c4df83fe00cc",
+  "demoSha256": "c85341f8630c934931328662f4a1f35dbb0adc1c4e6208b1e077af5950b1fc21",
+  "bytes": 612042,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.518,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.931,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 439
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sentinel-ai-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sentinel-ai-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sentinel-ai-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\sentinel-ai-return.jpg"
+  ]
+}

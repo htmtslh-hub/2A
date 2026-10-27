@@ -1,6 +1,6 @@
 {
-  "lastRunDate": "2026-10-27",
-  "todayCopiedCount": 6,
+  "lastRunDate": "2026-10-28",
+  "todayCopiedCount": 3,
   "processedSlugs": [
     "adoratorio-summer",
     "aeris",
@@ -10,8 +10,10 @@
     "aetheris-voyage",
     "airmax-plus",
     "ais-folio",
+    "alex-carter-ui",
     "amazing-agency",
     "apartment-flow",
+    "apex-upheaval",
     "asme",
     "astra-interior",
     "astro-armor",
@@ -19,6 +21,7 @@
     "atrium-mtl",
     "auralis",
     "backbest-800",
+    "bame-esports",
     "beetbuh",
     "beyond-voyages",
     "bishop-tentwenty",
@@ -39,6 +42,7 @@
     "designpro",
     "diginest",
     "digital-epoch",
+    "digital-kensei",
     "docs",
     "dualplay",
     "eclipsio",
@@ -94,7 +98,9 @@
     "music-app",
     "neuralkinetics",
     "nexlayer",
+    "nexora-automation",
     "nourish-bowl",
+    "nova-glass",
     "novatrend",
     "oceanpulse",
     "orbis-nft",
@@ -113,6 +119,7 @@
     "securify",
     "sellix",
     "semaan",
+    "sentinel-ai",
     "shirtline",
     "shopluxe",
     "skyelite-private-jets",
@@ -127,6 +134,7 @@
     "tidal",
     "tools",
     "toonhub",
+    "transform-data",
     "vanguard",
     "vaultra",
     "vectrus-energy",
@@ -219,7 +227,10 @@
     "codenest-hero",
     "power-ai-hero",
     "bloom-ai-hero",
-    "luminex-hero"
+    "luminex-hero",
+    "sentinel-ai-hero",
+    "nexora-hero",
+    "transform-data-hero"
   ],
   "history": [
     {
@@ -313,10 +324,28 @@
         "orbis-nft": "premium",
         "portfolio-cosmic": "premium"
       }
+    },
+    {
+      "date": "2026-10-28",
+      "built": [
+        "sentinel-ai",
+        "nexora-automation",
+        "transform-data"
+      ],
+      "catalogIds": [
+        "t141",
+        "t142",
+        "t143"
+      ],
+      "tiers": {
+        "sentinel-ai": "free",
+        "nexora-automation": "premium",
+        "transform-data": "premium"
+      }
     }
   ],
-  "todayFreeCount": 2,
-  "todayPremiumCount": 4,
+  "todayFreeCount": 1,
+  "todayPremiumCount": 2,
   "processedPromptHashes": [
     "aa5f58f6ac4d3806dcbc1d54c34773bfaa8d8e37d80579513ccaad8135239694",
     "98a578e9d85ce3e6d4a80b5fc09a94e31a8796088975de98245db90e56bfd3fb",
@@ -341,6 +370,9 @@
     "aecd9a57ef07ea90a50e99364f6fc1c2eb9cbaaa6de4cb6853f62bb7643697ec",
     "7da85cb611a91bdb080434dce20716b4efe5bd97224849594446e19d697ff009",
     "d821c5196a8f4039bd0de4235c2e94de55bb4867b6fe37088430720ea9aa19d5",
-    "d0acf3c4f3d521af4b44ed5b7fc036f4d002aa435d2bea497fb5d2455a633550"
+    "d0acf3c4f3d521af4b44ed5b7fc036f4d002aa435d2bea497fb5d2455a633550",
+    "e52bab7ddad4744ce9c3e7058c7af3cab4dc95a53bd6c08964b5df55e00504ea",
+    "74c6b26bd78c1b439dc2eb30bbb16a70f4d22d42c3acd3999616d2e8d8822f84",
+    "677d3fcb3c1f2fe378d9d463a05925f39951c343dbb3a22920cc0f604fe73f6b"
   ]
 }

@@ -14,6 +14,9 @@ export const WEB_CATEGORY_LABELS: Record<LangCode, Record<WebCategory, string>> 
  * conservation programmes and public research belong to education.
  */
 export const TEMPLATE_CATEGORIES = {
+  'transform-data': 'portfolio',
+  'nexora-automation': 'commerce',
+  'sentinel-ai': 'portfolio',
   'luminex': 'portfolio',
   'bloom-ai': 'portfolio',
   'power-ai': 'portfolio',

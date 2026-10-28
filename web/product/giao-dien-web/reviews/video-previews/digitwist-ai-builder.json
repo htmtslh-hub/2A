@@ -1,0 +1,48 @@
+{
+  "id": "t165",
+  "slug": "digitwist-ai-builder",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-28T23:02:15.765Z",
+  "demo": "/demos/digitwist-ai-builder/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "fcf6045e9af7",
+  "sha256": "fcf6045e9af784122b70d1c93eb147abb79cc8849162cad42034da7b68a80314",
+  "demoHtmlSha256": "bc041672d694a36a8f89385132e55fec92eb9fdab546803cc25ec0bd5cc336c6",
+  "demoSha256": "d059a4f2ee7126a2dde8fd7e5bd8bbccaf40538d87e9269a3335526908a9a369",
+  "bytes": 223244,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.488,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.947,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 439
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digitwist-ai-builder-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digitwist-ai-builder-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digitwist-ai-builder-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\digitwist-ai-builder-return.jpg"
+  ]
+}

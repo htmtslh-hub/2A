@@ -1,0 +1,48 @@
+{
+  "id": "t167",
+  "slug": "email-marketing",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-28T23:03:14.693Z",
+  "demo": "/demos/email-marketing/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "c8014312803e",
+  "sha256": "c8014312803e3650214804c709fc5890889bf5b05b1df8a0b2701d25e6d34865",
+  "demoHtmlSha256": "56d815a88915f868116df446d4204085f1af930047e90837b1b00c750a260681",
+  "demoSha256": "be610888b1fced9b9386a4fa0b451c6a0c9dd02e456a046dd22b543af03b3e45",
+  "bytes": 561924,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.509,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.984,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 439
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\email-marketing-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\email-marketing-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\email-marketing-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\email-marketing-return.jpg"
+  ]
+}

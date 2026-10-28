@@ -46,6 +46,79 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t167: {
+    slug: 'email-marketing',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Email Marketing",
+        desc: "Giao diện web Email Marketing với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Email Marketing", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Email Marketing",
+        desc: "Bespoke Email Marketing web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Email Marketing", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Email Marketing",
+        desc: "单文件自包含 Email Marketing 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t166: {
+    slug: 'dot',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Dot",
+        desc: "Giao diện web Dot với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Dot",
+        desc: "Bespoke Dot web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Dot",
+        desc: "单文件自包含 Dot 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t165: {
+    slug: 'digitwist-ai-builder',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Digitwist AI Builder",
+        desc: "Giao diện web Digitwist AI Builder với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Digitwist AI Builder",
+        desc: "Bespoke Digitwist AI Builder web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Digitwist AI Builder",
+        desc: "单文件自包含 Digitwist AI Builder 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t164: {
     slug: 'swatch-luxury-chronograph',
     cat: 'commerce',
@@ -159,123 +232,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       zh: {
         name: "Industrix Engineering",
         desc: "Industrix Engineering (copper-ribbed-industrial) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t159: {
-    slug: 'luminex-atelier',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t158: {
-    slug: 'monolith-canvas',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Sarto Monza Atelier",
-        desc: "Sarto Monza Atelier (carbon-atelier) — Hand-laminated T1100G carbon monocoque chassis sculpted in Veneto — engineered with wind-tunnel smoke telemetry and sub-millimeter laser mitering.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Sarto Monza Atelier",
-        desc: "Sarto Monza Atelier (carbon-atelier) — Hand-laminated T1100G carbon monocoque chassis sculpted in Veneto — engineered with wind-tunnel smoke telemetry and sub-millimeter laser mitering.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Sarto Monza Atelier",
-        desc: "Sarto Monza Atelier (carbon-atelier) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t157: {
-    slug: 'nuvem-canvas',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t156: {
-    slug: 'nextsus-gamerlix',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t155: {
-    slug: 'manufacturing-grid',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Lunar Oasis Villa",
-        desc: "Lunar Oasis Villa (lunar-villa) — Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Lunar Oasis Villa",
-        desc: "Lunar Oasis Villa (lunar-villa) — Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Lunar Oasis Villa",
-        desc: "Lunar Oasis Villa (lunar-villa) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
@@ -562,55 +518,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       zh: {
         name: "Transform Data",
         desc: "单文件自包含 Transform Data 网页模板，配备 3D 悬浮视觉与四组动态交互。",
-        tags: ['交互组件', '3D 破界视觉', '动态视差']
-      }
-    }
-  },
-
-  t142: {
-    slug: 'nexora-automation',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Nexora Automation",
-        desc: "Giao diện web Nexora Automation với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
-        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
-      },
-      en: {
-        name: "Nexora Automation",
-        desc: "Bespoke Nexora Automation web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
-        tags: ["SaaS", '3D Pop-Out & Motion', 'Hallmark UI']
-      },
-      zh: {
-        name: "Nexora Automation",
-        desc: "单文件自包含 Nexora Automation 网页模板，配备 3D 悬浮视觉与四组动态交互。",
-        tags: ['交互组件', '3D 破界视觉', '动态视差']
-      }
-    }
-  },
-
-  t141: {
-    slug: 'sentinel-ai',
-    cat: 'portfolio',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Sentinel AI",
-        desc: "Giao diện web Sentinel AI với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
-        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
-      },
-      en: {
-        name: "Sentinel AI",
-        desc: "Bespoke Sentinel AI web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
-        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
-      },
-      zh: {
-        name: "Sentinel AI",
-        desc: "单文件自包含 Sentinel AI 网页模板，配备 3D 悬浮视觉与四组动态交互。",
         tags: ['交互组件', '3D 破界视觉', '动态视差']
       }
     }
@@ -1142,128 +1049,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     }
   },
 
-  t118: {
-    slug: 'geospace-canvas',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "AquaCosmos Zero-G",
-        desc: "AquaCosmos Zero-G (aquacosmos-hud) — Where abyssal ocean optics meet zero-gravity orbital habitats — interactive WebGL fluid waves, floating celestial spheres, and bioluminescent photonics.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "AquaCosmos Zero-G",
-        desc: "AquaCosmos Zero-G (aquacosmos-hud) — Where abyssal ocean optics meet zero-gravity orbital habitats — interactive WebGL fluid waves, floating celestial spheres, and bioluminescent photonics.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "AquaCosmos Zero-G",
-        desc: "AquaCosmos Zero-G (aquacosmos-hud) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-
-  t117: {
-    slug: 'launch-video',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Lunar Oasis Villa",
-        desc: "Lunar Oasis Villa (lunar-villa) — Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Lunar Oasis Villa",
-        desc: "Lunar Oasis Villa (lunar-villa) — Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Lunar Oasis Villa",
-        desc: "Lunar Oasis Villa (lunar-villa) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-
-  t116: {
-    slug: 'break-code',
-    cat: 'portfolio',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-
-  t115: {
-    slug: 'startup-devkit',
-    cat: 'portfolio',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-
-  t114: {
-    slug: 'forest-pulse',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Sarto Monza Atelier",
-        desc: "Sarto Monza Atelier (carbon-atelier) — Hand-laminated T1100G carbon monocoque chassis sculpted in Veneto — engineered with wind-tunnel smoke telemetry and sub-millimeter laser mitering.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Sarto Monza Atelier",
-        desc: "Sarto Monza Atelier (carbon-atelier) — Hand-laminated T1100G carbon monocoque chassis sculpted in Veneto — engineered with wind-tunnel smoke telemetry and sub-millimeter laser mitering.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Sarto Monza Atelier",
-        desc: "Sarto Monza Atelier (carbon-atelier) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-
   t113: {
     slug: 'vex-ventures',
     cat: 'commerce',
@@ -1406,103 +1191,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
         name: "Glow Features",
         desc: "深色霓虹光晕三卡特性展示组件，采用 8px 渐变裁剪边框、45px 模糊光晕与实时配色调节器。",
         tags: ['渐变边框', '氛围光晕', '特性网格']
-      }
-    }
-  },
-
-  t107: {
-    slug: 'designer-portfolio',
-    cat: 'portfolio',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Designer Portfolio",
-        desc: "Giao diện web Designer Portfolio lấy cảm hứng từ thiết kế website design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#fafafa, #4353ff).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
-      },
-      en: {
-        name: "Designer Portfolio",
-        desc: "Interactive Designer Portfolio web template inspired by website design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#fafafa, #4353ff).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
-      },
-      zh: {
-        name: "Designer Portfolio",
-        desc: "源自 website design 视觉灵感的 Designer Portfolio 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
-        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
-      }
-    }
-  },
-
-  t106: {
-    slug: 'flexible-spark',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Flexible Spark",
-        desc: "Giao diện web Flexible Spark lấy cảm hứng từ thiết kế website design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#fafafa, #e24919).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
-      },
-      en: {
-        name: "Flexible Spark",
-        desc: "Interactive Flexible Spark web template inspired by website design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#fafafa, #e24919).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
-      },
-      zh: {
-        name: "Flexible Spark",
-        desc: "源自 website design 视觉灵感的 Flexible Spark 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
-        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
-      }
-    }
-  },
-
-  t105: {
-    slug: 'lawyer-justicia',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Lawyer Justicia",
-        desc: "Giao diện web Lawyer Justicia lấy cảm hứng từ thiết kế website design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #4353ff).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
-      },
-      en: {
-        name: "Lawyer Justicia",
-        desc: "Interactive Lawyer Justicia web template inspired by website design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #4353ff).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
-      },
-      zh: {
-        name: "Lawyer Justicia",
-        desc: "源自 website design 视觉灵感的 Lawyer Justicia 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
-        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
-      }
-    }
-  },
-
-  t104: {
-    slug: 'ecommerce-omorfia',
-    cat: 'portfolio',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Ecommerce Omorfia",
-        desc: "Giao diện web Ecommerce Omorfia lấy cảm hứng từ thiết kế website design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#f8f8f8, #4353ff).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
-      },
-      en: {
-        name: "Ecommerce Omorfia",
-        desc: "Interactive Ecommerce Omorfia web template inspired by website design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#f8f8f8, #4353ff).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
-      },
-      zh: {
-        name: "Ecommerce Omorfia",
-        desc: "源自 website design 视觉灵感的 Ecommerce Omorfia 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
-        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
       }
     }
   },

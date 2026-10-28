@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>steary.com — VisionOS Spatial Cinema &amp; Multiverse Streaming</title>
+  <meta name="description" content="Apple VisionOS spatial glassmorphic streaming app with floating steary.com address bar, vertical glass dock, New Trailer sidebar, 3D multiverse portal hero banner, and interactive 4-card movie row.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --glass-win: rgba(38, 40, 46, 0.62);
+      --glass-card: rgba(255, 255, 255, 0.10);
+      --glass-border: rgba(255, 255, 255, 0.24);
+      --fg: #ffffff;
+      --muted: rgba(255, 255, 255, 0.68);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(214, 199, 182, 0.55) 0%, transparent 45%),
+        radial-gradient(circle at 82% 75%, rgba(148, 163, 184, 0.45) 0%, transparent 50%),
+        linear-gradient(135deg, #7d7973 0%, #52525b 48%, #27272a 100%);
+      color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip;
+    }
+
+    .ste21-stage {
+      max-width: 1380px; margin: 0 auto; padding: 18px 20px 64px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+    }
+    /* Floating VisionOS Safari Address Bar */
+    .ste21-safari-bar {
+      width: min(760px, 94vw); padding: 10px 18px; border-radius: 999px;
+      background: rgba(50, 52, 58, 0.65); backdrop-filter: blur(28px) saturate(180%);
+      border: 1px solid var(--glass-border);
+      display: flex; align-items: center; justify-content: space-between; font-size: 12px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+    }
+    .ste21-url-pill {
+      flex: 1; max-width: 420px; margin: 0 14px; padding: 6px 16px; border-radius: 999px;
+      background: rgba(0,0,0,0.28); text-align: center; color: #f4f4f5; font-weight: 600;
+    }
+
+    .ste21-workspace {
+      width: 100%; display: grid; grid-template-columns: 1fr; gap: 18px; align-items: center;
+    }
+    @media (min-width: 1040px) {
+      .ste21-workspace { grid-template-columns: 54px 1fr; }
+    }
+    /* Left Vertical Spatial Dock */
+    .ste21-dock {
+      display: flex; flex-direction: row; justify-content: center; gap: 12px;
+      padding: 12px 10px; border-radius: 999px;
+      background: rgba(50, 52, 58, 0.62); backdrop-filter: blur(28px);
+      border: 1px solid var(--glass-border);
+    }
+    @media (min-width: 1040px) {
+      .ste21-dock { flex-direction: column; }
+    }
+    .ste21-dock button {
+      width: 34px; height: 34px; border-radius: 50%; border: none;
+      background: transparent; color: #fff; cursor: pointer; font-size: 14px;
+    }
+    .ste21-dock button.active { background: rgba(255,255,255,0.22); }
+
+    /* Main Spatial Glass Window */
+    .ste21-window {
+      border-radius: 38px; padding: clamp(18px, 2.5vw, 30px);
+      background: var(--glass-win); backdrop-filter: blur(36px) saturate(180%);
+      border: 1.5px solid var(--glass-border);
+      box-shadow: 0 40px 90px rgba(0,0,0,0.45), inset 0 1px 1px rgba(255,255,255,0.35);
+    }
+    .ste21-win-top {
+      display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 22px;
+    }
+    .ste21-search {
+      padding: 10px 18px; border-radius: 999px; background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.16); color: #fff; font-size: 13px; min-width: 230px;
+    }
+    .ste21-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .ste21-tab {
+      padding: 9px 18px; border-radius: 999px; border: none; background: transparent;
+      color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .ste21-tab.active { background: rgba(255,255,255,0.22); color: #fff; }
+
+    .ste21-win-grid {
+      display: grid; grid-template-columns: 1fr; gap: 20px;
+    }
+    @media (min-width: 960px) {
+      .ste21-win-grid { grid-template-columns: 270px 1fr; }
+    }
+    .ste21-side-box {
+      border-radius: 26px; padding: 18px; background: var(--glass-card);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+    .ste21-trailer-card {
+      border-radius: 18px; padding: 14px; margin-top: 12px;
+      background: linear-gradient(135deg, rgba(30,41,59,0.85), rgba(15,23,42,0.9));
+      border: 1px solid rgba(255,255,255,0.16); display: flex; justify-content: space-between; align-items: flex-end;
+      min-height: 92px; cursor: pointer;
+    }
+    /* Main Featured Movie Banner with 3D Portal Cutout */
+    .ste21-hero-banner {
+      position: relative; border-radius: 28px; padding: clamp(22px, 3.5vw, 38px);
+      background: radial-gradient(circle at 75% 40%, #4c1d95 0%, #1e1b4b 48%, #09090b 100%);
+      border: 1px solid rgba(255,255,255,0.22); overflow: hidden;
+      display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center; min-height: 330px;
+    }
+    @media (min-width: 760px) {
+      .ste21-hero-banner { grid-template-columns: 1.15fr 0.85fr; }
+    }
+    .ste21-portal-img {
+      width: 100%; max-width: 310px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      filter: drop-shadow(0 20px 36px rgba(0,0,0,0.75));
+    }
+    .ste21-like-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 14px; margin-top: 14px;
+    }
+    .ste21-movie-card {
+      border-radius: 22px; padding: 18px; min-height: 175px;
+      border: 1px solid rgba(255,255,255,0.18);
+      display: flex; flex-direction: column; justify-content: flex-end; position: relative; cursor: pointer;
+      transition: transform 0.25s;
+    }
+    .ste21-movie-card:hover { transform: translateY(-5px); }
+    .ste21-play-fab {
+      position: absolute; bottom: 14px; right: 14px; width: 34px; height: 34px; border-radius: 50%;
+      background: #ffffff; color: #09090b; border: none; font-weight: 800; cursor: pointer;
+    }
+    .ste21-modal { position: fixed; inset: 0; z-index: 900; background: rgba(9,9,11,0.85); backdrop-filter: blur(22px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .ste21-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <div class="ste21-stage">
+    <!-- Top Floating Safari Bar -->
+    <header class="ste21-safari-bar">
+      <div style="display:flex;gap:10px;color:var(--muted);"><span>◧</span><span>‹</span><span>›</span></div>
+      <div class="ste21-url-pill">🔒 steary.com</div>
+      <div style="display:flex;gap:12px;color:var(--muted);"><span>⊕</span><span>↑</span><span>＋</span></div>
+    </header>
+
+    <div class="ste21-workspace">
+      <!-- Left Floating Glass Dock -->
+      <aside class="ste21-dock" aria-label="Spatial App Dock">
+        <button type="button" class="active" aria-label="Home">🏠</button>
+        <button type="button" aria-label="Favorites">♡</button>
+        <button type="button" aria-label="Downloads">⬇</button>
+        <button type="button" aria-label="Profile">👤</button>
+        <button type="button" aria-label="Settings">⚙</button>
+      </aside>
+
+      <!-- Main VisionOS Frosted Glass Window -->
+      <main class="ste21-window">
+        <div class="ste21-win-top">
+          <div class="ste21-search">🔍 Search movies, series, multiverse...</div>
+          <div class="ste21-tabs" role="tablist">
+            <button type="button" class="ste21-tab active" onclick="switchCat('Movies', this)">Movies</button>
+            <button type="button" class="ste21-tab" onclick="switchCat('TV Series', this)">TV Series</button>
+            <button type="button" class="ste21-tab" onclick="switchCat('Animation', this)">Animation</button>
+            <button type="button" class="ste21-tab" onclick="switchCat('Mystery', this)">Mystery</button>
+            <button type="button" class="ste21-tab" onclick="switchCat('More', this)">More</button>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,0.12);">
+            <span style="width:28px;height:28px;border-radius:50%;background:#6366f1;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;">AM</span>
+            <div style="font-size:12px;"><strong>Arfi Maulana</strong><span style="display:block;font-size:10px;color:var(--muted);">@arfimaulana</span></div>
+          </div>
+        </div>
+
+        <div class="ste21-win-grid">
+          <!-- Left Sidebar: New Trailer + Continue Watching -->
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <section class="ste21-side-box">
+              <div style="display:flex;justify-content:space-between;font-size:13px;">
+                <strong>🔥 New Trailer</strong><span style="color:var(--muted);font-size:11px;">Sort by: Today</span>
+              </div>
+              <div class="ste21-trailer-card" onclick="openStream('The Last Kingdom: Seven Kings Must Die')">
+                <div><strong style="font-size:12px;display:block;">The Last Kingdom: Seven Kings Must Die</strong></div>
+                <span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.2);display:inline-flex;align-items:center;justify-content:center;font-size:11px;">▶</span>
+              </div>
+              <div class="ste21-trailer-card" style="background:linear-gradient(135deg,#7c2d12,#3b0764);" onclick="openStream('The Super Mario Bros. Movie')">
+                <div><strong style="font-size:12px;display:block;">The Super Mario Bros. Movie</strong></div>
+                <span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.2);display:inline-flex;align-items:center;justify-content:center;font-size:11px;">▶</span>
+              </div>
+            </section>
+
+            <section class="ste21-side-box">
+              <strong style="font-size:13px;display:block;margin-bottom:10px;">Continue Watching</strong>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:12px;">
+                <div><strong>Dark Season 3</strong><span style="display:block;font-size:10px;color:var(--muted);">Episode 3</span></div><span>▶</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:12px;">
+                <div><strong>Transformers: Rise of the Beasts</strong><span style="display:block;font-size:10px;color:var(--muted);">32m remaining</span></div><span>▶</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:12px;">
+                <div><strong>Lupin Season 2</strong><span style="display:block;font-size:10px;color:var(--muted);">Episode 5</span></div><span>▶</span>
+              </div>
+            </section>
+          </div>
+
+          <!-- Right Main Column: Featured Hero + You might like -->
+          <div>
+            <section class="ste21-hero-banner">
+              <div>
+                <span style="display:inline-block;padding:5px 12px;border-radius:999px;background:rgba(0,0,0,0.45);font-size:11px;font-weight:700;margin-bottom:14px;">🔥 Now Trending</span>
+                <div style="display:flex;gap:8px;margin-bottom:10px;">
+                  <span style="padding:4px 10px;border-radius:999px;background:rgba(255,255,255,0.14);font-size:11px;">Animation</span>
+                  <span style="padding:4px 10px;border-radius:999px;background:rgba(255,255,255,0.14);font-size:11px;">Adventure</span>
+                </div>
+                <h1 id="featuredMovieTitle" style="font-size:clamp(26px,3.4vw,38px);font-weight:800;line-height:1.12;margin-bottom:10px;">
+                  Spider-Man:<br>Across the Spider-Verse
+                </h1>
+                <p style="font-size:13px;color:var(--muted);line-height:1.6;max-width:440px;margin-bottom:20px;">
+                  Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence.
+                </p>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                  <button type="button" id="exploreMagneticBtn" onclick="openStream('Spider-Man: Across the Spider-Verse (Spatial 3D IMAX)')" style="padding:10px 22px;border-radius:999px;background:#ffffff;color:#09090b;border:none;font-weight:700;font-size:13px;cursor:pointer;">▶ Watch</button>
+                  <button type="button" onclick="openStream('Offline Spatial Download — 4K Dolby Vision')" style="padding:10px 20px;border-radius:999px;background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.28);font-weight:600;font-size:13px;cursor:pointer;">⬇ Download</button>
+                </div>
+              </div>
+              <div>
+                <img src="assets/cutout.webp" alt="3D Spatial Multiverse Portal Cutout" class="ste21-portal-img" />
+              </div>
+            </section>
+
+            <section style="margin-top:20px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <strong style="font-size:16px;">You might like</strong>
+                <span style="padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.14);font-size:11px;">See all</span>
+              </div>
+              <div class="ste21-like-grid">
+                <article class="ste21-movie-card" style="background:linear-gradient(160deg,#7c2d12,#1c1917);" onclick="openStream('The Flash (2023)')">
+                  <span style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,0.16);width:max-content;margin-bottom:6px;">Fantasy</span>
+                  <strong style="font-size:14px;">The Flash (2023)</strong>
+                  <p style="font-size:11px;color:var(--muted);margin-top:4px;padding-right:34px;">Worlds collide when Barry uses his superpowers to travel back in time.</p>
+                  <button type="button" class="ste21-play-fab" aria-label="Play The Flash">▶</button>
+                </article>
+                <article class="ste21-movie-card" style="background:linear-gradient(160deg,#1e3a8a,#0f172a);" onclick="openStream('Manifest — Final Season')">
+                  <span style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,0.16);width:max-content;margin-bottom:6px;">Mystery</span>
+                  <strong style="font-size:14px;">Manifest</strong>
+                  <p style="font-size:11px;color:var(--muted);margin-top:4px;padding-right:34px;">Flight 828 passengers return after five years to face their callings.</p>
+                  <button type="button" class="ste21-play-fab" aria-label="Play Manifest">▶</button>
+                </article>
+                <article class="ste21-movie-card" style="background:linear-gradient(160deg,#701a75,#1e1b4b);" onclick="openStream('Elemental (Disney•Pixar)')">
+                  <span style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,0.16);width:max-content;margin-bottom:6px;">Animation</span>
+                  <strong style="font-size:14px;">Elemental</strong>
+                  <p style="font-size:11px;color:var(--muted);margin-top:4px;padding-right:34px;">Fire and water residents discover how much they actually have in common.</p>
+                  <button type="button" class="ste21-play-fab" aria-label="Play Elemental">▶</button>
+                </article>
+                <article class="ste21-movie-card" style="background:linear-gradient(160deg,#78350f,#09090b);" onclick="openStream('Interstellar (IMAX 70mm Spatial)')">
+                  <span style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,0.16);width:max-content;margin-bottom:6px;">Sci-Fi</span>
+                  <strong style="font-size:14px;">Interstellar</strong>
+                  <p style="font-size:11px;color:var(--muted);margin-top:4px;padding-right:34px;">Explorers travel through a wormhole near Saturn in search of a new home.</p>
+                  <button type="button" class="ste21-play-fab" aria-label="Play Interstellar">▶</button>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="stearyModal" class="ste21-modal" role="dialog" aria-modal="true" aria-labelledby="stearyModalTitle">
+    <div style="max-width:480px;width:100%;background:rgba(30,32,38,0.95);border:1px solid rgba(255,255,255,0.28);border-radius:28px;padding:32px;text-align:center;">
+      <h2 id="stearyModalTitle" style="font-size:22px;margin-bottom:10px;">Spatial Cinema Stream</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">Streaming in 4K 90Hz Stereoscopic VisionOS Environment with Spatial Audio.</p>
+      <button type="button" style="padding:11px 28px;border-radius:999px;background:#fff;color:#09090b;font-weight:700;border:none;cursor:pointer;" onclick="document.getElementById('stearyModal').classList.remove('is-open')">Close Player</button>
+    </div>
+  </div>
+
+  <script>
+    function openStream(title) {
+      document.getElementById('stearyModalTitle').textContent = title;
+      document.getElementById('stearyModal').classList.add('is-open');
+    }
+    function switchCat(cat, btn) {
+      document.querySelectorAll('.ste21-tab').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('featuredMovieTitle').innerHTML = cat + ' Spotlight:<br>Across the Spider-Verse';
+    }
+  </script>
+</body>
+</html>

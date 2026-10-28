@@ -1,0 +1,38 @@
+{
+  "id": "t164",
+  "slug": "swatch-luxury-chronograph",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-28T02:11:19.920Z",
+  "demo": "/demos/swatch-luxury-chronograph/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "8fda4d5b279e",
+  "sha256": "8fda4d5b279ea97f29532cbe101f34d4dd82c3b0cc2601c77ba9a1c7c35501ed",
+  "demoHtmlSha256": "84d4e139ac6d3fb8c1ae1c95befa1208f14dc690210b0d48d27648dcd1263e77",
+  "demoSha256": "b3c5048ffe37aee39b969001896908fd8416a1decd8a552e798ae0f7fdbaf958",
+  "bytes": 186862,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 131
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\swatch-luxury-chronograph-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\swatch-luxury-chronograph-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\swatch-luxury-chronograph-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\swatch-luxury-chronograph-return.jpg"
+  ]
+}

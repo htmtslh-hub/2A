@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>AQUARIUM WORLD — 3D Out-of-Bounds Marine Sanctuary Showcase</title>
+  <meta name="description" content="Deep ocean marine sanctuary showcase featuring tall condensed ANIMALS typography and 3 out-of-bounds 3D pop-out cards (Sea Lions, Bioluminescent Jellyfish cutout, Manta Ray) with straddling yellow arrow buttons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #012c47;
+      --bg-mid: #02436c;
+      --card-blue: #0568a3;
+      --card-light: #0a8fd8;
+      --yellow: #fbbf24;
+      --fg: #ffffff;
+      --muted: #bae6fd;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: radial-gradient(circle at 50% 18%, #045a8d 0%, #012e4a 60%, #001829 100%);
+      color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth;
+    }
+    .font-cond { font-family: 'Antonio', sans-serif; text-transform: uppercase; }
+
+    .aqu18-nav {
+      max-width: 1280px; margin: 0 auto; padding: 24px 28px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .aqu18-hero {
+      max-width: 1240px; margin: 0 auto; padding: 12px 24px 96px; text-align: center;
+    }
+    .aqu18-giant-animals {
+      font-size: clamp(68px, 12vw, 148px); font-weight: 400; letter-spacing: 0.22em; line-height: 0.92;
+      margin-bottom: 18px; color: #ffffff; text-indent: 0.22em;
+    }
+    .aqu18-sub {
+      max-width: 540px; margin: 0 auto 26px; font-size: 14px; line-height: 1.65; color: var(--muted);
+    }
+    .aqu18-view-btn {
+      padding: 11px 34px; background: rgba(255,255,255,0.04); border: 1px solid rgba(186,230,253,0.45);
+      color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.2s, border-color 0.2s;
+    }
+    .aqu18-view-btn:hover { background: rgba(10,143,216,0.28); border-color: #fff; }
+
+    /* 3-Column Out-of-Bounds 3D Pop-Out Marine Triptych */
+    .aqu18-triptych {
+      display: grid; grid-template-columns: 1fr; gap: 64px 28px; margin-top: 92px; align-items: stretch;
+    }
+    @media (min-width: 920px) {
+      .aqu18-triptych { grid-template-columns: repeat(3, 1fr); }
+    }
+    .aqu18-marine-card {
+      position: relative; min-height: 410px;
+      background: linear-gradient(180deg, #0b87cc 0%, #034b78 58%, #023759 100%);
+      box-shadow: 0 28px 60px rgba(0, 12, 24, 0.65);
+      border: 1px solid rgba(125, 211, 252, 0.22);
+      display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+      padding: 28px 24px 44px; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s;
+    }
+    .aqu18-marine-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 36px 72px rgba(0, 12, 24, 0.85), 0 0 40px rgba(56, 189, 248, 0.28);
+    }
+    /* Out-of-bounds 3D Subject Breaking Top Border */
+    .aqu18-popout-wrap {
+      position: absolute; top: -68px; left: 50%; transform: translateX(-50%);
+      width: 100%; max-width: 280px; height: 320px; display: flex; align-items: center; justify-content: center;
+      pointer-events: none; z-index: 4;
+    }
+    .aqu18-popout-wrap img, .aqu18-popout-wrap svg {
+      max-width: 100%; max-height: 320px; width: auto; height: auto; object-fit: contain;
+      filter: drop-shadow(0 24px 32px rgba(0, 18, 36, 0.78));
+      animation: aqu18Float 5.2s ease-in-out infinite;
+    }
+    @keyframes aqu18Float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+    .aqu18-card-title {
+      position: relative; z-index: 5; font-size: 32px; letter-spacing: 0.06em; margin-top: auto;
+    }
+    .aqu18-card-meta {
+      font-size: 12px; color: var(--muted); margin-top: 6px;
+    }
+    /* Bottom-Straddling Yellow Circle Button */
+    .aqu18-yellow-fab {
+      position: absolute; bottom: -23px; left: 50%; transform: translateX(-50%); z-index: 6;
+      width: 46px; height: 46px; border-radius: 50%; border: none;
+      background: var(--yellow); color: #ffffff; font-size: 18px; font-weight: 800;
+      display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+      box-shadow: 0 10px 24px rgba(251, 191, 36, 0.45); transition: transform 0.2s;
+    }
+    .aqu18-yellow-fab:hover { transform: translateX(-50%) scale(1.12); }
+
+    .aqu18-zone-sec { max-width: 1240px; margin: 0 auto; padding: 48px 24px 96px; }
+    .aqu18-zone-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 28px; }
+    .aqu18-zone-box {
+      padding: 26px; background: rgba(2, 67, 108, 0.55); border: 1px solid rgba(186,230,253,0.2);
+      backdrop-filter: blur(12px);
+    }
+    .aqu18-modal { position: fixed; inset: 0; z-index: 900; background: rgba(0,24,41,0.88); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .aqu18-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <header class="aqu18-nav">
+    <strong class="font-cond" style="font-size:22px;letter-spacing:0.18em;">🌊 AQUARIUM WORLD</strong>
+    <nav style="display:flex;gap:28px;" aria-label="Main Navigation">
+      <a href="#marineTriptych" style="color:var(--muted);text-decoration:none;font-size:13px;">Animals</a>
+      <a href="#depthZones" style="color:var(--muted);text-decoration:none;font-size:13px;">Abyssal Zones</a>
+      <a href="#depthZones" style="color:var(--muted);text-decoration:none;font-size:13px;">Conservation</a>
+    </nav>
+    <button type="button" id="exploreMagneticBtn" class="aqu18-view-btn">BOOK TICKETS</button>
+  </header>
+
+  <main>
+    <section class="aqu18-hero" id="marineTriptych">
+      <h1 class="aqu18-giant-animals font-cond">ANIMALS</h1>
+      <p class="aqu18-sub">
+        Explore our deep-water biosphere habitats where bioluminescent cnidarians, California sea lions, and pelagic manta rays glide across multi-story acrylic domes.
+      </p>
+      <button type="button" class="aqu18-view-btn" onclick="document.getElementById('aquaModal').classList.add('is-open')">VIEW ALL</button>
+
+      <div class="aqu18-triptych">
+        <!-- Card 1: SEA LIONS -->
+        <article class="aqu18-marine-card" data-tilt-card>
+          <div class="aqu18-popout-wrap">
+            <svg viewBox="0 0 280 290" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="seaLionGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#94a3b8"/>
+                  <stop offset="50%" stop-color="#334155"/>
+                  <stop offset="100%" stop-color="#0f172a"/>
+                </linearGradient>
+              </defs>
+              <path d="M95 250 C85 180 105 110 148 45 C168 25 198 30 202 52 C205 72 178 96 176 135 C174 178 215 218 242 238 C195 255 150 258 95 250 Z" fill="url(#seaLionGrad)" stroke="#7dd3fc" stroke-width="2"/>
+              <path d="M110 215 C75 235 45 255 32 268 C72 272 118 260 135 238 Z" fill="#1e293b"/>
+              <circle cx="172" cy="48" r="4" fill="#38bdf8"/>
+            </svg>
+          </div>
+          <h2 class="aqu18-card-title font-cond">SEA LIONS</h2>
+          <span class="aqu18-card-meta">Pacific Kelp Reef • Tank 01</span>
+          <button type="button" class="aqu18-yellow-fab" aria-label="Explore Sea Lions" onclick="openSpecies('SEA LIONS — Pacific Kelp Reef')">➔</button>
+        </article>
+
+        <!-- Card 2: JELLYFISH (Real 3D Cutout Breaking Top Border!) -->
+        <article class="aqu18-marine-card" data-tilt-card>
+          <div class="aqu18-popout-wrap" style="top:-78px;">
+            <img src="assets/cutout.webp" alt="3D Bioluminescent Jellyfish Cutout" />
+          </div>
+          <h2 class="aqu18-card-title font-cond">JELLYFISH</h2>
+          <span class="aqu18-card-meta">Bioluminescent Abyss • Tank 02</span>
+          <button type="button" class="aqu18-yellow-fab" aria-label="Explore Jellyfish" onclick="openSpecies('JELLYFISH — Bioluminescent Cnidaria Dome')">➔</button>
+        </article>
+
+        <!-- Card 3: MANTA RAY -->
+        <article class="aqu18-marine-card" data-tilt-card>
+          <div class="aqu18-popout-wrap">
+            <svg viewBox="0 0 300 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="mantaGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#38bdf8"/>
+                  <stop offset="45%" stop-color="#0369a1"/>
+                  <stop offset="100%" stop-color="#082f49"/>
+                </linearGradient>
+              </defs>
+              <path d="M150 32 C195 68 255 82 288 96 C235 135 190 168 158 192 L182 268 L152 194 C115 168 65 135 14 96 C52 82 108 68 150 32 Z" fill="url(#mantaGrad)" stroke="#bae6fd" stroke-width="2"/>
+              <ellipse cx="128" cy="96" rx="18" ry="8" fill="#e0f2fe" fill-opacity="0.85"/>
+              <ellipse cx="174" cy="96" rx="18" ry="8" fill="#e0f2fe" fill-opacity="0.85"/>
+            </svg>
+          </div>
+          <h2 class="aqu18-card-title font-cond">MANTA RAY</h2>
+          <span class="aqu18-card-meta">Pelagic Ocean Tunnel • Tank 03</span>
+          <button type="button" class="aqu18-yellow-fab" aria-label="Explore Manta Ray" onclick="openSpecies('MANTA RAY — Pelagic Ocean Tunnel')">➔</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="depthZones" class="aqu18-zone-sec">
+      <h2 class="font-cond" style="font-size:36px;letter-spacing:0.12em;text-align:center;">ABYSSAL BIOSPHERE TELEMETRY</h2>
+      <div class="aqu18-zone-grid">
+        <div class="aqu18-zone-box"><strong class="font-cond" style="font-size:28px;color:var(--yellow);">4.2M L</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Pressurized saltwater volume across 14 pelagic habitats.</p></div>
+        <div class="aqu18-zone-box"><strong class="font-cond" style="font-size:28px;color:var(--yellow);">380+</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Protected marine species including deep-sea Chrysaora jellyfish.</p></div>
+        <div class="aqu18-zone-box"><strong class="font-cond" style="font-size:28px;color:var(--yellow);">360°</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Sub-aquatic viewing tunnel at 18 meters depth.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="aquaModal" class="aqu18-modal" role="dialog" aria-modal="true" aria-labelledby="aquaModalTitle">
+    <div style="max-width:460px;width:100%;background:#023859;border:1px solid #38bdf8;padding:32px;text-align:center;">
+      <h2 id="aquaModalTitle" class="font-cond" style="font-size:30px;letter-spacing:0.08em;margin-bottom:10px;">JELLYFISH SANCTUARY</h2>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:22px;line-height:1.6;">Reserve VIP night-dive passes to witness bioluminescent deep-sea jellyfish and pelagic manta rays.</p>
+      <button type="button" class="aqu18-view-btn" style="background:var(--yellow);color:#012c47;border:none;" onclick="document.getElementById('aquaModal').classList.remove('is-open')">CONFIRM EXPEDITION PASS</button>
+    </div>
+  </div>
+
+  <script>
+    function openSpecies(title) {
+      var t = document.getElementById('aquaModalTitle');
+      if (t) t.textContent = title;
+      document.getElementById('aquaModal').classList.add('is-open');
+    }
+    document.getElementById('exploreMagneticBtn').addEventListener('click', function(){
+      openSpecies('VIP SANCTUARY ENTRY PASS');
+    });
+  </script>
+</body>
+</html>

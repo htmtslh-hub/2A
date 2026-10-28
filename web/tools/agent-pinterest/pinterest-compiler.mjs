@@ -325,6 +325,31 @@ const SLUG_BLUEPRINT_OVERRIDES = {
     id: 'fuji-sakura-expedition',
     brandTitle: 'Japan Sunrise Tours',
     headlineSub: '10-day Osaka, Kyoto & Tokyo expedition with masked JAPAN sunrise header, 3D vermilion pagoda & sakura cutout, 5 vertical glass cards, and vertical itinerary timeline.'
+  },
+  'industrix-engineering': {
+    id: 'copper-ribbed-industrial',
+    brandTitle: 'Industrix Engineering',
+    headlineSub: 'Industrial automation & heavy engineering showcase with ribbed bronze-copper metallic columns, 3D brushed-copper arrow monument & turbine gear cutout, 4-stat telemetry, and 6-step commissioning grid.'
+  },
+  'aquarium-animals': {
+    id: 'abyssal-popout-triptych',
+    brandTitle: 'Aquarium Animals',
+    headlineSub: 'Deep ocean marine sanctuary showcase featuring tall condensed ANIMALS typography and 3 out-of-bounds 3D pop-out cards (Sea Lions, Bioluminescent Jellyfish cutout, Manta Ray) with straddling yellow arrow buttons.'
+  },
+  'flash-rocky-mountain': {
+    id: 'alpine-glacier-expedition',
+    brandTitle: 'Flash Rocky Mountain',
+    headlineSub: 'Moody alpine & turquoise glacial lake adventure portal with TIME TO TRAVEL cyan headline, 01–05 vertical slide rail, 3D Rocky Mountain diorama cutout, Popular Tours 4-card gallery, and staggered video grid.'
+  },
+  'steary-spatial-cinema': {
+    id: 'visionos-spatial-streaming',
+    brandTitle: 'Steary Spatial Cinema',
+    headlineSub: 'Apple VisionOS spatial glassmorphic streaming app with floating steary.com address bar, vertical glass dock, New Trailer sidebar, 3D multiverse portal hero banner, and interactive 4-card movie row.'
+  },
+  'swatch-luxury-chronograph': {
+    id: 'dual-circle-chronograph',
+    brandTitle: "S'Watch Luxury Chronograph",
+    headlineSub: 'Dark slate and warm cognac-terracotta dual-circle geometry framing a 3D stitched leather smartwatch cutout (12:38 OLED dial), interactive 01–04 strikethrough slide rail, and vertical WATCH stencil.'
   }
 };
 
@@ -2827,6 +2852,1181 @@ export function buildPinterestInspiredHtml(data, palette) {
       var expBtn = document.getElementById('exploreMagneticBtn');
       if (expBtn) expBtn.addEventListener('click', function(){ document.getElementById('japanModal').classList.add('is-open'); });
     })();
+  </script>
+</body>
+</html>`;
+  }
+
+  // 11. INDUSTRIX ENGINEERING (Ribbed Copper-Bronze Columns + Giant Stacked "INDUSTRIX / ENGINEERING" + 3D Copper Arrow & Turbine Cutout + 4-Stat Grid + 6-Step Matrix + Orange Footer Banner)
+  // Motion Recipe: Ribbed Copper Shimmer + 3D Monument Tilt + Animated Industrial Counters + 6-Step Matrix Hover
+  if (data.slug === 'industrix-engineering') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>INDUSTRIX ENGINEERING — Industrial Automation &amp; Plant Engineering</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070504;
+      --copper: #d95d16;
+      --copper-bright: #f97316;
+      --fg: #ffffff;
+      --muted: #b8aba3;
+      --border: rgba(249, 115, 22, 0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .font-ind { font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; }
+
+    .${p}-hero {
+      position: relative; min-height: 92vh; max-width: 1360px; margin: 18px auto 0;
+      border: 1px solid rgba(255,255,255,0.22); overflow: hidden; padding: 28px clamp(20px, 4vw, 56px) 44px;
+      background:
+        radial-gradient(circle at 52% 68%, rgba(249,115,22,0.42) 0%, rgba(7,5,4,0.88) 64%),
+        repeating-linear-gradient(90deg, #2b1206 0px, #5c260c 28px, #120804 56px, #070504 84px);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .${p}-top-bar { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+    .${p}-plus-note { font-size: 13px; color: #f3ece7; max-width: 280px; line-height: 1.45; position: relative; padding-left: 20px; }
+    .${p}-plus-note::before { content: '+'; position: absolute; left: 0; top: -2px; color: var(--copper-bright); font-weight: 700; font-size: 18px; }
+
+    .${p}-giant-title {
+      font-size: clamp(46px, 8.8vw, 128px); font-weight: 700; line-height: 0.92; letter-spacing: -0.02em;
+      margin: 18px 0 0; position: relative; z-index: 3;
+    }
+    .${p}-giant-title .line-2 { display: block; padding-left: clamp(24px, 12vw, 190px); }
+
+    .${p}-stage-center {
+      position: relative; z-index: 4; margin: -24px auto -10px; text-align: center;
+    }
+    .${p}-cutout-img {
+      width: 100%; max-width: 410px; height: auto; object-fit: contain; display: block; margin: 0 auto;
+      filter: drop-shadow(0 28px 48px rgba(0,0,0,0.9)); transition: transform 0.3s ease;
+    }
+    .${p}-bottom-bar { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; position: relative; z-index: 5; }
+
+    /* 2-Column Bento Panels (Stats Left + 6-Step Matrix Right) */
+    .${p}-bento-row {
+      max-width: 1360px; margin: 24px auto 0; display: grid; grid-template-columns: 1fr; gap: 24px;
+    }
+    @media (min-width: 980px) {
+      .${p}-bento-row { grid-template-columns: 1fr 1fr; }
+    }
+    .${p}-panel {
+      border: 1px solid rgba(255,255,255,0.22); padding: clamp(24px, 3.5vw, 42px);
+      background:
+        radial-gradient(circle at 80% 80%, rgba(217,93,22,0.32), transparent 60%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 96px),
+        #0c0806;
+    }
+    .${p}-stats-4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
+    @media (min-width: 640px) { .${p}-stats-4 { grid-template-columns: repeat(4, 1fr); } }
+    .${p}-stat-num { font-size: clamp(30px, 3.6vw, 46px); font-weight: 600; color: #fff; display: block; }
+    .${p}-stat-lbl { font-size: 12px; color: var(--muted); margin-top: 4px; display: block; line-height: 1.4; }
+
+    .${p}-matrix-6 { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid rgba(255,255,255,0.16); margin-top: 24px; }
+    .${p}-mcell {
+      padding: 18px 14px; border-right: 1px solid rgba(255,255,255,0.14); border-bottom: 1px solid rgba(255,255,255,0.14);
+      background: rgba(217,93,22,0.08); transition: background 0.25s;
+    }
+    .${p}-mcell:hover { background: rgba(249,115,22,0.28); }
+    .${p}-mcell strong { display: block; text-align: right; font-size: 20px; margin-bottom: 18px; color: #fff; }
+    .${p}-mcell span { font-size: 11px; color: #e5dcd6; line-height: 1.4; display: block; }
+
+    .${p}-footer-box {
+      max-width: 1360px; margin: 24px auto 48px; border: 1px solid rgba(255,255,255,0.22);
+      background: #090706; padding: clamp(28px, 4vw, 56px) clamp(20px, 4vw, 56px) 0;
+    }
+    .${p}-orange-banner {
+      margin: 36px calc(-1 * clamp(20px, 4vw, 56px)) 0; background: linear-gradient(90deg, #ea580c, #9a3412);
+      padding: 18px 24px; text-align: center; font-size: clamp(28px, 5.8vw, 82px); font-weight: 700; letter-spacing: 0.02em;
+    }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(7,5,4,0.88); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body style="padding: 0 16px;">
+  <main>
+    <section class="${p}-hero">
+      <div class="${p}-top-bar">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <span style="width:12px;height:12px;background:var(--copper-bright);display:inline-block;"></span>
+          <strong class="font-ind" style="font-size:14px;letter-spacing:0.14em;">INDUSTRIX // AUTOMATION</strong>
+        </div>
+        <p class="${p}-plus-note">
+          Automation systems engineered to multiply heavy manufacturing throughput &amp; plant OEE efficiency.
+        </p>
+      </div>
+
+      <h1 class="${p}-giant-title font-ind">
+        INDUSTRIX
+        <span class="line-2">ENGINEERING</span>
+      </h1>
+
+      <div class="${p}-stage-center">
+        <img src="assets/cutout.webp" alt="Industrix 3D Copper Monument &amp; Turbine Gear" class="${p}-cutout-img" id="indCutout" />
+      </div>
+
+      <div class="${p}-bottom-bar">
+        <p class="${p}-plus-note">
+          We design, manufacture, and commission turnkey industrial equipment tailored to your facility's exact tolerances.
+        </p>
+        <div style="display:flex;gap:12px;">
+          <button type="button" id="exploreMagneticBtn" style="padding:12px 24px;background:var(--copper-bright);color:#fff;border:none;font-weight:700;font-size:13px;cursor:pointer;">
+            ↘ REQUEST TECHNICAL AUDIT
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="${p}-bento-row">
+      <section class="${p}-panel">
+        <h2 style="font-size:clamp(22px,2.6vw,32px);font-weight:500;line-height:1.2;">
+          Delivering turnkey engineering projects across heavy industries
+        </h2>
+        <div class="${p}-stats-4">
+          <div><span class="${p}-stat-num">15</span><span class="${p}-stat-lbl">years in heavy industrial automation</span></div>
+          <div><span class="${p}-stat-num">120+</span><span class="${p}-stat-lbl">certified control &amp; mechanical engineers</span></div>
+          <div><span class="${p}-stat-num">350+</span><span class="${p}-stat-lbl">commissioned production lines</span></div>
+          <div><span class="${p}-stat-num">95%</span><span class="${p}-stat-lbl">projects delivered ahead of schedule</span></div>
+        </div>
+      </section>
+
+      <section class="${p}-panel">
+        <h2 style="font-size:clamp(22px,2.6vw,32px);font-weight:500;line-height:1.2;">
+          Equipment launch is only the beginning of lifecycle support
+        </h2>
+        <div class="${p}-matrix-6">
+          <div class="${p}-mcell"><strong>1</strong><span>24/7 production line telemetry</span></div>
+          <div class="${p}-mcell"><strong>2</strong><span>Preventive maintenance audits</span></div>
+          <div class="${p}-mcell"><strong>3</strong><span>OEM spare parts logistics</span></div>
+          <div class="${p}-mcell"><strong>4</strong><span>Operator &amp; PLC crew training</span></div>
+          <div class="${p}-mcell"><strong>5</strong><span>SCADA firmware upgrades</span></div>
+          <div class="${p}-mcell"><strong>6</strong><span>Robotic cell retrofitting</span></div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="${p}-footer-box">
+      <h2 style="font-size:clamp(26px,3.8vw,48px);font-weight:500;max-width:880px;line-height:1.18;">
+        Sometimes a single engineering decision transforms the efficiency of an entire plant.
+      </h2>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-top:32px;">
+        <div>
+          <p style="font-size:18px;margin-bottom:8px;">↘ REQUEST A TECHNICAL AUDIT</p>
+          <p style="font-size:13px;color:var(--muted);">info@industrix.engineering • +1 (800) 555-0199</p>
+        </div>
+        <p class="${p}-plus-note">Schedule an on-site engineering inspection and receive a custom automation roadmap.</p>
+      </div>
+      <div class="${p}-orange-banner font-ind">INDUSTRIX ENGINEERING</div>
+    </footer>
+  </main>
+
+  <div id="indModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="indModalTitle">
+    <div style="max-width:480px;width:100%;background:#140c08;border:1px solid var(--copper-bright);padding:32px;">
+      <h2 id="indModalTitle" class="font-ind" style="font-size:24px;margin-bottom:8px;">Technical Plant Audit</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:18px;">Submit your facility parameters for a full OEE &amp; SCADA automation blueprint.</p>
+      <button type="button" style="width:100%;padding:12px;background:var(--copper-bright);color:#fff;border:none;font-weight:700;cursor:pointer;" onclick="document.getElementById('indModal').classList.remove('is-open')">Confirm Audit Request</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var btn = document.getElementById('exploreMagneticBtn');
+      if (btn) btn.addEventListener('click', function(){ document.getElementById('indModal').classList.add('is-open'); });
+      var img = document.getElementById('indCutout');
+      window.addEventListener('mousemove', function(e){
+        if (!img) return;
+        var nx = (e.clientX / window.innerWidth - 0.5) * 14;
+        var ny = (e.clientY / window.innerHeight - 0.5) * 14;
+        img.style.transform = 'perspective(900px) rotateY(' + nx.toFixed(1) + 'deg) rotateX(' + (-ny).toFixed(1) + 'deg)';
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>`;
+  }
+
+  // 12. AQUARIUM ANIMALS (Deep Abyssal Blue #012e4a + Tall Condensed "ANIMALS" + 3 Out-of-Bounds 3D Pop-Out Marine Cards with Straddling Yellow Circle Arrow Buttons)
+  // Motion Recipe: Zero-Gravity Marine Float + 3D Out-of-Bounds Card Pop-Out + Interactive Species Telemetry Filter
+  if (data.slug === 'aquarium-animals') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>AQUARIUM WORLD — 3D Out-of-Bounds Marine Sanctuary Showcase</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #012c47;
+      --bg-mid: #02436c;
+      --card-blue: #0568a3;
+      --card-light: #0a8fd8;
+      --yellow: #fbbf24;
+      --fg: #ffffff;
+      --muted: #bae6fd;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: radial-gradient(circle at 50% 18%, #045a8d 0%, #012e4a 60%, #001829 100%);
+      color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth;
+    }
+    .font-cond { font-family: 'Antonio', sans-serif; text-transform: uppercase; }
+
+    .${p}-nav {
+      max-width: 1280px; margin: 0 auto; padding: 24px 28px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-hero {
+      max-width: 1240px; margin: 0 auto; padding: 12px 24px 96px; text-align: center;
+    }
+    .${p}-giant-animals {
+      font-size: clamp(68px, 12vw, 148px); font-weight: 400; letter-spacing: 0.22em; line-height: 0.92;
+      margin-bottom: 18px; color: #ffffff; text-indent: 0.22em;
+    }
+    .${p}-sub {
+      max-width: 540px; margin: 0 auto 26px; font-size: 14px; line-height: 1.65; color: var(--muted);
+    }
+    .${p}-view-btn {
+      padding: 11px 34px; background: rgba(255,255,255,0.04); border: 1px solid rgba(186,230,253,0.45);
+      color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.2s, border-color 0.2s;
+    }
+    .${p}-view-btn:hover { background: rgba(10,143,216,0.28); border-color: #fff; }
+
+    /* 3-Column Out-of-Bounds 3D Pop-Out Marine Triptych */
+    .${p}-triptych {
+      display: grid; grid-template-columns: 1fr; gap: 64px 28px; margin-top: 92px; align-items: stretch;
+    }
+    @media (min-width: 920px) {
+      .${p}-triptych { grid-template-columns: repeat(3, 1fr); }
+    }
+    .${p}-marine-card {
+      position: relative; min-height: 410px;
+      background: linear-gradient(180deg, #0b87cc 0%, #034b78 58%, #023759 100%);
+      box-shadow: 0 28px 60px rgba(0, 12, 24, 0.65);
+      border: 1px solid rgba(125, 211, 252, 0.22);
+      display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+      padding: 28px 24px 44px; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s;
+    }
+    .${p}-marine-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 36px 72px rgba(0, 12, 24, 0.85), 0 0 40px rgba(56, 189, 248, 0.28);
+    }
+    /* Out-of-bounds 3D Subject Breaking Top Border */
+    .${p}-popout-wrap {
+      position: absolute; top: -68px; left: 50%; transform: translateX(-50%);
+      width: 100%; max-width: 280px; height: 320px; display: flex; align-items: center; justify-content: center;
+      pointer-events: none; z-index: 4;
+    }
+    .${p}-popout-wrap img, .${p}-popout-wrap svg {
+      max-width: 100%; max-height: 320px; width: auto; height: auto; object-fit: contain;
+      filter: drop-shadow(0 24px 32px rgba(0, 18, 36, 0.78));
+      animation: ${p}Float 5.2s ease-in-out infinite;
+    }
+    @keyframes ${p}Float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+    .${p}-card-title {
+      position: relative; z-index: 5; font-size: 32px; letter-spacing: 0.06em; margin-top: auto;
+    }
+    .${p}-card-meta {
+      font-size: 12px; color: var(--muted); margin-top: 6px;
+    }
+    /* Bottom-Straddling Yellow Circle Button */
+    .${p}-yellow-fab {
+      position: absolute; bottom: -23px; left: 50%; transform: translateX(-50%); z-index: 6;
+      width: 46px; height: 46px; border-radius: 50%; border: none;
+      background: var(--yellow); color: #ffffff; font-size: 18px; font-weight: 800;
+      display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+      box-shadow: 0 10px 24px rgba(251, 191, 36, 0.45); transition: transform 0.2s;
+    }
+    .${p}-yellow-fab:hover { transform: translateX(-50%) scale(1.12); }
+
+    .${p}-zone-sec { max-width: 1240px; margin: 0 auto; padding: 48px 24px 96px; }
+    .${p}-zone-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 28px; }
+    .${p}-zone-box {
+      padding: 26px; background: rgba(2, 67, 108, 0.55); border: 1px solid rgba(186,230,253,0.2);
+      backdrop-filter: blur(12px);
+    }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(0,24,41,0.88); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <header class="${p}-nav">
+    <strong class="font-cond" style="font-size:22px;letter-spacing:0.18em;">🌊 AQUARIUM WORLD</strong>
+    <nav style="display:flex;gap:28px;" aria-label="Main Navigation">
+      <a href="#marineTriptych" style="color:var(--muted);text-decoration:none;font-size:13px;">Animals</a>
+      <a href="#depthZones" style="color:var(--muted);text-decoration:none;font-size:13px;">Abyssal Zones</a>
+      <a href="#depthZones" style="color:var(--muted);text-decoration:none;font-size:13px;">Conservation</a>
+    </nav>
+    <button type="button" id="exploreMagneticBtn" class="${p}-view-btn">BOOK TICKETS</button>
+  </header>
+
+  <main>
+    <section class="${p}-hero" id="marineTriptych">
+      <h1 class="${p}-giant-animals font-cond">ANIMALS</h1>
+      <p class="${p}-sub">
+        Explore our deep-water biosphere habitats where bioluminescent cnidarians, California sea lions, and pelagic manta rays glide across multi-story acrylic domes.
+      </p>
+      <button type="button" class="${p}-view-btn" onclick="document.getElementById('aquaModal').classList.add('is-open')">VIEW ALL</button>
+
+      <div class="${p}-triptych">
+        <!-- Card 1: SEA LIONS -->
+        <article class="${p}-marine-card" data-tilt-card>
+          <div class="${p}-popout-wrap">
+            <svg viewBox="0 0 280 290" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="seaLionGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#94a3b8"/>
+                  <stop offset="50%" stop-color="#334155"/>
+                  <stop offset="100%" stop-color="#0f172a"/>
+                </linearGradient>
+              </defs>
+              <path d="M95 250 C85 180 105 110 148 45 C168 25 198 30 202 52 C205 72 178 96 176 135 C174 178 215 218 242 238 C195 255 150 258 95 250 Z" fill="url(#seaLionGrad)" stroke="#7dd3fc" stroke-width="2"/>
+              <path d="M110 215 C75 235 45 255 32 268 C72 272 118 260 135 238 Z" fill="#1e293b"/>
+              <circle cx="172" cy="48" r="4" fill="#38bdf8"/>
+            </svg>
+          </div>
+          <h2 class="${p}-card-title font-cond">SEA LIONS</h2>
+          <span class="${p}-card-meta">Pacific Kelp Reef • Tank 01</span>
+          <button type="button" class="${p}-yellow-fab" aria-label="Explore Sea Lions" onclick="openSpecies('SEA LIONS — Pacific Kelp Reef')">➔</button>
+        </article>
+
+        <!-- Card 2: JELLYFISH (Real 3D Cutout Breaking Top Border!) -->
+        <article class="${p}-marine-card" data-tilt-card>
+          <div class="${p}-popout-wrap" style="top:-78px;">
+            <img src="assets/cutout.webp" alt="3D Bioluminescent Jellyfish Cutout" />
+          </div>
+          <h2 class="${p}-card-title font-cond">JELLYFISH</h2>
+          <span class="${p}-card-meta">Bioluminescent Abyss • Tank 02</span>
+          <button type="button" class="${p}-yellow-fab" aria-label="Explore Jellyfish" onclick="openSpecies('JELLYFISH — Bioluminescent Cnidaria Dome')">➔</button>
+        </article>
+
+        <!-- Card 3: MANTA RAY -->
+        <article class="${p}-marine-card" data-tilt-card>
+          <div class="${p}-popout-wrap">
+            <svg viewBox="0 0 300 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="mantaGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#38bdf8"/>
+                  <stop offset="45%" stop-color="#0369a1"/>
+                  <stop offset="100%" stop-color="#082f49"/>
+                </linearGradient>
+              </defs>
+              <path d="M150 32 C195 68 255 82 288 96 C235 135 190 168 158 192 L182 268 L152 194 C115 168 65 135 14 96 C52 82 108 68 150 32 Z" fill="url(#mantaGrad)" stroke="#bae6fd" stroke-width="2"/>
+              <ellipse cx="128" cy="96" rx="18" ry="8" fill="#e0f2fe" fill-opacity="0.85"/>
+              <ellipse cx="174" cy="96" rx="18" ry="8" fill="#e0f2fe" fill-opacity="0.85"/>
+            </svg>
+          </div>
+          <h2 class="${p}-card-title font-cond">MANTA RAY</h2>
+          <span class="${p}-card-meta">Pelagic Ocean Tunnel • Tank 03</span>
+          <button type="button" class="${p}-yellow-fab" aria-label="Explore Manta Ray" onclick="openSpecies('MANTA RAY — Pelagic Ocean Tunnel')">➔</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="depthZones" class="${p}-zone-sec">
+      <h2 class="font-cond" style="font-size:36px;letter-spacing:0.12em;text-align:center;">ABYSSAL BIOSPHERE TELEMETRY</h2>
+      <div class="${p}-zone-grid">
+        <div class="${p}-zone-box"><strong class="font-cond" style="font-size:28px;color:var(--yellow);">4.2M L</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Pressurized saltwater volume across 14 pelagic habitats.</p></div>
+        <div class="${p}-zone-box"><strong class="font-cond" style="font-size:28px;color:var(--yellow);">380+</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Protected marine species including deep-sea Chrysaora jellyfish.</p></div>
+        <div class="${p}-zone-box"><strong class="font-cond" style="font-size:28px;color:var(--yellow);">360°</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Sub-aquatic viewing tunnel at 18 meters depth.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="aquaModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="aquaModalTitle">
+    <div style="max-width:460px;width:100%;background:#023859;border:1px solid #38bdf8;padding:32px;text-align:center;">
+      <h2 id="aquaModalTitle" class="font-cond" style="font-size:30px;letter-spacing:0.08em;margin-bottom:10px;">JELLYFISH SANCTUARY</h2>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:22px;line-height:1.6;">Reserve VIP night-dive passes to witness bioluminescent deep-sea jellyfish and pelagic manta rays.</p>
+      <button type="button" class="${p}-view-btn" style="background:var(--yellow);color:#012c47;border:none;" onclick="document.getElementById('aquaModal').classList.remove('is-open')">CONFIRM EXPEDITION PASS</button>
+    </div>
+  </div>
+
+  <script>
+    function openSpecies(title) {
+      var t = document.getElementById('aquaModalTitle');
+      if (t) t.textContent = title;
+      document.getElementById('aquaModal').classList.add('is-open');
+    }
+    document.getElementById('exploreMagneticBtn').addEventListener('click', function(){
+      openSpecies('VIP SANCTUARY ENTRY PASS');
+    });
+  </script>
+</body>
+</html>`;
+  }
+
+  // 13. FLASH ROCKY MOUNTAIN (Dark Alpine Glacier Cyan "TIME TO TRAVEL" + Right Vertical 01-05 Counter + 3D Rocky Mountain Diorama Cutout + 4-Card "POPULAR TOURS" + "DISCOVER THE WORLD IN A NEW WAY" Video Grid)
+  // Motion Recipe: Parallax Alpine Mist + Interactive 01-05 Elevation Switcher + 4-Card Popular Tours Center Scale + Video Modal
+  if (data.slug === 'flash-rocky-mountain') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>FLASH — Time To Travel | Rocky Mountain National Park Expeditions</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030708;
+      --surface: #0a1417;
+      --cyan: #38e8ff;
+      --fg: #ffffff;
+      --muted: #94a3b8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Montserrat', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; padding: 24px clamp(20px, 5vw, 72px) 56px;
+      background:
+        linear-gradient(180deg, rgba(3,7,8,0.35) 0%, rgba(10,32,38,0.55) 55%, #030708 100%),
+        radial-gradient(circle at 60% 42%, #164e63 0%, #07191e 55%, #030708 100%);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .${p}-nav {
+      max-width: 1320px; width: 100%; margin: 0 auto; padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .${p}-hero-grid {
+      max-width: 1320px; width: 100%; margin: 36px auto;
+      display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; position: relative;
+    }
+    @media (min-width: 980px) {
+      .${p}-hero-grid { grid-template-columns: 1.05fr 0.85fr 60px; }
+    }
+    .${p}-h1 {
+      font-size: clamp(42px, 6.2vw, 78px); font-weight: 700; color: var(--cyan);
+      letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.02;
+      text-shadow: 0 0 36px rgba(56, 232, 255, 0.35); margin-bottom: 18px;
+    }
+    .${p}-diorama-img {
+      width: 100%; max-width: 420px; height: auto; object-fit: contain; display: block; margin: 0 auto;
+      filter: drop-shadow(0 28px 44px rgba(0,0,0,0.85));
+    }
+    .${p}-slide-rail {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 12px; font-size: 13px; color: var(--muted);
+    }
+    .${p}-slide-rail button {
+      background: none; border: none; color: inherit; font-family: inherit; cursor: pointer; padding: 4px 0;
+    }
+    .${p}-slide-rail button.active {
+      color: #fff; font-size: 20px; font-weight: 700; border-bottom: 2px solid var(--cyan); padding-right: 18px;
+    }
+
+    .${p}-bottom-3 {
+      max-width: 1320px; width: 100%; margin: 0 auto; padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.14);
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px;
+    }
+    .${p}-info-col { display: flex; gap: 16px; align-items: flex-start; }
+    .${p}-info-icon { color: var(--cyan); font-size: 22px; flex-shrink: 0; }
+    .${p}-more-link { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: #fff; text-decoration: none; }
+
+    /* POPULAR TOURS 4-CARD GALLERY */
+    .${p}-tours-sec { max-width: 1240px; margin: 0 auto; padding: 88px 24px; text-align: center; }
+    .${p}-tours-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px;
+      margin-top: 44px; align-items: center;
+    }
+    .${p}-tour-card {
+      height: 360px; padding: 26px; display: flex; flex-direction: column; justify-content: flex-end;
+      border: 1px solid rgba(255,255,255,0.14); position: relative; overflow: hidden; cursor: pointer;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .${p}-tour-card.featured {
+      height: 400px; border: 3px solid #ffffff; box-shadow: 0 24px 60px rgba(56,232,255,0.18);
+    }
+    .${p}-tour-card:hover { transform: translateY(-8px); border-color: var(--cyan); }
+
+    /* DISCOVER THE WORLD IN A NEW WAY */
+    .${p}-discover-sec {
+      max-width: 1320px; margin: 0 auto; padding: 72px 24px 96px;
+      background: radial-gradient(circle at 30% 50%, rgba(16, 68, 56, 0.38), transparent 70%);
+      display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center;
+    }
+    @media (min-width: 980px) {
+      .${p}-discover-sec { grid-template-columns: 0.95fr 1.05fr; }
+    }
+    .${p}-vid-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .${p}-vid-thumb {
+      height: 135px; border: 1px solid rgba(56,232,255,0.28);
+      background: linear-gradient(135deg, #0f2930, #061317);
+      display: flex; align-items: center; justify-content: center; cursor: pointer; position: relative;
+    }
+    .${p}-play-circle {
+      width: 44px; height: 44px; border-radius: 50%; border: 2px solid #fff;
+      display: inline-flex; align-items: center; justify-content: center; font-size: 14px;
+    }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(3,7,8,0.9); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="${p}-hero">
+      <header class="${p}-nav">
+        <strong style="font-size:15px;letter-spacing:0.22em;">⛰️ FLASH</strong>
+        <nav style="display:flex;gap:26px;" aria-label="Main Navigation">
+          <a href="#popularTours" style="color:#fff;text-decoration:none;font-size:11px;letter-spacing:0.14em;">MAIN</a>
+          <a href="#popularTours" style="color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:0.14em;">ABOUT US</a>
+          <a href="#popularTours" style="color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:0.14em;">TOURS</a>
+          <a href="#discoverWorld" style="color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:0.14em;">GALLERY</a>
+          <a href="#discoverWorld" style="color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:0.14em;">CONTACTS</a>
+        </nav>
+        <button type="button" id="exploreMagneticBtn" style="background:none;border:1px solid var(--cyan);color:var(--cyan);padding:7px 18px;font-size:11px;font-weight:700;cursor:pointer;">BOOK TREK</button>
+      </header>
+
+      <div class="${p}-hero-grid">
+        <div>
+          <h1 class="${p}-h1" id="rockyTitle">TIME TO TRAVEL</h1>
+          <p style="font-size:14px;color:#cbd5e1;max-width:480px;line-height:1.7;" id="rockyDesc">
+            The best time to visit Rocky Mountain National Park is from June to September when the snow is melted and alpine trails to Longs Peak (14,259 ft) and Emerald Glacier Lake are open.
+          </p>
+        </div>
+
+        <div>
+          <img src="assets/cutout.webp" alt="3D Rocky Mountain &amp; Turquoise Glacial Lake Diorama" class="${p}-diorama-img" />
+        </div>
+
+        <div class="${p}-slide-rail" role="tablist" aria-label="Expedition Peaks">
+          <button type="button" onclick="setPeak(0, this)">01</button>
+          <button type="button" onclick="setPeak(1, this)">02</button>
+          <button type="button" class="active" onclick="setPeak(2, this)">03</button>
+          <button type="button" onclick="setPeak(3, this)">04</button>
+          <button type="button" onclick="setPeak(4, this)">05</button>
+        </div>
+      </div>
+
+      <div class="${p}-bottom-3">
+        <div class="${p}-info-col">
+          <span class="${p}-info-icon">🗺️</span>
+          <div>
+            <p style="font-size:12px;color:var(--muted);line-height:1.55;">The Crown Jewel of Rocky Mountain NP, Longs Peak is one of the most coveted 14er summits in the West.</p>
+            <a href="#popularTours" class="${p}-more-link">MORE DETAILED ➔</a>
+          </div>
+        </div>
+        <div class="${p}-info-col">
+          <span class="${p}-info-icon">🧭</span>
+          <div>
+            <p style="font-size:12px;color:var(--muted);line-height:1.55;">Our alpine route is tailored for hikers seeking turquoise glacial tarns and continental divide vistas.</p>
+            <a href="#popularTours" class="${p}-more-link">MORE DETAILED ➔</a>
+          </div>
+        </div>
+        <div class="${p}-info-col">
+          <span class="${p}-info-icon">🏕️</span>
+          <div>
+            <p style="font-size:12px;color:var(--muted);line-height:1.55;">Historic high-altitude trails cross subalpine fir forests, waterfalls, and backcountry basecamps.</p>
+            <a href="#popularTours" class="${p}-more-link">MORE DETAILED ➔</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="popularTours" class="${p}-tours-sec">
+      <span style="font-size:13px;font-weight:700;color:var(--cyan);letter-spacing:0.18em;">POPULAR TOURS</span>
+      <p style="font-size:13px;color:var(--muted);margin-top:6px;">Select a guided backcountry route across the Continental Divide</p>
+
+      <div class="${p}-tours-grid">
+        <article class="${p}-tour-card" style="background:linear-gradient(180deg,rgba(16,42,38,0.3),#061412);">
+          <strong style="font-size:16px;letter-spacing:0.1em;">TOUR 1</strong>
+          <span style="font-size:12px;color:var(--muted);margin-top:4px;">Pine Forest &amp; Bear Lake Loop</span>
+        </article>
+        <article class="${p}-tour-card featured" style="background:linear-gradient(180deg,rgba(22,78,99,0.45),#071e26);">
+          <span style="position:absolute;top:14px;right:14px;font-size:10px;background:var(--cyan);color:#030708;padding:3px 8px;font-weight:800;">FEATURED</span>
+          <strong style="font-size:18px;letter-spacing:0.1em;">TOUR 2</strong>
+          <span style="font-size:12px;color:#e2e8f0;margin-top:4px;">Emerald Glacial Tarn &amp; Longs Peak</span>
+        </article>
+        <article class="${p}-tour-card" style="background:linear-gradient(180deg,rgba(30,41,59,0.35),#090d16);">
+          <strong style="font-size:16px;letter-spacing:0.1em;">TOUR 3</strong>
+          <span style="font-size:12px;color:var(--muted);margin-top:4px;">Continental Divide Ridge Summit</span>
+        </article>
+        <article class="${p}-tour-card" style="background:linear-gradient(180deg,rgba(6,78,59,0.35),#04130f);">
+          <strong style="font-size:16px;letter-spacing:0.1em;">TOUR 4</strong>
+          <span style="font-size:12px;color:var(--muted);margin-top:4px;">Alberta Falls &amp; Loch Vale Gorge</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="discoverWorld" class="${p}-discover-sec">
+      <div>
+        <h2 style="font-size:clamp(30px,4.5vw,52px);color:var(--cyan);letter-spacing:0.06em;line-height:1.12;margin-bottom:24px;">
+          DISCOVER THE<br>WORLD IN A<br>NEW WAY
+        </h2>
+        <button type="button" onclick="document.getElementById('rockyModal').classList.add('is-open')" style="background:none;border:none;color:#fff;display:inline-flex;align-items:center;gap:14px;cursor:pointer;margin-bottom:24px;">
+          <span class="${p}-play-circle">▶</span>
+          <span style="font-size:12px;font-weight:700;letter-spacing:0.16em;">WATCH THE VIDEO</span>
+        </button>
+        <blockquote style="font-size:13px;color:var(--muted);line-height:1.7;border-left:2px solid var(--cyan);padding-left:16px;">
+          "Have you ever heard an avalanche roar in the mountains? Just after the avalanche roars, and there is absolute silence. You stop understanding where you are — that's 100% pure wilderness."
+          <footer style="margin-top:8px;color:#fff;font-weight:600;">— Haruki Murakami</footer>
+        </blockquote>
+      </div>
+
+      <div class="${p}-vid-grid">
+        <div class="${p}-vid-thumb" onclick="document.getElementById('rockyModal').classList.add('is-open')"><span class="${p}-play-circle">▶</span></div>
+        <div class="${p}-vid-thumb" onclick="document.getElementById('rockyModal').classList.add('is-open')"><span class="${p}-play-circle">▶</span></div>
+        <div class="${p}-vid-thumb" onclick="document.getElementById('rockyModal').classList.add('is-open')"><span class="${p}-play-circle">▶</span></div>
+        <div class="${p}-vid-thumb" onclick="document.getElementById('rockyModal').classList.add('is-open')"><span class="${p}-play-circle">▶</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="rockyModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="rockyModalTitle">
+    <div style="max-width:480px;width:100%;background:#0a1417;border:1px solid var(--cyan);padding:32px;">
+      <h2 id="rockyModalTitle" style="font-size:22px;color:var(--cyan);margin-bottom:10px;">Rocky Mountain 4K Expedition Reel</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6;">Reserve your spot on the June–September Longs Peak &amp; Dream Lake backcountry expedition.</p>
+      <button type="button" style="width:100%;padding:12px;background:var(--cyan);color:#030708;font-weight:800;border:none;cursor:pointer;" onclick="document.getElementById('rockyModal').classList.remove('is-open')">Reserve Alpine Permit</button>
+    </div>
+  </div>
+
+  <script>
+    var peaks = [
+      { t: '01 // DREAM LAKE DAWN', d: 'Sub-alpine glacial basin reflecting Hallett Peak at 9,905 ft elevation.' },
+      { t: '02 // EMERALD TARN TRAIL', d: 'Crystal-clear snowmelt waters framed by sheer granite cirques.' },
+      { t: 'TIME TO TRAVEL', d: 'The best time to visit Rocky Mountain National Park is from June to September when the snow is melted and alpine trails to Longs Peak are open.' },
+      { t: '04 // LONGS PEAK KEYHOLE', d: '14,259 ft summit scramble above the clouds on the Continental Divide.' },
+      { t: '05 // LOCH VALE WATERFALLS', d: 'Old-growth spruce canyon leading to Timberline Falls and Sky Pond.' }
+    ];
+    function setPeak(idx, btn) {
+      document.querySelectorAll('.${p}-slide-rail button').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('rockyTitle').textContent = peaks[idx].t;
+      document.getElementById('rockyDesc').textContent = peaks[idx].d;
+    }
+    document.getElementById('exploreMagneticBtn').addEventListener('click', function(){
+      document.getElementById('rockyModal').classList.add('is-open');
+    });
+  </script>
+</body>
+</html>`;
+  }
+
+  // 14. STEARY SPATIAL CINEMA (Apple VisionOS Glassmorphic Streaming UI: Top "steary.com" Safari Bar + Left Vertical Glass Dock + "New Trailer / Continue Watching" Sidebar + "Spider-Verse" 3D Portal Hero + 4-Card "You might like" Row)
+  // Motion Recipe: Spatial Window 3D Perspective Tilt + Category Tab Switcher + Interactive Trailer Player
+  if (data.slug === 'steary-spatial-cinema') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>steary.com — VisionOS Spatial Cinema &amp; Multiverse Streaming</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --glass-win: rgba(38, 40, 46, 0.62);
+      --glass-card: rgba(255, 255, 255, 0.10);
+      --glass-border: rgba(255, 255, 255, 0.24);
+      --fg: #ffffff;
+      --muted: rgba(255, 255, 255, 0.68);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(214, 199, 182, 0.55) 0%, transparent 45%),
+        radial-gradient(circle at 82% 75%, rgba(148, 163, 184, 0.45) 0%, transparent 50%),
+        linear-gradient(135deg, #7d7973 0%, #52525b 48%, #27272a 100%);
+      color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip;
+    }
+
+    .${p}-stage {
+      max-width: 1380px; margin: 0 auto; padding: 18px 20px 64px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+    }
+    /* Floating VisionOS Safari Address Bar */
+    .${p}-safari-bar {
+      width: min(760px, 94vw); padding: 10px 18px; border-radius: 999px;
+      background: rgba(50, 52, 58, 0.65); backdrop-filter: blur(28px) saturate(180%);
+      border: 1px solid var(--glass-border);
+      display: flex; align-items: center; justify-content: space-between; font-size: 12px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+    }
+    .${p}-url-pill {
+      flex: 1; max-width: 420px; margin: 0 14px; padding: 6px 16px; border-radius: 999px;
+      background: rgba(0,0,0,0.28); text-align: center; color: #f4f4f5; font-weight: 600;
+    }
+
+    .${p}-workspace {
+      width: 100%; display: grid; grid-template-columns: 1fr; gap: 18px; align-items: center;
+    }
+    @media (min-width: 1040px) {
+      .${p}-workspace { grid-template-columns: 54px 1fr; }
+    }
+    /* Left Vertical Spatial Dock */
+    .${p}-dock {
+      display: flex; flex-direction: row; justify-content: center; gap: 12px;
+      padding: 12px 10px; border-radius: 999px;
+      background: rgba(50, 52, 58, 0.62); backdrop-filter: blur(28px);
+      border: 1px solid var(--glass-border);
+    }
+    @media (min-width: 1040px) {
+      .${p}-dock { flex-direction: column; }
+    }
+    .${p}-dock button {
+      width: 34px; height: 34px; border-radius: 50%; border: none;
+      background: transparent; color: #fff; cursor: pointer; font-size: 14px;
+    }
+    .${p}-dock button.active { background: rgba(255,255,255,0.22); }
+
+    /* Main Spatial Glass Window */
+    .${p}-window {
+      border-radius: 38px; padding: clamp(18px, 2.5vw, 30px);
+      background: var(--glass-win); backdrop-filter: blur(36px) saturate(180%);
+      border: 1.5px solid var(--glass-border);
+      box-shadow: 0 40px 90px rgba(0,0,0,0.45), inset 0 1px 1px rgba(255,255,255,0.35);
+    }
+    .${p}-win-top {
+      display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin-bottom: 22px;
+    }
+    .${p}-search {
+      padding: 10px 18px; border-radius: 999px; background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.16); color: #fff; font-size: 13px; min-width: 230px;
+    }
+    .${p}-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .${p}-tab {
+      padding: 9px 18px; border-radius: 999px; border: none; background: transparent;
+      color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-tab.active { background: rgba(255,255,255,0.22); color: #fff; }
+
+    .${p}-win-grid {
+      display: grid; grid-template-columns: 1fr; gap: 20px;
+    }
+    @media (min-width: 960px) {
+      .${p}-win-grid { grid-template-columns: 270px 1fr; }
+    }
+    .${p}-side-box {
+      border-radius: 26px; padding: 18px; background: var(--glass-card);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+    .${p}-trailer-card {
+      border-radius: 18px; padding: 14px; margin-top: 12px;
+      background: linear-gradient(135deg, rgba(30,41,59,0.85), rgba(15,23,42,0.9));
+      border: 1px solid rgba(255,255,255,0.16); display: flex; justify-content: space-between; align-items: flex-end;
+      min-height: 92px; cursor: pointer;
+    }
+    /* Main Featured Movie Banner with 3D Portal Cutout */
+    .${p}-hero-banner {
+      position: relative; border-radius: 28px; padding: clamp(22px, 3.5vw, 38px);
+      background: radial-gradient(circle at 75% 40%, #4c1d95 0%, #1e1b4b 48%, #09090b 100%);
+      border: 1px solid rgba(255,255,255,0.22); overflow: hidden;
+      display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center; min-height: 330px;
+    }
+    @media (min-width: 760px) {
+      .${p}-hero-banner { grid-template-columns: 1.15fr 0.85fr; }
+    }
+    .${p}-portal-img {
+      width: 100%; max-width: 310px; height: auto; object-fit: contain; margin: 0 auto; display: block;
+      filter: drop-shadow(0 20px 36px rgba(0,0,0,0.75));
+    }
+    .${p}-like-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 14px; margin-top: 14px;
+    }
+    .${p}-movie-card {
+      border-radius: 22px; padding: 18px; min-height: 175px;
+      border: 1px solid rgba(255,255,255,0.18);
+      display: flex; flex-direction: column; justify-content: flex-end; position: relative; cursor: pointer;
+      transition: transform 0.25s;
+    }
+    .${p}-movie-card:hover { transform: translateY(-5px); }
+    .${p}-play-fab {
+      position: absolute; bottom: 14px; right: 14px; width: 34px; height: 34px; border-radius: 50%;
+      background: #ffffff; color: #09090b; border: none; font-weight: 800; cursor: pointer;
+    }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(9,9,11,0.85); backdrop-filter: blur(22px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <div class="${p}-stage">
+    <!-- Top Floating Safari Bar -->
+    <header class="${p}-safari-bar">
+      <div style="display:flex;gap:10px;color:var(--muted);"><span>◧</span><span>‹</span><span>›</span></div>
+      <div class="${p}-url-pill">🔒 steary.com</div>
+      <div style="display:flex;gap:12px;color:var(--muted);"><span>⊕</span><span>↑</span><span>＋</span></div>
+    </header>
+
+    <div class="${p}-workspace">
+      <!-- Left Floating Glass Dock -->
+      <aside class="${p}-dock" aria-label="Spatial App Dock">
+        <button type="button" class="active" aria-label="Home">🏠</button>
+        <button type="button" aria-label="Favorites">♡</button>
+        <button type="button" aria-label="Downloads">⬇</button>
+        <button type="button" aria-label="Profile">👤</button>
+        <button type="button" aria-label="Settings">⚙</button>
+      </aside>
+
+      <!-- Main VisionOS Frosted Glass Window -->
+      <main class="${p}-window">
+        <div class="${p}-win-top">
+          <div class="${p}-search">🔍 Search movies, series, multiverse...</div>
+          <div class="${p}-tabs" role="tablist">
+            <button type="button" class="${p}-tab active" onclick="switchCat('Movies', this)">Movies</button>
+            <button type="button" class="${p}-tab" onclick="switchCat('TV Series', this)">TV Series</button>
+            <button type="button" class="${p}-tab" onclick="switchCat('Animation', this)">Animation</button>
+            <button type="button" class="${p}-tab" onclick="switchCat('Mystery', this)">Mystery</button>
+            <button type="button" class="${p}-tab" onclick="switchCat('More', this)">More</button>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,0.12);">
+            <span style="width:28px;height:28px;border-radius:50%;background:#6366f1;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;">AM</span>
+            <div style="font-size:12px;"><strong>Arfi Maulana</strong><span style="display:block;font-size:10px;color:var(--muted);">@arfimaulana</span></div>
+          </div>
+        </div>
+
+        <div class="${p}-win-grid">
+          <!-- Left Sidebar: New Trailer + Continue Watching -->
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <section class="${p}-side-box">
+              <div style="display:flex;justify-content:space-between;font-size:13px;">
+                <strong>🔥 New Trailer</strong><span style="color:var(--muted);font-size:11px;">Sort by: Today</span>
+              </div>
+              <div class="${p}-trailer-card" onclick="openStream('The Last Kingdom: Seven Kings Must Die')">
+                <div><strong style="font-size:12px;display:block;">The Last Kingdom: Seven Kings Must Die</strong></div>
+                <span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.2);display:inline-flex;align-items:center;justify-content:center;font-size:11px;">▶</span>
+              </div>
+              <div class="${p}-trailer-card" style="background:linear-gradient(135deg,#7c2d12,#3b0764);" onclick="openStream('The Super Mario Bros. Movie')">
+                <div><strong style="font-size:12px;display:block;">The Super Mario Bros. Movie</strong></div>
+                <span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.2);display:inline-flex;align-items:center;justify-content:center;font-size:11px;">▶</span>
+              </div>
+            </section>
+
+            <section class="${p}-side-box">
+              <strong style="font-size:13px;display:block;margin-bottom:10px;">Continue Watching</strong>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:12px;">
+                <div><strong>Dark Season 3</strong><span style="display:block;font-size:10px;color:var(--muted);">Episode 3</span></div><span>▶</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:12px;">
+                <div><strong>Transformers: Rise of the Beasts</strong><span style="display:block;font-size:10px;color:var(--muted);">32m remaining</span></div><span>▶</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:12px;">
+                <div><strong>Lupin Season 2</strong><span style="display:block;font-size:10px;color:var(--muted);">Episode 5</span></div><span>▶</span>
+              </div>
+            </section>
+          </div>
+
+          <!-- Right Main Column: Featured Hero + You might like -->
+          <div>
+            <section class="${p}-hero-banner">
+              <div>
+                <span style="display:inline-block;padding:5px 12px;border-radius:999px;background:rgba(0,0,0,0.45);font-size:11px;font-weight:700;margin-bottom:14px;">🔥 Now Trending</span>
+                <div style="display:flex;gap:8px;margin-bottom:10px;">
+                  <span style="padding:4px 10px;border-radius:999px;background:rgba(255,255,255,0.14);font-size:11px;">Animation</span>
+                  <span style="padding:4px 10px;border-radius:999px;background:rgba(255,255,255,0.14);font-size:11px;">Adventure</span>
+                </div>
+                <h1 id="featuredMovieTitle" style="font-size:clamp(26px,3.4vw,38px);font-weight:800;line-height:1.12;margin-bottom:10px;">
+                  Spider-Man:<br>Across the Spider-Verse
+                </h1>
+                <p style="font-size:13px;color:var(--muted);line-height:1.6;max-width:440px;margin-bottom:20px;">
+                  Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence.
+                </p>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                  <button type="button" id="exploreMagneticBtn" onclick="openStream('Spider-Man: Across the Spider-Verse (Spatial 3D IMAX)')" style="padding:10px 22px;border-radius:999px;background:#ffffff;color:#09090b;border:none;font-weight:700;font-size:13px;cursor:pointer;">▶ Watch</button>
+                  <button type="button" onclick="openStream('Offline Spatial Download — 4K Dolby Vision')" style="padding:10px 20px;border-radius:999px;background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.28);font-weight:600;font-size:13px;cursor:pointer;">⬇ Download</button>
+                </div>
+              </div>
+              <div>
+                <img src="assets/cutout.webp" alt="3D Spatial Multiverse Portal Cutout" class="${p}-portal-img" />
+              </div>
+            </section>
+
+            <section style="margin-top:20px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <strong style="font-size:16px;">You might like</strong>
+                <span style="padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.14);font-size:11px;">See all</span>
+              </div>
+              <div class="${p}-like-grid">
+                <article class="${p}-movie-card" style="background:linear-gradient(160deg,#7c2d12,#1c1917);" onclick="openStream('The Flash (2023)')">
+                  <span style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,0.16);width:max-content;margin-bottom:6px;">Fantasy</span>
+                  <strong style="font-size:14px;">The Flash (2023)</strong>
+                  <p style="font-size:11px;color:var(--muted);margin-top:4px;padding-right:34px;">Worlds collide when Barry uses his superpowers to travel back in time.</p>
+                  <button type="button" class="${p}-play-fab" aria-label="Play The Flash">▶</button>
+                </article>
+                <article class="${p}-movie-card" style="background:linear-gradient(160deg,#1e3a8a,#0f172a);" onclick="openStream('Manifest — Final Season')">
+                  <span style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,0.16);width:max-content;margin-bottom:6px;">Mystery</span>
+                  <strong style="font-size:14px;">Manifest</strong>
+                  <p style="font-size:11px;color:var(--muted);margin-top:4px;padding-right:34px;">Flight 828 passengers return after five years to face their callings.</p>
+                  <button type="button" class="${p}-play-fab" aria-label="Play Manifest">▶</button>
+                </article>
+                <article class="${p}-movie-card" style="background:linear-gradient(160deg,#701a75,#1e1b4b);" onclick="openStream('Elemental (Disney•Pixar)')">
+                  <span style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,0.16);width:max-content;margin-bottom:6px;">Animation</span>
+                  <strong style="font-size:14px;">Elemental</strong>
+                  <p style="font-size:11px;color:var(--muted);margin-top:4px;padding-right:34px;">Fire and water residents discover how much they actually have in common.</p>
+                  <button type="button" class="${p}-play-fab" aria-label="Play Elemental">▶</button>
+                </article>
+                <article class="${p}-movie-card" style="background:linear-gradient(160deg,#78350f,#09090b);" onclick="openStream('Interstellar (IMAX 70mm Spatial)')">
+                  <span style="font-size:10px;padding:3px 8px;border-radius:999px;background:rgba(255,255,255,0.16);width:max-content;margin-bottom:6px;">Sci-Fi</span>
+                  <strong style="font-size:14px;">Interstellar</strong>
+                  <p style="font-size:11px;color:var(--muted);margin-top:4px;padding-right:34px;">Explorers travel through a wormhole near Saturn in search of a new home.</p>
+                  <button type="button" class="${p}-play-fab" aria-label="Play Interstellar">▶</button>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="stearyModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="stearyModalTitle">
+    <div style="max-width:480px;width:100%;background:rgba(30,32,38,0.95);border:1px solid rgba(255,255,255,0.28);border-radius:28px;padding:32px;text-align:center;">
+      <h2 id="stearyModalTitle" style="font-size:22px;margin-bottom:10px;">Spatial Cinema Stream</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">Streaming in 4K 90Hz Stereoscopic VisionOS Environment with Spatial Audio.</p>
+      <button type="button" style="padding:11px 28px;border-radius:999px;background:#fff;color:#09090b;font-weight:700;border:none;cursor:pointer;" onclick="document.getElementById('stearyModal').classList.remove('is-open')">Close Player</button>
+    </div>
+  </div>
+
+  <script>
+    function openStream(title) {
+      document.getElementById('stearyModalTitle').textContent = title;
+      document.getElementById('stearyModal').classList.add('is-open');
+    }
+    function switchCat(cat, btn) {
+      document.querySelectorAll('.${p}-tab').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('featuredMovieTitle').innerHTML = cat + ' Spotlight:<br>Across the Spider-Verse';
+    }
+  </script>
+</body>
+</html>`;
+  }
+
+  // 15. SWATCH LUXURY CHRONOGRAPH (Dark Slate & Warm Cognac Dual-Circle Geometry + 3D Stitched Leather Smartwatch "12:38" Cutout + Left 01-04 Strikethrough Slide Rail + Vertical "SMART WATCH" & "WATCH" Stencil)
+  // Motion Recipe: Interactive 01-04 Dial & Strap Edition Switcher + 3D Smartwatch Tilt + Cart Drawer Modal
+  if (data.slug === 'swatch-luxury-chronograph') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>S'WATCH — Super Luxury Smart Watches | Chronograph Edition</title>
+  <meta name="description" content="${bp.headlineSub}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --outer-tan: #b88a68;
+      --slate: #161d1f;
+      --slate-deep: #0f1416;
+      --orange: #e05a2b;
+      --peach: #e3b596;
+      --fg: #ffffff;
+      --muted: #9ca3af;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: linear-gradient(135deg, #c89b7b 0%, #9c6f4f 50%, #7c5338 100%);
+      color: var(--fg); font-family: 'Poppins', sans-serif; overflow-x: clip; scroll-behavior: smooth;
+    }
+
+    .${p}-frame {
+      max-width: 1360px; margin: 28px auto; border-radius: 16px;
+      background:
+        radial-gradient(circle at 36% 50%, #c89672 0%, #a37251 22%, transparent 22.2%),
+        radial-gradient(circle at -8% 50%, #171f22 0%, #11181a 40%, transparent 40.2%),
+        radial-gradient(circle at 82% 50%, #1b2427 0%, #12181a 56%, transparent 56.2%),
+        #b08261;
+      box-shadow: 0 36px 80px rgba(0, 0, 0, 0.55);
+      padding: 28px clamp(20px, 4vw, 52px) 36px; position: relative; overflow: hidden; min-height: 84vh;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 10;
+    }
+    .${p}-stage {
+      display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center;
+      position: relative; z-index: 8; margin: 24px 0;
+    }
+    @media (min-width: 980px) {
+      .${p}-stage { grid-template-columns: 110px 1fr 1.15fr 70px; }
+    }
+
+    /* Left 01-04 Strikethrough Number Rail */
+    .${p}-num-rail { display: flex; flex-direction: column; gap: 6px; }
+    .${p}-num-btn {
+      background: none; border: none; color: rgba(255,255,255,0.42); font-family: inherit;
+      font-size: 24px; font-weight: 700; text-align: left; cursor: pointer; position: relative; width: max-content;
+      transition: font-size 0.25s, color 0.25s;
+    }
+    .${p}-num-btn.active {
+      font-size: 64px; color: #ffffff; line-height: 1; margin-bottom: 6px;
+    }
+    .${p}-num-btn.active::after {
+      content: ''; position: absolute; left: -10px; right: -10px; top: 52%;
+      height: 5px; background: var(--orange);
+    }
+
+    /* Center Dual-Halo & 3D Watch Cutout */
+    .${p}-watch-center {
+      position: relative; display: flex; align-items: center; justify-content: center; min-height: 440px;
+    }
+    .${p}-peach-halo {
+      position: absolute; width: 320px; height: 320px; border-radius: 50%;
+      background: var(--peach); display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+    .${p}-orange-core {
+      width: 236px; height: 236px; border-radius: 50%; background: var(--orange);
+    }
+    .${p}-watch-img {
+      position: relative; z-index: 5; height: 450px; width: auto; object-fit: contain;
+      filter: drop-shadow(0 28px 40px rgba(0,0,0,0.75)); transition: transform 0.3s ease;
+    }
+
+    /* Right Copy Block with Vertical SMART WATCH & Orange Bar */
+    .${p}-copy-wrap {
+      display: flex; align-items: stretch; gap: 24px;
+    }
+    .${p}-vert-label {
+      display: flex; flex-direction: column; align-items: center; gap: 14px;
+    }
+    .${p}-vert-label span {
+      writing-mode: vertical-rl; transform: rotate(180deg);
+      font-size: 13px; letter-spacing: 0.24em; color: #d1d5db;
+    }
+    .${p}-vert-bar { width: 4px; flex: 1; min-height: 90px; background: var(--orange); }
+
+    .${p}-h1 {
+      font-size: clamp(36px, 4.8vw, 62px); line-height: 1.12; font-weight: 300; margin-bottom: 18px;
+    }
+    .${p}-h1 strong { font-weight: 700; }
+    .${p}-cart-btn {
+      padding: 13px 28px; background: #e5e7eb; color: #111827; border: none;
+      font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .${p}-cart-btn:hover { background: #ffffff; transform: translateY(-2px); }
+
+    /* Far-Right Giant Vertical WATCH Stencil */
+    .${p}-stencil {
+      writing-mode: vertical-rl; transform: rotate(180deg);
+      font-size: clamp(54px, 6.5vw, 88px); font-weight: 800; letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.14); user-select: none; text-align: center;
+    }
+
+    .${p}-specs-sec {
+      max-width: 1360px; margin: 0 auto 56px; border-radius: 16px;
+      background: #141b1d; padding: 42px clamp(20px, 4vw, 52px);
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;
+    }
+    .${p}-modal { position: fixed; inset: 0; z-index: 900; background: rgba(15,20,22,0.88); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .${p}-modal.is-open { display: flex; }
+  </style>
+</head>
+<body style="padding: 0 16px;">
+  <div class="${p}-frame">
+    <header class="${p}-nav">
+      <div style="display:flex;align-items:center;gap:22px;">
+        <span style="font-size:20px;">☰</span>
+        <strong style="font-size:16px;letter-spacing:0.08em;">S'WATCH</strong>
+      </div>
+      <nav style="display:flex;gap:36px;" aria-label="Main Navigation">
+        <a href="#watchSpecs" style="color:#fff;text-decoration:none;font-size:13px;font-weight:600;border-bottom:2px solid #fff;padding-bottom:4px;">MEN</a>
+        <a href="#watchSpecs" style="color:#d1d5db;text-decoration:none;font-size:13px;font-weight:500;">WOMEN</a>
+      </nav>
+      <div style="display:flex;gap:20px;align-items:center;font-size:15px;">
+        <span>🔍</span><span>👤</span>
+        <button type="button" id="exploreMagneticBtn" style="background:none;border:none;color:#fff;cursor:pointer;font-size:16px;">🛒</button>
+      </div>
+    </header>
+
+    <main class="${p}-stage">
+      <!-- 01-04 Strikethrough Rail -->
+      <div class="${p}-num-rail" role="tablist" aria-label="Chronograph Editions">
+        <button type="button" class="${p}-num-btn active" onclick="selectWatch(0, this)">01</button>
+        <button type="button" class="${p}-num-btn" onclick="selectWatch(1, this)">02</button>
+        <button type="button" class="${p}-num-btn" onclick="selectWatch(2, this)">03</button>
+        <button type="button" class="${p}-num-btn" onclick="selectWatch(3, this)">04</button>
+      </div>
+
+      <!-- Center Dual Halo + 3D Smartwatch Cutout -->
+      <div class="${p}-watch-center">
+        <div class="${p}-peach-halo"><div class="${p}-orange-core" id="watchCore"></div></div>
+        <img src="assets/cutout.webp" alt="S'Watch 3D Luxury Chronograph Smartwatch" class="${p}-watch-img" id="watchCutout" />
+      </div>
+
+      <!-- Right Editorial Typography -->
+      <div class="${p}-copy-wrap">
+        <div class="${p}-vert-label">
+          <span>SMART WATCH</span>
+          <div class="${p}-vert-bar"></div>
+        </div>
+        <div>
+          <h1 class="${p}-h1" id="watchHeadline">
+            Super <strong>Luxury</strong><br>
+            <strong>Super</strong> Watches
+          </h1>
+          <p style="font-size:15px;color:#cbd5e1;max-width:380px;line-height:1.7;margin-bottom:28px;" id="watchDesc">
+            Hand-stitched Italian cognac saddle leather meets a grade-5 matte titanium bezel, sapphire AMOLED always-on telemetry dial, and 14-day chronograph battery reserve.
+          </p>
+          <button type="button" class="${p}-cart-btn" id="watchPriceBtn" onclick="document.getElementById('swatchModal').classList.add('is-open')">
+            Add to Cart - $ 359
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Vertical WATCH Stencil -->
+      <div class="${p}-stencil" aria-hidden="true">WATCH</div>
+    </main>
+
+    <footer style="display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;font-size:14px;">
+      <div style="display:flex;gap:18px;"><span>f</span><span>◎</span><span>𝕏</span></div>
+      <span style="width:22px;height:34px;border:2px solid #fff;border-radius:99px;display:inline-flex;justify-content:center;padding-top:5px;"><span style="width:2px;height:6px;background:#fff;"></span></span>
+    </footer>
+  </div>
+
+  <section id="watchSpecs" class="${p}-specs-sec">
+    <div><strong style="color:var(--orange);font-size:22px;">SAPPHIRE OLED</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">1,000-nit always-on fitness rings &amp; chronograph complications.</p></div>
+    <div><strong style="color:var(--orange);font-size:22px;">5 ATM TITANIUM</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">DLC matte-black titanium case with tactile crown encoder.</p></div>
+    <div><strong style="color:var(--orange);font-size:22px;">ITALIAN CALFSKIN</strong><p style="font-size:13px;color:var(--muted);margin-top:6px;">Quick-release cognac leather strap with deployant clasp.</p></div>
+  </section>
+
+  <div id="swatchModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="swatchModalTitle">
+    <div style="max-width:440px;width:100%;background:#161d1f;border:1px solid var(--orange);padding:32px;text-align:center;">
+      <h2 id="swatchModalTitle" style="font-size:24px;margin-bottom:8px;">S'WATCH Chronograph — $359</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">Includes complimentary express insured shipping and 5-year international movement warranty.</p>
+      <button type="button" style="width:100%;padding:12px;background:var(--orange);color:#fff;font-weight:700;border:none;cursor:pointer;" onclick="document.getElementById('swatchModal').classList.remove('is-open')">Proceed to Express Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    var editions = [
+      { h: 'Super <strong>Luxury</strong><br><strong>Super</strong> Watches', p: 'Add to Cart - $ 359', c: '#e05a2b' },
+      { h: 'Obsidian <strong>Titanium</strong><br><strong>Chrono</strong> Pro', p: 'Add to Cart - $ 429', c: '#0ea5e9' },
+      { h: 'Cognac <strong>Heritage</strong><br><strong>Tourbillon</strong> OS', p: 'Add to Cart - $ 489', c: '#10b981' },
+      { h: 'Carbon <strong>Stealth</strong><br><strong>Sapphire</strong> Edition', p: 'Add to Cart - $ 549', c: '#f59e0b' }
+    ];
+    function selectWatch(idx, btn) {
+      document.querySelectorAll('.${p}-num-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('watchHeadline').innerHTML = editions[idx].h;
+      document.getElementById('watchPriceBtn').textContent = editions[idx].p;
+      document.getElementById('watchCore').style.background = editions[idx].c;
+    }
+    document.getElementById('exploreMagneticBtn').addEventListener('click', function(){
+      document.getElementById('swatchModal').classList.add('is-open');
+    });
   </script>
 </body>
 </html>`;

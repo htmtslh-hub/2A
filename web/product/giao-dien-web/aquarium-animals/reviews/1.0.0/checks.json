@@ -1,0 +1,38 @@
+{
+  "slug": "aquarium-animals",
+  "passed": true,
+  "viewports": [
+    {
+      "viewport": "desktop-1440",
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "h1Present": true,
+      "errors": []
+    },
+    {
+      "viewport": "laptop-1024",
+      "width": 1024,
+      "height": 768,
+      "overflow": false,
+      "h1Present": true,
+      "errors": []
+    },
+    {
+      "viewport": "tablet-768",
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "h1Present": true,
+      "errors": []
+    },
+    {
+      "viewport": "mobile-375",
+      "width": 375,
+      "height": 812,
+      "overflow": false,
+      "h1Present": true,
+      "errors": []
+    }
+  ]
+}

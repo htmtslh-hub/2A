@@ -1,0 +1,38 @@
+{
+  "id": "t160",
+  "slug": "industrix-engineering",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-28T02:09:11.607Z",
+  "demo": "/demos/industrix-engineering/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "f5fb47bb2d1d",
+  "sha256": "f5fb47bb2d1ddeae3f6bdfece57abc6ff8ee64af7a719458206843bc5d770776",
+  "demoHtmlSha256": "92d913dfb5b18c8187e2975350760baa7dc0df52b53ea70d34d2ea2ad64609ff",
+  "demoSha256": "ecbbc96c3c416b2e24cacd67b71075e7d86fe80778a7d55cddfdc9d2a98dd7cb",
+  "bytes": 507992,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 932
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\industrix-engineering-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\industrix-engineering-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\industrix-engineering-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\industrix-engineering-return.jpg"
+  ]
+}

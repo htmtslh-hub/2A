@@ -1,0 +1,38 @@
+{
+  "id": "t163",
+  "slug": "steary-spatial-cinema",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-28T02:10:48.179Z",
+  "demo": "/demos/steary-spatial-cinema/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "74f365fba54d",
+  "sha256": "74f365fba54db490f41434d027939bf0e24fcd3e936fed0b72b5d8c44f12148e",
+  "demoHtmlSha256": "0358fb6c4ffafe9ed3cc68376499b19f89e4004e6f4a52149a8aa5ae53f5a20e",
+  "demoSha256": "62dd66fb358e23e888d7f7694bba7533c439a3094987bade144e0f656959e45f",
+  "bytes": 182665,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\steary-spatial-cinema-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\steary-spatial-cinema-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\steary-spatial-cinema-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\steary-spatial-cinema-return.jpg"
+  ]
+}

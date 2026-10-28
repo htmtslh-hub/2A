@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>FLASH — Time To Travel | Rocky Mountain National Park Expeditions</title>
+  <meta name="description" content="Moody alpine & turquoise glacial lake adventure portal with TIME TO TRAVEL cyan headline, 01–05 vertical slide rail, 3D Rocky Mountain diorama cutout, Popular Tours 4-card gallery, and staggered video grid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030708;
+      --surface: #0a1417;
+      --cyan: #38e8ff;
+      --fg: #ffffff;
+      --muted: #94a3b8;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Montserrat', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+
+    .fla31-hero {
+      position: relative; min-height: 100vh; padding: 24px clamp(20px, 5vw, 72px) 56px;
+      background:
+        linear-gradient(180deg, rgba(3,7,8,0.35) 0%, rgba(10,32,38,0.55) 55%, #030708 100%),
+        radial-gradient(circle at 60% 42%, #164e63 0%, #07191e 55%, #030708 100%);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .fla31-nav {
+      max-width: 1320px; width: 100%; margin: 0 auto; padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.16);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .fla31-hero-grid {
+      max-width: 1320px; width: 100%; margin: 36px auto;
+      display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; position: relative;
+    }
+    @media (min-width: 980px) {
+      .fla31-hero-grid { grid-template-columns: 1.05fr 0.85fr 60px; }
+    }
+    .fla31-h1 {
+      font-size: clamp(42px, 6.2vw, 78px); font-weight: 700; color: var(--cyan);
+      letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.02;
+      text-shadow: 0 0 36px rgba(56, 232, 255, 0.35); margin-bottom: 18px;
+    }
+    .fla31-diorama-img {
+      width: 100%; max-width: 420px; height: auto; object-fit: contain; display: block; margin: 0 auto;
+      filter: drop-shadow(0 28px 44px rgba(0,0,0,0.85));
+    }
+    .fla31-slide-rail {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 12px; font-size: 13px; color: var(--muted);
+    }
+    .fla31-slide-rail button {
+      background: none; border: none; color: inherit; font-family: inherit; cursor: pointer; padding: 4px 0;
+    }
+    .fla31-slide-rail button.active {
+      color: #fff; font-size: 20px; font-weight: 700; border-bottom: 2px solid var(--cyan); padding-right: 18px;
+    }
+
+    .fla31-bottom-3 {
+      max-width: 1320px; width: 100%; margin: 0 auto; padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.14);
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px;
+    }
+    .fla31-info-col { display: flex; gap: 16px; align-items: flex-start; }
+    .fla31-info-icon { color: var(--cyan); font-size: 22px; flex-shrink: 0; }
+    .fla31-more-link { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: #fff; text-decoration: none; }
+
+    /* POPULAR TOURS 4-CARD GALLERY */
+    .fla31-tours-sec { max-width: 1240px; margin: 0 auto; padding: 88px 24px; text-align: center; }
+    .fla31-tours-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px;
+      margin-top: 44px; align-items: center;
+    }
+    .fla31-tour-card {
+      height: 360px; padding: 26px; display: flex; flex-direction: column; justify-content: flex-end;
+      border: 1px solid rgba(255,255,255,0.14); position: relative; overflow: hidden; cursor: pointer;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .fla31-tour-card.featured {
+      height: 400px; border: 3px solid #ffffff; box-shadow: 0 24px 60px rgba(56,232,255,0.18);
+    }
+    .fla31-tour-card:hover { transform: translateY(-8px); border-color: var(--cyan); }
+
+    /* DISCOVER THE WORLD IN A NEW WAY */
+    .fla31-discover-sec {
+      max-width: 1320px; margin: 0 auto; padding: 72px 24px 96px;
+      background: radial-gradient(circle at 30% 50%, rgba(16, 68, 56, 0.38), transparent 70%);
+      display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center;
+    }
+    @media (min-width: 980px) {
+      .fla31-discover-sec { grid-template-columns: 0.95fr 1.05fr; }
+    }
+    .fla31-vid-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .fla31-vid-thumb {
+      height: 135px; border: 1px solid rgba(56,232,255,0.28);
+      background: linear-gradient(135deg, #0f2930, #061317);
+      display: flex; align-items: center; justify-content: center; cursor: pointer; position: relative;
+    }
+    .fla31-play-circle {
+      width: 44px; height: 44px; border-radius: 50%; border: 2px solid #fff;
+      display: inline-flex; align-items: center; justify-content: center; font-size: 14px;
+    }
+    .fla31-modal { position: fixed; inset: 0; z-index: 900; background: rgba(3,7,8,0.9); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .fla31-modal.is-open { display: flex; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="fla31-hero">
+      <header class="fla31-nav">
+        <strong style="font-size:15px;letter-spacing:0.22em;">⛰️ FLASH</strong>
+        <nav style="display:flex;gap:26px;" aria-label="Main Navigation">
+          <a href="#popularTours" style="color:#fff;text-decoration:none;font-size:11px;letter-spacing:0.14em;">MAIN</a>
+          <a href="#popularTours" style="color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:0.14em;">ABOUT US</a>
+          <a href="#popularTours" style="color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:0.14em;">TOURS</a>
+          <a href="#discoverWorld" style="color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:0.14em;">GALLERY</a>
+          <a href="#discoverWorld" style="color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:0.14em;">CONTACTS</a>
+        </nav>
+        <button type="button" id="exploreMagneticBtn" style="background:none;border:1px solid var(--cyan);color:var(--cyan);padding:7px 18px;font-size:11px;font-weight:700;cursor:pointer;">BOOK TREK</button>
+      </header>
+
+      <div class="fla31-hero-grid">
+        <div>
+          <h1 class="fla31-h1" id="rockyTitle">TIME TO TRAVEL</h1>
+          <p style="font-size:14px;color:#cbd5e1;max-width:480px;line-height:1.7;" id="rockyDesc">
+            The best time to visit Rocky Mountain National Park is from June to September when the snow is melted and alpine trails to Longs Peak (14,259 ft) and Emerald Glacier Lake are open.
+          </p>
+        </div>
+
+        <div>
+          <img src="assets/cutout.webp" alt="3D Rocky Mountain &amp; Turquoise Glacial Lake Diorama" class="fla31-diorama-img" />
+        </div>
+
+        <div class="fla31-slide-rail" role="tablist" aria-label="Expedition Peaks">
+          <button type="button" onclick="setPeak(0, this)">01</button>
+          <button type="button" onclick="setPeak(1, this)">02</button>
+          <button type="button" class="active" onclick="setPeak(2, this)">03</button>
+          <button type="button" onclick="setPeak(3, this)">04</button>
+          <button type="button" onclick="setPeak(4, this)">05</button>
+        </div>
+      </div>
+
+      <div class="fla31-bottom-3">
+        <div class="fla31-info-col">
+          <span class="fla31-info-icon">🗺️</span>
+          <div>
+            <p style="font-size:12px;color:var(--muted);line-height:1.55;">The Crown Jewel of Rocky Mountain NP, Longs Peak is one of the most coveted 14er summits in the West.</p>
+            <a href="#popularTours" class="fla31-more-link">MORE DETAILED ➔</a>
+          </div>
+        </div>
+        <div class="fla31-info-col">
+          <span class="fla31-info-icon">🧭</span>
+          <div>
+            <p style="font-size:12px;color:var(--muted);line-height:1.55;">Our alpine route is tailored for hikers seeking turquoise glacial tarns and continental divide vistas.</p>
+            <a href="#popularTours" class="fla31-more-link">MORE DETAILED ➔</a>
+          </div>
+        </div>
+        <div class="fla31-info-col">
+          <span class="fla31-info-icon">🏕️</span>
+          <div>
+            <p style="font-size:12px;color:var(--muted);line-height:1.55;">Historic high-altitude trails cross subalpine fir forests, waterfalls, and backcountry basecamps.</p>
+            <a href="#popularTours" class="fla31-more-link">MORE DETAILED ➔</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="popularTours" class="fla31-tours-sec">
+      <span style="font-size:13px;font-weight:700;color:var(--cyan);letter-spacing:0.18em;">POPULAR TOURS</span>
+      <p style="font-size:13px;color:var(--muted);margin-top:6px;">Select a guided backcountry route across the Continental Divide</p>
+
+      <div class="fla31-tours-grid">
+        <article class="fla31-tour-card" style="background:linear-gradient(180deg,rgba(16,42,38,0.3),#061412);">
+          <strong style="font-size:16px;letter-spacing:0.1em;">TOUR 1</strong>
+          <span style="font-size:12px;color:var(--muted);margin-top:4px;">Pine Forest &amp; Bear Lake Loop</span>
+        </article>
+        <article class="fla31-tour-card featured" style="background:linear-gradient(180deg,rgba(22,78,99,0.45),#071e26);">
+          <span style="position:absolute;top:14px;right:14px;font-size:10px;background:var(--cyan);color:#030708;padding:3px 8px;font-weight:800;">FEATURED</span>
+          <strong style="font-size:18px;letter-spacing:0.1em;">TOUR 2</strong>
+          <span style="font-size:12px;color:#e2e8f0;margin-top:4px;">Emerald Glacial Tarn &amp; Longs Peak</span>
+        </article>
+        <article class="fla31-tour-card" style="background:linear-gradient(180deg,rgba(30,41,59,0.35),#090d16);">
+          <strong style="font-size:16px;letter-spacing:0.1em;">TOUR 3</strong>
+          <span style="font-size:12px;color:var(--muted);margin-top:4px;">Continental Divide Ridge Summit</span>
+        </article>
+        <article class="fla31-tour-card" style="background:linear-gradient(180deg,rgba(6,78,59,0.35),#04130f);">
+          <strong style="font-size:16px;letter-spacing:0.1em;">TOUR 4</strong>
+          <span style="font-size:12px;color:var(--muted);margin-top:4px;">Alberta Falls &amp; Loch Vale Gorge</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="discoverWorld" class="fla31-discover-sec">
+      <div>
+        <h2 style="font-size:clamp(30px,4.5vw,52px);color:var(--cyan);letter-spacing:0.06em;line-height:1.12;margin-bottom:24px;">
+          DISCOVER THE<br>WORLD IN A<br>NEW WAY
+        </h2>
+        <button type="button" onclick="document.getElementById('rockyModal').classList.add('is-open')" style="background:none;border:none;color:#fff;display:inline-flex;align-items:center;gap:14px;cursor:pointer;margin-bottom:24px;">
+          <span class="fla31-play-circle">▶</span>
+          <span style="font-size:12px;font-weight:700;letter-spacing:0.16em;">WATCH THE VIDEO</span>
+        </button>
+        <blockquote style="font-size:13px;color:var(--muted);line-height:1.7;border-left:2px solid var(--cyan);padding-left:16px;">
+          "Have you ever heard an avalanche roar in the mountains? Just after the avalanche roars, and there is absolute silence. You stop understanding where you are — that's 100% pure wilderness."
+          <footer style="margin-top:8px;color:#fff;font-weight:600;">— Haruki Murakami</footer>
+        </blockquote>
+      </div>
+
+      <div class="fla31-vid-grid">
+        <div class="fla31-vid-thumb" onclick="document.getElementById('rockyModal').classList.add('is-open')"><span class="fla31-play-circle">▶</span></div>
+        <div class="fla31-vid-thumb" onclick="document.getElementById('rockyModal').classList.add('is-open')"><span class="fla31-play-circle">▶</span></div>
+        <div class="fla31-vid-thumb" onclick="document.getElementById('rockyModal').classList.add('is-open')"><span class="fla31-play-circle">▶</span></div>
+        <div class="fla31-vid-thumb" onclick="document.getElementById('rockyModal').classList.add('is-open')"><span class="fla31-play-circle">▶</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="rockyModal" class="fla31-modal" role="dialog" aria-modal="true" aria-labelledby="rockyModalTitle">
+    <div style="max-width:480px;width:100%;background:#0a1417;border:1px solid var(--cyan);padding:32px;">
+      <h2 id="rockyModalTitle" style="font-size:22px;color:var(--cyan);margin-bottom:10px;">Rocky Mountain 4K Expedition Reel</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6;">Reserve your spot on the June–September Longs Peak &amp; Dream Lake backcountry expedition.</p>
+      <button type="button" style="width:100%;padding:12px;background:var(--cyan);color:#030708;font-weight:800;border:none;cursor:pointer;" onclick="document.getElementById('rockyModal').classList.remove('is-open')">Reserve Alpine Permit</button>
+    </div>
+  </div>
+
+  <script>
+    var peaks = [
+      { t: '01 // DREAM LAKE DAWN', d: 'Sub-alpine glacial basin reflecting Hallett Peak at 9,905 ft elevation.' },
+      { t: '02 // EMERALD TARN TRAIL', d: 'Crystal-clear snowmelt waters framed by sheer granite cirques.' },
+      { t: 'TIME TO TRAVEL', d: 'The best time to visit Rocky Mountain National Park is from June to September when the snow is melted and alpine trails to Longs Peak are open.' },
+      { t: '04 // LONGS PEAK KEYHOLE', d: '14,259 ft summit scramble above the clouds on the Continental Divide.' },
+      { t: '05 // LOCH VALE WATERFALLS', d: 'Old-growth spruce canyon leading to Timberline Falls and Sky Pond.' }
+    ];
+    function setPeak(idx, btn) {
+      document.querySelectorAll('.fla31-slide-rail button').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('rockyTitle').textContent = peaks[idx].t;
+      document.getElementById('rockyDesc').textContent = peaks[idx].d;
+    }
+    document.getElementById('exploreMagneticBtn').addEventListener('click', function(){
+      document.getElementById('rockyModal').classList.add('is-open');
+    });
+  </script>
+</body>
+</html>

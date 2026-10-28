@@ -46,6 +46,123 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t164: {
+    slug: 'swatch-luxury-chronograph',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "S'Watch Luxury Chronograph",
+        desc: "S'Watch Luxury Chronograph (dual-circle-chronograph) — Dark slate and warm cognac-terracotta dual-circle geometry framing a 3D stitched leather smartwatch cutout (12:38 OLED dial), interactive 01–04 strikethrough slide rail, and vertical WATCH stencil.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "S'Watch Luxury Chronograph",
+        desc: "S'Watch Luxury Chronograph (dual-circle-chronograph) — Dark slate and warm cognac-terracotta dual-circle geometry framing a 3D stitched leather smartwatch cutout (12:38 OLED dial), interactive 01–04 strikethrough slide rail, and vertical WATCH stencil.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "S'Watch Luxury Chronograph",
+        desc: "S'Watch Luxury Chronograph (dual-circle-chronograph) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t163: {
+    slug: 'steary-spatial-cinema',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Steary Spatial Cinema",
+        desc: "Steary Spatial Cinema (visionos-spatial-streaming) — Apple VisionOS spatial glassmorphic streaming app with floating steary.com address bar, vertical glass dock, New Trailer sidebar, 3D multiverse portal hero banner, and interactive 4-card movie row.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Steary Spatial Cinema",
+        desc: "Steary Spatial Cinema (visionos-spatial-streaming) — Apple VisionOS spatial glassmorphic streaming app with floating steary.com address bar, vertical glass dock, New Trailer sidebar, 3D multiverse portal hero banner, and interactive 4-card movie row.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Steary Spatial Cinema",
+        desc: "Steary Spatial Cinema (visionos-spatial-streaming) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t162: {
+    slug: 'flash-rocky-mountain',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Flash Rocky Mountain",
+        desc: "Flash Rocky Mountain (alpine-glacier-expedition) — Moody alpine & turquoise glacial lake adventure portal with TIME TO TRAVEL cyan headline, 01–05 vertical slide rail, 3D Rocky Mountain diorama cutout, Popular Tours 4-card gallery, and staggered video grid.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Flash Rocky Mountain",
+        desc: "Flash Rocky Mountain (alpine-glacier-expedition) — Moody alpine & turquoise glacial lake adventure portal with TIME TO TRAVEL cyan headline, 01–05 vertical slide rail, 3D Rocky Mountain diorama cutout, Popular Tours 4-card gallery, and staggered video grid.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Flash Rocky Mountain",
+        desc: "Flash Rocky Mountain (alpine-glacier-expedition) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t161: {
+    slug: 'aquarium-animals',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Aquarium Animals",
+        desc: "Aquarium Animals (abyssal-popout-triptych) — Deep ocean marine sanctuary showcase featuring tall condensed ANIMALS typography and 3 out-of-bounds 3D pop-out cards (Sea Lions, Bioluminescent Jellyfish cutout, Manta Ray) with straddling yellow arrow buttons.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Aquarium Animals",
+        desc: "Aquarium Animals (abyssal-popout-triptych) — Deep ocean marine sanctuary showcase featuring tall condensed ANIMALS typography and 3 out-of-bounds 3D pop-out cards (Sea Lions, Bioluminescent Jellyfish cutout, Manta Ray) with straddling yellow arrow buttons.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Aquarium Animals",
+        desc: "Aquarium Animals (abyssal-popout-triptych) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t160: {
+    slug: 'industrix-engineering',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Industrix Engineering",
+        desc: "Industrix Engineering (copper-ribbed-industrial) — Industrial automation & heavy engineering showcase with ribbed bronze-copper metallic columns, 3D brushed-copper arrow monument & turbine gear cutout, 4-stat telemetry, and 6-step commissioning grid.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Industrix Engineering",
+        desc: "Industrix Engineering (copper-ribbed-industrial) — Industrial automation & heavy engineering showcase with ribbed bronze-copper metallic columns, 3D brushed-copper arrow monument & turbine gear cutout, 4-stat telemetry, and 6-step commissioning grid.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Industrix Engineering",
+        desc: "Industrix Engineering (copper-ribbed-industrial) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
   t159: {
     slug: 'luminex-atelier',
     cat: 'commerce',

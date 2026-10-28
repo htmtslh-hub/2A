@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>INDUSTRIX ENGINEERING — Industrial Automation &amp; Plant Engineering</title>
+  <meta name="description" content="Industrial automation & heavy engineering showcase with ribbed bronze-copper metallic columns, 3D brushed-copper arrow monument & turbine gear cutout, 4-stat telemetry, and 6-step commissioning grid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070504;
+      --copper: #d95d16;
+      --copper-bright: #f97316;
+      --fg: #ffffff;
+      --muted: #b8aba3;
+      --border: rgba(249, 115, 22, 0.25);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
+    .font-ind { font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; }
+
+    .ind97-hero {
+      position: relative; min-height: 92vh; max-width: 1360px; margin: 18px auto 0;
+      border: 1px solid rgba(255,255,255,0.22); overflow: hidden; padding: 28px clamp(20px, 4vw, 56px) 44px;
+      background:
+        radial-gradient(circle at 52% 68%, rgba(249,115,22,0.42) 0%, rgba(7,5,4,0.88) 64%),
+        repeating-linear-gradient(90deg, #2b1206 0px, #5c260c 28px, #120804 56px, #070504 84px);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .ind97-top-bar { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+    .ind97-plus-note { font-size: 13px; color: #f3ece7; max-width: 280px; line-height: 1.45; position: relative; padding-left: 20px; }
+    .ind97-plus-note::before { content: '+'; position: absolute; left: 0; top: -2px; color: var(--copper-bright); font-weight: 700; font-size: 18px; }
+
+    .ind97-giant-title {
+      font-size: clamp(46px, 8.8vw, 128px); font-weight: 700; line-height: 0.92; letter-spacing: -0.02em;
+      margin: 18px 0 0; position: relative; z-index: 3;
+    }
+    .ind97-giant-title .line-2 { display: block; padding-left: clamp(24px, 12vw, 190px); }
+
+    .ind97-stage-center {
+      position: relative; z-index: 4; margin: -24px auto -10px; text-align: center;
+    }
+    .ind97-cutout-img {
+      width: 100%; max-width: 410px; height: auto; object-fit: contain; display: block; margin: 0 auto;
+      filter: drop-shadow(0 28px 48px rgba(0,0,0,0.9)); transition: transform 0.3s ease;
+    }
+    .ind97-bottom-bar { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; position: relative; z-index: 5; }
+
+    /* 2-Column Bento Panels (Stats Left + 6-Step Matrix Right) */
+    .ind97-bento-row {
+      max-width: 1360px; margin: 24px auto 0; display: grid; grid-template-columns: 1fr; gap: 24px;
+    }
+    @media (min-width: 980px) {
+      .ind97-bento-row { grid-template-columns: 1fr 1fr; }
+    }
+    .ind97-panel {
+      border: 1px solid rgba(255,255,255,0.22); padding: clamp(24px, 3.5vw, 42px);
+      background:
+        radial-gradient(circle at 80% 80%, rgba(217,93,22,0.32), transparent 60%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 96px),
+        #0c0806;
+    }
+    .ind97-stats-4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 32px; }
+    @media (min-width: 640px) { .ind97-stats-4 { grid-template-columns: repeat(4, 1fr); } }
+    .ind97-stat-num { font-size: clamp(30px, 3.6vw, 46px); font-weight: 600; color: #fff; display: block; }
+    .ind97-stat-lbl { font-size: 12px; color: var(--muted); margin-top: 4px; display: block; line-height: 1.4; }
+
+    .ind97-matrix-6 { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid rgba(255,255,255,0.16); margin-top: 24px; }
+    .ind97-mcell {
+      padding: 18px 14px; border-right: 1px solid rgba(255,255,255,0.14); border-bottom: 1px solid rgba(255,255,255,0.14);
+      background: rgba(217,93,22,0.08); transition: background 0.25s;
+    }
+    .ind97-mcell:hover { background: rgba(249,115,22,0.28); }
+    .ind97-mcell strong { display: block; text-align: right; font-size: 20px; margin-bottom: 18px; color: #fff; }
+    .ind97-mcell span { font-size: 11px; color: #e5dcd6; line-height: 1.4; display: block; }
+
+    .ind97-footer-box {
+      max-width: 1360px; margin: 24px auto 48px; border: 1px solid rgba(255,255,255,0.22);
+      background: #090706; padding: clamp(28px, 4vw, 56px) clamp(20px, 4vw, 56px) 0;
+    }
+    .ind97-orange-banner {
+      margin: 36px calc(-1 * clamp(20px, 4vw, 56px)) 0; background: linear-gradient(90deg, #ea580c, #9a3412);
+      padding: 18px 24px; text-align: center; font-size: clamp(28px, 5.8vw, 82px); font-weight: 700; letter-spacing: 0.02em;
+    }
+    .ind97-modal { position: fixed; inset: 0; z-index: 900; background: rgba(7,5,4,0.88); backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .ind97-modal.is-open { display: flex; }
+  </style>
+</head>
+<body style="padding: 0 16px;">
+  <main>
+    <section class="ind97-hero">
+      <div class="ind97-top-bar">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <span style="width:12px;height:12px;background:var(--copper-bright);display:inline-block;"></span>
+          <strong class="font-ind" style="font-size:14px;letter-spacing:0.14em;">INDUSTRIX // AUTOMATION</strong>
+        </div>
+        <p class="ind97-plus-note">
+          Automation systems engineered to multiply heavy manufacturing throughput &amp; plant OEE efficiency.
+        </p>
+      </div>
+
+      <h1 class="ind97-giant-title font-ind">
+        INDUSTRIX
+        <span class="line-2">ENGINEERING</span>
+      </h1>
+
+      <div class="ind97-stage-center">
+        <img src="assets/cutout.webp" alt="Industrix 3D Copper Monument &amp; Turbine Gear" class="ind97-cutout-img" id="indCutout" />
+      </div>
+
+      <div class="ind97-bottom-bar">
+        <p class="ind97-plus-note">
+          We design, manufacture, and commission turnkey industrial equipment tailored to your facility's exact tolerances.
+        </p>
+        <div style="display:flex;gap:12px;">
+          <button type="button" id="exploreMagneticBtn" style="padding:12px 24px;background:var(--copper-bright);color:#fff;border:none;font-weight:700;font-size:13px;cursor:pointer;">
+            ↘ REQUEST TECHNICAL AUDIT
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="ind97-bento-row">
+      <section class="ind97-panel">
+        <h2 style="font-size:clamp(22px,2.6vw,32px);font-weight:500;line-height:1.2;">
+          Delivering turnkey engineering projects across heavy industries
+        </h2>
+        <div class="ind97-stats-4">
+          <div><span class="ind97-stat-num">15</span><span class="ind97-stat-lbl">years in heavy industrial automation</span></div>
+          <div><span class="ind97-stat-num">120+</span><span class="ind97-stat-lbl">certified control &amp; mechanical engineers</span></div>
+          <div><span class="ind97-stat-num">350+</span><span class="ind97-stat-lbl">commissioned production lines</span></div>
+          <div><span class="ind97-stat-num">95%</span><span class="ind97-stat-lbl">projects delivered ahead of schedule</span></div>
+        </div>
+      </section>
+
+      <section class="ind97-panel">
+        <h2 style="font-size:clamp(22px,2.6vw,32px);font-weight:500;line-height:1.2;">
+          Equipment launch is only the beginning of lifecycle support
+        </h2>
+        <div class="ind97-matrix-6">
+          <div class="ind97-mcell"><strong>1</strong><span>24/7 production line telemetry</span></div>
+          <div class="ind97-mcell"><strong>2</strong><span>Preventive maintenance audits</span></div>
+          <div class="ind97-mcell"><strong>3</strong><span>OEM spare parts logistics</span></div>
+          <div class="ind97-mcell"><strong>4</strong><span>Operator &amp; PLC crew training</span></div>
+          <div class="ind97-mcell"><strong>5</strong><span>SCADA firmware upgrades</span></div>
+          <div class="ind97-mcell"><strong>6</strong><span>Robotic cell retrofitting</span></div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="ind97-footer-box">
+      <h2 style="font-size:clamp(26px,3.8vw,48px);font-weight:500;max-width:880px;line-height:1.18;">
+        Sometimes a single engineering decision transforms the efficiency of an entire plant.
+      </h2>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-top:32px;">
+        <div>
+          <p style="font-size:18px;margin-bottom:8px;">↘ REQUEST A TECHNICAL AUDIT</p>
+          <p style="font-size:13px;color:var(--muted);">info@industrix.engineering • +1 (800) 555-0199</p>
+        </div>
+        <p class="ind97-plus-note">Schedule an on-site engineering inspection and receive a custom automation roadmap.</p>
+      </div>
+      <div class="ind97-orange-banner font-ind">INDUSTRIX ENGINEERING</div>
+    </footer>
+  </main>
+
+  <div id="indModal" class="ind97-modal" role="dialog" aria-modal="true" aria-labelledby="indModalTitle">
+    <div style="max-width:480px;width:100%;background:#140c08;border:1px solid var(--copper-bright);padding:32px;">
+      <h2 id="indModalTitle" class="font-ind" style="font-size:24px;margin-bottom:8px;">Technical Plant Audit</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:18px;">Submit your facility parameters for a full OEE &amp; SCADA automation blueprint.</p>
+      <button type="button" style="width:100%;padding:12px;background:var(--copper-bright);color:#fff;border:none;font-weight:700;cursor:pointer;" onclick="document.getElementById('indModal').classList.remove('is-open')">Confirm Audit Request</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var btn = document.getElementById('exploreMagneticBtn');
+      if (btn) btn.addEventListener('click', function(){ document.getElementById('indModal').classList.add('is-open'); });
+      var img = document.getElementById('indCutout');
+      window.addEventListener('mousemove', function(e){
+        if (!img) return;
+        var nx = (e.clientX / window.innerWidth - 0.5) * 14;
+        var ny = (e.clientY / window.innerHeight - 0.5) * 14;
+        img.style.transform = 'perspective(900px) rotateY(' + nx.toFixed(1) + 'deg) rotateX(' + (-ny).toFixed(1) + 'deg)';
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

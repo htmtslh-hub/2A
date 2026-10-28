@@ -1,0 +1,38 @@
+{
+  "id": "t161",
+  "slug": "aquarium-animals",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-28T02:09:43.507Z",
+  "demo": "/demos/aquarium-animals/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "4cc91fe4e41d",
+  "sha256": "4cc91fe4e41de43364238ed9b946259735694657435882797ac81fe91728ec42",
+  "demoHtmlSha256": "291e8ab0797c6bd77d754a6c8247b41f2c095f7b211e02cb80b68f6435855fc0",
+  "demoSha256": "5866bfb09423377126a68c6ed35f3244e5bdbb5a6f01f4c82f6889c1d48c650e",
+  "bytes": 593135,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 403
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aquarium-animals-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aquarium-animals-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aquarium-animals-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aquarium-animals-return.jpg"
+  ]
+}

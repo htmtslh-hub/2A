@@ -1,0 +1,38 @@
+{
+  "id": "t162",
+  "slug": "flash-rocky-mountain",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-28T02:10:15.851Z",
+  "demo": "/demos/flash-rocky-mountain/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d42f584198db",
+  "sha256": "d42f584198db40f34a4e6c0bdac0142aeb4d9163a1f227100273aaa49963b166",
+  "demoHtmlSha256": "c9091e0050cc05b567234207721813b42f1bb38150cc233bf142c1627c11561c",
+  "demoSha256": "3a2e180823918f5201b92be708eca2d941031568127278455533f647a80c808c",
+  "bytes": 448425,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1192
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\flash-rocky-mountain-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\flash-rocky-mountain-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\flash-rocky-mountain-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\flash-rocky-mountain-return.jpg"
+  ]
+}

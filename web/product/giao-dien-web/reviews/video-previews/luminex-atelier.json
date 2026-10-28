@@ -1,0 +1,48 @@
+{
+  "id": "t159",
+  "slug": "luminex-atelier",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-28T02:02:55.343Z",
+  "demo": "/demos/luminex-atelier/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3322a7fc0f56",
+  "sha256": "3322a7fc0f563acd41e64944dd4301737002bd6484aef2cf4b7309cfee1ba4a1",
+  "demoHtmlSha256": "c3024247935c5cc4a9eb5660dc1367debe193834de7c40ec2c6448ea4d78ab09",
+  "demoSha256": "9b3327f0f9f3cff19b761c6f1e48133c892956b102a035e961ea7a9ab31ca06d",
+  "bytes": 793981,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.486,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.902,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1532
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\luminex-atelier-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\luminex-atelier-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\luminex-atelier-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\luminex-atelier-return.jpg"
+  ]
+}

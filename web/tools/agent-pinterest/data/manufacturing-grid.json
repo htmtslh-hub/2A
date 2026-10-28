@@ -1,0 +1,32 @@
+{
+  "pinId": "local-354e5cc2b81a",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "Manufacturing WordPress Website — Precision Engineering Web Design.jpg",
+  "archivedImagePath": "D:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-28\\Manufacturing WordPress Website — Precision Engineering Web Design.jpg",
+  "title": "Manufacturing Grid",
+  "slug": "manufacturing-grid",
+  "assignedTier": "free",
+  "motionRecipe": {
+    "id": "recipe-parallax-magnetic",
+    "name": "Parallax Depth + 3D Pop-Out + Magnetic CTA",
+    "focus": [
+      "parallax-layers",
+      "magnetic-buttons",
+      "floating-3d-cutout"
+    ],
+    "description": "Tập trung vào chiều sâu thị sai nhiều lớp (Parallax), vật thể 3D nổi lấn khung và nút bấm từ tính nhẹ nhàng."
+  },
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-28\\manufacturing-grid.jpg",
+  "imageBytes": 136919,
+  "imageSha256": "354e5cc2b81a01663ad71024c442ca8bc5645adf3dc37c99b237a03eeefa273e",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 736,
+    "height": 1307,
+    "aspectRatio": 0.56,
+    "reason": "Rejected geometry (736x1307, AR=0.56) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-10-28T02:00:04.088Z"
+}

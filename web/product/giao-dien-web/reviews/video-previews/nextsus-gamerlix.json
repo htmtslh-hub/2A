@@ -1,0 +1,48 @@
+{
+  "id": "t156",
+  "slug": "nextsus-gamerlix",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-28T02:01:18.710Z",
+  "demo": "/demos/nextsus-gamerlix/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0d92027622b3",
+  "sha256": "0d92027622b31137f175b51308acdda7eeaad9f091098b83ade5e2f3476b0eee",
+  "demoHtmlSha256": "3150f8b6ddf8bf24ebe89754c1525f3f0bfd53c127bc62d96fa24024a2d156b4",
+  "demoSha256": "7c4d725eb91572e0f2bedfa9f130c2e2ea89579f986d81afa82f7bcfa2776c6b",
+  "bytes": 694076,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.525,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.907,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1492
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nextsus-gamerlix-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nextsus-gamerlix-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nextsus-gamerlix-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nextsus-gamerlix-return.jpg"
+  ]
+}

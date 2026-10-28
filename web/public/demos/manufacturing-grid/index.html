@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Lunar Oasis Villa — Interactive 3D Hero &amp; Motion Showcase</title>
+  <meta name="description" content="Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* hallmark · v2.0.0 · blueprint=lunar-villa · slug=manufacturing-grid */
+    :root {
+      --bg: #0c1116;
+      --surface: #151e26;
+      --glass: rgba(255, 255, 255, 0.10);
+      --fg: #f8fafc;
+      --muted: #cbd5e1;
+      --border: rgba(255, 255, 255, 0.16);
+      --accent: #eab308;
+      --accent-2: #2dd4bf;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      overflow-x: clip;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Group 2.5: Custom Follower Cursor with Blend-Mode Difference */
+    .man90-cursor-ring,
+    .man90-cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      border-radius: 50%;
+      transform: translate3d(-100px, -100px, 0);
+      transition: width 0.24s ease, height 0.24s ease, background-color 0.24s ease;
+      mix-blend-mode: difference;
+    }
+    .man90-cursor-ring {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid #ffffff;
+      margin-left: -18px;
+      margin-top: -18px;
+    }
+    .man90-cursor-ring.is-hovered {
+      width: 64px;
+      height: 64px;
+      margin-left: -32px;
+      margin-top: -32px;
+      background: #ffffff;
+    }
+    .man90-cursor-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      margin-left: -3.5px;
+      margin-top: -3.5px;
+    }
+    @media (max-width: 900px) {
+      .man90-cursor-ring, .man90-cursor-dot { display: none; }
+    }
+
+    /* Criterion 6: Minimalist Edge Navigation */
+    .man90-edge-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 220;
+      padding: 18px clamp(18px, 4vw, 52px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      pointer-events: none;
+    }
+    .man90-edge-top > * { pointer-events: auto; }
+    .man90-brand {
+      text-decoration: none;
+      color: var(--fg);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .man90-brand-mark {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px var(--accent);
+    }
+    .man90-nav-links {
+      display: none;
+      list-style: none;
+      gap: 24px;
+      padding: 8px 20px;
+      border-radius: 999px;
+      background: var(--glass);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+    }
+    @media (min-width: 900px) {
+      .man90-nav-links { display: flex; }
+    }
+    .man90-nav-links a {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0.82;
+      transition: opacity 0.2s ease;
+    }
+    .man90-nav-links a:hover { opacity: 1; }
+    .man90-edge-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .man90-pill-btn {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      color: var(--fg);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .man90-cta-magnetic {
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: var(--accent);
+      color: #090b10;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Left & Right Minimalist Edge Slide Rails */
+    .man90-edge-left,
+    .man90-edge-right {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 130;
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+    }
+    @media (min-width: 1120px) {
+      .man90-edge-left { display: flex; left: 22px; }
+      .man90-edge-right { display: flex; right: 22px; }
+    }
+    .man90-slide-dot {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      color: var(--fg);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .man90-slide-dot.is-active {
+      background: var(--accent);
+      color: #090b10;
+      border-color: var(--accent);
+    }
+    .man90-telemetry-rail {
+      writing-mode: vertical-rl;
+      padding: 14px 8px;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* Hero Stage */
+    .man90-hero {
+      position: relative;
+      min-height: 100vh;
+      padding: 104px clamp(20px, 5vw, 84px) 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      isolation: isolate;
+      background: linear-gradient(135deg, #0b131b 0%, #172a3a 48%, #292218 100%);
+    }
+    .man90-smoke-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      pointer-events: none;
+    }
+    .man90-marquee-band {
+      position: absolute;
+      bottom: 8%;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+      opacity: 0.10;
+      white-space: nowrap;
+    }
+    .man90-marquee-track {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: clamp(64px, 11vw, 156px);
+      font-weight: 800;
+      color: transparent;
+      -webkit-text-stroke: 1.5px #ffffff;
+      animation: man90Marquee 24s linear infinite;
+    }
+    @keyframes man90Marquee {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* Shared Typography & Split-Text */
+    .man90-tag-chip {
+      display: inline-flex;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .man90-display-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(44px, 7.8vw, 108px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      overflow-wrap: break-word;
+    }
+    .man90-serif-accent {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--accent);
+      display: block;
+    }
+    .man90-lead {
+      font-size: clamp(15px, 1.35vw, 18px);
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 18px 0 26px;
+    }
+    .man90-split-word {
+      display: inline-block;
+      opacity: 0;
+      transform: translate3d(0, 32px, 0);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .man90-split-word.is-in {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* 3D Cutout Subject Styling (Out-of-bounds Pop-out & Drop Shadow) */
+    .man90-cutout-3d-img {
+      width: 100%;
+      height: auto;
+      max-height: 390px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 28px 42px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 26px rgba(255, 255, 255, 0.14));
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* Blueprint 0 Specific: Asymmetric Carbon Bike Atelier */
+    .man90-hero-grid-bike {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 980px) {
+      .man90-hero-grid-bike {
+        grid-template-columns: 0.92fr 1.08fr;
+      }
+    }
+    .man90-popout-rig {
+      position: relative;
+      padding: 20px 14px 28px;
+      border-radius: 32px;
+      background: radial-gradient(circle at 52% 48%, rgba(212,149,106,0.22), rgba(20,18,16,0.40) 72%);
+      border: 1px solid var(--border);
+      animation: man90Float 5.5s ease-in-out infinite;
+      overflow: visible;
+    }
+    .man90-popout-rig .man90-cutout-3d-img {
+      max-height: 380px;
+      transform: scale(1.09) translateX(-14px);
+    }
+    .man90-cutout-pill {
+      position: absolute;
+      top: -14px;
+      right: 24px;
+      z-index: 8;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #090b10;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .man90-floating-pair {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: -32px;
+      position: relative;
+      z-index: 6;
+    }
+
+    /* Blueprint 1 Specific: Sky Aircraft Pop-Out */
+    .man90-hero-sky {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .man90-sky-h1 {
+      font-size: clamp(54px, 10vw, 138px);
+      letter-spacing: 0.02em;
+      position: relative;
+      z-index: 1;
+    }
+    .man90-sky-plane-popout {
+      max-width: 780px;
+      margin: -58px auto -10px;
+      position: relative;
+      z-index: 5;
+      animation: man90Float 6s ease-in-out infinite;
+    }
+    .man90-sky-plane-popout .man90-cutout-3d-img {
+      max-height: 350px;
+      transform: scale(1.06);
+    }
+    .man90-sky-destinations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      text-align: left;
+      position: relative;
+      z-index: 6;
+    }
+    .man90-pill-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-radius: 999px !important;
+      padding: 14px 24px !important;
+    }
+    .man90-pill-avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    /* Blueprint 2 Specific: Vibrant Orange/Cyan Poster Stage */
+    .man90-poster-stage {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 78vh;
+    }
+    .man90-poster-top-meta { text-align: center; }
+    .man90-poster-stack {
+      position: relative;
+      text-align: center;
+      padding: 12px 0;
+    }
+    .man90-poster-giant-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(64px, 13.5vw, 184px);
+      line-height: 0.88;
+      color: #ffffff;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    .man90-poster-figure-popout {
+      position: relative;
+      z-index: 4;
+      width: min(360px, 72vw);
+      margin: -255px auto -18px;
+      animation: man90Float 5s ease-in-out infinite;
+    }
+    .man90-poster-figure-popout .man90-cutout-3d-img {
+      max-height: 430px;
+      width: auto;
+    }
+    .man90-poster-bottom-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      z-index: 6;
+    }
+    .man90-poster-replay-card {
+      max-width: 340px;
+    }
+    .man90-circle-fab {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #090b10;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    }
+
+    /* Blueprint 3 Specific: Lunar Oasis Villa Editorial Split */
+    .man90-villa-grid {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 980px) {
+      .man90-villa-grid {
+        grid-template-columns: 1.12fr 0.88fr;
+      }
+    }
+    .man90-villa-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(50px, 7.2vw, 102px);
+      font-weight: 400;
+      line-height: 0.94;
+    }
+    .man90-villa-Elevation .man90-cutout-3d-img {
+      max-height: 290px;
+      transform: scale(1.04);
+    }
+    .man90-villa-right-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .man90-cutout-tab-pill {
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #090b10;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* Blueprint 4 Specific: AquaCosmos Orbital HUD */
+    .man90-hud-stage {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .man90-hud-orbital-ring {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: center;
+      margin-top: 12px;
+    }
+    @media (min-width: 1024px) {
+      .man90-hud-orbital-ring {
+        grid-template-columns: 290px 1fr 290px;
+      }
+    }
+    .man90-hud-planet-center {
+      animation: man90Float 6.5s ease-in-out infinite;
+    }
+    .man90-orbital-pod {
+      text-align: left;
+      border-radius: 36px;
+    }
+
+    @keyframes man90Float {
+      0%, 100% { transform: translate3d(0, 0px, 0); }
+      50% { transform: translate3d(0, -12px, 0); }
+    }
+
+    /* Glassmorphism Cards & Counters */
+    .man90-glass-card {
+      position: relative;
+      border-radius: 26px;
+      background: var(--glass);
+      backdrop-filter: blur(22px) saturate(160%);
+      -webkit-backdrop-filter: blur(22px) saturate(160%);
+      border: 1px solid var(--border);
+      padding: 22px;
+      cursor: pointer;
+      transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.24s ease;
+      overflow: hidden;
+    }
+    .man90-glass-card:hover {
+      border-color: var(--accent);
+    }
+    .man90-card-kicker {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .man90-glass-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .man90-glass-card p {
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+    .man90-counters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+    .man90-counter-box strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3vw, 38px);
+      color: var(--fg);
+    }
+    .man90-counter-box span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Group 1.3 & 1.5: Sticky Pinned 001-003 Telemetry Section */
+    .man90-pinned-section {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 88px clamp(20px, 5vw, 84px);
+    }
+    .man90-pinned-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: start;
+      margin-top: 40px;
+    }
+    @media (min-width: 980px) {
+      .man90-pinned-grid {
+        grid-template-columns: 1fr 1.1fr 1fr;
+      }
+    }
+    .man90-sticky-center {
+      position: relative;
+      top: 110px;
+      padding: 28px;
+      border-radius: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    @media (min-width: 980px) {
+      .man90-sticky-center { position: sticky; }
+    }
+    .man90-scrub-stage {
+      transition: transform 0.12s linear;
+      will-change: transform;
+    }
+    .man90-spec-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    .man90-spec-card.is-active {
+      border-color: var(--accent);
+    }
+
+    /* Group 1.4: Horizontal Scroll Projects Section */
+    .man90-hscroll-section {
+      padding: 72px clamp(20px, 5vw, 84px);
+      border-top: 1px solid var(--border);
+    }
+    .man90-hscroll-track {
+      max-width: 1320px;
+      margin: 32px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(260px, 1fr));
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+    .man90-project-card {
+      padding: 24px;
+      border-radius: 26px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .man90-project-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+    }
+    .man90-project-visual {
+      height: 140px;
+      border-radius: 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    /* Group 1.2: Scroll Reveal */
+    .man90-reveal {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .man90-reveal.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* Group 3.3: Seamless Fullscreen Page Transition Overlay */
+    .man90-seamless-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 190;
+      background: rgba(5, 8, 15, 0.88);
+      backdrop-filter: blur(22px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      pointer-events: none;
+    }
+    .man90-seamless-overlay.is-open { display: flex; }
+    .man90-seamless-box {
+      width: 100%;
+      max-width: 760px;
+      border-radius: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 36px;
+      pointer-events: auto;
+    }
+
+    .man90-footer {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 40px clamp(20px, 5vw, 84px);
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    body.is-motion-paused * {
+      animation-play-state: paused !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Group 2.4: SVG Liquid Ripple Filter -->
+  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="man90LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="4" />
+        <feDisplacementMap id="man90Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div id="cursorRing" class="man90-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="man90-cursor-dot" aria-hidden="true"></div>
+
+  <header class="man90-edge-top">
+    <a href="#heroStage" class="man90-brand">
+      <span class="man90-brand-mark"></span>
+      <span>Lunar Oasis Villa</span>
+    </a>
+    <ul class="man90-nav-links" aria-label="Primary Navigation">
+      <li><a href="#heroStage">01 / Showcase</a></li>
+      <li><a href="#pinnedSpecs">02 / Pinned Telemetry</a></li>
+      <li><a href="#motionProjects">03 / Motion Archive</a></li>
+    </ul>
+    <div class="man90-edge-controls">
+      <button type="button" id="motionToggleBtn" class="man90-pill-btn" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="man90-cta-magnetic" data-magnetic data-next-preview>
+        Explore Spec
+      </button>
+    </div>
+  </header>
+
+  <aside class="man90-edge-left" aria-label="Slide Numbers">
+    <a href="#heroStage" class="man90-slide-dot is-active" data-slide-link="0">01</a>
+    <a href="#pinnedSpecs" class="man90-slide-dot" data-slide-link="1">02</a>
+    <a href="#motionProjects" class="man90-slide-dot" data-slide-link="2">03</a>
+  </aside>
+
+  <aside class="man90-edge-right" aria-label="Scroll Scrub Readout">
+    <div class="man90-telemetry-rail" id="scrollScrubReadout">SCRUB 0% • 0.0°</div>
+  </aside>
+
+  <main id="main">
+    <section id="heroStage" class="man90-hero">
+      <canvas id="ambientSmokeCanvas" class="man90-smoke-canvas" aria-hidden="true"></canvas>
+      <div class="man90-marquee-band" aria-hidden="true">
+        <div class="man90-marquee-track">NEW WAY OF LIVING • LUNAR OASIS PAVILION • CANTILEVER INFINITY POOL • BIOCLIMATIC GLASS • NEW WAY OF LIVING • LUNAR OASIS PAVILION • CANTILEVER INFINITY POOL • BIOCLIMATIC GLASS • </div>
+      </div>
+
+      
+      <div class="man90-villa-grid">
+        <div class="man90-villa-left" data-parallax="0.06">
+          <span class="man90-tag-chip" id="activeHeroTag">Lunar Oasis Villa • Desert &amp; Sea Architecture</span>
+          <h1 class="man90-villa-h1" id="oversizedHeadline">
+            <span class="man90-split-word is-in">New Way</span><br>
+            <em><span class="man90-split-word is-in" style="color:var(--accent);transition-delay:90ms;">Of Living</span></em>
+          </h1>
+          <p class="man90-lead">Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.</p>
+
+          <div id="heroPopoutRig" class="man90-villa-Elevation" data-tilt-card style="filter: url(#man90LiquidFilter);">
+            
+      <svg viewBox="0 0 760 440" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <!-- Lunar Horizon Sun & Cantilevered Glass Villa -->
+        <circle cx="540" cy="145" r="78" fill="#eab308" fill-opacity="0.28"/>
+        <!-- Upper Cantilever Volume -->
+        <path d="M120 170 L590 140 L650 220 L180 245 Z" fill="rgba(255,255,255,0.14)" stroke="#ffffff" stroke-width="2"/>
+        <!-- Warm Interior Glow -->
+        <rect x="210" y="175" width="320" height="58" rx="8" fill="#eab308" fill-opacity="0.35"/>
+        <!-- Lower Terrace & Infinity Pool Deck -->
+        <path d="M80 250 L680 235 L720 305 L40 315 Z" fill="#1e293b" stroke="#2dd4bf" stroke-width="2"/>
+        <!-- Shimmering Water Ripples -->
+        <path d="M60 345 Q260 330 460 345 T710 340" stroke="#2dd4bf" stroke-width="3" stroke-opacity="0.7"/>
+        <path d="M90 375 Q290 362 490 375 T680 372" stroke="#eab308" stroke-width="2" stroke-opacity="0.5"/>
+      </svg>
+          </div>
+
+          <div class="man90-counters" style="margin-top:24px;">
+            <div class="man90-counter-box"><strong data-counter-target="120" data-counter-suffix="+">120+</strong><span>Private Acres</span></div>
+            <div class="man90-counter-box"><strong data-counter-target="10" data-counter-suffix="K+">10K+</strong><span>Solar Louvers</span></div>
+            <div class="man90-counter-box"><strong data-counter-target="1000" data-counter-suffix="m²">1000m²</strong><span>Infinity Mirror Pool</span></div>
+          </div>
+        </div>
+
+        <div class="man90-villa-right-stack">
+          
+          <article class="man90-glass-card man90-villa-cutout-card" data-tilt-card data-seamless-trigger="Lunar Oasis Cliffside Villa">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <span class="man90-card-kicker">RESIDENCE 01</span>
+              <span class="man90-cutout-tab-pill">$14.8M • 5 Bed</span>
+            </div>
+            <h3>Lunar Oasis Cliffside Villa</h3>
+            <p>3D perspective glassmorphism card with interactive specular border shine &amp; seamless floorplan expansion.</p>
+          </article>
+          <article class="man90-glass-card man90-villa-cutout-card" data-tilt-card data-seamless-trigger="Dune Mirage Glass Pavilion">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <span class="man90-card-kicker">RESIDENCE 02</span>
+              <span class="man90-cutout-tab-pill">$11.2M • 4 Bed</span>
+            </div>
+            <h3>Dune Mirage Glass Pavilion</h3>
+            <p>3D perspective glassmorphism card with interactive specular border shine &amp; seamless floorplan expansion.</p>
+          </article>
+          <article class="man90-glass-card man90-villa-cutout-card" data-tilt-card data-seamless-trigger="Atoll Floating Water House">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <span class="man90-card-kicker">RESIDENCE 03</span>
+              <span class="man90-cutout-tab-pill">$18.5M • 6 Bed</span>
+            </div>
+            <h3>Atoll Floating Water House</h3>
+            <p>3D perspective glassmorphism card with interactive specular border shine &amp; seamless floorplan expansion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky Pinned Center Subject + 001/002/003 Telemetry -->
+    <section id="pinnedSpecs" class="man90-pinned-section">
+      <div class="man90-reveal" style="text-align:center;max-width:680px;margin:0 auto;">
+        <span class="man90-tag-chip">Sticky Pinned &amp; Scroll Scrubbing</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(28px,4vw,48px);">Lunar Oasis Villa — 001 to 003 Engineering</h2>
+      </div>
+
+      <div class="man90-pinned-grid">
+        <div>
+          <article class="man90-spec-card man90-reveal is-active" data-spec-index="001">
+            <span class="man90-card-kicker">001 / SUBTERRANEAN SPA</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">1,240 m²</div>
+            <h3>Geothermal Limestone Cavern</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Carved into the coastal cliffside with natural acoustic water reflection chambers.</p>
+          </article>
+          <article class="man90-spec-card man90-reveal" data-spec-index="002">
+            <span class="man90-card-kicker">002 / CANTILEVER DECK</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">18.5 m</div>
+            <h3>Frameless Triple-Glazed Horizon</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Motorized glass walls retract into the floor slab to merge indoor living with the infinity pool.</p>
+          </article>
+        </div>
+
+        <div class="man90-sticky-center">
+          <div id="scrubCenterStage" class="man90-scrub-stage">
+            
+      <svg viewBox="0 0 760 440" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <!-- Lunar Horizon Sun & Cantilevered Glass Villa -->
+        <circle cx="540" cy="145" r="78" fill="#eab308" fill-opacity="0.28"/>
+        <!-- Upper Cantilever Volume -->
+        <path d="M120 170 L590 140 L650 220 L180 245 Z" fill="rgba(255,255,255,0.14)" stroke="#ffffff" stroke-width="2"/>
+        <!-- Warm Interior Glow -->
+        <rect x="210" y="175" width="320" height="58" rx="8" fill="#eab308" fill-opacity="0.35"/>
+        <!-- Lower Terrace & Infinity Pool Deck -->
+        <path d="M80 250 L680 235 L720 305 L40 315 Z" fill="#1e293b" stroke="#2dd4bf" stroke-width="2"/>
+        <!-- Shimmering Water Ripples -->
+        <path d="M60 345 Q260 330 460 345 T710 340" stroke="#2dd4bf" stroke-width="3" stroke-opacity="0.7"/>
+        <path d="M90 375 Q290 362 490 375 T680 372" stroke="#eab308" stroke-width="2" stroke-opacity="0.5"/>
+      </svg>
+          </div>
+          <div id="scrubDialText" style="margin-top:14px;font-size:12px;color:var(--accent);font-weight:700;">
+            SCROLL SCRUB ANGLE: 0.0°
+          </div>
+        </div>
+
+        <div>
+          <article class="man90-spec-card man90-reveal" data-spec-index="003">
+            <span class="man90-card-kicker">003 / SOLAR SKIN</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">100% Net-0</div>
+            <h3>Photovoltaic Alabaster Louvers</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Autonomous sun-tracking roof fins generate 42 kWh daily while casting kinetic shadow patterns.</p>
+          </article>
+          <article class="man90-spec-card man90-reveal" data-seamless-trigger="Lunar Oasis Villa Full Specification Sheet" style="cursor:pointer;">
+            <span class="man90-card-kicker">004 / INTERACTIVE DOSSIER</span>
+            <div style="font-family:var(--font-display);font-size:28px;font-weight:800;margin:6px 0;color:var(--accent);">Expand View</div>
+            <h3>Seamless Page Transition</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Click to expand full specification view without page reload.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horizontal Scroll Track -->
+    <section id="motionProjects" class="man90-hscroll-section">
+      <div style="max-width:1320px;margin:0 auto;">
+        <span class="man90-tag-chip">Featured Motion Projects</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(26px,3.5vw,42px);">Horizontal Scroll Showcase</h2>
+      </div>
+      <div id="hScrollTrack" class="man90-hscroll-track">
+        
+        <article class="man90-project-card man90-reveal" data-tilt-card data-seamless-trigger="Lunar Oasis Cliffside Villa">
+          <div class="man90-project-visual" style="background:radial-gradient(circle at 50% 50%, #eab30833, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#eab308;">01 // $14.8M • 5 Bed</span>
+          </div>
+          <span class="man90-card-kicker">RESIDENCE 01</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Lunar Oasis Cliffside Villa</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="man90-project-card man90-reveal" data-tilt-card data-seamless-trigger="Dune Mirage Glass Pavilion">
+          <div class="man90-project-visual" style="background:radial-gradient(circle at 50% 50%, #2dd4bf33, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#2dd4bf;">02 // $11.2M • 4 Bed</span>
+          </div>
+          <span class="man90-card-kicker">RESIDENCE 02</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Dune Mirage Glass Pavilion</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="man90-project-card man90-reveal" data-tilt-card data-seamless-trigger="Atoll Floating Water House">
+          <div class="man90-project-visual" style="background:radial-gradient(circle at 50% 50%, #38bdf833, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#38bdf8;">03 // $18.5M • 6 Bed</span>
+          </div>
+          <span class="man90-card-kicker">RESIDENCE 03</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Atoll Floating Water House</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="man90-project-card man90-reveal" data-tilt-card data-seamless-trigger="Observatory Sky Penthouse">
+          <div class="man90-project-visual" style="background:radial-gradient(circle at 50% 50%, #f59e0b33, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#f59e0b;">04 // $9.6M • 3 Bed</span>
+          </div>
+          <span class="man90-card-kicker">RESIDENCE 04</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Observatory Sky Penthouse</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="man90-footer">
+    <p>© 2026 Lunar Oasis Villa — Bespoke Blueprint (lunar-villa).</p>
+    <p>Parallax • Sticky Scrub 001-003 • 3D Card Tilt • Liquid Wave • Particle Smoke</p>
+  </footer>
+
+  <div id="seamlessModal" class="man90-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="man90-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span class="man90-tag-chip" style="margin-bottom:0;">Seamless Detail Transition</span>
+        <button type="button" id="closeSeamlessBtn" class="man90-pill-btn">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:12px;">Lunar Oasis Villa</h2>
+      <p style="font-size:15px;line-height:1.65;color:var(--muted);margin-bottom:20px;">Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.</p>
+      <div style="max-height:220px;overflow:hidden;border-radius:18px;border:1px solid var(--border);margin-bottom:20px;padding:12px;background:var(--bg);">
+        
+      <svg viewBox="0 0 760 440" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <!-- Lunar Horizon Sun & Cantilevered Glass Villa -->
+        <circle cx="540" cy="145" r="78" fill="#eab308" fill-opacity="0.28"/>
+        <!-- Upper Cantilever Volume -->
+        <path d="M120 170 L590 140 L650 220 L180 245 Z" fill="rgba(255,255,255,0.14)" stroke="#ffffff" stroke-width="2"/>
+        <!-- Warm Interior Glow -->
+        <rect x="210" y="175" width="320" height="58" rx="8" fill="#eab308" fill-opacity="0.35"/>
+        <!-- Lower Terrace & Infinity Pool Deck -->
+        <path d="M80 250 L680 235 L720 305 L40 315 Z" fill="#1e293b" stroke="#2dd4bf" stroke-width="2"/>
+        <!-- Shimmering Water Ripples -->
+        <path d="M60 345 Q260 330 460 345 T710 340" stroke="#2dd4bf" stroke-width="3" stroke-opacity="0.7"/>
+        <path d="M90 375 Q290 362 490 375 T680 372" stroke="#eab308" stroke-width="2" stroke-opacity="0.5"/>
+      </svg>
+      </div>
+      <button type="button" id="confirmSeamlessBtn" class="man90-cta-magnetic" style="width:100%;">Return to Live Stage</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var slideLinks = document.querySelectorAll('[data-slide-link]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+
+        var activeIdx = progress < 0.34 ? 0 : progress < 0.72 ? 1 : 2;
+        slideLinks.forEach(function (l, i) { l.classList.toggle('is-active', i === activeIdx); });
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      var revealEls = document.querySelectorAll('.man90-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.26;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.26;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / r.width - 0.5;
+          var ny = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 9).toFixed(2) + 'deg) rotateX(' + (-ny * 9).toFixed(2) + 'deg)';
+        });
+        card.addEventListener('mouseleave', function () { card.style.transform = ''; });
+      });
+
+      var displacement = document.getElementById('man90Displacement');
+      var heroRig = document.getElementById('heroPopoutRig');
+      if (heroRig && displacement) {
+        heroRig.addEventListener('mouseenter', function () { if (!motionPaused) displacement.setAttribute('scale', '16'); });
+        heroRig.addEventListener('mouseleave', function () { displacement.setAttribute('scale', '0'); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var openBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(heading) {
+        if (modalTitle && heading) modalTitle.textContent = heading;
+        if (modal) modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (modal) modal.classList.remove('is-open');
+      }
+      if (openBtn) {
+        openBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless('Lunar Oasis Villa — Specification View');
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () { openSeamless(el.getAttribute('data-seamless-trigger')); });
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSeamless(); });
+
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var pts = [];
+        for (var i = 0; i < 24; i++) {
+          pts.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, r: 1.5 + Math.random() * 3, vx: (Math.random() - 0.5) * 0.4, vy: -0.2 - Math.random() * 0.4, a: 0.15 + Math.random() * 0.35 });
+        }
+        var f = 0;
+        function loop() {
+          if (!motionPaused && f < 900) {
+            f++;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (var j = 0; j < pts.length; j++) {
+              var pt = pts[j];
+              pt.x += pt.vx; pt.y += pt.vy;
+              if (pt.y < 0) pt.y = canvas.height;
+              ctx.beginPath();
+              ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(255,255,255,' + pt.a.toFixed(2) + ')';
+              ctx.fill();
+            }
+            window.requestAnimationFrame(loop);
+          }
+        }
+        window.requestAnimationFrame(loop);
+      }
+    })();
+  </script>
+</body>
+</html>

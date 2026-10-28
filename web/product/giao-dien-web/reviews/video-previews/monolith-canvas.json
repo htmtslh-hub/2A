@@ -1,0 +1,48 @@
+{
+  "id": "t158",
+  "slug": "monolith-canvas",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-28T02:02:23.015Z",
+  "demo": "/demos/monolith-canvas/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3b2184a76345",
+  "sha256": "3b2184a763453386566e490ee7a70211e6ea966e3733f3bc8106b4ef98ffc47c",
+  "demoHtmlSha256": "983e4f0736d4b0e1e4d49fba5330db007b60a7e541c898b2681c1ea11d980fec",
+  "demoSha256": "07f1fe26a26fda838152e2fd2bbd2300684b39a3acec0c65299a59866e2576e2",
+  "bytes": 771506,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.481,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.893,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1486
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\monolith-canvas-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\monolith-canvas-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\monolith-canvas-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\monolith-canvas-return.jpg"
+  ]
+}

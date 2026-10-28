@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Apex 240Hz Signature — Interactive 3D Hero &amp; Motion Showcase</title>
+  <meta name="description" content="Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* hallmark · v2.0.0 · blueprint=kinetic-poster · slug=luminex-atelier */
+    :root {
+      --bg: #d95d1e;
+      --surface: #b54610;
+      --glass: rgba(20, 14, 10, 0.72);
+      --fg: #ffffff;
+      --muted: #ffedd5;
+      --border: rgba(255, 255, 255, 0.16);
+      --accent: #0ea5e9;
+      --accent-2: #fde047;
+      --font-display: 'Anton', Impact, sans-serif;
+      --font-serif: 'Anton', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      overflow-x: clip;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Group 2.5: Custom Follower Cursor with Blend-Mode Difference */
+    .lum50-cursor-ring,
+    .lum50-cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      border-radius: 50%;
+      transform: translate3d(-100px, -100px, 0);
+      transition: width 0.24s ease, height 0.24s ease, background-color 0.24s ease;
+      mix-blend-mode: difference;
+    }
+    .lum50-cursor-ring {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid #ffffff;
+      margin-left: -18px;
+      margin-top: -18px;
+    }
+    .lum50-cursor-ring.is-hovered {
+      width: 64px;
+      height: 64px;
+      margin-left: -32px;
+      margin-top: -32px;
+      background: #ffffff;
+    }
+    .lum50-cursor-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      margin-left: -3.5px;
+      margin-top: -3.5px;
+    }
+    @media (max-width: 900px) {
+      .lum50-cursor-ring, .lum50-cursor-dot { display: none; }
+    }
+
+    /* Criterion 6: Minimalist Edge Navigation */
+    .lum50-edge-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 220;
+      padding: 18px clamp(18px, 4vw, 52px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      pointer-events: none;
+    }
+    .lum50-edge-top > * { pointer-events: auto; }
+    .lum50-brand {
+      text-decoration: none;
+      color: var(--fg);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .lum50-brand-mark {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px var(--accent);
+    }
+    .lum50-nav-links {
+      display: none;
+      list-style: none;
+      gap: 24px;
+      padding: 8px 20px;
+      border-radius: 999px;
+      background: var(--glass);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border);
+    }
+    @media (min-width: 900px) {
+      .lum50-nav-links { display: flex; }
+    }
+    .lum50-nav-links a {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0.82;
+      transition: opacity 0.2s ease;
+    }
+    .lum50-nav-links a:hover { opacity: 1; }
+    .lum50-edge-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .lum50-pill-btn {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      color: var(--fg);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .lum50-cta-magnetic {
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: var(--accent);
+      color: #090b10;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Left & Right Minimalist Edge Slide Rails */
+    .lum50-edge-left,
+    .lum50-edge-right {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 130;
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+    }
+    @media (min-width: 1120px) {
+      .lum50-edge-left { display: flex; left: 22px; }
+      .lum50-edge-right { display: flex; right: 22px; }
+    }
+    .lum50-slide-dot {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      color: var(--fg);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .lum50-slide-dot.is-active {
+      background: var(--accent);
+      color: #090b10;
+      border-color: var(--accent);
+    }
+    .lum50-telemetry-rail {
+      writing-mode: vertical-rl;
+      padding: 14px 8px;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* Hero Stage */
+    .lum50-hero {
+      position: relative;
+      min-height: 100vh;
+      padding: 104px clamp(20px, 5vw, 84px) 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      isolation: isolate;
+      background: radial-gradient(circle at 50% 45%, #f9803a 0%, #e06322 52%, #b8430b 100%);
+    }
+    .lum50-smoke-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      pointer-events: none;
+    }
+    .lum50-marquee-band {
+      position: absolute;
+      bottom: 8%;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+      opacity: 0.10;
+      white-space: nowrap;
+    }
+    .lum50-marquee-track {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: clamp(64px, 11vw, 156px);
+      font-weight: 800;
+      color: transparent;
+      -webkit-text-stroke: 1.5px #ffffff;
+      animation: lum50Marquee 24s linear infinite;
+    }
+    @keyframes lum50Marquee {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* Shared Typography & Split-Text */
+    .lum50-tag-chip {
+      display: inline-flex;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .lum50-display-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(44px, 7.8vw, 108px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      overflow-wrap: break-word;
+    }
+    .lum50-serif-accent {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--accent);
+      display: block;
+    }
+    .lum50-lead {
+      font-size: clamp(15px, 1.35vw, 18px);
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 18px 0 26px;
+    }
+    .lum50-split-word {
+      display: inline-block;
+      opacity: 0;
+      transform: translate3d(0, 32px, 0);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .lum50-split-word.is-in {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* 3D Cutout Subject Styling (Out-of-bounds Pop-out & Drop Shadow) */
+    .lum50-cutout-3d-img {
+      width: 100%;
+      height: auto;
+      max-height: 390px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 28px 42px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 26px rgba(255, 255, 255, 0.14));
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* Blueprint 0 Specific: Asymmetric Carbon Bike Atelier */
+    .lum50-hero-grid-bike {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 980px) {
+      .lum50-hero-grid-bike {
+        grid-template-columns: 0.92fr 1.08fr;
+      }
+    }
+    .lum50-popout-rig {
+      position: relative;
+      padding: 20px 14px 28px;
+      border-radius: 32px;
+      background: radial-gradient(circle at 52% 48%, rgba(212,149,106,0.22), rgba(20,18,16,0.40) 72%);
+      border: 1px solid var(--border);
+      animation: lum50Float 5.5s ease-in-out infinite;
+      overflow: visible;
+    }
+    .lum50-popout-rig .lum50-cutout-3d-img {
+      max-height: 380px;
+      transform: scale(1.09) translateX(-14px);
+    }
+    .lum50-cutout-pill {
+      position: absolute;
+      top: -14px;
+      right: 24px;
+      z-index: 8;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #090b10;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .lum50-floating-pair {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: -32px;
+      position: relative;
+      z-index: 6;
+    }
+
+    /* Blueprint 1 Specific: Sky Aircraft Pop-Out */
+    .lum50-hero-sky {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .lum50-sky-h1 {
+      font-size: clamp(54px, 10vw, 138px);
+      letter-spacing: 0.02em;
+      position: relative;
+      z-index: 1;
+    }
+    .lum50-sky-plane-popout {
+      max-width: 780px;
+      margin: -58px auto -10px;
+      position: relative;
+      z-index: 5;
+      animation: lum50Float 6s ease-in-out infinite;
+    }
+    .lum50-sky-plane-popout .lum50-cutout-3d-img {
+      max-height: 350px;
+      transform: scale(1.06);
+    }
+    .lum50-sky-destinations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      text-align: left;
+      position: relative;
+      z-index: 6;
+    }
+    .lum50-pill-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-radius: 999px !important;
+      padding: 14px 24px !important;
+    }
+    .lum50-pill-avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    /* Blueprint 2 Specific: Vibrant Orange/Cyan Poster Stage */
+    .lum50-poster-stage {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 78vh;
+    }
+    .lum50-poster-top-meta { text-align: center; }
+    .lum50-poster-stack {
+      position: relative;
+      text-align: center;
+      padding: 12px 0;
+    }
+    .lum50-poster-giant-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(64px, 13.5vw, 184px);
+      line-height: 0.88;
+      color: #ffffff;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    .lum50-poster-figure-popout {
+      position: relative;
+      z-index: 4;
+      width: min(360px, 72vw);
+      margin: -255px auto -18px;
+      animation: lum50Float 5s ease-in-out infinite;
+    }
+    .lum50-poster-figure-popout .lum50-cutout-3d-img {
+      max-height: 430px;
+      width: auto;
+    }
+    .lum50-poster-bottom-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      z-index: 6;
+    }
+    .lum50-poster-replay-card {
+      max-width: 340px;
+    }
+    .lum50-circle-fab {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: none;
+      background: #ffffff;
+      color: #090b10;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    }
+
+    /* Blueprint 3 Specific: Lunar Oasis Villa Editorial Split */
+    .lum50-villa-grid {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 980px) {
+      .lum50-villa-grid {
+        grid-template-columns: 1.12fr 0.88fr;
+      }
+    }
+    .lum50-villa-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(50px, 7.2vw, 102px);
+      font-weight: 400;
+      line-height: 0.94;
+    }
+    .lum50-villa-Elevation .lum50-cutout-3d-img {
+      max-height: 290px;
+      transform: scale(1.04);
+    }
+    .lum50-villa-right-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .lum50-cutout-tab-pill {
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #090b10;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* Blueprint 4 Specific: AquaCosmos Orbital HUD */
+    .lum50-hud-stage {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .lum50-hud-orbital-ring {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: center;
+      margin-top: 12px;
+    }
+    @media (min-width: 1024px) {
+      .lum50-hud-orbital-ring {
+        grid-template-columns: 290px 1fr 290px;
+      }
+    }
+    .lum50-hud-planet-center {
+      animation: lum50Float 6.5s ease-in-out infinite;
+    }
+    .lum50-orbital-pod {
+      text-align: left;
+      border-radius: 36px;
+    }
+
+    @keyframes lum50Float {
+      0%, 100% { transform: translate3d(0, 0px, 0); }
+      50% { transform: translate3d(0, -12px, 0); }
+    }
+
+    /* Glassmorphism Cards & Counters */
+    .lum50-glass-card {
+      position: relative;
+      border-radius: 26px;
+      background: var(--glass);
+      backdrop-filter: blur(22px) saturate(160%);
+      -webkit-backdrop-filter: blur(22px) saturate(160%);
+      border: 1px solid var(--border);
+      padding: 22px;
+      cursor: pointer;
+      transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.24s ease;
+      overflow: hidden;
+    }
+    .lum50-glass-card:hover {
+      border-color: var(--accent);
+    }
+    .lum50-card-kicker {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .lum50-glass-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .lum50-glass-card p {
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+    .lum50-counters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+    .lum50-counter-box strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3vw, 38px);
+      color: var(--fg);
+    }
+    .lum50-counter-box span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Group 1.3 & 1.5: Sticky Pinned 001-003 Telemetry Section */
+    .lum50-pinned-section {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 88px clamp(20px, 5vw, 84px);
+    }
+    .lum50-pinned-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: start;
+      margin-top: 40px;
+    }
+    @media (min-width: 980px) {
+      .lum50-pinned-grid {
+        grid-template-columns: 1fr 1.1fr 1fr;
+      }
+    }
+    .lum50-sticky-center {
+      position: relative;
+      top: 110px;
+      padding: 28px;
+      border-radius: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    @media (min-width: 980px) {
+      .lum50-sticky-center { position: sticky; }
+    }
+    .lum50-scrub-stage {
+      transition: transform 0.12s linear;
+      will-change: transform;
+    }
+    .lum50-spec-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    .lum50-spec-card.is-active {
+      border-color: var(--accent);
+    }
+
+    /* Group 1.4: Horizontal Scroll Projects Section */
+    .lum50-hscroll-section {
+      padding: 72px clamp(20px, 5vw, 84px);
+      border-top: 1px solid var(--border);
+    }
+    .lum50-hscroll-track {
+      max-width: 1320px;
+      margin: 32px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(260px, 1fr));
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+    .lum50-project-card {
+      padding: 24px;
+      border-radius: 26px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .lum50-project-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+    }
+    .lum50-project-visual {
+      height: 140px;
+      border-radius: 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    /* Group 1.2: Scroll Reveal */
+    .lum50-reveal {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .lum50-reveal.is-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    /* Group 3.3: Seamless Fullscreen Page Transition Overlay */
+    .lum50-seamless-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 190;
+      background: rgba(5, 8, 15, 0.88);
+      backdrop-filter: blur(22px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      pointer-events: none;
+    }
+    .lum50-seamless-overlay.is-open { display: flex; }
+    .lum50-seamless-box {
+      width: 100%;
+      max-width: 760px;
+      border-radius: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 36px;
+      pointer-events: auto;
+    }
+
+    .lum50-footer {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 40px clamp(20px, 5vw, 84px);
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    body.is-motion-paused * {
+      animation-play-state: paused !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Group 2.4: SVG Liquid Ripple Filter -->
+  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="lum50LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="4" />
+        <feDisplacementMap id="lum50Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div id="cursorRing" class="lum50-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="lum50-cursor-dot" aria-hidden="true"></div>
+
+  <header class="lum50-edge-top">
+    <a href="#heroStage" class="lum50-brand">
+      <span class="lum50-brand-mark"></span>
+      <span>Apex 240Hz Signature</span>
+    </a>
+    <ul class="lum50-nav-links" aria-label="Primary Navigation">
+      <li><a href="#heroStage">01 / Showcase</a></li>
+      <li><a href="#pinnedSpecs">02 / Pinned Telemetry</a></li>
+      <li><a href="#motionProjects">03 / Motion Archive</a></li>
+    </ul>
+    <div class="lum50-edge-controls">
+      <button type="button" id="motionToggleBtn" class="lum50-pill-btn" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="lum50-cta-magnetic" data-magnetic data-next-preview>
+        Explore Spec
+      </button>
+    </div>
+  </header>
+
+  <aside class="lum50-edge-left" aria-label="Slide Numbers">
+    <a href="#heroStage" class="lum50-slide-dot is-active" data-slide-link="0">01</a>
+    <a href="#pinnedSpecs" class="lum50-slide-dot" data-slide-link="1">02</a>
+    <a href="#motionProjects" class="lum50-slide-dot" data-slide-link="2">03</a>
+  </aside>
+
+  <aside class="lum50-edge-right" aria-label="Scroll Scrub Readout">
+    <div class="lum50-telemetry-rail" id="scrollScrubReadout">SCRUB 0% • 0.0°</div>
+  </aside>
+
+  <main id="main">
+    <section id="heroStage" class="lum50-hero">
+      <canvas id="ambientSmokeCanvas" class="lum50-smoke-canvas" aria-hidden="true"></canvas>
+      <div class="lum50-marquee-band" aria-hidden="true">
+        <div class="lum50-marquee-track">SIGNATURE MOVES • 240HZ OPTICAL MOCAP • 48.2 INCH VERTICAL • 0.92S HANG-TIME • SIGNATURE MOVES • 240HZ OPTICAL MOCAP • 48.2 INCH VERTICAL • 0.92S HANG-TIME • </div>
+      </div>
+
+      
+      <div class="lum50-poster-stage">
+        <div class="lum50-poster-top-meta">
+          <span class="lum50-tag-chip" id="activeHeroTag" style="background:rgba(0,0,0,0.28);color:#fff;">SHOOTING BIOMECHANICS • 240HZ MOCAP</span>
+        </div>
+
+        <div class="lum50-poster-stack">
+          <!-- Layer 1: Giant White Block Typography Behind Subject -->
+          <h1 class="lum50-poster-giant-h1" id="oversizedHeadline" data-parallax="0.10">
+            <span class="lum50-split-word is-in">SIGNATURE</span><br>
+            <span class="lum50-split-word is-in" style="transition-delay:90ms;">FADEAWAY</span>
+          </h1>
+
+          <!-- Layer 2: 3D Glossy Cyan Athlete Pop-Out Overlapping the Giant Letters (Text Masking) -->
+          <div id="heroPopoutRig" class="lum50-poster-figure-popout" data-tilt-card style="filter: url(#lum50LiquidFilter);">
+            
+      <svg viewBox="0 0 540 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="cyanSculpture" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7dd3fc"/>
+            <stop offset="45%" stop-color="#0ea5e9"/>
+            <stop offset="100%" stop-color="#0369a1"/>
+          </linearGradient>
+        </defs>
+        <!-- Orbital Telemetry Arc Behind Figure -->
+        <path d="M70 430 C130 120 410 120 470 430" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2.5" stroke-dasharray="8 8"/>
+        <!-- 3D Glossy Cyan Athlete Sculpture Popping Out Over the White Poster Typography -->
+        <circle cx="275" cy="74" r="34" fill="url(#cyanSculpture)" stroke="#e0f2fe" stroke-width="3"/>
+        <circle cx="270" cy="145" r="24" fill="url(#cyanSculpture)"/>
+        <path d="M225 100 L248 165 L296 165 L320 95" stroke="url(#cyanSculpture)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M242 165 L298 165 L308 278 L232 278 Z" fill="url(#cyanSculpture)"/>
+        <path d="M236 278 L205 425 M296 278 L278 448" stroke="url(#cyanSculpture)" stroke-width="28" stroke-linecap="round"/>
+        <circle cx="200" cy="438" r="16" fill="#0284c7"/>
+        <circle cx="276" cy="462" r="16" fill="#0284c7"/>
+      </svg>
+          </div>
+        </div>
+
+        <div class="lum50-poster-bottom-bar">
+          <!-- Bottom-Left Floating Replay Card -->
+          <article class="lum50-glass-card lum50-poster-replay-card" data-tilt-card data-seamless-trigger="1998 Finals Last-Shot Biomechanics">
+            <span class="lum50-card-kicker">1998 FINALS • FADEAWAY KINEMATICS</span>
+            <h3>1998 Finals Last-Shot Biomechanics</h3>
+            <p>Release angle 54.2° • Apex hang-time 0.92s • Click for full 3D frame analysis.</p>
+          </article>
+
+          <!-- Center Decade & Counters -->
+          <div class="lum50-counters">
+            <div class="lum50-counter-box"><strong data-counter-target="240" data-counter-suffix="Hz">240Hz</strong><span>Optical Mocap</span></div>
+            <div class="lum50-counter-box"><strong data-counter-target="48" data-counter-suffix=".2&quot;">48.2"</strong><span>Vertical Leap</span></div>
+            <div class="lum50-counter-box"><strong data-counter-target="1000" data-counter-suffix="+">1000+</strong><span>Kinematic Vectors</span></div>
+          </div>
+
+          <!-- Bottom-Right Circular Magnetic Action Buttons -->
+          <div style="display:flex;gap:12px;">
+            <button type="button" class="lum50-circle-fab" data-magnetic data-seamless-trigger="360° Orbital Camera Replay" aria-label="Open 360 Replay">360°</button>
+            <a href="#pinnedSpecs" class="lum50-circle-fab" data-magnetic aria-label="Scroll to Biomechanics">↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky Pinned Center Subject + 001/002/003 Telemetry -->
+    <section id="pinnedSpecs" class="lum50-pinned-section">
+      <div class="lum50-reveal" style="text-align:center;max-width:680px;margin:0 auto;">
+        <span class="lum50-tag-chip">Sticky Pinned &amp; Scroll Scrubbing</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(28px,4vw,48px);">Apex 240Hz Signature — 001 to 003 Engineering</h2>
+      </div>
+
+      <div class="lum50-pinned-grid">
+        <div>
+          <article class="lum50-spec-card lum50-reveal is-active" data-spec-index="001">
+            <span class="lum50-card-kicker">001 / RELEASE VECTOR</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">54.2°</div>
+            <h3>Apex Shoulder Separation</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Inverse-kinematic tracking of elbow elevation and backward center-of-mass drift at peak jump height.</p>
+          </article>
+          <article class="lum50-spec-card lum50-reveal" data-spec-index="002">
+            <span class="lum50-card-kicker">002 / VERTICAL IMPULSE</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">48.2"</div>
+            <h3>0.92s Airborne Suspension</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Force-plate telemetry capturing 3,400N plant impulse and mid-air core stabilization.</p>
+          </article>
+        </div>
+
+        <div class="lum50-sticky-center">
+          <div id="scrubCenterStage" class="lum50-scrub-stage">
+            
+      <svg viewBox="0 0 540 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="cyanSculpture" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7dd3fc"/>
+            <stop offset="45%" stop-color="#0ea5e9"/>
+            <stop offset="100%" stop-color="#0369a1"/>
+          </linearGradient>
+        </defs>
+        <!-- Orbital Telemetry Arc Behind Figure -->
+        <path d="M70 430 C130 120 410 120 470 430" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2.5" stroke-dasharray="8 8"/>
+        <!-- 3D Glossy Cyan Athlete Sculpture Popping Out Over the White Poster Typography -->
+        <circle cx="275" cy="74" r="34" fill="url(#cyanSculpture)" stroke="#e0f2fe" stroke-width="3"/>
+        <circle cx="270" cy="145" r="24" fill="url(#cyanSculpture)"/>
+        <path d="M225 100 L248 165 L296 165 L320 95" stroke="url(#cyanSculpture)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M242 165 L298 165 L308 278 L232 278 Z" fill="url(#cyanSculpture)"/>
+        <path d="M236 278 L205 425 M296 278 L278 448" stroke="url(#cyanSculpture)" stroke-width="28" stroke-linecap="round"/>
+        <circle cx="200" cy="438" r="16" fill="#0284c7"/>
+        <circle cx="276" cy="462" r="16" fill="#0284c7"/>
+      </svg>
+          </div>
+          <div id="scrubDialText" style="margin-top:14px;font-size:12px;color:var(--accent);font-weight:700;">
+            SCROLL SCRUB ANGLE: 0.0°
+          </div>
+        </div>
+
+        <div>
+          <article class="lum50-spec-card lum50-reveal" data-spec-index="003">
+            <span class="lum50-card-kicker">003 / TURNTABLE RIG</span>
+            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">240 Hz</div>
+            <h3>Volumetric 3D Mesh Capture</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">64 synchronized high-speed optical cameras reconstructing every muscle contour in glossy 3D.</p>
+          </article>
+          <article class="lum50-spec-card lum50-reveal" data-seamless-trigger="Apex 240Hz Signature Full Specification Sheet" style="cursor:pointer;">
+            <span class="lum50-card-kicker">004 / INTERACTIVE DOSSIER</span>
+            <div style="font-family:var(--font-display);font-size:28px;font-weight:800;margin:6px 0;color:var(--accent);">Expand View</div>
+            <h3>Seamless Page Transition</h3>
+            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Click to expand full specification view without page reload.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horizontal Scroll Track -->
+    <section id="motionProjects" class="lum50-hscroll-section">
+      <div style="max-width:1320px;margin:0 auto;">
+        <span class="lum50-tag-chip">Featured Motion Projects</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(26px,3.5vw,42px);">Horizontal Scroll Showcase</h2>
+      </div>
+      <div id="hScrollTrack" class="lum50-hscroll-track">
+        
+        <article class="lum50-project-card lum50-reveal" data-tilt-card data-seamless-trigger="1998 Finals Last-Shot Biomechanics">
+          <div class="lum50-project-visual" style="background:radial-gradient(circle at 50% 50%, #0ea5e933, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#0ea5e9;">01 // 54.2° Release</span>
+          </div>
+          <span class="lum50-card-kicker">DECADE 1990s • 01</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">1998 Finals Last-Shot Biomechanics</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="lum50-project-card lum50-reveal" data-tilt-card data-seamless-trigger="Free-Throw Line Glide Trajectory">
+          <div class="lum50-project-visual" style="background:radial-gradient(circle at 50% 50%, #fde04733, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#fde047;">02 // 48.2" Vertical</span>
+          </div>
+          <span class="lum50-card-kicker">AIRBORNE • 02</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Free-Throw Line Glide Trajectory</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="lum50-project-card lum50-reveal" data-tilt-card data-seamless-trigger="Baseline Spin Angular Velocity">
+          <div class="lum50-project-visual" style="background:radial-gradient(circle at 50% 50%, #38bdf833, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#38bdf8;">03 // 840 deg/s</span>
+          </div>
+          <span class="lum50-card-kicker">FOOTWORK • 03</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Baseline Spin Angular Velocity</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+        <article class="lum50-project-card lum50-reveal" data-tilt-card data-seamless-trigger="Crossover Step Lateral G-Force">
+          <div class="lum50-project-visual" style="background:radial-gradient(circle at 50% 50%, #ffffff33, var(--bg));">
+            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#ffffff;">04 // 2.8G Plant</span>
+          </div>
+          <span class="lum50-card-kicker">ARCHIVE • 04</span>
+          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Crossover Step Lateral G-Force</h3>
+          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lum50-footer">
+    <p>© 2026 Apex 240Hz Signature — Bespoke Blueprint (kinetic-poster).</p>
+    <p>Parallax • Sticky Scrub 001-003 • 3D Card Tilt • Liquid Wave • Particle Smoke</p>
+  </footer>
+
+  <div id="seamlessModal" class="lum50-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="lum50-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <span class="lum50-tag-chip" style="margin-bottom:0;">Seamless Detail Transition</span>
+        <button type="button" id="closeSeamlessBtn" class="lum50-pill-btn">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:12px;">Apex 240Hz Signature</h2>
+      <p style="font-size:15px;line-height:1.65;color:var(--muted);margin-bottom:20px;">Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.</p>
+      <div style="max-height:220px;overflow:hidden;border-radius:18px;border:1px solid var(--border);margin-bottom:20px;padding:12px;background:var(--bg);">
+        
+      <svg viewBox="0 0 540 520" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="cyanSculpture" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7dd3fc"/>
+            <stop offset="45%" stop-color="#0ea5e9"/>
+            <stop offset="100%" stop-color="#0369a1"/>
+          </linearGradient>
+        </defs>
+        <!-- Orbital Telemetry Arc Behind Figure -->
+        <path d="M70 430 C130 120 410 120 470 430" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2.5" stroke-dasharray="8 8"/>
+        <!-- 3D Glossy Cyan Athlete Sculpture Popping Out Over the White Poster Typography -->
+        <circle cx="275" cy="74" r="34" fill="url(#cyanSculpture)" stroke="#e0f2fe" stroke-width="3"/>
+        <circle cx="270" cy="145" r="24" fill="url(#cyanSculpture)"/>
+        <path d="M225 100 L248 165 L296 165 L320 95" stroke="url(#cyanSculpture)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M242 165 L298 165 L308 278 L232 278 Z" fill="url(#cyanSculpture)"/>
+        <path d="M236 278 L205 425 M296 278 L278 448" stroke="url(#cyanSculpture)" stroke-width="28" stroke-linecap="round"/>
+        <circle cx="200" cy="438" r="16" fill="#0284c7"/>
+        <circle cx="276" cy="462" r="16" fill="#0284c7"/>
+      </svg>
+      </div>
+      <button type="button" id="confirmSeamlessBtn" class="lum50-cta-magnetic" style="width:100%;">Return to Live Stage</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var slideLinks = document.querySelectorAll('[data-slide-link]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+
+        var activeIdx = progress < 0.34 ? 0 : progress < 0.72 ? 1 : 2;
+        slideLinks.forEach(function (l, i) { l.classList.toggle('is-active', i === activeIdx); });
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      var revealEls = document.querySelectorAll('.lum50-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.26;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.26;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / r.width - 0.5;
+          var ny = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 9).toFixed(2) + 'deg) rotateX(' + (-ny * 9).toFixed(2) + 'deg)';
+        });
+        card.addEventListener('mouseleave', function () { card.style.transform = ''; });
+      });
+
+      var displacement = document.getElementById('lum50Displacement');
+      var heroRig = document.getElementById('heroPopoutRig');
+      if (heroRig && displacement) {
+        heroRig.addEventListener('mouseenter', function () { if (!motionPaused) displacement.setAttribute('scale', '16'); });
+        heroRig.addEventListener('mouseleave', function () { displacement.setAttribute('scale', '0'); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var openBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(heading) {
+        if (modalTitle && heading) modalTitle.textContent = heading;
+        if (modal) modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (modal) modal.classList.remove('is-open');
+      }
+      if (openBtn) {
+        openBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless('Apex 240Hz Signature — Specification View');
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () { openSeamless(el.getAttribute('data-seamless-trigger')); });
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSeamless(); });
+
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var pts = [];
+        for (var i = 0; i < 24; i++) {
+          pts.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, r: 1.5 + Math.random() * 3, vx: (Math.random() - 0.5) * 0.4, vy: -0.2 - Math.random() * 0.4, a: 0.15 + Math.random() * 0.35 });
+        }
+        var f = 0;
+        function loop() {
+          if (!motionPaused && f < 900) {
+            f++;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (var j = 0; j < pts.length; j++) {
+              var pt = pts[j];
+              pt.x += pt.vx; pt.y += pt.vy;
+              if (pt.y < 0) pt.y = canvas.height;
+              ctx.beginPath();
+              ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(255,255,255,' + pt.a.toFixed(2) + ')';
+              ctx.fill();
+            }
+            window.requestAnimationFrame(loop);
+          }
+        }
+        window.requestAnimationFrame(loop);
+      }
+    })();
+  </script>
+</body>
+</html>

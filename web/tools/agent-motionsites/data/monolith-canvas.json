@@ -1,0 +1,35 @@
+{
+  "pinId": "local-ebd08cf1731a",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_02e35938567a88da.jpg",
+  "archivedImagePath": "D:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-28\\pin_02e35938567a88da.jpg",
+  "title": "Monolith Canvas",
+  "slug": "monolith-canvas",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-tilt-splittext",
+    "name": "Split-Text Staggered Reveal + 3D Card Tilt + Blend Cursor",
+    "focus": [
+      "split-text-reveal",
+      "3d-card-tilt",
+      "image-zoom-mask",
+      "custom-blend-cursor"
+    ],
+    "description": "Tập trung vào nghệ thuật chữ tách ký tự (Split-Text), thẻ kính mờ nghiêng 3D khi rê chuột và con trỏ Blend-mode."
+  },
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-28\\monolith-canvas.jpg",
+  "imageBytes": 209600,
+  "imageSha256": "ebd08cf1731aab8c252f4d2209f3954f6cc9415df452062787404db9cd917c56",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 1440,
+    "height": 1920,
+    "aspectRatio": 0.75,
+    "reason": "Rejected geometry (1440x1920, AR=0.75) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-10-28T02:00:04.116Z",
+  "category": "commerce",
+  "prompt_text": "Hand-laminated T1100G carbon monocoque chassis sculpted in Veneto — engineered with wind-tunnel smoke telemetry and sub-millimeter laser mitering."
+}

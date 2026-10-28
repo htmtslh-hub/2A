@@ -46,6 +46,123 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t159: {
+    slug: 'luminex-atelier',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Apex 240Hz Signature",
+        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Apex 240Hz Signature",
+        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Apex 240Hz Signature",
+        desc: "Apex 240Hz Signature (kinetic-poster) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t158: {
+    slug: 'monolith-canvas',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Sarto Monza Atelier",
+        desc: "Sarto Monza Atelier (carbon-atelier) — Hand-laminated T1100G carbon monocoque chassis sculpted in Veneto — engineered with wind-tunnel smoke telemetry and sub-millimeter laser mitering.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Sarto Monza Atelier",
+        desc: "Sarto Monza Atelier (carbon-atelier) — Hand-laminated T1100G carbon monocoque chassis sculpted in Veneto — engineered with wind-tunnel smoke telemetry and sub-millimeter laser mitering.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Sarto Monza Atelier",
+        desc: "Sarto Monza Atelier (carbon-atelier) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t157: {
+    slug: 'nuvem-canvas',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "AetherJet Supersonic",
+        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "AetherJet Supersonic",
+        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "AetherJet Supersonic",
+        desc: "AetherJet Supersonic (sky-aviation) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t156: {
+    slug: 'nextsus-gamerlix',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "AetherJet Supersonic",
+        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "AetherJet Supersonic",
+        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "AetherJet Supersonic",
+        desc: "AetherJet Supersonic (sky-aviation) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t155: {
+    slug: 'manufacturing-grid',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Lunar Oasis Villa",
+        desc: "Lunar Oasis Villa (lunar-villa) — Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Lunar Oasis Villa",
+        desc: "Lunar Oasis Villa (lunar-villa) — Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Lunar Oasis Villa",
+        desc: "Lunar Oasis Villa (lunar-villa) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
   t154: {
     slug: 'neuralyn',
     cat: 'commerce',

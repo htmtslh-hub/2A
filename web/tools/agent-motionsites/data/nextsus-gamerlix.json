@@ -1,0 +1,69 @@
+{
+  "pinId": "local-a555c1c79162",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "Nextsus _ Gamerlix - Max Kreitor ✺.jpg",
+  "archivedImagePath": "D:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-28\\Nextsus _ Gamerlix - Max Kreitor ✺.jpg",
+  "title": "Nextsus Gamerlix",
+  "slug": "nextsus-gamerlix",
+  "assignedTier": "free",
+  "motionRecipe": {
+    "id": "recipe-horizontal-liquid",
+    "name": "Horizontal Showcase Scroll + Liquid Wave Filter + Seamless Modal",
+    "focus": [
+      "horizontal-scroll",
+      "liquid-ripple-distortion",
+      "seamless-modal-transition"
+    ],
+    "description": "Tập trung vào cuộn ngang bộ sưu tập (Horizontal Scroll), hiệu ứng gợn sóng chất lỏng SVG/WebGL và chuyển cảnh phóng to mượt mà."
+  },
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-28\\nextsus-gamerlix.jpg",
+  "imageBytes": 58064,
+  "imageSha256": "a555c1c791622ba7e024bb3bc30747b4210e46af3ab46f4eb96936cf0910dc14",
+  "criteriaEvaluation": {
+    "accepted": true,
+    "totalScore": 100,
+    "criteriaMatchPercent": 100,
+    "passedCriteriaCount": 6,
+    "width": 736,
+    "height": 414,
+    "aspectRatio": 1.78,
+    "fullBleedRatio": 1,
+    "dofRatio": 2.64,
+    "criteriaChecks": {
+      "formatDesktopHeroShowcase": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "visualHookFullBleed3DDepth": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "floatingGlassPillCards": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "outOfBounds3DPopOut": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "oversizedHeadlineTypography": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "minimalistEdgeNavigation": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      }
+    },
+    "reason": "PASSED (100/100, 6/6 criteria = 100%)"
+  },
+  "fetchedAt": "2026-10-28T02:00:04.100Z",
+  "category": "commerce",
+  "prompt_text": "Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "t157",
+  "slug": "nuvem-canvas",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-28T02:01:50.598Z",
+  "demo": "/demos/nuvem-canvas/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "99154ed6ede2",
+  "sha256": "99154ed6ede2c58d65c603cf3ee41e7956b547b1f4205be0d1d78dd7cf9124f1",
+  "demoHtmlSha256": "bca9dd120e9d729ad0760f451e2495dcf86fc32ddd3f443ff2a9cde799749ad9",
+  "demoSha256": "e9cb32f99110f75182d32df06466074262717656415e6f8f57fcd6bb50b0da09",
+  "bytes": 707662,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.504,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.896,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1492
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nuvem-canvas-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nuvem-canvas-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nuvem-canvas-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nuvem-canvas-return.jpg"
+  ]
+}

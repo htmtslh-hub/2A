@@ -12,7 +12,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { getNextCatalogId } from './scaffold-template.mjs';
+import { getNextCatalogId, syncCustomiseGuide } from './scaffold-template.mjs';
+import { buildForgeScoreV2Template } from './forgescore-v2-templates.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '../../../');
@@ -399,7 +400,7 @@ export function buildSingleFileHtml(spec) {
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+  <svg width="0" height="0" viewBox="0 0 0 0" style="position:absolute;pointer-events:none;" aria-hidden="true">
     <defs>
       <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
         <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="3" />
@@ -920,7 +921,7 @@ export function buildSingleFileHtml(spec) {
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+  <svg width="0" height="0" viewBox="0 0 0 0" style="position:absolute;pointer-events:none;" aria-hidden="true">
     <defs>
       <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
         <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="7" />
@@ -1080,7 +1081,7 @@ export function buildSingleFileHtml(spec) {
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+  <svg width="0" height="0" viewBox="0 0 0 0" style="position:absolute;pointer-events:none;" aria-hidden="true">
     <defs>
       <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
         <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="9" />
@@ -1256,7 +1257,7 @@ export function buildSingleFileHtml(spec) {
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+  <svg width="0" height="0" viewBox="0 0 0 0" style="position:absolute;pointer-events:none;" aria-hidden="true">
     <defs>
       <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
         <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="11" />
@@ -1450,7 +1451,7 @@ export function buildSingleFileHtml(spec) {
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+  <svg width="0" height="0" viewBox="0 0 0 0" style="position:absolute;pointer-events:none;" aria-hidden="true">
     <defs>
       <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
         <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="14" />
@@ -4035,12 +4036,17 @@ export function buildSingleFileHtml(spec) {
 </html>`;
   }
 
-  // GENERAL BESPOKE HALLMARK COMPILER FOR ALL OTHER MOTIONSITES TEMPLATES (with 3D Cutout + 4 Mandatory Motion Groups)
+  const v2Html = buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotionRuntime);
+  if (v2Html) {
+    return v2Html;
+  }
+
+  // GENERAL BESPOKE HALLMARK COMPILER FOR ALL OTHER MOTIONSITES TEMPLATES (with 3D Cutout + 4 Mandatory Motion Groups + ForgeScore v2.0)
   const bg = spec.isLight ? '#f8fafc' : '#06070b';
   const surface = spec.isLight ? '#ffffff' : '#10131c';
   const glass = spec.isLight ? 'rgba(255,255,255,0.82)' : 'rgba(16,19,28,0.72)';
   const fg = spec.isLight ? '#0f172a' : '#f8fafc';
-  const muted = spec.isLight ? '#64748b' : '#94a3b8';
+  const muted = spec.isLight ? '#475569' : '#94a3b8';
   const borderCol = spec.isLight ? 'rgba(15,23,42,0.12)' : 'rgba(255,255,255,0.14)';
 
   return `<!DOCTYPE html>
@@ -4050,64 +4056,87 @@ export function buildSingleFileHtml(spec) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>${spec.title} — ${spec.headline}</title>
   <meta name="description" content="${spec.subheadline.replace(/"/g, '&quot;')}">
+  <meta property="og:title" content="${spec.title} — ${spec.headline}">
+  <meta property="og:description" content="${spec.subheadline.replace(/"/g, '&quot;')}">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="${bg}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: ${bg};
-      --surface: ${surface};
-      --glass: ${glass};
-      --fg: ${fg};
-      --muted: ${muted};
-      --border: ${borderCol};
-      --accent: ${spec.accent};
+      --bg-primary: ${bg};
+      --bg-surface: ${surface};
+      --bg-glass: ${glass};
+      --text-primary: ${fg};
+      --text-secondary: ${muted};
+      --text-muted: ${muted};
+      --accent-primary: ${spec.accent};
+      --accent-secondary: #38bdf8;
+      --border-hairline: ${borderCol};
+      --font-display: 'Instrument Serif', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+      --radius-card: 24px;
+      --radius-pill: 9999px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
-    .${p}-cursor-ring, .${p}-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
-    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
-    .${p}-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
-    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    html, body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-sans); overflow-x: clip; scroll-behavior: smooth; }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 10000; padding: 10px 18px; border-radius: var(--radius-pill); background: var(--accent-primary); color: #090b10; font-weight: 700; text-decoration: none; transition: transform 0.2s var(--ease-out-expo); }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--text-primary); outline-offset: 3px; }
+    :focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 3px; }
+    .${p}-cursor-ring, .${p}-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; will-change: transform; }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: transform 0.22s var(--ease-out-expo), opacity 0.22s var(--ease-out-expo); }
+    .${p}-cursor-ring.is-hovered { transform: translate3d(-100px,-100px,0) scale(1.65); background: #fff; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent-primary); margin: -3px 0 0 -3px; }
     @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
 
     .${p}-navbar {
       position: fixed; top: 14px; left: 0; right: 0; z-index: 220;
       max-width: 1280px; margin: 0 auto; padding: 12px 24px;
-      border-radius: 999px; background: var(--glass); backdrop-filter: blur(20px);
-      border: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      border-radius: var(--radius-pill); background: var(--bg-glass); backdrop-filter: blur(20px);
+      border: 1px solid var(--border-hairline); display: flex; align-items: center; justify-content: space-between; gap: 16px;
     }
-    .${p}-pill-btn { padding: 8px 18px; border-radius: 999px; background: var(--glass); border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 700; cursor: pointer; }
-    .${p}-cta-btn { padding: 9px 22px; border-radius: 999px; background: var(--accent); color: #090b10; border: none; font-size: 13px; font-weight: 800; cursor: pointer; }
+    .${p}-pill-btn { min-height: 44px; padding: 8px 18px; border-radius: var(--radius-pill); background: var(--bg-glass); border: 1px solid var(--border-hairline); color: var(--text-primary); font-size: 12px; font-weight: 700; cursor: pointer; transition: transform 0.25s var(--ease-spring), opacity 0.25s var(--ease-out-expo); }
+    .${p}-cta-btn { min-height: 44px; padding: 10px 22px; border-radius: var(--radius-pill); background: var(--accent-primary); color: #090b10; border: none; font-size: 13px; font-weight: 800; cursor: pointer; transition: transform 0.25s var(--ease-spring), opacity 0.25s var(--ease-out-expo); }
+    .${p}-pill-btn:active, .${p}-cta-btn:active { transform: scale(0.97); }
 
     .${p}-hero {
-      position: relative; min-height: 100vh; padding: 112px clamp(20px,5vw,72px) 64px;
+      position: relative; min-height: 100vh; padding: clamp(112px, 12vw, 148px) clamp(20px,5vw,72px) clamp(56px, 7vw, 88px);
       display: flex; flex-direction: column; justify-content: center; overflow: hidden; isolation: isolate;
     }
     .${p}-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: 0.36; pointer-events: none; }
     .${p}-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
-    .${p}-hero-grid { max-width: 1280px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
-    @media (min-width: 960px) { .${p}-hero-grid { grid-template-columns: 1.05fr 0.95fr; } }
-    .${p}-h1 { font-family: 'Instrument Serif', serif; font-size: clamp(46px, 7vw, 96px); font-weight: 400; line-height: 0.96; margin: 14px 0 18px; }
+    .${p}-hero-grid { max-width: 1280px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: clamp(24px, 4vw, 44px); align-items: center; }
+    .${p}-h1 { font-family: var(--font-display); font-size: clamp(2.75rem, 6.5vw, 5.75rem); font-weight: 400; line-height: 0.96; letter-spacing: -0.03em; margin: 14px 0 18px; }
     .${p}-cutout-3d { width: 100%; height: auto; max-height: 360px; object-fit: contain; display: block; margin: 0 auto; filter: drop-shadow(0 26px 40px rgba(0,0,0,0.55)); }
-    .${p}-popout-wrap { animation: ${p}Float 5.8s ease-in-out infinite; }
+    .${p}-popout-wrap { animation: ${p}Float 5.8s ease-in-out infinite; will-change: transform; }
     @keyframes ${p}Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
 
-    .${p}-section { max-width: 1280px; margin: 0 auto; padding: 80px clamp(20px,5vw,72px); }
+    .${p}-section { max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(20px,5vw,72px); }
     .${p}-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 32px; align-items: center; }
-    @media (min-width: 960px) { .${p}-pinned-grid { grid-template-columns: 1fr 1.1fr 1fr; } }
-    .${p}-card { padding: 24px; border-radius: 26px; background: var(--glass); border: 1px solid var(--border); backdrop-filter: blur(18px); }
+    .${p}-card { padding: clamp(20px, 3vw, 28px); border-radius: var(--radius-card); background: var(--bg-glass); border: 1px solid var(--border-hairline); backdrop-filter: blur(18px); box-shadow: 0 24px 48px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.12); transition: transform 0.35s var(--ease-out-expo), opacity 0.35s var(--ease-out-expo); }
     .${p}-hscroll-track { display: grid; grid-template-columns: repeat(3, minmax(260px, 1fr)); gap: 20px; overflow-x: auto; margin-top: 28px; }
-    .${p}-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s, transform 0.6s; }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s var(--ease-out-expo), transform 0.6s var(--ease-out-expo); }
     .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
 
     .${p}-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(5,8,15,0.84); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
     .${p}-seamless-overlay.is-open { display: flex; }
-    .${p}-seamless-box { max-width: 640px; width: 100%; border-radius: 28px; background: var(--surface); border: 1px solid var(--border); padding: 32px; pointer-events: auto; }
+    .${p}-seamless-box { max-width: 640px; width: 100%; border-radius: 28px; background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 32px; pointer-events: auto; }
+    @media (max-width: 640px) { .${p}-navbar { padding: 10px 16px; } }
+    @media (max-width: 768px) { .${p}-hscroll-track { grid-template-columns: 1fr; } }
+    @media (min-width: 960px) { .${p}-hero-grid { grid-template-columns: 1.05fr 0.95fr; } .${p}-pinned-grid { grid-template-columns: 1fr 1.1fr 1fr; } }
+    @media (min-width: 1024px) { .${p}-section { padding-inline: 64px; } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <svg width="0" height="0" viewBox="0 0 0 0" style="position:absolute;pointer-events:none;" aria-hidden="true">
     <defs>
       <filter id="${p}LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
         <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="5" />
@@ -4120,25 +4149,25 @@ export function buildSingleFileHtml(spec) {
 
   <header class="${p}-navbar">
     <strong style="font-size:17px;">✦ ${spec.title}</strong>
-    <div style="display:flex;gap:10px;align-items:center;">
+    <nav aria-label="Primary Navigation" style="display:flex;gap:10px;align-items:center;">
       <button type="button" id="motionToggleBtn" class="${p}-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="${p}-cta-btn" data-magnetic data-next-preview>Explore Dossier ↗</button>
-    </div>
+      <button type="button" id="exploreMagneticBtn" class="${p}-cta-btn" data-magnetic data-next-preview>Explore ${spec.title} ↗</button>
+    </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section id="heroStage" class="${p}-hero">
       <video id="heroBgVideo" class="${p}-bg-video" src="${spec.heroVideo}" autoplay loop muted playsinline preload="auto"></video>
       <canvas id="ambientSmokeCanvas" class="${p}-smoke-canvas" aria-hidden="true"></canvas>
       <div class="${p}-hero-grid">
         <div data-parallax="0.08">
-          <span class="${p}-pill-btn" style="color:var(--accent);">${spec.title} • Interactive Edition</span>
+          <span class="${p}-pill-btn" style="color:var(--accent-primary);display:inline-flex;align-items:center;">${spec.title} • Interactive Edition</span>
           <h1 class="${p}-h1" id="oversizedHeadline">${spec.headline}</h1>
-          <p style="font-size:16px;color:var(--muted);line-height:1.65;max-width:540px;margin-bottom:24px;">${spec.subheadline}</p>
-          <div style="display:flex;gap:28px;flex-wrap:wrap;">
-            <div><strong data-counter-target="120" data-counter-suffix="FPS" style="font-size:30px;">120FPS</strong><span style="display:block;font-size:12px;color:var(--muted);">Motion Pipeline</span></div>
-            <div><strong data-counter-target="10" data-counter-suffix="K+" style="font-size:30px;">10K+</strong><span style="display:block;font-size:12px;color:var(--muted);">Active Nodes</span></div>
-            <div><strong data-counter-target="99" data-counter-suffix="%" style="font-size:30px;">99%</strong><span style="display:block;font-size:12px;color:var(--muted);">Visual Fidelity</span></div>
+          <p style="font-size:16px;color:var(--text-secondary);line-height:1.65;max-width:60ch;margin-bottom:24px;">${spec.subheadline}</p>
+          <div style="display:flex;gap:28px;flex-wrap:wrap;font-variant-numeric:tabular-nums;">
+            <div><strong data-counter-target="120" data-counter-suffix="FPS" style="font-size:30px;font-family:var(--font-mono);">120FPS</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Motion Pipeline</span></div>
+            <div><strong data-counter-target="10" data-counter-suffix="K+" style="font-size:30px;font-family:var(--font-mono);">10K+</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Active Nodes</span></div>
+            <div><strong data-counter-target="99" data-counter-suffix="%" style="font-size:30px;font-family:var(--font-mono);">99%</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Visual Fidelity</span></div>
           </div>
         </div>
         <div id="heroPopoutRig" class="${p}-popout-wrap" data-tilt-card style="filter:url(#${p}LiquidFilter);">
@@ -4150,22 +4179,27 @@ export function buildSingleFileHtml(spec) {
     <section id="pinnedSpecs" class="${p}-section">
       <div class="${p}-pinned-grid">
         <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="001">
-          <span style="font-size:11px;color:var(--accent);font-weight:700;">001 / ARCHITECTURE</span>
-          <h3 style="font-size:20px;margin:8px 0;">Zero-Build Single File</h3>
-          <p style="font-size:13px;color:var(--muted);">Self-contained HTML5/CSS3/JS architecture with responsive 4-viewport layout.</p>
+          <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">001 / ${spec.title.toUpperCase()}</span>
+          <h2 style="font-size:20px;margin:8px 0;">${spec.headline}</h2>
+          <p style="font-size:13px;color:var(--text-secondary);">${spec.subheadline}</p>
         </article>
         <div class="${p}-card" id="scrubCenterStage" style="text-align:center;">
           ${cutoutImg}
-          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:var(--accent);font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
+          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
         <article class="${p}-card ${p}-reveal" data-tilt-card data-spec-index="002">
-          <span style="font-size:11px;color:var(--accent);font-weight:700;">002 / INTERACTION</span>
-          <h3 style="font-size:20px;margin:8px 0;">3D Tilt &amp; Liquid Wave</h3>
-          <p style="font-size:13px;color:var(--muted);">Interactive perspective cards and SVG displacement filters.</p>
+          <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">002 / TELEMETRY</span>
+          <h2 style="font-size:20px;margin:8px 0;">3D Tilt &amp; Liquid Wave</h2>
+          <p style="font-size:13px;color:var(--text-secondary);">Interactive perspective cards and SVG displacement filters tuned for ${spec.title}.</p>
         </article>
       </div>
     </section>
   </main>
+
+  <footer class="${p}-section" style="padding-top:24px;padding-bottom:40px;border-top:1px solid var(--border-hairline);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+    <span style="font-size:13px;color:var(--text-secondary);">© ${new Date().getFullYear()} ${spec.title}. Crafted with ForgeFrame Gold v2.0.</span>
+    <span style="font-size:12px;font-family:var(--font-mono);color:var(--accent-primary);">STATUS: NOMINAL • 60FPS</span>
+  </footer>
 
   <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
     <div class="${p}-seamless-box">
@@ -4174,7 +4208,7 @@ export function buildSingleFileHtml(spec) {
         <button type="button" id="closeSeamlessBtn" class="${p}-pill-btn">Close (Esc)</button>
       </div>
       <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">${spec.title}</h2>
-      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">${spec.subheadline}</p>
+      <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:18px;">${spec.subheadline}</p>
       <div style="margin-bottom:18px;">${cutoutImg}</div>
       <button type="button" id="confirmSeamlessBtn" class="${p}-cta-btn" style="width:100%;">Return to Live Stage</button>
     </div>
@@ -4212,6 +4246,7 @@ export async function compileAndIntegratePrompt(slug, options = {}) {
   const spec = extractSpecFromPrompt(data);
   const html = buildSingleFileHtml(spec);
   fs.writeFileSync(sourceHtmlPath, html, 'utf8');
+  syncCustomiseGuide(slug, data.title, [data.title, spec.headline, spec.subheadline]);
 
   fs.mkdirSync(path.dirname(demoHtmlPath), { recursive: true });
   fs.copyFileSync(sourceHtmlPath, demoHtmlPath);

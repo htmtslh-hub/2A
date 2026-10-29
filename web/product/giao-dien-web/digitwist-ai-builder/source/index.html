@@ -3,66 +3,243 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Digitwist AI Builder — Customer Stories</title>
-  <meta name="description" content="Create fully functional, SEO-optimized websites in seconds with our advanced AI engine.">
+  <title>Digitwist AI Builder — Design at the Speed of Thought</title>
+  <meta name="description" content="Create fully functional, SEO-optimized websites in seconds with the Digitwist AI Builder engine.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #06070b;
-      --surface: #10131c;
-      --glass: rgba(16,19,28,0.72);
+      --bg: #03050a;
+      --surface: #0b101e;
+      --surface-elevated: #131b31;
+      --glass: rgba(11, 16, 30, 0.78);
       --fg: #f8fafc;
       --muted: #94a3b8;
-      --border: rgba(255,255,255,0.14);
-      --accent: #b4c0ff;
+      --border: rgba(180, 192, 255, 0.16);
+      --accent: #3054ff;
+      --accent-text: #b4c0ff;
+      --accent-strong: #2040e0;
+      --on-accent: #ffffff;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 24px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
-    .dig48-cursor-ring, .dig48-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
-    .dig48-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
-    .dig48-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
-    .dig48-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px;
+      background: var(--accent); color: var(--on-accent);
+      font-weight: 600; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid #ffffff; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent-text);
+      outline-offset: 3px;
+    }
+    button, [role="button"], .dig48-interactive-btn {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active, .dig48-interactive-btn:active {
+      transform: scale(0.97) translateY(1px);
+    }
+    .tabular-nums, [data-counter-target], .dig48-metric-val {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .dig48-cursor-ring, .dig48-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0); mix-blend-mode: difference;
+    }
+    .dig48-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #ffffff; margin: -17px 0 0 -17px; transition: transform 0.18s var(--ease-out), background-color 0.22s var(--ease-out); }
+    .dig48-cursor-ring.is-hovered { background: #ffffff; }
+    .dig48-cursor-dot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
     @media (max-width: 900px) { .dig48-cursor-ring, .dig48-cursor-dot { display: none; } }
 
-    .dig48-navbar {
-      position: fixed; top: 14px; left: 0; right: 0; z-index: 220;
-      max-width: 1280px; margin: 0 auto; padding: 12px 24px;
-      border-radius: 999px; background: var(--glass); backdrop-filter: blur(20px);
-      border: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    .dig48-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 220;
+      padding: 16px clamp(20px, 4vw, 48px);
+      background: linear-gradient(180deg, rgba(3, 5, 10, 0.88) 0%, rgba(3, 5, 10, 0) 100%);
     }
-    .dig48-pill-btn { padding: 8px 18px; border-radius: 999px; background: var(--glass); border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 700; cursor: pointer; }
-    .dig48-cta-btn { padding: 9px 22px; border-radius: 999px; background: var(--accent); color: #090b10; border: none; font-size: 13px; font-weight: 800; cursor: pointer; }
+    .dig48-nav-container {
+      max-width: 1320px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .dig48-brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--fg); text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: -0.02em;
+    }
+    .dig48-nav-links {
+      display: flex; align-items: center; gap: 32px; list-style: none;
+    }
+    .dig48-nav-links a {
+      color: rgba(248, 250, 252, 0.78); text-decoration: none; font-size: 14px; font-weight: 500;
+      display: inline-flex; align-items: center; gap: 5px;
+    }
+    .dig48-nav-links a:hover { color: #ffffff; }
+    .dig48-nav-actions { display: flex; align-items: center; gap: 12px; }
+    .dig48-pill-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .dig48-btn-get-started {
+      padding: 10px 20px; border-radius: 999px; background: #ffffff; color: #05070e;
+      border: none; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
 
     .dig48-hero {
-      position: relative; min-height: 100vh; padding: 112px clamp(20px,5vw,72px) 64px;
-      display: flex; flex-direction: column; justify-content: center; overflow: hidden; isolation: isolate;
+      position: relative; min-height: 100vh; padding: 140px clamp(20px, 5vw, 64px) 84px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden; isolation: isolate;
     }
-    .dig48-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: 0.36; pointer-events: none; }
-    .dig48-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
-    .dig48-hero-grid { max-width: 1280px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
-    @media (min-width: 960px) { .dig48-hero-grid { grid-template-columns: 1.05fr 0.95fr; } }
-    .dig48-h1 { font-family: 'Instrument Serif', serif; font-size: clamp(46px, 7vw, 96px); font-weight: 400; line-height: 0.96; margin: 14px 0 18px; }
-    .dig48-cutout-3d { width: 100%; height: auto; max-height: 360px; object-fit: contain; display: block; margin: 0 auto; filter: drop-shadow(0 26px 40px rgba(0,0,0,0.55)); }
-    .dig48-popout-wrap { animation: dig48Float 5.8s ease-in-out infinite; }
-    @keyframes dig48Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
+    .dig48-bg-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      z-index: -3; opacity: 0.45; pointer-events: none;
+    }
+    .dig48-hero-overlay {
+      position: absolute; inset: 0; z-index: -2;
+      background:
+        radial-gradient(600px circle at 20% 0%, rgba(48, 84, 255, 0.24), transparent 70%),
+        radial-gradient(520px circle at 80% 90%, rgba(99, 102, 241, 0.22), transparent 70%),
+        rgba(3, 5, 10, 0.62);
+    }
+    .dig48-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+    .dig48-pre-headline {
+      font-family: var(--font-display); font-style: italic;
+      font-size: clamp(28px, 4.2vw, 48px); line-height: 1.1; color: #ffffff;
+      margin-bottom: 14px;
+    }
+    .dig48-main-h1 {
+      font-family: var(--font-sans); font-weight: 600;
+      font-size: clamp(56px, 10.5vw, 136px); line-height: 0.92; letter-spacing: -0.045em;
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 45%, #b4c0ff 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 24px;
+    }
+    .dig48-subheadline {
+      font-size: clamp(17px, 2vw, 20px); line-height: 1.65; color: rgba(248, 250, 252, 0.72);
+      max-width: 580px; margin: 0 auto 36px;
+    }
+    .dig48-cta-row {
+      display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;
+    }
+    .dig48-primary-pill {
+      display: inline-flex; align-items: center; gap: 14px;
+      padding: 8px 8px 8px 24px; border-radius: 999px;
+      background: #ffffff; color: #0a0400; border: none;
+      font-size: 17px; font-weight: 600; cursor: pointer;
+      box-shadow: 0 0 24px rgba(255, 255, 255, 0.22);
+    }
+    .dig48-arrow-circle {
+      width: 40px; height: 40px; border-radius: 50%; background: var(--accent);
+      color: #ffffff; display: inline-flex; align-items: center; justify-content: center;
+    }
+    .dig48-secondary-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+      color: rgba(255, 255, 255, 0.82); font-size: 15px; font-weight: 500;
+      text-decoration: none; cursor: pointer;
+    }
 
-    .dig48-section { max-width: 1280px; margin: 0 auto; padding: 80px clamp(20px,5vw,72px); }
-    .dig48-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 32px; align-items: center; }
-    @media (min-width: 960px) { .dig48-pinned-grid { grid-template-columns: 1fr 1.1fr 1fr; } }
-    .dig48-card { padding: 24px; border-radius: 26px; background: var(--glass); border: 1px solid var(--border); backdrop-filter: blur(18px); }
-    .dig48-hscroll-track { display: grid; grid-template-columns: repeat(3, minmax(260px, 1fr)); gap: 20px; overflow-x: auto; margin-top: 28px; }
-    .dig48-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s, transform 0.6s; }
-    .dig48-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+    .dig48-section {
+      max-width: 1280px; margin: 0 auto; padding: clamp(64px, 8vw, 108px) clamp(20px, 5vw, 64px);
+    }
+    .dig48-section-header {
+      display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px;
+    }
+    .dig48-kicker {
+      font-family: var(--font-mono); font-size: 12px; text-transform: uppercase;
+      letter-spacing: 0.14em; color: var(--accent-text);
+    }
+    .dig48-h2 {
+      font-family: var(--font-display); font-size: clamp(34px, 4.8vw, 56px);
+      font-weight: 400; line-height: 1.04; letter-spacing: -0.02em;
+    }
 
-    .dig48-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(5,8,15,0.84); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
+    /* Live Interactive AI Prompt-to-Website Sandbox */
+    .dig48-sandbox-shell {
+      display: grid; grid-template-columns: 1fr 1.25fr; gap: 24px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px;
+    }
+    .dig48-preset-list { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .dig48-preset-btn {
+      text-align: left; padding: 14px 16px; border-radius: 14px;
+      background: var(--surface-elevated); border: 1px solid var(--border);
+      color: var(--fg); cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    }
+    .dig48-preset-btn[aria-selected="true"] {
+      border-color: var(--accent); background: rgba(48, 84, 255, 0.18);
+    }
+    .dig48-preview-stage {
+      background: #060913; border: 1px solid var(--border); border-radius: 18px;
+      padding: 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;
+    }
+
+    .dig48-bento-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    }
+    .dig48-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px;
+      display: flex; flex-direction: column; justify-content: space-between; gap: 14px;
+    }
+    .dig48-stories-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    }
+    .dig48-pricing-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    }
+    .dig48-reveal {
+      opacity: 0; transform: translate3d(0, 22px, 0);
+      transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    }
+    .dig48-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .dig48-footer {
+      border-top: 1px solid var(--border); padding: 56px clamp(20px, 5vw, 64px);
+      max-width: 1280px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px;
+      color: var(--muted); font-size: 13px;
+    }
+
+    .dig48-seamless-overlay {
+      position: fixed; inset: 0; z-index: 190; background: rgba(3, 5, 10, 0.86);
+      backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none;
+    }
     .dig48-seamless-overlay.is-open { display: flex; }
-    .dig48-seamless-box { max-width: 640px; width: 100%; border-radius: 28px; background: var(--surface); border: 1px solid var(--border); padding: 32px; pointer-events: auto; }
+    .dig48-seamless-box {
+      max-width: 580px; width: 100%; border-radius: 26px;
+      background: var(--surface); border: 1px solid var(--border); padding: 32px; pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .dig48-sandbox-shell { grid-template-columns: 1fr; }
+      .dig48-bento-grid, .dig48-stories-grid, .dig48-pricing-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .dig48-nav-links { display: none; }
+      .dig48-bento-grid, .dig48-stories-grid, .dig48-pricing-grid { grid-template-columns: 1fr; }
+      .dig48-hero { padding-top: 116px; }
+    }
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <svg width="0" height="0" viewBox="0 0 0 0" style="position:absolute;pointer-events:none;" aria-hidden="true">
     <defs>
       <filter id="dig48LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
         <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="5" />
@@ -73,67 +250,255 @@
   <div id="cursorRing" class="dig48-cursor-ring" aria-hidden="true"></div>
   <div id="cursorDot" class="dig48-cursor-dot" aria-hidden="true"></div>
 
-  <header class="dig48-navbar">
-    <strong style="font-size:17px;">✦ Digitwist AI Builder</strong>
-    <div style="display:flex;gap:10px;align-items:center;">
-      <button type="button" id="motionToggleBtn" class="dig48-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="dig48-cta-btn" data-magnetic data-next-preview>Explore Dossier ↗</button>
+  <header class="dig48-header">
+    <div class="dig48-nav-container">
+      <a href="#heroStage" class="dig48-brand" aria-label="Digitwist AI Builder Home">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M19.07 4.93l-2.12 2.12M7.05 16.95l-2.12 2.12"/>
+        </svg>
+        <span>Digitwist AI Builder</span>
+      </a>
+      <nav aria-label="Primary Navigation">
+        <ul class="dig48-nav-links">
+          <li>
+            <a href="#aiSandbox">
+              <span>Products</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+          </li>
+          <li><a href="#customerStories">Customer Stories</a></li>
+          <li><a href="#pinnedSpecs">Resources</a></li>
+          <li><a href="#pricingMatrix">Pricing</a></li>
+        </ul>
+      </nav>
+      <div class="dig48-nav-actions">
+        <button type="button" id="motionToggleBtn" class="dig48-pill-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
+        <button type="button" class="dig48-pill-ghost" data-seamless-trigger="Book a Live Architecture Demo">Book A Demo</button>
+        <button type="button" id="exploreMagneticBtn" class="dig48-btn-get-started" data-magnetic data-next-preview>Get Started</button>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section id="heroStage" class="dig48-hero">
-      <video id="heroBgVideo" class="dig48-bg-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260419_024949_c2df2ce2-00c2-4c26-84c6-210c14f3b98e.mp4" autoplay loop muted playsinline preload="auto"></video>
+  <main id="mainContent">
+    <!-- SECTION 1: HERO STAGE -->
+    <section id="heroStage" class="dig48-hero" aria-labelledby="oversizedHeadline">
+      <video id="heroBgVideo" class="dig48-bg-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260419_024949_c2df2ce2-00c2-4c26-84c6-210c14f3b98e.mp4" autoplay loop muted playsinline preload="metadata"></video>
+      <div class="dig48-hero-overlay" aria-hidden="true"></div>
       <canvas id="ambientSmokeCanvas" class="dig48-smoke-canvas" aria-hidden="true"></canvas>
-      <div class="dig48-hero-grid">
-        <div data-parallax="0.08">
-          <span class="dig48-pill-btn" style="color:var(--accent);">Digitwist AI Builder • Interactive Edition</span>
-          <h1 class="dig48-h1" id="oversizedHeadline">Customer Stories</h1>
-          <p style="font-size:16px;color:var(--muted);line-height:1.65;max-width:540px;margin-bottom:24px;">Create fully functional, SEO-optimized websites in seconds with our advanced AI engine.</p>
-          <div style="display:flex;gap:28px;flex-wrap:wrap;">
-            <div><strong data-counter-target="120" data-counter-suffix="FPS" style="font-size:30px;">120FPS</strong><span style="display:block;font-size:12px;color:var(--muted);">Motion Pipeline</span></div>
-            <div><strong data-counter-target="10" data-counter-suffix="K+" style="font-size:30px;">10K+</strong><span style="display:block;font-size:12px;color:var(--muted);">Active Nodes</span></div>
-            <div><strong data-counter-target="99" data-counter-suffix="%" style="font-size:30px;">99%</strong><span style="display:block;font-size:12px;color:var(--muted);">Visual Fidelity</span></div>
-          </div>
+
+      <div style="max-width:1024px;margin:0 auto;position:relative;z-index:10;" data-parallax="0.06">
+        <p class="dig48-pre-headline">Design at the speed of thought</p>
+        <h1 class="dig48-main-h1" id="oversizedHeadline">Build Faster</h1>
+        <p class="dig48-subheadline">
+          Create fully functional, SEO-optimized websites in seconds with our advanced AI engine.
+        </p>
+        <div class="dig48-cta-row">
+          <button type="button" class="dig48-primary-pill" data-magnetic data-seamless-trigger="Start Building Free — Instant AI Workspace">
+            <span>Start Building Free</span>
+            <span class="dig48-arrow-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </span>
+          </button>
+          <a href="#aiSandbox" class="dig48-secondary-link">
+            <span>See Examples</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
         </div>
-        <div id="heroPopoutRig" class="dig48-popout-wrap" data-tilt-card style="filter:url(#dig48LiquidFilter);">
-          <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#b4c0ff" stop-opacity="0.75"/><stop offset="100%" stop-color="#b4c0ff" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#b4c0ff" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
+
+        <div style="display:flex;justify-content:center;gap:42px;flex-wrap:wrap;margin-top:48px;" class="tabular-nums">
+          <div><strong data-counter-target="4" data-counter-suffix=".2s" style="font-size:32px;display:block;">4.2s</strong><span style="font-size:12px;color:var(--muted);">Full DOM Synthesis</span></div>
+          <div><strong data-counter-target="100" data-counter-suffix="/100" style="font-size:32px;display:block;">100/100</strong><span style="font-size:12px;color:var(--muted);">Core Web Vitals SEO</span></div>
+          <div><strong data-counter-target="48" data-counter-suffix="K+" style="font-size:32px;display:block;">48K+</strong><span style="font-size:12px;color:var(--muted);">Sites Deployed</span></div>
         </div>
       </div>
     </section>
 
-    <section id="pinnedSpecs" class="dig48-section">
-      <div class="dig48-pinned-grid">
+    <!-- SECTION 2: LIVE INTERACTIVE AI PROMPT-TO-SITE SANDBOX (ONE LIVE THING) -->
+    <section id="aiSandbox" class="dig48-section" aria-labelledby="sandboxHeading">
+      <div class="dig48-section-header">
+        <span class="dig48-kicker">01 / LIVE NEURAL COMPILER</span>
+        <h2 id="sandboxHeading" class="dig48-h2">Prompt to Production Architecture</h2>
+      </div>
+      <div class="dig48-sandbox-shell">
+        <div>
+          <label for="aiPromptInput" style="display:block;font-size:13px;font-weight:600;color:var(--accent-text);margin-bottom:8px;">Select or customise an AI build prompt:</label>
+          <input id="aiPromptInput" type="text" value="Fintech AI treasury platform with dark bento telemetry" aria-label="AI Website Prompt" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#060913;color:var(--fg);font-size:14px;" />
+          <div class="dig48-preset-list" role="tablist" aria-label="AI Blueprint Presets">
+            <button type="button" class="dig48-preset-btn" role="tab" aria-selected="true" data-prompt-preset="Fintech AI treasury platform with dark bento telemetry" data-seo="99" data-lcp="0.4s" data-nodes="42 Semantic Sections">
+              <span>01. Fintech AI Treasury Bento</span>
+              <span class="tabular-nums" style="font-size:12px;color:var(--accent-text);">0.4s LCP</span>
+            </button>
+            <button type="button" class="dig48-preset-btn" role="tab" aria-selected="false" data-prompt-preset="Luxury architectural monograph with editorial serif grid" data-seo="100" data-lcp="0.3s" data-nodes="36 Editorial Blocks">
+              <span>02. Architectural Monograph Studio</span>
+              <span class="tabular-nums" style="font-size:12px;color:var(--accent-text);">0.3s LCP</span>
+            </button>
+            <button type="button" class="dig48-preset-btn" role="tab" aria-selected="false" data-prompt-preset="Developer CLI & SDK documentation hub with live playground" data-seo="100" data-lcp="0.5s" data-nodes="54 Interactive Modules">
+              <span>03. Developer SDK &amp; CLI Hub</span>
+              <span class="tabular-nums" style="font-size:12px;color:var(--accent-text);">0.5s LCP</span>
+            </button>
+          </div>
+        </div>
+        <div class="dig48-preview-stage" aria-live="polite">
+          <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);padding-bottom:14px;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);" id="sandboxStatusText">COMPILED: Fintech AI treasury platform</span>
+            <span class="tabular-nums" style="font-size:12px;background:rgba(48,84,255,0.2);color:#b4c0ff;padding:4px 10px;border-radius:999px;" id="sandboxSeoBadge">SEO Score: 99/100</span>
+          </div>
+          <div id="heroPopoutRig" data-tilt-card style="filter:url(#dig48LiquidFilter);padding:12px 0;">
+            <svg viewBox="0 0 640 240" width="100%" height="200" fill="none" aria-hidden="true">
+              <rect x="8" y="8" width="624" height="224" rx="16" fill="#0b101e" stroke="rgba(180,192,255,0.22)"/>
+              <rect x="28" y="28" width="180" height="16" rx="8" fill="#3054ff"/>
+              <rect x="28" y="58" width="320" height="28" rx="6" fill="#f8fafc"/>
+              <rect x="28" y="98" width="260" height="12" rx="6" fill="#64748b"/>
+              <rect x="28" y="136" width="190" height="72" rx="12" fill="#131b31" stroke="#3054ff"/>
+              <rect x="234" y="136" width="190" height="72" rx="12" fill="#131b31" stroke="rgba(180,192,255,0.2)"/>
+              <rect x="440" y="28" width="172" height="180" rx="14" fill="rgba(48,84,255,0.14)" stroke="#b4c0ff"/>
+              <path d="M464 168 L498 122 L532 142 L584 74" stroke="#b4c0ff" stroke-width="3.5" stroke-linecap="round"/>
+              <circle cx="584" cy="74" r="6" fill="#3054ff"/>
+            </svg>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);" class="tabular-nums">
+            <span id="sandboxNodesText">Generated: 42 Semantic Sections</span>
+            <span id="sandboxLcpText">Estimated LCP: 0.4s</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PINNED TELEMETRY & ARCHITECTURE BENTO -->
+    <section id="pinnedSpecs" class="dig48-section" aria-labelledby="specsHeading">
+      <div class="dig48-section-header">
+        <span class="dig48-kicker">02 / CORE ENGINE TELEMETRY</span>
+        <h2 id="specsHeading" class="dig48-h2">Engineered for Zero-Bloat Speed</h2>
+      </div>
+      <div class="dig48-bento-grid">
         <article class="dig48-card dig48-reveal" data-tilt-card data-spec-index="001">
-          <span style="font-size:11px;color:var(--accent);font-weight:700;">001 / ARCHITECTURE</span>
-          <h3 style="font-size:20px;margin:8px 0;">Zero-Build Single File</h3>
-          <p style="font-size:13px;color:var(--muted);">Self-contained HTML5/CSS3/JS architecture with responsive 4-viewport layout.</p>
+          <span class="dig48-kicker">001 / SEMANTIC AST</span>
+          <h3 style="font-size:22px;">Clean HTML5 &amp; CSS Grid</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Digitwist compiles directly to semantic landmarks, fluid clamp() tokens, and accessible ARIA components with zero runtime bloat.</p>
         </article>
         <div class="dig48-card" id="scrubCenterStage" style="text-align:center;">
-          <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#b4c0ff" stop-opacity="0.75"/><stop offset="100%" stop-color="#b4c0ff" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#b4c0ff" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
-          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:var(--accent);font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#b4c0ff" stroke-width="1.6" style="margin:0 auto;" aria-hidden="true">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
+          </svg>
+          <p id="scrubDialText" class="tabular-nums" style="margin-top:12px;font-size:13px;color:var(--accent-text);font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
         <article class="dig48-card dig48-reveal" data-tilt-card data-spec-index="002">
-          <span style="font-size:11px;color:var(--accent);font-weight:700;">002 / INTERACTION</span>
-          <h3 style="font-size:20px;margin:8px 0;">3D Tilt &amp; Liquid Wave</h3>
-          <p style="font-size:13px;color:var(--muted);">Interactive perspective cards and SVG displacement filters.</p>
+          <span class="dig48-kicker">002 / EDGE STREAMING</span>
+          <h3 style="font-size:22px;">Adaptive HLS &amp; WebP Pipeline</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Automatic responsive poster generation, hardware-accelerated motion curves, and instant global CDN deployment.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CUSTOMER STORIES -->
+    <section id="customerStories" class="dig48-section" aria-labelledby="storiesHeading">
+      <div class="dig48-section-header">
+        <span class="dig48-kicker">03 / VERIFIED LAUNCHES</span>
+        <h2 id="storiesHeading" class="dig48-h2">Customer Stories</h2>
+      </div>
+      <div class="dig48-stories-grid">
+        <article class="dig48-card dig48-reveal" data-tilt-card data-seamless-trigger="Kinetix Cloud — +240% Conversion Case Study">
+          <span class="dig48-kicker">KINETIX CLOUD</span>
+          <strong class="tabular-nums" style="font-size:36px;color:var(--accent-text);">+240%</strong>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Launched 18 localized product landing pages in a single afternoon with 100/100 Lighthouse SEO scores.</p>
+        </article>
+        <article class="dig48-card dig48-reveal" data-tilt-card data-seamless-trigger="Vespera Studio — 3.8x Faster Client Delivery">
+          <span class="dig48-kicker">VESPERA STUDIO</span>
+          <strong class="tabular-nums" style="font-size:36px;color:var(--accent-text);">3.8x</strong>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Cut agency prototyping cycles from three weeks to four hours using Digitwist live token synchronization.</p>
+        </article>
+        <article class="dig48-card dig48-reveal" data-tilt-card data-seamless-trigger="Monolith AI — 0.38s Global LCP">
+          <span class="dig48-kicker">MONOLITH AI</span>
+          <strong class="tabular-nums" style="font-size:36px;color:var(--accent-text);">0.38s</strong>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Replaced heavy SPA bundles with clean Digitwist semantic HTML and doubled organic search traffic.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PRICING MATRIX -->
+    <section id="pricingMatrix" class="dig48-section" aria-labelledby="pricingHeading">
+      <div class="dig48-section-header">
+        <span class="dig48-kicker">04 / TRANSPARENT TIERS</span>
+        <h2 id="pricingHeading" class="dig48-h2">Scale at the Speed of Thought</h2>
+      </div>
+      <div class="dig48-pricing-grid">
+        <article class="dig48-card dig48-reveal" data-tilt-card>
+          <span class="dig48-kicker">STARTER</span>
+          <strong class="tabular-nums" style="font-size:38px;">$0<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
+          <p style="color:var(--muted);font-size:14px;">3 AI-generated sites, full HTML/CSS export, and standard SEO telemetry.</p>
+          <button type="button" class="dig48-pill-ghost" data-seamless-trigger="Starter Tier — Instant Activation">Start Free</button>
+        </article>
+        <article class="dig48-card dig48-reveal" data-tilt-card style="border-color:var(--accent);">
+          <span class="dig48-kicker">PRO STUDIO</span>
+          <strong class="tabular-nums" style="font-size:38px;">$29<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
+          <p style="color:var(--muted);font-size:14px;">Unlimited AI builds, custom domains, 3-layer token export, and priority edge streaming.</p>
+          <button type="button" class="dig48-btn-get-started" data-seamless-trigger="Pro Studio Tier — Start 14-Day Trial">Deploy Pro Studio</button>
+        </article>
+        <article class="dig48-card dig48-reveal" data-tilt-card>
+          <span class="dig48-kicker">ENTERPRISE</span>
+          <strong class="tabular-nums" style="font-size:38px;">$99<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
+          <p style="color:var(--muted);font-size:14px;">Dedicated neural clusters, SSO governance, and bespoke design system locks.</p>
+          <button type="button" class="dig48-pill-ghost" data-seamless-trigger="Enterprise Architecture Briefing">Contact Sales</button>
         </article>
       </div>
     </section>
   </main>
 
+  <footer class="dig48-footer">
+    <div>
+      <strong style="color:var(--fg);">Digitwist AI Builder</strong> — Design at the speed of thought. © 2026 Digitwist Inc.
+    </div>
+    <div style="display:flex;gap:20px;">
+      <a href="#heroStage" style="color:var(--muted);text-decoration:none;">Top</a>
+      <a href="#aiSandbox" style="color:var(--muted);text-decoration:none;">Sandbox</a>
+      <a href="#customerStories" style="color:var(--muted);text-decoration:none;">Stories</a>
+      <a href="#pricingMatrix" style="color:var(--muted);text-decoration:none;">Pricing</a>
+    </div>
+  </footer>
+
   <div id="seamlessModal" class="dig48-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
     <div class="dig48-seamless-box">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-        <span class="dig48-pill-btn">Digitwist AI Builder Specification</span>
-        <button type="button" id="closeSeamlessBtn" class="dig48-pill-btn">Close (Esc)</button>
+        <span class="dig48-kicker">Digitwist AI Workspace</span>
+        <button type="button" id="closeSeamlessBtn" class="dig48-pill-ghost">Close (Esc)</button>
       </div>
-      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Digitwist AI Builder</h2>
-      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">Create fully functional, SEO-optimized websites in seconds with our advanced AI engine.</p>
-      <div style="margin-bottom:18px;"><svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#b4c0ff" stop-opacity="0.75"/><stop offset="100%" stop-color="#b4c0ff" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#b4c0ff" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg></div>
-      <button type="button" id="confirmSeamlessBtn" class="dig48-cta-btn" style="width:100%;">Return to Live Stage</button>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:32px;margin-bottom:10px;">Start Building Free</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Enter your project domain or prompt specification to synthesize a production-ready, SEO-optimized website in under 5 seconds.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="dig48-btn-get-started" style="width:100%;">Launch AI Builder</button>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var input = document.getElementById('aiPromptInput');
+      var statusText = document.getElementById('sandboxStatusText');
+      var seoBadge = document.getElementById('sandboxSeoBadge');
+      var nodesText = document.getElementById('sandboxNodesText');
+      var lcpText = document.getElementById('sandboxLcpText');
+      var presetBtns = document.querySelectorAll('[data-prompt-preset]');
+
+      presetBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          presetBtns.forEach(function (b) { b.setAttribute('aria-selected', 'false'); });
+          btn.setAttribute('aria-selected', 'true');
+          var promptVal = btn.getAttribute('data-prompt-preset') || '';
+          if (input) input.value = promptVal;
+          if (statusText) statusText.textContent = 'COMPILED: ' + promptVal.slice(0, 38);
+          if (seoBadge) seoBadge.textContent = 'SEO Score: ' + (btn.getAttribute('data-seo') || '100') + '/100';
+          if (nodesText) nodesText.textContent = 'Generated: ' + (btn.getAttribute('data-nodes') || '40 Semantic Sections');
+          if (lcpText) lcpText.textContent = 'Estimated LCP: ' + (btn.getAttribute('data-lcp') || '0.4s');
+        });
+      });
+
+      if (input) {
+        input.addEventListener('input', function () {
+          if (statusText) statusText.textContent = 'COMPILING: ' + (input.value.trim().slice(0, 38) || 'Custom Prompt');
+        });
+      }
+    })();
+  </script>
   
   <script>
     (function () {

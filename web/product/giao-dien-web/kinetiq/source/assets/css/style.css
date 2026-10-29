@@ -51,6 +51,7 @@
    ========================================================================== */
 
 *, *::before, *::after { box-sizing: border-box; }
+::selection { background: var(--accent); color: var(--accent-ink); }
 
 html { scroll-behavior: smooth; }
 
@@ -100,9 +101,9 @@ p { margin: 0; }
   background: var(--ink);
   color: var(--ink-invert);
   font-size: 14px; font-weight: 600;
-  transition: top .2s ease;
+  transform: translateY(-140%); transition: transform .2s var(--ease);
 }
-.skip-link:focus { top: 0; color: var(--ink-invert); }
+.skip-link:focus { top: 0; transform: translateY(0); color: var(--ink-invert); }
 
 .wrap {
   width: 100%;
@@ -421,6 +422,7 @@ p { margin: 0; }
 }
 .stat { padding: 34px 30px; background: var(--bg); }
 .stat__num {
+  font-variant-numeric: tabular-nums;
   display: block;
   font-family: var(--font-display);
   font-size: clamp(32px, 3.3vw, 46px);
@@ -528,17 +530,20 @@ p { margin: 0; }
 }
 .site-footer__legal { display: flex; gap: 24px; margin-left: auto; }
 .site-footer__legal a { color: var(--ink-faint); }
+.motion-toggle { padding: 6px 12px; border: 1px solid var(--line-strong); border-radius: 99px; background: transparent; color: var(--ink-soft); font: 600 11.5px/1 var(--font-body); letter-spacing: .06em; text-transform: uppercase; cursor: pointer; transition: border-color .2s var(--ease), color .2s var(--ease), transform .15s var(--ease); }
+.motion-toggle:hover { border-color: var(--ink); color: var(--ink); }
+.motion-toggle:active { transform: scale(.97); }
 
 /* ==========================================================================
    REVEAL ON SCROLL  (see assets/js/main.js)
    ========================================================================== */
 
-[data-reveal] {
+.js [data-reveal] {
   opacity: 0;
   transform: translateY(22px);
   transition: opacity .7s var(--ease), transform .7s var(--ease);
 }
-[data-reveal].is-visible { opacity: 1; transform: none; }
+.js [data-reveal].is-visible { opacity: 1; transform: none; }
 
 /* ==========================================================================
    RESPONSIVE
@@ -606,12 +611,9 @@ p { margin: 0; }
    REDUCED MOTION
    ========================================================================== */
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .marquee__track { animation: none; }
-  [data-reveal] { opacity: 1; transform: none; transition: none; }
-  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
-}
+html[data-motion="off"] { scroll-behavior: auto; }
+html[data-motion="off"] .marquee__track { animation-play-state: paused; }
+html[data-motion="off"] [data-reveal] { opacity: 1; transform: none; transition: none; }
 
 /* ==========================================================================
    PRINT

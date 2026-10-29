@@ -1,0 +1,38 @@
+{
+  "id": "t171",
+  "slug": "hush-futurist-bags",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-29T00:33:07.952Z",
+  "demo": "/demos/hush-futurist-bags/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "09db25936625",
+  "sha256": "09db259366255c18cae722332895e9fdf1f22162f3c5d95857d93c02c630da5c",
+  "demoHtmlSha256": "639e67bb2d2fcbfdb9dc674f48d6634c193eef016d4b11ea05beeaff97ac2d32",
+  "demoSha256": "d08a74096c1a3f14950b0736ebaf699c05693f46a6b637d93dece5d6df2cd288",
+  "bytes": 307408,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 716
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hush-futurist-bags-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hush-futurist-bags-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hush-futurist-bags-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\hush-futurist-bags-return.jpg"
+  ]
+}

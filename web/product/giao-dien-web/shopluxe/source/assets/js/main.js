@@ -7,6 +7,17 @@
 
   // Mark JS initialized to enable clean reveals without flash
   document.documentElement.classList.add('js-ready');
+  document.documentElement.dataset.motion = 'on';
+  var motionPaused = false;
+  var motionToggle = document.querySelector('[data-motion-toggle]');
+  if (motionToggle) {
+    motionToggle.addEventListener('click', function () {
+      motionPaused = !motionPaused;
+      document.documentElement.dataset.motion = motionPaused ? 'off' : 'on';
+      motionToggle.setAttribute('aria-pressed', String(motionPaused));
+      motionToggle.textContent = motionPaused ? 'Play motion' : 'Pause motion';
+    });
+  }
 
   // ---- 1. Mobile Menu ----------------------------------------------------
   var navToggle = document.querySelector('.nav-toggle');
@@ -162,7 +173,22 @@
     var observer = new IntersectionObserver(function (entries) {
       for (var j = 0; j < entries.length; j++) {
         if (entries[j].isIntersecting) {
-          entries[j].target.classList.add('is-visible');
+          var el = entries[j].target;
+          el.classList.add('is-visible');
+          if (!motionPaused && typeof requestAnimationFrame === 'function') {
+            (function (targetEl) {
+              var start = performance.now();
+              function tick(now) {
+                if (motionPaused) { targetEl.style.removeProperty('transform'); return; }
+                var p = Math.min(1, (now - start) / 480);
+                var e = 1 - Math.pow(1 - p, 3);
+                targetEl.style.transform = 'translate3d(0,' + ((1 - e) * 14).toFixed(2) + 'px,0)';
+                if (p < 1) requestAnimationFrame(tick);
+                else targetEl.style.removeProperty('transform');
+              }
+              requestAnimationFrame(tick);
+            })(el);
+          }
           observer.unobserve(entries[j].target);
         }
       }

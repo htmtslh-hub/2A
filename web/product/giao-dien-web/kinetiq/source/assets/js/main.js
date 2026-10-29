@@ -1,11 +1,40 @@
 /* ==========================================================================
    KINETIQ — page behaviour
-   Two small things only: the mobile menu, and a reveal-on-scroll effect.
+   Mobile menu, session motion control (default ON per Owner Rule 05/10/2026),
+   interactive assembly inspection, and finite requestAnimationFrame reveals.
    No dependencies, no build step.
    ========================================================================== */
 
 (function () {
   'use strict';
+
+  document.documentElement.classList.add('js');
+  document.documentElement.dataset.motion = 'on';
+
+  var motionPaused = false;
+  var activeRafs = new Map();
+
+  function cancelAllRafs() {
+    activeRafs.forEach(function (id, el) {
+      cancelAnimationFrame(id);
+      el.style.removeProperty('opacity');
+      el.style.removeProperty('transform');
+    });
+    activeRafs.clear();
+  }
+
+  /* ---- session motion toggle (default ON) ---------------------------- */
+
+  var motionBtn = document.querySelector('[data-motion-toggle]');
+  if (motionBtn) {
+    motionBtn.addEventListener('click', function () {
+      motionPaused = !motionPaused;
+      document.documentElement.dataset.motion = motionPaused ? 'off' : 'on';
+      motionBtn.setAttribute('aria-pressed', String(motionPaused));
+      motionBtn.textContent = motionPaused ? 'Play motion' : 'Pause motion';
+      if (motionPaused) cancelAllRafs();
+    });
+  }
 
   /* ---- mobile menu -------------------------------------------------- */
 
@@ -19,7 +48,6 @@
       nav.classList.toggle('is-open', !open);
     });
 
-    // Tapping a link closes the menu again.
     nav.addEventListener('click', function (e) {
       if (e.target.closest('a')) {
         toggle.setAttribute('aria-expanded', 'false');
@@ -27,7 +55,6 @@
       }
     });
 
-    // Escape closes it and puts focus back on the button.
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && nav.classList.contains('is-open')) {
         toggle.setAttribute('aria-expanded', 'false');
@@ -37,16 +64,42 @@
     });
   }
 
-  /* ---- reveal on scroll ---------------------------------------------- */
+  /* ---- finite requestAnimationFrame reveal on scroll ----------------- */
 
   var targets = document.querySelectorAll('[data-reveal]');
-
-  // Someone who asked their system for less motion gets everything at once.
-  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   if (!targets.length) return;
 
-  if (still || !('IntersectionObserver' in window)) {
+  function animateReveal(el) {
+    el.classList.add('is-visible');
+    if (motionPaused || typeof requestAnimationFrame !== 'function') return;
+    var prev = activeRafs.get(el);
+    if (prev) cancelAnimationFrame(prev);
+
+    var start = performance.now();
+    var duration = 560;
+    function step(now) {
+      if (motionPaused) {
+        el.style.removeProperty('opacity');
+        el.style.removeProperty('transform');
+        activeRafs.delete(el);
+        return;
+      }
+      var t = Math.min(1, (now - start) / duration);
+      var eased = 1 - Math.pow(1 - t, 3);
+      el.style.opacity = String((0.2 + 0.8 * eased).toFixed(3));
+      el.style.transform = 'translate3d(0,' + ((1 - eased) * 18).toFixed(2) + 'px,0)';
+      if (t < 1) {
+        activeRafs.set(el, requestAnimationFrame(step));
+      } else {
+        el.style.removeProperty('opacity');
+        el.style.removeProperty('transform');
+        activeRafs.delete(el);
+      }
+    }
+    activeRafs.set(el, requestAnimationFrame(step));
+  }
+
+  if (!('IntersectionObserver' in window)) {
     targets.forEach(function (el) { el.classList.add('is-visible'); });
     return;
   }
@@ -54,7 +107,7 @@
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
+      animateReveal(entry.target);
       io.unobserve(entry.target);
     });
   }, { rootMargin: '0px 0px -12% 0px', threshold: 0.05 });

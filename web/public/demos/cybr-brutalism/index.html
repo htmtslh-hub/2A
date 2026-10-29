@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CYBR_ — Cyber Brutalism &amp; Systematic Digital Architecture</title>
+  <meta name="description" content="Industrial cyber-brutalist design system studio featuring acid-lime #C6FF00 military terminal grids, wireframe 3D cybernetic head telemetry, and live system command filtering.">
+  <meta property="og:title" content="CYBR_ — The Future Isn't Minimal. It's Systematic.">
+  <meta property="og:description" content="Cyber Brutalism design systems, WebGL wireframe telemetry, and raw architectural interfaces.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#080908">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080908;
+      --surface: #111310;
+      --surface-elevated: #181c16;
+      --fg: #f4f7f0;
+      --muted: #9aa392;
+      --border: rgba(198, 255, 0, 0.24);
+      --accent: #c6ff00;
+      --accent-text: #d9ff4d;
+      --accent-strong: #a3d900;
+      --on-accent: #080908;
+      --font-display: 'Space Grotesk', system-ui, sans-serif;
+      --font-sans: 'Space Grotesk', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background-color: var(--bg);
+      background-image: linear-gradient(rgba(198, 255, 0, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(198, 255, 0, 0.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; background: var(--accent); color: var(--on-accent);
+      font-family: var(--font-mono); font-weight: 800; text-decoration: none;
+      transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    .cyb79-cursor-ring, .cyb79-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      transform: translate3d(-100px, -100px, 0); will-change: transform;
+    }
+    .cyb79-cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; transition: transform 0.2s var(--ease-out); }
+    .cyb79-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+
+    .cyb79-topbar {
+      position: sticky; top: 0; z-index: 200; background: rgba(8, 9, 8, 0.92);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
+      padding: 12px clamp(16px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      font-family: var(--font-mono); font-size: 12px;
+    }
+    .cyb79-nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    .cyb79-nav a { color: var(--muted); text-decoration: none; font-weight: 700; transition: color 0.2s var(--ease-out); }
+    .cyb79-nav a:hover { color: var(--accent); }
+    .cyb79-btn {
+      min-height: 44px; padding: 10px 18px; border: 1px solid var(--border);
+      background: var(--surface); color: var(--fg); font-family: var(--font-mono);
+      font-size: 12px; font-weight: 700; cursor: pointer;
+      transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out);
+    }
+    .cyb79-btn-acid {
+      min-height: 44px; padding: 10px 20px; border: 1px solid var(--accent);
+      background: var(--accent); color: var(--on-accent); font-family: var(--font-mono);
+      font-size: 12px; font-weight: 800; cursor: pointer;
+      transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out);
+    }
+    .cyb79-btn:active, .cyb79-btn-acid:active { transform: scale(0.97); }
+
+    .cyb79-wrap { max-width: 1360px; margin: 0 auto; padding: clamp(36px, 5vw, 72px) clamp(16px, 4vw, 48px); }
+    .cyb79-hero-grid {
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 28px;
+      border: 1px solid var(--border); background: rgba(17, 19, 16, 0.86);
+      padding: clamp(24px, 4vw, 48px); box-shadow: 0 28px 64px rgba(0,0,0,0.65);
+    }
+    .cyb79-h1 {
+      font-family: var(--font-display); font-size: clamp(2.75rem, 6.2vw, 5.4rem);
+      line-height: 0.94; letter-spacing: -0.03em; text-transform: uppercase; margin: 14px 0 18px;
+    }
+    .cyb79-wireframe-box {
+      border: 1px solid var(--border); background: #0b0d0a; padding: 20px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+    }
+    .cyb79-principles {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 24px;
+    }
+    .cyb79-p-card {
+      padding: 20px; border: 1px solid var(--border); background: var(--surface);
+      transition: transform 0.25s var(--ease-out), opacity 0.25s var(--ease-out);
+    }
+    .cyb79-p-card:hover { transform: translate3d(0, -4px, 0); }
+    .cyb79-work-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 22px;
+      font-variant-numeric: tabular-nums;
+    }
+    .cyb79-work-card {
+      padding: 26px; border: 1px solid var(--border); background: var(--surface);
+      display: flex; flex-direction: column; justify-content: space-between; gap: 16px;
+      cursor: pointer; transition: transform 0.25s var(--ease-out), opacity 0.25s var(--ease-out);
+    }
+    .cyb79-work-card:hover { transform: translate3d(0, -4px, 0); }
+    .cyb79-reveal { opacity: 0; transform: translate3d(0, 20px, 0); transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out); }
+    .cyb79-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .cyb79-modal {
+      position: fixed; inset: 0; z-index: 190; pointer-events: none; background: rgba(8, 9, 8, 0.88);
+      backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .cyb79-modal.is-open { display: flex; }
+    .cyb79-modal-box { pointer-events: auto; max-width: 580px; width: 100%; padding: 32px; background: var(--surface-elevated); border: 2px solid var(--accent); }
+
+    @media (max-width: 1024px) {
+      .cyb79-hero-grid { grid-template-columns: 1fr; }
+      .cyb79-principles { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .cyb79-work-grid { grid-template-columns: 1fr; }
+      .cyb79-principles { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .cyb79-topbar { flex-direction: column; align-items: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">[SKIP_TO_MAIN_TERMINAL]</a>
+  <div id="cursorRing" class="cyb79-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="cyb79-cursor-dot" aria-hidden="true"></div>
+
+  <header class="cyb79-topbar">
+    <strong style="font-size:16px;color:var(--accent);">CYBR_ // SYS_V2.0</strong>
+    <nav class="cyb79-nav" aria-label="Primary Navigation">
+      <a href="#sec01">+ WORK</a>
+      <a href="#sec02">+ PRINCIPLES</a>
+      <a href="#sec03">+ ARCHIVE</a>
+      <a href="#sec05">+ SYS_STATUS</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <span id="sysClockReadout" style="color:var(--accent-text);font-variant-numeric:tabular-nums;">SYS_TIME 23:47:12 UTC+0</span>
+      <button type="button" id="motionToggleBtn" class="cyb79-btn" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="cyb79-btn-acid">START A PROJECT ↗</button>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section id="sec01" class="cyb79-wrap">
+      <div class="cyb79-hero-grid">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:700;">/01 // SYSTEMATIC ARCHITECTURE</span>
+          <h1 id="oversizedHeadline" class="cyb79-h1">
+            CYBER BRUTALISM<br>
+            <span style="color:var(--accent);font-size:0.58em;display:block;margin-top:8px;">THE FUTURE ISN'T MINIMAL. IT'S SYSTEMATIC.</span>
+          </h1>
+          <p style="color:var(--muted);font-size:16px;line-height:1.65;max-width:56ch;margin-bottom:24px;">
+            We engineer raw, exposed-grid digital products, high-frequency telemetry terminals, and unpolished industrial WebGL systems that reject sterile templates.
+          </p>
+          <div style="display:flex;gap:28px;flex-wrap:wrap;font-family:var(--font-mono);font-variant-numeric:tabular-nums;margin-bottom:24px;">
+            <div><strong data-counter-target="87" data-counter-suffix="%" style="font-size:32px;color:var(--accent);">87%</strong><span style="display:block;font-size:11px;color:var(--muted);">MESH_RENDER_LOAD</span></div>
+            <div><strong data-counter-target="73" data-counter-suffix="%" style="font-size:32px;">73%</strong><span style="display:block;font-size:11px;color:var(--muted);">CPU_USAGE_NOMINAL</span></div>
+            <div><strong data-counter-target="120" data-counter-suffix="FPS" style="font-size:32px;">120FPS</strong><span style="display:block;font-size:11px;color:var(--muted);">FRAME_LOCK_RATE</span></div>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <button type="button" class="cyb79-btn-acid" data-seamless-trigger="INITIALIZE_SYSTEM_AUDIT // SCN_01">INITIALIZE AUDIT ↗</button>
+            <a href="#sec03" class="cyb79-btn" style="text-decoration:none;display:inline-flex;align-items:center;">INSPECT SELECTED WORK</a>
+          </div>
+        </div>
+
+        <div class="cyb79-wireframe-box">
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--accent);">
+            <span>&gt;RENDERING... 87%</span>
+            <span>//SCN_01</span>
+          </div>
+          <svg viewBox="0 0 420 300" width="100%" height="250" fill="none" aria-hidden="true">
+            <rect x="16" y="16" width="388" height="268" stroke="#c6ff00" stroke-opacity="0.3" stroke-dasharray="4 4"/>
+            <ellipse cx="210" cy="145" rx="86" ry="108" stroke="#c6ff00" stroke-width="1.5"/>
+            <ellipse cx="210" cy="145" rx="52" ry="108" stroke="#c6ff00" stroke-width="1" stroke-opacity="0.6"/>
+            <line x1="124" y1="115" x2="296" y2="115" stroke="#c6ff00" stroke-width="2"/>
+            <line x1="132" y1="155" x2="288" y2="155" stroke="#c6ff00" stroke-width="1" stroke-opacity="0.7"/>
+            <rect x="242" y="88" width="68" height="24" fill="#c6ff00"/>
+            <text x="276" y="104" fill="#080908" font-family="monospace" font-size="11" font-weight="800" text-anchor="middle">GLITCH_01</text>
+          </svg>
+          <div id="coordTelemetry" style="font-size:11px;color:var(--muted);display:flex;justify-content:space-between;">
+            <span>X_36.1749 Y_-86.7676 Z_46.6827</span>
+            <span style="color:var(--accent);">ALL SYSTEMS OPERATIONAL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec02" class="cyb79-wrap">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:700;">/02 // CORE PRINCIPLES</span>
+      <div class="cyb79-principles">
+        <article class="cyb79-p-card cyb79-reveal"><strong style="font-family:var(--font-mono);color:var(--accent);font-size:12px;">01</strong><h2 style="font-size:16px;margin:6px 0;">FUNCTION OVER FORM</h2><p style="font-size:12px;color:var(--muted);">Zero decorative fluff. Every pixel reports live system state.</p></article>
+        <article class="cyb79-p-card cyb79-reveal"><strong style="font-family:var(--font-mono);color:var(--accent);font-size:12px;">02</strong><h2 style="font-size:16px;margin:6px 0;">SYSTEMS THINKING</h2><p style="font-size:12px;color:var(--muted);">Modular token architecture built for extreme scale.</p></article>
+        <article class="cyb79-p-card cyb79-reveal"><strong style="font-family:var(--font-mono);color:var(--accent);font-size:12px;">03</strong><h2 style="font-size:16px;margin:6px 0;">DIGITAL AESTHETICS</h2><p style="font-size:12px;color:var(--muted);">Exposed hairline borders and terminal-grade typography.</p></article>
+        <article class="cyb79-p-card cyb79-reveal"><strong style="font-family:var(--font-mono);color:var(--accent);font-size:12px;">04</strong><h2 style="font-size:16px;margin:6px 0;">BOLD CONTRAST</h2><p style="font-size:12px;color:var(--muted);">Acid lime #C6FF00 on obsidian #080908 for instant legibility.</p></article>
+        <article class="cyb79-p-card cyb79-reveal"><strong style="font-family:var(--font-mono);color:var(--accent);font-size:12px;">05</strong><h2 style="font-size:16px;margin:6px 0;">RAW &amp; AUTHENTIC</h2><p style="font-size:12px;color:var(--muted);">Honest HTML5/CSS3/JS materials without bloated runtime layers.</p></article>
+      </div>
+    </section>
+
+    <!-- /03 SELECTED WORK + ONE LIVE THING FILTER -->
+    <section id="sec03" class="cyb79-wrap">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:700;">/03 // SELECTED WORK &amp; LIVE FILTER</span>
+          <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-top:4px;">DEPLOYED BRUTALIST SYSTEMS</h2>
+        </div>
+        <div role="group" aria-label="Filter Deployed Systems" style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="cyb79-btn-acid cybr-filter" data-filter="ALL">ALL_NODES (4)</button>
+          <button type="button" class="cyb79-btn cybr-filter" data-filter="TELEMETRY">TELEMETRY</button>
+          <button type="button" class="cyb79-btn cybr-filter" data-filter="AI_CORE">AI_CORE</button>
+        </div>
+      </div>
+
+      <div class="cyb79-work-grid">
+        <article class="cyb79-work-card" data-cat="TELEMETRY" data-seamless-trigger="DATA_PORTAL // High-Frequency Telemetry">
+          <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:12px;color:var(--accent);"><span>NODE_01 // TELEMETRY</span><span>99.98% UPTIME</span></div>
+          <h3 style="font-size:24px;">DATA_PORTAL</h3>
+          <p style="font-size:14px;color:var(--muted);">Sub-millisecond WebSocket observability matrix for distributed energy grids.</p>
+        </article>
+        <article class="cyb79-work-card" data-cat="AI_CORE" data-seamless-trigger="NEURAL_NET // Synthetic Inference Cluster">
+          <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:12px;color:var(--accent);"><span>NODE_02 // AI_CORE</span><span>14.2 TFLOPS</span></div>
+          <h3 style="font-size:24px;">NEURAL_NET</h3>
+          <p style="font-size:14px;color:var(--muted);">Brutalist model-weights inspector and tensor routing console.</p>
+        </article>
+        <article class="cyb79-work-card" data-cat="AI_CORE" data-seamless-trigger="VOID_SYSTEM // Zero-Knowledge Kernel">
+          <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:12px;color:var(--accent);"><span>NODE_03 // AI_CORE</span><span>ZK_SNARK_V4</span></div>
+          <h3 style="font-size:24px;">VOID_SYSTEM</h3>
+          <p style="font-size:14px;color:var(--muted);">Cryptographic proof generator with hardware-accelerated command shell.</p>
+        </article>
+        <article class="cyb79-work-card" data-cat="TELEMETRY" data-seamless-trigger="GRIDLINE // Industrial Design Tokens">
+          <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:12px;color:var(--accent);"><span>NODE_04 // TELEMETRY</span><span>48PX_MODULAR</span></div>
+          <h3 style="font-size:24px;">GRIDLINE</h3>
+          <p style="font-size:14px;color:var(--muted);">Swiss-military typographic grid engine and tokens specification.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sec05" class="cyb79-wrap">
+      <div style="padding:24px;border:1px solid var(--accent);background:var(--surface);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-family:var(--font-mono);font-variant-numeric:tabular-nums;">
+        <span>/05 SYSTEM STATUS: <strong>CPU_USAGE 73%</strong> | <strong>MEMORY 8.6 GB / 16 GB</strong> | <strong>UPTIME 7D 14H 22M</strong></span>
+        <span style="color:var(--accent);font-weight:800;">&gt; ACCESS GRANTED_</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cyb79-wrap" style="border-top:1px solid var(--border);font-family:var(--font-mono);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <span>© 2026 CYBR_ BRUTALIST STUDIO. ALL SYSTEMS OPERATIONAL.</span>
+    <span style="color:var(--accent);">BUILD_REV: 2026.10.29 // FORGEFRAME_GOLD</span>
+  </footer>
+
+  <div id="seamlessModal" class="cyb79-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="cyb79-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-family:var(--font-mono);">
+        <span style="color:var(--accent);">// SYSTEM_DOSSIER</span>
+        <button type="button" id="closeSeamlessBtn" class="cyb79-btn">ESC_CLOSE</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;margin-bottom:10px;">CYBR_ SYSTEM SPECIFICATION</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Direct kernel telemetry verified. Exposed 48px CSS grid, high-contrast Acid Lime #C6FF00 tokens, and zero-bloat Vanilla JS execution.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="cyb79-btn-acid" style="width:100%;">EXECUTE_RETURN_</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var btns = document.querySelectorAll('.cybr-filter');
+      var cards = document.querySelectorAll('.cyb79-work-card');
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var f = btn.getAttribute('data-filter');
+          btns.forEach(function (b) { b.className = b === btn ? 'cyb79-btn-acid cybr-filter' : 'cyb79-btn cybr-filter'; });
+          cards.forEach(function (c) {
+            var match = f === 'ALL' || c.getAttribute('data-cat') === f;
+            c.style.display = match ? 'flex' : 'none';
+          });
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.cyb79-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

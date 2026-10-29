@@ -2,15 +2,15 @@
   "id": "t165",
   "slug": "digitwist-ai-builder",
   "browser": "153.0.8010.12",
-  "date": "2026-10-28T23:02:15.765Z",
+  "date": "2026-10-29T00:29:17.621Z",
   "demo": "/demos/digitwist-ai-builder/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "fcf6045e9af7",
-  "sha256": "fcf6045e9af784122b70d1c93eb147abb79cc8849162cad42034da7b68a80314",
-  "demoHtmlSha256": "bc041672d694a36a8f89385132e55fec92eb9fdab546803cc25ec0bd5cc336c6",
-  "demoSha256": "d059a4f2ee7126a2dde8fd7e5bd8bbccaf40538d87e9269a3335526908a9a369",
-  "bytes": 223244,
+  "revision": "6b1f71d720e6",
+  "sha256": "6b1f71d720e65f4142aeeb0401c85d34ba8fee051129b2c811b87edd63b37528",
+  "demoHtmlSha256": "743dae4ea74560ee0e745bebe96e212189c8ba280d93bb723bc6e5251b64ad2e",
+  "demoSha256": "34d5c6155a019d0102c15d68ba3e441a6595a77c18fc64039751d6123a6231ef",
+  "bytes": 374486,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.488,
+      "seconds": 2.472,
       "action": "click",
       "selector": "#exploreMagneticBtn"
     },
     {
-      "seconds": 4.947,
+      "seconds": 4.906,
       "action": "click",
       "selector": "#exploreMagneticBtn"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 439
+      "target": 1650
     }
   ],
   "errors": [],

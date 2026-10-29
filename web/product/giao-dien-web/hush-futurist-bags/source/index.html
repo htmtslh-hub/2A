@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>HUSH — Your Choice Futurist 3D Luxury Bag Maison</title>
+  <meta name="description" content="Each HUSH brand bag is the perfect combination of creativity and practicality. Explore NEW ARRIVALS: Sabrina, Brielle, and Naomi.">
+  <meta property="og:title" content="HUSH — Futurist Chrome &amp; Rose-Pink Luxury Bags">
+  <meta property="og:description" content="Explore Sabrina (220 USD), Brielle (200 USD), and Naomi (235 USD) in our interactive ECO collection.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#180b12">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #180b12;
+      --surface: #26121d;
+      --surface-elevated: #361a29;
+      --glass: rgba(38, 18, 29, 0.8);
+      --fg: #fdf2f8;
+      --muted: #f4b8d1;
+      --border: rgba(244, 184, 209, 0.22);
+      --accent: #f472b6;
+      --accent-text: #f9a8d4;
+      --accent-strong: #ec4899;
+      --on-accent: #180b12;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: radial-gradient(circle at 50% 18%, #3b172b 0%, #180b12 68%);
+      color: var(--fg); font-family: var(--font-sans); overflow-x: clip; scroll-behavior: smooth;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.2s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    .hus19-cursor-ring, .hus19-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0); will-change: transform;
+    }
+    .hus19-cursor-ring { width: 34px; height: 34px; border: 1.5px solid var(--accent-text); margin: -17px 0 0 -17px; transition: transform 0.22s var(--ease-out); }
+    .hus19-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+
+    .hus19-header {
+      position: sticky; top: 14px; z-index: 200; max-width: 1320px; margin: 14px auto 0;
+      padding: 12px 24px; border-radius: 999px; background: var(--glass);
+      backdrop-filter: blur(18px); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .hus19-nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    .hus19-nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; transition: color 0.2s var(--ease-out); }
+    .hus19-nav a:hover { color: var(--fg); }
+    .hus19-pill {
+      min-height: 44px; padding: 9px 18px; border-radius: 999px;
+      background: rgba(255, 255, 255, 0.07); border: 1px solid var(--border);
+      color: var(--fg); font-size: 12px; font-weight: 700; cursor: pointer;
+      transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out);
+    }
+    .hus19-cta {
+      min-height: 44px; padding: 10px 24px; border-radius: 999px;
+      background: var(--accent); color: var(--on-accent); border: none;
+      font-size: 13px; font-weight: 800; cursor: pointer;
+      transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out);
+    }
+    .hus19-pill:active, .hus19-cta:active { transform: scale(0.97); }
+
+    .hus19-wrap { max-width: 1320px; margin: 0 auto; padding: clamp(32px, 5vw, 68px) clamp(16px, 4vw, 48px); }
+    .hus19-hero {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 32px; align-items: center;
+      padding: clamp(28px, 4vw, 52px); border-radius: 38px;
+      background: linear-gradient(145deg, rgba(64, 26, 46, 0.85) 0%, rgba(24, 11, 18, 0.94) 100%);
+      border: 1px solid var(--border); box-shadow: 0 32px 72px rgba(0,0,0,0.55);
+    }
+    .hus19-h1 {
+      font-family: var(--font-display); font-size: clamp(3.1rem, 6.8vw, 5.8rem);
+      font-weight: 600; line-height: 0.94; letter-spacing: -0.02em; margin: 12px 0 18px;
+    }
+    .hus19-arch-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px;
+      font-variant-numeric: tabular-nums;
+    }
+    .hus19-arch-card {
+      padding: 28px 24px; border-radius: 140px 140px 28px 28px;
+      background: var(--surface); border: 1px solid var(--border);
+      text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 14px;
+      transition: transform 0.28s var(--ease-out), opacity 0.28s var(--ease-out);
+    }
+    .hus19-arch-card:hover { transform: translate3d(0, -5px, 0); }
+    .hus19-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .hus19-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .hus19-modal {
+      position: fixed; inset: 0; z-index: 190; pointer-events: none; background: rgba(24, 11, 18, 0.86);
+      backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .hus19-modal.is-open { display: flex; }
+    .hus19-modal-box { pointer-events: auto; max-width: 560px; width: 100%; padding: 32px; border-radius: 28px; background: var(--surface-elevated); border: 1px solid var(--accent); }
+
+    @media (max-width: 1024px) {
+      .hus19-hero { grid-template-columns: 1fr; }
+      .hus19-arch-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .hus19-arch-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .hus19-header { border-radius: 20px; padding: 12px 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to HUSH Bag Collection</a>
+  <div id="cursorRing" class="hus19-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="hus19-cursor-dot" aria-hidden="true"></div>
+
+  <header class="hus19-header">
+    <strong style="font-size:20px;letter-spacing:0.14em;">HUSH</strong>
+    <nav class="hus19-nav" aria-label="Primary Navigation">
+      <a href="#heroChoice">Your Choice</a>
+      <a href="#newArrivals">New Arrivals</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="motionToggleBtn" class="hus19-pill" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="hus19-cta">Bag Concierge (<span id="bagCount">1</span>) ↗</button>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section id="heroChoice" class="hus19-wrap">
+      <div class="hus19-hero">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">HUSH MAISON // LIQUID CHROME &amp; ROSE</span>
+          <h1 id="oversizedHeadline" class="hus19-h1">your choice.<br><em style="color:var(--accent-text);">Sculpted in Chrome.</em></h1>
+          <p style="font-size:16px;color:var(--muted);line-height:1.65;max-width:52ch;margin-bottom:24px;">
+            Each HUSH brand bag is the perfect combination of creativity and practicality — crafted from bio-based ECO vegan leather and mirror-polished liquid aluminum hardware.
+          </p>
+          <div style="display:flex;gap:28px;flex-wrap:wrap;font-variant-numeric:tabular-nums;margin-bottom:24px;">
+            <div><strong data-counter-target="100" data-counter-suffix="% ECO" style="font-size:30px;color:var(--accent-text);">100% ECO</strong><span style="display:block;font-size:12px;color:var(--muted);">Bio-Polymer Shell</span></div>
+            <div><strong data-counter-target="380" data-counter-suffix="g" style="font-size:30px;">380g</strong><span style="display:block;font-size:12px;color:var(--muted);">Featherweight Core</span></div>
+          </div>
+          <a href="#newArrivals" class="hus19-cta" style="text-decoration:none;display:inline-flex;align-items:center;">Learn more →</a>
+        </div>
+
+        <div style="text-align:center;">
+          <svg viewBox="0 0 420 340" width="100%" height="300" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="hus19ChromePink" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#fbcfe8"/>
+                <stop offset="50%" stop-color="#f472b6"/>
+                <stop offset="100%" stop-color="#831843"/>
+              </linearGradient>
+            </defs>
+            <path d="M145 130 C 145 55, 275 55, 275 130" stroke="#fbcfe8" stroke-width="14" stroke-linecap="round"/>
+            <rect x="95" y="120" width="230" height="165" rx="48" fill="url(#hus19ChromePink)" stroke="#fdf2f8" stroke-width="2"/>
+            <circle cx="210" cy="195" r="22" fill="#180b12" stroke="#fbcfe8" stroke-width="3"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW ARRIVALS ARCHED PILL CARDS + LIVE COLLECTION FILTER -->
+    <section id="newArrivals" class="hus19-wrap">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">OUR COLLECTIONS</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.4rem);">NEW ARRIVALS</h2>
+        </div>
+        <div role="group" aria-label="Filter HUSH Bag Tier" style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="hus19-cta hush-tab" data-tab="ALL">All Editions (3)</button>
+          <button type="button" class="hus19-pill hush-tab" data-tab="CHROME">Bloggers' Choice</button>
+          <button type="button" class="hus19-pill hush-tab" data-tab="PASTEL">Bestsellers</button>
+        </div>
+      </div>
+
+      <div class="hus19-arch-grid">
+        <article class="hus19-arch-card hus19-reveal" data-tier="CHROME">
+          <span style="padding:4px 12px;border-radius:999px;background:rgba(244,114,182,0.18);color:var(--accent-text);font-size:11px;font-weight:700;">ECO • LIQUID CHROME</span>
+          <svg viewBox="0 0 180 140" width="140" height="110" fill="none" aria-hidden="true">
+            <path d="M60 55 C 60 20, 120 20, 120 55" stroke="#f9a8d4" stroke-width="8" stroke-linecap="round"/>
+            <rect x="38" y="50" width="104" height="72" rx="26" fill="#f472b6"/>
+          </svg>
+          <h3 style="font-family:var(--font-display);font-size:28px;">Sabrina</h3>
+          <strong style="font-family:var(--font-mono);font-size:20px;color:var(--accent-text);">220 USD</strong>
+          <button type="button" class="hus19-cta add-bag-btn" data-bag="Sabrina (220 USD)">Select Sabrina</button>
+        </article>
+
+        <article class="hus19-arch-card hus19-reveal" data-tier="PASTEL">
+          <span style="padding:4px 12px;border-radius:999px;background:rgba(244,114,182,0.18);color:var(--accent-text);font-size:11px;font-weight:700;">ECO • MATTE PEARL</span>
+          <svg viewBox="0 0 180 140" width="140" height="110" fill="none" aria-hidden="true">
+            <path d="M60 55 C 60 20, 120 20, 120 55" stroke="#fdf2f8" stroke-width="8" stroke-linecap="round"/>
+            <rect x="38" y="50" width="104" height="72" rx="26" fill="#fbcfe8"/>
+          </svg>
+          <h3 style="font-family:var(--font-display);font-size:28px;">Brielle</h3>
+          <strong style="font-family:var(--font-mono);font-size:20px;color:var(--accent-text);">200 USD</strong>
+          <button type="button" class="hus19-cta add-bag-btn" data-bag="Brielle (200 USD)">Select Brielle</button>
+        </article>
+
+        <article class="hus19-arch-card hus19-reveal" data-tier="CHROME">
+          <span style="padding:4px 12px;border-radius:999px;background:rgba(244,114,182,0.18);color:var(--accent-text);font-size:11px;font-weight:700;">ECO • BLUSH ROSE</span>
+          <svg viewBox="0 0 180 140" width="140" height="110" fill="none" aria-hidden="true">
+            <path d="M60 55 C 60 20, 120 20, 120 55" stroke="#f472b6" stroke-width="8" stroke-linecap="round"/>
+            <rect x="38" y="50" width="104" height="72" rx="26" fill="#ec4899"/>
+          </svg>
+          <h3 style="font-family:var(--font-display);font-size:28px;">Naomi</h3>
+          <strong style="font-family:var(--font-mono);font-size:20px;color:var(--accent-text);">235 USD</strong>
+          <button type="button" class="hus19-cta add-bag-btn" data-bag="Naomi (235 USD)">Select Naomi</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hus19-wrap" style="border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+    <span style="font-size:13px;color:var(--muted);">© 2026 HUSH Luxury Bag Maison. 100% ECO Sculpted Hardware.</span>
+    <span style="font-size:12px;font-family:var(--font-mono);color:var(--accent-text);">SABRINA • BRIELLE • NAOMI</span>
+  </footer>
+
+  <div id="seamlessModal" class="hus19-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="hus19-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">HUSH ATELIER BAG</span>
+        <button type="button" id="closeSeamlessBtn" class="hus19-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:30px;margin-bottom:10px;">Sabrina — 220 USD</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        Added to your HUSH private concierge reservation. Crafted with mirror-chrome arches and sustainable ECO lining.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="hus19-cta" style="width:100%;">Continue Exploring HUSH</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var count = 1;
+      var countEl = document.getElementById('bagCount');
+      var modal = document.getElementById('seamlessModal');
+      var titleEl = document.getElementById('seamlessTitle');
+
+      document.querySelectorAll('.add-bag-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          count++;
+          if (countEl) countEl.textContent = String(count);
+          if (titleEl) titleEl.textContent = 'Reserved: ' + btn.getAttribute('data-bag');
+          if (modal) modal.classList.add('is-open');
+        });
+      });
+
+      document.querySelectorAll('.hush-tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var t = tab.getAttribute('data-tab');
+          document.querySelectorAll('.hush-tab').forEach(function (b) {
+            b.className = b === tab ? 'hus19-cta hush-tab' : 'hus19-pill hush-tab';
+          });
+          document.querySelectorAll('.hus19-arch-card').forEach(function (card) {
+            var show = t === 'ALL' || card.getAttribute('data-tier') === t;
+            card.style.display = show ? 'flex' : 'none';
+          });
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.hus19-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "id": "t172",
+  "slug": "quiet-place-sanctuary",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-29T00:33:27.489Z",
+  "demo": "/demos/quiet-place-sanctuary/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "b620b21f14aa",
+  "sha256": "b620b21f14aa934310e6e63921fba135713dd4a11b4a6195afaa9ddc6b9a758e",
+  "demoHtmlSha256": "1be7799017d67186ca02ba53614f4d785aaa47de5acdad106e32f48c0e61b12a",
+  "demoSha256": "05a0bf84ea88c5d667e8db11fb5eebdec598b86794e014dc8c3cb8d505ac60b1",
+  "bytes": 309328,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 365
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\quiet-place-sanctuary-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\quiet-place-sanctuary-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\quiet-place-sanctuary-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\quiet-place-sanctuary-return.jpg"
+  ]
+}

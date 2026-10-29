@@ -2,15 +2,15 @@
   "id": "t143",
   "slug": "transform-data",
   "browser": "153.0.8010.12",
-  "date": "2026-10-27T23:01:47.216Z",
+  "date": "2026-10-29T00:30:16.022Z",
   "demo": "/demos/transform-data/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "07f53300b3ff",
-  "sha256": "07f53300b3ff7ebfeab2113432a1ca96f103fab2320c091a0cb83bb75293d68b",
-  "demoHtmlSha256": "2ddfc1d07c863d453173eaded53348857585905ee566623bffc7f6cf23cef40d",
-  "demoSha256": "9c7bbeab9cb42500acc066a2b40a0195b4db3695d756da11858ad80baf5c3caf",
-  "bytes": 550150,
+  "revision": "00bcc1fc4398",
+  "sha256": "00bcc1fc43982794ef8bce35acdac9c04b87eb567b18e29fe2e628aed5ea072e",
+  "demoHtmlSha256": "a7f61745a6dd3a4be5251a784f3611f8947d1be65717cd15fd0a33c5545702e1",
+  "demoSha256": "8786a7c6017cbd7b6efe15f4bcf4a88cba6c0b649398d60b8f77b16fe7a35243",
+  "bytes": 493488,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.521,
+      "seconds": 2.506,
       "action": "click",
       "selector": "#exploreMagneticBtn"
     },
     {
-      "seconds": 4.913,
+      "seconds": 4.883,
       "action": "click",
       "selector": "#exploreMagneticBtn"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 439
+      "target": 1650
     }
   ],
   "errors": [],

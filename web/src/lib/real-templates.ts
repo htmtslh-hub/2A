@@ -46,6 +46,123 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t172: {
+    slug: 'quiet-place-sanctuary',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Quiet Place Sanctuary",
+        desc: "Quiet Place Sanctuary (serene-pine-island-sanctuary) — Mindful creative sanctuary where calm meets creativity — interactive pine-island lake diorama, ambient soundscape mixer, 4-7-8 breathwork timer, and gentle reflection tools.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Quiet Place Sanctuary",
+        desc: "Quiet Place Sanctuary (serene-pine-island-sanctuary) — Mindful creative sanctuary where calm meets creativity — interactive pine-island lake diorama, ambient soundscape mixer, 4-7-8 breathwork timer, and gentle reflection tools.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Quiet Place Sanctuary",
+        desc: "Quiet Place Sanctuary (serene-pine-island-sanctuary) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t171: {
+    slug: 'hush-futurist-bags',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Hush Futurist Bags",
+        desc: "Hush Futurist Bags (rose-chrome-luxury-bags) — High-fashion editorial 3D bag maison featuring masked oversized typography, rose-pink arched ECO product cards (Sabrina, Brielle, Naomi), and interactive material studio.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Hush Futurist Bags",
+        desc: "Hush Futurist Bags (rose-chrome-luxury-bags) — High-fashion editorial 3D bag maison featuring masked oversized typography, rose-pink arched ECO product cards (Sabrina, Brielle, Naomi), and interactive material studio.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Hush Futurist Bags",
+        desc: "Hush Futurist Bags (rose-chrome-luxury-bags) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t170: {
+    slug: 'aurelia-biocyber',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Aurelia BioCyber",
+        desc: "Aurelia BioCyber (golden-astrolabe-biocyber) — Obsidian and brushed-gold bio-cybernetic atelier with out-of-bounds 3D botanical visor sculpture, circular golden astrolabe portal, and live neural resonance inspector.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Aurelia BioCyber",
+        desc: "Aurelia BioCyber (golden-astrolabe-biocyber) — Obsidian and brushed-gold bio-cybernetic atelier with out-of-bounds 3D botanical visor sculpture, circular golden astrolabe portal, and live neural resonance inspector.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Aurelia BioCyber",
+        desc: "Aurelia BioCyber (golden-astrolabe-biocyber) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t169: {
+    slug: 'cybr-brutalism',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "CYBR Brutalism",
+        desc: "CYBR Brutalism (industrial-cyber-brutalist) — Industrial cyber-brutalist design system studio featuring acid-lime #C6FF00 military terminal grids, wireframe 3D cybernetic head telemetry, and live system command filtering.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "CYBR Brutalism",
+        desc: "CYBR Brutalism (industrial-cyber-brutalist) — Industrial cyber-brutalist design system studio featuring acid-lime #C6FF00 military terminal grids, wireframe 3D cybernetic head telemetry, and live system command filtering.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "CYBR Brutalism",
+        desc: "CYBR Brutalism (industrial-cyber-brutalist) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t168: {
+    slug: 'calfin-weather',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Calfin Weather",
+        desc: "Calfin Weather (spatial-weather-glass) — Real-time spatial glass weather forecast dashboard with interactive 6-node Bezier temperature curve, multi-city Jakarta & Danang telemetry cards, and live storm radar.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Calfin Weather",
+        desc: "Calfin Weather (spatial-weather-glass) — Real-time spatial glass weather forecast dashboard with interactive 6-node Bezier temperature curve, multi-city Jakarta & Danang telemetry cards, and live storm radar.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Calfin Weather",
+        desc: "Calfin Weather (spatial-weather-glass) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
   t167: {
     slug: 'email-marketing',
     cat: 'commerce',

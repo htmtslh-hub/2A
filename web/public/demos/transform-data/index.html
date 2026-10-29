@@ -3,69 +3,198 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Transform Data — Discover what's possible</title>
-  <meta name="description" content="Precision-engineered Transform Data web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.">
+  <title>Transform Data — Discover What's Possible with Instant AI Insights</title>
+  <meta name="description" content="Upload your information and get powerful insights right away. Work smarter and achieve goals effortlessly.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Schibsted+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #06070b;
-      --surface: #10131c;
-      --glass: rgba(16,19,28,0.72);
-      --fg: #f8fafc;
-      --muted: #94a3b8;
-      --border: rgba(255,255,255,0.14);
-      --accent: #505050;
+      --bg: #f8f8f8;
+      --surface: #ffffff;
+      --surface-elevated: #eef1ef;
+      --glass: rgba(14, 19, 17, 0.78);
+      --fg: #0e1311;
+      --muted: #505050;
+      --border: rgba(14, 19, 17, 0.12);
+      --accent: #16a34a;
+      --accent-text: #15803d;
+      --accent-strong: #5ae14c;
+      --on-accent: #0e1311;
+      --font-display: 'Schibsted Grotesk', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 20px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { background: var(--bg); color: var(--fg); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: clip; scroll-behavior: smooth; }
-    .tra18-cursor-ring, .tra18-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; }
-    .tra18-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: width 0.22s, height 0.22s, background 0.22s; }
-    .tra18-cursor-ring.is-hovered { width: 58px; height: 58px; margin: -29px 0 0 -29px; background: #fff; }
-    .tra18-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    ::selection { background: var(--accent-strong); color: var(--fg); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--fg); color: #ffffff;
+      font-weight: 600; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid var(--accent); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), background-color 0.22s var(--ease-out), opacity 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active {
+      transform: scale(0.97) translateY(1px);
+    }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .tra18-cursor-ring, .tra18-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0); mix-blend-mode: difference;
+    }
+    .tra18-cursor-ring { width: 32px; height: 32px; border: 1.5px solid #ffffff; margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .tra18-cursor-dot { width: 6px; height: 6px; background: var(--accent-strong); margin: -3px 0 0 -3px; }
     @media (max-width: 900px) { .tra18-cursor-ring, .tra18-cursor-dot { display: none; } }
 
-    .tra18-navbar {
-      position: fixed; top: 14px; left: 0; right: 0; z-index: 220;
-      max-width: 1280px; margin: 0 auto; padding: 12px 24px;
-      border-radius: 999px; background: var(--glass); backdrop-filter: blur(20px);
-      border: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    .tra18-header {
+      max-width: 1320px; margin: 0 auto; padding: 18px clamp(20px, 5vw, 80px);
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      position: relative; z-index: 100;
     }
-    .tra18-pill-btn { padding: 8px 18px; border-radius: 999px; background: var(--glass); border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 700; cursor: pointer; }
-    .tra18-cta-btn { padding: 9px 22px; border-radius: 999px; background: var(--accent); color: #090b10; border: none; font-size: 13px; font-weight: 800; cursor: pointer; }
+    .tra18-logo {
+      font-family: var(--font-display); font-weight: 700; font-size: 23px;
+      letter-spacing: -0.04em; color: var(--fg); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .tra18-nav-links { display: flex; gap: 28px; list-style: none; }
+    .tra18-nav-links a { color: var(--fg); text-decoration: none; font-size: 15px; font-weight: 500; }
+    .tra18-btn-dark {
+      padding: 10px 22px; border-radius: 999px; background: var(--fg); color: #ffffff;
+      border: none; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .tra18-btn-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(14,19,17,0.06);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
 
     .tra18-hero {
-      position: relative; min-height: 100vh; padding: 112px clamp(20px,5vw,72px) 64px;
-      display: flex; flex-direction: column; justify-content: center; overflow: hidden; isolation: isolate;
+      position: relative; min-height: 88vh; padding: 48px clamp(20px, 5vw, 80px) 72px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden; isolation: isolate;
     }
-    .tra18-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: 0.36; pointer-events: none; }
-    .tra18-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
-    .tra18-hero-grid { max-width: 1280px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
-    @media (min-width: 960px) { .tra18-hero-grid { grid-template-columns: 1.05fr 0.95fr; } }
-    .tra18-h1 { font-family: 'Instrument Serif', serif; font-size: clamp(46px, 7vw, 96px); font-weight: 400; line-height: 0.96; margin: 14px 0 18px; }
-    .tra18-cutout-3d { width: 100%; height: auto; max-height: 360px; object-fit: contain; display: block; margin: 0 auto; filter: drop-shadow(0 26px 40px rgba(0,0,0,0.55)); }
-    .tra18-popout-wrap { animation: tra18Float 5.8s ease-in-out infinite; }
-    @keyframes tra18Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
+    .tra18-bg-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      object-position: top center; z-index: -2; opacity: 0.34; pointer-events: none;
+    }
+    .tra18-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+    .tra18-badge-bar {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 5px 14px 5px 6px; border-radius: 999px;
+      background: #ffffff; border: 1px solid var(--border);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05); margin-bottom: 24px; font-size: 13px;
+    }
+    .tra18-badge-dark {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--fg); color: #ffffff; padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 700;
+    }
+    .tra18-h1 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(44px, 6.8vw, 80px); line-height: 0.96; letter-spacing: -0.05em;
+      color: #000000; margin-bottom: 20px;
+    }
+    .tra18-subtitle {
+      font-size: clamp(17px, 2vw, 20px); color: var(--muted);
+      max-width: 560px; line-height: 1.55; margin: 0 auto 36px;
+    }
 
-    .tra18-section { max-width: 1280px; margin: 0 auto; padding: 80px clamp(20px,5vw,72px); }
-    .tra18-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 32px; align-items: center; }
-    @media (min-width: 960px) { .tra18-pinned-grid { grid-template-columns: 1fr 1.1fr 1fr; } }
-    .tra18-card { padding: 24px; border-radius: 26px; background: var(--glass); border: 1px solid var(--border); backdrop-filter: blur(18px); }
-    .tra18-hscroll-track { display: grid; grid-template-columns: repeat(3, minmax(260px, 1fr)); gap: 20px; overflow-x: auto; margin-top: 28px; }
-    .tra18-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s, transform 0.6s; }
-    .tra18-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+    /* Search & GPT-4o Insight Console (Exact Specification) */
+    .tra18-query-console {
+      max-width: 728px; width: 100%; border-radius: 18px;
+      background: var(--glass); backdrop-filter: blur(18px);
+      padding: 16px; color: #ffffff; text-align: left;
+      box-shadow: 0 24px 60px rgba(14, 19, 17, 0.22);
+    }
+    .tra18-console-top {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 12px; margin-bottom: 12px;
+    }
+    .tra18-upgrade-pill {
+      background: var(--accent-strong); color: #0e1311; border: none;
+      padding: 4px 10px; border-radius: 999px; font-weight: 700; font-size: 11px; cursor: pointer; margin-left: 8px;
+    }
+    .tra18-input-card {
+      background: #ffffff; border-radius: 12px; padding: 14px 16px; color: var(--fg);
+    }
+    .tra18-input-row { display: flex; align-items: center; gap: 12px; }
+    .tra18-query-input {
+      flex: 1; border: none; background: transparent; font-size: 16px; color: var(--fg); outline: none;
+    }
+    .tra18-submit-circle {
+      width: 36px; height: 36px; border-radius: 50%; background: #000000; color: #ffffff;
+      border: none; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+    }
+    .tra18-console-actions {
+      display: flex; justify-content: space-between; align-items: center; margin-top: 12px;
+    }
+    .tra18-chip-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 10px; border-radius: 6px; background: #f1f5f9;
+      border: 1px solid rgba(0,0,0,0.08); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
 
-    .tra18-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(5,8,15,0.84); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
+    .tra18-section {
+      max-width: 1240px; margin: 0 auto; padding: clamp(64px, 7vw, 96px) clamp(20px, 5vw, 80px);
+    }
+    .tra18-kicker {
+      font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--accent-text); display: block; margin-bottom: 8px;
+    }
+    .tra18-h2 {
+      font-family: var(--font-display); font-size: clamp(32px, 4.2vw, 48px);
+      font-weight: 700; letter-spacing: -0.03em; margin-bottom: 28px;
+    }
+    .tra18-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .tra18-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px;
+      display: flex; flex-direction: column; justify-content: space-between; gap: 14px;
+    }
+    .tra18-reveal {
+      opacity: 0; transform: translate3d(0, 20px, 0);
+      transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    }
+    .tra18-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .tra18-footer {
+      border-top: 1px solid var(--border); padding: 48px clamp(20px, 5vw, 80px);
+      max-width: 1240px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;
+      font-size: 13px; color: var(--muted);
+    }
+
+    .tra18-seamless-overlay {
+      position: fixed; inset: 0; z-index: 190; background: rgba(14, 19, 17, 0.72);
+      backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none;
+    }
     .tra18-seamless-overlay.is-open { display: flex; }
-    .tra18-seamless-box { max-width: 640px; width: 100%; border-radius: 28px; background: var(--surface); border: 1px solid var(--border); padding: 32px; pointer-events: auto; }
+    .tra18-seamless-box {
+      max-width: 540px; width: 100%; border-radius: 24px;
+      background: var(--surface); border: 1px solid var(--border); padding: 32px; pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) { .tra18-grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { .tra18-nav-links { display: none; } }
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <svg width="0" height="0" viewBox="0 0 0 0" style="position:absolute;pointer-events:none;" aria-hidden="true">
     <defs>
       <filter id="tra18LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="5" />
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="11" />
         <feDisplacementMap id="tra18Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
       </filter>
     </defs>
@@ -73,67 +202,231 @@
   <div id="cursorRing" class="tra18-cursor-ring" aria-hidden="true"></div>
   <div id="cursorDot" class="tra18-cursor-dot" aria-hidden="true"></div>
 
-  <header class="tra18-navbar">
-    <strong style="font-size:17px;">✦ Transform Data</strong>
+  <header class="tra18-header">
+    <a href="#heroStage" class="tra18-logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      <span>Transform Data</span>
+    </a>
+    <nav aria-label="Primary Navigation">
+      <ul class="tra18-nav-links">
+        <li><a href="#liveAnalytics">Platform</a></li>
+        <li><a href="#pinnedSpecs">Features</a></li>
+        <li><a href="#projectsSection">Projects</a></li>
+        <li><a href="#pricingSection">Community</a></li>
+      </ul>
+    </nav>
     <div style="display:flex;gap:10px;align-items:center;">
-      <button type="button" id="motionToggleBtn" class="tra18-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="tra18-cta-btn" data-magnetic data-next-preview>Explore Dossier ↗</button>
+      <button type="button" id="motionToggleBtn" class="tra18-btn-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="tra18-btn-dark" data-magnetic data-next-preview>Log In</button>
     </div>
   </header>
 
-  <main>
-    <section id="heroStage" class="tra18-hero">
-      <video id="heroBgVideo" class="tra18-bg-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260329_050842_be71947f-f16e-4a14-810c-06e83d23ddb5.mp4" autoplay loop muted playsinline preload="auto"></video>
+  <main id="mainContent">
+    <!-- SECTION 1: HERO & GPT-4O QUERY BOX -->
+    <section id="heroStage" class="tra18-hero" aria-labelledby="oversizedHeadline">
+      <video id="heroBgVideo" class="tra18-bg-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260329_050842_be71947f-f16e-4a14-810c-06e83d23ddb5.mp4" autoplay loop muted playsinline preload="metadata"></video>
       <canvas id="ambientSmokeCanvas" class="tra18-smoke-canvas" aria-hidden="true"></canvas>
-      <div class="tra18-hero-grid">
-        <div data-parallax="0.08">
-          <span class="tra18-pill-btn" style="color:var(--accent);">Transform Data • Interactive Edition</span>
-          <h1 class="tra18-h1" id="oversizedHeadline">Discover what's possible</h1>
-          <p style="font-size:16px;color:var(--muted);line-height:1.65;max-width:540px;margin-bottom:24px;">Precision-engineered Transform Data web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.</p>
-          <div style="display:flex;gap:28px;flex-wrap:wrap;">
-            <div><strong data-counter-target="120" data-counter-suffix="FPS" style="font-size:30px;">120FPS</strong><span style="display:block;font-size:12px;color:var(--muted);">Motion Pipeline</span></div>
-            <div><strong data-counter-target="10" data-counter-suffix="K+" style="font-size:30px;">10K+</strong><span style="display:block;font-size:12px;color:var(--muted);">Active Nodes</span></div>
-            <div><strong data-counter-target="99" data-counter-suffix="%" style="font-size:30px;">99%</strong><span style="display:block;font-size:12px;color:var(--muted);">Visual Fidelity</span></div>
-          </div>
+
+      <div style="max-width:760px;width:100%;margin:0 auto;position:relative;z-index:10;" data-parallax="0.05">
+        <div class="tra18-badge-bar">
+          <span class="tra18-badge-dark">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15 9 22 9 16.5 14 18.5 21 12 17 5.5 21 7.5 14 2 9 9 9"/></svg>
+            <span>New</span>
+          </span>
+          <span>Discover what's possible</span>
         </div>
-        <div id="heroPopoutRig" class="tra18-popout-wrap" data-tilt-card style="filter:url(#tra18LiquidFilter);">
-          <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#505050" stop-opacity="0.75"/><stop offset="100%" stop-color="#505050" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#505050" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
+
+        <h1 class="tra18-h1" id="oversizedHeadline">Transform Data Quickly</h1>
+        <p class="tra18-subtitle">
+          Upload your information and get powerful insights right away. Work smarter and achieve goals effortlessly.
+        </p>
+
+        <div id="heroPopoutRig" class="tra18-query-console" data-tilt-card style="filter:url(#tra18LiquidFilter);">
+          <div class="tra18-console-top tabular-nums">
+            <div>
+              <span>60/450 credits</span>
+              <button type="button" class="tra18-upgrade-pill" data-seamless-trigger="Upgrade to Unlimited GPT-4o Data Credits">Upgrade</button>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5ae14c" stroke-width="2" aria-hidden="true"><path d="M12 3v18M3 12h18"/></svg>
+              <span>Powered by GPT-4o</span>
+            </div>
+          </div>
+
+          <div class="tra18-input-card">
+            <div class="tra18-input-row">
+              <input id="dataQueryInput" class="tra18-query-input" type="text" maxlength="3000" value="Compare Q3 recurring revenue retention across enterprise cohorts" aria-label="Type data question" placeholder="Type question..." />
+              <button type="button" id="runQueryBtn" class="tra18-submit-circle" aria-label="Run Insight Query">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+              </button>
+            </div>
+            <div class="tra18-console-actions">
+              <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <button type="button" class="tra18-chip-btn" data-query-preset="Forecast Q4 ARR growth from pipeline velocity">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                  <span>Attach</span>
+                </button>
+                <button type="button" class="tra18-chip-btn" data-query-preset="Identify top 5 churn anomalies in EMEA region">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+                  <span>Voice</span>
+                </button>
+                <button type="button" class="tra18-chip-btn" data-query-preset="Synthesize unit economics LTV:CAC ratio by channel">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                  <span>Prompts</span>
+                </button>
+              </div>
+              <span id="dataCharCount" class="tabular-nums" style="font-size:12px;color:#64748b;">63/3,000</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="pinnedSpecs" class="tra18-section">
-      <div class="tra18-pinned-grid">
+    <!-- SECTION 2: LIVE INSIGHT OUTPUT -->
+    <section id="liveAnalytics" class="tra18-section" aria-labelledby="liveInsightHeading">
+      <span class="tra18-kicker">01 / INSTANT INSIGHT SYNTHESIS</span>
+      <h2 id="liveInsightHeading" class="tra18-h2">Real-Time Cohort Telemetry</h2>
+      <div class="tra18-grid-3">
+        <article class="tra18-card tra18-reveal" data-tilt-card>
+          <span class="tra18-kicker">QUERY RESULT</span>
+          <strong id="liveQueryTitle" style="font-size:20px;">Enterprise NRR: 118.4%</strong>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Automated anomaly detection across 14.2M warehouse rows in 180 milliseconds.</p>
+        </article>
+        <article class="tra18-card tra18-reveal" data-tilt-card>
+          <span class="tra18-kicker">THROUGHPUT</span>
+          <strong class="tabular-nums" data-counter-target="180" data-counter-suffix="ms" style="font-size:36px;color:var(--accent-text);">180ms</strong>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Zero-copy DuckDB &amp; Parquet vector execution directly in the browser.</p>
+        </article>
+        <article class="tra18-card tra18-reveal" data-tilt-card>
+          <span class="tra18-kicker">ACCURACY</span>
+          <strong class="tabular-nums" data-counter-target="99" data-counter-suffix=".8%" style="font-size:36px;color:var(--accent-text);">99.8%</strong>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Verified SQL lineage attached to every generated chart and executive summary.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PINNED SPECS -->
+    <section id="pinnedSpecs" class="tra18-section" aria-labelledby="specsHeading">
+      <span class="tra18-kicker">02 / ARCHITECTURE</span>
+      <h2 id="specsHeading" class="tra18-h2">Built for Modern Data Teams</h2>
+      <div class="tra18-grid-3">
         <article class="tra18-card tra18-reveal" data-tilt-card data-spec-index="001">
-          <span style="font-size:11px;color:var(--accent);font-weight:700;">001 / ARCHITECTURE</span>
-          <h3 style="font-size:20px;margin:8px 0;">Zero-Build Single File</h3>
-          <p style="font-size:13px;color:var(--muted);">Self-contained HTML5/CSS3/JS architecture with responsive 4-viewport layout.</p>
+          <span class="tra18-kicker">001 / INGESTION</span>
+          <h3 style="font-size:20px;">CSV, Parquet &amp; Snowflake</h3>
+          <p style="color:var(--muted);font-size:14px;">Drop raw files or connect live warehouse credentials with zero schema migration.</p>
         </article>
         <div class="tra18-card" id="scrubCenterStage" style="text-align:center;">
-          <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#505050" stop-opacity="0.75"/><stop offset="100%" stop-color="#505050" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#505050" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
-          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:var(--accent);font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--accent-text)" stroke-width="1.8" style="margin:0 auto;" aria-hidden="true">
+            <path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>
+          </svg>
+          <p id="scrubDialText" class="tabular-nums" style="margin-top:10px;font-size:12px;color:var(--accent-text);font-weight:700;">SCROLL SCRUB ANGLE: 0.0°</p>
         </div>
         <article class="tra18-card tra18-reveal" data-tilt-card data-spec-index="002">
-          <span style="font-size:11px;color:var(--accent);font-weight:700;">002 / INTERACTION</span>
-          <h3 style="font-size:20px;margin:8px 0;">3D Tilt &amp; Liquid Wave</h3>
-          <p style="font-size:13px;color:var(--muted);">Interactive perspective cards and SVG displacement filters.</p>
+          <span class="tra18-kicker">002 / GOVERNANCE</span>
+          <h3 style="font-size:20px;">SOC2 Type II &amp; Zero-Retention</h3>
+          <p style="color:var(--muted);font-size:14px;">Your proprietary datasets never train public models and stay encrypted at rest.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PROJECTS SHOWCASE -->
+    <section id="projectsSection" class="tra18-section" aria-labelledby="projHeading">
+      <span class="tra18-kicker">03 / TEMPLATES</span>
+      <h2 id="projHeading" class="tra18-h2">One-Click Executive Boards</h2>
+      <div class="tra18-grid-3">
+        <article class="tra18-card tra18-reveal" data-tilt-card data-seamless-trigger="SaaS Net Retention Board">
+          <span class="tra18-kicker">BOARD 01</span>
+          <h3 style="font-size:20px;">SaaS Net Retention</h3>
+          <p style="color:var(--muted);font-size:14px;">Cohort expansion, logo churn, and payback period decomposition.</p>
+        </article>
+        <article class="tra18-card tra18-reveal" data-tilt-card data-seamless-trigger="Supply Chain Inventory Velocity">
+          <span class="tra18-kicker">BOARD 02</span>
+          <h3 style="font-size:20px;">Inventory Velocity</h3>
+          <p style="color:var(--muted);font-size:14px;">SKU lead-time forecasting and safety-stock threshold alerts.</p>
+        </article>
+        <article class="tra18-card tra18-reveal" data-tilt-card data-seamless-trigger="Paid Acquisition Attribution">
+          <span class="tra18-kicker">BOARD 03</span>
+          <h3 style="font-size:20px;">Multi-Touch Attribution</h3>
+          <p style="color:var(--muted);font-size:14px;">Channel marginal ROAS and pipeline conversion velocity.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PRICING -->
+    <section id="pricingSection" class="tra18-section" aria-labelledby="priceHeading">
+      <span class="tra18-kicker">04 / CREDIT PLANS</span>
+      <h2 id="priceHeading" class="tra18-h2">Predictable Usage Tiers</h2>
+      <div class="tra18-grid-3">
+        <article class="tra18-card tra18-reveal" data-tilt-card>
+          <span class="tra18-kicker">ANALYST</span>
+          <strong class="tabular-nums" style="font-size:36px;">$0<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
+          <p style="color:var(--muted);font-size:14px;">450 monthly GPT-4o credits, CSV/Parquet uploads, and instant chart exports.</p>
+        </article>
+        <article class="tra18-card tra18-reveal" data-tilt-card style="border-color:var(--accent);">
+          <span class="tra18-kicker">TEAM INTELLIGENCE</span>
+          <strong class="tabular-nums" style="font-size:36px;">$39<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
+          <p style="color:var(--muted);font-size:14px;">5,000 monthly credits, live Snowflake/Postgres connectors, and shared boards.</p>
+        </article>
+        <article class="tra18-card tra18-reveal" data-tilt-card>
+          <span class="tra18-kicker">ENTERPRISE</span>
+          <strong class="tabular-nums" style="font-size:36px;">$149<span style="font-size:15px;color:var(--muted);">/mo</span></strong>
+          <p style="color:var(--muted);font-size:14px;">Unlimited credits, VPC deployment, and custom semantic layer models.</p>
         </article>
       </div>
     </section>
   </main>
 
+  <footer class="tra18-footer">
+    <div><strong>Transform Data</strong> — Discover what's possible. © 2026 Transform Data Labs.</div>
+    <div style="display:flex;gap:20px;">
+      <a href="#liveAnalytics" style="color:var(--muted);text-decoration:none;">Platform</a>
+      <a href="#pinnedSpecs" style="color:var(--muted);text-decoration:none;">Features</a>
+      <a href="#projectsSection" style="color:var(--muted);text-decoration:none;">Projects</a>
+      <a href="#pricingSection" style="color:var(--muted);text-decoration:none;">Pricing</a>
+    </div>
+  </footer>
+
   <div id="seamlessModal" class="tra18-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
     <div class="tra18-seamless-box">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-        <span class="tra18-pill-btn">Transform Data Specification</span>
-        <button type="button" id="closeSeamlessBtn" class="tra18-pill-btn">Close (Esc)</button>
+        <span class="tra18-kicker">Transform Data Engine</span>
+        <button type="button" id="closeSeamlessBtn" class="tra18-btn-ghost">Close (Esc)</button>
       </div>
-      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Transform Data</h2>
-      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">Precision-engineered Transform Data web experience combining real-time scroll telemetry, 3D perspective cards, and liquid glass interactions.</p>
-      <div style="margin-bottom:18px;"><svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#505050" stop-opacity="0.75"/><stop offset="100%" stop-color="#505050" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#505050" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg></div>
-      <button type="button" id="confirmSeamlessBtn" class="tra18-cta-btn" style="width:100%;">Return to Live Stage</button>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">Transform Data Quickly</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Connect your dataset or upload a CSV/Parquet file to generate verified GPT-4o executive charts in milliseconds.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="tra18-btn-dark" style="width:100%;">Open Data Workspace</button>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var input = document.getElementById('dataQueryInput');
+      var countEl = document.getElementById('dataCharCount');
+      var titleEl = document.getElementById('liveQueryTitle');
+      var runBtn = document.getElementById('runQueryBtn');
+
+      function updateQuery() {
+        if (!input) return;
+        var val = input.value || '';
+        if (countEl) countEl.textContent = val.length + '/3,000';
+      }
+      if (input) input.addEventListener('input', updateQuery);
+      if (runBtn && input && titleEl) {
+        runBtn.addEventListener('click', function () {
+          titleEl.textContent = 'Synthesized: ' + (input.value.slice(0, 34) || 'Custom Cohort Insight');
+        });
+      }
+      document.querySelectorAll('[data-query-preset]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var q = btn.getAttribute('data-query-preset') || '';
+          if (input) { input.value = q; updateQuery(); }
+          if (titleEl) titleEl.textContent = 'Synthesized: ' + q.slice(0, 34);
+        });
+      });
+    })();
+  </script>
   
   <script>
     (function () {

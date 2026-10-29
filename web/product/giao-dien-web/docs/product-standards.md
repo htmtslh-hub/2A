@@ -1,6 +1,6 @@
 # Quy chuẩn sản phẩm Forge Zone
 
-Phiên bản: 1.2.1 — Ngày: 13/10/2026 — Hồ sơ đang áp dụng: `WEB-STATIC-1`.
+Phiên bản: 2.0.0 — Ngày: 28/10/2026 — Hồ sơ đang áp dụng: `WEB-STATIC-1` & `WEB-CRAFT-2` (kèm thang chấm điểm `ForgeScore v2.0`).
 
 ## 1. Cách dùng bộ tài liệu
 
@@ -245,32 +245,77 @@ Khi triển khai loại mới, bổ sung tài liệu riêng rồi cập nhật d
 
 | Hồ sơ | Trạng thái | Nội dung cần xác định trước khi áp dụng |
 |---|---|---|
-| WEB-STATIC-1 | Đang áp dụng | Toàn bộ quy chuẩn web trong file này. |
-| WEB-STATIC-IMG-1 | **Đề xuất, chờ chủ sản phẩm duyệt — chưa áp dụng** | Xem mục 12.1. Cho mẫu có ảnh raster thay cho ngoại lệ từng mẫu. |
+| WEB-STATIC-1 | Đang áp dụng | Toàn bộ quy chuẩn web tĩnh siêu nhẹ (`< 20.480 byte`, 6 file, thuần SVG) trong file này. |
+| WEB-CRAFT-2 | **Đang áp dụng (từ v2.0.0 — 28/10/2026)** | Xem mục 12.1 & mục 13. Hồ sơ giàu tương tác & hình ảnh (`< 1 MiB`, cho phép ảnh WebP/AVIF + JS tương tác `One Live Thing`, `skill-morge`, `react-bits-canvas` thuần Vanilla ES6). |
+| WEB-STATIC-IMG-1 | Gộp vào `WEB-CRAFT-2` | Kế thừa trong `WEB-CRAFT-2` cho các mẫu có ảnh cục bộ và tương tác nâng cao. |
 | AGENT-1 | Dự kiến, chưa nghiệm thu được | Nhiệm vụ, quyền/công cụ, dữ liệu, điều kiện dừng, can thiệp người dùng, chi phí, log, bảo mật, ca kiểm thử thành công/thất bại và cách cài đặt. |
 | PROMPT-1 | Dự kiến, chưa nghiệm thu được | Mục tiêu, biến đầu vào, hợp đồng đầu ra, môi trường/model đã thử, ví dụ, ca kiểm thử, tiêu chí chấm, giới hạn và cách dùng lại. |
 
-### 12.1 Đề xuất hồ sơ WEB-STATIC-IMG-1 (chưa áp dụng)
+### 12.1 Hồ sơ WEB-CRAFT-2 (Hồ sơ Giàu Tương Tác & Hình Ảnh — Chính thức áp dụng từ 28/10/2026)
 
-Lý do: tại thời điểm 03/10/2026, 5/8 mẫu đang bán (tidal, solenne, pinehaven, japan-trails, astra-interior) vượt `WEB-STATIC-1` bằng ngoại lệ riêng về ảnh/dung lượng. Đề xuất gom thành một hồ sơ chính thức. Khi chưa được duyệt, các mẫu này vẫn là `WEB-STATIC-1` + ngoại lệ ghi trong QA.md.
+Kế thừa toàn bộ nền tảng chất lượng của `WEB-STATIC-1` (D01–D08, Q01–Q13, W02, W04, W07, W08), mở rộng chính thức cho các mẫu dựng từ ảnh/video tham chiếu (`ForgeFrame`, Pinterest, MotionSites) hoặc các mẫu cần tương tác cao cấp:
 
-Kế thừa toàn bộ `WEB-STATIC-1` (D01–D08, Q01–Q13, W02, W04, W05, W07, W08), chỉ thay:
-
-| Mã | Thay cho | Điều kiện đề xuất |
+| Mã | Thay cho | Điều kiện bắt buộc của `WEB-CRAFT-2` |
 |---|---|---|
-| I01 | W01 | Sáu file bắt buộc + thư mục `assets/img/` chứa tối đa 8 ảnh raster (WebP/AVIF, JPEG chỉ khi có lý do). Không file nào khác. |
-| I02 | W03 | Mỗi ảnh có nguồn ghi trong QA.md (tự chụp, tự vẽ hoặc tạo bằng AI bởi chủ sản phẩm) và quyền giao cho khách. `LICENCE.txt` phải nói rõ ảnh có được dùng trên site của khách hay không — **chủ sản phẩm tự sửa điều khoản**, agent không được sửa. Không hotlink, không base64. |
-| I03 | W06 | ZIP < 1.048.576 byte; mỗi ảnh ≤ 300 KB; `dong-goi.mjs` chạy với `--ngoai-le` và QA.md ghi byte từng ảnh. |
-| I04 | mới | Ảnh có kích thước/`aspect-ratio` khai báo (không nhảy bố cục); ảnh dưới màn hình đầu dùng `loading="lazy"`; ảnh trang trí đặt bằng CSS hoặc `alt=""`. |
-| I05 | mới | Chữ đè lên ảnh phải có lớp phủ/nền và được kiểm **thủ công** trên ảnh chụp ở 320, 768, 1024, 1440 px (công cụ chỉ đánh dấu "overImage"). Ghi kết quả vào QA.md. |
-| I06 | mới | Mất ảnh (xoá thư mục `img`) vẫn đọc và thao tác được: nội dung, điều hướng, nút còn đủ. |
-
-Cần chủ sản phẩm quyết: ngưỡng 1 MiB / 300 KB / 8 ảnh; có cho phép JS ngoài menu + reveal không (hiện vẫn theo W05); và nội dung điều khoản ảnh trong `LICENCE.txt`. Sau khi duyệt: tăng chuẩn lên 1.3, ghi lịch sử và nghiệm thu lại từng mẫu theo hồ sơ mới.
+| C01 | W01 | Sáu file bắt buộc (`index.html`, `assets/css/style.css`, `assets/js/main.js`, `CUSTOMISE.md`, `README.md`, `LICENCE.txt`) + thư mục `assets/img/` hoặc `assets/media/` khi có tài sản cục bộ hợp lệ. Không framework, không thư viện JS ngoài. |
+| C02 | W03 | Minh hoạ dùng SVG nội tuyến có chủ đích (`dimensional-drawing`, biểu đồ, vector sắc nét) hoặc ảnh WebP/AVIF/MP4 có nguồn rõ ràng ghi trong `QA.md`. Không hotlink tài sản không rõ quyền, không icon emoji. |
+| C03 | W05 | Ngoài menu mobile và reveal, `assets/js/main.js` **bắt buộc có ít nhất 01 Tương Tác Sống (`One Live Thing`)** hoạt động thật bằng Vanilla ES6 + hiệu ứng chuyển cảnh/cuộn bằng `requestAnimationFrame` hữu hạn (hủy lượt cũ khi có thao tác mới, kèm nút `Pause/Play Motion` theo quy tắc 05/10/2026). |
+| C04 | W06 | ZIP cuối cùng `< 1.048.576 byte` (`1 MiB`); mỗi ảnh raster `<= 300 KB`; chạy `dong-goi.mjs <slug> --ngoai-le` và ghi rõ hồ sơ `WEB-CRAFT-2` cùng dung lượng trong `QA.md`. |
+| C05 | mới | Ảnh có kích thước hoặc `aspect-ratio` khai báo (`CLS < 0.1`); ảnh dưới màn hình đầu dùng `loading="lazy"`; chữ đè lên ảnh có lớp phủ đảm bảo tương phản `>= 4.5:1` ở cả 4 khổ màn hình. |
+| C06 | mới | Khi mất ảnh hoặc tắt JS, toàn bộ nội dung chính, điều hướng và CTA vẫn đọc và thao tác được bình thường. |
 
 Mỗi lần thay đổi chuẩn: tăng phiên bản, ghi thay đổi và phạm vi áp dụng. Sản phẩm cũ giữ phiên bản chuẩn đã nghiệm thu; không tự gắn nhãn đạt bản mới khi chưa kiểm tra lại. Phiên bản sản phẩm dùng `major.minor.patch`: major khi phá vỡ cấu trúc/cách tuỳ chỉnh, minor khi thêm nội dung hoặc khả năng tương thích ngược, patch khi sửa lỗi. Tăng phiên bản và thay hash mỗi khi thay gói đã bàn giao.
 
+---
+
+## 13. Bộ Tiêu Chuẩn Thiết Kế Nâng Cao & Thang Điểm Nghiệm Thu `ForgeScore v2.0`
+
+Từ phiên bản **2.0.0 (28/10/2026)**, mọi sản phẩm giao diện web được sáng tạo và đánh giá dựa trên sự kết hợp giữa nền tảng Forge Zone và **14 bộ Skill UI/UX & Motion** trong `d:\2A\skill\`:
+- **Nhóm Định hướng & Hệ thống:** `ui-ux-pro-max`, `taste-skill`, `hallmark`, `design-md`, `reference-design-contract`, `brutalist-skill`, `minimalist-skill`, `soft-skill`.
+- **Nhóm Thành phần & Minh hoạ:** `forgeframe`, `uiverse-galaxy`, `react-bits-canvas`, `magic-ui`, `neon-orbit-border`, `dimensional-drawing`.
+- **Nhóm Chuyển động & Vật lý:** `emil-design-eng`, `emil-animate`, `animation-performance`, `skill-morge`, `gsap-skills` (`core`, `scrolltrigger`, `timeline`, `performance`, `plugins`, `utils`), `scroll-world`.
+- **Nhóm Phê bình & Kiểm toán:** `impeccable` (`craft-floor`, `critique`, `audit`, `polish`), `review-animations`, `improve-animations`.
+
+### 13.1 Năm Nguyên Tắc Hòa Giải Bắt Buộc Của Forge Zone
+
+1. **Ưu tiên số 1 — Animation mặc định BẬT (Quy tắc Chủ sản phẩm 05/10/2026):**
+   - Mọi animation mặc định **BẬT** trên tất cả trình duyệt (kể cả Edge và Cốc Cốc) bất chấp `prefers-reduced-motion: reduce` của hệ điều hành.
+   - Cung cấp nút điều khiển `Pause/Play Motion` (`[data-motion-toggle]` hoặc tương đương) để người dùng chủ động tạm dừng trong phiên đang mở; lần mở mới mặc định bật lại.
+2. **Chuyển thể Không Thư Viện Ngoài (`Zero-Dependency Vanilla ES6`):**
+   - Không nhúng CDN/npm runtime bên ngoài vào mẫu tĩnh thương mại. Mọi kỹ thuật từ `gsap-scrolltrigger`, `emil-design-eng`, `react-bits-canvas`, `scroll-world` được triển khai bằng **Vanilla ES6 (`requestAnimationFrame` hữu hạn + `IntersectionObserver`) + CSS `@property`**.
+3. **Trung thành Tham chiếu (`>95%`) + Sáng tạo Có kiểm soát (`+15–20%`):**
+   - Với mẫu dựng từ ảnh/video tham chiếu (`ForgeFrame`), ưu tiên độ giống `>95.00` cho phần gốc; áp dụng kỷ luật chống văn mẫu AI (`Anti-Slop` của `hallmark` + `taste-skill` + `impeccable`) cho phần mở rộng sáng tạo `+15–20%` và cho các mẫu thiết kế mới.
+4. **Tách Hai Biến Màu Nhấn (`Dual-Accent Contrast`):**
+   - Khai báo riêng `--accent` (nền nút/mảng nhấn) và `--accent-text` (chữ màu nhấn trên nền sáng/tối đảm bảo tương phản `>= 4.5:1`). Không dùng chữ xám trung tính (`#888`) trên nền màu; phải pha sắc độ (`tint`) từ màu chủ đạo.
+5. **Chống Trùng Lặp Cấu Trúc DOM (`Anti-Clone DOM Gate`):**
+   - Độ tương đồng cấu trúc thẻ/class DOM so với 15 mẫu gần nhất phải `< 45%`; không lặp lại cùng một kiểu bố cục section quá 2 lần liên tiếp trên một trang.
+
+### 13.2 Bảy Trụ Cột Chất Lượng (`7-Pillar Craft Standard`)
+
+- **P1. Kiến trúc & Ý tưởng Độc bản (`taste-skill` + `hallmark` + `impeccable`):** Xác định rõ chế độ bề mặt (`Persuade | Operate | Experience | Read`); vượt qua `Competitor Test` (nội dung và bố cục gắn chặt với đặc trưng vật lý/nghiệp vụ của chủ đề); có ít nhất **01 Tương Tác Sống (`One Live Thing`)**.
+- **P2. Hệ thống Token & Bề mặt Trình duyệt (`design-md` + `impeccable/craft-floor` + `dimensional-drawing`):** 100% màu, font, khoảng cách, bo góc, easing đi qua `:root`; bo góc lồng nhau tuân theo công thức đồng tâm $R_{\text{inner}} = \max(0, R_{\text{outer}} - B - S)$; định kiểu đầy đủ cho `::selection`, `scrollbar-color`, `text-underline-offset`, và `font-variant-numeric: tabular-nums` cho mọi con số/giá tiền.
+- **P3. Typography & Nhịp điệu Bố cục (`hallmark` + `ui-ux-pro-max`):** Tối đa 2–3 họ font (cấm dùng `Inter`, `Roboto`, `Arial` làm font tiêu đề trưng bày `--font-display`); tiêu đề Hero gấp `>= 3x` chữ thân bài (`>= 16px`); độ rộng dòng đọc `60–75ch`; `text-wrap: balance` cho tiêu đề; số cụm tiêu đề căn trái nhiều hơn hoặc bằng căn giữa.
+- **P4. Động lực học & Vật lý Chuyển động (`emil-design-eng` + `skill-morge` + `gsap-skills` + `scroll-world`):** Cấm `transition: all` và cấm `ease-in` cho UI; dùng đường cong vật lý (`--ease-out: cubic-bezier(0.23, 1, 0.32, 1)`, `--ease-in-out: cubic-bezier(0.77, 0, 0.175, 1)`, `--ease-drawer: cubic-bezier(0.32, 0.72, 0, 1)`); phản hồi nhấn nút `:active` `scale(0.97)` trong `100–160ms`; chỉ biến đổi `transform` và `opacity` (hoặc `@property`).
+- **P5. Hình ảnh, Minh hoạ SVG & Trung thực Dữ liệu (`dimensional-drawing` + `product-standards`):** SVG nội tuyến có `viewBox` và thuộc tính trợ năng chuẩn; không dùng icon emoji, không `Lorem ipsum`, không bịa số liệu vô lý hay nút `href="#"`.
+- **P6. Đa thiết bị, Trợ năng & Dự phòng 4 Lớp (`WEB-STATIC-1` + `ui-ux-pro-max`):** Không tràn ngang ở `1440×900`, `820×1180`, `375×812`, `320×740` và `Zoom 200%`; dùng `overflow-x: clip` (cấm `overflow-x: hidden` trên `html/body` và cấm `100vw`); vùng chạm `>= 44×44px`; điều hướng bàn phím + `:focus-visible` đạt tương phản `>= 3:1`; hoạt động khi tắt JS và khi mở qua `file://`.
+- **P7. Mã nguồn sạch, Tài liệu Khách hàng & Video Preview (`instruction-product.txt`):** Cấu trúc chuẩn, `CUSTOMISE.md` đủ 10 bước, 12 prompt và bảng đếm chuỗi chính xác 100%; có video preview `.mp4` quay thật và ảnh `.webp` đồng bộ.
+
+### 13.3 Thang Chấm Điểm Nghiệm Thu `ForgeScore v2.0` (100 Điểm)
+
+Công cụ tự động: `node web/product/giao-dien-web/tools/evaluate-forgescore.mjs <slug>` (hoặc `--all`).
+
+| Trục Đánh Giá | Điểm Tối Đa | Tiêu Chí Thành Phần |
+|---|---:|---|
+| **Trục 1: Kiến trúc, Ý tưởng & Chống rập khuôn (`Architecture & Anti-Slop`)** | **25 điểm** | Không vi phạm `hallmark/taste-skill` (`0` emoji icon, không `transition: all`, không `100vw`, không `overflow-x: hidden` trên `html/body`), đa dạng thẻ `<section>`, `DOM-Similarity < 45%`, nội dung chuyên biệt không `Lorem ipsum`. |
+| **Trục 2: Hệ thống Token, Màu sắc & Bề mặt (`Tokens, Color & Craft Surfaces`)** | **20 điểm** | Khai báo `:root` đầy đủ (`--accent`, `--accent-text`, font, spacing, ease), định kiểu bề mặt trình duyệt (`::selection`, `tabular-nums`, `:focus-visible`), font trưng bày chọn lọc (không dùng Inter/Roboto/Arial làm display), tương phản màu đạt chuẩn. |
+| **Trục 3: Vật lý Chuyển động & Tương tác Sống (`Motion Physics & One Live Thing`)** | **20 điểm** | Có đường cong `cubic-bezier` chuẩn `emil-design-eng`, phản hồi `:active`, dùng `requestAnimationFrame` hữu hạn / `IntersectionObserver`, có ít nhất 01 `One Live Thing` tương tác thật trong JS, mặc định BẬT kèm nút `Pause/Play Motion`. |
+| **Trục 4: Đa thiết bị, Trợ năng & Dự phòng (`Responsive, A11y & Resilience`)** | **20 điểm** | Đủ 4 landmark (`header`, `nav`, `main`, `footer`), đúng 1 thẻ `h1`, có `skip-link`, mọi SVG/ảnh/nút có nhãn trợ năng, tối thiểu 3–4 mốc `@media` responsive, `clamp()` chữ/khoảng cách, hiển thị đầy đủ khi tắt JS. |
+| **Trục 5: Đóng gói, Tài liệu & Preview (`Packaging, Docs & Store Assets`)** | **15 điểm** | Đủ 6 file gốc (`index.html`, `style.css`, `main.js`, `CUSTOMISE.md`, `README.md`, `LICENCE.txt`), `CUSTOMISE.md` đủ 10 bước & 12 prompt và khớp số đếm literal, có file `.zip`, `.webp` và `.mp4` hợp lệ. |
+| **TỔNG CỘNG (`ForgeScore v2.0`)** | **100 điểm** | **Đạt chuẩn phát hành (`PASS`):** `ForgeScore >= 90.0/100` (hoặc `> 95.0/100` với `ForgeFrame`) **VÀ** `0 Blocker` kỹ thuật. |
+
 ### Lịch sử
 
+- 2.0.0 — 28/10/2026: tích hợp 14 bộ Skill UI/UX & Motion vào quy chuẩn Forge Zone; chính thức áp dụng hồ sơ `WEB-CRAFT-2` song song với `WEB-STATIC-1`; ban hành 7 Trụ Cột Chất Lượng, 5 Nguyên Tắc Hòa Giải và thang chấm điểm nghiệm thu `ForgeScore v2.0` (100 điểm).
 - 1.2.1 — 13/10/2026: bắt buộc video preview hoạt động thật cho mọi sản phẩm cửa hàng, poster dự phòng, lazy hover/touch playback, manifest và quy trình quay/kiểm tra. Chỉ bổ sung phần trưng bày; giữ nguyên hồ sơ ZIP và hướng dẫn khách hàng.
 
 - 1.2 — 21/09/2026: bổ sung bản hướng dẫn khách hàng tiếng Anh và Trung giản thể; yêu cầu ba bản giữ cùng cấu trúc 10 bước, 12 prompt.

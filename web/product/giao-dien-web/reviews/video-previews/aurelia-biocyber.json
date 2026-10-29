@@ -1,0 +1,38 @@
+{
+  "id": "t170",
+  "slug": "aurelia-biocyber",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-29T00:32:37.527Z",
+  "demo": "/demos/aurelia-biocyber/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "b5a83270f57a",
+  "sha256": "b5a83270f57a90c0d78cf1536c9de937a84da2d8d30ded6f2bbf1c41a332595d",
+  "demoHtmlSha256": "abd4327ee9c8590e2c49ebbb8843ba6b02817a06324321297527b54f7b7fe4da",
+  "demoSha256": "d1a8bf3d4e32412cc2b0d06290a4a090bb33aadc9fcf047cf16bdefe2f700d3e",
+  "bytes": 336765,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 465
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aurelia-biocyber-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aurelia-biocyber-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aurelia-biocyber-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\aurelia-biocyber-return.jpg"
+  ]
+}

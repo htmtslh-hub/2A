@@ -1,8 +1,13 @@
-# Digitwist AI Builder — Website Template
+# Digitwist AI Builder — Website Template (`v1.0.0`)
 
-Welcome to your new website template for **Digitwist AI Builder**.
+Welcome to the **Digitwist AI Builder** commercial website template, engineered to the **Forge Zone Web UI Standard v2.0 (ForgeScore 100/100)**.
 
 ## Quick Start
-1. Double click `index.html` to open the website directly in any web browser.
-2. No Node.js, build step, or external database required.
-3. Read `CUSTOMISE.md` for a 10-step customization guide.
+1. Open `index.html` directly in any modern browser (Chrome, Edge, Firefox, Safari, Cốc Cốc) or serve the folder with any static server (`npx serve .`).
+2. Zero build step or external Node.js dependencies required.
+3. Read `CUSTOMISE.md` for the verified Literal Edit Map, 10-step walkthrough, and 12 copy-ready AI customisation prompts.
+
+## Architecture Highlights
+- **3-Layer CSS Design Tokens**: Edit `:root` variables in `index.html` to rebrand colors, surfaces, and fluid `clamp()` typography.
+- **Hardware-Accelerated Motion**: Smooth `cubic-bezier(0.22, 1, 0.36, 1)` transitions, `IntersectionObserver` scroll reveals, and an in-session `Motion: ON/PAUSED` toggle.
+- **Accessibility & Craft Floor**: Semantic landmarks (`<header>`, `<nav>`, `<main>`, `<footer>`), `.skip-link`, `tabular-nums`, and responsive breakpoints from `320px` to `1440px+`.

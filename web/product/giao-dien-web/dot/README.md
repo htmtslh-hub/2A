@@ -1,3 +1,8 @@
-# Dot (t166)
+# Dot (`dot` / `t168`)
 
-Commercial web template built from MotionSites prompt specification with 15-20% creative enhancements.
+- **Version:** `1.0.0`
+- **Standard Profile:** `WEB-CRAFT-2` / **ForgeScore v2.0 (`FORGEFRAME_GOLD`)**
+- **Access Tier:** `premium`
+- **Package:** `dot.zip`
+
+Bespoke web interface template crafted with 3-layer CSS design tokens, hardware-accelerated motion, interactive live telemetry, and full keyboard/screen-reader accessibility.

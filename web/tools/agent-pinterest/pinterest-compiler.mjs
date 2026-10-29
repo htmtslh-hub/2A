@@ -3,7 +3,8 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
-import { getNextCatalogId, scaffoldTemplate } from '../agent-motionsites/scaffold-template.mjs';
+import { getNextCatalogId, scaffoldTemplate, syncCustomiseGuide } from '../agent-motionsites/scaffold-template.mjs';
+import { buildPinterestV2Template, PINTEREST_V2_META } from './pinterest-v2-templates.mjs';
 
 const require = createRequire(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -106,6 +107,7 @@ export async function analyzePinterestImagePalette(localImagePath) {
 
 export function detectWebCategory(data) {
   const slug = String(data.slug || '').toLowerCase();
+  if (PINTEREST_V2_META[slug]?.category) return PINTEREST_V2_META[slug].category;
   if (slug === 'break-code' || slug === 'startup-devkit' || slug === 'nova-glass' || slug === 'alex-carter-ui') return 'portfolio';
   return 'commerce';
 }
@@ -356,7 +358,7 @@ const SLUG_BLUEPRINT_OVERRIDES = {
 function getBlueprintForData(data) {
   const base = BLUEPRINTS[selectBlueprintIndex(data)];
   const s = String(data.slug || '').toLowerCase();
-  const ov = SLUG_BLUEPRINT_OVERRIDES[s];
+  const ov = SLUG_BLUEPRINT_OVERRIDES[s] || PINTEREST_V2_META[s];
   if (!ov) return base;
   return { ...base, ...ov };
 }
@@ -852,6 +854,10 @@ function renderHeroByBlueprint(bp, p, data, evalScore) {
 
 export function buildPinterestInspiredHtml(data, palette) {
   const p = getSlugPrefix(data.slug);
+  const v2Html = buildPinterestV2Template(data, p);
+  if (v2Html) {
+    return v2Html;
+  }
   const bp = getBlueprintForData(data);
   const evalScore = data.criteriaEvaluation?.totalScore || 98;
   const svgCenter = get3DCutoutMarkup(bp, p, data);
@@ -5169,6 +5175,7 @@ export async function compilePinterestTemplate(slug, options = {}) {
 
   const html = buildPinterestInspiredHtml(data, palette);
   fs.writeFileSync(sourceHtmlPath, html, 'utf8');
+  syncCustomiseGuide(slug, bp.brandTitle, [bp.brandTitle, bp.headlineSub]);
 
   fs.mkdirSync(path.dirname(demoHtmlPath), { recursive: true });
   fs.copyFileSync(sourceHtmlPath, demoHtmlPath);
@@ -5238,10 +5245,12 @@ ${accessLine}    version: '1.0.0',
     fs.writeFileSync(realTplPath, realTpl, 'utf8');
   }
 
-  execFileSync('node', ['web/tools/agent-motionsites/generate-previews.mjs', slug], {
-    cwd: root,
-    stdio: 'inherit'
-  });
+  if (!options.skipPreviews) {
+    execFileSync('node', ['web/tools/agent-motionsites/generate-previews.mjs', slug], {
+      cwd: root,
+      stdio: 'inherit'
+    });
+  }
 
   return { slug, catalogId, title: bp.brandTitle, blueprint: bp.id, accessTier, category: webCat, criteriaScore: evalScore };
 }

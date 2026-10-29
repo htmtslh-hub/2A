@@ -11,6 +11,7 @@
   --ease: cubic-bezier(.22, 1, .36, 1);
 }
 * { box-sizing: border-box; }
+::selection { background: var(--accent); color: var(--bg); }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 var(--font-body); }
 a { color: inherit; text-decoration: none; }
@@ -44,6 +45,7 @@ button:active, .button:active { transform: scale(.97); }
 .hero__model-code { color: var(--ink-soft); font-size: 12px; letter-spacing: 1.8px; }
 h1 { font: 300 clamp(40px, 4.4vw, 66px)/1.03 var(--font-display); letter-spacing: -2.5px; margin: 15px 0 24px; max-width: 320px; }
 .hero__description { max-width: 275px; color: var(--ink-soft); font-size: 15px; }
+.hero__price, .hero__count, .specs dd, .product__price { font-variant-numeric: tabular-nums; }
 .hero__price { font-size: 18px; margin-top: 20px; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 20px; border-radius: 30px; background: var(--accent); color: var(--bg); border: 0; font-size: 12px; font-weight: 600; letter-spacing: .5px; transition: box-shadow .3s, transform .3s; }
 .button:hover { box-shadow: 0 0 30px #91d1e230; transform: translateY(-3px); }

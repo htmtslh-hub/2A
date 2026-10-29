@@ -22,6 +22,16 @@
   });
   mobile.addEventListener('change', () => closeMenu());
   document.documentElement.classList.add('js');
+  document.documentElement.dataset.motion = 'on';
+  const motionBtn = document.querySelector('[data-motion-toggle]');
+  if (motionBtn) {
+    motionBtn.addEventListener('click', () => {
+      const paused = document.documentElement.dataset.motion === 'off';
+      document.documentElement.dataset.motion = paused ? 'on' : 'off';
+      motionBtn.setAttribute('aria-pressed', String(!paused));
+      motionBtn.textContent = paused ? 'Pause motion' : 'Play motion';
+    });
+  }
 
   // One frame per scroll/resize burst; no perpetual animation loop.
   const hero = document.querySelector('.hero');

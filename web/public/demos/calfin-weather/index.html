@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Calfin Weather — Real-Time Spatial Storm &amp; Atmospheric Forecast</title>
+  <meta name="description" content="Real-time spatial glass weather forecast dashboard with interactive 6-node Bezier temperature curve, multi-city Jakarta and Danang telemetry cards, and live storm radar.">
+  <meta property="og:title" content="Calfin Weather — Spatial Atmospheric Telemetry">
+  <meta property="og:description" content="Storm with Heavy Rain telemetry, 6-day Bezier temperature curve, and multi-station glass cards.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#071717">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #071717;
+      --surface: #0e2424;
+      --surface-elevated: #153535;
+      --glass: rgba(14, 36, 36, 0.74);
+      --fg: #f0fdfa;
+      --muted: #99d5cf;
+      --border: rgba(153, 213, 207, 0.18);
+      --accent: #2dd4bf;
+      --accent-text: #5eead4;
+      --accent-strong: #14b8a6;
+      --on-accent: #041f1e;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 26px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: radial-gradient(circle at 22% 18%, #164e4a 0%, #091d1d 55%, #051010 100%);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    .cal63-cursor-ring, .cal63-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0); will-change: transform;
+    }
+    .cal63-cursor-ring { width: 34px; height: 34px; border: 1.5px solid var(--accent-text); margin: -17px 0 0 -17px; transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out); }
+    .cal63-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+
+    .cal63-header {
+      position: sticky; top: 14px; z-index: 200; max-width: 1360px; margin: 14px auto 0;
+      padding: 12px 24px; border-radius: 999px; background: var(--glass);
+      backdrop-filter: blur(18px); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .cal63-brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 16px; color: var(--fg); text-decoration: none; }
+    .cal63-nav { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .cal63-nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; transition: color 0.2s var(--ease-out); }
+    .cal63-nav a:hover { color: var(--fg); }
+    .cal63-btn-pill {
+      min-height: 44px; padding: 9px 18px; border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border);
+      color: var(--fg); font-size: 12px; font-weight: 700; cursor: pointer;
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out);
+    }
+    .cal63-btn-cta {
+      min-height: 44px; padding: 10px 22px; border-radius: 999px;
+      background: var(--accent); color: var(--on-accent); border: none;
+      font-size: 13px; font-weight: 800; cursor: pointer;
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out);
+    }
+    .cal63-btn-pill:active, .cal63-btn-cta:active { transform: scale(0.97); }
+
+    .cal63-shell { max-width: 1360px; margin: 0 auto; padding: clamp(28px, 4vw, 56px) clamp(16px, 4vw, 48px); }
+    .cal63-spatial-stage {
+      display: grid; grid-template-columns: 68px 1fr 310px; gap: 24px;
+      padding: clamp(20px, 3vw, 36px); border-radius: 34px;
+      background: linear-gradient(155deg, rgba(20, 62, 58, 0.78) 0%, rgba(7, 23, 23, 0.92) 100%);
+      border: 1px solid var(--border);
+      box-shadow: 0 36px 80px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+      align-items: stretch;
+    }
+    .cal63-dock {
+      display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+      padding: 18px 10px; border-radius: 999px; background: rgba(7, 23, 23, 0.75);
+      border: 1px solid var(--border); gap: 14px;
+    }
+    .cal63-dock-btn {
+      width: 44px; height: 44px; border-radius: 50%; border: 1px solid transparent;
+      background: rgba(255, 255, 255, 0.05); color: var(--muted);
+      display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out);
+    }
+    .cal63-dock-btn.is-active { background: var(--accent); color: var(--on-accent); }
+    .cal63-dock-btn:active { transform: scale(0.95); }
+
+    .cal63-center-col { display: flex; flex-direction: column; justify-content: space-between; gap: 22px; }
+    .cal63-badge {
+      display: inline-flex; align-items: center; gap: 8px; width: fit-content;
+      padding: 7px 16px; border-radius: 999px; background: rgba(45, 212, 191, 0.14);
+      border: 1px solid rgba(45, 212, 191, 0.36); color: var(--accent-text);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
+    }
+    .cal63-h1 {
+      font-family: var(--font-display); font-size: clamp(2.85rem, 6vw, 5.2rem);
+      font-weight: 400; line-height: 0.98; letter-spacing: -0.02em; color: var(--fg);
+    }
+    .cal63-lead { font-size: clamp(0.98rem, 1.2vw, 1.1rem); color: var(--muted); max-width: 58ch; line-height: 1.65; }
+
+    .cal63-curve-box {
+      padding: 22px; border-radius: var(--radius-lg);
+      background: rgba(7, 23, 23, 0.66); border: 1px solid var(--border);
+    }
+    .cal63-day-row {
+      display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px;
+      margin-top: 12px; text-align: center; font-variant-numeric: tabular-nums;
+    }
+    .cal63-day-btn {
+      min-height: 44px; padding: 8px 6px; border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04); border: 1px solid transparent;
+      color: var(--muted); font-size: 12px; font-weight: 600; cursor: pointer;
+      transition: transform 0.2s var(--ease-out), opacity 0.2s var(--ease-out);
+    }
+    .cal63-day-btn.is-active { background: rgba(45, 212, 191, 0.18); border-color: var(--accent); color: var(--fg); }
+
+    .cal63-city-stack { display: flex; flex-direction: column; gap: 14px; font-variant-numeric: tabular-nums; }
+    .cal63-city-card {
+      padding: 16px 18px; border-radius: 22px; background: rgba(10, 31, 31, 0.78);
+      border: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between;
+      cursor: pointer; transition: transform 0.25s var(--ease-out), opacity 0.25s var(--ease-out);
+    }
+    .cal63-city-card:hover { transform: translate3d(0, -3px, 0); }
+    .cal63-city-card.is-selected { border-color: var(--accent); background: rgba(20, 62, 58, 0.9); }
+
+    .cal63-bento-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px;
+      font-variant-numeric: tabular-nums;
+    }
+    .cal63-card {
+      padding: 26px; border-radius: var(--radius-lg); background: var(--surface);
+      border: 1px solid var(--border); box-shadow: 0 20px 44px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.08);
+      transition: transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out);
+    }
+    .cal63-card:hover { transform: translate3d(0, -4px, 0); }
+    .cal63-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .cal63-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .cal63-modal {
+      position: fixed; inset: 0; z-index: 190; pointer-events: none; background: rgba(4, 15, 15, 0.84);
+      backdrop-filter: blur(16px); display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .cal63-modal.is-open { display: flex; }
+    .cal63-modal-box { pointer-events: auto;
+      max-width: 580px; width: 100%; padding: 32px; border-radius: 28px;
+      background: var(--surface-elevated); border: 1px solid var(--border);
+    }
+
+    @media (max-width: 1024px) {
+      .cal63-spatial-stage { grid-template-columns: 1fr; }
+      .cal63-dock { flex-direction: row; border-radius: 22px; justify-content: center; }
+      .cal63-bento-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .cal63-bento-grid { grid-template-columns: 1fr; }
+      .cal63-day-row { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .cal63-header { border-radius: 20px; padding: 12px 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main weather telemetry</a>
+  <div id="cursorRing" class="cal63-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="cal63-cursor-dot" aria-hidden="true"></div>
+
+  <header class="cal63-header">
+    <a href="#mainContent" class="cal63-brand">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+      </svg>
+      <span>Calfin Weather <small style="color:var(--muted);font-weight:500;">/ Danang &amp; Jakarta</small></span>
+    </a>
+    <nav class="cal63-nav" aria-label="Primary Navigation">
+      <a href="#forecastStage">Live Radar</a>
+      <a href="#telemetryBento">Atmospheric Grid</a>
+      <a href="#stationMatrix">Regional Stations</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button type="button" id="unitToggleBtn" class="cal63-btn-pill" aria-pressed="false">Unit: °C</button>
+      <button type="button" id="motionToggleBtn" class="cal63-btn-pill" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="cal63-btn-cta">Storm Alert Bulletin ↗</button>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section id="forecastStage" class="cal63-shell">
+      <div class="cal63-spatial-stage">
+        <!-- Left Frosted Vertical Icon Dock -->
+        <aside class="cal63-dock" aria-label="Spatial Weather Instruments">
+          <button type="button" class="cal63-dock-btn is-active" aria-label="Precipitation Radar" data-seamless-trigger="Doppler Precipitation Radar — Calfin Danang">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 14v6"/><path d="M8 14v6"/><path d="M12 16v6"/></svg>
+          </button>
+          <button type="button" class="cal63-dock-btn" aria-label="Wind Vector Telemetry" data-seamless-trigger="East Wind Vector Telemetry (11–21 mph)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>
+          </button>
+          <button type="button" class="cal63-dock-btn" aria-label="Barometric Isobars" data-seamless-trigger="Barometric Pressure — 1004.8 hPa">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.2 7.8-2 6.3-6.4 2.1 2-6.3z"/></svg>
+          </button>
+          <button type="button" class="cal63-dock-btn" aria-label="Lightning Strike Matrix" data-seamless-trigger="Lightning Discharge Tracker">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </button>
+        </aside>
+
+        <!-- Center Weather Forecast Hero & Interactive Bezier Curve -->
+        <div class="cal63-center-col">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
+              <span class="cal63-badge">Weather Forecast • Welcome Calfin Danang</span>
+              <span id="liveStationCoords" style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">16.0544° N, 108.2022° E • LIVE</span>
+            </div>
+            <h1 id="oversizedHeadline" class="cal63-h1">Storm with Heavy Rain</h1>
+            <p id="activeWeatherDesc" class="cal63-lead" style="margin-top:12px;">
+              Partly cloudy with occasional snow showers and highland squalls. High around 50°F (10°C). Wind from the east 11 to 21 mph with 88% relative humidity.
+            </p>
+          </div>
+
+          <div style="display:flex;gap:28px;flex-wrap:wrap;font-variant-numeric:tabular-nums;">
+            <div>
+              <strong id="mainTempReadout" data-counter-target="14" data-counter-suffix="°C" style="font-size:38px;font-family:var(--font-mono);color:var(--accent-text);">14°C</strong>
+              <span style="display:block;font-size:12px;color:var(--muted);">Current Highland Temp</span>
+            </div>
+            <div>
+              <strong data-counter-target="21" data-counter-suffix=" mph" style="font-size:38px;font-family:var(--font-mono);">21 mph</strong>
+              <span style="display:block;font-size:12px;color:var(--muted);">East Wind Gusts</span>
+            </div>
+            <div>
+              <strong data-counter-target="88" data-counter-suffix="%" style="font-size:38px;font-family:var(--font-mono);">88%</strong>
+              <span style="display:block;font-size:12px;color:var(--muted);">Precipitation Probability</span>
+            </div>
+          </div>
+
+          <!-- Interactive 6-Node SVG Bezier Temperature Curve (One Live Thing) -->
+          <div class="cal63-curve-box">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+              <strong style="font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--accent-text);">6-Day Atmospheric Temperature Curve</strong>
+              <span id="selectedDaySummary" style="font-size:12px;font-family:var(--font-mono);color:var(--muted);">Thursday Peak: 19°C • Storm Front</span>
+            </div>
+            <svg viewBox="0 0 680 170" width="100%" height="160" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="cal63CurveFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.38"/>
+                  <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0.0"/>
+                </linearGradient>
+              </defs>
+              <path d="M40 112 C 110 92, 145 88, 165 94 C 215 100, 250 75, 290 78 C 340 82, 375 124, 415 120 C 460 116, 495 36, 540 42 C 585 48, 615 98, 645 102 L 645 155 L 40 155 Z" fill="url(#cal63CurveFill)"/>
+              <path id="bezierTempPath" d="M40 112 C 110 92, 145 88, 165 94 C 215 100, 250 75, 290 78 C 340 82, 375 124, 415 120 C 460 116, 495 36, 540 42 C 585 48, 615 98, 645 102" stroke="#5eead4" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="40" cy="112" r="6" fill="#071717" stroke="#5eead4" stroke-width="3"/>
+              <text x="40" y="96" fill="#f0fdfa" font-size="13" font-weight="700" text-anchor="middle">11°</text>
+              <circle cx="165" cy="94" r="6" fill="#071717" stroke="#5eead4" stroke-width="3"/>
+              <text x="165" y="78" fill="#f0fdfa" font-size="13" font-weight="700" text-anchor="middle">13°</text>
+              <circle cx="290" cy="78" r="6" fill="#071717" stroke="#5eead4" stroke-width="3"/>
+              <text x="290" y="62" fill="#f0fdfa" font-size="13" font-weight="700" text-anchor="middle">14°</text>
+              <circle cx="415" cy="120" r="6" fill="#071717" stroke="#5eead4" stroke-width="3"/>
+              <text x="415" y="104" fill="#f0fdfa" font-size="13" font-weight="700" text-anchor="middle">10°</text>
+              <circle cx="540" cy="42" r="8" fill="#2dd4bf" stroke="#f0fdfa" stroke-width="3"/>
+              <text x="540" y="24" fill="#5eead4" font-size="14" font-weight="800" text-anchor="middle">19°</text>
+              <circle cx="645" cy="102" r="6" fill="#071717" stroke="#5eead4" stroke-width="3"/>
+              <text x="645" y="86" fill="#f0fdfa" font-size="13" font-weight="700" text-anchor="middle">12°</text>
+            </svg>
+            <div class="cal63-day-row" role="group" aria-label="Select Forecast Day">
+              <button type="button" class="cal63-day-btn" data-day="Sunday" data-c="11" data-cond="Scattered Squalls • 14 mph E">Sunday · 11°</button>
+              <button type="button" class="cal63-day-btn" data-day="Monday" data-c="13" data-cond="Mist &amp; Drizzle • 12 mph NE">Monday · 13°</button>
+              <button type="button" class="cal63-day-btn" data-day="Tuesday" data-c="14" data-cond="Heavy Rainband • 19 mph E">Tuesday · 14°</button>
+              <button type="button" class="cal63-day-btn" data-day="Wednesday" data-c="10" data-cond="Highland Frost • 21 mph E">Wednesday · 10°</button>
+              <button type="button" class="cal63-day-btn is-active" data-day="Thursday" data-c="19" data-cond="Warm Break &amp; Cloud Deck • 11 mph SE">Thursday · 19°</button>
+              <button type="button" class="cal63-day-btn" data-day="Friday" data-c="12" data-cond="Evening Monsoon • 17 mph E">Friday · 12°</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Stacked Regional Glass Cards -->
+        <aside id="stationMatrix" class="cal63-city-stack" aria-label="Regional Weather Stations">
+          <article class="cal63-city-card is-selected" data-city="Central Jakarta" data-temp-c="10" data-coords="06.1805° S, 106.8284° E" data-desc="Heavy monsoon cloud deck across Central Jakarta with 18 mph gusting winds.">
+            <div>
+              <span style="font-size:11px;font-family:var(--font-mono);color:var(--accent-text);">STATION 01 • ID-JK</span>
+              <h2 style="font-size:17px;margin-top:2px;">Central Jakarta</h2>
+              <span style="font-size:12px;color:var(--muted);">Storm with Heavy Rain</span>
+            </div>
+            <strong class="station-temp" data-c="10" style="font-size:26px;font-family:var(--font-mono);">10°C</strong>
+          </article>
+          <article class="cal63-city-card" data-city="North Jakarta" data-temp-c="12" data-coords="06.1384° S, 106.8639° E" data-desc="Coastal squalls along North Jakarta harbor with 15 mph onshore winds and 84% humidity.">
+            <div>
+              <span style="font-size:11px;font-family:var(--font-mono);color:var(--accent-text);">STATION 02 • COASTAL</span>
+              <h2 style="font-size:17px;margin-top:2px;">North Jakarta</h2>
+              <span style="font-size:12px;color:var(--muted);">Coastal Squalls</span>
+            </div>
+            <strong class="station-temp" data-c="12" style="font-size:26px;font-family:var(--font-mono);">12°C</strong>
+          </article>
+          <article class="cal63-city-card" data-city="Bandung" data-temp-c="10" data-coords="06.9175° S, 107.6191° E" data-desc="Dense volcanic highland fog and cold rain showers over Bandung basin.">
+            <div>
+              <span style="font-size:11px;font-family:var(--font-mono);color:var(--accent-text);">STATION 03 • HIGHLAND</span>
+              <h2 style="font-size:17px;margin-top:2px;">Bandung</h2>
+              <span style="font-size:12px;color:var(--muted);">Highland Mist</span>
+            </div>
+            <strong class="station-temp" data-c="10" style="font-size:26px;font-family:var(--font-mono);">10°C</strong>
+          </article>
+          <article class="cal63-city-card" data-city="South Jakarta" data-temp-c="14" data-coords="06.2615° S, 106.8106° E" data-desc="Scattered thunderstorm cells moving northeast across South Jakarta at 14 mph.">
+            <div>
+              <span style="font-size:11px;font-family:var(--font-mono);color:var(--accent-text);">STATION 04 • INLAND</span>
+              <h2 style="font-size:17px;margin-top:2px;">South Jakarta</h2>
+              <span style="font-size:12px;color:var(--muted);">Thunderstorm Cells</span>
+            </div>
+            <strong class="station-temp" data-c="14" style="font-size:26px;font-family:var(--font-mono);">14°C</strong>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <section id="telemetryBento" class="cal63-shell">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span class="cal63-badge">Atmospheric Telemetry</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.2rem);font-weight:400;margin-top:8px;">Precision Mesoscale Sensors</h2>
+        </div>
+        <p style="color:var(--muted);font-size:14px;max-width:46ch;">Synchronized every 30 seconds across 48 Doppler radar domes and barometric buoys in Southeast Asia.</p>
+      </div>
+      <div class="cal63-bento-grid">
+        <article class="cal63-card cal63-reveal" data-seamless-trigger="Doppler Precipitation Core">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">01 / PRECIPITATION CORE</span>
+          <h3 style="font-size:20px;margin:8px 0;">42.8 mm/hr Peak</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Dual-polarization radar tracks rainband density across terraced mountain valleys in real time.</p>
+        </article>
+        <article class="cal63-card cal63-reveal" data-seamless-trigger="East Wind Shear Profile">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">02 / ANEMOMETER ARRAY</span>
+          <h3 style="font-size:20px;margin:8px 0;">11–21 mph East Vector</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Ultrasonic wind profilers measure boundary-layer shear and mountain-pass gust corridors.</p>
+        </article>
+        <article class="cal63-card cal63-reveal" data-seamless-trigger="Barometric Pressure Drop">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">03 / BAROMETRIC TENDENCY</span>
+          <h3 style="font-size:20px;margin:8px 0;">1004.8 hPa Falling</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Automated micro-barographs trigger early flash-flood advisories 45 minutes ahead of squall arrival.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cal63-shell" style="border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+    <span style="font-size:13px;color:var(--muted);">© 2026 Calfin Weather Telemetry. Spatial Glass Edition.</span>
+    <span style="font-size:12px;font-family:var(--font-mono);color:var(--accent-text);">RADAR SYNC: 99.98% • DANANG / JAKARTA</span>
+  </footer>
+
+  <div id="seamlessModal" class="cal63-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="cal63-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span class="cal63-badge">Calfin Advisory Bulletin</span>
+        <button type="button" id="closeSeamlessBtn" class="cal63-btn-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Storm with Heavy Rain — Advisory</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        Active mesoscale convective system detected over Calfin Danang and Central Jakarta stations. Winds from the east at 11 to 21 mph with localized heavy rainfall.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="cal63-btn-cta" style="width:100%;">Acknowledge Telemetry</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var isFahrenheit = false;
+      var unitBtn = document.getElementById('unitToggleBtn');
+      var mainTemp = document.getElementById('mainTempReadout');
+      var daySummary = document.getElementById('selectedDaySummary');
+      var activeDesc = document.getElementById('activeWeatherDesc');
+      var coordsEl = document.getElementById('liveStationCoords');
+      var headlineEl = document.getElementById('oversizedHeadline');
+
+      function formatTemp(c) {
+        var val = isFahrenheit ? Math.round((c * 9) / 5 + 32) : c;
+        return val + (isFahrenheit ? '°F' : '°C');
+      }
+
+      if (unitBtn) {
+        unitBtn.addEventListener('click', function () {
+          isFahrenheit = !isFahrenheit;
+          unitBtn.setAttribute('aria-pressed', String(isFahrenheit));
+          unitBtn.textContent = isFahrenheit ? 'Unit: °F' : 'Unit: °C';
+          document.querySelectorAll('.station-temp').forEach(function (el) {
+            var c = parseFloat(el.getAttribute('data-c') || '12');
+            el.textContent = formatTemp(c);
+          });
+          var activeDay = document.querySelector('.cal63-day-btn.is-active');
+          if (activeDay) {
+            var dc = parseFloat(activeDay.getAttribute('data-c') || '19');
+            if (mainTemp) mainTemp.textContent = formatTemp(dc);
+          }
+        });
+      }
+
+      document.querySelectorAll('.cal63-day-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.cal63-day-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var day = btn.getAttribute('data-day');
+          var c = parseFloat(btn.getAttribute('data-c') || '14');
+          var cond = btn.getAttribute('data-cond') || '';
+          if (mainTemp) mainTemp.textContent = formatTemp(c);
+          if (daySummary) daySummary.textContent = day + ' Forecast: ' + formatTemp(c) + ' • ' + cond;
+        });
+      });
+
+      document.querySelectorAll('.cal63-city-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.cal63-city-card').forEach(function (c) { c.classList.remove('is-selected'); });
+          card.classList.add('is-selected');
+          var city = card.getAttribute('data-city');
+          var tc = parseFloat(card.getAttribute('data-temp-c') || '12');
+          var coords = card.getAttribute('data-coords') || '';
+          var desc = card.getAttribute('data-desc') || '';
+          if (headlineEl) headlineEl.textContent = city + ' — Storm Watch';
+          if (mainTemp) mainTemp.textContent = formatTemp(tc);
+          if (coordsEl) coordsEl.textContent = coords + ' • LIVE';
+          if (activeDesc) activeDesc.textContent = desc;
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.cal63-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

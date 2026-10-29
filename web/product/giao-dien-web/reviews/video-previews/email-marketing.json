@@ -2,15 +2,15 @@
   "id": "t167",
   "slug": "email-marketing",
   "browser": "153.0.8010.12",
-  "date": "2026-10-28T23:03:14.693Z",
+  "date": "2026-10-29T00:29:56.606Z",
   "demo": "/demos/email-marketing/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "c8014312803e",
-  "sha256": "c8014312803e3650214804c709fc5890889bf5b05b1df8a0b2701d25e6d34865",
-  "demoHtmlSha256": "56d815a88915f868116df446d4204085f1af930047e90837b1b00c750a260681",
-  "demoSha256": "be610888b1fced9b9386a4fa0b451c6a0c9dd02e456a046dd22b543af03b3e45",
-  "bytes": 561924,
+  "revision": "b9464189d9a9",
+  "sha256": "b9464189d9a9d0dbe7feb60a4cb1a0c56588843c3fa7dc2577b54fd07d26a318",
+  "demoHtmlSha256": "f92ecbacecb254b7a8ed46464c8115e7e4bee733db7e6aa8e6cd70ef35f2a200",
+  "demoSha256": "009b40cf321e3b858a1c8bced01f7b9242d46a191dc6acc06e97e240a6e5e2fd",
+  "bytes": 629977,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.509,
+      "seconds": 2.479,
       "action": "click",
       "selector": "#exploreMagneticBtn"
     },
     {
-      "seconds": 4.984,
+      "seconds": 4.901,
       "action": "click",
       "selector": "#exploreMagneticBtn"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 439
+      "target": 1650
     }
   ],
   "errors": [],

@@ -1,0 +1,38 @@
+{
+  "id": "t168",
+  "slug": "calfin-weather",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-29T00:30:35.492Z",
+  "demo": "/demos/calfin-weather/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "2791b9e85c89",
+  "sha256": "2791b9e85c89ce7e698474872a13b143fd8055a934c7c043b62a9e7e2eeb5b39",
+  "demoHtmlSha256": "64a4af0622cb95b738d40c62f216c4121a88236d42e25a394697e9d6f320a31f",
+  "demoSha256": "49e11969ea466ab5b11ad00d8fc58d163688e20d1b071f54af67bde9c21a6b95",
+  "bytes": 437083,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 502
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\calfin-weather-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\calfin-weather-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\calfin-weather-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\calfin-weather-return.jpg"
+  ]
+}

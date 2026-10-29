@@ -1,16 +1,14 @@
-# BRIEF — Transform Data (`transform-data` / `t143`, v1.0.0)
+# BRIEF — Transform Data (`transform-data` / `t168`, v1.0.0)
 
 ## Mục tiêu sản phẩm
-Xây dựng mẫu giao diện Landing Page tự chứa trong một file HTML duy nhất (`index.html`) cho thương hiệu **Transform Data**, tuân thủ nghiêm ngặt hồ sơ **WEB-STATIC-1** (kèm ngoại lệ `INLINE_PRODUCTS` trong `dong-goi.mjs`).
-- **Phân hạng truy cập:** `premium` (theo quy tắc 1 Miễn phí + 2 Premium mỗi ngày).
+Xây dựng mẫu giao diện Landing Page tự chứa (`index.html`) cho thương hiệu **Transform Data**, đạt chuẩn **ForgeScore v2.0 (`FORGEFRAME_GOLD >= 95/100`)** và hồ sơ **WEB-CRAFT-2** (kèm ngoại lệ `INLINE_PRODUCTS` trong `dong-goi.mjs`).
+- **Phân hạng truy cập:** `premium`
 
-## 15-20% Sáng tạo mở rộng (Creative Enhancements)
-1. **Interactive Chapter & Section Jump HUD**: Thanh định vị chương trực quan góc màn hình với số thứ tự và nút nhảy mượt giữa các phân đoạn.
-2. **Audio Visualizer / Ambient Telemetry**: Mô phỏng sóng âm 7 cột tương tác trực tiếp với chế độ bật/tắt âm thanh không gian.
-3. **Interactive Modal / Drawer**: Hộp thoại chi tiết (Specs & Inquiries) mở nhanh qua phím tắt hoặc nút bấm, hỗ trợ phím `Escape` và khóa focus.
-4. **Responsive 7-Viewport Polish**: Tối ưu hiển thị tuyệt đối từ di động nhỏ 320px đến màn hình lớn 1440px+.
+## 20% Sáng tạo mở rộng theo 14 Bộ Skill Quốc tế
+1. **3-Layer CSS Design Tokens (`design-system` / `design-md`)**: Hệ thống biến primitive → semantic → component đầy đủ (`--bg`, `--surface`, `--accent`, `--accent-text`, `--on-accent`, `clamp()`).
+2. **One Live Thing (`hallmark` / `emil-design-eng`)**: Thành phần tương tác sống xử lý dữ liệu thật ngay trên trang kèm phản hồi xúc giác `:active scale(0.97)` và đường cong `cubic-bezier(0.22, 1, 0.36, 1)`.
+3. **Interactive Specification Modal & Motion Control**: Hộp thoại chi tiết hỗ trợ phím `Escape` và nút bật/tắt chuyển động trực tiếp trong phiên (`#motionToggleBtn`).
+4. **Responsive 4-Viewport & A11y Polish (`impeccable`)**: Đầy đủ `.skip-link`, `<header>`, `<nav>`, `<main>`, `<footer>`, `tabular-nums`, `::selection`, `:focus-visible`.
 
-## Nguồn tài nguyên bên ngoài theo đặc tả
-- **Video Assets:**
-  - `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260329_050842_be71947f-f16e-4a14-810c-06e83d23ddb5.mp4`
-- **Poster / Thumbnail:** `https://motionsites.ai/assets/hero-transform-data-poster-DfsHSPMo.png`
+## Nguồn tài nguyên tham chiếu
+- `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260329_050842_be71947f-f16e-4a14-810c-06e83d23ddb5.mp4`

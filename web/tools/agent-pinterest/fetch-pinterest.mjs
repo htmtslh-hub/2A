@@ -43,7 +43,7 @@ function cleanPinTitle(rawTitle, keyword, pinId) {
     .replace(/#[a-zA-Z0-9_]+/g, ' ')
     .replace(/https?:\/\/\S+/g, ' ')
     .replace(/[^\w\s]/g, ' ')
-    .replace(/\b(pin|on|by|in|to|of|for|the|and|with|from|your|our|how|what|why|more|new|ideas|best|top|inspiration|templates?|layout|concept|design|website|websites|web|page|pages|ui|ux|home|landing|free|html|html5|css|bootstrap|wordpress|theme|themes|webflow|framer|pinterest|made|create|build|modern|simple|clean|responsive|see|full|project|behance|dribbble|codrops|check|out|video|day|wotd|\d+)\b/gi, ' ')
+    .replace(/\b(pin|muc|nay|co|hinh|anh|cua|phan|chua|on|by|in|to|of|for|the|and|with|from|your|our|how|what|why|more|new|ideas|best|top|inspiration|templates?|layout|concept|design|website|websites|web|page|pages|ui|ux|home|landing|free|html|html5|css|bootstrap|wordpress|theme|themes|webflow|framer|pinterest|made|create|build|modern|simple|clean|responsive|see|full|project|behance|dribbble|codrops|check|out|video|day|wotd|\d+)\b/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 
@@ -535,7 +535,20 @@ const CREATIVE_MOTION_RECIPES = [
   }
 ];
 
-function parseFilenameHint(filename, index) {
+const CURATED_PIN_IDENTITIES = [
+  { match: /1023935665292488759|^832290e8035f/i, title: 'Calfin Weather', slug: 'calfin-weather', tierHint: 'free' },
+  { match: /1025343040190272817|^0074202d0629/i, title: 'CYBR Brutalism', slug: 'cybr-brutalism', tierHint: 'free' },
+  { match: /1026891152513510316|^c83e430cbd15/i, title: 'Aurelia BioCyber', slug: 'aurelia-biocyber', tierHint: 'premium' },
+  { match: /1029354058596850824|^b2ca43a410d4/i, title: 'Hush Futurist Bags', slug: 'hush-futurist-bags', tierHint: 'premium' },
+  { match: /1033646551982054949|^f10f338bc06e/i, title: 'Quiet Place Sanctuary', slug: 'quiet-place-sanctuary', tierHint: 'premium' }
+];
+
+function parseFilenameHint(filename, index, sha256 = '') {
+  for (const c of CURATED_PIN_IDENTITIES) {
+    if (c.match.test(filename) || (sha256 && c.match.test(sha256))) {
+      return { title: c.title, slug: c.slug, tierHint: c.tierHint };
+    }
+  }
   const base = basename(filename, extname(filename));
   let tierHint = null;
   let cleanBase = base;
@@ -615,7 +628,7 @@ export async function runPinterestFetchPipeline(options = {}) {
     const evaluation = await evaluateImageAgainst6Criteria(buf, { rawTitle: fileEntry.name }, 'User Curated Hero UI');
     const slotIndex = fetchedList.length;
     const forcedSlug = replaceSlugs[slotIndex] || null;
-    const hint = parseFilenameHint(fileEntry.name, state.todayCopiedCount + i);
+    const hint = parseFilenameHint(fileEntry.name, state.todayCopiedCount + i, sha256);
 
     let title = hint.title;
     let slug = forcedSlug || hint.slug;

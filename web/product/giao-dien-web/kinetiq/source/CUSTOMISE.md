@@ -177,3 +177,68 @@ that is almost always the cause.
 
 Keep a copy of the original folder before you start. Then you can always
 compare, or start over.
+
+
+---
+
+## Twelve copy-ready AI prompts
+
+**Prompt 01 - Start my editing assistant**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 01: Start my editing assistant.
+```
+
+**Prompt 02 - Replace brand and copy**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 02: Replace brand and copy.
+```
+
+**Prompt 03 - Update contact links**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 03: Update contact links.
+```
+
+**Prompt 04 - Apply colours and fonts**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 04: Apply colours and fonts.
+```
+
+**Prompt 05 - Replace SVG hero artwork**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 05: Replace SVG hero artwork.
+```
+
+**Prompt 06 - Translate page language**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 06: Translate page language.
+```
+
+**Prompt 07 - Add or remove a product card**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 07: Add or remove a product card.
+```
+
+**Prompt 08 - Update engineering metrics**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 08: Update engineering metrics.
+```
+
+**Prompt 09 - Audit before publishing**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 09: Audit before publishing.
+```
+
+**Prompt 10 - Publish to static hosting**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 10: Publish to static hosting.
+```
+
+**Prompt 11 - Connect custom domain**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 11: Connect custom domain.
+```
+
+**Prompt 12 - Diagnose a layout issue**
+```text
+Read the attached Kinetiq source files (index.html, assets/css/style.css, assets/js/main.js, CUSTOMISE.md). Keep plain HTML/CSS/JS, file:// compatibility, and default-on motion with session pause. Help me complete task 12: Diagnose a layout issue.
+```

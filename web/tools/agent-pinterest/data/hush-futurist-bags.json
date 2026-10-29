@@ -1,0 +1,33 @@
+{
+  "pinId": "local-b2ca43a410d4",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1029354058596850824_Mục_này_có_hình_ảnh_của_Click_to_Exp.png",
+  "archivedImagePath": "d:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-29\\pin_1029354058596850824_Mục_này_có_hình_ảnh_của_Click_to_Exp.png",
+  "title": "Hush Futurist Bags",
+  "slug": "hush-futurist-bags",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-tilt-splittext",
+    "name": "Split-Text Staggered Reveal + 3D Card Tilt + Blend Cursor",
+    "focus": [
+      "split-text-reveal",
+      "3d-card-tilt",
+      "image-zoom-mask",
+      "custom-blend-cursor"
+    ],
+    "description": "Tập trung vào nghệ thuật chữ tách ký tự (Split-Text), thẻ kính mờ nghiêng 3D khi rê chuột và con trỏ Blend-mode."
+  },
+  "localImagePath": "d:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-29\\hush-futurist-bags.png",
+  "imageBytes": 803343,
+  "imageSha256": "b2ca43a410d48133065a6e7b5e7a5d8c588cdb672fc261eb5fd94cd0c66ecccd",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 1029,
+    "height": 2058,
+    "aspectRatio": 0.5,
+    "reason": "Rejected geometry (1029x2058, AR=0.50) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-10-29T00:18:34.204Z"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "t169",
+  "slug": "cybr-brutalism",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-29T00:30:55.438Z",
+  "demo": "/demos/cybr-brutalism/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "463a457265ee",
+  "sha256": "463a457265ee5cce5800ad031ee1513b80be4aa47d25f92ef5a4c3e9fc86f550",
+  "demoHtmlSha256": "2a8a22016429a2de679abf7b6fd50907b44dd7af35943be1d398fcf093f2887f",
+  "demoSha256": "bb7f1d70d3c75cddd2c18d3ad47447f029cae9f39720acb00dddee0d279bcb0e",
+  "bytes": 423552,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1220
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cybr-brutalism-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cybr-brutalism-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cybr-brutalism-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cybr-brutalism-return.jpg"
+  ]
+}

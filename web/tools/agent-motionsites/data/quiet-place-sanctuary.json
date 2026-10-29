@@ -1,0 +1,35 @@
+{
+  "pinId": "local-f10f338bc06e",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1033646551982054949_Mục_này_có_hình_ảnh_của.jpg",
+  "archivedImagePath": "d:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-29\\pin_1033646551982054949_Mục_này_có_hình_ảnh_của.jpg",
+  "title": "Quiet Place Sanctuary",
+  "slug": "quiet-place-sanctuary",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-sticky-counters",
+    "name": "Sticky Pinned Storytelling + Scroll Scrubbing + Number Counters",
+    "focus": [
+      "sticky-pinned-stage",
+      "scroll-scrub-rotation",
+      "number-counters"
+    ],
+    "description": "Tập trung vào ghim cố định chủ thể ở giữa màn hình xoay theo thanh cuộn (Scroll Scrubbing) kết hợp đếm số tự động."
+  },
+  "localImagePath": "d:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-29\\quiet-place-sanctuary.jpg",
+  "imageBytes": 215035,
+  "imageSha256": "f10f338bc06e4d010ffbfc36c36f80dd3e4835be0c4b0a35e5ef0f91ddd1af13",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 1920,
+    "height": 1440,
+    "aspectRatio": 1.33,
+    "fullBleedRatio": 0.15,
+    "reason": "Rejected non-full-bleed background (fullBleedRatio=0.15 < 0.55)"
+  },
+  "fetchedAt": "2026-10-29T00:18:34.225Z",
+  "category": "commerce",
+  "prompt_text": "Mindful creative sanctuary where calm meets creativity — interactive pine-island lake diorama, ambient soundscape mixer, 4-7-8 breathwork timer, and gentle reflection tools."
+}

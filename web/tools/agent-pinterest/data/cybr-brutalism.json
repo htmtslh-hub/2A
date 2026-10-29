@@ -1,0 +1,32 @@
+{
+  "pinId": "local-0074202d0629",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1025343040190272817_Phần_này_chứa_UI_Design_Cyber_Brutal.jpg",
+  "archivedImagePath": "d:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-29\\pin_1025343040190272817_Phần_này_chứa_UI_Design_Cyber_Brutal.jpg",
+  "title": "CYBR Brutalism",
+  "slug": "cybr-brutalism",
+  "assignedTier": "free",
+  "motionRecipe": {
+    "id": "recipe-horizontal-liquid",
+    "name": "Horizontal Showcase Scroll + Liquid Wave Filter + Seamless Modal",
+    "focus": [
+      "horizontal-scroll",
+      "liquid-ripple-distortion",
+      "seamless-modal-transition"
+    ],
+    "description": "Tập trung vào cuộn ngang bộ sưu tập (Horizontal Scroll), hiệu ứng gợn sóng chất lỏng SVG/WebGL và chuyển cảnh phóng to mượt mà."
+  },
+  "localImagePath": "d:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-29\\cybr-brutalism.jpg",
+  "imageBytes": 91578,
+  "imageSha256": "0074202d0629a203f2f3ab6cf16137c18d6fb0193be7273d9b693fd77786c157",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 736,
+    "height": 981,
+    "aspectRatio": 0.75,
+    "reason": "Rejected geometry (736x981, AR=0.75) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-10-29T00:18:34.197Z"
+}

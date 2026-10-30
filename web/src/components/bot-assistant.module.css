@@ -554,12 +554,19 @@
 .input {
   flex: 1 1 auto;
   height: 36px;
-  border: 0;
-  background: transparent;
+  border: 0 !important;
+  background: transparent !important;
   color: #ffffff;
   font-size: 13.8px;
-  outline: none;
+  outline: none !important;
+  box-shadow: none !important;
   min-width: 0;
+}
+
+.input:focus,
+.input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .input::placeholder {

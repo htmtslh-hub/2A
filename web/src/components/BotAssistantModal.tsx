@@ -335,6 +335,7 @@ export default function BotAssistantModal({
                     type="button"
                     className={styles.topicCard}
                     onClick={() => handleChipClick(chip.id, chip.question)}
+                    data-bot-chip={chip.id}
                   >
                     <span>{chip.label}</span>
                     <span className={styles.topicCardArrow} aria-hidden="true">→</span>
@@ -345,22 +346,24 @@ export default function BotAssistantModal({
           )}
         </div>
 
-        <div className={styles.quickSection}>
-          <p className={styles.quickTitle}>{ui.quickTitle}:</p>
-          <div className={styles.chipStrip}>
-            {chips.map((chip) => (
-              <button
-                key={chip.id}
-                type="button"
-                className={styles.chip}
-                onClick={() => handleChipClick(chip.id, chip.question)}
-                data-bot-chip={chip.id}
-              >
-                {chip.label}
-              </button>
-            ))}
+        {messages.length > 1 && (
+          <div className={styles.quickSection}>
+            <p className={styles.quickTitle}>{ui.quickTitle}:</p>
+            <div className={styles.chipStrip}>
+              {chips.map((chip) => (
+                <button
+                  key={chip.id}
+                  type="button"
+                  className={styles.chip}
+                  onClick={() => handleChipClick(chip.id, chip.question)}
+                  data-bot-chip={chip.id}
+                >
+                  {chip.label}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         <form className={styles.inputBar} onSubmit={handleSubmit}>
           <div className={styles.inputShell}>

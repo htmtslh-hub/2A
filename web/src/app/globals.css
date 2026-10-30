@@ -223,3 +223,64 @@
 .product-stage__image[src*="/solenne.webp"] { object-fit: contain; object-position: center; }
 .product-stage__frame:has(.product-stage__image[src*="/lingoglass.webp"]) { background: #faf7f2; }
 .product-stage__image[src*="/lingoglass.webp"] { object-fit: contain; object-position: center; }
+
+/* Interactive flying Forge Bot assistant trigger around Dynamic Island */
+[data-bot] {
+  pointer-events: auto !important;
+  cursor: pointer;
+  z-index: 6;
+  outline: none;
+}
+[data-bot] > [data-bot-flip] > div {
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), filter 0.22s ease;
+}
+[data-bot]:hover > [data-bot-flip] > div,
+[data-bot]:focus-visible > [data-bot-flip] > div {
+  transform: scale(1.16);
+  filter: drop-shadow(0 0 14px rgba(47, 224, 245, 0.72)) drop-shadow(0 8px 18px rgba(0, 0, 0, 0.55)) !important;
+}
+[data-bot]::after {
+  content: attr(data-bot-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 4px);
+  transform: translate(-50%, 4px) scale(0.92);
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.94);
+  border: 1px solid rgba(56, 189, 248, 0.55);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  color: #e0f2fe;
+  font-family: var(--font-be-vietnam), system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+[data-bot][data-bot-tip]:hover::after,
+[data-bot][data-bot-tip]:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+[data-bot]::before {
+  content: "?";
+  position: absolute;
+  top: -2px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+  border: 1.5px solid #ffffff;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.55);
+  color: #ffffff;
+  font-family: var(--font-be-vietnam), system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 15px;
+  text-align: center;
+  pointer-events: none;
+  z-index: 2;
+}

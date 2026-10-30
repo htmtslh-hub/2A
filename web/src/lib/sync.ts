@@ -333,7 +333,7 @@ export function syncPreviews() {
 export function startBot(el: HTMLElement) {
   let flip = 1;
   let botX = 0;
-  const hop = () => {
+  const hop = () => { if (el.dataset.botPaused === '1') return;
     const island = document.querySelector('[data-island]');
     const w = island ? island.getBoundingClientRect().width : 320;
     const rx = Math.min(w / 2 + 60, window.innerWidth / 2 - 40);

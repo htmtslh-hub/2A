@@ -22,6 +22,8 @@ import { REAL_TEMPLATES } from '@/lib/real-templates';
 import { canBuyIndividually } from '@/lib/product-policy';
 import { CART_KEY, PENDING_CART_KEY, OPEN_CART_AFTER_LOGIN_KEY } from '@/lib/cart-storage';
 import { flyProductToCart } from '@/lib/cart-flight';
+import BotAssistantModal from './BotAssistantModal';
+import { BOT_UI_COPY } from '@/lib/bot-knowledge';
 
 
 
@@ -41,6 +43,7 @@ export default function AgenticSite({
     tab: (TAB_KEYS.includes(defaultTab) ? defaultTab : 'home') as State['tab'],
   }));
   const [cartPulse, setCartPulse] = useState(0);
+  const [botOpen, setBotOpen] = useState(false);
   const [pendingCartIds, setPendingCartIds] = useState<string[]>([]);
   const pendingCartIdsRef = useRef(new Set<string>());
 
@@ -191,7 +194,45 @@ export default function AgenticSite({
     const el = botRef.current;
     if (!el) return;
     const timer = startBot(el);
-    return () => clearInterval(timer);
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.removeAttribute('aria-hidden');
+    const onOpenBot = () => setBotOpen(true);
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        setBotOpen(true);
+      }
+    };
+    const onPause = () => { el.dataset.botPaused = '1'; };
+    const onResume = () => { delete el.dataset.botPaused; };
+    el.addEventListener('click', onOpenBot);
+    el.addEventListener('keydown', onKeyDown);
+    el.addEventListener('mouseenter', onPause);
+    el.addEventListener('mouseleave', onResume);
+    el.addEventListener('focusin', onPause);
+    el.addEventListener('focusout', onResume);
+    const cleanupBot = () => {
+      clearInterval(timer);
+      el.removeEventListener('click', onOpenBot);
+      el.removeEventListener('keydown', onKeyDown);
+      el.removeEventListener('mouseenter', onPause);
+      el.removeEventListener('mouseleave', onResume);
+      el.removeEventListener('focusin', onPause);
+      el.removeEventListener('focusout', onResume);
+    };
+    return cleanupBot;
+  }, []);
+
+  useEffect(() => {
+    const el = botRef.current;
+    if (!el) return;
+    const copy = BOT_UI_COPY[state.lang] || BOT_UI_COPY.vi;
+    el.setAttribute('aria-label', copy.buttonAriaLabel);
+    el.setAttribute('data-bot-tip', copy.buttonTooltip);
+    el.setAttribute('title', copy.buttonTooltip);
+  }, [state.lang]);
+  useEffect(() => {
   }, []);
 
   /* --- đồng bộ DOM sau mỗi lần state đổi --- */
@@ -622,6 +663,14 @@ export default function AgenticSite({
       <AgenticMarkup vm={vm} />
       <CartDrawer ids={cartIds} count={cartIds.filter((id) => !pendingCartIds.includes(id)).length} lang={state.lang} open={cartOpen} busy={cartBusy} error={cartError} pulse={cartPulse} onOpen={() => setCartOpen(true)} onClose={() => setCartOpen(false)} onRemove={removeFromCart} onCheckout={checkoutCart} />
       <Toast message={state.toast} onClose={() => setState({ toast: null })} />
+      <BotAssistantModal
+        open={botOpen}
+        lang={state.lang}
+        onClose={() => setBotOpen(false)}
+        onNavigateTab={(tab) => vm.onTab(tab)}
+        onOpenTemplate={(templateId) => vm.onDetail(templateId)}
+        onNavigateUrl={(url) => router.push(url)}
+      />
     </>
   );
 }

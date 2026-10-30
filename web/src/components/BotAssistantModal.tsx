@@ -19,6 +19,52 @@ interface ChatMessage {
   actions?: BotAction[];
 }
 
+interface ParsedBullet {
+  step: string | null;
+  title: string | null;
+  body: string;
+}
+
+function parseStructuredBullet(raw: string): ParsedBullet {
+  const trimmed = raw.trim();
+
+  // Pattern 1: "1. Title: Body" or "Bước 1: Body"
+  const stepMatch = trimmed.match(/^(?:Bước\s+)?(\d+)[.)\s-]+(.+)$/i);
+  if (stepMatch) {
+    const stepNum = stepMatch[1];
+    const rest = stepMatch[2].trim();
+    const colonIdx = rest.indexOf(':');
+    if (colonIdx > 0 && colonIdx < 70) {
+      return {
+        step: stepNum,
+        title: rest.slice(0, colonIdx).trim(),
+        body: rest.slice(colonIdx + 1).trim(),
+      };
+    }
+    return {
+      step: stepNum,
+      title: null,
+      body: rest,
+    };
+  }
+
+  // Pattern 2: "Title: Body" (where Title is concise, e.g. "Miễn phí ($0): Tải ngay...")
+  const colonIdx = trimmed.indexOf(':');
+  if (colonIdx > 0 && colonIdx < 68 && !trimmed.slice(0, colonIdx).includes('http')) {
+    return {
+      step: null,
+      title: trimmed.slice(0, colonIdx).trim(),
+      body: trimmed.slice(colonIdx + 1).trim(),
+    };
+  }
+
+  return {
+    step: null,
+    title: null,
+    body: trimmed,
+  };
+}
+
 export default function BotAssistantModal({
   open,
   lang,
@@ -40,6 +86,7 @@ export default function BotAssistantModal({
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const listRef = useRef<HTMLDivElement | null>(null);
+  const latestUserRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   // Sync welcome message when language changes if no user messages yet
@@ -58,12 +105,13 @@ export default function BotAssistantModal({
     });
   }, [lang, ui.welcome, ui.welcomeBullets]);
 
-  // Auto-scroll to bottom when messages change or modal opens
+  // Scroll latest question into view so the user immediately sees the start of the new answer
   useEffect(() => {
     if (!open) return;
-    const el = listRef.current;
-    if (el) {
-      el.scrollTop = el.scrollHeight;
+    if (messages.length <= 1) {
+      if (listRef.current) listRef.current.scrollTop = 0;
+    } else if (latestUserRef.current) {
+      latestUserRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     const timer = window.setTimeout(() => {
       inputRef.current?.focus();
@@ -143,6 +191,15 @@ export default function BotAssistantModal({
     }
   };
 
+  // Find index of the last user message for scroll anchoring
+  let lastUserIdx = -1;
+  for (let i = messages.length - 1; i >= 0; i--) {
+    if (messages[i].role === 'user') {
+      lastUserIdx = i;
+      break;
+    }
+  }
+
   return (
     <div
       className={styles.backdrop}
@@ -178,7 +235,8 @@ export default function BotAssistantModal({
             </div>
             <div className={styles.titleGroup}>
               <h2 id="forge-bot-title" className={styles.title}>
-                {ui.botName}
+                <span>{ui.botName}</span>
+                <span className={styles.badgeAi}>Q&amp;A</span>
               </h2>
               <p className={styles.status}>{ui.status}</p>
             </div>
@@ -207,27 +265,54 @@ export default function BotAssistantModal({
         </div>
 
         <div className={styles.messages} ref={listRef} data-bot-messages="">
-          {messages.map((msg) => (
+          {messages.map((msg, idx) => (
             <div
               key={msg.id}
+              ref={idx === lastUserIdx ? latestUserRef : undefined}
               className={`${styles.msgRow} ${msg.role === 'user' ? styles.msgUser : styles.msgBot}`}
             >
+              {msg.role === 'bot' && idx > 0 && (
+                <div className={styles.botHeader}>
+                  <span className={styles.botMiniIcon} aria-hidden="true">✦</span>
+                  <span>{ui.botName}</span>
+                </div>
+              )}
+
               <div className={styles.bubble}>
-                <div>{msg.text}</div>
+                <p className={msg.role === 'bot' ? styles.leadText : undefined} style={msg.role === 'user' ? { margin: 0 } : undefined}>
+                  {msg.text}
+                </p>
+
                 {msg.bullets && msg.bullets.length > 0 && (
-                  <ul className={styles.bulletList}>
-                    {msg.bullets.map((b, idx) => (
-                      <li key={idx}>{b}</li>
-                    ))}
-                  </ul>
+                  <div className={styles.cardList}>
+                    {msg.bullets.map((rawBullet, bIdx) => {
+                      const parsed = parseStructuredBullet(rawBullet);
+                      return (
+                        <div key={bIdx} className={styles.cardItem}>
+                          {parsed.step ? (
+                            <span className={styles.stepBadge}>{parsed.step}</span>
+                          ) : (
+                            <span className={styles.dotBadge} aria-hidden="true">✦</span>
+                          )}
+                          <div className={styles.cardContent}>
+                            {parsed.title && (
+                              <span className={styles.cardTitle}>{parsed.title}</span>
+                            )}
+                            <span>{parsed.body}</span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 )}
+
                 {msg.actions && msg.actions.length > 0 && (
                   <div className={styles.actionRow}>
-                    {msg.actions.map((act, idx) => (
+                    {msg.actions.map((act, aIdx) => (
                       <button
-                        key={`${act.kind}-${act.target}-${idx}`}
+                        key={`${act.kind}-${act.target}-${aIdx}`}
                         type="button"
-                        className={styles.actionBtn}
+                        className={`${styles.actionBtn} ${aIdx === 0 ? styles.actionBtnPrimary : ''}`}
                         onClick={() => handleActionClick(act)}
                       >
                         <span>{act.label}</span>
@@ -239,10 +324,29 @@ export default function BotAssistantModal({
               </div>
             </div>
           ))}
+
+          {messages.length === 1 && (
+            <div className={styles.topicGridBlock}>
+              <p className={styles.topicGridLabel}>{ui.quickTitle}</p>
+              <div className={styles.topicGrid}>
+                {chips.map((chip) => (
+                  <button
+                    key={`grid-${chip.id}`}
+                    type="button"
+                    className={styles.topicCard}
+                    onClick={() => handleChipClick(chip.id, chip.question)}
+                  >
+                    <span>{chip.label}</span>
+                    <span className={styles.topicCardArrow} aria-hidden="true">→</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         <div className={styles.quickSection}>
-          <p className={styles.quickTitle}>{ui.quickTitle}</p>
+          <p className={styles.quickTitle}>{ui.quickTitle}:</p>
           <div className={styles.chipStrip}>
             {chips.map((chip) => (
               <button
@@ -259,24 +363,26 @@ export default function BotAssistantModal({
         </div>
 
         <form className={styles.inputBar} onSubmit={handleSubmit}>
-          <input
-            ref={inputRef}
-            type="text"
-            className={styles.input}
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder={ui.inputPlaceholder}
-            aria-label={ui.inputPlaceholder}
-            data-bot-input=""
-          />
-          <button
-            type="submit"
-            className={styles.sendBtn}
-            disabled={!input.trim()}
-            data-bot-send=""
-          >
-            {ui.sendLabel}
-          </button>
+          <div className={styles.inputShell}>
+            <input
+              ref={inputRef}
+              type="text"
+              className={styles.input}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder={ui.inputPlaceholder}
+              aria-label={ui.inputPlaceholder}
+              data-bot-input=""
+            />
+            <button
+              type="submit"
+              className={styles.sendBtn}
+              disabled={!input.trim()}
+              data-bot-send=""
+            >
+              {ui.sendLabel}
+            </button>
+          </div>
         </form>
       </div>
     </div>

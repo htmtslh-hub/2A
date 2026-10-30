@@ -1,0 +1,34 @@
+{
+  "pinId": "local-8b8453c973fd",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1040894532665699931_Mục_này_có_hình_ảnh_của_Cryptocurren.jpg",
+  "archivedImagePath": "D:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-30\\pin_1040894532665699931_Mục_này_có_hình_ảnh_của_Cryptocurren.jpg",
+  "title": "PolkaCrypto Future",
+  "slug": "polkacrypto-future",
+  "assignedTier": "free",
+  "motionRecipe": {
+    "id": "recipe-horizontal-liquid",
+    "name": "Horizontal Showcase Scroll + Liquid Wave Filter + Seamless Modal",
+    "focus": [
+      "horizontal-scroll",
+      "liquid-ripple-distortion",
+      "seamless-modal-transition"
+    ],
+    "description": "Tập trung vào cuộn ngang bộ sưu tập (Horizontal Scroll), hiệu ứng gợn sóng chất lỏng SVG/WebGL và chuyển cảnh phóng to mượt mà."
+  },
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-30\\polkacrypto-future.jpg",
+  "imageBytes": 74679,
+  "imageSha256": "8b8453c973fd85ef377facbd96eafe9ede8f8582ea3f79328e99f1b5e27cddb3",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 800,
+    "height": 1200,
+    "aspectRatio": 0.67,
+    "reason": "Rejected geometry (800x1200, AR=0.67) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-10-30T11:24:03.856Z",
+  "category": "commerce",
+  "prompt_text": "Obsidian grid & neon chartreuse #B8FF01 Polkadot parachain investing platform featuring tilted 3D dual mobile terminals, 01–03 security cards, and live ETH/DOT staking simulator."
+}

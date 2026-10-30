@@ -1,0 +1,48 @@
+{
+  "id": "t178",
+  "slug": "nexora-alex-portfolio",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-30T11:28:21.511Z",
+  "demo": "/demos/nexora-alex-portfolio/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "903c3c0936f1",
+  "sha256": "903c3c0936f17f2fe0167fd430458ee14c192ede31be1faff84fe629fdaf772c",
+  "demoHtmlSha256": "f32b458d186281bfcce4bececc2cb2391e71c1a8ed566389ce7deead19997218",
+  "demoSha256": "da56edfcb116fd42e05e4c0015638a93f896bcc8960108ee46aa57a20e743441",
+  "bytes": 425484,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.477,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.859,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 702
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexora-alex-portfolio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexora-alex-portfolio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexora-alex-portfolio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexora-alex-portfolio-return.jpg"
+  ]
+}

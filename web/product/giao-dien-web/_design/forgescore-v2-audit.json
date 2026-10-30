@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-29T00:33:58.056Z",
+  "generatedAt": "2026-10-30T11:29:14.594Z",
   "standardVersion": "ForgeScore v2.0 (product-standards.md v2.0.0)",
-  "totalEvaluated": 156,
-  "averageScore": 77.2,
+  "totalEvaluated": 164,
+  "averageScore": 78.3,
   "countsByGrade": {
-    "FORGEFRAME_GOLD": 17,
+    "FORGEFRAME_GOLD": 25,
     "PASS_STANDARD": 27,
     "NEAR_PASS": 24,
     "NEEDS_REWORK": 63,
@@ -12,7 +12,7 @@
   },
   "countsByProfile": {
     "WEB-STATIC-1": 1,
-    "WEB-CRAFT-2": 155
+    "WEB-CRAFT-2": 163
   },
   "results": [
     {
@@ -1171,6 +1171,26 @@
       "warnings": []
     },
     {
+      "slug": "cross-border",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 13554,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 7.8,
+      "mostSimilarSlug": "email-marketing",
+      "hardFails": [],
+      "deductions": [],
+      "warnings": []
+    },
+    {
       "slug": "cyber-ronin",
       "profile": "WEB-CRAFT-2",
       "zipSize": 12414,
@@ -1440,6 +1460,26 @@
       "warnings": []
     },
     {
+      "slug": "dotdna-cyber",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 10443,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 5.7,
+      "mostSimilarSlug": "nexora-alex-portfolio",
+      "hardFails": [],
+      "deductions": [],
+      "warnings": []
+    },
+    {
       "slug": "dualplay",
       "profile": "WEB-CRAFT-2",
       "zipSize": 335706,
@@ -1466,6 +1506,26 @@
         "[A3.2 -2.0đ] Nút bấm thiếu phản hồi xúc giác :active transform scale(0.97)/translateY(1px) (emil-design-eng)",
         "[A5.2 -1đ] Sai lệch số đếm chuỗi trong CUSTOMISE.md: \"79.99\": ghi 2× nhưng trong index.html có 1×; \"--accent\": ghi 19× nhưng trong index.html có 0×"
       ],
+      "warnings": []
+    },
+    {
+      "slug": "duolingo-styleguide",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 14878,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 4.9,
+      "mostSimilarSlug": "cybr-brutalism",
+      "hardFails": [],
+      "deductions": [],
       "warnings": []
     },
     {
@@ -1519,8 +1579,8 @@
         "axis4_responsive_a11y": 20,
         "axis5_packaging_docs": 15
       },
-      "maxSimilarity": 4.5,
-      "mostSimilarSlug": "dot",
+      "maxSimilarity": 7.8,
+      "mostSimilarSlug": "cross-border",
       "hardFails": [],
       "deductions": [],
       "warnings": []
@@ -1824,6 +1884,26 @@
       },
       "maxSimilarity": 5.1,
       "mostSimilarSlug": "fresh-reddy",
+      "hardFails": [],
+      "deductions": [],
+      "warnings": []
+    },
+    {
+      "slug": "glitch-cyberwear",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 10657,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 4.6,
+      "mostSimilarSlug": "dotdna-cyber",
       "hardFails": [],
       "deductions": [],
       "warnings": []
@@ -2258,6 +2338,26 @@
       "warnings": []
     },
     {
+      "slug": "kata-ocado-portfolio",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 10669,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 10.8,
+      "mostSimilarSlug": "hush-futurist-bags",
+      "hardFails": [],
+      "deductions": [],
+      "warnings": []
+    },
+    {
       "slug": "keystead",
       "profile": "WEB-CRAFT-2",
       "zipSize": 416065,
@@ -2427,8 +2527,8 @@
         "axis4_responsive_a11y": 20,
         "axis5_packaging_docs": 13.5
       },
-      "maxSimilarity": 2.3,
-      "mostSimilarSlug": "vybe",
+      "maxSimilarity": 3,
+      "mostSimilarSlug": "cross-border",
       "hardFails": [],
       "deductions": [
         "[A2.4 -1.25đ] Thiếu tuỳ biến màu bôi đen chữ ::selection (impeccable craft-floor)",
@@ -3235,6 +3335,26 @@
       "warnings": []
     },
     {
+      "slug": "nexora-alex-portfolio",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 10838,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 5.7,
+      "mostSimilarSlug": "dotdna-cyber",
+      "hardFails": [],
+      "deductions": [],
+      "warnings": []
+    },
+    {
       "slug": "nourish-bowl",
       "profile": "WEB-CRAFT-2",
       "zipSize": 5115372,
@@ -3450,6 +3570,26 @@
         "[A3.4 -4.0đ] Thiếu hoạt cảnh cuộn (IntersectionObserver) và requestAnimationFrame",
         "[A5.2 -1.0đ] CUSTOMISE.md thiếu bảng Edit Map có cột số lần xuất hiện"
       ],
+      "warnings": []
+    },
+    {
+      "slug": "polkacrypto-future",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 10547,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 4.6,
+      "mostSimilarSlug": "luminex",
+      "hardFails": [],
+      "deductions": [],
       "warnings": []
     },
     {
@@ -3770,8 +3910,8 @@
         "axis4_responsive_a11y": 16,
         "axis5_packaging_docs": 12.5
       },
-      "maxSimilarity": 1,
-      "mostSimilarSlug": "solaris-gate",
+      "maxSimilarity": 1.1,
+      "mostSimilarSlug": "dotdna-cyber",
       "hardFails": [],
       "deductions": [
         "[A1.1 -1.5đ] Dùng ký tự Emoji/Unicode làm icon (✕) thay vì SVG (taste-skill / hallmark)",
@@ -4244,6 +4384,26 @@
         "[A5.2 -1.5đ] CUSTOMISE.md có 5/12 AI prompts",
         "[A5.2 -1.0đ] CUSTOMISE.md thiếu bảng Edit Map có cột số lần xuất hiện"
       ],
+      "warnings": []
+    },
+    {
+      "slug": "subscription-agency",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 12542,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 5.2,
+      "mostSimilarSlug": "taskly",
+      "hardFails": [],
+      "deductions": [],
       "warnings": []
     },
     {

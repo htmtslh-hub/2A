@@ -540,7 +540,12 @@ const CURATED_PIN_IDENTITIES = [
   { match: /1025343040190272817|^0074202d0629/i, title: 'CYBR Brutalism', slug: 'cybr-brutalism', tierHint: 'free' },
   { match: /1026891152513510316|^c83e430cbd15/i, title: 'Aurelia BioCyber', slug: 'aurelia-biocyber', tierHint: 'premium' },
   { match: /1029354058596850824|^b2ca43a410d4/i, title: 'Hush Futurist Bags', slug: 'hush-futurist-bags', tierHint: 'premium' },
-  { match: /1033646551982054949|^f10f338bc06e/i, title: 'Quiet Place Sanctuary', slug: 'quiet-place-sanctuary', tierHint: 'premium' }
+  { match: /1033646551982054949|^f10f338bc06e/i, title: 'Quiet Place Sanctuary', slug: 'quiet-place-sanctuary', tierHint: 'premium' },
+  { match: /1040542688905903756|^429d836f12e6/i, title: 'DotDNA Cyber', slug: 'dotdna-cyber', tierHint: 'free' },
+  { match: /1040894532665699931|^8b8453c973fd/i, title: 'PolkaCrypto Future', slug: 'polkacrypto-future', tierHint: 'free' },
+  { match: /1052997956649341571|^4c686f8c153a/i, title: 'Nexora Alex Portfolio', slug: 'nexora-alex-portfolio', tierHint: 'premium' },
+  { match: /1055531231411192497|^b4b8ac6ba0fa/i, title: 'Kata Ocado Portfolio', slug: 'kata-ocado-portfolio', tierHint: 'premium' },
+  { match: /1055812706409706318|^dbdf32161e8a/i, title: 'Glitch Cyberwear', slug: 'glitch-cyberwear', tierHint: 'premium' }
 ];
 
 function parseFilenameHint(filename, index, sha256 = '') {

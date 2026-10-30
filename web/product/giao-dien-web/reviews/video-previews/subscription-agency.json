@@ -1,0 +1,48 @@
+{
+  "id": "t175",
+  "slug": "subscription-agency",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-30T11:27:22.556Z",
+  "demo": "/demos/subscription-agency/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "9aba1773b3df",
+  "sha256": "9aba1773b3dffe7de42b61d706f47f5d15e5bdead0e00c043da2c7b1327c7dbd",
+  "demoHtmlSha256": "26771057483625d1aa923d5c8b37f3236d6c1bb15102280db4c74c827326b892",
+  "demoSha256": "41a94db94539beee75a015dfdc8fd0f203711fc13dd9f59753faa88e41cfeb1e",
+  "bytes": 317191,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.454,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.85,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 745
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\subscription-agency-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\subscription-agency-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\subscription-agency-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\subscription-agency-return.jpg"
+  ]
+}

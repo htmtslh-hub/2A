@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CARGOX GROUP — Beyond Borders and Limits | Cross-Border Freight Command</title>
+  <meta name="description" content="Global intermodal logistics shaped by scale and powered by precision. 3M+ tons of cargo delivered across sea, air, and overland corridors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A1F2B;
+      --surface: #112A3A;
+      --surface-dark: #07151E;
+      --fg: #F8FAFC;
+      --muted: #B0C4D4;
+      --border: rgba(255, 255, 255, 0.14);
+      --accent: #FFDA00;
+      --accent-strong: #FFE433;
+      --on-accent: #0A1F2B;
+      --terracotta: #EA7C58;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid #ffffff; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active {
+      transform: scale(0.97) translateY(1px);
+    }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .cro24-cursor-ring, .cro24-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .cro24-cursor-ring { width: 34px; height: 34px; border: 1.5px solid var(--accent); margin: -17px 0 0 -17px; transition: transform 0.18s var(--ease-out); }
+    .cro24-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .cro24-cursor-ring, .cro24-cursor-dot { display: none; } }
+
+    .cro24-header {
+      position: sticky; top: 0; z-index: 220;
+      background: rgba(10, 31, 43, 0.88); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .cro24-nav {
+      max-width: 1380px; margin: 0 auto; padding: 16px clamp(20px, 4vw, 64px);
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .cro24-brand {
+      font-family: var(--font-display); font-weight: 800; font-size: 28px;
+      letter-spacing: 0.04em; text-transform: uppercase; color: #FFFFFF; text-decoration: none;
+    }
+    .cro24-nav-links { display: flex; gap: 28px; list-style: none; }
+    .cro24-nav-links a {
+      color: var(--fg); text-decoration: none; font-size: 14px; font-weight: 600;
+    }
+    .cro24-nav-links a:hover { color: var(--accent); }
+    .cro24-btn-yellow {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 11px 24px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em;
+      border: none; cursor: pointer;
+    }
+    .cro24-btn-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,0.08);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+
+    .cro24-hero {
+      max-width: 1380px; margin: 0 auto; padding: clamp(44px, 6vw, 84px) clamp(20px, 4vw, 64px);
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center;
+    }
+    .cro24-h1 {
+      font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+      font-size: clamp(56px, 8.5vw, 118px); line-height: 0.9; letter-spacing: -0.01em;
+      color: #FFFFFF; margin: 14px 0 22px;
+    }
+    .cro24-h1 span { color: var(--accent); display: block; }
+    .cro24-lead {
+      font-size: clamp(16px, 1.8vw, 19px); color: var(--muted); line-height: 1.6;
+      max-width: 54ch; margin-bottom: 28px;
+    }
+
+    /* Realistic iPhone 15 Pro Container Telemetry Frame */
+    .cro24-phone-frame {
+      max-width: 340px; width: 100%; margin: 0 auto; border-radius: 44px;
+      padding: 14px; background: #111111; border: 3px solid #334155;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+    }
+    .cro24-phone-screen {
+      border-radius: 32px; padding: 22px 18px;
+      background: linear-gradient(180deg, #C8C7B3 0%, #F0B172 50%, #EA7C58 100%);
+      color: #111111; position: relative; min-height: 440px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .cro24-dynamic-island {
+      width: 96px; height: 22px; border-radius: 999px; background: #111111; margin: 0 auto 16px;
+    }
+
+    .cro24-section {
+      max-width: 1380px; margin: 0 auto; padding: clamp(56px, 7vw, 92px) clamp(20px, 4vw, 64px);
+      border-top: 1px solid var(--border);
+    }
+    .cro24-h2 {
+      font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+      font-size: clamp(38px, 5.2vw, 68px); line-height: 0.95; margin-bottom: 18px;
+    }
+    .cro24-route-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
+      padding: clamp(24px, 4vw, 40px); display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 32px; align-items: center;
+    }
+    .cro24-estimator-grid {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; margin-top: 24px;
+    }
+    .cro24-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px;
+    }
+    .cro24-reveal {
+      opacity: 0; transform: translate3d(0, 20px, 0);
+      transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    }
+    .cro24-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .cro24-footer {
+      max-width: 1380px; margin: 0 auto; padding: 36px clamp(20px, 4vw, 64px);
+      border-top: 1px solid var(--border); display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted);
+    }
+
+    .cro24-seamless-overlay {
+      position: fixed; inset: 0; z-index: 190; background: rgba(7, 21, 30, 0.84);
+      backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .cro24-seamless-overlay.is-open { display: flex; }
+    .cro24-seamless-box {
+      max-width: 540px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 1px solid var(--border); padding: 32px; color: var(--fg); pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .cro24-hero, .cro24-route-card, .cro24-estimator-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .cro24-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="cro24-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="cro24-cursor-dot" aria-hidden="true"></div>
+
+  <header class="cro24-header">
+    <div class="cro24-nav">
+      <a href="#heroStage" class="cro24-brand">CARGOX GROUP</a>
+      <nav aria-label="Primary Logistics Navigation">
+        <ul class="cro24-nav-links">
+          <li><a href="#routeMapSection">Global Corridors</a></li>
+          <li><a href="#freightCalculator">Rate Estimator</a></li>
+          <li><a href="#contactSection">Dispatch Desk</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="cro24-btn-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="cro24-btn-yellow" data-magnetic data-next-preview>Get in touch</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- SECTION 1: HERO -->
+    <section id="heroStage" class="cro24-hero" aria-labelledby="oversizedHeadline">
+      <div>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:0.16em;">INTERMODAL CROSS-BORDER COMMAND</span>
+        <h1 id="oversizedHeadline" class="cro24-h1">
+          BEYOND
+          <span>BORDERS</span>
+          AND LIMITS
+        </h1>
+        <p class="cro24-lead">
+          Precision-routed maritime, rail, and air freight corridors connecting European hubs, Asian ports, and North American distribution centers in real time.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+          <button type="button" class="cro24-btn-yellow" data-seamless-trigger="CARGOX Priority Corridor Booking">
+            <span>Get in touch</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <a href="#freightCalculator" class="cro24-btn-ghost" style="text-decoration:none;padding:11px 20px;">Calculate Tonnage Rate</a>
+        </div>
+      </div>
+
+      <!-- Realistic iPhone 15 Pro Container Telemetry Mockup -->
+      <div class="cro24-phone-frame" data-tilt-card>
+        <div class="cro24-phone-screen tabular-nums">
+          <div>
+            <div class="cro24-dynamic-island" aria-hidden="true"></div>
+            <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:11px;font-weight:700;">
+              <span>CARGOX LIVE BILL</span>
+              <span>#CX-88412</span>
+            </div>
+            <h2 style="font-family:var(--font-display);font-size:34px;font-weight:800;line-height:0.95;margin-top:12px;text-transform:uppercase;">
+              ROTTERDAM → SHANGHAI
+            </h2>
+          </div>
+
+          <!-- Inline SVG Isometric Cargo Vessel & Container Stack -->
+          <svg viewBox="0 0 260 140" width="100%" height="130" fill="none" aria-hidden="true">
+            <rect x="24" y="78" width="212" height="36" rx="10" fill="#0A1F2B"/>
+            <rect x="46" y="42" width="52" height="36" rx="4" fill="#111111"/>
+            <rect x="104" y="34" width="52" height="44" rx="4" fill="#FFDA00"/>
+            <rect x="162" y="48" width="48" height="30" rx="4" fill="#0A1F2B"/>
+            <path d="M12 118c36 8 72-8 108 0s72 8 128 0" stroke="#0A1F2B" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+
+          <div style="background:rgba(17,17,17,0.9);color:#FFFFFF;padding:14px;border-radius:18px;">
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:#FFDA00;font-family:var(--font-mono);">
+              <span>VESSEL TELEMETRY</span>
+              <span>99.4% ON-TIME</span>
+            </div>
+            <p style="font-size:14px;font-weight:700;margin-top:4px;">42 TEU Containers • Cleared Customs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WORLD ROUTE MAP & SCALE METRICS -->
+    <section id="routeMapSection" class="cro24-section" aria-labelledby="scaleHeading">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:0.14em;">GLOBAL NETWORK TOPOLOGY</span>
+      <h2 id="scaleHeading" class="cro24-h2">LOGISTICS shaped by scale / powered by precision</h2>
+
+      <div class="cro24-route-card cro24-reveal">
+        <div>
+          <svg viewBox="0 0 680 300" width="100%" height="260" fill="none" aria-hidden="true" style="background:#07151E;border-radius:18px;border:1px solid var(--border);">
+            <!-- Grid lines -->
+            <line x1="0" y1="75" x2="680" y2="75" stroke="rgba(255,255,255,0.06)"/>
+            <line x1="0" y1="150" x2="680" y2="150" stroke="rgba(255,255,255,0.06)"/>
+            <line x1="0" y1="225" x2="680" y2="225" stroke="rgba(255,255,255,0.06)"/>
+            <!-- 4 Curved Yellow Bezier Corridors -->
+            <path d="M90 190 C 210 60, 360 70, 580 150" stroke="#FFDA00" stroke-width="3" stroke-dasharray="6 4"/>
+            <path d="M90 190 C 240 240, 410 220, 580 150" stroke="#EA7C58" stroke-width="2.5"/>
+            <path d="M180 110 C 310 40, 440 90, 540 210" stroke="#FFDA00" stroke-width="2" stroke-opacity="0.7"/>
+            <path d="M140 230 C 290 160, 420 140, 580 150" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.75"/>
+            <!-- 5 Port Nodes -->
+            <circle cx="90" cy="190" r="7" fill="#FFDA00"/>
+            <circle cx="180" cy="110" r="6" fill="#FFFFFF"/>
+            <circle cx="340" cy="132" r="7" fill="#FFDA00"/>
+            <circle cx="540" cy="210" r="6" fill="#EA7C58"/>
+            <circle cx="580" cy="150" r="8" fill="#FFDA00"/>
+          </svg>
+        </div>
+        <div class="tabular-nums" style="display:flex;flex-direction:column;gap:22px;">
+          <div style="padding:20px;border-radius:18px;background:var(--surface-dark);border:1px solid var(--border);">
+            <strong data-counter-target="3" data-counter-suffix="M+ Tons" style="font-family:var(--font-display);font-size:48px;color:var(--accent);display:block;line-height:1;">3M+ Tons</strong>
+            <span style="font-size:14px;color:var(--muted);">of cross-border cargo delivered safely across 48 countries</span>
+          </div>
+          <div style="padding:20px;border-radius:18px;background:var(--surface-dark);border:1px solid var(--border);">
+            <strong data-counter-target="13" data-counter-suffix="+ Years" style="font-family:var(--font-display);font-size:48px;color:#FFFFFF;display:block;line-height:1;">13+ Years</strong>
+            <span style="font-size:14px;color:var(--muted);">of trusted customs clearance &amp; intermodal operations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: ONE LIVE THING (CORRIDOR RATE ESTIMATOR) & CONTACT US -->
+    <section id="freightCalculator" class="cro24-section" aria-labelledby="calcHeading">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:0.14em;">INTERACTIVE DISPATCH WORKBENCH</span>
+      <h2 id="calcHeading" class="cro24-h2">Cross-Border Corridor &amp; Tonnage Estimator</h2>
+      <div class="cro24-estimator-grid">
+        <article class="cro24-card tabular-nums">
+          <label for="corridorSelect" style="display:block;font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px;">1. Select Intermodal Corridor:</label>
+          <select id="corridorSelect" style="width:100%;padding:12px;border-radius:12px;background:var(--surface-dark);color:#FFFFFF;border:1px solid var(--border);font-size:14px;margin-bottom:18px;">
+            <option value="sea" data-rate="145" data-days="18 Days Transit">Maritime Deep-Sea (Rotterdam ↔ Shanghai)</option>
+            <option value="rail" data-rate="260" data-days="9 Days Transit">Eurasian Express Rail (Warsaw ↔ Chongqing)</option>
+            <option value="air" data-rate="680" data-days="48 Hours Priority">Dedicated Air Charter (Frankfurt ↔ Chicago)</option>
+          </select>
+
+          <label for="tonnageRange" style="display:block;font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px;">
+            2. Cargo Volume: <span id="tonnageValueLabel">24 Metric Tons</span>
+          </label>
+          <input id="tonnageRange" type="range" min="5" max="120" value="24" style="width:100%;margin-bottom:20px;accent-color:#FFDA00;" />
+
+          <div style="padding:18px;border-radius:16px;background:var(--surface-dark);border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+            <div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">ESTIMATED DISPATCH TARIFF</span>
+              <strong id="estimatedCostOut" style="display:block;font-family:var(--font-display);font-size:38px;color:var(--accent);">$3,480 USD</strong>
+            </div>
+            <span id="estimatedTransitOut" style="padding:8px 14px;border-radius:999px;background:rgba(255,218,0,0.14);color:var(--accent);font-family:var(--font-mono);font-size:12px;font-weight:700;">18 Days Transit</span>
+          </div>
+        </article>
+
+        <article id="contactSection" class="cro24-card tabular-nums">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">CONTACT US • 24/7 OPERATIONS DESK</span>
+          <h3 style="font-family:var(--font-display);font-size:32px;text-transform:uppercase;margin:8px 0 12px;">Direct Customs &amp; Charter Desk</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">
+            Lock in guaranteed container allocation or request a multi-country bonded customs clearance manifest.
+          </p>
+          <div style="font-family:var(--font-mono);font-size:13px;color:#FFFFFF;margin-bottom:20px;display:flex;flex-direction:column;gap:6px;">
+            <span>Email: info@cargox-group.com</span>
+            <span>Hotline: +380 44 234-7890</span>
+          </div>
+          <button type="button" class="cro24-btn-yellow" style="width:100%;justify-content:center;" data-seamless-trigger="CARGOX Manifest &amp; Rate Lock">
+            Request Official Bill of Lading Quote
+          </button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cro24-footer">
+    <div><strong>CARGOX GROUP</strong> — Beyond Borders and Limits. © 2026 CargoX Intermodal Logistics.</div>
+    <div style="display:flex;gap:20px;">
+      <a href="#routeMapSection" style="color:var(--muted);text-decoration:none;">Corridors</a>
+      <a href="#freightCalculator" style="color:var(--muted);text-decoration:none;">Estimator</a>
+      <a href="#contactSection" style="color:var(--muted);text-decoration:none;">Contact</a>
+    </div>
+  </footer>
+
+  <div id="seamlessModal" class="cro24-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="cro24-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">CARGOX DISPATCH TERMINAL</span>
+        <button type="button" id="closeSeamlessBtn" class="cro24-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:34px;text-transform:uppercase;margin-bottom:10px;">Reserve Container Allocation</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Our customs clearance engineers respond within 30 minutes with vessel IMO numbers and bonded corridor routing.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="cro24-btn-yellow" style="width:100%;justify-content:center;">Confirm Dispatch Inquiry</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var sel = document.getElementById('corridorSelect');
+      var rng = document.getElementById('tonnageRange');
+      var tonLbl = document.getElementById('tonnageValueLabel');
+      var costOut = document.getElementById('estimatedCostOut');
+      var daysOut = document.getElementById('estimatedTransitOut');
+
+      function updateCalc() {
+        if (!sel || !rng) return;
+        var opt = sel.options[sel.selectedIndex];
+        var rate = parseFloat(opt ? opt.getAttribute('data-rate') : '145') || 145;
+        var days = (opt && opt.getAttribute('data-days')) || '18 Days Transit';
+        var tons = parseInt(rng.value || '24', 10);
+        if (tonLbl) tonLbl.textContent = tons + ' Metric Tons';
+        var total = Math.round(rate * tons);
+        if (costOut) costOut.textContent = '$' + total.toLocaleString('en-US') + ' USD';
+        if (daysOut) daysOut.textContent = days;
+      }
+      if (sel) sel.addEventListener('change', updateCalc);
+      if (rng) rng.addEventListener('input', updateCalc);
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.cro24-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('cro24Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

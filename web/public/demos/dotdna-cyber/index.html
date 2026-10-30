@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>DOTDNA — Defending the Digital on the Dot | Cyber Security by Design</title>
+  <meta name="description" content="We assist our clients in integrating cyber security by design in their digital transformation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #041A0E;
+      --surface: #082917;
+      --surface-glass: rgba(8, 41, 23, 0.82);
+      --fg: #ECFDF5;
+      --muted: #A7F3D0;
+      --border: rgba(101, 232, 25, 0.24);
+      --accent: #65E819;
+      --accent-text: #86EFAC;
+      --accent-strong: #79F72D;
+      --on-accent: #041A0E;
+      --font-display: 'Syne', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid #FFFFFF; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .dot89-cursor-ring, .dot89-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .dot89-cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .dot89-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .dot89-cursor-ring, .dot89-cursor-dot { display: none; } }
+
+    .dot89-header {
+      position: sticky; top: 0; z-index: 220;
+      background: rgba(4, 26, 14, 0.88); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .dot89-wrap { max-width: 1340px; margin: 0 auto; padding: 20px clamp(20px, 4vw, 60px); }
+    .dot89-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .dot89-brand {
+      font-family: var(--font-display); font-weight: 800; font-size: 24px;
+      letter-spacing: 0.08em; color: #FFFFFF; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .dot89-dock {
+      display: inline-flex; gap: 8px; padding: 6px 10px; border-radius: 999px;
+      background: var(--surface-glass); border: 1px solid var(--border);
+    }
+    .dot89-dock a {
+      color: var(--fg); text-decoration: none; font-size: 13px; font-weight: 600;
+      padding: 6px 14px; border-radius: 999px;
+    }
+    .dot89-dock a:hover { background: rgba(101, 232, 25, 0.16); color: var(--accent); }
+    .dot89-btn-acid {
+      padding: 11px 22px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; border: none; cursor: pointer;
+    }
+    .dot89-btn-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+
+    .dot89-hero {
+      position: relative; padding: clamp(48px, 7vw, 88px) 0;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; align-items: center;
+    }
+    .dot89-h1 {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: clamp(44px, 6.2vw, 82px); line-height: 0.98; letter-spacing: -0.03em;
+      margin: 14px 0 20px;
+    }
+    .dot89-h2 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(30px, 4vw, 48px); line-height: 1.06; margin-bottom: 16px;
+    }
+    .dot89-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+    .dot89-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 26px;
+    }
+    .dot89-reveal {
+      opacity: 0; transform: translate3d(0, 18px, 0);
+      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
+    }
+    .dot89-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .dot89-modal {
+      position: fixed; inset: 0; z-index: 190; background: rgba(4, 26, 14, 0.86);
+      backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .dot89-modal.is-open { display: flex; }
+    .dot89-modal-box {
+      max-width: 520px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 1px solid var(--border); padding: 32px; pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) { .dot89-hero, .dot89-grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { .dot89-dock { display: none; } }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="dot89-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="dot89-cursor-dot" aria-hidden="true"></div>
+
+  <header class="dot89-header">
+    <div class="dot89-wrap dot89-nav">
+      <a href="#heroStage" class="dot89-brand">
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="11" stroke="#65E819" stroke-width="2.5" stroke-dasharray="4 3"/>
+          <circle cx="14" cy="14" r="4" fill="#65E819"/>
+        </svg>
+        <span>DOTDNA</span>
+      </a>
+      <nav class="dot89-dock" aria-label="DotDNA Navigation">
+        <a href="#heroStage">Home</a>
+        <a href="#servicesGrid">Services +</a>
+        <a href="#threatScanner">Product</a>
+        <a href="#aboutPosture">About</a>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="dot89-btn-ghost" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="dot89-btn-acid" data-next-preview>Contact us ↗</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" class="dot89-wrap">
+    <section id="heroStage" class="dot89-hero" aria-labelledby="oversizedHeadline">
+      <div>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:0.18em;">| CYBER SECURITY BY DESIGN</span>
+        <h1 id="oversizedHeadline" class="dot89-h1">
+          Defending the Digital <span style="color:var(--accent);">on the Dot.</span>
+        </h1>
+        <p style="font-size:17px;color:var(--muted);line-height:1.65;max-width:54ch;margin-bottom:28px;">
+          We assist our clients in integrating cyber security by design in their digital transformation — securing cloud meshes, zero-trust APIs, and post-quantum telemetry.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <button type="button" class="dot89-btn-acid" data-seamless-trigger="DotDNA Zero-Trust Architecture Audit">Deploy DotDNA Shield</button>
+          <a href="#threatScanner" class="dot89-btn-ghost" style="text-decoration:none;padding:11px 20px;">Run Posture Scan</a>
+        </div>
+      </div>
+
+      <!-- Bioluminescent Particle Wave SVG Sculpture -->
+      <div class="dot89-card tabular-nums" style="background:radial-gradient(circle at 50% 40%, rgba(101,232,25,0.22), rgba(8,41,23,0.95));">
+        <svg viewBox="0 0 460 250" width="100%" height="220" fill="none" aria-hidden="true">
+          <path d="M20 180 C 120 60, 220 220, 320 90 C 380 30, 420 140, 440 110" stroke="#65E819" stroke-width="3" stroke-dasharray="4 6"/>
+          <path d="M20 140 C 130 210, 250 40, 360 160 C 400 190, 430 90, 440 130" stroke="#86EFAC" stroke-width="2" stroke-opacity="0.7"/>
+          <circle cx="145" cy="126" r="6" fill="#65E819"/>
+          <circle cx="268" cy="112" r="8" fill="#65E819"/>
+          <circle cx="358" cy="158" r="6" fill="#ECFDF5"/>
+        </svg>
+        <div style="display:flex;justify-content:space-between;border-top:1px solid var(--border);padding-top:14px;margin-top:10px;font-family:var(--font-mono);font-size:12px;">
+          <span>NODE INTEGRITY: <strong data-counter-target="99" data-counter-suffix=".98%">99.98%</strong></span>
+          <span style="color:var(--accent);">DOT-MESH ACTIVE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONE LIVE THING: ZERO-TRUST POSTURE SCANNER -->
+    <section id="threatScanner" style="padding:40px 0;" aria-labelledby="scanHeading">
+      <div class="dot89-card tabular-nums">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:18px;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">LIVE POSTURE TELEMETRY</span>
+            <h2 id="scanHeading" class="dot89-h2" style="margin-bottom:4px;">Zero-Trust Surface Inspector</h2>
+          </div>
+          <div role="group" aria-label="Select Security Layer" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="dot89-btn-acid scan-btn" data-layer="Edge API Gateway • 0 Open CVEs • TLS 1.3 Strict">Edge Gateway</button>
+            <button type="button" class="dot89-btn-ghost scan-btn" data-layer="Kubernetes Mesh • mTLS Enforced • 412 Pods Verified">K8s Workload Mesh</button>
+            <button type="button" class="dot89-btn-ghost scan-btn" data-layer="Identity Perimeter • FIDO2 Hardware Keys • 0 Anomalies">IAM Perimeter</button>
+          </div>
+        </div>
+        <p id="scanLayerOutput" style="font-family:var(--font-mono);font-size:14px;color:var(--accent-text);padding:14px;border-radius:14px;background:var(--bg);border:1px solid var(--border);">
+          Edge API Gateway • 0 Open CVEs • TLS 1.3 Strict
+        </p>
+      </div>
+    </section>
+
+    <section id="servicesGrid" style="padding:28px 0 64px;" aria-labelledby="srvHeading">
+      <h2 id="srvHeading" class="dot89-h2">Security Architecture Pillars</h2>
+      <div class="dot89-grid-3">
+        <article class="dot89-card dot89-reveal" data-seamless-trigger="Zero-Trust Cloud Architecture">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">01 / CLOUD MESH</span>
+          <h3 style="font-size:21px;margin:8px 0;">Security by Design</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Threat modeling embedded directly into CI/CD pipelines before code reaches production.</p>
+        </article>
+        <article class="dot89-card dot89-reveal" data-seamless-trigger="Continuous Red-Team Telemetry">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">02 / OFFENSIVE OPS</span>
+          <h3 style="font-size:21px;margin:8px 0;">Automated Red Teaming</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Continuous breach simulation across hybrid cloud and enterprise identity graphs.</p>
+        </article>
+        <article id="aboutPosture" class="dot89-card dot89-reveal" data-seamless-trigger="ISO 27001 &amp; NIS2 Compliance">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">03 / GOVERNANCE</span>
+          <h3 style="font-size:21px;margin:8px 0;">NIS2 &amp; DORA Readiness</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Cryptographic audit logs and automated compliance evidence for regulated enterprises.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dot89-wrap" style="border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 DOTDNA Cyber Security Architecture. All rights reserved.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent);">SOC2 TYPE II • ISO 27001</span>
+  </footer>
+
+  <div id="seamlessModal" class="dot89-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="dot89-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">DOTDNA ADVISORY</span>
+        <button type="button" id="closeSeamlessBtn" class="dot89-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">Schedule Security Architecture Review</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Connect with a principal DotDNA security architect to map your zero-trust transformation roadmap.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="dot89-btn-acid" style="width:100%;">Confirm Encrypted Briefing</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var out = document.getElementById('scanLayerOutput');
+      document.querySelectorAll('.scan-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.scan-btn').forEach(function (b) {
+            b.className = b === btn ? 'dot89-btn-acid scan-btn' : 'dot89-btn-ghost scan-btn';
+          });
+          if (out) out.textContent = btn.getAttribute('data-layer');
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.dot89-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

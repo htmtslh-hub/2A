@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Duolingo Styleguide — Tactile Gamified Design System &amp; UI Token Workbench</title>
+  <meta name="description" content="Explore Duolingo's playful, accessible design language: Feather Green 3D tactile buttons, Nunito typographic scale, course cards, and live token workbench.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F7F9FA;
+      --surface: #FFFFFF;
+      --surface-dark: #100F3E;
+      --surface-dark-card: #1B1A55;
+      --fg: #1E293B;
+      --muted: #475569;
+      --border: #E2E8F0;
+      --border-dark: rgba(255, 255, 255, 0.16);
+      --accent: #58CC02;
+      --accent-shadow: #46A302;
+      --accent-text: #1B5E20;
+      --sky: #1CB0F6;
+      --sky-shadow: #1899D6;
+      --danger: #FF4B4B;
+      --danger-shadow: #EA2B2B;
+      --orange: #FF9600;
+      --gold: #FFC800;
+      --font-display: 'Nunito', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 20px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #0A1905; }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--surface-dark); color: #ffffff;
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid var(--sky); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--sky); outline-offset: 3px;
+    }
+    button, [role="button"] {
+      font-family: var(--font-display);
+      transition: transform 0.16s var(--ease-out), background-color 0.16s var(--ease-out), opacity 0.16s var(--ease-out);
+    }
+    button:active, [role="button"]:active {
+      transform: translateY(3px) scale(0.98);
+    }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .duo76-cursor-ring, .duo76-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .duo76-cursor-ring { width: 32px; height: 32px; border: 2px solid var(--sky); margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .duo76-cursor-dot { width: 6px; height: 6px; background: var(--accent-shadow); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .duo76-cursor-ring, .duo76-cursor-dot { display: none; } }
+
+    .duo76-header {
+      position: sticky; top: 0; z-index: 220; background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px); border-bottom: 2px solid var(--border);
+    }
+    .duo76-nav-inner {
+      max-width: 1360px; margin: 0 auto; padding: 14px clamp(20px, 4vw, 56px);
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .duo76-brand {
+      display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--fg);
+    }
+    .duo76-wordmark {
+      font-family: var(--font-display); font-weight: 900; font-size: 26px; letter-spacing: -0.03em; color: #100F3E;
+    }
+    .duo76-divider { width: 2px; height: 22px; background: var(--border); }
+    .duo76-badge-tag {
+      font-family: var(--font-display); font-weight: 800; font-size: 11px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .duo76-nav-links { display: flex; gap: 24px; list-style: none; }
+    .duo76-nav-links a {
+      color: var(--fg); text-decoration: none; font-family: var(--font-display);
+      font-weight: 800; font-size: 14px;
+    }
+    .duo76-nav-links a:hover { color: #0B6E99; }
+
+    /* 3D Tactile Buttons */
+    .duo76-btn-green {
+      padding: 12px 24px; border-radius: 16px; background: var(--accent); color: #091E05;
+      font-weight: 900; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase;
+      border: 2px solid var(--accent-shadow); border-bottom-width: 5px; cursor: pointer;
+    }
+    .duo76-btn-sky {
+      padding: 12px 24px; border-radius: 16px; background: var(--sky); color: #062335;
+      font-weight: 900; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase;
+      border: 2px solid var(--sky-shadow); border-bottom-width: 5px; cursor: pointer;
+    }
+    .duo76-btn-danger {
+      padding: 12px 24px; border-radius: 16px; background: var(--danger); color: #2B0404;
+      font-weight: 900; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase;
+      border: 2px solid var(--danger-shadow); border-bottom-width: 5px; cursor: pointer;
+    }
+    .duo76-btn-ghost {
+      padding: 10px 18px; border-radius: 16px; background: #FFFFFF; color: var(--fg);
+      font-weight: 800; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase;
+      border: 2px solid #CBD5E1; border-bottom-width: 4px; cursor: pointer;
+    }
+
+    .duo76-hero {
+      max-width: 1360px; margin: 28px auto 0; padding: 0 clamp(20px, 4vw, 56px);
+    }
+    .duo76-hero-banner {
+      background: var(--surface-dark); color: #FFFFFF; border-radius: 28px;
+      padding: clamp(40px, 6vw, 72px); display: grid; grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px; align-items: center; position: relative; overflow: hidden;
+      border: 2px solid #25236E;
+    }
+    .duo76-h1 {
+      font-family: var(--font-display); font-weight: 900;
+      font-size: clamp(42px, 5.8vw, 72px); line-height: 1.02; letter-spacing: -0.025em;
+      color: #FFFFFF; margin: 14px 0 18px;
+    }
+    .duo76-sub {
+      font-size: clamp(16px, 1.8vw, 19px); color: #E2E8F0; line-height: 1.6;
+      max-width: 54ch; margin-bottom: 28px;
+    }
+
+    .duo76-grid-8 {
+      max-width: 1360px; margin: 36px auto 64px; padding: 0 clamp(20px, 4vw, 56px);
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
+    }
+    .duo76-panel-light {
+      background: var(--surface); border: 2px solid var(--border); border-bottom-width: 5px;
+      border-radius: 24px; padding: clamp(24px, 3.5vw, 36px); color: var(--fg);
+    }
+    .duo76-panel-dark {
+      background: var(--surface-dark); border: 2px solid #292775; border-bottom-width: 5px;
+      border-radius: 24px; padding: clamp(24px, 3.5vw, 36px); color: #FFFFFF;
+    }
+    .duo76-h2 {
+      font-family: var(--font-display); font-weight: 900;
+      font-size: clamp(24px, 3vw, 32px); letter-spacing: -0.02em; margin-bottom: 8px;
+    }
+    .duo76-kicker {
+      font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-text);
+      display: inline-block; margin-bottom: 6px;
+    }
+    .duo76-panel-dark .duo76-kicker { color: var(--gold); }
+
+    .duo76-swatch-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px;
+    }
+    .duo76-swatch-btn {
+      display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between;
+      padding: 14px; border-radius: 16px; border: 2px solid rgba(15,23,42,0.12);
+      border-bottom-width: 4px; min-height: 88px; cursor: pointer; text-align: left;
+    }
+    .duo76-course-card {
+      padding: 18px; border-radius: 18px; border: 2px solid var(--border); border-bottom-width: 4px;
+      display: flex; align-items: center; gap: 16px; margin-top: 14px; background: #FAFCFF;
+    }
+    .duo76-super-card {
+      padding: 18px; border-radius: 18px; border: 2px solid rgba(255,255,255,0.18);
+      background: var(--surface-dark-card); display: flex; align-items: center; gap: 16px; margin-top: 14px;
+    }
+    .duo76-progress-track {
+      width: 100%; height: 16px; border-radius: 999px; background: #E2E8F0; overflow: hidden; margin-top: 8px;
+    }
+    .duo76-progress-fill {
+      width: 100%; height: 100%; border-radius: 999px; background: var(--accent);
+      transform-origin: left center; transform: scaleX(0.85);
+      transition: transform 0.4s var(--ease-out);
+    }
+
+    .duo76-reveal {
+      opacity: 0; transform: translate3d(0, 18px, 0);
+      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
+    }
+    .duo76-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .duo76-footer {
+      max-width: 1360px; margin: 0 auto 48px; padding: 28px clamp(20px, 4vw, 56px);
+      border-top: 2px solid var(--border); display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px; color: var(--muted); font-size: 13px;
+    }
+
+    .duo76-seamless-overlay {
+      position: fixed; inset: 0; z-index: 190; background: rgba(16, 15, 62, 0.78);
+      backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .duo76-seamless-overlay.is-open { display: flex; }
+    .duo76-seamless-box {
+      max-width: 520px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 2px solid var(--border); border-bottom-width: 6px; padding: 32px;
+      color: var(--fg); pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .duo76-hero-banner, .duo76-grid-8 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .duo76-nav-links { display: none; }
+      .duo76-swatch-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="duo76-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="duo76-cursor-dot" aria-hidden="true"></div>
+
+  <header class="duo76-header">
+    <div class="duo76-nav-inner">
+      <a href="#heroStage" class="duo76-brand">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect width="40" height="40" rx="12" fill="#58CC02"/>
+          <circle cx="14" cy="18" r="5" fill="#FFFFFF"/>
+          <circle cx="26" cy="18" r="5" fill="#FFFFFF"/>
+          <circle cx="14" cy="18" r="2.3" fill="#100F3E"/>
+          <circle cx="26" cy="18" r="2.3" fill="#100F3E"/>
+          <polygon points="20,21 16,26 24,26" fill="#FFC800"/>
+        </svg>
+        <span class="duo76-wordmark">duolingo</span>
+        <span class="duo76-divider" aria-hidden="true"></span>
+        <span class="duo76-badge-tag">STYLE GUIDE</span>
+      </a>
+      <nav aria-label="Styleguide Sections">
+        <ul class="duo76-nav-links">
+          <li><a href="#colorsPanel">Colors</a></li>
+          <li><a href="#typePanel">Typography</a></li>
+          <li><a href="#buttonsPanel">Buttons</a></li>
+          <li><a href="#cardsPanel">Cards</a></li>
+          <li><a href="#componentsPanel">Components</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="duo76-btn-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="duo76-btn-green" data-magnetic data-next-preview>Export Tokens</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- HERO -->
+    <section id="heroStage" class="duo76-hero" aria-labelledby="oversizedHeadline">
+      <div class="duo76-hero-banner">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(88,204,2,0.18);color:#89E219;font-family:var(--font-mono);font-size:12px;font-weight:700;">
+            DESIGN LANGUAGE v4.8 • TACTILE GAMIFICATION
+          </span>
+          <h1 id="oversizedHeadline" class="duo76-h1">duolingo design</h1>
+          <p class="duo76-sub">
+            Our tactile design system pairs rounded Nunito geometry, 4px bottom-lip 3D button physics, and vibrant Feather Green feedback loops to make daily learning feel effortless.
+          </p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <button type="button" class="duo76-btn-green" data-seamless-trigger="Duolingo Design System — Token Kit">GET STARTED</button>
+            <button type="button" class="duo76-btn-sky" data-seamless-trigger="Duolingo Component Library — Figma &amp; CSS">I ALREADY HAVE AN ACCOUNT</button>
+          </div>
+        </div>
+        <div style="background:var(--surface-dark-card);border:2px solid rgba(255,255,255,0.18);border-radius:24px;padding:24px;" class="tabular-nums">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:#FFC800;">LIVE STREAK ENGINE</span>
+            <span id="streakBadgeOut" style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:rgba(255,150,0,0.2);color:#FFC800;font-weight:800;font-size:14px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF9600" aria-hidden="true"><path d="M12 2c2 4 6 6.5 6 11a6 6 0 1 1-12 0c0-3 2-6 3-8 1 2 2 3 3 3s1-3 0-6z"/></svg>
+              <strong data-counter-target="42" data-counter-suffix=" Day Streak">42 Day Streak</strong>
+            </span>
+          </div>
+          <p style="font-size:14px;color:#E2E8F0;line-height:1.55;margin-bottom:16px;">
+            Click any swatch or interactive control below to copy live CSS variables or test tactile 3D button states.
+          </p>
+          <div style="padding:14px;border-radius:14px;background:#0A0929;border:1px solid rgba(255,255,255,0.12);font-family:var(--font-mono);font-size:12px;color:#89E219;" id="liveTokenConsole">
+            /* Copied Token */ --duo-feather-green: #58CC02;
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8-PANEL 2-COLUMN WORKBENCH GRID -->
+    <section class="duo76-grid-8" aria-label="Design System Workbench">
+      <!-- PANEL 1: COLOR SWATCHES (ONE LIVE THING) -->
+      <article id="colorsPanel" class="duo76-panel-light duo76-reveal">
+        <span class="duo76-kicker">01 / BRAND PALETTE</span>
+        <h2 class="duo76-h2">Interactive Color Swatches</h2>
+        <p style="font-size:14px;color:var(--muted);max-width:56ch;">Click any swatch to inspect and copy its production hex token into the live console.</p>
+        <div class="duo76-swatch-grid tabular-nums">
+          <button type="button" class="duo76-swatch-btn" data-swatch-name="Feather Green" data-swatch-hex="#58CC02" style="background:#58CC02;color:#091E05;">
+            <strong>Feather Green</strong><span style="font-family:var(--font-mono);font-size:12px;">#58CC02</span>
+          </button>
+          <button type="button" class="duo76-swatch-btn" data-swatch-name="Tree Frog" data-swatch-hex="#46A302" style="background:#46A302;color:#FFFFFF;">
+            <strong>Tree Frog</strong><span style="font-family:var(--font-mono);font-size:12px;">#46A302</span>
+          </button>
+          <button type="button" class="duo76-swatch-btn" data-swatch-name="Macaw Sky" data-swatch-hex="#1CB0F6" style="background:#1CB0F6;color:#052130;">
+            <strong>Macaw Sky</strong><span style="font-family:var(--font-mono);font-size:12px;">#1CB0F6</span>
+          </button>
+          <button type="button" class="duo76-swatch-btn" data-swatch-name="Dark Navy" data-swatch-hex="#100F3E" style="background:#100F3E;color:#FFFFFF;">
+            <strong>Dark Navy</strong><span style="font-family:var(--font-mono);font-size:12px;">#100F3E</span>
+          </button>
+          <button type="button" class="duo76-swatch-btn" data-swatch-name="Cardinal Red" data-swatch-hex="#FF4B4B" style="background:#FF4B4B;color:#2B0404;">
+            <strong>Cardinal Red</strong><span style="font-family:var(--font-mono);font-size:12px;">#FF4B4B</span>
+          </button>
+          <button type="button" class="duo76-swatch-btn" data-swatch-name="Bee Gold" data-swatch-hex="#FFC800" style="background:#FFC800;color:#241A00;">
+            <strong>Bee Gold</strong><span style="font-family:var(--font-mono);font-size:12px;">#FFC800</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- PANEL 2: TYPOGRAPHY SCALE -->
+      <article id="typePanel" class="duo76-panel-light duo76-reveal tabular-nums">
+        <span class="duo76-kicker">02 / NUNITO TYPE SCALE</span>
+        <h2 class="duo76-h2">Rounded Geometric Hierarchy</h2>
+        <p style="font-size:14px;color:var(--muted);margin-bottom:16px;max-width:56ch;">Friendly rounded terminals keep complex grammar lessons approachable on every screen.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="padding:12px;border-radius:14px;background:#F1F5F9;display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-family:var(--font-display);font-weight:900;font-size:32px;color:#100F3E;">Display 48px</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">Nunito 900 • -0.025em</span>
+          </div>
+          <div style="padding:12px;border-radius:14px;background:#F1F5F9;display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#100F3E;">Heading 28px</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">Nunito 800 • -0.015em</span>
+          </div>
+          <div style="padding:12px;border-radius:14px;background:#F1F5F9;display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-weight:600;font-size:16px;color:var(--fg);">Body Lesson Copy 16px</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">Plus Jakarta 600 • 1.6</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PANEL 3: LIGHT BUTTON VARIANTS -->
+      <article id="buttonsPanel" class="duo76-panel-light duo76-reveal">
+        <span class="duo76-kicker">03 / TACTILE CONTROLS (LIGHT)</span>
+        <h2 class="duo76-h2">3D Lip Button Physics</h2>
+        <p style="font-size:14px;color:var(--muted);margin-bottom:18px;max-width:56ch;">Every button features a 4px bottom lip that compresses on active press for instant physical feedback.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="duo76-btn-green" data-button-demo="Primary Check">CHECK ANSWER</button>
+          <button type="button" class="duo76-btn-sky" data-button-demo="Secondary Practice">PRACTICE UNIT</button>
+          <button type="button" class="duo76-btn-danger" data-button-demo="Danger Reset">HEART REFILL</button>
+          <button type="button" class="duo76-btn-ghost" data-button-demo="Ghost Skip">SKIP STEP</button>
+        </div>
+      </article>
+
+      <!-- PANEL 4: DARK THEME BUTTONS -->
+      <article class="duo76-panel-dark duo76-reveal">
+        <span class="duo76-kicker">04 / NIGHT OWL MODE (#100F3E)</span>
+        <h2 class="duo76-h2">Dark Surface Controls</h2>
+        <p style="font-size:14px;color:#CBD5E1;margin-bottom:18px;max-width:56ch;">High-luminance surface tokens preserve WCAG AA legibility during late-night streak sessions.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="duo76-btn-green" data-seamless-trigger="Super Duolingo Night Owl Mode">START NIGHT LESSON</button>
+          <button type="button" class="duo76-btn-sky" data-seamless-trigger="League Leaderboard Challenge">VIEW DIAMOND LEAGUE</button>
+        </div>
+      </article>
+
+      <!-- PANEL 5: LIGHT COURSE CARDS -->
+      <article id="cardsPanel" class="duo76-panel-light duo76-reveal tabular-nums">
+        <span class="duo76-kicker">05 / CURRICULUM MODULES</span>
+        <h2 class="duo76-h2">Light Course Cards</h2>
+        <div class="duo76-course-card">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect width="48" height="48" rx="14" fill="#FFF3D6"/>
+            <circle cx="24" cy="24" r="13" fill="#FF9600"/>
+            <path d="M18 25l4 4 8-8" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <div style="flex:1;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <strong style="font-family:var(--font-display);font-size:18px;">Spanish for Beginners</strong>
+              <span style="font-family:var(--font-mono);font-size:12px;font-weight:700;color:var(--accent-text);">12 UNITS</span>
+            </div>
+            <p style="font-size:13px;color:var(--muted);margin-top:4px;">Greetings, travel essentials, and cafe conversations.</p>
+          </div>
+        </div>
+        <div class="duo76-course-card">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect width="48" height="48" rx="14" fill="#E0F4FF"/>
+            <circle cx="24" cy="24" r="13" fill="#1CB0F6"/>
+            <path d="M17 24h14M24 17v14" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <div style="flex:1;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <strong style="font-family:var(--font-display);font-size:18px;">French Conversations</strong>
+              <span style="font-family:var(--font-mono);font-size:12px;font-weight:700;color:#0B6E99;">8 UNITS</span>
+            </div>
+            <p style="font-size:13px;color:var(--muted);margin-top:4px;">Phonetics, Parisian dining, and past tense storytelling.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- PANEL 6: DARK SUPER CARDS -->
+      <article class="duo76-panel-dark duo76-reveal">
+        <span class="duo76-kicker">06 / SUPER DUOLINGO PERKS</span>
+        <h2 class="duo76-h2">Dark Pro Feature Cards</h2>
+        <div class="duo76-super-card">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <rect width="44" height="44" rx="12" fill="rgba(255,75,75,0.2)"/>
+            <path d="M22 32s-9-5.6-9-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.4-9 12-9 12z" fill="#FF4B4B"/>
+          </svg>
+          <div>
+            <strong style="font-family:var(--font-display);font-size:18px;color:#FFFFFF;">Unlimited Hearts</strong>
+            <p style="font-size:13px;color:#CBD5E1;margin-top:3px;">Mistakes are part of learning — practice without interruption.</p>
+          </div>
+        </div>
+        <div class="duo76-super-card">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <rect width="44" height="44" rx="12" fill="rgba(28,176,246,0.2)"/>
+            <polygon points="22,9 26,18 35,19 28,25 30,34 22,29 14,34 16,25 9,19 18,18" fill="#FFC800"/>
+          </svg>
+          <div>
+            <strong style="font-family:var(--font-display);font-size:18px;color:#FFFFFF;">Mastery Quizzes</strong>
+            <p style="font-size:13px;color:#CBD5E1;margin-top:3px;">Adaptive spaced-repetition reviews tailored to your weak spots.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- PANEL 7: INTERACTIVE COMPONENTS -->
+      <article id="componentsPanel" class="duo76-panel-light duo76-reveal tabular-nums">
+        <span class="duo76-kicker">07 / LIVE PROGRESS &amp; XP SIMULATOR</span>
+        <h2 class="duo76-h2">Interactive XP &amp; Streak Progress</h2>
+        <div style="margin:14px 0;">
+          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;">
+            <span>Daily Goal Completion</span>
+            <span id="xpPctLabel">85% (85 / 100 XP)</span>
+          </div>
+          <div class="duo76-progress-track">
+            <div id="xpProgressBar" class="duo76-progress-fill"></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+          <button type="button" class="duo76-btn-green" id="addXpBtn">+15 XP Lesson Boost</button>
+          <button type="button" class="duo76-btn-ghost" id="soundToggleSimBtn" aria-pressed="true">Sound Effects: ON</button>
+        </div>
+      </article>
+
+      <!-- PANEL 8: LANGUAGE PILLS & ACTIVE LEARNERS -->
+      <article class="duo76-panel-dark duo76-reveal tabular-nums">
+        <span class="duo76-kicker">08 / GLOBAL TRACKS</span>
+        <h2 class="duo76-h2">Language Pills &amp; Active Cohort</h2>
+        <p style="font-size:14px;color:#CBD5E1;margin-bottom:16px;max-width:56ch;">Switch active language track to preview localized unit metrics.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;">
+          <button type="button" class="duo76-btn-green" data-lang-pill="Spanish • 14.2M Learners">Spanish</button>
+          <button type="button" class="duo76-btn-sky" data-lang-pill="French • 9.8M Learners">French</button>
+          <button type="button" class="duo76-btn-sky" data-lang-pill="Japanese • 7.4M Learners">Japanese</button>
+          <button type="button" class="duo76-btn-sky" data-lang-pill="German • 5.6M Learners">German</button>
+        </div>
+        <div style="padding:14px;border-radius:14px;background:var(--surface-dark-card);display:flex;justify-content:space-between;align-items:center;">
+          <span id="activeLangStatus" style="font-weight:700;font-size:14px;color:#89E219;">Spanish • 14.2M Learners</span>
+          <span style="font-family:var(--font-mono);font-size:12px;color:#FFC800;">+5 COHORT PEERS ONLINE</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="duo76-footer">
+    <div><strong>Duolingo Styleguide</strong> — Tactile Design System Workbench. Crafted with ForgeFrame Gold v2.0.</div>
+    <div style="display:flex;gap:18px;">
+      <a href="#colorsPanel" style="color:var(--fg);text-decoration:none;font-weight:700;">Colors</a>
+      <a href="#typePanel" style="color:var(--fg);text-decoration:none;font-weight:700;">Typography</a>
+      <a href="#buttonsPanel" style="color:var(--fg);text-decoration:none;font-weight:700;">Buttons</a>
+      <a href="#componentsPanel" style="color:var(--fg);text-decoration:none;font-weight:700;">Components</a>
+    </div>
+  </footer>
+
+  <div id="seamlessModal" class="duo76-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="duo76-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span class="duo76-kicker">DUOLINGO DESIGN TOKENS</span>
+        <button type="button" id="closeSeamlessBtn" class="duo76-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-weight:900;font-size:28px;margin-bottom:10px;">Export Tactile UI Kit</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Download the complete CSS custom properties, 3D tactile button mixins, and Nunito typographic scale tokens.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="duo76-btn-green" style="width:100%;">Copy Production CSS Bundle</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var consoleEl = document.getElementById('liveTokenConsole');
+      document.querySelectorAll('[data-swatch-hex]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var name = btn.getAttribute('data-swatch-name') || 'Color';
+          var hex = btn.getAttribute('data-swatch-hex') || '#58CC02';
+          if (consoleEl) {
+            consoleEl.textContent = '/* Copied ' + name + ' */ --duo-token: ' + hex + ';';
+          }
+        });
+      });
+
+      var xp = 85;
+      var xpBar = document.getElementById('xpProgressBar');
+      var xpLabel = document.getElementById('xpPctLabel');
+      var addXpBtn = document.getElementById('addXpBtn');
+      if (addXpBtn) {
+        addXpBtn.addEventListener('click', function () {
+          xp = xp >= 100 ? 35 : Math.min(100, xp + 15);
+          if (xpBar) xpBar.style.transform = 'scaleX(' + (xp / 100) + ')';
+          if (xpLabel) xpLabel.textContent = xp + '% (' + xp + ' / 100 XP)';
+        });
+      }
+
+      var soundBtn = document.getElementById('soundToggleSimBtn');
+      if (soundBtn) {
+        soundBtn.addEventListener('click', function () {
+          var on = soundBtn.getAttribute('aria-pressed') === 'true';
+          soundBtn.setAttribute('aria-pressed', String(!on));
+          soundBtn.textContent = !on ? 'Sound Effects: ON' : 'Sound Effects: MUTED';
+        });
+      }
+
+      var langOut = document.getElementById('activeLangStatus');
+      document.querySelectorAll('[data-lang-pill]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (langOut) langOut.textContent = btn.getAttribute('data-lang-pill') || '';
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.duo76-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('duo76Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

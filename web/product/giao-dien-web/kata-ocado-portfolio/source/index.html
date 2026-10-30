@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kathleen Anne "Kata" Ocado — Portfolio &amp; Resume | Art Director &amp; Graphic Designer</title>
+  <meta name="description" content="Hello! I am Kathleen Anne Ocado, Kata for short — 7 years experience as Graphic Designer & Art Director across Brand Design, Print, Social Media, and Web UI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #1F142E;
+      --surface: #2C1D42;
+      --surface-cream: #F5F2EB;
+      --fg: #FAF8F5;
+      --muted: #D8CBEB;
+      --border: rgba(245, 158, 11, 0.28);
+      --accent: #F59E0B;
+      --accent-text: #FCD34D;
+      --accent-strong: #FBBF24;
+      --on-accent: #1F142E;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid #FFFFFF; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .kat51-cursor-ring, .kat51-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .kat51-cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .kat51-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .kat51-cursor-ring, .kat51-cursor-dot { display: none; } }
+
+    .kat51-header {
+      position: sticky; top: 0; z-index: 220;
+      background: rgba(31, 20, 46, 0.9); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .kat51-wrap { max-width: 1320px; margin: 0 auto; padding: 20px clamp(20px, 4vw, 60px); }
+    .kat51-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .kat51-brand {
+      font-family: var(--font-display); font-weight: 700; font-size: 24px;
+      color: var(--fg); text-decoration: none;
+    }
+    .kat51-links { display: flex; gap: 24px; list-style: none; }
+    .kat51-links a { color: var(--fg); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .kat51-links a:hover { color: var(--accent-text); }
+    .kat51-btn-gold {
+      padding: 11px 22px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; border: none; cursor: pointer;
+    }
+    .kat51-btn-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,0.08);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+
+    .kat51-hero {
+      padding: clamp(44px, 6vw, 80px) 0;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; align-items: center;
+    }
+    .kat51-h1 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(42px, 5.8vw, 72px); line-height: 1.02; letter-spacing: -0.02em;
+      margin: 12px 0 18px;
+    }
+    .kat51-h2 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(28px, 4vw, 44px); line-height: 1.08; margin-bottom: 18px;
+    }
+    .kat51-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .kat51-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 28px;
+    }
+    .kat51-pill-gold {
+      display: inline-flex; padding: 8px 16px; border-radius: 999px;
+      background: rgba(245, 158, 11, 0.16); border: 1px solid var(--border);
+      color: var(--accent-text); font-weight: 600; font-size: 13px;
+    }
+    .kat51-reveal {
+      opacity: 0; transform: translate3d(0, 18px, 0);
+      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
+    }
+    .kat51-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .kat51-modal {
+      position: fixed; inset: 0; z-index: 190; background: rgba(31, 20, 46, 0.86);
+      backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .kat51-modal.is-open { display: flex; }
+    .kat51-modal-box {
+      max-width: 520px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 1px solid var(--border); padding: 32px; pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) { .kat51-hero, .kat51-grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { .kat51-links { display: none; } }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="kat51-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="kat51-cursor-dot" aria-hidden="true"></div>
+
+  <header class="kat51-header">
+    <div class="kat51-wrap kat51-nav">
+      <a href="#heroStage" class="kat51-brand">Kata Ocado.</a>
+      <nav aria-label="Kata Ocado Portfolio Navigation">
+        <ul class="kat51-links">
+          <li><a href="#heroStage">About Kata</a></li>
+          <li><a href="#expertiseSection">Expertise</a></li>
+          <li><a href="#softwareMatrix">Software Skills</a></li>
+          <li><a href="#experienceTimeline">Education &amp; CV</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="kat51-btn-ghost" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="kat51-btn-gold" data-next-preview>Let's Talk!</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" class="kat51-wrap">
+    <!-- HERO -->
+    <section id="heroStage" class="kat51-hero" aria-labelledby="oversizedHeadline">
+      <div>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.14em;">PORTFOLIO &amp; RESUME • ART DIRECTOR</span>
+        <h1 id="oversizedHeadline" class="kat51-h1">
+          Hello! I am Kathleen Anne <em style="color:var(--accent-text);">"Kata"</em> Ocado.
+        </h1>
+        <p style="font-size:16px;color:var(--muted);line-height:1.65;max-width:54ch;margin-bottom:24px;">
+          Graphic Designer &amp; Art Director with 7+ years of experience crafting campaign storytelling, print advertisements, social media ecosystems, and brand identities.
+        </p>
+        <div id="expertiseSection" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;">
+          <span class="kat51-pill-gold">Art Direction</span>
+          <span class="kat51-pill-gold">Social Media</span>
+          <span class="kat51-pill-gold">Print Ads</span>
+          <span class="kat51-pill-gold">Web Design</span>
+          <span class="kat51-pill-gold">Video Editing</span>
+          <span class="kat51-pill-gold">Brand Design</span>
+        </div>
+        <button type="button" class="kat51-btn-gold" data-seamless-trigger="Commission Art Direction — Kata Ocado">Download Full Dossier →</button>
+      </div>
+
+      <div class="kat51-card tabular-nums">
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">CREATIVE CREDENTIALS</span>
+        <h2 style="font-family:var(--font-display);font-size:28px;margin:8px 0 14px;">BFA Advertising Arts</h2>
+        <svg viewBox="0 0 320 120" width="100%" height="110" fill="none" aria-hidden="true" style="margin-bottom:12px;">
+          <rect x="8" y="10" width="304" height="100" rx="18" fill="#1F142E" stroke="#F59E0B" stroke-width="1.5"/>
+          <circle cx="64" cy="60" r="28" fill="#F59E0B"/>
+          <circle cx="64" cy="52" r="10" fill="#1F142E"/>
+          <path d="M44 82c4-14 36-14 40 0" fill="#1F142E"/>
+          <rect x="112" y="36" width="140" height="10" rx="5" fill="#FCD34D"/>
+          <rect x="112" y="56" width="176" height="8" rx="4" fill="#D8CBEB" fill-opacity="0.5"/>
+          <rect x="112" y="74" width="116" height="8" rx="4" fill="#F59E0B" fill-opacity="0.7"/>
+        </svg>
+        <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">
+          Far Eastern University • Magna Cum Laude Track in Visual Campaign Direction &amp; Integrated Media.
+        </p>
+        <div style="display:flex;justify-content:space-between;border-top:1px solid var(--border);padding-top:16px;">
+          <div><strong data-counter-target="7" data-counter-suffix=" Years" style="font-size:28px;color:var(--accent-text);display:block;">7 Years</strong><span style="font-size:12px;color:var(--muted);">Agency &amp; Brand Lead</span></div>
+          <div><strong data-counter-target="140" data-counter-suffix="+" style="font-size:28px;color:var(--accent-text);display:block;">140+</strong><span style="font-size:12px;color:var(--muted);">Campaigns Shipped</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONE LIVE THING: INTERACTIVE SOFTWARE PROFICIENCY MATRIX -->
+    <section id="softwareMatrix" style="padding:28px 0 56px;" aria-labelledby="softHeading">
+      <div class="kat51-card tabular-nums">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:18px;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">CREATIVE SUITE WORKBENCH</span>
+            <h2 id="softHeading" class="kat51-h2" style="margin-bottom:0;">Interactive Software Proficiency Matrix</h2>
+          </div>
+          <div role="group" aria-label="Select Creative Tool" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="kat51-btn-gold tool-btn" data-tool="Ps / Ai — Adobe Photoshop &amp; Illustrator • 98% Mastery (Key Visuals &amp; Vector Craft)">Ps + Ai</button>
+            <button type="button" class="kat51-btn-ghost tool-btn" data-tool="Xd / Fg — Figma &amp; Adobe XD • 94% Mastery (Design Systems &amp; Interactive Prototypes)">Figma + Xd</button>
+            <button type="button" class="kat51-btn-ghost tool-btn" data-tool="Ae / Pr — After Effects &amp; Premiere Pro • 90% Mastery (Motion Reels &amp; Social Video)">Ae + Pr</button>
+          </div>
+        </div>
+        <p id="toolSpecOutput" style="font-family:var(--font-mono);font-size:14px;color:var(--accent-text);padding:16px;border-radius:14px;background:var(--bg);border:1px solid var(--border);">
+          Ps / Ai — Adobe Photoshop &amp; Illustrator • 98% Mastery (Key Visuals &amp; Vector Craft)
+        </p>
+      </div>
+    </section>
+
+    <section id="experienceTimeline" style="padding:12px 0 64px;" aria-labelledby="expHeading">
+      <h2 id="expHeading" class="kat51-h2">Career Milestones</h2>
+      <div class="kat51-grid-3">
+        <article class="kat51-card kat51-reveal">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">2023 — PRESENT</span>
+          <h3 style="font-size:20px;margin:8px 0;">Senior Art Director</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Leading 360-degree brand launches, seasonal lookbooks, and digital design systems.</p>
+        </article>
+        <article class="kat51-card kat51-reveal">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">2020 — 2023</span>
+          <h3 style="font-size:20px;margin:8px 0;">Multimedia Graphic Designer</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Directed social motion campaigns, packaging suites, and high-converting web landing pages.</p>
+        </article>
+        <article class="kat51-card kat51-reveal">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">2018 — 2020</span>
+          <h3 style="font-size:20px;margin:8px 0;">Junior Visual Designer</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Crafted print collateral, out-of-home billboards, and editorial illustration systems.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kat51-wrap" style="border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 Kathleen Anne "Kata" Ocado — Art Direction &amp; Graphic Design.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent-text);">MANILA • GLOBAL REMOTE</span>
+  </footer>
+
+  <div id="seamlessModal" class="kat51-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="kat51-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">KATA OCADO STUDIO</span>
+        <button type="button" id="closeSeamlessBtn" class="kat51-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">Let's Create Together</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Available for creative direction, brand identity systems, and campaign key visuals.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="kat51-btn-gold" style="width:100%;">Request Portfolio Deck</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var out = document.getElementById('toolSpecOutput');
+      document.querySelectorAll('.tool-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.tool-btn').forEach(function (b) {
+            b.className = b === btn ? 'kat51-btn-gold tool-btn' : 'kat51-btn-ghost tool-btn';
+          });
+          if (out) out.textContent = btn.getAttribute('data-tool');
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.kat51-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

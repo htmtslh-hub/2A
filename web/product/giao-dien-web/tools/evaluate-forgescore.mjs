@@ -45,7 +45,7 @@ const INLINE_PRODUCTS = new Set([
   'industrix-engineering', 'aquarium-animals',
   'flash-rocky-mountain', 'steary-spatial-cinema', 'swatch-luxury-chronograph',
   'digitwist-ai-builder', 'dot', 'email-marketing'
-, 'calfin-weather', 'cybr-brutalism', 'aurelia-biocyber', 'hush-futurist-bags', 'quiet-place-sanctuary']);
+, 'calfin-weather', 'cybr-brutalism', 'aurelia-biocyber', 'hush-futurist-bags', 'quiet-place-sanctuary', 'duolingo-styleguide', 'cross-border', 'subscription-agency', 'dotdna-cyber', 'polkacrypto-future', 'nexora-alex-portfolio', 'kata-ocado-portfolio', 'glitch-cyberwear']);
 
 const STATIC_ZIP_LIMIT = 20480;       // 20 KiB (WEB-STATIC-1)
 const CRAFT_ZIP_LIMIT = 1048576;      // 1 MiB (WEB-CRAFT-2)

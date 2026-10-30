@@ -1,0 +1,48 @@
+{
+  "id": "t179",
+  "slug": "kata-ocado-portfolio",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-30T11:28:41.443Z",
+  "demo": "/demos/kata-ocado-portfolio/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "4b15d55e7579",
+  "sha256": "4b15d55e75793a5fb91e51f8aa25004fbc44fb1878cf68213d4c695488bdc2ab",
+  "demoHtmlSha256": "7af973f5aacd8c180335f4a7130d8beba3862b0e54f8dc9948488edab294f259",
+  "demoSha256": "b0cf6135daec1c6ddfc8855c1f8ea4f24865c96751295dbaaa0d4aae605b4307",
+  "bytes": 487893,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.477,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.856,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 438
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kata-ocado-portfolio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kata-ocado-portfolio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kata-ocado-portfolio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\kata-ocado-portfolio-return.jpg"
+  ]
+}

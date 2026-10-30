@@ -1,0 +1,48 @@
+{
+  "id": "t173",
+  "slug": "duolingo-styleguide",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-30T11:26:43.103Z",
+  "demo": "/demos/duolingo-styleguide/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "b7a85864a46e",
+  "sha256": "b7a85864a46e865aadcd7c3e596a9fa225fe6a7c894594ae33871ec27ba5b0a8",
+  "demoHtmlSha256": "39670810aa21dc13267ec10876057a76f9dbaf7564bbe656db01c5beb31aa633",
+  "demoSha256": "088c30ced399dacf673109befd81c6b04a2fba9c81d68396550201119993fc55",
+  "bytes": 639565,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.456,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.836,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1345
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\duolingo-styleguide-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\duolingo-styleguide-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\duolingo-styleguide-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\duolingo-styleguide-return.jpg"
+  ]
+}

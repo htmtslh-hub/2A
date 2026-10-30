@@ -1,0 +1,48 @@
+{
+  "id": "t177",
+  "slug": "polkacrypto-future",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-30T11:28:01.818Z",
+  "demo": "/demos/polkacrypto-future/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d298b632f63e",
+  "sha256": "d298b632f63eaac81eebe0408ded96070f406e13eda82f89eb4fdfcca501f12a",
+  "demoHtmlSha256": "5390b3821c4bcf2400ffb4ca928dd03198701f6cb21d5e7d07fbd11024c3d286",
+  "demoSha256": "7e87e0cae7c67eaa11c455425a3cd94ec27318128eb42d00dc70c62fceea6320",
+  "bytes": 372930,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.466,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.846,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 501
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\polkacrypto-future-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\polkacrypto-future-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\polkacrypto-future-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\polkacrypto-future-return.jpg"
+  ]
+}

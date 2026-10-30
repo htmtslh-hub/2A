@@ -1,0 +1,48 @@
+{
+  "id": "t180",
+  "slug": "glitch-cyberwear",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-30T11:29:01.091Z",
+  "demo": "/demos/glitch-cyberwear/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "1fd5135b0f93",
+  "sha256": "1fd5135b0f933ecc5e8234d71af7244e8da031c80b82fbbb142328b7991d6de1",
+  "demoHtmlSha256": "82b49b0151cced644a7eb4b9cf976fa1b598ceb053f6889a6c63b76d02ca9db5",
+  "demoSha256": "34cbff4a064708f416a69d043a617cf85a5f38444edbaefa66b77873ce9de363",
+  "bytes": 400701,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.474,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.854,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 461
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\glitch-cyberwear-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\glitch-cyberwear-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\glitch-cyberwear-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\glitch-cyberwear-return.jpg"
+  ]
+}

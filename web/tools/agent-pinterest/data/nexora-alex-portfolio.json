@@ -1,0 +1,32 @@
+{
+  "pinId": "local-4c686f8c153a",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1052997956649341571_Mục_này_có_hình_ảnh_của_Personal_Por.png",
+  "archivedImagePath": "D:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-30\\pin_1052997956649341571_Mục_này_có_hình_ảnh_của_Personal_Por.png",
+  "title": "Nexora Alex Portfolio",
+  "slug": "nexora-alex-portfolio",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-ambient-marquee",
+    "name": "Ambient Particle Canvas + Kinetic Marquee + Cutout Glass Tabs",
+    "focus": [
+      "ambient-smoke-particles",
+      "infinite-marquee",
+      "inverted-cutout-tabs"
+    ],
+    "description": "Tập trung vào hệ thống hạt bụi/khói chuyển động nền (Ambient Canvas), chữ chạy vô tận (Marquee) và thẻ bo góc Cutout."
+  },
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-30\\nexora-alex-portfolio.png",
+  "imageBytes": 1459044,
+  "imageSha256": "4c686f8c153a21661b58815d7c092ca4d8b3900c433ca52f9e832e77524b0947",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 807,
+    "height": 1949,
+    "aspectRatio": 0.41,
+    "reason": "Rejected geometry (807x1949, AR=0.41) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-10-30T11:24:03.860Z"
+}

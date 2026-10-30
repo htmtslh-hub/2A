@@ -4317,10 +4317,12 @@ ${accessLine}    version: '1.0.0',
     }
   }
 
-  execFileSync('node', ['web/tools/agent-motionsites/generate-previews.mjs', slug], {
-    cwd: root,
-    stdio: 'inherit'
-  });
+  if (!options.skipPreviews) {
+    execFileSync('node', ['web/tools/agent-motionsites/generate-previews.mjs', slug], {
+      cwd: root,
+      stdio: 'inherit'
+    });
+  }
 
   return { slug, catalogId, title: data.title, accessTier };
 }

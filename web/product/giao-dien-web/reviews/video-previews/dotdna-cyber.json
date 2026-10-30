@@ -1,0 +1,48 @@
+{
+  "id": "t176",
+  "slug": "dotdna-cyber",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-30T11:27:42.155Z",
+  "demo": "/demos/dotdna-cyber/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "08da263cc65c",
+  "sha256": "08da263cc65c64e71437630f7ef664b26ae347ee0ed1c469882280c5632f864f",
+  "demoHtmlSha256": "07dc0d743d58c6933bdb2e182eb90caaa108d900b0053e6ad063edf1b6d040fc",
+  "demoSha256": "12052ef57a6c58c60875dc13e54b8f0a3b02c5dd33939af00d889b7fe70e19ae",
+  "bytes": 371155,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.467,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.847,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 563
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\dotdna-cyber-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\dotdna-cyber-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\dotdna-cyber-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\dotdna-cyber-return.jpg"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "t174",
+  "slug": "cross-border",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-30T11:27:02.809Z",
+  "demo": "/demos/cross-border/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "7efbe29e6541",
+  "sha256": "7efbe29e6541dd8fd7bb3c2cfb971f0e427dd2e15562eb8db15c45cf9dd47c93",
+  "demoHtmlSha256": "d721cfab20e02dc44201fa33b5fc908f4ce5dd48ce1ad0361e3a1fab14b999fd",
+  "demoSha256": "93e67cd2337323745d6fd2ebe23bcf936db10acc515455eb56a89f6549b2a86a",
+  "bytes": 438128,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.467,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.845,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1239
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cross-border-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cross-border-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cross-border-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\cross-border-return.jpg"
+  ]
+}

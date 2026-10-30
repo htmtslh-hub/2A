@@ -1,0 +1,67 @@
+{
+  "pinId": "local-429d836f12e6",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1040542688905903756_Need_a_website_for_your_business_Con.jpg",
+  "archivedImagePath": "D:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-30\\pin_1040542688905903756_Need_a_website_for_your_business_Con.jpg",
+  "title": "DotDNA Cyber",
+  "slug": "dotdna-cyber",
+  "assignedTier": "free",
+  "motionRecipe": {
+    "id": "recipe-parallax-magnetic",
+    "name": "Parallax Depth + 3D Pop-Out + Magnetic CTA",
+    "focus": [
+      "parallax-layers",
+      "magnetic-buttons",
+      "floating-3d-cutout"
+    ],
+    "description": "Tập trung vào chiều sâu thị sai nhiều lớp (Parallax), vật thể 3D nổi lấn khung và nút bấm từ tính nhẹ nhàng."
+  },
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-30\\dotdna-cyber.jpg",
+  "imageBytes": 29333,
+  "imageSha256": "429d836f12e6a67d8368e2a260fe725bf31702954981910d9f9cef422bc759d7",
+  "criteriaEvaluation": {
+    "accepted": true,
+    "totalScore": 100,
+    "criteriaMatchPercent": 100,
+    "passedCriteriaCount": 6,
+    "width": 720,
+    "height": 540,
+    "aspectRatio": 1.33,
+    "fullBleedRatio": 1,
+    "dofRatio": 2.86,
+    "criteriaChecks": {
+      "formatDesktopHeroShowcase": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "visualHookFullBleed3DDepth": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "floatingGlassPillCards": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "outOfBounds3DPopOut": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "oversizedHeadlineTypography": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "minimalistEdgeNavigation": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      }
+    },
+    "reason": "PASSED (100/100, 6/6 criteria = 100%)"
+  },
+  "fetchedAt": "2026-10-30T11:24:03.851Z"
+}

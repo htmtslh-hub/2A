@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-10-29",
+  "lastRunDate": "2026-10-30",
   "todayCopiedCount": 5,
   "todayFreeCount": 2,
   "todayPremiumCount": 3,
@@ -24,7 +24,12 @@
     "local-0074202d0629",
     "local-c83e430cbd15",
     "local-b2ca43a410d4",
-    "local-f10f338bc06e"
+    "local-f10f338bc06e",
+    "local-429d836f12e6",
+    "local-8b8453c973fd",
+    "local-4c686f8c153a",
+    "local-b4b8ac6ba0fa",
+    "local-dbdf32161e8a"
   ],
   "processedImageHashes": [
     "ecb0eb8a36263a9bd80e535321f1f5161c76d6b70a0bf9ea3d6ab2462886f512",
@@ -46,7 +51,12 @@
     "0074202d0629a203f2f3ab6cf16137c18d6fb0193be7273d9b693fd77786c157",
     "c83e430cbd15863372fba4489e570f32f39445e5e155540093608dd2c35025ef",
     "b2ca43a410d48133065a6e7b5e7a5d8c588cdb672fc261eb5fd94cd0c66ecccd",
-    "f10f338bc06e4d010ffbfc36c36f80dd3e4835be0c4b0a35e5ef0f91ddd1af13"
+    "f10f338bc06e4d010ffbfc36c36f80dd3e4835be0c4b0a35e5ef0f91ddd1af13",
+    "429d836f12e6a67d8368e2a260fe725bf31702954981910d9f9cef422bc759d7",
+    "8b8453c973fd85ef377facbd96eafe9ede8f8582ea3f79328e99f1b5e27cddb3",
+    "4c686f8c153a21661b58815d7c092ca4d8b3900c433ca52f9e832e77524b0947",
+    "b4b8ac6ba0fad81f042dbb24e7dd85dd532257ac25562ec8992e4628b07854bd",
+    "dbdf32161e8a622608ba136066a4b1dc6ce713ebec28b9d1e7828e1669ae62e0"
   ],
   "processedSlugs": [
     "_design",
@@ -88,6 +98,7 @@
     "codenest-coding-platform",
     "cozypaws",
     "crimson-folio",
+    "cross-border",
     "cyber-ronin",
     "cybr-brutalism",
     "datacore-booking",
@@ -100,7 +111,9 @@
     "digitwist-ai-builder",
     "docs",
     "dot",
+    "dotdna-cyber",
     "dualplay",
+    "duolingo-styleguide",
     "eclipsio",
     "ecommerce-omorfia",
     "email-marketing",
@@ -118,6 +131,7 @@
     "fresh-reddy",
     "galaxy-edge",
     "geospace-canvas",
+    "glitch-cyberwear",
     "glow-features",
     "gridwork-co",
     "halden",
@@ -130,6 +144,7 @@
     "jack-3d",
     "japan-sunrise-tour",
     "japan-trails",
+    "kata-ocado-portfolio",
     "keystead",
     "kinetiq",
     "kresna-footer",
@@ -165,6 +180,7 @@
     "neuralkinetics",
     "neuralyn",
     "nexlayer",
+    "nexora-alex-portfolio",
     "nexora-automation",
     "nextsus-gamerlix",
     "nourish-bowl",
@@ -175,6 +191,7 @@
     "orbis-nft",
     "orbit-academy",
     "pinehaven",
+    "polkacrypto-future",
     "portfolio-cosmic",
     "power-ai",
     "price-calculator",
@@ -202,6 +219,7 @@
     "startup-devkit",
     "steary-spatial-cinema",
     "stellar-ai",
+    "subscription-agency",
     "swatch-luxury-chronograph",
     "synapsex",
     "targo",
@@ -369,6 +387,37 @@
         "aurelia-biocyber": "premium",
         "hush-futurist-bags": "premium",
         "quiet-place-sanctuary": "premium"
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "built": [
+        "dotdna-cyber",
+        "polkacrypto-future",
+        "nexora-alex-portfolio",
+        "kata-ocado-portfolio",
+        "glitch-cyberwear"
+      ],
+      "catalogIds": [
+        "t176",
+        "t177",
+        "t178",
+        "t179",
+        "t180"
+      ],
+      "pinIds": [
+        "local-429d836f12e6",
+        "local-8b8453c973fd",
+        "local-4c686f8c153a",
+        "local-b4b8ac6ba0fa",
+        "local-dbdf32161e8a"
+      ],
+      "tiers": {
+        "dotdna-cyber": "free",
+        "polkacrypto-future": "free",
+        "nexora-alex-portfolio": "premium",
+        "kata-ocado-portfolio": "premium",
+        "glitch-cyberwear": "premium"
       }
     }
   ],

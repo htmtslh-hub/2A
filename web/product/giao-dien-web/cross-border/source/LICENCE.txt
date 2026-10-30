@@ -1,0 +1,16 @@
+FORGE ZONE COMMERCIAL TEMPLATE LICENCE (v2.0)
+
+Copyright (c) 2026 Forge Zone (https://forgezone.store). All rights reserved.
+
+1. GRANT OF LICENCE
+The purchaser or authorised user of this template ("Cross-Border" / "cross-border") is granted a non-exclusive, perpetual, worldwide licence to use, modify, and deploy the template source code for personal or commercial web projects.
+
+2. PERMITTED USES
+- Unlimited customisation of HTML, CSS, JavaScript, SVG illustrations, and layout structures.
+- Deployment on commercial client websites, startup landing pages, and internal web applications.
+
+3. RESTRICTIONS
+- You may not redistribute, resell, or sub-licence the unmodified template archive (cross-border.zip) on competing template marketplaces.
+
+4. WARRANTY DISCLAIMER
+Provided "AS IS" without warranty of any kind, express or implied.

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nexora — Alex Carter | Creative Designer &amp; Brand Architect</title>
+  <meta name="description" content="Hi, I'm Alex Carter — Creative Designer turning ideas into beautiful UI/UX, brand identity, and web design systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080711;
+      --surface: #121024;
+      --surface-elevated: #1B1836;
+      --fg: #F8FAFC;
+      --muted: #A5B4FC;
+      --border: rgba(139, 92, 246, 0.25);
+      --accent: #8B5CF6;
+      --accent-text: #C4B5FD;
+      --accent-strong: #A78BFA;
+      --on-accent: #FFFFFF;
+      --font-display: 'Outfit', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: #FFFFFF;
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid #FFFFFF; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .nex27-cursor-ring, .nex27-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .nex27-cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--accent-text); margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .nex27-cursor-dot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .nex27-cursor-ring, .nex27-cursor-dot { display: none; } }
+
+    .nex27-header {
+      position: sticky; top: 0; z-index: 220;
+      background: rgba(8, 7, 17, 0.88); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nex27-wrap { max-width: 1320px; margin: 0 auto; padding: 20px clamp(20px, 4vw, 60px); }
+    .nex27-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .nex27-brand {
+      font-family: var(--font-display); font-weight: 800; font-size: 24px;
+      color: #FFFFFF; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+    }
+    .nex27-links { display: flex; gap: 24px; list-style: none; }
+    .nex27-links a { color: var(--fg); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .nex27-links a:hover { color: var(--accent-text); }
+    .nex27-btn-violet {
+      padding: 11px 22px; border-radius: 999px; background: var(--accent); color: #FFFFFF;
+      font-weight: 700; font-size: 13px; border: none; cursor: pointer;
+    }
+    .nex27-btn-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+
+    .nex27-hero {
+      padding: clamp(44px, 6vw, 80px) 0;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; align-items: center;
+    }
+    .nex27-h1 {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: clamp(42px, 5.8vw, 74px); line-height: 1.02; letter-spacing: -0.03em;
+      margin: 12px 0 18px;
+    }
+    .nex27-h2 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(30px, 4vw, 46px); line-height: 1.08; margin-bottom: 18px;
+    }
+    .nex27-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0 48px; }
+    .nex27-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .nex27-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .nex27-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 26px;
+    }
+    .nex27-reveal {
+      opacity: 0; transform: translate3d(0, 18px, 0);
+      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
+    }
+    .nex27-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .nex27-modal {
+      position: fixed; inset: 0; z-index: 190; background: rgba(8, 7, 17, 0.86);
+      backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .nex27-modal.is-open { display: flex; }
+    .nex27-modal-box {
+      max-width: 520px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 1px solid var(--border); padding: 32px; pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .nex27-hero, .nex27-stats-row, .nex27-grid-2, .nex27-grid-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) { .nex27-links { display: none; } }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="nex27-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="nex27-cursor-dot" aria-hidden="true"></div>
+
+  <header class="nex27-header">
+    <div class="nex27-wrap nex27-nav">
+      <a href="#heroStage" class="nex27-brand">
+        <span style="width:28px;height:28px;border-radius:8px;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;font-size:15px;">N</span>
+        <span>Nexora</span>
+      </a>
+      <nav aria-label="Nexora Portfolio Navigation">
+        <ul class="nex27-links">
+          <li><a href="#heroStage">Home</a></li>
+          <li><a href="#servicesSection">Services</a></li>
+          <li><a href="#portfolioWorkbench">Portfolio</a></li>
+          <li><a href="#testimonialsSection">Reviews</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="nex27-btn-ghost" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="nex27-btn-violet" data-next-preview>Let's Talk →</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" class="nex27-wrap">
+    <!-- HERO -->
+    <section id="heroStage" class="nex27-hero" aria-labelledby="oversizedHeadline">
+      <div>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.14em;">CREATIVE PORTFOLIO • ALEX CARTER</span>
+        <h1 id="oversizedHeadline" class="nex27-h1">
+          Hi, I'm Alex Carter — <span style="color:var(--accent-text);">Creative Designer</span>
+        </h1>
+        <p style="font-size:16px;color:var(--muted);line-height:1.65;max-width:54ch;margin-bottom:26px;">
+          Turning complex product ideas into luminous digital experiences across UI/UX Design, Brand Identity, and interactive design systems.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="#portfolioWorkbench" class="nex27-btn-violet" style="text-decoration:none;">View My Work →</a>
+          <button type="button" class="nex27-btn-ghost" data-seamless-trigger="Book Discovery Call with Alex Carter">Download CV</button>
+        </div>
+      </div>
+
+      <div class="nex27-card" style="text-align:center;background:radial-gradient(circle at 50% 35%, rgba(139,92,246,0.32), rgba(18,16,36,0.96));">
+        <svg viewBox="0 0 320 220" width="100%" height="200" fill="none" aria-hidden="true">
+          <circle cx="160" cy="110" r="76" stroke="#8B5CF6" stroke-width="2.5" stroke-dasharray="6 4"/>
+          <circle cx="160" cy="92" r="28" fill="#C4B5FD"/>
+          <path d="M108 176c10-32 94-32 104 0" fill="#8B5CF6"/>
+        </svg>
+        <p style="font-family:var(--font-display);font-size:20px;color:var(--accent-text);margin-top:8px;">"Design Creates Value"</p>
+      </div>
+    </section>
+
+    <!-- 4 METRIC CARDS -->
+    <section class="nex27-stats-row tabular-nums" aria-label="Career Metrics">
+      <div class="nex27-card"><strong data-counter-target="100" data-counter-suffix="+" style="font-family:var(--font-display);font-size:34px;color:var(--accent-text);display:block;">100+</strong><span style="font-size:13px;color:var(--muted);">Projects Completed</span></div>
+      <div class="nex27-card"><strong data-counter-target="80" data-counter-suffix="+" style="font-family:var(--font-display);font-size:34px;color:var(--accent-text);display:block;">80+</strong><span style="font-size:13px;color:var(--muted);">Happy Clients</span></div>
+      <div class="nex27-card"><strong style="font-family:var(--font-display);font-size:34px;color:var(--accent-text);display:block;">5.0</strong><span style="font-size:13px;color:var(--muted);">Client Ratings</span></div>
+      <div class="nex27-card"><strong data-counter-target="3" data-counter-suffix="+ Years" style="font-family:var(--font-display);font-size:34px;color:var(--accent-text);display:block;">3+ Years</strong><span style="font-size:13px;color:var(--muted);">Design Experience</span></div>
+    </section>
+
+    <!-- ONE LIVE THING: FILTERABLE RECENT PROJECTS -->
+    <section id="portfolioWorkbench" style="padding:24px 0 56px;" aria-labelledby="projHeading">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:22px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">SELECTED CASE STUDIES</span>
+          <h2 id="projHeading" class="nex27-h2" style="margin-bottom:0;">My Recent Projects</h2>
+        </div>
+        <div role="group" aria-label="Filter Projects by Discipline" style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="nex27-btn-violet filter-btn" data-cat="all">All</button>
+          <button type="button" class="nex27-btn-ghost filter-btn" data-cat="branding">Branding</button>
+          <button type="button" class="nex27-btn-ghost filter-btn" data-cat="web">Web Design</button>
+          <button type="button" class="nex27-btn-ghost filter-btn" data-cat="graphics">Graphics</button>
+        </div>
+      </div>
+
+      <div class="nex27-grid-2">
+        <article class="nex27-card proj-item" data-proj-cat="web" data-seamless-trigger="Case Study — Nova Fintech SaaS Platform">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">WEB DESIGN • SAAS</span>
+          <h3 style="font-size:22px;margin:8px 0;">Nova AI Financial Workspace</h3>
+          <p style="font-size:14px;color:var(--muted);">Multi-currency treasury dashboard and design token library.</p>
+        </article>
+        <article class="nex27-card proj-item" data-proj-cat="branding" data-seamless-trigger="Case Study — Lumina Audio Brand Identity">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">BRANDING • PACKAGING</span>
+          <h3 style="font-size:22px;margin:8px 0;">Lumina Spatial Acoustics</h3>
+          <p style="font-size:14px;color:var(--muted);">Visual identity, custom wordmark, and 3D retail packaging system.</p>
+        </article>
+        <article class="nex27-card proj-item" data-proj-cat="web" data-seamless-trigger="Case Study — Veloce Web3 Exchange">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">WEB DESIGN • UI/UX</span>
+          <h3 style="font-size:22px;margin:8px 0;">Veloce Perpetual DEX</h3>
+          <p style="font-size:14px;color:var(--muted);">Low-latency orderbook interface and mobile companion wallet.</p>
+        </article>
+        <article class="nex27-card proj-item" data-proj-cat="graphics" data-seamless-trigger="Case Study — Kinetic 3D Poster Series">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">GRAPHICS • ART DIRECTION</span>
+          <h3 style="font-size:22px;margin:8px 0;">Chroma 3D Editorial Type</h3>
+          <p style="font-size:14px;color:var(--muted);">Custom procedural shaders and exhibition poster system.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES & TESTIMONIALS -->
+    <section id="servicesSection" style="padding:24px 0 64px;" aria-labelledby="testHeading">
+      <h2 id="testHeading" class="nex27-h2">What My Clients Say</h2>
+      <div id="testimonialsSection" class="nex27-grid-3">
+        <article class="nex27-card nex27-reveal">
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:14px;">"Alex transformed our SaaS onboarding flow, lifting trial-to-paid conversion by 38% in six weeks."</p>
+          <strong style="font-size:15px;">Sarah Mitchell — VP Product</strong>
+        </article>
+        <article class="nex27-card nex27-reveal">
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:14px;">"Every Figma component and motion spec was production-ready on day one."</p>
+          <strong style="font-size:15px;">James Walker — Founder</strong>
+        </article>
+        <article class="nex27-card nex27-reveal">
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:14px;">"Our rebrand stood out immediately during our Series A pitch deck roadshow."</p>
+          <strong style="font-size:15px;">Emily Carter — Creative Lead</strong>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nex27-wrap" style="border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 Nexora — Alex Carter Creative Studio. hello@nexora.com</span>
+    <span style="font-family:var(--font-mono);color:var(--accent-text);">AVAILABLE FOR Q4 SPRINT</span>
+  </footer>
+
+  <div id="seamlessModal" class="nex27-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="nex27-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">NEXORA PROJECT BRIEF</span>
+        <button type="button" id="closeSeamlessBtn" class="nex27-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">Let's Work Together</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Share your product timeline and scope to lock in a dedicated design sprint with Alex Carter.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="nex27-btn-violet" style="width:100%;">Send Project Inquiry</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var items = document.querySelectorAll('.proj-item');
+      document.querySelectorAll('.filter-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var cat = btn.getAttribute('data-cat') || 'all';
+          document.querySelectorAll('.filter-btn').forEach(function (b) {
+            b.className = b === btn ? 'nex27-btn-violet filter-btn' : 'nex27-btn-ghost filter-btn';
+          });
+          items.forEach(function (el) {
+            var match = cat === 'all' || el.getAttribute('data-proj-cat') === cat;
+            el.style.display = match ? 'block' : 'none';
+          });
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.nex27-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

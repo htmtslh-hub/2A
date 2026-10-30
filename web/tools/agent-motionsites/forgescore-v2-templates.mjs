@@ -1792,5 +1792,1270 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </html>`;
   }
 
+  // ============================================================================
+  // 5. DUOLINGO STYLEGUIDE (t173 — Free Tier)
+  // Tactile Gamified Design System & Interactive Token Workbench
+  // Palette: Feather Green #58CC02, Sky Blue #1CB0F6, Dark Navy #100F3E, Cardinal #FF4B4B, Amber #FF9600
+  // ============================================================================
+  if (spec.slug === 'duolingo-styleguide') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Duolingo Styleguide — Tactile Gamified Design System &amp; UI Token Workbench</title>
+  <meta name="description" content="Explore Duolingo's playful, accessible design language: Feather Green 3D tactile buttons, Nunito typographic scale, course cards, and live token workbench.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F7F9FA;
+      --surface: #FFFFFF;
+      --surface-dark: #100F3E;
+      --surface-dark-card: #1B1A55;
+      --fg: #1E293B;
+      --muted: #475569;
+      --border: #E2E8F0;
+      --border-dark: rgba(255, 255, 255, 0.16);
+      --accent: #58CC02;
+      --accent-shadow: #46A302;
+      --accent-text: #1B5E20;
+      --sky: #1CB0F6;
+      --sky-shadow: #1899D6;
+      --danger: #FF4B4B;
+      --danger-shadow: #EA2B2B;
+      --orange: #FF9600;
+      --gold: #FFC800;
+      --font-display: 'Nunito', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 20px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #0A1905; }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--surface-dark); color: #ffffff;
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid var(--sky); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--sky); outline-offset: 3px;
+    }
+    button, [role="button"] {
+      font-family: var(--font-display);
+      transition: transform 0.16s var(--ease-out), background-color 0.16s var(--ease-out), opacity 0.16s var(--ease-out);
+    }
+    button:active, [role="button"]:active {
+      transform: translateY(3px) scale(0.98);
+    }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 32px; height: 32px; border: 2px solid var(--sky); margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent-shadow); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-header {
+      position: sticky; top: 0; z-index: 220; background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px); border-bottom: 2px solid var(--border);
+    }
+    .${p}-nav-inner {
+      max-width: 1360px; margin: 0 auto; padding: 14px clamp(20px, 4vw, 56px);
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .${p}-brand {
+      display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--fg);
+    }
+    .${p}-wordmark {
+      font-family: var(--font-display); font-weight: 900; font-size: 26px; letter-spacing: -0.03em; color: #100F3E;
+    }
+    .${p}-divider { width: 2px; height: 22px; background: var(--border); }
+    .${p}-badge-tag {
+      font-family: var(--font-display); font-weight: 800; font-size: 11px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .${p}-nav-links { display: flex; gap: 24px; list-style: none; }
+    .${p}-nav-links a {
+      color: var(--fg); text-decoration: none; font-family: var(--font-display);
+      font-weight: 800; font-size: 14px;
+    }
+    .${p}-nav-links a:hover { color: #0B6E99; }
+
+    /* 3D Tactile Buttons */
+    .${p}-btn-green {
+      padding: 12px 24px; border-radius: 16px; background: var(--accent); color: #091E05;
+      font-weight: 900; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase;
+      border: 2px solid var(--accent-shadow); border-bottom-width: 5px; cursor: pointer;
+    }
+    .${p}-btn-sky {
+      padding: 12px 24px; border-radius: 16px; background: var(--sky); color: #062335;
+      font-weight: 900; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase;
+      border: 2px solid var(--sky-shadow); border-bottom-width: 5px; cursor: pointer;
+    }
+    .${p}-btn-danger {
+      padding: 12px 24px; border-radius: 16px; background: var(--danger); color: #2B0404;
+      font-weight: 900; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase;
+      border: 2px solid var(--danger-shadow); border-bottom-width: 5px; cursor: pointer;
+    }
+    .${p}-btn-ghost {
+      padding: 10px 18px; border-radius: 16px; background: #FFFFFF; color: var(--fg);
+      font-weight: 800; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase;
+      border: 2px solid #CBD5E1; border-bottom-width: 4px; cursor: pointer;
+    }
+
+    .${p}-hero {
+      max-width: 1360px; margin: 28px auto 0; padding: 0 clamp(20px, 4vw, 56px);
+    }
+    .${p}-hero-banner {
+      background: var(--surface-dark); color: #FFFFFF; border-radius: 28px;
+      padding: clamp(40px, 6vw, 72px); display: grid; grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px; align-items: center; position: relative; overflow: hidden;
+      border: 2px solid #25236E;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-weight: 900;
+      font-size: clamp(42px, 5.8vw, 72px); line-height: 1.02; letter-spacing: -0.025em;
+      color: #FFFFFF; margin: 14px 0 18px;
+    }
+    .${p}-sub {
+      font-size: clamp(16px, 1.8vw, 19px); color: #E2E8F0; line-height: 1.6;
+      max-width: 54ch; margin-bottom: 28px;
+    }
+
+    .${p}-grid-8 {
+      max-width: 1360px; margin: 36px auto 64px; padding: 0 clamp(20px, 4vw, 56px);
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
+    }
+    .${p}-panel-light {
+      background: var(--surface); border: 2px solid var(--border); border-bottom-width: 5px;
+      border-radius: 24px; padding: clamp(24px, 3.5vw, 36px); color: var(--fg);
+    }
+    .${p}-panel-dark {
+      background: var(--surface-dark); border: 2px solid #292775; border-bottom-width: 5px;
+      border-radius: 24px; padding: clamp(24px, 3.5vw, 36px); color: #FFFFFF;
+    }
+    .${p}-h2 {
+      font-family: var(--font-display); font-weight: 900;
+      font-size: clamp(24px, 3vw, 32px); letter-spacing: -0.02em; margin-bottom: 8px;
+    }
+    .${p}-kicker {
+      font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-text);
+      display: inline-block; margin-bottom: 6px;
+    }
+    .${p}-panel-dark .${p}-kicker { color: var(--gold); }
+
+    .${p}-swatch-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px;
+    }
+    .${p}-swatch-btn {
+      display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between;
+      padding: 14px; border-radius: 16px; border: 2px solid rgba(15,23,42,0.12);
+      border-bottom-width: 4px; min-height: 88px; cursor: pointer; text-align: left;
+    }
+    .${p}-course-card {
+      padding: 18px; border-radius: 18px; border: 2px solid var(--border); border-bottom-width: 4px;
+      display: flex; align-items: center; gap: 16px; margin-top: 14px; background: #FAFCFF;
+    }
+    .${p}-super-card {
+      padding: 18px; border-radius: 18px; border: 2px solid rgba(255,255,255,0.18);
+      background: var(--surface-dark-card); display: flex; align-items: center; gap: 16px; margin-top: 14px;
+    }
+    .${p}-progress-track {
+      width: 100%; height: 16px; border-radius: 999px; background: #E2E8F0; overflow: hidden; margin-top: 8px;
+    }
+    .${p}-progress-fill {
+      width: 100%; height: 100%; border-radius: 999px; background: var(--accent);
+      transform-origin: left center; transform: scaleX(0.85);
+      transition: transform 0.4s var(--ease-out);
+    }
+
+    .${p}-reveal {
+      opacity: 0; transform: translate3d(0, 18px, 0);
+      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
+    }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-footer {
+      max-width: 1360px; margin: 0 auto 48px; padding: 28px clamp(20px, 4vw, 56px);
+      border-top: 2px solid var(--border); display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px; color: var(--muted); font-size: 13px;
+    }
+
+    .${p}-seamless-overlay {
+      position: fixed; inset: 0; z-index: 190; background: rgba(16, 15, 62, 0.78);
+      backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box {
+      max-width: 520px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 2px solid var(--border); border-bottom-width: 6px; padding: 32px;
+      color: var(--fg); pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-hero-banner, .${p}-grid-8 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .${p}-nav-links { display: none; }
+      .${p}-swatch-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-nav-inner">
+      <a href="#heroStage" class="${p}-brand">
+        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect width="40" height="40" rx="12" fill="#58CC02"/>
+          <circle cx="14" cy="18" r="5" fill="#FFFFFF"/>
+          <circle cx="26" cy="18" r="5" fill="#FFFFFF"/>
+          <circle cx="14" cy="18" r="2.3" fill="#100F3E"/>
+          <circle cx="26" cy="18" r="2.3" fill="#100F3E"/>
+          <polygon points="20,21 16,26 24,26" fill="#FFC800"/>
+        </svg>
+        <span class="${p}-wordmark">duolingo</span>
+        <span class="${p}-divider" aria-hidden="true"></span>
+        <span class="${p}-badge-tag">STYLE GUIDE</span>
+      </a>
+      <nav aria-label="Styleguide Sections">
+        <ul class="${p}-nav-links">
+          <li><a href="#colorsPanel">Colors</a></li>
+          <li><a href="#typePanel">Typography</a></li>
+          <li><a href="#buttonsPanel">Buttons</a></li>
+          <li><a href="#cardsPanel">Cards</a></li>
+          <li><a href="#componentsPanel">Components</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-green" data-magnetic data-next-preview>Export Tokens</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- HERO -->
+    <section id="heroStage" class="${p}-hero" aria-labelledby="oversizedHeadline">
+      <div class="${p}-hero-banner">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(88,204,2,0.18);color:#89E219;font-family:var(--font-mono);font-size:12px;font-weight:700;">
+            DESIGN LANGUAGE v4.8 • TACTILE GAMIFICATION
+          </span>
+          <h1 id="oversizedHeadline" class="${p}-h1">duolingo design</h1>
+          <p class="${p}-sub">
+            Our tactile design system pairs rounded Nunito geometry, 4px bottom-lip 3D button physics, and vibrant Feather Green feedback loops to make daily learning feel effortless.
+          </p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <button type="button" class="${p}-btn-green" data-seamless-trigger="Duolingo Design System — Token Kit">GET STARTED</button>
+            <button type="button" class="${p}-btn-sky" data-seamless-trigger="Duolingo Component Library — Figma &amp; CSS">I ALREADY HAVE AN ACCOUNT</button>
+          </div>
+        </div>
+        <div style="background:var(--surface-dark-card);border:2px solid rgba(255,255,255,0.18);border-radius:24px;padding:24px;" class="tabular-nums">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:#FFC800;">LIVE STREAK ENGINE</span>
+            <span id="streakBadgeOut" style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:rgba(255,150,0,0.2);color:#FFC800;font-weight:800;font-size:14px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF9600" aria-hidden="true"><path d="M12 2c2 4 6 6.5 6 11a6 6 0 1 1-12 0c0-3 2-6 3-8 1 2 2 3 3 3s1-3 0-6z"/></svg>
+              <strong data-counter-target="42" data-counter-suffix=" Day Streak">42 Day Streak</strong>
+            </span>
+          </div>
+          <p style="font-size:14px;color:#E2E8F0;line-height:1.55;margin-bottom:16px;">
+            Click any swatch or interactive control below to copy live CSS variables or test tactile 3D button states.
+          </p>
+          <div style="padding:14px;border-radius:14px;background:#0A0929;border:1px solid rgba(255,255,255,0.12);font-family:var(--font-mono);font-size:12px;color:#89E219;" id="liveTokenConsole">
+            /* Copied Token */ --duo-feather-green: #58CC02;
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8-PANEL 2-COLUMN WORKBENCH GRID -->
+    <section class="${p}-grid-8" aria-label="Design System Workbench">
+      <!-- PANEL 1: COLOR SWATCHES (ONE LIVE THING) -->
+      <article id="colorsPanel" class="${p}-panel-light ${p}-reveal">
+        <span class="${p}-kicker">01 / BRAND PALETTE</span>
+        <h2 class="${p}-h2">Interactive Color Swatches</h2>
+        <p style="font-size:14px;color:var(--muted);max-width:56ch;">Click any swatch to inspect and copy its production hex token into the live console.</p>
+        <div class="${p}-swatch-grid tabular-nums">
+          <button type="button" class="${p}-swatch-btn" data-swatch-name="Feather Green" data-swatch-hex="#58CC02" style="background:#58CC02;color:#091E05;">
+            <strong>Feather Green</strong><span style="font-family:var(--font-mono);font-size:12px;">#58CC02</span>
+          </button>
+          <button type="button" class="${p}-swatch-btn" data-swatch-name="Tree Frog" data-swatch-hex="#46A302" style="background:#46A302;color:#FFFFFF;">
+            <strong>Tree Frog</strong><span style="font-family:var(--font-mono);font-size:12px;">#46A302</span>
+          </button>
+          <button type="button" class="${p}-swatch-btn" data-swatch-name="Macaw Sky" data-swatch-hex="#1CB0F6" style="background:#1CB0F6;color:#052130;">
+            <strong>Macaw Sky</strong><span style="font-family:var(--font-mono);font-size:12px;">#1CB0F6</span>
+          </button>
+          <button type="button" class="${p}-swatch-btn" data-swatch-name="Dark Navy" data-swatch-hex="#100F3E" style="background:#100F3E;color:#FFFFFF;">
+            <strong>Dark Navy</strong><span style="font-family:var(--font-mono);font-size:12px;">#100F3E</span>
+          </button>
+          <button type="button" class="${p}-swatch-btn" data-swatch-name="Cardinal Red" data-swatch-hex="#FF4B4B" style="background:#FF4B4B;color:#2B0404;">
+            <strong>Cardinal Red</strong><span style="font-family:var(--font-mono);font-size:12px;">#FF4B4B</span>
+          </button>
+          <button type="button" class="${p}-swatch-btn" data-swatch-name="Bee Gold" data-swatch-hex="#FFC800" style="background:#FFC800;color:#241A00;">
+            <strong>Bee Gold</strong><span style="font-family:var(--font-mono);font-size:12px;">#FFC800</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- PANEL 2: TYPOGRAPHY SCALE -->
+      <article id="typePanel" class="${p}-panel-light ${p}-reveal tabular-nums">
+        <span class="${p}-kicker">02 / NUNITO TYPE SCALE</span>
+        <h2 class="${p}-h2">Rounded Geometric Hierarchy</h2>
+        <p style="font-size:14px;color:var(--muted);margin-bottom:16px;max-width:56ch;">Friendly rounded terminals keep complex grammar lessons approachable on every screen.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="padding:12px;border-radius:14px;background:#F1F5F9;display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-family:var(--font-display);font-weight:900;font-size:32px;color:#100F3E;">Display 48px</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">Nunito 900 • -0.025em</span>
+          </div>
+          <div style="padding:12px;border-radius:14px;background:#F1F5F9;display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-family:var(--font-display);font-weight:800;font-size:22px;color:#100F3E;">Heading 28px</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">Nunito 800 • -0.015em</span>
+          </div>
+          <div style="padding:12px;border-radius:14px;background:#F1F5F9;display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-weight:600;font-size:16px;color:var(--fg);">Body Lesson Copy 16px</span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">Plus Jakarta 600 • 1.6</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PANEL 3: LIGHT BUTTON VARIANTS -->
+      <article id="buttonsPanel" class="${p}-panel-light ${p}-reveal">
+        <span class="${p}-kicker">03 / TACTILE CONTROLS (LIGHT)</span>
+        <h2 class="${p}-h2">3D Lip Button Physics</h2>
+        <p style="font-size:14px;color:var(--muted);margin-bottom:18px;max-width:56ch;">Every button features a 4px bottom lip that compresses on active press for instant physical feedback.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="${p}-btn-green" data-button-demo="Primary Check">CHECK ANSWER</button>
+          <button type="button" class="${p}-btn-sky" data-button-demo="Secondary Practice">PRACTICE UNIT</button>
+          <button type="button" class="${p}-btn-danger" data-button-demo="Danger Reset">HEART REFILL</button>
+          <button type="button" class="${p}-btn-ghost" data-button-demo="Ghost Skip">SKIP STEP</button>
+        </div>
+      </article>
+
+      <!-- PANEL 4: DARK THEME BUTTONS -->
+      <article class="${p}-panel-dark ${p}-reveal">
+        <span class="${p}-kicker">04 / NIGHT OWL MODE (#100F3E)</span>
+        <h2 class="${p}-h2">Dark Surface Controls</h2>
+        <p style="font-size:14px;color:#CBD5E1;margin-bottom:18px;max-width:56ch;">High-luminance surface tokens preserve WCAG AA legibility during late-night streak sessions.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="${p}-btn-green" data-seamless-trigger="Super Duolingo Night Owl Mode">START NIGHT LESSON</button>
+          <button type="button" class="${p}-btn-sky" data-seamless-trigger="League Leaderboard Challenge">VIEW DIAMOND LEAGUE</button>
+        </div>
+      </article>
+
+      <!-- PANEL 5: LIGHT COURSE CARDS -->
+      <article id="cardsPanel" class="${p}-panel-light ${p}-reveal tabular-nums">
+        <span class="${p}-kicker">05 / CURRICULUM MODULES</span>
+        <h2 class="${p}-h2">Light Course Cards</h2>
+        <div class="${p}-course-card">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect width="48" height="48" rx="14" fill="#FFF3D6"/>
+            <circle cx="24" cy="24" r="13" fill="#FF9600"/>
+            <path d="M18 25l4 4 8-8" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <div style="flex:1;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <strong style="font-family:var(--font-display);font-size:18px;">Spanish for Beginners</strong>
+              <span style="font-family:var(--font-mono);font-size:12px;font-weight:700;color:var(--accent-text);">12 UNITS</span>
+            </div>
+            <p style="font-size:13px;color:var(--muted);margin-top:4px;">Greetings, travel essentials, and cafe conversations.</p>
+          </div>
+        </div>
+        <div class="${p}-course-card">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect width="48" height="48" rx="14" fill="#E0F4FF"/>
+            <circle cx="24" cy="24" r="13" fill="#1CB0F6"/>
+            <path d="M17 24h14M24 17v14" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <div style="flex:1;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <strong style="font-family:var(--font-display);font-size:18px;">French Conversations</strong>
+              <span style="font-family:var(--font-mono);font-size:12px;font-weight:700;color:#0B6E99;">8 UNITS</span>
+            </div>
+            <p style="font-size:13px;color:var(--muted);margin-top:4px;">Phonetics, Parisian dining, and past tense storytelling.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- PANEL 6: DARK SUPER CARDS -->
+      <article class="${p}-panel-dark ${p}-reveal">
+        <span class="${p}-kicker">06 / SUPER DUOLINGO PERKS</span>
+        <h2 class="${p}-h2">Dark Pro Feature Cards</h2>
+        <div class="${p}-super-card">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <rect width="44" height="44" rx="12" fill="rgba(255,75,75,0.2)"/>
+            <path d="M22 32s-9-5.6-9-12a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.4-9 12-9 12z" fill="#FF4B4B"/>
+          </svg>
+          <div>
+            <strong style="font-family:var(--font-display);font-size:18px;color:#FFFFFF;">Unlimited Hearts</strong>
+            <p style="font-size:13px;color:#CBD5E1;margin-top:3px;">Mistakes are part of learning — practice without interruption.</p>
+          </div>
+        </div>
+        <div class="${p}-super-card">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+            <rect width="44" height="44" rx="12" fill="rgba(28,176,246,0.2)"/>
+            <polygon points="22,9 26,18 35,19 28,25 30,34 22,29 14,34 16,25 9,19 18,18" fill="#FFC800"/>
+          </svg>
+          <div>
+            <strong style="font-family:var(--font-display);font-size:18px;color:#FFFFFF;">Mastery Quizzes</strong>
+            <p style="font-size:13px;color:#CBD5E1;margin-top:3px;">Adaptive spaced-repetition reviews tailored to your weak spots.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- PANEL 7: INTERACTIVE COMPONENTS -->
+      <article id="componentsPanel" class="${p}-panel-light ${p}-reveal tabular-nums">
+        <span class="${p}-kicker">07 / LIVE PROGRESS &amp; XP SIMULATOR</span>
+        <h2 class="${p}-h2">Interactive XP &amp; Streak Progress</h2>
+        <div style="margin:14px 0;">
+          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;">
+            <span>Daily Goal Completion</span>
+            <span id="xpPctLabel">85% (85 / 100 XP)</span>
+          </div>
+          <div class="${p}-progress-track">
+            <div id="xpProgressBar" class="${p}-progress-fill"></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+          <button type="button" class="${p}-btn-green" id="addXpBtn">+15 XP Lesson Boost</button>
+          <button type="button" class="${p}-btn-ghost" id="soundToggleSimBtn" aria-pressed="true">Sound Effects: ON</button>
+        </div>
+      </article>
+
+      <!-- PANEL 8: LANGUAGE PILLS & ACTIVE LEARNERS -->
+      <article class="${p}-panel-dark ${p}-reveal tabular-nums">
+        <span class="${p}-kicker">08 / GLOBAL TRACKS</span>
+        <h2 class="${p}-h2">Language Pills &amp; Active Cohort</h2>
+        <p style="font-size:14px;color:#CBD5E1;margin-bottom:16px;max-width:56ch;">Switch active language track to preview localized unit metrics.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;">
+          <button type="button" class="${p}-btn-green" data-lang-pill="Spanish • 14.2M Learners">Spanish</button>
+          <button type="button" class="${p}-btn-sky" data-lang-pill="French • 9.8M Learners">French</button>
+          <button type="button" class="${p}-btn-sky" data-lang-pill="Japanese • 7.4M Learners">Japanese</button>
+          <button type="button" class="${p}-btn-sky" data-lang-pill="German • 5.6M Learners">German</button>
+        </div>
+        <div style="padding:14px;border-radius:14px;background:var(--surface-dark-card);display:flex;justify-content:space-between;align-items:center;">
+          <span id="activeLangStatus" style="font-weight:700;font-size:14px;color:#89E219;">Spanish • 14.2M Learners</span>
+          <span style="font-family:var(--font-mono);font-size:12px;color:#FFC800;">+5 COHORT PEERS ONLINE</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="${p}-footer">
+    <div><strong>Duolingo Styleguide</strong> — Tactile Design System Workbench. Crafted with ForgeFrame Gold v2.0.</div>
+    <div style="display:flex;gap:18px;">
+      <a href="#colorsPanel" style="color:var(--fg);text-decoration:none;font-weight:700;">Colors</a>
+      <a href="#typePanel" style="color:var(--fg);text-decoration:none;font-weight:700;">Typography</a>
+      <a href="#buttonsPanel" style="color:var(--fg);text-decoration:none;font-weight:700;">Buttons</a>
+      <a href="#componentsPanel" style="color:var(--fg);text-decoration:none;font-weight:700;">Components</a>
+    </div>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span class="${p}-kicker">DUOLINGO DESIGN TOKENS</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-weight:900;font-size:28px;margin-bottom:10px;">Export Tactile UI Kit</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Download the complete CSS custom properties, 3D tactile button mixins, and Nunito typographic scale tokens.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-green" style="width:100%;">Copy Production CSS Bundle</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var consoleEl = document.getElementById('liveTokenConsole');
+      document.querySelectorAll('[data-swatch-hex]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var name = btn.getAttribute('data-swatch-name') || 'Color';
+          var hex = btn.getAttribute('data-swatch-hex') || '#58CC02';
+          if (consoleEl) {
+            consoleEl.textContent = '/* Copied ' + name + ' */ --duo-token: ' + hex + ';';
+          }
+        });
+      });
+
+      var xp = 85;
+      var xpBar = document.getElementById('xpProgressBar');
+      var xpLabel = document.getElementById('xpPctLabel');
+      var addXpBtn = document.getElementById('addXpBtn');
+      if (addXpBtn) {
+        addXpBtn.addEventListener('click', function () {
+          xp = xp >= 100 ? 35 : Math.min(100, xp + 15);
+          if (xpBar) xpBar.style.transform = 'scaleX(' + (xp / 100) + ')';
+          if (xpLabel) xpLabel.textContent = xp + '% (' + xp + ' / 100 XP)';
+        });
+      }
+
+      var soundBtn = document.getElementById('soundToggleSimBtn');
+      if (soundBtn) {
+        soundBtn.addEventListener('click', function () {
+          var on = soundBtn.getAttribute('aria-pressed') === 'true';
+          soundBtn.setAttribute('aria-pressed', String(!on));
+          soundBtn.textContent = !on ? 'Sound Effects: ON' : 'Sound Effects: MUTED';
+        });
+      }
+
+      var langOut = document.getElementById('activeLangStatus');
+      document.querySelectorAll('[data-lang-pill]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (langOut) langOut.textContent = btn.getAttribute('data-lang-pill') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 6. CROSS-BORDER — CARGOX GROUP (t174 — Premium Tier)
+  // Global Intermodal Freight & Cross-Border Logistics Command
+  // Palette: Obsidian #111111, Deep Maritime Navy #0A1F2B, Signal Yellow #FFDA00, Warm Terracotta Route Gradient
+  // ============================================================================
+  if (spec.slug === 'cross-border') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CARGOX GROUP — Beyond Borders and Limits | Cross-Border Freight Command</title>
+  <meta name="description" content="Global intermodal logistics shaped by scale and powered by precision. 3M+ tons of cargo delivered across sea, air, and overland corridors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A1F2B;
+      --surface: #112A3A;
+      --surface-dark: #07151E;
+      --fg: #F8FAFC;
+      --muted: #B0C4D4;
+      --border: rgba(255, 255, 255, 0.14);
+      --accent: #FFDA00;
+      --accent-strong: #FFE433;
+      --on-accent: #0A1F2B;
+      --terracotta: #EA7C58;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid #ffffff; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active {
+      transform: scale(0.97) translateY(1px);
+    }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid var(--accent); margin: -17px 0 0 -17px; transition: transform 0.18s var(--ease-out); }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-header {
+      position: sticky; top: 0; z-index: 220;
+      background: rgba(10, 31, 43, 0.88); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .${p}-nav {
+      max-width: 1380px; margin: 0 auto; padding: 16px clamp(20px, 4vw, 64px);
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .${p}-brand {
+      font-family: var(--font-display); font-weight: 800; font-size: 28px;
+      letter-spacing: 0.04em; text-transform: uppercase; color: #FFFFFF; text-decoration: none;
+    }
+    .${p}-nav-links { display: flex; gap: 28px; list-style: none; }
+    .${p}-nav-links a {
+      color: var(--fg); text-decoration: none; font-size: 14px; font-weight: 600;
+    }
+    .${p}-nav-links a:hover { color: var(--accent); }
+    .${p}-btn-yellow {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 11px 24px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em;
+      border: none; cursor: pointer;
+    }
+    .${p}-btn-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,0.08);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+
+    .${p}-hero {
+      max-width: 1380px; margin: 0 auto; padding: clamp(44px, 6vw, 84px) clamp(20px, 4vw, 64px);
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+      font-size: clamp(56px, 8.5vw, 118px); line-height: 0.9; letter-spacing: -0.01em;
+      color: #FFFFFF; margin: 14px 0 22px;
+    }
+    .${p}-h1 span { color: var(--accent); display: block; }
+    .${p}-lead {
+      font-size: clamp(16px, 1.8vw, 19px); color: var(--muted); line-height: 1.6;
+      max-width: 54ch; margin-bottom: 28px;
+    }
+
+    /* Realistic iPhone 15 Pro Container Telemetry Frame */
+    .${p}-phone-frame {
+      max-width: 340px; width: 100%; margin: 0 auto; border-radius: 44px;
+      padding: 14px; background: #111111; border: 3px solid #334155;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+    }
+    .${p}-phone-screen {
+      border-radius: 32px; padding: 22px 18px;
+      background: linear-gradient(180deg, #C8C7B3 0%, #F0B172 50%, #EA7C58 100%);
+      color: #111111; position: relative; min-height: 440px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .${p}-dynamic-island {
+      width: 96px; height: 22px; border-radius: 999px; background: #111111; margin: 0 auto 16px;
+    }
+
+    .${p}-section {
+      max-width: 1380px; margin: 0 auto; padding: clamp(56px, 7vw, 92px) clamp(20px, 4vw, 64px);
+      border-top: 1px solid var(--border);
+    }
+    .${p}-h2 {
+      font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+      font-size: clamp(38px, 5.2vw, 68px); line-height: 0.95; margin-bottom: 18px;
+    }
+    .${p}-route-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
+      padding: clamp(24px, 4vw, 40px); display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 32px; align-items: center;
+    }
+    .${p}-estimator-grid {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; margin-top: 24px;
+    }
+    .${p}-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px;
+    }
+    .${p}-reveal {
+      opacity: 0; transform: translate3d(0, 20px, 0);
+      transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-footer {
+      max-width: 1380px; margin: 0 auto; padding: 36px clamp(20px, 4vw, 64px);
+      border-top: 1px solid var(--border); display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted);
+    }
+
+    .${p}-seamless-overlay {
+      position: fixed; inset: 0; z-index: 190; background: rgba(7, 21, 30, 0.84);
+      backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box {
+      max-width: 540px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 1px solid var(--border); padding: 32px; color: var(--fg); pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-hero, .${p}-route-card, .${p}-estimator-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .${p}-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-nav">
+      <a href="#heroStage" class="${p}-brand">CARGOX GROUP</a>
+      <nav aria-label="Primary Logistics Navigation">
+        <ul class="${p}-nav-links">
+          <li><a href="#routeMapSection">Global Corridors</a></li>
+          <li><a href="#freightCalculator">Rate Estimator</a></li>
+          <li><a href="#contactSection">Dispatch Desk</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" data-motion-toggle aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-yellow" data-magnetic data-next-preview>Get in touch</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- SECTION 1: HERO -->
+    <section id="heroStage" class="${p}-hero" aria-labelledby="oversizedHeadline">
+      <div>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:0.16em;">INTERMODAL CROSS-BORDER COMMAND</span>
+        <h1 id="oversizedHeadline" class="${p}-h1">
+          BEYOND
+          <span>BORDERS</span>
+          AND LIMITS
+        </h1>
+        <p class="${p}-lead">
+          Precision-routed maritime, rail, and air freight corridors connecting European hubs, Asian ports, and North American distribution centers in real time.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+          <button type="button" class="${p}-btn-yellow" data-seamless-trigger="CARGOX Priority Corridor Booking">
+            <span>Get in touch</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <a href="#freightCalculator" class="${p}-btn-ghost" style="text-decoration:none;padding:11px 20px;">Calculate Tonnage Rate</a>
+        </div>
+      </div>
+
+      <!-- Realistic iPhone 15 Pro Container Telemetry Mockup -->
+      <div class="${p}-phone-frame" data-tilt-card>
+        <div class="${p}-phone-screen tabular-nums">
+          <div>
+            <div class="${p}-dynamic-island" aria-hidden="true"></div>
+            <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:11px;font-weight:700;">
+              <span>CARGOX LIVE BILL</span>
+              <span>#CX-88412</span>
+            </div>
+            <h2 style="font-family:var(--font-display);font-size:34px;font-weight:800;line-height:0.95;margin-top:12px;text-transform:uppercase;">
+              ROTTERDAM → SHANGHAI
+            </h2>
+          </div>
+
+          <!-- Inline SVG Isometric Cargo Vessel & Container Stack -->
+          <svg viewBox="0 0 260 140" width="100%" height="130" fill="none" aria-hidden="true">
+            <rect x="24" y="78" width="212" height="36" rx="10" fill="#0A1F2B"/>
+            <rect x="46" y="42" width="52" height="36" rx="4" fill="#111111"/>
+            <rect x="104" y="34" width="52" height="44" rx="4" fill="#FFDA00"/>
+            <rect x="162" y="48" width="48" height="30" rx="4" fill="#0A1F2B"/>
+            <path d="M12 118c36 8 72-8 108 0s72 8 128 0" stroke="#0A1F2B" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+
+          <div style="background:rgba(17,17,17,0.9);color:#FFFFFF;padding:14px;border-radius:18px;">
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:#FFDA00;font-family:var(--font-mono);">
+              <span>VESSEL TELEMETRY</span>
+              <span>99.4% ON-TIME</span>
+            </div>
+            <p style="font-size:14px;font-weight:700;margin-top:4px;">42 TEU Containers • Cleared Customs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WORLD ROUTE MAP & SCALE METRICS -->
+    <section id="routeMapSection" class="${p}-section" aria-labelledby="scaleHeading">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:0.14em;">GLOBAL NETWORK TOPOLOGY</span>
+      <h2 id="scaleHeading" class="${p}-h2">LOGISTICS shaped by scale / powered by precision</h2>
+
+      <div class="${p}-route-card ${p}-reveal">
+        <div>
+          <svg viewBox="0 0 680 300" width="100%" height="260" fill="none" aria-hidden="true" style="background:#07151E;border-radius:18px;border:1px solid var(--border);">
+            <!-- Grid lines -->
+            <line x1="0" y1="75" x2="680" y2="75" stroke="rgba(255,255,255,0.06)"/>
+            <line x1="0" y1="150" x2="680" y2="150" stroke="rgba(255,255,255,0.06)"/>
+            <line x1="0" y1="225" x2="680" y2="225" stroke="rgba(255,255,255,0.06)"/>
+            <!-- 4 Curved Yellow Bezier Corridors -->
+            <path d="M90 190 C 210 60, 360 70, 580 150" stroke="#FFDA00" stroke-width="3" stroke-dasharray="6 4"/>
+            <path d="M90 190 C 240 240, 410 220, 580 150" stroke="#EA7C58" stroke-width="2.5"/>
+            <path d="M180 110 C 310 40, 440 90, 540 210" stroke="#FFDA00" stroke-width="2" stroke-opacity="0.7"/>
+            <path d="M140 230 C 290 160, 420 140, 580 150" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.75"/>
+            <!-- 5 Port Nodes -->
+            <circle cx="90" cy="190" r="7" fill="#FFDA00"/>
+            <circle cx="180" cy="110" r="6" fill="#FFFFFF"/>
+            <circle cx="340" cy="132" r="7" fill="#FFDA00"/>
+            <circle cx="540" cy="210" r="6" fill="#EA7C58"/>
+            <circle cx="580" cy="150" r="8" fill="#FFDA00"/>
+          </svg>
+        </div>
+        <div class="tabular-nums" style="display:flex;flex-direction:column;gap:22px;">
+          <div style="padding:20px;border-radius:18px;background:var(--surface-dark);border:1px solid var(--border);">
+            <strong data-counter-target="3" data-counter-suffix="M+ Tons" style="font-family:var(--font-display);font-size:48px;color:var(--accent);display:block;line-height:1;">3M+ Tons</strong>
+            <span style="font-size:14px;color:var(--muted);">of cross-border cargo delivered safely across 48 countries</span>
+          </div>
+          <div style="padding:20px;border-radius:18px;background:var(--surface-dark);border:1px solid var(--border);">
+            <strong data-counter-target="13" data-counter-suffix="+ Years" style="font-family:var(--font-display);font-size:48px;color:#FFFFFF;display:block;line-height:1;">13+ Years</strong>
+            <span style="font-size:14px;color:var(--muted);">of trusted customs clearance &amp; intermodal operations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: ONE LIVE THING (CORRIDOR RATE ESTIMATOR) & CONTACT US -->
+    <section id="freightCalculator" class="${p}-section" aria-labelledby="calcHeading">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:0.14em;">INTERACTIVE DISPATCH WORKBENCH</span>
+      <h2 id="calcHeading" class="${p}-h2">Cross-Border Corridor &amp; Tonnage Estimator</h2>
+      <div class="${p}-estimator-grid">
+        <article class="${p}-card tabular-nums">
+          <label for="corridorSelect" style="display:block;font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px;">1. Select Intermodal Corridor:</label>
+          <select id="corridorSelect" style="width:100%;padding:12px;border-radius:12px;background:var(--surface-dark);color:#FFFFFF;border:1px solid var(--border);font-size:14px;margin-bottom:18px;">
+            <option value="sea" data-rate="145" data-days="18 Days Transit">Maritime Deep-Sea (Rotterdam ↔ Shanghai)</option>
+            <option value="rail" data-rate="260" data-days="9 Days Transit">Eurasian Express Rail (Warsaw ↔ Chongqing)</option>
+            <option value="air" data-rate="680" data-days="48 Hours Priority">Dedicated Air Charter (Frankfurt ↔ Chicago)</option>
+          </select>
+
+          <label for="tonnageRange" style="display:block;font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px;">
+            2. Cargo Volume: <span id="tonnageValueLabel">24 Metric Tons</span>
+          </label>
+          <input id="tonnageRange" type="range" min="5" max="120" value="24" style="width:100%;margin-bottom:20px;accent-color:#FFDA00;" />
+
+          <div style="padding:18px;border-radius:16px;background:var(--surface-dark);border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+            <div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">ESTIMATED DISPATCH TARIFF</span>
+              <strong id="estimatedCostOut" style="display:block;font-family:var(--font-display);font-size:38px;color:var(--accent);">$3,480 USD</strong>
+            </div>
+            <span id="estimatedTransitOut" style="padding:8px 14px;border-radius:999px;background:rgba(255,218,0,0.14);color:var(--accent);font-family:var(--font-mono);font-size:12px;font-weight:700;">18 Days Transit</span>
+          </div>
+        </article>
+
+        <article id="contactSection" class="${p}-card tabular-nums">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">CONTACT US • 24/7 OPERATIONS DESK</span>
+          <h3 style="font-family:var(--font-display);font-size:32px;text-transform:uppercase;margin:8px 0 12px;">Direct Customs &amp; Charter Desk</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">
+            Lock in guaranteed container allocation or request a multi-country bonded customs clearance manifest.
+          </p>
+          <div style="font-family:var(--font-mono);font-size:13px;color:#FFFFFF;margin-bottom:20px;display:flex;flex-direction:column;gap:6px;">
+            <span>Email: info@cargox-group.com</span>
+            <span>Hotline: +380 44 234-7890</span>
+          </div>
+          <button type="button" class="${p}-btn-yellow" style="width:100%;justify-content:center;" data-seamless-trigger="CARGOX Manifest &amp; Rate Lock">
+            Request Official Bill of Lading Quote
+          </button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-footer">
+    <div><strong>CARGOX GROUP</strong> — Beyond Borders and Limits. © 2026 CargoX Intermodal Logistics.</div>
+    <div style="display:flex;gap:20px;">
+      <a href="#routeMapSection" style="color:var(--muted);text-decoration:none;">Corridors</a>
+      <a href="#freightCalculator" style="color:var(--muted);text-decoration:none;">Estimator</a>
+      <a href="#contactSection" style="color:var(--muted);text-decoration:none;">Contact</a>
+    </div>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">CARGOX DISPATCH TERMINAL</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:34px;text-transform:uppercase;margin-bottom:10px;">Reserve Container Allocation</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Our customs clearance engineers respond within 30 minutes with vessel IMO numbers and bonded corridor routing.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-yellow" style="width:100%;justify-content:center;">Confirm Dispatch Inquiry</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var sel = document.getElementById('corridorSelect');
+      var rng = document.getElementById('tonnageRange');
+      var tonLbl = document.getElementById('tonnageValueLabel');
+      var costOut = document.getElementById('estimatedCostOut');
+      var daysOut = document.getElementById('estimatedTransitOut');
+
+      function updateCalc() {
+        if (!sel || !rng) return;
+        var opt = sel.options[sel.selectedIndex];
+        var rate = parseFloat(opt ? opt.getAttribute('data-rate') : '145') || 145;
+        var days = (opt && opt.getAttribute('data-days')) || '18 Days Transit';
+        var tons = parseInt(rng.value || '24', 10);
+        if (tonLbl) tonLbl.textContent = tons + ' Metric Tons';
+        var total = Math.round(rate * tons);
+        if (costOut) costOut.textContent = '$' + total.toLocaleString('en-US') + ' USD';
+        if (daysOut) daysOut.textContent = days;
+      }
+      if (sel) sel.addEventListener('change', updateCalc);
+      if (rng) rng.addEventListener('input', updateCalc);
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 7. SUBSCRIPTION AGENCY — ALWAYZZ® (t175 — Premium Tier)
+  // Minimalist High-Craft On-Demand Creative Partnership
+  // Palette: Alabaster White #FFFFFF, Warm Stone #FCFAF8, Obsidian #0A0A0A, Live Green #17C964
+  // Typography: Source Serif 4 (400, 600, italic) + Inter + JetBrains Mono
+  // ============================================================================
+  if (spec.slug === 'subscription-agency') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Alwayzz® — Premium Creative Always On Demand | Design Subscription Agency</title>
+  <meta name="description" content="A flexible design partnership for founders, brands, and agencies who want top craft delivered on their timeline.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FCFAF8;
+      --surface: #FFFFFF;
+      --surface-elevated: #F3EFEA;
+      --fg: #0A0A0A;
+      --muted: #525252;
+      --border: rgba(10, 10, 10, 0.1);
+      --accent: #0A0A0A;
+      --accent-text: #0E793C;
+      --accent-strong: #17C964;
+      --on-accent: #FFFFFF;
+      --live-green: #17C964;
+      --live-green-text: #0E793C;
+      --font-display: 'Source Serif 4', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: #0A0A0A; color: #FFFFFF; }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--fg); color: #FFFFFF;
+      font-weight: 600; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid var(--live-green-text); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--fg); outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active {
+      transform: scale(0.97) translateY(1px);
+    }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--fg); margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--fg); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-header {
+      position: sticky; top: 0; z-index: 220;
+      background: rgba(252, 250, 248, 0.9); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .${p}-nav {
+      max-width: 1280px; margin: 0 auto; padding: 18px clamp(20px, 5vw, 64px);
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .${p}-brand {
+      font-family: var(--font-display); font-style: italic; font-weight: 600;
+      font-size: 28px; letter-spacing: -0.02em; color: var(--fg); text-decoration: none;
+    }
+    .${p}-nav-links { display: flex; gap: 28px; list-style: none; }
+    .${p}-nav-links a { color: var(--fg); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .${p}-btn-dark {
+      padding: 12px 24px; border-radius: 999px; background: var(--fg); color: #FFFFFF;
+      border: none; font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-btn-pill {
+      padding: 9px 18px; border-radius: 999px; background: var(--surface);
+      border: 1px solid var(--border); color: var(--fg); font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+
+    .${p}-hero {
+      position: relative; max-width: 1280px; margin: 0 auto;
+      padding: clamp(56px, 8vw, 108px) clamp(20px, 5vw, 64px) 64px;
+      text-align: center; overflow: hidden;
+    }
+    .${p}-capability-row {
+      display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 28px;
+    }
+    .${p}-cap-tag {
+      padding: 6px 14px; border-radius: 999px; background: var(--surface);
+      border: 1px solid var(--border); font-size: 12px; font-weight: 500; color: var(--muted);
+    }
+    .${p}-h1 {
+      font-family: var(--font-sans); font-weight: 600;
+      font-size: clamp(44px, 6.8vw, 86px); line-height: 0.98; letter-spacing: -0.04em;
+      color: var(--fg); max-width: 820px; margin: 0 auto 22px;
+    }
+    .${p}-h1 em {
+      font-family: var(--font-display); font-style: italic; font-weight: 400;
+    }
+    .${p}-sub {
+      font-size: clamp(17px, 2vw, 20px); color: var(--muted); line-height: 1.6;
+      max-width: 54ch; margin: 0 auto 36px;
+    }
+    .${p}-cta-row {
+      display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    .${p}-slot-pill {
+      display: inline-flex; align-items: center; gap: 12px;
+      padding: 8px 20px 8px 10px; border-radius: 999px; background: var(--surface);
+      border: 1px solid var(--border); cursor: pointer; text-align: left;
+      box-shadow: 0 8px 24px rgba(10, 10, 10, 0.04);
+    }
+
+    .${p}-trusted {
+      max-width: 1280px; margin: 0 auto; padding: 28px clamp(20px, 5vw, 64px);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;
+    }
+    .${p}-section {
+      max-width: 1280px; margin: 0 auto; padding: clamp(56px, 7vw, 92px) clamp(20px, 5vw, 64px);
+    }
+    .${p}-h2 {
+      font-family: var(--font-display); font-weight: 400;
+      font-size: clamp(34px, 4.5vw, 54px); line-height: 1.06; letter-spacing: -0.02em; margin-bottom: 24px;
+    }
+    .${p}-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .${p}-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
+      padding: 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 18px;
+    }
+    .${p}-reveal {
+      opacity: 0; transform: translate3d(0, 18px, 0);
+      transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-footer {
+      max-width: 1280px; margin: 0 auto; padding: 40px clamp(20px, 5vw, 64px);
+      border-top: 1px solid var(--border); display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted);
+    }
+
+    .${p}-seamless-overlay {
+      position: fixed; inset: 0; z-index: 190; background: rgba(10, 10, 10, 0.68);
+      backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .${p}-seamless-overlay.is-open { display: flex; }
+    .${p}-seamless-box {
+      max-width: 520px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 1px solid var(--border); padding: 32px; color: var(--fg); pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) { .${p}-grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { .${p}-nav-links { display: none; } }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-nav">
+      <a href="#heroStage" class="${p}-brand">Alwayzz®</a>
+      <nav aria-label="Agency Navigation">
+        <ul class="${p}-nav-links">
+          <li><a href="#capabilitiesSection">Capabilities</a></li>
+          <li><a href="#plansConfigurator">Subscription Plans</a></li>
+          <li><a href="#workShowcase">Recent Craft</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="${p}-btn-pill" data-motion-toggle aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-dark" data-magnetic data-next-preview>Menu</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- HERO -->
+    <section id="heroStage" class="${p}-hero" aria-labelledby="oversizedHeadline">
+      <!-- Decorative Curved Pulse Lines -->
+      <svg viewBox="0 0 1200 220" width="100%" height="90" fill="none" aria-hidden="true" style="margin-bottom:12px;">
+        <path d="M40 180 C 260 20, 420 20, 600 110 C 780 200, 940 200, 1160 40" stroke="rgba(10,10,10,0.12)" stroke-width="1.5"/>
+        <circle cx="600" cy="110" r="5" fill="#17C964"/>
+      </svg>
+
+      <div id="capabilitiesSection" class="${p}-capability-row">
+        <span class="${p}-cap-tag">Brand Identity</span>
+        <span class="${p}-cap-tag">App Development</span>
+        <span class="${p}-cap-tag">Visual Design</span>
+        <span class="${p}-cap-tag">Creative Video</span>
+        <span class="${p}-cap-tag">Iconography</span>
+      </div>
+
+      <h1 id="oversizedHeadline" class="${p}-h1">
+        Premium creative <em>alwayzz®</em> on demand.
+      </h1>
+      <p class="${p}-sub">
+        A flexible design partnership for founders, brands, and agencies who want top craft delivered on their timeline.
+      </p>
+
+      <div class="${p}-cta-row">
+        <a href="#plansConfigurator" class="${p}-btn-dark" style="text-decoration:none;padding:15px 30px;">View Plans</a>
+        <button type="button" class="${p}-slot-pill" data-seamless-trigger="Book a 15-Minute Discovery Call with Alwayzz®">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <circle cx="18" cy="18" r="18" fill="#E5E0D8"/>
+            <circle cx="18" cy="14" r="6" fill="#0A0A0A"/>
+            <path d="M8 31c2-6 18-6 20 0" fill="#0A0A0A"/>
+          </svg>
+          <div>
+            <span style="display:block;font-size:13px;font-weight:700;color:var(--fg);">Chat for 15 minutes</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--live-green-text);font-weight:600;">
+              <span style="width:7px;height:7px;border-radius:50%;background:var(--live-green);display:inline-block;"></span>
+              Pick a slot • 2 spots left
+            </span>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- TRUSTED BY LOGO BAR -->
+    <section class="${p}-trusted" aria-label="Trusted Partners">
+      <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;">TRUSTED BY TEAMS AT</span>
+      <div style="display:flex;gap:32px;flex-wrap:wrap;font-family:var(--font-display);font-size:20px;color:var(--fg);opacity:0.82;">
+        <span>Airbnb</span>
+        <span>Shopify</span>
+        <span>Linear</span>
+        <span>Notion</span>
+        <span>Webflow</span>
+        <span>Figma</span>
+        <span>Stripe</span>
+        <span>Vercel</span>
+      </div>
+    </section>
+
+    <!-- ONE LIVE THING: SPRINT CAPACITY & PLAN CONFIGURATOR -->
+    <section id="plansConfigurator" class="${p}-section" aria-labelledby="planHeading">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:28px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:0.14em;">ON-DEMAND SUBSCRIPTION</span>
+          <h2 id="planHeading" class="${p}-h2" style="margin-bottom:0;">Pause or scale your creative velocity anytime.</h2>
+        </div>
+        <div role="group" aria-label="Billing Cadence" style="display:flex;gap:8px;">
+          <button type="button" class="${p}-btn-dark cadence-btn" data-cadence="monthly">Monthly Retainer</button>
+          <button type="button" class="${p}-btn-pill cadence-btn" data-cadence="quarterly">Quarterly (-15%)</button>
+        </div>
+      </div>
+
+      <div class="${p}-grid-3 tabular-nums">
+        <article class="${p}-card ${p}-reveal">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">STANDARD SPRINT</span>
+            <h3 style="font-family:var(--font-display);font-size:28px;margin:6px 0;">Single Active Stream</h3>
+            <strong id="priceStandard" style="font-size:38px;display:block;margin:12px 0;">$4,950<span style="font-size:15px;color:var(--muted);font-weight:400;">/mo</span></strong>
+            <p style="font-size:14px;color:var(--muted);line-height:1.6;">48-hour average turnaround on brand identity, landing pages, and design systems.</p>
+          </div>
+          <button type="button" class="${p}-btn-pill" data-seamless-trigger="Subscribe — Standard Sprint ($4,950/mo)">Start Standard Sprint</button>
+        </article>
+
+        <article class="${p}-card ${p}-reveal" style="border-color:var(--fg);background:var(--surface-elevated);">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--live-green-text);font-weight:700;">MOST POPULAR • DOUBLE VELOCITY</span>
+            <h3 style="font-family:var(--font-display);font-size:28px;margin:6px 0;">Two Concurrent Streams</h3>
+            <strong id="priceDouble" style="font-size:38px;display:block;margin:12px 0;">$7,950<span style="font-size:15px;color:var(--muted);font-weight:400;">/mo</span></strong>
+            <p style="font-size:14px;color:var(--muted);line-height:1.6;">Ideal for funded startups shipping product UI, Framer/Next.js builds, and launch motion simultaneously.</p>
+          </div>
+          <button type="button" class="${p}-btn-dark" data-seamless-trigger="Subscribe — Double Velocity ($7,950/mo)">Start Double Velocity</button>
+        </article>
+
+        <article id="workShowcase" class="${p}-card ${p}-reveal">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">DEDICATED POD</span>
+            <h3 style="font-family:var(--font-display);font-size:28px;margin:6px 0;">Full Creative Studio</h3>
+            <strong id="pricePod" style="font-size:38px;display:block;margin:12px 0;">$12,500<span style="font-size:15px;color:var(--muted);font-weight:400;">/mo</span></strong>
+            <p style="font-size:14px;color:var(--muted);line-height:1.6;">Embedded design director, motion engineer, and frontend partner in your Slack channel.</p>
+          </div>
+          <button type="button" class="${p}-btn-pill" data-seamless-trigger="Book Dedicated Pod Consultation">Book Pod Intro</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-footer">
+    <div><strong>Alwayzz®</strong> — Premium creative on demand. © 2026 Alwayzz Design Partnership.</div>
+    <div style="display:flex;gap:20px;">
+      <a href="#capabilitiesSection" style="color:var(--muted);text-decoration:none;">Capabilities</a>
+      <a href="#plansConfigurator" style="color:var(--muted);text-decoration:none;">Plans</a>
+      <a href="#workShowcase" style="color:var(--muted);text-decoration:none;">Dedicated Pod</a>
+    </div>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-seamless-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--live-green-text);">ALWAYZZ® PARTNER ONBOARDING</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:30px;margin-bottom:10px;">Reserve Your Creative Slot</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Get matched with your dedicated design director and submit your first sprint brief on Monday morning.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-dark" style="width:100%;">Confirm Partnership Slot</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var pStd = document.getElementById('priceStandard');
+      var pDbl = document.getElementById('priceDouble');
+      var pPod = document.getElementById('pricePod');
+      document.querySelectorAll('.cadence-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var q = btn.getAttribute('data-cadence') === 'quarterly';
+          document.querySelectorAll('.cadence-btn').forEach(function (b) {
+            b.className = b === btn ? '${p}-btn-dark cadence-btn' : '${p}-btn-pill cadence-btn';
+          });
+          if (pStd) pStd.innerHTML = (q ? '$4,200' : '$4,950') + '<span style="font-size:15px;color:var(--muted);font-weight:400;">/mo</span>';
+          if (pDbl) pDbl.innerHTML = (q ? '$6,750' : '$7,950') + '<span style="font-size:15px;color:var(--muted);font-weight:400;">/mo</span>';
+          if (pPod) pPod.innerHTML = (q ? '$10,600' : '$12,500') + '<span style="font-size:15px;color:var(--muted);font-weight:400;">/mo</span>';
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
   return null;
 }

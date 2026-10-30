@@ -33,6 +33,36 @@ export const PINTEREST_V2_META = {
     brandTitle: 'Quiet Place Sanctuary',
     category: 'commerce',
     headlineSub: 'Mindful creative sanctuary where calm meets creativity — interactive pine-island lake diorama, ambient soundscape mixer, 4-7-8 breathwork timer, and gentle reflection tools.'
+  },
+  'dotdna-cyber': {
+    id: 'bioluminescent-cyber-mesh',
+    brandTitle: 'DotDNA Cyber',
+    category: 'commerce',
+    headlineSub: 'Bioluminescent emerald #041A0E & acid-green #65E819 cyber-security architecture — defending the digital on the dot with interactive zero-trust posture scanning and 3D particle wave.'
+  },
+  'polkacrypto-future': {
+    id: 'parachain-chartreuse-crypto',
+    brandTitle: 'PolkaCrypto Future',
+    category: 'commerce',
+    headlineSub: 'Obsidian grid & neon chartreuse #B8FF01 Polkadot parachain investing platform featuring tilted 3D dual mobile terminals, 01–03 security cards, and live ETH/DOT staking simulator.'
+  },
+  'nexora-alex-portfolio': {
+    id: 'cosmic-violet-creative-folio',
+    brandTitle: 'Nexora Alex Portfolio',
+    category: 'portfolio',
+    headlineSub: 'Deep cosmic indigo #080711 & electric violet #8B5CF6 creative designer portfolio for Alex Carter with filterable case-study showcase, 4-pillar service matrix, and client testimonials.'
+  },
+  'kata-ocado-portfolio': {
+    id: 'editorial-plum-art-direction',
+    brandTitle: 'Kata Ocado Portfolio',
+    category: 'portfolio',
+    headlineSub: 'Editorial plum-violet #2A1B3D & warm amber-gold #F59E0B Art Director & Graphic Designer studio for Kathleen Anne "Kata" Ocado with interactive Adobe/Figma proficiency matrix.'
+  },
+  'glitch-cyberwear': {
+    id: 'cutout-samurai-techwear',
+    brandTitle: 'Glitch Cyberwear',
+    category: 'commerce',
+    headlineSub: 'Monochrome obsidian & pure white inverted cutout frame techwear store featuring cyber-samurai 3D operative callout pins (NeuroVibe MK-I, VoidBlade, Shadow Circuit Jacket, Crimson Phantom).'
   }
 };
 
@@ -1669,6 +1699,1382 @@ export function buildPinterestV2Template(data, p) {
             b.className = b === btn ? '${p}-btn-coral sound-btn' : '${p}-btn-cream sound-btn';
           });
           if (statusEl) statusEl.textContent = btn.getAttribute('data-sound');
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 6. DOTDNA CYBER (t176 — Free Tier)
+  // Deep Bioluminescent Emerald #041A0E & Acid-Green #65E819 Cyber Security Architecture
+  // ============================================================================
+  if (slug === 'dotdna-cyber') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>DOTDNA — Defending the Digital on the Dot | Cyber Security by Design</title>
+  <meta name="description" content="We assist our clients in integrating cyber security by design in their digital transformation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #041A0E;
+      --surface: #082917;
+      --surface-glass: rgba(8, 41, 23, 0.82);
+      --fg: #ECFDF5;
+      --muted: #A7F3D0;
+      --border: rgba(101, 232, 25, 0.24);
+      --accent: #65E819;
+      --accent-text: #86EFAC;
+      --accent-strong: #79F72D;
+      --on-accent: #041A0E;
+      --font-display: 'Syne', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid #FFFFFF; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-header {
+      position: sticky; top: 0; z-index: 220;
+      background: rgba(4, 26, 14, 0.88); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .${p}-wrap { max-width: 1340px; margin: 0 auto; padding: 20px clamp(20px, 4vw, 60px); }
+    .${p}-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .${p}-brand {
+      font-family: var(--font-display); font-weight: 800; font-size: 24px;
+      letter-spacing: 0.08em; color: #FFFFFF; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .${p}-dock {
+      display: inline-flex; gap: 8px; padding: 6px 10px; border-radius: 999px;
+      background: var(--surface-glass); border: 1px solid var(--border);
+    }
+    .${p}-dock a {
+      color: var(--fg); text-decoration: none; font-size: 13px; font-weight: 600;
+      padding: 6px 14px; border-radius: 999px;
+    }
+    .${p}-dock a:hover { background: rgba(101, 232, 25, 0.16); color: var(--accent); }
+    .${p}-btn-acid {
+      padding: 11px 22px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; border: none; cursor: pointer;
+    }
+    .${p}-btn-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+
+    .${p}-hero {
+      position: relative; padding: clamp(48px, 7vw, 88px) 0;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; align-items: center;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: clamp(44px, 6.2vw, 82px); line-height: 0.98; letter-spacing: -0.03em;
+      margin: 14px 0 20px;
+    }
+    .${p}-h2 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(30px, 4vw, 48px); line-height: 1.06; margin-bottom: 16px;
+    }
+    .${p}-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+    .${p}-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 26px;
+    }
+    .${p}-reveal {
+      opacity: 0; transform: translate3d(0, 18px, 0);
+      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
+    }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 190; background: rgba(4, 26, 14, 0.86);
+      backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 1px solid var(--border); padding: 32px; pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) { .${p}-hero, .${p}-grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { .${p}-dock { display: none; } }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-wrap ${p}-nav">
+      <a href="#heroStage" class="${p}-brand">
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="11" stroke="#65E819" stroke-width="2.5" stroke-dasharray="4 3"/>
+          <circle cx="14" cy="14" r="4" fill="#65E819"/>
+        </svg>
+        <span>DOTDNA</span>
+      </a>
+      <nav class="${p}-dock" aria-label="DotDNA Navigation">
+        <a href="#heroStage">Home</a>
+        <a href="#servicesGrid">Services +</a>
+        <a href="#threatScanner">Product</a>
+        <a href="#aboutPosture">About</a>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-acid" data-next-preview>Contact us ↗</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" class="${p}-wrap">
+    <section id="heroStage" class="${p}-hero" aria-labelledby="oversizedHeadline">
+      <div>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:0.18em;">| CYBER SECURITY BY DESIGN</span>
+        <h1 id="oversizedHeadline" class="${p}-h1">
+          Defending the Digital <span style="color:var(--accent);">on the Dot.</span>
+        </h1>
+        <p style="font-size:17px;color:var(--muted);line-height:1.65;max-width:54ch;margin-bottom:28px;">
+          We assist our clients in integrating cyber security by design in their digital transformation — securing cloud meshes, zero-trust APIs, and post-quantum telemetry.
+        </p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <button type="button" class="${p}-btn-acid" data-seamless-trigger="DotDNA Zero-Trust Architecture Audit">Deploy DotDNA Shield</button>
+          <a href="#threatScanner" class="${p}-btn-ghost" style="text-decoration:none;padding:11px 20px;">Run Posture Scan</a>
+        </div>
+      </div>
+
+      <!-- Bioluminescent Particle Wave SVG Sculpture -->
+      <div class="${p}-card tabular-nums" style="background:radial-gradient(circle at 50% 40%, rgba(101,232,25,0.22), rgba(8,41,23,0.95));">
+        <svg viewBox="0 0 460 250" width="100%" height="220" fill="none" aria-hidden="true">
+          <path d="M20 180 C 120 60, 220 220, 320 90 C 380 30, 420 140, 440 110" stroke="#65E819" stroke-width="3" stroke-dasharray="4 6"/>
+          <path d="M20 140 C 130 210, 250 40, 360 160 C 400 190, 430 90, 440 130" stroke="#86EFAC" stroke-width="2" stroke-opacity="0.7"/>
+          <circle cx="145" cy="126" r="6" fill="#65E819"/>
+          <circle cx="268" cy="112" r="8" fill="#65E819"/>
+          <circle cx="358" cy="158" r="6" fill="#ECFDF5"/>
+        </svg>
+        <div style="display:flex;justify-content:space-between;border-top:1px solid var(--border);padding-top:14px;margin-top:10px;font-family:var(--font-mono);font-size:12px;">
+          <span>NODE INTEGRITY: <strong data-counter-target="99" data-counter-suffix=".98%">99.98%</strong></span>
+          <span style="color:var(--accent);">DOT-MESH ACTIVE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONE LIVE THING: ZERO-TRUST POSTURE SCANNER -->
+    <section id="threatScanner" style="padding:40px 0;" aria-labelledby="scanHeading">
+      <div class="${p}-card tabular-nums">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:18px;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">LIVE POSTURE TELEMETRY</span>
+            <h2 id="scanHeading" class="${p}-h2" style="margin-bottom:4px;">Zero-Trust Surface Inspector</h2>
+          </div>
+          <div role="group" aria-label="Select Security Layer" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="${p}-btn-acid scan-btn" data-layer="Edge API Gateway • 0 Open CVEs • TLS 1.3 Strict">Edge Gateway</button>
+            <button type="button" class="${p}-btn-ghost scan-btn" data-layer="Kubernetes Mesh • mTLS Enforced • 412 Pods Verified">K8s Workload Mesh</button>
+            <button type="button" class="${p}-btn-ghost scan-btn" data-layer="Identity Perimeter • FIDO2 Hardware Keys • 0 Anomalies">IAM Perimeter</button>
+          </div>
+        </div>
+        <p id="scanLayerOutput" style="font-family:var(--font-mono);font-size:14px;color:var(--accent-text);padding:14px;border-radius:14px;background:var(--bg);border:1px solid var(--border);">
+          Edge API Gateway • 0 Open CVEs • TLS 1.3 Strict
+        </p>
+      </div>
+    </section>
+
+    <section id="servicesGrid" style="padding:28px 0 64px;" aria-labelledby="srvHeading">
+      <h2 id="srvHeading" class="${p}-h2">Security Architecture Pillars</h2>
+      <div class="${p}-grid-3">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Zero-Trust Cloud Architecture">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">01 / CLOUD MESH</span>
+          <h3 style="font-size:21px;margin:8px 0;">Security by Design</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Threat modeling embedded directly into CI/CD pipelines before code reaches production.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Continuous Red-Team Telemetry">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">02 / OFFENSIVE OPS</span>
+          <h3 style="font-size:21px;margin:8px 0;">Automated Red Teaming</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Continuous breach simulation across hybrid cloud and enterprise identity graphs.</p>
+        </article>
+        <article id="aboutPosture" class="${p}-card ${p}-reveal" data-seamless-trigger="ISO 27001 &amp; NIS2 Compliance">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">03 / GOVERNANCE</span>
+          <h3 style="font-size:21px;margin:8px 0;">NIS2 &amp; DORA Readiness</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Cryptographic audit logs and automated compliance evidence for regulated enterprises.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 DOTDNA Cyber Security Architecture. All rights reserved.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent);">SOC2 TYPE II • ISO 27001</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">DOTDNA ADVISORY</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">Schedule Security Architecture Review</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Connect with a principal DotDNA security architect to map your zero-trust transformation roadmap.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-acid" style="width:100%;">Confirm Encrypted Briefing</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var out = document.getElementById('scanLayerOutput');
+      document.querySelectorAll('.scan-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.scan-btn').forEach(function (b) {
+            b.className = b === btn ? '${p}-btn-acid scan-btn' : '${p}-btn-ghost scan-btn';
+          });
+          if (out) out.textContent = btn.getAttribute('data-layer');
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 7. POLKACRYPTO FUTURE (t177 — Free Tier)
+  // Obsidian Grid #0B0D0E & Neon Chartreuse #B8FF01 Polkadot Parachain & Crypto Platform
+  // ============================================================================
+  if (slug === 'polkacrypto-future') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CRYPTO. — Best Crypto Investing Platform for Your Future</title>
+  <meta name="description" content="Keep your money safe. Your trusted partner of cryptocurrency with 168K+ realtime users, institutional custody, and Polkadot parachain staking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0B0D0E;
+      --surface: #14181B;
+      --surface-elevated: #1D2328;
+      --fg: #F8FAFC;
+      --muted: #94A3B8;
+      --border: rgba(255, 255, 255, 0.12);
+      --accent: #B8FF01;
+      --accent-text: #D9FF66;
+      --accent-strong: #C9FF33;
+      --on-accent: #0B0D0E;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid #FFFFFF; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-header {
+      position: sticky; top: 0; z-index: 220;
+      background: rgba(11, 13, 14, 0.88); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .${p}-wrap { max-width: 1340px; margin: 0 auto; padding: 20px clamp(20px, 4vw, 60px); }
+    .${p}-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .${p}-brand {
+      font-family: var(--font-display); font-weight: 700; font-size: 24px;
+      color: #FFFFFF; text-decoration: none; letter-spacing: -0.03em;
+    }
+    .${p}-brand span { color: var(--accent); }
+    .${p}-links { display: flex; gap: 26px; list-style: none; }
+    .${p}-links a { color: var(--fg); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .${p}-links a:hover { color: var(--accent); }
+    .${p}-btn-lime {
+      padding: 11px 22px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; border: none; cursor: pointer;
+    }
+    .${p}-btn-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+
+    .${p}-hero {
+      padding: clamp(44px, 6vw, 80px) 0;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; align-items: center;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(42px, 6vw, 76px); line-height: 1.02; letter-spacing: -0.03em;
+      margin: 12px 0 20px;
+    }
+    .${p}-h2 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(30px, 4.2vw, 48px); line-height: 1.06; margin-bottom: 18px;
+    }
+    .${p}-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .${p}-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 28px;
+    }
+    .${p}-card-lime {
+      background: var(--accent); color: var(--on-accent); border-radius: 24px; padding: 28px;
+    }
+    .${p}-reveal {
+      opacity: 0; transform: translate3d(0, 18px, 0);
+      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
+    }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 190; background: rgba(11, 13, 14, 0.86);
+      backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 1px solid var(--border); padding: 32px; pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) { .${p}-hero, .${p}-grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { .${p}-links { display: none; } }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-wrap ${p}-nav">
+      <a href="#heroStage" class="${p}-brand">CRYPTO<span>.</span></a>
+      <nav aria-label="Crypto Platform Navigation">
+        <ul class="${p}-links">
+          <li><a href="#heroStage">Home</a></li>
+          <li><a href="#partnerSection">Services</a></li>
+          <li><a href="#stakingSimulator">About</a></li>
+          <li><a href="#analyticsSpline">What's new?</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-lime" data-next-preview>Explore now</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" class="${p}-wrap">
+    <!-- HERO -->
+    <section id="heroStage" class="${p}-hero" aria-labelledby="oversizedHeadline">
+      <div>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:0.14em;">KEEP YOUR MONEY SAFE !</span>
+        <h1 id="oversizedHeadline" class="${p}-h1">
+          Best crypto investing platform for your future.
+        </h1>
+        <p style="font-size:16px;color:var(--muted);line-height:1.65;max-width:54ch;margin-bottom:24px;">
+          Trade, stake, and secure Polkadot parachain assets and institutional-grade portfolios with real-time on-chain proof of reserves.
+        </p>
+        <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;" class="tabular-nums">
+          <button type="button" class="${p}-btn-lime" data-seamless-trigger="CRYPTO. — Open Institutional Vault">Start Investing →</button>
+          <div>
+            <strong data-counter-target="168" data-counter-suffix="K+" style="font-family:var(--font-display);font-size:28px;color:var(--accent);display:block;">168K+</strong>
+            <span style="font-size:12px;color:var(--muted);">Realtime Users</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dual Tilted 3D Mobile Terminal Card -->
+      <div class="${p}-card tabular-nums" style="background:linear-gradient(145deg, #181E22, #0F1315);">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">POLKADOT PARACHAIN TERMINAL</span>
+          <span style="padding:4px 10px;border-radius:999px;background:rgba(184,255,1,0.16);color:var(--accent);font-size:12px;font-weight:700;">+45.66% APY</span>
+        </div>
+        <strong style="font-family:var(--font-display);font-size:36px;display:block;margin-bottom:12px;">9.872098 ETH</strong>
+        <svg viewBox="0 0 420 130" width="100%" height="120" fill="none" aria-hidden="true">
+          <path d="M10 105 C 85 95, 120 40, 190 58 C 260 76, 310 18, 410 24" stroke="#B8FF01" stroke-width="3.5"/>
+          <circle cx="190" cy="58" r="6" fill="#B8FF01"/>
+          <circle cx="410" cy="24" r="7" fill="#FFFFFF"/>
+        </svg>
+        <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:10px;">
+          <span>$4,528 USD / ETH</span>
+          <span>144,528 BTC VOL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01, 02, 03 PARTNER CARDS -->
+    <section id="partnerSection" style="padding:36px 0;" aria-labelledby="partnerHeading">
+      <h2 id="partnerHeading" class="${p}-h2">Your trusted partner of cryptocurrency.</h2>
+      <div class="${p}-grid-3 tabular-nums">
+        <article class="${p}-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--accent);">01.</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Service for Any Level of Expertise.</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Guided parachain indexing for first-time allocators and FIX API execution for funds.</p>
+        </article>
+        <article class="${p}-card-lime ${p}-reveal" data-seamless-trigger="Industry Best Practices Security Whitepaper">
+          <span style="font-family:var(--font-mono);font-size:14px;font-weight:700;">02.</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Industry best practices.</h3>
+          <p style="font-size:14px;line-height:1.6;margin-bottom:14px;">Multi-party computation (MPC) cold storage and real-time Merkle-tree reserve audits.</p>
+          <span style="font-weight:700;font-size:13px;">Learn More →</span>
+        </article>
+        <article class="${p}-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:14px;color:var(--accent);">03.</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Protected by insurance.</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">$250M Lloyd's syndicated custody coverage across all staked validator nodes.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ONE LIVE THING: STAKING & YIELD SIMULATOR -->
+    <section id="stakingSimulator" style="padding:36px 0 64px;" aria-labelledby="stakeHeading">
+      <div id="analyticsSpline" class="${p}-card tabular-nums">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:18px;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">TRUSTED PLATFORM ANYTIME &amp; ANYWHERE</span>
+            <h2 id="stakeHeading" class="${p}-h2" style="margin-bottom:0;">Live Parachain Yield Simulator</h2>
+          </div>
+          <div role="group" aria-label="Select Crypto Asset" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="${p}-btn-lime asset-btn" data-asset="Polkadot (DOT) • 14.8% APY •Est. Annual Yield: $6,701 USD">Polkadot (DOT)</button>
+            <button type="button" class="${p}-btn-ghost asset-btn" data-asset="Ethereum (ETH) • 4.6% APY • Est. Annual Yield: $4,528 USD">Ethereum (ETH)</button>
+            <button type="button" class="${p}-btn-ghost asset-btn" data-asset="Bitcoin Vault (wBTC) • 3.2% APY • Est. Annual Yield: $9,120 USD">Bitcoin (BTC)</button>
+          </div>
+        </div>
+        <p id="stakeYieldOutput" style="font-family:var(--font-mono);font-size:14px;color:var(--accent-text);padding:16px;border-radius:14px;background:var(--bg);border:1px solid var(--border);">
+          Polkadot (DOT) • 14.8% APY • Est. Annual Yield: $6,701 USD
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 CRYPTO. Parachain Financial Technologies.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent);">168K+ REALTIME USERS • MPC CUSTODY</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">CRYPTO. VAULT ONBOARDING</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">Connect Hardware Wallet</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Activate non-custodial Polkadot parachain staking and instant USD liquidity lines in under 60 seconds.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-lime" style="width:100%;">Launch Web3 Terminal</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var out = document.getElementById('stakeYieldOutput');
+      document.querySelectorAll('.asset-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.asset-btn').forEach(function (b) {
+            b.className = b === btn ? '${p}-btn-lime asset-btn' : '${p}-btn-ghost asset-btn';
+          });
+          if (out) out.textContent = btn.getAttribute('data-asset');
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 8. NEXORA ALEX PORTFOLIO (t178 — Premium Tier)
+  // Deep Cosmic Indigo #080711 & Electric Violet #8B5CF6 Creative Designer Portfolio
+  // ============================================================================
+  if (slug === 'nexora-alex-portfolio') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nexora — Alex Carter | Creative Designer &amp; Brand Architect</title>
+  <meta name="description" content="Hi, I'm Alex Carter — Creative Designer turning ideas into beautiful UI/UX, brand identity, and web design systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080711;
+      --surface: #121024;
+      --surface-elevated: #1B1836;
+      --fg: #F8FAFC;
+      --muted: #A5B4FC;
+      --border: rgba(139, 92, 246, 0.25);
+      --accent: #8B5CF6;
+      --accent-text: #C4B5FD;
+      --accent-strong: #A78BFA;
+      --on-accent: #FFFFFF;
+      --font-display: 'Outfit', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: #FFFFFF;
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid #FFFFFF; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--accent-text); margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-header {
+      position: sticky; top: 0; z-index: 220;
+      background: rgba(8, 7, 17, 0.88); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .${p}-wrap { max-width: 1320px; margin: 0 auto; padding: 20px clamp(20px, 4vw, 60px); }
+    .${p}-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .${p}-brand {
+      font-family: var(--font-display); font-weight: 800; font-size: 24px;
+      color: #FFFFFF; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+    }
+    .${p}-links { display: flex; gap: 24px; list-style: none; }
+    .${p}-links a { color: var(--fg); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .${p}-links a:hover { color: var(--accent-text); }
+    .${p}-btn-violet {
+      padding: 11px 22px; border-radius: 999px; background: var(--accent); color: #FFFFFF;
+      font-weight: 700; font-size: 13px; border: none; cursor: pointer;
+    }
+    .${p}-btn-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+
+    .${p}-hero {
+      padding: clamp(44px, 6vw, 80px) 0;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; align-items: center;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: clamp(42px, 5.8vw, 74px); line-height: 1.02; letter-spacing: -0.03em;
+      margin: 12px 0 18px;
+    }
+    .${p}-h2 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(30px, 4vw, 46px); line-height: 1.08; margin-bottom: 18px;
+    }
+    .${p}-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0 48px; }
+    .${p}-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .${p}-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .${p}-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 26px;
+    }
+    .${p}-reveal {
+      opacity: 0; transform: translate3d(0, 18px, 0);
+      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
+    }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 190; background: rgba(8, 7, 17, 0.86);
+      backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 1px solid var(--border); padding: 32px; pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-hero, .${p}-stats-row, .${p}-grid-2, .${p}-grid-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) { .${p}-links { display: none; } }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-wrap ${p}-nav">
+      <a href="#heroStage" class="${p}-brand">
+        <span style="width:28px;height:28px;border-radius:8px;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;font-size:15px;">N</span>
+        <span>Nexora</span>
+      </a>
+      <nav aria-label="Nexora Portfolio Navigation">
+        <ul class="${p}-links">
+          <li><a href="#heroStage">Home</a></li>
+          <li><a href="#servicesSection">Services</a></li>
+          <li><a href="#portfolioWorkbench">Portfolio</a></li>
+          <li><a href="#testimonialsSection">Reviews</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-violet" data-next-preview>Let's Talk →</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" class="${p}-wrap">
+    <!-- HERO -->
+    <section id="heroStage" class="${p}-hero" aria-labelledby="oversizedHeadline">
+      <div>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.14em;">CREATIVE PORTFOLIO • ALEX CARTER</span>
+        <h1 id="oversizedHeadline" class="${p}-h1">
+          Hi, I'm Alex Carter — <span style="color:var(--accent-text);">Creative Designer</span>
+        </h1>
+        <p style="font-size:16px;color:var(--muted);line-height:1.65;max-width:54ch;margin-bottom:26px;">
+          Turning complex product ideas into luminous digital experiences across UI/UX Design, Brand Identity, and interactive design systems.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="#portfolioWorkbench" class="${p}-btn-violet" style="text-decoration:none;">View My Work →</a>
+          <button type="button" class="${p}-btn-ghost" data-seamless-trigger="Book Discovery Call with Alex Carter">Download CV</button>
+        </div>
+      </div>
+
+      <div class="${p}-card" style="text-align:center;background:radial-gradient(circle at 50% 35%, rgba(139,92,246,0.32), rgba(18,16,36,0.96));">
+        <svg viewBox="0 0 320 220" width="100%" height="200" fill="none" aria-hidden="true">
+          <circle cx="160" cy="110" r="76" stroke="#8B5CF6" stroke-width="2.5" stroke-dasharray="6 4"/>
+          <circle cx="160" cy="92" r="28" fill="#C4B5FD"/>
+          <path d="M108 176c10-32 94-32 104 0" fill="#8B5CF6"/>
+        </svg>
+        <p style="font-family:var(--font-display);font-size:20px;color:var(--accent-text);margin-top:8px;">"Design Creates Value"</p>
+      </div>
+    </section>
+
+    <!-- 4 METRIC CARDS -->
+    <section class="${p}-stats-row tabular-nums" aria-label="Career Metrics">
+      <div class="${p}-card"><strong data-counter-target="100" data-counter-suffix="+" style="font-family:var(--font-display);font-size:34px;color:var(--accent-text);display:block;">100+</strong><span style="font-size:13px;color:var(--muted);">Projects Completed</span></div>
+      <div class="${p}-card"><strong data-counter-target="80" data-counter-suffix="+" style="font-family:var(--font-display);font-size:34px;color:var(--accent-text);display:block;">80+</strong><span style="font-size:13px;color:var(--muted);">Happy Clients</span></div>
+      <div class="${p}-card"><strong style="font-family:var(--font-display);font-size:34px;color:var(--accent-text);display:block;">5.0</strong><span style="font-size:13px;color:var(--muted);">Client Ratings</span></div>
+      <div class="${p}-card"><strong data-counter-target="3" data-counter-suffix="+ Years" style="font-family:var(--font-display);font-size:34px;color:var(--accent-text);display:block;">3+ Years</strong><span style="font-size:13px;color:var(--muted);">Design Experience</span></div>
+    </section>
+
+    <!-- ONE LIVE THING: FILTERABLE RECENT PROJECTS -->
+    <section id="portfolioWorkbench" style="padding:24px 0 56px;" aria-labelledby="projHeading">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:22px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">SELECTED CASE STUDIES</span>
+          <h2 id="projHeading" class="${p}-h2" style="margin-bottom:0;">My Recent Projects</h2>
+        </div>
+        <div role="group" aria-label="Filter Projects by Discipline" style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="${p}-btn-violet filter-btn" data-cat="all">All</button>
+          <button type="button" class="${p}-btn-ghost filter-btn" data-cat="branding">Branding</button>
+          <button type="button" class="${p}-btn-ghost filter-btn" data-cat="web">Web Design</button>
+          <button type="button" class="${p}-btn-ghost filter-btn" data-cat="graphics">Graphics</button>
+        </div>
+      </div>
+
+      <div class="${p}-grid-2">
+        <article class="${p}-card proj-item" data-proj-cat="web" data-seamless-trigger="Case Study — Nova Fintech SaaS Platform">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">WEB DESIGN • SAAS</span>
+          <h3 style="font-size:22px;margin:8px 0;">Nova AI Financial Workspace</h3>
+          <p style="font-size:14px;color:var(--muted);">Multi-currency treasury dashboard and design token library.</p>
+        </article>
+        <article class="${p}-card proj-item" data-proj-cat="branding" data-seamless-trigger="Case Study — Lumina Audio Brand Identity">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">BRANDING • PACKAGING</span>
+          <h3 style="font-size:22px;margin:8px 0;">Lumina Spatial Acoustics</h3>
+          <p style="font-size:14px;color:var(--muted);">Visual identity, custom wordmark, and 3D retail packaging system.</p>
+        </article>
+        <article class="${p}-card proj-item" data-proj-cat="web" data-seamless-trigger="Case Study — Veloce Web3 Exchange">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">WEB DESIGN • UI/UX</span>
+          <h3 style="font-size:22px;margin:8px 0;">Veloce Perpetual DEX</h3>
+          <p style="font-size:14px;color:var(--muted);">Low-latency orderbook interface and mobile companion wallet.</p>
+        </article>
+        <article class="${p}-card proj-item" data-proj-cat="graphics" data-seamless-trigger="Case Study — Kinetic 3D Poster Series">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">GRAPHICS • ART DIRECTION</span>
+          <h3 style="font-size:22px;margin:8px 0;">Chroma 3D Editorial Type</h3>
+          <p style="font-size:14px;color:var(--muted);">Custom procedural shaders and exhibition poster system.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES & TESTIMONIALS -->
+    <section id="servicesSection" style="padding:24px 0 64px;" aria-labelledby="testHeading">
+      <h2 id="testHeading" class="${p}-h2">What My Clients Say</h2>
+      <div id="testimonialsSection" class="${p}-grid-3">
+        <article class="${p}-card ${p}-reveal">
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:14px;">"Alex transformed our SaaS onboarding flow, lifting trial-to-paid conversion by 38% in six weeks."</p>
+          <strong style="font-size:15px;">Sarah Mitchell — VP Product</strong>
+        </article>
+        <article class="${p}-card ${p}-reveal">
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:14px;">"Every Figma component and motion spec was production-ready on day one."</p>
+          <strong style="font-size:15px;">James Walker — Founder</strong>
+        </article>
+        <article class="${p}-card ${p}-reveal">
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:14px;">"Our rebrand stood out immediately during our Series A pitch deck roadshow."</p>
+          <strong style="font-size:15px;">Emily Carter — Creative Lead</strong>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 Nexora — Alex Carter Creative Studio. hello@nexora.com</span>
+    <span style="font-family:var(--font-mono);color:var(--accent-text);">AVAILABLE FOR Q4 SPRINT</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">NEXORA PROJECT BRIEF</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">Let's Work Together</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Share your product timeline and scope to lock in a dedicated design sprint with Alex Carter.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-violet" style="width:100%;">Send Project Inquiry</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var items = document.querySelectorAll('.proj-item');
+      document.querySelectorAll('.filter-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var cat = btn.getAttribute('data-cat') || 'all';
+          document.querySelectorAll('.filter-btn').forEach(function (b) {
+            b.className = b === btn ? '${p}-btn-violet filter-btn' : '${p}-btn-ghost filter-btn';
+          });
+          items.forEach(function (el) {
+            var match = cat === 'all' || el.getAttribute('data-proj-cat') === cat;
+            el.style.display = match ? 'block' : 'none';
+          });
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 9. KATA OCADO PORTFOLIO (t179 — Premium Tier)
+  // Editorial Plum-Violet #2A1B3D, Warm Amber Gold #F59E0B, & Alabaster Cream Art Direction
+  // ============================================================================
+  if (slug === 'kata-ocado-portfolio') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kathleen Anne "Kata" Ocado — Portfolio &amp; Resume | Art Director &amp; Graphic Designer</title>
+  <meta name="description" content="Hello! I am Kathleen Anne Ocado, Kata for short — 7 years experience as Graphic Designer & Art Director across Brand Design, Print, Social Media, and Web UI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #1F142E;
+      --surface: #2C1D42;
+      --surface-cream: #F5F2EB;
+      --fg: #FAF8F5;
+      --muted: #D8CBEB;
+      --border: rgba(245, 158, 11, 0.28);
+      --accent: #F59E0B;
+      --accent-text: #FCD34D;
+      --accent-strong: #FBBF24;
+      --on-accent: #1F142E;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid #FFFFFF; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-header {
+      position: sticky; top: 0; z-index: 220;
+      background: rgba(31, 20, 46, 0.9); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .${p}-wrap { max-width: 1320px; margin: 0 auto; padding: 20px clamp(20px, 4vw, 60px); }
+    .${p}-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .${p}-brand {
+      font-family: var(--font-display); font-weight: 700; font-size: 24px;
+      color: var(--fg); text-decoration: none;
+    }
+    .${p}-links { display: flex; gap: 24px; list-style: none; }
+    .${p}-links a { color: var(--fg); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .${p}-links a:hover { color: var(--accent-text); }
+    .${p}-btn-gold {
+      padding: 11px 22px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; border: none; cursor: pointer;
+    }
+    .${p}-btn-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,0.08);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+
+    .${p}-hero {
+      padding: clamp(44px, 6vw, 80px) 0;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; align-items: center;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(42px, 5.8vw, 72px); line-height: 1.02; letter-spacing: -0.02em;
+      margin: 12px 0 18px;
+    }
+    .${p}-h2 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(28px, 4vw, 44px); line-height: 1.08; margin-bottom: 18px;
+    }
+    .${p}-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .${p}-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 28px;
+    }
+    .${p}-pill-gold {
+      display: inline-flex; padding: 8px 16px; border-radius: 999px;
+      background: rgba(245, 158, 11, 0.16); border: 1px solid var(--border);
+      color: var(--accent-text); font-weight: 600; font-size: 13px;
+    }
+    .${p}-reveal {
+      opacity: 0; transform: translate3d(0, 18px, 0);
+      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
+    }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 190; background: rgba(31, 20, 46, 0.86);
+      backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 1px solid var(--border); padding: 32px; pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) { .${p}-hero, .${p}-grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { .${p}-links { display: none; } }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-wrap ${p}-nav">
+      <a href="#heroStage" class="${p}-brand">Kata Ocado.</a>
+      <nav aria-label="Kata Ocado Portfolio Navigation">
+        <ul class="${p}-links">
+          <li><a href="#heroStage">About Kata</a></li>
+          <li><a href="#expertiseSection">Expertise</a></li>
+          <li><a href="#softwareMatrix">Software Skills</a></li>
+          <li><a href="#experienceTimeline">Education &amp; CV</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-gold" data-next-preview>Let's Talk!</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" class="${p}-wrap">
+    <!-- HERO -->
+    <section id="heroStage" class="${p}-hero" aria-labelledby="oversizedHeadline">
+      <div>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.14em;">PORTFOLIO &amp; RESUME • ART DIRECTOR</span>
+        <h1 id="oversizedHeadline" class="${p}-h1">
+          Hello! I am Kathleen Anne <em style="color:var(--accent-text);">"Kata"</em> Ocado.
+        </h1>
+        <p style="font-size:16px;color:var(--muted);line-height:1.65;max-width:54ch;margin-bottom:24px;">
+          Graphic Designer &amp; Art Director with 7+ years of experience crafting campaign storytelling, print advertisements, social media ecosystems, and brand identities.
+        </p>
+        <div id="expertiseSection" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;">
+          <span class="${p}-pill-gold">Art Direction</span>
+          <span class="${p}-pill-gold">Social Media</span>
+          <span class="${p}-pill-gold">Print Ads</span>
+          <span class="${p}-pill-gold">Web Design</span>
+          <span class="${p}-pill-gold">Video Editing</span>
+          <span class="${p}-pill-gold">Brand Design</span>
+        </div>
+        <button type="button" class="${p}-btn-gold" data-seamless-trigger="Commission Art Direction — Kata Ocado">Download Full Dossier →</button>
+      </div>
+
+      <div class="${p}-card tabular-nums">
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">CREATIVE CREDENTIALS</span>
+        <h2 style="font-family:var(--font-display);font-size:28px;margin:8px 0 14px;">BFA Advertising Arts</h2>
+        <svg viewBox="0 0 320 120" width="100%" height="110" fill="none" aria-hidden="true" style="margin-bottom:12px;">
+          <rect x="8" y="10" width="304" height="100" rx="18" fill="#1F142E" stroke="#F59E0B" stroke-width="1.5"/>
+          <circle cx="64" cy="60" r="28" fill="#F59E0B"/>
+          <circle cx="64" cy="52" r="10" fill="#1F142E"/>
+          <path d="M44 82c4-14 36-14 40 0" fill="#1F142E"/>
+          <rect x="112" y="36" width="140" height="10" rx="5" fill="#FCD34D"/>
+          <rect x="112" y="56" width="176" height="8" rx="4" fill="#D8CBEB" fill-opacity="0.5"/>
+          <rect x="112" y="74" width="116" height="8" rx="4" fill="#F59E0B" fill-opacity="0.7"/>
+        </svg>
+        <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:18px;">
+          Far Eastern University • Magna Cum Laude Track in Visual Campaign Direction &amp; Integrated Media.
+        </p>
+        <div style="display:flex;justify-content:space-between;border-top:1px solid var(--border);padding-top:16px;">
+          <div><strong data-counter-target="7" data-counter-suffix=" Years" style="font-size:28px;color:var(--accent-text);display:block;">7 Years</strong><span style="font-size:12px;color:var(--muted);">Agency &amp; Brand Lead</span></div>
+          <div><strong data-counter-target="140" data-counter-suffix="+" style="font-size:28px;color:var(--accent-text);display:block;">140+</strong><span style="font-size:12px;color:var(--muted);">Campaigns Shipped</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONE LIVE THING: INTERACTIVE SOFTWARE PROFICIENCY MATRIX -->
+    <section id="softwareMatrix" style="padding:28px 0 56px;" aria-labelledby="softHeading">
+      <div class="${p}-card tabular-nums">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:18px;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">CREATIVE SUITE WORKBENCH</span>
+            <h2 id="softHeading" class="${p}-h2" style="margin-bottom:0;">Interactive Software Proficiency Matrix</h2>
+          </div>
+          <div role="group" aria-label="Select Creative Tool" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="${p}-btn-gold tool-btn" data-tool="Ps / Ai — Adobe Photoshop &amp; Illustrator • 98% Mastery (Key Visuals &amp; Vector Craft)">Ps + Ai</button>
+            <button type="button" class="${p}-btn-ghost tool-btn" data-tool="Xd / Fg — Figma &amp; Adobe XD • 94% Mastery (Design Systems &amp; Interactive Prototypes)">Figma + Xd</button>
+            <button type="button" class="${p}-btn-ghost tool-btn" data-tool="Ae / Pr — After Effects &amp; Premiere Pro • 90% Mastery (Motion Reels &amp; Social Video)">Ae + Pr</button>
+          </div>
+        </div>
+        <p id="toolSpecOutput" style="font-family:var(--font-mono);font-size:14px;color:var(--accent-text);padding:16px;border-radius:14px;background:var(--bg);border:1px solid var(--border);">
+          Ps / Ai — Adobe Photoshop &amp; Illustrator • 98% Mastery (Key Visuals &amp; Vector Craft)
+        </p>
+      </div>
+    </section>
+
+    <section id="experienceTimeline" style="padding:12px 0 64px;" aria-labelledby="expHeading">
+      <h2 id="expHeading" class="${p}-h2">Career Milestones</h2>
+      <div class="${p}-grid-3">
+        <article class="${p}-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">2023 — PRESENT</span>
+          <h3 style="font-size:20px;margin:8px 0;">Senior Art Director</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Leading 360-degree brand launches, seasonal lookbooks, and digital design systems.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">2020 — 2023</span>
+          <h3 style="font-size:20px;margin:8px 0;">Multimedia Graphic Designer</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Directed social motion campaigns, packaging suites, and high-converting web landing pages.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">2018 — 2020</span>
+          <h3 style="font-size:20px;margin:8px 0;">Junior Visual Designer</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Crafted print collateral, out-of-home billboards, and editorial illustration systems.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 Kathleen Anne "Kata" Ocado — Art Direction &amp; Graphic Design.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent-text);">MANILA • GLOBAL REMOTE</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">KATA OCADO STUDIO</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">Let's Create Together</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Available for creative direction, brand identity systems, and campaign key visuals.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-gold" style="width:100%;">Request Portfolio Deck</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var out = document.getElementById('toolSpecOutput');
+      document.querySelectorAll('.tool-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.tool-btn').forEach(function (b) {
+            b.className = b === btn ? '${p}-btn-gold tool-btn' : '${p}-btn-ghost tool-btn';
+          });
+          if (out) out.textContent = btn.getAttribute('data-tool');
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 10. GLITCH CYBERWEAR (t180 — Premium Tier)
+  // Monochrome Obsidian #0B0C0E, Pure White Cutout Frame, & Molten Orange #FF6B00 Cyber-Samurai Techwear
+  // ============================================================================
+  if (slug === 'glitch-cyberwear') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>GLITCH — Future Fashion, Redefined | Cyber-Samurai Techwear Store</title>
+  <meta name="description" content="Modular cyber-samurai streetwear featuring NeuroVibe MK-I visors, VoidBlade carbon accessories, Shadow Circuit Jackets, and Crimson Phantom shells.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0B0C0E;
+      --surface: #14171C;
+      --surface-cutout: #FFFFFF;
+      --fg: #F8FAFC;
+      --muted: #94A3B8;
+      --border: rgba(255, 255, 255, 0.16);
+      --accent: #FF6B00;
+      --accent-text: #FF9E44;
+      --accent-strong: #FF8524;
+      --on-accent: #0B0C0E;
+      --font-display: 'Chakra Petch', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; text-decoration: none;
+      transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus { transform: translate3d(0, 116px, 0); outline: 2px solid #FFFFFF; outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums, [data-counter-target] { font-variant-numeric: tabular-nums; }
+
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; transition: transform 0.18s var(--ease-out); }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @media (max-width: 900px) { .${p}-cursor-ring, .${p}-cursor-dot { display: none; } }
+
+    .${p}-header {
+      position: sticky; top: 0; z-index: 220;
+      background: rgba(11, 12, 14, 0.9); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .${p}-wrap { max-width: 1360px; margin: 0 auto; padding: 18px clamp(20px, 4vw, 56px); }
+    .${p}-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .${p}-brand {
+      font-family: var(--font-display); font-weight: 700; font-size: 26px;
+      letter-spacing: 0.14em; color: #FFFFFF; text-decoration: none;
+    }
+    .${p}-links { display: flex; gap: 24px; list-style: none; }
+    .${p}-links a { color: var(--fg); text-decoration: none; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+    .${p}-links a:hover { color: var(--accent); }
+    .${p}-btn-white {
+      padding: 11px 24px; border-radius: 999px; background: #FFFFFF; color: #0B0C0E;
+      font-weight: 800; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+      border: none; cursor: pointer;
+    }
+    .${p}-btn-orange {
+      padding: 11px 24px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 800; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+      border: none; cursor: pointer;
+    }
+    .${p}-btn-ghost {
+      padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,0.08);
+      border: 1px solid var(--border); color: var(--fg); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+
+    .${p}-cutout-stage {
+      border: 6px solid #FFFFFF; border-radius: 32px; padding: clamp(28px, 5vw, 56px);
+      background: radial-gradient(circle at 55% 40%, rgba(255,107,0,0.18), #0B0C0E 70%);
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: center;
+      margin: 20px 0 44px;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(44px, 6.4vw, 84px); line-height: 0.94; letter-spacing: -0.02em;
+      margin: 14px 0 20px;
+    }
+    .${p}-h2 {
+      font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+      font-size: clamp(28px, 4vw, 46px); line-height: 1.02; margin-bottom: 18px;
+    }
+    .${p}-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .${p}-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 24px;
+    }
+    .${p}-cutout-card {
+      background: #FFFFFF; color: #0B0C0E; border-radius: 22px; padding: 24px;
+    }
+    .${p}-reveal {
+      opacity: 0; transform: translate3d(0, 18px, 0);
+      transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
+    }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 190; background: rgba(11, 12, 14, 0.86);
+      backdrop-filter: blur(14px); display: none; align-items: center; justify-content: center;
+      padding: 20px; pointer-events: none;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px; width: 100%; border-radius: 24px; background: var(--surface);
+      border: 1px solid var(--border); padding: 32px; pointer-events: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-cutout-stage, .${p}-grid-4 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) { .${p}-links { display: none; } }
+  </style>
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="${p}-cursor-ring" aria-hidden="true"></div>
+  <div id="cursorDot" class="${p}-cursor-dot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-wrap ${p}-nav">
+      <a href="#heroStage" class="${p}-brand">GLITCH</a>
+      <nav aria-label="Glitch Techwear Navigation">
+        <ul class="${p}-links">
+          <li><a href="#heroStage">Operative Rig</a></li>
+          <li><a href="#pinInspector">Callout Pins</a></li>
+          <li><a href="#dropCatalog">Drop 04</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-white" data-next-preview>SHOP NOW</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent" class="${p}-wrap">
+    <!-- CUTOUT HERO STAGE -->
+    <section id="heroStage" class="${p}-cutout-stage" aria-labelledby="oversizedHeadline">
+      <div>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);letter-spacing:0.16em;">DROP 04 // CYBER-SAMURAI OPERATIVE</span>
+        <h1 id="oversizedHeadline" class="${p}-h1">
+          FUTURE FASHION, <span style="color:var(--accent);">REDEFINED.</span>
+        </h1>
+        <p style="font-size:16px;color:var(--muted);line-height:1.6;max-width:52ch;margin-bottom:26px;">
+          Ballistic 3-layer Gore-Tex shells, HUD-ready polycarbonate visors, and modular magnetic sling hardware engineered for urban night ops.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="${p}-btn-orange" data-seamless-trigger="Equip Full Cyber-Samurai Kit">EQUIP OPERATIVE KIT</button>
+          <a href="#pinInspector" class="${p}-btn-ghost" style="text-decoration:none;padding:11px 20px;">INSPECT CALLOUT PINS</a>
+        </div>
+      </div>
+
+      <!-- Cyber-Samurai Vector Operative & Cutout Card -->
+      <div class="tabular-nums">
+        <svg viewBox="0 0 420 230" width="100%" height="210" fill="none" aria-hidden="true">
+          <!-- Twin Katana & Cyber Helmet Silhouette -->
+          <line x1="65" y1="205" x2="355" y2="25" stroke="#FFFFFF" stroke-width="4"/>
+          <line x1="355" y1="205" x2="65" y2="25" stroke="#FF6B00" stroke-width="4"/>
+          <circle cx="210" cy="115" r="56" fill="#14171C" stroke="#FFFFFF" stroke-width="3"/>
+          <rect x="172" y="102" width="76" height="18" rx="9" fill="#FF6B00"/>
+          <circle cx="130" cy="68" r="8" fill="#FF6B00"/>
+          <circle cx="295" cy="92" r="8" fill="#FFFFFF"/>
+          <circle cx="210" cy="182" r="8" fill="#FF6B00"/>
+        </svg>
+        <div class="${p}-cutout-card" style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;color:#FF6B00;">FEATURED SHELL</span>
+            <strong id="activeGearTitle" style="display:block;font-family:var(--font-display);font-size:22px;">CRIMSON PHANTOM — $450</strong>
+          </div>
+          <button type="button" class="${p}-btn-orange" data-seamless-trigger="Add to Bag — Crimson Phantom ($450)">ADD +</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONE LIVE THING: CALLOUT PIN GEAR INSPECTOR -->
+    <section id="pinInspector" style="padding:16px 0 56px;" aria-labelledby="pinHeading">
+      <div class="${p}-card tabular-nums">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:18px;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">INTERACTIVE TACTICAL CALLOUTS</span>
+            <h2 id="pinHeading" class="${p}-h2" style="margin-bottom:0;">Select Operative Callout Pin</h2>
+          </div>
+          <div role="group" aria-label="Operative Gear Pins" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="${p}-btn-orange pin-btn" data-gear="NEUROVIBE MK-I — $230 • Anti-Fog OLED HUD Visor with UV400 Ballistic Shield">NEUROVIBE MK-I ($230)</button>
+            <button type="button" class="${p}-btn-ghost pin-btn" data-gear="VOIDBLADE — $120 • Forged Carbon-Fiber Tactical Umbrella &amp; Fidlock Back Sheath">VOIDBLADE ($120)</button>
+            <button type="button" class="${p}-btn-ghost pin-btn" data-gear="SHADOW CIRCUIT JACKET — $450 • 3L Waterproof Membrane with 14 Concealed Cargo Pockets">SHADOW CIRCUIT ($450)</button>
+            <button type="button" class="${p}-btn-ghost pin-btn" data-gear="CRIMSON PHANTOM — $450 • Anodized Articulated Shoulder Shell &amp; Thermal Liner">CRIMSON PHANTOM ($450)</button>
+          </div>
+        </div>
+        <p id="pinSpecOutput" style="font-family:var(--font-mono);font-size:14px;color:var(--accent-text);padding:16px;border-radius:14px;background:var(--bg);border:1px solid var(--border);">
+          NEUROVIBE MK-I — $230 • Anti-Fog OLED HUD Visor with UV400 Ballistic Shield
+        </p>
+      </div>
+    </section>
+
+    <!-- 4 PIECE DROP CATALOG -->
+    <section id="dropCatalog" style="padding:12px 0 64px;" aria-labelledby="catHeading">
+      <h2 id="catHeading" class="${p}-h2">Complete Operative Loadout</h2>
+      <div class="${p}-grid-4 tabular-nums">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Reserve — NeuroVibe MK-I ($230)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">PIN 01 // HEADGEAR</span>
+          <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">NEUROVIBE MK-I</h3>
+          <strong style="font-size:24px;color:var(--accent-text);">$230</strong>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Reserve — VoidBlade ($120)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">PIN 02 // HARDWARE</span>
+          <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">VOIDBLADE</h3>
+          <strong style="font-size:24px;color:var(--accent-text);">$120</strong>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Reserve — Shadow Circuit Jacket ($450)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">PIN 03 // OUTERWEAR</span>
+          <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">SHADOW CIRCUIT JACKET</h3>
+          <strong style="font-size:24px;color:var(--accent-text);">$450</strong>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Reserve — Crimson Phantom ($450)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">PIN 04 // EXOSHELL</span>
+          <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">CRIMSON PHANTOM</h3>
+          <strong style="font-size:24px;color:var(--accent-text);">$450</strong>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 GLITCH Cyberwear Division. Future Fashion, Redefined.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent);">WORLDWIDE EXPRESS DISPATCH</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">GLITCH ARMORY CHECKOUT</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">Lock Operative Sizing</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Each Glitch shell includes serialized NFC authenticity tags and lifetime Fidlock hardware replacement.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-orange" style="width:100%;">Proceed to Encrypted Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var out = document.getElementById('pinSpecOutput');
+      var titleOut = document.getElementById('activeGearTitle');
+      document.querySelectorAll('.pin-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.pin-btn').forEach(function (b) {
+            b.className = b === btn ? '${p}-btn-orange pin-btn' : '${p}-btn-ghost pin-btn';
+          });
+          var spec = btn.getAttribute('data-gear') || '';
+          if (out) out.textContent = spec;
+          if (titleOut) titleOut.textContent = spec.split('•')[0].trim();
         });
       });
     })();

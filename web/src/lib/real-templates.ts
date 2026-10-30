@@ -46,6 +46,196 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t180: {
+    slug: 'glitch-cyberwear',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Glitch Cyberwear",
+        desc: "Glitch Cyberwear (cutout-samurai-techwear) — Monochrome obsidian & pure white inverted cutout frame techwear store featuring cyber-samurai 3D operative callout pins (NeuroVibe MK-I, VoidBlade, Shadow Circuit Jacket, Crimson Phantom).",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Glitch Cyberwear",
+        desc: "Glitch Cyberwear (cutout-samurai-techwear) — Monochrome obsidian & pure white inverted cutout frame techwear store featuring cyber-samurai 3D operative callout pins (NeuroVibe MK-I, VoidBlade, Shadow Circuit Jacket, Crimson Phantom).",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Glitch Cyberwear",
+        desc: "Glitch Cyberwear (cutout-samurai-techwear) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t179: {
+    slug: 'kata-ocado-portfolio',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Kata Ocado Portfolio",
+        desc: "Kata Ocado Portfolio (editorial-plum-art-direction) — Editorial plum-violet #2A1B3D & warm amber-gold #F59E0B Art Director & Graphic Designer studio for Kathleen Anne \"Kata\" Ocado with interactive Adobe/Figma proficiency matrix.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Kata Ocado Portfolio",
+        desc: "Kata Ocado Portfolio (editorial-plum-art-direction) — Editorial plum-violet #2A1B3D & warm amber-gold #F59E0B Art Director & Graphic Designer studio for Kathleen Anne \"Kata\" Ocado with interactive Adobe/Figma proficiency matrix.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Kata Ocado Portfolio",
+        desc: "Kata Ocado Portfolio (editorial-plum-art-direction) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t178: {
+    slug: 'nexora-alex-portfolio',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Nexora Alex Portfolio",
+        desc: "Nexora Alex Portfolio (cosmic-violet-creative-folio) — Deep cosmic indigo #080711 & electric violet #8B5CF6 creative designer portfolio for Alex Carter with filterable case-study showcase, 4-pillar service matrix, and client testimonials.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Nexora Alex Portfolio",
+        desc: "Nexora Alex Portfolio (cosmic-violet-creative-folio) — Deep cosmic indigo #080711 & electric violet #8B5CF6 creative designer portfolio for Alex Carter with filterable case-study showcase, 4-pillar service matrix, and client testimonials.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Nexora Alex Portfolio",
+        desc: "Nexora Alex Portfolio (cosmic-violet-creative-folio) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t177: {
+    slug: 'polkacrypto-future',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "PolkaCrypto Future",
+        desc: "PolkaCrypto Future (parachain-chartreuse-crypto) — Obsidian grid & neon chartreuse #B8FF01 Polkadot parachain investing platform featuring tilted 3D dual mobile terminals, 01–03 security cards, and live ETH/DOT staking simulator.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "PolkaCrypto Future",
+        desc: "PolkaCrypto Future (parachain-chartreuse-crypto) — Obsidian grid & neon chartreuse #B8FF01 Polkadot parachain investing platform featuring tilted 3D dual mobile terminals, 01–03 security cards, and live ETH/DOT staking simulator.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "PolkaCrypto Future",
+        desc: "PolkaCrypto Future (parachain-chartreuse-crypto) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t176: {
+    slug: 'dotdna-cyber',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "DotDNA Cyber",
+        desc: "DotDNA Cyber (bioluminescent-cyber-mesh) — Bioluminescent emerald #041A0E & acid-green #65E819 cyber-security architecture — defending the digital on the dot with interactive zero-trust posture scanning and 3D particle wave.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "DotDNA Cyber",
+        desc: "DotDNA Cyber (bioluminescent-cyber-mesh) — Bioluminescent emerald #041A0E & acid-green #65E819 cyber-security architecture — defending the digital on the dot with interactive zero-trust posture scanning and 3D particle wave.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "DotDNA Cyber",
+        desc: "DotDNA Cyber (bioluminescent-cyber-mesh) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t175: {
+    slug: 'subscription-agency',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Subscription Agency",
+        desc: "Giao diện web Subscription Agency với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Subscription Agency",
+        desc: "Bespoke Subscription Agency web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Subscription Agency",
+        desc: "单文件自包含 Subscription Agency 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t174: {
+    slug: 'cross-border',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Cross-Border",
+        desc: "Giao diện web Cross-Border với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Transportation", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Cross-Border",
+        desc: "Bespoke Cross-Border web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Transportation", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Cross-Border",
+        desc: "单文件自包含 Cross-Border 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t173: {
+    slug: 'duolingo-styleguide',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Duolingo Styleguide",
+        desc: "Giao diện web Duolingo Styleguide với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Duolingo Styleguide",
+        desc: "Bespoke Duolingo Styleguide web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero Section", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Duolingo Styleguide",
+        desc: "单文件自包含 Duolingo Styleguide 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t172: {
     slug: 'quiet-place-sanctuary',
     cat: 'commerce',

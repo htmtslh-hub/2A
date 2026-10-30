@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-10-29",
+  "lastRunDate": "2026-10-30",
   "todayCopiedCount": 3,
   "processedSlugs": [
     "_design",
@@ -23,6 +23,7 @@
     "atlas",
     "atrium-mtl",
     "auralis",
+    "aurelia-biocyber",
     "backbest-800",
     "bame-esports",
     "beetbuh",
@@ -30,6 +31,7 @@
     "bishop-tentwenty",
     "bloom-ai",
     "break-code",
+    "calfin-weather",
     "camper",
     "cast-and-render",
     "chain-warden",
@@ -39,7 +41,9 @@
     "codenest-coding-platform",
     "cozypaws",
     "crimson-folio",
+    "cross-border",
     "cyber-ronin",
+    "cybr-brutalism",
     "datacore-booking",
     "design",
     "designer-portfolio",
@@ -51,6 +55,7 @@
     "docs",
     "dot",
     "dualplay",
+    "duolingo-styleguide",
     "eclipsio",
     "ecommerce-omorfia",
     "email-marketing",
@@ -72,6 +77,7 @@
     "gridwork-co",
     "halden",
     "haul",
+    "hush-futurist-bags",
     "industrix-engineering",
     "innovation",
     "interactive-discovery",
@@ -130,6 +136,7 @@
     "prisma-creative-studio",
     "prmpt",
     "puro-amor",
+    "quiet-place-sanctuary",
     "reelmark",
     "reviews",
     "riverine-ai",
@@ -150,6 +157,7 @@
     "startup-devkit",
     "steary-spatial-cinema",
     "stellar-ai",
+    "subscription-agency",
     "swatch-luxury-chronograph",
     "synapsex",
     "targo",
@@ -176,11 +184,11 @@
     "wander-far",
     "watchroom",
     "yellow-beast",
-    "calfin-weather",
-    "cybr-brutalism",
-    "aurelia-biocyber",
-    "hush-futurist-bags",
-    "quiet-place-sanctuary"
+    "dotdna-cyber",
+    "polkacrypto-future",
+    "nexora-alex-portfolio",
+    "kata-ocado-portfolio",
+    "glitch-cyberwear"
   ],
   "processedPromptIds": [
     "aetheris-voyage-hero",
@@ -263,7 +271,10 @@
     "transform-data-hero",
     "digitwist-hero",
     "dot-hero",
-    "design-rocket-email-hero"
+    "design-rocket-email-hero",
+    "duolingo-styleguide-hero",
+    "cross-border",
+    "subscription-agency"
   ],
   "history": [
     {
@@ -393,6 +404,24 @@
         "dot": "premium",
         "email-marketing": "premium"
       }
+    },
+    {
+      "date": "2026-10-30",
+      "built": [
+        "duolingo-styleguide",
+        "cross-border",
+        "subscription-agency"
+      ],
+      "catalogIds": [
+        "t173",
+        "t174",
+        "t175"
+      ],
+      "tiers": {
+        "duolingo-styleguide": "free",
+        "cross-border": "premium",
+        "subscription-agency": "premium"
+      }
     }
   ],
   "todayFreeCount": 1,
@@ -427,6 +456,9 @@
     "677d3fcb3c1f2fe378d9d463a05925f39951c343dbb3a22920cc0f604fe73f6b",
     "22db40a74f053015edad3376029e3c7233ebd8d714909980d3fcb867fefc4a26",
     "b614b6f76ad13973a13b4b0f84bd52690615fb74faab019d428f0bb9336ddd31",
-    "1d97d87ed65d76e23926a8829d04be25a6fe07f187477becfd3bd7f89b0948f1"
+    "1d97d87ed65d76e23926a8829d04be25a6fe07f187477becfd3bd7f89b0948f1",
+    "0deb9fcc19897fddf4349c579511d3eee66586ead3ff9fbed3e0896f2a8bf080",
+    "51277206ad60741d5f96ec0838c26ed6c92e63858b03f07c9975fe05bb62214b",
+    "a1c407a9c4090191ddb3cd175d22d7c90c0c42715d3c7235a2c6a08022e24120"
   ]
 }

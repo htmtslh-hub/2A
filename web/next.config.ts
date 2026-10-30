@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import driveManifest from "./src/lib/drive-manifest.json";
+
+const hasSyncedDriveFiles = Object.keys(driveManifest.files || {}).length > 0;
 
 const nextConfig: NextConfig = {
   async redirects() {
@@ -49,8 +52,11 @@ const nextConfig: NextConfig = {
      tĩnh nên không thấy chúng, và hàm /api/download sẽ được triển khai mà
      không có file nào — khách trả tiền xong bấm link tải là 404.
      Dòng dưới bắt Next mang theo cả thư mục. */
-  outputFileTracingIncludes: {
-    '/api/download': ['./product/giao-dien-web/*/*.zip', './product/agent/lingoglass/lingoglass.zip'],
+
+  outputFileTracingIncludes: hasSyncedDriveFiles
+    ? {}
+    : {
+        '/api/download': ['./product/giao-dien-web/*/*.zip', './product/agent/lingoglass/lingoglass.zip'],
   },
 };
 

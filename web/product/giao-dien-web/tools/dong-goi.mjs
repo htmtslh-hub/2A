@@ -21,6 +21,7 @@
    Sau khi ghi, script đọc lại ZIP, so từng file với source và in SHA-256 để ghi
    vào QA.md. */
 import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -188,3 +189,12 @@ console.log(`${files.length} file (đã đọc lại, khớp byte với source):
 for (const f of files) console.log(`  ${name}/${f.rel}`);
 if (extra.length) console.log(`Ngoại lệ (--ngoai-le): ${extra.join(', ')}`);
 if (written.length >= ZIP_LIMIT) console.log(`Ngoại lệ W06: ZIP ${written.length} byte >= ${ZIP_LIMIT}.`);
+
+const syncDriveScript = resolve(HERE, '..', '..', '..', 'tools', 'sync-gdrive.mjs');
+if (existsSync(syncDriveScript) && !args.includes('--no-drive')) {
+  try {
+    execFileSync(process.execPath, [syncDriveScript, '--slug', name], { stdio: 'inherit' });
+  } catch (err) {
+    console.warn(`[dong-goi] Cảnh báo: chưa đồng bộ lên Google Drive cho ${name} (${err.message || err})`);
+  }
+}

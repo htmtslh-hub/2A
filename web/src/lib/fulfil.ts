@@ -8,6 +8,7 @@ import { prisma } from '@/lib/db';
 import { sendMail, orderPaidEmail } from '@/lib/mail';
 import { formatMoney, productName, type Currency, type Lang } from '@/lib/catalog';
 import { isMembershipPlan, membershipExpiry } from '@/lib/membership-policy';
+import { grantDriveAccessForOrder, revokeDriveAccessForOrder } from '@/lib/google-drive';
 
 /** Kết quả để route webhook biết trả gì về cho cổng thanh toán. */
 export type FulfilResult = 'ok' | 'already-paid' | 'amount-mismatch';
@@ -53,6 +54,7 @@ export async function fulfilOrder(
   // đọc từ trước. Cổng gửi lại webhook khi phản hồi chậm, và hai lần gửi chạy
   // song song đều thấy đơn chưa PAID — kiểm tra kiểu đọc-rồi-ghi sẽ cho cả hai
   // đi tiếp: tạo trùng quyền sở hữu, gửi hai email, hai link tải.
+  let membershipExpiresAt: Date | undefined;
   const claimed = await prisma.$transaction(async (tx: Prisma.TransactionClient) => {
     const { count } = await tx.order.updateMany({
       where: { id: order.id, status: { notIn: ['PAID', 'REFUNDED'] } },
@@ -69,6 +71,7 @@ export async function fulfilOrder(
         orderBy: { expiresAt: 'desc' },
       });
       const startsAt = previous?.expiresAt ?? now;
+      membershipExpiresAt = membershipExpiry(startsAt, order.kind);
       await tx.membership.create({ data: {
         userId: user.id, orderId: order.id, plan: order.kind,
         startsAt, expiresAt: membershipExpiry(startsAt, order.kind),
@@ -91,6 +94,18 @@ export async function fulfilOrder(
   });
 
   if (!claimed) return 'already-paid';
+
+  try {
+    await grantDriveAccessForOrder({
+      buyerEmail: order.buyerEmail,
+      kind: order.kind,
+      templateId: order.templateId,
+      itemTemplateIds: items.map((item) => item.templateId),
+      expiresAt: membershipExpiresAt,
+    });
+  } catch (err) {
+    console.error('[fulfil] cấp quyền Google Drive thất bại:', err);
+  }
 
   // Có tài khoản thì cấp link tải gắn với tài khoản đó; không thì dẫn về trang chủ.
   let downloadUrl = `${baseUrl}/?tab=pricing`;
@@ -152,6 +167,12 @@ export async function revokeOrder(order: Order): Promise<'ok' | 'not-paid'> {
     // Quyền tải lại bằng tài khoản.
     await tx.purchase.deleteMany({ where: { orderId: order.id } });
     await tx.membership.deleteMany({ where: { orderId: order.id } });
+    await revokeDriveAccessForOrder({
+      buyerEmail: order.buyerEmail,
+      kind: order.kind,
+      templateId: order.templateId,
+      itemTemplateIds: cartItems.map((item) => item.templateId),
+    }).catch((err) => console.error('[fulfil] thu hồi quyền Google Drive thất bại:', err));
 
     // Link tải trong email không gắn với đơn, chỉ gắn người mua + mẫu, nên cho
     // hết hạn mọi link còn dùng được của cặp đó. Nếu khách còn đơn khác mua

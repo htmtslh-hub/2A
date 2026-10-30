@@ -16,6 +16,7 @@ import { templateExists, templateFile } from '@/lib/catalog';
 import { REAL_TEMPLATES } from '@/lib/real-templates';
 import { hasProductAccess } from '@/lib/memberships';
 import { isFreeProduct } from '@/lib/product-policy';
+import { serveFromGoogleDrive, shouldServeFromDrive } from '@/lib/google-drive';
 
 import crypto from 'node:crypto';
 
@@ -30,8 +31,11 @@ function fileFor(templateId: string) {
 }
 
 async function serve(templateId: string, logUserId?: string) {
+  const slug = templateFile(templateId);
   const file = fileFor(templateId);
-  if (!existsSync(file)) {
+  const localExists = existsSync(file);
+  const useDrive = shouldServeFromDrive(slug, localExists);
+  if (!useDrive && !localExists) {
     return NextResponse.json(
       {
         error: `Chưa có file bàn giao cho "${templateId}". Vui lòng liên hệ để được hỗ trợ.`,
@@ -50,6 +54,10 @@ async function serve(templateId: string, logUserId?: string) {
         usedAt: now,
       },
     }).catch(() => {});
+  }
+  if (useDrive) {
+    const driveRes = await serveFromGoogleDrive(templateId, slug, isFreeProduct(templateId));
+    if (driveRes) return driveRes;
   }
   const stream = Readable.toWeb(createReadStream(file)) as ReadableStream;
   return new NextResponse(stream, {

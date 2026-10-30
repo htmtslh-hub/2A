@@ -175,7 +175,7 @@ export async function serveFromGoogleDrive(
 
   const publicDownloadUrl = entry.publicUrl || buildPublicDriveDownloadUrl(entry.fileId);
 
-  if (isFree) {
+  if (isFree || entry.tier === 'free') {
     return NextResponse.redirect(publicDownloadUrl, {
       status: 302,
       headers: { 'Cache-Control': 'private, no-store' },

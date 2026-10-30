@@ -57,8 +57,8 @@ export const BOT_UI_COPY: Record<LangCode, BotUiCopy> = {
       'Xin chào! Mình là Forge Bot — trợ lý tự động của Forge Zone. Bạn có thể chọn nhanh chủ đề bên dưới hoặc nhập câu hỏi bất kỳ (ví dụ: cài đặt và sử dụng giao diện như thế nào, mẫu miễn phí, giá gói Premium, tìm mẫu portfolio...).',
     welcomeBullets: [
       `Kho hiện có ${Object.keys(REAL_TEMPLATES).length}+ sản phẩm thật kèm bản xem thử trực tiếp`,
-      `Gói thành viên: Miễn phí ($0) • Premium ($${PRICE_USD.pro}/tháng) • Ultra ($${PRICE_USD.ultra}/năm) • Mua lẻ ($${PRICE_USD.single})`,
-      'Thanh toán một lần qua Paddle, không tự động gia hạn, kèm hướng dẫn CUSTOMISE.md & giấy phép thương mại',
+      `Gói thành viên: Miễn phí ($0) • Premium (500.000₫ / $${PRICE_USD.pro} / tháng) • Ultra (5.000.000₫ / $${PRICE_USD.ultra} / năm) • Mua lẻ (500.000₫ / $${PRICE_USD.single})`,
+      'Thanh toán một lần qua VietQR (PayOS) tại Việt Nam hoặc thẻ quốc tế (Paddle), không tự động gia hạn, kèm giấy phép thương mại',
     ],
     quickTitle: 'Câu hỏi thường gặp',
     inputPlaceholder: 'Nhập câu hỏi (VD: Cài đặt giao diện thế nào, giá gói Premium, tìm mẫu AI...)',
@@ -213,11 +213,11 @@ function buildPricingReply(lang: LangCode): BotReply {
     return {
       text: `Forge Zone áp dụng mô hình trả một lần cho kỳ đã chọn, KHÔNG tự động gia hạn (${m.pricingIntro}):`,
       bullets: [
-        `Miễn phí ($0): Tải ngay các sản phẩm gắn nhãn Miễn phí (bao gồm mẫu web Free Sample, các mẫu miễn phí trong thư viện và LingoGlass Player).`,
-        `Gói Premium ($${PRICE_USD.pro} / 1 tháng): Mở khóa và tải không giới hạn toàn bộ Giao diện web và Kỹ năng / Prompt trong 30 ngày.`,
-        `Gói Ultra ($${PRICE_USD.ultra} / 1 năm): Mở khóa toàn bộ Giao diện web + Kỹ năng / Prompt suốt 365 ngày, tiết kiệm $${PRICE_USD.pro * 12 - PRICE_USD.ultra} so với mua từng tháng và nhận toàn bộ mẫu mới ra mắt trong năm.`,
-        `Mua lẻ ($${PRICE_USD.single} / sản phẩm): Áp dụng cho các sản phẩm thuộc nhóm Agent hoặc mua từng sản phẩm riêng lẻ qua giỏ hàng.`,
-        `Sau khi hết hạn gói, các file .zip bạn đã tải về máy vẫn được phép sử dụng thương mại vĩnh viễn.`,
+        `Miễn phí (0₫ / $0): Tải ngay các sản phẩm gắn nhãn Miễn phí (bao gồm mẫu web Free Sample, các mẫu miễn phí trong thư viện và LingoGlass Player).`,
+        `Gói Premium (500.000₫ hoặc $${PRICE_USD.pro} / 1 tháng): Mở khóa và tải không giới hạn toàn bộ Giao diện web và Kỹ năng / Prompt trong 30 ngày.`,
+        `Gói Ultra (5.000.000₫ hoặc $${PRICE_USD.ultra} / 1 năm): Mở khóa toàn bộ Giao diện web + Kỹ năng / Prompt suốt 365 ngày, nhận toàn bộ mẫu mới ra mắt trong năm.`,
+        `Mua lẻ (500.000₫ hoặc $${PRICE_USD.single} / sản phẩm): Áp dụng cho các sản phẩm thuộc nhóm Agent hoặc mua từng sản phẩm riêng lẻ qua giỏ hàng.`,
+        `Cổng thanh toán: Khách Việt Nam chuyển khoản nhanh qua mã VietQR (PayOS - VNĐ); khách quốc tế thanh toán thẻ qua Paddle (USD). Sau khi hết hạn gói, file .zip đã tải vẫn được dùng thương mại vĩnh viễn.`,
       ],
       actions: [
         { label: 'Xem Bảng giá chi tiết →', kind: 'tab', target: 'pricing' },

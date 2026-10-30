@@ -1,6 +1,7 @@
 export type MembershipPlan = 'PRO' | 'ULTRA';
 // PRO remains the stored identifier for existing orders; its public name is Premium.
 export const MEMBERSHIP_PRICES = { PRO: 2000, ULTRA: 20000 } as const;
+export const MEMBERSHIP_PRICES_VND = { PRO: 500_000, ULTRA: 5_000_000 } as const;
 export function membershipName(plan: string): string {
   return plan === 'PRO' ? 'Premium' : plan === 'ULTRA' ? 'Ultra' : plan;
 }

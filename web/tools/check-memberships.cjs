@@ -58,18 +58,18 @@ async function main() {
   const ultra = record('ULTRA', '2026-10-01', '2027-10-01');
   eq(policy.activeMembership([active, ultra], now), ultra);
   for (const lang of ['vi', 'en', 'zh']) {
-    eq(catalog.providerForLang(lang), 'PADDLE');
+    eq(catalog.providerForLang(lang), lang === 'vi' ? 'PAYOS' : 'PADDLE');
     eq(catalog.priceOf('PRO', 'USD'), 2000);
     eq(catalog.priceOf('ULTRA', 'USD'), 20000);
     for (const id of Object.keys(load('src/lib/real-templates.ts').REAL_TEMPLATES)) eq(catalog.priceOf('TEMPLATE', 'USD', id), 2000);
   }
-  assert.throws(() => catalog.priceOf('PRO', 'VND')); checks++;
+  eq(catalog.priceOf('PRO', 'VND'), 500000); eq(catalog.priceOf('ULTRA', 'VND'), 5000000); checks += 2;
 
   let session = null, suspended = false, created = [], adapterInput;
   const checkout = load('src/app/api/checkout/route.ts', {
     '@/auth': { auth: async () => session },
     '@/lib/db': { prisma: { user: { findUnique: async () => ({ suspendedAt: suspended ? now : null }) }, order: { create: async ({ data }) => { created.push(data); return { ...data, id: 'order-test' }; }, update: async () => ({}) } } },
-    '@/lib/payments': { adapterFor: () => ({ configured: () => true, createCheckout: async input => { adapterInput = input; return { checkoutUrl: 'https://shop.example.test/thanh-toan/paddle?_ptxn=test', reference: 'test' }; } }) },
+    '@/lib/payments': { adapterFor: () => ({ configured: () => true, createCheckout: async input => { adapterInput = input; return { checkoutUrl: 'https://shop.example.test/thanh-toan/paddle?_ptxn=test', reference: '123456' }; } }) },
   });
   const post = data => checkout.POST(new Request('https://shop.example.test/api/checkout', { method: 'POST', body: JSON.stringify({ email: 'buyer@example.test', ...data }) }));
   eq((await post({ kind: 'PRO' })).status, 401);
@@ -77,12 +77,12 @@ async function main() {
   session = { user: { id: 'user-1', email: 'buyer@example.test' } };
   eq((await post({ kind: 'ULTRA', email: 'other@example.test' })).status, 401);
   eq((await post({ kind: 'BUNDLE' })).status, 400);
-  eq((await post({ kind: 'PRO', provider: 'PAYOS' })).status, 400);
+  eq((await post({ kind: 'PRO', provider: 'PAYOS' })).status, 200);
   suspended = true;
   eq((await post({ kind: 'PRO' })).status, 403);
   suspended = false;
   for (const kind of ['PRO', 'ULTRA']) {
-    eq((await post({ kind, amount: 1, currency: 'VND' })).status, 200);
+    eq((await post({ kind, lang: 'en', amount: 1, currency: 'VND' })).status, 200);
     eq(adapterInput.amount, kind === 'PRO' ? 2000 : 20000);
     eq(adapterInput.currency, 'USD');
     eq(created.at(-1).userId, 'user-1');
@@ -102,7 +102,7 @@ async function main() {
   eq((await post({ kind: 'CART', templateIds: [premiumId, agentId] })).status, 403);
   eq(created.length, beforeBlocked);
   eq((await post({ kind: 'TEMPLATE', templateId: agentId })).status, 200);
-  eq(adapterInput.amount, 2000);
+  eq(adapterInput.amount, 500000); eq((await post({ kind: 'TEMPLATE', templateId: agentId, lang: 'en' })).status, 200); eq(adapterInput.amount, 2000);
   session = null;
   eq((await post({ kind: 'TEMPLATE', templateId: premiumId })).status, 403);
   session = { user: { id: 'user-1', email: 'buyer@example.test' } };

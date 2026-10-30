@@ -725,7 +725,7 @@ export function buildView(
       ...TIER_STYLE[i],
       ...tr,
       featured: i === 1,
-      price: formatMoney(priceOf(i === 0 ? 'PRO' : 'ULTRA', 'USD'), 'USD', lang as Lang),
+      price: formatMoney(priceOf(i === 0 ? 'PRO' : 'ULTRA', currency), currency, lang as Lang),
       onCta: () => im.startCheckout(i === 0 ? 'PRO' : 'ULTRA'),
     })),
     faqs: t.faqs.map((f: any, i: number) => ({

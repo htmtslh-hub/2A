@@ -7,7 +7,7 @@
    VNĐ là đồng, USD là cent (2_000 = $20). Cả PayOS lẫn Paddle đều
    nhận số nguyên theo quy ước này. */
 import { REAL_TEMPLATES, templateSlug } from './real-templates';
-import { isMembershipPlan, MEMBERSHIP_PRICES } from './membership-policy';
+import { isMembershipPlan, MEMBERSHIP_PRICES, MEMBERSHIP_PRICES_VND } from './membership-policy';
 
 export type Lang = 'vi' | 'en' | 'zh';
 export type Currency = 'VND' | 'USD';
@@ -17,7 +17,7 @@ export type Kind = 'TEMPLATE' | 'BUNDLE' | 'PRO' | 'ULTRA';
 /* ---------- giá ---------- */
 
 export const PRICE_VND = {
-  single: 1_900_000,
+  single: 500_000,
   bundle: 9_900_000,
 };
 
@@ -33,8 +33,8 @@ export const TEMPLATE_PRICE_OVERRIDE: Record<string, Partial<Record<Currency, nu
 /* ---------- chọn cổng theo thị trường ---------- */
 
 /** Display language does not change the payment currency. */
-export function providerForLang(_lang: Lang): Provider {
-  return 'PADDLE';
+export function providerForLang(lang: Lang): Provider {
+  return lang === 'vi' ? 'PAYOS' : 'PADDLE';
 }
 
 export function currencyForProvider(provider: Provider): Currency {
@@ -66,8 +66,8 @@ export function templateName(id: string, lang: Lang = 'vi'): string {
 
 export function priceOf(kind: Kind, currency: Currency, templateId?: string | null): number {
   if (isMembershipPlan(kind)) {
-    if (currency !== 'USD') throw new Error('Account upgrades are USD-only.');
-    return MEMBERSHIP_PRICES[kind];
+    return currency === 'VND' ? MEMBERSHIP_PRICES_VND[kind] : MEMBERSHIP_PRICES[kind];
+
   }
   if (kind === 'TEMPLATE' && templateId) {
     const override = TEMPLATE_PRICE_OVERRIDE[templateId]?.[currency];
@@ -106,7 +106,16 @@ export function shortDescription(kind: Kind | 'CART', templateId?: string | null
   // Chỉ giữ chữ, số, khoảng trắng: ngân hàng hay tự bỏ ký tự đặc biệt khỏi nội
   // dung chuyển khoản, khiến nội dung trên sao kê lệch với cái mình gửi.
   const id = (templateId ?? '').toUpperCase().replace(/[^A-Z0-9]/g, '');
-  const raw = kind === 'BUNDLE' ? 'FZ TRONBO' : kind === 'CART' ? 'FZ GIOHANG' : `FZ ${id}`.trim();
+  const raw =
+    kind === 'PRO'
+      ? 'FZ PREM'
+      : kind === 'ULTRA'
+        ? 'FZ ULTRA'
+        : kind === 'BUNDLE'
+          ? 'FZ TRONBO'
+          : kind === 'CART'
+            ? 'FZ GIOHNG'
+            : `FZ ${id}`.trim();
   return raw.slice(0, 9);
 }
 

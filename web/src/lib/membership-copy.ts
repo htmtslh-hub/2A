@@ -2,7 +2,7 @@ import type { Lang } from './catalog';
 
 export const MEMBERSHIP_COPY = {
   vi: {
-    lead: 'Để lại email để nhận link tải mẫu miễn phí. Nâng cấp Premium $20/tháng hoặc Ultra $200/năm.',
+    lead: 'Để lại email để nhận link tải mẫu miễn phí. Nâng cấp Premium 500.000₫/tháng ($20) hoặc Ultra 5.000.000₫/năm ($200).',
     pricingTitle: 'Nâng cấp tài khoản Premium hoặc Ultra',
     pricingIntro: 'Mở toàn bộ thư viện trong thời hạn gói. Thanh toán một lần, không tự gia hạn.',
     pricingNote: 'Hết hạn sẽ dừng tải mới; file đã tải vẫn dùng theo giấy phép. Giao diện web, Skill và Prompt thuộc Premium; cần gói Premium hoặc Ultra còn hiệu lực để tải. Không gồm dịch vụ thiết kế hoặc cài đặt.',

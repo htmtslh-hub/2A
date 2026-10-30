@@ -53,7 +53,7 @@ const schema = z.object({
   email: z.string().email(),
   name: z.string().trim().max(120).optional(),
   lang: z.enum(['vi', 'en', 'zh']).default('vi'),
-  provider: z.literal('PADDLE').optional(),
+  provider: z.enum(['PAYOS', 'PADDLE']).optional(),
 });
 
 export async function POST(req: Request) {

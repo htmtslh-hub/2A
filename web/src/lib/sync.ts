@@ -150,7 +150,7 @@ export function syncDom(st: State) {
     const on = i === st.active;
     el.style.opacity = on ? '1' : '0';
     el.style.transform = on ? 'scale(1)' : 'scale(1.18)';
-    el.style.filter = on ? 'blur(0px)' : 'blur(18px)';
+    el.style.filter = on ? 'blur(0px) brightness(1.16) saturate(1.08)' : 'blur(18px) brightness(1)';
     el.muted = true;
     if (on)
       playVid(el, heroVideo(IMAGES[i], vw, vh), () => i === st.active, bgPoster(POSTERS[i]));

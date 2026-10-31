@@ -133,14 +133,14 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                     {(vm.heroBgs ?? []).map((bg: any, bg_i: number) => (
                           <video key={bg_i} style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover", transformOrigin: "center", transition: "opacity 1s ease, transform 1.6s cubic-bezier(.16,1,.3,1), filter 1.2s ease", willChange: "opacity, transform, filter" }} aria-hidden="true" data-hero-bg="" poster={bg.poster} muted loop playsInline preload="none" />
                       ))}
-                    <div style={{ position: "absolute", inset: "0", background: "radial-gradient(90% 70% at 80% 30%, var(--acc-a14), transparent 62%)", pointerEvents: "none" }} />
-                    <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(18,20,24,.82) 0%, rgba(18,20,24,.62) 34%, rgba(18,20,24,.74) 72%, rgba(18,20,24,.96) 100%)", pointerEvents: "none", left: "3px", top: "-17px" }} />
-                    <div style={{ position: "absolute", inset: "0", background: "linear-gradient(90deg, rgba(18,20,24,.9) 0%, rgba(18,20,24,.72) 32%, rgba(18,20,24,.18) 60%, transparent 78%)", pointerEvents: "none" }} />
+                    <div style={{ position: "absolute", inset: "0", background: "radial-gradient(95% 75% at 78% 28%, var(--acc-a18), rgba(255,255,255,.06) 38%, transparent 68%)", pointerEvents: "none" }} />
+                    <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(18,20,24,.38) 0%, rgba(18,20,24,.18) 36%, rgba(18,20,24,.32) 72%, rgba(18,20,24,.78) 100%)", pointerEvents: "none", left: "3px", top: "-17px" }} />
+                    <div style={{ position: "absolute", inset: "0", background: "linear-gradient(90deg, rgba(18,20,24,.56) 0%, rgba(18,20,24,.34) 32%, rgba(18,20,24,.08) 58%, transparent 76%)", pointerEvents: "none" }} />
                     <div style={{ position: "absolute", left: "0", right: "0", bottom: "0", height: "26%", pointerEvents: "none", backdropFilter: "blur(22px) saturate(115%)", WebkitBackdropFilter: "blur(22px) saturate(115%)", maskImage: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 46%, #000 100%)", WebkitMaskImage: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.5) 46%, #000 100%)" }} aria-hidden="true" />
-                    <div style={{ position: "absolute", left: "0", right: "0", bottom: "0", height: "22%", pointerEvents: "none", background: "linear-gradient(180deg, rgba(19,21,25,0) 0%, rgba(19,21,25,.55) 55%, rgba(19,21,25,.92) 100%)" }} aria-hidden="true" />
+                    <div style={{ position: "absolute", left: "0", right: "0", bottom: "0", height: "22%", pointerEvents: "none", background: "linear-gradient(180deg, rgba(19,21,25,0) 0%, rgba(19,21,25,.32) 55%, rgba(19,21,25,.78) 100%)" }} aria-hidden="true" />
                   </div>
                 </div>
-                <div style={{ position: "absolute", zIndex: "4", top: "clamp(14px,1.5vw,26px)", left: "clamp(14px,1.5vw,26px)", right: "clamp(14px,1.5vw,26px)", bottom: "0", borderRadius: "clamp(20px,2vw,32px)", border: "1px solid rgba(236,238,241,.16)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.14), inset 0 0 90px rgba(0,0,0,.34)", pointerEvents: "none" }} aria-hidden="true">
+                <div style={{ position: "absolute", zIndex: "4", top: "clamp(14px,1.5vw,26px)", left: "clamp(14px,1.5vw,26px)", right: "clamp(14px,1.5vw,26px)", bottom: "0", borderRadius: "clamp(20px,2vw,32px)", border: "1px solid rgba(236,238,241,.24)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.24), inset 0 0 60px rgba(255,255,255,.03)", pointerEvents: "none" }} aria-hidden="true">
                   <span style={{ position: "absolute", top: "-1px", left: "-1px", width: "46px", height: "46px", borderTop: "2px solid var(--acc)", borderLeft: "2px solid var(--acc)", borderTopLeftRadius: "clamp(20px,2vw,32px)" }} />
                   <span style={{ position: "absolute", top: "-1px", right: "-1px", width: "46px", height: "46px", borderTop: "2px solid var(--acc)", borderRight: "2px solid var(--acc)", borderTopRightRadius: "clamp(20px,2vw,32px)" }} />
                   <span style={{ position: "absolute", bottom: "-1px", left: "-1px", width: "46px", height: "46px", borderBottom: "2px solid var(--acc)", borderLeft: "2px solid var(--acc)", borderBottomLeftRadius: "clamp(20px,2vw,32px)" }} />
@@ -181,9 +181,9 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                   <div style={{ flex: "1 1 480px", minWidth: "min(100%,320px)", display: "flex", flexDirection: "column", gap: "18px" }}>
                     <div style={{ display: "flex", gap: "10px", height: "clamp(300px,42vh,420px)", overflow: "hidden" }} data-herostrip="">
                       {(vm.cards ?? []).map((item: any, item_i: number) => (
-                            <div key={item_i} className="hv4" style={{ position: "relative", minWidth: "0", borderRadius: "18px", overflow: "hidden", cursor: "pointer", transition: "flex-basis .6s cubic-bezier(.22,1,.36,1)", border: "1px solid rgba(236,238,241,.12)" }} onClick={item.onSelect} onMouseEnter={item.onSelect} data-hero-card="">
-                              <video style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover" }} aria-hidden="true" data-hero-cardvid="" poster={item.poster} muted loop playsInline preload="none" />
-                              <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(18,20,24,0) 0%, rgba(18,20,24,0) 45%, rgba(18,20,24,.82) 100%)", pointerEvents: "none" }} />
+                            <div key={item_i} className="hv4" style={{ position: "relative", minWidth: "0", borderRadius: "18px", overflow: "hidden", cursor: "pointer", transition: "flex-basis .6s cubic-bezier(.22,1,.36,1)", border: "1px solid rgba(236,238,241,.24)", boxShadow: "inset 0 1px 0 rgba(255,255,255,.22)" }} onClick={item.onSelect} onMouseEnter={item.onSelect} data-hero-card="">
+                              <video style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover", filter: "brightness(1.12) saturate(1.06)" }} aria-hidden="true" data-hero-cardvid="" poster={item.poster} muted loop playsInline preload="none" />
+                              <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(18,20,24,0) 0%, rgba(18,20,24,0) 52%, rgba(18,20,24,.64) 100%)", pointerEvents: "none" }} />
                               <span style={{ position: "absolute", top: "12px", right: "14px", fontFamily: "var(--display)", fontWeight: "700", fontSize: "20px", color: "#ffffff", pointerEvents: "none" }}>
                                 {item.no}
                               </span>
@@ -197,7 +197,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                               </div>
                               {(item.locked) ? (
                                 <>
-                                  <div style={{ position: "absolute", inset: "0", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(10,11,13,.38)", cursor: "not-allowed" }} aria-hidden="true">
+                                  <div style={{ position: "absolute", inset: "0", display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(14,16,20,.22)", cursor: "not-allowed" }} aria-hidden="true">
                                     <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "46px", height: "46px", borderRadius: "50%", background: "rgba(12,13,16,.72)", border: "1px solid rgba(255,255,255,.42)", boxShadow: "0 6px 18px -6px rgba(0,0,0,.7)" }}>
                                       <svg width="19" height="19" viewBox="0 0 24 24" fill="none">
                                         <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" stroke="#ffffff" strokeWidth="1.7" />
@@ -231,7 +231,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
               </section>
               {/* HOME: product showcase (ảnh sản phẩm) */}
               <section style={{ position: "relative", marginTop: "-90px", padding: "clamp(48px,7vw,96px) clamp(20px,4vw,56px) clamp(64px,9vw,120px)", overflow: "hidden" }}>
-                <div style={{ position: "absolute", top: "-160px", left: "0", right: "0", height: "340px", zIndex: "2", pointerEvents: "none", background: "linear-gradient(180deg, rgba(19,21,25,0) 0%, rgba(19,21,25,.45) 34%, rgba(19,21,25,.72) 50%, rgba(19,21,25,.3) 76%, rgba(19,21,25,0) 100%)" }} aria-hidden="true">
+                <div style={{ position: "absolute", top: "-160px", left: "0", right: "0", height: "340px", zIndex: "2", pointerEvents: "none", background: "linear-gradient(180deg, rgba(19,21,25,0) 0%, rgba(19,21,25,.24) 36%, rgba(19,21,25,.48) 52%, rgba(19,21,25,.18) 78%, rgba(19,21,25,0) 100%)" }} aria-hidden="true">
                   <div style={{ position: "absolute", top: "177px", left: "-6px", height: "200px", zIndex: "3", pointerEvents: "none", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)", maskImage: "linear-gradient(180deg, #000 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,0) 100%)", WebkitMaskImage: "linear-gradient(180deg, #000 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,0) 100%)" }} aria-hidden="true" />
                 </div>
                 <div style={{ position: "absolute", top: "-10%", left: "50%", transform: "translateX(-50%)", width: "74%", height: "56%", borderRadius: "50%", background: "var(--acc-a14)", filter: "blur(140px)", pointerEvents: "none" }} aria-hidden="true" />

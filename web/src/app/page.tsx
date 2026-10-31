@@ -54,19 +54,19 @@ const TAB_META: Record<
   },
   pricing: {
     vi: {
-      title: 'Bảng giá & Gói thành viên Premium / Ultra — Forge Zone',
+      title: 'Bảng giá & Gói thành viên Premium / Ultra / Ultra Lifetime — Forge Zone',
       description:
-        'Tải miễn phí các mẫu Free, mua lẻ từng sản phẩm hoặc nâng cấp gói Premium (500.000₫/tháng) & Ultra (5.000.000₫/năm) kèm giấy phép thương mại.',
+        'Tải miễn phí các mẫu Free, mua lẻ từng sản phẩm hoặc nâng cấp gói Premium (269.000₫/tháng), Ultra (1.799.000₫/năm) & Ultra Lifetime (3.999.000₫ trọn đời) kèm giấy phép thương mại.',
     },
     en: {
-      title: 'Pricing & Premium / Ultra Membership Plans — Forge Zone',
+      title: 'Pricing & Premium / Ultra / Ultra Lifetime Plans — Forge Zone',
       description:
-        'Download Free templates, buy individual products, or unlock the full library with Premium ($20/month) and Ultra ($200/year) commercial plans.',
+        'Download Free templates, buy individual products, or unlock the full library with Premium ($10/month), Ultra ($79/year), and Ultra Lifetime ($200 one-time) commercial plans.',
     },
     zh: {
-      title: '价格与 Premium / Ultra 会员套餐 — Forge Zone',
+      title: '价格与 Premium / Ultra / Ultra Lifetime 会员套餐 — Forge Zone',
       description:
-        '免费下载开放模板，单品购买，或订阅 Premium ($20/月) 与 Ultra ($200/年) 商业授权套餐。',
+        '免费下载开放模板，单品购买，或订阅 Premium ($10/月)、Ultra ($79/年) 与 Ultra Lifetime ($200/终身) 商业授权套餐。',
     },
   },
   faq: {

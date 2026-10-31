@@ -47,7 +47,7 @@ function paddleCheckoutUrlForOrder(checkoutUrl: string, orderId: string): string
 }
 
 const schema = z.object({
-  kind: z.enum(['TEMPLATE', 'CART', 'PRO', 'ULTRA']),
+  kind: z.enum(['TEMPLATE', 'CART', 'PRO', 'ULTRA', 'BUNDLE']),
   templateId: z.string().max(10).optional(),
   templateIds: z.array(z.string().max(10)).min(1).max(20).optional(),
   email: z.string().email(),
@@ -88,10 +88,10 @@ export async function POST(req: Request) {
 
   const session = await auth();
   const userId = (session?.user as { id?: string } | undefined)?.id ?? null;
-  if ((kind === 'CART' || isMembershipPlan(kind)) && (!userId || session?.user?.email?.toLowerCase() !== email.toLowerCase())) {
+  if ((kind === 'CART' || isMembershipPlan(kind) || kind === 'BUNDLE') && (!userId || session?.user?.email?.toLowerCase() !== email.toLowerCase())) {
     return NextResponse.json({ error: 'Vui lòng đăng nhập đúng tài khoản để thanh toán.' }, { status: 401 });
   }
-  if (isMembershipPlan(kind)) {
+  if (isMembershipPlan(kind) || kind === 'BUNDLE') {
     const buyer = await prisma.user.findUnique({ where: { id: userId! }, select: { suspendedAt: true } });
     if (!buyer || buyer.suspendedAt) return NextResponse.json({ error: 'Tài khoản không được phép nâng cấp.' }, { status: 403 });
   }

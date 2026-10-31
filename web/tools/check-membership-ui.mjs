@@ -33,12 +33,15 @@ try {
       await page.goto(`${base}/?tab=pricing`);
       const cards = page.locator('.pricing-card');
       await cards.first().waitFor();
-      assert.equal(await cards.count(), 2); checks++;
+      assert.equal(await cards.count(), 3); checks++;
       assert.equal(await cards.nth(0).locator('h3').textContent(), 'Premium'); checks++;
       assert.equal(await cards.nth(1).locator('h3').textContent(), 'Ultra'); checks++;
-      assert.match(await cards.nth(0).textContent(), /20/); checks++;
-      assert.match(await cards.nth(1).textContent(), /200/); checks++;
+      assert.equal(await cards.nth(2).locator('h3').textContent(), 'Ultra Lifetime'); checks++;
+      assert.match(await cards.nth(0).textContent(), /10|269\.000/); checks++;
+      assert.match(await cards.nth(1).textContent(), /79|1\.799\.000/); checks++;
+      assert.match(await cards.nth(2).textContent(), /200|3\.999\.000/); checks++;
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), true); checks++;
+      assert.equal(await page.evaluate(() => Array.from(document.querySelectorAll('.pricing-card')).every(card => { const cb = card.getBoundingClientRect(); const spans = card.querySelectorAll('p + div > span'); return Array.from(spans).every(sp => sp.getBoundingClientRect().right <= cb.right - 6); })), true); checks++;
       await page.screenshot({ path: resolve(output, `pricing-${locale}-${width}.png`), fullPage: true });
       await cards.first().locator('button').click();
       await page.locator('input[type="password"]').waitFor();
@@ -47,7 +50,7 @@ try {
       await page.reload();
       await cards.first().waitFor();
       await page.getByText('Buyer', { exact: true }).waitFor();
-      for (const [index, kind] of [[0, 'PRO'], [1, 'ULTRA']]) {
+      for (const [index, kind] of [[0, 'PRO'], [1, 'ULTRA'], [2, 'BUNDLE']]) {
         await Promise.all([page.waitForResponse(response => response.url().includes('/api/checkout')), cards.nth(index).locator('button').click()]);
         await page.waitForFunction(() => document.body.textContent.includes('Offline test: payment request verified.'));
         assert.equal(checkoutRequests.at(-1).kind, kind); checks++;
@@ -68,7 +71,7 @@ try {
       await page.getByRole('button', {name:download,exact:false}).waitFor();
       const [file] = await Promise.all([page.waitForEvent('download'),page.getByRole('button',{name:download,exact:false}).click()]);
       assert.match(file.url(), /api\/download\?id=t31/); checks++;
-      assert.equal(checkoutRequests.length,2); checks++;
+      assert.equal(checkoutRequests.length,3); checks++;
       await context.close();
       console.log(`PASS pricing ${locale} at ${width}px: prices, layout, login gate, Premium/Ultra checkout requests.`);
     }

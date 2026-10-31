@@ -12,6 +12,7 @@ const PRICE_USD = {
   single: PRICE_CENTS.single / 100,
   pro: MEMBERSHIP_PRICES.PRO / 100,
   ultra: MEMBERSHIP_PRICES.ULTRA / 100,
+  lifetime: MEMBERSHIP_PRICES.BUNDLE / 100,
 };
 
 export interface BotAction {
@@ -57,7 +58,7 @@ export const BOT_UI_COPY: Record<LangCode, BotUiCopy> = {
       'Xin chào! Mình là Forge Bot — trợ lý tự động của Forge Zone. Bạn có thể chọn nhanh chủ đề bên dưới hoặc nhập câu hỏi bất kỳ (ví dụ: cài đặt và sử dụng giao diện như thế nào, mẫu miễn phí, giá gói Premium, tìm mẫu portfolio...).',
     welcomeBullets: [
       `Kho hiện có ${Object.keys(REAL_TEMPLATES).length}+ sản phẩm thật kèm bản xem thử trực tiếp`,
-      `Gói thành viên: Miễn phí ($0) • Premium (500.000₫ / $${PRICE_USD.pro} / tháng) • Ultra (5.000.000₫ / $${PRICE_USD.ultra} / năm) • Mua lẻ (500.000₫ / $${PRICE_USD.single})`,
+      `Gói thành viên: Miễn phí ($0) • Premium (269.000₫ / $${PRICE_USD.pro} / tháng) • Ultra (1.799.000₫ / $${PRICE_USD.ultra} / năm) • Ultra Lifetime (3.999.000₫ / $${PRICE_USD.lifetime} / trọn đời)`,
       'Thanh toán một lần qua VietQR (PayOS) tại Việt Nam hoặc thẻ quốc tế (Paddle), không tự động gia hạn, kèm giấy phép thương mại',
     ],
     quickTitle: 'Câu hỏi thường gặp',
@@ -76,7 +77,7 @@ export const BOT_UI_COPY: Record<LangCode, BotUiCopy> = {
       'Hi there! I am Forge Bot — your automated Forge Zone assistant. Pick a quick topic below or type any question (e.g. how to install and use a template, free templates, Premium pricing, portfolio designs, refund policy...).',
     welcomeBullets: [
       `${Object.keys(REAL_TEMPLATES).length}+ live products with interactive demos`,
-      `Plans: Free ($0) • Premium ($${PRICE_USD.pro}/month) • Ultra ($${PRICE_USD.ultra}/year) • Single ($${PRICE_USD.single})`,
+      `Plans: Free ($0) • Premium ($${PRICE_USD.pro}/month) • Ultra ($${PRICE_USD.ultra}/year) • Ultra Lifetime ($${PRICE_USD.lifetime} lifetime) • Single ($${PRICE_USD.single})`,
       'One-time payment via Paddle, no auto-renewal, ships with CUSTOMISE.md & commercial licence',
     ],
     quickTitle: 'Popular questions',
@@ -95,7 +96,7 @@ export const BOT_UI_COPY: Record<LangCode, BotUiCopy> = {
       '你好！我是 Forge Zone 的自动问答助手 Forge Bot。你可以点击下方快捷问题，或直接输入想了解的内容（例如：如何安装和使用网页模板、免费模板、Premium 价格、作品集模板、退款政策等）。',
     welcomeBullets: [
       `现已上架 ${Object.keys(REAL_TEMPLATES).length}+ 款真实产品，均支持在线预览`,
-      `方案：免费 ($0) • Premium ($${PRICE_USD.pro}/月) • Ultra ($${PRICE_USD.ultra}/年) • 单买 ($${PRICE_USD.single})`,
+      `方案：免费 ($0) • Premium ($${PRICE_USD.pro}/月) • Ultra ($${PRICE_USD.ultra}/年) • Ultra Lifetime ($${PRICE_USD.lifetime}/终身) • 单买 ($${PRICE_USD.single})`,
       '通过 Paddle 一次性付款，绝不自动续费，附带 CUSTOMISE.md 修改清单与商用授权',
     ],
     quickTitle: '常见问题快捷入口',
@@ -214,8 +215,9 @@ function buildPricingReply(lang: LangCode): BotReply {
       text: `Forge Zone áp dụng mô hình trả một lần cho kỳ đã chọn, KHÔNG tự động gia hạn (${m.pricingIntro}):`,
       bullets: [
         `Miễn phí (0₫ / $0): Tải ngay các sản phẩm gắn nhãn Miễn phí (bao gồm mẫu web Free Sample, các mẫu miễn phí trong thư viện và LingoGlass Player).`,
-        `Gói Premium (500.000₫ hoặc $${PRICE_USD.pro} / 1 tháng): Mở khóa và tải không giới hạn toàn bộ Giao diện web và Kỹ năng / Prompt trong 30 ngày.`,
-        `Gói Ultra (5.000.000₫ hoặc $${PRICE_USD.ultra} / 1 năm): Mở khóa toàn bộ Giao diện web + Kỹ năng / Prompt suốt 365 ngày, nhận toàn bộ mẫu mới ra mắt trong năm.`,
+        `Gói Premium (269.000₫ hoặc $${PRICE_USD.pro} / 1 tháng): Mở khóa và tải không giới hạn toàn bộ Giao diện web và Kỹ năng / Prompt trong 30 ngày.`,
+        `Gói Ultra (1.799.000₫ hoặc $${PRICE_USD.ultra} / 1 năm): Mở khóa toàn bộ Giao diện web + Kỹ năng / Prompt suốt 365 ngày, nhận toàn bộ mẫu mới ra mắt trong năm.`,
+        `Gói Ultra Lifetime (3.999.000₫ hoặc $${PRICE_USD.lifetime} / trọn đời): Mở khóa vĩnh viễn toàn bộ thư viện và mọi sản phẩm mới trong tương lai.`,
         `Mua lẻ (500.000₫ hoặc $${PRICE_USD.single} / sản phẩm): Áp dụng cho các sản phẩm thuộc nhóm Agent hoặc mua từng sản phẩm riêng lẻ qua giỏ hàng.`,
         `Cổng thanh toán: Khách Việt Nam chuyển khoản nhanh qua mã VietQR (PayOS - VNĐ); khách quốc tế thanh toán thẻ qua Paddle (USD). Sau khi hết hạn gói, file .zip đã tải vẫn được dùng thương mại vĩnh viễn.`,
       ],
@@ -232,6 +234,7 @@ function buildPricingReply(lang: LangCode): BotReply {
         `免费方案 ($0)：直接下载标有“免费”的产品（如 Free Sample 网页模板与 LingoGlass 播放器）。`,
         `Premium 方案 ($${PRICE_USD.pro} / 1个月)：30 天内无限量解锁并下载所有网站模板与技能 / 提示词。`,
         `Ultra 方案 ($${PRICE_USD.ultra} / 1年)：365 天内解锁全部网站模板与技能 / 提示词，比按月购买立省 $${PRICE_USD.pro * 12 - PRICE_USD.ultra}，包含全年新增模板。`,
+        `Ultra Lifetime 方案 ($${PRICE_USD.lifetime} / 终身)：一次性付款，永久解锁全部产品与未来新增内容。`,
         `单品购买 ($${PRICE_USD.single} / 款)：适用于智能体 (Agent) 产品或通过购物车单独结算。`,
         `会员到期后，已下载到本地的 .zip 文件仍可永久用于商业项目。`,
       ],
@@ -247,6 +250,7 @@ function buildPricingReply(lang: LangCode): BotReply {
       `Free ($0): Instant access to all products marked Free (including the Free Sample web template and LingoGlass Player).`,
       `Premium Plan ($${PRICE_USD.pro} / 1 month): Unlimited downloads across all Web Templates and Skills / Prompts for 30 days.`,
       `Ultra Plan ($${PRICE_USD.ultra} / 1 year): Full access to all Web Templates + Skills / Prompts for 365 days — save $${PRICE_USD.pro * 12 - PRICE_USD.ultra} vs. monthly and get every new release all year.`,
+      `Ultra Lifetime Plan ($${PRICE_USD.lifetime} / lifetime): One-time payment for permanent lifetime access to all current and future products.`,
       `Individual Purchase ($${PRICE_USD.single} / item): Available for Agent products or individual cart checkout.`,
       `Files you download remain yours forever under the commercial licence, even after your membership window ends.`,
     ],

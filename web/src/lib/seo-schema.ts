@@ -124,7 +124,7 @@ export function buildStoreJsonLd(options: {
         description: isFree
           ? 'Free commercial website template download'
           : isPrem
-            ? 'Included with Forge Zone Premium ($20/month) or Ultra ($200/year) membership'
+            ? 'Included with Forge Zone Premium ($10/month), Ultra ($79/year), or Ultra Lifetime ($200 one-time) membership'
             : 'One-time purchase with commercial licence',
       },
     });

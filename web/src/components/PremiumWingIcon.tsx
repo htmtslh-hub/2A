@@ -219,7 +219,7 @@ export default function PremiumWingIcon({
   className,
   title,
 }: PremiumWingIconProps) {
-  const isGold = variant === 'gold';
+  const isGold = variant === 'gold' || Boolean(title && title.startsWith('Ultra'));
   const label = title ?? (isGold ? 'Ultra' : 'Premium');
 
   return (

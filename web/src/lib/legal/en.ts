@@ -39,7 +39,7 @@ export const LEGAL_EN: LegalPack = {
           'The price shown at the time you order applies. All new purchases are paid in USD, regardless of display language. Applicable taxes are shown at checkout.',
           '<b>Paddle.com Market Ltd</b> is the merchant of record and is responsible for collecting and remitting VAT/GST in your country. Your invoice and card statement will show Paddle.',
           'An order is complete only once we receive confirmation of successful payment from the payment provider.',
-          'Premium costs USD 20 for one month of full-library access; Ultra costs USD 200 for one year. These are one-time account upgrades with no automatic renewal. Terms use calendar months/years from confirmed payment, clamping month-end dates to the last valid day.',
+          'Premium costs USD 10 for one month of full-library access; Ultra costs USD 79 for one year; Ultra Lifetime costs USD 200 for permanent lifetime access. These are one-time account upgrades with no automatic renewal. Terms use calendar months/years from confirmed payment, clamping month-end dates to the last valid day.',
           'Renewing the same plan extends your purchased term. A different plan starts on payment, with no credit or transfer of remaining time.',
         ],
       },

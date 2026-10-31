@@ -59,11 +59,12 @@ async function main() {
   eq(policy.activeMembership([active, ultra], now), ultra);
   for (const lang of ['vi', 'en', 'zh']) {
     eq(catalog.providerForLang(lang), lang === 'vi' ? 'PAYOS' : 'PADDLE');
-    eq(catalog.priceOf('PRO', 'USD'), 2000);
-    eq(catalog.priceOf('ULTRA', 'USD'), 20000);
+    eq(catalog.priceOf('PRO', 'USD'), 1000);
+    eq(catalog.priceOf('ULTRA', 'USD'), 7900);
+    eq(catalog.priceOf('BUNDLE', 'USD'), 20000);
     for (const id of Object.keys(load('src/lib/real-templates.ts').REAL_TEMPLATES)) eq(catalog.priceOf('TEMPLATE', 'USD', id), 2000);
   }
-  eq(catalog.priceOf('PRO', 'VND'), 500000); eq(catalog.priceOf('ULTRA', 'VND'), 5000000); checks += 2;
+  eq(catalog.priceOf('PRO', 'VND'), 269000); eq(catalog.priceOf('ULTRA', 'VND'), 1799000); eq(catalog.priceOf('BUNDLE', 'VND'), 3999000); checks += 3;
 
   let session = null, suspended = false, created = [], adapterInput;
   const checkout = load('src/app/api/checkout/route.ts', {
@@ -76,14 +77,14 @@ async function main() {
   eq(created.length, 0);
   session = { user: { id: 'user-1', email: 'buyer@example.test' } };
   eq((await post({ kind: 'ULTRA', email: 'other@example.test' })).status, 401);
-  eq((await post({ kind: 'BUNDLE' })).status, 400);
+  eq((await post({ kind: 'BUNDLE', email: 'other@example.test' })).status, 401);
   eq((await post({ kind: 'PRO', provider: 'PAYOS' })).status, 200);
   suspended = true;
   eq((await post({ kind: 'PRO' })).status, 403);
   suspended = false;
-  for (const kind of ['PRO', 'ULTRA']) {
+  for (const kind of ['PRO', 'ULTRA', 'BUNDLE']) {
     eq((await post({ kind, lang: 'en', amount: 1, currency: 'VND' })).status, 200);
-    eq(adapterInput.amount, kind === 'PRO' ? 2000 : 20000);
+    eq(adapterInput.amount, kind === 'PRO' ? 1000 : kind === 'ULTRA' ? 7900 : 20000);
     eq(adapterInput.currency, 'USD');
     eq(created.at(-1).userId, 'user-1');
     eq(created.at(-1).templateId, null);
@@ -241,9 +242,9 @@ async function main() {
   eq((await get('t31')).status, 403);
   let payload;
   const paddle = load('src/lib/payments/paddle.ts', {}, { fetch: async (_, options) => { payload = JSON.parse(options.body); return { ok: true, json: async () => ({ data: { id: 'test', checkout: { url: 'https://shop.example.test/checkout' } } }) }; } });
-  for (const kind of ['PRO', 'ULTRA']) {
+  for (const kind of ['PRO', 'ULTRA', 'BUNDLE']) {
     await paddle.paddleAdapter.createCheckout({ orderId: kind, kind, amount: catalog.priceOf(kind, 'USD'), currency: 'USD', productName: kind, buyerEmail: 'buyer@example.test', lang: 'en', baseUrl: 'https://shop.example.test' });
-    eq(payload.items[0].price.unit_price.amount, kind === 'PRO' ? '2000' : '20000');
+    eq(payload.items[0].price.unit_price.amount, kind === 'PRO' ? '1000' : kind === 'ULTRA' ? '7900' : '20000');
     eq('billing_cycle' in payload.items[0].price, false);
   }
   // Orders created at the former prices still reconcile against their recorded amount.

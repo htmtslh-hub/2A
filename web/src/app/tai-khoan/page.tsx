@@ -81,6 +81,7 @@ export default async function AccountPage() {
 
   const formatDate = (date: Date) => new Intl.DateTimeFormat(dateLocale[lang], { dateStyle: 'medium' }).format(date);
   const m = MEMBERSHIP_COPY[lang];
+  const hasLifetime = purchases.some((p) => p.templateId === null);
   const plan = membership.active ?? membership.latest;
   const formatTerm = (date: Date) => new Intl.DateTimeFormat(dateLocale[lang], { dateStyle: 'medium', timeStyle: 'short' }).format(date);
   const activity = [
@@ -104,8 +105,8 @@ export default async function AccountPage() {
       <section className={styles.section}>
         <div className={styles.sectionHead}><h2>{m.title}</h2><Link className={styles.textLink} href="/?tab=pricing">{m.upgrade} ↗</Link></div>
         <div className={styles.purchase}>
-          <div className={styles.purchaseInfo}><div><strong>{plan ? membershipName(plan.plan) : m.free}</strong><span>{membership.active ? m.active : plan ? plan.startsAt > new Date() ? m.scheduled : m.expired : m.empty}</span>{plan && <span>{m.starts}: {formatTerm(plan.startsAt)} · {m.until}: {formatTerm(plan.expiresAt)}</span>}</div></div>
-          {membership.active && <Link className={styles.smallButton} href="/don-hang">{m.download} ↗</Link>}
+          <div className={styles.purchaseInfo}><div><strong>{hasLifetime ? membershipName('BUNDLE') : plan ? membershipName(plan.plan) : m.free}</strong><span>{hasLifetime ? m.lifetime : membership.active ? m.active : plan ? plan.startsAt > new Date() ? m.scheduled : m.expired : m.empty}</span>{!hasLifetime && plan && <span>{m.starts}: {formatTerm(plan.startsAt)} · {m.until}: {formatTerm(plan.expiresAt)}</span>}</div></div>
+          {(hasLifetime || membership.active) && <Link className={styles.smallButton} href="/don-hang">{m.download} ↗</Link>}
         </div>
         {membership.periods.filter(period => period.startsAt > new Date() && period.id !== plan?.id).map(period => <p key={period.id}>{m.scheduled}: {membershipName(period.plan)} · {m.starts}: {formatTerm(period.startsAt)} · {m.until}: {formatTerm(period.expiresAt)}</p>)}
         <p>{m.policy}</p><p>{m.renewal}</p>

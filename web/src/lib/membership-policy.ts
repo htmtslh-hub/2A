@@ -1,10 +1,19 @@
 export type MembershipPlan = 'PRO' | 'ULTRA';
 // PRO remains the stored identifier for existing orders; its public name is Premium.
-export const MEMBERSHIP_PRICES = { PRO: 2000, ULTRA: 20000 } as const;
-export const MEMBERSHIP_PRICES_VND = { PRO: 500_000, ULTRA: 5_000_000 } as const;
+// BUNDLE is used for Ultra Lifetime (permanent full-library access).
+export const MEMBERSHIP_PRICES = { PRO: 1000, ULTRA: 7900, BUNDLE: 20000 } as const;
+export const MEMBERSHIP_PRICES_VND = { PRO: 269_000, ULTRA: 1_799_000, BUNDLE: 3_999_000 } as const;
+
 export function membershipName(plan: string): string {
-  return plan === 'PRO' ? 'Premium' : plan === 'ULTRA' ? 'Ultra' : plan;
+  return plan === 'PRO'
+    ? 'Premium'
+    : plan === 'ULTRA'
+      ? 'Ultra'
+      : plan === 'BUNDLE'
+        ? 'Ultra Lifetime'
+        : plan;
 }
+
 export function isMembershipPlan(value: string): value is MembershipPlan {
   return value === 'PRO' || value === 'ULTRA';
 }
@@ -22,9 +31,16 @@ export function membershipExpiry(start: Date, plan: MembershipPlan): Date {
 }
 
 export type MembershipRecord = {
-  plan: string; startsAt: Date; expiresAt: Date; order: { status: string };
+  plan: string;
+  startsAt: Date;
+  expiresAt: Date;
+  order: { status: string };
 };
+
 export function activeMembership<T extends MembershipRecord>(rows: T[], now = new Date()): T | null {
-  return rows.filter(row => isMembershipPlan(row.plan) && row.order.status === 'PAID' && row.startsAt <= now && row.expiresAt > now)
-    .sort((a,b) => Number(b.plan === 'ULTRA') - Number(a.plan === 'ULTRA') || b.expiresAt.getTime() - a.expiresAt.getTime())[0] ?? null;
+  return (
+    rows
+      .filter((row) => isMembershipPlan(row.plan) && row.order.status === 'PAID' && row.startsAt <= now && row.expiresAt > now)
+      .sort((a, b) => Number(b.plan === 'ULTRA') - Number(a.plan === 'ULTRA') || b.expiresAt.getTime() - a.expiresAt.getTime())[0] ?? null
+  );
 }

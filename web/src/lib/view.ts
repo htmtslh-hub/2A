@@ -100,7 +100,7 @@ export interface Imperative {
   /** Đăng nhập bằng Google. */
   onGoogleSignIn: () => void;
   /** Bắt đầu thanh toán: mở PayOS, hoặc yêu cầu đăng nhập trước. */
-  startCheckout: (kind: 'TEMPLATE' | 'PRO' | 'ULTRA', templateId?: string) => void;
+  startCheckout: (kind: 'TEMPLATE' | 'PRO' | 'ULTRA' | 'BUNDLE', templateId?: string) => void;
 }
 
 /** Keep coming-soon hero cards 04–05 visible, but unavailable to select. */
@@ -721,13 +721,17 @@ export function buildView(
       desc: inc.desc,
     })),
     // Premium library access uses plans; individual Agent/Tool sales keep the cart.
-    tiers: MEMBERSHIP_COPY[lang].plans.map((tr, i) => ({
-      ...TIER_STYLE[i],
-      ...tr,
-      featured: i === 1,
-      price: formatMoney(priceOf(i === 0 ? 'PRO' : 'ULTRA', currency), currency, lang as Lang),
-      onCta: () => im.startCheckout(i === 0 ? 'PRO' : 'ULTRA'),
-    })),
+    tiers: MEMBERSHIP_COPY[lang].plans.map((tr, i) => {
+      const planKinds: Array<'PRO' | 'ULTRA' | 'BUNDLE'> = ['PRO', 'ULTRA', 'BUNDLE'];
+      const kind = planKinds[i] ?? 'ULTRA';
+      return {
+        ...(TIER_STYLE[i] ?? TIER_STYLE[2]),
+        ...tr,
+        featured: i === 1,
+        price: formatMoney(priceOf(kind, currency), currency, lang as Lang),
+        onCta: () => im.startCheckout(kind),
+      };
+    }),
     faqs: t.faqs.map((f: any, i: number) => ({
       q: f.q,
       a: f.a,

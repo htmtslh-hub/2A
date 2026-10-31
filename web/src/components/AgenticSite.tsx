@@ -23,7 +23,8 @@ import { canBuyIndividually } from '@/lib/product-policy';
 import { CART_KEY, PENDING_CART_KEY, OPEN_CART_AFTER_LOGIN_KEY } from '@/lib/cart-storage';
 import { flyProductToCart } from '@/lib/cart-flight';
 import BotAssistantModal from './BotAssistantModal';
-import { BOT_UI_COPY } from '@/lib/bot-knowledge';
+import { BOT_UI_COPY } from '@/lib/bot-knowledge';
+
 import { resolveTemplateParam } from '@/lib/seo-schema';
 
 
@@ -582,7 +583,7 @@ export default function AgenticSite({
   /* --- thanh toán: cần email nên phải đăng nhập trước --- */
   const checkoutPending = useRef(false);
   const startCheckout = useCallback(
-    (kind: 'TEMPLATE' | 'PRO' | 'ULTRA', templateId?: string) => {
+    (kind: 'TEMPLATE' | 'PRO' | 'ULTRA' | 'BUNDLE', templateId?: string) => {
       const email = session?.user?.email;
       if (!email) {
         setState({ authOpen: true });

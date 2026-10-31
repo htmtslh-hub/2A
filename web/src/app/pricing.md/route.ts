@@ -16,6 +16,8 @@ export function GET() {
   const proVnd = MEMBERSHIP_PRICES_VND.PRO.toLocaleString('vi-VN');
   const ultraUsd = (MEMBERSHIP_PRICES.ULTRA / 100).toFixed(0);
   const ultraVnd = MEMBERSHIP_PRICES_VND.ULTRA.toLocaleString('vi-VN');
+  const lifetimeUsd = (MEMBERSHIP_PRICES.BUNDLE / 100).toFixed(0);
+  const lifetimeVnd = MEMBERSHIP_PRICES_VND.BUNDLE.toLocaleString('vi-VN');
 
   const body = `# Pricing & Licensing — ${COMPANY.brand} (${base})
 
@@ -35,17 +37,24 @@ Last updated: ${new Date().toISOString().slice(0, 10)}
 
 ## 3. Ultra Membership (Annual — Plan ID: \`ULTRA\`)
 - **Price:** $${ultraUsd} USD / year (via Paddle) | ${ultraVnd} VND / year (via PayOS VietQR)
-- **Billing:** One-time 1-year pass (Save 17% compared to monthly)
+- **Billing:** One-time 1-year pass
 - **Included:** Unlimited access to all ${entries.length}+ website templates, upcoming Skill/Prompt packs, and Agent/Tool releases for 12 months
 - **Support:** Priority technical & AI customization support via ${COMPANY.email}
 - **Licence:** Perpetual commercial licence for all products downloaded while active
 
-## 4. Individual Product / Template Purchase
+## 4. Ultra Lifetime Membership (Permanent — Plan ID: \`BUNDLE\`)
+- **Price:** $${lifetimeUsd} USD one-time (via Paddle) | ${lifetimeVnd} VND one-time (via PayOS VietQR)
+- **Billing:** One-time payment, permanent lifetime access (never expires)
+- **Included:** Unlimited permanent access to all ${entries.length}+ website templates and all future additions to the library
+- **Support:** Priority technical & AI customization support via ${COMPANY.email}
+- **Licence:** Perpetual commercial licence for all products in the library
+
+## 5. Individual Product / Template Purchase
 - **Price:** $${singleUsd} USD (via Paddle) | ${singleVnd} VND (via PayOS VietQR)
 - **Billing:** One-time purchase, lifetime access to the purchased item
 - **Licence:** Unlimited commercial projects (use for yourself or client projects; resale/redistribution as a competing template library is prohibited)
 
-## 5. Payment Methods & Refund Policy
+## 6. Payment Methods & Refund Policy
 - **International Customers (USD):** Paddle (Cards, PayPal, Apple Pay, Google Pay)
 - **Vietnam Customers (VND):** PayOS (Instant VietQR bank transfer)
 - **Refund Policy:** ${COMPANY.refundDays}-day refund policy (${base}/hoan-tien)

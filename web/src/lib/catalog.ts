@@ -1,8 +1,6 @@
 /* Bảng giá dùng cho thanh toán.
 
-   New purchases use Paddle and USD in every display language.
-   VND/PayOS definitions remain for historical orders and webhook reconciliation.
-
+   New purchases use Paddle (USD) for international languages and PayOS (VND) for Vietnamese.
    Số tiền luôn tính bằng ĐƠN VỊ NHỎ NHẤT của loại tiền:
    VNĐ là đồng, USD là cent (2_000 = $20). Cả PayOS lẫn Paddle đều
    nhận số nguyên theo quy ước này. */
@@ -18,13 +16,13 @@ export type Kind = 'TEMPLATE' | 'BUNDLE' | 'PRO' | 'ULTRA';
 
 export const PRICE_VND = {
   single: 500_000,
-  bundle: 9_900_000,
+  bundle: 3_999_000,
 };
 
-/** Cent. All individual templates share the $20 price. */
+/** Cent. All individual templates share the $20 price; Ultra Lifetime (BUNDLE) is $200. */
 export const PRICE_USD = {
   single: 2_000,
-  bundle: 39_900,
+  bundle: 20_000,
 };
 
 /** Giá riêng cho từng mẫu nếu muốn khác giá chung. VD: { t18: { VND: 2_500_000, USD: 10_900 } } */
@@ -32,7 +30,7 @@ export const TEMPLATE_PRICE_OVERRIDE: Record<string, Partial<Record<Currency, nu
 
 /* ---------- chọn cổng theo thị trường ---------- */
 
-/** Display language does not change the payment currency. */
+/** Display language selects PayOS (VND) for Vietnamese and Paddle (USD) otherwise. */
 export function providerForLang(lang: Lang): Provider {
   return lang === 'vi' ? 'PAYOS' : 'PADDLE';
 }
@@ -50,10 +48,7 @@ export function templateFile(id: string): string {
   return templateSlug(id);
 }
 
-/** Chỉ mẫu có sản phẩm thật (có file .zip để giao) mới mua được.
- *
- *  Trước đây nhận mọi mã trong TPL_META (t1–t18), nên 15 ô lấp chỗ của bản
- *  thiết kế vẫn thanh toán được — khách trả tiền rồi tải về nhận 404. */
+/** Chỉ mẫu có sản phẩm thật (có file .zip để giao) mới mua được. */
 export function templateExists(id: string): boolean {
   return Boolean(REAL_TEMPLATES[id]) && !REAL_TEMPLATES[id].previewOnly;
 }
@@ -67,14 +62,16 @@ export function templateName(id: string, lang: Lang = 'vi'): string {
 export function priceOf(kind: Kind, currency: Currency, templateId?: string | null): number {
   if (isMembershipPlan(kind)) {
     return currency === 'VND' ? MEMBERSHIP_PRICES_VND[kind] : MEMBERSHIP_PRICES[kind];
-
+  }
+  if (kind === 'BUNDLE') {
+    return currency === 'VND' ? MEMBERSHIP_PRICES_VND.BUNDLE : MEMBERSHIP_PRICES.BUNDLE;
   }
   if (kind === 'TEMPLATE' && templateId) {
     const override = TEMPLATE_PRICE_OVERRIDE[templateId]?.[currency];
     if (override) return override;
   }
   const table = currency === 'VND' ? PRICE_VND : PRICE_USD;
-  return kind === 'BUNDLE' ? table.bundle : table.single;
+  return table.single;
 }
 
 /** Hiển thị tiền cho người đọc, dùng trong email và trang đơn hàng. */
@@ -92,19 +89,13 @@ export function productName(kind: Kind, templateId: string | null | undefined, l
   if (kind === 'PRO') return { vi: 'Nâng cấp Premium · 1 tháng', en: 'Premium upgrade · 1 month', zh: 'Premium 升级 · 1个月' }[lang];
   if (kind === 'ULTRA') return { vi: 'Nâng cấp Ultra · 1 năm', en: 'Ultra upgrade · 1 year', zh: 'Ultra 升级 · 1年' }[lang];
   if (kind === 'BUNDLE') {
-    return { vi: 'Trọn bộ thư viện', en: 'Full library', zh: '全部模板库' }[lang];
+    return { vi: 'Nâng cấp Ultra Lifetime · Trọn đời', en: 'Ultra Lifetime upgrade · Lifetime', zh: 'Ultra Lifetime 升级 · 终身' }[lang];
   }
   return templateName(templateId ?? '', lang);
 }
 
-/** Nội dung chuyển khoản gửi PayOS (`description`).
- *
- *  Tối đa 9 ký tự: tài liệu PayOS ghi rõ tài khoản ngân hàng không liên kết qua
- *  payOS chỉ nhận 9 ký tự, dài hơn thì không tạo được link — khách bấm mua là
- *  lỗi. Bản cũ "Forge Zone tron bo" dài 18. VD: "FZ T5", "FZ TRONBO". */
+/** Nội dung chuyển khoản gửi PayOS (`description`), tối đa 9 ký tự. */
 export function shortDescription(kind: Kind | 'CART', templateId?: string | null): string {
-  // Chỉ giữ chữ, số, khoảng trắng: ngân hàng hay tự bỏ ký tự đặc biệt khỏi nội
-  // dung chuyển khoản, khiến nội dung trên sao kê lệch với cái mình gửi.
   const id = (templateId ?? '').toUpperCase().replace(/[^A-Z0-9]/g, '');
   const raw =
     kind === 'PRO'
@@ -112,7 +103,7 @@ export function shortDescription(kind: Kind | 'CART', templateId?: string | null
       : kind === 'ULTRA'
         ? 'FZ ULTRA'
         : kind === 'BUNDLE'
-          ? 'FZ TRONBO'
+          ? 'FZ ULTLT'
           : kind === 'CART'
             ? 'FZ GIOHNG'
             : `FZ ${id}`.trim();
@@ -121,6 +112,5 @@ export function shortDescription(kind: Kind | 'CART', templateId?: string | null
 
 /** orderCode của PayOS phải là số nguyên dương, duy nhất cho mỗi đơn. */
 export function newOrderCode(): number {
-  // Dạng: giây kể từ epoch (10 chữ số) + 3 số ngẫu nhiên, vẫn nằm dưới 2^53.
   return Number(`${Math.floor(Date.now() / 1000)}${Math.floor(Math.random() * 900 + 100)}`);
 }

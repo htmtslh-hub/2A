@@ -39,7 +39,7 @@ export const LEGAL_VI: LegalPack = {
           'Giá hiển thị tại thời điểm đặt hàng là giá áp dụng. Mọi đơn hàng mới thanh toán bằng USD, bất kể ngôn ngữ hiển thị. Thuế áp dụng được thể hiện tại checkout.',
           '<b>Paddle.com Market Ltd</b> là đơn vị bán hàng chính thức (merchant of record) và chịu trách nhiệm thu, kê khai thuế GTGT/GST tại nước của người mua. Hoá đơn của bạn sẽ mang tên Paddle.',
           'Đơn hàng chỉ được coi là hoàn tất khi chúng tôi nhận được xác nhận thanh toán thành công từ cổng thanh toán.',
-          'Premium giá 20 USD mở toàn bộ thư viện trong 1 tháng; Ultra giá 200 USD trong 1 năm. Đây là nâng cấp tài khoản thanh toán một lần, không tự gia hạn. Thời hạn tính theo tháng/năm lịch từ lúc xác nhận thanh toán; ngày cuối tháng được điều chỉnh về ngày hợp lệ cuối cùng.',
+          'Premium giá 10 USD (269.000₫) mở toàn bộ thư viện trong 1 tháng; Ultra giá 79 USD (1.799.000₫) trong 1 năm; Ultra Lifetime giá 200 USD (3.999.000₫) mở quyền truy cập trọn đời. Đây là nâng cấp tài khoản thanh toán một lần, không tự gia hạn. Thời hạn tính theo tháng/năm lịch từ lúc xác nhận thanh toán; ngày cuối tháng được điều chỉnh về ngày hợp lệ cuối cùng.',
           'Gia hạn cùng gói cộng tiếp sau thời hạn đã mua. Chuyển sang gói khác bắt đầu khi thanh toán, không khấu trừ hay chuyển thời gian còn lại.',
         ],
       },

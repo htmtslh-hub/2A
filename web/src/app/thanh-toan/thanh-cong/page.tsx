@@ -27,7 +27,7 @@ export default async function Page({
     : null;
 
   if (row?.status === 'PAID') {
-    if (isMembershipPlan(row.kind)) return <PaymentResult tone="ok" title="Nâng cấp tài khoản thành công" body="Gói đã được kích hoạt. Bạn có thể xem thời hạn và tải toàn bộ sản phẩm trong tài khoản. Thanh toán một lần, không tự gia hạn; file đã tải vẫn dùng theo giấy phép sau khi hết hạn." orderCode={order} cta={{ href: '/tai-khoan', label: 'Xem gói tài khoản' }} />;
+    if (isMembershipPlan(row.kind) || row.kind === 'BUNDLE') return <PaymentResult tone="ok" title="Nâng cấp tài khoản thành công" body="Gói đã được kích hoạt. Bạn có thể xem thời hạn và tải toàn bộ sản phẩm trong tài khoản. Thanh toán một lần, không tự gia hạn; file đã tải vẫn dùng theo giấy phép sau khi hết hạn." orderCode={order} cta={{ href: '/tai-khoan', label: 'Xem gói tài khoản' }} />;
     return (
       <><ClearPaidCart orderId={order!} /><PaymentResult
         tone="ok"

@@ -137,7 +137,7 @@ export async function fulfilOrder(
         productName: order.kind === 'CART' ? items.map((item) => productName('TEMPLATE', item.templateId, lang)).join(', ') : productName(order.kind as 'TEMPLATE' | 'BUNDLE' | 'PRO' | 'ULTRA', order.templateId, lang),
         amountLabel: formatMoney(order.amount, order.currency as Currency, lang),
         downloadUrl,
-        membership: isMembershipPlan(order.kind),
+        membership: isMembershipPlan(order.kind) || order.kind === 'BUNDLE',
         lang,
       }),
     });

@@ -16,7 +16,7 @@ export function GET() {
     const tier = isFreeProduct(id)
       ? 'Free ($0 / 0 VND — instant download)'
       : requiresPremium(id)
-        ? 'Premium (Included in Premium $20/mo or Ultra $200/yr)'
+        ? 'Premium (Included in Premium $10/mo, Ultra $79/yr, or Ultra Lifetime $200)'
         : 'Single Purchase ($20 USD / 500,000 VND)';
 
     return `### ${idx + 1}. ${en.name} (\`${id}\` / \`${tpl.slug}\`)

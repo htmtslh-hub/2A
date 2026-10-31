@@ -8,7 +8,7 @@
 
 **Tech Stack:** HTML5, CSS3 (`@property`, CSS Grid/Flexbox, `clamp()`), Vanilla ES6+ JS (`requestAnimationFrame` hữu hạn, `IntersectionObserver`), Playwright Chromium/Firefox, FFmpeg H.264, `uiverse-galaxy` CLI (`search.py`), `forgeframe`, `skill-morge`, `neon-orbit-border`.
 
-**Spec:** `d:\2A\web\product\giao-dien-web\AGENTS.md`, `d:\2A\web\product\giao-dien-web\docs\product-standards.md`, `d:\2A\web\tools\agent-motionsites\motionsites-master-bank.json`
+**Spec:** `E:\DONG_PHU\2A\web\product\giao-dien-web\AGENTS.md`, `E:\DONG_PHU\2A\web\product\giao-dien-web\docs\product-standards.md`, `E:\DONG_PHU\2A\web\tools\agent-motionsites\motionsites-master-bank.json`
 
 ## Global Constraints
 
@@ -16,15 +16,15 @@
 - **Chống lặp khung giao diện (`Anti-Clone DOM Gate`):** Hai mẫu liên tiếp không được dùng chung một bộ khung HTML/CSS. Trước khi đóng gói, so khớp tập class CSS và cấu trúc thẻ `<section>` với các mẫu đã tạo; nếu độ tương đồng cấu trúc DOM `> 45%` thì từ chối xuất bản và bắt buộc dựng lại theo đúng kiến trúc riêng của prompt.
 - **Quy tắc Animation ngày 05/10/2026:** Toàn bộ animation mặc định **BẬT** trên mọi trình duyệt (kể cả khi OS bật `prefers-reduced-motion`). Có nút `Pause/Play Motion` cho phiên hiện tại và dùng `requestAnimationFrame` hữu hạn có hủy lượt cũ khi thao tác mới tới.
 - **Quy tắc Sáng tạo +15–20% & Ma trận Phối hợp 6 Skill Tạo Web trong máy:**
-  1. **`hallmark` (`D:\2A\skill\hallmark\SKILL.md` — Anti-AI-Slop & 21 Macrostructures / 48 Themes):**
-     - Dùng `node D:\2A\skill\hallmark\scripts\theme.mjs deal` & `theme.mjs draw` để xoay vòng **21 Macrostructures** (`Bento Grid`, `Workbench`, `Manifesto`, `Photographic`, `Specimen`, `Catalogue`, `Narrative Workflow`, `Split Studio`, `Feature Stack`, `Portfolio Grid`, `Component Playground`...) và **6 trục Fingerprint** (`Heading placement | Body composition | Divider language | Button voice | Image treatment | Reveal pattern`) nhằm triệt tiêu 100% hiện tượng các trang web có bố cục lặp lại.
+  1. **`hallmark` (`E:\DONG_PHU\2A\skill\hallmark\SKILL.md` — Anti-AI-Slop & 21 Macrostructures / 48 Themes):**
+     - Dùng `node E:\DONG_PHU\2A\skill\hallmark\scripts\theme.mjs deal` & `theme.mjs draw` để xoay vòng **21 Macrostructures** (`Bento Grid`, `Workbench`, `Manifesto`, `Photographic`, `Specimen`, `Catalogue`, `Narrative Workflow`, `Split Studio`, `Feature Stack`, `Portfolio Grid`, `Component Playground`...) và **6 trục Fingerprint** (`Heading placement | Body composition | Divider language | Button voice | Image treatment | Reveal pattern`) nhằm triệt tiêu 100% hiện tượng các trang web có bố cục lặp lại.
      - Áp dụng kỷ luật **The Floor của Hallmark**: Mọi màu/font đi qua `:root` token; cấm `transition: all`; cấm animate `width/height/top/left` (chỉ dùng `transform` và `opacity`); `overflow-x: clip` trên cả `html` và `body`; lưới chứa ảnh luôn dùng `minmax(0, 1fr)`; mọi nút có `:focus-visible` hiện tức thì.
      - *Lưu ý ưu tiên quy chuẩn dự án:* Theo quy tắc chủ sản phẩm ngày `05/10/2026`, animation trong Forge Zone vẫn **mặc định BẬT trên mọi trình duyệt** (kể cả khi OS bật `prefers-reduced-motion`) kèm nút `Pause/Play Motion`.
-  2. **`forgeframe` (`D:\2A\skill\forgeframe\SKILL.md` — Reference Fidelity >95%):**
+  2. **`forgeframe` (`E:\DONG_PHU\2A\skill\forgeframe\SKILL.md` — Reference Fidelity >95%):**
      - Giữ vai trò chủ đạo khi dựng phần gốc từ Prompt/Video của MotionSites hoặc ảnh Pinterest: bám sát bố cục, bảng màu, font chữ và video/ảnh gốc của mẫu tham chiếu trước khi mở rộng thêm 15–20% bằng `hallmark`.
-  3. **`skill-morge` (`D:\2A\skill\skill-morge\SKILL.md` — Finite RAF & Scroll Choreography):**
+  3. **`skill-morge` (`E:\DONG_PHU\2A\skill\skill-morge\SKILL.md` — Finite RAF & Scroll Choreography):**
      - Phối hợp cùng `hallmark/references/scroll-choreography.md` (`Pinned chapter`, `Scrub-linked headline`, `Progress spine`, `Sticky diptych`) và dùng `requestAnimationFrame` hữu hạn (tự hủy lượt cũ khi có thao tác mới) cho các chuyển cảnh phức tạp và carousel 2 chiều wrap trực tiếp.
-  4. **`neon-orbit-border` (`D:\2A\skill\neon-orbit-border\SKILL.md` — Conic-Gradient `@property`):**
+  4. **`neon-orbit-border` (`E:\DONG_PHU\2A\skill\neon-orbit-border\SKILL.md` — Conic-Gradient `@property`):**
      - Tạo viền xoay `1.8s–2.4s` cho thẻ tiêu điểm, gói Pricing hoặc trạng thái đang chọn.
   5. **`uiverse-galaxy` (`C:\Users\htmts\.gemini\config\plugins\uiverse-galaxy\skills\uiverse-galaxy\SKILL.md` — 3.800+ Components):**
      - Tra cứu bằng `search.py` để lấy ý tưởng nút bấm, công tắc, thẻ tương tác cho phần +15–20% sáng tạo, sau đó chuẩn hóa toàn bộ màu/font về `:root` token theo chuẩn `hallmark`.
@@ -37,7 +37,7 @@
 - **Nguy cơ 2 — Ảo giác / Bịa kết quả kiểm thử (`Hallucinated QA`):** Báo PASS khi chưa chạy trình duyệt thật hoặc khi video `.mp4` bị đen/trắng khung hình. Giải pháp: Mọi mẫu phải có file ảnh chụp thật ở 4 viewport (`1440×900`, `1024×768`, `768×1024`, `375×812`) và file `.mp4` `> 100 KB` được kiểm tra bằng `npm --prefix web run previews:check`.
 - **Nguy cơ 3 — Quá tải tài nguyên máy & Giới hạn Deploy Vercel:** Nếu nhồi 20 mẫu/ngày trong 1 lần chạy, quá trình quay 20 video FFmpeg + build Next.js sẽ treo RAM/CPU hoặc chạm ngưỡng giới hạn deploy miễn phí/ngày của Vercel. Giải pháp: Chia thành các **Ca nhỏ (3 mẫu/ca)**, mỗi ca chạy trọn vẹn trong ~18–22 phút.
 - **Nguy cơ 4 — Tràn ngang trên Mobile (`375px` / `320px`):** Font chữ `clamp()` quá lớn hoặc thanh điều hướng nhiều mục gây `scrollWidth > innerWidth`. Giải pháp: Kiểm tra tự động `overflowX === false` trên cả 4 viewport.
-- **Nguy cơ 5 — Xung đột Git với file người dùng đang làm dở:** Luôn kiểm tra `git status` và chỉ `git add` đúng các file của mẫu vừa tạo theo `d:\2A\AGENTS.md`.
+- **Nguy cơ 5 — Xung đột Git với file người dùng đang làm dở:** Luôn kiểm tra `git status` và chỉ `git add` đúng các file của mẫu vừa tạo theo `E:\DONG_PHU\2A\AGENTS.md`.
 
 ---
 

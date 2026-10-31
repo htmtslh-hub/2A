@@ -3,6 +3,7 @@ import LegalPage from '@/components/LegalPage';
 import { CONTACT } from '@/lib/pages-content';
 import { readLang } from '@/lib/server-lang';
 import { COMPANY } from '@/lib/company';
+import { buildAlternates } from '@/lib/seo-schema';
 import type { LangCode } from '@/generated/data';
 
 export const dynamic = 'force-dynamic';
@@ -16,7 +17,7 @@ const LABELS: Record<LangCode, { email: string; address: string; phone: string; 
 
 export async function generateMetadata(): Promise<Metadata> {
   const doc = CONTACT[await readLang()];
-  return { title: `${doc.title} — ${COMPANY.brand}`, description: doc.intro };
+  return { title: `${doc.title} — ${COMPANY.brand}`, description: doc.intro, alternates: buildAlternates('/lien-he') };
 }
 
 export default async function Page() {

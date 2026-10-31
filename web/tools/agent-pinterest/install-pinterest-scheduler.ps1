@@ -1,7 +1,7 @@
 # Script tạo Windows Scheduled Task chạy tự động hàng ngày lúc 09:00 AM (Tự đánh thức máy từ chế độ Sleep & Tắt máy hoàn toàn khi xong việc)
 $TaskName = "ForgeZone-Pinterest-DailyAgent"
-$RunnerScript = "D:\2A\web\tools\agent-pinterest\run-scheduled-pinterest.ps1"
-$WorkingDir = "D:\2A"
+$RunnerScript = "E:\DONG_PHU\2A\web\tools\agent-pinterest\run-scheduled-pinterest.ps1"
+$WorkingDir = "E:\DONG_PHU\2A"
 
 Write-Host "Setting up Scheduled Task: $TaskName (09:00 AM Daily, WakeFromSleep + ShutdownAfterRun)" -ForegroundColor Cyan
 

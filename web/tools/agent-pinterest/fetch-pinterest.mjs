@@ -597,7 +597,7 @@ export async function runPinterestFetchPipeline(options = {}) {
   state.todayFreeCount = state.todayFreeCount || 0;
   state.todayPremiumCount = state.todayPremiumCount || 0;
 
-  // Read reference images directly from the user's daily drop-folder: D:\2A\anh-mau-pinterest
+  // Read reference images directly from the user's daily drop-folder: E:\DONG_PHU\2A\anh-mau-pinterest
   const inboxDir = resolve(root, 'anh-mau-pinterest');
   const archiveDir = resolve(inboxDir, 'da-lam', today);
   const downloadsDir = resolve(__dirname, 'downloads', today);
@@ -610,7 +610,7 @@ export async function runPinterestFetchPipeline(options = {}) {
     .sort((a, b) => a.name.localeCompare(b.name));
 
   if (entries.length === 0) {
-    console.log(`[Inbox Empty] Chưa có ảnh mới trong thư mục ${inboxDir}. Hãy bỏ ảnh (.png, .jpg, .webp) vào D:\\2A\\anh-mau-pinterest để Agent thực hiện.`);
+    console.log(`[Inbox Empty] Chưa có ảnh mới trong thư mục ${inboxDir}. Hãy bỏ ảnh (.png, .jpg, .webp) vào E:\\DONG_PHU\\2A\\anh-mau-pinterest để Agent thực hiện.`);
     return [];
   }
 
@@ -656,7 +656,7 @@ export async function runPinterestFetchPipeline(options = {}) {
     const savedDownloadPath = resolve(downloadsDir, `${slug}${ext}`);
     copyFileSync(srcPath, savedDownloadPath);
 
-    // Move processed image from D:\2A\anh-mau-pinterest to D:\2A\anh-mau-pinterest\da-lam\<today>\
+    // Move processed image from E:\DONG_PHU\2A\anh-mau-pinterest to E:\DONG_PHU\2A\anh-mau-pinterest\da-lam\<today>\
     const archivedPath = resolve(archiveDir, fileEntry.name);
     try {
       renameSync(srcPath, archivedPath);
@@ -707,6 +707,6 @@ if (process.argv[1] && process.argv[1].endsWith('fetch-pinterest.mjs')) {
   const replaceArg = process.argv.find(a => a.startsWith('--replace-slugs='))?.split('=')[1];
   const replaceSlugs = replaceArg ? replaceArg.split(',').map(s => s.trim()).filter(Boolean) : [];
   runPinterestFetchPipeline({ replaceSlugs }).then(list => {
-    console.log(`Done. Processed ${list.length} reference images from D:\\2A\\anh-mau-pinterest.`);
+    console.log(`Done. Processed ${list.length} reference images from E:\\DONG_PHU\\2A\\anh-mau-pinterest.`);
   }).catch(console.error);
 }

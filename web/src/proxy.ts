@@ -13,7 +13,7 @@ export function proxy(req: NextRequest) {
   const host = (req.headers.get('x-forwarded-host') ?? req.headers.get('host') ?? '')
     .split(':')[0]
     .toLowerCase();
-  const { pathname } = req.nextUrl;
+  const { pathname, searchParams } = req.nextUrl;
   const isServicePath = SERVICE_PATHS.some((p) => under(pathname, p));
 
   // The Paddle storefront sells downloadable templates only. Legacy service
@@ -27,6 +27,24 @@ export function proxy(req: NextRequest) {
         'x-robots-tag': 'noindex, nofollow',
       },
     });
+  }
+
+  // Cho phép công cụ tìm kiếm & AI crawler truy cập bản dịch cụ thể qua ?hl=vi|en|zh
+  // để phục vụ thẻ hreflang mà không ảnh hưởng cơ chế tự nhận diện trình duyệt mặc định.
+  const rawLang = (searchParams.get('hl') ?? searchParams.get('lang') ?? '').toLowerCase();
+  const mappedLang =
+    rawLang === 'vi' || rawLang.startsWith('vi-')
+      ? 'vi'
+      : rawLang === 'zh' || rawLang.startsWith('zh-')
+        ? 'zh'
+        : rawLang === 'en' || rawLang.startsWith('en-')
+          ? 'en'
+          : null;
+
+  if (mappedLang) {
+    const requestHeaders = new Headers(req.headers);
+    requestHeaders.set('x-forge-lang', mappedLang);
+    return NextResponse.next({ request: { headers: requestHeaders } });
   }
 
   return NextResponse.next();

@@ -1,5 +1,5 @@
 @echo off
-cd /d "D:\2A"
+cd /d "E:\DONG_PHU\2A"
 echo ========================================================
 echo Running MotionSites Daily Agent
 echo ========================================================

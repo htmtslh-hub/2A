@@ -23,15 +23,18 @@ import { canBuyIndividually } from '@/lib/product-policy';
 import { CART_KEY, PENDING_CART_KEY, OPEN_CART_AFTER_LOGIN_KEY } from '@/lib/cart-storage';
 import { flyProductToCart } from '@/lib/cart-flight';
 import BotAssistantModal from './BotAssistantModal';
-import { BOT_UI_COPY } from '@/lib/bot-knowledge';
+import { BOT_UI_COPY } from '@/lib/bot-knowledge';
+import { resolveTemplateParam } from '@/lib/seo-schema';
 
 
 
 export default function AgenticSite({
   defaultTab = 'home',
+  initialDetail = null,
   initialLang = 'vi',
 }: {
   defaultTab?: string;
+  initialDetail?: string | null;
   /** Ngôn ngữ đọc từ cookie hoặc Accept-Language ở server. Dựng sẵn đúng ngôn ngữ ngay từ HTML
    *  đầu tiên, thay vì dựng tiếng Việt rồi đổi sau khi mount — khách chọn
    *  tiếng Anh sẽ không còn thấy chớp một nhịp tiếng Việt. */
@@ -40,7 +43,8 @@ export default function AgenticSite({
   const [state, setStateRaw] = useState<State>(() => ({
     ...INITIAL_STATE,
     lang: initialLang,
-    tab: (TAB_KEYS.includes(defaultTab) ? defaultTab : 'home') as State['tab'],
+    tab: (initialDetail ? 'detail' : TAB_KEYS.includes(defaultTab) ? defaultTab : 'home') as State['tab'],
+    detail: initialDetail,
   }));
   const [cartPulse, setCartPulse] = useState(0);
   const [botOpen, setBotOpen] = useState(false);
@@ -82,7 +86,7 @@ export default function AgenticSite({
     const readUrl = () => {
       const p = new URLSearchParams(window.location.search);
       const tab = p.get('tab');
-      const detail = p.get('mau');
+      const detail = resolveTemplateParam(p.get('mau'));
       if (detail) {
         setState({ tab: 'detail', detail });
       } else if (tab && TAB_KEYS.includes(tab)) {
@@ -114,9 +118,17 @@ export default function AgenticSite({
     window.history.pushState(null, '', qs ? '?' + qs : window.location.pathname);
   }, []);
 
-  /* --- ngôn ngữ theo trình duyệt/hệ thống --- */
+  /* --- ngôn ngữ theo trình duyệt/hệ thống (trừ khi URL có ?hl=vi|en|zh) --- */
   useEffect(() => {
     const syncBrowserLanguage = () => {
+      const p = new URLSearchParams(window.location.search);
+      const rawHl = (p.get('hl') ?? p.get('lang') ?? '').toLowerCase();
+      if (rawHl === 'vi' || rawHl === 'en' || rawHl === 'zh' || rawHl.startsWith('zh-')) {
+        const forced: LangCode = rawHl === 'vi' ? 'vi' : rawHl === 'en' ? 'en' : 'zh';
+        setStateRaw((prev) => (prev.lang === forced ? prev : { ...prev, lang: forced }));
+        document.documentElement.lang = HTML_LANG[forced];
+        return;
+      }
       const detected = navigator.languages?.length || navigator.language
         ? langFromBrowser(navigator.languages, navigator.language)
         : initialLang;

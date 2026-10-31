@@ -4,7 +4,7 @@ param(
 )
 
 $ErrorActionPreference = "Continue"
-Set-Location "D:\2A"
+Set-Location "E:\DONG_PHU\2A"
 
 # 1. Giữ máy thức trong suốt quá trình tải ảnh, tạo web, kiểm thử, đóng gói, quay video và deploy
 $PowerCode = @"
@@ -29,7 +29,7 @@ try {
 
     # 2. Chạy Daily Pinterest Orchestrator
     $NodePath = (Get-Command node).Source
-    & $NodePath "D:\2A\web\tools\agent-pinterest\daily-pinterest-orchestrator.mjs"
+    & $NodePath "E:\DONG_PHU\2A\web\tools\agent-pinterest\daily-pinterest-orchestrator.mjs"
 } finally {
     # 3. Giải phóng Keep-Awake lock (KHÔNG tự động tắt/sleep máy để tránh làm gián đoạn khi bật máy)
     try {

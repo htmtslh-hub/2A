@@ -8,6 +8,8 @@ import { HTML_LANG } from '@/lib/lang';
 import type { LangCode } from '@/generated/data';
 import { Suspense } from 'react';
 import TrafficTracker from '@/components/TrafficTracker';
+import { PremiumWingSprite } from '@/components/PremiumWingIcon';
+import { buildAlternates } from '@/lib/seo-schema';
 
 // Chỉ nạp đúng những weight và bảng chữ trang thực sự dùng. Mỗi weight ×
 // mỗi subset là một file .woff2 riêng, nên thừa một dòng ở đây là thừa vài
@@ -58,6 +60,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(COMPANY.siteUrl),
     title: m.title,
     description: m.description,
+    alternates: buildAlternates('/'),
     openGraph: {
       title: m.title,
       description: m.og,
@@ -84,6 +87,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={lang} data-scroll-behavior="smooth" className={`${display.variable} ${body.variable}`}>
       <body>
+        <PremiumWingSprite />
         <Providers>{children}</Providers>
         {process.env.ANALYTICS_ENABLED === 'true' && <Suspense fallback={null}><TrafficTracker /></Suspense>}
       </body>

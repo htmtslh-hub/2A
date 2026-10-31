@@ -1,5 +1,5 @@
 'use client';
-import React, { useId } from 'react';
+import React from 'react';
 
 export interface PremiumWingIconProps {
   size?: number | string;
@@ -8,179 +8,10 @@ export interface PremiumWingIconProps {
   title?: string;
 }
 
-export default function PremiumWingIcon({
-  size = 30,
-  variant = 'blue',
-  className,
-  title,
-}: PremiumWingIconProps) {
-  const isGold = variant === 'gold';
-  const label = title ?? (isGold ? 'Ultra' : 'Premium');
-  const rawId = useId().replace(/[^a-zA-Z0-9_-]/g, '');
-  const id = (name: string) => `pw-${rawId}-${name}`;
-
+function WingGeometry({ prefix, isGold }: { prefix: string; isGold: boolean }) {
+  const id = (name: string) => `${prefix}-${name}`;
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 100 100"
-      fill="none"
-      width={size}
-      height={size}
-      className={className}
-      role="img"
-      aria-label={label}
-      style={{
-        display: 'inline-block',
-        verticalAlign: 'middle',
-        flexShrink: 0,
-        filter: isGold
-          ? 'drop-shadow(0 2px 9px rgba(245, 184, 61, 0.36))'
-          : 'drop-shadow(0 2px 8px rgba(76, 195, 255, 0.28))',
-      }}
-    >
-      <title>{label}</title>
-      <defs>
-        {isGold ? (
-          <>
-            <radialGradient id={id('aura')} cx="65%" cy="46%" r="30%">
-              <stop offset="0%" stopColor="#fff6b3" stopOpacity="0.95" />
-              <stop offset="42%" stopColor="#f7b733" stopOpacity="0.7" />
-              <stop offset="76%" stopColor="#d97706" stopOpacity="0.32" />
-              <stop offset="100%" stopColor="#b45309" stopOpacity="0" />
-            </radialGradient>
-
-            <linearGradient id={id('ice-outer')} x1="6" y1="8" x2="72" y2="54" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#ffefb0" />
-              <stop offset="18%" stopColor="#fffdf0" />
-              <stop offset="56%" stopColor="#ffe28a" />
-              <stop offset="82%" stopColor="#f5b027" />
-              <stop offset="100%" stopColor="#c97208" />
-            </linearGradient>
-
-            <linearGradient id={id('ice-mid')} x1="16" y1="22" x2="74" y2="50" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#ffea9f" />
-              <stop offset="22%" stopColor="#fffbe6" />
-              <stop offset="60%" stopColor="#ffd56b" />
-              <stop offset="85%" stopColor="#eba018" />
-              <stop offset="100%" stopColor="#b86306" />
-            </linearGradient>
-
-            <linearGradient id={id('ice-tail')} x1="52" y1="90" x2="84" y2="54" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#ffe89c" />
-              <stop offset="24%" stopColor="#fff9db" />
-              <stop offset="60%" stopColor="#f7c454" />
-              <stop offset="84%" stopColor="#dc8812" />
-              <stop offset="100%" stopColor="#9e4f04" />
-            </linearGradient>
-
-            <linearGradient id={id('cyan-covert')} x1="36" y1="28" x2="78" y2="52" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#fff3b8" />
-              <stop offset="35%" stopColor="#ffd866" />
-              <stop offset="72%" stopColor="#f2a218" />
-              <stop offset="100%" stopColor="#b86005" />
-            </linearGradient>
-
-            <radialGradient id={id('aqua-core')} cx="72%" cy="44%" r="18%">
-              <stop offset="0%" stopColor="#fffff0" />
-              <stop offset="48%" stopColor="#ffea85" />
-              <stop offset="82%" stopColor="#f59e0b" />
-              <stop offset="100%" stopColor="#d97706" stopOpacity="0" />
-            </radialGradient>
-
-            <linearGradient id={id('chrome-light')} x1="51" y1="18" x2="94" y2="66" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#ffffff" />
-              <stop offset="26%" stopColor="#fff4c2" />
-              <stop offset="56%" stopColor="#e5b548" />
-              <stop offset="84%" stopColor="#a87012" />
-              <stop offset="100%" stopColor="#6b4205" />
-            </linearGradient>
-
-            <linearGradient id={id('chrome-dark')} x1="54" y1="20" x2="96" y2="69" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#b88420" />
-              <stop offset="38%" stopColor="#85560a" />
-              <stop offset="75%" stopColor="#523204" />
-              <stop offset="100%" stopColor="#2e1a02" />
-            </linearGradient>
-
-            <linearGradient id={id('chrome-stem')} x1="76" y1="40" x2="94" y2="68" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#d49e2a" />
-              <stop offset="42%" stopColor="#fff1b8" />
-              <stop offset="78%" stopColor="#a36b10" />
-              <stop offset="100%" stopColor="#4d2c03" />
-            </linearGradient>
-          </>
-        ) : (
-          <>
-            <radialGradient id={id('aura')} cx="65%" cy="46%" r="30%">
-              <stop offset="0%" stopColor="#a6fcff" stopOpacity="0.95" />
-              <stop offset="42%" stopColor="#52c5ff" stopOpacity="0.7" />
-              <stop offset="76%" stopColor="#487df2" stopOpacity="0.32" />
-              <stop offset="100%" stopColor="#487df2" stopOpacity="0" />
-            </radialGradient>
-
-            <linearGradient id={id('ice-outer')} x1="6" y1="8" x2="72" y2="54" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#c2e9ff" />
-              <stop offset="18%" stopColor="#eef9ff" />
-              <stop offset="56%" stopColor="#cdeeff" />
-              <stop offset="82%" stopColor="#7ec0ff" />
-              <stop offset="100%" stopColor="#497ff0" />
-            </linearGradient>
-
-            <linearGradient id={id('ice-mid')} x1="16" y1="22" x2="74" y2="50" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#bce8ff" />
-              <stop offset="22%" stopColor="#e8f8ff" />
-              <stop offset="60%" stopColor="#b0e1ff" />
-              <stop offset="85%" stopColor="#62b2ff" />
-              <stop offset="100%" stopColor="#4276e6" />
-            </linearGradient>
-
-            <linearGradient id={id('ice-tail')} x1="52" y1="90" x2="84" y2="54" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#bae4ff" />
-              <stop offset="24%" stopColor="#e5f5ff" />
-              <stop offset="60%" stopColor="#9bc6ff" />
-              <stop offset="84%" stopColor="#5e8bf2" />
-              <stop offset="100%" stopColor="#3c61d6" />
-            </linearGradient>
-
-            <linearGradient id={id('cyan-covert')} x1="36" y1="28" x2="78" y2="52" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#c8f6ff" />
-              <stop offset="35%" stopColor="#8be7ff" />
-              <stop offset="72%" stopColor="#4ab7ff" />
-              <stop offset="100%" stopColor="#3b6fe3" />
-            </linearGradient>
-
-            <radialGradient id={id('aqua-core')} cx="72%" cy="44%" r="18%">
-              <stop offset="0%" stopColor="#ecffff" />
-              <stop offset="48%" stopColor="#9efbff" />
-              <stop offset="82%" stopColor="#48d4ff" />
-              <stop offset="100%" stopColor="#3898ff" stopOpacity="0" />
-            </radialGradient>
-
-            <linearGradient id={id('chrome-light')} x1="51" y1="18" x2="94" y2="66" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#ffffff" />
-              <stop offset="28%" stopColor="#eff5fa" />
-              <stop offset="58%" stopColor="#b9c8d6" />
-              <stop offset="84%" stopColor="#7c8d9e" />
-              <stop offset="100%" stopColor="#4d5c6b" />
-            </linearGradient>
-
-            <linearGradient id={id('chrome-dark')} x1="54" y1="20" x2="96" y2="69" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#8fa0b0" />
-              <stop offset="38%" stopColor="#5c6c7d" />
-              <stop offset="75%" stopColor="#384553" />
-              <stop offset="100%" stopColor="#212a34" />
-            </linearGradient>
-
-            <linearGradient id={id('chrome-stem')} x1="76" y1="40" x2="94" y2="68" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#a8b8c8" />
-              <stop offset="42%" stopColor="#e2eaf2" />
-              <stop offset="78%" stopColor="#798999" />
-              <stop offset="100%" stopColor="#3a4653" />
-            </linearGradient>
-          </>
-        )}
-      </defs>
-
+    <>
       <ellipse cx="64" cy="47" rx="22" ry="18" fill={`url(#${id('aura')})`} />
       <path d="M54 29 L82 40 L89 65 L73 58 L54 45 Z" fill={`url(#${id('cyan-covert')})`} />
 
@@ -237,6 +68,181 @@ export default function PremiumWingIcon({
         <path d="M69 44.8 C74 45.8 78.5 48 82.5 50.5" stroke={isGold ? '#fffef5' : '#ffffff'} strokeWidth="0.7" strokeLinecap="round" opacity="0.88" />
         <path d="M84.2 51.5 C83.8 55.8 86 60.2 90.5 63.5 C92.8 65 94.8 65.5 96.2 66.8" stroke={isGold ? '#fffef5' : '#ffffff'} strokeWidth="0.75" strokeLinecap="round" opacity="0.85" />
       </g>
+    </>
+  );
+}
+
+/** Shared SVG sprite rendered once at the document root to avoid duplicating 15 KB of gradients/paths across 100+ cards. */
+export function PremiumWingSprite() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={0}
+      height={0}
+      aria-hidden="true"
+      focusable="false"
+      style={{ position: 'absolute', width: 0, height: 0, overflow: 'hidden', pointerEvents: 'none' }}
+    >
+      <defs>
+        <radialGradient id="pw-gold-aura" cx="65%" cy="46%" r="30%">
+          <stop offset="0%" stopColor="#fff6b3" stopOpacity="0.95" />
+          <stop offset="42%" stopColor="#f7b733" stopOpacity="0.7" />
+          <stop offset="76%" stopColor="#d97706" stopOpacity="0.32" />
+          <stop offset="100%" stopColor="#b45309" stopOpacity="0" />
+        </radialGradient>
+        <linearGradient id="pw-gold-ice-outer" x1="6" y1="8" x2="72" y2="54" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ffefb0" />
+          <stop offset="18%" stopColor="#fffdf0" />
+          <stop offset="56%" stopColor="#ffe28a" />
+          <stop offset="82%" stopColor="#f5b027" />
+          <stop offset="100%" stopColor="#c97208" />
+        </linearGradient>
+        <linearGradient id="pw-gold-ice-mid" x1="16" y1="22" x2="74" y2="50" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ffea9f" />
+          <stop offset="22%" stopColor="#fffbe6" />
+          <stop offset="60%" stopColor="#ffd56b" />
+          <stop offset="85%" stopColor="#eba018" />
+          <stop offset="100%" stopColor="#b86306" />
+        </linearGradient>
+        <linearGradient id="pw-gold-ice-tail" x1="52" y1="90" x2="84" y2="54" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ffe89c" />
+          <stop offset="24%" stopColor="#fff9db" />
+          <stop offset="60%" stopColor="#f7c454" />
+          <stop offset="84%" stopColor="#dc8812" />
+          <stop offset="100%" stopColor="#9e4f04" />
+        </linearGradient>
+        <linearGradient id="pw-gold-cyan-covert" x1="36" y1="28" x2="78" y2="52" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#fff3b8" />
+          <stop offset="35%" stopColor="#ffd866" />
+          <stop offset="72%" stopColor="#f2a218" />
+          <stop offset="100%" stopColor="#b86005" />
+        </linearGradient>
+        <radialGradient id="pw-gold-aqua-core" cx="72%" cy="44%" r="18%">
+          <stop offset="0%" stopColor="#fffff0" />
+          <stop offset="48%" stopColor="#ffea85" />
+          <stop offset="82%" stopColor="#f59e0b" />
+          <stop offset="100%" stopColor="#d97706" stopOpacity="0" />
+        </radialGradient>
+        <linearGradient id="pw-gold-chrome-light" x1="51" y1="18" x2="94" y2="66" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="26%" stopColor="#fff4c2" />
+          <stop offset="56%" stopColor="#e5b548" />
+          <stop offset="84%" stopColor="#a87012" />
+          <stop offset="100%" stopColor="#6b4205" />
+        </linearGradient>
+        <linearGradient id="pw-gold-chrome-dark" x1="54" y1="20" x2="96" y2="69" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#b88420" />
+          <stop offset="38%" stopColor="#85560a" />
+          <stop offset="75%" stopColor="#523204" />
+          <stop offset="100%" stopColor="#2e1a02" />
+        </linearGradient>
+        <linearGradient id="pw-gold-chrome-stem" x1="76" y1="40" x2="94" y2="68" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#d49e2a" />
+          <stop offset="42%" stopColor="#fff1b8" />
+          <stop offset="78%" stopColor="#a36b10" />
+          <stop offset="100%" stopColor="#4d2c03" />
+        </linearGradient>
+
+        <radialGradient id="pw-blue-aura" cx="65%" cy="46%" r="30%">
+          <stop offset="0%" stopColor="#a6fcff" stopOpacity="0.95" />
+          <stop offset="42%" stopColor="#52c5ff" stopOpacity="0.7" />
+          <stop offset="76%" stopColor="#487df2" stopOpacity="0.32" />
+          <stop offset="100%" stopColor="#487df2" stopOpacity="0" />
+        </radialGradient>
+        <linearGradient id="pw-blue-ice-outer" x1="6" y1="8" x2="72" y2="54" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#c2e9ff" />
+          <stop offset="18%" stopColor="#eef9ff" />
+          <stop offset="56%" stopColor="#cdeeff" />
+          <stop offset="82%" stopColor="#7ec0ff" />
+          <stop offset="100%" stopColor="#497ff0" />
+        </linearGradient>
+        <linearGradient id="pw-blue-ice-mid" x1="16" y1="22" x2="74" y2="50" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#bce8ff" />
+          <stop offset="22%" stopColor="#e8f8ff" />
+          <stop offset="60%" stopColor="#b0e1ff" />
+          <stop offset="85%" stopColor="#62b2ff" />
+          <stop offset="100%" stopColor="#4276e6" />
+        </linearGradient>
+        <linearGradient id="pw-blue-ice-tail" x1="52" y1="90" x2="84" y2="54" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#bae4ff" />
+          <stop offset="24%" stopColor="#e5f5ff" />
+          <stop offset="60%" stopColor="#9bc6ff" />
+          <stop offset="84%" stopColor="#5e8bf2" />
+          <stop offset="100%" stopColor="#3c61d6" />
+        </linearGradient>
+        <linearGradient id="pw-blue-cyan-covert" x1="36" y1="28" x2="78" y2="52" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#c8f6ff" />
+          <stop offset="35%" stopColor="#8be7ff" />
+          <stop offset="72%" stopColor="#4ab7ff" />
+          <stop offset="100%" stopColor="#3b6fe3" />
+        </linearGradient>
+        <radialGradient id="pw-blue-aqua-core" cx="72%" cy="44%" r="18%">
+          <stop offset="0%" stopColor="#ecffff" />
+          <stop offset="48%" stopColor="#9efbff" />
+          <stop offset="82%" stopColor="#48d4ff" />
+          <stop offset="100%" stopColor="#3898ff" stopOpacity="0" />
+        </radialGradient>
+        <linearGradient id="pw-blue-chrome-light" x1="51" y1="18" x2="94" y2="66" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="28%" stopColor="#eff5fa" />
+          <stop offset="58%" stopColor="#b9c8d6" />
+          <stop offset="84%" stopColor="#7c8d9e" />
+          <stop offset="100%" stopColor="#4d5c6b" />
+        </linearGradient>
+        <linearGradient id="pw-blue-chrome-dark" x1="54" y1="20" x2="96" y2="69" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#8fa0b0" />
+          <stop offset="38%" stopColor="#5c6c7d" />
+          <stop offset="75%" stopColor="#384553" />
+          <stop offset="100%" stopColor="#212a34" />
+        </linearGradient>
+        <linearGradient id="pw-blue-chrome-stem" x1="76" y1="40" x2="94" y2="68" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#a8b8c8" />
+          <stop offset="42%" stopColor="#e2eaf2" />
+          <stop offset="78%" stopColor="#798999" />
+          <stop offset="100%" stopColor="#3a4653" />
+        </linearGradient>
+
+        <symbol id="pw-symbol-gold" viewBox="0 0 100 100">
+          <WingGeometry prefix="pw-gold" isGold={true} />
+        </symbol>
+        <symbol id="pw-symbol-blue" viewBox="0 0 100 100">
+          <WingGeometry prefix="pw-blue" isGold={false} />
+        </symbol>
+      </defs>
+    </svg>
+  );
+}
+
+export default function PremiumWingIcon({
+  size = 30,
+  variant = 'blue',
+  className,
+  title,
+}: PremiumWingIconProps) {
+  const isGold = variant === 'gold';
+  const label = title ?? (isGold ? 'Ultra' : 'Premium');
+
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      fill="none"
+      width={size}
+      height={size}
+      className={className}
+      role="img"
+      aria-label={label}
+      style={{
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        flexShrink: 0,
+        filter: isGold
+          ? 'drop-shadow(0 2px 9px rgba(245, 184, 61, 0.36))'
+          : 'drop-shadow(0 2px 8px rgba(76, 195, 255, 0.28))',
+      }}
+    >
+      <title>{label}</title>
+      <use href={isGold ? '#pw-symbol-gold' : '#pw-symbol-blue'} />
     </svg>
   );
 }

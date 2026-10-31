@@ -13,13 +13,14 @@ import { guideHref } from '@/lib/guide-links';
 import { GUIDE_COPY } from '@/lib/guide-copy';
 import { readLang } from '@/lib/server-lang';
 import { HTML_LANG } from '@/lib/lang';
+import { buildAlternates } from '@/lib/seo-schema';
 
 export async function generateMetadata(): Promise<Metadata> {
   const meta = GUIDE_COPY[await readLang()].meta;
   return {
     title: meta.title,
     description: meta.description,
-    alternates: { canonical: '/huong-dan' },
+    alternates: buildAlternates('/huong-dan'),
     openGraph: { title: meta.ogTitle, description: meta.ogDescription, url: '/huong-dan', locale: meta.locale },
   };
 }
@@ -55,7 +56,21 @@ export default async function GuidePage({ searchParams }: { searchParams: Promis
     {checklist && <a href={`${href('steps')}#checklist`}>{checklist.title}</a>}
   </nav>;
 
+  const howToJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: `${copy.heroFirst} ${copy.heroSecond}`,
+    description: copy.heroBody,
+    step: steps.map((s) => ({
+      '@type': 'HowToStep',
+      position: s.step,
+      name: displayTitle(s.title),
+      url: `https://forgezone.store/huong-dan#${s.id}`,
+    })),
+  };
+
   return <div className={styles.shell} lang={HTML_LANG[lang]}>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
     <a className={styles.skip} href="#noi-dung">{copy.skip}</a>
     <header className={styles.header}>
       <Link className={styles.brand} href="/">FORGE ZONE</Link>

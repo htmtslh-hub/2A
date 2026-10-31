@@ -4,7 +4,7 @@ param(
 )
 
 $ErrorActionPreference = "Continue"
-Set-Location "D:\2A"
+Set-Location "E:\DONG_PHU\2A"
 
 # 1. Giữ máy thức trong suốt quá trình build, quay video và deploy
 $PowerCode = @"
@@ -29,7 +29,7 @@ try {
 
     # 2. Chạy Daily Orchestrator
     $NodePath = (Get-Command node).Source
-    & $NodePath "D:\2A\web\tools\agent-motionsites\daily-orchestrator.mjs"
+    & $NodePath "E:\DONG_PHU\2A\web\tools\agent-motionsites\daily-orchestrator.mjs"
 } finally {
     # 3. Giải phóng Keep-Awake lock (KHÔNG tự động Sleep máy khi kết thúc)
     try {

@@ -1,7 +1,7 @@
 # Script tạo Windows Scheduled Task chạy tự động hàng ngày lúc 06:00 AM (Tự đánh thức máy từ chế độ Sleep & chạy xong tự Sleep lại)
 $TaskName = "ForgeZone-MotionSites-DailyAgent"
-$RunnerScript = "D:\2A\web\tools\agent-motionsites\run-scheduled-agent.ps1"
-$WorkingDir = "D:\2A"
+$RunnerScript = "E:\DONG_PHU\2A\web\tools\agent-motionsites\run-scheduled-agent.ps1"
+$WorkingDir = "E:\DONG_PHU\2A"
 
 Write-Host "Setting up Scheduled Task: $TaskName (06:00 AM Daily, WakeFromSleep + SleepAfterRun)" -ForegroundColor Cyan
 

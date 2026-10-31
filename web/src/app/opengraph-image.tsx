@@ -1,13 +1,25 @@
-/* Ảnh hiển thị khi chia sẻ link lên Facebook, Zalo, X…
-   Sinh động bằng ImageResponse nên không cần thiết kế file ảnh riêng. */
+/* Ảnh hiển thị khi chia sẻ link lên Facebook, Zalo, X, LinkedIn, Discord…
+   Sinh động bằng ImageResponse và tự thích ứng theo ngôn ngữ (vi/en). */
 import { ImageResponse } from 'next/og';
 import { COMPANY } from '@/lib/company';
+import { readLang } from '@/lib/server-lang';
 
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
-export const alt = 'Forge Zone — Giao diện web cao cấp, dựng sẵn để bán';
+export const alt = 'Forge Zone — Premium ready-made website templates';
 
-export default function Image() {
+export default async function Image() {
+  const lang = await readLang();
+  const isVi = lang === 'vi';
+
+  const headline = isVi
+    ? 'Giao diện web cao cấp, dựng sẵn để bán'
+    : 'Premium Ready-Made Website Templates';
+  const subline = isVi
+    ? 'Tải về · Thay chữ · Lên sóng'
+    : 'Download · Customize · Launch';
+  const rightBadge = isVi ? 'Giấy phép thương mại' : 'Commercial Licence';
+
   return new ImageResponse(
     (
       <div
@@ -48,13 +60,13 @@ export default function Image() {
               lineHeight: 1.05,
               letterSpacing: -2,
               display: 'flex',
-              maxWidth: 900,
+              maxWidth: 940,
             }}
           >
-            Giao diện web cao cấp, dựng sẵn để bán
+            {headline}
           </div>
           <div style={{ marginTop: 26, fontSize: 30, color: '#9aa2ac', display: 'flex' }}>
-            Tải về · Thay chữ · Lên sóng
+            {subline}
           </div>
         </div>
 
@@ -68,7 +80,7 @@ export default function Image() {
           }}
         >
           <div style={{ display: 'flex' }}>HTML · CSS · JS</div>
-          <div style={{ display: 'flex' }}>Giấy phép thương mại</div>
+          <div style={{ display: 'flex' }}>{rightBadge}</div>
         </div>
       </div>
     ),

@@ -565,9 +565,9 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                           {!vm.detail.previewOnly && !vm.detail.premium && !vm.detail.free && (<button className="cart-detail-button" type="button" onClick={vm.addDetailToCart}>
                             {vm.detailCartLabel}
                           </button>)}
-                          <button className="hv10" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px", padding: "16px 26px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontSize: "14px", fontWeight: "600", color: "#ffffff", background: "transparent", border: "1px solid rgba(236,238,241,.24)", transition: "border-color .25s ease, background .25s ease" }} onClick={vm.detail.openDemo}>
+                          {vm.detail.group !== 'agent' && (<button className="hv10" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px", padding: "16px 26px", borderRadius: "16px", cursor: "pointer", fontFamily: "inherit", fontSize: "14px", fontWeight: "600", color: "#ffffff", background: "transparent", border: "1px solid rgba(236,238,241,.24)", transition: "border-color .25s ease, background .25s ease" }} onClick={vm.detail.openDemo}>
                             {vm.t.dLive} ↗
-                          </button>
+                          </button>)}
                         </div>
                         {vm.guideSlug ? <ProductHelp lang={vm.guideLang} slug={vm.guideSlug} /> : null}
                       </div>
@@ -602,7 +602,7 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                     <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "clamp(24px,3vw,34px)" }}>
                       <span style={{ width: "40px", height: "1px", background: "var(--acc)" }} />
                       <span style={{ fontSize: "12px", letterSpacing: ".24em", textTransform: "uppercase", color: "#ffffff" }}>
-                        {vm.t.dRelated}
+                        {vm.detail.group === 'agent' ? ({ vi: 'Tool / Agent tương tự', en: 'Related tools & agents', zh: '相关工具与智能体' }[vm.guideLang as 'vi' | 'en' | 'zh']) : vm.t.dRelated}
                       </span>
                     </div>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "22px" }}>

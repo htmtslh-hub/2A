@@ -453,8 +453,8 @@ export function buildView(
         })),
         specs: ((REAL_TEMPLATES[d.id]?.group === 'agent' || ['monoframe', 'solaris-gate', 'jack-3d', 'spaceedu', 'mostar-city', 'fennec', 'riverine-ai', 'freight-axis', 'meridian', 'vesper-ai', 'astro-armor', 'galaxy-edge', 'aerox-studio', 'dualplay', 'verdant', 'orbit-academy', 'shopluxe', 'chronoform', 'leaflit', 'ais-folio', 'semaan', 'motora', 'aerosix', 'airmax-plus', 'backbest-800', 'firepower', 'beetbuh', 'sonicore', 'manganresto'].includes(REAL_TEMPLATES[d.id]?.slug)) ? REAL_TEMPLATES[d.id].specs?.[lang] ?? [] : t.dSpecRows ?? []).map((r: string[]) => ({ k: r[0], v: r[1] })),
         related: allTpl
-          .filter((m: any) => m.cat === d.cat && m.id !== d.id)
-          .concat(allTpl.filter((m: any) => m.cat !== d.cat && m.id !== d.id))
+          .filter((m: any) => m.group === d.group && m.cat === d.cat && m.id !== d.id)
+          .concat(allTpl.filter((m: any) => m.group === d.group && m.cat !== d.cat && m.id !== d.id))
           .slice(0, 3)
           .map((m: any) => withSave({ ...m, href: `?mau=${m.id}`, onSelect: (event: MouseEvent<HTMLAnchorElement>) => followTemplateLink(event, m.id) })),
       }
@@ -750,13 +750,21 @@ export function buildView(
         } else goTab('pricing');
         return;
       }
+      if (ctx.signedIn && ctx.downloadIds?.includes(state.detail)) {
+        window.location.href = `/api/download?id=${encodeURIComponent(state.detail)}`;
+        return;
+      }
       im.startCheckout('TEMPLATE', state.detail);
     },
     detailBuyLabel: detail?.free ? { vi: 'Tải miễn phí', en: 'Download free', zh: '免费下载' }[lang] : detail?.premium
       ? ctx.signedIn && ctx.downloadIds?.includes(detail.id)
         ? { vi: 'Tải sản phẩm', en: 'Download product', zh: '下载产品' }[lang]
         : { vi: 'Xem gói Premium', en: 'Explore Premium plans', zh: '查看 Premium 套餐' }[lang]
-      : t.dBuy,
+      : detail?.group === 'agent'
+        ? (ctx.signedIn && ctx.downloadIds?.includes(detail.id)
+          ? { vi: 'Tải tool này', en: 'Download this tool', zh: '下载此工具' }[lang]
+          : { vi: 'Mua tool này', en: 'Buy this tool', zh: '购买此工具' }[lang])
+        : t.dBuy,
     premiumIncludedLabel: { vi: 'Trong gói Premium / Ultra', en: 'Included with Premium / Ultra', zh: '包含在 Premium / Ultra 套餐内' }[lang],
     detailPriceUnit: detail?.previewOnly ? '' : detail?.free ? { vi: 'Không cần đăng nhập', en: 'No sign-in required', zh: '无需登录' }[lang] : detail?.premium
       ? { vi: 'Trong gói Premium / Ultra', en: 'Included with Premium / Ultra', zh: '包含在 Premium / Ultra 套餐内' }[lang]

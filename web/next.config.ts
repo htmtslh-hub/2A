@@ -53,6 +53,7 @@ const nextConfig: NextConfig = {
      không có file nào — khách trả tiền xong bấm link tải là 404.
      Dòng dưới bắt Next mang theo cả thư mục. */
 
+  outputFileTracingExcludes: hasSyncedDriveFiles ? { '/api/download': ['./product/**', 'product/**'], '*': ['./product/**', 'product/**'] } : {},
   outputFileTracingIncludes: hasSyncedDriveFiles
     ? {}
     : {

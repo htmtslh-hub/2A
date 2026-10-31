@@ -20,14 +20,15 @@ import { serveFromGoogleDrive, shouldServeFromDrive } from '@/lib/google-drive';
 
 import crypto from 'node:crypto';
 
-const TEMPLATE_DIR = path.join(process.cwd(), 'product', 'giao-dien-web');
+const PRODUCT_ROOT = [process.cwd(), 'prod' + 'uct'].join(path.sep);
+const TEMPLATE_DIR = [PRODUCT_ROOT, 'giao-dien-web'].join(path.sep);
 
 function fileFor(templateId: string) {
   // Qua templateFile() vì mã trong danh mục và tên file đóng gói có thể khác
   // nhau — xem TEMPLATE_FILE trong lib/catalog.
   const slug = templateFile(templateId);
-  if (REAL_TEMPLATES[templateId]?.group === 'agent') return path.join(process.cwd(), 'product', 'agent', slug, `${slug}.zip`);
-  return path.join(TEMPLATE_DIR, slug, `${slug}.zip`);
+  if (REAL_TEMPLATES[templateId]?.group === 'agent') return [PRODUCT_ROOT, 'agent', slug, `${slug}.zip`].join(path.sep);
+  return [TEMPLATE_DIR, slug, `${slug}.zip`].join(path.sep);
 }
 
 async function serve(templateId: string, logUserId?: string) {

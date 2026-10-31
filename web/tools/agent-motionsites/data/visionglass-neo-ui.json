@@ -1,0 +1,35 @@
+{
+  "pinId": "local-65658236e456",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1069323505300032436_Mục_này_có_hình_ảnh_của_Neo-Apple_UI.jpg",
+  "archivedImagePath": "D:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-31\\pin_1069323505300032436_Mục_này_có_hình_ảnh_của_Neo-Apple_UI.jpg",
+  "title": "VisionGlass Neo UI",
+  "slug": "visionglass-neo-ui",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-tilt-splittext",
+    "name": "Split-Text Staggered Reveal + 3D Card Tilt + Blend Cursor",
+    "focus": [
+      "split-text-reveal",
+      "3d-card-tilt",
+      "image-zoom-mask",
+      "custom-blend-cursor"
+    ],
+    "description": "Tập trung vào nghệ thuật chữ tách ký tự (Split-Text), thẻ kính mờ nghiêng 3D khi rê chuột và con trỏ Blend-mode."
+  },
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-31\\visionglass-neo-ui.jpg",
+  "imageBytes": 57660,
+  "imageSha256": "65658236e4568d137f28e372ada6d212a9c35265cd2f997fcfc3686ac450faa5",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 832,
+    "height": 1248,
+    "aspectRatio": 0.67,
+    "reason": "Rejected geometry (832x1248, AR=0.67) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-10-31T00:13:51.907Z",
+  "category": "portfolio",
+  "prompt_text": "Neo-Apple Vision Pro spatial UI design system featuring pastel aurora 3D glass refraction, interactive rotary depth dial, tactile spatial toggles, and live CSS glass token generator."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "t186",
+  "slug": "foods-gourmet-bowl",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-31T00:24:58.933Z",
+  "demo": "/demos/foods-gourmet-bowl/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "e7ca79473410",
+  "sha256": "e7ca794734102258cc2bb694a30debcca6eae62da696397705fed72a40628428",
+  "demoHtmlSha256": "918164b8afabb7368f23e40e0516f26c8e5c3176752b9711b6ace33daf54faf7",
+  "demoSha256": "646fc5a54a229f1832ff2f9ba518017b3438ce6fb3a2ed9354cf0ffab4daf395",
+  "bytes": 263544,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 367
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\foods-gourmet-bowl-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\foods-gourmet-bowl-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\foods-gourmet-bowl-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\foods-gourmet-bowl-return.jpg"
+  ]
+}

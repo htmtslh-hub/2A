@@ -1,0 +1,32 @@
+{
+  "pinId": "local-2e82c299dabf",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1062568105861618273_Mục_này_có_hình_ảnh_của_High-Impact_.jpg",
+  "archivedImagePath": "D:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-31\\pin_1062568105861618273_Mục_này_có_hình_ảnh_của_High-Impact_.jpg",
+  "title": "Terrarium Deck Studio",
+  "slug": "terrarium-deck-studio",
+  "assignedTier": "free",
+  "motionRecipe": {
+    "id": "recipe-horizontal-liquid",
+    "name": "Horizontal Showcase Scroll + Liquid Wave Filter + Seamless Modal",
+    "focus": [
+      "horizontal-scroll",
+      "liquid-ripple-distortion",
+      "seamless-modal-transition"
+    ],
+    "description": "Tập trung vào cuộn ngang bộ sưu tập (Horizontal Scroll), hiệu ứng gợn sóng chất lỏng SVG/WebGL và chuyển cảnh phóng to mượt mà."
+  },
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-31\\terrarium-deck-studio.jpg",
+  "imageBytes": 105216,
+  "imageSha256": "2e82c299dabfea91c3e8bb33a650aac788fc67e0d374c63e6885b090dfbbf407",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 1024,
+    "height": 1024,
+    "aspectRatio": 1,
+    "reason": "Rejected geometry (1024x1024, AR=1.00) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-10-31T00:13:51.864Z"
+}

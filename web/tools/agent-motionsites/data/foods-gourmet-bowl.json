@@ -1,0 +1,69 @@
+{
+  "pinId": "local-356f2b4c52cc",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1066719861751680646_Mục_này_có_hình_ảnh_của_Food_Orderin.png",
+  "archivedImagePath": "D:\\2A\\anh-mau-pinterest\\da-lam\\2026-10-31\\pin_1066719861751680646_Mục_này_có_hình_ảnh_của_Food_Orderin.png",
+  "title": "Foods Gourmet Bowl",
+  "slug": "foods-gourmet-bowl",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-ambient-marquee",
+    "name": "Ambient Particle Canvas + Kinetic Marquee + Cutout Glass Tabs",
+    "focus": [
+      "ambient-smoke-particles",
+      "infinite-marquee",
+      "inverted-cutout-tabs"
+    ],
+    "description": "Tập trung vào hệ thống hạt bụi/khói chuyển động nền (Ambient Canvas), chữ chạy vô tận (Marquee) và thẻ bo góc Cutout."
+  },
+  "localImagePath": "D:\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-10-31\\foods-gourmet-bowl.png",
+  "imageBytes": 1213501,
+  "imageSha256": "356f2b4c52cc7a1389b82346b75db8805105fc81f40133e6f1f67cffba15f04c",
+  "criteriaEvaluation": {
+    "accepted": true,
+    "totalScore": 100,
+    "criteriaMatchPercent": 100,
+    "passedCriteriaCount": 6,
+    "width": 1611,
+    "height": 1208,
+    "aspectRatio": 1.33,
+    "fullBleedRatio": 1,
+    "dofRatio": 2.87,
+    "criteriaChecks": {
+      "formatDesktopHeroShowcase": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "visualHookFullBleed3DDepth": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "floatingGlassPillCards": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "outOfBounds3DPopOut": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "oversizedHeadlineTypography": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "minimalistEdgeNavigation": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      }
+    },
+    "reason": "PASSED (100/100, 6/6 criteria = 100%)"
+  },
+  "fetchedAt": "2026-10-31T00:13:51.905Z",
+  "category": "commerce",
+  "prompt_text": "Interactive gourmet bowl & street-food ordering showcase featuring live quantity stepper, real-time Total Order calculator, and instant Burger ($3.25), Cake ($2.25), and Salad ($5.25) switcher."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "t184",
+  "slug": "ozzies-pretzels",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-31T00:24:19.597Z",
+  "demo": "/demos/ozzies-pretzels/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0499e2d48231",
+  "sha256": "0499e2d482316972ef853ff1681ae37717ece5b8eed8fff2331ab9b23505d381",
+  "demoHtmlSha256": "3da7305a4271dd0e9852445671c1f4c5bdce42d20447c873c700eeb2125ac836",
+  "demoSha256": "18b65cf175935661172edb0e9e12491069abe11812e0e24e13426ff00f628be8",
+  "bytes": 605610,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1446
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ozzies-pretzels-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ozzies-pretzels-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ozzies-pretzels-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\ozzies-pretzels-return.jpg"
+  ]
+}

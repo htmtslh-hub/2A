@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-10-30",
+  "lastRunDate": "2026-10-31",
   "todayCopiedCount": 5,
   "todayFreeCount": 2,
   "todayPremiumCount": 3,
@@ -29,7 +29,12 @@
     "local-8b8453c973fd",
     "local-4c686f8c153a",
     "local-b4b8ac6ba0fa",
-    "local-dbdf32161e8a"
+    "local-dbdf32161e8a",
+    "local-72b9a080e36e",
+    "local-2e82c299dabf",
+    "local-356f2b4c52cc",
+    "local-65658236e456",
+    "local-bedff480851f"
   ],
   "processedImageHashes": [
     "ecb0eb8a36263a9bd80e535321f1f5161c76d6b70a0bf9ea3d6ab2462886f512",
@@ -56,7 +61,12 @@
     "8b8453c973fd85ef377facbd96eafe9ede8f8582ea3f79328e99f1b5e27cddb3",
     "4c686f8c153a21661b58815d7c092ca4d8b3900c433ca52f9e832e77524b0947",
     "b4b8ac6ba0fad81f042dbb24e7dd85dd532257ac25562ec8992e4628b07854bd",
-    "dbdf32161e8a622608ba136066a4b1dc6ce713ebec28b9d1e7828e1669ae62e0"
+    "dbdf32161e8a622608ba136066a4b1dc6ce713ebec28b9d1e7828e1669ae62e0",
+    "72b9a080e36e93d6339ee8c248d302eccc994ef9697c765ddb9caff410d4817f",
+    "2e82c299dabfea91c3e8bb33a650aac788fc67e0d374c63e6885b090dfbbf407",
+    "356f2b4c52cc7a1389b82346b75db8805105fc81f40133e6f1f67cffba15f04c",
+    "65658236e4568d137f28e372ada6d212a9c35265cd2f997fcfc3686ac450faa5",
+    "bedff480851fc0b3c3e38a111108e0ac1ce46b6dc1b47f78595a6136249d430a"
   ],
   "processedSlugs": [
     "_design",
@@ -125,6 +135,7 @@
     "fitclub-food",
     "flash-rocky-mountain",
     "flexible-spark",
+    "foods-gourmet-bowl",
     "forest-pulse",
     "free-sample",
     "freight-axis",
@@ -187,9 +198,11 @@
     "nova-glass",
     "novatrend",
     "nuvem-canvas",
+    "o2-moonish-cosmic",
     "oceanpulse",
     "orbis-nft",
     "orbit-academy",
+    "ozzies-pretzels",
     "pinehaven",
     "polkacrypto-future",
     "portfolio-cosmic",
@@ -197,9 +210,11 @@
     "price-calculator",
     "prisma-creative-studio",
     "prmpt",
+    "prosthetics-hero",
     "puro-amor",
     "quiet-place-sanctuary",
     "reelmark",
+    "retro-futurist",
     "reviews",
     "riverine-ai",
     "rivr",
@@ -224,6 +239,7 @@
     "synapsex",
     "targo",
     "taskly",
+    "terrarium-deck-studio",
     "tidal",
     "tools",
     "toonhub",
@@ -240,11 +256,13 @@
     "vex-ventures",
     "veyra",
     "viktor",
+    "visionglass-neo-ui",
     "vize-footer",
     "volt-hoodie",
     "vybe",
     "wander-far",
     "watchroom",
+    "wellbeing-os",
     "yellow-beast"
   ],
   "history": [
@@ -419,6 +437,48 @@
         "kata-ocado-portfolio": "premium",
         "glitch-cyberwear": "premium"
       }
+    },
+    {
+      "date": "2026-10-31",
+      "timestamp": "2026-10-31T00:18:03.275Z",
+      "products": [
+        {
+          "slug": "ozzies-pretzels",
+          "catalogId": "t184",
+          "title": "Ozzie's Pretzels",
+          "accessTier": "free"
+        },
+        {
+          "slug": "terrarium-deck-studio",
+          "catalogId": "t185",
+          "title": "Terrarium Deck Studio",
+          "accessTier": "free"
+        },
+        {
+          "slug": "foods-gourmet-bowl",
+          "catalogId": "t186",
+          "title": "Foods Gourmet Bowl",
+          "accessTier": "premium"
+        },
+        {
+          "slug": "visionglass-neo-ui",
+          "catalogId": "t187",
+          "title": "VisionGlass Neo UI",
+          "blueprint": "spatial-visionos-glass-workbench",
+          "accessTier": "premium",
+          "category": "portfolio",
+          "criteriaScore": 98
+        },
+        {
+          "slug": "o2-moonish-cosmic",
+          "catalogId": "t188",
+          "title": "O2 Moonish Cosmic",
+          "blueprint": "desert-glass-sphere-streetwear",
+          "accessTier": "premium",
+          "category": "commerce",
+          "criteriaScore": 98
+        }
+      ]
     }
   ],
   "todayCreatedCount": 5

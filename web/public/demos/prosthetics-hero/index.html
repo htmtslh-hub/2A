@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kinetix Bionic — Simple, Smart Prosthetics Made for People Who Keep Fighting</title>
+  <meta name="description" content="Seen on Shark Tank in India. Simple, smart myoelectric prosthetics made for people who keep fighting. Reclaim your movement now." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F0F0EE;
+      --surface: #FFFFFF;
+      --surface-2: #EDEDED;
+      --text: #111827;
+      --muted: #52525B;
+      --accent: #2563EB;
+      --accent-text: #1D4ED8;
+      --border: rgba(17, 24, 39, 0.1);
+      --radius-card: 20px;
+      --font-display: 'Space Grotesk', 'Inter', sans-serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --space-section: clamp(64px, 8vw, 108px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--bg); }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--font-sans); overflow-x: clip; }
+    body { background: var(--bg); color: var(--text); overflow-x: clip; line-height: 1.6; }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--accent); color: #FFFFFF; font-weight: 700; border-radius: 8px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--text); }
+    a, button, input { font-family: inherit; }
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .pro89-hero-outer {
+      padding: 10px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .pro89-hero-frame {
+      position: relative;
+      flex: 1;
+      min-height: calc(100vh - 20px);
+      border-radius: 20px;
+      overflow: hidden;
+      background: #18181B;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .pro89-hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .pro89-nav-wrap {
+      position: relative;
+      z-index: 20;
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .pro89-logo-pill {
+      background: #EDEDED;
+      border-radius: 14px;
+      padding: 11px 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #111827;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .pro89-logo-pill:hover { transform: translateY(-2px); }
+    .pro89-links-pill {
+      background: #EDEDED;
+      border-radius: 14px;
+      padding: 12px 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 22px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      flex-wrap: wrap;
+    }
+    .pro89-nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: #374151;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .pro89-nav-link:hover { color: #000000; }
+    .pro89-motion-pill {
+      background: rgba(237, 237, 237, 0.92);
+      border: 1px solid rgba(17, 24, 39, 0.12);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #111827;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .pro89-motion-pill:hover { background: #FFFFFF; }
+    .pro89-motion-pill:active { transform: scale(0.97); }
+
+    .pro89-hero-card {
+      position: relative;
+      z-index: 15;
+      margin: auto auto 24px 24px;
+      width: calc(100% - 48px);
+      max-width: 660px;
+      background: #EDEDED;
+      border-radius: 16px;
+      padding: clamp(24px, 4vw, 44px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    }
+    .pro89-shark-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #E2E2E2;
+      color: #4B5563;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      margin-bottom: 18px;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .pro89-shark-badge:hover { background: #D4D4D8; color: #111827; }
+    .pro89-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.3vw, 3.35rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: #111827;
+      margin-bottom: 14px;
+    }
+    .pro89-sub {
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      color: #6B7280;
+      max-width: 52ch;
+      margin-bottom: 24px;
+    }
+    .pro89-btn-blue {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #2563EB;
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 13px 24px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .pro89-btn-blue:hover { background: #1D4ED8; transform: translateY(-2px); }
+    .pro89-btn-blue:active { transform: translateY(0) scale(0.98); }
+
+    .pro89-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: var(--space-section) clamp(20px, 5vw, 48px);
+    }
+    .pro89-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 3.4vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      margin-bottom: 14px;
+    }
+    .pro89-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 32px;
+    }
+    .pro89-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
+    .pro89-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(17, 24, 39, 0.07);
+    }
+    .pro89-grip-btn {
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .pro89-grip-btn.is-active, .pro89-grip-btn:hover {
+      background: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--accent);
+    }
+    .pro89-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(17, 24, 39, 0.65);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+    .pro89-modal.is-open { display: flex; }
+    .pro89-modal-box {
+      max-width: 520px;
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 900px) {
+      .pro89-grid-3 { grid-template-columns: 1fr; }
+      .pro89-hero-card { margin: auto 12px 12px 12px; width: calc(100% - 24px); }
+    }
+    @media (max-width: 600px) {
+      .pro89-links-pill { gap: 12px; padding: 10px 14px; }
+      .pro89-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(37,99,235,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#2563EB;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="pro89-hero-outer">
+    <div class="pro89-hero-frame">
+      <video id="heroBgVideo" class="pro89-hero-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_215831_c6a8989c-d716-4d8d-8745-e972a2eec711.mp4" autoplay loop muted playsinline preload="auto"></video>
+
+      <header class="pro89-nav-wrap">
+        <a href="#main-content" class="pro89-logo-pill" aria-label="Kinetix Bionic Home">
+          <svg viewBox="0 0 256 256" width="22" height="22" fill="#111827" aria-hidden="true">
+            <path d="M 160 88 L 194 34 L 160 34 L 128 88 L 96 34 L 62 34 L 96 88 L 62 142 L 96 142 L 128 88 L 160 142 L 194 142 Z M 194 166 L 160 166 L 128 220 L 96 166 L 62 166 L 96 222 L 160 222 Z" />
+          </svg>
+        </a>
+        <nav class="pro89-links-pill" aria-label="Primary Navigation">
+          <a href="#story-section" class="pro89-nav-link">Story</a>
+          <a href="#bionic-calibrator" class="pro89-nav-link">Products</a>
+          <a href="#fitting-faq" class="pro89-nav-link">Help</a>
+          <a href="#fitting-clinics" class="pro89-nav-link">Support</a>
+        </nav>
+        <button type="button" id="motionToggleBtn" class="pro89-motion-pill" aria-pressed="false">Motion: ON</button>
+      </header>
+
+      <section class="pro89-hero-card" aria-labelledby="heroTitle">
+        <a href="#story-section" class="pro89-shark-badge">
+          <span>Seen on Shark Tank in India</span>
+          <span aria-hidden="true">→</span>
+        </a>
+        <h1 id="heroTitle" class="pro89-h1">Simple, smart prosthetics made for people who keep fighting.</h1>
+        <p class="pro89-sub">Reclaim your movement now.</p>
+        <button type="button" id="exploreMagneticBtn" class="pro89-btn-blue" data-magnetic>
+          <span>Try a free fitting</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </section>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ONE LIVE THING: INTERACTIVE MYOELECTRIC GRIP & SOCKET TELEMETRY CALIBRATOR -->
+    <section id="bionic-calibrator" class="pro89-wrap tabular-nums" aria-labelledby="calibHeading">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:600;">LIVE MYOELECTRIC TELEMETRY</span>
+          <h2 id="calibHeading" class="pro89-h2">Adaptive 14-Grip Bionic Hand &amp; Socket Calibrator</h2>
+        </div>
+        <div role="group" aria-label="Myoelectric Grip Modes" style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="pro89-grip-btn is-active" data-grip="Precision Pinch" data-force="18 N" data-latency="9 ms" data-battery="38 hrs" data-note="Micro-step thumb opposition calibrated for buttoning shirts, holding keys, and writing.">Precision Pinch</button>
+          <button type="button" class="pro89-grip-btn" data-grip="Power Cylinder" data-force="112 N" data-latency="11 ms" data-battery="32 hrs" data-note="Full 5-digit wraparound torque lock for lifting gym kettlebells, luggage, and workshop tools.">Power Cylinder</button>
+          <button type="button" class="pro89-grip-btn" data-grip="Tripod Typing" data-force="24 N" data-latency="7 ms" data-battery="42 hrs" data-note="Ultra-fast index-middle-thumb stabilization for keyboard typing, lab pipettes, and utensils.">Tripod Typing</button>
+          <button type="button" class="pro89-grip-btn" data-grip="Active Hook" data-force="135 N" data-latency="10 ms" data-battery="36 hrs" data-note="Passive auto-locking load distribution engineered for cycling handlebars and heavy carrying.">Active Hook</button>
+        </div>
+      </div>
+
+      <div class="pro89-grid-3">
+        <div class="pro89-card" style="grid-column: span 2;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+            <strong id="activeGripTitle" style="font-family:var(--font-display);font-size:22px;">Precision Pinch Mode</strong>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);background:rgba(37,99,235,0.1);padding:4px 10px;border-radius:6px;">EMG DUAL-CHANNEL ACTIVE</span>
+          </div>
+          <p id="activeGripNote" style="font-size:15px;color:var(--muted);max-width:62ch;margin-bottom:22px;">
+            Micro-step thumb opposition calibrated for buttoning shirts, holding keys, and writing.
+          </p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+            <div style="padding:16px;background:var(--bg);border-radius:14px;">
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">GRIP FORCE</span>
+              <strong id="gripForceVal" style="font-family:var(--font-display);font-size:28px;color:var(--text);">18 N</strong>
+            </div>
+            <div style="padding:16px;background:var(--bg);border-radius:14px;">
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">EMG RESPONSE</span>
+              <strong id="gripLatencyVal" style="font-family:var(--font-display);font-size:28px;color:var(--accent);">9 ms</strong>
+            </div>
+            <div style="padding:16px;background:var(--bg);border-radius:14px;">
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">CYCLE RUNTIME</span>
+              <strong id="gripBatteryVal" style="font-family:var(--font-display);font-size:28px;color:var(--text);">38 hrs</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="pro89-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">WEIGHT &amp; WEATHERPROOFING</span>
+            <h3 style="font-family:var(--font-display);font-size:26px;margin:8px 0;">415g Carbon Frame • IP67 Sealed</h3>
+            <p style="font-size:14px;color:var(--muted);max-width:46ch;">Lighter than a smartphone, breathable 3D-scanned silicone liner, and field-serviceable modular fingers.</p>
+          </div>
+          <button type="button" class="pro89-btn-blue" style="width:100%;justify-content:center;margin-top:20px;" data-seamless-trigger="Book Free 3D Socket Scan &amp; Fitting">Try a free fitting →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY & ENGINEERING PILLARS -->
+    <section id="story-section" class="pro89-wrap tabular-nums" aria-labelledby="storyHeading" style="padding-top:16px;">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:600;">WHY WE BUILT KINETIX</span>
+      <h2 id="storyHeading" class="pro89-h2">Bionic Mobility Without the $40,000 Hospital Markup</h2>
+      <div class="pro89-grid-3">
+        <article class="pro89-card pro89-reveal" data-tilt-card>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">01 // DIRECT 3D OPTICAL FIT</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Fitted in 48 Hours, Not 6 Weeks</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:50ch;">Our mobile prosthetists scan your residual limb using sub-millimeter structured light and print custom breathable sockets locally.</p>
+        </article>
+        <article class="pro89-card pro89-reveal" data-tilt-card>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">02 // NEURAL MUSCLE LEARNING</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Adapts to Your Signal, Not Vice Versa</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:50ch;">On-board edge AI calibrates to subtle surface EMG muscle twitches in 10 minutes—even through sweat or long workdays.</p>
+        </article>
+        <article class="pro89-card pro89-reveal" data-tilt-card>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">03 // ZERO-DOWNTIME MODULARITY</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Swap Digits in 90 Seconds</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:50ch;">Every knuckle actuator uses a single hex key release, backed by a 3-year no-questions-asked warranty across 28 clinics.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CLINICS & SUPPORT -->
+    <section id="fitting-clinics" class="pro89-wrap tabular-nums" aria-labelledby="clinicHeading" style="padding-top:16px;">
+      <div class="pro89-card" id="fitting-faq" style="background:#111827;color:#FFFFFF;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:#60A5FA;">FREE HOME &amp; CLINIC TRIALS</span>
+          <h2 id="clinicHeading" style="font-family:var(--font-display);font-size:clamp(1.7rem,3vw,2.4rem);margin:8px 0;">Test-Drive Kinetix Bionic With Zero Obligation</h2>
+          <p style="font-size:14px;color:#D1D5DB;max-width:58ch;">Available in Bengaluru, Mumbai, Delhi NCR, Hyderabad, Chennai, and via home tele-fitting kits nationwide. 0% EMI financing available.</p>
+        </div>
+        <button type="button" class="pro89-btn-blue" data-seamless-trigger="Schedule Free Prosthetic Trial Session">Book Free Fitting →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pro89-wrap" style="padding-top:24px;padding-bottom:48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 Kinetix Bionic Labs Pvt. Ltd. ISO 13485 Certified Medical Device.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent);">24/7 PROSTHETIST HELPLINE • 1800-KINETIX</span>
+  </footer>
+
+  <div id="seamlessModal" class="pro89-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="pro89-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">FREE BIONIC FITTING</span>
+        <button type="button" id="closeSeamlessBtn" class="pro89-motion-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:26px;margin-bottom:10px;">Try a free fitting</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:52ch;">
+        A certified clinical prosthetist will bring a demo bionic hand and 3D optical scanner to your nearest clinic or home at zero cost.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="pro89-btn-blue" style="width:100%;justify-content:center;">Confirm Free Fitting Request →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var titleEl = document.getElementById('activeGripTitle');
+      var noteEl = document.getElementById('activeGripNote');
+      var forceEl = document.getElementById('gripForceVal');
+      var latEl = document.getElementById('gripLatencyVal');
+      var batEl = document.getElementById('gripBatteryVal');
+
+      document.querySelectorAll('.pro89-grip-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.pro89-grip-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (titleEl) titleEl.textContent = (btn.getAttribute('data-grip') || '') + ' Mode';
+          if (noteEl) noteEl.textContent = btn.getAttribute('data-note') || '';
+          if (forceEl) forceEl.textContent = btn.getAttribute('data-force') || '';
+          if (latEl) latEl.textContent = btn.getAttribute('data-latency') || '';
+          if (batEl) batEl.textContent = btn.getAttribute('data-battery') || '';
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.pro89-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('pro89Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

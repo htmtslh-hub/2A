@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-30T11:29:14.594Z",
+  "generatedAt": "2026-10-31T00:25:51.487Z",
   "standardVersion": "ForgeScore v2.0 (product-standards.md v2.0.0)",
-  "totalEvaluated": 164,
-  "averageScore": 78.3,
+  "totalEvaluated": 172,
+  "averageScore": 79.3,
   "countsByGrade": {
-    "FORGEFRAME_GOLD": 25,
+    "FORGEFRAME_GOLD": 33,
     "PASS_STANDARD": 27,
     "NEAR_PASS": 24,
     "NEEDS_REWORK": 63,
@@ -12,7 +12,7 @@
   },
   "countsByProfile": {
     "WEB-STATIC-1": 1,
-    "WEB-CRAFT-2": 163
+    "WEB-CRAFT-2": 171
   },
   "results": [
     {
@@ -659,8 +659,8 @@
         "axis4_responsive_a11y": 20,
         "axis5_packaging_docs": 15
       },
-      "maxSimilarity": 9.1,
-      "mostSimilarSlug": "neuralyn",
+      "maxSimilarity": 10.6,
+      "mostSimilarSlug": "terrarium-deck-studio",
       "hardFails": [],
       "deductions": [],
       "warnings": []
@@ -1473,8 +1473,8 @@
         "axis4_responsive_a11y": 20,
         "axis5_packaging_docs": 15
       },
-      "maxSimilarity": 5.7,
-      "mostSimilarSlug": "nexora-alex-portfolio",
+      "maxSimilarity": 5.9,
+      "mostSimilarSlug": "prosthetics-hero",
       "hardFails": [],
       "deductions": [],
       "warnings": []
@@ -1804,6 +1804,26 @@
         "[A5.2 -1.5đ] CUSTOMISE.md có 5/12 AI prompts",
         "[A5.2 -1.0đ] CUSTOMISE.md thiếu bảng Edit Map có cột số lần xuất hiện"
       ],
+      "warnings": []
+    },
+    {
+      "slug": "foods-gourmet-bowl",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 11945,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 3.5,
+      "mostSimilarSlug": "calfin-weather",
+      "hardFails": [],
+      "deductions": [],
       "warnings": []
     },
     {
@@ -2166,8 +2186,8 @@
         "axis4_responsive_a11y": 16,
         "axis5_packaging_docs": 11
       },
-      "maxSimilarity": 3.8,
-      "mostSimilarSlug": "taskly",
+      "maxSimilarity": 4.1,
+      "mostSimilarSlug": "ozzies-pretzels",
       "hardFails": [],
       "deductions": [
         "[A1.4 -3.5đ] Cấu trúc trang quá ngắn (2 <section>)",
@@ -3280,8 +3300,8 @@
         "axis4_responsive_a11y": 10,
         "axis5_packaging_docs": 11
       },
-      "maxSimilarity": 9.1,
-      "mostSimilarSlug": "aurelia-biocyber",
+      "maxSimilarity": 11.7,
+      "mostSimilarSlug": "prosthetics-hero",
       "hardFails": [],
       "deductions": [
         "[A1.4 -3.5đ] Cấu trúc trang quá ngắn (2 <section>)",
@@ -3450,6 +3470,26 @@
       "warnings": []
     },
     {
+      "slug": "o2-moonish-cosmic",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 11346,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 6.3,
+      "mostSimilarSlug": "mindloop-landing",
+      "hardFails": [],
+      "deductions": [],
+      "warnings": []
+    },
+    {
       "slug": "oceanpulse",
       "profile": "WEB-CRAFT-2",
       "zipSize": 13612,
@@ -3545,6 +3585,26 @@
       "warnings": []
     },
     {
+      "slug": "ozzies-pretzels",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 12558,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 5.8,
+      "mostSimilarSlug": "aurelia-biocyber",
+      "hardFails": [],
+      "deductions": [],
+      "warnings": []
+    },
+    {
       "slug": "pinehaven",
       "profile": "WEB-CRAFT-2",
       "zipSize": 597971,
@@ -3586,8 +3646,8 @@
         "axis4_responsive_a11y": 20,
         "axis5_packaging_docs": 15
       },
-      "maxSimilarity": 4.6,
-      "mostSimilarSlug": "luminex",
+      "maxSimilarity": 4.9,
+      "mostSimilarSlug": "o2-moonish-cosmic",
       "hardFails": [],
       "deductions": [],
       "warnings": []
@@ -3783,6 +3843,26 @@
       "warnings": []
     },
     {
+      "slug": "prosthetics-hero",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 13363,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 11.7,
+      "mostSimilarSlug": "neuralyn",
+      "hardFails": [],
+      "deductions": [],
+      "warnings": []
+    },
+    {
       "slug": "puro-amor",
       "profile": "WEB-CRAFT-2",
       "zipSize": 1257866,
@@ -3863,6 +3943,26 @@
         "[A4.5 -2.0đ] Trang có nguy cơ trắng nội dung khi tắt JS hoặc mất mạng",
         "[A5.2 -1.0đ] CUSTOMISE.md thiếu bảng Edit Map có cột số lần xuất hiện"
       ],
+      "warnings": []
+    },
+    {
+      "slug": "retro-futurist",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 13254,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 3.8,
+      "mostSimilarSlug": "polkacrypto-future",
+      "hardFails": [],
+      "deductions": [],
       "warnings": []
     },
     {
@@ -4566,6 +4666,26 @@
       "warnings": []
     },
     {
+      "slug": "terrarium-deck-studio",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 11306,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 10.6,
+      "mostSimilarSlug": "aurelia-biocyber",
+      "hardFails": [],
+      "deductions": [],
+      "warnings": []
+    },
+    {
       "slug": "tidal",
       "profile": "WEB-CRAFT-2",
       "zipSize": 258257,
@@ -4647,8 +4767,8 @@
         "axis4_responsive_a11y": 20,
         "axis5_packaging_docs": 15
       },
-      "maxSimilarity": 0.8,
-      "mostSimilarSlug": "dot",
+      "maxSimilarity": 1.1,
+      "mostSimilarSlug": "foods-gourmet-bowl",
       "hardFails": [],
       "deductions": [],
       "warnings": []
@@ -5085,6 +5205,26 @@
       "warnings": []
     },
     {
+      "slug": "visionglass-neo-ui",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 10898,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 3.2,
+      "mostSimilarSlug": "neuralyn",
+      "hardFails": [],
+      "deductions": [],
+      "warnings": []
+    },
+    {
       "slug": "vize-footer",
       "profile": "WEB-CRAFT-2",
       "zipSize": 6923,
@@ -5224,6 +5364,26 @@
       },
       "maxSimilarity": 1.8,
       "mostSimilarSlug": "shirtline",
+      "hardFails": [],
+      "deductions": [],
+      "warnings": []
+    },
+    {
+      "slug": "wellbeing-os",
+      "profile": "WEB-CRAFT-2",
+      "zipSize": 13961,
+      "fileCount": 4,
+      "total": 100,
+      "grade": "FORGEFRAME_GOLD (>=95)",
+      "axes": {
+        "axis1_architecture_antislop": 25,
+        "axis2_tokens_surfaces": 20,
+        "axis3_motion_live_thing": 20,
+        "axis4_responsive_a11y": 20,
+        "axis5_packaging_docs": 15
+      },
+      "maxSimilarity": 5.9,
+      "mostSimilarSlug": "dotdna-cyber",
       "hardFails": [],
       "deductions": [],
       "warnings": []

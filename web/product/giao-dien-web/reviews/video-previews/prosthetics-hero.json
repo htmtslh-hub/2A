@@ -1,0 +1,38 @@
+{
+  "id": "t182",
+  "slug": "prosthetics-hero",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-31T00:23:40.269Z",
+  "demo": "/demos/prosthetics-hero/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "32b3985c6913",
+  "sha256": "32b3985c691365db0c9579b018bd978c9522cc035a37e8b9b361f05ac94f9d92",
+  "demoHtmlSha256": "2a7c3374a28fc80d019aae97be6ea8058824112d77c2c6bc9ae7a0309b778d53",
+  "demoSha256": "2442baa157d7b1f347b94cf532f8428656c19b34ec5cd20a81953f54f79b013a",
+  "bytes": 455891,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1597
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prosthetics-hero-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prosthetics-hero-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prosthetics-hero-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\prosthetics-hero-return.jpg"
+  ]
+}

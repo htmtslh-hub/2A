@@ -46,6 +46,196 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t188: {
+    slug: 'o2-moonish-cosmic',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "O2 Moonish Cosmic",
+        desc: "O2 Moonish Cosmic (desert-glass-sphere-streetwear) — O2 Studio Moonish Cosmic Set 23 — Late 2050 desert-glass capsule collection featuring 01 Classic Hoodie encased in a 3D translucent sphere, Nike dune sneakers, and live fabric colorway switcher.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "O2 Moonish Cosmic",
+        desc: "O2 Moonish Cosmic (desert-glass-sphere-streetwear) — O2 Studio Moonish Cosmic Set 23 — Late 2050 desert-glass capsule collection featuring 01 Classic Hoodie encased in a 3D translucent sphere, Nike dune sneakers, and live fabric colorway switcher.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "O2 Moonish Cosmic",
+        desc: "O2 Moonish Cosmic (desert-glass-sphere-streetwear) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t187: {
+    slug: 'visionglass-neo-ui',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "VisionGlass Neo UI",
+        desc: "VisionGlass Neo UI (spatial-visionos-glass-workbench) — Neo-Apple Vision Pro spatial UI design system featuring pastel aurora 3D glass refraction, interactive rotary depth dial, tactile spatial toggles, and live CSS glass token generator.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "VisionGlass Neo UI",
+        desc: "VisionGlass Neo UI (spatial-visionos-glass-workbench) — Neo-Apple Vision Pro spatial UI design system featuring pastel aurora 3D glass refraction, interactive rotary depth dial, tactile spatial toggles, and live CSS glass token generator.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "VisionGlass Neo UI",
+        desc: "VisionGlass Neo UI (spatial-visionos-glass-workbench) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t186: {
+    slug: 'foods-gourmet-bowl',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Foods Gourmet Bowl",
+        desc: "Foods Gourmet Bowl (saffron-charcoal-food-ordering) — Interactive gourmet bowl & street-food ordering showcase featuring live quantity stepper, real-time Total Order calculator, and instant Burger ($3.25), Cake ($2.25), and Salad ($5.25) switcher.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Foods Gourmet Bowl",
+        desc: "Foods Gourmet Bowl (saffron-charcoal-food-ordering) — Interactive gourmet bowl & street-food ordering showcase featuring live quantity stepper, real-time Total Order calculator, and instant Burger ($3.25), Cake ($2.25), and Salad ($5.25) switcher.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Foods Gourmet Bowl",
+        desc: "Foods Gourmet Bowl (saffron-charcoal-food-ordering) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t185: {
+    slug: 'terrarium-deck-studio',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Terrarium Deck Studio",
+        desc: "Terrarium Deck Studio (pastel-biodome-deck-bento) — Iridescent pastel glass biodome & architectural terrarium presentation system with 12-slide Bento storyboard, interactive biome light inspector, and botanical telemetry.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Terrarium Deck Studio",
+        desc: "Terrarium Deck Studio (pastel-biodome-deck-bento) — Iridescent pastel glass biodome & architectural terrarium presentation system with 12-slide Bento storyboard, interactive biome light inspector, and botanical telemetry.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Terrarium Deck Studio",
+        desc: "Terrarium Deck Studio (pastel-biodome-deck-bento) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t184: {
+    slug: 'ozzies-pretzels',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Ozzie's Pretzels",
+        desc: "Ozzie's Pretzels (artisan-bakery-crimson-cream) — Denver's favorite hand-rolled Bavarian pretzels delivered fresh to your door — crimson-and-cream bakery showcase with interactive box builder, 4-step baking craft, and gift bundles.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Ozzie's Pretzels",
+        desc: "Ozzie's Pretzels (artisan-bakery-crimson-cream) — Denver's favorite hand-rolled Bavarian pretzels delivered fresh to your door — crimson-and-cream bakery showcase with interactive box builder, 4-step baking craft, and gift bundles.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Ozzie's Pretzels",
+        desc: "Ozzie's Pretzels (artisan-bakery-crimson-cream) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t183: {
+    slug: 'retro-futurist',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Retro-Futurist",
+        desc: "Giao diện web Retro-Futurist với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Retro-Futurist",
+        desc: "Bespoke Retro-Futurist web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Retro-Futurist",
+        desc: "单文件自包含 Retro-Futurist 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t182: {
+    slug: 'prosthetics-hero',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Prosthetics Hero",
+        desc: "Giao diện web Prosthetics Hero với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Prosthetics Hero",
+        desc: "Bespoke Prosthetics Hero web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Prosthetics Hero",
+        desc: "单文件自包含 Prosthetics Hero 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t181: {
+    slug: 'wellbeing-os',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Wellbeing OS",
+        desc: "Giao diện web Wellbeing OS với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Wellbeing OS",
+        desc: "Bespoke Wellbeing OS web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Wellbeing OS",
+        desc: "单文件自包含 Wellbeing OS 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t180: {
     slug: 'glitch-cyberwear',
     cat: 'commerce',

@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-10-30",
+  "lastRunDate": "2026-10-31",
   "todayCopiedCount": 3,
   "processedSlugs": [
     "_design",
@@ -54,6 +54,7 @@
     "digitwist-ai-builder",
     "docs",
     "dot",
+    "dotdna-cyber",
     "dualplay",
     "duolingo-styleguide",
     "eclipsio",
@@ -73,6 +74,7 @@
     "fresh-reddy",
     "galaxy-edge",
     "geospace-canvas",
+    "glitch-cyberwear",
     "glow-features",
     "gridwork-co",
     "halden",
@@ -85,6 +87,7 @@
     "jack-3d",
     "japan-sunrise-tour",
     "japan-trails",
+    "kata-ocado-portfolio",
     "keystead",
     "kinetiq",
     "kresna-footer",
@@ -120,6 +123,7 @@
     "neuralkinetics",
     "neuralyn",
     "nexlayer",
+    "nexora-alex-portfolio",
     "nexora-automation",
     "nextsus-gamerlix",
     "nourish-bowl",
@@ -130,14 +134,17 @@
     "orbis-nft",
     "orbit-academy",
     "pinehaven",
+    "polkacrypto-future",
     "portfolio-cosmic",
     "power-ai",
     "price-calculator",
     "prisma-creative-studio",
     "prmpt",
+    "prosthetics-hero",
     "puro-amor",
     "quiet-place-sanctuary",
     "reelmark",
+    "retro-futurist",
     "reviews",
     "riverine-ai",
     "rivr",
@@ -183,12 +190,8 @@
     "vybe",
     "wander-far",
     "watchroom",
-    "yellow-beast",
-    "dotdna-cyber",
-    "polkacrypto-future",
-    "nexora-alex-portfolio",
-    "kata-ocado-portfolio",
-    "glitch-cyberwear"
+    "wellbeing-os",
+    "yellow-beast"
   ],
   "processedPromptIds": [
     "aetheris-voyage-hero",
@@ -274,7 +277,10 @@
     "design-rocket-email-hero",
     "duolingo-styleguide-hero",
     "cross-border",
-    "subscription-agency"
+    "subscription-agency",
+    "wellbeing-os",
+    "prosthetics-hero",
+    "retro-futurist"
   ],
   "history": [
     {
@@ -422,6 +428,30 @@
         "cross-border": "premium",
         "subscription-agency": "premium"
       }
+    },
+    {
+      "date": "2026-10-31",
+      "timestamp": "2026-10-31T00:13:36.471Z",
+      "products": [
+        {
+          "slug": "wellbeing-os",
+          "catalogId": "t181",
+          "title": "Wellbeing OS",
+          "accessTier": "free"
+        },
+        {
+          "slug": "prosthetics-hero",
+          "catalogId": "t182",
+          "title": "Prosthetics Hero",
+          "accessTier": "premium"
+        },
+        {
+          "slug": "retro-futurist",
+          "catalogId": "t183",
+          "title": "Retro-Futurist",
+          "accessTier": "premium"
+        }
+      ]
     }
   ],
   "todayFreeCount": 1,
@@ -459,6 +489,9 @@
     "1d97d87ed65d76e23926a8829d04be25a6fe07f187477becfd3bd7f89b0948f1",
     "0deb9fcc19897fddf4349c579511d3eee66586ead3ff9fbed3e0896f2a8bf080",
     "51277206ad60741d5f96ec0838c26ed6c92e63858b03f07c9975fe05bb62214b",
-    "a1c407a9c4090191ddb3cd175d22d7c90c0c42715d3c7235a2c6a08022e24120"
+    "a1c407a9c4090191ddb3cd175d22d7c90c0c42715d3c7235a2c6a08022e24120",
+    "6883361e5addea9ca09740bb047d4050683b32312c5b97dbc43811c530f95662",
+    "43dc54544e666fcf232cd251a9caf081cbbde86436f5eeff6d5ecdc484e73948",
+    "77349f561dcf23cb8d0dfc0b45f8acedd3505bff78a5eae8aa3be73f95768e4c"
   ]
 }

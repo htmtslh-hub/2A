@@ -1,0 +1,38 @@
+{
+  "id": "t187",
+  "slug": "visionglass-neo-ui",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-31T00:25:18.480Z",
+  "demo": "/demos/visionglass-neo-ui/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "dbde72da0e8b",
+  "sha256": "dbde72da0e8b92c88ba01998f83addaa13348edd5361dd52cef12b6021ef59ac",
+  "demoHtmlSha256": "286814cb4dfc0e850c563ee8ea8be9b8540941e45b9acdbf459aa6a63017003b",
+  "demoSha256": "6ab5f8ef1e5e8bbb4b8f78ad4119836be870aedc7cf748ff667e5389e02a614a",
+  "bytes": 385266,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 361
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\visionglass-neo-ui-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\visionglass-neo-ui-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\visionglass-neo-ui-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\visionglass-neo-ui-return.jpg"
+  ]
+}

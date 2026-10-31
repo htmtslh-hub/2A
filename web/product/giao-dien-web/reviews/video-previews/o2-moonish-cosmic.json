@@ -1,0 +1,38 @@
+{
+  "id": "t188",
+  "slug": "o2-moonish-cosmic",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-31T00:25:38.194Z",
+  "demo": "/demos/o2-moonish-cosmic/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "459d8778d5a9",
+  "sha256": "459d8778d5a9456e972a6393dc99ccef9036c9746af6f57bd102bdff5edf0060",
+  "demoHtmlSha256": "5f2ed7f9d1ce82b1ca9dbb78cd1cbdf9be139942fc777426849554728e017306",
+  "demoSha256": "5553453e3f2500f99a688efedc78a11875b6c7cd2df4c22498440568ad77c937",
+  "bytes": 370690,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 571
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\o2-moonish-cosmic-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\o2-moonish-cosmic-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\o2-moonish-cosmic-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\o2-moonish-cosmic-return.jpg"
+  ]
+}

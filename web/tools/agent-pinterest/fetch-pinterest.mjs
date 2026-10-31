@@ -545,7 +545,12 @@ const CURATED_PIN_IDENTITIES = [
   { match: /1040894532665699931|^8b8453c973fd/i, title: 'PolkaCrypto Future', slug: 'polkacrypto-future', tierHint: 'free' },
   { match: /1052997956649341571|^4c686f8c153a/i, title: 'Nexora Alex Portfolio', slug: 'nexora-alex-portfolio', tierHint: 'premium' },
   { match: /1055531231411192497|^b4b8ac6ba0fa/i, title: 'Kata Ocado Portfolio', slug: 'kata-ocado-portfolio', tierHint: 'premium' },
-  { match: /1055812706409706318|^dbdf32161e8a/i, title: 'Glitch Cyberwear', slug: 'glitch-cyberwear', tierHint: 'premium' }
+  { match: /1055812706409706318|^dbdf32161e8a/i, title: 'Glitch Cyberwear', slug: 'glitch-cyberwear', tierHint: 'premium' },
+  { match: /1060879255984170579|^72b9a080e36e/i, title: "Ozzie's Pretzels", slug: 'ozzies-pretzels', tierHint: 'free' },
+  { match: /1062568105861618273|^2e82c299dabf/i, title: 'Terrarium Deck Studio', slug: 'terrarium-deck-studio', tierHint: 'free' },
+  { match: /1066719861751680646|^356f2b4c52cc/i, title: 'Foods Gourmet Bowl', slug: 'foods-gourmet-bowl', tierHint: 'premium' },
+  { match: /1069323505300032436|^65658236e456/i, title: 'VisionGlass Neo UI', slug: 'visionglass-neo-ui', tierHint: 'premium' },
+  { match: /1080160291868203924|^bedff480851f/i, title: 'O2 Moonish Cosmic', slug: 'o2-moonish-cosmic', tierHint: 'premium' }
 ];
 
 function parseFilenameHint(filename, index, sha256 = '') {

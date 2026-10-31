@@ -63,6 +63,36 @@ export const PINTEREST_V2_META = {
     brandTitle: 'Glitch Cyberwear',
     category: 'commerce',
     headlineSub: 'Monochrome obsidian & pure white inverted cutout frame techwear store featuring cyber-samurai 3D operative callout pins (NeuroVibe MK-I, VoidBlade, Shadow Circuit Jacket, Crimson Phantom).'
+  },
+  'ozzies-pretzels': {
+    id: 'artisan-bakery-crimson-cream',
+    brandTitle: "Ozzie's Pretzels",
+    category: 'commerce',
+    headlineSub: "Denver's favorite hand-rolled Bavarian pretzels delivered fresh to your door — crimson-and-cream bakery showcase with interactive box builder, 4-step baking craft, and gift bundles."
+  },
+  'terrarium-deck-studio': {
+    id: 'pastel-biodome-deck-bento',
+    brandTitle: 'Terrarium Deck Studio',
+    category: 'portfolio',
+    headlineSub: 'Iridescent pastel glass biodome & architectural terrarium presentation system with 12-slide Bento storyboard, interactive biome light inspector, and botanical telemetry.'
+  },
+  'foods-gourmet-bowl': {
+    id: 'saffron-charcoal-food-ordering',
+    brandTitle: 'Foods Gourmet Bowl',
+    category: 'commerce',
+    headlineSub: 'Interactive gourmet bowl & street-food ordering showcase featuring live quantity stepper, real-time Total Order calculator, and instant Burger ($3.25), Cake ($2.25), and Salad ($5.25) switcher.'
+  },
+  'visionglass-neo-ui': {
+    id: 'spatial-visionos-glass-workbench',
+    brandTitle: 'VisionGlass Neo UI',
+    category: 'portfolio',
+    headlineSub: 'Neo-Apple Vision Pro spatial UI design system featuring pastel aurora 3D glass refraction, interactive rotary depth dial, tactile spatial toggles, and live CSS glass token generator.'
+  },
+  'o2-moonish-cosmic': {
+    id: 'desert-glass-sphere-streetwear',
+    brandTitle: 'O2 Moonish Cosmic',
+    category: 'commerce',
+    headlineSub: 'O2 Studio Moonish Cosmic Set 23 — Late 2050 desert-glass capsule collection featuring 01 Classic Hoodie encased in a 3D translucent sphere, Nike dune sneakers, and live fabric colorway switcher.'
   }
 };
 
@@ -3075,6 +3105,2021 @@ export function buildPinterestV2Template(data, p) {
           var spec = btn.getAttribute('data-gear') || '';
           if (out) out.textContent = spec;
           if (titleOut) titleOut.textContent = spec.split('•')[0].trim();
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 11. OZZIE'S PRETZELS (Denver Artisan Bavarian Bakery & Box Builder)
+  // ============================================================================
+  if (slug === 'ozzies-pretzels') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ozzie's Pretzels — Denver's Favorite Pretzels, Delivered Fresh to Your Door</title>
+  <meta name="description" content="Ozzie's Pretzels bakes 100% hand-rolled Bavarian pretzels in Denver. Order original sea-salt twists, sweet cinnamon-sugar bites, and custom party gift boxes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #FAF5EE;
+      --surface: #FFFFFF;
+      --surface-2: #F3EADF;
+      --text: #1F120E;
+      --muted: #68534B;
+      --accent: #99140E;
+      --accent-text: #7F100B;
+      --border: rgba(153, 20, 14, 0.14);
+      --radius-card: 22px;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --space-section: clamp(64px, 8vw, 108px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #FFFFFF; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--font-sans); overflow-x: clip; max-width: 100%; }
+    body { background: var(--bg); color: var(--text); overflow-x: clip; max-width: 100%; line-height: 1.6; }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--accent); color: #FFFFFF; font-weight: 700; border-radius: 8px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--text); }
+    a, button, input { font-family: inherit; }
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-crimson-hero {
+      background: radial-gradient(circle at 72% 38%, #B51B14 0%, #8E110B 65%, #6E0C08 100%);
+      color: #FAF5EE;
+      position: relative;
+      overflow: hidden;
+    }
+    .${p}-nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px clamp(20px, 5vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .${p}-brand {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 800;
+      color: #FAF5EE;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .${p}-nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .${p}-nav-link {
+      color: rgba(250, 245, 238, 0.88);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .${p}-nav-link:hover { color: #FDE68A; }
+    .${p}-btn-cream {
+      background: #FAF5EE;
+      color: #8E110B;
+      border: 1px solid #FAF5EE;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease;
+    }
+    .${p}-btn-cream:hover { transform: translateY(-2px); background: #FFFFFF; }
+    .${p}-btn-cream:active { transform: scale(0.97); }
+    .${p}-btn-crimson {
+      background: var(--accent);
+      color: #FFFFFF;
+      border: 1px solid var(--accent);
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease;
+    }
+    .${p}-btn-crimson:hover { transform: translateY(-2px); background: #7F100B; }
+    .${p}-btn-crimson:active { transform: scale(0.97); }
+    .${p}-btn-outline {
+      background: rgba(250, 245, 238, 0.12);
+      color: #FAF5EE;
+      border: 1px solid rgba(250, 245, 238, 0.35);
+      padding: 11px 20px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .${p}-btn-outline:hover { background: rgba(250, 245, 238, 0.22); }
+    .${p}-btn-outline:active { transform: scale(0.98); }
+
+    .${p}-hero-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px clamp(20px, 5vw, 48px) 76px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5.2vw, 4.35rem);
+      font-weight: 800;
+      line-height: 1.04;
+      letter-spacing: -0.025em;
+      color: #FAF5EE;
+      margin-bottom: 18px;
+    }
+    .${p}-sub {
+      font-size: clamp(1rem, 1.3vw, 1.14rem);
+      color: rgba(250, 245, 238, 0.86);
+      max-width: 54ch;
+      margin-bottom: 28px;
+    }
+    .${p}-stats-strip {
+      background: #7F100B;
+      border-top: 1px solid rgba(250, 245, 238, 0.14);
+      padding: 24px clamp(20px, 5vw, 48px);
+    }
+    .${p}-stats-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+      color: #FAF5EE;
+    }
+    .${p}-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: var(--space-section) clamp(20px, 5vw, 48px);
+    }
+    .${p}-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.95rem, 3.6vw, 2.95rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .${p}-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .${p}-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 26px;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
+    .${p}-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px rgba(153, 20, 14, 0.08);
+    }
+    .${p}-topping-btn {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .${p}-topping-btn.is-active, .${p}-topping-btn:hover {
+      background: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--accent);
+    }
+    .${p}-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(31, 18, 14, 0.72);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px;
+      width: 100%;
+      background: var(--surface);
+      border-radius: 24px;
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 960px) {
+      .${p}-hero-grid { grid-template-columns: 1fr; }
+      .${p}-stats-inner, .${p}-grid-4 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 580px) {
+      .${p}-stats-inner, .${p}-grid-4 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(153,20,14,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#99140E;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-crimson-hero">
+    <header class="${p}-nav">
+      <a href="#main-content" class="${p}-brand">
+        <svg width="28" height="28" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M16 26C10 16 20 8 32 16C44 8 54 16 48 26C42 36 22 44 18 52M48 26C42 36 22 36 16 26M32 16C38 24 38 40 46 52" stroke="#FBBF24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Ozzie's Pretzels</span>
+      </a>
+      <nav class="${p}-nav-links" aria-label="Primary Navigation">
+        <a href="#pretzel-categories" class="${p}-nav-link">Shop Pretzels</a>
+        <a href="#box-builder" class="${p}-nav-link">Build a Box</a>
+        <a href="#ozzies-craft" class="${p}-nav-link">How It's Made</a>
+        <a href="#bakery-faq" class="${p}-nav-link">FAQ</a>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <button type="button" id="motionToggleBtn" class="${p}-btn-outline" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-cream">Order Now</button>
+      </div>
+    </header>
+
+    <section class="${p}-hero-grid" aria-labelledby="heroHeading">
+      <div>
+        <span style="display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(251,191,36,0.18);color:#FDE68A;font-family:var(--font-mono);font-size:12px;margin-bottom:16px;">SMALL-BATCH DENVER BAKERY • HOT OUT OF THE OVEN</span>
+        <h1 id="heroHeading" class="${p}-h1">Denver's Favorite Pretzels, Delivered Fresh to Your Door</h1>
+        <p class="${p}-sub">
+          Hand-twisted every morning with organic High Plains wheat, traditional Bavarian lye dip, and flaky Maldon sea salt. Warm, golden crust outside—pillow-soft inside.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="${p}-btn-cream" data-seamless-trigger="Order Warm Pretzel Delivery">Order Now</button>
+          <a href="#pretzel-categories" class="${p}-btn-outline">View menu</a>
+        </div>
+      </div>
+
+      <div style="background:rgba(250,245,238,0.1);border:1px solid rgba(250,245,238,0.22);border-radius:28px;padding:28px;text-align:center;">
+        <svg viewBox="0 0 420 300" style="width:100%;max-width:380px;height:auto;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.35));" role="img" aria-label="Artisan golden hand-rolled Bavarian pretzel with coarse sea salt">
+          <defs>
+            <linearGradient id="pretzelCrust" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#F59E0B" />
+              <stop offset="55%" stop-color="#B45309" />
+              <stop offset="100%" stop-color="#78350F" />
+            </linearGradient>
+          </defs>
+          <path d="M110 175 C55 95, 145 30, 210 95 C275 30, 365 95, 310 175 C270 230, 150 230, 110 175 Z" fill="none" stroke="url(#pretzelCrust)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M145 140 C185 190, 235 190, 275 140" fill="none" stroke="url(#pretzelCrust)" stroke-width="30" stroke-linecap="round" />
+          <path d="M170 210 L135 265 M250 210 L285 265" stroke="url(#pretzelCrust)" stroke-width="26" stroke-linecap="round" />
+          <circle cx="135" cy="95" r="4" fill="#FEF3C7" />
+          <circle cx="165" cy="78" r="3.5" fill="#FEF3C7" />
+          <circle cx="255" cy="82" r="4" fill="#FEF3C7" />
+          <circle cx="288" cy="108" r="3.5" fill="#FEF3C7" />
+          <circle cx="210" cy="168" r="4" fill="#FEF3C7" />
+          <circle cx="185" cy="160" r="3" fill="#FEF3C7" />
+          <circle cx="238" cy="158" r="3.5" fill="#FEF3C7" />
+        </svg>
+        <p class="tabular-nums" style="font-family:var(--font-mono);font-size:12px;color:#FDE68A;margin-top:12px;">BATCH #409 • BAKED AT 450°F • $3.99 / TWIST</p>
+      </div>
+    </section>
+
+    <div class="${p}-stats-strip tabular-nums">
+      <div class="${p}-stats-inner">
+        <div>
+          <strong style="font-family:var(--font-display);font-size:32px;display:block;">5,000+</strong>
+          <span style="font-size:13px;color:rgba(250,245,238,0.8);">Pretzels Delivered</span>
+        </div>
+        <div>
+          <strong style="font-family:var(--font-display);font-size:32px;display:block;">98%</strong>
+          <span style="font-size:13px;color:rgba(250,245,238,0.8);">5-Star Reviews</span>
+        </div>
+        <div>
+          <strong style="font-family:var(--font-display);font-size:32px;display:block;">6,300+</strong>
+          <span style="font-size:13px;color:rgba(250,245,238,0.8);">Pretzels Baked</span>
+        </div>
+        <div>
+          <strong style="font-family:var(--font-display);font-size:32px;display:block;">100%</strong>
+          <span style="font-size:13px;color:rgba(250,245,238,0.8);">Hand-Rolled</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ONE LIVE THING: INTERACTIVE PRETZEL BOX & DIP BUILDER -->
+    <section id="box-builder" class="${p}-wrap tabular-nums" aria-labelledby="builderHeading">
+      <div class="${p}-card" style="background:linear-gradient(135deg,#FFFFFF 0%,#F7EFE4 100%);">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:22px;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:700;">CUSTOM BAKERY BOX BUILDER</span>
+            <h2 id="builderHeading" class="${p}-h2" style="margin-bottom:0;">Warm Golden Pretzels — $3.99 Each</h2>
+          </div>
+          <div role="group" aria-label="Pretzel Crust Toppings" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="${p}-topping-btn is-active" data-flavor="Classic Coarse Sea Salt" data-unit="3.99" data-dip="Whole-Grain Bavarian Beer Mustard">Coarse Sea Salt ($3.99)</button>
+            <button type="button" class="${p}-topping-btn" data-flavor="Warm Cinnamon Sugar" data-unit="4.25" data-dip="Whipped Vanilla Bean Cream Cheese Glaze">Cinnamon Sugar ($4.25)</button>
+            <button type="button" class="${p}-topping-btn" data-flavor="Aged Jalapeño Cheddar" data-unit="4.75" data-dip="Smoked Gouda &amp; Ale Fondue">Jalapeño Cheddar ($4.75)</button>
+            <button type="button" class="${p}-topping-btn" data-flavor="Everything Bagel &amp; Garlic" data-unit="4.50" data-dip="Chive &amp; Roasted Shallot Schmear">Everything Spice ($4.50)</button>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:24px;align-items:center;">
+          <div>
+            <label for="pretzelCountRange" style="display:block;font-size:14px;font-weight:600;margin-bottom:8px;">
+              Select Box Size: <strong id="pretzelCountOut" style="color:var(--accent);">6 Hand-Rolled Pretzels</strong>
+            </label>
+            <input id="pretzelCountRange" type="range" min="4" max="24" step="2" value="6" style="width:100%;accent-color:#99140E;cursor:pointer;margin-bottom:14px;" />
+            <p id="pretzelPairingOut" style="font-size:14px;color:var(--muted);max-width:56ch;">
+              Selected Glaze: <strong>Classic Coarse Sea Salt</strong> • Paired Dip: <strong>Whole-Grain Bavarian Beer Mustard</strong>
+            </p>
+          </div>
+          <div style="background:var(--surface);padding:22px;border-radius:18px;border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;">
+            <div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">FRESH BOX TOTAL</span>
+              <strong id="pretzelTotalOut" style="font-family:var(--font-display);font-size:34px;color:var(--accent);">$23.94</strong>
+            </div>
+            <button type="button" class="${p}-btn-crimson" data-seamless-trigger="Add Custom Pretzel Box to Oven Queue">Bake My Box →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 CATEGORY CARDS -->
+    <section id="pretzel-categories" class="${p}-wrap tabular-nums" aria-labelledby="catHeading" style="padding-top:0;">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:700;">EXPLORE OUR PRETZELS</span>
+      <h2 id="catHeading" class="${p}-h2">Baked Fresh for Every Craving</h2>
+      <div class="${p}-grid-4">
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Original Pretzels ($3.99)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">01 // SAVORY TWISTS</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Original Pretzels</h3>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:14px;max-width:44ch;">Traditional Bavarian knots dipped in food-grade lye and finished with diamond-crystal sea salt.</p>
+          <strong style="color:var(--accent);">From $3.99</strong>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Sweet Pretzels ($4.25)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">02 // DESSERT CRUST</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Sweet Pretzels</h3>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:14px;max-width:44ch;">Brushed with browned cultured butter and tossed in Ceylon cinnamon sugar or salted caramel drizzle.</p>
+          <strong style="color:var(--accent);">From $4.25</strong>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Pretzel Bites &amp; Snacks ($8.50)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">03 // SHAREABLE NUGGETS</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Pretzel Bites &amp; Snacks</h3>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:14px;max-width:44ch;">Golden bite-sized pillows served with two warm house-made cheese and mustard dipping cups.</p>
+          <strong style="color:var(--accent);">$8.50 / Tub</strong>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-seamless-trigger="Gift Boxes &amp; Bundles ($36.00)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">04 // DENVER CATERING</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Gift Boxes &amp; Bundles</h3>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:14px;max-width:44ch;">Stamped crimson keepsake boxes with 12 assorted twists, 4 artisan dips, and reheating instructions.</p>
+          <strong style="color:var(--accent);">$36.00 / Box</strong>
+        </article>
+      </div>
+    </section>
+
+    <!-- HOW IT'S MADE — THE OZZIE'S WAY -->
+    <section id="ozzies-craft" class="${p}-wrap tabular-nums" aria-labelledby="craftHeading" style="padding-top:0;">
+      <div class="${p}-card" id="bakery-faq" style="background:#8E110B;color:#FAF5EE;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:#FDE68A;">HOW IT'S MADE — THE OZZIE'S WAY</span>
+        <h2 id="craftHeading" class="${p}-h2" style="color:#FAF5EE;margin-top:6px;">24-Hour Cold Ferment, 12-Minute Stone Bake</h2>
+        <div class="${p}-grid-4" style="margin-top:20px;">
+          <div style="padding:18px;border-radius:16px;background:rgba(250,245,238,0.08);border:1px solid rgba(250,245,238,0.18);">
+            <strong style="font-family:var(--font-mono);font-size:12px;color:#FDE68A;">STEP 01</strong>
+            <h3 style="font-family:var(--font-display);font-size:19px;margin:6px 0;">Colorado Flour</h3>
+            <p style="font-size:13px;color:rgba(250,245,238,0.82);max-width:40ch;">Unbleached malted winter wheat mixed with pure Rocky Mountain spring water.</p>
+          </div>
+          <div style="padding:18px;border-radius:16px;background:rgba(250,245,238,0.08);border:1px solid rgba(250,245,238,0.18);">
+            <strong style="font-family:var(--font-mono);font-size:12px;color:#FDE68A;">STEP 02</strong>
+            <h3 style="font-family:var(--font-display);font-size:19px;margin:6px 0;">Hand-Twisted</h3>
+            <p style="font-size:13px;color:rgba(250,245,238,0.82);max-width:40ch;">Rolled to a 28-inch tapered rope and snapped in mid-air for thick belly &amp; crispy arms.</p>
+          </div>
+          <div style="padding:18px;border-radius:16px;background:rgba(250,245,238,0.08);border:1px solid rgba(250,245,238,0.18);">
+            <strong style="font-family:var(--font-mono);font-size:12px;color:#FDE68A;">STEP 03</strong>
+            <h3 style="font-family:var(--font-display);font-size:19px;margin:6px 0;">Hearth Baked</h3>
+            <p style="font-size:13px;color:rgba(250,245,238,0.82);max-width:40ch;">Scored on the belly and baked on deck stones for signature mahogany Maillard snap.</p>
+          </div>
+          <div style="padding:18px;border-radius:16px;background:rgba(250,245,238,0.08);border:1px solid rgba(250,245,238,0.18);">
+            <strong style="font-family:var(--font-mono);font-size:12px;color:#FDE68A;">STEP 04</strong>
+            <h3 style="font-family:var(--font-display);font-size:19px;margin:6px 0;">Courier Express</h3>
+            <p style="font-size:13px;color:rgba(250,245,238,0.82);max-width:40ch;">Dispatched across Denver in insulated linen pouches within 35 minutes of baking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="padding-top:24px;padding-bottom:48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 Ozzie's Pretzels Bakery — 2418 Larimer St, Denver, CO.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent);">DAILY OVEN HOURS • 07:00 AM – 08:00 PM MT</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">OZZIE'S OVEN DISPATCH</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-topping-btn">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">Reserve Fresh Pretzel Batch</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:52ch;">
+        Your pretzels are twisted to order and delivered warm across Metro Denver or shipped nationwide on overnight dry-ice packs.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-crimson" style="width:100%;justify-content:center;">Confirm Bakery Order</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var range = document.getElementById('pretzelCountRange');
+      var countOut = document.getElementById('pretzelCountOut');
+      var pairOut = document.getElementById('pretzelPairingOut');
+      var totalOut = document.getElementById('pretzelTotalOut');
+      var unitPrice = 3.99;
+      var flavor = 'Classic Coarse Sea Salt';
+      var dip = 'Whole-Grain Bavarian Beer Mustard';
+
+      function updateBox() {
+        var qty = range ? parseInt(range.value, 10) : 6;
+        if (countOut) countOut.textContent = qty + ' Hand-Rolled Pretzels';
+        if (totalOut) totalOut.textContent = '$' + (qty * unitPrice).toFixed(2);
+        if (pairOut) pairOut.innerHTML = 'Selected Glaze: <strong>' + flavor + '</strong> • Paired Dip: <strong>' + dip + '</strong>';
+      }
+      if (range) range.addEventListener('input', updateBox);
+
+      document.querySelectorAll('.${p}-topping-btn').forEach(function (btn) {
+        if (btn.id === 'closeSeamlessBtn') return;
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.${p}-topping-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          unitPrice = parseFloat(btn.getAttribute('data-unit') || '3.99');
+          flavor = btn.getAttribute('data-flavor') || 'Classic Coarse Sea Salt';
+          dip = btn.getAttribute('data-dip') || 'Whole-Grain Bavarian Beer Mustard';
+          updateBox();
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 12. TERRARIUM DECK STUDIO (Spatial Biodome & Glass Diorama Presentation System)
+  // ============================================================================
+  if (slug === 'terrarium-deck-studio') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terrarium Deck Studio — Spatial Biodome &amp; Architectural Diorama Presentation System</title>
+  <meta name="description" content="High-impact 12-slide pastel glass biodome &amp; architectural terrarium presentation system with interactive biome lighting and ecological telemetry." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F3F5FB;
+      --surface: rgba(255, 255, 255, 0.86);
+      --surface-2: #E8ECF7;
+      --text: #0F172A;
+      --muted: #475569;
+      --accent: #0284C7;
+      --accent-text: #0369A1;
+      --border: rgba(15, 23, 42, 0.1);
+      --radius-card: 24px;
+      --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --space-section: clamp(60px, 7.5vw, 104px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #FFFFFF; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--font-sans); overflow-x: clip; max-width: 100%; }
+    body { background: radial-gradient(circle at 18% 12%, #FCE7F3 0%, #E0F2FE 42%, #F3F5FB 85%); color: var(--text); overflow-x: clip; max-width: 100%; line-height: 1.6; }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--accent); color: #FFFFFF; font-weight: 700; border-radius: 8px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--text); }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-nav {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 22px clamp(20px, 5vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .${p}-brand {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .${p}-pill-btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      backdrop-filter: blur(12px);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .${p}-pill-btn:hover, .${p}-pill-btn.is-active {
+      background: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .${p}-pill-btn:active { transform: scale(0.97); }
+    .${p}-wrap {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: var(--space-section) clamp(20px, 5vw, 48px);
+    }
+    .${p}-hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 36px;
+      align-items: center;
+      padding-top: 24px;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.8vw, 4.1rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .${p}-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 3.3vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .${p}-sub {
+      font-size: clamp(1rem, 1.3vw, 1.14rem);
+      color: var(--muted);
+      max-width: 56ch;
+      margin-bottom: 28px;
+    }
+    .${p}-slide-bento {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .${p}-slide-card {
+      background: var(--surface);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.05);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    }
+    .${p}-slide-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(2, 132, 199, 0.45);
+    }
+    .${p}-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px;
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    .${p}-biome-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 20px;
+      align-items: center;
+    }
+    @media (max-width: 960px) {
+      .${p}-hero-grid, .${p}-slide-bento, .${p}-biome-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .${p}-slide-card { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(2,132,199,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#0284C7;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <header class="${p}-nav">
+    <a href="#main-content" class="${p}-brand">
+      <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" stroke="#0284C7" stroke-width="2" fill="rgba(56,189,248,0.16)" />
+        <path d="M9 21C12 14 20 14 23 21" stroke="#EC4899" stroke-width="2" stroke-linecap="round" />
+        <circle cx="16" cy="12" r="3" fill="#0284C7" />
+      </svg>
+      <span>Terrarium Deck Studio</span>
+    </a>
+    <nav aria-label="Primary Navigation" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+      <a href="#biome-inspector" style="color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;">Biome Inspector</a>
+      <a href="#slide-matrix" style="color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;">12-Slide Bento</a>
+      <button type="button" id="motionToggleBtn" class="${p}-pill-btn" aria-pressed="false">Motion: ON</button>
+      <button type="button" id="exploreMagneticBtn" class="${p}-pill-btn is-active">Export Keynote / Figma Deck</button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="${p}-wrap ${p}-hero-grid" aria-labelledby="heroHeading">
+      <div>
+        <span style="display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(2,132,199,0.1);color:var(--accent-text);font-family:var(--font-mono);font-size:12px;font-weight:600;margin-bottom:16px;">ARCHITECTURAL BIODOME DECK • 60+ GLASS DIORAMA SLIDES</span>
+        <h1 id="heroHeading" class="${p}-h1">High-Impact Glass Terrarium &amp; Spatial Biodome Deck</h1>
+        <p class="${p}-sub">
+          Present ecological architecture, climate-tech roadmaps, and botanical urbanism inside translucent 3D glass vessels. Engineered with modular Bento grids and live telemetry callouts.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="${p}-pill-btn is-active" data-seamless-trigger="Download Full 60-Slide Terrarium Deck">Download Master Deck</button>
+          <a href="#slide-matrix" class="${p}-pill-btn">Inspect Slide System</a>
+        </div>
+      </div>
+
+      <div class="${p}-slide-card tabular-nums" style="text-align:center;background:linear-gradient(145deg,rgba(255,255,255,0.92),rgba(224,242,254,0.75));">
+        <svg viewBox="0 0 420 300" style="width:100%;max-width:380px;height:auto;" role="img" aria-label="Translucent 3D glass biodome sphere housing coral botanicals and waterfalls">
+          <defs>
+            <radialGradient id="domeGlass" cx="35%" cy="28%" r="70%">
+              <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+              <stop offset="55%" stop-color="#BAE6FD" stop-opacity="0.55" />
+              <stop offset="100%" stop-color="#F472B6" stop-opacity="0.35" />
+            </radialGradient>
+          </defs>
+          <ellipse cx="210" cy="248" rx="135" ry="24" fill="rgba(2,132,199,0.16)" />
+          <circle cx="210" cy="150" r="108" fill="url(#domeGlass)" stroke="#FFFFFF" stroke-width="3" />
+          <path d="M122 185 Q210 135 298 185 A108 108 0 0 1 122 185 Z" fill="#0EA5E9" fill-opacity="0.35" />
+          <path d="M175 185 C175 130, 205 110, 210 82 C215 110, 245 130, 245 185 Z" fill="#EC4899" fill-opacity="0.65" />
+          <circle cx="165" cy="115" r="16" fill="#FFFFFF" fill-opacity="0.7" />
+        </svg>
+        <div style="display:flex;justify-content:space-between;padding-top:12px;border-top:1px solid var(--border);font-family:var(--font-mono);font-size:12px;color:var(--muted);">
+          <span>SLIDE 01 // BIODOME SPHERE</span>
+          <span style="color:var(--accent-text);">HUMIDITY 78% • PAR 420</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONE LIVE THING: INTERACTIVE BIOME SLIDE & REFRACTION INSPECTOR -->
+    <section id="biome-inspector" class="${p}-wrap tabular-nums" aria-labelledby="inspHeading" style="padding-top:0;">
+      <div class="${p}-slide-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:20px;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);font-weight:600;">INTERACTIVE SLIDE LIGHTING SWITCHER</span>
+            <h2 id="inspHeading" class="${p}-h2" style="margin-bottom:0;">Preview Ecological Diorama Moods</h2>
+          </div>
+          <div role="group" aria-label="Biodome Lighting Presets" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="${p}-pill-btn is-active biome-btn" data-title="Slide 04 // Solarpunk Hydro-Reef" data-lux="14,200 LUX" data-co2="310 ppm" data-summary="Suspended glass terrarium ring filtering rainwater through bioluminescent kelp and floating lotus decks.">Solarpunk Hydro-Reef</button>
+            <button type="button" class="${p}-pill-btn biome-btn" data-title="Slide 08 // Alpine Cloud Conservatory" data-lux="9,800 LUX" data-co2="285 ppm" data-summary="High-altitude pressurized geodesic capsule cultivating rare Himalayan mosses and mist orchids.">Alpine Cloud Dome</button>
+            <button type="button" class="${p}-pill-btn biome-btn" data-title="Slide 11 // Acoustic Desert Oasis" data-lux="22,400 LUX" data-co2="340 ppm" data-summary="Double-walled rose-quartz biosphere harvesting nocturnal dew for arid succulent amphitheaters.">Rose-Quartz Oasis</button>
+          </div>
+        </div>
+
+        <div class="${p}-biome-grid">
+          <div style="padding:18px;border-radius:16px;background:var(--bg);border:1px solid var(--border);">
+            <strong id="biomeSlideTitle" style="font-family:var(--font-display);font-size:20px;display:block;margin-bottom:6px;">Slide 04 // Solarpunk Hydro-Reef</strong>
+            <p id="biomeSlideDesc" style="font-size:14px;color:var(--muted);max-width:58ch;">
+              Suspended glass terrarium ring filtering rainwater through bioluminescent kelp and floating lotus decks.
+            </p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center;">
+            <div style="padding:16px;border-radius:16px;background:var(--bg);border:1px solid var(--border);">
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">CANOPY LUX</span>
+              <strong id="biomeLuxOut" style="font-family:var(--font-display);font-size:24px;color:var(--accent-text);">14,200 LUX</strong>
+            </div>
+            <div style="padding:16px;border-radius:16px;background:var(--bg);border:1px solid var(--border);">
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">NET CARBON</span>
+              <strong id="biomeCo2Out" style="font-family:var(--font-display);font-size:24px;color:#0D9488;">310 ppm</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6-CARD BENTO SLIDE SHOWCASE -->
+    <section id="slide-matrix" class="${p}-wrap tabular-nums" aria-labelledby="matrixHeading" style="padding-top:0;">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);font-weight:600;">MODULAR PRESENTATION ARCHITECTURE</span>
+      <h2 id="matrixHeading" class="${p}-h2">Included Master Layouts</h2>
+      <div class="${p}-slide-bento">
+        <article class="${p}-slide-card ${p}-reveal" data-seamless-trigger="Inspect Layout 01 — Executive Thesis Dome">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">LAYOUT 01 // COVER</span>
+          <h3 style="font-family:var(--font-display);font-size:21px;margin:8px 0;">Spherical Hero Title</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:46ch;">Full-bleed 3D glass orb centerpiece with oversized typographic callouts and chapter index.</p>
+        </article>
+        <article class="${p}-slide-card ${p}-reveal" data-seamless-trigger="Inspect Layout 02 — Ecological KPI Bento">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">LAYOUT 02 // METRICS</span>
+          <h3 style="font-family:var(--font-display);font-size:21px;margin:8px 0;">4-Quadrant Biodiversity Grid</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:46ch;">Compare water recirculation, solar capture, and flora growth curves side by side.</p>
+        </article>
+        <article class="${p}-slide-card ${p}-reveal" data-seamless-trigger="Inspect Layout 03 — Cross-Section Cutaway">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">LAYOUT 03 // ANATOMY</span>
+          <h3 style="font-family:var(--font-display);font-size:21px;margin:8px 0;">Layered Substrate Cutaway</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:46ch;">Exploded diagram pins for root aeration, mycorrhizal mesh, and smart misting nozzles.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="padding-top:24px;padding-bottom:48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 Terrarium Deck Studio. Spatial Presentation System for Keynote, Figma &amp; WebGL.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent-text);">16:9 UHD • 4K GLASS ASSETS</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">TERRARIUM DECK EXPORT</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill-btn">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:26px;margin-bottom:10px;">Download Terrarium Deck</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:52ch;">
+        Includes 60 editable master slides, 24 transparent PNG/SVG 3D glass biodomes, and auto-layout Bento components.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill-btn is-active" style="width:100%;">Start Instant Download</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var tOut = document.getElementById('biomeSlideTitle');
+      var dOut = document.getElementById('biomeSlideDesc');
+      var lOut = document.getElementById('biomeLuxOut');
+      var cOut = document.getElementById('biomeCo2Out');
+
+      document.querySelectorAll('.biome-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.biome-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (tOut) tOut.textContent = btn.getAttribute('data-title') || '';
+          if (dOut) dOut.textContent = btn.getAttribute('data-summary') || '';
+          if (lOut) lOut.textContent = btn.getAttribute('data-lux') || '';
+          if (cOut) cOut.textContent = btn.getAttribute('data-co2') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 13. FOODS GOURMET BOWL (FOODS — Order Your Favourite Foods Interactive Showcase)
+  // ============================================================================
+  if (slug === 'foods-gourmet-bowl') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FOODS — Order Your Favourite Foods • Interactive Gourmet Bowl Showcase</title>
+  <meta name="description" content="Order your favourite foods with live nutritional telemetry, instant Burger ($3.25), Cake ($2.25), and Salad ($5.25) dish switching, and 10–18 minute express dispatch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-2: #262930;
+      --text: #1E2025;
+      --muted: #64748B;
+      --accent: #F59E0B;
+      --accent-text: #B45309;
+      --border: rgba(30, 32, 37, 0.1);
+      --radius-card: 26px;
+      --font-display: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --space-section: clamp(56px, 7vw, 96px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #FFFFFF; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--font-sans); overflow-x: clip; max-width: 100%; }
+    body { background: var(--bg); color: var(--text); overflow-x: clip; max-width: 100%; line-height: 1.6; }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--surface-2); color: #FFFFFF; font-weight: 700; border-radius: 8px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--accent); }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-stage-shell {
+      max-width: 1320px;
+      margin: 24px auto;
+      background: var(--surface);
+      border-radius: 36px;
+      border: 1px solid var(--border);
+      box-shadow: 0 28px 70px rgba(30, 32, 37, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .${p}-dark-wedge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 44%;
+      height: 100%;
+      background: #262930;
+      border-top-left-radius: 320px;
+      border-bottom-left-radius: 320px;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .${p}-nav {
+      position: relative;
+      z-index: 10;
+      padding: 28px clamp(24px, 4.5vw, 56px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .${p}-brand {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--text);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .${p}-nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .${p}-nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .${p}-nav-link.is-active, .${p}-nav-link:hover { color: var(--text); font-weight: 600; }
+    .${p}-nav-link.is-active::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+      transform: translateX(-50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .${p}-login-pill {
+      background: var(--accent);
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease;
+    }
+    .${p}-login-pill:hover { background: #D97706; transform: translateY(-2px); }
+    .${p}-login-pill:active { transform: scale(0.97); }
+
+    .${p}-hero-grid {
+      position: relative;
+      z-index: 10;
+      padding: 24px clamp(24px, 4.5vw, 56px) 52px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+    }
+    .${p}-h1 strong { font-weight: 700; }
+    .${p}-sub {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 50ch;
+      margin-bottom: 24px;
+    }
+    .${p}-total-line {
+      font-size: 22px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .${p}-total-line strong {
+      font-size: 28px;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .${p}-order-controls {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 42px;
+    }
+    .${p}-stepper {
+      display: inline-flex;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 14px;
+      gap: 14px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+    }
+    .${p}-step-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: none;
+      background: #F1F5F9;
+      color: var(--text);
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .${p}-step-btn:hover { background: var(--accent); color: #FFFFFF; }
+    .${p}-buy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #262930;
+      color: #FFFFFF;
+      border: none;
+      padding: 8px 24px 8px 8px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 16px 32px rgba(38, 41, 48, 0.25);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .${p}-buy-btn:hover { transform: translateY(-2px); }
+    .${p}-buy-btn:active { transform: scale(0.97); }
+    .${p}-buy-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #262930;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .${p}-dish-pills {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .${p}-dish-pill {
+      border: none;
+      border-radius: 26px;
+      padding: 16px 20px;
+      min-width: 118px;
+      text-align: center;
+      color: #FFFFFF;
+      cursor: pointer;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+    }
+    .${p}-dish-pill:hover, .${p}-dish-pill.is-active {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.16);
+    }
+    .${p}-bowl-stage {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .${p}-orange-badge {
+      margin-top: -22px;
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+      color: #FFFFFF;
+      border-radius: 22px;
+      padding: 18px 26px;
+      min-width: 250px;
+      box-shadow: 0 20px 40px rgba(245, 158, 11, 0.32);
+    }
+    .${p}-wrap {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: var(--space-section) clamp(20px, 4.5vw, 48px);
+    }
+    .${p}-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .${p}-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+    }
+    .${p}-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 26px;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .${p}-card:hover { transform: translateY(-4px); }
+    .${p}-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(30, 32, 37, 0.72);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 500px;
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 26px;
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 960px) {
+      .${p}-dark-wedge { display: none; }
+      .${p}-hero-grid, .${p}-grid-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .${p}-stage-shell { margin: 12px; border-radius: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(245,158,11,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#F59E0B;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-stage-shell">
+    <div class="${p}-dark-wedge" aria-hidden="true"></div>
+
+    <header class="${p}-nav">
+      <a href="#main-content" class="${p}-brand">
+        <span>F</span>
+        <span style="display:inline-block;width:16px;height:16px;border-radius:50%;border:3px solid #F59E0B;"></span>
+        <span style="display:inline-block;width:16px;height:16px;border-radius:50%;border:3px solid #F59E0B;margin-left:-5px;"></span>
+        <span>DS</span>
+      </a>
+      <nav class="${p}-nav-links" aria-label="Primary Navigation">
+        <a href="#main-content" class="${p}-nav-link is-active">Home</a>
+        <a href="#kitchen-telemetry" class="${p}-nav-link">Menu</a>
+        <a href="#kitchen-telemetry" class="${p}-nav-link">Service</a>
+        <a href="#kitchen-telemetry" class="${p}-nav-link">Shop</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button type="button" id="motionToggleBtn" class="${p}-step-btn" style="width:auto;padding:6px 14px;border-radius:999px;font-size:12px;" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-login-pill">Login</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ONE LIVE THING: INTERACTIVE DISH SWITCHER & REAL-TIME ORDER CALCULATOR -->
+      <section class="${p}-hero-grid tabular-nums" aria-labelledby="heroHeading">
+        <div>
+          <h1 id="heroHeading" class="${p}-h1">Order your<br /><strong>favourite Foods</strong></h1>
+          <p id="activeDishDesc" class="${p}-sub">
+            Char-grilled herb chicken breast, crisp baby romaine, heirloom cherry tomatoes, shaved parmesan, and cold-pressed lemon vinaigrette.
+          </p>
+
+          <p class="${p}-total-line">Total order : <strong id="totalOrderOut">$24.30</strong></p>
+
+          <div class="${p}-order-controls">
+            <div class="${p}-stepper" role="group" aria-label="Order Quantity">
+              <button type="button" id="qtyMinusBtn" class="${p}-step-btn" aria-label="Decrease quantity">−</button>
+              <strong id="qtyValueOut" style="font-size:15px;min-width:18px;text-align:center;">2</strong>
+              <button type="button" id="qtyPlusBtn" class="${p}-step-btn" aria-label="Increase quantity">+</button>
+            </div>
+
+            <button type="button" class="${p}-buy-btn" data-seamless-trigger="Instant Checkout — FOODS Express">
+              <span class="${p}-buy-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </span>
+              <span>Buy Now</span>
+            </button>
+          </div>
+
+          <div class="${p}-dish-pills" role="group" aria-label="Select Featured Dish">
+            <button type="button" class="${p}-dish-pill dish-switch-btn" style="background:#84CC16;" data-name="Burger" data-price="12.15" data-pill="$3.25" data-rating="4.9" data-time="12-16 mins" data-desc="Double smashed Wagyu patty, aged sharp cheddar, house dill pickles, and toasted brioche bun.">
+              <strong style="display:block;font-size:15px;">Burger</strong>
+              <span style="font-size:13px;opacity:0.92;">$ 3.25</span>
+            </button>
+            <button type="button" class="${p}-dish-pill dish-switch-btn" style="background:#EC4899;" data-name="Cake" data-price="9.50" data-pill="$2.25" data-rating="4.8" data-time="8-12 mins" data-desc="Velvety Hokkaido strawberry shortcake layered with Madagascar vanilla chantilly cream.">
+              <strong style="display:block;font-size:15px;">Cake</strong>
+              <span style="font-size:13px;opacity:0.92;">$ 2.25</span>
+            </button>
+            <button type="button" class="${p}-dish-pill dish-switch-btn is-active" style="background:#F59E0B;" data-name="Salad" data-price="12.15" data-pill="$5.25" data-rating="4.7" data-time="10-18 mins" data-desc="Char-grilled herb chicken breast, crisp baby romaine, heirloom cherry tomatoes, shaved parmesan, and cold-pressed lemon vinaigrette.">
+              <strong style="display:block;font-size:15px;">Salad</strong>
+              <span style="font-size:13px;opacity:0.92;">$ 5.25</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="${p}-bowl-stage">
+          <svg viewBox="0 0 360 360" style="width:100%;max-width:330px;height:auto;filter:drop-shadow(0 28px 40px rgba(0,0,0,0.45));" role="img" aria-label="Top-down ceramic gourmet bowl with grilled chicken, greens, cherry tomatoes, and lime">
+            <circle cx="180" cy="180" r="154" fill="#181A20" stroke="#3F4451" stroke-width="8" />
+            <circle cx="180" cy="180" r="132" fill="#232730" />
+            <!-- Fresh Greens -->
+            <circle cx="135" cy="135" r="42" fill="#4D7C0F" />
+            <circle cx="220" cy="128" r="38" fill="#65A30D" />
+            <circle cx="128" cy="215" r="36" fill="#3F6212" />
+            <!-- Grilled Chicken Slices -->
+            <rect x="145" y="148" width="92" height="24" rx="12" transform="rotate(-14 145 148)" fill="#D97706" />
+            <rect x="150" y="176" width="96" height="24" rx="12" transform="rotate(-14 150 176)" fill="#B45309" />
+            <rect x="158" y="204" width="84" height="22" rx="11" transform="rotate(-14 158 204)" fill="#F59E0B" />
+            <!-- Cherry Tomatoes & Seeds -->
+            <circle cx="235" cy="215" r="18" fill="#DC2626" />
+            <circle cx="195" cy="115" r="15" fill="#EF4444" />
+            <circle cx="115" cy="175" r="14" fill="#FBBF24" />
+          </svg>
+
+          <div class="${p}-orange-badge">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <strong id="badgeDishName" style="font-size:20px;">Salad</strong>
+              <span style="display:inline-flex;align-items:center;gap:4px;font-size:14px;font-weight:600;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span id="badgeDishRating">4.7</span>
+              </span>
+            </div>
+            <span id="badgeDishTime" style="display:inline-block;background:#262930;color:#FFFFFF;font-size:12px;padding:5px 12px;border-radius:999px;">10 - 18 mins</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- NUTRITIONAL & DISPATCH GUARANTEES -->
+      <section id="kitchen-telemetry" class="${p}-wrap tabular-nums" aria-labelledby="telemetryHeading">
+        <h2 id="telemetryHeading" class="${p}-h2">Precision Cloud Kitchen Standards</h2>
+        <div class="${p}-grid-3">
+          <article class="${p}-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">01 // MACRO VERIFIED</span>
+            <h3 style="font-size:20px;margin:8px 0;">42g Lean Protein / Bowl</h3>
+            <p style="font-size:14px;color:var(--muted);max-width:46ch;">Every portion is weighed on smart induction scales for exact calorie and macro consistency.</p>
+          </article>
+          <article class="${p}-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">02 // THERMAL SEAL</span>
+            <h3 style="font-size:20px;margin:8px 0;">10–18 Minute Hot Dispatch</h3>
+            <p style="font-size:14px;color:var(--muted);max-width:46ch;">Dual-zone compostable bowls keep grilled proteins piping hot and baby greens crisp at 4°C.</p>
+          </article>
+          <article class="${p}-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">03 // ZERO SEED OILS</span>
+            <h3 style="font-size:20px;margin:8px 0;">100% Extra-Virgin Olive &amp; Avocado</h3>
+            <p style="font-size:14px;color:var(--muted);max-width:46ch;">Cold-pressed dressings whisked fresh every morning with organic local micro-herbs.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="${p}-wrap" style="padding-top:16px;padding-bottom:44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 FOODS Gourmet Cloud Kitchens. Freshly plated on demand.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent-text);">AVERAGE DELIVERY • 14 MINS</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">FOODS EXPRESS CHECKOUT</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-step-btn" style="width:auto;padding:6px 14px;border-radius:999px;">Close</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Confirm Your Gourmet Order</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:48ch;">
+        Your order is routed directly to our nearest culinary pod. Live courier GPS tracking starts the moment your bowl is sealed.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-login-pill" style="width:100%;padding:14px;">Place Order Now</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var qty = 2;
+      var unitPrice = 12.15;
+      var qtyOut = document.getElementById('qtyValueOut');
+      var totalOut = document.getElementById('totalOrderOut');
+      var minusBtn = document.getElementById('qtyMinusBtn');
+      var plusBtn = document.getElementById('qtyPlusBtn');
+      var descOut = document.getElementById('activeDishDesc');
+      var nameOut = document.getElementById('badgeDishName');
+      var rateOut = document.getElementById('badgeDishRating');
+      var timeOut = document.getElementById('badgeDishTime');
+
+      function renderTotal() {
+        if (qtyOut) qtyOut.textContent = String(qty);
+        if (totalOut) totalOut.textContent = '$' + (qty * unitPrice).toFixed(2);
+      }
+      if (minusBtn) {
+        minusBtn.addEventListener('click', function () {
+          qty = Math.max(1, qty - 1);
+          renderTotal();
+        });
+      }
+      if (plusBtn) {
+        plusBtn.addEventListener('click', function () {
+          qty = Math.min(12, qty + 1);
+          renderTotal();
+        });
+      }
+
+      document.querySelectorAll('.dish-switch-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.dish-switch-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          unitPrice = parseFloat(btn.getAttribute('data-price') || '12.15');
+          if (descOut) descOut.textContent = btn.getAttribute('data-desc') || '';
+          if (nameOut) nameOut.textContent = btn.getAttribute('data-name') || 'Salad';
+          if (rateOut) rateOut.textContent = btn.getAttribute('data-rating') || '4.7';
+          if (timeOut) timeOut.textContent = btn.getAttribute('data-time') || '10 - 18 mins';
+          renderTotal();
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 14. VISIONGLASS NEO UI (Product Design Apple Vision Pro Spatial Workbench)
+  // ============================================================================
+  if (slug === 'visionglass-neo-ui') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VisionGlass Neo UI — Product Design Apple Vision Pro Spatial Component System</title>
+  <meta name="description" content="Neo-Apple Vision Pro spatial UI kit featuring pastel aurora 3D glass refraction, tactile rotary dials, spatial toggle switches, and live CSS glass token export." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #DCE4EE;
+      --surface: rgba(255, 255, 255, 0.78);
+      --surface-2: rgba(255, 255, 255, 0.52);
+      --text: #0F172A;
+      --muted: #475569;
+      --accent: #2563EB;
+      --accent-text: #1D4ED8;
+      --border: rgba(255, 255, 255, 0.75);
+      --radius-card: 28px;
+      --font-display: 'Space Grotesk', 'Inter', sans-serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --space-section: clamp(56px, 7vw, 96px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #FFFFFF; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--font-sans); overflow-x: clip; max-width: 100%; }
+    body { background: linear-gradient(145deg, #D5DFEC 0%, #EBF0F7 50%, #D2DCE9 100%); color: var(--text); overflow-x: clip; max-width: 100%; line-height: 1.6; }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--accent); color: #FFFFFF; font-weight: 700; border-radius: 8px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--text); }
+    a, button, input { font-family: inherit; }
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-window {
+      max-width: 1280px;
+      margin: 28px auto;
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      border-radius: 36px;
+      padding: clamp(20px, 3.5vw, 40px);
+      box-shadow: 0 32px 80px rgba(15, 23, 42, 0.12), inset 0 1px 2px #FFFFFF;
+    }
+    .${p}-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .${p}-pill-btn {
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .${p}-pill-btn:hover, .${p}-pill-btn.is-active {
+      background: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .${p}-pill-btn:active { transform: scale(0.97); }
+
+    .${p}-aurora-stage {
+      border-radius: 28px;
+      padding: clamp(28px, 5vw, 56px);
+      background: radial-gradient(circle at 75% 30%, rgba(244, 114, 182, 0.45) 0%, rgba(56, 189, 248, 0.42) 45%, rgba(255, 255, 255, 0.88) 90%);
+      border: 1px solid #FFFFFF;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.35rem, 4.6vw, 3.85rem);
+      font-weight: 700;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .${p}-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3vw, 2.45rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .${p}-sub {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 52ch;
+      margin-bottom: 24px;
+    }
+    .${p}-workbench {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 24px;
+      margin-top: 28px;
+    }
+    .${p}-glass-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 26px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06), inset 0 1px 1px #FFFFFF;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .${p}-glass-card:hover { transform: translateY(-3px); }
+    .${p}-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px;
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 28px;
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 920px) {
+      .${p}-aurora-stage, .${p}-workbench { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .${p}-window { margin: 12px; padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(37,99,235,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#2563EB;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-window">
+    <header class="${p}-top-bar">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="width:12px;height:12px;border-radius:50%;background:#38BDF8;display:inline-block;"></span>
+        <strong style="font-family:var(--font-display);font-size:18px;">VisionGlass Neo UI</strong>
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);padding:4px 10px;border-radius:999px;background:var(--surface-2);">visionOS 2.4 HIG</span>
+      </div>
+      <nav aria-label="Primary Navigation" style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+        <a href="#spatial-workbench" class="${p}-pill-btn">Product Section</a>
+        <a href="#token-exporter" class="${p}-pill-btn">Refraction Tokens</a>
+        <button type="button" id="motionToggleBtn" class="${p}-pill-btn" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-pill-btn is-active">Copy Spatial Kit</button>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="${p}-aurora-stage" aria-labelledby="heroHeading">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);font-weight:600;display:block;margin-bottom:10px;">SPATIAL COMPUTING INTERFACE SYSTEM</span>
+          <h1 id="heroHeading" class="${p}-h1">Product Design<br />Apple Vision Pro</h1>
+          <p class="${p}-sub">
+            Tactile neumorphic rotary dials, iridescent glassmorphism windows, and eye-tracked specular highlights engineered for next-generation spatial web apps.
+          </p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button type="button" class="${p}-pill-btn is-active" data-seamless-trigger="Download VisionGlass Neo Figma &amp; CSS Kit">Get UI Kit (v2.4)</button>
+            <a href="#spatial-workbench" class="${p}-pill-btn">Test Live Widgets</a>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <svg viewBox="0 0 400 260" style="width:100%;max-width:360px;height:auto;" role="img" aria-label="Iridescent 3D spatial glass sculpture with floating visionOS control pills">
+            <defs>
+              <linearGradient id="auroraRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#38BDF8" />
+                <stop offset="50%" stop-color="#A855F7" />
+                <stop offset="100%" stop-color="#F472B6" />
+              </linearGradient>
+            </defs>
+            <rect x="30" y="25" width="340" height="210" rx="28" fill="rgba(255,255,255,0.65)" stroke="#FFFFFF" stroke-width="2" />
+            <path d="M85 175 C115 65, 205 65, 235 165 C265 215, 315 95, 330 75" fill="none" stroke="url(#auroraRibbon)" stroke-width="28" stroke-linecap="round" />
+            <circle cx="155" cy="115" r="34" fill="rgba(255,255,255,0.78)" stroke="#FFFFFF" stroke-width="2" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- ONE LIVE THING: SPATIAL DEPTH & REFRACTION TOKEN WORKBENCH -->
+      <section id="spatial-workbench" class="${p}-workbench tabular-nums" aria-labelledby="workHeading">
+        <div class="${p}-glass-card" id="token-exporter">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);font-weight:600;">PRODUCT SECTION // LIVE TOKENS</span>
+          <h2 id="workHeading" class="${p}-h2" style="margin-top:6px;">Spatial Glass Refraction Dial</h2>
+          <p style="font-size:14px;color:var(--muted);max-width:48ch;margin-bottom:18px;">
+            Adjust backdrop blur radius and specular Z-depth to preview real-time visionOS glass tokens:
+          </p>
+          <label for="blurRangeInput" style="display:block;font-size:13px;font-weight:600;margin-bottom:6px;">
+            Glass Blur Radius: <strong id="blurValOut" style="color:var(--accent);">28px</strong>
+          </label>
+          <input id="blurRangeInput" type="range" min="8" max="48" step="2" value="28" style="width:100%;accent-color:#2563EB;cursor:pointer;margin-bottom:18px;" />
+
+          <div role="group" aria-label="Spatial Surface Tint" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="${p}-pill-btn is-active tint-btn" data-tint="Cyan Gaze (rgba(56, 189, 248, 0.24))" data-code="backdrop-filter: blur(28px) saturate(190%); background: rgba(56, 189, 248, 0.24);">Cyan Gaze</button>
+            <button type="button" class="${p}-pill-btn tint-btn" data-tint="Aurora Rose (rgba(244, 114, 182, 0.24))" data-code="backdrop-filter: blur(28px) saturate(210%); background: rgba(244, 114, 182, 0.24);">Aurora Rose</button>
+            <button type="button" class="${p}-pill-btn tint-btn" data-tint="Titanium Frost (rgba(255, 255, 255, 0.78))" data-code="backdrop-filter: blur(28px) saturate(160%); background: rgba(255, 255, 255, 0.78);">Titanium Frost</button>
+          </div>
+        </div>
+
+        <div class="${p}-glass-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <strong id="activeTintLabel" style="font-family:var(--font-display);font-size:20px;">Cyan Gaze (rgba(56, 189, 248, 0.24))</strong>
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">60 FPS EYE-TRACKED</span>
+            </div>
+            <pre id="cssTokenOutput" style="font-family:var(--font-mono);font-size:13px;padding:18px;border-radius:18px;background:#0F172A;color:#E0F2FE;overflow-x:auto;margin-bottom:18px;">backdrop-filter: blur(28px) saturate(190%);
+background: rgba(56, 189, 248, 0.24);
+box-shadow: inset 0 1px 1px #FFFFFF;</pre>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center;">
+            <article style="padding:12px;border-radius:16px;background:var(--surface-2);">
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">SPECULAR</span>
+              <strong style="font-size:18px;">1.5px Rim</strong>
+            </article>
+            <article style="padding:12px;border-radius:16px;background:var(--surface-2);">
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">FOV SCALE</span>
+              <strong style="font-size:18px;">1.04x Hover</strong>
+            </article>
+            <article style="padding:12px;border-radius:16px;background:var(--surface-2);">
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">COMPONENTS</span>
+              <strong style="font-size:18px;">140+ Ready</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top:24px;" aria-labelledby="spatialSpecsHeading">
+        <div class="${p}-glass-card tabular-nums">
+          <h2 id="spatialSpecsHeading" class="${p}-h2">Spatial HIG Component Architecture</h2>
+          <p style="font-size:14px;color:var(--muted);max-width:60ch;">Every VisionGlass control respects 60pt minimum eye-gaze targets, dynamic specular edge lighting, and true Z-axis parallax elevation.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer style="margin-top:36px;padding-top:20px;border-top:1px solid rgba(15,23,42,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+      <span>© 2026 VisionGlass Neo UI System. Designed for Spatial Web &amp; visionOS.</span>
+      <span style="font-family:var(--font-mono);color:var(--accent-text);">SPATIAL HIG COMPLIANT</span>
+    </footer>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">VISIONGLASS NEO KIT</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill-btn">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:26px;margin-bottom:10px;">Spatial Design Token Package</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:52ch;">
+        Includes Figma variable collections, CSS/Tailwind glassmorphism tokens, and interactive 3D rotary dial components.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill-btn is-active" style="width:100%;">Download Spatial Package</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var blurRange = document.getElementById('blurRangeInput');
+      var blurVal = document.getElementById('blurValOut');
+      var tintLabel = document.getElementById('activeTintLabel');
+      var codeOut = document.getElementById('cssTokenOutput');
+      var activeBg = 'rgba(56, 189, 248, 0.24)';
+
+      function updateToken() {
+        var b = blurRange ? blurRange.value : '28';
+        if (blurVal) blurVal.textContent = b + 'px';
+        if (codeOut) {
+          codeOut.textContent = 'backdrop-filter: blur(' + b + 'px) saturate(190%);\\nbackground: ' + activeBg + ';\\nbox-shadow: inset 0 1px 1px #FFFFFF;';
+        }
+      }
+      if (blurRange) blurRange.addEventListener('input', updateToken);
+
+      document.querySelectorAll('.tint-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.tint-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var t = btn.getAttribute('data-tint') || '';
+          if (tintLabel) tintLabel.textContent = t;
+          var m = t.match(/rgba\\([^)]+\\)/);
+          if (m) activeBg = m[0];
+          updateToken();
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 15. O2 MOONISH COSMIC (O2® Studio — Cosmic Set 23 / Late 2050 Glass Sphere Drop)
+  // ============================================================================
+  if (slug === 'o2-moonish-cosmic') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>O2® Studio — Moonish Cosmic Set 23 • 01 Classic Hoodie The Late 2050</title>
+  <meta name="description" content="01 Classic Hoodie by O2 Studio — The Late 2050. 53% Cotton 47% Polyester desert-glass streetwear capsule encased in a translucent 3D sphere." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #231F1E;
+      --surface: rgba(214, 204, 194, 0.16);
+      --surface-2: rgba(255, 255, 255, 0.08);
+      --text: #F5F2EE;
+      --muted: rgba(245, 242, 238, 0.74);
+      --accent: #E5D5C5;
+      --accent-text: #FDE68A;
+      --border: rgba(245, 242, 238, 0.22);
+      --radius-card: 28px;
+      --font-display: 'Syne', 'Space Grotesk', sans-serif;
+      --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --space-section: clamp(56px, 7vw, 96px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #1B1817; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--font-sans); overflow-x: clip; max-width: 100%; }
+    body {
+      background: radial-gradient(circle at 50% 18%, #574E49 0%, #2E2927 52%, #1B1817 100%);
+      color: var(--text);
+      overflow-x: clip;
+      max-width: 100%;
+      line-height: 1.6;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--accent); color: #1B1817; font-weight: 700; border-radius: 8px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #FFFFFF; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-shell {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 22px clamp(18px, 4vw, 42px);
+    }
+    .${p}-glass-bar {
+      background: rgba(214, 204, 194, 0.16);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .${p}-brand {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+    .${p}-nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .${p}-nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .${p}-nav-link:hover { color: #FFFFFF; }
+    .${p}-pill {
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .${p}-pill:hover, .${p}-pill.is-active {
+      background: #F5F2EE;
+      color: #1B1817;
+      border-color: #F5F2EE;
+      transform: translateY(-1px);
+    }
+    .${p}-pill:active { transform: scale(0.97); }
+
+    .${p}-main-frame {
+      background: rgba(214, 204, 194, 0.14);
+      backdrop-filter: blur(24px);
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      padding: clamp(22px, 3.5vw, 40px);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.38);
+    }
+    .${p}-meta-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .${p}-stage-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 4.2vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+    .${p}-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .${p}-sneaker-card {
+      background: rgba(28, 25, 23, 0.55);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+    .${p}-sphere-card {
+      background: radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.26) 0%, rgba(214, 199, 184, 0.12) 60%, rgba(28, 25, 23, 0.45) 100%);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 28px;
+      text-align: center;
+      position: relative;
+    }
+    .${p}-bottom-bar {
+      margin-top: 18px;
+      background: rgba(214, 204, 194, 0.16);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 14px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+    }
+    .${p}-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .${p}-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .${p}-card:hover { transform: translateY(-4px); }
+    .${p}-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 16, 15, 0.82);
+      backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 500px;
+      width: 100%;
+      background: #262220;
+      border-radius: 28px;
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 920px) {
+      .${p}-meta-row { grid-template-columns: 1fr 1fr; }
+      .${p}-stage-grid, .${p}-grid-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .${p}-meta-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(245,242,238,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#F5F2EE;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-shell">
+    <header class="${p}-glass-bar">
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <a href="#main-content" class="${p}-brand">O2<sup>®</sup></a>
+        <span style="font-size:13px;color:var(--muted);">Moonish</span>
+        <nav class="${p}-nav-links" aria-label="Primary Navigation">
+          <a href="#capsule-customizer" class="${p}-nav-link">New in</a>
+          <a href="#capsule-customizer" class="${p}-nav-link">Hot drops</a>
+          <a href="#cosmic-archive" class="${p}-nav-link">Collection</a>
+        </nav>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" class="${p}-pill" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-pill is-active">O2 SHOP NEW COLLECTION</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="${p}-main-frame tabular-nums" aria-labelledby="heroHeading">
+        <div class="${p}-meta-row">
+          <div><strong style="color:var(--text);">01</strong> CLASSIC HOODIE<br />BY O2 STUDIO</div>
+          <div>THE LATE 2050<br />DESERT CAPSULE</div>
+          <div>53% COTTON<br />47% POLYESTER</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span>3 COLORS</span>
+            <button type="button" class="${p}-pill" data-seamless-trigger="O2 Studio Member Login">Log in</button>
+          </div>
+        </div>
+
+        <div class="${p}-stage-grid">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">MOONISH COSMIC SET 23</span>
+            <h1 id="heroHeading" class="${p}-h1">O2 HOODIE • ENCASED IN GLASS</h1>
+            <p style="font-size:14px;color:var(--muted);max-width:48ch;margin-bottom:18px;">
+              Heavyweight 580GSM brushed fleece sculpted inside a zero-gravity desert biosphere. Engineered with drop-shoulder seams and garment-dyed dune patinas.
+            </p>
+
+            <!-- ONE LIVE THING: INTERACTIVE 2050 COLORWAY & BUNDLE SWITCHER -->
+            <div id="capsule-customizer" role="group" aria-label="Select 2050 Capsule Colorway" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+              <button type="button" class="${p}-pill is-active color-btn" data-color="Dune Beige / Larger" data-price="119$" data-tint="#D6C7B8" data-note="Garment-washed Sahara sand fleece with raw-edge kangaroo pocket.">Dune Beige (119$)</button>
+              <button type="button" class="${p}-pill color-btn" data-color="Lunar Obsidian / Oversized" data-price="129$" data-tint="#3F3A38" data-note="Carbon-dyed heavyweight loopback cotton with reflective 2050 chest seal.">Lunar Obsidian (129$)</button>
+              <button type="button" class="${p}-pill color-btn" data-color="Martian Clay / Boxy" data-price="125$" data-tint="#B45309" data-note="Sun-baked terracotta pigment with double-layered storm hood.">Martian Clay (125$)</button>
+            </div>
+            <p id="colorwayNoteOut" style="font-size:13px;color:var(--muted);max-width:46ch;">
+              Garment-washed Sahara sand fleece with raw-edge kangaroo pocket.
+            </p>
+
+            <div class="${p}-sneaker-card">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                <strong style="font-family:var(--font-display);font-size:16px;">NIKE SNEAKERS • DUNE LOW</strong>
+                <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">PAIR +89$</span>
+              </div>
+              <p style="font-size:13px;color:var(--muted);margin-bottom:12px;max-width:44ch;">Cordura ballistic mesh &amp; sculpted foam sole matched to Cosmic Set 23.</p>
+              <button type="button" class="${p}-pill" data-seamless-trigger="Refresh Moonish Footwear Pairing">REFRESH Moonish</button>
+            </div>
+          </div>
+
+          <div class="${p}-sphere-card">
+            <svg viewBox="0 0 380 340" style="width:100%;max-width:340px;height:auto;" role="img" aria-label="O2 Studio oversized beige hoodie suspended inside a translucent 3D glass sphere">
+              <defs>
+                <radialGradient id="o2Sphere" cx="35%" cy="28%" r="70%">
+                  <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55" />
+                  <stop offset="65%" stop-color="#D6C7B8" stop-opacity="0.18" />
+                  <stop offset="100%" stop-color="#1B1817" stop-opacity="0.45" />
+                </radialGradient>
+              </defs>
+              <circle cx="190" cy="170" r="142" fill="url(#o2Sphere)" stroke="rgba(255,255,255,0.6)" stroke-width="2" />
+              <!-- Sculpted Hoodie Silhouette -->
+              <path id="hoodieSvgPath" d="M135 110 C150 82, 230 82, 245 110 L285 155 L260 182 L240 155 L240 245 L140 245 L140 155 L120 182 L95 155 Z" fill="#D6C7B8" stroke="#F5F2EE" stroke-width="2.5" stroke-linejoin="round" />
+              <ellipse cx="190" cy="108" rx="26" ry="18" fill="#231F1E" />
+              <ellipse cx="165" cy="95" rx="45" ry="14" fill="rgba(255,255,255,0.35)" transform="rotate(-18 165 95)" />
+            </svg>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-top:12px;padding-top:16px;border-top:1px solid var(--border);">
+              <div style="text-align:left;">
+                <span id="hoodieVariantLabel" style="font-size:13px;color:var(--muted);display:block;">HOODIE beige / larger</span>
+                <strong id="hoodiePriceOut" style="font-family:var(--font-display);font-size:28px;">119$</strong>
+              </div>
+              <button type="button" id="addToCartSphereBtn" class="${p}-pill is-active" data-seamless-trigger="Add 01 Classic Hoodie (Cosmic Set 23) to Cart">
+                <span>Add to cart</span>
+                <span aria-hidden="true">+</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="${p}-bottom-bar" aria-label="Hot Drop Status">
+        <span>NEW DROP</span>
+        <span>COSMIC SET 23 ↗</span>
+        <span style="color:var(--accent-text);">HOT DROP BY O2 STUDIO</span>
+      </section>
+
+      <!-- COSMIC ARCHIVE SPECIFICATIONS -->
+      <section id="cosmic-archive" style="padding:var(--space-section) 0 24px;" aria-labelledby="archiveHeading">
+        <h2 id="archiveHeading" class="${p}-h2">Late 2050 Textile Engineering</h2>
+        <div class="${p}-grid-3 tabular-nums">
+          <article class="${p}-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">01 // THERMO-FLEECE</span>
+            <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">580 GSM Desert Weave</h3>
+            <p style="font-size:14px;color:var(--muted);max-width:46ch;">53% organic long-staple cotton blended with 47% recycled technical polyester for architectural drape.</p>
+          </article>
+          <article class="${p}-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">02 // SPHERE PACKAGING</span>
+            <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">Vacuum Orb Delivery</h3>
+            <p style="font-size:14px;color:var(--muted);max-width:46ch;">Each Cosmic Set 23 piece ships inside a reusable polycarbonate display hemisphere with NFC serial authentication.</p>
+          </article>
+          <article class="${p}-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">03 // ZERO RESTORATION</span>
+            <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">300-Piece Numbered Edition</h3>
+            <p style="font-size:14px;color:var(--muted);max-width:46ch;">Once Cosmic Set 23 sells out, the dye vats are retired permanently to preserve archival collector value.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer style="padding:24px 0 40px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+      <span>© 2026 O2® Studio — Moonish Cosmic Set 23. All rights reserved.</span>
+      <span style="font-family:var(--font-mono);color:var(--accent-text);">WORLDWIDE ORB DISPATCH</span>
+    </footer>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">O2® STUDIO VAULT</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:26px;margin-bottom:10px;">Reserve Cosmic Set 23</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:48ch;">
+        Includes serialized 01 Classic Hoodie in collector sphere packaging and priority access to Late 2050 footwear drops.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill is-active" style="width:100%;justify-content:center;">Proceed to Encrypted Bag</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var vLabel = document.getElementById('hoodieVariantLabel');
+      var pOut = document.getElementById('hoodiePriceOut');
+      var noteOut = document.getElementById('colorwayNoteOut');
+      var svgPath = document.getElementById('hoodieSvgPath');
+
+      document.querySelectorAll('.color-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.color-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (vLabel) vLabel.textContent = 'HOODIE ' + (btn.getAttribute('data-color') || '');
+          if (pOut) pOut.textContent = btn.getAttribute('data-price') || '119$';
+          if (noteOut) noteOut.textContent = btn.getAttribute('data-note') || '';
+          if (svgPath) svgPath.setAttribute('fill', btn.getAttribute('data-tint') || '#D6C7B8');
         });
       });
     })();

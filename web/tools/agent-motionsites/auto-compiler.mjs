@@ -4266,7 +4266,10 @@ export async function compileAndIntegratePrompt(slug, options = {}) {
     stdio: 'inherit'
   });
 
-  const webCat = /portfolio|agency|hero/i.test(data.category || '') ? 'portfolio' : 'commerce';
+  const COMMERCE_HERO_SLUGS = new Set(['wellbeing-os', 'prosthetics-hero']);
+  const webCat = COMMERCE_HERO_SLUGS.has(slug)
+    ? 'commerce'
+    : /portfolio|agency|hero/i.test(data.category || '') ? 'portfolio' : 'commerce';
   const catPath = path.resolve(root, 'web/src/lib/template-categories.ts');
   let catContent = fs.readFileSync(catPath, 'utf8');
   if (!catContent.includes(`'${slug}':`)) {

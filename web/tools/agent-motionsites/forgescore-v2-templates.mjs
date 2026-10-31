@@ -3057,5 +3057,1336 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </html>`;
   }
 
+  // ============================================================================
+  // 28. WELLBEING OS (flowpath — Liquid Glass Workforce Wellbeing & Rhythm OS)
+  // ============================================================================
+  if (spec.slug === 'wellbeing-os') {
+    const heroVideo = spec.heroVideo || 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260703_053131_1ec3dd1c-d627-44fb-ab20-6e1fce41b0d5.mp4';
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>flowpath — Wellbeing OS • Bridge the Gaps, Ditch the Grindwork</title>
+  <meta name="description" content="Flowpath unifies your complete wellness tools, so your crew spends less energy plugging gaps and more on real progress." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #120F0D;
+      --surface: rgba(30, 24, 20, 0.76);
+      --surface-2: rgba(255, 248, 240, 0.06);
+      --text: #FAF6F2;
+      --muted: rgba(250, 246, 242, 0.76);
+      --accent: #F59E0B;
+      --accent-text: #FDE68A;
+      --border: rgba(255, 248, 240, 0.14);
+      --radius-card: 24px;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --space-section: clamp(64px, 8vw, 112px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--bg); }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--font-sans); overflow-x: clip; }
+    body { background: var(--bg); color: var(--text); overflow-x: clip; line-height: 1.6; }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--accent); color: #120F0D; font-weight: 700; border-radius: 8px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #FFFFFF; }
+    a, button, input { font-family: inherit; }
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-liquid-glass {
+      background: rgba(255, 248, 240, 0.04);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 248, 240, 0.14);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.16), 0 16px 40px rgba(0, 0, 0, 0.35);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    }
+    .${p}-liquid-glass:hover {
+      background: rgba(255, 248, 240, 0.08);
+      border-color: rgba(253, 230, 138, 0.34);
+    }
+    .${p}-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 25%, #2D2118 0%, #120F0D 75%);
+    }
+    .${p}-bg-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.62;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .${p}-hero-vignette {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(18, 15, 13, 0.55) 0%, rgba(18, 15, 13, 0.25) 45%, rgba(18, 15, 13, 0.94) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .${p}-nav {
+      position: relative;
+      z-index: 10;
+      max-width: 1360px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px clamp(20px, 5vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .${p}-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+    .${p}-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .${p}-nav-link {
+      color: rgba(250, 246, 242, 0.9);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .${p}-nav-link:hover { color: #FFFFFF; }
+    .${p}-btn-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), background 0.28s ease;
+    }
+    .${p}-btn-pill:hover { transform: scale(1.03); }
+    .${p}-btn-pill:active { transform: scale(0.97); }
+    .${p}-btn-ghost {
+      background: transparent;
+      border: 1px solid transparent;
+      color: rgba(250, 246, 242, 0.85);
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+    .${p}-btn-ghost:hover { color: #FFFFFF; border-color: var(--border); }
+    .${p}-btn-ghost:active { transform: scale(0.98); }
+
+    .${p}-hero-center {
+      position: relative;
+      z-index: 5;
+      max-width: 980px;
+      margin: auto;
+      padding: 64px 24px 96px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3.1rem, 7.2vw, 5.75rem);
+      font-weight: 400;
+      line-height: 0.96;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .${p}-sub {
+      font-size: clamp(1rem, 1.35vw, 1.15rem);
+      color: var(--muted);
+      max-width: 58ch;
+      line-height: 1.65;
+      margin-bottom: 36px;
+    }
+    .${p}-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: var(--space-section) clamp(20px, 5vw, 48px);
+    }
+    .${p}-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 4vw, 3.3rem);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .${p}-bento {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 36px;
+    }
+    .${p}-card {
+      border-radius: var(--radius-card);
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+    }
+    .${p}-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(253, 230, 138, 0.4);
+    }
+    .${p}-rhythm-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+      margin-top: 28px;
+    }
+    .${p}-mode-pill {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .${p}-mode-pill.is-active, .${p}-mode-pill:hover {
+      background: rgba(245, 158, 11, 0.18);
+      border-color: var(--accent);
+      color: var(--accent-text);
+    }
+    .${p}-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 8, 7, 0.82);
+      backdrop-filter: blur(14px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 540px;
+      width: 100%;
+      background: #1C1613;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px;
+    }
+    @media (max-width: 920px) {
+      .${p}-bento, .${p}-rhythm-grid { grid-template-columns: 1fr; }
+      .${p}-nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .${p}-hero-center { padding: 40px 16px 64px; }
+      .${p}-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(253,230,138,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FDE68A;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-hero">
+    <video id="heroBgVideo" class="${p}-bg-video" src="${heroVideo}" autoplay loop muted playsinline preload="auto"></video>
+    <div class="${p}-hero-vignette" aria-hidden="true"></div>
+
+    <header class="${p}-nav">
+      <div style="display:flex;align-items:center;gap:36px;">
+        <a href="#main-content" class="${p}-brand" aria-label="flowpath home">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect x="7" y="5" width="13" height="13" rx="3" transform="rotate(45 13.5 11.5)" stroke="#FAF6F2" stroke-width="1.8" fill="rgba(255,255,255,0.08)" />
+            <rect x="13" y="11" width="13" height="13" rx="3" transform="rotate(45 19.5 17.5)" stroke="#FDE68A" stroke-width="1.8" fill="rgba(245,158,11,0.16)" />
+          </svg>
+          <span>flowpath</span>
+        </a>
+        <nav class="${p}-nav-links" aria-label="Primary Navigation">
+          <a href="#rhythm-lab" class="${p}-nav-link">Product <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#unified-tools" class="${p}-nav-link">Solutions <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#crew-telemetry" class="${p}-nav-link">About</a>
+          <a href="#plans-matrix" class="${p}-nav-link">Plans</a>
+        </nav>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" class="${p}-btn-ghost" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-pill ${p}-liquid-glass" data-magnetic>Begin your journey</button>
+      </div>
+    </header>
+
+    <section class="${p}-hero-center" aria-labelledby="heroHeadline">
+      <span class="${p}-liquid-glass" style="padding:7px 16px;border-radius:999px;font-size:12px;font-family:var(--font-mono);color:var(--accent-text);margin-bottom:22px;display:inline-flex;align-items:center;gap:8px;">
+        <span style="width:7px;height:7px;border-radius:50%;background:#34D399;display:inline-block;"></span>
+        FLOWPATH WELLBEING OS 4.2 • ZERO GRINDWORK ARCHITECTURE
+      </span>
+      <h1 id="heroHeadline" class="${p}-h1">Bridge the gaps.<br /><em>Ditch the grindwork.</em></h1>
+      <p class="${p}-sub">
+        Flowpath unifies your complete wellness tools, so your crew spends less energy plugging gaps and more on real progress.
+      </p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
+        <button type="button" class="${p}-btn-pill ${p}-liquid-glass" data-seamless-trigger="Begin Your Flowpath Workspace Journey">Begin your journey</button>
+        <a href="#rhythm-lab" class="${p}-btn-ghost">See it live</a>
+      </div>
+    </section>
+  </div>
+
+  <main id="main-content">
+    <!-- ONE LIVE THING: INTERACTIVE CREW WELLBEING & WORKFLOW RHYTHM CONFIGURATOR -->
+    <section id="rhythm-lab" class="${p}-wrap" aria-labelledby="rhythmHeading">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.08em;">LIVE CREW CALIBRATOR</span>
+          <h2 id="rhythmHeading" class="${p}-h2">Unify Asynchronous Focus &amp; Recovery Cycles</h2>
+        </div>
+        <div role="group" aria-label="Crew Rhythm Presets" style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="${p}-mode-pill is-active rhythm-preset" data-mode="deep" data-hours="14.5" data-burnout="-42%" data-sync="96%" data-desc="Silences non-urgent Slack/Jira pings during 3.5-hour maker blocks and auto-schedules micro-recovery walks.">Deep Focus Cadence</button>
+          <button type="button" class="${p}-mode-pill rhythm-preset" data-mode="async" data-hours="18.2" data-burnout="-58%" data-sync="99%" data-desc="Replaces recurring status standups with 90-second spatial check-ins across 6 time zones.">Async Global Crew</button>
+          <button type="button" class="${p}-mode-pill rhythm-preset" data-mode="sprint" data-hours="11.8" data-burnout="-34%" data-sync="94%" data-desc="Balances launch-week velocity with mandatory 18:00 cooldown gates and biometric fatigue alerts.">Recovery Guardrails</button>
+        </div>
+      </div>
+
+      <div class="${p}-rhythm-grid tabular-nums">
+        <div class="${p}-card ${p}-liquid-glass">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">ACTIVE CREW SIZE</span>
+            <strong id="crewSizeLabel" style="font-size:22px;color:var(--accent-text);">45 Members</strong>
+          </div>
+          <label for="crewSizeRange" style="display:block;font-size:13px;color:var(--muted);margin-bottom:10px;">Adjust engineering &amp; product crew headcount:</label>
+          <input id="crewSizeRange" type="range" min="10" max="250" step="5" value="45" style="width:100%;accent-color:#F59E0B;cursor:pointer;margin-bottom:22px;" />
+          <p id="rhythmModeDesc" style="font-size:14px;color:var(--muted);max-width:60ch;padding:16px;border-radius:16px;background:rgba(0,0,0,0.28);border:1px solid var(--border);">
+            Silences non-urgent Slack/Jira pings during 3.5-hour maker blocks and auto-schedules micro-recovery walks.
+          </p>
+        </div>
+
+        <div class="${p}-card" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:center;text-align:center;">
+          <div style="padding:18px;border-radius:18px;background:var(--surface-2);border:1px solid var(--border);">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;margin-bottom:6px;">RECLAIMED / WK</span>
+            <strong id="reclaimedHoursOut" style="font-family:var(--font-display);font-size:42px;font-weight:400;color:var(--text);">653h</strong>
+            <span style="font-size:12px;color:var(--accent-text);display:block;">Zero grindwork</span>
+          </div>
+          <div style="padding:18px;border-radius:18px;background:var(--surface-2);border:1px solid var(--border);">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;margin-bottom:6px;">STRAIN DROP</span>
+            <strong id="burnoutDropOut" style="font-family:var(--font-display);font-size:42px;font-weight:400;color:#34D399;">-42%</strong>
+            <span style="font-size:12px;color:var(--muted);display:block;">Cognitive load</span>
+          </div>
+          <div style="padding:18px;border-radius:18px;background:var(--surface-2);border:1px solid var(--border);">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;margin-bottom:6px;">TOOL HARMONY</span>
+            <strong id="syncScoreOut" style="font-family:var(--font-display);font-size:42px;font-weight:400;color:var(--accent-text);">96%</strong>
+            <span style="font-size:12px;color:var(--muted);display:block;">Unified bridge</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIFIED WELLNESS ARCHITECTURE BENTO -->
+    <section id="unified-tools" class="${p}-wrap" aria-labelledby="bentoHeading" style="padding-top:16px;">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">COMPLETE WELLNESS BRIDGE</span>
+      <h2 id="bentoHeading" class="${p}-h2">Three Layers of Calm, Zero Context Switching</h2>
+      <div class="${p}-bento tabular-nums">
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">01 // CALENDAR SHIELD</span>
+          <h3 style="font-family:var(--font-display);font-size:28px;font-weight:400;margin:10px 0;">Autonomous Focus Defragmentation</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:52ch;">Automatically clusters scattered 15-minute calls into cohesive blocks so your crew preserves uninterrupted deep-craft mornings.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">02 // PULSE TELEMETRY</span>
+          <h3 style="font-family:var(--font-display);font-size:28px;font-weight:400;margin:10px 0;">Privacy-First Energy Check-Ins</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:52ch;">Zero surveillance. Crew members log 1-tap energy states that dynamically rebalance sprint story points before burnout hits.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">03 // RITUAL ENGINE</span>
+          <h3 style="font-family:var(--font-display);font-size:28px;font-weight:400;margin:10px 0;">Guided Decompression Transitions</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:52ch;">End-of-day shutdown rituals close open browser loops, capture tomorrow's priorities, and mute work notifications until 09:00.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PLANS SECTION -->
+    <section id="plans-matrix" class="${p}-wrap tabular-nums" aria-labelledby="plansHeading" style="padding-top:16px;">
+      <h2 id="plansHeading" class="${p}-h2">Transparent Crew Plans</h2>
+      <div class="${p}-bento">
+        <article class="${p}-card">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">STARTER POD</span>
+          <h3 style="font-family:var(--font-display);font-size:32px;font-weight:400;margin:6px 0;">$12 <span style="font-size:14px;font-family:var(--font-sans);color:var(--muted);">/ seat / mo</span></h3>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:20px;max-width:48ch;">Core calendar defragmentation, daily shutdown rituals, and Slack rhythm sync.</p>
+          <button type="button" class="${p}-btn-pill ${p}-liquid-glass" style="width:100%;" data-seamless-trigger="Starter Pod Plan ($12/seat)">Start 14-Day Free Trial</button>
+        </article>
+        <article class="${p}-card" style="border-color:rgba(245,158,11,0.5);">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">GROWTH COLLECTIVE • POPULAR</span>
+          <h3 style="font-family:var(--font-display);font-size:32px;font-weight:400;margin:6px 0;">$24 <span style="font-size:14px;font-family:var(--font-sans);color:var(--muted);">/ seat / mo</span></h3>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:20px;max-width:48ch;">Full Jira/Linear load balancing, anonymized burnout radar, and team recovery stipends.</p>
+          <button type="button" class="${p}-btn-pill ${p}-liquid-glass" style="width:100%;" data-seamless-trigger="Growth Collective Plan ($24/seat)">Begin your journey</button>
+        </article>
+        <article class="${p}-card">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">ENTERPRISE OS</span>
+          <h3 style="font-family:var(--font-display);font-size:32px;font-weight:400;margin:6px 0;">Custom</h3>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:20px;max-width:48ch;">Dedicated SSO, custom HRIS integrations, and executive organizational health audits.</p>
+          <button type="button" class="${p}-btn-pill ${p}-liquid-glass" style="width:100%;" data-seamless-trigger="Enterprise Wellbeing OS Consultation">Talk to Architecture Team</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="crew-telemetry" class="${p}-wrap" style="padding-top:32px;padding-bottom:48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);">
+    <span>© 2026 flowpath Inc. Wellbeing OS — Built for sustainable human progress.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent-text);">ALL SYSTEMS CALM • 99.99% UPTIME</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">FLOWPATH ONBOARDING</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-ghost">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:32px;font-weight:400;margin-bottom:10px;">Begin your journey</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;max-width:54ch;">
+        Connect Google Calendar or Microsoft 365 in 60 seconds. Flowpath runs in read-only simulation mode for your first 7 days so you can preview reclaimed focus hours risk-free.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-pill ${p}-liquid-glass" style="width:100%;">Launch Workspace Sandbox</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var range = document.getElementById('crewSizeRange');
+      var sizeLabel = document.getElementById('crewSizeLabel');
+      var hoursOut = document.getElementById('reclaimedHoursOut');
+      var burnoutOut = document.getElementById('burnoutDropOut');
+      var syncOut = document.getElementById('syncScoreOut');
+      var descOut = document.getElementById('rhythmModeDesc');
+      var activeRate = 14.5;
+
+      function recalc() {
+        var crew = range ? parseInt(range.value, 10) : 45;
+        if (sizeLabel) sizeLabel.textContent = crew + ' Members';
+        if (hoursOut) hoursOut.textContent = Math.round(crew * activeRate) + 'h';
+      }
+      if (range) range.addEventListener('input', recalc);
+
+      document.querySelectorAll('.rhythm-preset').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.rhythm-preset').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          activeRate = parseFloat(btn.getAttribute('data-hours') || '14.5');
+          if (burnoutOut) burnoutOut.textContent = btn.getAttribute('data-burnout') || '-42%';
+          if (syncOut) syncOut.textContent = btn.getAttribute('data-sync') || '96%';
+          if (descOut) descOut.textContent = btn.getAttribute('data-desc') || '';
+          recalc();
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 29. PROSTHETICS HERO (Kinetix Bionic — Smart Myoelectric Prosthetics)
+  // ============================================================================
+  if (spec.slug === 'prosthetics-hero') {
+    const heroVideo = spec.heroVideo || 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260508_215831_c6a8989c-d716-4d8d-8745-e972a2eec711.mp4';
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kinetix Bionic — Simple, Smart Prosthetics Made for People Who Keep Fighting</title>
+  <meta name="description" content="Seen on Shark Tank in India. Simple, smart myoelectric prosthetics made for people who keep fighting. Reclaim your movement now." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F0F0EE;
+      --surface: #FFFFFF;
+      --surface-2: #EDEDED;
+      --text: #111827;
+      --muted: #52525B;
+      --accent: #2563EB;
+      --accent-text: #1D4ED8;
+      --border: rgba(17, 24, 39, 0.1);
+      --radius-card: 20px;
+      --font-display: 'Space Grotesk', 'Inter', sans-serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --space-section: clamp(64px, 8vw, 108px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--bg); }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--font-sans); overflow-x: clip; }
+    body { background: var(--bg); color: var(--text); overflow-x: clip; line-height: 1.6; }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--accent); color: #FFFFFF; font-weight: 700; border-radius: 8px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--text); }
+    a, button, input { font-family: inherit; }
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-hero-outer {
+      padding: 10px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .${p}-hero-frame {
+      position: relative;
+      flex: 1;
+      min-height: calc(100vh - 20px);
+      border-radius: 20px;
+      overflow: hidden;
+      background: #18181B;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .${p}-hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .${p}-nav-wrap {
+      position: relative;
+      z-index: 20;
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .${p}-logo-pill {
+      background: #EDEDED;
+      border-radius: 14px;
+      padding: 11px 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #111827;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .${p}-logo-pill:hover { transform: translateY(-2px); }
+    .${p}-links-pill {
+      background: #EDEDED;
+      border-radius: 14px;
+      padding: 12px 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 22px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      flex-wrap: wrap;
+    }
+    .${p}-nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: #374151;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .${p}-nav-link:hover { color: #000000; }
+    .${p}-motion-pill {
+      background: rgba(237, 237, 237, 0.92);
+      border: 1px solid rgba(17, 24, 39, 0.12);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #111827;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .${p}-motion-pill:hover { background: #FFFFFF; }
+    .${p}-motion-pill:active { transform: scale(0.97); }
+
+    .${p}-hero-card {
+      position: relative;
+      z-index: 15;
+      margin: auto auto 24px 24px;
+      width: calc(100% - 48px);
+      max-width: 660px;
+      background: #EDEDED;
+      border-radius: 16px;
+      padding: clamp(24px, 4vw, 44px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    }
+    .${p}-shark-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #E2E2E2;
+      color: #4B5563;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      margin-bottom: 18px;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .${p}-shark-badge:hover { background: #D4D4D8; color: #111827; }
+    .${p}-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.3vw, 3.35rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: #111827;
+      margin-bottom: 14px;
+    }
+    .${p}-sub {
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      color: #6B7280;
+      max-width: 52ch;
+      margin-bottom: 24px;
+    }
+    .${p}-btn-blue {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #2563EB;
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 13px 24px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .${p}-btn-blue:hover { background: #1D4ED8; transform: translateY(-2px); }
+    .${p}-btn-blue:active { transform: translateY(0) scale(0.98); }
+
+    .${p}-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: var(--space-section) clamp(20px, 5vw, 48px);
+    }
+    .${p}-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 3.4vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      margin-bottom: 14px;
+    }
+    .${p}-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 32px;
+    }
+    .${p}-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
+    .${p}-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(17, 24, 39, 0.07);
+    }
+    .${p}-grip-btn {
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .${p}-grip-btn.is-active, .${p}-grip-btn:hover {
+      background: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--accent);
+    }
+    .${p}-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(17, 24, 39, 0.65);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px;
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 900px) {
+      .${p}-grid-3 { grid-template-columns: 1fr; }
+      .${p}-hero-card { margin: auto 12px 12px 12px; width: calc(100% - 24px); }
+    }
+    @media (max-width: 600px) {
+      .${p}-links-pill { gap: 12px; padding: 10px 14px; }
+      .${p}-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(37,99,235,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#2563EB;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-hero-outer">
+    <div class="${p}-hero-frame">
+      <video id="heroBgVideo" class="${p}-hero-video" src="${heroVideo}" autoplay loop muted playsinline preload="auto"></video>
+
+      <header class="${p}-nav-wrap">
+        <a href="#main-content" class="${p}-logo-pill" aria-label="Kinetix Bionic Home">
+          <svg viewBox="0 0 256 256" width="22" height="22" fill="#111827" aria-hidden="true">
+            <path d="M 160 88 L 194 34 L 160 34 L 128 88 L 96 34 L 62 34 L 96 88 L 62 142 L 96 142 L 128 88 L 160 142 L 194 142 Z M 194 166 L 160 166 L 128 220 L 96 166 L 62 166 L 96 222 L 160 222 Z" />
+          </svg>
+        </a>
+        <nav class="${p}-links-pill" aria-label="Primary Navigation">
+          <a href="#story-section" class="${p}-nav-link">Story</a>
+          <a href="#bionic-calibrator" class="${p}-nav-link">Products</a>
+          <a href="#fitting-faq" class="${p}-nav-link">Help</a>
+          <a href="#fitting-clinics" class="${p}-nav-link">Support</a>
+        </nav>
+        <button type="button" id="motionToggleBtn" class="${p}-motion-pill" aria-pressed="false">Motion: ON</button>
+      </header>
+
+      <section class="${p}-hero-card" aria-labelledby="heroTitle">
+        <a href="#story-section" class="${p}-shark-badge">
+          <span>Seen on Shark Tank in India</span>
+          <span aria-hidden="true">→</span>
+        </a>
+        <h1 id="heroTitle" class="${p}-h1">Simple, smart prosthetics made for people who keep fighting.</h1>
+        <p class="${p}-sub">Reclaim your movement now.</p>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-blue" data-magnetic>
+          <span>Try a free fitting</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </section>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ONE LIVE THING: INTERACTIVE MYOELECTRIC GRIP & SOCKET TELEMETRY CALIBRATOR -->
+    <section id="bionic-calibrator" class="${p}-wrap tabular-nums" aria-labelledby="calibHeading">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:600;">LIVE MYOELECTRIC TELEMETRY</span>
+          <h2 id="calibHeading" class="${p}-h2">Adaptive 14-Grip Bionic Hand &amp; Socket Calibrator</h2>
+        </div>
+        <div role="group" aria-label="Myoelectric Grip Modes" style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="${p}-grip-btn is-active" data-grip="Precision Pinch" data-force="18 N" data-latency="9 ms" data-battery="38 hrs" data-note="Micro-step thumb opposition calibrated for buttoning shirts, holding keys, and writing.">Precision Pinch</button>
+          <button type="button" class="${p}-grip-btn" data-grip="Power Cylinder" data-force="112 N" data-latency="11 ms" data-battery="32 hrs" data-note="Full 5-digit wraparound torque lock for lifting gym kettlebells, luggage, and workshop tools.">Power Cylinder</button>
+          <button type="button" class="${p}-grip-btn" data-grip="Tripod Typing" data-force="24 N" data-latency="7 ms" data-battery="42 hrs" data-note="Ultra-fast index-middle-thumb stabilization for keyboard typing, lab pipettes, and utensils.">Tripod Typing</button>
+          <button type="button" class="${p}-grip-btn" data-grip="Active Hook" data-force="135 N" data-latency="10 ms" data-battery="36 hrs" data-note="Passive auto-locking load distribution engineered for cycling handlebars and heavy carrying.">Active Hook</button>
+        </div>
+      </div>
+
+      <div class="${p}-grid-3">
+        <div class="${p}-card" style="grid-column: span 2;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+            <strong id="activeGripTitle" style="font-family:var(--font-display);font-size:22px;">Precision Pinch Mode</strong>
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);background:rgba(37,99,235,0.1);padding:4px 10px;border-radius:6px;">EMG DUAL-CHANNEL ACTIVE</span>
+          </div>
+          <p id="activeGripNote" style="font-size:15px;color:var(--muted);max-width:62ch;margin-bottom:22px;">
+            Micro-step thumb opposition calibrated for buttoning shirts, holding keys, and writing.
+          </p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+            <div style="padding:16px;background:var(--bg);border-radius:14px;">
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">GRIP FORCE</span>
+              <strong id="gripForceVal" style="font-family:var(--font-display);font-size:28px;color:var(--text);">18 N</strong>
+            </div>
+            <div style="padding:16px;background:var(--bg);border-radius:14px;">
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">EMG RESPONSE</span>
+              <strong id="gripLatencyVal" style="font-family:var(--font-display);font-size:28px;color:var(--accent);">9 ms</strong>
+            </div>
+            <div style="padding:16px;background:var(--bg);border-radius:14px;">
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">CYCLE RUNTIME</span>
+              <strong id="gripBatteryVal" style="font-family:var(--font-display);font-size:28px;color:var(--text);">38 hrs</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="${p}-card" style="display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">WEIGHT &amp; WEATHERPROOFING</span>
+            <h3 style="font-family:var(--font-display);font-size:26px;margin:8px 0;">415g Carbon Frame • IP67 Sealed</h3>
+            <p style="font-size:14px;color:var(--muted);max-width:46ch;">Lighter than a smartphone, breathable 3D-scanned silicone liner, and field-serviceable modular fingers.</p>
+          </div>
+          <button type="button" class="${p}-btn-blue" style="width:100%;justify-content:center;margin-top:20px;" data-seamless-trigger="Book Free 3D Socket Scan &amp; Fitting">Try a free fitting →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY & ENGINEERING PILLARS -->
+    <section id="story-section" class="${p}-wrap tabular-nums" aria-labelledby="storyHeading" style="padding-top:16px;">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:600;">WHY WE BUILT KINETIX</span>
+      <h2 id="storyHeading" class="${p}-h2">Bionic Mobility Without the $40,000 Hospital Markup</h2>
+      <div class="${p}-grid-3">
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">01 // DIRECT 3D OPTICAL FIT</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Fitted in 48 Hours, Not 6 Weeks</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:50ch;">Our mobile prosthetists scan your residual limb using sub-millimeter structured light and print custom breathable sockets locally.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">02 // NEURAL MUSCLE LEARNING</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Adapts to Your Signal, Not Vice Versa</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:50ch;">On-board edge AI calibrates to subtle surface EMG muscle twitches in 10 minutes—even through sweat or long workdays.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-tilt-card>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent);">03 // ZERO-DOWNTIME MODULARITY</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Swap Digits in 90 Seconds</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:50ch;">Every knuckle actuator uses a single hex key release, backed by a 3-year no-questions-asked warranty across 28 clinics.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CLINICS & SUPPORT -->
+    <section id="fitting-clinics" class="${p}-wrap tabular-nums" aria-labelledby="clinicHeading" style="padding-top:16px;">
+      <div class="${p}-card" id="fitting-faq" style="background:#111827;color:#FFFFFF;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:#60A5FA;">FREE HOME &amp; CLINIC TRIALS</span>
+          <h2 id="clinicHeading" style="font-family:var(--font-display);font-size:clamp(1.7rem,3vw,2.4rem);margin:8px 0;">Test-Drive Kinetix Bionic With Zero Obligation</h2>
+          <p style="font-size:14px;color:#D1D5DB;max-width:58ch;">Available in Bengaluru, Mumbai, Delhi NCR, Hyderabad, Chennai, and via home tele-fitting kits nationwide. 0% EMI financing available.</p>
+        </div>
+        <button type="button" class="${p}-btn-blue" data-seamless-trigger="Schedule Free Prosthetic Trial Session">Book Free Fitting →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="padding-top:24px;padding-bottom:48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 Kinetix Bionic Labs Pvt. Ltd. ISO 13485 Certified Medical Device.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent);">24/7 PROSTHETIST HELPLINE • 1800-KINETIX</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">FREE BIONIC FITTING</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-motion-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:26px;margin-bottom:10px;">Try a free fitting</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:52ch;">
+        A certified clinical prosthetist will bring a demo bionic hand and 3D optical scanner to your nearest clinic or home at zero cost.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-blue" style="width:100%;justify-content:center;">Confirm Free Fitting Request →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var titleEl = document.getElementById('activeGripTitle');
+      var noteEl = document.getElementById('activeGripNote');
+      var forceEl = document.getElementById('gripForceVal');
+      var latEl = document.getElementById('gripLatencyVal');
+      var batEl = document.getElementById('gripBatteryVal');
+
+      document.querySelectorAll('.${p}-grip-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.${p}-grip-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (titleEl) titleEl.textContent = (btn.getAttribute('data-grip') || '') + ' Mode';
+          if (noteEl) noteEl.textContent = btn.getAttribute('data-note') || '';
+          if (forceEl) forceEl.textContent = btn.getAttribute('data-force') || '';
+          if (latEl) latEl.textContent = btn.getAttribute('data-latency') || '';
+          if (batEl) batEl.textContent = btn.getAttribute('data-battery') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 30. RETRO-FUTURIST (Mainframe® — A.R.I.A. Adaptive Response Interface Agent)
+  // ============================================================================
+  if (spec.slug === 'retro-futurist') {
+    const heroVideo = spec.heroVideo || 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260530_042513_df96a13b-6155-4f6e-8b93-c9dee66fba08.mp4';
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mainframe® — A.R.I.A. Adaptive Response Interface Agent</title>
+  <meta name="description" content="Hey there, meet A.R.I.A, Mainframe's Adaptive Response Interface Agent. Glad you stopped in. Good taste tends to find us. Now, what are we building?" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0A0A0C;
+      --surface: rgba(255, 255, 255, 0.14);
+      --surface-2: rgba(255, 255, 255, 0.08);
+      --text: #FFFFFF;
+      --muted: rgba(255, 255, 255, 0.78);
+      --accent: #F59E0B;
+      --accent-text: #FDE68A;
+      --border: rgba(255, 255, 255, 0.25);
+      --radius-card: 20px;
+      --font-display: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --space-section: clamp(64px, 8vw, 112px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--bg); }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--font-sans); overflow-x: clip; }
+    body { background: var(--bg); color: var(--text); overflow-x: clip; line-height: 1.6; }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: #FFFFFF; color: #0A0A0C; font-weight: 700; border-radius: 8px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--accent); }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-hero {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #0A0A0C;
+    }
+    .${p}-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.84;
+    }
+    .${p}-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10,10,12,0.45) 0%, rgba(10,10,12,0.18) 45%, rgba(10,10,12,0.88) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .${p}-header {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px clamp(20px, 4vw, 40px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .${p}-brand-group {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .${p}-wordmark {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #FFFFFF;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: flex-start;
+    }
+    .${p}-wordmark sup {
+      font-size: 10px;
+      margin-left: 2px;
+      top: -0.4em;
+    }
+    .${p}-comma-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .${p}-comma-link {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .${p}-comma-link:hover { color: var(--accent-text); }
+    .${p}-glass-pill {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      padding: 10px 20px;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .${p}-glass-pill:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+    .${p}-glass-pill:active { transform: scale(0.98); }
+
+    .${p}-stage {
+      position: relative;
+      z-index: 10;
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 32px;
+      padding: clamp(28px, 5vw, 56px) clamp(20px, 4vw, 40px);
+      align-items: end;
+    }
+    .${p}-aria-badge {
+      align-self: start;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 16px;
+      padding: 14px 20px;
+      max-width: 390px;
+      font-size: 14px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.92);
+    }
+    .${p}-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.8vw, 3.15rem);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+    }
+    .${p}-cursor-bar {
+      display: inline-block;
+      width: 2px;
+      height: 0.9em;
+      background: #FFFFFF;
+      margin-left: 4px;
+      vertical-align: middle;
+      animation: ${p}Blink 0.9s steps(2, start) infinite;
+    }
+    @keyframes ${p}Blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .${p}-action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .${p}-bottom-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    .${p}-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: var(--space-section) clamp(20px, 4vw, 40px);
+    }
+    .${p}-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 3.4vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .${p}-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .${p}-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 26px;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    }
+    .${p}-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-text);
+    }
+    .${p}-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 10, 12, 0.84);
+      backdrop-filter: blur(14px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px;
+      width: 100%;
+      background: #141418;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 32px;
+    }
+    @media (max-width: 960px) {
+      .${p}-stage { grid-template-columns: 1fr; }
+      .${p}-grid-4 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .${p}-grid-4 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(253,230,138,0.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FDE68A;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-hero" id="heroScrubContainer">
+    <video id="heroBgVideo" class="${p}-video" src="${heroVideo}" autoplay loop muted playsinline preload="auto"></video>
+    <div class="${p}-overlay" aria-hidden="true"></div>
+
+    <header class="${p}-header">
+      <div class="${p}-brand-group">
+        <a href="#main-content" class="${p}-wordmark" aria-label="Mainframe Home">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px;align-self:center;" aria-hidden="true">
+            <line x1="12" y1="2" x2="12" y2="22" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+            <line x1="19.07" y1="4.93" x2="4.93" y2="19.07" />
+          </svg>
+          Mainframe<sup>®</sup>
+        </a>
+        <nav class="${p}-comma-nav" aria-label="Primary Navigation">
+          <a href="#aria-console" class="${p}-comma-link">Labs,</a>
+          <a href="#studio-matrix" class="${p}-comma-link">Studio,</a>
+          <a href="#studio-matrix" class="${p}-comma-link">Openings,</a>
+          <a href="#studio-matrix" class="${p}-comma-link">Shop</a>
+        </nav>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" class="${p}-glass-pill" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-glass-pill" data-magnetic>Get in touch</button>
+      </div>
+    </header>
+
+    <section class="${p}-stage" aria-labelledby="typewriterHeadline">
+      <div class="${p}-aria-badge">
+        <p>Hey there, meet <strong>A.R.I.A</strong>,<br />Mainframe's Adaptive Response Interface Agent</p>
+        <span id="scrubReadoutText" class="tabular-nums" style="display:block;margin-top:8px;font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">MOUSE SCRUB: 0.8x SENSITIVITY • READY</span>
+      </div>
+
+      <div>
+        <h1 id="typewriterHeadline" class="${p}-h1">
+          <span id="typewriterText">Glad you stopped in. Good taste tends to find us. Now, what are we building?</span><span class="${p}-cursor-bar" aria-hidden="true"></span>
+        </h1>
+
+        <div class="${p}-action-row" role="group" aria-label="A.R.I.A. Prompts">
+          <button type="button" class="${p}-glass-pill aria-prompt-btn" data-response="A.R.I.A. // PITCH MODE: Send us your wildest spatial hardware, AI agent, or brand film brief. We prototype in 10 days." data-scope="01 // VENTURE &amp; PRODUCT LABS">Pitch us an idea</button>
+          <button type="button" class="${p}-glass-pill aria-prompt-btn" data-response="A.R.I.A. // OPENINGS: Hiring Senior Creative Technologists (WebGL/Shaders) &amp; Design Engineers in SF / Tokyo." data-scope="02 // CAREERS &amp; RESIDENCY">Come work here</button>
+          <button type="button" class="${p}-glass-pill aria-prompt-btn" data-response="A.R.I.A. // HELLO RECEIVED: Signal locked. Our partners read every note personally within 24 hours." data-scope="03 // DIRECT TRANSMISSION">Send a brief hello</button>
+          <button type="button" class="${p}-glass-pill aria-prompt-btn" data-response="A.R.I.A. // OPERATING SYSTEM: Small senior pods, zero account managers, weekly shippable artifacts." data-scope="04 // STUDIO DOCTRINE">See how we operate</button>
+        </div>
+
+        <div class="${p}-bottom-bar">
+          <span style="font-size:13px;color:rgba(255,255,255,0.7);display:inline-flex;align-items:center;gap:8px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/><line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/></svg>
+            Have something more specific?
+          </span>
+
+          <button type="button" id="copyEmailPill" class="${p}-glass-pill" aria-label="Copy hello@mainframe.co to clipboard">
+            <span style="color:rgba(255,255,255,0.75);">Reach us:</span>
+            <strong id="copyEmailLabel">hello@mainframe.co</strong>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <main id="main-content">
+    <!-- ONE LIVE THING: A.R.I.A. ADAPTIVE RESPONSE CONSOLE -->
+    <section id="aria-console" class="${p}-wrap tabular-nums" aria-labelledby="ariaConsoleHeading">
+      <div class="${p}-card" style="background:rgba(255,255,255,0.08);backdrop-filter:blur(16px);">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px;">
+          <span id="ariaScopeBadge" style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">01 // VENTURE &amp; PRODUCT LABS</span>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">RETRO-FUTURIST TERMINAL v2.6</span>
+        </div>
+        <h2 id="ariaConsoleHeading" class="${p}-h2" style="margin-bottom:10px;">A.R.I.A. Live Dispatch Output</h2>
+        <p id="ariaLiveOutput" style="font-size:16px;color:var(--text);max-width:66ch;padding:18px;border-radius:14px;background:rgba(0,0,0,0.45);border:1px solid var(--border);">
+          A.R.I.A. // PITCH MODE: Send us your wildest spatial hardware, AI agent, or brand film brief. We prototype in 10 days.
+        </p>
+      </div>
+    </section>
+
+    <!-- STUDIO DIVISIONS -->
+    <section id="studio-matrix" class="${p}-wrap tabular-nums" aria-labelledby="matrixHeading" style="padding-top:0;">
+      <h2 id="matrixHeading" class="${p}-h2">Four Divisions Under One Mainframe®</h2>
+      <div class="${p}-grid-4">
+        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Mainframe Labs — Applied AI &amp; Spatial Prototypes">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">01 // LABS</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Adaptive Interfaces</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:46ch;">Proprietary multimodal agents, tactile hardware controllers, and real-time WebGPU canvases.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Mainframe Studio — Brand &amp; Product Systems">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">02 // STUDIO</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Flagship Launches</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:46ch;">Identity systems, industrial 3D motion films, and high-converting web architecture for category leaders.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Mainframe Openings — Join the Collective">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">03 // OPENINGS</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Senior Craft Pods</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:46ch;">Autonomous engineering and design residencies in San Francisco, New York, and Tokyo.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal" data-tilt-card data-seamless-trigger="Mainframe Shop — Physical Objects &amp; Editions">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">04 // SHOP</span>
+          <h3 style="font-family:var(--font-display);font-size:22px;margin:10px 0;">Hardware Editions</h3>
+          <p style="font-size:14px;color:var(--muted);max-width:46ch;">Limited-run anodized aluminum desk instruments, keycap sets, and technical monographs.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="padding-top:24px;padding-bottom:48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 Mainframe® Corporation. All rights reserved.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent-text);">A.R.I.A. AGENT ONLINE • HELLO@MAINFRAME.CO</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">MAINFRAME® DISPATCH</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-glass-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:26px;margin-bottom:10px;">Initiate A.R.I.A. Project Brief</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:52ch;">
+        Direct partner transmission to hello@mainframe.co. Share your timeline, ambition, and what we are building together.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-glass-pill" style="width:100%;justify-content:center;">Transmit Brief to Mainframe®</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var video = document.getElementById('heroBgVideo');
+      var scrubReadout = document.getElementById('scrubReadoutText');
+      var lastX = null;
+      var SENSITIVITY = 0.8;
+
+      window.addEventListener('mousemove', function (e) {
+        if (lastX === null) { lastX = e.clientX; return; }
+        var deltaX = e.clientX - lastX;
+        lastX = e.clientX;
+        var norm = deltaX / Math.max(1, window.innerWidth);
+        if (video && video.duration && isFinite(video.duration)) {
+          var nextTime = Math.max(0, Math.min(video.duration, video.currentTime + norm * video.duration * SENSITIVITY));
+          video.currentTime = nextTime;
+        }
+        if (scrubReadout) {
+          scrubReadout.textContent = 'MOUSE SCRUB DELTA: ' + (deltaX >= 0 ? '+' : '') + deltaX + 'px • 0.8x SENSITIVITY';
+        }
+      }, { passive: true });
+
+      var out = document.getElementById('ariaLiveOutput');
+      var scope = document.getElementById('ariaScopeBadge');
+      var tw = document.getElementById('typewriterText');
+
+      document.querySelectorAll('.aria-prompt-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var resp = btn.getAttribute('data-response') || '';
+          var sc = btn.getAttribute('data-scope') || '';
+          if (out) out.textContent = resp;
+          if (scope) scope.textContent = sc;
+          if (tw) tw.textContent = resp;
+        });
+      });
+
+      var copyBtn = document.getElementById('copyEmailPill');
+      var copyLabel = document.getElementById('copyEmailLabel');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', function () {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText('hello@mainframe.co').catch(function () {});
+          }
+          if (copyLabel) {
+            copyLabel.textContent = 'Copied: hello@mainframe.co';
+            setTimeout(function () { copyLabel.textContent = 'hello@mainframe.co'; }, 2000);
+          }
+        });
+      }
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
   return null;
 }

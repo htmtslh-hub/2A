@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FOODS — Order Your Favourite Foods • Interactive Gourmet Bowl Showcase</title>
+  <meta name="description" content="Order your favourite foods with live nutritional telemetry, instant Burger ($3.25), Cake ($2.25), and Salad ($5.25) dish switching, and 10–18 minute express dispatch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-2: #262930;
+      --text: #1E2025;
+      --muted: #64748B;
+      --accent: #F59E0B;
+      --accent-text: #B45309;
+      --border: rgba(30, 32, 37, 0.1);
+      --radius-card: 26px;
+      --font-display: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --space-section: clamp(56px, 7vw, 96px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: #FFFFFF; }
+    html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--font-sans); overflow-x: clip; max-width: 100%; }
+    body { background: var(--bg); color: var(--text); overflow-x: clip; max-width: 100%; line-height: 1.6; }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--surface-2); color: #FFFFFF; font-weight: 700; border-radius: 8px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--accent); }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .foo92-stage-shell {
+      max-width: 1320px;
+      margin: 24px auto;
+      background: var(--surface);
+      border-radius: 36px;
+      border: 1px solid var(--border);
+      box-shadow: 0 28px 70px rgba(30, 32, 37, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .foo92-dark-wedge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 44%;
+      height: 100%;
+      background: #262930;
+      border-top-left-radius: 320px;
+      border-bottom-left-radius: 320px;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .foo92-nav {
+      position: relative;
+      z-index: 10;
+      padding: 28px clamp(24px, 4.5vw, 56px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .foo92-brand {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--text);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .foo92-nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .foo92-nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .foo92-nav-link.is-active, .foo92-nav-link:hover { color: var(--text); font-weight: 600; }
+    .foo92-nav-link.is-active::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+      transform: translateX(-50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .foo92-login-pill {
+      background: var(--accent);
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease;
+    }
+    .foo92-login-pill:hover { background: #D97706; transform: translateY(-2px); }
+    .foo92-login-pill:active { transform: scale(0.97); }
+
+    .foo92-hero-grid {
+      position: relative;
+      z-index: 10;
+      padding: 24px clamp(24px, 4.5vw, 56px) 52px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .foo92-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+    }
+    .foo92-h1 strong { font-weight: 700; }
+    .foo92-sub {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 50ch;
+      margin-bottom: 24px;
+    }
+    .foo92-total-line {
+      font-size: 22px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .foo92-total-line strong {
+      font-size: 28px;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .foo92-order-controls {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 42px;
+    }
+    .foo92-stepper {
+      display: inline-flex;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 14px;
+      gap: 14px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+    }
+    .foo92-step-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: none;
+      background: #F1F5F9;
+      color: var(--text);
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .foo92-step-btn:hover { background: var(--accent); color: #FFFFFF; }
+    .foo92-buy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #262930;
+      color: #FFFFFF;
+      border: none;
+      padding: 8px 24px 8px 8px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 16px 32px rgba(38, 41, 48, 0.25);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .foo92-buy-btn:hover { transform: translateY(-2px); }
+    .foo92-buy-btn:active { transform: scale(0.97); }
+    .foo92-buy-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #262930;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .foo92-dish-pills {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .foo92-dish-pill {
+      border: none;
+      border-radius: 26px;
+      padding: 16px 20px;
+      min-width: 118px;
+      text-align: center;
+      color: #FFFFFF;
+      cursor: pointer;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+    }
+    .foo92-dish-pill:hover, .foo92-dish-pill.is-active {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.16);
+    }
+    .foo92-bowl-stage {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .foo92-orange-badge {
+      margin-top: -22px;
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+      color: #FFFFFF;
+      border-radius: 22px;
+      padding: 18px 26px;
+      min-width: 250px;
+      box-shadow: 0 20px 40px rgba(245, 158, 11, 0.32);
+    }
+    .foo92-wrap {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: var(--space-section) clamp(20px, 4.5vw, 48px);
+    }
+    .foo92-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .foo92-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+    }
+    .foo92-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 26px;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .foo92-card:hover { transform: translateY(-4px); }
+    .foo92-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(30, 32, 37, 0.72);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+    .foo92-modal.is-open { display: flex; }
+    .foo92-modal-box {
+      max-width: 500px;
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 26px;
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 960px) {
+      .foo92-dark-wedge { display: none; }
+      .foo92-hero-grid, .foo92-grid-3 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .foo92-stage-shell { margin: 12px; border-radius: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(245,158,11,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#F59E0B;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="foo92-stage-shell">
+    <div class="foo92-dark-wedge" aria-hidden="true"></div>
+
+    <header class="foo92-nav">
+      <a href="#main-content" class="foo92-brand">
+        <span>F</span>
+        <span style="display:inline-block;width:16px;height:16px;border-radius:50%;border:3px solid #F59E0B;"></span>
+        <span style="display:inline-block;width:16px;height:16px;border-radius:50%;border:3px solid #F59E0B;margin-left:-5px;"></span>
+        <span>DS</span>
+      </a>
+      <nav class="foo92-nav-links" aria-label="Primary Navigation">
+        <a href="#main-content" class="foo92-nav-link is-active">Home</a>
+        <a href="#kitchen-telemetry" class="foo92-nav-link">Menu</a>
+        <a href="#kitchen-telemetry" class="foo92-nav-link">Service</a>
+        <a href="#kitchen-telemetry" class="foo92-nav-link">Shop</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button type="button" id="motionToggleBtn" class="foo92-step-btn" style="width:auto;padding:6px 14px;border-radius:999px;font-size:12px;" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="foo92-login-pill">Login</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ONE LIVE THING: INTERACTIVE DISH SWITCHER & REAL-TIME ORDER CALCULATOR -->
+      <section class="foo92-hero-grid tabular-nums" aria-labelledby="heroHeading">
+        <div>
+          <h1 id="heroHeading" class="foo92-h1">Order your<br /><strong>favourite Foods</strong></h1>
+          <p id="activeDishDesc" class="foo92-sub">
+            Char-grilled herb chicken breast, crisp baby romaine, heirloom cherry tomatoes, shaved parmesan, and cold-pressed lemon vinaigrette.
+          </p>
+
+          <p class="foo92-total-line">Total order : <strong id="totalOrderOut">$24.30</strong></p>
+
+          <div class="foo92-order-controls">
+            <div class="foo92-stepper" role="group" aria-label="Order Quantity">
+              <button type="button" id="qtyMinusBtn" class="foo92-step-btn" aria-label="Decrease quantity">−</button>
+              <strong id="qtyValueOut" style="font-size:15px;min-width:18px;text-align:center;">2</strong>
+              <button type="button" id="qtyPlusBtn" class="foo92-step-btn" aria-label="Increase quantity">+</button>
+            </div>
+
+            <button type="button" class="foo92-buy-btn" data-seamless-trigger="Instant Checkout — FOODS Express">
+              <span class="foo92-buy-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </span>
+              <span>Buy Now</span>
+            </button>
+          </div>
+
+          <div class="foo92-dish-pills" role="group" aria-label="Select Featured Dish">
+            <button type="button" class="foo92-dish-pill dish-switch-btn" style="background:#84CC16;" data-name="Burger" data-price="12.15" data-pill="$3.25" data-rating="4.9" data-time="12-16 mins" data-desc="Double smashed Wagyu patty, aged sharp cheddar, house dill pickles, and toasted brioche bun.">
+              <strong style="display:block;font-size:15px;">Burger</strong>
+              <span style="font-size:13px;opacity:0.92;">$ 3.25</span>
+            </button>
+            <button type="button" class="foo92-dish-pill dish-switch-btn" style="background:#EC4899;" data-name="Cake" data-price="9.50" data-pill="$2.25" data-rating="4.8" data-time="8-12 mins" data-desc="Velvety Hokkaido strawberry shortcake layered with Madagascar vanilla chantilly cream.">
+              <strong style="display:block;font-size:15px;">Cake</strong>
+              <span style="font-size:13px;opacity:0.92;">$ 2.25</span>
+            </button>
+            <button type="button" class="foo92-dish-pill dish-switch-btn is-active" style="background:#F59E0B;" data-name="Salad" data-price="12.15" data-pill="$5.25" data-rating="4.7" data-time="10-18 mins" data-desc="Char-grilled herb chicken breast, crisp baby romaine, heirloom cherry tomatoes, shaved parmesan, and cold-pressed lemon vinaigrette.">
+              <strong style="display:block;font-size:15px;">Salad</strong>
+              <span style="font-size:13px;opacity:0.92;">$ 5.25</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="foo92-bowl-stage">
+          <svg viewBox="0 0 360 360" style="width:100%;max-width:330px;height:auto;filter:drop-shadow(0 28px 40px rgba(0,0,0,0.45));" role="img" aria-label="Top-down ceramic gourmet bowl with grilled chicken, greens, cherry tomatoes, and lime">
+            <circle cx="180" cy="180" r="154" fill="#181A20" stroke="#3F4451" stroke-width="8" />
+            <circle cx="180" cy="180" r="132" fill="#232730" />
+            <!-- Fresh Greens -->
+            <circle cx="135" cy="135" r="42" fill="#4D7C0F" />
+            <circle cx="220" cy="128" r="38" fill="#65A30D" />
+            <circle cx="128" cy="215" r="36" fill="#3F6212" />
+            <!-- Grilled Chicken Slices -->
+            <rect x="145" y="148" width="92" height="24" rx="12" transform="rotate(-14 145 148)" fill="#D97706" />
+            <rect x="150" y="176" width="96" height="24" rx="12" transform="rotate(-14 150 176)" fill="#B45309" />
+            <rect x="158" y="204" width="84" height="22" rx="11" transform="rotate(-14 158 204)" fill="#F59E0B" />
+            <!-- Cherry Tomatoes & Seeds -->
+            <circle cx="235" cy="215" r="18" fill="#DC2626" />
+            <circle cx="195" cy="115" r="15" fill="#EF4444" />
+            <circle cx="115" cy="175" r="14" fill="#FBBF24" />
+          </svg>
+
+          <div class="foo92-orange-badge">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+              <strong id="badgeDishName" style="font-size:20px;">Salad</strong>
+              <span style="display:inline-flex;align-items:center;gap:4px;font-size:14px;font-weight:600;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span id="badgeDishRating">4.7</span>
+              </span>
+            </div>
+            <span id="badgeDishTime" style="display:inline-block;background:#262930;color:#FFFFFF;font-size:12px;padding:5px 12px;border-radius:999px;">10 - 18 mins</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- NUTRITIONAL & DISPATCH GUARANTEES -->
+      <section id="kitchen-telemetry" class="foo92-wrap tabular-nums" aria-labelledby="telemetryHeading">
+        <h2 id="telemetryHeading" class="foo92-h2">Precision Cloud Kitchen Standards</h2>
+        <div class="foo92-grid-3">
+          <article class="foo92-card foo92-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">01 // MACRO VERIFIED</span>
+            <h3 style="font-size:20px;margin:8px 0;">42g Lean Protein / Bowl</h3>
+            <p style="font-size:14px;color:var(--muted);max-width:46ch;">Every portion is weighed on smart induction scales for exact calorie and macro consistency.</p>
+          </article>
+          <article class="foo92-card foo92-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">02 // THERMAL SEAL</span>
+            <h3 style="font-size:20px;margin:8px 0;">10–18 Minute Hot Dispatch</h3>
+            <p style="font-size:14px;color:var(--muted);max-width:46ch;">Dual-zone compostable bowls keep grilled proteins piping hot and baby greens crisp at 4°C.</p>
+          </article>
+          <article class="foo92-card foo92-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">03 // ZERO SEED OILS</span>
+            <h3 style="font-size:20px;margin:8px 0;">100% Extra-Virgin Olive &amp; Avocado</h3>
+            <p style="font-size:14px;color:var(--muted);max-width:46ch;">Cold-pressed dressings whisked fresh every morning with organic local micro-herbs.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="foo92-wrap" style="padding-top:16px;padding-bottom:44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 FOODS Gourmet Cloud Kitchens. Freshly plated on demand.</span>
+    <span style="font-family:var(--font-mono);color:var(--accent-text);">AVERAGE DELIVERY • 14 MINS</span>
+  </footer>
+
+  <div id="seamlessModal" class="foo92-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="foo92-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);">FOODS EXPRESS CHECKOUT</span>
+        <button type="button" id="closeSeamlessBtn" class="foo92-step-btn" style="width:auto;padding:6px 14px;border-radius:999px;">Close</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Confirm Your Gourmet Order</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:48ch;">
+        Your order is routed directly to our nearest culinary pod. Live courier GPS tracking starts the moment your bowl is sealed.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="foo92-login-pill" style="width:100%;padding:14px;">Place Order Now</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var qty = 2;
+      var unitPrice = 12.15;
+      var qtyOut = document.getElementById('qtyValueOut');
+      var totalOut = document.getElementById('totalOrderOut');
+      var minusBtn = document.getElementById('qtyMinusBtn');
+      var plusBtn = document.getElementById('qtyPlusBtn');
+      var descOut = document.getElementById('activeDishDesc');
+      var nameOut = document.getElementById('badgeDishName');
+      var rateOut = document.getElementById('badgeDishRating');
+      var timeOut = document.getElementById('badgeDishTime');
+
+      function renderTotal() {
+        if (qtyOut) qtyOut.textContent = String(qty);
+        if (totalOut) totalOut.textContent = '$' + (qty * unitPrice).toFixed(2);
+      }
+      if (minusBtn) {
+        minusBtn.addEventListener('click', function () {
+          qty = Math.max(1, qty - 1);
+          renderTotal();
+        });
+      }
+      if (plusBtn) {
+        plusBtn.addEventListener('click', function () {
+          qty = Math.min(12, qty + 1);
+          renderTotal();
+        });
+      }
+
+      document.querySelectorAll('.dish-switch-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.dish-switch-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          unitPrice = parseFloat(btn.getAttribute('data-price') || '12.15');
+          if (descOut) descOut.textContent = btn.getAttribute('data-desc') || '';
+          if (nameOut) nameOut.textContent = btn.getAttribute('data-name') || 'Salad';
+          if (rateOut) rateOut.textContent = btn.getAttribute('data-rating') || '4.7';
+          if (timeOut) timeOut.textContent = btn.getAttribute('data-time') || '10 - 18 mins';
+          renderTotal();
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.foo92-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

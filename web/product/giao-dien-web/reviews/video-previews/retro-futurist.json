@@ -1,0 +1,38 @@
+{
+  "id": "t183",
+  "slug": "retro-futurist",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-31T00:23:59.899Z",
+  "demo": "/demos/retro-futurist/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d4c25aca34c7",
+  "sha256": "d4c25aca34c7811c65144aaccee103b6468f99089e5542d270bae399b2b29ec6",
+  "demoHtmlSha256": "88d4afa90c808211419732720865ceea91a430116dfd53cb99ed00a4413ccbcd",
+  "demoSha256": "4be8978616d133357e4fc13d271a64e5cc03d29c328c45e23bf2e8fb8492c107",
+  "bytes": 545656,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 967
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\retro-futurist-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\retro-futurist-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\retro-futurist-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\retro-futurist-return.jpg"
+  ]
+}

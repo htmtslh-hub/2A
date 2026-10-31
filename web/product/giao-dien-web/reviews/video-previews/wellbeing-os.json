@@ -1,0 +1,38 @@
+{
+  "id": "t181",
+  "slug": "wellbeing-os",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-31T00:23:04.882Z",
+  "demo": "/demos/wellbeing-os/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d4f5157758fb",
+  "sha256": "d4f5157758fb315d7b973af20f9e6b7dfad957897730cc5501e7667e362e4f4d",
+  "demoHtmlSha256": "4ea50921b7e6046deaf871786e76ce1eec436e35ff9c76efd7c649f7112fbb30",
+  "demoSha256": "238aa57e57d508053a6d6fdbf6809b46e73e513c25130cf3d46d9209cf2ac168",
+  "bytes": 744928,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1650
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellbeing-os-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellbeing-os-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellbeing-os-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellbeing-os-return.jpg"
+  ]
+}

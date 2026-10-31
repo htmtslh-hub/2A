@@ -1,0 +1,38 @@
+{
+  "id": "t185",
+  "slug": "terrarium-deck-studio",
+  "browser": "153.0.8010.12",
+  "date": "2026-10-31T00:24:39.438Z",
+  "demo": "/demos/terrarium-deck-studio/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "5a1f64e54bcb",
+  "sha256": "5a1f64e54bcbfbfbaa9a90b58ab830845e3aa2be72dbbb44a78d3efdde9195a8",
+  "demoHtmlSha256": "6c51cb47c7a565f14b8e0db806c6a363d014793c17f2df3c14bcb39002f3355a",
+  "demoSha256": "6d3388ed07e7bd60c7b47044a227f40a00b2945347d2a2f9fc679e2c51decbd9",
+  "bytes": 505908,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 633
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\terrarium-deck-studio-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\terrarium-deck-studio-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\terrarium-deck-studio-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\terrarium-deck-studio-return.jpg"
+  ]
+}

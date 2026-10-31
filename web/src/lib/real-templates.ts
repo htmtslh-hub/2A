@@ -46,6 +46,49 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t189: {
+    slug: 'film-studio',
+    cat: 'entertainment',
+    group: 'agent',
+    version: '2.5.0',
+    specs: {
+      vi: [
+        ['Định dạng', 'Ứng dụng Desktop Python (Tkinter Studio) + MCP Server (STDIO & HTTP/SSE :3100)'],
+        ['Nền tảng', 'Windows 10 / 11 (Kèm bộ 4 file .bat chạy & kết nối AI 1-Click)'],
+        ['Tự động hóa', '11 Phân hệ (Kịch bản, Đồng nhất nhân vật REF_CHAR, TTS đa luồng, Google Flow/Veo3, FFmpeg)'],
+        ['Bản quyền', 'Khóa theo Mã Máy (FS-XXXX-XXXX-XXXX-XXXX) đồng bộ thời hạn gói trực tiếp trên Web']
+      ],
+      en: [
+        ['Format', 'Python Desktop Studio (Tkinter) + Model Context Protocol Server (STDIO & HTTP/SSE :3100)'],
+        ['Platform', 'Windows 10 / 11 (Includes 4 one-click .bat launchers & AI client connectors)'],
+        ['Automation', '11 Modules (Storyboard, REF_CHAR Consistency, Multi-Engine TTS, Google Flow/Veo3, FFmpeg)'],
+        ['Licensing', 'Hardware Machine ID (FS-XXXX-XXXX-XXXX-XXXX) synced with Web subscription duration']
+      ],
+      zh: [
+        ['格式', 'Python 桌面端工作站 (Tkinter) + MCP 协议服务器 (STDIO & HTTP/SSE :3100)'],
+        ['平台', 'Windows 10 / 11（附带 4 个一键启动与 AI 客户端连接 .bat 脚本）'],
+        ['自动化', '11 大模块（分镜剧本、REF_CHAR 角色一致性、多引擎配音、Google Flow/Veo3、FFmpeg 合成）'],
+        ['授权机制', '硬件机器码 (FS-XXXX-XXXX-XXXX-XXXX) 绑定并与网站订阅时长实时同步']
+      ]
+    },
+    copy: {
+      vi: {
+        name: 'Film Studio Pro — Xưởng Phim AI & MCP Server',
+        desc: 'Phần mềm sản xuất phim & video AI tự động hóa toàn diện (11 phân hệ: Kịch bản phân cảnh, Tạo ảnh đồng nhất nhân vật REF_CHAR, Chuyển ảnh/văn bản thành video qua Google Flow & Veo 3, Phòng thu giọng đọc TTS đa luồng, Cắt ghép xuất phim MP4). Tích hợp sẵn MCP Server (10 công cụ chuẩn JSON-RPC 2.0 qua STDIO & HTTP/SSE :3100) giúp kết nối 1-Click với Claude Desktop, Cursor, Windsurf, Antigravity để điều khiển tự động bằng ngôn ngữ tự nhiên, kèm hệ thống kích hoạt bản quyền theo Mã Máy đồng bộ trực tiếp trên Web.',
+        tags: ['AI Video Studio', 'MCP Server :3100', 'Hardware License']
+      },
+      en: {
+        name: 'Film Studio Pro — AI Video Suite & MCP Server',
+        desc: 'All-in-one autonomous AI film and video production desktop suite featuring 11 specialized modules: Storyboard & Prompt Engineering, REF_CHAR Character Consistency, Image/Text-to-Video via Google Flow & Veo 3, Multi-Thread Neural TTS Studio, and FFmpeg Auto-Assembly. Built-in Model Context Protocol (MCP) Server exposing 10 tools over STDIO and HTTP/SSE (:3100) with 1-click setup for Claude Desktop, Cursor, Windsurf, and Antigravity, secured by Hardware Machine ID licensing synced with your Forge Zone plan.',
+        tags: ['AI Video Studio', 'MCP Server :3100', 'Hardware License']
+      },
+      zh: {
+        name: 'Film Studio Pro — AI 影视工作站与 MCP 服务器',
+        desc: '全流程自动化 AI 影视与视频制作桌面套件，内置 11 大专业模块：分镜剧本与提示词工程、REF_CHAR 跨镜头角色一致性锁脸、Google Flow 与 Veo 3 图生/文生视频、多线程神经网络配音室及 FFmpeg 自动剪辑合成。内置 MCP 协议服务器（STDIO 与 HTTP/SSE :3100 暴露 10 个工具），支持一键接入 Claude Desktop、Cursor、Windsurf 与 Antigravity，并配备与网站套餐时长同步的硬件机器码授权系统。',
+        tags: ['AI 影视工作站', 'MCP 服务器 :3100', '机器码授权']
+      }
+    }
+  },
   t188: {
     slug: 'o2-moonish-cosmic',
     cat: 'commerce',

@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Film Studio Pro v2.5.0 — AI Video Production Suite + MCP Server + Hardware License</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-root: #070b12;
+      --bg-sidebar: #0d131f;
+      --bg-panel: #111827;
+      --bg-card: #161f33;
+      --bg-card-hover: #1c2740;
+      --border: #1e293b;
+      --border-hi: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --cyan: #06b6d4;
+      --emerald: #10b981;
+      --violet: #8b5cf6;
+      --amber: #f59e0b;
+      --rose: #f43f5e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-root);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+
+    /* Top Titlebar */
+    .titlebar {
+      height: 52px;
+      background: linear-gradient(90deg, #090d16 0%, #111827 50%, #090d16 100%);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      flex-shrink: 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #06b6d4, #6366f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      box-shadow: 0 0 18px rgba(6, 182, 212, 0.35);
+    }
+    .brand-title {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .badge-v {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 99px;
+      background: rgba(6, 182, 212, 0.14);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      color: #67e8f9;
+      font-weight: 700;
+    }
+    .brand-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pill-btn {
+      height: 32px;
+      padding: 0 12px;
+      border-radius: 8px;
+      font-size: 11.5px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.18s ease;
+      color: var(--text-main);
+    }
+    .pill-ai {
+      background: rgba(139, 92, 246, 0.15);
+      border-color: rgba(139, 92, 246, 0.4);
+      color: #ddd6fe;
+    }
+    .pill-ai:hover { background: rgba(139, 92, 246, 0.28); }
+    .pill-mcp {
+      background: rgba(6, 182, 212, 0.15);
+      border-color: rgba(6, 182, 212, 0.45);
+      color: #a5f3fc;
+    }
+    .pill-mcp:hover { background: rgba(6, 182, 212, 0.28); }
+    .pill-lic {
+      background: rgba(16, 185, 129, 0.16);
+      border-color: rgba(16, 185, 129, 0.45);
+      color: #a7f3d0;
+    }
+    .pill-lic:hover { background: rgba(16, 185, 129, 0.28); }
+    .dot-live {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      animation: pulse 1.6s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.25); }
+    }
+
+    /* Main Workspace Layout */
+    .workspace {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 238px 1fr 310px;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      padding: 12px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow-y: auto;
+    }
+    .step-group-title {
+      font-size: 9.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cyan);
+      padding: 4px 8px;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+    }
+    .nav-item:hover {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-main);
+    }
+    .nav-item.active {
+      background: linear-gradient(90deg, rgba(6, 182, 212, 0.18), rgba(99, 102, 241, 0.08));
+      border-color: rgba(6, 182, 212, 0.4);
+      color: #ffffff;
+    }
+    .nav-badge {
+      font-size: 9.5px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--text-muted);
+    }
+
+    /* Center Stage */
+    .stage {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.08), transparent 65%);
+    }
+    .stage-header {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(15, 23, 42, 0.6);
+    }
+    .stage-title {
+      font-size: 15px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .stage-desc {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #06b6d4, #3b82f6);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 14px rgba(6, 182, 212, 0.3);
+      transition: transform 0.15s ease;
+    }
+    .btn-primary:hover { transform: translateY(-1px); }
+
+    .stage-body {
+      padding: 16px 20px;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* Pipeline Progress Bar */
+    .pipeline-bar {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .pipe-step {
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 700;
+    }
+    .pipe-step.done {
+      border-color: rgba(16, 185, 129, 0.45);
+      background: rgba(16, 185, 129, 0.1);
+      color: #a7f3d0;
+    }
+    .pipe-step.running {
+      border-color: rgba(6, 182, 212, 0.55);
+      background: rgba(6, 182, 212, 0.14);
+      color: #67e8f9;
+    }
+
+    /* Scene Grid */
+    .scene-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .scene-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s ease;
+    }
+    .scene-card:hover { border-color: var(--cyan); }
+    .scene-visual {
+      height: 118px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 10px;
+      background-size: cover;
+      background-position: center;
+    }
+    .scene-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(7,11,18,0.15) 0%, rgba(7,11,18,0.88) 100%);
+    }
+    .scene-overlay {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .scene-tag {
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: rgba(6, 182, 212, 0.22);
+      border: 1px solid rgba(6, 182, 212, 0.5);
+      color: #a5f3fc;
+    }
+    .char-locks {
+      display: flex;
+      gap: 4px;
+    }
+    .char-pill {
+      font-size: 9.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(139, 92, 246, 0.25);
+      border: 1px solid rgba(139, 92, 246, 0.5);
+      color: #ddd6fe;
+      font-weight: 700;
+    }
+    .scene-content {
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .scene-prompt {
+      font-size: 11px;
+      color: #cbd5e1;
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .scene-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10.5px;
+      color: var(--text-muted);
+      padding-top: 4px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Right Inspector: MCP + License Live Telemetry */
+    .inspector {
+      background: var(--bg-sidebar);
+      border-left: 1px solid var(--border);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow-y: auto;
+    }
+    .panel-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .panel-heading {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .kv-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.06);
+    }
+    .kv-label { color: var(--text-muted); }
+    .kv-val { font-weight: 700; color: var(--text-main); }
+
+    .mcp-log {
+      background: #05080f;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 9px;
+      font-size: 10.5px;
+      line-height: 1.5;
+      color: #93c5fd;
+      height: 155px;
+      overflow-y: auto;
+    }
+    .mcp-log div { margin-bottom: 4px; }
+    .log-ok { color: #34d399; }
+    .log-warn { color: #fbbf24; }
+
+    /* Modal Overlay for MCP & License Key */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 7, 13, 0.78);
+      backdrop-filter: blur(5px);
+      z-index: 50;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-box {
+      width: 100%;
+      max-width: 620px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.65);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .modal-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .close-btn {
+      background: rgba(255,255,255,0.08);
+      border: none;
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .input-box {
+      width: 100%;
+      background: #070b12;
+      border: 1px solid #334155;
+      color: #67e8f9;
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Titlebar -->
+  <header class="titlebar">
+    <div class="brand">
+      <div class="brand-logo">🎬</div>
+      <div>
+        <div class="brand-title">
+          FILM STUDIO PRO
+          <span class="badge-v">v2.5.0 FULL SOURCE</span>
+        </div>
+        <div class="brand-sub">Xưởng Sản Xuất Phim AI Tự Động • 11 Phân Hệ • Chuẩn MCP Server &amp; Hardware License</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="pill-btn pill-ai" onclick="switchMode('ai')">
+        🤖 AI Engine: Gemini 2.5 + DeepSeek V3
+      </button>
+      <button class="pill-btn pill-mcp" onclick="openModal('mcpModal')">
+        <span class="dot-live"></span>
+        🔌 MCP Server :3100 (10 Tools)
+      </button>
+      <button class="pill-btn pill-lic" onclick="openModal('licenseModal')">
+        🔑 Bản Quyền: ULTRA ACTIVE (365 Ngày)
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <div class="workspace">
+    <!-- Left Sidebar (3 Steps / 11 Modules) -->
+    <aside class="sidebar">
+      <div class="step-group-title">Bước 1 • Kịch Bản &amp; Âm Thanh</div>
+      <div class="nav-item active" onclick="selectTab(this, '1a')">
+        <span>📝 1a. Kịch Bản &amp; Prompt</span>
+        <span class="nav-badge">AI</span>
+      </div>
+      <div class="nav-item" onclick="selectTab(this, '1b')">
+        <span>🔍 1b. Chuẩn Hóa Prompt</span>
+        <span class="nav-badge">JSON</span>
+      </div>
+      <div class="nav-item" onclick="selectTab(this, '1c')">
+        <span>🎙️ 1c. Phòng Thu Giọng Đọc</span>
+        <span class="nav-badge">TTS</span>
+      </div>
+
+      <div class="step-group-title" style="margin-top:6px;">Bước 2 • Khởi Tạo Ảnh &amp; Video</div>
+      <div class="nav-item" onclick="selectTab(this, '2a')">
+        <span>🖼️ 2a. Tạo Ảnh Đồng Nhất</span>
+        <span class="nav-badge">REF</span>
+      </div>
+      <div class="nav-item" onclick="selectTab(this, '2b')">
+        <span>🎬 2b. Ảnh Thành Video (I2V)</span>
+        <span class="nav-badge">VEO3</span>
+      </div>
+      <div class="nav-item" onclick="selectTab(this, '2c')">
+        <span>⚡ 2c. Prompt Thành Video</span>
+        <span class="nav-badge">FLOW</span>
+      </div>
+      <div class="nav-item" onclick="selectTab(this, '2d')">
+        <span>🎞️ 2d. Văn Bản Thành Video</span>
+        <span class="nav-badge">T2V</span>
+      </div>
+      <div class="nav-item" onclick="selectTab(this, '2e')">
+        <span>🎭 2e. Nhân Vật Muse AI</span>
+        <span class="nav-badge">MUSE</span>
+      </div>
+      <div class="nav-item" onclick="selectTab(this, '2f')">
+        <span>🚀 2f. Google Flow Ultra</span>
+        <span class="nav-badge">CDP</span>
+      </div>
+
+      <div class="step-group-title" style="margin-top:6px;">Bước 3 • Hậu Kỳ &amp; Quản Trị</div>
+      <div class="nav-item" onclick="selectTab(this, '3a')">
+        <span>✂️ 3a. Cắt Ghép &amp; Xuất Phim</span>
+        <span class="nav-badge">MP4</span>
+      </div>
+      <div class="nav-item" onclick="selectTab(this, '3b')">
+        <span>⚙️ 3b. Cấu Hình Tài Khoản</span>
+        <span class="nav-badge">CFG</span>
+      </div>
+    </aside>
+
+    <!-- Center Stage -->
+    <main class="stage">
+      <div class="stage-header">
+        <div>
+          <div class="stage-title" id="stageTitle">
+            <span>🎬</span> Dây Chuyền Sản Xuất Phim AI Đồng Nhất Nhân Vật (Auto-Pipeline)
+          </div>
+          <div class="stage-desc" id="stageDesc">
+            Tự động hóa khép kín từ Ý tưởng → Kịch bản phân cảnh → Khóa mặt nhân vật REF_CHAR → Lồng tiếng TTS → Ghép MP4
+          </div>
+        </div>
+        <button class="btn-primary" onclick="triggerAutoPipeline()">
+          ⚡ Chạy Tự Động Qua MCP (:3100)
+        </button>
+      </div>
+
+      <div class="stage-body">
+        <!-- 4-Stage Pipeline Status -->
+        <div class="pipeline-bar">
+          <div class="pipe-step done" id="pStep1">
+            <span>✅</span>
+            <div>
+              <div>1. Kịch Bản &amp; Prompt</div>
+              <div style="font-size:10px;opacity:0.75;">4 Phân cảnh • Chuẩn Veo3</div>
+            </div>
+          </div>
+          <div class="pipe-step done" id="pStep2">
+            <span>✅</span>
+            <div>
+              <div>2. Đồng Nhất Nhân Vật</div>
+              <div style="font-size:10px;opacity:0.75;">Khóa REF_CHAR_01 &amp; 02</div>
+            </div>
+          </div>
+          <div class="pipe-step running" id="pStep3">
+            <span>⚡</span>
+            <div>
+              <div>3. Lồng Tiếng &amp; Render I2V</div>
+              <div style="font-size:10px;opacity:0.75;">Hoài My Neural • 1080p</div>
+            </div>
+          </div>
+          <div class="pipe-step done" id="pStep4">
+            <span>🎬</span>
+            <div>
+              <div>4. Xuất Phim Hoàn Chỉnh</div>
+              <div style="font-size:10px;opacity:0.75;">FFmpeg Auto-Muxing</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Storyboard Scenes -->
+        <div class="scene-grid">
+          <div class="scene-card">
+            <div class="scene-visual" style="background-image: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #083344 100%);">
+              <div class="scene-overlay">
+                <span class="scene-tag mono">SCENE #01 • 00:00 → 00:08</span>
+                <div class="char-locks">
+                  <span class="char-pill mono">REF_CHAR_01</span>
+                  <span class="char-pill mono">16:9 4K</span>
+                </div>
+              </div>
+            </div>
+            <div class="scene-content">
+              <div class="scene-prompt">
+                <strong>[Góc máy Wide Establishing Shot]:</strong> Thám tử Kaito đứng dưới ánh đèn Neon tím xanh tại ga tàu điện ngầm Tokyo năm 2089, mưa phản chiếu trên áo khoác da đen, camera dolly in chậm.
+              </div>
+              <div class="scene-footer">
+                <span>🎙️ TTS: "Mọi dấu vết đều dẫn về tầng ngầm số 9..."</span>
+                <span style="color:#34d399;font-weight:700;">● ĐÃ KẾT XUẤT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="scene-card">
+            <div class="scene-visual" style="background-image: linear-gradient(135deg, #1e1b4b 0%, #31102f 55%, #0f172a 100%);">
+              <div class="scene-overlay">
+                <span class="scene-tag mono">SCENE #02 • 00:08 → 00:16</span>
+                <div class="char-locks">
+                  <span class="char-pill mono">REF_CHAR_01</span>
+                  <span class="char-pill mono">REF_CHAR_02</span>
+                </div>
+              </div>
+            </div>
+            <div class="scene-content">
+              <div class="scene-prompt">
+                <strong>[Góc máy Over-The-Shoulder]:</strong> Aria mở bản đồ Hologram màu lục bảo trên bàn điều khiển, ánh sáng quét qua khuôn mặt đồng nhất tỷ lệ 99.4% với ảnh gốc tham chiếu.
+              </div>
+              <div class="scene-footer">
+                <span>🎙️ TTS: "Hệ thống khóa sinh trắc học vừa được kích hoạt."</span>
+                <span style="color:#34d399;font-weight:700;">● ĐÃ KẾT XUẤT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="scene-card">
+            <div class="scene-visual" style="background-image: linear-gradient(135deg, #042f2e 0%, #0f172a 60%, #1e293b 100%);">
+              <div class="scene-overlay">
+                <span class="scene-tag mono">SCENE #03 • 00:16 → 00:24</span>
+                <div class="char-locks">
+                  <span class="char-pill mono">REF_CHAR_02</span>
+                  <span class="char-pill mono">FLOW ULTRA</span>
+                </div>
+              </div>
+            </div>
+            <div class="scene-content">
+              <div class="scene-prompt">
+                <strong>[Góc máy Tracking Action Shot]:</strong> Drone an ninh bay dọc hành lang kính cường lực, tia laser đỏ quét ngang màn đêm, chuyển động mượt 60fps từ Google Flow I2V.
+              </div>
+              <div class="scene-footer">
+                <span>🎙️ TTS: "Chúng ta chỉ còn đúng 90 giây trước khi cổng đóng!"</span>
+                <span style="color:#38bdf8;font-weight:700;">⚡ ĐANG GHÉP AUDIO</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="scene-card">
+            <div class="scene-visual" style="background-image: linear-gradient(135deg, #172554 0%, #090d16 60%, #064e3b 100%);">
+              <div class="scene-overlay">
+                <span class="scene-tag mono">SCENE #04 • 00:24 → 00:32</span>
+                <div class="char-locks">
+                  <span class="char-pill mono">REF_CHAR_01</span>
+                  <span class="char-pill mono">FINAL CUT</span>
+                </div>
+              </div>
+            </div>
+            <div class="scene-content">
+              <div class="scene-prompt">
+                <strong>[Góc máy Cinematic Close-up]:</strong> Cánh cổng lõi trung tâm mở ra tràn ngập ánh sáng trắng kim cương, nhạc nền cao trào hòa quyện cùng giọng đọc thuyết minh tự nhiên.
+              </div>
+              <div class="scene-footer">
+                <span>🎞️ Output: final_movie_cyber_tokyo_1080p.mp4</span>
+                <span style="color:#34d399;font-weight:700;">● SẴN SÀNG XUẤT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right Inspector -->
+    <aside class="inspector">
+      <!-- Hardware License Status Card -->
+      <div class="panel-card">
+        <div class="panel-heading" style="color:#34d399;">
+          <span>🔑 Bản Quyền Theo Mã Máy</span>
+          <span class="mono" style="font-size:10px;">HMAC-SHA256</span>
+        </div>
+        <div class="kv-row">
+          <span class="kv-label">Mã Máy (HWID)</span>
+          <span class="kv-val mono" style="color:#67e8f9;">FS-8F60-CA8C-3C31-0334</span>
+        </div>
+        <div class="kv-row">
+          <span class="kv-label">Gói Thuê Bao</span>
+          <span class="kv-val" style="color:#34d399;">ULTRA MEMBERSHIP</span>
+        </div>
+        <div class="kv-row">
+          <span class="kv-label">Thời Hạn Gói</span>
+          <span class="kv-val">Còn 365 Ngày (Tự động ĐB)</span>
+        </div>
+        <button class="pill-btn pill-lic" style="width:100%;justify-content:center;margin-top:4px;" onclick="openModal('licenseModal')">
+          🔄 Đồng Bộ &amp; Quản Lý Mã Kích Hoạt
+        </button>
+      </div>
+
+      <!-- MCP Server Status Card -->
+      <div class="panel-card">
+        <div class="panel-heading" style="color:#38bdf8;">
+          <span>🔌 Giao Thức MCP Server</span>
+          <span class="mono" style="font-size:10px;">PORT :3100</span>
+        </div>
+        <div class="kv-row">
+          <span class="kv-label">STDIO &amp; HTTP/SSE</span>
+          <span class="kv-val" style="color:#34d399;">● ĐANG CHẠY</span>
+        </div>
+        <div class="kv-row">
+          <span class="kv-label">AI Đã Kết Nối</span>
+          <span class="kv-val">Claude • Cursor • Antigravity</span>
+        </div>
+        <div class="kv-row">
+          <span class="kv-label">Công Cụ Phơi Bày</span>
+          <span class="kv-val mono">10 MCP Tools</span>
+        </div>
+        <button class="pill-btn pill-mcp" style="width:100%;justify-content:center;margin-top:4px;" onclick="openModal('mcpModal')">
+          ⚡ Cài Đặt 1-Click Cho AI Client
+        </button>
+      </div>
+
+      <!-- Real-Time MCP JSON-RPC Stream -->
+      <div class="panel-card" style="flex:1;">
+        <div class="panel-heading" style="color:#c084fc;">
+          <span>📡 Nhật Ký Điều Phối MCP</span>
+          <span class="mono" style="font-size:9.5px;">JSON-RPC 2.0</span>
+        </div>
+        <div class="mcp-log mono" id="mcpConsole">
+          <div class="log-ok">[21:00:01] ✔ License Gate PASS (HWID: FS-8F60-CA8C-3C31-0334)</div>
+          <div>[21:00:02] → tools/call: film_studio_generate_storyboard</div>
+          <div class="log-ok">[21:00:04] ✔ Sinh 4 phân cảnh + khóa 2 nhân vật REF_CHAR</div>
+          <div>[21:00:05] → tools/call: film_studio_synthesize_voice</div>
+          <div class="log-ok">[21:00:07] ✔ Phòng thu TTS xuất 4 tệp MP3 (Hoài My Neural)</div>
+          <div>[21:00:08] → tools/call: film_studio_assemble_video</div>
+          <div class="log-ok">[21:00:11] ✔ Xuất bản final_movie_1080p.mp4 (32.0s)</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Modal 1: MCP 1-Click Connector -->
+  <div class="modal-backdrop" id="mcpModal">
+    <div class="modal-box">
+      <div class="modal-top">
+        <div style="font-size:15px;font-weight:800;color:#67e8f9;">
+          🔌 Trung Tâm Kết Nối MCP Server 1-Click (STDIO &amp; HTTP/SSE :3100)
+        </div>
+        <button class="close-btn" onclick="closeModal('mcpModal')">✕</button>
+      </div>
+      <p style="font-size:12px;color:#94a3b8;line-height:1.5;">
+        Cho phép Claude Desktop, Cursor, Windsurf, Cline, Antigravity hoặc n8n/Make tự động điều khiển toàn bộ 11 phân hệ sản xuất phim chỉ bằng 1 câu lệnh tự nhiên.
+      </p>
+      <div class="kv-row">
+        <span class="kv-label">HTTP/SSE Endpoint</span>
+        <span class="kv-val mono" style="color:#38bdf8;">http://127.0.0.1:3100/sse</span>
+      </div>
+      <div class="kv-row">
+        <span class="kv-label">10 Công Cụ MCP</span>
+        <span class="kv-val mono">status,activate_license,storyboard,prompts,tts,character,video,assemble,auto_pipeline,job</span>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button class="btn-primary" onclick="simulateMcpInstall()">🚀 Cài Tự Động Vào Claude / Cursor / Windsurf</button>
+        <button class="pill-btn pill-mcp" onclick="closeModal('mcpModal')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Hardware Machine ID License Activation -->
+  <div class="modal-backdrop" id="licenseModal">
+    <div class="modal-box">
+      <div class="modal-top">
+        <div style="font-size:15px;font-weight:800;color:#34d399;">
+          🔑 Quản Lý Bản Quyền Theo Mã Máy (Hardware Machine ID)
+        </div>
+        <button class="close-btn" onclick="closeModal('licenseModal')">✕</button>
+      </div>
+      <p style="font-size:12px;color:#94a3b8;line-height:1.5;">
+        Mỗi máy tính có một Mã Máy độc lập. Khách hàng sao chép Mã Máy bên dưới và dán vào cổng <strong>forgezone.store/kich-hoat</strong> (hoặc bấm Đồng Bộ Online) để nhận khóa kích hoạt theo đúng thời hạn gói đã mua trên Web.
+      </p>
+      <div>
+        <div style="font-size:11px;color:#94a3b8;margin-bottom:4px;">1. Mã Máy Của Thiết Bị Này (Hardware Machine ID):</div>
+        <input class="input-box mono" readonly value="FS-8F60-CA8C-3C31-0334" />
+      </div>
+      <div>
+        <div style="font-size:11px;color:#94a3b8;margin-bottom:4px;">2. Mã Kích Hoạt Bản Quyền (Forge Zone License Key):</div>
+        <input class="input-box mono" id="licKeyInput" value="FZKEY-ULTRA-8F60CA8C3C310334-20271031-8A4FD912C3E07B19F5E1204A" />
+      </div>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button class="btn-primary" style="background:linear-gradient(135deg,#10b981,#059669);" onclick="verifyDemoLicense()">
+          ✅ Kích Hoạt &amp; Đồng Bộ Thời Hạn Từ Web
+        </button>
+        <button class="pill-btn pill-lic" onclick="closeModal('licenseModal')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tabMeta = {
+      '1a': ['📝 1a. Kịch Bản & Prompt Điện Ảnh', 'Khởi tạo cốt truyện, chia phân cảnh và viết Prompt Veo3/Sora tự động bằng Gemini 2.5 & DeepSeek'],
+      '1b': ['🔍 1b. Chuẩn Hóa & Kiểm Duyệt Prompt', 'Tự động chuẩn hóa cấu trúc JSON, kiểm tra tính nhất quán nhân vật và lọc từ khóa nhạy cảm'],
+      '1c': ['🎙️ 1c. Phòng Thu Giọng Đọc AI Đa Luồng', 'Tổng hợp giọng đọc thuyết minh tự nhiên (Edge Neural, OpenSpeaker, ElevenLabs, Google Vids TTS)'],
+      '2a': ['🖼️ 2a. Tạo Ảnh Đồng Nhất Nhân Vật (REF_CHAR)', 'Khóa khuôn mặt và trang phục nhân vật xuyên suốt hàng trăm phân cảnh liên tiếp'],
+      '2b': ['🎬 2b. Chuyển Ảnh Thành Video (Image-to-Video)', 'Biến ảnh phân cảnh tĩnh thành chuyển động điện ảnh mượt mà qua Google Flow / Veo 3'],
+      '2c': ['⚡ 2c. Prompt Thành Video Hàng Loạt', 'Đẩy hàng loạt Prompt phân cảnh vào luồng kết xuất đa tài khoản tự động'],
+      '2d': ['🎞️ 2d. Văn Bản Thành Video Trực Tiếp (Text-to-Video)', 'Sinh video trực tiếp từ kịch bản văn bản với hiệu ứng chuyển động camera chuẩn Hollywood'],
+      '2e': ['🎭 2e. Nhân Vật Muse AI & Biểu Cảm', 'Đồng bộ khẩu hình và diễn xuất nhân vật nói chuyện theo file thu âm'],
+      '2f': ['🚀 2f. Google Flow Ultra (CDP Browser Engine)', 'Tự động hóa trình duyệt đa luồng kết nối trực tiếp tài khoản Google AI Ultra'],
+      '3a': ['✂️ 3a. Cắt Ghép, Lồng Nhạc & Xuất Phim MP4', 'Tự động ghép các phân cảnh video, khớp thời lượng giọng đọc TTS và xuất file MP4 Full HD'],
+      '3b': ['⚙️ 3b. Cấu Hình Tài Khoản & Khóa Bản Quyền', 'Quản lý API Key đa hãng (Gemini/OpenAI/DeepSeek), cổng MCP :3100 và khóa bản quyền theo Mã Máy']
+    };
+
+    function selectTab(el, code) {
+      document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+      el.classList.add('active');
+      const meta = tabMeta[code];
+      if (meta) {
+        document.getElementById('stageTitle').innerHTML = meta[0];
+        document.getElementById('stageDesc').innerText = meta[1];
+        appendLog(`[UI] Chuyển sang phân hệ ${meta[0]}`);
+      }
+    }
+
+    function appendLog(msg, cls = '') {
+      const box = document.getElementById('mcpConsole');
+      const div = document.createElement('div');
+      if (cls) div.className = cls;
+      const now = new Date().toTimeString().slice(0, 8);
+      div.textContent = `[${now}] ${msg}`;
+      box.appendChild(div);
+      box.scrollTop = box.scrollHeight;
+    }
+
+    function triggerAutoPipeline() {
+      appendLog('→ MCP tools/call: film_studio_auto_produce_pipeline', 'log-warn');
+      setTimeout(() => appendLog('✔ Bước 1: Sinh 4 phân cảnh + khóa nhân vật REF_CHAR_01', 'log-ok'), 450);
+      setTimeout(() => appendLog('✔ Bước 2: Phòng thu TTS hoàn tất 4 file thuyết minh', 'log-ok'), 950);
+      setTimeout(() => appendLog('✔ Bước 3: Xuất bản phim hoàn chỉnh final_movie_1080p.mp4', 'log-ok'), 1500);
+    }
+
+    function openModal(id) {
+      document.getElementById(id).classList.add('open');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
+    }
+    function simulateMcpInstall() {
+      appendLog('✔ Đã ghi cấu hình MCP film-studio vào Claude, Cursor, Windsurf & Antigravity!', 'log-ok');
+      closeModal('mcpModal');
+    }
+    function verifyDemoLicense() {
+      appendLog('✔ Xác thực chữ ký HMAC-SHA256 hợp lệ: Gói ULTRA (Còn 365 ngày)', 'log-ok');
+      closeModal('licenseModal');
+    }
+    function switchMode() {
+      appendLog('🤖 Đã chuyển chế độ điều phối Multi-LLM (Gemini 2.5 Flash + DeepSeek V3)', 'log-ok');
+    }
+
+    // Auto-showcase animation for preview recording & visitors
+    setTimeout(() => openModal('licenseModal'), 3600);
+    setTimeout(() => {
+      verifyDemoLicense();
+      openModal('mcpModal');
+    }, 7500);
+    setTimeout(() => {
+      simulateMcpInstall();
+      triggerAutoPipeline();
+    }, 11200);
+  </script>
+</body>
+</html>

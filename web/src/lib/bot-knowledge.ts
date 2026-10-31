@@ -672,7 +672,7 @@ function searchTemplatesByQuery(query: string, lang: LangCode): Array<{ id: stri
   }
 
   let targetGroup: 'web' | 'skill-prompt' | 'agent' | null = null;
-  if (hasWholePhrase(qNorm, 'lingoglass') || hasWholePhrase(qNorm, 'agent') || hasWholePhrase(qNorm, 'player')) {
+  if (hasWholePhrase(qNorm, 'lingoglass') || hasWholePhrase(qNorm, 'film studio') || hasWholePhrase(qNorm, 'film-studio') || hasWholePhrase(qNorm, 'mcp') || hasWholePhrase(qNorm, 'agent') || hasWholePhrase(qNorm, 'player')) {
     targetGroup = 'agent';
   } else if (hasWholePhrase(qNorm, 'skill') || hasWholePhrase(qNorm, 'masterprompt')) {
     targetGroup = 'skill-prompt';

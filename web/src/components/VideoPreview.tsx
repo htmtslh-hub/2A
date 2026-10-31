@@ -80,7 +80,7 @@ export default function VideoPreview({ src, poster, fit, label, controls = false
   </span>;
   return <span ref={box} data-recorded-preview="" style={{ display: 'block', position: 'absolute', inset: 0 }}>
     {/* eslint-disable-next-line @next/next/no-img-element */}
-    <img className="product-stage__image" src={poster} alt={label} style={{ ...mediaStyle, objectFit: /\/(?:solenne|lingoglass)\.webp/.test(poster) ? 'contain' : mediaStyle.objectFit }} />
+    <img className="product-stage__image" src={poster} alt={label} style={{ ...mediaStyle, objectFit: /\/(?:solenne|lingoglass|film-studio)\.webp/.test(poster) ? 'contain' : mediaStyle.objectFit }} />
     <video ref={video} poster={poster} muted loop playsInline preload="none" aria-label={label} tabIndex={-1}
       style={{ ...mediaStyle, objectFit: 'contain', background: '#111', opacity: ready ? 1 : 0, pointerEvents: fullscreen ? 'auto' : 'none' }}
       onPlaying={() => { setReady(true); setPlaying(true); }} onPause={() => setPlaying(false)}

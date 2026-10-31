@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { templateName } from '@/lib/catalog';
 import styles from './admin.module.css';
 import Icon from './icons';
+import AdminLicenseGenerator from './license-generator';
 import { createAdminMotion, type AdminMotion } from './motion';
 
 type Section = 'overview' | 'users' | 'orders' | 'traffic' | 'audit';
@@ -228,6 +229,7 @@ export default function Dashboard({ name }: { name: string }) {
             <Metric label="Doanh thu USD" value={summary.revenue.find(r => r.currency === 'USD')?._sum.amount ?? 0} format={usd} sub="Tách riêng tiền tệ · Chưa trừ phí" motion={motion} icon="store" />
           </div>}
           {!summary.tracking && <div className={styles.notice}>Thu thập truy cập đang tắt. Bật ANALYTICS_ENABLED sau khi áp dụng migration để bắt đầu ghi nhận dữ liệu.</div>}
+          <AdminLicenseGenerator />
           <TemplateDownloads summary={summary} />
           <section data-reveal className={`${styles.panel} ${styles.chartPanel}`}><div className={styles.panelHeading}><div><h2>Lưu lượng truy cập</h2><p>{integer(summary.views)} lượt xem · {integer(summary.sessions)} phiên / {days} ngày</p></div><div className={styles.chartControls}><span className={styles.legend}><i /> Lượt xem</span><div className={styles.periods} aria-label="Khoảng ngày biểu đồ">{[7,30,90].map(d => <button key={d} aria-label={`Biểu đồ ${d} ngày`} aria-pressed={days === d} onClick={() => { setDays(d); setPage(1); }}>{d}N</button>)}</div></div></div><TrafficChart data={summary.chart} motion={motion} />
             {summary.views === 0 && <p className={styles.chartEmpty}>Chưa có lượt xem được ghi nhận trong khoảng này.</p>}

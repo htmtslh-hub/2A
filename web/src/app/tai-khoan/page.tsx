@@ -14,6 +14,8 @@ import { isAdminEmail } from '@/lib/admin-access';
 import { membershipState } from '@/lib/memberships';
 import { membershipName } from '@/lib/membership-policy';
 import { MEMBERSHIP_COPY } from '@/lib/membership-copy';
+import { getUserLicenseEntitlement, listUserActivatedMachines } from '@/lib/license-key';
+import LicenseKeyPortal from '@/components/LicenseKeyPortal';
 
 export const dynamic = 'force-dynamic';
 
@@ -71,11 +73,13 @@ export default async function AccountPage() {
     </div></main>;
   }
 
-  const [user, purchases, savedItems, membership] = await Promise.all([
+  const [user, purchases, savedItems, membership, licenseEntitlement, activatedMachines] = await Promise.all([
     prisma.user.findUnique({ where: { id: userId }, select: { name: true, email: true, image: true, createdAt: true } }),
     prisma.purchase.findMany({ where: { userId }, orderBy: { createdAt: 'desc' }, select: { id: true, templateId: true, createdAt: true } }),
     prisma.savedTemplate.findMany({ where: { userId }, orderBy: { createdAt: 'desc' }, select: { id: true, templateId: true, createdAt: true } }),
     membershipState(userId),
+    getUserLicenseEntitlement(userId),
+    listUserActivatedMachines(userId),
   ]);
   if (!user) return <main className={styles.shell}><div className={styles.loginPrompt}><h1>{t.loginTitle}</h1><Link className={styles.primary} href="/?login=1&next=account">{t.login}</Link></div></main>;
 
@@ -110,6 +114,21 @@ export default async function AccountPage() {
         </div>
         {membership.periods.filter(period => period.startsAt > new Date() && period.id !== plan?.id).map(period => <p key={period.id}>{m.scheduled}: {membershipName(period.plan)} · {m.starts}: {formatTerm(period.startsAt)} · {m.until}: {formatTerm(period.expiresAt)}</p>)}
         <p>{m.policy}</p><p>{m.renewal}</p>
+      </section>
+
+      <section className={styles.section}>
+        <LicenseKeyPortal
+          lang={lang}
+          initialEntitlement={{
+            eligible: licenseEntitlement.eligible,
+            plan: licenseEntitlement.plan,
+            expiresAtTs: licenseEntitlement.expiresAtTs,
+            maxMachines: licenseEntitlement.maxMachines,
+            email: licenseEntitlement.email,
+            reason: licenseEntitlement.reason,
+          }}
+          initialMachines={activatedMachines}
+        />
       </section>
 
       <div className={styles.stats}>

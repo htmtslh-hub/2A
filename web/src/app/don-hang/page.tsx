@@ -13,6 +13,8 @@ import { SignOutButton } from './actions';
 import { membershipState } from '@/lib/memberships';
 import { membershipName } from '@/lib/membership-policy';
 import { MEMBERSHIP_COPY } from '@/lib/membership-copy';
+import { getUserLicenseEntitlement, listUserActivatedMachines } from '@/lib/license-key';
+import LicenseKeyPortal from '@/components/LicenseKeyPortal';
 
 const DATE_LOCALE: Record<Lang, string> = { vi: 'vi-VN', en: 'en-US', zh: 'zh-CN' };
 
@@ -193,12 +195,16 @@ export default async function Page() {
     );
   }
 
-  const purchases = await prisma.purchase.findMany({
-    where: { userId },
-    orderBy: { createdAt: 'desc' },
-    include: { order: { include: { items: true } } },
-  });
-  const membership = await membershipState(userId);
+  const [purchases, membership, licenseEntitlement, activatedMachines] = await Promise.all([
+    prisma.purchase.findMany({
+      where: { userId },
+      orderBy: { createdAt: 'desc' },
+      include: { order: { include: { items: true } } },
+    }),
+    membershipState(userId),
+    getUserLicenseEntitlement(userId),
+    listUserActivatedMachines(userId),
+  ]);
   const m = MEMBERSHIP_COPY[lang];
 
   return (
@@ -259,6 +265,21 @@ export default async function Page() {
         </p>
         <p style={{ margin: '0 0 32px', fontSize: 13, color: '#6f767f' }}>{session?.user?.email}</p>
 
+        <section style={{ marginBottom: 28 }}>
+          <LicenseKeyPortal
+            lang={lang}
+            initialEntitlement={{
+              eligible: licenseEntitlement.eligible,
+              plan: licenseEntitlement.plan,
+              expiresAtTs: licenseEntitlement.expiresAtTs,
+              maxMachines: licenseEntitlement.maxMachines,
+              email: licenseEntitlement.email,
+              reason: licenseEntitlement.reason,
+            }}
+            initialMachines={activatedMachines}
+          />
+        </section>
+
         {membership.active && <section style={{ marginBottom: 28 }}>
           <h2>{membershipName(membership.active.plan)} · {m.download}</h2>
           <p>{m.until}: {new Intl.DateTimeFormat(DATE_LOCALE[lang], { dateStyle: 'long', timeStyle: 'short' }).format(membership.active.expiresAt)}</p>
@@ -306,8 +327,6 @@ export default async function Page() {
                     </p>
                   </div>
                   {isBundle ? (
-                    // Trọn bộ không có một file chung: mỗi mẫu thật một nút tải.
-                    // Trước đây nút trỏ tới 'bundle' — không có file đó, nên 404.
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'flex-end' }}>
                       {Object.entries(REAL_TEMPLATES).filter(([, tpl]) => !tpl.previewOnly).map(([id, tpl]) => (
                         <div key={id} className={guideStyles.orderLinks}>
@@ -317,6 +336,7 @@ export default async function Page() {
                           <Link href={guideHref(tpl.slug, 'template')} className={guideStyles.orderStart} aria-label={`${GUIDE_LABELS[lang].start}: ${tpl.copy[lang].name}`}>
                             {GUIDE_LABELS[lang].start}
                           </Link>
+
                         </div>
                       ))}
                     </div>

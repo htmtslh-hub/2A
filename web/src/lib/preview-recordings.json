@@ -2364,5 +2364,19 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "film-studio": {
+    "productVersion": "2.5.0",
+    "revision": "ebb67d9ec8bc",
+    "sha256": "ebb67d9ec8bc0da78ae082787a80570b95741ad711e54542716718b85003a0ec",
+    "demoHtmlSha256": "f70d038796e457c098da9e2245c7d20f7ee005ba20003248639619d488a5d3eb",
+    "bytes": 573533,
+    "duration": 15,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false,
+    "demoSha256": "ca832a5adadb7ed75b33643e877460a687eeb0c0003c3bccf89a58dddcd5474f",
+    "status": "recorded"
   }
 }

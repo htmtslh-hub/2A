@@ -150,7 +150,7 @@ export function syncDom(st: State) {
     const on = i === st.active;
     el.style.opacity = on ? '1' : '0';
     el.style.transform = on ? 'scale(1)' : 'scale(1.18)';
-    el.style.filter = on ? 'contrast(1.06) brightness(1.06) saturate(1.08)' : 'blur(18px) brightness(1)';
+    el.style.filter = on ? 'none' : 'blur(18px) brightness(1)';
     el.muted = true;
     if (on)
       playVid(el, heroVideo(IMAGES[i], vw, vh), () => i === st.active, bgPoster(POSTERS[i]));
@@ -272,7 +272,7 @@ export function applyParallax() {
   const vh = window.innerHeight || 1;
 
   const hero = document.getElementById('hero-bg-wrap');
-  if (hero) hero.style.transform = 'translate3d(0,' + (Math.min(y, vh * 1.2) * 0.04).toFixed(1) + 'px,0)';
+  if (hero) hero.style.transform = 'translate3d(0,' + (Math.min(y, vh * 1.2) * 0.1).toFixed(1) + 'px,0)';
 
   const bar = document.getElementById('scroll-progress');
   if (bar) {

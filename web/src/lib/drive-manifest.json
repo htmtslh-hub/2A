@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-01T08:13:07.615Z",
+  "updatedAt": "2026-11-01T08:24:00.845Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -1538,9 +1538,81 @@
       "tier": "individual",
       "publicUrl": "https://drive.google.com/uc?export=download&id=13W4orv9XouIYVaTOf3_lVqFHkckER3gH",
       "webViewUrl": "https://drive.google.com/file/d/13W4orv9XouIYVaTOf3_lVqFHkckER3gH/view",
-      "sizeBytes": 87476301,
-      "sha256": "d473fae679ceee870fba42b3cf4bbaafa15c70a34b9ce6519c967048f87fd473",
-      "updatedAt": "2026-11-01T08:13:07.615Z"
+      "sizeBytes": 88064709,
+      "sha256": "348f1c2190d4c8ffd5abaa2c6e66e72203849c14ad9ea593b66939db8c05872c",
+      "updatedAt": "2026-11-01T08:24:00.845Z"
+    },
+    "agentai-grid": {
+      "fileId": "1v5MP1Qnol_2jn0PZXwbwPXDiVfn_9F9C",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1v5MP1Qnol_2jn0PZXwbwPXDiVfn_9F9C",
+      "webViewUrl": "https://drive.google.com/file/d/1v5MP1Qnol_2jn0PZXwbwPXDiVfn_9F9C/view",
+      "sizeBytes": 11887,
+      "sha256": "569e603c17d1a6ae761bb516fce978867e5ef8beca6413a2e65fbcd44b3adeee",
+      "updatedAt": "2026-11-01T08:15:47.703Z"
+    },
+    "porsche-caym": {
+      "fileId": "1HwHNvMKnR1A2cS96U2YxaszUh4SPJ5xE",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1HwHNvMKnR1A2cS96U2YxaszUh4SPJ5xE",
+      "webViewUrl": "https://drive.google.com/file/d/1HwHNvMKnR1A2cS96U2YxaszUh4SPJ5xE/view",
+      "sizeBytes": 11085,
+      "sha256": "c8a5698f4aebddf8ad6726de3dc7b2ca8c255e7dc315cbc4f9bbc9a6bb6c3be1",
+      "updatedAt": "2026-11-01T08:21:28.352Z"
+    },
+    "which-canvas": {
+      "fileId": "1JVvmnR-2wGDj6mqsyGAwYwM5-nziMhmE",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1JVvmnR-2wGDj6mqsyGAwYwM5-nziMhmE",
+      "webViewUrl": "https://drive.google.com/file/d/1JVvmnR-2wGDj6mqsyGAwYwM5-nziMhmE/view",
+      "sizeBytes": 10833,
+      "sha256": "c4854b5b4c144eea904bface81d10680aeb54caf42e54ea095a9de40e6c84c83",
+      "updatedAt": "2026-11-01T08:15:57.432Z"
+    },
+    "setting-stic": {
+      "fileId": "1KEYga_ZKCwWg2stDr4Cgo-NVGkdFg1Um",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1KEYga_ZKCwWg2stDr4Cgo-NVGkdFg1Um",
+      "webViewUrl": "https://drive.google.com/file/d/1KEYga_ZKCwWg2stDr4Cgo-NVGkdFg1Um/view",
+      "sizeBytes": 10612,
+      "sha256": "f8de9ef4a278d5056949962751dcf37330b510359d5214cd64ee3608352a175b",
+      "updatedAt": "2026-11-01T08:16:02.297Z"
+    },
+    "luminex-atelier-eab": {
+      "fileId": "1t8UMe5hf6l75MrKbVRRrUMdzkYfeBOD7",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1t8UMe5hf6l75MrKbVRRrUMdzkYfeBOD7",
+      "webViewUrl": "https://drive.google.com/file/d/1t8UMe5hf6l75MrKbVRRrUMdzkYfeBOD7/view",
+      "sizeBytes": 10888,
+      "sha256": "671741a8017f619f6874cc86a7655196697af0827de4387076df8ab908fe9bd3",
+      "updatedAt": "2026-11-01T08:16:07.325Z"
+    },
+    "contact-cybernetic": {
+      "fileId": "1-dAyQGxOKswoMXWkLx-FF5sOaXJH4ok3",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1-dAyQGxOKswoMXWkLx-FF5sOaXJH4ok3",
+      "webViewUrl": "https://drive.google.com/file/d/1-dAyQGxOKswoMXWkLx-FF5sOaXJH4ok3/view",
+      "sizeBytes": 11939,
+      "sha256": "14858be46f836dd8f3a3fda7fbb1cfa41d8dad446c2d4f7a84147de6ef3c441f",
+      "updatedAt": "2026-11-01T08:16:09.259Z"
+    },
+    "health-portal": {
+      "fileId": "1MqXvwfdR5WORfhuJiwaulP8pb-NLEhDx",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1MqXvwfdR5WORfhuJiwaulP8pb-NLEhDx",
+      "webViewUrl": "https://drive.google.com/file/d/1MqXvwfdR5WORfhuJiwaulP8pb-NLEhDx/view",
+      "sizeBytes": 12543,
+      "sha256": "ab75de877f14f5fe12a64475042b1626b954ad119f771b3dcff2fe8737a5639d",
+      "updatedAt": "2026-11-01T08:21:30.449Z"
+    },
+    "impact-ventures": {
+      "fileId": "1RYBv2UCFaYzxW2m-mSig2xAacnNr-3c6",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1RYBv2UCFaYzxW2m-mSig2xAacnNr-3c6",
+      "webViewUrl": "https://drive.google.com/file/d/1RYBv2UCFaYzxW2m-mSig2xAacnNr-3c6/view",
+      "sizeBytes": 11493,
+      "sha256": "20ae08bb72864a1e75a625e5a5e0f9c1eab62b34f6eb164fcd02059c3fce8898",
+      "updatedAt": "2026-11-01T08:16:13.129Z"
     }
   }
 }

@@ -134,7 +134,7 @@ export async function POST(req: Request) {
         {
           error:
             entitlement.reason ||
-            'Tài khoản của bạn chưa có gói bản quyền đang hoạt động. Vui lòng mua gói Premium / Ultra trên Web trước khi lấy Mã Kích Hoạt.',
+            'Tài khoản của bạn chưa mua công cụ này. Vui lòng mua sản phẩm Agent / Tool trên Web trước khi lấy Mã Kích Hoạt.',
         },
         { status: 403 }
       );

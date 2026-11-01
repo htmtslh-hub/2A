@@ -1,6 +1,6 @@
 import crypto from 'node:crypto';
 import { prisma } from '@/lib/db';
-import { membershipState } from '@/lib/memberships';
+import { REAL_TEMPLATES } from '@/lib/real-templates';
 
 export const LIFETIME_TIMESTAMP = 4102444800; // 2099-12-31T00:00:00Z
 
@@ -192,16 +192,21 @@ export function verifyLicenseKeyToken(rawKey: string): {
   }
 }
 
-const LICENSED_DESKTOP_TOOL_IDS = new Set(['a001', 'a002', 'a003', 'a004', 'a005', 'a006', 'a007', 'a008']);
+const LICENSED_DESKTOP_TOOL_IDS = new Set([
+  't189', // Film Studio Pro
+  't14',  // LingoGlass Player
+  'a001', 'a002', 'a003', 'a004', 'a005', 'a006', 'a007', 'a008',
+  ...Object.keys(REAL_TEMPLATES).filter((id) => REAL_TEMPLATES[id]?.group === 'agent'),
+]);
 
 /**
- * Kiểm tra quyền lợi gói mua hiện tại của người dùng trên Web để xác định thời hạn cấp Key.
- * Chỉ cấp quyền kích hoạt Mã Máy khi tài khoản ĐÃ MUA THẬT (đơn hàng PAID có thanh toán > 0đ):
- *   1. Gói Ultra Lifetime (BUNDLE trọn đời)
- *   2. Gói thành viên đang còn hạn (Premium 1 tháng / Ultra 1 năm)
- *   3. Mua lẻ trực tiếp công cụ Desktop (a001..a008, ví dụ Film Studio a007) có totalVnd > 0
+ * Kiểm tra quyền kích hoạt Mã Máy (Hardware ID) cho sản phẩm Agent / Tool trên Web.
+ * Quy tắc:
+ *   - Các gói thành viên (Premium / Ultra / Ultra Lifetime) CHỈ áp dụng cho Giao diện Web, Skill và Prompt.
+ *   - Các công cụ Agent / Tool (như Film Studio Pro - t189) có giá bán lẻ riêng (trả một lần, dùng vĩnh viễn).
+ *   - Chỉ cấp Mã Kích Hoạt khi tài khoản đã mua trực tiếp sản phẩm Agent / Tool (đơn hàng PAID có amount > 0).
  */
-export async function getUserLicenseEntitlement(userId: string, now = new Date()): Promise<{
+export async function getUserLicenseEntitlement(userId: string): Promise<{
   eligible: boolean;
   plan: LicensePlanCode | null;
   expiresAtTs: number;
@@ -227,59 +232,27 @@ export async function getUserLicenseEntitlement(userId: string, now = new Date()
     };
   }
 
-  const [membership, paidToolOrBundlePurchases] = await Promise.all([
-    membershipState(userId, now),
-    prisma.purchase.findMany({
-      where: {
-        userId,
-        order: {
-          status: 'PAID',
-          amount: { gt: 0 },
-        },
+  const paidToolPurchases = await prisma.purchase.findMany({
+    where: {
+      userId,
+      kind: 'TEMPLATE',
+      templateId: { in: Array.from(LICENSED_DESKTOP_TOOL_IDS) },
+      order: {
+        status: 'PAID',
+        amount: { gt: 0 },
       },
-      orderBy: { createdAt: 'desc' },
-      select: { id: true, kind: true, templateId: true, createdAt: true },
-    }),
-  ]);
+    },
+    orderBy: { createdAt: 'desc' },
+    select: { id: true, templateId: true, createdAt: true },
+  });
 
-  // 1. Kiểm tra gói Ultra Lifetime (BUNDLE đã thanh toán > 0đ)
-  const hasLifetimeBundle = paidToolOrBundlePurchases.some((p) => p.kind === 'BUNDLE' && p.templateId === null);
-  if (hasLifetimeBundle) {
+  if (paidToolPurchases.length > 0) {
     return {
       eligible: true,
       plan: 'LIFETIME',
       expiresAtTs: LIFETIME_TIMESTAMP,
       expiresAtDate: new Date(LIFETIME_TIMESTAMP * 1000),
-      maxMachines: MAX_MACHINES_BY_PLAN.LIFETIME,
-      email: user.email,
-    };
-  }
-
-  // 2. Kiểm tra gói thành viên đang hoạt động (Premium 1 tháng = PRO, Ultra 1 năm = ULTRA)
-  if (membership.active) {
-    const planCode: LicensePlanCode = membership.active.plan === 'ULTRA' ? 'ULTRA' : 'PRO';
-    const expTs = Math.floor(membership.active.expiresAt.getTime() / 1000);
-    return {
-      eligible: true,
-      plan: planCode,
-      expiresAtTs: expTs,
-      expiresAtDate: membership.active.expiresAt,
-      maxMachines: MAX_MACHINES_BY_PLAN[planCode],
-      email: user.email,
-    };
-  }
-
-  // 3. Chỉ khi khách có mua lẻ trực tiếp Công cụ Desktop (a001..a008, như Film Studio a007) đã thanh toán (> 0đ)
-  const toolPurchases = paidToolOrBundlePurchases.filter(
-    (p) => p.templateId && LICENSED_DESKTOP_TOOL_IDS.has(p.templateId)
-  );
-  if (toolPurchases.length > 0) {
-    return {
-      eligible: true,
-      plan: 'LIFETIME',
-      expiresAtTs: LIFETIME_TIMESTAMP,
-      expiresAtDate: new Date(LIFETIME_TIMESTAMP * 1000),
-      maxMachines: MAX_MACHINES_BY_PLAN.PRO,
+      maxMachines: Math.max(2, paidToolPurchases.length * 2),
       email: user.email,
     };
   }
@@ -291,9 +264,8 @@ export async function getUserLicenseEntitlement(userId: string, now = new Date()
     expiresAtDate: null,
     maxMachines: 0,
     email: user.email,
-    reason: membership.latest
-      ? 'Gói tài khoản của bạn đã hết hạn. Vui lòng gia hạn gói Premium / Ultra để tiếp tục lấy Mã Kích Hoạt mới.'
-      : 'Bạn chưa mua công cụ hoặc gói bản quyền nào. Vui lòng mua sản phẩm hoặc nâng cấp gói Premium (1 tháng), Ultra (1 năm) hoặc Ultra Lifetime trước khi kích hoạt Mã Máy.',
+    reason:
+      'Tài khoản của bạn chưa mua công cụ này. (Lưu ý: Gói thành viên Premium / Ultra chỉ áp dụng cho Giao diện Web, Skill và Prompt; các sản phẩm Agent / Tool có giá mua riêng). Vui lòng mua sản phẩm để nhận Mã Kích Hoạt theo Mã Máy.',
   };
 }
 

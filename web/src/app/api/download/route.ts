@@ -122,10 +122,18 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: 'Không tìm thấy giao diện này.' }, { status: 404 });
   }
 
-  // Mua trọn bộ (templateId = null) thì mở khoá mọi mẫu.
   const owned = await hasProductAccess(userId, id);
   if (!owned) {
-    return NextResponse.json({ error: 'Bạn cần gói Premium/Ultra còn hiệu lực hoặc quyền mua đã có để tải.', pricingUrl: '/?tab=pricing' }, { status: 403 });
+    const isAgentTool = REAL_TEMPLATES[id]?.group === 'agent';
+    return NextResponse.json(
+      {
+        error: isAgentTool
+          ? 'Bạn cần mua công cụ này trước khi tải về (Gói thành viên chỉ áp dụng cho Giao diện Web, Skill và Prompt).'
+          : 'Bạn cần gói Premium/Ultra còn hiệu lực hoặc quyền mua đã có để tải.',
+        pricingUrl: isAgentTool ? `/?mau=${id}` : '/?tab=pricing',
+      },
+      { status: 403 }
+    );
   }
 
   return serve(id, userId);

@@ -11,10 +11,25 @@ export async function membershipState(userId: string, now = new Date()) {
   return { active: activeMembership(rows, now), latest: rows[0] ?? null, periods: rows };
 }
 
-/** Each request rechecks expiry/refund/suspension on the server, never in the browser. */
+/** Each request rechecks expiry/refund/suspension on the server, never in the browser.
+ *  Note: Membership plans (Premium/Ultra/Bundle) ONLY cover Web Templates, Skills, and Prompts.
+ *  Agent/Tool products (group === 'agent') are sold individually at their own price.
+ */
 export async function hasProductAccess(userId: string, templateId: string, now = new Date()) {
   const user = await prisma.user.findUnique({ where: { id: userId }, select: { suspendedAt: true } });
   if (!user || user.suspendedAt) return false;
+  const isAgentTool = REAL_TEMPLATES[templateId]?.group === 'agent';
+  if (isAgentTool) {
+    const ownedTool = await prisma.purchase.findFirst({
+      where: {
+        userId,
+        kind: 'TEMPLATE',
+        templateId,
+        order: { status: 'PAID', amount: { gt: 0 } },
+      },
+    });
+    return Boolean(ownedTool);
+  }
   const owned = await prisma.purchase.findFirst({ where: {
     userId, order: { status: 'PAID' },
     OR: [{ kind: 'TEMPLATE', templateId }, { kind: 'BUNDLE', templateId: null }],
@@ -31,7 +46,13 @@ export async function accessibleProductIds(userId: string, now = new Date()): Pr
     membershipState(userId, now),
     prisma.purchase.findMany({ where: { userId, order: { status: 'PAID' } }, select: { kind: true, templateId: true } }),
   ]);
-  const all = membership.active || purchases.some(p => p.kind === 'BUNDLE' && p.templateId === null);
-  return Object.keys(REAL_TEMPLATES).filter(id => !REAL_TEMPLATES[id].previewOnly &&
-    (all || purchases.some(p => p.kind === 'TEMPLATE' && p.templateId === id)));
+  const allNonAgent = membership.active || purchases.some(p => p.kind === 'BUNDLE' && p.templateId === null);
+  return Object.keys(REAL_TEMPLATES).filter(id => {
+    const tpl = REAL_TEMPLATES[id];
+    if (!tpl || tpl.previewOnly) return false;
+    if (tpl.group === 'agent') {
+      return purchases.some(p => p.kind === 'TEMPLATE' && p.templateId === id);
+    }
+    return allNonAgent || purchases.some(p => p.kind === 'TEMPLATE' && p.templateId === id);
+  });
 }

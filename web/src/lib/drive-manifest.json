@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-01T08:24:00.845Z",
+  "updatedAt": "2026-11-01T08:58:15.792Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -1538,9 +1538,9 @@
       "tier": "individual",
       "publicUrl": "https://drive.google.com/uc?export=download&id=13W4orv9XouIYVaTOf3_lVqFHkckER3gH",
       "webViewUrl": "https://drive.google.com/file/d/13W4orv9XouIYVaTOf3_lVqFHkckER3gH/view",
-      "sizeBytes": 88064709,
-      "sha256": "348f1c2190d4c8ffd5abaa2c6e66e72203849c14ad9ea593b66939db8c05872c",
-      "updatedAt": "2026-11-01T08:24:00.845Z"
+      "sizeBytes": 36673845,
+      "sha256": "806e706030180bb8eb84b357c99b4ba5e283d28ebd5002e910f834130b39923e",
+      "updatedAt": "2026-11-01T08:58:15.791Z"
     },
     "agentai-grid": {
       "fileId": "1v5MP1Qnol_2jn0PZXwbwPXDiVfn_9F9C",

@@ -1,7 +1,6 @@
 import crypto from 'node:crypto';
 import { prisma } from '@/lib/db';
 import { membershipState } from '@/lib/memberships';
-import { isAdminEmail } from '@/lib/admin-access';
 
 export const LIFETIME_TIMESTAMP = 4102444800; // 2099-12-31T00:00:00Z
 
@@ -193,8 +192,14 @@ export function verifyLicenseKeyToken(rawKey: string): {
   }
 }
 
+const LICENSED_DESKTOP_TOOL_IDS = new Set(['a001', 'a002', 'a003', 'a004', 'a005', 'a006', 'a007', 'a008']);
+
 /**
  * Kiểm tra quyền lợi gói mua hiện tại của người dùng trên Web để xác định thời hạn cấp Key.
+ * Chỉ cấp quyền kích hoạt Mã Máy khi tài khoản ĐÃ MUA THẬT (đơn hàng PAID có thanh toán > 0đ):
+ *   1. Gói Ultra Lifetime (BUNDLE trọn đời)
+ *   2. Gói thành viên đang còn hạn (Premium 1 tháng / Ultra 1 năm)
+ *   3. Mua lẻ trực tiếp công cụ Desktop (a001..a008, ví dụ Film Studio a007) có totalVnd > 0
  */
 export async function getUserLicenseEntitlement(userId: string, now = new Date()): Promise<{
   eligible: boolean;
@@ -222,29 +227,23 @@ export async function getUserLicenseEntitlement(userId: string, now = new Date()
     };
   }
 
-  // 1. Tài khoản Quản trị viên (Admin) được cấp quyền Ultra Lifetime
-  if (isAdminEmail(user.email)) {
-    return {
-      eligible: true,
-      plan: 'LIFETIME',
-      expiresAtTs: LIFETIME_TIMESTAMP,
-      expiresAtDate: new Date(LIFETIME_TIMESTAMP * 1000),
-      maxMachines: 99,
-      email: user.email,
-    };
-  }
-
-  const [membership, purchases] = await Promise.all([
+  const [membership, paidToolOrBundlePurchases] = await Promise.all([
     membershipState(userId, now),
     prisma.purchase.findMany({
-      where: { userId, order: { status: 'PAID' } },
+      where: {
+        userId,
+        order: {
+          status: 'PAID',
+          totalVnd: { gt: 0 },
+        },
+      },
       orderBy: { createdAt: 'desc' },
       select: { id: true, kind: true, templateId: true, createdAt: true },
     }),
   ]);
 
-  // 2. Kiểm tra gói Ultra Lifetime (BUNDLE)
-  const hasLifetimeBundle = purchases.some((p) => p.kind === 'BUNDLE' && p.templateId === null);
+  // 1. Kiểm tra gói Ultra Lifetime (BUNDLE đã thanh toán > 0đ)
+  const hasLifetimeBundle = paidToolOrBundlePurchases.some((p) => p.kind === 'BUNDLE' && p.templateId === null);
   if (hasLifetimeBundle) {
     return {
       eligible: true,
@@ -256,7 +255,7 @@ export async function getUserLicenseEntitlement(userId: string, now = new Date()
     };
   }
 
-  // 3. Kiểm tra gói thành viên đang hoạt động (Premium 1 tháng = PRO, Ultra 1 năm = ULTRA)
+  // 2. Kiểm tra gói thành viên đang hoạt động (Premium 1 tháng = PRO, Ultra 1 năm = ULTRA)
   if (membership.active) {
     const planCode: LicensePlanCode = membership.active.plan === 'ULTRA' ? 'ULTRA' : 'PRO';
     const expTs = Math.floor(membership.active.expiresAt.getTime() / 1000);
@@ -270,20 +269,19 @@ export async function getUserLicenseEntitlement(userId: string, now = new Date()
     };
   }
 
-  // 4. Nếu khách có mua đơn lẻ đã thanh toán (PAID) còn hiệu lực
-  if (purchases.length > 0) {
-    const latestPurchase = purchases[0];
-    const oneYearLater = new Date(latestPurchase.createdAt.getTime() + 365 * 86400 * 1000);
-    if (oneYearLater > now) {
-      return {
-        eligible: true,
-        plan: 'ULTRA',
-        expiresAtTs: Math.floor(oneYearLater.getTime() / 1000),
-        expiresAtDate: oneYearLater,
-        maxMachines: MAX_MACHINES_BY_PLAN.PRO,
-        email: user.email,
-      };
-    }
+  // 3. Chỉ khi khách có mua lẻ trực tiếp Công cụ Desktop (a001..a008, như Film Studio a007) đã thanh toán (> 0đ)
+  const toolPurchases = paidToolOrBundlePurchases.filter(
+    (p) => p.templateId && LICENSED_DESKTOP_TOOL_IDS.has(p.templateId)
+  );
+  if (toolPurchases.length > 0) {
+    return {
+      eligible: true,
+      plan: 'LIFETIME',
+      expiresAtTs: LIFETIME_TIMESTAMP,
+      expiresAtDate: new Date(LIFETIME_TIMESTAMP * 1000),
+      maxMachines: MAX_MACHINES_BY_PLAN.PRO,
+      email: user.email,
+    };
   }
 
   return {
@@ -295,15 +293,20 @@ export async function getUserLicenseEntitlement(userId: string, now = new Date()
     email: user.email,
     reason: membership.latest
       ? 'Gói tài khoản của bạn đã hết hạn. Vui lòng gia hạn gói Premium / Ultra để tiếp tục lấy Mã Kích Hoạt mới.'
-      : 'Tài khoản chưa có gói bản quyền đang hoạt động. Vui lòng nâng cấp gói Premium (1 tháng), Ultra (1 năm) hoặc Ultra Lifetime.',
+      : 'Bạn chưa mua công cụ hoặc gói bản quyền nào. Vui lòng mua sản phẩm hoặc nâng cấp gói Premium (1 tháng), Ultra (1 năm) hoặc Ultra Lifetime trước khi kích hoạt Mã Máy.',
   };
 }
 
 /**
  * Lấy danh sách các Mã Máy (Hardware ID) đang được kích hoạt của người dùng.
- * Lưu trữ an toàn trong bảng AdminAuditLog với action = 'license-activate' / 'license-unbind'.
+ * Chỉ trả về danh sách thiết bị khi tài khoản ĐÃ MUA sản phẩm / gói bản quyền còn hiệu lực.
  */
 export async function listUserActivatedMachines(userId: string): Promise<ActivatedMachineRecord[]> {
+  const entitlement = await getUserLicenseEntitlement(userId);
+  if (!entitlement.eligible) {
+    return [];
+  }
+
   const logs = await prisma.adminAuditLog.findMany({
     where: {
       actorId: userId,

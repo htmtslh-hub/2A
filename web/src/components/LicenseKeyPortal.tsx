@@ -366,6 +366,23 @@ export default function LicenseKeyPortal({
         </div>
       </div>
 
+      {!entitlement.eligible && (
+        <div
+          style={{
+            padding: '12px 16px',
+            borderRadius: 12,
+            background: 'rgba(245,158,11,.12)',
+            border: '1px solid rgba(245,158,11,.36)',
+            color: '#fde68a',
+            fontSize: 13,
+            marginBottom: 16,
+            lineHeight: 1.55,
+          }}
+        >
+          ⚠️ {entitlement.reason || t.noPlan}
+        </div>
+      )}
+
       {/* Form nhập Mã Máy để lấy Mã Kích Hoạt */}
       <form onSubmit={handleGenerate} style={{ marginBottom: 18 }}>
         <label
@@ -381,7 +398,7 @@ export default function LicenseKeyPortal({
             value={machineIdInput}
             onChange={(e) => setMachineIdInput(e.target.value.toUpperCase())}
             placeholder={t.inputPlaceholder}
-            disabled={busy}
+            disabled={busy || !entitlement.eligible}
             style={{
               flex: '1 1 260px',
               padding: '12px 16px',
@@ -393,11 +410,13 @@ export default function LicenseKeyPortal({
               fontSize: 15,
               fontWeight: 700,
               letterSpacing: '.06em',
+              opacity: entitlement.eligible ? 1 : 0.5,
+              cursor: entitlement.eligible ? 'text' : 'not-allowed',
             }}
           />
           <button
             type="submit"
-            disabled={busy || !machineIdInput.trim()}
+            disabled={busy || !entitlement.eligible || !machineIdInput.trim()}
             style={{
               padding: '12px 22px',
               borderRadius: 12,
@@ -406,7 +425,8 @@ export default function LicenseKeyPortal({
               color: '#fff',
               fontWeight: 700,
               fontSize: 13,
-              cursor: busy ? 'wait' : 'pointer',
+              opacity: entitlement.eligible ? 1 : 0.45,
+              cursor: !entitlement.eligible ? 'not-allowed' : busy ? 'wait' : 'pointer',
               whiteSpace: 'nowrap',
             }}
           >

@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-01T08:05:46.452Z",
+  "updatedAt": "2026-11-01T08:13:07.615Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -1538,9 +1538,9 @@
       "tier": "individual",
       "publicUrl": "https://drive.google.com/uc?export=download&id=13W4orv9XouIYVaTOf3_lVqFHkckER3gH",
       "webViewUrl": "https://drive.google.com/file/d/13W4orv9XouIYVaTOf3_lVqFHkckER3gH/view",
-      "sizeBytes": 87783644,
-      "sha256": "4d434630027ff1a30969736a8644dbde7cd2b634981d10bdcb5e6e5bb4b60f90",
-      "updatedAt": "2026-11-01T08:05:46.452Z"
+      "sizeBytes": 87476301,
+      "sha256": "d473fae679ceee870fba42b3cf4bbaafa15c70a34b9ce6519c967048f87fd473",
+      "updatedAt": "2026-11-01T08:13:07.615Z"
     }
   }
 }

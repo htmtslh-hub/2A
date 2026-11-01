@@ -2,15 +2,15 @@
   "id": "t195",
   "slug": "contact-cybernetic",
   "browser": "153.0.8010.12",
-  "date": "2026-11-01T02:55:39.164Z",
+  "date": "2026-11-01T08:19:38.892Z",
   "demo": "/demos/contact-cybernetic/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "644a2c5b571f",
-  "sha256": "644a2c5b571fff7fdd907ad730421e42993503a34b83dff21d5f73350352d8a2",
-  "demoHtmlSha256": "3fa942a604e4c05f70ef78e42088c663493c2d1c568f033f354e1d5d5ac1117c",
-  "demoSha256": "52baf305b7f63e29c0d7254341a2e492259d1149065a08827323ec480737b082",
-  "bytes": 451593,
+  "revision": "435d7e487d70",
+  "sha256": "435d7e487d700e188863e182a1b1c5943bc90a48fff4cabadd399e5ec8519371",
+  "demoHtmlSha256": "f895306aff86bba1b98ae3acb66827087fcf8b0c7270bcde782dce831315664b",
+  "demoSha256": "871c4ce3a1526138dccf7f06fa3365bab9db1cc69a94892bde6ca52fece5dadf",
+  "bytes": 637455,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.528,
+      "seconds": 2.564,
       "action": "click",
-      "selector": "#exploreMagneticBtn"
+      "selector": "<button type=\"button\" class=\"con33-scope-pill scope-pill-btn\" data-next-preview=\"true\" data-scope=\"Brand\">Brand</button>"
     },
     {
-      "seconds": 4.951,
+      "seconds": 4.905,
       "action": "click",
-      "selector": "#exploreMagneticBtn"
+      "selector": "<button type=\"button\" class=\"con33-scope-pill scope-pill-btn is-selected\" data-next-preview=\"true\" data-scope=\"Brand\">Brand</button>"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 560
+      "target": 529
     }
   ],
   "errors": [],

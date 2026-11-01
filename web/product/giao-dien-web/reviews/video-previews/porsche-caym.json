@@ -2,15 +2,15 @@
   "id": "t191",
   "slug": "porsche-caym",
   "browser": "153.0.8010.12",
-  "date": "2026-11-01T02:01:18.651Z",
+  "date": "2026-11-01T08:22:10.755Z",
   "demo": "/demos/porsche-caym/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "82e9eb87b60f",
-  "sha256": "82e9eb87b60f884cdeb3a74a89fcd8f6d89c052083d979e2ff17ac3d3239bbb9",
-  "demoHtmlSha256": "825c449986c86d204e3b892554d45020834f18b5fb1eb44e926e53127c56b742",
-  "demoSha256": "8f5dbc5bb68eb8d394b6715fbbed1cab759765829791117e454fb3479ea94800",
-  "bytes": 742209,
+  "revision": "2e6e6574089c",
+  "sha256": "2e6e6574089c3c005b30dde2143eb8c973ac40d5e8feddd36b8332069ccb7497",
+  "demoHtmlSha256": "f6889f9faeebebad4cf662442fbc86e278bc426d6cc0b184b6eb49496387491c",
+  "demoSha256": "26d122c7db0fe2b618b8fb925732288af01b757fdfb46cc823958fffa5af1b88",
+  "bytes": 339848,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.478,
+      "seconds": 2.471,
       "action": "click",
-      "selector": "#exploreMagneticBtn"
+      "selector": "<button type=\"button\" class=\"por38-pill trim-tab-btn is-active\" data-next-preview=\"true\" data-model=\"718 CAYMAN\" data-price=\"$60,000*\" data-hp=\"300 hp\" data-accel=\"4.9 s\" data-spee"
     },
     {
-      "seconds": 4.885,
+      "seconds": 4.853,
       "action": "click",
-      "selector": "#exploreMagneticBtn"
+      "selector": "<button type=\"button\" class=\"por38-pill trim-tab-btn is-active\" data-next-preview=\"true\" data-model=\"718 CAYMAN\" data-price=\"$60,000*\" data-hp=\"300 hp\" data-accel=\"4.9 s\" data-spee"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 1532
+      "target": 336
     }
   ],
   "errors": [],

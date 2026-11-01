@@ -121,23 +121,23 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
 
   t194: {
     slug: 'luminex-atelier-eab',
-    cat: 'commerce',
+    cat: 'portfolio',
     version: '1.0.0',
     video: true,
     copy: {
       vi: {
-        name: "Lunar Oasis Villa",
-        desc: "Lunar Oasis Villa (lunar-villa) — Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.",
+        name: "PumpIt Mobile Product Studio",
+        desc: "PumpIt Mobile Product Studio (pastel-aurora-mobile-product-it) — Progressive Unique Mobile Product IT studio — pastel aurora glassmorphism interface featuring 6 industry spheres, 10-step MVP-to-launch honeycomb workflow, and 4 transparent tariff tiers.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Lunar Oasis Villa",
-        desc: "Lunar Oasis Villa (lunar-villa) — Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.",
+        name: "PumpIt Mobile Product Studio",
+        desc: "PumpIt Mobile Product Studio (pastel-aurora-mobile-product-it) — Progressive Unique Mobile Product IT studio — pastel aurora glassmorphism interface featuring 6 industry spheres, 10-step MVP-to-launch honeycomb workflow, and 4 transparent tariff tiers.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Lunar Oasis Villa",
-        desc: "Lunar Oasis Villa (lunar-villa) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        name: "PumpIt Mobile Product Studio",
+        desc: "PumpIt Mobile Product Studio (pastel-aurora-mobile-product-it) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
@@ -149,18 +149,18 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
+        name: "PlayNFT Digital Art Market",
+        desc: "PlayNFT Digital Art Market (violet-chrome-nft-marketplace) — Web3 digital art & collectible NFT marketplace featuring liquid-chrome 3D portrait auctions, live ETH bid countdowns, Popular This Week showcase, and Top Sellers leaderboard.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
+        name: "PlayNFT Digital Art Market",
+        desc: "PlayNFT Digital Art Market (violet-chrome-nft-marketplace) — Web3 digital art & collectible NFT marketplace featuring liquid-chrome 3D portrait auctions, live ETH bid countdowns, Popular This Week showcase, and Top Sellers leaderboard.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        name: "PlayNFT Digital Art Market",
+        desc: "PlayNFT Digital Art Market (violet-chrome-nft-marketplace) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
@@ -172,18 +172,18 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
+        name: "Gcore Edge AI Inference",
+        desc: "Gcore Edge AI Inference (amber-ray-edge-ai-inference) — Global low-latency AI inference at the edge powered by NVIDIA A100 & H100 clusters (€1.3/h) — interactive neural routing topology and real-time token throughput calculator.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
+        name: "Gcore Edge AI Inference",
+        desc: "Gcore Edge AI Inference (amber-ray-edge-ai-inference) — Global low-latency AI inference at the edge powered by NVIDIA A100 & H100 clusters (€1.3/h) — interactive neural routing topology and real-time token throughput calculator.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        name: "Gcore Edge AI Inference",
+        desc: "Gcore Edge AI Inference (amber-ray-edge-ai-inference) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
@@ -196,42 +196,42 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     video: true,
     copy: {
       vi: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
+        name: "Porsche 718 Cayman Studio",
+        desc: "Porsche 718 Cayman Studio (silver-alpine-cayman-configurator) — Interactive 718 Cayman mid-engine coupe & cabriolet configurator featuring diagonal Alpine pass split-screen, 300 hp Boxer telemetry, and live 360° trim switcher.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — Interactive 3D biomechanical sculpture archive dissecting airborne hang-time, apex release angles, and ground-reaction impulse at 240 frames per second.",
+        name: "Porsche 718 Cayman Studio",
+        desc: "Porsche 718 Cayman Studio (silver-alpine-cayman-configurator) — Interactive 718 Cayman mid-engine coupe & cabriolet configurator featuring diagonal Alpine pass split-screen, 300 hp Boxer telemetry, and live 360° trim switcher.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "Apex 240Hz Signature",
-        desc: "Apex 240Hz Signature (kinetic-poster) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        name: "Porsche 718 Cayman Studio",
+        desc: "Porsche 718 Cayman Studio (silver-alpine-cayman-configurator) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
   },
   t190: {
     slug: 'agentai-grid',
-    cat: 'commerce',
+    cat: 'portfolio',
     access: 'free',
     version: '1.0.0',
     video: true,
     copy: {
       vi: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
+        name: "AgentAI Sprint Studio",
+        desc: "AgentAI Sprint Studio (crimson-jellyfish-ai-agency) — On-demand AI sprint agency — from discovery to deployment in 8–10 weeks with bioluminescent neural telemetry, 230+ shipped AI products, and end-to-end LLM strategy.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       en: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — Private Mach 1.8 delta-wing aviation crossing the Atlantic in 3 hours 15 minutes — floating above the cloud deck in whisper-quiet glass cabins.",
+        name: "AgentAI Sprint Studio",
+        desc: "AgentAI Sprint Studio (crimson-jellyfish-ai-agency) — On-demand AI sprint agency — from discovery to deployment in 8–10 weeks with bioluminescent neural telemetry, 230+ shipped AI products, and end-to-end LLM strategy.",
         tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
       },
       zh: {
-        name: "AetherJet Supersonic",
-        desc: "AetherJet Supersonic (sky-aviation) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        name: "AgentAI Sprint Studio",
+        desc: "AgentAI Sprint Studio (crimson-jellyfish-ai-agency) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }

@@ -3,165 +3,284 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Health Portal — Open Sauce One</title>
-  <meta name="description" content="We wish to provide professional dental services">
-  <meta property="og:title" content="Health Portal — Open Sauce One">
-  <meta property="og:description" content="We wish to provide professional dental services">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#06070b">
+  <title>Dental Health — Quality Healthcare &amp; Cosmetic Dentistry in West New York</title>
+  <meta name="description" content="Trusted Dentist in West New York offering Dental Veneers, Dental Crowns, Teeth Whitening, and Implant Dentistry with free consultation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #06070b;
-      --bg-surface: #10131c;
-      --bg-glass: rgba(16,19,28,0.72);
-      --text-primary: #f8fafc;
-      --text-secondary: #94a3b8;
-      --text-muted: #94a3b8;
-      --accent-primary: #ec4899;
-      --accent-secondary: #38bdf8;
-      --border-hairline: rgba(255,255,255,0.14);
-      --font-display: 'Instrument Serif', serif;
-      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --bg: #ffffff;
+      --surface: #f4f6f9;
+      --text: #111827;
+      --muted: #4b5563;
+      --blue: #0284c7;
+      --navy: #0f172a;
+      --border: rgba(15, 23, 42, 0.1);
+      --font-display: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-      --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
-      --radius-card: 24px;
-      --radius-pill: 9999px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-sans); overflow-x: clip; scroll-behavior: smooth; }
-    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 10000; padding: 10px 18px; border-radius: var(--radius-pill); background: var(--accent-primary); color: #090b10; font-weight: 700; text-decoration: none; transition: transform 0.2s var(--ease-out-expo); }
-    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--text-primary); outline-offset: 3px; }
-    :focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 3px; }
-    .hea39-cursor-ring, .hea39-cursor-dot { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate3d(-100px,-100px,0); mix-blend-mode: difference; will-change: transform; }
-    .hea39-cursor-ring { width: 34px; height: 34px; border: 1.5px solid #fff; margin: -17px 0 0 -17px; transition: transform 0.22s var(--ease-out-expo), opacity 0.22s var(--ease-out-expo); }
-    .hea39-cursor-ring.is-hovered { transform: translate3d(-100px,-100px,0) scale(1.65); background: #fff; }
-    .hea39-cursor-dot { width: 6px; height: 6px; background: var(--accent-primary); margin: -3px 0 0 -3px; }
-    @media (max-width: 900px) { .hea39-cursor-ring, .hea39-cursor-dot { display: none; } }
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--blue); color: #fff; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--navy); }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
 
+    .hea39-shell { max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 3.5vw, 40px); }
     .hea39-navbar {
-      position: fixed; top: 14px; left: 0; right: 0; z-index: 220;
-      max-width: 1280px; margin: 0 auto; padding: 12px 24px;
-      border-radius: var(--radius-pill); background: var(--bg-glass); backdrop-filter: blur(20px);
-      border: 1px solid var(--border-hairline); display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding: 12px 24px; border-radius: 999px; background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(18px); border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06); margin-bottom: 24px;
     }
-    .hea39-pill-btn { min-height: 44px; padding: 8px 18px; border-radius: var(--radius-pill); background: var(--bg-glass); border: 1px solid var(--border-hairline); color: var(--text-primary); font-size: 12px; font-weight: 700; cursor: pointer; transition: transform 0.25s var(--ease-spring), opacity 0.25s var(--ease-out-expo); }
-    .hea39-cta-btn { min-height: 44px; padding: 10px 22px; border-radius: var(--radius-pill); background: var(--accent-primary); color: #090b10; border: none; font-size: 13px; font-weight: 800; cursor: pointer; transition: transform 0.25s var(--ease-spring), opacity 0.25s var(--ease-out-expo); }
-    .hea39-pill-btn:active, .hea39-cta-btn:active { transform: scale(0.97); }
-
-    .hea39-hero {
-      position: relative; min-height: 100vh; padding: clamp(112px, 12vw, 148px) clamp(20px,5vw,72px) clamp(56px, 7vw, 88px);
-      display: flex; flex-direction: column; justify-content: center; overflow: hidden; isolation: isolate;
+    .hea39-brand {
+      display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text);
     }
-    .hea39-bg-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; opacity: 0.36; pointer-events: none; }
-    .hea39-smoke-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
-    .hea39-hero-grid { max-width: 1280px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: clamp(24px, 4vw, 44px); align-items: center; }
-    .hea39-h1 { font-family: var(--font-display); font-size: clamp(2.75rem, 6.5vw, 5.75rem); font-weight: 400; line-height: 0.96; letter-spacing: -0.03em; margin: 14px 0 18px; }
-    .hea39-cutout-3d { width: 100%; height: auto; max-height: 360px; object-fit: contain; display: block; margin: 0 auto; filter: drop-shadow(0 26px 40px rgba(0,0,0,0.55)); }
-    .hea39-popout-wrap { animation: hea39Float 5.8s ease-in-out infinite; will-change: transform; }
-    @keyframes hea39Float { 0%, 100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-12px,0); } }
+    .hea39-pill {
+      padding: 10px 20px; border-radius: 999px; border: 1px solid var(--border);
+      background: #fff; color: var(--text); font-size: 13px; font-weight: 700;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      transition: all 0.22s ease;
+    }
+    .hea39-pill:hover, .hea39-pill.is-active {
+      background: var(--navy); color: #fff; border-color: var(--navy);
+    }
 
-    .hea39-section { max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(20px,5vw,72px); }
-    .hea39-pinned-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 32px; align-items: center; }
-    .hea39-card { padding: clamp(20px, 3vw, 28px); border-radius: var(--radius-card); background: var(--bg-glass); border: 1px solid var(--border-hairline); backdrop-filter: blur(18px); box-shadow: 0 24px 48px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.12); transition: transform 0.35s var(--ease-out-expo), opacity 0.35s var(--ease-out-expo); }
-    .hea39-hscroll-track { display: grid; grid-template-columns: repeat(3, minmax(260px, 1fr)); gap: 20px; overflow-x: auto; margin-top: 28px; }
-    .hea39-reveal { opacity: 0; transform: translate3d(0, 22px, 0); transition: opacity 0.6s var(--ease-out-expo), transform 0.6s var(--ease-out-expo); }
-    .hea39-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+    .hea39-mosaic-hero {
+      display: grid; grid-template-columns: 320px 1fr; gap: 18px; align-items: stretch;
+    }
+    .hea39-feature-bars {
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .hea39-feature-bar {
+      flex: 1; border-radius: 26px; padding: 24px; position: relative; overflow: hidden;
+      background: linear-gradient(145deg, #0f172a, #1e293b); color: #fff;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      min-height: 150px;
+    }
+    .hea39-main-card {
+      position: relative; border-radius: 32px; overflow: hidden; min-height: 520px;
+      background: #0f172a; color: #fff; padding: clamp(28px, 4.5vw, 52px);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .hea39-main-card-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      opacity: 0.58; z-index: 0;
+    }
+    .hea39-main-card-content { position: relative; z-index: 2; }
+    .hea39-h1 {
+      font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4.4rem);
+      font-weight: 700; line-height: 1.02; letter-spacing: -0.03em; margin: 10px 0 18px;
+    }
 
-    .hea39-seamless-overlay { position: fixed; inset: 0; z-index: 190; background: rgba(5,8,15,0.84); backdrop-filter: blur(20px); display: none; align-items: center; justify-content: center; padding: 20px; pointer-events: none; }
-    .hea39-seamless-overlay.is-open { display: flex; }
-    .hea39-seamless-box { max-width: 640px; width: 100%; border-radius: 28px; background: var(--bg-surface); border: 1px solid var(--border-hairline); padding: 32px; pointer-events: auto; }
-    @media (max-width: 640px) { .hea39-navbar { padding: 10px 16px; } }
-    @media (max-width: 768px) { .hea39-hscroll-track { grid-template-columns: 1fr; } }
-    @media (min-width: 960px) { .hea39-hero-grid { grid-template-columns: 1.05fr 0.95fr; } .hea39-pinned-grid { grid-template-columns: 1fr 1.1fr 1fr; } }
-    @media (min-width: 1024px) { .hea39-section { padding-inline: 64px; } }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    .hea39-makeover-grid {
+      margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch;
+    }
+    .hea39-service-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .hea39-service-card {
+      border-radius: 24px; padding: 24px; background: var(--surface); border: 1px solid var(--border);
+      cursor: pointer; transition: all 0.22s ease; text-align: left;
+    }
+    .hea39-service-card.is-active, .hea39-service-card:hover {
+      background: var(--navy); color: #fff; border-color: var(--navy);
+      transform: translateY(-3px);
+    }
+    .hea39-implant-banner {
+      margin-top: 36px; border-radius: 32px; padding: clamp(28px, 4vw, 48px);
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1px solid rgba(2, 132, 199, 0.2);
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 28px; align-items: center;
+    }
+    .hea39-modal {
+      position: fixed; inset: 0; background: rgba(15, 23, 42, 0.72); backdrop-filter: blur(12px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .hea39-modal.is-open { display: flex; }
+    .hea39-modal-box {
+      max-width: 500px; width: 100%; border-radius: 28px; padding: 32px;
+      background: #fff; color: var(--text); border: 1px solid var(--border);
+    }
+    @media (max-width: 960px) {
+      .hea39-mosaic-hero, .hea39-makeover-grid, .hea39-implant-banner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .hea39-service-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <svg width="0" height="0" viewBox="0 0 0 0" style="position:absolute;pointer-events:none;" aria-hidden="true">
-    <defs>
-      <filter id="hea39LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="5" />
-        <feDisplacementMap id="hea39Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
-      </filter>
-    </defs>
-  </svg>
-  <div id="cursorRing" class="hea39-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="hea39-cursor-dot" aria-hidden="true"></div>
+  <div id="cursorRing" class="hea39-cursor-ring"></div>
+  <div id="cursorDot" class="hea39-cursor-dot"></div>
 
-  <header class="hea39-navbar">
-    <strong style="font-size:17px;">✦ Health Portal</strong>
-    <nav aria-label="Primary Navigation" style="display:flex;gap:10px;align-items:center;">
-      <button type="button" id="motionToggleBtn" class="hea39-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="hea39-cta-btn" data-magnetic data-next-preview>Explore Health Portal ↗</button>
-    </nav>
-  </header>
+  <div class="hea39-shell">
+    <header class="hea39-navbar">
+      <a href="#main-content" class="hea39-brand">
+        <span style="width:36px;height:36px;border-radius:50%;background:#0284c7;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:800;">🦷</span>
+        <div>
+          <strong style="font-size:15px;display:block;line-height:1.1;">DENTAL HEALTH</strong>
+          <span style="font-size:11px;color:var(--muted);">quality healthcare</span>
+        </div>
+      </a>
 
-  <main id="main-content">
-    <section id="heroStage" class="hea39-hero">
-      <video id="heroBgVideo" class="hea39-bg-video" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260419_024949_c2df2ce2-00c2-4c26-84c6-210c14f3b98e.mp4" autoplay loop muted playsinline preload="auto"></video>
-      <canvas id="ambientSmokeCanvas" class="hea39-smoke-canvas" aria-hidden="true"></canvas>
-      <div class="hea39-hero-grid">
-        <div data-parallax="0.08">
-          <span class="hea39-pill-btn" style="color:var(--accent-primary);display:inline-flex;align-items:center;">Health Portal • Interactive Edition</span>
-          <h1 class="hea39-h1" id="oversizedHeadline">Open Sauce One</h1>
-          <p style="font-size:16px;color:var(--text-secondary);line-height:1.65;max-width:60ch;margin-bottom:24px;">We wish to provide professional dental services</p>
-          <div style="display:flex;gap:28px;flex-wrap:wrap;font-variant-numeric:tabular-nums;">
-            <div><strong data-counter-target="120" data-counter-suffix="FPS" style="font-size:30px;font-family:var(--font-mono);">120FPS</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Motion Pipeline</span></div>
-            <div><strong data-counter-target="10" data-counter-suffix="K+" style="font-size:30px;font-family:var(--font-mono);">10K+</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Active Nodes</span></div>
-            <div><strong data-counter-target="99" data-counter-suffix="%" style="font-size:30px;font-family:var(--font-mono);">99%</strong><span style="display:block;font-size:12px;color:var(--text-secondary);">Visual Fidelity</span></div>
+      <nav style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;font-weight:600;">
+        <a href="#smile-gallery" style="color:var(--muted);text-decoration:none;">Smile Makeover</a>
+        <a href="#smile-gallery" style="color:var(--muted);text-decoration:none;">Veneers &amp; Crowns</a>
+        <a href="#implant-section" style="color:var(--muted);text-decoration:none;">Implant Dentistry</a>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <button type="button" id="motionToggleBtn" class="hea39-pill" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="hea39-pill is-active">📞 Dental Emergency</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hea39-mosaic-hero tabular-nums" aria-labelledby="heroHeading">
+        <div class="hea39-feature-bars">
+          <article class="hea39-feature-bar">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#38bdf8;">01 // PRECISION</span>
+            <h2 style="font-family:var(--font-display);font-size:22px;margin-top:6px;">Advanced Dentistry</h2>
+            <p style="font-size:12px;color:rgba(255,255,255,0.75);margin-top:4px;">3D CBCT digital scanning &amp; painless laser protocols.</p>
+          </article>
+          <article class="hea39-feature-bar">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#38bdf8;">02 // TECHNOLOGY</span>
+            <h2 style="font-family:var(--font-display);font-size:22px;margin-top:6px;">High Quality Equipment</h2>
+            <p style="font-size:12px;color:rgba(255,255,255,0.75);margin-top:4px;">Same-day CAD/CAM porcelain restorations.</p>
+          </article>
+          <article class="hea39-feature-bar">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#38bdf8;">03 // PATIENT CARE</span>
+            <h2 style="font-family:var(--font-display);font-size:22px;margin-top:6px;">Friendly Staff</h2>
+            <p style="font-size:12px;color:rgba(255,255,255,0.75);margin-top:4px;">Bilingual West New York care team &amp; 0% financing.</p>
+          </article>
+        </div>
+
+        <div class="hea39-main-card">
+          <img class="hea39-main-card-bg" src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260624_113640_ccf3cf97-d447-425b-a134-d7b09fc743fc.png&w=1280&q=85" alt="Modern Dental Care Clinic in West New York" />
+          <div class="hea39-main-card-content" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+            <span style="padding:8px 16px;border-radius:999px;background:rgba(255,255,255,0.18);backdrop-filter:blur(12px);font-size:12px;font-weight:600;">
+              ✦ Complete Dental Care under One Roof
+            </span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:#7dd3fc;">WEST NEW YORK, NJ</span>
+          </div>
+
+          <div class="hea39-main-card-content">
+            <p style="font-size:18px;font-weight:500;color:rgba(255,255,255,0.9);">Trusted Dentist in West New York</p>
+            <h1 id="heroHeading" class="hea39-h1">Dental Care</h1>
+            <p style="font-size:15px;color:rgba(255,255,255,0.84);max-width:48ch;margin-bottom:22px;">
+              Experience stress-free cosmetic, restorative, and implant dentistry backed by 3D digital smile design and transparent treatment plans.
+            </p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <button type="button" class="hea39-pill is-active" data-seamless-trigger="Book Free Dental Consultation">Free Consultation →</button>
+              <a href="#smile-gallery" class="hea39-pill">Explore Smile Makeover</a>
+            </div>
           </div>
         </div>
-        <div id="heroPopoutRig" class="hea39-popout-wrap" data-tilt-card style="filter:url(#hea39LiquidFilter);">
-          <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.75"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#ec4899" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
+      </section>
+
+      <section id="smile-gallery" class="hea39-makeover-grid tabular-nums" aria-labelledby="makeoverHeading">
+        <div style="position:relative;border-radius:28px;overflow:hidden;min-height:380px;background:linear-gradient(145deg,#0f172a,#1e3a8a);color:#fff;padding:32px;display:flex;flex-direction:column;justify-content:space-between;">
+          <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260624_113640_ccf3cf97-d447-425b-a134-d7b09fc743fc.png&w=1280&q=85" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;opacity:0.35;filter:saturate(1.15);" />
+          <div style="position:relative;z-index:2;">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#7dd3fc;">COSMETIC EXCELLENCE</span>
+            <h2 id="makeoverHeading" style="font-family:var(--font-display);font-size:32px;margin-top:6px;">Smile Gallery &amp; Smile Makeover</h2>
+          </div>
+          <div style="position:relative;z-index:2;background:rgba(15,23,42,0.84);backdrop-filter:blur(14px);padding:18px;border-radius:20px;">
+            <strong id="activeDentalTitle" style="font-size:17px;display:block;margin-bottom:4px;">01 // Porcelain Dental Veneers</strong>
+            <p id="activeDentalDesc" style="font-size:13px;color:rgba(255,255,255,0.8);">
+              Ultra-thin custom ceramic shells crafted to close gaps, lengthen worn enamel, and deliver a permanent Hollywood shade.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section id="pinnedSpecs" class="hea39-section">
-      <div class="hea39-pinned-grid">
-        <article class="hea39-card hea39-reveal" data-tilt-card data-spec-index="001">
-          <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">001 / HEALTH PORTAL</span>
-          <h2 style="font-size:20px;margin:8px 0;">Open Sauce One</h2>
-          <p style="font-size:13px;color:var(--text-secondary);">We wish to provide professional dental services</p>
-        </article>
-        <div class="hea39-card" id="scrubCenterStage" style="text-align:center;">
-          <svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.75"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#ec4899" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg>
-          <p id="scrubDialText" style="margin-top:10px;font-size:12px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">SCROLL SCRUB ANGLE: 0.0°</p>
+        <div class="hea39-service-grid" role="group" aria-label="Cosmetic Dental Treatments">
+          <button type="button" class="hea39-service-card is-active dental-service-btn" data-next-preview="true" data-title="01 // Porcelain Dental Veneers" data-desc="Ultra-thin custom ceramic shells crafted to close gaps, lengthen worn enamel, and deliver a permanent Hollywood shade.">
+            <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;display:block;margin-bottom:8px;">01</span>
+            <h3 style="font-family:var(--font-display);font-size:21px;margin-bottom:6px;">Dental Veneers</h3>
+            <p style="font-size:13px;opacity:0.8;">Custom stain-resistant porcelain veneers in 2 visits.</p>
+          </button>
+
+          <button type="button" class="hea39-service-card dental-service-btn" data-next-preview="true" data-title="02 // Zirconia &amp; E-Max Dental Crowns" data-desc="Full-coverage digital crowns milled with micron accuracy to restore fractured or root-canal treated teeth.">
+            <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;display:block;margin-bottom:8px;">02</span>
+            <h3 style="font-family:var(--font-display);font-size:21px;margin-bottom:6px;">Dental Crowns</h3>
+            <p style="font-size:13px;opacity:0.8;">Biocompatible zirconia strength with natural translucency.</p>
+          </button>
+
+          <button type="button" class="hea39-service-card dental-service-btn" data-next-preview="true" data-title="03 // Clinical LED Teeth Whitening" data-desc="Up to 8 shades brighter in a single 60-minute chairside session with zero post-treatment sensitivity.">
+            <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;display:block;margin-bottom:8px;">03</span>
+            <h3 style="font-family:var(--font-display);font-size:21px;margin-bottom:6px;">Teeth Whitening</h3>
+            <p style="font-size:13px;opacity:0.8;">Desensitizing enamel-safe whitening gel &amp; take-home trays.</p>
+          </button>
+
+          <button type="button" class="hea39-service-card dental-service-btn" data-next-preview="true" data-title="04 // Full-Arch Dental Implants" data-desc="Titanium and zirconia root replacements guided by 3D CBCT tomography for lifetime chewing stability.">
+            <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;display:block;margin-bottom:8px;">04</span>
+            <h3 style="font-family:var(--font-display);font-size:21px;margin-bottom:6px;">Dental Implants</h3>
+            <p style="font-size:13px;opacity:0.8;">Permanent single-tooth &amp; All-on-4 implant restorations.</p>
+          </button>
         </div>
-        <article class="hea39-card hea39-reveal" data-tilt-card data-spec-index="002">
-          <span style="font-size:11px;color:var(--accent-primary);font-weight:700;font-family:var(--font-mono);">002 / TELEMETRY</span>
-          <h2 style="font-size:20px;margin:8px 0;">3D Tilt &amp; Liquid Wave</h2>
-          <p style="font-size:13px;color:var(--text-secondary);">Interactive perspective cards and SVG displacement filters tuned for Health Portal.</p>
-        </article>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="hea39-section" style="padding-top:24px;padding-bottom:40px;border-top:1px solid var(--border-hairline);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-    <span style="font-size:13px;color:var(--text-secondary);">© 2026 Health Portal. Crafted with ForgeFrame Gold v2.0.</span>
-    <span style="font-size:12px;font-family:var(--font-mono);color:var(--accent-primary);">STATUS: NOMINAL • 60FPS</span>
-  </footer>
+      <section id="implant-section" class="hea39-implant-banner" aria-labelledby="implantHeading">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;font-weight:700;">PERMANENT TOOTH REPLACEMENT</span>
+          <h2 id="implantHeading" style="font-family:var(--font-display);font-size:clamp(1.8rem,3.4vw,2.7rem);margin:8px 0 12px;">Implant Dentistry — Restore Missing Teeth</h2>
+          <p style="font-size:15px;color:var(--muted);max-width:52ch;margin-bottom:20px;">
+            Look, feel, and function like natural teeth. Our computer-guided implant placement preserves jawbone density and restores 99% of natural bite force.
+          </p>
+          <button type="button" class="hea39-pill is-active" data-seamless-trigger="Schedule 3D Implant Scan &amp; Consultation">Book 3D CBCT Implant Scan →</button>
+        </div>
+        <div style="text-align:center;">
+          <img src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260624_115106_0d53e042-a285-4ec4-9e7c-4afda82a6f87.png&w=1280&q=85" alt="3D Dental Implant Restorations" style="width:100%;max-width:360px;height:240px;object-fit:cover;border-radius:24px;box-shadow:0 18px 40px rgba(2,132,199,0.18);" />
+        </div>
+      </section>
+    </main>
 
-  <div id="seamlessModal" class="hea39-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
-    <div class="hea39-seamless-box">
+    <footer style="margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+      <span>© 2026 Dental Health Quality Healthcare — West New York, NJ.</span>
+      <span style="font-family:var(--font-mono);color:#0284c7;">EMERGENCY LINE: (201) 555-0194</span>
+    </footer>
+  </div>
+
+  <div id="seamlessModal" class="hea39-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="hea39-modal-box">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-        <span class="hea39-pill-btn">Health Portal Specification</span>
-        <button type="button" id="closeSeamlessBtn" class="hea39-pill-btn">Close (Esc)</button>
+        <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;">DENTAL HEALTH APPOINTMENT DESK</span>
+        <button type="button" id="closeSeamlessBtn" class="hea39-pill">Close (Esc)</button>
       </div>
-      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Health Portal</h2>
-      <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:18px;">We wish to provide professional dental services</p>
-      <div style="margin-bottom:18px;"><svg viewBox="0 0 680 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:280px;"><defs><radialGradient id="gOrb" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.75"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient></defs><circle cx="340" cy="170" r="135" fill="url(#gOrb)"/><ellipse cx="340" cy="170" rx="250" ry="68" transform="rotate(-14 340 170)" stroke="#ec4899" stroke-width="3" stroke-dasharray="10 6"/><circle cx="340" cy="170" r="76" stroke="#ffffff" stroke-width="2.5"/></svg></div>
-      <button type="button" id="confirmSeamlessBtn" class="hea39-cta-btn" style="width:100%;">Return to Live Stage</button>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Book Your Free Consultation</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Includes complimentary digital X-rays, 3D intraoral scan, and a personalized cosmetic or implant treatment plan.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="hea39-pill is-active" style="width:100%;justify-content:center;">Confirm Patient Appointment</button>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var tOut = document.getElementById('activeDentalTitle');
+      var dOut = document.getElementById('activeDentalDesc');
+      document.querySelectorAll('.dental-service-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.dental-service-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (tOut) tOut.textContent = btn.getAttribute('data-title') || '';
+          if (dOut) dOut.textContent = btn.getAttribute('data-desc') || '';
+        });
+      });
+    })();
+  </script>
   
   <script>
     (function () {

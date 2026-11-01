@@ -4388,5 +4388,833 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </html>`;
   }
 
+  // ============================================================================
+  // 14. CONTACT CYBERNETIC (t195 — Free Tier — Mainframe® Studio Interactive Inquiry)
+  // Crisp White #FFFFFF + Forest Green #1C2E1E + Mouse-Scrubbed Video + Typewriter + Multi-Select Pills
+  // ============================================================================
+  if (spec.slug === 'contact-cybernetic') {
+    const bgVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260601_110537_3a579fa0-7bbc-4d94-9d25-0e816c7840f5.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mainframe® Studio — Cybernetic Contact &amp; Project Inquiry</title>
+  <meta name="description" content="Mainframe® Studio interactive project inquiry terminal featuring mouse-scrubbed cybernetic video, typewriter headline, and multi-select scope pills.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: rgba(255, 255, 255, 0.86);
+      --text: #09090b;
+      --muted: #52525b;
+      --forest: #1C2E1E;
+      --border: #e4e4e7;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--forest); color: #fff; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--text); }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; width: 100%; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: space-between;
+      background: #ffffff;
+    }
+    .${p}-bg-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      pointer-events: none; z-index: 0; opacity: 0.92;
+    }
+    .${p}-top-overlay {
+      position: relative; z-index: 10; padding: 28px clamp(20px, 4vw, 48px);
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+    }
+    .${p}-brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--font-display); font-size: 28px; font-weight: 700; letter-spacing: -0.04em;
+      color: var(--text); text-decoration: none;
+    }
+    .${p}-brand-asterisk {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%; background: var(--forest); color: #fff; font-size: 16px;
+    }
+    .${p}-nav-links {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px);
+      padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border);
+    }
+    .${p}-nav-link {
+      color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500;
+      padding: 6px 10px; border-radius: 999px; transition: opacity 0.2s;
+    }
+    .${p}-nav-link:hover { opacity: 0.6; }
+    .${p}-pill-btn {
+      padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.9); color: var(--text); font-size: 13px; font-weight: 600;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .${p}-pill-btn:hover, .${p}-pill-btn.is-active {
+      background: var(--forest); color: #fff; border-color: var(--forest);
+    }
+
+    .${p}-bottom-overlay {
+      position: relative; z-index: 10; padding: 24px clamp(20px, 4vw, 48px) 44px;
+      max-width: 920px;
+    }
+    .${p}-card-shell {
+      background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(22px);
+      border: 1px solid rgba(24, 24, 27, 0.1); border-radius: 32px;
+      padding: clamp(24px, 4vw, 42px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-size: clamp(2.5rem, 5.6vw, 4.75rem);
+      font-weight: 500; letter-spacing: -0.04em; line-height: 1.04; color: var(--text);
+      margin-bottom: 24px;
+    }
+    .${p}-cursor-bar {
+      display: inline-block; width: 3px; height: 0.85em; background: var(--forest);
+      vertical-align: middle; margin-left: 4px; animation: ${p}Blink 0.9s step-end infinite;
+    }
+    @keyframes ${p}Blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    .${p}-scope-pills {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px;
+    }
+    .${p}-scope-pill {
+      padding: 12px 24px; border-radius: 999px; font-size: 15px; font-weight: 600;
+      border: 1px solid #d4d4d8; background: rgba(255, 255, 255, 0.82); color: var(--text);
+      cursor: pointer; transition: all 0.2s ease;
+    }
+    .${p}-scope-pill.is-selected {
+      background: var(--forest); color: #ffffff; border-color: var(--forest);
+      box-shadow: 0 8px 20px rgba(28, 46, 30, 0.25);
+    }
+    .${p}-ready-bar {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding: 16px 22px; border-radius: 20px; background: #f4f4f5; border: 1px solid var(--border);
+    }
+    .${p}-section {
+      max-width: 1280px; margin: 0 auto; padding: 72px clamp(20px, 4vw, 48px);
+    }
+    .${p}-grid-3 {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px;
+    }
+    .${p}-studio-card {
+      padding: 28px; border-radius: 24px; background: #fafafa; border: 1px solid var(--border);
+    }
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(9, 9, 11, 0.65); backdrop-filter: blur(12px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px; width: 100%; border-radius: 28px; padding: 32px;
+      background: #fff; color: var(--text); border: 1px solid var(--border);
+    }
+    @media (max-width: 900px) {
+      .${p}-grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="${p}-cursor-ring"></div>
+  <div id="cursorDot" class="${p}-cursor-dot"></div>
+
+  <main id="main-content">
+    <section class="${p}-hero tabular-nums" aria-labelledby="heroHeading">
+      <video id="cyberContactVideo" class="${p}-bg-video" src="${bgVideo}" autoplay muted loop playsinline preload="auto"></video>
+
+      <header class="${p}-top-overlay">
+        <a href="#main-content" class="${p}-brand">
+          <span>Mainframe<sup>®</sup></span>
+          <span class="${p}-brand-asterisk" aria-hidden="true">✱</span>
+        </a>
+
+        <nav class="${p}-nav-links" aria-label="Primary Navigation">
+          <a href="#studio-pods" class="${p}-nav-link">Labs,</a>
+          <a href="#studio-pods" class="${p}-nav-link">Studio,</a>
+          <a href="#studio-pods" class="${p}-nav-link">Openings,</a>
+          <a href="#studio-pods" class="${p}-nav-link">Shop</a>
+        </nav>
+
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+          <button type="button" id="motionToggleBtn" class="${p}-pill-btn" aria-pressed="false">Motion: ON</button>
+          <button type="button" id="exploreMagneticBtn" class="${p}-pill-btn is-active">
+            <span>Get in touch</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="${p}-bottom-overlay">
+        <div class="${p}-card-shell">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px;">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--forest);font-weight:600;">
+              ● INTERACTIVE BRIEF TERMINAL • SCRUB VIDEO WITH CURSOR
+            </span>
+            <span id="scrubDeltaOut" style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">
+              SCRUB READY • 0.5x SENSITIVITY
+            </span>
+          </div>
+
+          <h1 id="heroHeading" class="${p}-h1">
+            we'd love to<br />hear from you!<span class="${p}-cursor-bar" aria-hidden="true"></span>
+          </h1>
+
+          <p style="font-size:15px;font-weight:500;color:var(--muted);margin-bottom:14px;">
+            I'm interested in... (Select one or multiple project scopes)
+          </p>
+
+          <div class="${p}-scope-pills" role="group" aria-label="Project Scope Selection">
+            <button type="button" class="${p}-scope-pill is-selected scope-pill-btn" data-next-preview="true" data-scope="Brand">Brand</button>
+            <button type="button" class="${p}-scope-pill is-selected scope-pill-btn" data-next-preview="true" data-scope="Digital">Digital</button>
+            <button type="button" class="${p}-scope-pill scope-pill-btn" data-next-preview="true" data-scope="Campaign">Campaign</button>
+            <button type="button" class="${p}-scope-pill scope-pill-btn" data-next-preview="true" data-scope="Other">Other</button>
+          </div>
+
+          <div class="${p}-ready-bar">
+            <p style="font-size:14px;color:var(--muted);">
+              Ready to inquire about: <strong id="selectedScopesOut" style="color:var(--text);">Brand, Digital</strong>
+            </p>
+            <button type="button" class="${p}-pill-btn is-active" data-seamless-trigger="Submit Inquiry for Brand &amp; Digital">
+              <span>Let's Go</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio-pods" class="${p}-section tabular-nums" aria-labelledby="podsHeading">
+      <span style="font-family:var(--font-mono);font-size:12px;color:var(--forest);font-weight:600;">MAINFRAME® GLOBAL PRACTICE</span>
+      <h2 id="podsHeading" style="font-family:var(--font-display);font-size:clamp(1.8rem,3.2vw,2.6rem);margin-top:8px;">Autonomous Design &amp; Cybernetic Systems</h2>
+
+      <div class="${p}-grid-3">
+        <article class="${p}-studio-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--forest);">01 // BRAND ARCHITECTURE</span>
+          <h3 style="font-family:var(--font-display);font-size:21px;margin:10px 0;">Kinetic Identity Systems</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Typeface engineering, 3D industrial motion grammar, and design tokens built for category-defining ventures.</p>
+        </article>
+        <article class="${p}-studio-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--forest);">02 // DIGITAL PLATFORMS</span>
+          <h3 style="font-family:var(--font-display);font-size:21px;margin:10px 0;">WebGL &amp; Spatial Flagships</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Sub-second Next.js commerce and interactive product configurators with 60fps hardware-accelerated motion.</p>
+        </article>
+        <article class="${p}-studio-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--forest);">03 // CAMPAIGN FILMS</span>
+          <h3 style="font-family:var(--font-display);font-size:21px;margin:10px 0;">Launch Keynotes &amp; Reels</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Real-time Unreal and Houdini product films synchronized with interactive launch microsites.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-section" style="padding-top:24px;padding-bottom:40px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 Mainframe® Studio. All rights reserved.</span>
+    <span style="font-family:var(--font-mono);color:var(--forest);">SAN FRANCISCO • NEW YORK • ZÜRICH</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--forest);">MAINFRAME® INQUIRY DESK</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill-btn">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Start Your Mainframe® Brief</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Our executive producers respond within 24 hours with a tailored pod allocation and sprint timeline.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill-btn is-active" style="width:100%;justify-content:center;">Dispatch Project Brief</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var video = document.getElementById('cyberContactVideo');
+      var scrubOut = document.getElementById('scrubDeltaOut');
+      var lastX = null;
+      window.addEventListener('mousemove', function (e) {
+        if (lastX === null) { lastX = e.clientX; return; }
+        var dx = e.clientX - lastX;
+        lastX = e.clientX;
+        var norm = dx / Math.max(1, window.innerWidth);
+        if (video && video.duration && isFinite(video.duration)) {
+          video.currentTime = Math.max(0, Math.min(video.duration, video.currentTime + norm * video.duration * 0.5));
+        }
+        if (scrubOut) scrubOut.textContent = 'MOUSE SCRUB: ' + (dx >= 0 ? '+' : '') + dx + 'px • 0.5x';
+      }, { passive: true });
+
+      var out = document.getElementById('selectedScopesOut');
+      function syncScopes() {
+        var active = [];
+        document.querySelectorAll('.scope-pill-btn.is-selected').forEach(function (b) {
+          active.push(b.getAttribute('data-scope'));
+        });
+        if (out) out.textContent = active.length ? active.join(', ') : 'General Partnership';
+      }
+      document.querySelectorAll('.scope-pill-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btn.classList.toggle('is-selected');
+          syncScopes();
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 15. HEALTH PORTAL (t196 — Premium Tier — Dental Health Quality Healthcare)
+  // Mosaic MaskedCard Hero + Smile Gallery Makeover + Implant Dentistry
+  // ============================================================================
+  if (spec.slug === 'health-portal') {
+    const heroImg = 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260624_113640_ccf3cf97-d447-425b-a134-d7b09fc743fc.png&w=1280&q=85';
+    const section2Img = 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260624_114411_a9bc9ab4-9bf8-4ac1-922d-9f4fdb20cef2.png&w=1280&q=85';
+    const section3Img1 = 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260624_115106_0d53e042-a285-4ec4-9e7c-4afda82a6f87.png&w=1280&q=85';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dental Health — Quality Healthcare &amp; Cosmetic Dentistry in West New York</title>
+  <meta name="description" content="Trusted Dentist in West New York offering Dental Veneers, Dental Crowns, Teeth Whitening, and Implant Dentistry with free consultation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f4f6f9;
+      --text: #111827;
+      --muted: #4b5563;
+      --blue: #0284c7;
+      --navy: #0f172a;
+      --border: rgba(15, 23, 42, 0.1);
+      --font-display: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--blue); color: #fff; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--navy); }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    .${p}-shell { max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 3.5vw, 40px); }
+    .${p}-navbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding: 12px 24px; border-radius: 999px; background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(18px); border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06); margin-bottom: 24px;
+    }
+    .${p}-brand {
+      display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text);
+    }
+    .${p}-pill {
+      padding: 10px 20px; border-radius: 999px; border: 1px solid var(--border);
+      background: #fff; color: var(--text); font-size: 13px; font-weight: 700;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      transition: all 0.22s ease;
+    }
+    .${p}-pill:hover, .${p}-pill.is-active {
+      background: var(--navy); color: #fff; border-color: var(--navy);
+    }
+
+    .${p}-mosaic-hero {
+      display: grid; grid-template-columns: 320px 1fr; gap: 18px; align-items: stretch;
+    }
+    .${p}-feature-bars {
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .${p}-feature-bar {
+      flex: 1; border-radius: 26px; padding: 24px; position: relative; overflow: hidden;
+      background: linear-gradient(145deg, #0f172a, #1e293b); color: #fff;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      min-height: 150px;
+    }
+    .${p}-main-card {
+      position: relative; border-radius: 32px; overflow: hidden; min-height: 520px;
+      background: #0f172a; color: #fff; padding: clamp(28px, 4.5vw, 52px);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .${p}-main-card-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      opacity: 0.58; z-index: 0;
+    }
+    .${p}-main-card-content { position: relative; z-index: 2; }
+    .${p}-h1 {
+      font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4.4rem);
+      font-weight: 700; line-height: 1.02; letter-spacing: -0.03em; margin: 10px 0 18px;
+    }
+
+    .${p}-makeover-grid {
+      margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch;
+    }
+    .${p}-service-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .${p}-service-card {
+      border-radius: 24px; padding: 24px; background: var(--surface); border: 1px solid var(--border);
+      cursor: pointer; transition: all 0.22s ease; text-align: left;
+    }
+    .${p}-service-card.is-active, .${p}-service-card:hover {
+      background: var(--navy); color: #fff; border-color: var(--navy);
+      transform: translateY(-3px);
+    }
+    .${p}-implant-banner {
+      margin-top: 36px; border-radius: 32px; padding: clamp(28px, 4vw, 48px);
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1px solid rgba(2, 132, 199, 0.2);
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 28px; align-items: center;
+    }
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(15, 23, 42, 0.72); backdrop-filter: blur(12px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 500px; width: 100%; border-radius: 28px; padding: 32px;
+      background: #fff; color: var(--text); border: 1px solid var(--border);
+    }
+    @media (max-width: 960px) {
+      .${p}-mosaic-hero, .${p}-makeover-grid, .${p}-implant-banner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .${p}-service-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="${p}-cursor-ring"></div>
+  <div id="cursorDot" class="${p}-cursor-dot"></div>
+
+  <div class="${p}-shell">
+    <header class="${p}-navbar">
+      <a href="#main-content" class="${p}-brand">
+        <span style="width:36px;height:36px;border-radius:50%;background:#0284c7;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:800;">🦷</span>
+        <div>
+          <strong style="font-size:15px;display:block;line-height:1.1;">DENTAL HEALTH</strong>
+          <span style="font-size:11px;color:var(--muted);">quality healthcare</span>
+        </div>
+      </a>
+
+      <nav style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;font-weight:600;">
+        <a href="#smile-gallery" style="color:var(--muted);text-decoration:none;">Smile Makeover</a>
+        <a href="#smile-gallery" style="color:var(--muted);text-decoration:none;">Veneers &amp; Crowns</a>
+        <a href="#implant-section" style="color:var(--muted);text-decoration:none;">Implant Dentistry</a>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <button type="button" id="motionToggleBtn" class="${p}-pill" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-pill is-active">📞 Dental Emergency</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="${p}-mosaic-hero tabular-nums" aria-labelledby="heroHeading">
+        <div class="${p}-feature-bars">
+          <article class="${p}-feature-bar">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#38bdf8;">01 // PRECISION</span>
+            <h2 style="font-family:var(--font-display);font-size:22px;margin-top:6px;">Advanced Dentistry</h2>
+            <p style="font-size:12px;color:rgba(255,255,255,0.75);margin-top:4px;">3D CBCT digital scanning &amp; painless laser protocols.</p>
+          </article>
+          <article class="${p}-feature-bar">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#38bdf8;">02 // TECHNOLOGY</span>
+            <h2 style="font-family:var(--font-display);font-size:22px;margin-top:6px;">High Quality Equipment</h2>
+            <p style="font-size:12px;color:rgba(255,255,255,0.75);margin-top:4px;">Same-day CAD/CAM porcelain restorations.</p>
+          </article>
+          <article class="${p}-feature-bar">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#38bdf8;">03 // PATIENT CARE</span>
+            <h2 style="font-family:var(--font-display);font-size:22px;margin-top:6px;">Friendly Staff</h2>
+            <p style="font-size:12px;color:rgba(255,255,255,0.75);margin-top:4px;">Bilingual West New York care team &amp; 0% financing.</p>
+          </article>
+        </div>
+
+        <div class="${p}-main-card">
+          <img class="${p}-main-card-bg" src="${heroImg}" alt="Modern Dental Care Clinic in West New York" />
+          <div class="${p}-main-card-content" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+            <span style="padding:8px 16px;border-radius:999px;background:rgba(255,255,255,0.18);backdrop-filter:blur(12px);font-size:12px;font-weight:600;">
+              ✦ Complete Dental Care under One Roof
+            </span>
+            <span style="font-family:var(--font-mono);font-size:12px;color:#7dd3fc;">WEST NEW YORK, NJ</span>
+          </div>
+
+          <div class="${p}-main-card-content">
+            <p style="font-size:18px;font-weight:500;color:rgba(255,255,255,0.9);">Trusted Dentist in West New York</p>
+            <h1 id="heroHeading" class="${p}-h1">Dental Care</h1>
+            <p style="font-size:15px;color:rgba(255,255,255,0.84);max-width:48ch;margin-bottom:22px;">
+              Experience stress-free cosmetic, restorative, and implant dentistry backed by 3D digital smile design and transparent treatment plans.
+            </p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <button type="button" class="${p}-pill is-active" data-seamless-trigger="Book Free Dental Consultation">Free Consultation →</button>
+              <a href="#smile-gallery" class="${p}-pill">Explore Smile Makeover</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="smile-gallery" class="${p}-makeover-grid tabular-nums" aria-labelledby="makeoverHeading">
+        <div style="position:relative;border-radius:28px;overflow:hidden;min-height:380px;background:linear-gradient(145deg,#0f172a,#1e3a8a);color:#fff;padding:32px;display:flex;flex-direction:column;justify-content:space-between;">
+          <img src="${heroImg}" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;opacity:0.35;filter:saturate(1.15);" />
+          <div style="position:relative;z-index:2;">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#7dd3fc;">COSMETIC EXCELLENCE</span>
+            <h2 id="makeoverHeading" style="font-family:var(--font-display);font-size:32px;margin-top:6px;">Smile Gallery &amp; Smile Makeover</h2>
+          </div>
+          <div style="position:relative;z-index:2;background:rgba(15,23,42,0.84);backdrop-filter:blur(14px);padding:18px;border-radius:20px;">
+            <strong id="activeDentalTitle" style="font-size:17px;display:block;margin-bottom:4px;">01 // Porcelain Dental Veneers</strong>
+            <p id="activeDentalDesc" style="font-size:13px;color:rgba(255,255,255,0.8);">
+              Ultra-thin custom ceramic shells crafted to close gaps, lengthen worn enamel, and deliver a permanent Hollywood shade.
+            </p>
+          </div>
+        </div>
+
+        <div class="${p}-service-grid" role="group" aria-label="Cosmetic Dental Treatments">
+          <button type="button" class="${p}-service-card is-active dental-service-btn" data-next-preview="true" data-title="01 // Porcelain Dental Veneers" data-desc="Ultra-thin custom ceramic shells crafted to close gaps, lengthen worn enamel, and deliver a permanent Hollywood shade.">
+            <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;display:block;margin-bottom:8px;">01</span>
+            <h3 style="font-family:var(--font-display);font-size:21px;margin-bottom:6px;">Dental Veneers</h3>
+            <p style="font-size:13px;opacity:0.8;">Custom stain-resistant porcelain veneers in 2 visits.</p>
+          </button>
+
+          <button type="button" class="${p}-service-card dental-service-btn" data-next-preview="true" data-title="02 // Zirconia &amp; E-Max Dental Crowns" data-desc="Full-coverage digital crowns milled with micron accuracy to restore fractured or root-canal treated teeth.">
+            <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;display:block;margin-bottom:8px;">02</span>
+            <h3 style="font-family:var(--font-display);font-size:21px;margin-bottom:6px;">Dental Crowns</h3>
+            <p style="font-size:13px;opacity:0.8;">Biocompatible zirconia strength with natural translucency.</p>
+          </button>
+
+          <button type="button" class="${p}-service-card dental-service-btn" data-next-preview="true" data-title="03 // Clinical LED Teeth Whitening" data-desc="Up to 8 shades brighter in a single 60-minute chairside session with zero post-treatment sensitivity.">
+            <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;display:block;margin-bottom:8px;">03</span>
+            <h3 style="font-family:var(--font-display);font-size:21px;margin-bottom:6px;">Teeth Whitening</h3>
+            <p style="font-size:13px;opacity:0.8;">Desensitizing enamel-safe whitening gel &amp; take-home trays.</p>
+          </button>
+
+          <button type="button" class="${p}-service-card dental-service-btn" data-next-preview="true" data-title="04 // Full-Arch Dental Implants" data-desc="Titanium and zirconia root replacements guided by 3D CBCT tomography for lifetime chewing stability.">
+            <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;display:block;margin-bottom:8px;">04</span>
+            <h3 style="font-family:var(--font-display);font-size:21px;margin-bottom:6px;">Dental Implants</h3>
+            <p style="font-size:13px;opacity:0.8;">Permanent single-tooth &amp; All-on-4 implant restorations.</p>
+          </button>
+        </div>
+      </section>
+
+      <section id="implant-section" class="${p}-implant-banner" aria-labelledby="implantHeading">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;font-weight:700;">PERMANENT TOOTH REPLACEMENT</span>
+          <h2 id="implantHeading" style="font-family:var(--font-display);font-size:clamp(1.8rem,3.4vw,2.7rem);margin:8px 0 12px;">Implant Dentistry — Restore Missing Teeth</h2>
+          <p style="font-size:15px;color:var(--muted);max-width:52ch;margin-bottom:20px;">
+            Look, feel, and function like natural teeth. Our computer-guided implant placement preserves jawbone density and restores 99% of natural bite force.
+          </p>
+          <button type="button" class="${p}-pill is-active" data-seamless-trigger="Schedule 3D Implant Scan &amp; Consultation">Book 3D CBCT Implant Scan →</button>
+        </div>
+        <div style="text-align:center;">
+          <img src="${section3Img1}" alt="3D Dental Implant Restorations" style="width:100%;max-width:360px;height:240px;object-fit:cover;border-radius:24px;box-shadow:0 18px 40px rgba(2,132,199,0.18);" />
+        </div>
+      </section>
+    </main>
+
+    <footer style="margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+      <span>© 2026 Dental Health Quality Healthcare — West New York, NJ.</span>
+      <span style="font-family:var(--font-mono);color:#0284c7;">EMERGENCY LINE: (201) 555-0194</span>
+    </footer>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:#0284c7;">DENTAL HEALTH APPOINTMENT DESK</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Book Your Free Consultation</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Includes complimentary digital X-rays, 3D intraoral scan, and a personalized cosmetic or implant treatment plan.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill is-active" style="width:100%;justify-content:center;">Confirm Patient Appointment</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var tOut = document.getElementById('activeDentalTitle');
+      var dOut = document.getElementById('activeDentalDesc');
+      document.querySelectorAll('.dental-service-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.dental-service-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (tOut) tOut.textContent = btn.getAttribute('data-title') || '';
+          if (dOut) dOut.textContent = btn.getAttribute('data-desc') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 16. IMPACT VENTURES (t197 — Premium Tier — Atelier UX and App Design for Bold Ventures)
+  // Fullscreen Video Hero + Instrument Serif Italic Typography + Interactive Case Studies
+  // ============================================================================
+  if (spec.slug === 'impact-ventures') {
+    const heroVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260622_204103_f607742e-09da-4cf5-bb06-4e67b0a531de.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Atelier — UX and App Design for Bold Ventures</title>
+  <meta name="description" content="We shape digital products that define brands and unlock exponential growth. UX and App Design for Bold Ventures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080c;
+      --surface: rgba(255, 255, 255, 0.06);
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.68);
+      --border: rgba(255, 255, 255, 0.16);
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: #fff; color: #000; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; width: 100%; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 24px clamp(20px, 5vw, 56px) 56px;
+    }
+    .${p}-bg-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+      z-index: 0; opacity: 0.72; pointer-events: none;
+    }
+    .${p}-hero-scrim {
+      position: absolute; inset: 0; z-index: 1;
+      background: radial-gradient(circle at 50% 45%, rgba(8, 8, 12, 0.28) 0%, rgba(8, 8, 12, 0.82) 100%);
+      pointer-events: none;
+    }
+    .${p}-nav {
+      position: relative; z-index: 10; max-width: 1320px; width: 100%; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .${p}-brand {
+      font-family: var(--font-serif); font-size: 32px; color: #fff; text-decoration: none; letter-spacing: -0.02em;
+    }
+    .${p}-nav-links {
+      display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+      padding: 10px 24px; border-radius: 999px; background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border); backdrop-filter: blur(16px);
+    }
+    .${p}-nav-link { color: rgba(255, 255, 255, 0.78); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .${p}-nav-link:hover { color: #fff; }
+    .${p}-pill {
+      padding: 10px 22px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.1); color: #fff; font-size: 13px; font-weight: 600;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      backdrop-filter: blur(12px); transition: all 0.22s ease;
+    }
+    .${p}-pill:hover, .${p}-pill.is-active {
+      background: #ffffff; color: #08080c; border-color: #ffffff;
+    }
+
+    .${p}-hero-center {
+      position: relative; z-index: 10; max-width: 980px; margin: auto; text-align: center;
+      padding: 64px 0;
+    }
+    .${p}-h1 {
+      font-family: var(--font-serif); font-size: clamp(3.1rem, 7.6vw, 6.4rem);
+      font-weight: 400; line-height: 0.96; letter-spacing: -0.02em; margin-bottom: 22px;
+    }
+    .${p}-h1 em { font-style: italic; font-weight: 400; color: rgba(255, 255, 255, 0.9); }
+
+    .${p}-section {
+      max-width: 1320px; margin: 0 auto; padding: 80px clamp(20px, 5vw, 56px);
+    }
+    .${p}-case-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px;
+    }
+    .${p}-case-card {
+      border-radius: 26px; padding: 28px; background: var(--surface); border: 1px solid var(--border);
+      cursor: pointer; transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .${p}-case-card:hover, .${p}-case-card.is-active {
+      transform: translateY(-5px); border-color: #fff; background: rgba(255, 255, 255, 0.11);
+    }
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(8, 8, 12, 0.86); backdrop-filter: blur(16px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px; width: 100%; border-radius: 28px; padding: 32px;
+      background: #12121a; border: 1px solid var(--border);
+    }
+    @media (max-width: 920px) {
+      .${p}-case-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" class="${p}-cursor-ring"></div>
+  <div id="cursorDot" class="${p}-cursor-dot"></div>
+
+  <main id="main-content">
+    <section class="${p}-hero tabular-nums" aria-labelledby="heroHeading">
+      <video class="${p}-bg-video" src="${heroVideo}" autoplay muted loop playsinline preload="auto"></video>
+      <div class="${p}-hero-scrim"></div>
+
+      <header class="${p}-nav">
+        <a href="#main-content" class="${p}-brand">Atelier</a>
+        <nav class="${p}-nav-links" aria-label="Primary Navigation">
+          <a href="#venture-cases" class="${p}-nav-link">Projects</a>
+          <a href="#venture-cases" class="${p}-nav-link">Expertise</a>
+          <a href="#venture-cases" class="${p}-nav-link">Studio</a>
+          <a href="#venture-cases" class="${p}-nav-link">Insights</a>
+        </nav>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+          <button type="button" id="motionToggleBtn" class="${p}-pill" aria-pressed="false">Motion: ON</button>
+          <button type="button" id="exploreMagneticBtn" class="${p}-pill is-active">Let's Talk ↗</button>
+        </div>
+      </header>
+
+      <div class="${p}-hero-center">
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;color:var(--muted);display:inline-block;margin-bottom:16px;">
+          ATELIER VENTURE DESIGN PARTNER • SERIES A–C
+        </span>
+        <h1 id="heroHeading" class="${p}-h1">
+          UX <em>and</em> APP DESIGN<br /><em>for</em> BOLD VENTURES
+        </h1>
+        <p style="font-size:clamp(1rem,1.4vw,1.2rem);color:var(--muted);max-width:46ch;margin:0 auto 28px;line-height:1.6;">
+          We shape digital products that define brands and unlock exponential growth.
+        </p>
+        <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+          <a href="#venture-cases" class="${p}-pill is-active">See Cases →</a>
+          <button type="button" class="${p}-pill" data-seamless-trigger="Atelier 2026 Product Design Showreel">Watch Reel ▶</button>
+        </div>
+      </div>
+
+      <div style="position:relative;z-index:10;max-width:1320px;width:100%;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:var(--font-mono);font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:18px;">
+        <span>$4.2B+ CLIENT VALUATION CREATED</span>
+        <span id="activeVentureReadout" style="color:#fff;">FEATURED CASE: Veloce Autonomous Treasury (+310% Activation)</span>
+        <span>LONDON • NEW YORK • BERLIN</span>
+      </div>
+    </section>
+
+    <section id="venture-cases" class="${p}-section tabular-nums" aria-labelledby="casesHeading">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">SELECTED VENTURE OUTCOMES</span>
+          <h2 id="casesHeading" style="font-family:var(--font-serif);font-size:clamp(2.2rem,4vw,3.4rem);font-weight:400;margin-top:6px;">
+            Category-Defining <em>Product Launches</em>
+          </h2>
+        </div>
+      </div>
+
+      <div class="${p}-case-grid" role="group" aria-label="Interactive Venture Case Studies">
+        <article class="${p}-case-card is-active venture-case-btn" tabindex="0" role="button" data-next-preview="true" data-readout="FEATURED CASE: Veloce Autonomous Treasury (+310% Activation)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">01 // FINTECH OS • SERIES B</span>
+          <h3 style="font-family:var(--font-serif);font-size:28px;font-weight:400;margin:10px 0;">Veloce Treasury</h3>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:16px;">Redesigned multi-currency liquidity routing and iOS biometric approval workflows.</p>
+          <strong style="font-family:var(--font-mono);font-size:13px;color:#fff;">+310% Enterprise Activation →</strong>
+        </article>
+
+        <article class="${p}-case-card venture-case-btn" tabindex="0" role="button" data-next-preview="true" data-readout="FEATURED CASE: Kinetix AI Health Companion (4.9★ App Store)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">02 // BIOHEALTH • SERIES A</span>
+          <h3 style="font-family:var(--font-serif);font-size:28px;font-weight:400;margin:10px 0;">Kinetix Longevity</h3>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:16px;">Wearable biomarker synthesis and conversational AI coaching native mobile app.</p>
+          <strong style="font-family:var(--font-mono);font-size:13px;color:#fff;">4.9★ App Store • 1.2M MAU →</strong>
+        </article>
+
+        <article class="${p}-case-card venture-case-btn" tabindex="0" role="button" data-next-preview="true" data-readout="FEATURED CASE: Orbital Spatial Workspace ($85M Series C)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">03 // SPATIAL SAAS • SERIES C</span>
+          <h3 style="font-family:var(--font-serif);font-size:28px;font-weight:400;margin:10px 0;">Orbital Canvas</h3>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:16px;">Multiplayer WebGL product architecture and design system for 40,000 engineering teams.</p>
+          <strong style="font-family:var(--font-mono);font-size:13px;color:#fff;">$85M Series C Raised →</strong>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-section" style="padding-top:24px;padding-bottom:44px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+    <span>© 2026 Atelier Venture Design Partner.</span>
+    <span style="font-family:var(--font-mono);">UX &amp; APP DESIGN FOR BOLD VENTURES</span>
+  </footer>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">ATELIER PARTNER DESK</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-serif);font-size:30px;font-weight:400;margin-bottom:10px;">Shape Your Venture Flagship</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Book an executive product audit or partner sprint directly with Atelier's founding design directors.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill is-active" style="width:100%;justify-content:center;">Schedule Founder Session</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var out = document.getElementById('activeVentureReadout');
+      document.querySelectorAll('.venture-case-btn').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.venture-case-btn').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (out) out.textContent = card.getAttribute('data-readout') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
   return null;
 }

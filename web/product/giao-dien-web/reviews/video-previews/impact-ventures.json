@@ -2,15 +2,15 @@
   "id": "t197",
   "slug": "impact-ventures",
   "browser": "153.0.8010.12",
-  "date": "2026-11-01T02:58:09.039Z",
+  "date": "2026-11-01T08:20:19.585Z",
   "demo": "/demos/impact-ventures/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "a89366b682e9",
-  "sha256": "a89366b682e9ba97cabe7b34adddb352cc4a5baf6e129049cc8d20ed9121d936",
-  "demoHtmlSha256": "8c6d608d7db4a91c4d590ba1b5d7544c247c0deba2e98595b86e57a9b7057057",
-  "demoSha256": "8beed7d0411333756342a3d607a6df856451ec68cbe4b0ffb9bbd6ff8fa5294f",
-  "bytes": 722119,
+  "revision": "d0db0378eae1",
+  "sha256": "d0db0378eae1d185178a714cf7e9d52ed2891a77d4beca95152ec4a92201d8fa",
+  "demoHtmlSha256": "0c2cf325a1776a4c385d6759358ff15e7ea58de749d84b938081858745a8fcb5",
+  "demoSha256": "c27c0eebe4791c4c5a15227a60b03f44c8fc9addef970d1af48280a95356c675",
+  "bytes": 552408,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.517,
+      "seconds": 2.467,
       "action": "click",
-      "selector": "#exploreMagneticBtn"
+      "selector": "<article class=\"imp64-case-card venture-case-btn is-active\" tabindex=\"0\" role=\"button\" data-next-preview=\"true\" data-readout=\"FEATURED CASE: Veloce Autonomous Treasury (+310% Activ"
     },
     {
-      "seconds": 5.023,
+      "seconds": 4.824,
       "action": "click",
-      "selector": "#exploreMagneticBtn"
+      "selector": "<article class=\"imp64-case-card venture-case-btn is-active\" tabindex=\"0\" role=\"button\" data-next-preview=\"true\" data-readout=\"FEATURED CASE: Veloce Autonomous Treasury (+310% Activ"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 560
+      "target": 581
     }
   ],
   "errors": [],

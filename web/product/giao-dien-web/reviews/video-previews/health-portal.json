@@ -2,15 +2,15 @@
   "id": "t196",
   "slug": "health-portal",
   "browser": "153.0.8010.12",
-  "date": "2026-11-01T02:57:38.707Z",
+  "date": "2026-11-01T08:22:31.598Z",
   "demo": "/demos/health-portal/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "6ad3aa95cea4",
-  "sha256": "6ad3aa95cea4e9311ca87559f86dce289e9693b30432141117c12a07011a5f4a",
-  "demoHtmlSha256": "8ef4d57946c3cf045fd8b836e9ce541659f664aedcc98f9fae1c03bd872e9b42",
-  "demoSha256": "9f2f2fd4b04d0dbefd53e3dc92816bc5dafd02a82a99dc2271ec30f8b2e5c064",
-  "bytes": 207987,
+  "revision": "51285b33a515",
+  "sha256": "51285b33a5153e6af77cd896a20b0637fb928beff0cc8ef26d867882e31d5021",
+  "demoHtmlSha256": "cab9db19983cb48fcad8f5b1e32a8bc893169e91af0f2494a032745ddb59abcf",
+  "demoSha256": "209b050745ecf18599d5280f59f0d238939fa89896ae2524f018877b0bd4a662",
+  "bytes": 466738,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.485,
+      "seconds": 2.452,
       "action": "click",
-      "selector": "#exploreMagneticBtn"
+      "selector": "<button type=\"button\" class=\"hea39-service-card dental-service-btn is-active\" data-next-preview=\"true\" data-title=\"01 // Porcelain Dental Veneers\" data-desc=\"Ultra-thin custom cera"
     },
     {
-      "seconds": 4.899,
+      "seconds": 4.85,
       "action": "click",
-      "selector": "#exploreMagneticBtn"
+      "selector": "<button type=\"button\" class=\"hea39-service-card dental-service-btn is-active\" data-next-preview=\"true\" data-title=\"01 // Porcelain Dental Veneers\" data-desc=\"Ultra-thin custom cera"
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 560
+      "target": 667
     }
   ],
   "errors": [],

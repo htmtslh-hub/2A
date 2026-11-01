@@ -1,984 +1,265 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Lunar Oasis Villa — Interactive 3D Hero &amp; Motion Showcase</title>
-  <meta name="description" content="Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PUMPIT — Progressive Unique Mobile Product IT Studio</title>
+  <meta name="description" content="Progressive Unique Mobile Product IT studio — pastel aurora glassmorphism interface featuring 6 application spheres, 10-step MVP workflow, and 4 transparent tariff tiers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
   <style>
-    /* hallmark · v2.0.0 · blueprint=lunar-villa · slug=luminex-atelier-eab */
     :root {
-      --bg: #0c1116;
-      --surface: #151e26;
-      --glass: rgba(255, 255, 255, 0.10);
-      --fg: #f8fafc;
-      --muted: #cbd5e1;
-      --border: rgba(255, 255, 255, 0.16);
-      --accent: #eab308;
-      --accent-2: #2dd4bf;
-      --font-display: 'Instrument Serif', Georgia, serif;
-      --font-serif: 'Instrument Serif', Georgia, serif;
-      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --bg: #F6F4FA;
+      --surface: rgba(255, 255, 255, 0.76);
+      --text: #0F172A;
+      --muted: #475569;
+      --coral: #E06D64;
+      --sky: #38BDF8;
+      --lavender: #8B5CF6;
+      --amber: #F59E0B;
+      --border: rgba(15, 23, 42, 0.1);
+      --font-display: 'Syne', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
     }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
+      background:
+        radial-gradient(circle at 18% 16%, rgba(251, 146, 60, 0.24) 0%, transparent 40%),
+        radial-gradient(circle at 84% 28%, rgba(139, 92, 246, 0.22) 0%, transparent 42%),
+        radial-gradient(circle at 52% 78%, rgba(56, 189, 248, 0.22) 0%, transparent 45%),
+        var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
       overflow-x: clip;
-      background-color: var(--bg);
-      color: var(--fg);
-      font-family: var(--font-body);
+      max-width: 100%;
       scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
     }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--text); color: #fff; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--coral); }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--lavender); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
 
-    /* Group 2.5: Custom Follower Cursor with Blend-Mode Difference */
-    .lum66-cursor-ring,
-    .lum66-cursor-dot {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 9999;
-      border-radius: 50%;
-      transform: translate3d(-100px, -100px, 0);
-      transition: width 0.24s ease, height 0.24s ease, background-color 0.24s ease;
-      mix-blend-mode: difference;
+    .lum66-shell { max-width: 1320px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 44px); }
+    .lum66-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding: 12px 24px; border-radius: 999px; background: rgba(255, 255, 255, 0.84);
+      border: 1px solid var(--border); backdrop-filter: blur(20px); margin-bottom: 28px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
     }
-    .lum66-cursor-ring {
-      width: 36px;
-      height: 36px;
-      border: 1.5px solid #ffffff;
-      margin-left: -18px;
-      margin-top: -18px;
-    }
-    .lum66-cursor-ring.is-hovered {
-      width: 64px;
-      height: 64px;
-      margin-left: -32px;
-      margin-top: -32px;
-      background: #ffffff;
-    }
-    .lum66-cursor-dot {
-      width: 7px;
-      height: 7px;
-      background: var(--accent);
-      margin-left: -3.5px;
-      margin-top: -3.5px;
-    }
-    @media (max-width: 900px) {
-      .lum66-cursor-ring, .lum66-cursor-dot { display: none; }
-    }
-
-    /* Criterion 6: Minimalist Edge Navigation */
-    .lum66-edge-top {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 220;
-      padding: 18px clamp(18px, 4vw, 52px);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      pointer-events: none;
-    }
-    .lum66-edge-top > * { pointer-events: auto; }
     .lum66-brand {
-      text-decoration: none;
-      color: var(--fg);
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 18px;
-      letter-spacing: 0.04em;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      font-family: var(--font-display); font-weight: 800; font-size: 20px; color: var(--text); text-decoration: none;
     }
-    .lum66-brand-mark {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 16px var(--accent);
+    .lum66-pill {
+      padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.9); color: var(--text); font-size: 12px; font-weight: 700;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      transition: all 0.22s ease;
     }
-    .lum66-nav-links {
-      display: none;
-      list-style: none;
-      gap: 24px;
-      padding: 8px 20px;
-      border-radius: 999px;
-      background: var(--glass);
-      backdrop-filter: blur(18px);
-      border: 1px solid var(--border);
-    }
-    @media (min-width: 900px) {
-      .lum66-nav-links { display: flex; }
-    }
-    .lum66-nav-links a {
-      color: var(--fg);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      opacity: 0.82;
-      transition: opacity 0.2s ease;
-    }
-    .lum66-nav-links a:hover { opacity: 1; }
-    .lum66-edge-controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .lum66-pill-btn {
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--glass);
-      backdrop-filter: blur(16px);
-      color: var(--fg);
-      font-family: inherit;
-      font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    .lum66-cta-magnetic {
-      padding: 10px 22px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.28);
-      background: var(--accent);
-      color: #090b10;
-      font-family: inherit;
-      font-size: 12px;
-      font-weight: 800;
-      cursor: pointer;
-      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    .lum66-pill:hover, .lum66-pill.is-active {
+      background: var(--text); color: #fff; border-color: var(--text);
     }
 
-    /* Left & Right Minimalist Edge Slide Rails */
-    .lum66-edge-left,
-    .lum66-edge-right {
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 130;
-      display: none;
-      flex-direction: column;
-      gap: 12px;
-    }
-    @media (min-width: 1120px) {
-      .lum66-edge-left { display: flex; left: 22px; }
-      .lum66-edge-right { display: flex; right: 22px; }
-    }
-    .lum66-slide-dot {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--glass);
-      color: var(--fg);
-      font-size: 11px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-    }
-    .lum66-slide-dot.is-active {
-      background: var(--accent);
-      color: #090b10;
-      border-color: var(--accent);
-    }
-    .lum66-telemetry-rail {
-      writing-mode: vertical-rl;
-      padding: 14px 8px;
-      border-radius: 999px;
-      background: var(--glass);
-      border: 1px solid var(--border);
-      font-size: 11px;
-      font-weight: 700;
-    }
-
-    /* Hero Stage */
     .lum66-hero {
-      position: relative;
-      min-height: 100vh;
-      padding: 104px clamp(20px, 5vw, 84px) 56px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      overflow: hidden;
-      isolation: isolate;
-      background: linear-gradient(135deg, #0b131b 0%, #172a3a 48%, #292218 100%);
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center;
+      padding: clamp(28px, 4.5vw, 52px); border-radius: 32px;
+      background: rgba(255, 255, 255, 0.72); border: 1px solid rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(24px); box-shadow: 0 24px 60px rgba(15, 23, 42, 0.07);
     }
-    .lum66-smoke-canvas {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      pointer-events: none;
+    .lum66-h1 {
+      font-family: var(--font-display); font-size: clamp(2.2rem, 4.6vw, 3.9rem);
+      font-weight: 800; line-height: 1.06; letter-spacing: -0.03em; margin-bottom: 16px;
     }
-    .lum66-marquee-band {
-      position: absolute;
-      bottom: 8%;
-      left: 0;
-      width: 100%;
-      z-index: -1;
-      overflow: hidden;
-      pointer-events: none;
-      opacity: 0.10;
-      white-space: nowrap;
+    .lum66-spheres-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px;
     }
-    .lum66-marquee-track {
-      display: inline-block;
-      font-family: var(--font-display);
-      font-size: clamp(64px, 11vw, 156px);
-      font-weight: 800;
-      color: transparent;
-      -webkit-text-stroke: 1.5px #ffffff;
-      animation: lum66Marquee 24s linear infinite;
-    }
-    @keyframes lum66Marquee {
-      0% { transform: translate3d(0, 0, 0); }
-      100% { transform: translate3d(-50%, 0, 0); }
-    }
-
-    /* Shared Typography & Split-Text */
-    .lum66-tag-chip {
-      display: inline-flex;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: var(--glass);
-      border: 1px solid var(--border);
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    .lum66-display-h1 {
-      font-family: var(--font-display);
-      font-size: clamp(44px, 7.8vw, 108px);
-      font-weight: 800;
-      line-height: 0.95;
-      letter-spacing: -0.03em;
-      overflow-wrap: break-word;
-    }
-    .lum66-serif-accent {
-      font-family: var(--font-serif);
-      font-style: italic;
-      color: var(--accent);
-      display: block;
-    }
-    .lum66-lead {
-      font-size: clamp(15px, 1.35vw, 18px);
-      line-height: 1.65;
-      color: var(--muted);
-      max-width: 540px;
-      margin: 18px 0 26px;
-    }
-    .lum66-split-word {
-      display: inline-block;
-      opacity: 0;
-      transform: translate3d(0, 32px, 0);
-      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .lum66-split-word.is-in {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
-
-    /* 3D Cutout Subject Styling (Out-of-bounds Pop-out & Drop Shadow) */
-    .lum66-cutout-3d-img {
-      width: 100%;
-      height: auto;
-      max-height: 390px;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-      filter: drop-shadow(0 28px 42px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 26px rgba(255, 255, 255, 0.14));
-      user-select: none;
-      pointer-events: none;
-    }
-
-    /* Blueprint 0 Specific: Asymmetric Carbon Bike Atelier */
-    .lum66-hero-grid-bike {
-      max-width: 1320px;
-      width: 100%;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 36px;
-      align-items: center;
-    }
-    @media (min-width: 980px) {
-      .lum66-hero-grid-bike {
-        grid-template-columns: 0.92fr 1.08fr;
-      }
-    }
-    .lum66-popout-rig {
-      position: relative;
-      padding: 20px 14px 28px;
-      border-radius: 32px;
-      background: radial-gradient(circle at 52% 48%, rgba(212,149,106,0.22), rgba(20,18,16,0.40) 72%);
-      border: 1px solid var(--border);
-      animation: lum66Float 5.5s ease-in-out infinite;
-      overflow: visible;
-    }
-    .lum66-popout-rig .lum66-cutout-3d-img {
-      max-height: 380px;
-      transform: scale(1.09) translateX(-14px);
-    }
-    .lum66-cutout-pill {
-      position: absolute;
-      top: -14px;
-      right: 24px;
-      z-index: 8;
-      padding: 6px 16px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #090b10;
-      font-size: 11px;
-      font-weight: 800;
-    }
-    .lum66-floating-pair {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: -32px;
-      position: relative;
-      z-index: 6;
-    }
-
-    /* Blueprint 1 Specific: Sky Aircraft Pop-Out */
-    .lum66-hero-sky {
-      max-width: 1320px;
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .lum66-sky-h1 {
-      font-size: clamp(54px, 10vw, 138px);
-      letter-spacing: 0.02em;
-      position: relative;
-      z-index: 1;
-    }
-    .lum66-sky-plane-popout {
-      max-width: 780px;
-      margin: -58px auto -10px;
-      position: relative;
-      z-index: 5;
-      animation: lum66Float 6s ease-in-out infinite;
-    }
-    .lum66-sky-plane-popout .lum66-cutout-3d-img {
-      max-height: 350px;
-      transform: scale(1.06);
-    }
-    .lum66-sky-destinations {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      text-align: left;
-      position: relative;
-      z-index: 6;
-    }
-    .lum66-pill-card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      border-radius: 999px !important;
-      padding: 14px 24px !important;
-    }
-    .lum66-pill-avatar {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      color: #fff;
-    }
-
-    /* Blueprint 2 Specific: Vibrant Orange/Cyan Poster Stage */
-    .lum66-poster-stage {
-      max-width: 1320px;
-      width: 100%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 78vh;
-    }
-    .lum66-poster-top-meta { text-align: center; }
-    .lum66-poster-stack {
-      position: relative;
-      text-align: center;
-      padding: 12px 0;
-    }
-    .lum66-poster-giant-h1 {
-      font-family: var(--font-display);
-      font-size: clamp(64px, 13.5vw, 184px);
-      line-height: 0.88;
-      color: #ffffff;
-      text-transform: uppercase;
-      position: relative;
-      z-index: 1;
-    }
-    .lum66-poster-figure-popout {
-      position: relative;
-      z-index: 4;
-      width: min(360px, 72vw);
-      margin: -255px auto -18px;
-      animation: lum66Float 5s ease-in-out infinite;
-    }
-    .lum66-poster-figure-popout .lum66-cutout-3d-img {
-      max-height: 430px;
-      width: auto;
-    }
-    .lum66-poster-bottom-bar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 20px;
-      position: relative;
-      z-index: 6;
-    }
-    .lum66-poster-replay-card {
-      max-width: 340px;
-    }
-    .lum66-circle-fab {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      border: none;
-      background: #ffffff;
-      color: #090b10;
-      font-weight: 800;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-    }
-
-    /* Blueprint 3 Specific: Lunar Oasis Villa Editorial Split */
-    .lum66-villa-grid {
-      max-width: 1320px;
-      width: 100%;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 36px;
-      align-items: center;
-    }
-    @media (min-width: 980px) {
-      .lum66-villa-grid {
-        grid-template-columns: 1.12fr 0.88fr;
-      }
-    }
-    .lum66-villa-h1 {
-      font-family: var(--font-display);
-      font-size: clamp(50px, 7.2vw, 102px);
-      font-weight: 400;
-      line-height: 0.94;
-    }
-    .lum66-villa-Elevation .lum66-cutout-3d-img {
-      max-height: 290px;
-      transform: scale(1.04);
-    }
-    .lum66-villa-right-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-    .lum66-cutout-tab-pill {
-      padding: 4px 12px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #090b10;
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    /* Blueprint 4 Specific: AquaCosmos Orbital HUD */
-    .lum66-hud-stage {
-      max-width: 1320px;
-      width: 100%;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .lum66-hud-orbital-ring {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      align-items: center;
-      margin-top: 12px;
-    }
-    @media (min-width: 1024px) {
-      .lum66-hud-orbital-ring {
-        grid-template-columns: 290px 1fr 290px;
-      }
-    }
-    .lum66-hud-planet-center {
-      animation: lum66Float 6.5s ease-in-out infinite;
-    }
-    .lum66-orbital-pod {
-      text-align: left;
-      border-radius: 36px;
-    }
-
-    @keyframes lum66Float {
-      0%, 100% { transform: translate3d(0, 0px, 0); }
-      50% { transform: translate3d(0, -12px, 0); }
-    }
-
-    /* Glassmorphism Cards & Counters */
     .lum66-glass-card {
-      position: relative;
-      border-radius: 26px;
-      background: var(--glass);
-      backdrop-filter: blur(22px) saturate(160%);
-      -webkit-backdrop-filter: blur(22px) saturate(160%);
-      border: 1px solid var(--border);
-      padding: 22px;
-      cursor: pointer;
-      transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.24s ease;
-      overflow: hidden;
+      border-radius: 24px; padding: 24px; background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.95); backdrop-filter: blur(18px);
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.05);
     }
-    .lum66-glass-card:hover {
-      border-color: var(--accent);
+    .lum66-tariffs-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px;
     }
-    .lum66-card-kicker {
-      display: block;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 6px;
+    .lum66-tariff-card {
+      border-radius: 24px; padding: 24px; color: #fff; cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
-    .lum66-glass-card h3 {
-      font-size: 18px;
-      font-weight: 800;
-      margin-bottom: 6px;
+    .lum66-tariff-card:hover, .lum66-tariff-card.is-active {
+      transform: translateY(-6px); box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
     }
-    .lum66-glass-card p {
-      font-size: 13px;
-      line-height: 1.55;
-      color: var(--muted);
+    .lum66-modal {
+      position: fixed; inset: 0; background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(12px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
     }
-    .lum66-counters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 28px;
+    .lum66-modal.is-open { display: flex; }
+    .lum66-modal-box {
+      max-width: 500px; width: 100%; border-radius: 28px; padding: 32px;
+      background: #fff; color: var(--text); border: 1px solid var(--border);
     }
-    .lum66-counter-box strong {
-      display: block;
-      font-family: var(--font-display);
-      font-size: clamp(26px, 3vw, 38px);
-      color: var(--fg);
+    @media (max-width: 960px) {
+      .lum66-hero, .lum66-spheres-grid { grid-template-columns: 1fr; }
+      .lum66-tariffs-grid { grid-template-columns: 1fr 1fr; }
     }
-    .lum66-counter-box span {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    /* Group 1.3 & 1.5: Sticky Pinned 001-003 Telemetry Section */
-    .lum66-pinned-section {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 88px clamp(20px, 5vw, 84px);
-    }
-    .lum66-pinned-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-      align-items: start;
-      margin-top: 40px;
-    }
-    @media (min-width: 980px) {
-      .lum66-pinned-grid {
-        grid-template-columns: 1fr 1.1fr 1fr;
-      }
-    }
-    .lum66-sticky-center {
-      position: relative;
-      top: 110px;
-      padding: 28px;
-      border-radius: 32px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      text-align: center;
-    }
-    @media (min-width: 980px) {
-      .lum66-sticky-center { position: sticky; }
-    }
-    .lum66-scrub-stage {
-      transition: transform 0.12s linear;
-      will-change: transform;
-    }
-    .lum66-spec-card {
-      padding: 24px;
-      border-radius: 24px;
-      background: var(--glass);
-      border: 1px solid var(--border);
-      margin-bottom: 20px;
-    }
-    .lum66-spec-card.is-active {
-      border-color: var(--accent);
-    }
-
-    /* Group 1.4: Horizontal Scroll Projects Section */
-    .lum66-hscroll-section {
-      padding: 72px clamp(20px, 5vw, 84px);
-      border-top: 1px solid var(--border);
-    }
-    .lum66-hscroll-track {
-      max-width: 1320px;
-      margin: 32px auto 0;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(260px, 1fr));
-      gap: 20px;
-      overflow-x: auto;
-      padding-bottom: 12px;
-    }
-    .lum66-project-card {
-      padding: 24px;
-      border-radius: 26px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      cursor: pointer;
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-    .lum66-project-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent);
-    }
-    .lum66-project-visual {
-      height: 140px;
-      border-radius: 18px;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-
-    /* Group 1.2: Scroll Reveal */
-    .lum66-reveal {
-      opacity: 0;
-      transform: translate3d(0, 24px, 0);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .lum66-reveal.is-visible {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
-
-    /* Group 3.3: Seamless Fullscreen Page Transition Overlay */
-    .lum66-seamless-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 190;
-      background: rgba(5, 8, 15, 0.88);
-      backdrop-filter: blur(22px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      pointer-events: none;
-    }
-    .lum66-seamless-overlay.is-open { display: flex; }
-    .lum66-seamless-box {
-      width: 100%;
-      max-width: 760px;
-      border-radius: 32px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 36px;
-      pointer-events: auto;
-    }
-
-    .lum66-footer {
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 40px clamp(20px, 5vw, 84px);
-      border-top: 1px solid var(--border);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 16px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    body.is-motion-paused * {
-      animation-play-state: paused !important;
+    @media (max-width: 600px) {
+      .lum66-tariffs-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <!-- Group 2.4: SVG Liquid Ripple Filter -->
-  <svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true" focusable="false">
-    <defs>
-      <filter id="lum66LiquidFilter" x="-10%" y="-10%" width="120%" height="120%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" result="noise" seed="4" />
-        <feDisplacementMap id="lum66Displacement" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
-      </filter>
-    </defs>
-  </svg>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(139,92,246,0.55);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#E06D64;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
 
-  <div id="cursorRing" class="lum66-cursor-ring" aria-hidden="true"></div>
-  <div id="cursorDot" class="lum66-cursor-dot" aria-hidden="true"></div>
-
-  <header class="lum66-edge-top">
-    <a href="#heroStage" class="lum66-brand">
-      <span class="lum66-brand-mark"></span>
-      <span>Lunar Oasis Villa</span>
-    </a>
-    <ul class="lum66-nav-links" aria-label="Primary Navigation">
-      <li><a href="#heroStage">01 / Showcase</a></li>
-      <li><a href="#pinnedSpecs">02 / Pinned Telemetry</a></li>
-      <li><a href="#motionProjects">03 / Motion Archive</a></li>
-    </ul>
-    <div class="lum66-edge-controls">
-      <button type="button" id="motionToggleBtn" class="lum66-pill-btn" aria-pressed="false">Motion: ON</button>
-      <button type="button" id="exploreMagneticBtn" class="lum66-cta-magnetic" data-magnetic data-next-preview>
-        Explore Spec
-      </button>
-    </div>
-  </header>
-
-  <aside class="lum66-edge-left" aria-label="Slide Numbers">
-    <a href="#heroStage" class="lum66-slide-dot is-active" data-slide-link="0">01</a>
-    <a href="#pinnedSpecs" class="lum66-slide-dot" data-slide-link="1">02</a>
-    <a href="#motionProjects" class="lum66-slide-dot" data-slide-link="2">03</a>
-  </aside>
-
-  <aside class="lum66-edge-right" aria-label="Scroll Scrub Readout">
-    <div class="lum66-telemetry-rail" id="scrollScrubReadout">SCRUB 0% • 0.0°</div>
-  </aside>
-
-  <main id="main">
-    <section id="heroStage" class="lum66-hero">
-      <canvas id="ambientSmokeCanvas" class="lum66-smoke-canvas" aria-hidden="true"></canvas>
-      <div class="lum66-marquee-band" aria-hidden="true">
-        <div class="lum66-marquee-track">NEW WAY OF LIVING • LUNAR OASIS PAVILION • CANTILEVER INFINITY POOL • BIOCLIMATIC GLASS • NEW WAY OF LIVING • LUNAR OASIS PAVILION • CANTILEVER INFINITY POOL • BIOCLIMATIC GLASS • </div>
+  <div class="lum66-shell">
+    <header class="lum66-nav">
+      <a href="#main-content" class="lum66-brand">PUMP<span style="color:#E06D64;">IT</span></a>
+      <nav style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;font-weight:600;">
+        <a href="#app-spheres" style="color:var(--muted);text-decoration:none;">Application Spheres</a>
+        <a href="#workflow-honeycomb" style="color:var(--muted);text-decoration:none;">10-Step Workflow</a>
+        <a href="#tariffs-section" style="color:var(--muted);text-decoration:none;">Tariffs</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" class="lum66-pill" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="lum66-pill is-active">Estimate App MVP →</button>
       </div>
+    </header>
 
-      
-      <div class="lum66-villa-grid">
-        <div class="lum66-villa-left" data-parallax="0.06">
-          <span class="lum66-tag-chip" id="activeHeroTag">Lunar Oasis Villa • Desert &amp; Sea Architecture</span>
-          <h1 class="lum66-villa-h1" id="oversizedHeadline">
-            <span class="lum66-split-word is-in">New Way</span><br>
-            <em><span class="lum66-split-word is-in" style="color:var(--accent);transition-delay:90ms;">Of Living</span></em>
+    <main id="main-content">
+      <section class="lum66-hero tabular-nums" aria-labelledby="heroHeading">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:#8B5CF6;font-weight:700;display:inline-block;margin-bottom:10px;">
+            01 // FULL-CYCLE IOS, ANDROID &amp; FLUTTER ENGINEERING
+          </span>
+          <h1 id="heroHeading" class="lum66-h1">
+            Progressive Unique<br />
+            <span style="color:#E06D64;">Mobile Product IT</span>
           </h1>
-          <p class="lum66-lead">Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.</p>
-
-          <div id="heroPopoutRig" class="lum66-villa-Elevation" data-tilt-card style="filter: url(#lum66LiquidFilter);">
-            
-      <svg viewBox="0 0 760 440" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <!-- Lunar Horizon Sun & Cantilevered Glass Villa -->
-        <circle cx="540" cy="145" r="78" fill="#eab308" fill-opacity="0.28"/>
-        <!-- Upper Cantilever Volume -->
-        <path d="M120 170 L590 140 L650 220 L180 245 Z" fill="rgba(255,255,255,0.14)" stroke="#ffffff" stroke-width="2"/>
-        <!-- Warm Interior Glow -->
-        <rect x="210" y="175" width="320" height="58" rx="8" fill="#eab308" fill-opacity="0.35"/>
-        <!-- Lower Terrace & Infinity Pool Deck -->
-        <path d="M80 250 L680 235 L720 305 L40 315 Z" fill="#1e293b" stroke="#2dd4bf" stroke-width="2"/>
-        <!-- Shimmering Water Ripples -->
-        <path d="M60 345 Q260 330 460 345 T710 340" stroke="#2dd4bf" stroke-width="3" stroke-opacity="0.7"/>
-        <path d="M90 375 Q290 362 490 375 T680 372" stroke="#eab308" stroke-width="2" stroke-opacity="0.5"/>
-      </svg>
-          </div>
-
-          <div class="lum66-counters" style="margin-top:24px;">
-            <div class="lum66-counter-box"><strong data-counter-target="120" data-counter-suffix="+">120+</strong><span>Private Acres</span></div>
-            <div class="lum66-counter-box"><strong data-counter-target="10" data-counter-suffix="K+">10K+</strong><span>Solar Louvers</span></div>
-            <div class="lum66-counter-box"><strong data-counter-target="1000" data-counter-suffix="m²">1000m²</strong><span>Infinity Mirror Pool</span></div>
+          <p style="font-size:15px;color:var(--muted);max-width:48ch;margin-bottom:22px;">
+            We transform ambitious product concepts into high-retention iOS and Android ecosystems — combining pastel spatial glass UI, 10-step transparent delivery, and modular component kits.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="#tariffs-section" class="lum66-pill is-active">Explore 4 Tariff Models</a>
+            <button type="button" class="lum66-pill" data-seamless-trigger="Download PumpIt Mobile Portfolio Deck">View Case Studies</button>
           </div>
         </div>
 
-        <div class="lum66-villa-right-stack">
-          
-          <article class="lum66-glass-card lum66-villa-cutout-card" data-tilt-card data-seamless-trigger="Lunar Oasis Cliffside Villa">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <span class="lum66-card-kicker">RESIDENCE 01</span>
-              <span class="lum66-cutout-tab-pill">$14.8M • 5 Bed</span>
-            </div>
-            <h3>Lunar Oasis Cliffside Villa</h3>
-            <p>3D perspective glassmorphism card with interactive specular border shine &amp; seamless floorplan expansion.</p>
+        <div style="text-align:center;">
+          <svg viewBox="0 0 420 300" style="width:100%;max-width:380px;height:auto;" role="img" aria-label="Pastel 3D rocket launch and dual mobile UI glass frames">
+            <defs>
+              <linearGradient id="pumpAura" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FDE68A" />
+                <stop offset="50%" stop-color="#FCA5A5" />
+                <stop offset="100%" stop-color="#C4B5FD" />
+              </linearGradient>
+            </defs>
+            <rect x="40" y="30" width="340" height="230" rx="32" fill="url(#pumpAura)" fill-opacity="0.45" stroke="#FFF" stroke-width="3" />
+            <rect x="95" y="52" width="105" height="190" rx="22" fill="#0F172A" stroke="#FFF" stroke-width="3" transform="rotate(-6 147 147)" />
+            <rect x="215" y="52" width="105" height="190" rx="22" fill="#FFF" stroke="#E2E8F0" stroke-width="3" transform="rotate(6 267 147)" />
+            <circle cx="147" cy="120" r="24" fill="#E06D64" />
+            <circle cx="267" cy="120" r="24" fill="#38BDF8" />
+          </svg>
+        </div>
+      </section>
+
+      <section id="app-spheres" style="margin-top:36px;" aria-labelledby="spheresHeading">
+        <h2 id="spheresHeading" style="font-family:var(--font-display);font-size:clamp(1.6rem,2.8vw,2.3rem);">6 Mobile Application Spheres</h2>
+        <div class="lum66-spheres-grid">
+          <article class="lum66-glass-card lum66-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#E06D64;">01 // ENTERPRISE</span>
+            <h3 style="font-size:18px;margin:6px 0;">Business Process Automation</h3>
+            <p style="font-size:13px;color:var(--muted);">Mobile ERP, field-force dispatch, and real-time executive KPI cockpits.</p>
           </article>
-          <article class="lum66-glass-card lum66-villa-cutout-card" data-tilt-card data-seamless-trigger="Dune Mirage Glass Pavilion">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <span class="lum66-card-kicker">RESIDENCE 02</span>
-              <span class="lum66-cutout-tab-pill">$11.2M • 4 Bed</span>
-            </div>
-            <h3>Dune Mirage Glass Pavilion</h3>
-            <p>3D perspective glassmorphism card with interactive specular border shine &amp; seamless floorplan expansion.</p>
+          <article class="lum66-glass-card lum66-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#38BDF8;">02 // GROWTH</span>
+            <h3 style="font-size:18px;margin:6px 0;">Marketing &amp; Loyalty Engines</h3>
+            <p style="font-size:13px;color:var(--muted);">Gamified push retention, referral loops, and personalized AI offers.</p>
           </article>
-          <article class="lum66-glass-card lum66-villa-cutout-card" data-tilt-card data-seamless-trigger="Atoll Floating Water House">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-              <span class="lum66-card-kicker">RESIDENCE 03</span>
-              <span class="lum66-cutout-tab-pill">$18.5M • 6 Bed</span>
-            </div>
-            <h3>Atoll Floating Water House</h3>
-            <p>3D perspective glassmorphism card with interactive specular border shine &amp; seamless floorplan expansion.</p>
+          <article class="lum66-glass-card lum66-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#8B5CF6;">03 // COMMERCE</span>
+            <h3 style="font-size:18px;margin:6px 0;">1-Click Mobile Checkout</h3>
+            <p style="font-size:13px;color:var(--muted);">Apple Pay / Google Pay native storefronts with AR product try-on.</p>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Sticky Pinned Center Subject + 001/002/003 Telemetry -->
-    <section id="pinnedSpecs" class="lum66-pinned-section">
-      <div class="lum66-reveal" style="text-align:center;max-width:680px;margin:0 auto;">
-        <span class="lum66-tag-chip">Sticky Pinned &amp; Scroll Scrubbing</span>
-        <h2 style="font-family:var(--font-display);font-size:clamp(28px,4vw,48px);">Lunar Oasis Villa — 001 to 003 Engineering</h2>
-      </div>
-
-      <div class="lum66-pinned-grid">
-        <div>
-          <article class="lum66-spec-card lum66-reveal is-active" data-spec-index="001">
-            <span class="lum66-card-kicker">001 / SUBTERRANEAN SPA</span>
-            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">1,240 m²</div>
-            <h3>Geothermal Limestone Cavern</h3>
-            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Carved into the coastal cliffside with natural acoustic water reflection chambers.</p>
-          </article>
-          <article class="lum66-spec-card lum66-reveal" data-spec-index="002">
-            <span class="lum66-card-kicker">002 / CANTILEVER DECK</span>
-            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">18.5 m</div>
-            <h3>Frameless Triple-Glazed Horizon</h3>
-            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Motorized glass walls retract into the floor slab to merge indoor living with the infinity pool.</p>
-          </article>
+      <section id="workflow-honeycomb" style="margin-top:36px;" aria-labelledby="tariffsHeading">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <h2 id="tariffsHeading" style="font-family:var(--font-display);font-size:clamp(1.6rem,2.8vw,2.3rem);">Interactive Tariff Configurator (10-Step Delivery)</h2>
+          <span id="selectedTariffOut" style="font-family:var(--font-mono);font-size:12px;background:#0F172A;color:#fff;padding:8px 16px;border-radius:999px;">
+            ACTIVE PLAN: Subscription Pod — $6,800/mo (Dedicated 4-Senior Team)
+          </span>
         </div>
 
-        <div class="lum66-sticky-center">
-          <div id="scrubCenterStage" class="lum66-scrub-stage">
-            
-      <svg viewBox="0 0 760 440" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <!-- Lunar Horizon Sun & Cantilevered Glass Villa -->
-        <circle cx="540" cy="145" r="78" fill="#eab308" fill-opacity="0.28"/>
-        <!-- Upper Cantilever Volume -->
-        <path d="M120 170 L590 140 L650 220 L180 245 Z" fill="rgba(255,255,255,0.14)" stroke="#ffffff" stroke-width="2"/>
-        <!-- Warm Interior Glow -->
-        <rect x="210" y="175" width="320" height="58" rx="8" fill="#eab308" fill-opacity="0.35"/>
-        <!-- Lower Terrace & Infinity Pool Deck -->
-        <path d="M80 250 L680 235 L720 305 L40 315 Z" fill="#1e293b" stroke="#2dd4bf" stroke-width="2"/>
-        <!-- Shimmering Water Ripples -->
-        <path d="M60 345 Q260 330 460 345 T710 340" stroke="#2dd4bf" stroke-width="3" stroke-opacity="0.7"/>
-        <path d="M90 375 Q290 362 490 375 T680 372" stroke="#eab308" stroke-width="2" stroke-opacity="0.5"/>
-      </svg>
+        <div id="tariffs-section" class="lum66-tariffs-grid tabular-nums" role="group" aria-label="Select Development Tariff">
+          <div class="lum66-tariff-card is-active tariff-select-btn" tabindex="0" role="button" data-next-preview="true" style="background:linear-gradient(145deg,#E06D64,#C85249);" data-summary="Subscription Pod — $6,800/mo (Dedicated 4-Senior Team)">
+            <span style="font-family:var(--font-mono);font-size:11px;opacity:0.85;">01 // SUBSCRIPTION</span>
+            <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Monthly Sprint Pod</h3>
+            <p style="font-size:13px;opacity:0.9;margin-bottom:14px;">Continuous product velocity with fixed monthly billing and bi-weekly TestFlight releases.</p>
+            <strong style="font-family:var(--font-mono);font-size:18px;">$6,800 / mo →</strong>
           </div>
-          <div id="scrubDialText" style="margin-top:14px;font-size:12px;color:var(--accent);font-weight:700;">
-            SCROLL SCRUB ANGLE: 0.0°
+
+          <div class="lum66-tariff-card tariff-select-btn" tabindex="0" role="button" data-next-preview="true" style="background:linear-gradient(145deg,#38BDF8,#0284C7);" data-summary="Milestone Turnkey — $18,500 Fixed Scope (10-Step Guarantee)">
+            <span style="font-family:var(--font-mono);font-size:11px;opacity:0.85;">02 // MILESTONE</span>
+            <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Fixed-Stage MVP</h3>
+            <p style="font-size:13px;opacity:0.9;margin-bottom:14px;">Pay per verified milestone across 10 stages: Discovery, Wireframes, UI Kit, API, QA, and App Store Launch.</p>
+            <strong style="font-family:var(--font-mono);font-size:18px;">$18,500 Fixed →</strong>
+          </div>
+
+          <div class="lum66-tariff-card tariff-select-btn" tabindex="0" role="button" data-next-preview="true" style="background:linear-gradient(145deg,#8B5CF6,#6D28D9);" data-summary="Time &amp; Material — $55/hr Senior Flutter/Swift Engineers">
+            <span style="font-family:var(--font-mono);font-size:11px;opacity:0.85;">03 // HOURLY</span>
+            <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Elastic Engineering</h3>
+            <p style="font-size:13px;opacity:0.9;margin-bottom:14px;">Augment your in-house mobile team with senior Swift, Kotlin, and Flutter specialists on demand.</p>
+            <strong style="font-family:var(--font-mono);font-size:18px;">$55 / hour →</strong>
+          </div>
+
+          <div class="lum66-tariff-card tariff-select-btn" tabindex="0" role="button" data-next-preview="true" style="background:linear-gradient(145deg,#F59E0B,#D97706);" data-summary="Ready Component Accelerator — $9,400 (Launch in 3 Weeks)">
+            <span style="font-family:var(--font-mono);font-size:11px;opacity:0.85;">04 // READY MODULES</span>
+            <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Pre-Built Modules</h3>
+            <p style="font-size:13px;opacity:0.9;margin-bottom:14px;">Assemble your app from 80+ pre-audited PumpIt auth, chat, wallet, and booking modules in 3 weeks.</p>
+            <strong style="font-family:var(--font-mono);font-size:18px;">$9,400 Fast-Track →</strong>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div>
-          <article class="lum66-spec-card lum66-reveal" data-spec-index="003">
-            <span class="lum66-card-kicker">003 / SOLAR SKIN</span>
-            <div style="font-family:var(--font-display);font-size:34px;font-weight:800;margin:6px 0;">100% Net-0</div>
-            <h3>Photovoltaic Alabaster Louvers</h3>
-            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Autonomous sun-tracking roof fins generate 42 kWh daily while casting kinetic shadow patterns.</p>
-          </article>
-          <article class="lum66-spec-card lum66-reveal" data-seamless-trigger="Lunar Oasis Villa Full Specification Sheet" style="cursor:pointer;">
-            <span class="lum66-card-kicker">004 / INTERACTIVE DOSSIER</span>
-            <div style="font-family:var(--font-display);font-size:28px;font-weight:800;margin:6px 0;color:var(--accent);">Expand View</div>
-            <h3>Seamless Page Transition</h3>
-            <p style="font-size:14px;color:var(--muted);margin-top:6px;">Click to expand full specification view without page reload.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <footer style="margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+      <span>© 2026 PUMPIT — Progressive Unique Mobile Product IT.</span>
+      <span style="font-family:var(--font-mono);color:var(--text);">IOS • ANDROID • CROSS-PLATFORM</span>
+    </footer>
+  </div>
 
-    <!-- Horizontal Scroll Track -->
-    <section id="motionProjects" class="lum66-hscroll-section">
-      <div style="max-width:1320px;margin:0 auto;">
-        <span class="lum66-tag-chip">Featured Motion Projects</span>
-        <h2 style="font-family:var(--font-display);font-size:clamp(26px,3.5vw,42px);">Horizontal Scroll Showcase</h2>
+  <div id="seamlessModal" class="lum66-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="lum66-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:#E06D64;">PUMPIT MVP ESTIMATOR</span>
+        <button type="button" id="closeSeamlessBtn" class="lum66-pill">Close (Esc)</button>
       </div>
-      <div id="hScrollTrack" class="lum66-hscroll-track">
-        
-        <article class="lum66-project-card lum66-reveal" data-tilt-card data-seamless-trigger="Lunar Oasis Cliffside Villa">
-          <div class="lum66-project-visual" style="background:radial-gradient(circle at 50% 50%, #eab30833, var(--bg));">
-            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#eab308;">01 // $14.8M • 5 Bed</span>
-          </div>
-          <span class="lum66-card-kicker">RESIDENCE 01</span>
-          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Lunar Oasis Cliffside Villa</h3>
-          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
-        </article>
-        <article class="lum66-project-card lum66-reveal" data-tilt-card data-seamless-trigger="Dune Mirage Glass Pavilion">
-          <div class="lum66-project-visual" style="background:radial-gradient(circle at 50% 50%, #2dd4bf33, var(--bg));">
-            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#2dd4bf;">02 // $11.2M • 4 Bed</span>
-          </div>
-          <span class="lum66-card-kicker">RESIDENCE 02</span>
-          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Dune Mirage Glass Pavilion</h3>
-          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
-        </article>
-        <article class="lum66-project-card lum66-reveal" data-tilt-card data-seamless-trigger="Atoll Floating Water House">
-          <div class="lum66-project-visual" style="background:radial-gradient(circle at 50% 50%, #38bdf833, var(--bg));">
-            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#38bdf8;">03 // $18.5M • 6 Bed</span>
-          </div>
-          <span class="lum66-card-kicker">RESIDENCE 03</span>
-          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Atoll Floating Water House</h3>
-          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
-        </article>
-        <article class="lum66-project-card lum66-reveal" data-tilt-card data-seamless-trigger="Observatory Sky Penthouse">
-          <div class="lum66-project-visual" style="background:radial-gradient(circle at 50% 50%, #f59e0b33, var(--bg));">
-            <span style="font-family:var(--font-display);font-size:32px;font-weight:800;color:#f59e0b;">04 // $9.6M • 3 Bed</span>
-          </div>
-          <span class="lum66-card-kicker">RESIDENCE 04</span>
-          <h3 style="font-size:18px;font-weight:800;margin-bottom:6px;">Observatory Sky Penthouse</h3>
-          <p style="font-size:13px;color:var(--muted);">Click for seamless full-screen transition</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="lum66-footer">
-    <p>© 2026 Lunar Oasis Villa — Bespoke Blueprint (lunar-villa).</p>
-    <p>Parallax • Sticky Scrub 001-003 • 3D Card Tilt • Liquid Wave • Particle Smoke</p>
-  </footer>
-
-  <div id="seamlessModal" class="lum66-seamless-overlay" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
-    <div class="lum66-seamless-box">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-        <span class="lum66-tag-chip" style="margin-bottom:0;">Seamless Detail Transition</span>
-        <button type="button" id="closeSeamlessBtn" class="lum66-pill-btn">Close (Esc)</button>
-      </div>
-      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;margin-bottom:12px;">Lunar Oasis Villa</h2>
-      <p style="font-size:15px;line-height:1.65;color:var(--muted);margin-bottom:20px;">Monolithic desert-and-sea glass pavilions cantilevered over mirror pools — combining passive solar thermodynamics with 360° horizon serenity.</p>
-      <div style="max-height:220px;overflow:hidden;border-radius:18px;border:1px solid var(--border);margin-bottom:20px;padding:12px;background:var(--bg);">
-        
-      <svg viewBox="0 0 760 440" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <!-- Lunar Horizon Sun & Cantilevered Glass Villa -->
-        <circle cx="540" cy="145" r="78" fill="#eab308" fill-opacity="0.28"/>
-        <!-- Upper Cantilever Volume -->
-        <path d="M120 170 L590 140 L650 220 L180 245 Z" fill="rgba(255,255,255,0.14)" stroke="#ffffff" stroke-width="2"/>
-        <!-- Warm Interior Glow -->
-        <rect x="210" y="175" width="320" height="58" rx="8" fill="#eab308" fill-opacity="0.35"/>
-        <!-- Lower Terrace & Infinity Pool Deck -->
-        <path d="M80 250 L680 235 L720 305 L40 315 Z" fill="#1e293b" stroke="#2dd4bf" stroke-width="2"/>
-        <!-- Shimmering Water Ripples -->
-        <path d="M60 345 Q260 330 460 345 T710 340" stroke="#2dd4bf" stroke-width="3" stroke-opacity="0.7"/>
-        <path d="M90 375 Q290 362 490 375 T680 372" stroke="#eab308" stroke-width="2" stroke-opacity="0.5"/>
-      </svg>
-      </div>
-      <button type="button" id="confirmSeamlessBtn" class="lum66-cta-magnetic" style="width:100%;">Return to Live Stage</button>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Request 10-Step Mobile Blueprint</h2>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">
+        Receive an interactive Figma prototype and itemized 10-step sprint breakdown within 48 hours.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="lum66-pill is-active" style="width:100%;justify-content:center;">Book Product Architecture Call</button>
     </div>
   </div>
 
+  <script>
+    (function () {
+      var out = document.getElementById('selectedTariffOut');
+      document.querySelectorAll('.tariff-select-btn').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.tariff-select-btn').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (out) out.textContent = 'ACTIVE PLAN: ' + (card.getAttribute('data-summary') || '');
+        });
+      });
+    })();
+  </script>
+  
   <script>
     (function () {
       var motionPaused = false;
@@ -992,162 +273,92 @@
         });
       }
 
-      var scrubStage = document.getElementById('scrubCenterStage');
-      var scrubDial = document.getElementById('scrubDialText');
-      var scrubReadout = document.getElementById('scrollScrubReadout');
-      var parallaxEls = document.querySelectorAll('[data-parallax]');
-      var slideLinks = document.querySelectorAll('[data-slide-link]');
-      var specCards = document.querySelectorAll('[data-spec-index]');
-
-      function onScroll() {
-        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
-        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
-        var deg = (progress * 360).toFixed(1);
-
-        if (!motionPaused) {
-          parallaxEls.forEach(function (el) {
-            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
-            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
-          });
-          if (scrubStage) {
-            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
-          }
-        }
-        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
-        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
-
-        var activeIdx = progress < 0.34 ? 0 : progress < 0.72 ? 1 : 2;
-        slideLinks.forEach(function (l, i) { l.classList.toggle('is-active', i === activeIdx); });
-        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
-      }
-      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
-      onScroll();
-
-      var revealEls = document.querySelectorAll('.lum66-reveal');
-      var counterEls = document.querySelectorAll('[data-counter-target]');
-      function animateCounter(el) {
-        if (el.getAttribute('data-counted') === 'true') return;
-        el.setAttribute('data-counted', 'true');
-        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
-        var suffix = el.getAttribute('data-counter-suffix') || '';
-        var start = performance.now();
-        function tick(now) {
-          var t = Math.min(1, (now - start) / 1000);
-          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
-          if (t < 1) window.requestAnimationFrame(tick);
-        }
-        window.requestAnimationFrame(tick);
-      }
-      if ('IntersectionObserver' in window) {
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
-        }, { threshold: 0.12 });
-        revealEls.forEach(function (el) { io.observe(el); });
-        var cio = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
-        }, { threshold: 0.2 });
-        counterEls.forEach(function (el) { cio.observe(el); });
-      } else {
-        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-      }
-
-      var cursorRing = document.getElementById('cursorRing');
-      var cursorDot = document.getElementById('cursorDot');
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
       window.addEventListener('mousemove', function (e) {
-        if (motionPaused) return;
-        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
-        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
       }, { passive: true });
 
-      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
-        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
-        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
-      });
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
 
-      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
-        btn.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.26;
-          var dy = (e.clientY - (r.top + r.height / 2)) * 0.26;
-          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
-        });
-        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
-      });
+      var reveals = document.querySelectorAll('.lum66-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
 
-      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
-        card.addEventListener('mousemove', function (e) {
-          if (motionPaused) return;
-          var r = card.getBoundingClientRect();
-          var nx = (e.clientX - r.left) / r.width - 0.5;
-          var ny = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = 'perspective(1000px) rotateY(' + (nx * 9).toFixed(2) + 'deg) rotateX(' + (-ny * 9).toFixed(2) + 'deg)';
-        });
-        card.addEventListener('mouseleave', function () { card.style.transform = ''; });
-      });
-
-      var displacement = document.getElementById('lum66Displacement');
-      var heroRig = document.getElementById('heroPopoutRig');
-      if (heroRig && displacement) {
-        heroRig.addEventListener('mouseenter', function () { if (!motionPaused) displacement.setAttribute('scale', '16'); });
-        heroRig.addEventListener('mouseleave', function () { displacement.setAttribute('scale', '0'); });
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
       }
 
       var modal = document.getElementById('seamlessModal');
       var modalTitle = document.getElementById('seamlessTitle');
-      var openBtn = document.getElementById('exploreMagneticBtn');
       var closeBtn = document.getElementById('closeSeamlessBtn');
       var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
 
-      function openSeamless(heading) {
-        if (modalTitle && heading) modalTitle.textContent = heading;
-        if (modal) modal.classList.add('is-open');
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
       }
-      function closeSeamless() {
-        if (modal) modal.classList.remove('is-open');
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
       }
-      if (openBtn) {
-        openBtn.addEventListener('click', function () {
-          if (modal && modal.classList.contains('is-open')) closeSeamless();
-          else openSeamless('Lunar Oasis Villa — Specification View');
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
         });
       }
-      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
-      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
       document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
-        el.addEventListener('click', function () { openSeamless(el.getAttribute('data-seamless-trigger')); });
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
       });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSeamless(); });
-
-      var canvas = document.getElementById('ambientSmokeCanvas');
-      if (canvas && canvas.getContext) {
-        var ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        var pts = [];
-        for (var i = 0; i < 24; i++) {
-          pts.push({ x: Math.random() * canvas.width, y: Math.random() * canvas.height, r: 1.5 + Math.random() * 3, vx: (Math.random() - 0.5) * 0.4, vy: -0.2 - Math.random() * 0.4, a: 0.15 + Math.random() * 0.35 });
-        }
-        var f = 0;
-        function loop() {
-          if (!motionPaused && f < 900) {
-            f++;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (var j = 0; j < pts.length; j++) {
-              var pt = pts[j];
-              pt.x += pt.vx; pt.y += pt.vy;
-              if (pt.y < 0) pt.y = canvas.height;
-              ctx.beginPath();
-              ctx.arc(pt.x, pt.y, pt.r, 0, Math.PI * 2);
-              ctx.fillStyle = 'rgba(255,255,255,' + pt.a.toFixed(2) + ')';
-              ctx.fill();
-            }
-            window.requestAnimationFrame(loop);
-          }
-        }
-        window.requestAnimationFrame(loop);
-      }
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
     })();
   </script>
 </body>

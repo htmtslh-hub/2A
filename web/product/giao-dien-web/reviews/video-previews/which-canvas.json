@@ -2,15 +2,15 @@
   "id": "t192",
   "slug": "which-canvas",
   "browser": "153.0.8010.12",
-  "date": "2026-11-01T02:01:50.339Z",
+  "date": "2026-11-01T08:18:39.531Z",
   "demo": "/demos/which-canvas/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "52905bc10f40",
-  "sha256": "52905bc10f408321965f58adce1518f49270fce086fcc3ae109c1ab8bc5c7fe1",
-  "demoHtmlSha256": "6c09db99b55e60ef10b8d4bbfdd44aa1a62366571c5b20f7c7fd4ddd195a5708",
-  "demoSha256": "c1075bc92c852f1675daa6c35c787911e57727cf69d1c9e3c944e42e46d6f023",
-  "bytes": 780180,
+  "revision": "f9e4d2f40611",
+  "sha256": "f9e4d2f40611b8399c48417b74f4b4aace1870367ac12ad20f43d78c74994705",
+  "demoHtmlSha256": "adf80566fc8515c3692c762ef7fa749ada7ecd86ad61d5e1aa04f3cbca99804e",
+  "demoSha256": "72f77626f63bb53c406ebf8ebf62a2134fd299fb130d50bef5db484f1e049f5b",
+  "bytes": 495410,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -22,19 +22,19 @@
       "action": "hover hero"
     },
     {
-      "seconds": 2.471,
+      "seconds": 2.496,
       "action": "click",
-      "selector": "#exploreMagneticBtn"
+      "selector": "<button type=\"button\" class=\"whi45-node-btn model-node-btn is-active\" data-next-preview=\"true\" data-model=\"Llama-3.3 70B Instruct\" data-ttft=\"18 ms\" data-tps=\"142 tok/s\" data-cost="
     },
     {
-      "seconds": 4.897,
+      "seconds": 4.856,
       "action": "click",
-      "selector": "#exploreMagneticBtn"
+      "selector": "<button type=\"button\" class=\"whi45-node-btn model-node-btn is-active\" data-next-preview=\"true\" data-model=\"Llama-3.3 70B Instruct\" data-ttft=\"18 ms\" data-tps=\"142 tok/s\" data-cost="
     },
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 1532
+      "target": 351
     }
   ],
   "errors": [],

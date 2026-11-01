@@ -93,6 +93,36 @@ export const PINTEREST_V2_META = {
     brandTitle: 'O2 Moonish Cosmic',
     category: 'commerce',
     headlineSub: 'O2 Studio Moonish Cosmic Set 23 — Late 2050 desert-glass capsule collection featuring 01 Classic Hoodie encased in a 3D translucent sphere, Nike dune sneakers, and live fabric colorway switcher.'
+  },
+  'agentai-grid': {
+    id: 'crimson-jellyfish-ai-agency',
+    brandTitle: 'AgentAI Sprint Studio',
+    category: 'portfolio',
+    headlineSub: 'On-demand AI sprint agency — from discovery to deployment in 8–10 weeks with bioluminescent neural telemetry, 230+ shipped AI products, and end-to-end LLM strategy.'
+  },
+  'porsche-caym': {
+    id: 'silver-alpine-cayman-configurator',
+    brandTitle: 'Porsche 718 Cayman Studio',
+    category: 'commerce',
+    headlineSub: 'Interactive 718 Cayman mid-engine coupe & cabriolet configurator featuring diagonal Alpine pass split-screen, 300 hp Boxer telemetry, and live 360° trim switcher.'
+  },
+  'which-canvas': {
+    id: 'amber-ray-edge-ai-inference',
+    brandTitle: 'Gcore Edge AI Inference',
+    category: 'commerce',
+    headlineSub: 'Global low-latency AI inference at the edge powered by NVIDIA A100 & H100 clusters (€1.3/h) — interactive neural routing topology and real-time token throughput calculator.'
+  },
+  'setting-stic': {
+    id: 'violet-chrome-nft-marketplace',
+    brandTitle: 'PlayNFT Digital Art Market',
+    category: 'commerce',
+    headlineSub: 'Web3 digital art & collectible NFT marketplace featuring liquid-chrome 3D portrait auctions, live ETH bid countdowns, Popular This Week showcase, and Top Sellers leaderboard.'
+  },
+  'luminex-atelier-eab': {
+    id: 'pastel-aurora-mobile-product-it',
+    brandTitle: 'PumpIt Mobile Product Studio',
+    category: 'portfolio',
+    headlineSub: 'Progressive Unique Mobile Product IT studio — pastel aurora glassmorphism interface featuring 6 industry spheres, 10-step MVP-to-launch honeycomb workflow, and 4 transparent tariff tiers.'
   }
 };
 
@@ -5120,6 +5150,1511 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
           if (pOut) pOut.textContent = btn.getAttribute('data-price') || '119$';
           if (noteOut) noteOut.textContent = btn.getAttribute('data-note') || '';
           if (svgPath) svgPath.setAttribute('fill', btn.getAttribute('data-tint') || '#D6C7B8');
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 16. AGENTAI GRID (AgentAI Sprint Studio — Crimson Bioluminescent Jellyfish AI Agency)
+  // ============================================================================
+  if (slug === 'agentai-grid') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgentAI — Your AI Sprint Team On Demand</title>
+  <meta name="description" content="On-demand AI sprint agency based in Montréal, Canada. From discovery to deployment in 8–10 weeks with 230+ shipped AI products and 95% ROI improvement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050203;
+      --surface: rgba(24, 9, 12, 0.78);
+      --surface-2: rgba(255, 46, 46, 0.08);
+      --text: #FAF5F5;
+      --muted: rgba(250, 245, 245, 0.68);
+      --accent: #FF2E2E;
+      --accent-2: #FF6B3D;
+      --border: rgba(255, 72, 72, 0.24);
+      --font-display: 'Syne', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: radial-gradient(circle at 62% 24%, rgba(220, 28, 28, 0.28) 0%, rgba(45, 6, 10, 0.65) 42%, #050203 100%);
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--accent); color: #fff; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-shell { max-width: 1320px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 44px); }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding: 12px 22px; border-radius: 999px; background: rgba(16, 6, 8, 0.82);
+      border: 1px solid var(--border); backdrop-filter: blur(20px); margin-bottom: 28px;
+    }
+    .${p}-brand {
+      display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text);
+      font-family: var(--font-display); font-weight: 800; font-size: 20px; letter-spacing: -0.02em;
+    }
+    .${p}-brand-orb {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #FF8566, #FF1F1F 65%, #590000);
+      box-shadow: 0 0 18px rgba(255, 46, 46, 0.75);
+    }
+    .${p}-nav-links { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+    .${p}-nav-link { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.2s; }
+    .${p}-nav-link:hover { color: #fff; }
+    .${p}-pill {
+      padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(255, 46, 46, 0.12); color: var(--text); font-size: 12px; font-weight: 600;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+    }
+    .${p}-pill:hover, .${p}-pill.is-active {
+      background: linear-gradient(135deg, #FF2E2E, #FF6B3D); color: #fff; border-color: #FF8566;
+      box-shadow: 0 0 24px rgba(255, 46, 46, 0.48); transform: translateY(-1px);
+    }
+
+    .${p}-hero {
+      position: relative; border-radius: 32px; border: 1px solid var(--border);
+      background: radial-gradient(circle at 60% 42%, rgba(255, 38, 38, 0.25) 0%, rgba(18, 5, 8, 0.92) 62%, #070203 100%);
+      padding: clamp(28px, 4.5vw, 56px); overflow: hidden;
+      display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 32px; align-items: center;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 120, 120, 0.22);
+    }
+    .${p}-kicker {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px;
+      background: rgba(255, 46, 46, 0.14); border: 1px solid var(--border);
+      font-family: var(--font-mono); font-size: 11px; color: #FF9478; margin-bottom: 18px;
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-size: clamp(2.35rem, 4.8vw, 4.25rem);
+      font-weight: 800; line-height: 1.03; letter-spacing: -0.03em; margin-bottom: 18px;
+    }
+    .${p}-lead { font-size: 15px; color: var(--muted); max-width: 50ch; margin-bottom: 24px; }
+    .${p}-jelly-stage {
+      position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .${p}-telemetry-card {
+      width: 100%; margin-top: -24px; border-radius: 22px; padding: 18px 22px;
+      background: rgba(15, 5, 7, 0.86); border: 1px solid var(--border); backdrop-filter: blur(18px);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    }
+    .${p}-metrics-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px;
+    }
+    .${p}-metric-card {
+      border-radius: 24px; padding: 26px; background: var(--surface); border: 1px solid var(--border);
+      position: relative; overflow: hidden;
+    }
+    .${p}-metric-num {
+      font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800;
+      color: #FF4D4D; line-height: 1; margin-bottom: 8px; display: block;
+    }
+    .${p}-split-section {
+      margin-top: 44px; display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 28px; align-items: stretch;
+    }
+    .${p}-glass-panel {
+      border-radius: 28px; padding: clamp(24px, 3.5vw, 36px); background: var(--surface); border: 1px solid var(--border);
+    }
+    .${p}-service-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 14px 18px; border-radius: 16px; border: 1px solid rgba(255, 72, 72, 0.16);
+      background: rgba(255, 255, 255, 0.02); margin-bottom: 10px; cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .${p}-service-row.is-active, .${p}-service-row:hover {
+      background: rgba(255, 46, 46, 0.15); border-color: #FF5533;
+    }
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(5, 2, 3, 0.84); backdrop-filter: blur(14px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px; width: 100%; border-radius: 28px; padding: 32px;
+      background: #140608; border: 1px solid var(--border);
+    }
+    @keyframes ${p}Pulse {
+      0%, 100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 28px rgba(255,46,46,0.65)); }
+      50% { transform: translateY(-10px) scale(1.03); filter: drop-shadow(0 0 44px rgba(255,95,55,0.9)); }
+    }
+    @media (max-width: 960px) {
+      .${p}-hero, .${p}-metrics-grid, .${p}-split-section { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(255,82,82,0.55);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FF2E2E;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-shell">
+    <header class="${p}-nav">
+      <a href="#main-content" class="${p}-brand">
+        <span class="${p}-brand-orb" aria-hidden="true"></span>
+        <span>AgentAI</span>
+      </a>
+      <nav class="${p}-nav-links" aria-label="Primary Navigation">
+        <a href="#sprint-metrics" class="${p}-nav-link">Results</a>
+        <a href="#montreal-hub" class="${p}-nav-link">Montréal Hub</a>
+        <a href="#ai-services" class="${p}-nav-link">End-to-End Services</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <button type="button" id="motionToggleBtn" class="${p}-pill" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-pill is-active">Book a Call ↗</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="${p}-hero tabular-nums" aria-labelledby="heroHeading">
+        <div>
+          <span class="${p}-kicker">● FROM IDEA TO LAUNCH IN 8–10 WEEKS</span>
+          <h1 id="heroHeading" class="${p}-h1">Your AI Sprint Team On Demand</h1>
+          <p class="${p}-lead">
+            From discovery to deployment, our senior AI engineers and product strategists help you design, build, and launch production-grade LLM agents and autonomous workflows in 8–10 weeks.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;">
+            <button type="button" class="${p}-pill is-active" data-seamless-trigger="Start Your 8-Week AI Sprint">Start a Project →</button>
+            <a href="#ai-services" class="${p}-pill">Explore AI Architecture</a>
+          </div>
+          <div style="display:flex;gap:24px;flex-wrap:wrap;padding-top:18px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);">
+            <span><strong style="color:#fff;">SOC2 Type II</strong> Certified Pipelines</span>
+            <span><strong style="color:#fff;">Montréal</strong> AI Research Talent</span>
+            <span><strong style="color:#fff;">Zero-Lock</strong> Custom Weights</span>
+          </div>
+        </div>
+
+        <div class="${p}-jelly-stage">
+          <svg viewBox="0 0 420 360" style="width:100%;max-width:370px;height:auto;animation:${p}Pulse 5.5s ease-in-out infinite;" role="img" aria-label="Bioluminescent crimson neural jellyfish representing distributed AI agent tentacles">
+            <defs>
+              <radialGradient id="jellyBell" cx="50%" cy="38%" r="58%">
+                <stop offset="0%" stop-color="#FFF0EB" />
+                <stop offset="28%" stop-color="#FF5E3A" />
+                <stop offset="68%" stop-color="#D90429" />
+                <stop offset="100%" stop-color="#2B0008" stop-opacity="0.1" />
+              </radialGradient>
+              <linearGradient id="tentacleGlow" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#FF7A59" stop-opacity="0.95" />
+                <stop offset="60%" stop-color="#FF1E1E" stop-opacity="0.65" />
+                <stop offset="100%" stop-color="#FF1E1E" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="210" cy="135" rx="135" ry="95" fill="url(#jellyBell)" />
+            <path d="M92 145 Q210 95 328 145 Q280 178 210 176 Q140 178 92 145 Z" fill="rgba(255,220,210,0.42)" />
+            <path d="M135 168 C122 225, 152 275, 128 340" stroke="url(#tentacleGlow)" stroke-width="4" fill="none" stroke-linecap="round" />
+            <path d="M168 174 C158 238, 190 282, 166 350" stroke="url(#tentacleGlow)" stroke-width="5" fill="none" stroke-linecap="round" />
+            <path d="M210 176 C212 245, 195 295, 214 355" stroke="url(#tentacleGlow)" stroke-width="5.5" fill="none" stroke-linecap="round" />
+            <path d="M250 174 C265 235, 232 285, 258 348" stroke="url(#tentacleGlow)" stroke-width="4.5" fill="none" stroke-linecap="round" />
+            <path d="M284 166 C302 225, 272 275, 296 336" stroke="url(#tentacleGlow)" stroke-width="3.5" fill="none" stroke-linecap="round" />
+            <circle cx="165" cy="112" r="4" fill="#FFF" />
+            <circle cx="210" cy="96" r="5" fill="#FFF" />
+            <circle cx="255" cy="114" r="4" fill="#FFF" />
+          </svg>
+
+          <div class="${p}-telemetry-card">
+            <div>
+              <strong style="font-family:var(--font-display);font-size:26px;color:#FF5E3A;display:block;" data-counter-target="230" data-counter-suffix="+">230+</strong>
+              <span style="font-size:12px;color:var(--muted);">Projects successfully launched</span>
+            </div>
+            <div>
+              <strong style="font-family:var(--font-display);font-size:26px;color:#fff;display:block;" data-counter-target="400" data-counter-suffix="+">400+</strong>
+              <span style="font-size:12px;color:var(--muted);">Trusted global partners</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sprint-metrics" class="${p}-metrics-grid tabular-nums" aria-label="Impact Metrics">
+        <article class="${p}-metric-card ${p}-reveal">
+          <span class="${p}-metric-num">3M+</span>
+          <h2 style="font-size:18px;margin-bottom:6px;">Happy end-users</h2>
+          <p style="font-size:13px;color:var(--muted);">Interacting daily with our custom RAG copilots, voice agents, and automated neural pipelines.</p>
+        </article>
+        <article class="${p}-metric-card ${p}-reveal">
+          <span class="${p}-metric-num" data-counter-target="95" data-counter-suffix="%">95%</span>
+          <h2 style="font-size:18px;margin-bottom:6px;">ROI Improvement</h2>
+          <p style="font-size:13px;color:var(--muted);">Measured reduction in manual triage overhead within 60 days of production deployment.</p>
+        </article>
+        <article class="${p}-metric-card ${p}-reveal">
+          <span class="${p}-metric-num" data-counter-target="88" data-counter-suffix="%">88%</span>
+          <h2 style="font-size:18px;margin-bottom:6px;">Client Retention</h2>
+          <p style="font-size:13px;color:var(--muted);">Long-term enterprise partners scaling from initial 8-week MVP sprint to multi-agent ecosystems.</p>
+        </article>
+      </section>
+
+      <section id="montreal-hub" class="${p}-split-section tabular-nums" aria-labelledby="serviceHeading">
+        <div class="${p}-glass-panel ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:11px;color:#FF8566;">BASED IN MONTRÉAL, CANADA</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.7rem,3vw,2.4rem);margin:10px 0 14px;">120+ Clients Across 4 Core Industries</h2>
+          <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">
+            Rooted in Montréal's world-renowned deep learning corridor, our sprint pods combine MILA-grade research rigor with ruthless product velocity.
+          </p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div style="padding:14px;border-radius:16px;background:rgba(255,46,46,0.08);border:1px solid var(--border);">
+              <strong style="display:block;font-size:18px;color:#fff;">FinTech &amp; Risk</strong>
+              <span style="font-size:12px;color:var(--muted);">Real-time fraud &amp; underwriting agents</span>
+            </div>
+            <div style="padding:14px;border-radius:16px;background:rgba(255,46,46,0.08);border:1px solid var(--border);">
+              <strong style="display:block;font-size:18px;color:#fff;">BioHealth AI</strong>
+              <span style="font-size:12px;color:var(--muted);">Clinical trial synthesis &amp; diagnostics</span>
+            </div>
+            <div style="padding:14px;border-radius:16px;background:rgba(255,46,46,0.08);border:1px solid var(--border);">
+              <strong style="display:block;font-size:18px;color:#fff;">Autonomous SaaS</strong>
+              <span style="font-size:12px;color:var(--muted);">Self-healing workflow orchestration</span>
+            </div>
+            <div style="padding:14px;border-radius:16px;background:rgba(255,46,46,0.08);border:1px solid var(--border);">
+              <strong style="display:block;font-size:18px;color:#fff;">Supply Logistics</strong>
+              <span style="font-size:12px;color:var(--muted);">Predictive demand &amp; route optimization</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="ai-services" class="${p}-glass-panel ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:11px;color:#FF8566;">END-TO-END AI SERVICES</span>
+          <h2 id="serviceHeading" style="font-family:var(--font-display);font-size:clamp(1.7rem,3vw,2.4rem);margin:10px 0 14px;">Interactive Sprint Scope Selector</h2>
+
+          <div role="group" aria-label="AI Service Modules">
+            <div class="${p}-service-row is-active sprint-module-btn" tabindex="0" role="button" data-next-preview="true" data-title="01 // AI Strategy &amp; Opportunity Mapping" data-deliverable="Weeks 1–2: Architecture blueprint, proprietary data audit, ROI model, and guardrails specification." data-timeline="2 Weeks • $14,500 Sprint">
+              <span><strong>01. AI Strategy &amp; Mapping</strong></span>
+              <span style="font-family:var(--font-mono);font-size:12px;color:#FF8566;">Weeks 1–2 →</span>
+            </div>
+            <div class="${p}-service-row sprint-module-btn" tabindex="0" role="button" data-next-preview="true" data-title="02 // Custom Multi-Agent &amp; RAG Engineering" data-deliverable="Weeks 3–6: Hybrid vector indexing, tool-calling agent graph, low-latency streaming UI, and eval harness." data-timeline="4 Weeks • $28,000 Sprint">
+              <span><strong>02. Multi-Agent &amp; RAG Build</strong></span>
+              <span style="font-family:var(--font-mono);font-size:12px;color:#FF8566;">Weeks 3–6 →</span>
+            </div>
+            <div class="${p}-service-row sprint-module-btn" tabindex="0" role="button" data-next-preview="true" data-title="03 // Fine-Tuning, Red-Teaming &amp; Production Launch" data-deliverable="Weeks 7–10: LoRA weight optimization, hallucination firewall, telemetry dashboard, and zero-downtime rollout." data-timeline="4 Weeks • $24,000 Sprint">
+              <span><strong>03. Fine-Tuning &amp; Production Launch</strong></span>
+              <span style="font-family:var(--font-mono);font-size:12px;color:#FF8566;">Weeks 7–10 →</span>
+            </div>
+          </div>
+
+          <div style="margin-top:16px;padding:18px;border-radius:18px;background:rgba(5,2,3,0.75);border:1px solid var(--border);">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+              <strong id="sprintModuleTitle" style="font-size:15px;color:#fff;">01 // AI Strategy &amp; Opportunity Mapping</strong>
+              <span id="sprintModuleTime" style="font-family:var(--font-mono);font-size:12px;color:#FF5E3A;">2 Weeks • $14,500 Sprint</span>
+            </div>
+            <p id="sprintModuleDesc" style="font-size:13px;color:var(--muted);">
+              Weeks 1–2: Architecture blueprint, proprietary data audit, ROI model, and guardrails specification.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="margin-top:48px;padding:24px 0 36px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+      <span>© 2026 AgentAI Sprint Studio Inc. — Montréal, QC.</span>
+      <span style="font-family:var(--font-mono);color:#FF8566;">8–10 WEEK ON-DEMAND AI PODS</span>
+    </footer>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:#FF8566;">AGENTAI SPRINT DISPATCH</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Reserve Your AI Sprint Pod</h2>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">
+        Schedule a 30-minute technical discovery session with our Montréal principal AI architects to scope your 8–10 week deployment.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill is-active" style="width:100%;justify-content:center;">Confirm Technical Discovery Call</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var titleEl = document.getElementById('sprintModuleTitle');
+      var descEl = document.getElementById('sprintModuleDesc');
+      var timeEl = document.getElementById('sprintModuleTime');
+      document.querySelectorAll('.sprint-module-btn').forEach(function (row) {
+        row.addEventListener('click', function () {
+          document.querySelectorAll('.sprint-module-btn').forEach(function (r) { r.classList.remove('is-active'); });
+          row.classList.add('is-active');
+          if (titleEl) titleEl.textContent = row.getAttribute('data-title') || '';
+          if (descEl) descEl.textContent = row.getAttribute('data-deliverable') || '';
+          if (timeEl) timeEl.textContent = row.getAttribute('data-timeline') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 17. PORSCHE CAYMAN (Porsche 718 Cayman Studio — Diagonal Silver Alpine Configurator)
+  // ============================================================================
+  if (slug === 'porsche-caym') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>718 Cayman — Porsche Mid-Engine Alpine Studio</title>
+  <meta name="description" content="Interactive Porsche 718 Cayman Coupe & Cabriolet configurator featuring 300 hp Boxer telemetry, 4.9s 0-100 km/h acceleration, and 280 km/h top track speed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-light: #CFD6DC;
+      --bg-dark: #252C33;
+      --surface: rgba(30, 36, 43, 0.88);
+      --text-dark: #14181D;
+      --text-light: #F4F7FA;
+      --accent: #D5001C;
+      --gold: #EAB308;
+      --border: rgba(20, 24, 29, 0.16);
+      --font-display: 'Syne', 'Space Grotesk', sans-serif;
+      --font-sans: 'Space Grotesk', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: linear-gradient(135deg, #DCE2E7 0%, #BCC5CE 54%, #2B333B 54.1%, #1B2026 100%);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      line-height: 1.55;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--accent); color: #fff; font-weight: 700; border-radius: 8px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-shell { max-width: 1360px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 44px); }
+    .${p}-topbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding: 14px 24px; border-radius: 999px; background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(18px); border: 1px solid var(--border); margin-bottom: 24px;
+    }
+    .${p}-crest {
+      display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display);
+      font-weight: 800; font-size: 18px; letter-spacing: 0.12em; text-decoration: none; color: var(--text-dark);
+    }
+    .${p}-pill {
+      padding: 8px 18px; border-radius: 999px; border: 1px solid rgba(20, 24, 29, 0.22);
+      background: rgba(255, 255, 255, 0.65); color: var(--text-dark); font-size: 12px; font-weight: 700;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      transition: all 0.22s ease;
+    }
+    .${p}-pill:hover, .${p}-pill.is-active {
+      background: var(--text-dark); color: #fff; border-color: var(--text-dark);
+    }
+    .${p}-stage {
+      position: relative; border-radius: 32px; overflow: hidden;
+      background: linear-gradient(128deg, #E3E8EC 0%, #C4CDD6 56%, #262E36 56.1%, #181D23 100%);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      padding: clamp(24px, 4vw, 48px);
+      box-shadow: 0 30px 70px rgba(15, 20, 25, 0.35);
+    }
+    .${p}-stage-header {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .${p}-giant-title {
+      font-family: var(--font-display); font-size: clamp(2.8rem, 7vw, 6.2rem);
+      font-weight: 800; letter-spacing: 0.04em; line-height: 0.94; color: #1B2228;
+      text-transform: uppercase;
+    }
+    .${p}-car-grid {
+      display: grid; grid-template-columns: 160px 1fr 250px; gap: 24px; align-items: center;
+      margin: 18px 0 28px;
+    }
+    .${p}-step-rail {
+      display: flex; flex-direction: column; gap: 10px; font-family: var(--font-mono); font-size: 12px;
+    }
+    .${p}-step-btn {
+      padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(20, 24, 29, 0.18);
+      background: rgba(255, 255, 255, 0.55); color: var(--text-dark); text-align: left;
+      cursor: pointer; font-weight: 700; transition: all 0.2s;
+    }
+    .${p}-step-btn.is-active, .${p}-step-btn:hover {
+      background: #D5001C; color: #fff; border-color: #D5001C;
+    }
+    .${p}-telemetry-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+      background: rgba(20, 25, 31, 0.92); color: var(--text-light);
+      padding: 22px 26px; border-radius: 22px; backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .${p}-spec-val {
+      font-family: var(--font-display); font-size: clamp(1.45rem, 2.5vw, 2.1rem); font-weight: 800; color: #fff; display: block;
+    }
+    .${p}-spec-lbl {
+      font-family: var(--font-mono); font-size: 11px; color: rgba(244, 247, 250, 0.66); text-transform: uppercase;
+    }
+    .${p}-bento {
+      margin-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .${p}-card {
+      background: rgba(24, 30, 36, 0.9); color: var(--text-light); border-radius: 24px;
+      padding: 26px; border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(12, 16, 20, 0.84); backdrop-filter: blur(14px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px; width: 100%; border-radius: 26px; padding: 32px;
+      background: #1B2128; color: #fff; border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width: 980px) {
+      .${p}-car-grid, .${p}-telemetry-strip, .${p}-bento { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(213,0,28,0.65);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#D5001C;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-shell">
+    <header class="${p}-topbar">
+      <a href="#main-content" class="${p}-crest">
+        <span style="display:inline-block;width:12px;height:18px;background:linear-gradient(180deg,#D5001C 33%,#14181D 33%,#14181D 66%,#EAB308 66%);border-radius:2px;"></span>
+        <span>PORSCHE • 718 STUDIO</span>
+      </a>
+      <div role="group" aria-label="Body Style Filter" style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button type="button" class="${p}-pill is-active trim-tab-btn" data-next-preview="true" data-model="718 CAYMAN" data-price="$60,000*" data-hp="300 hp" data-accel="4.9 s" data-speed="280 km/h" data-paint="#C8D0D8">01 // COUPÉ</button>
+        <button type="button" class="${p}-pill trim-tab-btn" data-next-preview="true" data-model="718 CAYMAN S" data-price="$72,500*" data-hp="350 hp" data-accel="4.4 s" data-speed="285 km/h" data-paint="#D5001C">02 // CAYMAN S</button>
+        <button type="button" class="${p}-pill trim-tab-btn" data-next-preview="true" data-model="718 GTS 4.0" data-price="$90,300*" data-hp="394 hp" data-accel="4.0 s" data-speed="293 km/h" data-paint="#2563EB">03 // GTS 4.0</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" class="${p}-pill" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-pill is-active">Configure Yours →</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="${p}-stage tabular-nums" aria-labelledby="heroHeading">
+        <div class="${p}-stage-header">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:12px;font-weight:700;color:#D5001C;">MID-ENGINE SPORT COUPÉ • 01 / 05</span>
+            <h1 id="heroHeading" class="${p}-giant-title">718 CAYMAN</h1>
+          </div>
+          <div style="background:rgba(255,255,255,0.86);padding:14px 20px;border-radius:18px;border:1px solid var(--border);text-align:right;">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#475569;display:block;">MANUFACTURER RETAIL</span>
+            <strong id="caymanPriceOut" style="font-family:var(--font-display);font-size:26px;color:#14181D;">FROM $60,000*</strong>
+          </div>
+        </div>
+
+        <div class="${p}-car-grid">
+          <div class="${p}-step-rail" role="group" aria-label="Exterior Paint Selection">
+            <button type="button" class="${p}-step-btn is-active paint-btn" data-paint="#C8D0D8" data-label="GT Silver Metallic">01 GT Silver</button>
+            <button type="button" class="${p}-step-btn paint-btn" data-paint="#D5001C" data-label="Guards Red">02 Guards Red</button>
+            <button type="button" class="${p}-step-btn paint-btn" data-paint="#0EA5E9" data-label="shark Blue">03 Shark Blue</button>
+            <button type="button" class="${p}-step-btn paint-btn" data-paint="#E2E8F0" data-label="Chalk Special">04 Chalk</button>
+          </div>
+
+          <div style="text-align:center;">
+            <svg viewBox="0 0 640 250" style="width:100%;max-width:580px;height:auto;filter:drop-shadow(0 24px 32px rgba(0,0,0,0.45));" role="img" aria-label="Porsche 718 Cayman side-three-quarter coupe silhouette on Alpine pass">
+              <ellipse cx="320" cy="212" rx="260" ry="18" fill="rgba(0,0,0,0.42)" />
+              <path id="caymanBodyPath" d="M72 162 C95 128, 155 112, 220 92 C275 74, 360 72, 435 98 C495 116, 555 126, 578 158 L568 188 L78 188 Z" fill="#C8D0D8" stroke="#14181D" stroke-width="3" />
+              <path d="M225 96 C275 80, 352 80, 412 102 L385 130 L212 130 Z" fill="#1E293B" stroke="#F8FAFC" stroke-width="2" />
+              <path d="M350 135 L405 135 L392 168 L342 168 Z" fill="#0F172A" />
+              <circle cx="175" cy="184" r="38" fill="#111827" stroke="#94A3B8" stroke-width="5" />
+              <circle cx="175" cy="184" r="18" fill="#D5001C" />
+              <circle cx="468" cy="184" r="38" fill="#111827" stroke="#94A3B8" stroke-width="5" />
+              <circle cx="468" cy="184" r="18" fill="#D5001C" />
+            </svg>
+            <p id="activePaintLabel" style="font-family:var(--font-mono);font-size:12px;color:#F8FAFC;background:rgba(20,24,29,0.75);display:inline-block;padding:6px 16px;border-radius:999px;margin-top:6px;">
+              ACTIVE FINISH: GT Silver Metallic • 20-inch Carrera S Wheels
+            </p>
+          </div>
+
+          <div style="background:rgba(20,25,31,0.88);color:#fff;padding:22px;border-radius:22px;border:1px solid rgba(255,255,255,0.16);">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#EAB308;">ALPINE PASS TELEMETRY</span>
+            <h2 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">Mid-Engine Balance</h2>
+            <p style="font-size:13px;color:rgba(244,247,250,0.75);margin-bottom:16px;">
+              Positioned no more than 30 cm behind the driver for low polar moment of inertia through hairpin switchbacks.
+            </p>
+            <button type="button" class="${p}-pill is-active" style="width:100%;justify-content:center;" data-seamless-trigger="718 Cayman Alpine Test Drive Booking">Book Track Experience</button>
+          </div>
+        </div>
+
+        <div class="${p}-telemetry-strip">
+          <div>
+            <span id="caymanHpOut" class="${p}-spec-val">300 hp</span>
+            <span class="${p}-spec-lbl">Max Power (220 kW Boxer)</span>
+          </div>
+          <div>
+            <span id="caymanAccelOut" class="${p}-spec-val">4.9 s</span>
+            <span class="${p}-spec-lbl">0–100 km/h with PDK</span>
+          </div>
+          <div>
+            <span id="caymanSpeedOut" class="${p}-spec-val">280 km/h</span>
+            <span class="${p}-spec-lbl">Top Track Speed</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:flex-end;">
+            <button type="button" class="${p}-pill is-active" data-seamless-trigger="Download 718 Cayman Technical Dossier">Full Technical Specs ↗</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="${p}-bento tabular-nums" aria-label="Engineering Highlights">
+        <article class="${p}-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:11px;color:#EAB308;">01 // POWERTRAIN</span>
+          <h2 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">2.0L &amp; 4.0L Boxer Architecture</h2>
+          <p style="font-size:13px;color:rgba(244,247,250,0.72);">Variable turbine geometry (VTG) delivers 380 Nm of plateau torque from 2,150 to 4,500 rpm.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:11px;color:#EAB308;">02 // CHASSIS</span>
+          <h2 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">PASM Active Suspension</h2>
+          <p style="font-size:13px;color:rgba(244,247,250,0.72);">Lowers center of gravity by up to 20 mm with electromechanical power steering and torque vectoring.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:11px;color:#EAB308;">03 // COCKPIT</span>
+          <h2 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">Sport Chrono Package</h2>
+          <p style="font-size:13px;color:rgba(244,247,250,0.72);">Steering-wheel mode switch (Normal, Sport, Sport Plus, Individual) with 20-second Sport Response boost button.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer style="margin-top:40px;padding:20px 0 36px;border-top:1px solid rgba(255,255,255,0.18);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:#E2E8F0;">
+      <span>© 2026 Porsche 718 Cayman Digital Studio.</span>
+      <span style="font-family:var(--font-mono);">FOR THE SPORT OF IT • STUTTGART-ZUFFENHAUSEN</span>
+    </footer>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:#EAB308;">PORSCHE CODE GENERATOR</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Save Your 718 Cayman Build</h2>
+      <p style="font-size:14px;color:rgba(244,247,250,0.78);margin-bottom:20px;">
+        Generate a unique Porsche Code for your configured 718 Cayman and share it directly with your certified Porsche Center.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill is-active" style="width:100%;justify-content:center;">Generate Porsche Build Code</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var h1 = document.getElementById('heroHeading');
+      var priceOut = document.getElementById('caymanPriceOut');
+      var hpOut = document.getElementById('caymanHpOut');
+      var accelOut = document.getElementById('caymanAccelOut');
+      var speedOut = document.getElementById('caymanSpeedOut');
+      var bodyPath = document.getElementById('caymanBodyPath');
+      var paintLbl = document.getElementById('activePaintLabel');
+
+      document.querySelectorAll('.trim-tab-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.trim-tab-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (h1) h1.textContent = btn.getAttribute('data-model') || '718 CAYMAN';
+          if (priceOut) priceOut.textContent = 'FROM ' + (btn.getAttribute('data-price') || '$60,000*');
+          if (hpOut) hpOut.textContent = btn.getAttribute('data-hp') || '300 hp';
+          if (accelOut) accelOut.textContent = btn.getAttribute('data-accel') || '4.9 s';
+          if (speedOut) speedOut.textContent = btn.getAttribute('data-speed') || '280 km/h';
+          if (bodyPath) bodyPath.setAttribute('fill', btn.getAttribute('data-paint') || '#C8D0D8');
+        });
+      });
+
+      document.querySelectorAll('.paint-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.paint-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var col = btn.getAttribute('data-paint') || '#C8D0D8';
+          var lbl = btn.getAttribute('data-label') || 'GT Silver';
+          if (bodyPath) bodyPath.setAttribute('fill', col);
+          if (paintLbl) paintLbl.textContent = 'ACTIVE FINISH: ' + lbl + ' • 20-inch Carrera S Wheels';
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 18. WHICH CANVAS (Gcore Edge AI Inference — Volumetric Amber-Orange Ray & Chip Circuit)
+  // ============================================================================
+  if (slug === 'which-canvas') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gcore Edge AI — Inference at the Edge (€1.3/h NVIDIA H100)</title>
+  <meta name="description" content="Boost your ML model performance at the edge with Gcore Everywhere Inference. Global low-latency NVIDIA A100 & H100 clusters for €1.3/h." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #070505;
+      --surface: rgba(24, 14, 10, 0.82);
+      --text: #FFFBF7;
+      --muted: rgba(255, 251, 247, 0.68);
+      --accent: #FF5500;
+      --accent-glow: #FF9E44;
+      --border: rgba(255, 102, 26, 0.28);
+      --font-display: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background:
+        linear-gradient(218deg, rgba(255, 92, 0, 0.36) 0%, rgba(255, 68, 0, 0.12) 32%, rgba(7, 5, 5, 0.96) 62%),
+        #070505;
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--accent); color: #fff; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-glow); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-banner {
+      background: linear-gradient(90deg, #1E0D06, #3B1607, #1E0D06);
+      border-bottom: 1px solid var(--border);
+      text-align: center; padding: 9px 16px; font-size: 12px; font-weight: 600; color: #FFD2B3;
+    }
+    .${p}-shell { max-width: 1320px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 44px); }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding: 12px 22px; border-radius: 999px; background: rgba(18, 11, 8, 0.82);
+      border: 1px solid var(--border); backdrop-filter: blur(20px); margin-bottom: 32px;
+    }
+    .${p}-brand {
+      display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #fff;
+      font-family: var(--font-display); font-weight: 700; font-size: 20px;
+    }
+    .${p}-pill {
+      padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(255, 85, 0, 0.12); color: #fff; font-size: 12px; font-weight: 600;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      transition: all 0.22s ease;
+    }
+    .${p}-pill:hover, .${p}-pill.is-active {
+      background: var(--accent); color: #fff; border-color: var(--accent-glow);
+      box-shadow: 0 0 26px rgba(255, 85, 0, 0.55);
+    }
+
+    .${p}-hero {
+      position: relative; border-radius: 32px; border: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 82% 12%, rgba(255, 120, 20, 0.45) 0%, rgba(255, 72, 0, 0.16) 35%, rgba(12, 8, 6, 0.94) 72%),
+        #0B0706;
+      padding: clamp(32px, 5vw, 60px) clamp(20px, 4vw, 48px);
+      text-align: center; overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-size: clamp(2.5rem, 5.4vw, 4.6rem);
+      font-weight: 700; letter-spacing: -0.03em; line-height: 1.04; margin: 14px auto 16px;
+      max-width: 16ch;
+    }
+    .${p}-circuit-stage {
+      margin: 34px auto 12px; max-width: 980px;
+      display: grid; grid-template-columns: 1fr 220px 1fr; gap: 20px; align-items: center;
+    }
+    .${p}-node-col { display: flex; flex-direction: column; gap: 12px; }
+    .${p}-node-btn {
+      padding: 14px 18px; border-radius: 16px; border: 1px solid var(--border);
+      background: rgba(22, 13, 9, 0.88); color: var(--text); text-align: left;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      transition: all 0.2s ease;
+    }
+    .${p}-node-btn.is-active, .${p}-node-btn:hover {
+      background: rgba(255, 85, 0, 0.22); border-color: #FF8833;
+      box-shadow: 0 0 22px rgba(255, 85, 0, 0.35);
+    }
+    .${p}-ai-chip {
+      width: 180px; height: 180px; margin: 0 auto; border-radius: 34px;
+      background: radial-gradient(circle at 35% 30%, #FF8833, #D93800 62%, #2A0A00 100%);
+      border: 2px solid #FFB380;
+      box-shadow: 0 0 55px rgba(255, 85, 0, 0.72), inset 0 2px 12px rgba(255, 255, 255, 0.45);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .${p}-telemetry-bar {
+      margin-top: 26px; padding: 20px 26px; border-radius: 22px;
+      background: rgba(18, 10, 7, 0.9); border: 1px solid var(--border);
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; text-align: left;
+    }
+    .${p}-grid-3 {
+      margin-top: 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .${p}-card {
+      border-radius: 24px; padding: 26px; background: var(--surface); border: 1px solid var(--border);
+    }
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(7, 5, 5, 0.85); backdrop-filter: blur(14px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 520px; width: 100%; border-radius: 28px; padding: 32px;
+      background: #180D09; border: 1px solid var(--border);
+    }
+    @media (max-width: 920px) {
+      .${p}-circuit-stage, .${p}-telemetry-bar, .${p}-grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(255,115,36,0.6);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FF5500;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-banner">
+    GPU AI/ML Apps today! Deploy on NVIDIA A100s &amp; H100s for <strong>€1.3/h</strong> across 180+ global edge nodes →
+  </div>
+
+  <div class="${p}-shell">
+    <header class="${p}-nav">
+      <a href="#main-content" class="${p}-brand">
+        <span style="display:inline-block;width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,#FF8833,#FF3300);"></span>
+        <span>GCORE</span>
+      </a>
+      <nav style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;">
+        <a href="#edge-topology" style="color:var(--muted);text-decoration:none;">Products</a>
+        <a href="#edge-topology" style="color:var(--muted);text-decoration:none;">Solutions</a>
+        <a href="#edge-specs" style="color:var(--muted);text-decoration:none;">Pricing (€1.3/h)</a>
+        <a href="#edge-specs" style="color:var(--muted);text-decoration:none;">Resources</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <button type="button" id="motionToggleBtn" class="${p}-pill" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-pill is-active">Sign up for free</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="edge-topology" class="${p}-hero tabular-nums" aria-labelledby="heroHeading">
+        <span style="font-family:var(--font-mono);font-size:11px;color:#FF9E44;padding:6px 14px;border-radius:999px;background:rgba(255,85,0,0.16);border:1px solid var(--border);">
+          ⚡ EVERYWHERE INFERENCE • 180+ GLOBAL EDGE POPS
+        </span>
+        <h1 id="heroHeading" class="${p}-h1">Inference at the Edge</h1>
+        <p style="font-size:15px;color:var(--muted);max-width:56ch;margin:0 auto 22px;">
+          Boost your ML model performance at the edge with Gcore Everywhere Inference. Zero cold starts, automatic regional routing, and dedicated H100 tensor clusters.
+        </p>
+        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+          <button type="button" class="${p}-pill is-active" data-seamless-trigger="Deploy Edge AI Endpoint">Get started →</button>
+          <button type="button" class="${p}-pill" data-seamless-trigger="Book Gcore H100 Cluster Demo">Book a demo</button>
+        </div>
+
+        <div class="${p}-circuit-stage" role="group" aria-label="Interactive Edge Model Router">
+          <div class="${p}-node-col">
+            <button type="button" class="${p}-node-btn is-active model-node-btn" data-next-preview="true" data-model="Llama-3.3 70B Instruct" data-ttft="18 ms" data-tps="142 tok/s" data-cost="€0.42 / 1M tok">
+              <span><strong>Llama-3.3 70B</strong><br /><small style="color:var(--muted);">FP8 TensorRT-LLM</small></span>
+              <span style="font-family:var(--font-mono);font-size:12px;color:#FF9E44;">18ms ●</span>
+            </button>
+            <button type="button" class="${p}-node-btn model-node-btn" data-next-preview="true" data-model="Flux.1 Pro Diffusion" data-ttft="340 ms" data-tps="4.2 img/s" data-cost="€0.008 / image">
+              <span><strong>Flux.1 Pro Edge</strong><br /><small style="color:var(--muted);">1024×1024 Image Synth</small></span>
+              <span style="font-family:var(--font-mono);font-size:12px;color:#FF9E44;">340ms ●</span>
+            </button>
+            <button type="button" class="${p}-node-btn model-node-btn" data-next-preview="true" data-model="Whisper Large-v3 Turbo" data-ttft="11 ms" data-tps="48x Real-Time" data-cost="€0.003 / min">
+              <span><strong>Whisper v3 Turbo</strong><br /><small style="color:var(--muted);">Streaming Voice ASR</small></span>
+              <span style="font-family:var(--font-mono);font-size:12px;color:#FF9E44;">11ms ●</span>
+            </button>
+          </div>
+
+          <div class="${p}-ai-chip" aria-hidden="true">
+            <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.16em;color:#FFE4CC;">GCORE SILICON</span>
+            <strong style="font-family:var(--font-display);font-size:52px;line-height:1;color:#fff;">AI</strong>
+            <span style="font-family:var(--font-mono);font-size:11px;color:#FFE4CC;margin-top:4px;">H100 NVLINK</span>
+          </div>
+
+          <div class="${p}-node-col">
+            <button type="button" class="${p}-node-btn model-node-btn" data-next-preview="true" data-model="DeepSeek-R1 Distill 32B" data-ttft="21 ms" data-tps="168 tok/s" data-cost="€0.29 / 1M tok">
+              <span><strong>DeepSeek-R1 32B</strong><br /><small style="color:var(--muted);">Chain-of-Thought Edge</small></span>
+              <span style="font-family:var(--font-mono);font-size:12px;color:#FF9E44;">21ms ●</span>
+            </button>
+            <button type="button" class="${p}-node-btn model-node-btn" data-next-preview="true" data-model="Qwen-2.5 Coder 32B" data-ttft="16 ms" data-tps="175 tok/s" data-cost="€0.25 / 1M tok">
+              <span><strong>Qwen-2.5 Coder</strong><br /><small style="color:var(--muted);">Low-Latency Code Autocomplete</small></span>
+              <span style="font-family:var(--font-mono);font-size:12px;color:#FF9E44;">16ms ●</span>
+            </button>
+            <button type="button" class="${p}-node-btn model-node-btn" data-next-preview="true" data-model="BGE-M3 Multilingual Embed" data-ttft="6 ms" data-tps="3,400 vec/s" data-cost="€0.04 / 1M tok">
+              <span><strong>BGE-M3 Embeddings</strong><br /><small style="color:var(--muted);">Hybrid Dense+Sparse Vector</small></span>
+              <span style="font-family:var(--font-mono);font-size:12px;color:#FF9E44;">6ms ●</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="${p}-telemetry-bar">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">ACTIVE EDGE MODEL</span>
+            <strong id="edgeModelOut" style="font-size:16px;color:#fff;">Llama-3.3 70B Instruct</strong>
+          </div>
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">TIME TO FIRST TOKEN</span>
+            <strong id="edgeTtftOut" style="font-size:20px;color:#FF9E44;">18 ms</strong>
+          </div>
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">THROUGHPUT</span>
+            <strong id="edgeTpsOut" style="font-size:20px;color:#fff;">142 tok/s</strong>
+          </div>
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);display:block;">EDGE BILLING</span>
+            <strong id="edgeCostOut" style="font-size:20px;color:#FF9E44;">€0.42 / 1M tok</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="edge-specs" class="${p}-grid-3 tabular-nums" aria-label="Edge Infrastructure Capabilities">
+        <article class="${p}-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:11px;color:#FF9E44;">01 // GLOBAL ANYCAST</span>
+          <h2 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">Sub-25ms Global Routing</h2>
+          <p style="font-size:13px;color:var(--muted);">Requests automatically resolve to the nearest NVIDIA L40S or H100 PoP across Frankfurt, Amsterdam, Manassas, and Singapore.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:11px;color:#FF9E44;">02 // DEDICATED CLUSTERS</span>
+          <h2 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">€1.3/h Bare-Metal GPUs</h2>
+          <p style="font-size:13px;color:var(--muted);">3.2 Tbps InfiniBand interconnects with zero noisy-neighbor throttling and instant Kubernetes autoscaling.</p>
+        </article>
+        <article class="${p}-card ${p}-reveal">
+          <span style="font-family:var(--font-mono);font-size:11px;color:#FF9E44;">03 // OPENAI-COMPATIBLE</span>
+          <h2 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">1-Line SDK Migration</h2>
+          <p style="font-size:13px;color:var(--muted);">Swap your base_url to Gcore Everywhere Inference and cut token latency by 64% without rewriting application logic.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer style="margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+      <span>© 2026 Gcore Edge AI Infrastructure S.A.</span>
+      <span style="font-family:var(--font-mono);color:#FF9E44;">180+ EDGE POPS • €1.3/H H100 INSTANCES</span>
+    </footer>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:#FF9E44;">GCORE CLOUD CONSOLE</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Provision Edge AI Endpoint</h2>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">
+        Receive €100 in free Everywhere Inference credits and deploy Llama-3.3 70B or custom HuggingFace weights in 45 seconds.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill is-active" style="width:100%;justify-content:center;">Generate API Key &amp; Deploy</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var mOut = document.getElementById('edgeModelOut');
+      var tOut = document.getElementById('edgeTtftOut');
+      var sOut = document.getElementById('edgeTpsOut');
+      var cOut = document.getElementById('edgeCostOut');
+      document.querySelectorAll('.model-node-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.model-node-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (mOut) mOut.textContent = btn.getAttribute('data-model') || '';
+          if (tOut) tOut.textContent = btn.getAttribute('data-ttft') || '';
+          if (sOut) sOut.textContent = btn.getAttribute('data-tps') || '';
+          if (cOut) cOut.textContent = btn.getAttribute('data-cost') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 19. SETTING STIC (PlayNFT Digital Art Market — Cosmic Violet & Cyan Web3 Collectibles)
+  // ============================================================================
+  if (slug === 'setting-stic') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PLAY NFT — Discover, Collect and Sell Dope Art and NFTs</title>
+  <meta name="description" content="The world's largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover exclusive digital assets." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050517;
+      --surface: rgba(20, 18, 52, 0.78);
+      --text: #F8FAFC;
+      --muted: rgba(248, 250, 252, 0.68);
+      --accent: #7C3AED;
+      --cyan: #06B6D4;
+      --pink: #EC4899;
+      --border: rgba(139, 92, 246, 0.28);
+      --font-display: 'Syne', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background:
+        radial-gradient(circle at 78% 18%, rgba(124, 58, 237, 0.34) 0%, rgba(6, 182, 212, 0.14) 36%, #050517 72%),
+        #050517;
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--accent); color: #fff; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-shell { max-width: 1320px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 44px); }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding: 12px 24px; border-radius: 999px; background: rgba(14, 12, 38, 0.84);
+      border: 1px solid var(--border); backdrop-filter: blur(20px); margin-bottom: 28px;
+    }
+    .${p}-brand {
+      font-family: var(--font-display); font-weight: 800; font-size: 20px; color: #fff; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .${p}-pill {
+      padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(124, 58, 237, 0.16); color: #fff; font-size: 12px; font-weight: 600;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      transition: all 0.22s ease;
+    }
+    .${p}-pill:hover, .${p}-pill.is-active {
+      background: linear-gradient(135deg, #7C3AED, #06B6D4); border-color: #67E8F9;
+      box-shadow: 0 0 24px rgba(124, 58, 237, 0.5);
+    }
+
+    .${p}-hero {
+      display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 36px; align-items: center;
+      padding: clamp(24px, 4vw, 48px); border-radius: 32px; background: var(--surface);
+      border: 1px solid var(--border); backdrop-filter: blur(24px);
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-size: clamp(2.25rem, 4.6vw, 4rem);
+      font-weight: 800; line-height: 1.06; letter-spacing: -0.02em; margin-bottom: 16px;
+    }
+    .${p}-stats-row {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+      margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--border);
+    }
+    .${p}-auction-card {
+      border-radius: 28px; padding: 22px;
+      background: linear-gradient(160deg, rgba(45, 32, 96, 0.92), rgba(14, 12, 38, 0.96));
+      border: 1px solid rgba(103, 232, 249, 0.35);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+    }
+    .${p}-partners {
+      display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 18px;
+      margin: 28px 0; padding: 16px 24px; border-radius: 20px;
+      background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border);
+      font-family: var(--font-display); font-size: 14px; color: var(--muted);
+    }
+    .${p}-cat-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 20px;
+    }
+    .${p}-art-card {
+      border-radius: 24px; padding: 20px; background: var(--surface); border: 1px solid var(--border);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .${p}-art-card:hover { transform: translateY(-4px); border-color: #67E8F9; }
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(5, 5, 23, 0.85); backdrop-filter: blur(14px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 500px; width: 100%; border-radius: 28px; padding: 32px;
+      background: #0F0D29; border: 1px solid var(--border);
+    }
+    @media (max-width: 920px) {
+      .${p}-hero, .${p}-cat-grid { grid-template-columns: 1fr; }
+      .${p}-stats-row { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(6,182,212,0.65);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#06B6D4;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-shell">
+    <header class="${p}-nav">
+      <a href="#main-content" class="${p}-brand">
+        <span style="color:#06B6D4;">PLAY</span><span>NFT</span>
+      </a>
+      <nav style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;">
+        <a href="#main-content" style="color:#fff;text-decoration:none;">Home</a>
+        <a href="#explore-artworks" style="color:var(--muted);text-decoration:none;">Explore</a>
+        <a href="#explore-artworks" style="color:var(--muted);text-decoration:none;">Marketplace</a>
+        <a href="#popular-week" style="color:var(--muted);text-decoration:none;">Artists</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" class="${p}-pill" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-pill is-active">Connect Wallet</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="${p}-hero tabular-nums" aria-labelledby="heroHeading">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:#67E8F9;display:inline-block;margin-bottom:12px;">
+            ✦ WEB3 CHROME COLLECTIBLES MARKETPLACE
+          </span>
+          <h1 id="heroHeading" class="${p}-h1">Discover, Collect and Sell Dope Art and NFTs</h1>
+          <p style="font-size:15px;color:var(--muted);max-width:48ch;margin-bottom:22px;">
+            The world's largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover exclusive digital assets.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="#explore-artworks" class="${p}-pill is-active">Discover Now</a>
+            <button type="button" class="${p}-pill" data-seamless-trigger="Mint Your 3D Artwork on PlayNFT">Create Artwork</button>
+          </div>
+
+          <div class="${p}-stats-row">
+            <div>
+              <strong style="font-family:var(--font-display);font-size:24px;color:#fff;display:block;">27k+</strong>
+              <span style="font-size:12px;color:var(--muted);">Art works</span>
+            </div>
+            <div>
+              <strong style="font-family:var(--font-display);font-size:24px;color:#fff;display:block;">20k+</strong>
+              <span style="font-size:12px;color:var(--muted);">Auctions</span>
+            </div>
+            <div>
+              <strong style="font-family:var(--font-display);font-size:24px;color:#fff;display:block;">7k+</strong>
+              <span style="font-size:12px;color:var(--muted);">Artists</span>
+            </div>
+            <div>
+              <strong style="font-family:var(--font-display);font-size:24px;color:#67E8F9;display:block;">40k+</strong>
+              <span style="font-size:12px;color:var(--muted);">Active Users</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="${p}-auction-card">
+          <svg viewBox="0 0 400 260" style="width:100%;height:auto;border-radius:20px;background:radial-gradient(circle at 50% 35%,#3B0764,#0F172A);" role="img" aria-label="3D iridescent liquid chrome cybernetic sculpture NFT">
+            <defs>
+              <linearGradient id="nftChrome" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#67E8F9" />
+                <stop offset="50%" stop-color="#A855F7" />
+                <stop offset="100%" stop-color="#EC4899" />
+              </linearGradient>
+            </defs>
+            <circle cx="200" cy="130" r="84" fill="url(#nftChrome)" />
+            <ellipse cx="200" cy="130" rx="128" ry="38" fill="none" stroke="#67E8F9" stroke-width="4" transform="rotate(-18 200 130)" />
+            <circle cx="175" cy="110" r="14" fill="#FFF" fill-opacity="0.65" />
+          </svg>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;margin:16px 0;padding-bottom:14px;border-bottom:1px solid var(--border);">
+            <div>
+              <span style="font-size:11px;color:var(--muted);display:block;">Ending In</span>
+              <strong id="nftTimerOut" style="font-family:var(--font-mono);font-size:16px;color:#67E8F9;">1h 20m 30s</strong>
+            </div>
+            <div style="text-align:right;">
+              <span style="font-size:11px;color:var(--muted);display:block;">Highest Bid</span>
+              <strong id="nftBidOut" style="font-family:var(--font-mono);font-size:18px;color:#fff;">32.4 ETH</strong>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:10px;">
+            <button type="button" id="placeBidLiveBtn" class="${p}-pill is-active" data-next-preview="true" style="flex:1;justify-content:center;">Place a Bid (+0.5 ETH)</button>
+            <button type="button" class="${p}-pill" data-seamless-trigger="Instant Buyout — Digital Decade #01" style="flex:1;justify-content:center;">Purchase</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="${p}-partners" aria-label="Supported Web3 Ecosystems">
+        <span>PayPal</span>
+        <span>Coinbase</span>
+        <span>BINANCE</span>
+        <span>Revolut</span>
+        <span>EXODUS</span>
+        <span>BITFINEX</span>
+        <span>Blockchain</span>
+      </div>
+
+      <section id="explore-artworks" style="margin-top:36px;" aria-labelledby="exploreHeading">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <h2 id="exploreHeading" style="font-family:var(--font-display);font-size:clamp(1.7rem,3vw,2.4rem);">Explore Artworks by Category</h2>
+          <div role="group" aria-label="Artwork Category Filter" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="${p}-pill is-active cat-filter-btn" data-next-preview="true" data-cat="3D Art" data-floor="2.45 ETH">3D Art (2.45 ETH)</button>
+            <button type="button" class="${p}-pill cat-filter-btn" data-next-preview="true" data-cat="Abstract" data-floor="1.85 ETH">Abstract (1.85 ETH)</button>
+            <button type="button" class="${p}-pill cat-filter-btn" data-next-preview="true" data-cat="Modern Art" data-floor="3.10 ETH">Modern Art (3.10 ETH)</button>
+            <button type="button" class="${p}-pill cat-filter-btn" data-next-preview="true" data-cat="Graffiti &amp; Game" data-floor="1.40 ETH">Graffiti &amp; Game</button>
+          </div>
+        </div>
+
+        <div id="popular-week" class="${p}-cat-grid tabular-nums">
+          <article class="${p}-art-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#67E8F9;">POPULAR THIS WEEK // 01</span>
+            <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">Digital Decade — Anthony Gargasz</h3>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Octane-rendered holographic bust with verified ERC-721 provenance.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <strong class="floor-price-lbl" style="font-family:var(--font-mono);color:#fff;">2.45 ETH</strong>
+              <span style="font-size:12px;color:#EC4899;">♥ 50k Likes</span>
+            </div>
+          </article>
+          <article class="${p}-art-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#67E8F9;">TOP SELLER // 02</span>
+            <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">Cyber Seraphim — Leighton Kramer</h3>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">276.7 ETH total volume traded across 42 collector vaults.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <strong class="floor-price-lbl" style="font-family:var(--font-mono);color:#fff;">3.80 ETH</strong>
+              <span style="font-size:12px;color:#EC4899;">♥ 38k Likes</span>
+            </div>
+          </article>
+          <article class="${p}-art-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#67E8F9;">FEATURED DROP // 03</span>
+            <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">Neon Mirage — Haylie Arcand</h3>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">345.6 ETH creator royalties distributed with zero gas L2 minting.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <strong class="floor-price-lbl" style="font-family:var(--font-mono);color:#fff;">1.95 ETH</strong>
+              <span style="font-size:12px;color:#EC4899;">♥ 44k Likes</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer style="margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+      <span>© 2026 PLAY NFT Digital Marketplace. All rights reserved.</span>
+      <span style="font-family:var(--font-mono);color:#67E8F9;">ERC-721 &amp; ERC-1155 VERIFIED</span>
+    </footer>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:#67E8F9;">PLAY NFT WALLET BRIDGE</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Connect Web3 Wallet</h2>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">
+        Sign in with MetaMask, Coinbase Wallet, or Phantom to bid on live auctions and mint zero-gas collectibles.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill is-active" style="width:100%;justify-content:center;">Authorize Wallet Signature</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var bidVal = 32.4;
+      var bidOut = document.getElementById('nftBidOut');
+      var bidBtn = document.getElementById('placeBidLiveBtn');
+      if (bidBtn && bidOut) {
+        bidBtn.addEventListener('click', function () {
+          bidVal = +(bidVal + 0.5).toFixed(1);
+          bidOut.textContent = bidVal + ' ETH';
+        });
+      }
+      document.querySelectorAll('.cat-filter-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.cat-filter-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var floor = btn.getAttribute('data-floor') || '2.45 ETH';
+          document.querySelectorAll('.floor-price-lbl').forEach(function (el) { el.textContent = floor; });
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 20. LUMINEX ATELIER EAB (PumpIt Mobile Product Studio — Pastel Aurora Glassmorphism)
+  // ============================================================================
+  if (slug === 'luminex-atelier-eab') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PUMPIT — Progressive Unique Mobile Product IT Studio</title>
+  <meta name="description" content="Progressive Unique Mobile Product IT studio — pastel aurora glassmorphism interface featuring 6 application spheres, 10-step MVP workflow, and 4 transparent tariff tiers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #F6F4FA;
+      --surface: rgba(255, 255, 255, 0.76);
+      --text: #0F172A;
+      --muted: #475569;
+      --coral: #E06D64;
+      --sky: #38BDF8;
+      --lavender: #8B5CF6;
+      --amber: #F59E0B;
+      --border: rgba(15, 23, 42, 0.1);
+      --font-display: 'Syne', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background:
+        radial-gradient(circle at 18% 16%, rgba(251, 146, 60, 0.24) 0%, transparent 40%),
+        radial-gradient(circle at 84% 28%, rgba(139, 92, 246, 0.22) 0%, transparent 42%),
+        radial-gradient(circle at 52% 78%, rgba(56, 189, 248, 0.22) 0%, transparent 45%),
+        var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--text); color: #fff; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--coral); }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--lavender); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-shell { max-width: 1320px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 44px); }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding: 12px 24px; border-radius: 999px; background: rgba(255, 255, 255, 0.84);
+      border: 1px solid var(--border); backdrop-filter: blur(20px); margin-bottom: 28px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
+    }
+    .${p}-brand {
+      font-family: var(--font-display); font-weight: 800; font-size: 20px; color: var(--text); text-decoration: none;
+    }
+    .${p}-pill {
+      padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.9); color: var(--text); font-size: 12px; font-weight: 700;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      transition: all 0.22s ease;
+    }
+    .${p}-pill:hover, .${p}-pill.is-active {
+      background: var(--text); color: #fff; border-color: var(--text);
+    }
+
+    .${p}-hero {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: center;
+      padding: clamp(28px, 4.5vw, 52px); border-radius: 32px;
+      background: rgba(255, 255, 255, 0.72); border: 1px solid rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(24px); box-shadow: 0 24px 60px rgba(15, 23, 42, 0.07);
+    }
+    .${p}-h1 {
+      font-family: var(--font-display); font-size: clamp(2.2rem, 4.6vw, 3.9rem);
+      font-weight: 800; line-height: 1.06; letter-spacing: -0.03em; margin-bottom: 16px;
+    }
+    .${p}-spheres-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px;
+    }
+    .${p}-glass-card {
+      border-radius: 24px; padding: 24px; background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.95); backdrop-filter: blur(18px);
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.05);
+    }
+    .${p}-tariffs-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px;
+    }
+    .${p}-tariff-card {
+      border-radius: 24px; padding: 24px; color: #fff; cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .${p}-tariff-card:hover, .${p}-tariff-card.is-active {
+      transform: translateY(-6px); box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+    }
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(12px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 500px; width: 100%; border-radius: 28px; padding: 32px;
+      background: #fff; color: var(--text); border: 1px solid var(--border);
+    }
+    @media (max-width: 960px) {
+      .${p}-hero, .${p}-spheres-grid { grid-template-columns: 1fr; }
+      .${p}-tariffs-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .${p}-tariffs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(139,92,246,0.55);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#E06D64;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-shell">
+    <header class="${p}-nav">
+      <a href="#main-content" class="${p}-brand">PUMP<span style="color:#E06D64;">IT</span></a>
+      <nav style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;font-weight:600;">
+        <a href="#app-spheres" style="color:var(--muted);text-decoration:none;">Application Spheres</a>
+        <a href="#workflow-honeycomb" style="color:var(--muted);text-decoration:none;">10-Step Workflow</a>
+        <a href="#tariffs-section" style="color:var(--muted);text-decoration:none;">Tariffs</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" class="${p}-pill" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-pill is-active">Estimate App MVP →</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="${p}-hero tabular-nums" aria-labelledby="heroHeading">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:#8B5CF6;font-weight:700;display:inline-block;margin-bottom:10px;">
+            01 // FULL-CYCLE IOS, ANDROID &amp; FLUTTER ENGINEERING
+          </span>
+          <h1 id="heroHeading" class="${p}-h1">
+            Progressive Unique<br />
+            <span style="color:#E06D64;">Mobile Product IT</span>
+          </h1>
+          <p style="font-size:15px;color:var(--muted);max-width:48ch;margin-bottom:22px;">
+            We transform ambitious product concepts into high-retention iOS and Android ecosystems — combining pastel spatial glass UI, 10-step transparent delivery, and modular component kits.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="#tariffs-section" class="${p}-pill is-active">Explore 4 Tariff Models</a>
+            <button type="button" class="${p}-pill" data-seamless-trigger="Download PumpIt Mobile Portfolio Deck">View Case Studies</button>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <svg viewBox="0 0 420 300" style="width:100%;max-width:380px;height:auto;" role="img" aria-label="Pastel 3D rocket launch and dual mobile UI glass frames">
+            <defs>
+              <linearGradient id="pumpAura" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FDE68A" />
+                <stop offset="50%" stop-color="#FCA5A5" />
+                <stop offset="100%" stop-color="#C4B5FD" />
+              </linearGradient>
+            </defs>
+            <rect x="40" y="30" width="340" height="230" rx="32" fill="url(#pumpAura)" fill-opacity="0.45" stroke="#FFF" stroke-width="3" />
+            <rect x="95" y="52" width="105" height="190" rx="22" fill="#0F172A" stroke="#FFF" stroke-width="3" transform="rotate(-6 147 147)" />
+            <rect x="215" y="52" width="105" height="190" rx="22" fill="#FFF" stroke="#E2E8F0" stroke-width="3" transform="rotate(6 267 147)" />
+            <circle cx="147" cy="120" r="24" fill="#E06D64" />
+            <circle cx="267" cy="120" r="24" fill="#38BDF8" />
+          </svg>
+        </div>
+      </section>
+
+      <section id="app-spheres" style="margin-top:36px;" aria-labelledby="spheresHeading">
+        <h2 id="spheresHeading" style="font-family:var(--font-display);font-size:clamp(1.6rem,2.8vw,2.3rem);">6 Mobile Application Spheres</h2>
+        <div class="${p}-spheres-grid">
+          <article class="${p}-glass-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#E06D64;">01 // ENTERPRISE</span>
+            <h3 style="font-size:18px;margin:6px 0;">Business Process Automation</h3>
+            <p style="font-size:13px;color:var(--muted);">Mobile ERP, field-force dispatch, and real-time executive KPI cockpits.</p>
+          </article>
+          <article class="${p}-glass-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#38BDF8;">02 // GROWTH</span>
+            <h3 style="font-size:18px;margin:6px 0;">Marketing &amp; Loyalty Engines</h3>
+            <p style="font-size:13px;color:var(--muted);">Gamified push retention, referral loops, and personalized AI offers.</p>
+          </article>
+          <article class="${p}-glass-card ${p}-reveal">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#8B5CF6;">03 // COMMERCE</span>
+            <h3 style="font-size:18px;margin:6px 0;">1-Click Mobile Checkout</h3>
+            <p style="font-size:13px;color:var(--muted);">Apple Pay / Google Pay native storefronts with AR product try-on.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="workflow-honeycomb" style="margin-top:36px;" aria-labelledby="tariffsHeading">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <h2 id="tariffsHeading" style="font-family:var(--font-display);font-size:clamp(1.6rem,2.8vw,2.3rem);">Interactive Tariff Configurator (10-Step Delivery)</h2>
+          <span id="selectedTariffOut" style="font-family:var(--font-mono);font-size:12px;background:#0F172A;color:#fff;padding:8px 16px;border-radius:999px;">
+            ACTIVE PLAN: Subscription Pod — $6,800/mo (Dedicated 4-Senior Team)
+          </span>
+        </div>
+
+        <div id="tariffs-section" class="${p}-tariffs-grid tabular-nums" role="group" aria-label="Select Development Tariff">
+          <div class="${p}-tariff-card is-active tariff-select-btn" tabindex="0" role="button" data-next-preview="true" style="background:linear-gradient(145deg,#E06D64,#C85249);" data-summary="Subscription Pod — $6,800/mo (Dedicated 4-Senior Team)">
+            <span style="font-family:var(--font-mono);font-size:11px;opacity:0.85;">01 // SUBSCRIPTION</span>
+            <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Monthly Sprint Pod</h3>
+            <p style="font-size:13px;opacity:0.9;margin-bottom:14px;">Continuous product velocity with fixed monthly billing and bi-weekly TestFlight releases.</p>
+            <strong style="font-family:var(--font-mono);font-size:18px;">$6,800 / mo →</strong>
+          </div>
+
+          <div class="${p}-tariff-card tariff-select-btn" tabindex="0" role="button" data-next-preview="true" style="background:linear-gradient(145deg,#38BDF8,#0284C7);" data-summary="Milestone Turnkey — $18,500 Fixed Scope (10-Step Guarantee)">
+            <span style="font-family:var(--font-mono);font-size:11px;opacity:0.85;">02 // MILESTONE</span>
+            <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Fixed-Stage MVP</h3>
+            <p style="font-size:13px;opacity:0.9;margin-bottom:14px;">Pay per verified milestone across 10 stages: Discovery, Wireframes, UI Kit, API, QA, and App Store Launch.</p>
+            <strong style="font-family:var(--font-mono);font-size:18px;">$18,500 Fixed →</strong>
+          </div>
+
+          <div class="${p}-tariff-card tariff-select-btn" tabindex="0" role="button" data-next-preview="true" style="background:linear-gradient(145deg,#8B5CF6,#6D28D9);" data-summary="Time &amp; Material — $55/hr Senior Flutter/Swift Engineers">
+            <span style="font-family:var(--font-mono);font-size:11px;opacity:0.85;">03 // HOURLY</span>
+            <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Elastic Engineering</h3>
+            <p style="font-size:13px;opacity:0.9;margin-bottom:14px;">Augment your in-house mobile team with senior Swift, Kotlin, and Flutter specialists on demand.</p>
+            <strong style="font-family:var(--font-mono);font-size:18px;">$55 / hour →</strong>
+          </div>
+
+          <div class="${p}-tariff-card tariff-select-btn" tabindex="0" role="button" data-next-preview="true" style="background:linear-gradient(145deg,#F59E0B,#D97706);" data-summary="Ready Component Accelerator — $9,400 (Launch in 3 Weeks)">
+            <span style="font-family:var(--font-mono);font-size:11px;opacity:0.85;">04 // READY MODULES</span>
+            <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0;">Pre-Built Modules</h3>
+            <p style="font-size:13px;opacity:0.9;margin-bottom:14px;">Assemble your app from 80+ pre-audited PumpIt auth, chat, wallet, and booking modules in 3 weeks.</p>
+            <strong style="font-family:var(--font-mono);font-size:18px;">$9,400 Fast-Track →</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="margin-top:44px;padding:24px 0 36px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);">
+      <span>© 2026 PUMPIT — Progressive Unique Mobile Product IT.</span>
+      <span style="font-family:var(--font-mono);color:var(--text);">IOS • ANDROID • CROSS-PLATFORM</span>
+    </footer>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:12px;color:#E06D64;">PUMPIT MVP ESTIMATOR</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill">Close (Esc)</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Request 10-Step Mobile Blueprint</h2>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">
+        Receive an interactive Figma prototype and itemized 10-step sprint breakdown within 48 hours.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill is-active" style="width:100%;justify-content:center;">Book Product Architecture Call</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var out = document.getElementById('selectedTariffOut');
+      document.querySelectorAll('.tariff-select-btn').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.tariff-select-btn').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (out) out.textContent = 'ACTIVE PLAN: ' + (card.getAttribute('data-summary') || '');
         });
       });
     })();

@@ -14,6 +14,9 @@ export const WEB_CATEGORY_LABELS: Record<LangCode, Record<WebCategory, string>> 
  * conservation programmes and public research belong to education.
  */
 export const TEMPLATE_CATEGORIES = {
+  'impact-ventures': 'portfolio',
+  'health-portal': 'commerce',
+  'contact-cybernetic': 'portfolio',
   'luminex-atelier-eab': 'commerce',
   'setting-stic': 'commerce',
   'which-canvas': 'commerce',

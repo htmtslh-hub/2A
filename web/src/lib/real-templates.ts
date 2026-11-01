@@ -46,6 +46,79 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t197: {
+    slug: 'impact-ventures',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Impact Ventures",
+        desc: "Giao diện web Impact Ventures với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Impact Ventures",
+        desc: "Bespoke Impact Ventures web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Impact Ventures",
+        desc: "单文件自包含 Impact Ventures 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t196: {
+    slug: 'health-portal',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Health Portal",
+        desc: "Giao diện web Health Portal với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Health Portal",
+        desc: "Bespoke Health Portal web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Landing Page", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Health Portal",
+        desc: "单文件自包含 Health Portal 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t195: {
+    slug: 'contact-cybernetic',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Contact Cybernetic",
+        desc: "Giao diện web Contact Cybernetic với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Contact Cybernetic",
+        desc: "Bespoke Contact Cybernetic web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Contact Cybernetic",
+        desc: "单文件自包含 Contact Cybernetic 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t194: {
     slug: 'luminex-atelier-eab',
     cat: 'commerce',

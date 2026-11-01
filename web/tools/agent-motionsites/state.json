@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-10-31",
+  "lastRunDate": "2026-11-01",
   "todayCopiedCount": 3,
   "processedSlugs": [
     "_design",
@@ -9,6 +9,7 @@
     "aerox-studio",
     "aethera",
     "aetheris-voyage",
+    "agentai-grid",
     "airmax-plus",
     "ais-folio",
     "alex-carter-ui",
@@ -39,6 +40,7 @@
     "cinder-axis",
     "cinematic",
     "codenest-coding-platform",
+    "contact-cybernetic",
     "cozypaws",
     "crimson-folio",
     "cross-border",
@@ -62,12 +64,14 @@
     "email-marketing",
     "ember-arcade",
     "fennec",
+    "film-studio",
     "firepower",
     "fischer-motorsport",
     "fishfinger-creative",
     "fitclub-food",
     "flash-rocky-mountain",
     "flexible-spark",
+    "foods-gourmet-bowl",
     "forest-pulse",
     "free-sample",
     "freight-axis",
@@ -79,7 +83,9 @@
     "gridwork-co",
     "halden",
     "haul",
+    "health-portal",
     "hush-futurist-bags",
+    "impact-ventures",
     "industrix-engineering",
     "innovation",
     "interactive-discovery",
@@ -101,6 +107,7 @@
     "lumina",
     "luminex",
     "luminex-atelier",
+    "luminex-atelier-eab",
     "lumora",
     "maldives-escape",
     "manganresto",
@@ -130,11 +137,14 @@
     "nova-glass",
     "novatrend",
     "nuvem-canvas",
+    "o2-moonish-cosmic",
     "oceanpulse",
     "orbis-nft",
     "orbit-academy",
+    "ozzies-pretzels",
     "pinehaven",
     "polkacrypto-future",
+    "porsche-caym",
     "portfolio-cosmic",
     "power-ai",
     "price-calculator",
@@ -153,6 +163,7 @@
     "sellix",
     "semaan",
     "sentinel-ai",
+    "setting-stic",
     "shirtline",
     "shopluxe",
     "skyelite-private-jets",
@@ -169,6 +180,7 @@
     "synapsex",
     "targo",
     "taskly",
+    "terrarium-deck-studio",
     "tidal",
     "tools",
     "toonhub",
@@ -185,18 +197,15 @@
     "vex-ventures",
     "veyra",
     "viktor",
+    "visionglass-neo-ui",
     "vize-footer",
     "volt-hoodie",
     "vybe",
     "wander-far",
     "watchroom",
     "wellbeing-os",
-    "yellow-beast",
-    "agentai-grid",
-    "porsche-caym",
     "which-canvas",
-    "setting-stic",
-    "luminex-atelier-eab"
+    "yellow-beast"
   ],
   "processedPromptIds": [
     "aetheris-voyage-hero",
@@ -285,7 +294,10 @@
     "subscription-agency",
     "wellbeing-os",
     "prosthetics-hero",
-    "retro-futurist"
+    "retro-futurist",
+    "contact-cybernetic",
+    "health-portal",
+    "impact-ventures"
   ],
   "history": [
     {
@@ -457,6 +469,24 @@
           "accessTier": "premium"
         }
       ]
+    },
+    {
+      "date": "2026-11-01",
+      "built": [
+        "contact-cybernetic",
+        "health-portal",
+        "impact-ventures"
+      ],
+      "catalogIds": [
+        "t195",
+        "t196",
+        "t197"
+      ],
+      "tiers": {
+        "contact-cybernetic": "free",
+        "health-portal": "premium",
+        "impact-ventures": "premium"
+      }
     }
   ],
   "todayFreeCount": 1,
@@ -497,6 +527,9 @@
     "a1c407a9c4090191ddb3cd175d22d7c90c0c42715d3c7235a2c6a08022e24120",
     "6883361e5addea9ca09740bb047d4050683b32312c5b97dbc43811c530f95662",
     "43dc54544e666fcf232cd251a9caf081cbbde86436f5eeff6d5ecdc484e73948",
-    "77349f561dcf23cb8d0dfc0b45f8acedd3505bff78a5eae8aa3be73f95768e4c"
+    "77349f561dcf23cb8d0dfc0b45f8acedd3505bff78a5eae8aa3be73f95768e4c",
+    "3bdae30ec7078168d20fbced6eb76b89ba5a8a412253aeb75dd91915411bf051",
+    "16286a9938d5b87fe11d9ef402285994ad1b4414a406dd0e7c04e3383254b849",
+    "c19477fa46ff8da25abdc927ce7dd1af814ad62453a688423479123ffa64a96c"
   ]
 }

@@ -1,0 +1,48 @@
+{
+  "id": "t196",
+  "slug": "health-portal",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-01T02:57:38.707Z",
+  "demo": "/demos/health-portal/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "6ad3aa95cea4",
+  "sha256": "6ad3aa95cea4e9311ca87559f86dce289e9693b30432141117c12a07011a5f4a",
+  "demoHtmlSha256": "8ef4d57946c3cf045fd8b836e9ce541659f664aedcc98f9fae1c03bd872e9b42",
+  "demoSha256": "9f2f2fd4b04d0dbefd53e3dc92816bc5dafd02a82a99dc2271ec30f8b2e5c064",
+  "bytes": 207987,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.485,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.899,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 560
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\health-portal-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\health-portal-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\health-portal-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\health-portal-return.jpg"
+  ]
+}

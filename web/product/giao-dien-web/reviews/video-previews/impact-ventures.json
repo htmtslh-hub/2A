@@ -1,0 +1,48 @@
+{
+  "id": "t197",
+  "slug": "impact-ventures",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-01T02:58:09.039Z",
+  "demo": "/demos/impact-ventures/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a89366b682e9",
+  "sha256": "a89366b682e9ba97cabe7b34adddb352cc4a5baf6e129049cc8d20ed9121d936",
+  "demoHtmlSha256": "8c6d608d7db4a91c4d590ba1b5d7544c247c0deba2e98595b86e57a9b7057057",
+  "demoSha256": "8beed7d0411333756342a3d607a6df856451ec68cbe4b0ffb9bbd6ff8fa5294f",
+  "bytes": 722119,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.517,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 5.023,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 560
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\impact-ventures-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\impact-ventures-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\impact-ventures-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\impact-ventures-return.jpg"
+  ]
+}

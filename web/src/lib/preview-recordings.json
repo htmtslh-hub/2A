@@ -2448,5 +2448,47 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "contact-cybernetic": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "644a2c5b571f",
+    "sha256": "644a2c5b571fff7fdd907ad730421e42993503a34b83dff21d5f73350352d8a2",
+    "demoHtmlSha256": "3fa942a604e4c05f70ef78e42088c663493c2d1c568f033f354e1d5d5ac1117c",
+    "demoSha256": "52baf305b7f63e29c0d7254341a2e492259d1149065a08827323ec480737b082",
+    "bytes": 451593,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "health-portal": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "6ad3aa95cea4",
+    "sha256": "6ad3aa95cea4e9311ca87559f86dce289e9693b30432141117c12a07011a5f4a",
+    "demoHtmlSha256": "8ef4d57946c3cf045fd8b836e9ce541659f664aedcc98f9fae1c03bd872e9b42",
+    "demoSha256": "9f2f2fd4b04d0dbefd53e3dc92816bc5dafd02a82a99dc2271ec30f8b2e5c064",
+    "bytes": 207987,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "impact-ventures": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "a89366b682e9",
+    "sha256": "a89366b682e9ba97cabe7b34adddb352cc4a5baf6e129049cc8d20ed9121d936",
+    "demoHtmlSha256": "8c6d608d7db4a91c4d590ba1b5d7544c247c0deba2e98595b86e57a9b7057057",
+    "demoSha256": "8beed7d0411333756342a3d607a6df856451ec68cbe4b0ffb9bbd6ff8fa5294f",
+    "bytes": 722119,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

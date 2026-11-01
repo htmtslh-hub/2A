@@ -45,6 +45,30 @@ const nextConfig: NextConfig = {
           { key: 'X-Auralis-Version', value: '1.2.4' },
         ],
       },
+      {
+        source: '/previews/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, stale-while-revalidate=86400' },
+        ],
+      },
+      {
+        source: '/media/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, stale-while-revalidate=86400' },
+        ],
+      },
+      {
+        source: '/brand/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, stale-while-revalidate=86400' },
+        ],
+      },
+      {
+        source: '/icons/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, stale-while-revalidate=86400' },
+        ],
+      },
     ];
   },
   /* File giao diện bán cho khách nằm ngoài public/ và chỉ được đọc lúc chạy,

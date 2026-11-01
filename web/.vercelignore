@@ -8,35 +8,45 @@
 # Tài sản thử nghiệm của hướng homepage cũ; sản phẩm thương mại dùng
 # public/previews và public/demos/astra-interior.
 public/cinematic/
-# Chỉ ZIP trong product cần hiện diện ở môi trường chạy để /api/download đọc.
-product/giao-dien-web/*/source/
-product/giao-dien-web/docs/
-product/giao-dien-web/tools/
-product/giao-dien-web/*/reviews/
-product/giao-dien-web/reviews/
-product/giao-dien-web/*/design/
-product/giao-dien-web/design/
 
-# Retired templates are internal backups, never delivery assets.
-product/retired/
+# Toàn bộ gói .zip trong product/ đã được đồng bộ và phục vụ trực tiếp từ Google Drive
+# (xem src/lib/drive-manifest.json & outputFileTracingExcludes trong next.config.ts).
+# Chặn toàn bộ product/ và tools/ để giảm ~138.5 MB mỗi lần deploy lên Vercel.
+product/
+tools/
+.claude/
+Video_Result/
+reviews/
 
-# Crimson Folio scratch files are private working material.
-product/giao-dien-web/crimson-folio/scratch/
+# Các bản demo và preview của mẫu đã nghỉ hưu (retired) không còn trong REAL_TEMPLATES
+public/demos/ember-arcade/
+public/demos/fitclub-food/
+public/demos/chain-warden/
+public/demos/volt-hoodie/
+public/previews/agentic-tpl-t1.webp
+public/previews/break-code-*
+public/previews/chain-warden.*
+public/previews/designer-portfolio-*
+public/previews/ecommerce-omorfia-*
+public/previews/ember-arcade.*
+public/previews/fitclub-food.*
+public/previews/flexible-spark-*
+public/previews/forest-pulse-*
+public/previews/geospace-canvas-*
+public/previews/launch-video-*
+public/previews/lawyer-justicia-*
+public/previews/luminex-atelier-mobile.webp
+public/previews/luminex-atelier-tablet.webp
+public/previews/manufacturing-grid-*
+public/previews/monolith-canvas-*
+public/previews/nexora-automation-*
+public/previews/nextsus-gamerlix-*
+public/previews/nuvem-canvas-*
+public/previews/sentinel-ai-*
+public/previews/startup-devkit-*
+public/previews/volt-hoodie.*
 
 # Build dependencies and caches are recreated on Vercel, never uploaded.
 node_modules/
 .next/
 *.tsbuildinfo
-product/agent/*/node_modules/
-product/agent/*/release/
-product/agent/*/dist/
-product/agent/*/build/
-product/agent/*/.keys/
-
-tools/agent-pinterest/downloads/
-tools/agent-pinterest/logs/
-tools/agent-motionsites/logs/
-tools/agent-motionsites/motionsites-master-bank.json
-tools/agent-motionsites/MOTIONSITES-PROMPT-BANK.md
-
-product/agent/film-studio/film-studio.zip

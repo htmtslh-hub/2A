@@ -72,6 +72,32 @@ export async function pushAndDeploy(slugs, summaryLabel) {
     execSync(`npx.cmd vercel link --project web --yes${globalConfigFlag}`, { cwd: webRoot, stdio: 'inherit' });
   }
   execSync(`npx.cmd vercel deploy --prod --yes${globalConfigFlag}`, { cwd: webRoot, stdio: 'inherit' });
+
+  // 6. Auto-prune superseded deployments on Vercel so only the latest Production deployment remains
+  try {
+    const authFile = resolve(codexVercelConfig, 'auth.json');
+    const projFile = resolve(webRoot, '.vercel/project.json');
+    if (existsSync(authFile) && existsSync(projFile)) {
+      const { readFileSync } = await import('node:fs');
+      const { token } = JSON.parse(readFileSync(authFile, 'utf8'));
+      const { projectId, orgId } = JSON.parse(readFileSync(projFile, 'utf8'));
+      const headers = { Authorization: `Bearer ${token}` };
+      const r = await fetch(`https://api.vercel.com/v6/deployments?teamId=${orgId}&projectId=${projectId}&limit=50`, { headers });
+      const data = await r.json();
+      const readyDpls = (data.deployments || []).filter(d => d.state === 'READY');
+      const latestProdUid = readyDpls[0]?.uid;
+      for (const d of (data.deployments || [])) {
+        if (d.uid !== latestProdUid) {
+          await fetch(`https://api.vercel.com/v13/deployments/${d.uid}?teamId=${orgId}`, { method: 'DELETE', headers }).catch(() => {});
+        }
+      }
+      console.log(`--> Auto-pruned old Vercel deployments (retained active: ${latestProdUid}).`);
+    }
+  } catch (e) {
+    console.warn('Warning pruning old Vercel deployments:', e.message);
+  }
+
   console.log('--> Successfully pushed to GitHub master and deployed to https://forgezone.store!');
+  return true;
 }
 

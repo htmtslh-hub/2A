@@ -234,7 +234,7 @@ export async function getUserLicenseEntitlement(userId: string, now = new Date()
         userId,
         order: {
           status: 'PAID',
-          totalVnd: { gt: 0 },
+          amount: { gt: 0 },
         },
       },
       orderBy: { createdAt: 'desc' },

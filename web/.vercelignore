@@ -11,9 +11,10 @@ public/cinematic/
 
 # Toàn bộ gói .zip trong product/ đã được đồng bộ và phục vụ trực tiếp từ Google Drive
 # (xem src/lib/drive-manifest.json & outputFileTracingExcludes trong next.config.ts).
-# Chặn toàn bộ product/ và tools/ để giảm ~138.5 MB mỗi lần deploy lên Vercel.
+# Chặn toàn bộ product/ và tools/agent-* để giảm ~138.4 MB mỗi lần deploy lên Vercel.
 product/
-tools/
+tools/agent-pinterest/
+tools/agent-motionsites/
 .claude/
 Video_Result/
 reviews/

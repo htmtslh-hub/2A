@@ -243,20 +243,20 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     version: '2.5.0',
     specs: {
       vi: [
-        ['Định dạng', 'Ứng dụng Desktop Python (Tkinter Studio) + MCP Server (STDIO & HTTP/SSE :3100)'],
-        ['Nền tảng', 'Windows 10 / 11 (Kèm bộ 4 file .bat chạy & kết nối AI 1-Click)'],
+        ['Định dạng', 'Bộ cài đặt PC Windows (.exe độc lập) + MCP Server (STDIO & HTTP/SSE :3100)'],
+        ['Nền tảng', 'Windows 10 / 11 64-bit (Film_Studio_Pro_Setup_v2.5.0.exe — Không cần cài Python)'],
         ['Tự động hóa', '11 Phân hệ (Kịch bản, Đồng nhất nhân vật REF_CHAR, TTS đa luồng, Google Flow/Veo3, FFmpeg)'],
         ['Bản quyền', 'Khóa theo Mã Máy (FS-XXXX-XXXX-XXXX-XXXX) đồng bộ thời hạn gói trực tiếp trên Web']
       ],
       en: [
-        ['Format', 'Python Desktop Studio (Tkinter) + Model Context Protocol Server (STDIO & HTTP/SSE :3100)'],
-        ['Platform', 'Windows 10 / 11 (Includes 4 one-click .bat launchers & AI client connectors)'],
+        ['Format', 'Standalone Windows PC Installer (.exe) + Model Context Protocol Server (STDIO & HTTP/SSE :3100)'],
+        ['Platform', 'Windows 10 / 11 64-bit (Film_Studio_Pro_Setup_v2.5.0.exe — No Python required)'],
         ['Automation', '11 Modules (Storyboard, REF_CHAR Consistency, Multi-Engine TTS, Google Flow/Veo3, FFmpeg)'],
         ['Licensing', 'Hardware Machine ID (FS-XXXX-XXXX-XXXX-XXXX) synced with Web subscription duration']
       ],
       zh: [
-        ['格式', 'Python 桌面端工作站 (Tkinter) + MCP 协议服务器 (STDIO & HTTP/SSE :3100)'],
-        ['平台', 'Windows 10 / 11（附带 4 个一键启动与 AI 客户端连接 .bat 脚本）'],
+        ['格式', 'Windows PC 独立安装包 (.exe) + MCP 协议服务器 (STDIO & HTTP/SSE :3100)'],
+        ['平台', 'Windows 10 / 11 64-bit（Film_Studio_Pro_Setup_v2.5.0.exe — 无需安装 Python）'],
         ['自动化', '11 大模块（分镜剧本、REF_CHAR 角色一致性、多引擎配音、Google Flow/Veo3、FFmpeg 合成）'],
         ['授权机制', '硬件机器码 (FS-XXXX-XXXX-XXXX-XXXX) 绑定并与网站订阅时长实时同步']
       ]

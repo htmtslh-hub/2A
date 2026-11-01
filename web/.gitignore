@@ -43,3 +43,5 @@ next-env.d.ts
 
 # file giao diện bán cho khách — không commit
 .neon
+
+product/agent/film-studio/film-studio.zip

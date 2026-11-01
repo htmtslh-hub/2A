@@ -9,6 +9,7 @@ import type { LangCode } from '@/generated/data';
 import { Suspense } from 'react';
 import TrafficTracker from '@/components/TrafficTracker';
 import { PremiumWingSprite } from '@/components/PremiumWingIcon';
+import ZaloSupportButton from '@/components/ZaloSupportButton';
 import { buildAlternates } from '@/lib/seo-schema';
 
 // Chỉ nạp đúng những weight và bảng chữ trang thực sự dùng. Mỗi weight ×
@@ -83,12 +84,14 @@ export const viewport: Viewport = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   // Trình đọc màn hình chọn giọng theo thuộc tính này, nên nó phải đi theo
   // ngôn ngữ khách đang xem chứ không được để cứng tiếng Việt.
-  const lang = HTML_LANG[await readLang()];
+  const rawLang = await readLang();
+  const lang = HTML_LANG[rawLang];
   return (
     <html lang={lang} data-scroll-behavior="smooth" className={`${display.variable} ${body.variable}`}>
       <body>
         <PremiumWingSprite />
         <Providers>{children}</Providers>
+        <ZaloSupportButton lang={rawLang} />
         {process.env.ANALYTICS_ENABLED === 'true' && <Suspense fallback={null}><TrafficTracker /></Suspense>}
       </body>
     </html>

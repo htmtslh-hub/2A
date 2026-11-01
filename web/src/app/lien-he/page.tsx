@@ -4,15 +4,16 @@ import { CONTACT } from '@/lib/pages-content';
 import { readLang } from '@/lib/server-lang';
 import { COMPANY } from '@/lib/company';
 import { buildAlternates } from '@/lib/seo-schema';
+import { ZaloIcon } from '@/components/ZaloSupportButton';
 import type { LangCode } from '@/generated/data';
 
 export const dynamic = 'force-dynamic';
 
-const LABELS: Record<LangCode, { email: string; address: string; phone: string; company: string }> =
+const LABELS: Record<LangCode, { zalo: string; zaloAction: string; email: string; address: string; phone: string; company: string }> =
   {
-    vi: { email: 'Email', address: 'Địa chỉ', phone: 'Điện thoại', company: 'Đơn vị vận hành' },
-    en: { email: 'Email', address: 'Address', phone: 'Phone', company: 'Operated by' },
-    zh: { email: '邮箱', address: '地址', phone: '电话', company: '运营方' },
+    vi: { zalo: 'Nhóm CSKH Zalo', zaloAction: 'Tham gia nhóm Zalo hỗ trợ trực tiếp 24/7 →', email: 'Email', address: 'Địa chỉ', phone: 'Điện thoại', company: 'Đơn vị vận hành' },
+    en: { zalo: 'Zalo Support Group', zaloAction: 'Join 24/7 Zalo Customer Support Group →', email: 'Email', address: 'Address', phone: 'Phone', company: 'Operated by' },
+    zh: { zalo: 'Zalo 客服群', zaloAction: '加入 7×24 Zalo 官方客服支持群 →', email: '邮箱', address: '地址', phone: '电话', company: '运营方' },
   };
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -58,6 +59,36 @@ export default async function Page() {
           border: '1px solid rgba(236,238,241,.14)',
         }}
       >
+        {row(
+          L.zalo,
+          <a
+            href={COMPANY.zaloGroupUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 10,
+              color: '#68b5ff',
+              fontWeight: 600,
+              textDecoration: 'none',
+            }}
+          >
+            <span
+              style={{
+                display: 'inline-flex',
+                width: 26,
+                height: 26,
+                borderRadius: 8,
+                overflow: 'hidden',
+                flexShrink: 0,
+              }}
+            >
+              <ZaloIcon size={26} />
+            </span>
+            <span>{L.zaloAction}</span>
+          </a>
+        )}
         {row(
           L.email,
           <a href={`mailto:${COMPANY.email}`} style={{ color: '#fff' }}>

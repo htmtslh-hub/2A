@@ -29,6 +29,9 @@ export const COMPANY = {
   /** Email liên hệ chính thức, hiện dùng chung cho hỗ trợ và pháp lý. */
   email: 'htmt.slh@gmail.com',
 
+  /** Nhóm Zalo CSKH chính thức của Forge Zone. */
+  zaloGroupUrl: 'https://zalo.me/g/ghysgisxqd7jojoztf33',
+
   /** TẠM — số điện thoại hỗ trợ. Để trống thì các trang tự ẩn dòng này. */
   phone: '',
 

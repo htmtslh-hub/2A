@@ -13,6 +13,7 @@ import { guideHref, TOOL_GUIDE_BY_SLUG } from '@/lib/guide-links';
 import { GUIDE_COPY } from '@/lib/guide-copy';
 import { readLang } from '@/lib/server-lang';
 import { HTML_LANG } from '@/lib/lang';
+import { COMPANY } from '@/lib/company';
 import { buildAlternates } from '@/lib/seo-schema';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -144,7 +145,24 @@ export default async function GuidePage({ searchParams }: { searchParams: Promis
       <p>{toolHeroCopy ? toolHeroCopy.body : copy.heroBody}</p>
     </div>
     <div className={styles.layout}>
-      <aside className={styles.sidebar}><p className={styles.sidebarTitle}>{copy.routeTitle}</p>{nav}<div className={styles.support}>{copy.supportQuestion}<br /><Link href="/lien-he">{copy.supportLink}</Link></div></aside>
+      <aside className={styles.sidebar}>
+        <p className={styles.sidebarTitle}>{copy.routeTitle}</p>
+        {nav}
+        <div className={styles.support}>
+          {copy.supportQuestion}
+          <br />
+          <a
+            href={COMPANY.zaloGroupUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 6, color: '#68b5ff', fontWeight: 600 }}
+          >
+            <span>💬 {{ vi: 'Tham gia Nhóm CSKH Zalo →', en: 'Join Zalo Support Group →', zh: '加入 Zalo 客服群 →' }[lang]}</span>
+          </a>
+          <br />
+          <Link href="/lien-he">{copy.supportLink}</Link>
+        </div>
+      </aside>
       <main id="noi-dung" className={styles.main}>
         {!isAgentTool && (
           <nav className={styles.tabs} aria-label={copy.tabsAria}>

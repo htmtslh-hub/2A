@@ -908,13 +908,29 @@ export default function AgenticMarkup({ vm }: { vm: View }) {
                     ))}
                 </div>
               </div>
-              <div style={{ maxWidth: "1200px", margin: "28px auto 0", paddingTop: "20px", borderTop: "1px solid rgba(236,238,241,.08)", display: "flex", flexWrap: "wrap", gap: "16px", justifyContent: "space-between", fontSize: "12px", color: "#868d97" }}>
+              <div style={{ maxWidth: "1200px", margin: "28px auto 0", paddingTop: "20px", borderTop: "1px solid rgba(236,238,241,.08)", display: "flex", flexWrap: "wrap", gap: "16px", justifyContent: "space-between", alignItems: "center", fontSize: "12px", color: "#868d97" }}>
                 <span>
                   {vm.t.copyright}
                 </span>
-                <a className="hv2" style={{ color: "#868d97" }} href={`mailto:${vm.contactEmail}`}>
-                  {vm.contactEmail}
-                </a>
+                <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "18px" }}>
+                  <a
+                    className="hv2"
+                    style={{ display: "inline-flex", alignItems: "center", gap: "7px", color: "#68b5ff", fontWeight: 600, textDecoration: "none" }}
+                    href="https://zalo.me/g/ghysgisxqd7jojoztf33"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 48 48" fill="none" aria-hidden="true" style={{ borderRadius: "4px", flexShrink: 0 }}>
+                      <rect width="48" height="48" rx="12" fill="#0068FF" />
+                      <path d="M24 9.5C15.16 9.5 8 15.62 8 23.16C8 27.45 10.33 31.27 13.97 33.77C14.32 34.01 14.47 34.45 14.34 34.86L13.11 38.74C12.88 39.46 13.64 40.09 14.31 39.74L18.78 37.39C19.12 37.21 19.51 37.16 19.89 37.24C21.21 37.52 22.59 37.67 24 37.67C32.84 37.67 40 31.55 40 24.01C40 16.47 32.84 9.5 24 9.5Z" fill="#ffffff" />
+                      <text x="24" y="26.8" textAnchor="middle" fill="#0068FF" style={{ fontSize: "11px", fontWeight: 800, fontFamily: "system-ui, -apple-system, sans-serif", letterSpacing: "-0.02em" }}>Zalo</text>
+                    </svg>
+                    <span>{vm.lang === 'en' ? 'Zalo CSKH Support Group' : vm.lang === 'zh' ? 'Zalo 客服支持群' : 'Nhóm CSKH Zalo'}</span>
+                  </a>
+                  <a className="hv2" style={{ color: "#868d97" }} href={`mailto:${vm.contactEmail}`}>
+                    {vm.contactEmail}
+                  </a>
+                </div>
               </div>
             </footer>
           </>

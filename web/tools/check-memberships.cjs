@@ -198,7 +198,7 @@ async function main() {
     '@/lib/db': { prisma: {
       user: { findUnique: async () => ({ name: 'Buyer', email: 'buyer@example.test', image: null, createdAt: now }) },
       purchase: { findMany: async () => [] }, savedTemplate: { findMany: async () => [] },
-      membership: { findMany: async () => accessRows },
+      membership: { findMany: async () => accessRows }, adminAuditLog: { findMany: async () => [] },
     } },
   };
   const current = new Date();

@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-10-31",
+  "lastRunDate": "2026-11-01",
   "todayCopiedCount": 5,
   "todayFreeCount": 2,
   "todayPremiumCount": 3,
@@ -34,7 +34,12 @@
     "local-2e82c299dabf",
     "local-356f2b4c52cc",
     "local-65658236e456",
-    "local-bedff480851f"
+    "local-bedff480851f",
+    "local-0bcea91c3182",
+    "local-32e2aa167701",
+    "local-0c4ef4c3233c",
+    "local-4569663a82b4",
+    "local-eab007a94d23"
   ],
   "processedImageHashes": [
     "ecb0eb8a36263a9bd80e535321f1f5161c76d6b70a0bf9ea3d6ab2462886f512",
@@ -66,7 +71,12 @@
     "2e82c299dabfea91c3e8bb33a650aac788fc67e0d374c63e6885b090dfbbf407",
     "356f2b4c52cc7a1389b82346b75db8805105fc81f40133e6f1f67cffba15f04c",
     "65658236e4568d137f28e372ada6d212a9c35265cd2f997fcfc3686ac450faa5",
-    "bedff480851fc0b3c3e38a111108e0ac1ce46b6dc1b47f78595a6136249d430a"
+    "bedff480851fc0b3c3e38a111108e0ac1ce46b6dc1b47f78595a6136249d430a",
+    "0bcea91c3182065a145532f83803c9f1e2c6aaebe042cdc83cc09361483ec374",
+    "32e2aa167701f77f7645c3c2cef0cfbba44a15d80a52be58b204d44cb756e808",
+    "0c4ef4c3233cc3df0377f766c42541b6222f1248d3e121d1d21d15842f69e1e3",
+    "4569663a82b40f2fca8e1bd94fddb2e3eb18f6fd7dbdd42bfe29da9baa4ee291",
+    "eab007a94d2365b30f9418c948c63c5aabfdfd059a0ad1f9616059d5bc57c937"
   ],
   "processedSlugs": [
     "_design",
@@ -76,6 +86,7 @@
     "aerox-studio",
     "aethera",
     "aetheris-voyage",
+    "agentai-grid",
     "airmax-plus",
     "ais-folio",
     "alex-carter-ui",
@@ -129,6 +140,7 @@
     "email-marketing",
     "ember-arcade",
     "fennec",
+    "film-studio",
     "firepower",
     "fischer-motorsport",
     "fishfinger-creative",
@@ -169,6 +181,7 @@
     "lumina",
     "luminex",
     "luminex-atelier",
+    "luminex-atelier-eab",
     "lumora",
     "maldives-escape",
     "manganresto",
@@ -205,6 +218,7 @@
     "ozzies-pretzels",
     "pinehaven",
     "polkacrypto-future",
+    "porsche-caym",
     "portfolio-cosmic",
     "power-ai",
     "price-calculator",
@@ -223,6 +237,7 @@
     "sellix",
     "semaan",
     "sentinel-ai",
+    "setting-stic",
     "shirtline",
     "shopluxe",
     "skyelite-private-jets",
@@ -263,6 +278,7 @@
     "wander-far",
     "watchroom",
     "wellbeing-os",
+    "which-canvas",
     "yellow-beast"
   ],
   "history": [
@@ -479,6 +495,37 @@
           "criteriaScore": 98
         }
       ]
+    },
+    {
+      "date": "2026-11-01",
+      "built": [
+        "agentai-grid",
+        "porsche-caym",
+        "which-canvas",
+        "setting-stic",
+        "luminex-atelier-eab"
+      ],
+      "catalogIds": [
+        "t190",
+        "t191",
+        "t192",
+        "t193",
+        "t194"
+      ],
+      "pinIds": [
+        "local-0bcea91c3182",
+        "local-32e2aa167701",
+        "local-0c4ef4c3233c",
+        "local-4569663a82b4",
+        "local-eab007a94d23"
+      ],
+      "tiers": {
+        "agentai-grid": "free",
+        "porsche-caym": "free",
+        "which-canvas": "premium",
+        "setting-stic": "premium",
+        "luminex-atelier-eab": "premium"
+      }
     }
   ],
   "todayCreatedCount": 5

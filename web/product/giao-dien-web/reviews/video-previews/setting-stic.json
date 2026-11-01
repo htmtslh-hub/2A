@@ -1,0 +1,48 @@
+{
+  "id": "t193",
+  "slug": "setting-stic",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-01T02:02:21.811Z",
+  "demo": "/demos/setting-stic/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "7d27d3d6eaf5",
+  "sha256": "7d27d3d6eaf5eab5afedc26316d8028264b26611a9de3a903b40c7713fb7bea4",
+  "demoHtmlSha256": "de48d568929e8f9fd51b0a5635c161a9b17bfb4d9f01b9ad298b9a6eb65e7e52",
+  "demoSha256": "90000209326c0eece06e613613a2bf76814783e9725ffdcf9997b8b81dbc52ac",
+  "bytes": 701669,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.478,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.9,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1492
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\setting-stic-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\setting-stic-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\setting-stic-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\setting-stic-return.jpg"
+  ]
+}

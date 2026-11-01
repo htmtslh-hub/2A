@@ -1,0 +1,48 @@
+{
+  "id": "t191",
+  "slug": "porsche-caym",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-01T02:01:18.651Z",
+  "demo": "/demos/porsche-caym/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "82e9eb87b60f",
+  "sha256": "82e9eb87b60f884cdeb3a74a89fcd8f6d89c052083d979e2ff17ac3d3239bbb9",
+  "demoHtmlSha256": "825c449986c86d204e3b892554d45020834f18b5fb1eb44e926e53127c56b742",
+  "demoSha256": "8f5dbc5bb68eb8d394b6715fbbed1cab759765829791117e454fb3479ea94800",
+  "bytes": 742209,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.478,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.885,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1532
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\porsche-caym-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\porsche-caym-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\porsche-caym-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\porsche-caym-return.jpg"
+  ]
+}

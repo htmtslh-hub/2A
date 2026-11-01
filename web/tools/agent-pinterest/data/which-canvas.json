@@ -1,0 +1,32 @@
+{
+  "pinId": "local-0c4ef4c3233c",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1088111959986134023_Mục_này_có_hình_ảnh_của_which_one_is.jpg",
+  "archivedImagePath": "E:\\DONG_PHU\\2A\\anh-mau-pinterest\\da-lam\\2026-11-01\\pin_1088111959986134023_Mục_này_có_hình_ảnh_của_which_one_is.jpg",
+  "title": "Which Canvas",
+  "slug": "which-canvas",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-ambient-marquee",
+    "name": "Ambient Particle Canvas + Kinetic Marquee + Cutout Glass Tabs",
+    "focus": [
+      "ambient-smoke-particles",
+      "infinite-marquee",
+      "inverted-cutout-tabs"
+    ],
+    "description": "Tập trung vào hệ thống hạt bụi/khói chuyển động nền (Ambient Canvas), chữ chạy vô tận (Marquee) và thẻ bo góc Cutout."
+  },
+  "localImagePath": "E:\\DONG_PHU\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-11-01\\which-canvas.jpg",
+  "imageBytes": 28158,
+  "imageSha256": "0c4ef4c3233cc3df0377f766c42541b6222f1248d3e121d1d21d15842f69e1e3",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 720,
+    "height": 720,
+    "aspectRatio": 1,
+    "reason": "Rejected geometry (720x720, AR=1.00) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-11-01T02:00:03.375Z"
+}

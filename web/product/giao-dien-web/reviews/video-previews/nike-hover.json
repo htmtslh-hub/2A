@@ -1,0 +1,48 @@
+{
+  "id": "t205",
+  "slug": "nike-hover",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T00:15:26.916Z",
+  "demo": "/demos/nike-hover/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "de2e47a57754",
+  "sha256": "de2e47a5775465e0fa099d87562f758fee779f6428fbceeab733b5b8ca99a269",
+  "demoHtmlSha256": "230e8c678eff3a2e19c03dfda59ef733c373d21e8e6847588375ae8864341002",
+  "demoSha256": "e6d7ea885ac1013268fdcadaf71ebc86c5b8b4c2b05b1c02cd96d9dbc92b5252",
+  "bytes": 224163,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.494,
+      "action": "click",
+      "selector": "<article class=\"nik61-lab-card nike-lab-btn is-active\" tabindex=\"0\" role=\"button\" data-next-preview=\"true\" data-stat=\"78%\" data-title=\"NEXT-GEN CUSHIONING ARCHITECTURE\" data-sub=\"I"
+    },
+    {
+      "seconds": 4.843,
+      "action": "click",
+      "selector": "<article class=\"nik61-lab-card nike-lab-btn is-active\" tabindex=\"0\" role=\"button\" data-next-preview=\"true\" data-stat=\"78%\" data-title=\"NEXT-GEN CUSHIONING ARCHITECTURE\" data-sub=\"I"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 461
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nike-hover-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nike-hover-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nike-hover-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nike-hover-return.jpg"
+  ]
+}

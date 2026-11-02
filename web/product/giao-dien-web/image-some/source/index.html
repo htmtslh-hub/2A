@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blobs — Smart Pet Health, GPS Collar &amp; Veterinary Care Companion</title>
+  <meta name="description" content="Playful monochrome ink-black, pure white, and warm peach-apricot smart pet companion showcase featuring expressive black-cat blob illustrations, live GPS collar telemetry, and veterinary calendars." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-ink: #13141C;
+      --card-ink: #1C1E2A;
+      --snow: #FFFFFF;
+      --peach: #FFAE73;
+      --peach-soft: #FFE4CE;
+      --muted: #8E93A6;
+      --border-ink: #13141C;
+      --font-display: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg-ink);
+      color: var(--snow);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--peach); color: var(--bg-ink); font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--peach); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .ima1-shell {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 24px clamp(16px, 3.5vw, 44px);
+    }
+    .ima1-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .ima1-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .ima1-pill-btn {
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.24);
+      background: transparent;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .ima1-pill-btn.is-peach, .ima1-pill-btn:hover {
+      background: var(--peach);
+      color: var(--bg-ink);
+      border-color: var(--peach);
+    }
+
+    /* Multi-Phone Mockups Showcase Stage (Мокапы) */
+    .ima1-Phones-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+    .ima1-phone {
+      background: var(--snow);
+      color: var(--bg-ink);
+      border-radius: 40px;
+      padding: 18px 16px 22px;
+      border: 7px solid #E2E6F0;
+      box-shadow: 0 28px 65px rgba(0, 0, 0, 0.55);
+      min-height: 650px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .ima1-phone.is-dark {
+      background: var(--bg-ink);
+      color: var(--snow);
+    }
+    .ima1-status-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      opacity: 0.85;
+    }
+    .ima1-outline-pill {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1.5px solid var(--bg-ink);
+      background: #fff;
+      color: var(--bg-ink);
+      font-size: 11px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ima1-vitals-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .ima1-vital-box {
+      background: var(--bg-ink);
+      color: #fff;
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .ima1-cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .ima1-cal-day {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      border: 1.2px solid var(--bg-ink);
+      margin: 0 auto;
+    }
+    .ima1-cal-day.is-peach {
+      background: var(--peach);
+      border-color: var(--peach);
+      color: var(--bg-ink);
+    }
+    .ima1-cal-day.is-black {
+      background: var(--bg-ink);
+      color: #fff;
+    }
+
+    .ima1-modal {
+      position: fixed; inset: 0; background: rgba(19, 20, 28, 0.82); backdrop-filter: blur(12px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .ima1-modal.is-open { display: flex; }
+    .ima1-modal-box {
+      max-width: 460px; width: 100%; border-radius: 28px; padding: 30px;
+      background: #fff; color: var(--bg-ink); border: 4px solid var(--peach);
+    }
+
+    @media (max-width: 1150px) {
+      .ima1-Phones-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .ima1-Phones-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:30px;height:30px;border:1.5px solid #FFAE73;border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FFAE73;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="ima1-shell">
+    <header class="ima1-header">
+      <a href="#main-content" class="ima1-brand">
+        <span style="display:inline-flex;width:36px;height:36px;border-radius:50%;background:var(--peach);color:var(--bg-ink);align-items:center;justify-content:center;font-weight:900;">🐱</span>
+        <span>Blobs • Мокапы</span>
+      </a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;" role="group" aria-label="Switch Active Pet Profile">
+        <button type="button" class="ima1-pill-btn is-peach blob-pet-btn" data-next-preview="true" data-pet="Огурец (Abyssinian Cat • 10 mos • 14 kg)" data-bp="123 мм. рт. ст." data-speed="12 км.ч">🐱 Огурец (Cat)</button>
+        <button type="button" class="ima1-pill-btn blob-pet-btn" data-next-preview="true" data-pet="Бублик (Welsh Corgi • 2 yrs • 11.4 kg)" data-bp="118 мм. рт. ст." data-speed="19 км.ч">🐶 Бублик (Dog)</button>
+        <button type="button" class="ima1-pill-btn blob-pet-btn" data-next-preview="true" data-pet="Пиксик (Chinchilla • 8 mos • 0.6 kg)" data-bp="110 мм. рт. ст." data-speed="6 км.ч">🐹 Пиксик (Chinchilla)</button>
+        <button type="button" id="motionToggleBtn" class="ima1-pill-btn" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="ima1-pill-btn is-peach">Download iOS App →</button>
+      </div>
+    </header>
+
+    <main id="main-content" class="tabular-nums">
+      <div style="text-align:center;margin-bottom:26px;">
+        <h1 style="font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.4rem);font-weight:700;">
+          Мокапы • Smart Pet Care &amp; GPS Telemetry
+        </h1>
+        <p id="activePetBanner" style="font-family:var(--font-mono);font-size:13px;color:var(--peach);margin-top:6px;">
+          ACTIVE PET: Огурец (Abyssinian Cat • 10 mos • 14 kg) — Collar GPS Online
+        </p>
+      </div>
+
+      <!-- 4-Screen Interactive iPhone Mockup Grid -->
+      <section class="ima1-Phones-grid" aria-label="Interactive iOS Pet Care Screens">
+        <!-- PHONE 1: Pet Biography & Blood Pressure / Speed Telemetry (Огурец) -->
+        <article class="ima1-phone">
+          <div>
+            <div class="ima1-status-row"><span>5:13 PM</span><span>⏰ 🛜 🔋</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+              <span style="font-weight:800;">‹</span>
+              <strong id="phonePetName" style="font-size:15px;">Огурец</strong>
+              <span>⋮</span>
+            </div>
+
+            <!-- Black Cat Liquid Blob Mascot SVG -->
+            <div style="text-align:center;margin:8px 0;">
+              <svg viewBox="0 0 180 155" style="width:148px;height:128px;" role="img" aria-label="Black Cat Mascot Огурец">
+                <circle cx="90" cy="78" r="62" fill="#FFFFFF" stroke="#13141C" stroke-width="3" />
+                <path d="M48,78 C46,45 55,22 62,18 C72,32 76,38 90,38 C104,38 108,32 118,18 C125,22 134,45 132,78 C130,108 112,122 90,122 C68,122 50,108 48,78 Z" fill="#13141C" />
+                <ellipse cx="73" cy="74" rx="11" ry="15" fill="#FFFFFF" />
+                <ellipse cx="75" cy="74" rx="6" ry="9" fill="#13141C" />
+                <ellipse cx="107" cy="74" rx="11" ry="15" fill="#FFFFFF" />
+                <ellipse cx="105" cy="74" rx="6" ry="9" fill="#13141C" />
+                <path d="M84,92 Q90,97 96,92" stroke="#FFFFFF" stroke-width="2" fill="none" />
+              </svg>
+              <div style="margin-top:-6px;">
+                <span style="background:var(--bg-ink);color:#fff;padding:5px 16px;border-radius:999px;font-size:11px;font-weight:700;">Биография</span>
+              </div>
+              <p style="font-size:13px;font-weight:700;margin-top:8px;">Абиссинский кот ♂</p>
+            </div>
+
+            <div style="display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:10px 0;">
+              <span class="ima1-outline-pill">Черный <small style="opacity:0.6;">Цвет</small></span>
+              <span class="ima1-outline-pill">10 месяцев <small style="opacity:0.6;">Возраст</small></span>
+              <span class="ima1-outline-pill">14 кг <small style="opacity:0.6;">Вес</small></span>
+            </div>
+          </div>
+
+          <!-- Bottom Dark Vitals Telemetry Card -->
+          <div>
+            <div style="font-size:12px;font-weight:800;margin-bottom:6px;display:flex;justify-content:space-between;">
+              <span>Динамика</span><span>⌄</span>
+            </div>
+            <div class="ima1-vitals-grid">
+              <div class="ima1-vital-box">
+                <div style="font-size:9px;opacity:0.75;">Артериальное Давление</div>
+                <svg viewBox="0 0 100 36" style="width:100%;height:28px;margin:4px 0;">
+                  <path d="M4,28 L26,22 L48,25 L72,12 L96,8" stroke="#FFAE73" stroke-width="2" stroke-dasharray="3 3" fill="none" />
+                  <circle cx="96" cy="8" r="3.5" fill="#FFAE73" />
+                </svg>
+                <strong id="phoneBpVal" style="font-size:11px;">123 мм. рт. ст.</strong>
+              </div>
+              <div class="ima1-vital-box">
+                <div style="font-size:9px;opacity:0.75;">Скорость</div>
+                <svg viewBox="0 0 100 36" style="width:100%;height:28px;margin:4px 0;">
+                  <path d="M4,26 L32,14 L64,20 L96,10" stroke="#FFAE73" stroke-width="2" stroke-dasharray="3 3" fill="none" />
+                  <circle cx="96" cy="10" r="3.5" fill="#FFAE73" />
+                </svg>
+                <strong id="phoneSpeedVal" style="font-size:11px;">12 км.ч</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PHONE 2: Мои питомцы & Планы (Dark Mode Screen) -->
+        <article class="ima1-phone is-dark">
+          <div>
+            <div class="ima1-status-row"><span>5:13 PM</span><span>⏰ 🛜 🔋</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+              <strong style="font-size:15px;">Мои питомцы</strong>
+              <span>＋ ⋮</span>
+            </div>
+
+            <!-- White Card Holding 3 Pet Avatars -->
+            <div style="background:#fff;color:var(--bg-ink);border-radius:24px;padding:14px;">
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;">
+                <div>
+                  <div style="width:52px;height:52px;border-radius:50%;border:2px solid var(--bg-ink);margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:22px;">🐱</div>
+                  <div style="font-size:10px;font-weight:800;">Огурец</div>
+                  <span style="font-size:9px;background:var(--bg-ink);color:#fff;padding:2px 8px;border-radius:999px;">Кот</span>
+                </div>
+                <div>
+                  <div style="width:52px;height:52px;border-radius:50%;border:2px solid var(--bg-ink);margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:22px;">🐶</div>
+                  <div style="font-size:10px;font-weight:800;">Бублик</div>
+                  <span style="font-size:9px;background:var(--bg-ink);color:#fff;padding:2px 8px;border-radius:999px;">Собака</span>
+                </div>
+                <div>
+                  <div style="width:52px;height:52px;border-radius:50%;border:2px solid var(--bg-ink);margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:22px;">🐹</div>
+                  <div style="font-size:10px;font-weight:800;">Пиксик</div>
+                  <span style="font-size:9px;background:var(--bg-ink);color:#fff;padding:2px 8px;border-radius:999px;">Шиншилла</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Планы Schedule -->
+            <div style="margin-top:16px;">
+              <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:8px;">
+                <strong>Планы</strong>
+                <span style="color:var(--muted);font-size:10px;">Добавить +</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:12px;align-items:center;">
+                <span>10</span><span>11</span>
+                <span style="background:var(--peach);color:var(--bg-ink);padding:4px 8px;border-radius:999px;font-weight:800;">12</span>
+                <span>13</span><span>14</span><span>15</span><span>16</span>
+              </div>
+              <div style="background:var(--peach-soft);color:var(--bg-ink);padding:10px 14px;border-radius:999px;font-size:11px;font-weight:700;display:flex;justify-content:space-between;margin-bottom:8px;">
+                <span>Запись к ветеринару</span><span>08:00</span>
+              </div>
+              <div style="border:1px solid rgba(255,255,255,0.28);padding:10px 14px;border-radius:999px;font-size:11px;display:flex;justify-content:space-between;">
+                <span>Прогулка с друзьями</span><span>09:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#fff;color:var(--bg-ink);border-radius:22px;padding:14px;">
+            <div style="border:1.5px solid var(--bg-ink);border-radius:999px;padding:8px 14px;font-size:11px;font-weight:700;display:flex;justify-content:space-between;margin-bottom:8px;">
+              <span>Не забудь о встречах!</span><span>‹</span>
+            </div>
+            <div style="border:1.5px solid var(--bg-ink);border-radius:999px;padding:8px 14px;font-size:11px;font-weight:700;display:flex;justify-content:space-between;">
+              <span>Приходи к нам</span><span>‹</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PHONE 3: Live Collar GPS Map & Vet Articles -->
+        <article class="ima1-phone">
+          <div>
+            <div class="ima1-status-row"><span>5:13 PM</span><span>⏰ 🛜 🔋</span></div>
+            <div style="background:var(--bg-ink);color:#fff;border-radius:22px;padding:12px;margin-bottom:12px;">
+              <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:8px;">
+                <span>‹</span><span>GPS</span><span>⋮</span>
+              </div>
+              <div style="display:flex;justify-content:space-around;font-size:10px;">
+                <span style="color:var(--peach);font-weight:700;">● Огурец</span>
+                <span>○ Бублик</span>
+                <span>○ Пиксик</span>
+              </div>
+            </div>
+
+            <!-- Interactive SVG Street Map with Orange Route & Cat Pin -->
+            <div style="border-radius:22px;overflow:hidden;border:1.5px solid #E2E6F0;background:#F1F3F8;padding:6px;">
+              <svg viewBox="0 0 240 230" style="width:100%;height:auto;" role="img" aria-label="Live Pet Collar GPS Route">
+                <rect width="240" height="230" rx="16" fill="#EEF1F6" />
+                <path d="M0,45 L240,120 M0,155 L240,75 M85,0 L145,230 M180,0 L70,230" stroke="#FFFFFF" stroke-width="14" />
+                <path d="M55,205 L118,122 L185,152" stroke="#FFAE73" stroke-width="3.5" fill="none" />
+                <circle cx="118" cy="122" r="16" fill="#13141C" />
+                <text x="118" y="127" text-anchor="middle" font-size="13" fill="#fff">🐱</text>
+                <circle cx="185" cy="152" r="10" fill="#13141C" />
+              </svg>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size:11px;font-weight:800;margin-bottom:8px;">Что нужно знать про прививки?</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <div style="border:1.5px solid var(--bg-ink);border-radius:16px;padding:10px;font-size:10px;font-weight:700;">
+                💉 Прививки кошкам и собакам
+              </div>
+              <div style="border:1.5px solid var(--bg-ink);border-radius:16px;padding:10px;font-size:10px;font-weight:700;">
+                🩺 Профилактика болезней
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PHONE 4: Календарь & Трекеры (Май Medication & Walk Tracker) -->
+        <article class="ima1-phone">
+          <div>
+            <div class="ima1-status-row"><span>5:13 PM</span><span>⏰ 🛜 🔋</span></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;border:1.5px solid var(--bg-ink);border-radius:999px;padding:2px;margin-bottom:12px;font-size:11px;font-weight:700;text-align:center;">
+              <span style="padding:5px;">Календарь</span>
+              <span style="padding:5px;background:var(--bg-ink);color:#fff;border-radius:999px;">Трекеры</span>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:700;margin-bottom:8px;">
+              <span>🐱 Дать таблетки 2x</span>
+              <span style="color:var(--muted);font-size:9px;">2 раза в день</span>
+            </div>
+
+            <div style="text-align:center;font-size:12px;font-weight:800;margin:6px 0;">‹ Май ›</div>
+            <div class="ima1-cal-grid">
+              <span class="ima1-cal-day is-peach">1</span>
+              <span class="ima1-cal-day is-peach">2</span>
+              <span class="ima1-cal-day is-black">3</span>
+              <span class="ima1-cal-day is-peach">4</span>
+              <span class="ima1-cal-day is-peach">5</span>
+              <span class="ima1-cal-day is-peach">6</span>
+              <span class="ima1-cal-day is-peach">7</span>
+              <span class="ima1-cal-day is-peach">8</span>
+              <span class="ima1-cal-day is-peach">9</span>
+              <span class="ima1-cal-day is-peach">10</span>
+              <span class="ima1-cal-day is-peach">11</span>
+              <span class="ima1-cal-day is-peach">12</span>
+              <span class="ima1-cal-day">13</span>
+              <span class="ima1-cal-day is-peach">14</span>
+              <span class="ima1-cal-day">15</span>
+              <span class="ima1-cal-day">16</span>
+              <span class="ima1-cal-day">17</span>
+              <span class="ima1-cal-day">18</span>
+              <span class="ima1-cal-day">19</span>
+              <span class="ima1-cal-day">20</span>
+              <span class="ima1-cal-day">21</span>
+            </div>
+          </div>
+
+          <div style="background:#F6F7FB;border-radius:20px;padding:12px;">
+            <div style="font-size:11px;font-weight:800;margin-bottom:8px;">🐶 Бублик • Поход в туалет</div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:4px;">
+              <span style="background:var(--peach);padding:8px 6px;border-radius:999px;font-size:10px;font-weight:800;">8 пн</span>
+              <span style="background:var(--peach);padding:8px 6px;border-radius:999px;font-size:10px;font-weight:800;">9 вт</span>
+              <span style="background:var(--bg-ink);color:#fff;padding:8px 6px;border-radius:999px;font-size:10px;font-weight:800;">10 ср</span>
+              <span style="background:var(--peach);padding:8px 6px;border-radius:999px;font-size:10px;font-weight:800;">11 чт</span>
+              <button type="button" style="width:32px;height:32px;border-radius:50%;background:var(--peach);border:none;font-weight:900;cursor:pointer;" data-seamless-trigger="Log New Pet Care Event">+</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div id="seamlessModal" class="ima1-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="ima1-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;">BLOBS PET OS // IOS &amp; ANDROID</span>
+        <button type="button" id="closeSeamlessBtn" class="ima1-outline-pill" style="cursor:pointer;">ESC</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Pair Smart GPS Collar &amp; App</h2>
+      <p style="font-size:14px;color:#475569;line-height:1.6;margin-bottom:20px;">
+        Track your cat or dog in real time, monitor blood pressure and velocity, and sync vaccination reminders with your local veterinary clinic.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="ima1-pill-btn is-peach" style="width:100%;">Get Blobs Companion App →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var banner = document.getElementById('activePetBanner');
+      var nameEl = document.getElementById('phonePetName');
+      var bpEl = document.getElementById('phoneBpVal');
+      var speedEl = document.getElementById('phoneSpeedVal');
+      document.querySelectorAll('.blob-pet-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.blob-pet-btn').forEach(function (b) { b.classList.remove('is-peach'); });
+          btn.classList.add('is-peach');
+          var pet = btn.getAttribute('data-pet') || '';
+          if (banner) banner.textContent = 'ACTIVE PET: ' + pet + ' — Collar GPS Online';
+          if (nameEl) nameEl.textContent = pet.split(' ')[0];
+          if (bpEl) bpEl.textContent = btn.getAttribute('data-bp') || '';
+          if (speedEl) speedEl.textContent = btn.getAttribute('data-speed') || '';
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.ima1-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

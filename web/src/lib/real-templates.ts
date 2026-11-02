@@ -46,6 +46,196 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t205: {
+    slug: 'nike-hover',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Nike Hover",
+        desc: "Giao diện web Nike Hover với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Nike Hover",
+        desc: "Bespoke Nike Hover web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Nike Hover",
+        desc: "单文件自包含 Nike Hover 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t204: {
+    slug: 'wellness-companion',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Wellness Companion",
+        desc: "Giao diện web Wellness Companion với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Wellness", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Wellness Companion",
+        desc: "Bespoke Wellness Companion web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Wellness", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Wellness Companion",
+        desc: "单文件自包含 Wellness Companion 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t203: {
+    slug: 'wanderful-hero',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Wanderful Hero",
+        desc: "Giao diện web Wanderful Hero với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Wanderful Hero",
+        desc: "Bespoke Wanderful Hero web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Wanderful Hero",
+        desc: "单文件自包含 Wanderful Hero 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t202: {
+    slug: 'image-some',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Blobs Pet Companion",
+        desc: "Blobs Pet Companion (monochrome-blob-pet-companion) — Playful monochrome & peach-apricot smart pet health, GPS collar tracking, and veterinary calendar ecosystem featuring expressive black-cat blob illustrations and multi-screen iOS mockups.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Blobs Pet Companion",
+        desc: "Blobs Pet Companion (monochrome-blob-pet-companion) — Playful monochrome & peach-apricot smart pet health, GPS collar tracking, and veterinary calendar ecosystem featuring expressive black-cat blob illustrations and multi-screen iOS mockups.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Blobs Pet Companion",
+        desc: "Blobs Pet Companion (monochrome-blob-pet-companion) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t201: {
+    slug: 'monolith-canvas-216',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Bilexer Web3 Identity",
+        desc: "Bilexer Web3 Identity (nordic-wave-web3-identity) — Universal privacy-first Web3 identity layer built on zero-knowledge cryptography and chain-key sync — featuring 3D particle mountain topography and folder-tabbed privacy cards.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Bilexer Web3 Identity",
+        desc: "Bilexer Web3 Identity (nordic-wave-web3-identity) — Universal privacy-first Web3 identity layer built on zero-knowledge cryptography and chain-key sync — featuring 3D particle mountain topography and folder-tabbed privacy cards.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Bilexer Web3 Identity",
+        desc: "Bilexer Web3 Identity (nordic-wave-web3-identity) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t200: {
+    slug: 'laptop-computer',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "BizNext Agency Hub",
+        desc: "BizNext Agency Hub (executive-macbook-agency-hub) — Modern digital agency & startup growth platform featuring interactive 3D MacBook Pro live analytics screen (+68% Growth), 4 frosted service modules, and 500+ enterprise case metrics.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "BizNext Agency Hub",
+        desc: "BizNext Agency Hub (executive-macbook-agency-hub) — Modern digital agency & startup growth platform featuring interactive 3D MacBook Pro live analytics screen (+68% Growth), 4 frosted service modules, and 500+ enterprise case metrics.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "BizNext Agency Hub",
+        desc: "BizNext Agency Hub (executive-macbook-agency-hub) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t199: {
+    slug: 'data-securit',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Securify Data Shield",
+        desc: "Securify Data Shield (iridescent-liquid-data-security) — Zero-knowledge enterprise data security platform featuring 3D iridescent liquid-glass core, +1.5B GB protected telemetry, human verification portal, and proactive threat detection.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Securify Data Shield",
+        desc: "Securify Data Shield (iridescent-liquid-data-security) — Zero-knowledge enterprise data security platform featuring 3D iridescent liquid-glass core, +1.5B GB protected telemetry, human verification portal, and proactive threat detection.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Securify Data Shield",
+        desc: "Securify Data Shield (iridescent-liquid-data-security) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t198: {
+    slug: 'pumpit-grid',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Aenetic Cyber Tattoo AI",
+        desc: "Aenetic Cyber Tattoo AI (aenetic-ai-tattoo-robotics) — Futuristic AI tattoo & cybernetic body-art robotics studio featuring vertical AENETIC® capsule rail, inverted L-cutout 3D exoskeleton rig, and interactive 05–06 launch roadmap.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Aenetic Cyber Tattoo AI",
+        desc: "Aenetic Cyber Tattoo AI (aenetic-ai-tattoo-robotics) — Futuristic AI tattoo & cybernetic body-art robotics studio featuring vertical AENETIC® capsule rail, inverted L-cutout 3D exoskeleton rig, and interactive 05–06 launch roadmap.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Aenetic Cyber Tattoo AI",
+        desc: "Aenetic Cyber Tattoo AI (aenetic-ai-tattoo-robotics) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
   t197: {
     slug: 'impact-ventures',
     cat: 'portfolio',

@@ -4,6 +4,7 @@
  */
 
 export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotionRuntime) {
+  const slug = String(spec.slug || '').toLowerCase();
   // ============================================================================
   // 1. DIGITWIST AI BUILDER (t165 — Free Tier)
   // Dark Mode #05070e + #3054ff Electric Cobalt + #b4c0ff Periwinkle Gradient
@@ -5207,6 +5208,1354 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
           document.querySelectorAll('.venture-case-btn').forEach(function (c) { c.classList.remove('is-active'); });
           card.classList.add('is-active');
           if (out) out.textContent = card.getAttribute('data-readout') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 13. WANDERFUL HERO (wanderful-hero — Free Tier)
+  // Full-Viewport Cinematic Travel Hero with CloudFront Video & .liquid-glass UI
+  // ============================================================================
+  if (slug === 'wanderful-hero') {
+    const heroVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260510_060007_60275ce7-030c-4668-a160-8f364ec537d3.mp4';
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wanderful™ — Venture Without Edges • Uncover With Keen Instinct</title>
+  <meta name="description" content="Smart bespoke travel itineraries that shape around your rhythm, your vibe, and your hunger for adventure — featuring liquid-glass navigation and parallax cinema." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #FFFFFF;
+      --muted: rgba(255, 255, 255, 0.55);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Barlow', sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: #fff; color: #000; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    /* Official MotionSites .liquid-glass utility */
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.04);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: none;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.14);
+      position: relative;
+      overflow: hidden;
+    }
+    .liquid-glass::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.45) 0%,
+        rgba(255, 255, 255, 0.15) 20%,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(255, 255, 255, 0.15) 80%,
+        rgba(255, 255, 255, 0.45) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .${p}-hero {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 32px clamp(20px, 4vw, 44px) 52px;
+      background: radial-gradient(circle at 50% 38%, #1C2E38 0%, #091015 62%, #000000 100%);
+    }
+    .${p}-video-wrap {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      transform: scale(1.08);
+      transform-origin: center;
+      pointer-events: none;
+    }
+    .${p}-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.86;
+    }
+    .${p}-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.16) 48%, rgba(0,0,0,0.74) 100%);
+      pointer-events: none;
+    }
+
+    /* Header */
+    .${p}-header {
+      position: relative;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .${p}-wordmark {
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #fff;
+      text-decoration: none;
+    }
+    .${p}-wordmark sup {
+      font-size: 9px;
+      letter-spacing: 0.04em;
+      margin-left: 2px;
+      opacity: 0.85;
+    }
+    .${p}-nav {
+      border-radius: 999px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .${p}-nav a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      padding: 6px 16px;
+      border-radius: 999px;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+    .${p}-nav a:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .${p}-roam-btn {
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.92);
+      cursor: pointer;
+    }
+
+    /* Centered Headline */
+    .${p}-headline-wrap {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      margin: 48px auto 24px;
+      max-width: 980px;
+    }
+    .${p}-h1 {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: clamp(2.5rem, 5.4vw, 4.5rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .${p}-h1-line1 { display: block; color: #FFFFFF; }
+    .${p}-h1-line2 { display: block; color: rgba(255, 255, 255, 0.55); }
+
+    /* Bottom Block */
+    .${p}-bottom-block {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      text-align: center;
+    }
+    .${p}-lead {
+      max-width: 620px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: #FFFFFF;
+    }
+    .${p}-lead span {
+      color: rgba(255, 255, 255, 0.55);
+    }
+    .${p}-cta-white {
+      background: #FFFFFF;
+      color: #000000;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 999px;
+      padding: 14px 32px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+    .${p}-cta-white:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 32px 4px rgba(255, 255, 255, 0.24);
+    }
+    .${p}-lock-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    /* Below-the-fold Smart Itinerary Section */
+    .${p}-section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 72px clamp(20px, 4vw, 44px);
+    }
+    .${p}-route-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .${p}-route-card {
+      border-radius: 24px;
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      cursor: pointer;
+      transition: all 0.24s ease;
+    }
+    .${p}-route-card.is-active, .${p}-route-card:hover {
+      border-color: rgba(255, 255, 255, 0.55);
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.82); backdrop-filter: blur(16px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 480px; width: 100%; border-radius: 26px; padding: 32px;
+      background: #0D1117; color: #fff; border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    @media (max-width: 860px) {
+      .${p}-nav { display: none; }
+      .${p}-route-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1px solid rgba(255,255,255,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#fff;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <main id="main-content" class="tabular-nums">
+    <section class="${p}-hero" aria-labelledby="heroHeading">
+      <div id="wanderVideoWrap" class="${p}-video-wrap">
+        <video id="wanderHeroVideo" class="${p}-video" src="${heroVideo}" autoplay muted loop playsinline preload="auto"></video>
+      </div>
+      <div class="${p}-scrim"></div>
+
+      <header class="${p}-header">
+        <a href="#main-content" class="${p}-wordmark">Wanderful<sup>TM</sup></a>
+        <nav class="${p}-nav liquid-glass" aria-label="Primary Navigation">
+          <a href="#journey-section">JOURNEY</a>
+          <a href="#journey-section">BENEFITS</a>
+          <a href="#journey-section">JOURNAL</a>
+          <a href="#journey-section">GUIDEBOOK</a>
+        </nav>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button type="button" id="motionToggleBtn" class="liquid-glass ${p}-roam-btn" aria-pressed="false">MOTION: ON</button>
+          <button type="button" id="exploreMagneticBtn" class="liquid-glass ${p}-roam-btn">GET ROAMING</button>
+        </div>
+      </header>
+
+      <div class="${p}-headline-wrap">
+        <h1 id="heroHeading" class="${p}-h1">
+          <span class="${p}-h1-line1">Venture without edges.</span>
+          <span class="${p}-h1-line2">Uncover with keen instinct.</span>
+        </h1>
+      </div>
+
+      <div class="${p}-bottom-block">
+        <p class="${p}-lead">
+          Our smart itineraries shape around you — your rhythm, your vibe, your hunger for adventure.<span> Each getaway is tailored, seamless, and wholly yours.</span>
+        </p>
+        <button type="button" class="${p}-cta-white" data-seamless-trigger="Plan Your Tailored Wanderful™ Escape">
+          Plan my escape today
+        </button>
+        <div class="${p}-lock-row">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+          <span>SECURE BY DESIGN. ZERO DATA LEAKS.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Below-the-Fold Interactive Rhythm & Vibe Itinerary Configurator -->
+    <section id="journey-section" class="${p}-section" aria-labelledby="journeyHeading">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;color:var(--muted);">SMART ITINERARY ENGINE // RHYTHM &amp; VIBE</span>
+          <h2 id="journeyHeading" style="font-size:clamp(1.8rem,3.4vw,2.8rem);font-weight:400;margin-top:6px;">
+            Tailored Getaways Built on Instinct
+          </h2>
+        </div>
+        <span id="wanderRouteStatus" style="font-family:var(--font-mono);font-size:12px;color:#fff;">
+          ACTIVE ESCAPE: Faroe Islands Coastal Ridge (7 Days • Solitude Rhythm)
+        </span>
+      </div>
+
+      <div class="${p}-route-grid" role="group" aria-label="Select Tailored Expedition">
+        <article class="${p}-route-card is-active wander-route-btn" tabindex="0" role="button" data-next-preview="true" data-status="ACTIVE ESCAPE: Faroe Islands Coastal Ridge (7 Days • Solitude Rhythm)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">01 // NORDIC INSTINCT</span>
+          <h3 style="font-size:22px;font-weight:500;margin:10px 0;">Faroe Cliffs &amp; Fjords</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">Private helicopter ridge transfers, sea-cliff glass cabins, and zero-crowd coastal trails.</p>
+        </article>
+
+        <article class="${p}-route-card wander-route-btn" tabindex="0" role="button" data-next-preview="true" data-status="ACTIVE ESCAPE: Kyoto Moss Sanctuary &amp; Naoshima Art (9 Days • Slow Vibe)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">02 // ZEN ARCHIPELAGO</span>
+          <h3 style="font-size:22px;font-weight:500;margin:10px 0;">Kyoto &amp; Seto Inland Sea</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">After-hours temple gardens, private ryokan cedar baths, and architectural island hopping.</p>
+        </article>
+
+        <article class="${p}-route-card wander-route-btn" tabindex="0" role="button" data-next-preview="true" data-status="ACTIVE ESCAPE: Atacama Stargazer &amp; Patagonia Glaciers (11 Days • High Altitude)">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">03 // SOUTHERN HORIZON</span>
+          <h3 style="font-size:22px;font-weight:500;margin:10px 0;">Atacama to Torres del Paine</h3>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;">High-desert astronomical domes paired with private ice-field treks at the edge of the world.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">WANDERFUL™ CONCIERGE</span>
+        <button type="button" id="closeSeamlessBtn" class="liquid-glass ${p}-roam-btn">ESC</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;font-weight:500;margin-bottom:10px;">Plan My Escape Today</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Share your preferred pace, climate, and dates — our encrypted itinerary engine synthesizes a bespoke route in 90 seconds.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-cta-white" style="width:100%;">Generate Private Itinerary →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var vid = document.getElementById('wanderHeroVideo');
+      var wrap = document.getElementById('wanderVideoWrap');
+      if (vid) {
+        vid.addEventListener('loadedmetadata', function () {
+          try { vid.playbackRate = 1.25; } catch (e) {}
+        });
+      }
+      var targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+      window.addEventListener('mousemove', function (e) {
+        var cx = window.innerWidth / 2 || 1;
+        var cy = window.innerHeight / 2 || 1;
+        targetX = ((e.clientX - cx) / cx) * 20;
+        targetY = ((e.clientY - cy) / cy) * 20;
+      });
+      function tick() {
+        currentX += (targetX - currentX) * 0.06;
+        currentY += (targetY - currentY) * 0.06;
+        if (wrap && !document.body.classList.contains('is-motion-paused')) {
+          wrap.style.transform = 'scale(1.08) translate3d(' + currentX.toFixed(2) + 'px,' + currentY.toFixed(2) + 'px,0)';
+        }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+
+      var out = document.getElementById('wanderRouteStatus');
+      document.querySelectorAll('.wander-route-btn').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.wander-route-btn').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (out) out.textContent = card.getAttribute('data-status') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 14. WELLNESS COMPANION (wellness-companion — Premium Tier)
+  // Vitaforge Daily Mobile Wellness Quiz Inside Realistic 375x780 Phone Frame
+  // ============================================================================
+  if (slug === 'wellness-companion') {
+    const bgImg = 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260704_143500_a76b8e64-2c69-4683-80e7-2bb060a921d6.png&w=1280&q=85';
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vitaforge Daily — Personalized Mobile Wellness Companion</title>
+  <meta name="description" content="Interactive mobile wellness companion quiz inside a realistic iPhone Dynamic Island frame featuring liquid-glass selection cards, voice biomarker input, and slide-to-confirm protocol." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --page-bg: #F4F6F8;
+      --phone-bg: #8A9AAA;
+      --text: #FFFFFF;
+      --ink: #111827;
+      --font-sans: 'Helvetica Now Var', 'Helvetica Neue', 'Inter', Helvetica, Arial, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: radial-gradient(circle at 50% 25%, #FFFFFF 0%, #E8EEF3 100%);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: #1A1A1E; color: #fff; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #1A1A1E; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #D4AF37; outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    /* Official Liquid Glass & Selected States */
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.04);
+      background-blend-mode: luminosity;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+      position: relative;
+      overflow: hidden;
+      border: none;
+    }
+    .liquid-glass::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.45) 0%,
+        rgba(255, 255, 255, 0.15) 20%,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(255, 255, 255, 0.15) 80%,
+        rgba(255, 255, 255, 0.45) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .liquid-glass-selected {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.25);
+      position: relative;
+      overflow: hidden;
+      border: none;
+    }
+    .liquid-glass-selected::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.4px;
+      background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.65) 0%,
+        rgba(255, 255, 255, 0.28) 20%,
+        rgba(255, 255, 255, 0.05) 40%,
+        rgba(255, 255, 255, 0.05) 60%,
+        rgba(255, 255, 255, 0.28) 80%,
+        rgba(255, 255, 255, 0.65) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .${p}-shell {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px clamp(16px, 4vw, 44px) 60px;
+    }
+    .${p}-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .${p}-stage {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .${p}-side-card {
+      background: #FFFFFF;
+      border-radius: 28px;
+      padding: 26px;
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      box-shadow: 0 20px 50px rgba(17, 24, 39, 0.06);
+    }
+
+    /* Realistic 375x780 Phone Frame Mockup */
+    .${p}-phone-frame {
+      width: 375px;
+      height: 780px;
+      border-radius: 52px;
+      background: var(--phone-bg);
+      box-shadow:
+        inset 0 0 0 2px rgba(255, 255, 255, 0.08),
+        0 0 0 1px rgba(0, 0, 0, 0.6),
+        0 0 0 10px #1A1A1E,
+        0 0 0 11px rgba(255, 255, 255, 0.06),
+        0 24px 60px rgba(0, 0, 0, 0.45);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 56px 24px 24px;
+      color: #FFFFFF;
+      margin: 0 auto;
+    }
+    .${p}-dynamic-island {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 32px;
+      border-radius: 999px;
+      background: #000000;
+      z-index: 50;
+    }
+    .${p}-phone-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('${bgImg}');
+      background-size: cover;
+      background-position: center;
+      filter: blur(12px);
+      transform: scale(1.1);
+      z-index: 0;
+    }
+    .${p}-phone-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(138, 154, 170, 0.32);
+      z-index: 1;
+    }
+
+    .${p}-phone-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+    }
+    .${p}-quiz-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 18px 0;
+    }
+    .${p}-quiz-card {
+      border-radius: 32px;
+      height: 100px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      color: #FFFFFF;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .${p}-quiz-card:hover { transform: translateY(-2px); }
+
+    /* Voice Button with Yellow/Gold Radial Glow */
+    .${p}-voice-wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 16px 0;
+    }
+    .${p}-voice-glow {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: -36px;
+      background: radial-gradient(ellipse at center, rgba(220, 200, 80, 0.52) 0%, rgba(180, 160, 40, 0.22) 40%, transparent 70%);
+      pointer-events: none;
+    }
+    .${p}-voice-btn {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Slide-to-Confirm Track */
+    .${p}-slider-track {
+      width: 100%;
+      height: 56px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 18px 6px 6px;
+      position: relative;
+      cursor: pointer;
+    }
+    .${p}-slider-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      color: #1F2937;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(17, 24, 39, 0.72); backdrop-filter: blur(12px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 460px; width: 100%; border-radius: 28px; padding: 30px;
+      background: #fff; color: var(--ink);
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-stage { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 420px) {
+      .${p}-phone-frame { width: 100%; max-width: 358px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1.5px solid #8A9AAA;border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#1A1A1E;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-shell tabular-nums">
+    <header class="${p}-topbar">
+      <div style="display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;">
+        <span style="display:inline-flex;width:30px;height:30px;border-radius:50%;background:#1A1A1E;color:#fff;align-items:center;justify-content:center;font-size:13px;">⏱</span>
+        <span>Vitaforge Daily • Wellness Companion</span>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <button type="button" id="motionToggleBtn" style="padding:8px 16px;border-radius:999px;border:1px solid rgba(17,24,39,0.15);background:#fff;font-size:12px;font-weight:600;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" style="padding:8px 18px;border-radius:999px;border:none;background:#1A1A1E;color:#fff;font-size:12px;font-weight:600;cursor:pointer;">Sync Apple Health →</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="${p}-stage" aria-labelledby="quizHeading">
+        <!-- Left Desktop Context Card -->
+        <aside class="${p}-side-card">
+          <span style="font-family:var(--font-mono);font-size:11px;color:#64748B;">BIOMETRIC INTAKE // STEP 01</span>
+          <h2 style="font-size:22px;font-weight:600;margin:8px 0 12px;">Adaptive Daily Longevity Stack</h2>
+          <p style="font-size:14px;color:#4B5563;line-height:1.6;margin-bottom:18px;">
+            Tap any wellness pillar inside the iPhone frame or use voice biomarker analysis to calibrate your morning adaptogen &amp; circadian micronutrient stack.
+          </p>
+          <div id="vitaSelectedSummary" style="font-family:var(--font-mono);font-size:12px;background:#F1F5F9;padding:12px 14px;border-radius:14px;color:#0F172A;">
+            ACTIVE FOCUS: Stress + Skin (2 pillars selected)
+          </div>
+        </aside>
+
+        <!-- Center 375x780 Realistic Phone Frame Mockup -->
+        <div class="${p}-phone-frame">
+          <div class="${p}-dynamic-island" aria-hidden="true"></div>
+          <div class="${p}-phone-bg" aria-hidden="true"></div>
+          <div class="${p}-phone-overlay" aria-hidden="true"></div>
+
+          <div class="${p}-phone-content">
+            <!-- 1. Header Badge -->
+            <div>
+              <div class="liquid-glass" style="display:inline-flex;align-items:center;gap:6px;padding:10px 14px;border-radius:999px;margin-bottom:32px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M9 2h6"/></svg>
+                <span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.92);">Vitaforge Daily</span>
+              </div>
+
+              <!-- 2. Title Section -->
+              <div style="margin-bottom:24px;">
+                <p style="font-size:14px;color:rgba(255,255,255,0.62);margin-bottom:6px;">Choose all that apply</p>
+                <h1 id="quizHeading" style="font-size:28px;font-weight:400;line-height:1.15;letter-spacing:-0.02em;color:#FFFFFF;">
+                  What aspects of your wellness would you like to boost?
+                </h1>
+              </div>
+
+              <!-- 3. 2x2 Selection Grid -->
+              <div class="${p}-quiz-grid" role="group" aria-label="Wellness Focus Options">
+                <button type="button" class="${p}-quiz-card liquid-glass vita-opt-btn" data-next-preview="true" data-label="Sleep quality" aria-pressed="false">
+                  <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">01</span>
+                  <span style="font-size:16px;font-weight:500;">Sleep quality</span>
+                </button>
+
+                <button type="button" class="${p}-quiz-card liquid-glass-selected vita-opt-btn is-selected" data-next-preview="true" data-label="Stress" aria-pressed="true">
+                  <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">02</span>
+                  <span style="font-size:16px;font-weight:500;">Stress</span>
+                </button>
+
+                <button type="button" class="${p}-quiz-card liquid-glass vita-opt-btn" data-next-preview="true" data-label="Weight" aria-pressed="false">
+                  <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">03</span>
+                  <span style="font-size:16px;font-weight:500;">Weight</span>
+                </button>
+
+                <button type="button" class="${p}-quiz-card liquid-glass-selected vita-opt-btn is-selected" data-next-preview="true" data-label="Skin" aria-pressed="true">
+                  <span style="font-size:11px;font-weight:500;color:rgba(255,255,255,0.5);">04</span>
+                  <span style="font-size:16px;font-weight:500;">Skin</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 4. Voice Button with Gold Radial Glow -->
+            <div class="${p}-voice-wrap">
+              <div class="${p}-voice-glow" aria-hidden="true"></div>
+              <button type="button" id="vitaVoiceBtn" class="${p}-voice-btn liquid-glass" data-next-preview="true" aria-label="Voice Input">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round">
+                  <line x1="4" y1="10" x2="4" y2="14" />
+                  <line x1="8" y1="7" x2="8" y2="17" />
+                  <line x1="12" y1="4" x2="12" y2="20" />
+                  <line x1="16" y1="8" x2="16" y2="16" />
+                  <line x1="20" y1="11" x2="20" y2="13" />
+                </svg>
+              </button>
+              <span id="vitaVoiceLabel" style="font-size:12px;color:rgba(255,255,255,0.72);margin-top:8px;">voice</span>
+            </div>
+
+            <!-- 5. Slide-to-Confirm Button -->
+            <div id="vitaSliderTrack" class="${p}-slider-track liquid-glass" role="button" tabindex="0" aria-label="Slide to confirm Done">
+              <div id="vitaSliderThumb" class="${p}-slider-thumb">→</div>
+              <span id="vitaSliderText" style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.68);">Done</span>
+              <span style="font-size:13px;letter-spacing:2px;color:rgba(255,255,255,0.5);">›››</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Desktop Telemetry Card -->
+        <aside class="${p}-side-card">
+          <span style="font-family:var(--font-mono);font-size:11px;color:#64748B;">DAILY FORMULATION // VITAFORGE</span>
+          <h2 style="font-size:22px;font-weight:600;margin:8px 0 12px;">Clinical Bio-Availability</h2>
+          <ul style="list-style:none;display:grid;gap:12px;font-size:13.5px;color:#374151;">
+            <li style="padding:10px 14px;background:#F8FAFC;border-radius:12px;"><strong>Ashwagandha KSM-66® (600mg):</strong> Reduces morning serum cortisol by 27.9%.</li>
+            <li style="padding:10px 14px;background:#F8FAFC;border-radius:12px;"><strong>Marine Phytoceramides (350mg):</strong> Restores epidermal barrier hydration in 14 days.</li>
+            <li style="padding:10px 14px;background:#F8FAFC;border-radius:12px;"><strong>Magnesium L-Threonate:</strong> Supports deep REM sleep architecture.</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:11px;color:#64748B;">VITAFORGE DAILY // PROTOCOL READY</span>
+        <button type="button" id="closeSeamlessBtn" style="border:1px solid #CBD5E1;background:#fff;padding:5px 12px;border-radius:999px;cursor:pointer;">ESC</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Your Personalized Wellness Pack</h2>
+      <p style="font-size:14px;color:#4B5563;line-height:1.6;margin-bottom:20px;">
+        Your selected wellness pillars have been compiled into a 30-day precision sachet subscription synced with your circadian timer.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" style="width:100%;padding:14px;border-radius:999px;border:none;background:#1A1A1E;color:#fff;font-weight:600;cursor:pointer;">Claim 30-Day Starter Kit →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var summary = document.getElementById('vitaSelectedSummary');
+      function updateSummary() {
+        var active = [];
+        document.querySelectorAll('.vita-opt-btn.is-selected').forEach(function (b) {
+          active.push(b.getAttribute('data-label'));
+        });
+        if (summary) {
+          summary.textContent = 'ACTIVE FOCUS: ' + (active.length ? active.join(' + ') : 'None') + ' (' + active.length + ' pillars selected)';
+        }
+      }
+      document.querySelectorAll('.vita-opt-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var sel = btn.classList.toggle('is-selected');
+          btn.setAttribute('aria-pressed', String(sel));
+          btn.classList.toggle('liquid-glass-selected', sel);
+          btn.classList.toggle('liquid-glass', !sel);
+          updateSummary();
+        });
+      });
+
+      var voiceBtn = document.getElementById('vitaVoiceBtn');
+      var voiceLbl = document.getElementById('vitaVoiceLabel');
+      if (voiceBtn && voiceLbl) {
+        voiceBtn.addEventListener('click', function () {
+          voiceLbl.textContent = 'listening • 98% vocal calm';
+        });
+      }
+
+      var track = document.getElementById('vitaSliderTrack');
+      var thumb = document.getElementById('vitaSliderThumb');
+      var txt = document.getElementById('vitaSliderText');
+      if (track && thumb && txt) {
+        track.addEventListener('click', function () {
+          thumb.style.transform = 'translateX(245px)';
+          txt.textContent = 'Confirmed ✓';
+          setTimeout(function () {
+            thumb.style.transform = 'translateX(0)';
+          }, 1600);
+        });
+      }
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 15. NIKE HOVER (nike-hover — Premium Tier)
+  // Full-Viewport Nike SpotlightReveal SVG Mask + 78% Cushioning Telemetry Card
+  // ============================================================================
+  if (slug === 'nike-hover') {
+    const videoSrc = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260419_024949_c2df2ce2-00c2-4c26-84c6-210c14f3b98e.mp4';
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NIKE IMPACT LAB — The Science of Impact Control &amp; Cushioning Architecture</title>
+  <meta name="description" content="Bringing aerospace-grade infrastructure directly to your everyday urban exploration — featuring an interactive 6-trail SVG SpotlightReveal mask, 78% impact absorption telemetry, and Nike Air dynamics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050507;
+      --nike-red: #DA3A16;
+      --text: #FFFFFF;
+      --muted: rgba(255, 255, 255, 0.6);
+      --card-bg: rgba(10, 10, 14, 0.56);
+      --card-border: rgba(255, 255, 255, 0.14);
+      --font-sans: 'Manrope', system-ui, sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--nike-red); color: #fff; font-weight: 700; border-radius: 4px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--nike-red); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-hero {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 60% 48%, rgba(218, 58, 22, 0.34) 0%, rgba(16, 18, 26, 0.92) 52%, #050507 100%);
+      box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px clamp(20px, 6vw, 88px) 64px;
+    }
+
+    /* SpotlightReveal Layer */
+    .${p}-spotlight-layer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .${p}-spotlight-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.45;
+      mix-blend-mode: screen;
+    }
+    .${p}-spotlight-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Top Nav Bar */
+    .${p}-nav {
+      position: relative;
+      z-index: 30;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .${p}-pill {
+      padding: 8px 18px;
+      border-radius: 2px;
+      border: 1px solid var(--card-border);
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(20px);
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .${p}-pill.is-red {
+      background: var(--nike-red);
+      border-color: var(--nike-red);
+      font-weight: 700;
+    }
+
+    /* Element 3 — Stats Card (Top-Left Area) */
+    .${p}-stats-card {
+      position: relative;
+      z-index: 25;
+      width: 340px;
+      max-width: 100%;
+      margin-top: 32px;
+      margin-left: clamp(0px, 10vw, 160px);
+      background: var(--card-bg);
+      backdrop-filter: blur(80px);
+      -webkit-backdrop-filter: blur(80px);
+      border: 1px solid var(--card-border);
+      border-radius: 2px;
+      padding: 24px 32px;
+    }
+    .${p}-stat-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .${p}-stat-num {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 72px;
+      line-height: 80px;
+      letter-spacing: -0.03em;
+      color: var(--nike-red);
+    }
+    .${p}-card-title {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+    .${p}-card-sub {
+      font-family: var(--font-serif);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Bottom Row: Element 4 (Headline) & Element 5 (Nike Branded CTA Block) */
+    .${p}-bottom-row {
+      position: relative;
+      z-index: 25;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .${p}-headline {
+      max-width: 520px;
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      display: flex;
+      flex-direction: column;
+    }
+    .${p}-nike-cta {
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+      transition: transform 0.22s ease;
+    }
+    .${p}-nike-cta:hover { transform: translateY(-4px); }
+    .${p}-cta-top {
+      width: 100%;
+      background: #FFFFFF;
+      color: #000000;
+      padding: 6px 8px;
+      text-align: center;
+      font-family: var(--font-serif);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      line-height: 16px;
+    }
+    .${p}-cta-bottom {
+      width: 100%;
+      height: 100px;
+      background: var(--nike-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 18px 45px rgba(218, 58, 22, 0.45);
+    }
+
+    /* Below-the-Fold Force-Plate Telemetry Lab */
+    .${p}-lab-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 72px clamp(20px, 6vw, 88px);
+      border-top: 1px solid var(--card-border);
+    }
+    .${p}-lab-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .${p}-lab-card {
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .${p}-lab-card.is-active, .${p}-lab-card:hover {
+      border-color: var(--nike-red);
+      background: rgba(218, 58, 22, 0.09);
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(16px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 480px; width: 100%; border-radius: 2px; padding: 32px;
+      background: #0A0A0C; color: #fff; border: 1px solid var(--nike-red);
+    }
+
+    @media (max-width: 860px) {
+      .${p}-stats-card { margin-left: 0; width: 100%; max-width: 320px; }
+      .${p}-lab-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:32px;height:32px;border:1.5px solid #DA3A16;border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#DA3A16;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <main id="main-content" class="tabular-nums">
+    <section id="nikeHeroStage" class="${p}-hero" aria-labelledby="heroHeading">
+      <!-- Element 1: SpotlightReveal Background -->
+      <div class="${p}-spotlight-layer" aria-hidden="true">
+        <video id="nikeRevealVideo" class="${p}-spotlight-video" src="${videoSrc}" autoplay muted loop playsinline></video>
+        <svg class="${p}-spotlight-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="holeGradient">
+              <stop offset="0%" stop-color="black" stop-opacity="1" />
+              <stop offset="60%" stop-color="black" stop-opacity="0.82" />
+              <stop offset="100%" stop-color="black" stop-opacity="0" />
+            </radialGradient>
+            <radialGradient id="xrayGlow" cx="58%" cy="50%" r="42%">
+              <stop offset="0%" stop-color="#DA3A16" stop-opacity="0.55" />
+              <stop offset="45%" stop-color="#7C2D12" stop-opacity="0.28" />
+              <stop offset="100%" stop-color="#050507" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="soleChrome" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#F8FAFC" />
+              <stop offset="45%" stop-color="#94A3B8" />
+              <stop offset="100%" stop-color="#1E293B" />
+            </linearGradient>
+            <mask id="spotlight-mask" maskContentUnits="userSpaceOnUse" x="0" y="0" width="1440" height="900">
+              <rect width="1440" height="900" fill="white" />
+              <circle id="trail-5" cx="840" cy="450" r="245" fill="url(#holeGradient)" opacity="0.25" />
+              <circle id="trail-4" cx="840" cy="450" r="275" fill="url(#holeGradient)" opacity="0.4" />
+              <circle id="trail-3" cx="840" cy="450" r="305" fill="url(#holeGradient)" opacity="0.55" />
+              <circle id="trail-2" cx="840" cy="450" r="335" fill="url(#holeGradient)" opacity="0.7" />
+              <circle id="trail-1" cx="840" cy="450" r="365" fill="url(#holeGradient)" opacity="0.85" />
+              <circle id="trail-0" cx="840" cy="450" r="395" fill="url(#holeGradient)" opacity="1" />
+            </mask>
+          </defs>
+
+          <!-- UNDERNEATH LAYER (Revealed inside the Spotlight Hole): Thermal X-Ray Air-Sole & Force-Plate Vectors -->
+          <g>
+            <rect width="1440" height="900" fill="#07070B" />
+            <circle cx="840" cy="450" r="460" fill="url(#xrayGlow)" />
+            <!-- Aerospace Telemetry Grid -->
+            <path d="M0,180 L1440,180 M0,360 L1440,360 M0,540 L1440,540 M0,720 L1440,720 M288,0 L288,900 M576,0 L576,900 M864,0 L864,900 M1152,0 L1152,900" stroke="rgba(218,58,22,0.16)" stroke-width="1" />
+            <!-- Glowing X-Ray Sneaker Silhouette & Multi-Chamber Air-Sole -->
+            <path d="M470,490 C520,355 645,270 770,250 L865,335 C955,365 1075,395 1135,465 C1165,500 1150,555 1095,565 L485,565 C445,565 445,525 470,490 Z" fill="rgba(218,58,22,0.14)" stroke="#DA3A16" stroke-width="3" />
+            <!-- Carbon Flyplate Spine -->
+            <path d="M480,515 Q800,470 1120,515" stroke="#FF8A65" stroke-width="5" fill="none" stroke-dasharray="12 6" />
+            <!-- 6 Pressurized Nitrogen Air Pods -->
+            <rect x="505" y="528" width="84" height="28" rx="14" fill="rgba(218,58,22,0.45)" stroke="#FFF" stroke-width="2" />
+            <rect x="605" y="528" width="84" height="28" rx="14" fill="rgba(218,58,22,0.45)" stroke="#FFF" stroke-width="2" />
+            <rect x="705" y="528" width="84" height="28" rx="14" fill="rgba(218,58,22,0.45)" stroke="#FFF" stroke-width="2" />
+            <rect x="805" y="528" width="84" height="28" rx="14" fill="rgba(218,58,22,0.45)" stroke="#FFF" stroke-width="2" />
+            <rect x="905" y="528" width="84" height="28" rx="14" fill="rgba(218,58,22,0.45)" stroke="#FFF" stroke-width="2" />
+            <rect x="1005" y="528" width="84" height="28" rx="14" fill="rgba(218,58,22,0.45)" stroke="#FFF" stroke-width="2" />
+            <!-- X-Ray Swoosh -->
+            <path d="M650,435 C705,468 825,445 985,380 C845,465 715,505 635,465 C615,452 622,425 650,435 Z" fill="#FFFFFF" />
+          </g>
+
+          <!-- TOP MASKED OVERLAY LAYER (Cut open where cursor spotlight moves): Architectural Silver/Obsidian Exterior -->
+          <g mask="url(#spotlight-mask)">
+            <rect width="1440" height="900" fill="#10131A" />
+            <path d="M0,180 L1440,180 M0,360 L1440,360 M0,540 L1440,540 M0,720 L1440,720 M288,0 L288,900 M576,0 L576,900 M864,0 L864,900 M1152,0 L1152,900" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+            <!-- Sculpted Metallic Sneaker Exterior -->
+            <path d="M470,490 C520,355 645,270 770,250 L865,335 C955,365 1075,395 1135,465 C1165,500 1150,555 1095,565 L485,565 C445,565 445,525 470,490 Z" fill="url(#soleChrome)" opacity="0.28" stroke="rgba(255,255,255,0.45)" stroke-width="2" />
+            <path d="M650,435 C705,468 825,445 985,380 C845,465 715,505 635,465 C615,452 622,425 650,435 Z" fill="rgba(255,255,255,0.65)" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Top Navigation -->
+      <header class="${p}-nav">
+        <div style="display:flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.12em;">
+          <span style="color:var(--nike-red);font-weight:700;">●</span>
+          <span>NIKE IMPACT LAB // AEROSPACE CUSHIONING</span>
+        </div>
+        <div style="display:flex;gap:10px;">
+          <button type="button" id="motionToggleBtn" class="${p}-pill" aria-pressed="false">Motion: ON</button>
+          <button type="button" id="exploreMagneticBtn" class="${p}-pill is-red">Explore Lab Specs</button>
+        </div>
+      </header>
+
+      <!-- Element 3: Glassmorphism Stats Card (Top-Left Area) -->
+      <div class="${p}-stats-card">
+        <div class="${p}-stat-row">
+          <span id="nikeStatNum" class="${p}-stat-num">78%</span>
+          <svg style="width:150px;height:76px;overflow:visible;" viewBox="0 0 289 138" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Impact Absorption Curve">
+            <g filter="url(#filter0_d_878_28499)">
+              <path d="M22.5 48.7306C39.7833 48.7306 49.34 54.94 63.1667 69.2965C76.9933 83.653 86.55 110.5 103.833 110.5C121.117 110.5 130.673 84.2876 144.5 59.2856C158.327 34.2837 167.883 19.5573 185.167 19.5573C202.45 19.5573 208.55 57.6673 225.833 57.6673C243.117 57.6673 249.217 19.5 266.5 19.5" stroke="#DA3A16" stroke-width="2.5" />
+            </g>
+            <defs>
+              <filter id="filter0_d_878_28499" x="0" y="0" width="289" height="138" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="11.25" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix type="matrix" values="0 0 0 0 0.854902 0 0 0 0 0.227451 0 0 0 0 0.0862745 0 0 0 1 0" />
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_878_28499" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_878_28499" result="shape" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+        <h2 id="nikeStatTitle" class="${p}-card-title">NEXT-GEN CUSHIONING ARCHITECTURE</h2>
+        <p id="nikeStatSub" class="${p}-card-sub">Impact Absorption &amp; Energy Return Dynamics</p>
+      </div>
+
+      <!-- Bottom Row: Element 4 (Headline) & Element 5 (Nike Branded CTA Block) -->
+      <div class="${p}-bottom-row">
+        <h1 id="heroHeading" class="${p}-headline">
+          <span style="font-family:var(--font-sans);font-weight:500;">Bringing Aerospace-</span>
+          <span style="font-family:var(--font-sans);font-weight:500;">Grade Infrastructure</span>
+          <span style="font-family:var(--font-serif);font-weight:400;padding-top:4px;">
+            <span style="font-style:normal;">Directly To Your </span>
+            <em style="font-style:italic;">Everyday</em>
+          </span>
+          <span style="font-family:var(--font-serif);font-style:italic;font-weight:400;">Urban Exploration</span>
+        </h1>
+
+        <button type="button" class="${p}-nike-cta" data-seamless-trigger="THE SCIENCE OF IMPACT CONTROL // Technical Dossier">
+          <div class="${p}-cta-top">THE SCIENCE OF IMPACT CONTROL</div>
+          <div class="${p}-cta-bottom">
+            <svg width="86" viewBox="135.5 361.38 420.32 149.8" fill="white" xmlns="http://www.w3.org/2000/svg" aria-label="Nike Swoosh">
+              <path d="m181.86 511.11c-12.524-0.49755-22.77-3.9244-30.782-10.289-1.529-1.2159-5.1725-4.8616-6.3949-6.3992-3.2489-4.0853-5.4578-8.0611-6.931-12.472-4.5334-13.579-2.2002-31.397 6.6737-50.953 7.5979-16.742 19.322-33.347 39.776-56.344 3.013-3.384 11.986-13.281 12.043-13.281 0.0216 0-0.46749 0.84706-1.083 1.8786-5.3183 8.9082-9.8689 19.401-12.348 28.485-3.9823 14.576-3.502 27.085 1.4068 36.784 3.3862 6.6822 9.1913 12.47 15.719 15.67 11.428 5.5993 28.159 6.0625 48.592 1.3554 1.4068-0.32599 71.116-18.831 154.91-41.123 83.794-22.294 152.36-40.52 152.37-40.505 0.0237 0.0193-194.68 83.333-295.75 126.56-16.007 6.8431-20.287 8.5715-27.812 11.214-19.236 6.7551-36.467 9.9783-50.396 9.4251z" />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Below-the-Fold Interactive Cushioning Force-Plate Matrix -->
+    <section class="${p}-lab-section" aria-labelledby="labHeading">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--nike-red);">AEROSPACE FORCE-PLATE TELEMETRY</span>
+          <h2 id="labHeading" style="font-family:var(--font-serif);font-size:clamp(2rem,3.8vw,3.2rem);font-weight:400;margin-top:4px;">
+            Interactive Impact Control Architecture
+          </h2>
+        </div>
+      </div>
+
+      <div class="${p}-lab-grid" role="group" aria-label="Select Cushioning Architecture">
+        <article class="${p}-lab-card is-active nike-lab-btn" tabindex="0" role="button" data-next-preview="true" data-stat="78%" data-title="NEXT-GEN CUSHIONING ARCHITECTURE" data-sub="Impact Absorption &amp; Energy Return Dynamics">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--nike-red);">01 // DUAL-CHAMBER AIR</span>
+          <h3 style="font-family:var(--font-serif);font-size:26px;font-weight:400;margin:8px 0;">78% Peak Impact Attenuation</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">Pressurized nitrogen pods distribute heel-strike kinetic loads across 14 articulated air channels.</p>
+        </article>
+
+        <article class="${p}-lab-card nike-lab-btn" tabindex="0" role="button" data-next-preview="true" data-stat="84%" data-title="REACTX AEROSPACE FOAM MATRIX" data-sub="Sub-Zero Thermal Stability &amp; Rebound">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--nike-red);">02 // REACTX COMPOUND</span>
+          <h3 style="font-family:var(--font-serif);font-size:26px;font-weight:400;margin:8px 0;">84% Energy Return Ratio</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">Injection-molded supercritical elastomer delivers +13% greater rebound with 43% lower carbon footprint.</p>
+        </article>
+
+        <article class="${p}-lab-card nike-lab-btn" tabindex="0" role="button" data-next-preview="true" data-stat="92%" data-title="CARBON FIBER FLYPLATE TORSION" data-sub="Propulsive Forefoot Snap &amp; Lateral Lock">
+          <span style="font-family:var(--font-mono);font-size:11px;color:var(--nike-red);">03 // CARBON FLYPLATE</span>
+          <h3 style="font-family:var(--font-serif);font-size:26px;font-weight:400;margin:8px 0;">92% Torsional Rigidity</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">Aerospace-grade woven carbon spine stabilizes urban transitions over wet asphalt and uneven terrain.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--nike-red);">NIKE SPORT RESEARCH LAB</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill">ESC</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-serif);font-size:28px;font-weight:400;margin-bottom:10px;">The Science of Impact Control</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Explore full high-speed force-plate telemetry and reserve early access to the Aerospace Urban Exploration capsule.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill is-red" style="width:100%;padding:14px;">Unlock Lab Specification →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var NUM_TRAILS = 6;
+      var points = Array.from({ length: NUM_TRAILS }, function () {
+        return { x: window.innerWidth * 0.55 || 720, y: window.innerHeight * 0.48 || 450 };
+      });
+      var targetX = window.innerWidth * 0.55 || 720;
+      var targetY = window.innerHeight * 0.48 || 450;
+
+      window.addEventListener('mousemove', function (e) {
+        targetX = e.clientX;
+        targetY = e.clientY;
+      });
+
+      function animateSpotlight() {
+        if (!document.body.classList.contains('is-motion-paused')) {
+          points[0].x += (targetX - points[0].x) * 0.2;
+          points[0].y += (targetY - points[0].y) * 0.2;
+          for (var i = 1; i < points.length; i++) {
+            points[i].x += (points[i - 1].x - points[i].x) * 0.35;
+            points[i].y += (points[i - 1].y - points[i].y) * 0.35;
+          }
+          for (var j = 0; j < points.length; j++) {
+            var c = document.getElementById('trail-' + j);
+            if (c) {
+              c.setAttribute('cx', points[j].x.toFixed(1));
+              c.setAttribute('cy', points[j].y.toFixed(1));
+            }
+          }
+        }
+        requestAnimationFrame(animateSpotlight);
+      }
+      requestAnimationFrame(animateSpotlight);
+
+      var statNum = document.getElementById('nikeStatNum');
+      var statTitle = document.getElementById('nikeStatTitle');
+      var statSub = document.getElementById('nikeStatSub');
+      document.querySelectorAll('.nike-lab-btn').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.nike-lab-btn').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (statNum) statNum.textContent = card.getAttribute('data-stat') || '78%';
+          if (statTitle) statTitle.textContent = card.getAttribute('data-title') || '';
+          if (statSub) statSub.textContent = card.getAttribute('data-sub') || '';
         });
       });
     })();

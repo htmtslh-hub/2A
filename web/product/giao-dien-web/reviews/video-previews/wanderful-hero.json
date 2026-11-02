@@ -1,0 +1,48 @@
+{
+  "id": "t203",
+  "slug": "wanderful-hero",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T00:08:19.373Z",
+  "demo": "/demos/wanderful-hero/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a09d8c2f23ed",
+  "sha256": "a09d8c2f23edd39ba87eff2d04bc74ccf317a5b6a890650a65308febe905662e",
+  "demoHtmlSha256": "10177b5489544f7479bd1740c573d3994154cea6c012308c3b82a7f159a4dfa7",
+  "demoSha256": "93ef0e9f5c9c8ca98047ba6c8eee8ce9b953cfcb1a6f95ab7f26227856a6410a",
+  "bytes": 356633,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.476,
+      "action": "click",
+      "selector": "<article class=\"wan49-route-card wander-route-btn is-active\" tabindex=\"0\" role=\"button\" data-next-preview=\"true\" data-status=\"ACTIVE ESCAPE: Faroe Islands Coastal Ridge (7 Days • S"
+    },
+    {
+      "seconds": 4.856,
+      "action": "click",
+      "selector": "<article class=\"wan49-route-card wander-route-btn is-active\" tabindex=\"0\" role=\"button\" data-next-preview=\"true\" data-status=\"ACTIVE ESCAPE: Faroe Islands Coastal Ridge (7 Days • S"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 453
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wanderful-hero-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wanderful-hero-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wanderful-hero-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wanderful-hero-return.jpg"
+  ]
+}

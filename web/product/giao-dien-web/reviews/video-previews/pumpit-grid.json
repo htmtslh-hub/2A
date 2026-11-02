@@ -1,0 +1,48 @@
+{
+  "id": "t198",
+  "slug": "pumpit-grid",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T00:04:39.191Z",
+  "demo": "/demos/pumpit-grid/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "2070a661895c",
+  "sha256": "2070a661895c438f78c6a404b08c61927a5d68bc7451771fdf7b4d8ae53d2078",
+  "demoHtmlSha256": "7e111be674d4d254c4f3acf7835d47744327bc6154d64c20a955ea9c9806c338",
+  "demoSha256": "f4d3d0cfb738087adfbd54f0820ead5e62b8906776cecd04d5967cda0d3533ef",
+  "bytes": 340313,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.465,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"pum75-tag-btn aenetic-tag is-active\" data-next-preview=\"true\" data-readout=\"AI NEURAL INK: Generative dragon &amp; geometric dermal mapping at 1,400 Hz"
+    },
+    {
+      "seconds": 4.847,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"pum75-tag-btn aenetic-tag is-active\" data-next-preview=\"true\" data-readout=\"AI NEURAL INK: Generative dragon &amp; geometric dermal mapping at 1,400 Hz"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 247
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pumpit-grid-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pumpit-grid-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pumpit-grid-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\pumpit-grid-return.jpg"
+  ]
+}

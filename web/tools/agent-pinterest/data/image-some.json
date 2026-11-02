@@ -1,0 +1,32 @@
+{
+  "pinId": "local-d28be5d36ffa",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1091982240928730179_Phần_này_chứa_an_image_of_some_cell_.png",
+  "archivedImagePath": "E:\\DONG_PHU\\2A\\anh-mau-pinterest\\da-lam\\2026-11-02\\pin_1091982240928730179_Phần_này_chứa_an_image_of_some_cell_.png",
+  "title": "Image Some",
+  "slug": "image-some",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-sticky-counters",
+    "name": "Sticky Pinned Storytelling + Scroll Scrubbing + Number Counters",
+    "focus": [
+      "sticky-pinned-stage",
+      "scroll-scrub-rotation",
+      "number-counters"
+    ],
+    "description": "Tập trung vào ghim cố định chủ thể ở giữa màn hình xoay theo thanh cuộn (Scroll Scrubbing) kết hợp đếm số tự động."
+  },
+  "localImagePath": "E:\\DONG_PHU\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-11-02\\image-some.png",
+  "imageBytes": 1427789,
+  "imageSha256": "d28be5d36ffa4da6aa58a78535bf085deaf11c56c2a23bef0e4a9396aaf7e7b5",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 2880,
+    "height": 4275,
+    "aspectRatio": 0.67,
+    "reason": "Rejected geometry (2880x4275, AR=0.67) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-11-01T23:43:55.156Z"
+}

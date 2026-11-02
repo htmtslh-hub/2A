@@ -1,0 +1,48 @@
+{
+  "id": "t202",
+  "slug": "image-some",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T00:06:46.185Z",
+  "demo": "/demos/image-some/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "3ebc3996978a",
+  "sha256": "3ebc3996978a24ef0ca17868873e1be415ade28d40b08a28a87efc1a27c399f8",
+  "demoHtmlSha256": "bba3b65866447d49d9f87c8b189963c840d676b60c2a9d76dcee1fec08701ec4",
+  "demoSha256": "de68960f7798099dba981db9ebbe8d4da6cf4c4edbd7317a571b3918029043a0",
+  "bytes": 151944,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.48,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"ima1-pill-btn blob-pet-btn is-peach\" data-next-preview=\"true\" data-pet=\"Огурец (Abyssinian Cat • 10 mos • 14 kg)\" data-bp=\"123 мм. рт. ст.\" data-speed="
+    },
+    {
+      "seconds": 4.842,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"ima1-pill-btn blob-pet-btn is-peach\" data-next-preview=\"true\" data-pet=\"Огурец (Abyssinian Cat • 10 mos • 14 kg)\" data-bp=\"123 мм. рт. ст.\" data-speed="
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 0
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\image-some-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\image-some-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\image-some-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\image-some-return.jpg"
+  ]
+}

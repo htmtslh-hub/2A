@@ -1,0 +1,48 @@
+{
+  "id": "t204",
+  "slug": "wellness-companion",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T00:08:49.834Z",
+  "demo": "/demos/wellness-companion/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "ae5db6665f64",
+  "sha256": "ae5db6665f64d03841c9cb9be55afcd06f27da5fd51ee156a83446a40ad8820a",
+  "demoHtmlSha256": "354e6fac4eaa06b1c5312d82a56f1648fce3bed1ae74a176da649af4602ff948",
+  "demoSha256": "755cb7b627ad06be400bb5071c1f538ac31edb8e4fd6bda74c6f924fa1434e21",
+  "bytes": 163075,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.457,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"wel12-quiz-card vita-opt-btn is-selected liquid-glass-selected\" data-next-preview=\"true\" data-label=\"Sleep quality\" aria-pressed=\"true\">\n              "
+    },
+    {
+      "seconds": 4.837,
+      "action": "click",
+      "selector": "<button type=\"button\" class=\"wel12-quiz-card vita-opt-btn liquid-glass\" data-next-preview=\"true\" data-label=\"Sleep quality\" aria-pressed=\"false\">\n                  <span style=\"fon"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 17
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellness-companion-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellness-companion-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellness-companion-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\wellness-companion-return.jpg"
+  ]
+}

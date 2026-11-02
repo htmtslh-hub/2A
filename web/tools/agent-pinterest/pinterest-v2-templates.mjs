@@ -123,6 +123,36 @@ export const PINTEREST_V2_META = {
     brandTitle: 'PumpIt Mobile Product Studio',
     category: 'portfolio',
     headlineSub: 'Progressive Unique Mobile Product IT studio — pastel aurora glassmorphism interface featuring 6 industry spheres, 10-step MVP-to-launch honeycomb workflow, and 4 transparent tariff tiers.'
+  },
+  'pumpit-grid': {
+    id: 'aenetic-ai-tattoo-robotics',
+    brandTitle: 'Aenetic Cyber Tattoo AI',
+    category: 'portfolio',
+    headlineSub: 'Futuristic AI tattoo & cybernetic body-art robotics studio featuring vertical AENETIC® capsule rail, inverted L-cutout 3D exoskeleton rig, and interactive 05–06 launch roadmap.'
+  },
+  'data-securit': {
+    id: 'iridescent-liquid-data-security',
+    brandTitle: 'Securify Data Shield',
+    category: 'commerce',
+    headlineSub: 'Zero-knowledge enterprise data security platform featuring 3D iridescent liquid-glass core, +1.5B GB protected telemetry, human verification portal, and proactive threat detection.'
+  },
+  'laptop-computer': {
+    id: 'executive-macbook-agency-hub',
+    brandTitle: 'BizNext Agency Hub',
+    category: 'portfolio',
+    headlineSub: 'Modern digital agency & startup growth platform featuring interactive 3D MacBook Pro live analytics screen (+68% Growth), 4 frosted service modules, and 500+ enterprise case metrics.'
+  },
+  'monolith-canvas-216': {
+    id: 'nordic-wave-web3-identity',
+    brandTitle: 'Bilexer Web3 Identity',
+    category: 'commerce',
+    headlineSub: 'Universal privacy-first Web3 identity layer built on zero-knowledge cryptography and chain-key sync — featuring 3D particle mountain topography and folder-tabbed privacy cards.'
+  },
+  'image-some': {
+    id: 'monochrome-blob-pet-companion',
+    brandTitle: 'Blobs Pet Companion',
+    category: 'commerce',
+    headlineSub: 'Playful monochrome & peach-apricot smart pet health, GPS collar tracking, and veterinary calendar ecosystem featuring expressive black-cat blob illustrations and multi-screen iOS mockups.'
   }
 };
 
@@ -6655,6 +6685,2531 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
           document.querySelectorAll('.tariff-select-btn').forEach(function (c) { c.classList.remove('is-active'); });
           card.classList.add('is-active');
           if (out) out.textContent = 'ACTIVE PLAN: ' + (card.getAttribute('data-summary') || '');
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 21. PUMPIT GRID -> AENETIC CYBER TATTOO AI (pumpit-grid — Free Tier)
+  // Faithful to TSH_AGENCY / AENETIC® "Futuristic technologies" Bento Cutout UI
+  // ============================================================================
+  if (slug === 'pumpit-grid') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AENETIC® — Futuristic AI Tattoo &amp; Cybernetic Robotics Technologies</title>
+  <meta name="description" content="Futuristic AI tattoo and cybernetic body-art robotics studio featuring the vertical AENETIC® capsule rail, inverted L-cutout 3D exoskeleton rig, and interactive 05–06 launch roadmap." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --outer-bg: #CBD2DC;
+      --board-bg: #FFFFFF;
+      --card-grey: #EDF0F5;
+      --stage-silver: #B8C2CE;
+      --ink: #090A0F;
+      --muted: #7C8494;
+      --border: #090A0F;
+      --font-display: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: linear-gradient(135deg, #D5DCE6 0%, #BFC8D4 100%);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--ink); color: #fff; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid var(--ink); }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-outer {
+      max-width: 1400px;
+      margin: 28px auto;
+      padding: 0 clamp(14px, 3vw, 36px);
+    }
+    .${p}-board {
+      background: var(--board-bg);
+      border-radius: 28px;
+      padding: clamp(18px, 2.5vw, 30px);
+      box-shadow: 0 32px 80px rgba(9, 10, 15, 0.14);
+      display: grid;
+      grid-template-columns: 68px 420px 1fr;
+      gap: 24px;
+      min-height: 760px;
+      position: relative;
+    }
+    /* Vertical Left Black Capsule Rail */
+    .${p}-rail {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 999px;
+      padding: 10px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 700px;
+    }
+    .${p}-rail-top {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #DCE2EA;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+    }
+    .${p}-rail-brand {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.42em;
+      color: rgba(255, 255, 255, 0.85);
+      text-transform: uppercase;
+    }
+    .${p}-rail-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .${p}-rail-profile {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      color: rgba(255, 255, 255, 0.72);
+    }
+    .${p}-rail-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #334155, #0F172A);
+      border: 2px solid rgba(255,255,255,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* Left Content Column */
+    .${p}-left-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+      z-index: 4;
+    }
+    .${p}-intro-card {
+      background: var(--card-grey);
+      border-radius: 24px;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 128px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+    .${p}-sculpture-thumb {
+      width: 128px;
+      height: 132px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #D5DCE6, #EAEFF5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid rgba(9,10,15,0.08);
+    }
+    .${p}-conjoined-cta {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 14px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    .${p}-cta-pill {
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1.5px solid var(--ink);
+      background: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      transition: all 0.2s ease;
+    }
+    .${p}-cta-circle {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1.5px solid var(--ink);
+      background: #fff;
+      margin-left: -4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--ink);
+      transition: all 0.2s ease;
+    }
+    .${p}-conjoined-cta:hover .${p}-cta-pill,
+    .${p}-conjoined-cta:hover .${p}-cta-circle {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    /* Timeline */
+    .${p}-timeline {
+      position: relative;
+      padding-left: 28px;
+      margin: 6px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .${p}-timeline::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 6px;
+      bottom: -14px;
+      width: 1.5px;
+      background: linear-gradient(180deg, #CBD5E1 0%, #090A0F 55%, transparent 100%);
+    }
+    .${p}-tl-item { position: relative; cursor: pointer; }
+    .${p}-tl-dot {
+      position: absolute;
+      left: -28px;
+      top: 3px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #DCE2EA;
+      border: 2px solid #fff;
+    }
+    .${p}-tl-item.is-active .${p}-tl-dot {
+      background: var(--ink);
+      box-shadow: 0 0 0 3px rgba(9, 10, 15, 0.12);
+    }
+
+    /* Conjoined Tag Cluster */
+    .${p}-tag-cluster {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .${p}-tag-btn {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1.5px solid var(--ink);
+      background: #fff;
+      color: var(--ink);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .${p}-tag-btn.is-active, .${p}-tag-btn:hover {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    /* Giant Display Title with Inverted Cutout Overlap */
+    .${p}-headline-zone {
+      position: relative;
+      z-index: 6;
+      background: #fff;
+      padding-top: 12px;
+      padding-right: 28px;
+      border-top-right-radius: 36px;
+      width: calc(100% + 140px);
+    }
+    .${p}-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 4.8vw, 4.4rem);
+      font-weight: 500;
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+    }
+
+    /* Right 3D Exoskeleton & Cyber Tattoo Stage */
+    .${p}-stage {
+      position: relative;
+      border-radius: 32px;
+      background: radial-gradient(circle at 55% 28%, #DAE2EC 0%, #B4BFC9 58%, #8F9BA8 100%);
+      overflow: hidden;
+      min-height: 700px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px;
+    }
+    .${p}-menu-notch {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 78px;
+      height: 78px;
+      background: #fff;
+      border-bottom-left-radius: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 8;
+    }
+    .${p}-menu-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      border: none;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+    }
+
+    /* Secondary Bento Section Below Board */
+    .${p}-sub-section {
+      margin-top: 24px;
+      background: var(--board-bg);
+      border-radius: 28px;
+      padding: clamp(22px, 3vw, 36px);
+      box-shadow: 0 24px 60px rgba(9, 10, 15, 0.1);
+    }
+    .${p}-spec-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+    .${p}-spec-card {
+      background: var(--card-grey);
+      border-radius: 22px;
+      padding: 22px;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .${p}-spec-card:hover, .${p}-spec-card.is-active {
+      border-color: var(--ink);
+      background: #fff;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(9, 10, 15, 0.65); backdrop-filter: blur(10px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 480px; width: 100%; border-radius: 26px; padding: 30px;
+      background: #fff; color: var(--ink); border: 2px solid var(--ink);
+    }
+
+    @media (max-width: 1100px) {
+      .${p}-board { grid-template-columns: 1fr; }
+      .${p}-rail {
+        flex-direction: row;
+        min-height: auto;
+        padding: 10px 18px;
+      }
+      .${p}-rail-brand, .${p}-rail-profile { writing-mode: horizontal-tb; transform: none; }
+      .${p}-rail-bottom { flex-direction: row; }
+      .${p}-headline-zone { width: 100%; padding-right: 0; }
+      .${p}-spec-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:28px;height:28px;border:1.5px solid #090A0F;border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#090A0F;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-outer">
+    <main id="main-content">
+      <section class="${p}-board tabular-nums" aria-labelledby="heroHeading">
+        <!-- Vertical Black Capsule Sidebar -->
+        <aside class="${p}-rail" aria-label="Brand &amp; Profile Rail">
+          <div class="${p}-rail-top" aria-hidden="true">❖</div>
+          <span class="${p}-rail-brand">A E N E T I C ®</span>
+          <div class="${p}-rail-bottom">
+            <span class="${p}-rail-profile">MY PROFILE</span>
+            <div class="${p}-rail-avatar" title="Cyber Operative 05">OP</div>
+          </div>
+        </aside>
+
+        <!-- Left Bento Info & Typography Column -->
+        <div class="${p}-left-col">
+          <div class="${p}-intro-card">
+            <div class="${p}-sculpture-thumb">
+              <svg viewBox="0 0 120 120" style="width:100%;height:100%;" role="img" aria-label="3D Chrome Cybernetic Torso Sculpture">
+                <defs>
+                  <linearGradient id="chromeGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#1E293B" />
+                    <stop offset="45%" stop-color="#94A3B8" />
+                    <stop offset="75%" stop-color="#F8FAFC" />
+                    <stop offset="100%" stop-color="#0F172A" />
+                  </linearGradient>
+                </defs>
+                <path d="M25,105 C22,68 38,44 60,20 C82,44 98,68 95,105 Z" fill="url(#chromeGrad)" />
+                <circle cx="60" cy="42" r="16" fill="#090A0F" stroke="#E2E8F0" stroke-width="2" />
+                <path d="M36,68 Q60,52 84,68 M40,86 Q60,72 80,86" stroke="#F8FAFC" stroke-width="2.5" fill="none" />
+              </svg>
+            </div>
+            <div>
+              <p style="font-size:12.5px;line-height:1.45;font-weight:500;color:var(--ink);">
+                This is the latest technology that allows you to make tattoos using artificial intelligence.
+              </p>
+              <button type="button" id="exploreMagneticBtn" class="${p}-conjoined-cta">
+                <span class="${p}-cta-pill">EXPLORE MORE</span>
+                <span class="${p}-cta-circle">&gt;&gt;&gt;</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Roadmap Timeline 06 / 05 -->
+          <div class="${p}-timeline" role="region" aria-label="Project Launch Milestones">
+            <div class="${p}-tl-item" data-stage="06 – LAUNCH: Global Neural Stencil Network Active (120 Studios)">
+              <span class="${p}-tl-dot"></span>
+              <div style="font-size:12px;font-weight:700;letter-spacing:0.03em;">06 – LAUNCH</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:2px;">Global start project</div>
+            </div>
+            <div class="${p}-tl-item is-active" data-stage="05 – BETA TEST: Sub-Dermal 0.02mm Optical Calibration Verified">
+              <span class="${p}-tl-dot"></span>
+              <div style="font-size:12px;font-weight:700;letter-spacing:0.03em;">05 – BETA TEST</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:2px;">Issues test and fix</div>
+            </div>
+          </div>
+
+          <!-- Conjoined Pill Tag Filter Cluster -->
+          <div>
+            <div class="${p}-tag-cluster" role="group" aria-label="Filter Technology Pillars">
+              <button type="button" class="${p}-tag-btn is-active aenetic-tag" data-next-preview="true" data-readout="AI NEURAL INK: Generative dragon &amp; geometric dermal mapping at 1,400 Hz">ARTIFICIAL INTELLIGENCE</button>
+              <button type="button" class="${p}-tag-btn aenetic-tag" data-next-preview="true" data-readout="TATTO ROBOTICS: 6-axis pneumatic needle spine with zero-pain depth lock">TATTO</button>
+              <button type="button" class="${p}-tag-btn aenetic-tag" data-next-preview="true" data-readout="GENERATIVE ART: Custom organic &amp; cyber-sigilism patterns tailored to anatomy">ART</button>
+              <button type="button" class="${p}-tag-btn aenetic-tag" data-next-preview="true" data-readout="OPTICAL LIDAR: Real-time 3D skin curvature tracking within 0.015mm tolerance">TECHNOLOGIES</button>
+              <button type="button" class="${p}-tag-btn aenetic-tag" data-next-preview="true" data-readout="CYBER EXOSKELETON: Dual-tube cervical stabilizer &amp; haptic dermal rig">CYBER</button>
+            </div>
+            <p id="aeneticReadout" style="font-family:var(--font-mono);font-size:11px;color:var(--ink);margin-top:12px;background:var(--card-grey);padding:8px 12px;border-radius:10px;">
+              AI NEURAL INK: Generative dragon &amp; geometric dermal mapping at 1,400 Hz
+            </p>
+          </div>
+
+          <!-- Bottom-Left Caption & Inverted Cutout Giant Title -->
+          <div class="${p}-headline-zone">
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;max-width:34ch;line-height:1.45;margin-bottom:14px;">
+              TECHNOLOGIES THAT WILL ALLOW US TO DO THE IMPOSSIBLE IN THE NEAR FUTURE.
+            </p>
+            <h1 id="heroHeading" class="${p}-h1">
+              Futuristic <span aria-hidden="true" style="display:inline-block;vertical-align:middle;font-size:0.78em;">◓ ✳</span><br />
+              technologies
+            </h1>
+          </div>
+        </div>
+
+        <!-- Right 3D Cybernetic Exoskeleton & Neural Tattoo Rig Stage -->
+        <div class="${p}-stage">
+          <div class="${p}-menu-notch">
+            <button type="button" id="motionToggleBtn" class="${p}-menu-circle" aria-pressed="false" title="Toggle Motion">MENU</button>
+          </div>
+
+          <!-- Top-Left Geometric White A Emblem -->
+          <div style="position:relative;z-index:3;display:flex;justify-content:space-between;align-items:flex-start;">
+            <svg width="150" height="84" viewBox="0 0 180 100" fill="none" aria-label="AENETIC Geometric Emblem">
+              <path d="M22,52 L44,8 L90,8 L68,52 Z M90,8 L136,8 L158,52 L112,52 Z M12,92 L36,52 L82,52 L58,92 Z M98,52 L144,52 L168,92 L122,92 Z" fill="#FFFFFF" />
+            </svg>
+          </div>
+
+          <!-- Detailed 3D Exoskeleton & Dragon Cranial Tattoo Illustration -->
+          <svg viewBox="0 0 680 560" style="width:100%;height:auto;max-height:540px;position:relative;z-index:2;margin:auto;" role="img" aria-label="3D Cybernetic Exoskeleton Rig and AI Dragon Tattoo">
+            <defs>
+              <linearGradient id="exoShell" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FFFFFF" />
+                <stop offset="55%" stop-color="#DCE3EC" />
+                <stop offset="100%" stop-color="#8A96A6" />
+              </linearGradient>
+              <linearGradient id="skinTone" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#C8A99E" />
+                <stop offset="60%" stop-color="#9A7B70" />
+                <stop offset="100%" stop-color="#5E463F" />
+              </linearGradient>
+              <linearGradient id="metalBlock" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#E2E8F0" />
+                <stop offset="50%" stop-color="#64748B" />
+                <stop offset="100%" stop-color="#0F172A" />
+              </linearGradient>
+            </defs>
+            <!-- Cranial Head & AI Dragon Tattoo Etching -->
+            <ellipse cx="410" cy="145" rx="92" ry="108" fill="url(#skinTone)" />
+            <path d="M355,85 C380,62 425,70 445,102 C460,126 440,165 468,185 M345,120 C375,112 398,135 425,125 M370,65 C395,95 415,95 450,78" stroke="#1E232A" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.68" />
+            <!-- Optical Neural Conduits (Left & Right Tubes) -->
+            <path d="M20,115 C160,175 290,175 360,162" stroke="url(#exoShell)" stroke-width="16" fill="none" stroke-linecap="round" />
+            <path d="M660,152 C560,185 480,178 440,165" stroke="url(#exoShell)" stroke-width="16" fill="none" stroke-linecap="round" />
+            <path d="M12,210 C150,275 280,260 365,245" stroke="url(#exoShell)" stroke-width="22" fill="none" stroke-linecap="round" />
+            <!-- Cervical Titanium Spine Clamp -->
+            <rect x="342" y="150" width="116" height="145" rx="16" fill="url(#metalBlock)" stroke="#090A0F" stroke-width="3" />
+            <rect x="366" y="172" width="68" height="84" rx="10" fill="#CBD5E1" stroke="#090A0F" stroke-width="2" />
+            <circle cx="385" cy="195" r="7" fill="#090A0F" />
+            <circle cx="415" cy="195" r="7" fill="#090A0F" />
+            <!-- White Sculpted Bio-Organic Scapula Exoskeleton Armor -->
+            <path d="M120,350 C200,265 300,265 358,285 L320,490 C220,475 150,420 120,350 Z" fill="url(#exoShell)" stroke="#94A3B8" stroke-width="2" />
+            <path d="M205,355 L295,330 L275,415 Z" fill="#475569" />
+            <path d="M620,390 C550,285 455,275 405,295 L435,510 C535,495 595,445 620,390 Z" fill="url(#exoShell)" stroke="#94A3B8" stroke-width="2" />
+            <path d="M455,355 L545,380 L475,445 Z" fill="#475569" />
+            <!-- Sweeping Lower Robotic Armature Tube -->
+            <path d="M310,470 C410,550 530,450 665,280" stroke="url(#exoShell)" stroke-width="34" fill="none" stroke-linecap="round" />
+          </svg>
+
+          <!-- Bottom-Right Barcode & Rights -->
+          <div style="position:relative;z-index:3;display:flex;justify-content:flex-end;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;color:#fff;letter-spacing:0.08em;">
+            <span style="display:inline-flex;gap:3px;align-items:center;">
+              <i style="width:3px;height:18px;background:#fff;display:inline-block;"></i>
+              <i style="width:2px;height:18px;background:#fff;display:inline-block;"></i>
+              <i style="width:5px;height:18px;background:#fff;display:inline-block;"></i>
+              <i style="width:2px;height:18px;background:#fff;display:inline-block;"></i>
+            </span>
+            <span>ALL RIGHTS RESERVED ®</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Below-the-Fold Precision Telemetry Matrix -->
+      <section class="${p}-sub-section tabular-nums" aria-labelledby="matrixHeading">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">AENETIC® HARDWARE ARCHITECTURE // REV 06</span>
+            <h2 id="matrixHeading" style="font-family:var(--font-display);font-size:clamp(1.6rem,2.8vw,2.4rem);margin-top:4px;">
+              Sub-Dermal AI Robotics Specifications
+            </h2>
+          </div>
+          <button type="button" class="${p}-tag-btn is-active" data-seamless-trigger="Reserve AENETIC® Studio Unit (Batch 06)">BOOK STUDIO DEMO →</button>
+        </div>
+
+        <div class="${p}-spec-grid">
+          <article class="${p}-spec-card is-active">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">01 // 3D LIDAR MAPPING</span>
+            <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">0.015mm Skin Topology</h3>
+            <p style="font-size:13px;color:var(--muted);">Dual stereoscopic sensors track breathing and micro-movements at 1,400 frames per second.</p>
+          </article>
+          <article class="${p}-spec-card">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">02 // NEURAL STENCIL ENGINE</span>
+            <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">Generative Anatomy Fit</h3>
+            <p style="font-size:13px;color:var(--muted);">AI automatically warps complex geometric and dragon artwork around muscle contours before ink deposition.</p>
+          </article>
+          <article class="${p}-spec-card">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);">03 // BIONIC NEEDLE DRIVE</span>
+            <h3 style="font-family:var(--font-display);font-size:20px;margin:8px 0;">Zero-Trauma Depth Lock</h3>
+            <p style="font-size:13px;color:var(--muted);">Piezoelectric actuators regulate needle penetration depth to reduce healing time by 64%.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:11px;">AENETIC® LABS // ACCESS PORTAL</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-tag-btn">ESC</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Request Beta 05 / Launch 06 Dossier</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Schedule a live robotic tattoo calibration session or request technical documentation for your flagship studio.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-tag-btn is-active" style="width:100%;padding:14px;">CONFIRM RESERVATION &gt;&gt;&gt;</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var out = document.getElementById('aeneticReadout');
+      document.querySelectorAll('.aenetic-tag').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.aenetic-tag').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (out) out.textContent = btn.getAttribute('data-readout') || '';
+        });
+      });
+      document.querySelectorAll('.${p}-tl-item').forEach(function (item) {
+        item.addEventListener('click', function () {
+          document.querySelectorAll('.${p}-tl-item').forEach(function (i) { i.classList.remove('is-active'); });
+          item.classList.add('is-active');
+          if (out) out.textContent = item.getAttribute('data-stage') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 22. DATA SECURIT -> SECURIFY DATA SHIELD (data-securit — Free Tier)
+  // Faithful to "securify — protect your data" Obsidian Iridescent Liquid Blob UI
+  // ============================================================================
+  if (slug === 'data-securit') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>securify — Protect Your Data With Zero-Knowledge Liquid Shield</title>
+  <meta name="description" content="Enterprise data security platform featuring a 3D iridescent liquid-glass shield core, +1.5B GB protected data telemetry, human verification portal, and proactive threat detection." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #020205;
+      --surface: rgba(18, 18, 28, 0.72);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #FFFFFF;
+      --muted: rgba(255, 255, 255, 0.62);
+      --amber: #FF7847;
+      --violet: #6D28D9;
+      --cyan: #38BDF8;
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--amber); color: #000; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-shell {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 22px clamp(18px, 4vw, 48px);
+    }
+    .${p}-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 20;
+    }
+    .${p}-logo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .${p}-nav-pill {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 11px 32px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+    }
+    .${p}-nav-pill a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .${p}-nav-pill a:hover { color: #fff; }
+    .${p}-white-btn {
+      padding: 10px 22px;
+      border-radius: 999px;
+      background: #FFFFFF;
+      color: #020205;
+      font-size: 13px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Hero Stage with Iridescent 3D Liquid Glass Blob */
+    .${p}-hero {
+      position: relative;
+      min-height: 760px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 0;
+    }
+    .${p}-blob-stage {
+      position: relative;
+      max-width: 980px;
+      margin: 0 auto;
+      width: 100%;
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .${p}-blob-svg {
+      position: absolute;
+      inset: -30px 0 0 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      animation: ${p}FloatBlob 9s ease-in-out infinite alternate;
+    }
+    @keyframes ${p}FloatBlob {
+      0% { transform: translate3d(0, 0, 0) scale(1); }
+      100% { transform: translate3d(0, -14px, 0) scale(1.03); }
+    }
+    .${p}-h1 {
+      position: relative;
+      z-index: 5;
+      font-family: var(--font-display);
+      font-size: clamp(3.6rem, 9.5vw, 7.6rem);
+      font-weight: 700;
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+      color: #fff;
+    }
+    .${p}-h1-row1 { display: block; text-align: left; }
+    .${p}-h1-row2 { display: block; text-align: right; color: rgba(255,255,255,0.92); margin-top: -10px; }
+    .${p}-h1-row3 { display: block; text-align: center; margin-top: 8px; }
+
+    /* Floating Stat Callouts */
+    .${p}-stat-callout {
+      position: relative;
+      z-index: 6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 18px;
+    }
+    .${p}-stat-box strong {
+      display: block;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .${p}-stat-box span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Center Verify Human Glass Pill */
+    .${p}-verify-bar {
+      position: relative;
+      z-index: 8;
+      margin: 28px auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      padding: 8px 10px 8px 24px;
+      border-radius: 999px;
+      background: rgba(24, 24, 34, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+    .${p}-peach-btn {
+      padding: 10px 24px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #FFB088 0%, #FF6B2B 100%);
+      color: #140804;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 0 28px rgba(255, 107, 43, 0.45);
+    }
+
+    /* Partner Cards */
+    .${p}-partners {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 36px 0;
+      position: relative;
+      z-index: 6;
+    }
+    .${p}-partner-card {
+      padding: 24px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.015) 100%);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    /* Our Benefits 3-Column Obsidian Glass Bento */
+    .${p}-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .${p}-benefit-card {
+      border-radius: 24px;
+      padding: 30px;
+      background: linear-gradient(160deg, rgba(35, 30, 58, 0.55) 0%, rgba(12, 12, 20, 0.85) 100%);
+      border: 1px solid var(--border);
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+    .${p}-benefit-card:hover, .${p}-benefit-card.is-active {
+      border-color: var(--amber);
+      transform: translateY(-4px);
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(2, 2, 5, 0.82); backdrop-filter: blur(16px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 480px; width: 100%; border-radius: 26px; padding: 32px;
+      background: #0D0D16; color: #fff; border: 1px solid rgba(255, 120, 71, 0.4);
+    }
+
+    @media (max-width: 900px) {
+      .${p}-nav-pill { display: none; }
+      .${p}-partners { grid-template-columns: 1fr 1fr; }
+      .${p}-benefits-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:30px;height:30px;border:1px solid rgba(255,120,71,0.6);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FF7847;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-shell">
+    <header class="${p}-header">
+      <a href="#main-content" class="${p}-logo-pill">
+        <span style="color:var(--amber);font-weight:900;">彡</span>
+        <span>securify</span>
+      </a>
+      <nav class="${p}-nav-pill" aria-label="Primary Navigation">
+        <a href="#benefits-section">platform</a>
+        <a href="#benefits-section">solutions</a>
+        <a href="#partners-section">company</a>
+        <a href="#benefits-section">support</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" class="${p}-logo-pill" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-white-btn">get started</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="${p}-hero tabular-nums" aria-labelledby="heroHeading">
+        <div class="${p}-blob-stage">
+          <!-- Iridescent 3D Organic Liquid Glass SVG Artwork -->
+          <svg class="${p}-blob-svg" viewBox="0 0 900 680" fill="none" aria-hidden="true">
+            <defs>
+              <radialGradient id="amberCore" cx="46%" cy="38%" r="46%">
+                <stop offset="0%" stop-color="#FFF7ED" stop-opacity="0.95" />
+                <stop offset="28%" stop-color="#FB923C" stop-opacity="0.88" />
+                <stop offset="62%" stop-color="#9A3412" stop-opacity="0.45" />
+                <stop offset="100%" stop-color="#020205" stop-opacity="0" />
+              </radialGradient>
+              <radialGradient id="violetRim" cx="55%" cy="68%" r="48%">
+                <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.7" />
+                <stop offset="45%" stop-color="#6D28D9" stop-opacity="0.55" />
+                <stop offset="100%" stop-color="#020205" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <!-- Upper Iridescent Liquid Lobe -->
+            <path d="M260,70 C360,-15 540,10 595,110 C650,210 560,340 430,355 C300,370 190,280 215,165 C228,110 230,95 260,70 Z" fill="url(#amberCore)" stroke="rgba(255,255,255,0.38)" stroke-width="2" />
+            <!-- Lower Iridescent Liquid Lobe -->
+            <path d="M295,335 C420,285 635,330 665,455 C695,580 555,665 425,645 C295,625 205,510 235,410 C250,360 265,348 295,335 Z" fill="url(#violetRim)" stroke="rgba(255,160,110,0.42)" stroke-width="2" />
+          </svg>
+
+          <!-- Top Stat Callout (+65k startups use) -->
+          <div style="display:flex;justify-content:flex-end;position:relative;z-index:6;">
+            <div class="${p}-stat-box" style="text-align:right;">
+              <strong>+65k</strong>
+              <span>startups use</span>
+            </div>
+          </div>
+
+          <!-- Split Editorial Display Title -->
+          <h1 id="heroHeading" class="${p}-h1">
+            <span class="${p}-h1-row1">protect</span>
+            <span class="${p}-h1-row2">your</span>
+            <span class="${p}-h1-row3">data</span>
+          </h1>
+
+          <!-- Middle Callout Row (+1.5b GB & +300k downloads) -->
+          <div class="${p}-stat-callout">
+            <div style="max-width:240px;">
+              <p style="font-size:12.5px;color:var(--muted);line-height:1.5;margin-bottom:16px;">
+                we can guarding your data with utmost care, empowering you with privacy everywhere
+              </p>
+              <div class="${p}-stat-box">
+                <strong>+1.5b</strong>
+                <span>gb data was protected</span>
+              </div>
+            </div>
+
+            <div class="${p}-verify-bar">
+              <span id="humanVerifyStatus" style="font-size:13px;color:rgba(255,255,255,0.88);">verify you're human</span>
+              <button type="button" id="verifyDemoBtn" class="${p}-peach-btn" data-next-preview="true">try demo</button>
+            </div>
+
+            <div class="${p}-stat-box" style="text-align:right;">
+              <strong>+300k</strong>
+              <span>downloads</span>
+            </div>
+          </div>
+
+          <!-- Editorial Context Paragraph -->
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;position:relative;z-index:6;margin-top:24px;">
+            <p style="font-size:13px;color:var(--muted);max-width:300px;line-height:1.55;">
+              protecting your data with outmost tech, empowering you with privacy everywhere
+            </p>
+            <p style="font-size:13px;color:var(--muted);max-width:420px;line-height:1.6;">
+              By partnering with a security provider, a company can significantly enhance the protection of its sensitive data. This includes implementing robust encryption techniques, access controls, and monitoring systems to safeguard against unauthorized access, data breaches, and cyberattacks.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partner Logos Strip -->
+      <section id="partners-section" aria-label="Trusted Enterprise Partners">
+        <div class="${p}-partners">
+          <div class="${p}-partner-card"><span style="color:var(--amber);">✳</span> Auth</div>
+          <div class="${p}-partner-card"><span>◁</span> unity</div>
+          <div class="${p}-partner-card"><span style="color:#FBBF24;">W</span> Western Union</div>
+          <div class="${p}-partner-card"><span style="color:#38BDF8;">❖</span> Dropbox</div>
+        </div>
+      </section>
+
+      <!-- Our Benefits 3-Column Bento -->
+      <section id="benefits-section" style="padding:36px 0 60px;" aria-labelledby="benefitsHeading">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:24px;">
+          <p style="font-size:13px;color:var(--muted);max-width:340px;">
+            protecting your data with outmost tech, empowering you with privacy everywhere
+          </p>
+          <button type="button" class="${p}-logo-pill" data-seamless-trigger="Launch Securify Interactive Threat Sandbox">Try Demo</button>
+        </div>
+
+        <h2 id="benefitsHeading" style="text-align:center;font-size:clamp(2rem,3.6vw,2.8rem);font-weight:600;margin-bottom:28px;">
+          Our Benefits
+        </h2>
+
+        <div class="${p}-benefits-grid">
+          <article class="${p}-benefit-card is-active securify-benefit" data-next-preview="true" data-status="ACTIVE SHIELD: Proactive Threat Detection scanning 1.5B GB in real time">
+            <h3 style="font-size:19px;line-height:1.35;">Proactive Threat<br />Detection and Response</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.65;">
+              Security providers continuously monitor network traffic, log files, and system activities to identify suspicious patterns or anomalies that may indicate a security breach.
+            </p>
+          </article>
+
+          <article class="${p}-benefit-card securify-benefit" data-next-preview="true" data-status="ACTIVE SHIELD: Zero-Knowledge Cryptographic Kernel verified">
+            <div style="margin:auto;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle at 35% 30%, #FB923C, #4C1D95 65%, #09090F);box-shadow:0 0 40px rgba(251,146,60,0.35);"></div>
+            <h3 style="font-size:19px;line-height:1.35;">Expertise and Industry<br />Knowledge</h3>
+          </article>
+
+          <article class="${p}-benefit-card securify-benefit" data-next-preview="true" data-status="ACTIVE SHIELD: Automated Incident Containment &amp; Immutable Audit Logs">
+            <h3 style="font-size:19px;line-height:1.35;">Automated Zero-Trust<br />Encryption &amp; Recovery</h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.65;">
+              Security providers continuously monitor network traffic, log files, and system activities to identify suspicious patterns or anomalies that may indicate a security breach.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--amber);">SECURIFY ZERO-TRUST SANDBOX</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-logo-pill">ESC</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Deploy Securify Data Shield</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Connect your cloud clusters in 60 seconds with end-to-end zero-knowledge encryption and autonomous anomaly containment.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-peach-btn" style="width:100%;">Start 30-Day Enterprise Trial</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var verifyBtn = document.getElementById('verifyDemoBtn');
+      var statusEl = document.getElementById('humanVerifyStatus');
+      if (verifyBtn && statusEl) {
+        verifyBtn.addEventListener('click', function () {
+          statusEl.textContent = '✓ human verified • zero-trust session active';
+          statusEl.style.color = '#FFB088';
+        });
+      }
+      document.querySelectorAll('.securify-benefit').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.securify-benefit').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (statusEl) statusEl.textContent = card.getAttribute('data-status') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 23. LAPTOP COMPUTER -> BIZNEXT AGENCY HUB (laptop-computer — Premium Tier)
+  // Faithful to "BizNext — Professional Business Website Design" 3D MacBook Pro UI
+  // ============================================================================
+  if (slug === 'laptop-computer') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BizNext — Professional Business Website Design &amp; Startup Growth Agency</title>
+  <meta name="description" content="Modern layout for startups and companies featuring an interactive 3D MacBook Pro live analytics display (+68% Growth), 4 frosted service modules, and 500+ enterprise deployments." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-top: #070E1E;
+      --bg-mid: #10203D;
+      --desk-surface: #2B394E;
+      --blue-primary: #0066FF;
+      --blue-cyan: #22A8FF;
+      --text: #FFFFFF;
+      --muted: #A3B8D7;
+      --border: rgba(255, 255, 255, 0.16);
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background:
+        radial-gradient(circle at 92% 28%, rgba(251, 191, 36, 0.22) 0%, transparent 34%),
+        radial-gradient(circle at 50% 42%, rgba(0, 102, 255, 0.28) 0%, transparent 52%),
+        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 58%, #0A1428 100%);
+      color: var(--text);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--blue-primary); color: #fff; font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--blue-cyan); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-shell {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 22px clamp(16px, 4vw, 44px);
+    }
+    .${p}-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+    .${p}-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .${p}-hex-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #22A8FF, #0052FF);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(34, 168, 255, 0.5);
+    }
+    .${p}-nav-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .${p}-nav-links a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+    .${p}-nav-links a.is-active {
+      color: #fff;
+      border-bottom-color: var(--blue-cyan);
+    }
+    .${p}-blue-btn {
+      padding: 11px 24px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: linear-gradient(135deg, #22A8FF 0%, #0052FF 100%);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 28px rgba(0, 82, 255, 0.45);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Hero Title Block */
+    .${p}-hero-head {
+      text-align: center;
+      margin: 28px auto 32px;
+      max-width: 820px;
+    }
+    .${p}-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-size: clamp(1.3rem, 2.2vw, 1.85rem);
+      font-style: italic;
+      color: var(--blue-cyan);
+      margin-bottom: 6px;
+    }
+    .${p}-kicker::before, .${p}-kicker::after {
+      content: "";
+      width: 54px;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, var(--blue-cyan), transparent);
+    }
+    .${p}-h1 {
+      font-size: clamp(2.5rem, 5.4vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+    }
+    .${p}-h1-blue {
+      display: block;
+      color: var(--blue-cyan);
+      text-shadow: 0 0 36px rgba(34, 168, 255, 0.45);
+    }
+
+    /* 3D MacBook Pro Workstation Mockup Stage */
+    .${p}-workstation {
+      position: relative;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 10px 0 36px;
+    }
+    .${p}-laptop-lid {
+      background: #080D1A;
+      border-radius: 22px 22px 6px 6px;
+      padding: 14px 14px 18px;
+      border: 3px solid #94A3B8;
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.65),
+        0 0 60px rgba(0, 102, 255, 0.25);
+    }
+    .${p}-laptop-screen {
+      background: radial-gradient(circle at 75% 40%, #0E2A5C 0%, #050B18 70%);
+      border-radius: 12px;
+      padding: clamp(18px, 3vw, 32px);
+      border: 1px solid rgba(34, 168, 255, 0.24);
+      position: relative;
+      overflow: hidden;
+    }
+    .${p}-screen-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: center;
+      margin: 22px 0;
+    }
+    .${p}-chart-card {
+      background: rgba(10, 22, 48, 0.82);
+      border: 1px solid rgba(34, 168, 255, 0.32);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 0 34px rgba(0, 102, 255, 0.25);
+    }
+    .${p}-trust-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 12px;
+    }
+    .${p}-laptop-base {
+      height: 22px;
+      margin: 0 -28px;
+      background: linear-gradient(90deg, #64748B 0%, #E2E8F0 22%, #CBD5E1 50%, #E2E8F0 78%, #475569 100%);
+      border-radius: 4px 4px 22px 22px;
+      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.65);
+      position: relative;
+    }
+    .${p}-laptop-notch {
+      width: 110px;
+      height: 7px;
+      background: #475569;
+      margin: 0 auto;
+      border-radius: 0 0 8px 8px;
+    }
+
+    /* 4 Frosted Glass Service Cards on Desk */
+    .${p}-service-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      max-width: 960px;
+      margin: 12px auto 28px;
+    }
+    .${p}-svc-card {
+      border-radius: 20px;
+      padding: 24px 18px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.85);
+      color: #0F172A;
+      border: 1.5px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      transition: all 0.24s ease;
+    }
+    .${p}-svc-card.is-active, .${p}-svc-card:hover {
+      background: linear-gradient(160deg, #0D2B6B 0%, #06122E 100%);
+      color: #FFFFFF;
+      border-color: var(--blue-cyan);
+      box-shadow: 0 20px 50px rgba(0, 102, 255, 0.5);
+      transform: translateY(-6px);
+    }
+    .${p}-svc-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin: 0 auto 12px;
+      background: rgba(0, 102, 255, 0.12);
+      color: var(--blue-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .${p}-svc-card.is-active .${p}-svc-icon {
+      background: rgba(34, 168, 255, 0.22);
+      color: var(--blue-cyan);
+    }
+
+    /* Bottom Frosted Stats Bar */
+    .${p}-stats-bar {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 18px 28px;
+      border-radius: 20px;
+      background: rgba(15, 26, 48, 0.68);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(20px);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) auto;
+      align-items: center;
+      gap: 20px;
+    }
+    .${p}-stat-cell {
+      text-align: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.14);
+      padding-right: 16px;
+    }
+    .${p}-stat-cell:nth-child(3) { border-right: none; }
+    .${p}-stat-cell strong {
+      display: block;
+      font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+      font-weight: 800;
+    }
+    .${p}-stat-cell span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(5, 11, 24, 0.8); backdrop-filter: blur(14px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 480px; width: 100%; border-radius: 24px; padding: 30px;
+      background: #0B1933; color: #fff; border: 1px solid var(--blue-cyan);
+    }
+
+    @media (max-width: 900px) {
+      .${p}-screen-grid { grid-template-columns: 1fr; }
+      .${p}-service-cards { grid-template-columns: 1fr 1fr; }
+      .${p}-stats-bar { grid-template-columns: 1fr; }
+      .${p}-stat-cell { border-right: none; padding-right: 0; }
+      .${p}-laptop-base { margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:30px;height:30px;border:1.5px solid #22A8FF;border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#22A8FF;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-shell">
+    <header class="${p}-nav">
+      <a href="#main-content" class="${p}-brand">
+        <span class="${p}-hex-icon">G</span>
+        <span>BizNext</span>
+      </a>
+      <nav class="${p}-nav-links" aria-label="Primary Navigation">
+        <a href="#main-content" class="is-active">Home</a>
+        <a href="#services-deck">Services</a>
+        <a href="#laptop-showcase">About</a>
+        <a href="#laptop-showcase">Portfolio</a>
+        <a href="#stats-strip">Contact</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" style="padding:9px 16px;border-radius:999px;background:rgba(255,255,255,0.08);color:#fff;border:1px solid var(--border);font-size:12px;font-weight:700;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-blue-btn">Get Started →</button>
+      </div>
+    </header>
+
+    <main id="main-content" class="tabular-nums">
+      <section class="${p}-hero-head" aria-labelledby="heroHeading">
+        <div class="${p}-kicker">Professional</div>
+        <h1 id="heroHeading" class="${p}-h1">
+          Business Website
+          <span class="${p}-h1-blue">Design</span>
+        </h1>
+        <p style="font-size:clamp(1rem,1.5vw,1.25rem);color:rgba(255,255,255,0.88);margin-top:12px;">
+          Modern Layout for Startups and Companies
+        </p>
+      </section>
+
+      <!-- 3D MacBook Pro Workstation Showcase -->
+      <section id="laptop-showcase" class="${p}-workstation" aria-label="Interactive MacBook Pro Live Preview">
+        <div class="${p}-laptop-lid">
+          <div class="${p}-laptop-screen">
+            <!-- Laptop Inner Top Bar -->
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.1);">
+              <div style="display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px;">
+                <span style="color:var(--blue-cyan);">⬡</span> BizNext
+              </div>
+              <div style="display:flex;gap:16px;font-size:11px;color:var(--muted);">
+                <span style="color:#fff;border-bottom:2px solid var(--blue-cyan);padding-bottom:2px;">Home</span>
+                <span>About</span>
+                <span>Services</span>
+                <span>Projects</span>
+                <span>Blog</span>
+              </div>
+              <span style="padding:5px 14px;border-radius:999px;background:#fff;color:#080D1A;font-size:11px;font-weight:700;">Contact Us</span>
+            </div>
+
+            <!-- Laptop Inner Hero & +68% Growth Chart -->
+            <div class="${p}-screen-grid">
+              <div>
+                <h2 id="screenModuleTitle" style="font-size:clamp(1.6rem,2.6vw,2.3rem);font-weight:800;line-height:1.15;margin-bottom:10px;">
+                  Grow Your<br />Business Online
+                </h2>
+                <p id="screenModuleDesc" style="font-size:13px;color:var(--muted);margin-bottom:18px;">
+                  We deliver innovative digital solutions
+                </p>
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                  <button type="button" class="${p}-blue-btn" data-seamless-trigger="Launch BizNext Interactive Prototype">Get Started</button>
+                  <button type="button" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:9px 16px;border-radius:999px;font-size:12px;cursor:pointer;" data-seamless-trigger="BizNext Agency Reel">▶ Watch Video</button>
+                </div>
+              </div>
+
+              <div class="${p}-chart-card">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                  <strong id="screenMetricBadge" style="font-size:16px;color:#fff;">+ 68% <span style="font-size:12px;font-weight:500;color:var(--muted);">Growth</span></strong>
+                  <span style="font-family:var(--font-mono);font-size:11px;color:var(--blue-cyan);">LIVE TELEMETRY</span>
+                </div>
+                <svg viewBox="0 0 280 120" style="width:100%;height:auto;" role="img" aria-label="+68% Growth Bar and Line Chart">
+                  <defs>
+                    <linearGradient id="barBlue" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#38BDF8" />
+                      <stop offset="100%" stop-color="#0052FF" stop-opacity="0.25" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="24" y="82" width="22" height="30" rx="4" fill="url(#barBlue)" />
+                  <rect x="68" y="64" width="22" height="48" rx="4" fill="url(#barBlue)" />
+                  <rect x="112" y="70" width="22" height="42" rx="4" fill="url(#barBlue)" />
+                  <rect x="156" y="48" width="22" height="64" rx="4" fill="url(#barBlue)" />
+                  <rect x="200" y="34" width="22" height="78" rx="4" fill="url(#barBlue)" />
+                  <rect x="244" y="16" width="22" height="96" rx="4" fill="url(#barBlue)" />
+                  <path d="M35,76 L79,56 L123,62 L167,40 L211,26 L255,10" stroke="#60A5FA" stroke-width="3" fill="none" />
+                  <circle cx="35" cy="76" r="4" fill="#fff" />
+                  <circle cx="79" cy="56" r="4" fill="#fff" />
+                  <circle cx="123" cy="62" r="4" fill="#fff" />
+                  <circle cx="167" cy="40" r="4" fill="#fff" />
+                  <circle cx="211" cy="26" r="4" fill="#fff" />
+                  <circle cx="255" cy="10" r="5" fill="#38BDF8" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Trusted By 500+ Companies Bar -->
+            <div class="${p}-trust-bar">
+              <span style="color:var(--muted);">Trusted by <strong style="color:#fff;">500+</strong> Companies</span>
+              <div style="display:flex;gap:22px;flex-wrap:wrap;font-weight:700;color:rgba(255,255,255,0.9);">
+                <span>Google</span>
+                <span>⊞ Microsoft</span>
+                <span># Slack</span>
+                <span>❖ Dropbox</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="${p}-laptop-base"><div class="${p}-laptop-notch"></div></div>
+      </section>
+
+      <!-- 4 Frosted Service Cards (Switches Laptop Display Live) -->
+      <section id="services-deck" aria-label="Core Digital Agency Pillars">
+        <div class="${p}-service-cards" role="group" aria-label="Select Service Module">
+          <article class="${p}-svc-card biz-svc-btn" tabindex="0" role="button" data-next-preview="true" data-title="Custom Website Architecture" data-desc="High-converting SaaS &amp; corporate design systems built for speed." data-metric="+ 94% Conversion">
+            <div class="${p}-svc-icon">▤</div>
+            <h3 style="font-size:15px;font-weight:800;margin-bottom:8px;">Website Design</h3>
+            <div style="color:var(--blue-primary);font-size:12px;letter-spacing:3px;">••••</div>
+          </article>
+
+          <article class="${p}-svc-card is-active biz-svc-btn" tabindex="0" role="button" data-next-preview="true" data-title="Grow Your Business Online" data-desc="We deliver innovative digital solutions &amp; AI-SEO organic acquisition." data-metric="+ 68% Growth">
+            <div class="${p}-svc-icon">📈</div>
+            <h3 style="font-size:15px;font-weight:800;margin-bottom:8px;">SEO &amp; Growth</h3>
+            <div style="color:var(--blue-cyan);font-size:12px;letter-spacing:3px;">•••</div>
+          </article>
+
+          <article class="${p}-svc-card biz-svc-btn" tabindex="0" role="button" data-next-preview="true" data-title="Global E-Commerce Flagships" data-desc="Sub-second headless checkout flows with multi-currency intelligence." data-metric="+ 142% GMV Lift">
+            <div class="${p}-svc-icon">🛒</div>
+            <h3 style="font-size:15px;font-weight:800;margin-bottom:8px;">E-Commerce</h3>
+            <div style="color:var(--blue-primary);font-size:12px;letter-spacing:3px;">•••</div>
+          </article>
+
+          <article class="${p}-svc-card biz-svc-btn" tabindex="0" role="button" data-next-preview="true" data-title="Dedicated 24/7 SLA Reliability" data-desc="Continuous security patching, Core Web Vitals monitoring, and cloud scale." data-metric="99.99% Uptime">
+            <div class="${p}-svc-icon">🎧</div>
+            <h3 style="font-size:15px;font-weight:800;margin-bottom:8px;">24/7 Support</h3>
+            <div style="color:var(--blue-primary);font-size:12px;letter-spacing:3px;">•••</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Bottom Frosted Stats & Free Quote Bar -->
+      <section id="stats-strip" aria-label="Agency Performance Metrics">
+        <div class="${p}-stats-bar">
+          <div class="${p}-stat-cell">
+            <strong>500+</strong>
+            <span>Projects</span>
+          </div>
+          <div class="${p}-stat-cell">
+            <strong>98%</strong>
+            <span>Client Satisfaction</span>
+          </div>
+          <div class="${p}-stat-cell">
+            <strong>24/7</strong>
+            <span>Support</span>
+          </div>
+          <div>
+            <button type="button" class="${p}-blue-btn" data-seamless-trigger="Request Free Custom Project Quote">Get Free Quote →</button>
+          </div>
+        </div>
+
+        <p style="text-align:center;margin:28px 0 40px;font-size:15px;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.88);">
+          <span style="color:var(--blue-cyan);">—</span> Modern <span style="color:var(--blue-cyan);">•</span> Fast <span style="color:var(--blue-cyan);">•</span> Secure <span style="color:var(--blue-cyan);">•</span> Scalable <span style="color:var(--blue-cyan);">—</span>
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--blue-cyan);">BIZNEXT PROJECT ESTIMATOR</span>
+        <button type="button" id="closeSeamlessBtn" style="background:none;border:1px solid var(--border);color:#fff;padding:6px 14px;border-radius:999px;cursor:pointer;">ESC</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:24px;margin-bottom:10px;">Get Your Free Website Proposal</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Receive a tailored architecture roadmap, timeline, and interactive prototype for your startup within 24 hours.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-blue-btn" style="width:100%;justify-content:center;">Submit Quote Request →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var titleEl = document.getElementById('screenModuleTitle');
+      var descEl = document.getElementById('screenModuleDesc');
+      var metricEl = document.getElementById('screenMetricBadge');
+      document.querySelectorAll('.biz-svc-btn').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.biz-svc-btn').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (titleEl) titleEl.textContent = card.getAttribute('data-title') || '';
+          if (descEl) descEl.textContent = card.getAttribute('data-desc') || '';
+          if (metricEl) metricEl.textContent = card.getAttribute('data-metric') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 24. MONOLITH CANVAS 216 -> BILEXER WEB3 IDENTITY (monolith-canvas-216 — Premium Tier)
+  // Faithful to "BLXR — Your Universal Web3 Identity" Nordic Particle Mountain UI
+  // ============================================================================
+  if (slug === 'monolith-canvas-216') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BLXR — Your Universal Privacy-First Web3 Identity (Bilexer)</title>
+  <meta name="description" content="100% self-custodial and decentralized Web3 identity layer built on zero-knowledge cryptography and chain-key synchronization across Ethereum, Solana, Bitcoin, and Cosmos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal-deep: #1E3238;
+      --teal-mid: #4E6B74;
+      --teal-mist: #88A2AA;
+      --sage-light: #DFECEF;
+      --cream-glow: #F7F9F4;
+      --glass: rgba(255, 255, 255, 0.16);
+      --glass-strong: rgba(255, 255, 255, 0.78);
+      --border: rgba(255, 255, 255, 0.28);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: linear-gradient(180deg, #5F7A83 0%, #314850 28%, #6D8891 58%, #385058 100%);
+      color: #FFFFFF;
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--cream-glow); color: var(--teal-deep); font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--cream-glow); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-shell {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 clamp(18px, 4vw, 48px);
+    }
+    .${p}-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 22px 0;
+      position: relative;
+      z-index: 20;
+    }
+    .${p}-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.14em;
+    }
+    .${p}-nav-pill {
+      display: flex;
+      gap: 24px;
+      padding: 9px 26px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+    }
+    .${p}-nav-pill a {
+      color: rgba(255, 255, 255, 0.88);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .${p}-waitlist-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 8px 7px 18px;
+      border-radius: 999px;
+      background: rgba(20, 36, 42, 0.72);
+      border: 1px solid var(--border);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .${p}-waitlist-dot {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--teal-deep);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+
+    /* Hero Stage with 3D Particle Mountain Wave */
+    .${p}-hero {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 36px 0 56px;
+    }
+    .${p}-bracket-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-left: 1px solid rgba(255,255,255,0.5);
+      border-right: 1px solid rgba(255,255,255,0.5);
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 8px;
+    }
+    .${p}-hero-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 20px;
+      position: relative;
+      z-index: 5;
+    }
+    .${p}-h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(4.2rem, 10.5vw, 8.6rem);
+      font-weight: 500;
+      font-style: italic;
+      line-height: 0.9;
+      color: rgba(247, 249, 244, 0.92);
+      letter-spacing: -0.02em;
+    }
+    .${p}-mountain-svg {
+      width: 100%;
+      height: auto;
+      margin: -60px 0 -30px;
+      position: relative;
+      z-index: 2;
+    }
+    .${p}-hero-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+      position: relative;
+      z-index: 6;
+    }
+    .${p}-badge-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .${p}-glass-sq {
+      width: 76px;
+      height: 76px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* Why Bilexer — Curved Mist Surface with Folder-Tabbed Cards */
+    .${p}-why-band {
+      background: linear-gradient(180deg, rgba(168, 192, 198, 0.45) 0%, rgba(92, 122, 130, 0.35) 100%);
+      border-top-left-radius: 56px;
+      border-top-right-radius: 56px;
+      padding: 56px clamp(20px, 4vw, 48px);
+      border-top: 1px solid rgba(255,255,255,0.3);
+    }
+    .${p}-folder-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .${p}-folder-card {
+      position: relative;
+      background: var(--glass-strong);
+      color: var(--teal-deep);
+      border-radius: 0 18px 18px 18px;
+      padding: 26px 20px;
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow: 0 18px 40px rgba(18, 34, 40, 0.16);
+      cursor: pointer;
+      transition: transform 0.22s ease;
+    }
+    .${p}-folder-card::before {
+      content: "";
+      position: absolute;
+      top: -14px;
+      left: 0;
+      width: 46%;
+      height: 15px;
+      background: var(--glass-strong);
+      border-radius: 12px 12px 0 0;
+    }
+    .${p}-folder-card:hover, .${p}-folder-card.is-active {
+      transform: translateY(-6px);
+      background: #FFFFFF;
+    }
+
+    /* How Do We Achieve This — Numbered 01..03 Glass Cards */
+    .${p}-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 28px 0 48px;
+    }
+    .${p}-step-card {
+      border-radius: 20px;
+      padding: 28px 24px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .${p}-step-num {
+      position: absolute;
+      top: 10px;
+      right: 18px;
+      font-size: 64px;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.14);
+      line-height: 1;
+    }
+
+    /* Where Bilexer Works 5-Column Matrix */
+    .${p}-works-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin: 28px 0 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(18, 32, 38, 0.78); backdrop-filter: blur(14px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 480px; width: 100%; border-radius: 24px; padding: 30px;
+      background: #233A42; color: #fff; border: 1px solid var(--border);
+    }
+
+    @media (max-width: 960px) {
+      .${p}-nav-pill { display: none; }
+      .${p}-folder-grid { grid-template-columns: 1fr 1fr; }
+      .${p}-steps-grid { grid-template-columns: 1fr; }
+      .${p}-works-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .${p}-folder-grid, .${p}-works-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:30px;height:30px;border:1px solid rgba(247,249,244,0.65);border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#F7F9F4;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-shell">
+    <header class="${p}-header">
+      <a href="#main-content" class="${p}-logo">
+        <span>🪽</span>
+        <span>BLXR</span>
+      </a>
+      <nav class="${p}-nav-pill" aria-label="Primary Navigation">
+        <a href="#why-bilexer">About Us</a>
+        <a href="#how-section">Our System</a>
+        <a href="#where-works">Use Cases</a>
+        <a href="#how-section">Technology</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <button type="button" id="motionToggleBtn" style="background:rgba(255,255,255,0.12);border:1px solid var(--border);color:#fff;padding:7px 14px;border-radius:999px;font-size:11px;cursor:pointer;" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-waitlist-btn">
+          <span>Join the Waitlist</span>
+          <span class="${p}-waitlist-dot">→</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" class="tabular-nums">
+      <section class="${p}-hero" aria-labelledby="heroHeading">
+        <div>
+          <span class="${p}-bracket-tag">Your Universal</span>
+          <h1 id="heroHeading" class="${p}-hero-title-row">
+            <span class="${p}-h1">Web3</span>
+            <span class="${p}-h1">Identity</span>
+          </h1>
+        </div>
+
+        <!-- 3D Dotted Particle Mountain Crest SVG -->
+        <svg class="${p}-mountain-svg" viewBox="0 0 1200 340" fill="none" role="img" aria-label="3D Particle Mountain Topography">
+          <defs>
+            <radialGradient id="crestGlow" cx="46%" cy="42%" r="40%">
+              <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.98" />
+              <stop offset="40%" stop-color="#E2ECE9" stop-opacity="0.72" />
+              <stop offset="75%" stop-color="#28424B" stop-opacity="0.45" />
+              <stop offset="100%" stop-color="#182A30" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="ridgeSlope" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1B2E35" />
+              <stop offset="46%" stop-color="#EBF3F0" />
+              <stop offset="100%" stop-color="#1E333A" />
+            </linearGradient>
+          </defs>
+          <path d="M0,250 C220,210 380,45 530,38 C680,32 860,185 1200,155 L1200,340 L0,340 Z" fill="url(#ridgeSlope)" opacity="0.88" />
+          <ellipse cx="545" cy="135" rx="260" ry="105" fill="url(#crestGlow)" />
+          <path d="M80,260 Q530,15 1120,185" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="3 7" opacity="0.75" />
+          <path d="M140,285 Q540,45 1080,215" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="2 8" opacity="0.55" />
+          <path d="M200,310 Q550,82 1040,245" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="2 9" opacity="0.4" />
+        </svg>
+
+        <div class="${p}-hero-bottom">
+          <p style="font-size:12.5px;max-width:340px;line-height:1.55;color:rgba(255,255,255,0.88);">
+            100% Self-Custodial &amp; decentralized DeFi Platform for Bitcoin &amp; Ethereum assets, using Chain-Key Cryptography
+          </p>
+          <div class="${p}-badge-row">
+            <div class="${p}-glass-sq">Private</div>
+            <div class="${p}-glass-sq">Secure</div>
+            <div class="${p}-glass-sq">Portable</div>
+            <div class="${p}-glass-sq">Verifiable</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Bilexer — Folder-Tabbed Glass Cards -->
+      <section id="why-bilexer" class="${p}-why-band" aria-labelledby="whyHeading">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+          <h2 id="whyHeading" style="font-family:var(--font-serif);font-size:clamp(2.2rem,4vw,3.2rem);font-style:italic;font-weight:500;">
+            Why Bilexer
+          </h2>
+          <p id="blxrStatusOut" style="font-size:12.5px;max-width:340px;color:rgba(255,255,255,0.9);">
+            Identity in Web3 should be private, portable, and controlled by the user — not by centralized platforms.
+          </p>
+        </div>
+
+        <div class="${p}-folder-grid" role="group" aria-label="Bilexer Privacy Architecture Pillars">
+          <article class="${p}-folder-card is-active blxr-card" tabindex="0" role="button" data-next-preview="true" data-status="ZK-PROOF VERIFIED: Zero raw personal data ever leaves your hardware enclave.">
+            <h3 style="font-size:15px;font-weight:700;margin-bottom:8px;">Privacy Without<br />Compromise</h3>
+            <p style="font-size:12px;line-height:1.55;opacity:0.82;">
+              Your raw data never leaves your device. Identity verification is powered by zero-knowledge proofs.
+            </p>
+          </article>
+
+          <article class="${p}-folder-card blxr-card" tabindex="0" role="button" data-next-preview="true" data-status="CHAIN-KEY SYNC: Unified DID active across Ethereum, Solana, Bitcoin, and Cosmos.">
+            <h3 style="font-size:15px;font-weight:700;margin-bottom:8px;">One Identity<br />for Every Chain</h3>
+            <p style="font-size:12px;line-height:1.55;opacity:0.82;">
+              A single private identity compatible with Ethereum, Solana, Bitcoin, Layer 2s, Cosmos, and all major Web3 networks.
+            </p>
+          </article>
+
+          <article class="${p}-folder-card blxr-card" tabindex="0" role="button" data-next-preview="true" data-status="SELF-CUSTODIAL: Zero centralized servers or revocable third-party registries.">
+            <h3 style="font-size:15px;font-weight:700;margin-bottom:8px;">You Own Your Identity</h3>
+            <p style="font-size:12px;line-height:1.55;opacity:0.82;">
+              No centralized verification, no data handling, no storage. Full user autonomy from day one.
+            </p>
+          </article>
+
+          <article class="${p}-folder-card blxr-card" tabindex="0" role="button" data-next-preview="true" data-status="SELECTIVE DISCLOSURE: Prove age, region, or reputation while keeping wallet balances private.">
+            <h3 style="font-size:15px;font-weight:700;margin-bottom:8px;">Reveal Only What<br />You Choose</h3>
+            <p style="font-size:12px;line-height:1.55;opacity:0.82;">
+              Provide cryptographic proofs of age, region, experience, or reputation — while keeping all personal data hidden.
+            </p>
+          </article>
+        </div>
+
+        <!-- How Do We Achieve This -->
+        <div id="how-section" style="margin-top:52px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+            <h2 style="font-family:var(--font-serif);font-size:clamp(2rem,3.6vw,3rem);line-height:1.05;font-weight:500;">
+              <em>How do we</em><br />achieve this
+            </h2>
+            <p style="font-size:12.5px;max-width:340px;color:rgba(255,255,255,0.88);">
+              A privacy-first identity system built on zero-knowledge cryptography and cross-chain synchronization.
+            </p>
+          </div>
+
+          <div class="${p}-steps-grid">
+            <article class="${p}-step-card">
+              <span class="${p}-step-num">01</span>
+              <h3 style="font-size:16px;font-weight:700;margin-top:36px;margin-bottom:8px;">Local Key Creation</h3>
+              <p style="font-size:12.5px;color:rgba(255,255,255,0.82);line-height:1.55;">
+                Identity keys are generated locally on your device, ensuring no personal data ever touches external servers.
+              </p>
+            </article>
+            <article class="${p}-step-card">
+              <span class="${p}-step-num">02</span>
+              <h3 style="font-size:16px;font-weight:700;margin-top:36px;margin-bottom:8px;">ZK-Proof Validation</h3>
+              <p style="font-size:12.5px;color:rgba(255,255,255,0.82);line-height:1.55;">
+                Your uniqueness and attributes are verified cryptographically — without revealing any raw information.
+              </p>
+            </article>
+            <article class="${p}-step-card">
+              <span class="${p}-step-num">03</span>
+              <h3 style="font-size:16px;font-weight:700;margin-top:36px;margin-bottom:8px;">State Mirror Protocol</h3>
+              <p style="font-size:12.5px;color:rgba(255,255,255,0.82);line-height:1.55;">
+                Your identity seamlessly propagates across blockchains without bridges, custodians, or centralized sequencers.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Where Bilexer Works -->
+        <div id="where-works" style="text-align:center;margin-top:28px;">
+          <h2 style="font-family:var(--font-serif);font-size:clamp(2rem,3.6vw,3rem);font-style:italic;font-weight:500;">
+            Where Bilexer Works
+          </h2>
+          <p style="font-size:12.5px;color:rgba(255,255,255,0.82);margin-top:4px;">
+            A universal identity layer for the entire Web3 ecosystem
+          </p>
+
+          <div class="${p}-works-grid" style="text-align:left;">
+            <div>
+              <h3 style="font-size:13px;font-weight:700;margin-bottom:6px;">Passwordless Authentication</h3>
+              <p style="font-size:11.5px;color:rgba(255,255,255,0.78);">Instant access to any dApp using your Bilexer ID — no emails, no passwords, no leaks.</p>
+            </div>
+            <div>
+              <h3 style="font-size:13px;font-weight:700;margin-bottom:6px;">Regulatory Access Without KYC</h3>
+              <p style="font-size:11.5px;color:rgba(255,255,255,0.78);">Provide zk-proofs of age or region to meet requirements without exposing identity.</p>
+            </div>
+            <div>
+              <h3 style="font-size:13px;font-weight:700;margin-bottom:6px;">Sybil-Resistant Voting</h3>
+              <p style="font-size:11.5px;color:rgba(255,255,255,0.78);">"One human = one vote" enabled through zk-verified uniqueness across DAOs.</p>
+            </div>
+            <div>
+              <h3 style="font-size:13px;font-weight:700;margin-bottom:6px;">Anti-Sybil Airdrop Distribution</h3>
+              <p style="font-size:11.5px;color:rgba(255,255,255,0.78);">Filter bots and multi-wallet abusers through zero-knowledge uniqueness proofs.</p>
+            </div>
+            <div>
+              <h3 style="font-size:13px;font-weight:700;margin-bottom:6px;">Portable Digital Persona</h3>
+              <p style="font-size:11.5px;color:rgba(255,255,255,0.78);">One profile for multiple games, complete with zk-verified achievements and traits.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div style="text-align:center;margin-top:36px;padding-top:32px;border-top:1px solid var(--border);">
+          <h2 style="font-family:var(--font-serif);font-size:clamp(2rem,3.8vw,3.2rem);font-weight:500;margin-bottom:10px;">
+            <em>Join the next generation of</em><br />privacy-first digital identity
+          </h2>
+          <p style="font-size:12.5px;color:rgba(255,255,255,0.82);margin-bottom:18px;">
+            Own your identity — don't share it, don't lose it, don't leak it.
+          </p>
+          <button type="button" class="${p}-waitlist-btn" data-seamless-trigger="Mint Your Self-Custodial BLXR Identity">
+            <span>Join the Waitlist</span>
+            <span class="${p}-waitlist-dot">→</span>
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:11px;">BLXR // CHAIN-KEY WAITLIST</span>
+        <button type="button" id="closeSeamlessBtn" style="background:none;border:1px solid var(--border);color:#fff;padding:5px 12px;border-radius:999px;cursor:pointer;">ESC</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-serif);font-size:28px;font-weight:500;margin-bottom:10px;">Reserve Your Universal BLXR DID</h2>
+      <p style="font-size:14px;color:rgba(255,255,255,0.82);line-height:1.6;margin-bottom:20px;">
+        Generate your local zero-knowledge keypair and claim early access to the Bilexer State Mirror testnet.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-waitlist-btn" style="width:100%;justify-content:center;">Initialize Local ZK Enclave →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var out = document.getElementById('blxrStatusOut');
+      document.querySelectorAll('.blxr-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.blxr-card').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (out) out.textContent = card.getAttribute('data-status') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 25. IMAGE SOME -> BLOBS PET COMPANION (image-some — Premium Tier)
+  // Faithful to "Мокапы / Blobs" Monochrome Black-Cat Blob & Peach Pet Care App
+  // ============================================================================
+  if (slug === 'image-some') {
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blobs — Smart Pet Health, GPS Collar &amp; Veterinary Care Companion</title>
+  <meta name="description" content="Playful monochrome ink-black, pure white, and warm peach-apricot smart pet companion showcase featuring expressive black-cat blob illustrations, live GPS collar telemetry, and veterinary calendars." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-ink: #13141C;
+      --card-ink: #1C1E2A;
+      --snow: #FFFFFF;
+      --peach: #FFAE73;
+      --peach-soft: #FFE4CE;
+      --muted: #8E93A6;
+      --border-ink: #13141C;
+      --font-display: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg-ink);
+      color: var(--snow);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      max-width: 100%;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 9999; padding: 10px 18px; background: var(--peach); color: var(--bg-ink); font-weight: 700; border-radius: 999px; text-decoration: none; }
+    .skip-link:focus-visible { top: 16px; outline: 2px solid #fff; }
+    a, button { font-family: inherit; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--peach); outline-offset: 3px; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .is-motion-paused *, .is-motion-paused *::before, .is-motion-paused *::after { animation-play-state: paused !important; transition-duration: 0.01ms !important; }
+
+    .${p}-shell {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 24px clamp(16px, 3.5vw, 44px);
+    }
+    .${p}-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .${p}-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .${p}-pill-btn {
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.24);
+      background: transparent;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .${p}-pill-btn.is-peach, .${p}-pill-btn:hover {
+      background: var(--peach);
+      color: var(--bg-ink);
+      border-color: var(--peach);
+    }
+
+    /* Multi-Phone Mockups Showcase Stage (Мокапы) */
+    .${p}-Phones-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+    .${p}-phone {
+      background: var(--snow);
+      color: var(--bg-ink);
+      border-radius: 40px;
+      padding: 18px 16px 22px;
+      border: 7px solid #E2E6F0;
+      box-shadow: 0 28px 65px rgba(0, 0, 0, 0.55);
+      min-height: 650px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .${p}-phone.is-dark {
+      background: var(--bg-ink);
+      color: var(--snow);
+    }
+    .${p}-status-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      opacity: 0.85;
+    }
+    .${p}-outline-pill {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1.5px solid var(--bg-ink);
+      background: #fff;
+      color: var(--bg-ink);
+      font-size: 11px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .${p}-vitals-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .${p}-vital-box {
+      background: var(--bg-ink);
+      color: #fff;
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .${p}-cal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .${p}-cal-day {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      border: 1.2px solid var(--bg-ink);
+      margin: 0 auto;
+    }
+    .${p}-cal-day.is-peach {
+      background: var(--peach);
+      border-color: var(--peach);
+      color: var(--bg-ink);
+    }
+    .${p}-cal-day.is-black {
+      background: var(--bg-ink);
+      color: #fff;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; background: rgba(19, 20, 28, 0.82); backdrop-filter: blur(12px);
+      display: none; align-items: center; justify-content: center; z-index: 999; padding: 20px;
+    }
+    .${p}-modal.is-open { display: flex; }
+    .${p}-modal-box {
+      max-width: 460px; width: 100%; border-radius: 28px; padding: 30px;
+      background: #fff; color: var(--bg-ink); border: 4px solid var(--peach);
+    }
+
+    @media (max-width: 1150px) {
+      .${p}-Phones-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .${p}-Phones-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" style="position:fixed;width:30px;height:30px;border:1.5px solid #FFAE73;border-radius:50%;pointer-events:none;z-index:9998;transform:translate3d(-100px,-100px,0);"></div>
+  <div id="cursorDot" style="position:fixed;width:6px;height:6px;background:#FFAE73;border-radius:50%;pointer-events:none;z-index:9999;transform:translate3d(-100px,-100px,0);"></div>
+
+  <div class="${p}-shell">
+    <header class="${p}-header">
+      <a href="#main-content" class="${p}-brand">
+        <span style="display:inline-flex;width:36px;height:36px;border-radius:50%;background:var(--peach);color:var(--bg-ink);align-items:center;justify-content:center;font-weight:900;">🐱</span>
+        <span>Blobs • Мокапы</span>
+      </a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;" role="group" aria-label="Switch Active Pet Profile">
+        <button type="button" class="${p}-pill-btn is-peach blob-pet-btn" data-next-preview="true" data-pet="Огурец (Abyssinian Cat • 10 mos • 14 kg)" data-bp="123 мм. рт. ст." data-speed="12 км.ч">🐱 Огурец (Cat)</button>
+        <button type="button" class="${p}-pill-btn blob-pet-btn" data-next-preview="true" data-pet="Бублик (Welsh Corgi • 2 yrs • 11.4 kg)" data-bp="118 мм. рт. ст." data-speed="19 км.ч">🐶 Бублик (Dog)</button>
+        <button type="button" class="${p}-pill-btn blob-pet-btn" data-next-preview="true" data-pet="Пиксик (Chinchilla • 8 mos • 0.6 kg)" data-bp="110 мм. рт. ст." data-speed="6 км.ч">🐹 Пиксик (Chinchilla)</button>
+        <button type="button" id="motionToggleBtn" class="${p}-pill-btn" aria-pressed="false">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-pill-btn is-peach">Download iOS App →</button>
+      </div>
+    </header>
+
+    <main id="main-content" class="tabular-nums">
+      <div style="text-align:center;margin-bottom:26px;">
+        <h1 style="font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.4rem);font-weight:700;">
+          Мокапы • Smart Pet Care &amp; GPS Telemetry
+        </h1>
+        <p id="activePetBanner" style="font-family:var(--font-mono);font-size:13px;color:var(--peach);margin-top:6px;">
+          ACTIVE PET: Огурец (Abyssinian Cat • 10 mos • 14 kg) — Collar GPS Online
+        </p>
+      </div>
+
+      <!-- 4-Screen Interactive iPhone Mockup Grid -->
+      <section class="${p}-Phones-grid" aria-label="Interactive iOS Pet Care Screens">
+        <!-- PHONE 1: Pet Biography & Blood Pressure / Speed Telemetry (Огурец) -->
+        <article class="${p}-phone">
+          <div>
+            <div class="${p}-status-row"><span>5:13 PM</span><span>⏰ 🛜 🔋</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+              <span style="font-weight:800;">‹</span>
+              <strong id="phonePetName" style="font-size:15px;">Огурец</strong>
+              <span>⋮</span>
+            </div>
+
+            <!-- Black Cat Liquid Blob Mascot SVG -->
+            <div style="text-align:center;margin:8px 0;">
+              <svg viewBox="0 0 180 155" style="width:148px;height:128px;" role="img" aria-label="Black Cat Mascot Огурец">
+                <circle cx="90" cy="78" r="62" fill="#FFFFFF" stroke="#13141C" stroke-width="3" />
+                <path d="M48,78 C46,45 55,22 62,18 C72,32 76,38 90,38 C104,38 108,32 118,18 C125,22 134,45 132,78 C130,108 112,122 90,122 C68,122 50,108 48,78 Z" fill="#13141C" />
+                <ellipse cx="73" cy="74" rx="11" ry="15" fill="#FFFFFF" />
+                <ellipse cx="75" cy="74" rx="6" ry="9" fill="#13141C" />
+                <ellipse cx="107" cy="74" rx="11" ry="15" fill="#FFFFFF" />
+                <ellipse cx="105" cy="74" rx="6" ry="9" fill="#13141C" />
+                <path d="M84,92 Q90,97 96,92" stroke="#FFFFFF" stroke-width="2" fill="none" />
+              </svg>
+              <div style="margin-top:-6px;">
+                <span style="background:var(--bg-ink);color:#fff;padding:5px 16px;border-radius:999px;font-size:11px;font-weight:700;">Биография</span>
+              </div>
+              <p style="font-size:13px;font-weight:700;margin-top:8px;">Абиссинский кот ♂</p>
+            </div>
+
+            <div style="display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin:10px 0;">
+              <span class="${p}-outline-pill">Черный <small style="opacity:0.6;">Цвет</small></span>
+              <span class="${p}-outline-pill">10 месяцев <small style="opacity:0.6;">Возраст</small></span>
+              <span class="${p}-outline-pill">14 кг <small style="opacity:0.6;">Вес</small></span>
+            </div>
+          </div>
+
+          <!-- Bottom Dark Vitals Telemetry Card -->
+          <div>
+            <div style="font-size:12px;font-weight:800;margin-bottom:6px;display:flex;justify-content:space-between;">
+              <span>Динамика</span><span>⌄</span>
+            </div>
+            <div class="${p}-vitals-grid">
+              <div class="${p}-vital-box">
+                <div style="font-size:9px;opacity:0.75;">Артериальное Давление</div>
+                <svg viewBox="0 0 100 36" style="width:100%;height:28px;margin:4px 0;">
+                  <path d="M4,28 L26,22 L48,25 L72,12 L96,8" stroke="#FFAE73" stroke-width="2" stroke-dasharray="3 3" fill="none" />
+                  <circle cx="96" cy="8" r="3.5" fill="#FFAE73" />
+                </svg>
+                <strong id="phoneBpVal" style="font-size:11px;">123 мм. рт. ст.</strong>
+              </div>
+              <div class="${p}-vital-box">
+                <div style="font-size:9px;opacity:0.75;">Скорость</div>
+                <svg viewBox="0 0 100 36" style="width:100%;height:28px;margin:4px 0;">
+                  <path d="M4,26 L32,14 L64,20 L96,10" stroke="#FFAE73" stroke-width="2" stroke-dasharray="3 3" fill="none" />
+                  <circle cx="96" cy="10" r="3.5" fill="#FFAE73" />
+                </svg>
+                <strong id="phoneSpeedVal" style="font-size:11px;">12 км.ч</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PHONE 2: Мои питомцы & Планы (Dark Mode Screen) -->
+        <article class="${p}-phone is-dark">
+          <div>
+            <div class="${p}-status-row"><span>5:13 PM</span><span>⏰ 🛜 🔋</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+              <strong style="font-size:15px;">Мои питомцы</strong>
+              <span>＋ ⋮</span>
+            </div>
+
+            <!-- White Card Holding 3 Pet Avatars -->
+            <div style="background:#fff;color:var(--bg-ink);border-radius:24px;padding:14px;">
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;">
+                <div>
+                  <div style="width:52px;height:52px;border-radius:50%;border:2px solid var(--bg-ink);margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:22px;">🐱</div>
+                  <div style="font-size:10px;font-weight:800;">Огурец</div>
+                  <span style="font-size:9px;background:var(--bg-ink);color:#fff;padding:2px 8px;border-radius:999px;">Кот</span>
+                </div>
+                <div>
+                  <div style="width:52px;height:52px;border-radius:50%;border:2px solid var(--bg-ink);margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:22px;">🐶</div>
+                  <div style="font-size:10px;font-weight:800;">Бублик</div>
+                  <span style="font-size:9px;background:var(--bg-ink);color:#fff;padding:2px 8px;border-radius:999px;">Собака</span>
+                </div>
+                <div>
+                  <div style="width:52px;height:52px;border-radius:50%;border:2px solid var(--bg-ink);margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:22px;">🐹</div>
+                  <div style="font-size:10px;font-weight:800;">Пиксик</div>
+                  <span style="font-size:9px;background:var(--bg-ink);color:#fff;padding:2px 8px;border-radius:999px;">Шиншилла</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Планы Schedule -->
+            <div style="margin-top:16px;">
+              <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:8px;">
+                <strong>Планы</strong>
+                <span style="color:var(--muted);font-size:10px;">Добавить +</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:12px;align-items:center;">
+                <span>10</span><span>11</span>
+                <span style="background:var(--peach);color:var(--bg-ink);padding:4px 8px;border-radius:999px;font-weight:800;">12</span>
+                <span>13</span><span>14</span><span>15</span><span>16</span>
+              </div>
+              <div style="background:var(--peach-soft);color:var(--bg-ink);padding:10px 14px;border-radius:999px;font-size:11px;font-weight:700;display:flex;justify-content:space-between;margin-bottom:8px;">
+                <span>Запись к ветеринару</span><span>08:00</span>
+              </div>
+              <div style="border:1px solid rgba(255,255,255,0.28);padding:10px 14px;border-radius:999px;font-size:11px;display:flex;justify-content:space-between;">
+                <span>Прогулка с друзьями</span><span>09:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#fff;color:var(--bg-ink);border-radius:22px;padding:14px;">
+            <div style="border:1.5px solid var(--bg-ink);border-radius:999px;padding:8px 14px;font-size:11px;font-weight:700;display:flex;justify-content:space-between;margin-bottom:8px;">
+              <span>Не забудь о встречах!</span><span>‹</span>
+            </div>
+            <div style="border:1.5px solid var(--bg-ink);border-radius:999px;padding:8px 14px;font-size:11px;font-weight:700;display:flex;justify-content:space-between;">
+              <span>Приходи к нам</span><span>‹</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PHONE 3: Live Collar GPS Map & Vet Articles -->
+        <article class="${p}-phone">
+          <div>
+            <div class="${p}-status-row"><span>5:13 PM</span><span>⏰ 🛜 🔋</span></div>
+            <div style="background:var(--bg-ink);color:#fff;border-radius:22px;padding:12px;margin-bottom:12px;">
+              <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:8px;">
+                <span>‹</span><span>GPS</span><span>⋮</span>
+              </div>
+              <div style="display:flex;justify-content:space-around;font-size:10px;">
+                <span style="color:var(--peach);font-weight:700;">● Огурец</span>
+                <span>○ Бублик</span>
+                <span>○ Пиксик</span>
+              </div>
+            </div>
+
+            <!-- Interactive SVG Street Map with Orange Route & Cat Pin -->
+            <div style="border-radius:22px;overflow:hidden;border:1.5px solid #E2E6F0;background:#F1F3F8;padding:6px;">
+              <svg viewBox="0 0 240 230" style="width:100%;height:auto;" role="img" aria-label="Live Pet Collar GPS Route">
+                <rect width="240" height="230" rx="16" fill="#EEF1F6" />
+                <path d="M0,45 L240,120 M0,155 L240,75 M85,0 L145,230 M180,0 L70,230" stroke="#FFFFFF" stroke-width="14" />
+                <path d="M55,205 L118,122 L185,152" stroke="#FFAE73" stroke-width="3.5" fill="none" />
+                <circle cx="118" cy="122" r="16" fill="#13141C" />
+                <text x="118" y="127" text-anchor="middle" font-size="13" fill="#fff">🐱</text>
+                <circle cx="185" cy="152" r="10" fill="#13141C" />
+              </svg>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size:11px;font-weight:800;margin-bottom:8px;">Что нужно знать про прививки?</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <div style="border:1.5px solid var(--bg-ink);border-radius:16px;padding:10px;font-size:10px;font-weight:700;">
+                💉 Прививки кошкам и собакам
+              </div>
+              <div style="border:1.5px solid var(--bg-ink);border-radius:16px;padding:10px;font-size:10px;font-weight:700;">
+                🩺 Профилактика болезней
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PHONE 4: Календарь & Трекеры (Май Medication & Walk Tracker) -->
+        <article class="${p}-phone">
+          <div>
+            <div class="${p}-status-row"><span>5:13 PM</span><span>⏰ 🛜 🔋</span></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;border:1.5px solid var(--bg-ink);border-radius:999px;padding:2px;margin-bottom:12px;font-size:11px;font-weight:700;text-align:center;">
+              <span style="padding:5px;">Календарь</span>
+              <span style="padding:5px;background:var(--bg-ink);color:#fff;border-radius:999px;">Трекеры</span>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:700;margin-bottom:8px;">
+              <span>🐱 Дать таблетки 2x</span>
+              <span style="color:var(--muted);font-size:9px;">2 раза в день</span>
+            </div>
+
+            <div style="text-align:center;font-size:12px;font-weight:800;margin:6px 0;">‹ Май ›</div>
+            <div class="${p}-cal-grid">
+              <span class="${p}-cal-day is-peach">1</span>
+              <span class="${p}-cal-day is-peach">2</span>
+              <span class="${p}-cal-day is-black">3</span>
+              <span class="${p}-cal-day is-peach">4</span>
+              <span class="${p}-cal-day is-peach">5</span>
+              <span class="${p}-cal-day is-peach">6</span>
+              <span class="${p}-cal-day is-peach">7</span>
+              <span class="${p}-cal-day is-peach">8</span>
+              <span class="${p}-cal-day is-peach">9</span>
+              <span class="${p}-cal-day is-peach">10</span>
+              <span class="${p}-cal-day is-peach">11</span>
+              <span class="${p}-cal-day is-peach">12</span>
+              <span class="${p}-cal-day">13</span>
+              <span class="${p}-cal-day is-peach">14</span>
+              <span class="${p}-cal-day">15</span>
+              <span class="${p}-cal-day">16</span>
+              <span class="${p}-cal-day">17</span>
+              <span class="${p}-cal-day">18</span>
+              <span class="${p}-cal-day">19</span>
+              <span class="${p}-cal-day">20</span>
+              <span class="${p}-cal-day">21</span>
+            </div>
+          </div>
+
+          <div style="background:#F6F7FB;border-radius:20px;padding:12px;">
+            <div style="font-size:11px;font-weight:800;margin-bottom:8px;">🐶 Бублик • Поход в туалет</div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:4px;">
+              <span style="background:var(--peach);padding:8px 6px;border-radius:999px;font-size:10px;font-weight:800;">8 пн</span>
+              <span style="background:var(--peach);padding:8px 6px;border-radius:999px;font-size:10px;font-weight:800;">9 вт</span>
+              <span style="background:var(--bg-ink);color:#fff;padding:8px 6px;border-radius:999px;font-size:10px;font-weight:800;">10 ср</span>
+              <span style="background:var(--peach);padding:8px 6px;border-radius:999px;font-size:10px;font-weight:800;">11 чт</span>
+              <button type="button" style="width:32px;height:32px;border-radius:50%;background:var(--peach);border:none;font-weight:900;cursor:pointer;" data-seamless-trigger="Log New Pet Care Event">+</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div id="seamlessModal" class="${p}-modal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;">BLOBS PET OS // IOS &amp; ANDROID</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-outline-pill" style="cursor:pointer;">ESC</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Pair Smart GPS Collar &amp; App</h2>
+      <p style="font-size:14px;color:#475569;line-height:1.6;margin-bottom:20px;">
+        Track your cat or dog in real time, monitor blood pressure and velocity, and sync vaccination reminders with your local veterinary clinic.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill-btn is-peach" style="width:100%;">Get Blobs Companion App →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var banner = document.getElementById('activePetBanner');
+      var nameEl = document.getElementById('phonePetName');
+      var bpEl = document.getElementById('phoneBpVal');
+      var speedEl = document.getElementById('phoneSpeedVal');
+      document.querySelectorAll('.blob-pet-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.blob-pet-btn').forEach(function (b) { b.classList.remove('is-peach'); });
+          btn.classList.add('is-peach');
+          var pet = btn.getAttribute('data-pet') || '';
+          if (banner) banner.textContent = 'ACTIVE PET: ' + pet + ' — Collar GPS Online';
+          if (nameEl) nameEl.textContent = pet.split(' ')[0];
+          if (bpEl) bpEl.textContent = btn.getAttribute('data-bp') || '';
+          if (speedEl) speedEl.textContent = btn.getAttribute('data-speed') || '';
         });
       });
     })();

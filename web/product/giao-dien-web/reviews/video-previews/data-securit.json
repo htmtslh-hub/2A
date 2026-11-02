@@ -1,0 +1,48 @@
+{
+  "id": "t199",
+  "slug": "data-securit",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T00:05:10.394Z",
+  "demo": "/demos/data-securit/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "4ea638d472a9",
+  "sha256": "4ea638d472a9613e2598f11be4b98d2fb0f885c14d0cdb49e2c58d670ce51078",
+  "demoHtmlSha256": "c12fff6aa30f6e0dabeb626831d8077423e6e2cb8b38e197f692357841204b89",
+  "demoSha256": "825e42cee15e3033c23f0f0b578fec4af9419e9291e4bebc97b5ce68c8f8fcf2",
+  "bytes": 326629,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.471,
+      "action": "click",
+      "selector": "#verifyDemoBtn"
+    },
+    {
+      "seconds": 4.852,
+      "action": "click",
+      "selector": "#verifyDemoBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 681
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\data-securit-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\data-securit-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\data-securit-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\data-securit-return.jpg"
+  ]
+}

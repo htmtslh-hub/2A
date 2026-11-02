@@ -1,0 +1,34 @@
+{
+  "pinId": "local-2c0b60dbf2ce",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1092826665858010875_Mục_này_có_hình_ảnh_của_AI-Designs_L.png",
+  "archivedImagePath": "E:\\DONG_PHU\\2A\\anh-mau-pinterest\\da-lam\\2026-11-03\\pin_1092826665858010875_Mục_này_có_hình_ảnh_của_AI-Designs_L.png",
+  "title": "Looo AI Magic Studio",
+  "slug": "looo-ai-magic",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-sticky-counters",
+    "name": "Sticky Pinned Storytelling + Scroll Scrubbing + Number Counters",
+    "focus": [
+      "sticky-pinned-stage",
+      "scroll-scrub-rotation",
+      "number-counters"
+    ],
+    "description": "Tập trung vào ghim cố định chủ thể ở giữa màn hình xoay theo thanh cuộn (Scroll Scrubbing) kết hợp đếm số tự động."
+  },
+  "localImagePath": "E:\\DONG_PHU\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-11-03\\looo-ai-magic.png",
+  "imageBytes": 1220366,
+  "imageSha256": "2c0b60dbf2ce8f54078e93b05a5303284e0530b235a88dc5fee30c182afbd31e",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 1280,
+    "height": 2074,
+    "aspectRatio": 0.62,
+    "reason": "Rejected geometry (1280x2074, AR=0.62) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-11-02T22:35:45.922Z",
+  "category": "commerce",
+  "prompt_text": "Iridescent cobalt-violet & rose-aura AI creative studio featuring 50+ theme prompt search, 3D holographic ribbon service cards (Web Design, App, Graphic), and curated 4-column poster trend gallery."
+}

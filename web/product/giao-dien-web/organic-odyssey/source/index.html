@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Organic Visions — Witness the Hidden Realm</title>
+  <meta name="description" content="An odyssey through delicate living forms, revealed by lens and curiosity — featuring full-bleed bioluminescent macro cinema, liquid-glass optics, and interactive specimen archive.">
+  <meta property="og:title" content="Organic Visions — Witness the Hidden Realm">
+  <meta property="og:description" content="An odyssey through delicate living forms, revealed by lens and curiosity.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#010101">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #010101;
+      --surface: #080d0e;
+      --surface-elevated: #0f191b;
+      --glass: rgba(255, 255, 255, 0.08);
+      --fg: #ffffff;
+      --muted: rgba(255, 255, 255, 0.72);
+      --border: rgba(255, 255, 255, 0.16);
+      --accent: #5eead4;
+      --accent-text: #99f6e4;
+      --accent-strong: #2dd4bf;
+      --on-accent: #021714;
+      --font-display: 'EB Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 24px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .org30-cursor-ring, .org30-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .org30-cursor-ring { width: 34px; height: 34px; border: 1.5px solid var(--accent); margin: -17px 0 0 -17px; }
+    .org30-cursor-dot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
+
+    @keyframes charRise {
+      0% { opacity: 0; transform: translateY(18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    }
+
+    .org30-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 190;
+      padding: 20px clamp(20px, 4.5vw, 56px);
+      background: linear-gradient(180deg, rgba(1, 1, 1, 0.78) 0%, rgba(1, 1, 1, 0) 100%);
+    }
+    .org30-nav {
+      max-width: 1360px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .org30-brand {
+      color: var(--fg); text-decoration: none; font-size: 13px; font-weight: 500;
+      letter-spacing: 0.25em; text-transform: uppercase;
+    }
+    .org30-nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .org30-nav-links a {
+      color: rgba(255, 255, 255, 0.8); text-decoration: none; font-size: 14px; font-weight: 300;
+      letter-spacing: 0.04em;
+    }
+    .org30-nav-links a:hover { color: #ffffff; }
+
+    .org30-hero {
+      position: relative; min-height: 100vh; width: 100%; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      padding: 120px clamp(20px, 4vw, 48px) 80px;
+    }
+    .org30-hero-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;
+    }
+    .org30-hero-scrim {
+      position: absolute; inset: 0; z-index: 2;
+      background: radial-gradient(circle at 50% 50%, rgba(1, 1, 1, 0.25) 0%, rgba(1, 1, 1, 0.78) 100%);
+    }
+    .org30-hero-content {
+      position: relative; z-index: 10; text-align: center; max-width: 960px; margin: 0 auto;
+    }
+    .org30-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.85rem, 6.8vw, 5.6rem);
+      font-weight: 400; line-height: 1.06; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #ffffff;
+    }
+    .org30-char {
+      display: inline-block; animation: charRise 0.8s var(--ease-out) both;
+    }
+    .org30-hero-sub {
+      font-weight: 300; font-size: clamp(1rem, 1.5vw, 1.22rem);
+      color: rgba(255, 255, 255, 0.82); letter-spacing: 0.04em; line-height: 1.7;
+      max-width: 580px; margin: 28px auto 40px;
+    }
+    .org30-cta-btn {
+      padding: 15px 38px; border-radius: 999px; color: #ffffff;
+      font-size: 14px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase;
+      cursor: pointer;
+    }
+    .org30-cta-btn:hover { background: rgba(255, 255, 255, 0.14); border-color: rgba(153, 246, 228, 0.45); }
+
+    .org30-section {
+      max-width: 1280px; margin: 0 auto; padding: 76px clamp(20px, 4vw, 48px);
+      border-top: 1px solid var(--border);
+    }
+    .org30-specimen-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 32px;
+    }
+    .org30-specimen-card {
+      border-radius: 22px; padding: 28px; cursor: pointer;
+      display: flex; flex-direction: column; justify-content: space-between; min-height: 240px;
+    }
+    .org30-specimen-card.is-active, .org30-specimen-card:hover {
+      border-color: var(--accent);
+    }
+
+    .org30-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(1, 1, 1, 0.82); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(16px);
+    }
+    .org30-modal.is-open { opacity: 1; pointer-events: auto; }
+    .org30-modal-box {
+      width: 100%; max-width: 480px; border-radius: 24px; padding: 30px;
+    }
+
+    @media (max-width: 960px) {
+      .org30-specimen-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .org30-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="org30-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="org30-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <header class="org30-header">
+    <div class="org30-nav">
+      <a href="#wander" class="org30-brand" style="display:inline-flex;align-items:center;gap:10px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-text)" stroke-width="1.8" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/>
+          <circle cx="12" cy="12" r="3.5"/>
+        </svg>
+        ORGANIC VISIONS
+      </a>
+      <nav aria-label="Primary">
+        <ul class="org30-nav-links">
+          <li><a href="#wander">Wander</a></li>
+          <li><a href="#archive">Archive</a></li>
+          <li><a href="#story">Story</a></li>
+          <li><a href="#connect">Connect</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" class="liquid-glass" style="padding:8px 16px;border-radius:999px;color:#ffffff;font-size:12px;cursor:pointer;">
+          Motion: ON
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="wander" class="org30-hero" aria-label="Witness the Hidden Realm Hero">
+      <video class="org30-hero-video" autoplay loop muted playsinline preload="auto" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260619_191346_9d19d66e-86a4-47f7-8dc6-712c1788c3b2.mp4" aria-hidden="true"></video>
+      <div class="org30-hero-scrim" aria-hidden="true"></div>
+
+      <div class="org30-hero-content">
+        <h1 class="org30-hero-title">
+          <span style="display:block;">WITNESS THE</span>
+          <span style="display:block;color:var(--accent-text);">HIDDEN REALM</span>
+        </h1>
+        <p class="org30-hero-sub" id="odysseyLensSub">
+          An odyssey through delicate living forms, revealed by lens and curiosity.
+        </p>
+        <button type="button" id="exploreMagneticBtn" class="liquid-glass org30-cta-btn">
+          Begin the Experience
+        </button>
+      </div>
+    </section>
+
+    <section id="archive" class="org30-section" aria-label="Bioluminescent Specimen Archive">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);letter-spacing:0.16em;">MACRO LENS ARCHIVE</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(2rem,3.6vw,2.9rem);font-weight:400;margin-top:6px;">
+            Delicate Living Forms Under Optical Magnification
+          </h2>
+        </div>
+        <span class="tabular-nums" style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);" id="odysseyFocalReadout">
+          FOCAL DEPTH: 85MM MACRO • F/1.4
+        </span>
+      </div>
+
+      <div class="org30-specimen-grid">
+        <article class="liquid-glass org30-specimen-card is-active" data-lens-focal="FOCAL DEPTH: 85MM MACRO • F/1.4" data-lens-desc="Translucent pelagic cnidarian filaments captured at 400fps in abyssal dark.">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);" class="tabular-nums">SPECIMEN 01</span>
+            <span style="font-size:12px;color:var(--muted);" class="tabular-nums">1,200m Depth</span>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:26px;font-weight:400;margin-bottom:8px;">Aurelia Biolumen</h3>
+            <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+              Rhythmic cyan-emerald pulses propagate along micro-cilia channels with zero thermal loss.
+            </p>
+          </div>
+        </article>
+
+        <article class="liquid-glass org30-specimen-card" data-lens-focal="FOCAL DEPTH: 120MM APO • F/2.0" data-lens-desc="Sub-surface mycelial networks exchanging photonic signals across damp forest strata.">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);" class="tabular-nums">SPECIMEN 02</span>
+            <span style="font-size:12px;color:var(--muted);" class="tabular-nums">4.2um Scale</span>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:26px;font-weight:400;margin-bottom:8px;">Mycelia Nocturna</h3>
+            <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+              Delicate branching hyphae illuminated through cross-polarized darkfield microscopy.
+            </p>
+          </div>
+        </article>
+
+        <article class="liquid-glass org30-specimen-card" data-lens-focal="FOCAL DEPTH: 50MM PROBE • F/1.8" data-lens-desc="Crystalline diatom frustules refracting ambient twilight into spectral arcs.">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);" class="tabular-nums">SPECIMEN 03</span>
+            <span style="font-size:12px;color:var(--muted);" class="tabular-nums">98.4% Purity</span>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:26px;font-weight:400;margin-bottom:8px;">Silica Flora</h3>
+            <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+              Architectural symmetry formed naturally at the boundary of light and oceanic pressure.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="story" class="org30-section" aria-label="Optical Telemetry Metrics">
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;text-align:center;">
+        <div class="liquid-glass" style="padding:26px;border-radius:20px;">
+          <div class="tabular-nums" style="font-family:var(--font-display);font-size:42px;color:var(--accent-text);" data-counter-target="400" data-counter-suffix=" FPS">400 FPS</div>
+          <div style="font-size:12px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:6px;">High-Speed Optical Capture</div>
+        </div>
+        <div class="liquid-glass" style="padding:26px;border-radius:20px;">
+          <div class="tabular-nums" style="font-family:var(--font-display);font-size:42px;" data-counter-target="64" data-counter-suffix=" Specimens">64 Specimens</div>
+          <div style="font-size:12px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:6px;">Cataloged Living Forms</div>
+        </div>
+        <div class="liquid-glass" style="padding:26px;border-radius:20px;">
+          <div class="tabular-nums" style="font-family:var(--font-display);font-size:42px;color:var(--accent-text);" data-counter-target="8" data-counter-suffix="K RAW">8K RAW</div>
+          <div style="font-size:12px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:6px;">Full-Bleed Macro Cinema</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="connect" class="org30-section" style="padding-top:28px;padding-bottom:44px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span style="letter-spacing:0.18em;text-transform:uppercase;">ORGANIC VISIONS — WITNESS THE HIDDEN REALM</span>
+    <span class="tabular-nums">Wander • Archive • Story • Connect</span>
+  </footer>
+
+  <div class="org30-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="liquid-glass org30-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">ORGANIC VISIONS IMMERSION</span>
+        <button type="button" id="closeSeamlessBtn" class="liquid-glass" style="width:32px;height:32px;border-radius:50%;color:#ffffff;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;font-weight:400;margin-bottom:10px;">Enter the Hidden Realm</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        An odyssey through delicate living forms, revealed by lens and curiosity. Select any macro specimen to inspect live focal depth and bioluminescent spectrum telemetry.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="liquid-glass org30-cta-btn" style="width:100%;">
+        Launch Specimen Lens →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var focalEl = document.getElementById('odysseyFocalReadout');
+      var subEl = document.getElementById('odysseyLensSub');
+      document.querySelectorAll('.org30-specimen-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.org30-specimen-card').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (focalEl) focalEl.textContent = card.getAttribute('data-lens-focal') || '';
+          if (subEl) subEl.textContent = card.getAttribute('data-lens-desc') || '';
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      var heroVid = document.getElementById('heroBgVideo');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+          if (heroVid) {
+            if (motionPaused) heroVid.pause();
+            else heroVid.play().catch(function(){});
+          }
+        });
+      }
+
+      // Live London Clock (if #londonClock exists)
+      var clockEl = document.getElementById('londonClock');
+      function updateLondonClock() {
+        if (!clockEl) return;
+        try {
+          var now = new Date();
+          var t = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: false });
+          clockEl.textContent = t + ' in London';
+        } catch (e) {
+          clockEl.textContent = '14:30 in London';
+        }
+      }
+      updateLondonClock();
+      setInterval(updateLondonClock, 10000);
+
+      // Group 1.1, 1.3 & 1.5: Parallax + Sticky Pinned 001-003 + Scroll Scrubbing
+      var scrubStage = document.getElementById('scrubCenterStage');
+      var scrubDial = document.getElementById('scrubDialText');
+      var scrubReadout = document.getElementById('scrollScrubReadout');
+      var parallaxEls = document.querySelectorAll('[data-parallax]');
+      var specCards = document.querySelectorAll('[data-spec-index]');
+
+      function onScroll() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+        var docHeight = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        var progress = Math.min(1, Math.max(0, scrollTop / docHeight));
+        var deg = (progress * 360).toFixed(1);
+
+        if (!motionPaused) {
+          parallaxEls.forEach(function (el) {
+            var speed = parseFloat(el.getAttribute('data-parallax') || '0.08');
+            el.style.transform = 'translate3d(0, ' + (scrollTop * speed).toFixed(1) + 'px, 0)';
+          });
+          if (scrubStage) {
+            scrubStage.style.transform = 'rotate(' + (progress * 14 - 7).toFixed(2) + 'deg) scale(' + (1 + Math.sin(progress * Math.PI) * 0.06).toFixed(3) + ')';
+          }
+        }
+        if (scrubDial) scrubDial.textContent = 'SCROLL SCRUB ANGLE: ' + deg + '°';
+        if (scrubReadout) scrubReadout.textContent = 'SCRUB ' + Math.round(progress * 100) + '% • ' + deg + '°';
+        specCards.forEach(function (c, i) { c.classList.toggle('is-active', i === (Math.floor(progress * 3) % 3)); });
+      }
+      window.addEventListener('scroll', function () { window.requestAnimationFrame(onScroll); }, { passive: true });
+      onScroll();
+
+      // Group 1.2 & 3.2: Scroll Reveal + Animated Number Counters
+      var revealEls = document.querySelectorAll('.org30-reveal');
+      var counterEls = document.querySelectorAll('[data-counter-target]');
+      function animateCounter(el) {
+        if (el.getAttribute('data-counted') === 'true') return;
+        el.setAttribute('data-counted', 'true');
+        var target = parseInt(el.getAttribute('data-counter-target') || '100', 10);
+        var suffix = el.getAttribute('data-counter-suffix') || '';
+        var start = performance.now();
+        function tick(now) {
+          var t = Math.min(1, (now - start) / 1000);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+          if (t < 1) window.requestAnimationFrame(tick);
+        }
+        window.requestAnimationFrame(tick);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) animateCounter(e.target); });
+        }, { threshold: 0.2 });
+        counterEls.forEach(function (el) { cio.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      // Group 2.1, 2.2, 2.4 & 2.5: Custom Blend Cursor + Magnetic Buttons + 3D Card Tilt + Liquid Wave Filter
+      var cursorRing = document.getElementById('cursorRing');
+      var cursorDot = document.getElementById('cursorDot');
+      window.addEventListener('mousemove', function (e) {
+        if (motionPaused) return;
+        if (cursorRing) cursorRing.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+        if (cursorDot) cursorDot.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0)';
+      }, { passive: true });
+
+      document.querySelectorAll('a, button, [data-tilt-card], h1').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { if (cursorRing) cursorRing.classList.add('is-hovered'); });
+        el.addEventListener('mouseleave', function () { if (cursorRing) cursorRing.classList.remove('is-hovered'); });
+      });
+
+      document.querySelectorAll('[data-magnetic]').forEach(function (btn) {
+        btn.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = btn.getBoundingClientRect();
+          var dx = (e.clientX - (r.left + r.width / 2)) * 0.24;
+          var dy = (e.clientY - (r.top + r.height / 2)) * 0.24;
+          btn.style.transform = 'translate3d(' + dx.toFixed(1) + 'px, ' + dy.toFixed(1) + 'px, 0)';
+        });
+        btn.addEventListener('mouseleave', function () { btn.style.transform = 'translate3d(0,0,0)'; });
+      });
+
+      var dispMap = document.getElementById('org30Displacement');
+      document.querySelectorAll('[data-tilt-card]').forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          if (motionPaused) return;
+          var r = card.getBoundingClientRect();
+          var nx = (e.clientX - r.left) / Math.max(1, r.width) - 0.5;
+          var ny = (e.clientY - r.top) / Math.max(1, r.height) - 0.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + (-ny * 10).toFixed(2) + 'deg) rotateY(' + (nx * 12).toFixed(2) + 'deg) translateZ(6px)';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '12');
+        });
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+          if (dispMap && card.id === 'heroPopoutRig') dispMap.setAttribute('scale', '0');
+        });
+      });
+
+      // Group 3.3: Seamless Fullscreen Modal Transition
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+
+      function openSeamless(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeSeamless() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeSeamless();
+          else openSeamless();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeSeamless);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeSeamless);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openSeamless(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSeamless();
+      });
+
+      // Group 4.2: Ambient Particle / Smoke Canvas
+      var canvas = document.getElementById('ambientSmokeCanvas');
+      if (canvas && canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        var w = 0, h = 0;
+        function resize() {
+          w = canvas.width = canvas.offsetWidth || window.innerWidth;
+          h = canvas.height = canvas.offsetHeight || window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+        var pts = [];
+        for (var i = 0; i < 34; i++) {
+          pts.push({
+            x: Math.random() * 1400,
+            y: Math.random() * 900,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -Math.random() * 0.45 - 0.1,
+            r: Math.random() * 2.5 + 1,
+            a: Math.random() * 0.4 + 0.12
+          });
+        }
+        function draw() {
+          if (!motionPaused && ctx) {
+            ctx.clearRect(0, 0, w, h);
+            for (var j = 0; j < pts.length; j++) {
+              var p = pts[j];
+              p.x += p.vx; p.y += p.vy;
+              if (p.y < -10) p.y = h + 10;
+              if (p.x < -10) p.x = w + 10;
+              if (p.x > w + 10) p.x = -10;
+              ctx.beginPath();
+              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+              ctx.fillStyle = 'rgba(148,163,184,' + p.a + ')';
+              ctx.fill();
+            }
+          }
+          window.requestAnimationFrame(draw);
+        }
+        window.requestAnimationFrame(draw);
+      }
+    })();
+  </script>
+</body>
+</html>

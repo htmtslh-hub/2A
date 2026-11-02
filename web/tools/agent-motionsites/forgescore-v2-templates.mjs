@@ -6565,5 +6565,995 @@ export function buildForgeScoreV2Template(spec, p, cutoutImg, renderSharedMotion
 </html>`;
   }
 
+  // ============================================================================
+  // 16. ORBIS HELLO (orbis-hello — Free Tier)
+  // Deep Midnight Navy #010828 + Soft Cream #EFF4FF + Neon Green #6FFF00 Exclusion
+  // ============================================================================
+  if (slug === 'orbis-hello') {
+    const heroVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260331_151551_992053d1-3d3e-4b8c-abac-45f22158f411.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Orbis Hello — A Digital Object Fixed Beyond Time and Place</title>
+  <meta name="description" content="An exploration of distance, form, and silence in space, where light and structure define presence — featuring exclusion blend-mode typography and live orbital telemetry.">
+  <meta property="og:title" content="Orbis Hello — Spatial Digital Object">
+  <meta property="og:description" content="HELLO! I'M Orbis — A digital object fixed beyond time and place.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#010828">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Condiment&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #010828;
+      --surface: #06103a;
+      --surface-elevated: #0c1b54;
+      --glass: rgba(6, 16, 58, 0.78);
+      --fg: #eff4ff;
+      --muted: #9eb0d9;
+      --border: rgba(239, 244, 255, 0.16);
+      --accent: #6fff00;
+      --accent-text: #8aff33;
+      --accent-strong: #54cc00;
+      --on-accent: #010828;
+      --font-display: 'Anton', Impact, sans-serif;
+      --font-script: 'Condiment', cursive;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 24px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0); mix-blend-mode: exclusion;
+    }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid var(--accent); margin: -17px 0 0 -17px; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @keyframes orbisFloat {
+      0%, 100% { transform: rotate(-6deg) translateY(0); }
+      50% { transform: rotate(-4deg) translateY(-6px); }
+    }
+
+    .${p}-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 180;
+      padding: 18px clamp(20px, 4vw, 48px);
+      background: linear-gradient(180deg, rgba(1, 8, 40, 0.88) 0%, rgba(1, 8, 40, 0) 100%);
+    }
+    .${p}-nav {
+      max-width: 1360px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .${p}-brand {
+      font-family: var(--font-display); font-size: 20px; letter-spacing: 0.08em;
+      color: var(--fg); text-decoration: none;
+    }
+    .${p}-brand span { color: var(--accent); }
+    .${p}-nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .${p}-nav-links a {
+      color: var(--muted); text-decoration: none; font-family: var(--font-mono);
+      font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .${p}-nav-links a:hover { color: var(--accent); }
+    .${p}-pill-btn {
+      padding: 9px 18px; border-radius: 999px; border: 1px solid rgba(111, 255, 0, 0.45);
+      background: rgba(111, 255, 0, 0.12); color: var(--accent);
+      font-family: var(--font-mono); font-size: 11.5px; font-weight: 600;
+      text-transform: uppercase; cursor: pointer;
+    }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; width: 100%; overflow: hidden;
+      background: var(--bg); display: flex; flex-direction: column; justify-content: space-between;
+      padding: 110px clamp(20px, 4vw, 48px) 36px;
+    }
+    .${p}-video-layer {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      pointer-events: none; z-index: 1;
+    }
+    .${p}-video-layer video {
+      width: 140%; height: 140%; object-fit: contain;
+      transform: rotate(-180deg) scale(1.25);
+      mix-blend-mode: exclusion; opacity: 0.92;
+    }
+    .${p}-hero-center {
+      position: relative; z-index: 10; max-width: 1120px; margin: auto; text-align: center;
+    }
+    .${p}-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(4.2rem, 11vw, 9.6rem);
+      font-weight: 400; line-height: 0.9; letter-spacing: -0.02em;
+      text-transform: uppercase; color: var(--fg); position: relative;
+    }
+    .${p}-orbis-script {
+      font-family: var(--font-script);
+      font-size: clamp(4.8rem, 13.5vw, 12.2rem);
+      color: var(--accent); text-transform: none;
+      display: inline-block; margin-left: 12px;
+      mix-blend-mode: exclusion;
+      animation: orbisFloat 5.5s ease-in-out infinite;
+    }
+    .${p}-hero-lead {
+      font-family: var(--font-mono);
+      font-size: clamp(0.85rem, 1.35vw, 1.15rem);
+      line-height: 1.5; letter-spacing: -0.02em; text-transform: uppercase;
+      color: var(--fg); max-width: 660px; margin: 28px auto 0;
+      mix-blend-mode: exclusion;
+    }
+    .${p}-ghost-columns {
+      position: relative; z-index: 10; max-width: 1360px; width: 100%; margin: 36px auto 0;
+      display: flex; justify-content: space-between; gap: 28px; flex-wrap: wrap;
+    }
+    .${p}-ghost-col {
+      max-width: 420px; font-family: var(--font-mono); font-size: 11.5px;
+      line-height: 1.55; text-transform: uppercase; color: var(--fg);
+      opacity: 0.42; mix-blend-mode: exclusion;
+    }
+
+    .${p}-section {
+      max-width: 1320px; margin: 0 auto; padding: 72px clamp(20px, 4vw, 48px);
+      border-top: 1px solid var(--border);
+    }
+    .${p}-telemetry-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 28px;
+    }
+    .${p}-orb-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 22px;
+      padding: 26px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px;
+      cursor: pointer;
+    }
+    .${p}-orb-card.is-active, .${p}-orb-card:hover {
+      border-color: var(--accent); box-shadow: 0 16px 40px rgba(111, 255, 0, 0.12);
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(1, 8, 40, 0.84); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(12px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 480px; background: var(--surface); border: 1px solid var(--accent);
+      border-radius: 24px; padding: 28px;
+    }
+
+    @media (max-width: 960px) {
+      .${p}-telemetry-grid { grid-template-columns: 1fr; }
+      .${p}-ghost-columns { flex-direction: column; }
+    }
+    @media (max-width: 640px) {
+      .${p}-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-nav">
+      <a href="#top" class="${p}-brand">ORBIS <span>01</span></a>
+      <nav aria-label="Primary">
+        <ul class="${p}-nav-links">
+          <li><a href="#top">Presence</a></li>
+          <li><a href="#telemetry">Distance &amp; Form</a></li>
+          <li><a href="#coordinates">Silence</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" class="${p}-pill-btn">Motion: ON</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-pill-btn" style="background:var(--accent);color:var(--on-accent);">
+          Inspect Object →
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="${p}-hero" aria-label="Orbis Digital Object Hero">
+      <div class="${p}-video-layer" aria-hidden="true">
+        <video autoplay loop muted playsinline preload="auto" src="${heroVideo}"></video>
+      </div>
+
+      <div class="${p}-hero-center">
+        <h1 class="${p}-hero-title">
+          <span style="display:block;">HELLO!</span>
+          <span style="display:block;">
+            I'M <span class="${p}-orbis-script">Orbis</span>
+          </span>
+        </h1>
+        <p class="${p}-hero-lead" id="orbisActiveStatement">
+          A digital object fixed beyond time and place. An exploration of distance, form, and silence in space
+        </p>
+      </div>
+
+      <div class="${p}-ghost-columns">
+        <p class="${p}-ghost-col">
+          A digital object fixed beyond time and place, existing in a quiet state of motion. An exploration of distance, form, and silence in space, where light and structure define presence.
+        </p>
+        <p class="${p}-ghost-col" style="text-align:right;">
+          A digital object fixed beyond time and place, existing in a quiet state of motion. An exploration of distance, form, and silence in space, where light and structure define presence.
+        </p>
+      </div>
+    </section>
+
+    <section id="telemetry" class="${p}-section" aria-label="Spatial Distance and Form Telemetry">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.1rem);letter-spacing:0.02em;">
+          DISTANCE, FORM &amp; <span style="color:var(--accent);">SILENCE</span>
+        </h2>
+        <span class="tabular-nums" style="font-family:var(--font-mono);font-size:12px;color:var(--accent);" id="orbisCoordReadout">
+          AXIS: -180.0 DEG • EXCLUSION FIELD
+        </span>
+      </div>
+
+      <div class="${p}-telemetry-grid">
+        <article class="${p}-orb-card is-active" data-orb-axis="AXIS: -180.0 DEG • DISTANCE 0.00 AU" data-orb-quote="A digital object fixed beyond time and place. An exploration of distance, form, and silence in space">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);" class="tabular-nums">01 / DISTANCE</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 style="font-family:var(--font-display);font-size:26px;letter-spacing:0.02em;">FIXED BEYOND TIME</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Suspended in deep midnight navy (#010828), Orbis maintains zero-drift equilibrium across viewport transformations.
+          </p>
+        </article>
+
+        <article class="${p}-orb-card" data-orb-axis="AXIS: -94.2 DEG • REFRACTION 1.48" data-orb-quote="Where light and structure define presence inside an exclusion-blended spatial field">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);" class="tabular-nums">02 / FORM</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" aria-hidden="true"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
+          </div>
+          <h3 style="font-family:var(--font-display);font-size:26px;letter-spacing:0.02em;">EXCLUSION OPTICS</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Electric neon green (#6FFF00) script and video luminance invert against soft cream (#EFF4FF) display geometry.
+          </p>
+        </article>
+
+        <article class="${p}-orb-card" data-orb-axis="AXIS: 0.0 DEG • SILENCE 99.8 DB" data-orb-quote="Existing in a quiet state of motion across deep orbital coordinates">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);" class="tabular-nums">03 / SILENCE</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" aria-hidden="true"><path d="M2 12h20"/><path d="M12 2v20"/></svg>
+          </div>
+          <h3 style="font-family:var(--font-display);font-size:26px;letter-spacing:0.02em;">QUIET MOTION</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Continuous 180-degree inverted loop synthesis pairs monospace telemetry with monumental Anton display scale.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="coordinates" class="${p}-section" aria-label="Orbis Spatial Coordinates">
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;text-align:center;">
+        <div style="padding:24px;border-radius:20px;background:var(--surface);border:1px solid var(--border);">
+          <div class="tabular-nums" style="font-family:var(--font-display);font-size:42px;color:var(--accent);" data-counter-target="180" data-counter-suffix="°">180°</div>
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--muted);margin-top:6px;">INVERTED ROTATION</div>
+        </div>
+        <div style="padding:24px;border-radius:20px;background:var(--surface);border:1px solid var(--border);">
+          <div class="tabular-nums" style="font-family:var(--font-display);font-size:42px;color:var(--fg);" data-counter-target="140" data-counter-suffix="%">140%</div>
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--muted);margin-top:6px;">FIELD SCALE</div>
+        </div>
+        <div style="padding:24px;border-radius:20px;background:var(--surface);border:1px solid var(--border);">
+          <div class="tabular-nums" style="font-family:var(--font-display);font-size:42px;color:var(--accent);" data-counter-target="60" data-counter-suffix=" FPS">60 FPS</div>
+          <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--muted);margin-top:6px;">EXCLUSION COMPOSITE</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-section" style="padding-top:28px;padding-bottom:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--font-mono);font-size:12px;color:var(--muted);">
+    <span>ORBIS — A DIGITAL OBJECT FIXED BEYOND TIME AND PLACE</span>
+    <span class="tabular-nums">#010828 • #EFF4FF • #6FFF00</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent);">ORBIS TELEMETRY</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-pill-btn" style="padding:4px 10px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;letter-spacing:0.03em;margin-bottom:10px;">ORBIS SPATIAL MANIFESTO</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        A digital object fixed beyond time and place, existing in a quiet state of motion. An exploration of distance, form, and silence in space, where light and structure define presence.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-pill-btn" style="width:100%;background:var(--accent);color:var(--on-accent);padding:12px;">
+        Lock Spatial Coordinates →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var coordEl = document.getElementById('orbisCoordReadout');
+      var quoteEl = document.getElementById('orbisActiveStatement');
+      document.querySelectorAll('.${p}-orb-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.${p}-orb-card').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (coordEl) coordEl.textContent = card.getAttribute('data-orb-axis') || '';
+          if (quoteEl) quoteEl.textContent = card.getAttribute('data-orb-quote') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 17. ORGANIC ODYSSEY (organic-odyssey — Premium Tier)
+  // Bioluminescent Living Forms + Character-Staggered "WITNESS THE HIDDEN REALM"
+  // ============================================================================
+  if (slug === 'organic-odyssey') {
+    const heroVideo = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260619_191346_9d19d66e-86a4-47f7-8dc6-712c1788c3b2.mp4';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Organic Visions — Witness the Hidden Realm</title>
+  <meta name="description" content="An odyssey through delicate living forms, revealed by lens and curiosity — featuring full-bleed bioluminescent macro cinema, liquid-glass optics, and interactive specimen archive.">
+  <meta property="og:title" content="Organic Visions — Witness the Hidden Realm">
+  <meta property="og:description" content="An odyssey through delicate living forms, revealed by lens and curiosity.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#010101">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #010101;
+      --surface: #080d0e;
+      --surface-elevated: #0f191b;
+      --glass: rgba(255, 255, 255, 0.08);
+      --fg: #ffffff;
+      --muted: rgba(255, 255, 255, 0.72);
+      --border: rgba(255, 255, 255, 0.16);
+      --accent: #5eead4;
+      --accent-text: #99f6e4;
+      --accent-strong: #2dd4bf;
+      --on-accent: #021714;
+      --font-display: 'EB Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 24px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 34px; height: 34px; border: 1.5px solid var(--accent); margin: -17px 0 0 -17px; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
+
+    @keyframes charRise {
+      0% { opacity: 0; transform: translateY(18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .liquid-glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    }
+
+    .${p}-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 190;
+      padding: 20px clamp(20px, 4.5vw, 56px);
+      background: linear-gradient(180deg, rgba(1, 1, 1, 0.78) 0%, rgba(1, 1, 1, 0) 100%);
+    }
+    .${p}-nav {
+      max-width: 1360px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .${p}-brand {
+      color: var(--fg); text-decoration: none; font-size: 13px; font-weight: 500;
+      letter-spacing: 0.25em; text-transform: uppercase;
+    }
+    .${p}-nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .${p}-nav-links a {
+      color: rgba(255, 255, 255, 0.8); text-decoration: none; font-size: 14px; font-weight: 300;
+      letter-spacing: 0.04em;
+    }
+    .${p}-nav-links a:hover { color: #ffffff; }
+
+    .${p}-hero {
+      position: relative; min-height: 100vh; width: 100%; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      padding: 120px clamp(20px, 4vw, 48px) 80px;
+    }
+    .${p}-hero-video {
+      position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;
+    }
+    .${p}-hero-scrim {
+      position: absolute; inset: 0; z-index: 2;
+      background: radial-gradient(circle at 50% 50%, rgba(1, 1, 1, 0.25) 0%, rgba(1, 1, 1, 0.78) 100%);
+    }
+    .${p}-hero-content {
+      position: relative; z-index: 10; text-align: center; max-width: 960px; margin: 0 auto;
+    }
+    .${p}-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.85rem, 6.8vw, 5.6rem);
+      font-weight: 400; line-height: 1.06; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #ffffff;
+    }
+    .${p}-char {
+      display: inline-block; animation: charRise 0.8s var(--ease-out) both;
+    }
+    .${p}-hero-sub {
+      font-weight: 300; font-size: clamp(1rem, 1.5vw, 1.22rem);
+      color: rgba(255, 255, 255, 0.82); letter-spacing: 0.04em; line-height: 1.7;
+      max-width: 580px; margin: 28px auto 40px;
+    }
+    .${p}-cta-btn {
+      padding: 15px 38px; border-radius: 999px; color: #ffffff;
+      font-size: 14px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase;
+      cursor: pointer;
+    }
+    .${p}-cta-btn:hover { background: rgba(255, 255, 255, 0.14); border-color: rgba(153, 246, 228, 0.45); }
+
+    .${p}-section {
+      max-width: 1280px; margin: 0 auto; padding: 76px clamp(20px, 4vw, 48px);
+      border-top: 1px solid var(--border);
+    }
+    .${p}-specimen-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 32px;
+    }
+    .${p}-specimen-card {
+      border-radius: 22px; padding: 28px; cursor: pointer;
+      display: flex; flex-direction: column; justify-content: space-between; min-height: 240px;
+    }
+    .${p}-specimen-card.is-active, .${p}-specimen-card:hover {
+      border-color: var(--accent);
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(1, 1, 1, 0.82); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(16px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 480px; border-radius: 24px; padding: 30px;
+    }
+
+    @media (max-width: 960px) {
+      .${p}-specimen-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .${p}-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-nav">
+      <a href="#wander" class="${p}-brand" style="display:inline-flex;align-items:center;gap:10px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-text)" stroke-width="1.8" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/>
+          <circle cx="12" cy="12" r="3.5"/>
+        </svg>
+        ORGANIC VISIONS
+      </a>
+      <nav aria-label="Primary">
+        <ul class="${p}-nav-links">
+          <li><a href="#wander">Wander</a></li>
+          <li><a href="#archive">Archive</a></li>
+          <li><a href="#story">Story</a></li>
+          <li><a href="#connect">Connect</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" class="liquid-glass" style="padding:8px 16px;border-radius:999px;color:#ffffff;font-size:12px;cursor:pointer;">
+          Motion: ON
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="wander" class="${p}-hero" aria-label="Witness the Hidden Realm Hero">
+      <video class="${p}-hero-video" autoplay loop muted playsinline preload="auto" src="${heroVideo}" aria-hidden="true"></video>
+      <div class="${p}-hero-scrim" aria-hidden="true"></div>
+
+      <div class="${p}-hero-content">
+        <h1 class="${p}-hero-title">
+          <span style="display:block;">WITNESS THE</span>
+          <span style="display:block;color:var(--accent-text);">HIDDEN REALM</span>
+        </h1>
+        <p class="${p}-hero-sub" id="odysseyLensSub">
+          An odyssey through delicate living forms, revealed by lens and curiosity.
+        </p>
+        <button type="button" id="exploreMagneticBtn" class="liquid-glass ${p}-cta-btn">
+          Begin the Experience
+        </button>
+      </div>
+    </section>
+
+    <section id="archive" class="${p}-section" aria-label="Bioluminescent Specimen Archive">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);letter-spacing:0.16em;">MACRO LENS ARCHIVE</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(2rem,3.6vw,2.9rem);font-weight:400;margin-top:6px;">
+            Delicate Living Forms Under Optical Magnification
+          </h2>
+        </div>
+        <span class="tabular-nums" style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);" id="odysseyFocalReadout">
+          FOCAL DEPTH: 85MM MACRO • F/1.4
+        </span>
+      </div>
+
+      <div class="${p}-specimen-grid">
+        <article class="liquid-glass ${p}-specimen-card is-active" data-lens-focal="FOCAL DEPTH: 85MM MACRO • F/1.4" data-lens-desc="Translucent pelagic cnidarian filaments captured at 400fps in abyssal dark.">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);" class="tabular-nums">SPECIMEN 01</span>
+            <span style="font-size:12px;color:var(--muted);" class="tabular-nums">1,200m Depth</span>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:26px;font-weight:400;margin-bottom:8px;">Aurelia Biolumen</h3>
+            <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+              Rhythmic cyan-emerald pulses propagate along micro-cilia channels with zero thermal loss.
+            </p>
+          </div>
+        </article>
+
+        <article class="liquid-glass ${p}-specimen-card" data-lens-focal="FOCAL DEPTH: 120MM APO • F/2.0" data-lens-desc="Sub-surface mycelial networks exchanging photonic signals across damp forest strata.">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);" class="tabular-nums">SPECIMEN 02</span>
+            <span style="font-size:12px;color:var(--muted);" class="tabular-nums">4.2um Scale</span>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:26px;font-weight:400;margin-bottom:8px;">Mycelia Nocturna</h3>
+            <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+              Delicate branching hyphae illuminated through cross-polarized darkfield microscopy.
+            </p>
+          </div>
+        </article>
+
+        <article class="liquid-glass ${p}-specimen-card" data-lens-focal="FOCAL DEPTH: 50MM PROBE • F/1.8" data-lens-desc="Crystalline diatom frustules refracting ambient twilight into spectral arcs.">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);" class="tabular-nums">SPECIMEN 03</span>
+            <span style="font-size:12px;color:var(--muted);" class="tabular-nums">98.4% Purity</span>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:26px;font-weight:400;margin-bottom:8px;">Silica Flora</h3>
+            <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+              Architectural symmetry formed naturally at the boundary of light and oceanic pressure.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="story" class="${p}-section" aria-label="Optical Telemetry Metrics">
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;text-align:center;">
+        <div class="liquid-glass" style="padding:26px;border-radius:20px;">
+          <div class="tabular-nums" style="font-family:var(--font-display);font-size:42px;color:var(--accent-text);" data-counter-target="400" data-counter-suffix=" FPS">400 FPS</div>
+          <div style="font-size:12px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:6px;">High-Speed Optical Capture</div>
+        </div>
+        <div class="liquid-glass" style="padding:26px;border-radius:20px;">
+          <div class="tabular-nums" style="font-family:var(--font-display);font-size:42px;" data-counter-target="64" data-counter-suffix=" Specimens">64 Specimens</div>
+          <div style="font-size:12px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:6px;">Cataloged Living Forms</div>
+        </div>
+        <div class="liquid-glass" style="padding:26px;border-radius:20px;">
+          <div class="tabular-nums" style="font-family:var(--font-display);font-size:42px;color:var(--accent-text);" data-counter-target="8" data-counter-suffix="K RAW">8K RAW</div>
+          <div style="font-size:12px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:6px;">Full-Bleed Macro Cinema</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="connect" class="${p}-section" style="padding-top:28px;padding-bottom:44px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span style="letter-spacing:0.18em;text-transform:uppercase;">ORGANIC VISIONS — WITNESS THE HIDDEN REALM</span>
+    <span class="tabular-nums">Wander • Archive • Story • Connect</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="liquid-glass ${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">ORGANIC VISIONS IMMERSION</span>
+        <button type="button" id="closeSeamlessBtn" class="liquid-glass" style="width:32px;height:32px;border-radius:50%;color:#ffffff;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;font-weight:400;margin-bottom:10px;">Enter the Hidden Realm</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        An odyssey through delicate living forms, revealed by lens and curiosity. Select any macro specimen to inspect live focal depth and bioluminescent spectrum telemetry.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="liquid-glass ${p}-cta-btn" style="width:100%;">
+        Launch Specimen Lens →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var focalEl = document.getElementById('odysseyFocalReadout');
+      var subEl = document.getElementById('odysseyLensSub');
+      document.querySelectorAll('.${p}-specimen-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.${p}-specimen-card').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          if (focalEl) focalEl.textContent = card.getAttribute('data-lens-focal') || '';
+          if (subEl) subEl.textContent = card.getAttribute('data-lens-desc') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 18. NEXACORE RESULTS (nexacore-results — Premium Tier)
+  // Structured Delivery ("PrecisionSection") + 4-Pillar Rising Staircase
+  // Scopes / Integrates / Certifies / Activates + Compounding Operational Value
+  // ============================================================================
+  if (slug === 'nexacore-results') {
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NexaCore Results — Structured Delivery &amp; Compounding Operational Value</title>
+  <meta name="description" content="One integrated, end-to-end system. Compounding operational value. NexaCore teams capture, align, validate and deliver across Scopes, Integrates, Certifies, and Activates.">
+  <meta property="og:title" content="NexaCore Results — Structured Delivery System">
+  <meta property="og:description" content="NexaCore teams capture, align, validate and deliver exactly what keeps your programs on track.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F7F5FC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f5fc;
+      --surface: #ffffff;
+      --surface-elevated: #efeaf9;
+      --glass: rgba(255, 255, 255, 0.84);
+      --fg: #1a0b54;
+      --muted: #64588a;
+      --border: rgba(169, 151, 206, 0.34);
+      --accent: #7c3aed;
+      --accent-text: #5b21b6;
+      --accent-strong: #4c1d95;
+      --on-accent: #ffffff;
+      --line-grad: linear-gradient(180deg, rgba(169, 151, 206, 0.08) 0%, #a997ce 30%, #7c3aed 72%, rgba(169, 151, 206, 0.12) 100%);
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 24px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background:
+        radial-gradient(circle at 80% 12%, rgba(200, 111, 255, 0.16) 0%, rgba(169, 151, 206, 0.12) 38%, #f7f5fc 75%),
+        #f7f5fc;
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--fg); color: #ffffff;
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--accent); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .${p}-cursor-ring, .${p}-cursor-dot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    .${p}-cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    .${p}-cursor-dot { width: 6px; height: 6px; background: var(--fg); margin: -3px 0 0 -3px; }
+    @keyframes pulseCrosshair {
+      0%, 100% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(90deg) scale(1.08); }
+    }
+
+    .${p}-wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+    .${p}-header {
+      position: sticky; top: 0; z-index: 160;
+      background: rgba(247, 245, 252, 0.86); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 0;
+    }
+    .${p}-brand {
+      font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: var(--fg); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .${p}-nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .${p}-nav-links a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 500; }
+    .${p}-nav-links a:hover { color: var(--fg); }
+    .${p}-btn-indigo {
+      padding: 10px 22px; border-radius: 999px; border: 0;
+      background: var(--fg); color: #ffffff; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-badge-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 16px; border-radius: 999px;
+      background: rgba(200, 111, 255, 0.12); border: 1px solid rgba(200, 111, 255, 0.35);
+      color: var(--fg); font-size: 13px; font-weight: 500;
+    }
+
+    .${p}-precision-hero { padding: 64px 0 48px; }
+    .${p}-headline {
+      font-size: clamp(2.35rem, 4.8vw, 3.85rem);
+      font-weight: 500; line-height: 1.08; letter-spacing: -0.03em;
+      color: var(--fg); max-width: 820px; margin: 18px 0 16px;
+    }
+    .${p}-grad-span {
+      background: linear-gradient(90deg, #6b4eff 0%, #c86fff 52%, #ff7eb6 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      display: block;
+    }
+    .${p}-subtext {
+      color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.15rem);
+      line-height: 1.65; max-width: 580px;
+    }
+
+    .${p}-staircase {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+      align-items: end; gap: 0; margin-top: 44px;
+      background: rgba(255, 255, 255, 0.65); border: 1px solid var(--border);
+      border-radius: 28px; padding: 32px 24px;
+      box-shadow: 0 24px 60px rgba(26, 11, 84, 0.06);
+    }
+    .${p}-pillar {
+      position: relative; padding: 24px 22px; display: flex; flex-direction: column;
+      justify-content: space-between; cursor: pointer; border-radius: 18px;
+    }
+    .${p}-pillar::before {
+      content: ''; position: absolute; left: 0; top: 8%; bottom: 8%; width: 1.5px;
+      background: var(--line-grad);
+    }
+    .${p}-pillar:hover, .${p}-pillar.is-active {
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 14px 34px rgba(26, 11, 84, 0.08);
+    }
+    .${p}-pillar-p1 { min-height: 240px; }
+    .${p}-pillar-p2 { min-height: 300px; }
+    .${p}-pillar-p3 { min-height: 360px; }
+    .${p}-pillar-p4 { min-height: 420px; }
+
+    .${p}-pillar-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3vw, 2.65rem);
+      font-weight: 400; color: var(--fg); line-height: 1.05; margin-bottom: 10px;
+    }
+    .${p}-pillar-items {
+      font-size: 14px; color: var(--muted); line-height: 1.55;
+    }
+    .${p}-pillar-num {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 4.5vw, 4.1rem);
+      line-height: 0.95; color: #a997ce; margin-top: 28px;
+    }
+
+    .${p}-section { padding: 56px 0; border-top: 1px solid var(--border); }
+    .${p}-sla-panel {
+      background: #ffffff; border: 1px solid var(--border); border-radius: 24px;
+      padding: 28px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 24px; align-items: center;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(26, 11, 84, 0.56); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 480px; background: #ffffff; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px;
+    }
+
+    @media (max-width: 980px) {
+      .${p}-staircase { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      .${p}-pillar-p1, .${p}-pillar-p2, .${p}-pillar-p3, .${p}-pillar-p4 { min-height: 230px; }
+      .${p}-sla-panel { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .${p}-nav-links { display: none; }
+      .${p}-staircase { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="${p}-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="${p}-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-wrap ${p}-nav">
+      <a href="#precision" class="${p}-brand">
+        <svg width="20" height="20" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <path d="M9 1V17M1 9H17" stroke="#c86fff" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="9" cy="9" r="4" stroke="#1a0b54" stroke-width="1.8"/>
+        </svg>
+        NexaCore
+      </a>
+      <nav aria-label="Primary">
+        <ul class="${p}-nav-links">
+          <li><a href="#precision">Structured Delivery</a></li>
+          <li><a href="#pillars">01—04 Pillars</a></li>
+          <li><a href="#telemetry">SLA Assurance</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:#ffffff;color:var(--fg);font-size:12px;font-weight:600;cursor:pointer;">
+          Motion: ON
+        </button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-indigo">Schedule Program Audit →</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="precision" class="${p}-wrap ${p}-precision-hero" aria-label="Structured Delivery System">
+      <div class="${p}-badge-pill">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="animation:pulseCrosshair 6s ease-in-out infinite;">
+          <circle cx="8" cy="8" r="5.5" stroke="#c86fff" stroke-width="1.5"/>
+          <path d="M8 0.5V15.5M0.5 8H15.5" stroke="#c86fff" stroke-width="1.5"/>
+        </svg>
+        <span>Structured Delivery</span>
+      </div>
+
+      <h1 class="${p}-headline">
+        One integrated, end-to-end system.
+        <span class="${p}-grad-span">Compounding operational value.</span>
+      </h1>
+
+      <p class="${p}-subtext">
+        NexaCore teams capture, align, validate and deliver exactly what keeps your programs on track.
+      </p>
+
+      <div id="pillars" class="${p}-staircase" role="region" aria-label="Four-Pillar Rising Delivery Staircase">
+        <article class="${p}-pillar ${p}-pillar-p1 is-active" data-pillar-stage="01 / SCOPES" data-pillar-detail="Site conditions, megawatt capacity envelopes, technical specs, and critical-path baselines locked prior to mobilization.">
+          <div>
+            <h2 class="${p}-pillar-title">Scopes</h2>
+            <p class="${p}-pillar-items">conditions, capacity, specs, timelines</p>
+          </div>
+          <div class="${p}-pillar-num tabular-nums">01</div>
+        </article>
+
+        <article class="${p}-pillar ${p}-pillar-p2" data-pillar-stage="02 / INTEGRATES" data-pillar-detail="Cross-disciplinary synchronization across civil grading, mechanical cooling, high-voltage electrical, and EPMS/BMS controls.">
+          <div>
+            <h2 class="${p}-pillar-title">Integrates</h2>
+            <p class="${p}-pillar-items">civil, mechanical, electrical, controls</p>
+          </div>
+          <div class="${p}-pillar-num tabular-nums">02</div>
+        </article>
+
+        <article class="${p}-pillar ${p}-pillar-p3" data-pillar-stage="03 / CERTIFIES" data-pillar-detail="Level 1–5 IST commissioning, N+1 fault-tolerance verification, regulatory compliance, and executive engineering sign-offs.">
+          <div>
+            <h2 class="${p}-pillar-title">Certifies</h2>
+            <p class="${p}-pillar-items">redundancy, testing, compliance, sign-offs</p>
+          </div>
+          <div class="${p}-pillar-num tabular-nums">03</div>
+        </article>
+
+        <article class="${p}-pillar ${p}-pillar-p4" data-pillar-stage="04 / ACTIVATES" data-pillar-detail="Zero-downtime live cutover, digital twin runbooks, operations team handoff, and multi-year SLA telemetry.">
+          <div>
+            <h2 class="${p}-pillar-title">Activates</h2>
+            <p class="${p}-pillar-items">cutover, runbooks, handoff, SLAs</p>
+          </div>
+          <div class="${p}-pillar-num tabular-nums">04</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="telemetry" class="${p}-wrap ${p}-section" aria-label="Active Stage Telemetry and SLA">
+      <div class="${p}-sla-panel">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:600;" id="nexaActiveStage">01 / SCOPES</span>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.85rem,3vw,2.5rem);font-weight:400;margin:6px 0 10px;">
+            Live Program Gate Verification
+          </h2>
+          <p style="color:var(--muted);font-size:14.5px;line-height:1.65;" id="nexaActiveDetail">
+            Site conditions, megawatt capacity envelopes, technical specs, and critical-path baselines locked prior to mobilization.
+          </p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;text-align:center;">
+          <div style="padding:18px;border-radius:18px;background:var(--bg);border:1px solid var(--border);">
+            <div class="tabular-nums" style="font-family:var(--font-display);font-size:36px;color:var(--fg);" data-counter-target="99" data-counter-suffix=".98%">99.98%</div>
+            <div style="font-size:11.5px;color:var(--muted);margin-top:4px;">Cutover SLA Adherence</div>
+          </div>
+          <div style="padding:18px;border-radius:18px;background:var(--bg);border:1px solid var(--border);">
+            <div class="tabular-nums" style="font-family:var(--font-display);font-size:36px;color:var(--accent);" data-counter-target="4" data-counter-suffix=" Gates">4 Gates</div>
+            <div style="font-size:11.5px;color:var(--muted);margin-top:4px;">End-to-End Validation</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="padding:28px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span>NexaCore — Structured Delivery &amp; Compounding Operational Value</span>
+    <span class="tabular-nums">Scopes (01) • Integrates (02) • Certifies (03) • Activates (04)</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span class="${p}-badge-pill" style="padding:4px 12px;font-size:11.5px;">NEXACORE DELIVERY GATE</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid var(--border);width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;font-weight:400;margin-bottom:10px;">NexaCore Program Alignment</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:20px;">
+        Capture, align, validate, and deliver mission-critical infrastructure across all 4 rising pillars: Scopes, Integrates, Certifies, and Activates.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-indigo" style="width:100%;padding:12px;">
+        Download Runbook Specification →
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var stageEl = document.getElementById('nexaActiveStage');
+      var detailEl = document.getElementById('nexaActiveDetail');
+      document.querySelectorAll('.${p}-pillar').forEach(function (pillar) {
+        pillar.addEventListener('click', function () {
+          document.querySelectorAll('.${p}-pillar').forEach(function (el) { el.classList.remove('is-active'); });
+          pillar.classList.add('is-active');
+          if (stageEl) stageEl.textContent = pillar.getAttribute('data-pillar-stage') || '';
+          if (detailEl) detailEl.textContent = pillar.getAttribute('data-pillar-detail') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderSharedMotionRuntime(p)}
+</body>
+</html>`;
+  }
+
   return null;
 }

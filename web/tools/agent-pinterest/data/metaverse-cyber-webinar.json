@@ -1,0 +1,33 @@
+{
+  "pinId": "local-c6e51538d538",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1092826665857530673_Mục_này_có_hình_ảnh_của_Лендинг_для_.png",
+  "archivedImagePath": "E:\\DONG_PHU\\2A\\anh-mau-pinterest\\da-lam\\2026-11-03\\pin_1092826665857530673_Mục_này_có_hình_ảnh_của_Лендинг_для_.png",
+  "title": "Metaverse Cyber Webinar",
+  "slug": "metaverse-cyber-webinar",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-tilt-splittext",
+    "name": "Split-Text Staggered Reveal + 3D Card Tilt + Blend Cursor",
+    "focus": [
+      "split-text-reveal",
+      "3d-card-tilt",
+      "image-zoom-mask",
+      "custom-blend-cursor"
+    ],
+    "description": "Tập trung vào nghệ thuật chữ tách ký tự (Split-Text), thẻ kính mờ nghiêng 3D khi rê chuột và con trỏ Blend-mode."
+  },
+  "localImagePath": "E:\\DONG_PHU\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-11-03\\metaverse-cyber-webinar.png",
+  "imageBytes": 1724732,
+  "imageSha256": "c6e51538d53840ead333026dcf7e11a6391d1108133dad706161b1a591ddcbbc",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 1500,
+    "height": 2304,
+    "aspectRatio": 0.65,
+    "reason": "Rejected geometry (1500x2304, AR=0.65) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-11-02T22:35:45.918Z"
+}

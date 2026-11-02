@@ -1,0 +1,38 @@
+{
+  "id": "t211",
+  "slug": "orbis-hello",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T22:42:06.390Z",
+  "demo": "/demos/orbis-hello/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "a32dffaea49d",
+  "sha256": "a32dffaea49d655a058ef425bec4455320c615b6911cb8ce8475fbb610f56b1b",
+  "demoHtmlSha256": "9e35df331aefc65015777c7355a683c1b5f3ecad78d4a4caf2b7d8d379dffb3f",
+  "demoSha256": "999dd093aeb70d0dd68521b4c665493b006f0ed45c043a337add413e1639227b",
+  "bytes": 1045081,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 822
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbis-hello-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbis-hello-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbis-hello-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\orbis-hello-return.jpg"
+  ]
+}

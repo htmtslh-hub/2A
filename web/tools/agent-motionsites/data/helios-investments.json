@@ -1,0 +1,69 @@
+{
+  "pinId": "local-c759a506be56",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1092052609672285653_Mục_này_có_hình_ảnh_của_Investment_D.webp",
+  "archivedImagePath": "E:\\DONG_PHU\\2A\\anh-mau-pinterest\\da-lam\\2026-11-03\\pin_1092052609672285653_Mục_này_có_hình_ảnh_của_Investment_D.webp",
+  "title": "Helios Investments",
+  "slug": "helios-investments",
+  "assignedTier": "free",
+  "motionRecipe": {
+    "id": "recipe-parallax-magnetic",
+    "name": "Parallax Depth + 3D Pop-Out + Magnetic CTA",
+    "focus": [
+      "parallax-layers",
+      "magnetic-buttons",
+      "floating-3d-cutout"
+    ],
+    "description": "Tập trung vào chiều sâu thị sai nhiều lớp (Parallax), vật thể 3D nổi lấn khung và nút bấm từ tính nhẹ nhàng."
+  },
+  "localImagePath": "E:\\DONG_PHU\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-11-03\\helios-investments.webp",
+  "imageBytes": 70658,
+  "imageSha256": "c759a506be56a5b77f5c11754bf49fece2ff65aabf7c565d7ed96ff3150c323e",
+  "criteriaEvaluation": {
+    "accepted": true,
+    "totalScore": 100,
+    "criteriaMatchPercent": 100,
+    "passedCriteriaCount": 6,
+    "width": 1504,
+    "height": 1128,
+    "aspectRatio": 1.33,
+    "fullBleedRatio": 1,
+    "dofRatio": 1.65,
+    "criteriaChecks": {
+      "formatDesktopHeroShowcase": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "visualHookFullBleed3DDepth": {
+        "score": 20,
+        "max": 20,
+        "passed": true
+      },
+      "floatingGlassPillCards": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "outOfBounds3DPopOut": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "oversizedHeadlineTypography": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      },
+      "minimalistEdgeNavigation": {
+        "score": 15,
+        "max": 15,
+        "passed": true
+      }
+    },
+    "reason": "PASSED (100/100, 6/6 criteria = 100%)"
+  },
+  "fetchedAt": "2026-11-02T22:35:45.904Z",
+  "category": "commerce",
+  "prompt_text": "Obsidian & smoky mauve-rose AI investment portfolio dashboard featuring Nadia Rachel overview, helios.ai natural-language assistant, Watchlist (SPOT, AMZN, MSFT, NVDA), 2x2 unit holdings, and interactive spline performance curve."
+}

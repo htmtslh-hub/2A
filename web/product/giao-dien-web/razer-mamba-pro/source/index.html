@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Razer Mamba Pro — Automated Full-Control Gaming Hardware Store</title>
+  <meta name="description" content="Flagship Razer esports hardware showcase featuring Razer Mamba Pro automated full-control gaming mouse, Razer Kraken 7.1 surround headset, 4-column gear store, and Razer Insider community.">
+  <meta property="og:title" content="Razer Mamba Pro — For Gamers. By Gamers.">
+  <meta property="og:description" content="Explore Razer Mamba Pro, Kraken 7.1 V2, Lycosa Mirror, and Firefly Light Chroma peripherals.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0B0D0B">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0d0b;
+      --surface: #131613;
+      --surface-elevated: #1b201b;
+      --glass: rgba(19, 22, 19, 0.85);
+      --fg: #f4f7f4;
+      --muted: #8b968b;
+      --border: rgba(132, 204, 22, 0.18);
+      --accent: #84cc16;
+      --accent-text: #a3e635;
+      --accent-strong: #65a30d;
+      --on-accent: #070a05;
+      --font-display: 'Chakra Petch', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 16px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: radial-gradient(circle at 72% 16%, rgba(132, 204, 22, 0.14) 0%, #0b0d0b 52%, #070807 100%);
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
+    @keyframes chromaGlow {
+      0%, 100% { filter: drop-shadow(0 0 18px rgba(132, 204, 22, 0.45)); }
+      50% { filter: drop-shadow(0 0 32px rgba(163, 230, 53, 0.78)); }
+    }
+    .raz69-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .raz69-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .raz69-wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 44px); }
+    .raz69-header {
+      position: sticky; top: 0; z-index: 160;
+      background: rgba(11, 13, 11, 0.9); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+    .raz69-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 0;
+    }
+    .raz69-logo {
+      font-family: var(--font-display); font-weight: 700; font-size: 18px;
+      letter-spacing: 0.36em; color: var(--accent-text); text-decoration: none;
+    }
+    .raz69-menu { display: flex; align-items: center; gap: 26px; list-style: none; }
+    .raz69-menu a {
+      color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .raz69-menu a:hover, .raz69-menu a.is-active { color: var(--accent-text); }
+    .raz69-btn-lime {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 11px 26px; border-radius: 4px; border: 1px solid var(--accent);
+      background: var(--accent); color: var(--on-accent);
+      font-family: var(--font-display); font-weight: 700; font-size: 12.5px;
+      letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;
+    }
+    .raz69-btn-ghost {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 9px 18px; border-radius: 4px; border: 1px solid var(--border);
+      background: rgba(132, 204, 22, 0.06); color: var(--accent-text);
+      font-family: var(--font-display); font-weight: 600; font-size: 12px;
+      letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+    }
+
+    .raz69-hero {
+      padding: 64px 0 56px; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 36px; align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .raz69-hero h1 {
+      font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4.1rem);
+      font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.02;
+    }
+    .raz69-hero h1 span { color: var(--accent-text); }
+    .raz69-hero p {
+      color: var(--muted); font-size: 15px; line-height: 1.65; max-width: 480px; margin: 18px 0 26px;
+    }
+    .raz69-mouse-stage {
+      background: radial-gradient(circle at 50% 50%, rgba(132, 204, 22, 0.2) 0%, rgba(19, 22, 19, 0.92) 72%);
+      border: 1px solid var(--border); border-radius: 20px; padding: 28px;
+      display: flex; flex-direction: column; align-items: center; gap: 18px;
+    }
+    .raz69-dpi-pills { display: inline-flex; gap: 8px; flex-wrap: wrap; }
+    .raz69-dpi-btn {
+      padding: 6px 12px; border-radius: 4px; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03); color: var(--muted);
+      font-family: var(--font-mono); font-size: 11.5px; cursor: pointer;
+    }
+    .raz69-dpi-btn.is-active { background: var(--accent); color: var(--on-accent); font-weight: 700; }
+
+    .raz69-spotlight {
+      padding: 56px 0; display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 36px; align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .raz69-kraken-box {
+      background: linear-gradient(145deg, #162111 0%, #0f130f 100%);
+      border: 1px solid var(--border); border-radius: 20px; padding: 26px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .raz69-kraken-box img {
+      width: 100%; max-height: 340px; object-fit: cover; object-position: center 28%; border-radius: 12px;
+    }
+
+    .raz69-catalog { padding: 60px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
+    .raz69-catalog-grid {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 28px;
+    }
+    .raz69-gear-card {
+      background: var(--surface); border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 14px; padding: 22px 18px; display: flex; flex-direction: column;
+      justify-content: space-between; gap: 18px; text-align: center; cursor: pointer;
+    }
+    .raz69-gear-card:hover { border-color: var(--accent); }
+    .raz69-gear-art {
+      height: 130px; display: flex; align-items: center; justify-content: center;
+      background: radial-gradient(circle, rgba(132, 204, 22, 0.14) 0%, transparent 70%);
+    }
+    .raz69-gear-price {
+      font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--accent-text); margin-top: 6px;
+    }
+
+    .raz69-insider {
+      padding: 64px 0;
+      background: linear-gradient(180deg, rgba(20, 26, 18, 0.5) 0%, rgba(11, 13, 11, 0.95) 100%);
+    }
+    .raz69-insider-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 32px 0;
+    }
+    .raz69-news-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px;
+      display: flex; flex-direction: column; justify-content: space-between; gap: 14px;
+    }
+
+    .raz69-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(6, 8, 6, 0.82); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(12px);
+    }
+    .raz69-modal.is-open { opacity: 1; pointer-events: auto; }
+    .raz69-modal-box {
+      width: 100%; max-width: 480px; background: #131712; border: 1px solid var(--accent);
+      border-radius: 16px; padding: 28px;
+    }
+
+    @media (max-width: 1024px) {
+      .raz69-hero, .raz69-spotlight { grid-template-columns: 1fr; }
+      .raz69-catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .raz69-insider-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .raz69-menu { display: none; }
+      .raz69-catalog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="raz69-header">
+    <div class="raz69-wrap raz69-nav">
+      <a href="#top" class="raz69-logo">R A Z E R</a>
+      <nav aria-label="Primary">
+        <ul class="raz69-menu">
+          <li><a href="#top" class="is-active">Home</a></li>
+          <li><a href="#kraken">Hardware</a></li>
+          <li><a href="#store">Software</a></li>
+          <li><a href="#insider">Community</a></li>
+          <li><a href="#store">Store</a></li>
+          <li><a href="#insider">Support</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" class="raz69-btn-ghost">Motion: ON</button>
+        <button type="button" class="raz69-btn-ghost" data-seamless-trigger="Razer Store Cart (1 Item — USD $149)">
+          Cart (<span id="razerCartCount" class="tabular-nums">1</span>)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="raz69-wrap raz69-hero" aria-label="Razer Mamba Pro Hero">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.16em;margin-bottom:10px;">
+          5G LASER SENSOR • <span id="activeDpiReadout" class="tabular-nums">16,000 DPI</span>
+        </div>
+        <h1>RAZER <span>MAMBA PRO</span></h1>
+        <p>
+          World's first automated full control mice developed in 2016. Special for gaming with Adjustable Click Force Technology and Razer Chroma dual-rail illumination.
+        </p>
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+          <button type="button" id="exploreMagneticBtn" class="raz69-btn-lime">VIEW MORE</button>
+          <span class="tabular-nums" style="font-family:var(--font-mono);font-size:13px;color:var(--muted);">Response: 1ms Ultrapolling</span>
+        </div>
+      </div>
+
+      <div class="raz69-mouse-stage">
+        <svg viewBox="0 0 360 220" width="100%" height="200" aria-hidden="true" style="animation:chromaGlow 4s ease-in-out infinite;">
+          <defs>
+            <linearGradient id="mambaBody" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#262b26"/>
+              <stop offset="55%" stop-color="#141714"/>
+              <stop offset="100%" stop-color="#090b09"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="180" cy="196" rx="110" ry="14" fill="rgba(132,204,22,0.22)"/>
+          <path d="M 115 48 C 115 20, 245 20, 245 48 L 262 142 C 266 178, 228 198, 180 198 C 132 198, 94 178, 98 142 Z" fill="url(#mambaBody)" stroke="#84cc16" stroke-width="2.2"/>
+          <path d="M 120 56 Q 180 78 240 56" fill="none" stroke="rgba(163,230,53,0.55)" stroke-width="1.5"/>
+          <rect x="172" y="32" width="16" height="36" rx="8" fill="#0b0d0b" stroke="#a3e635" stroke-width="2.5"/>
+          <path d="M 106 92 C 102 126, 108 158, 126 180" fill="none" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+          <path d="M 254 92 C 258 126, 252 158, 234 180" fill="none" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="180" cy="138" r="16" fill="none" stroke="#84cc16" stroke-width="2" stroke-dasharray="6 4"/>
+        </svg>
+        <div class="raz69-dpi-pills" role="group" aria-label="DPI Sensitivity Preset">
+          <button type="button" class="raz69-dpi-btn" data-dpi="1,600 DPI">1600 DPI</button>
+          <button type="button" class="raz69-dpi-btn" data-dpi="6,400 DPI">6400 DPI</button>
+          <button type="button" class="raz69-dpi-btn" data-dpi="10,000 DPI">10000 DPI</button>
+          <button type="button" class="raz69-dpi-btn is-active" data-dpi="16,000 DPI">16000 DPI</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="kraken" class="raz69-wrap raz69-spotlight raz69-reveal" aria-label="Razer Kraken 7.1 Spotlight">
+      <div class="raz69-kraken-box">
+        <svg viewBox="0 0 360 280" width="100%" height="260" role="img" aria-label="Razer Kraken 7.1 Chroma Gaming Headset">
+          <defs>
+            <radialGradient id="krakenGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#84cc16" stop-opacity="0.38"/>
+              <stop offset="100%" stop-color="#0f130f" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="180" cy="140" r="120" fill="url(#krakenGlow)"/>
+          <path d="M 88 156 A 92 92 0 0 1 272 156" fill="none" stroke="#84cc16" stroke-width="16" stroke-linecap="round"/>
+          <path d="M 98 156 A 82 82 0 0 1 262 156" fill="none" stroke="#1b221a" stroke-width="8"/>
+          <rect x="64" y="136" width="38" height="78" rx="18" fill="#182017" stroke="#a3e635" stroke-width="3"/>
+          <rect x="258" y="136" width="38" height="78" rx="18" fill="#182017" stroke="#a3e635" stroke-width="3"/>
+          <circle cx="83" cy="175" r="9" fill="#84cc16"/>
+          <circle cx="277" cy="175" r="9" fill="#84cc16"/>
+          <path d="M 92 198 Q 132 232 166 218" fill="none" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.14em;margin-bottom:8px;">
+          7.1 VIRTUAL SURROUND SOUND ENGINE
+        </div>
+        <h2 style="font-family:var(--font-display);font-size:clamp(2rem,3.8vw,3.1rem);letter-spacing:0.05em;text-transform:uppercase;">
+          RAZER <span style="color:var(--accent-text);">KRAKEN 7.1</span>
+        </h2>
+        <p style="color:var(--muted);font-size:14.5px;line-height:1.65;margin:16px 0 24px;">
+          Complete with an advanced 7.1 virtual surround sound engine, the Razer Kraken 7.1 Chroma delivers low-latency positional audio and a retractable digital microphone built for tournament stages.
+        </p>
+        <button type="button" class="raz69-btn-lime" data-seamless-trigger="Razer Kraken 7.1 Surround Audio Calibration">VIEW MORE</button>
+      </div>
+    </section>
+
+    <section id="store" class="raz69-wrap raz69-catalog raz69-reveal" aria-label="Razer Peripheral Store Lineup">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,2.6vw,2.2rem);letter-spacing:0.06em;">
+          TOURNAMENT <span style="color:var(--accent-text);">HARDWARE LINEUP</span>
+        </h2>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">CHROMA SYNC ENABLED</span>
+      </div>
+
+      <div class="raz69-catalog-grid">
+        <article class="raz69-gear-card" data-gear-buy="RAZER LYCOSA MIRROR (USD $199)">
+          <div class="raz69-gear-art">
+            <svg width="110" height="64" viewBox="0 0 110 64" fill="none" stroke="#84cc16" stroke-width="2" aria-hidden="true">
+              <rect x="8" y="14" width="94" height="38" rx="5" fill="#101410"/>
+              <line x1="18" y1="25" x2="92" y2="25"/><line x1="18" y1="33" x2="92" y2="33"/><line x1="28" y1="41" x2="82" y2="41"/>
+            </svg>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER LYCOSA MIRROR</h3>
+            <div class="raz69-gear-price tabular-nums">USD $199</div>
+          </div>
+        </article>
+
+        <article class="raz69-gear-card" data-gear-buy="RAZER KRAKEN 7.1 V2 (USD $89)">
+          <div class="raz69-gear-art">
+            <svg width="84" height="74" viewBox="0 0 84 74" fill="none" stroke="#a3e635" stroke-width="2.2" aria-hidden="true">
+              <path d="M 16 44 A 26 26 0 0 1 68 44"/>
+              <rect x="10" y="40" width="12" height="22" rx="6" fill="#151b14"/>
+              <rect x="62" y="40" width="12" height="22" rx="6" fill="#151b14"/>
+            </svg>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER KRAKEN 7.1 V2</h3>
+            <div class="raz69-gear-price tabular-nums">USD $89</div>
+          </div>
+        </article>
+
+        <article class="raz69-gear-card" data-gear-buy="RAZER MAMBA TOURNAMENT (USD $149)">
+          <div class="raz69-gear-art">
+            <svg width="72" height="76" viewBox="0 0 72 76" fill="none" stroke="#84cc16" stroke-width="2.2" aria-hidden="true">
+              <rect x="18" y="10" width="36" height="56" rx="18" fill="#121612"/>
+              <line x1="36" y1="16" x2="36" y2="30"/>
+            </svg>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER MAMBA TOURNAMENT</h3>
+            <div class="raz69-gear-price tabular-nums">USD $149</div>
+          </div>
+        </article>
+
+        <article class="raz69-gear-card" data-gear-buy="RAZER FIREFLY LIGHT (USD $29)">
+          <div class="raz69-gear-art">
+            <svg width="106" height="64" viewBox="0 0 106 64" fill="none" stroke="#a3e635" stroke-width="2" aria-hidden="true">
+              <polygon points="18,16 88,16 98,50 8,50" fill="#121712"/>
+            </svg>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER FIREFLY LIGHT</h3>
+            <div class="raz69-gear-price tabular-nums">USD $29</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="insider" class="raz69-insider raz69-reveal" aria-label="Razer Insider Community">
+      <div class="raz69-wrap">
+        <div style="text-align:center;">
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.18em;">RAZER INSIDER</div>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.85rem,3.2vw,2.6rem);letter-spacing:0.06em;margin-top:6px;">
+            FROM GAMERS TO GAMERS
+          </h2>
+        </div>
+
+        <div class="raz69-insider-grid">
+          <article class="raz69-news-card">
+            <h3 style="font-family:var(--font-display);font-size:16px;color:var(--accent-text);letter-spacing:0.04em;">
+              BREAKING THE SEAGE WITH RAZER ›
+            </h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.6;">
+              Go behind the scenes with pro Rainbow Six rosters calibrating Mamba Pro lift-off distance for tournament finals.
+            </p>
+          </article>
+
+          <article class="raz69-news-card">
+            <h3 style="font-family:var(--font-display);font-size:16px;color:var(--accent-text);letter-spacing:0.04em;">
+              WELCOME TO TEAM RAZER, NEXTBIT! ›
+            </h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.6;">
+              Cloud-first hardware design meets high-refresh mobile gaming engineering inside the expanding Razer ecosystem.
+            </p>
+          </article>
+
+          <article class="raz69-news-card">
+            <h3 style="font-family:var(--font-display);font-size:16px;color:var(--accent-text);letter-spacing:0.04em;">
+              THE RAZER BLACKWIDOW CHROMA V2 ›
+            </h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.6;">
+              Discover tactile Green, Orange, and Yellow mechanical switches with magnetic ergonomic wrist rest support.
+            </p>
+          </article>
+        </div>
+
+        <div style="text-align:center;">
+          <button type="button" class="raz69-btn-lime" data-seamless-trigger="Join Razer Insider Global Esports Forum">JOIN COMMUNITY</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="raz69-wrap" style="padding:28px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span>R A Z E R — For Gamers. By Gamers.</span>
+    <span class="tabular-nums">Synapse 3 Cloud • Chroma RGB SDK</span>
+  </footer>
+
+  <div class="raz69-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="raz69-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">RAZER SYNAPSE STORE</span>
+        <button type="button" id="closeSeamlessBtn" class="raz69-btn-ghost" style="padding:4px 10px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Razer Mamba Pro Specification</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Equipped with a true 16,000 DPI 5G laser sensor, Adjustable Click Force mechanism, and wired/wireless dual gaming grade performance.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="raz69-btn-lime" style="width:100%;">Add to Razer Setup →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var dpiOut = document.getElementById('activeDpiReadout');
+      document.querySelectorAll('.raz69-dpi-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.raz69-dpi-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (dpiOut) dpiOut.textContent = btn.getAttribute('data-dpi') || '16,000 DPI';
+        });
+      });
+      var cartEl = document.getElementById('razerCartCount');
+      var count = 1;
+      document.querySelectorAll('[data-gear-buy]').forEach(function (card) {
+        card.addEventListener('click', function () {
+          count += 1;
+          if (cartEl) cartEl.textContent = String(count);
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.raz69-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

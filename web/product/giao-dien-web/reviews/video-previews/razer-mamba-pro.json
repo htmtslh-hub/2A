@@ -1,0 +1,38 @@
+{
+  "id": "t208",
+  "slug": "razer-mamba-pro",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T22:40:32.862Z",
+  "demo": "/demos/razer-mamba-pro/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "d5088d331f2e",
+  "sha256": "d5088d331f2ef6ece3dd6ac913496159ea5919edeb6eac71c3260de59f83417c",
+  "demoHtmlSha256": "c96bbd105a4768c43626370fcb8130c5b51ed92789354ee97ff9076040625dee",
+  "demoSha256": "8a34879175d14ccb9d0dbf26d351701941496954a3cf24a9c9db4302062cfb72",
+  "bytes": 373420,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1010
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\razer-mamba-pro-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\razer-mamba-pro-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\razer-mamba-pro-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\razer-mamba-pro-return.jpg"
+  ]
+}

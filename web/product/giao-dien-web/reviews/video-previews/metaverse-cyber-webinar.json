@@ -1,0 +1,38 @@
+{
+  "id": "t209",
+  "slug": "metaverse-cyber-webinar",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T22:41:04.602Z",
+  "demo": "/demos/metaverse-cyber-webinar/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "0620f909e71d",
+  "sha256": "0620f909e71d10efbad729c90affb6c5618048f3b32242b58d29f56ad252d75e",
+  "demoHtmlSha256": "4df204d9efda78854c9f41b60379f7ac86c037f8abf7eac450de3cb8df2e5914",
+  "demoSha256": "e8639b0d65f710f27aa52987eee3e32128b9f6f914d7796bbff8e19f8a571ada",
+  "bytes": 329028,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1041
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\metaverse-cyber-webinar-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\metaverse-cyber-webinar-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\metaverse-cyber-webinar-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\metaverse-cyber-webinar-return.jpg"
+  ]
+}

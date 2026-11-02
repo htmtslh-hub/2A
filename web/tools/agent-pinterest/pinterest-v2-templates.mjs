@@ -153,6 +153,36 @@ export const PINTEREST_V2_META = {
     brandTitle: 'Blobs Pet Companion',
     category: 'commerce',
     headlineSub: 'Playful monochrome & peach-apricot smart pet health, GPS collar tracking, and veterinary calendar ecosystem featuring expressive black-cat blob illustrations and multi-screen iOS mockups.'
+  },
+  'helios-investments': {
+    id: 'obsidian-mauve-ai-wealth-dashboard',
+    brandTitle: 'Helios Investments',
+    category: 'commerce',
+    headlineSub: 'Obsidian & smoky mauve-rose AI investment portfolio dashboard featuring Nadia Rachel overview, helios.ai natural-language assistant, Watchlist (SPOT, AMZN, MSFT, NVDA), 2x2 unit holdings, and interactive spline performance curve.'
+  },
+  'rayhan-aditya': {
+    id: 'crimson-monolith-creative-portfolio',
+    brandTitle: 'Rayhan Aditya Portfolio',
+    category: 'portfolio',
+    headlineSub: 'Editorial pitch-black & bold crimson personal portfolio for Web Designer & UI/UX Creator Rayhan Aditya featuring giant condensed PORTFOLIO typography, Veloce/Woodcraft/Urbanic showcases, and 5-step process matrix.'
+  },
+  'razer-mamba-pro': {
+    id: 'acid-venom-esports-hardware-store',
+    brandTitle: 'Razer Mamba Pro',
+    category: 'commerce',
+    headlineSub: 'Matte-carbon & acid-green esports peripheral Flagship Store showcasing Razer Mamba Pro automated full-control gaming mouse, Kraken 7.1 surround headset spotlight, 4-column hardware lineup, and Razer Insider hub.'
+  },
+  'metaverse-cyber-webinar': {
+    id: 'porcelain-android-metaverse-webinar',
+    brandTitle: 'Metaverse Cyber Webinar',
+    category: 'portfolio',
+    headlineSub: 'High-key porcelain & periwinkle-indigo 3D cybernetic android webinar landing page featuring gothic МЕТА VERSE typography, 09.06.2023 mechanical heart badge, 19:00 neumorphic clock dial, and 3-pillar bionic curriculum.'
+  },
+  'looo-ai-magic': {
+    id: 'aurora-mesh-ai-design-studio',
+    brandTitle: 'Looo AI Magic Studio',
+    category: 'commerce',
+    headlineSub: 'Iridescent cobalt-violet & rose-aura AI creative studio featuring 50+ theme prompt search, 3D holographic ribbon service cards (Web Design, App, Graphic), and curated 4-column poster trend gallery.'
   }
 };
 
@@ -9210,6 +9240,2361 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
           if (nameEl) nameEl.textContent = pet.split(' ')[0];
           if (bpEl) bpEl.textContent = btn.getAttribute('data-bp') || '';
           if (speedEl) speedEl.textContent = btn.getAttribute('data-speed') || '';
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 26. HELIOS INVESTMENTS (helios-investments — Free Tier)
+  // Obsidian & Smoky Mauve-Rose AI Investment Dashboard (Nadia Rachel / helios.ai)
+  // ============================================================================
+  if (slug === 'helios-investments') {
+    const pinPath = data.pinExt ? 'assets/pin-reference' + data.pinExt : 'assets/pin-reference.webp';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Helios Investments — AI-Powered Wealth &amp; Portfolio Overview</title>
+  <meta name="description" content="Dark obsidian and smoky mauve-rose AI investment dashboard featuring Nadia Rachel portfolio overview, helios.ai voice assistant, live NYSE Watchlist, and interactive spline performance curve.">
+  <meta property="og:title" content="Helios Investments — AI Wealth &amp; Portfolio Dashboard">
+  <meta property="og:description" content="Track AAPL, AMZN, MSFT, NVDA, and SPOT holdings with helios.ai predictive market intelligence.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0A070C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #09070b;
+      --surface: #141018;
+      --surface-elevated: #1e1624;
+      --glass: rgba(24, 18, 30, 0.78);
+      --fg: #f8f4fa;
+      --muted: #a699b2;
+      --border: rgba(216, 168, 200, 0.16);
+      --accent: #d8a8c8;
+      --accent-text: #f0d0e6;
+      --accent-strong: #b882a6;
+      --on-accent: #130b18;
+      --emerald: #34d399;
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 24px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: radial-gradient(circle at 82% 14%, rgba(164, 108, 148, 0.22) 0%, rgba(18, 13, 23, 0.96) 46%, #08060a 100%);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      overflow-x: clip;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent-text); outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
+    @keyframes heliosPulse {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.06); opacity: 1; }
+    }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-shell {
+      max-width: 1420px; margin: 18px auto; padding: 0 clamp(14px, 2.4vw, 28px);
+      display: grid; grid-template-columns: 248px minmax(0, 1fr); gap: 20px; align-items: start;
+    }
+    .${p}-sidebar {
+      background: linear-gradient(180deg, rgba(28, 20, 34, 0.92) 0%, rgba(14, 10, 18, 0.95) 100%);
+      border: 1px solid var(--border); border-radius: 28px; padding: 24px 18px;
+      display: flex; flex-direction: column; justify-content: space-between; min-height: 820px;
+      position: sticky; top: 18px;
+      backdrop-filter: blur(18px);
+    }
+    .${p}-brand {
+      display: flex; align-items: center; gap: 12px; padding: 6px 10px 24px;
+      text-decoration: none; color: var(--fg); font-weight: 700; font-size: 16px; letter-spacing: -0.02em;
+    }
+    .${p}-brand-mark {
+      width: 34px; height: 34px; border-radius: 10px;
+      background: linear-gradient(135deg, #e5bed8 0%, #9b6b8c 100%);
+      color: #120b16; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 15px; box-shadow: 0 8px 20px rgba(216, 168, 200, 0.25);
+    }
+    .${p}-nav-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .${p}-nav-btn {
+      width: 100%; display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px; border-radius: 999px; border: 1px solid transparent;
+      background: transparent; color: var(--muted); font-size: 14px; font-weight: 500;
+      cursor: pointer; text-align: left; text-decoration: none;
+    }
+    .${p}-nav-btn:hover { color: var(--fg); background: rgba(255, 255, 255, 0.04); }
+    .${p}-nav-btn.is-active {
+      background: linear-gradient(90deg, rgba(216, 168, 200, 0.28) 0%, rgba(216, 168, 200, 0.08) 100%);
+      border-color: rgba(216, 168, 200, 0.36); color: var(--fg); font-weight: 600;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+    .${p}-workspace { display: flex; flex-direction: column; gap: 18px; }
+    .${p}-topbar {
+      background: rgba(22, 16, 28, 0.82); border: 1px solid var(--border);
+      border-radius: 26px; padding: 18px 24px;
+      display: flex; flex-direction: column; gap: 16px;
+      backdrop-filter: blur(16px);
+    }
+    .${p}-topbar-upper {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .${p}-welcome h1 {
+      font-size: clamp(1.55rem, 2.4vw, 2.15rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15;
+    }
+    .${p}-welcome p { color: var(--muted); font-size: 13.5px; margin-top: 4px; }
+    .${p}-user-cluster { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .${p}-icon-circle {
+      width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04); color: var(--fg);
+      display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+    }
+    .${p}-profile-pill {
+      display: flex; align-items: center; gap: 10px;
+      padding: 6px 14px 6px 6px; border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border);
+    }
+    .${p}-avatar {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #f5d0fe, #9333ea 70%, #3b0764);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 13px; color: #ffffff;
+    }
+    .${p}-topbar-lower {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding-top: 8px; border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .${p}-mode-tabs { display: inline-flex; align-items: center; gap: 8px; }
+    .${p}-mode-pill {
+      padding: 8px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03); color: var(--muted);
+      font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-mode-pill.is-active {
+      background: var(--accent); color: var(--on-accent); border-color: var(--accent);
+    }
+    .${p}-ai-omnibar {
+      flex: 1; max-width: 430px; display: flex; align-items: center; gap: 10px;
+      padding: 6px 8px 6px 16px; border-radius: 999px;
+      background: rgba(12, 9, 16, 0.85); border: 1px solid rgba(216, 168, 200, 0.28);
+    }
+    .${p}-ai-omnibar input {
+      flex: 1; background: transparent; border: 0; color: var(--fg);
+      font-size: 13px; font-family: inherit; outline: none;
+    }
+    .${p}-ai-omnibar input::placeholder { color: var(--muted); }
+    .${p}-ai-send {
+      padding: 7px 14px; border-radius: 999px; border: 0;
+      background: linear-gradient(135deg, #e2bad4 0%, #b580a3 100%);
+      color: #140c18; font-size: 12px; font-weight: 700; cursor: pointer;
+    }
+
+    .${p}-bento-grid {
+      display: grid; grid-template-columns: 1.05fr 1.25fr 1.25fr; gap: 18px;
+    }
+    .${p}-col-stack { display: flex; flex-direction: column; gap: 18px; }
+    .${p}-card {
+      background: linear-gradient(165deg, rgba(31, 22, 38, 0.86) 0%, rgba(17, 13, 22, 0.94) 100%);
+      border: 1px solid var(--border); border-radius: 24px; padding: 22px;
+      position: relative; overflow: hidden;
+    }
+    .${p}-card-head {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px;
+    }
+    .${p}-card-title { font-size: 15px; font-weight: 600; color: var(--fg); }
+    .${p}-badge-soft {
+      padding: 4px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 600;
+      background: rgba(216, 168, 200, 0.14); color: var(--accent-text); border: 1px solid rgba(216, 168, 200, 0.25);
+    }
+    .${p}-holding-val {
+      font-size: clamp(1.9rem, 2.8vw, 2.45rem); font-weight: 700; letter-spacing: -0.03em; margin: 8px 0 6px;
+    }
+    .${p}-dome-card {
+      min-height: 218px; display: flex; flex-direction: column; justify-content: space-between;
+      background:
+        radial-gradient(circle at 50% 105%, rgba(232, 180, 216, 0.55) 0%, rgba(168, 102, 148, 0.24) 42%, rgba(20, 15, 25, 0.95) 78%),
+        #16101c;
+    }
+    .${p}-dome-orb {
+      width: 140px; height: 70px; margin: 10px auto 0;
+      border-radius: 140px 140px 0 0;
+      background: radial-gradient(circle at 50% 90%, #fbe8f6 0%, #d8a8c8 48%, rgba(216, 168, 200, 0) 100%);
+      filter: drop-shadow(0 0 24px rgba(216, 168, 200, 0.45));
+      animation: heliosPulse 4.5s ease-in-out infinite;
+    }
+    .${p}-watch-tabs { display: inline-flex; gap: 6px; background: rgba(9, 7, 11, 0.6); padding: 4px; border-radius: 999px; }
+    .${p}-watch-tab {
+      padding: 5px 11px; border-radius: 999px; border: 0; background: transparent;
+      color: var(--muted); font-size: 11.5px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-watch-tab.is-active { background: rgba(216, 168, 200, 0.22); color: var(--fg); }
+    .${p}-watch-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .${p}-watch-row {
+      display: grid; grid-template-columns: 36px 1fr auto auto; align-items: center; gap: 12px;
+      padding: 10px 12px; border-radius: 16px; background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05); cursor: pointer;
+    }
+    .${p}-watch-row:hover { border-color: rgba(216, 168, 200, 0.35); background: rgba(216, 168, 200, 0.07); }
+    .${p}-ticker-icon {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(216, 168, 200, 0.14); color: var(--accent-text);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+    }
+    .${p}-gain-pill {
+      padding: 4px 8px; border-radius: 8px; font-size: 11.5px; font-weight: 600;
+      background: rgba(52, 211, 153, 0.14); color: var(--emerald);
+    }
+
+    .${p}-portfolio-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 8px;
+    }
+    .${p}-unit-card {
+      padding: 14px; border-radius: 18px; background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.07); display: flex; flex-direction: column; justify-content: space-between;
+      min-height: 142px; cursor: pointer;
+    }
+    .${p}-unit-card:hover { border-color: rgba(216, 168, 200, 0.4); }
+
+    .${p}-chart-card { padding: 24px 26px; }
+    .${p}-tf-group { display: inline-flex; gap: 6px; background: rgba(9, 7, 11, 0.65); padding: 4px; border-radius: 999px; border: 1px solid var(--border); }
+    .${p}-tf-btn {
+      padding: 6px 13px; border-radius: 999px; border: 0; background: transparent;
+      color: var(--muted); font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-tf-btn.is-active { background: var(--accent); color: var(--on-accent); }
+    .${p}-chart-stage { position: relative; margin-top: 16px; }
+    .${p}-chart-tooltip {
+      position: absolute; top: 18px; left: 48%; transform: translateX(-50%);
+      background: rgba(26, 18, 33, 0.94); border: 1px solid rgba(216, 168, 200, 0.42);
+      padding: 10px 14px; border-radius: 14px; box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+      pointer-events: none;
+    }
+    .${p}-months-row {
+      display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px;
+      margin-top: 10px; color: var(--muted); font-size: 11.5px; text-align: center;
+      font-family: var(--font-mono);
+    }
+
+    .${p}-ref-showcase {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 22px; align-items: center;
+    }
+    .${p}-ref-frame {
+      border-radius: 20px; overflow: hidden; border: 1px solid var(--border);
+      background: #0d0910; box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
+    }
+    .${p}-ref-frame img { width: 100%; height: auto; display: block; }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(6, 4, 8, 0.78); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out);
+      backdrop-filter: blur(12px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 480px; background: #181220; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+    }
+
+    @media (max-width: 1120px) {
+      .${p}-shell { grid-template-columns: 1fr; }
+      .${p}-sidebar { position: static; min-height: auto; }
+      .${p}-bento-grid { grid-template-columns: 1fr; }
+      .${p}-ref-showcase { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .${p}-portfolio-grid { grid-template-columns: 1fr; }
+      .${p}-months-row { grid-template-columns: repeat(6, 1fr); row-gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <div class="${p}-shell">
+    <aside class="${p}-sidebar" aria-label="Helios workspace navigation">
+      <div>
+        <a href="#top" class="${p}-brand">
+          <span class="${p}-brand-mark">H</span>
+          <span>Helios Investments</span>
+        </a>
+        <nav aria-label="Primary">
+          <ul class="${p}-nav-list">
+            <li><a href="#overview" class="${p}-nav-btn is-active">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/></svg>
+              Dashboard
+            </a></li>
+            <li><a href="#holdings" class="${p}-nav-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+              Portfolio
+            </a></li>
+            <li><a href="#performance" class="${p}-nav-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              Analysis
+            </a></li>
+            <li><a href="#watchlist" class="${p}-nav-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8"/><path d="M3.6 15h16.8"/></svg>
+              Market
+            </a></li>
+            <li><a href="#ai-blueprint" class="${p}-nav-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+              Community
+            </a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:16px;display:flex;flex-direction:column;gap:6px;">
+        <button type="button" class="${p}-nav-btn" data-seamless-trigger="Helios Portfolio Settings">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1z"/></svg>
+          Settings
+        </button>
+        <button type="button" class="${p}-nav-btn" data-seamless-trigger="Helios Priority Advisor Support">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Support
+        </button>
+        <button type="button" id="motionToggleBtn" aria-pressed="false" class="${p}-nav-btn" style="margin-top:6px;color:var(--accent-text);border-color:rgba(216,168,200,0.22);">
+          Motion: ON
+        </button>
+      </div>
+    </aside>
+
+    <div class="${p}-workspace">
+      <header class="${p}-topbar" id="top">
+        <div class="${p}-topbar-upper">
+          <div class="${p}-welcome">
+            <h1>Welcome, Nadia</h1>
+            <p>Here's your investment portfolio overview</p>
+          </div>
+          <div class="${p}-user-cluster">
+            <button type="button" class="${p}-icon-circle" aria-label="Notifications" data-seamless-trigger="Portfolio Alerts &amp; Rebalance Signals">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </button>
+            <button type="button" class="${p}-icon-circle" aria-label="Workspace Preferences" data-seamless-trigger="Helios Quantitative Engine Preferences">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2"/></svg>
+            </button>
+            <div class="${p}-profile-pill">
+              <span class="${p}-avatar" aria-hidden="true">NR</span>
+              <div style="line-height:1.25;">
+                <div style="font-size:13px;font-weight:700;">Nadia Rachel</div>
+                <div style="font-size:11px;color:var(--muted);font-family:var(--font-mono);">rachel_helios@gmail.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="${p}-topbar-lower">
+          <div class="${p}-mode-tabs" role="tablist" aria-label="Workspace mode">
+            <button type="button" class="${p}-mode-pill is-active" data-mode-btn="Market">Market</button>
+            <button type="button" class="${p}-mode-pill" data-mode-btn="Wallet">Wallet</button>
+            <button type="button" class="${p}-mode-pill" data-mode-btn="Tools">Tools</button>
+          </div>
+          <form class="${p}-ai-omnibar" id="heliosAiForm" onsubmit="return false;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+            <input type="text" id="heliosPromptInput" placeholder="Ask helios.ai anything" aria-label="Ask helios.ai anything">
+            <button type="submit" class="${p}-ai-send" id="exploreMagneticBtn">Ask AI</button>
+          </form>
+        </div>
+      </header>
+
+      <main id="main-content" style="display:flex;flex-direction:column;gap:18px;">
+        <section id="overview" class="${p}-bento-grid ${p}-reveal" aria-label="Portfolio summary and watchlist">
+          <div class="${p}-col-stack">
+            <article class="${p}-card">
+              <div class="${p}-card-head">
+                <span class="${p}-card-title">Total Holding</span>
+                <span class="${p}-badge-soft tabular-nums">6M</span>
+              </div>
+              <div class="${p}-holding-val tabular-nums" id="totalHoldingVal">$ 12,304.11</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;font-size:12.5px;color:var(--muted);">
+                <span>Return vs S&amp;P Benchmark</span>
+                <span class="${p}-gain-pill tabular-nums">+14.82% (+ $1,588.40)</span>
+              </div>
+            </article>
+
+            <article class="${p}-card ${p}-dome-card">
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <span class="${p}-badge-soft">helios.ai Engine</span>
+                <span style="font-size:11.5px;color:var(--accent-text);font-family:var(--font-mono);">99.4% Confidence</span>
+              </div>
+              <div class="${p}-dome-orb" aria-hidden="true"></div>
+              <div style="text-align:center;">
+                <h2 style="font-size:18px;font-weight:700;letter-spacing:-0.02em;margin-bottom:12px;">Decisions Powered by Data</h2>
+                <button type="button" class="${p}-ai-send" style="padding:10px 22px;font-size:13px;" data-seamless-trigger="Helios AI Alpha Signals &amp; Risk Allocation">
+                  Explore AI Insights →
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <article id="watchlist" class="${p}-card">
+            <div class="${p}-card-head">
+              <h2 class="${p}-card-title">Watchlist</h2>
+              <div class="${p}-watch-tabs">
+                <button type="button" class="${p}-watch-tab is-active" data-watch-filter="all">Most Viewed</button>
+                <button type="button" class="${p}-watch-tab" data-watch-filter="gain">Gain</button>
+                <button type="button" class="${p}-watch-tab" data-watch-filter="tech">Lose</button>
+              </div>
+            </div>
+            <div class="${p}-watch-list">
+              <div class="${p}-watch-row" role="button" tabindex="0" data-ticker="SPOT" data-price="$11,770.3" data-delta="+16.31%">
+                <span class="${p}-ticker-icon">SPOT</span>
+                <div>
+                  <div style="font-size:14px;font-weight:600;">Spotify</div>
+                  <div style="font-size:11.5px;color:var(--muted);font-family:var(--font-mono);">NYSE. SPOT</div>
+                </div>
+                <div class="tabular-nums" style="font-size:13.5px;font-weight:600;">$11,770.3</div>
+                <span class="${p}-gain-pill tabular-nums">+16.31%</span>
+              </div>
+
+              <div class="${p}-watch-row" role="button" tabindex="0" data-ticker="AMZN" data-price="$10,280.8" data-delta="+8.11%">
+                <span class="${p}-ticker-icon">AMZN</span>
+                <div>
+                  <div style="font-size:14px;font-weight:600;">Amazon</div>
+                  <div style="font-size:11.5px;color:var(--muted);font-family:var(--font-mono);">NYSE. AMZN</div>
+                </div>
+                <div class="tabular-nums" style="font-size:13.5px;font-weight:600;">$10,280.8</div>
+                <span class="${p}-gain-pill tabular-nums">+8.11%</span>
+              </div>
+
+              <div class="${p}-watch-row" role="button" tabindex="0" data-ticker="MSFT" data-price="$8,510.2" data-delta="+4.89%">
+                <span class="${p}-ticker-icon">MSFT</span>
+                <div>
+                  <div style="font-size:14px;font-weight:600;">MSFT</div>
+                  <div style="font-size:11.5px;color:var(--muted);font-family:var(--font-mono);">NYSE. MSFT</div>
+                </div>
+                <div class="tabular-nums" style="font-size:13.5px;font-weight:600;">$8,510.2</div>
+                <span class="${p}-gain-pill tabular-nums">+4.89%</span>
+              </div>
+
+              <div class="${p}-watch-row" role="button" tabindex="0" data-ticker="NVDA" data-price="$2,110.2" data-delta="+2.12%">
+                <span class="${p}-ticker-icon">NVDA</span>
+                <div>
+                  <div style="font-size:14px;font-weight:600;">NVDA</div>
+                  <div style="font-size:11.5px;color:var(--muted);font-family:var(--font-mono);">NYSE. NVDA</div>
+                </div>
+                <div class="tabular-nums" style="font-size:13.5px;font-weight:600;">$2,110.2</div>
+                <span class="${p}-gain-pill tabular-nums">+2.12%</span>
+              </div>
+            </div>
+          </article>
+
+          <article id="holdings" class="${p}-card">
+            <div class="${p}-card-head">
+              <h2 class="${p}-card-title">My Portfolio</h2>
+              <button type="button" class="${p}-badge-soft" style="cursor:pointer;" data-seamless-trigger="Full Portfolio Ledger (AAPL, AMZN, MSFT, NVDA)">See all ↗</button>
+            </div>
+            <div class="${p}-portfolio-grid">
+              <div class="${p}-unit-card" role="button" tabindex="0" data-seamless-trigger="AAPL Position — 104 Units ($1,721.3)">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <span style="font-weight:700;font-size:14px;">AAPL</span>
+                  <span style="font-size:11.5px;color:var(--muted);font-family:var(--font-mono);" class="tabular-nums">Units 104</span>
+                </div>
+                <div>
+                  <div style="font-size:11px;color:var(--muted);">Current Value</div>
+                  <div class="tabular-nums" style="font-size:18px;font-weight:700;margin:3px 0;">$ 1,721.3</div>
+                  <div class="tabular-nums" style="font-size:11.5px;color:var(--emerald);">+12.31 (0.7%)</div>
+                </div>
+              </div>
+
+              <div class="${p}-unit-card" role="button" tabindex="0" data-seamless-trigger="AMZN Position — 12 Units ($1,721.3)">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <span style="font-weight:700;font-size:14px;">AMZN</span>
+                  <span style="font-size:11.5px;color:var(--muted);font-family:var(--font-mono);" class="tabular-nums">Units 12</span>
+                </div>
+                <div>
+                  <div style="font-size:11px;color:var(--muted);">Current Value</div>
+                  <div class="tabular-nums" style="font-size:18px;font-weight:700;margin:3px 0;">$ 1,721.3</div>
+                  <div class="tabular-nums" style="font-size:11.5px;color:var(--emerald);">+12.31 (0.7%)</div>
+                </div>
+              </div>
+
+              <div class="${p}-unit-card" role="button" tabindex="0" data-seamless-trigger="MSFT Position — 41 Units ($1,721.3)">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <span style="font-weight:700;font-size:14px;">MSFT</span>
+                  <span style="font-size:11.5px;color:var(--muted);font-family:var(--font-mono);" class="tabular-nums">Units 41</span>
+                </div>
+                <div>
+                  <div style="font-size:11px;color:var(--muted);">Current Value</div>
+                  <div class="tabular-nums" style="font-size:18px;font-weight:700;margin:3px 0;">$ 1,721.3</div>
+                  <div class="tabular-nums" style="font-size:11.5px;color:var(--emerald);">+12.31 (0.7%)</div>
+                </div>
+              </div>
+
+              <div class="${p}-unit-card" role="button" tabindex="0" data-seamless-trigger="NVDA Position — 16 Units ($1,721.3)">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <span style="font-weight:700;font-size:14px;">NVDA</span>
+                  <span style="font-size:11.5px;color:var(--muted);font-family:var(--font-mono);" class="tabular-nums">Units 16</span>
+                </div>
+                <div>
+                  <div style="font-size:11px;color:var(--muted);">Current Value</div>
+                  <div class="tabular-nums" style="font-size:18px;font-weight:700;margin:3px 0;">$ 1,721.3</div>
+                  <div class="tabular-nums" style="font-size:11.5px;color:var(--emerald);">+12.31 (0.7%)</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section id="performance" class="${p}-card ${p}-chart-card ${p}-reveal" aria-label="Portfolio performance curve">
+          <div class="${p}-card-head" style="flex-wrap:wrap;">
+            <div>
+              <h2 class="${p}-card-title" style="font-size:17px;">Portfolio Performance</h2>
+              <p style="font-size:12.5px;color:var(--muted);margin-top:2px;">Smoothed spline equity trajectory across NYSE core holdings</p>
+            </div>
+            <div class="${p}-tf-group" role="tablist" aria-label="Performance timeframe">
+              <button type="button" class="${p}-tf-btn" data-tf="1D" data-peak="$ 12,480" data-date="Today 14:30">1D</button>
+              <button type="button" class="${p}-tf-btn" data-tf="1W" data-peak="$ 13,920" data-date="18th May 2025">1W</button>
+              <button type="button" class="${p}-tf-btn is-active" data-tf="1M" data-peak="$ 16,500" data-date="1st Jun 2025">1M</button>
+              <button type="button" class="${p}-tf-btn" data-tf="6M" data-peak="$ 48,200" data-date="12th Aug 2025">6M</button>
+              <button type="button" class="${p}-tf-btn" data-tf="1Y" data-peak="$ 142,800" data-date="19th Nov 2025">1Y</button>
+            </div>
+          </div>
+
+          <div class="${p}-chart-stage">
+            <div class="${p}-chart-tooltip" id="heliosChartTooltip">
+              <div style="font-size:11px;color:var(--muted);font-family:var(--font-mono);" id="heliosTooltipDate">1st Jun 2025</div>
+              <div style="display:flex;align-items:center;gap:8px;margin-top:3px;">
+                <strong class="tabular-nums" style="font-size:16px;" id="heliosTooltipVal">$ 16,500</strong>
+                <span class="${p}-gain-pill tabular-nums">+3.5%</span>
+              </div>
+            </div>
+
+            <svg viewBox="0 0 960 240" width="100%" height="230" aria-hidden="true" style="display:block;overflow:visible;">
+              <defs>
+                <linearGradient id="heliosAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#e5bed8" stop-opacity="0.44"/>
+                  <stop offset="70%" stop-color="#a26d92" stop-opacity="0.10"/>
+                  <stop offset="100%" stop-color="#09070b" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <g stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 6" stroke-width="1">
+                <line x1="56" y1="30" x2="940" y2="30"/>
+                <line x1="56" y1="78" x2="940" y2="78"/>
+                <line x1="56" y1="126" x2="940" y2="126"/>
+                <line x1="56" y1="174" x2="940" y2="174"/>
+                <line x1="56" y1="214" x2="940" y2="214"/>
+              </g>
+              <g fill="rgba(166,153,178,0.75)" font-family="JetBrains Mono, monospace" font-size="11">
+                <text x="6" y="34">200k</text>
+                <text x="6" y="82">100k</text>
+                <text x="12" y="130">50k</text>
+                <text x="12" y="178">20k</text>
+                <text x="12" y="218">10k</text>
+              </g>
+              <path id="heliosSplineArea" d="M 56 185 C 140 160, 210 175, 290 138 C 365 102, 415 68, 468 72 C 530 76, 590 132, 665 110 C 740 88, 825 46, 940 54 L 940 218 L 56 218 Z" fill="url(#heliosAreaGrad)"/>
+              <path id="heliosSplineLine" d="M 56 185 C 140 160, 210 175, 290 138 C 365 102, 415 68, 468 72 C 530 76, 590 132, 665 110 C 740 88, 825 46, 940 54" fill="none" stroke="#e8c3dc" stroke-width="3" stroke-linecap="round"/>
+              <line x1="468" y1="72" x2="468" y2="214" stroke="#d8a8c8" stroke-width="1.5" stroke-dasharray="3 4"/>
+              <circle cx="468" cy="72" r="7" fill="#09070b" stroke="#f0d0e6" stroke-width="3"/>
+            </svg>
+
+            <div class="${p}-months-row">
+              <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+              <span>May</span><span style="color:var(--accent-text);font-weight:700;">Jun</span><span>Jul</span><span>Aug</span>
+              <span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="ai-blueprint" class="${p}-card ${p}-ref-showcase ${p}-reveal" aria-label="Helios AI Telemetry &amp; Reference Architecture">
+          <div>
+            <span class="${p}-badge-soft">Autonomous Portfolio Intelligence</span>
+            <h2 style="font-size:clamp(1.45rem,2.2vw,1.95rem);font-weight:700;margin:12px 0 10px;letter-spacing:-0.02em;">
+              Real-Time Quantitative Risk &amp; Sentiment Synthesis
+            </h2>
+            <p style="color:var(--muted);font-size:14px;line-height:1.65;margin-bottom:18px;">
+              Helios continuously cross-references NYSE order-book depth, earnings transcript sentiment, and macro yield curves to keep Nadia Rachel's holdings balanced across high-conviction tech leaders.
+            </p>
+            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;">
+              <div style="padding:14px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid var(--border);">
+                <div class="tabular-nums" style="font-size:20px;font-weight:700;color:var(--accent-text);" data-counter-target="98" data-counter-suffix="%">98%</div>
+                <div style="font-size:11.5px;color:var(--muted);margin-top:4px;">Execution Accuracy</div>
+              </div>
+              <div style="padding:14px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid var(--border);">
+                <div class="tabular-nums" style="font-size:20px;font-weight:700;color:var(--emerald);" data-counter-target="16" data-counter-suffix=".3%">16.3%</div>
+                <div style="font-size:11.5px;color:var(--muted);margin-top:4px;">Top Alpha (SPOT)</div>
+              </div>
+              <div style="padding:14px;border-radius:16px;background:rgba(255,255,255,0.03);border:1px solid var(--border);">
+                <div class="tabular-nums" style="font-size:20px;font-weight:700;" data-counter-target="173" data-counter-suffix=" Units">173 Units</div>
+                <div style="font-size:11.5px;color:var(--muted);margin-top:4px;">Active Core Lots</div>
+              </div>
+            </div>
+          </div>
+          <div class="${p}-ref-frame" style="padding:20px;">
+            <svg viewBox="0 0 380 220" width="100%" height="200" role="img" aria-label="Helios AI Quantitative Risk Radar">
+              <defs>
+                <radialGradient id="heliosCoreGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#f0d0e6" stop-opacity="0.45"/>
+                  <stop offset="100%" stop-color="#0d0910" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <circle cx="190" cy="110" r="88" fill="url(#heliosCoreGlow)" stroke="rgba(216,168,200,0.24)" stroke-width="1.2"/>
+              <circle cx="190" cy="110" r="58" fill="none" stroke="rgba(216,168,200,0.2)" stroke-dasharray="4 4"/>
+              <polygon points="190,34 258,86 232,168 142,162 124,82" fill="rgba(216,168,200,0.22)" stroke="#e5bed8" stroke-width="2"/>
+              <circle cx="190" cy="34" r="4.5" fill="#34d399"/>
+              <circle cx="258" cy="86" r="4.5" fill="#f0d0e6"/>
+              <circle cx="232" cy="168" r="4.5" fill="#34d399"/>
+              <circle cx="142" cy="162" r="4.5" fill="#f0d0e6"/>
+              <circle cx="124" cy="82" r="4.5" fill="#34d399"/>
+            </svg>
+          </div>
+        </section>
+      </main>
+
+      <footer style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:12px 18px 24px;color:var(--muted);font-size:12.5px;">
+        <span>Helios Investments AI Wealth Platform — Obsidian &amp; Smoky Mauve Edition</span>
+        <span class="tabular-nums">NYSE Live Feed • Latency 14ms</span>
+      </footer>
+    </div>
+  </div>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+        <span class="${p}-badge-soft">helios.ai Assistant</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-icon-circle" aria-label="Close modal">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:20px;font-weight:700;margin-bottom:10px;">Helios Quantitative Portfolio Brief</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Your 6M holding stands at <strong style="color:var(--fg);">$12,304.11</strong> with Spotify (NYSE: SPOT +16.31%) and Amazon (NYSE: AMZN +8.11%) leading momentum. AI recommends maintaining your 104 AAPL and 41 MSFT unit allocation.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-ai-send" style="width:100%;padding:12px;font-size:13.5px;">Execute AI Rebalance Check →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var holdingEl = document.getElementById('totalHoldingVal');
+      document.querySelectorAll('.${p}-watch-row').forEach(function (row) {
+        row.addEventListener('click', function () {
+          var price = row.getAttribute('data-price') || '$ 12,304.11';
+          if (holdingEl) holdingEl.textContent = price;
+        });
+      });
+      var tipVal = document.getElementById('heliosTooltipVal');
+      var tipDate = document.getElementById('heliosTooltipDate');
+      document.querySelectorAll('.${p}-tf-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.${p}-tf-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (tipVal) tipVal.textContent = btn.getAttribute('data-peak') || '$ 16,500';
+          if (tipDate) tipDate.textContent = btn.getAttribute('data-date') || '1st Jun 2025';
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 27. RAYHAN ADITYA PORTFOLIO (rayhan-aditya — Free Tier)
+  // Pitch-Black & Crimson Editorial Web Designer / Digital Creator Portfolio
+  // ============================================================================
+  if (slug === 'rayhan-aditya') {
+    const pinPath = data.pinExt ? 'assets/pin-reference' + data.pinExt : 'assets/pin-reference.jpg';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Rayhan Aditya — Web Designer &amp; UI/UX Creator Portfolio</title>
+  <meta name="description" content="Editorial pitch-black and crimson personal portfolio of Rayhan Aditya, Web Designer and UI/UX Creator in Jakarta, featuring Veloce Bikes, Woodcraft, and Urbanic case studies.">
+  <meta property="og:title" content="Rayhan Aditya — Web Designer &amp; Digital Creator">
+  <meta property="og:description" content="Turning ideas into powerful digital experiences. 3+ Years Experience, 40+ Projects Completed, 20+ Happy Clients.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#08080A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080a;
+      --surface: #111115;
+      --surface-elevated: #18181f;
+      --glass: rgba(17, 17, 21, 0.84);
+      --fg: #f8fafc;
+      --muted: #9ca3af;
+      --border: rgba(255, 255, 255, 0.11);
+      --accent: #d91b24;
+      --accent-text: #ff4d55;
+      --accent-strong: #b3121a;
+      --on-accent: #ffffff;
+      --font-display: 'Anton', Impact, sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 20px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 34px; height: 34px; border: 1.5px solid var(--accent); margin: -17px 0 0 -17px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
+    @keyframes crimsonPulse {
+      0%, 100% { opacity: 0.92; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.015); }
+    }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 20px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-container { max-width: 1280px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 44px); }
+    .${p}-header {
+      position: sticky; top: 0; z-index: 150;
+      background: rgba(8, 8, 10, 0.86); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+    .${p}-topbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 16px 0; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .${p}-nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .${p}-nav-links a { color: var(--muted); text-decoration: none; font-size: 12px; transition: color 0.2s var(--ease-out); }
+    .${p}-nav-links a:hover { color: var(--fg); }
+    .${p}-status-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(217, 27, 36, 0.45);
+      background: rgba(217, 27, 36, 0.12); color: var(--fg); font-size: 11px;
+    }
+    .${p}-status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+
+    .${p}-hero {
+      position: relative; padding: 36px 0 64px; overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .${p}-hero-backdrop-word {
+      font-family: var(--font-display);
+      font-size: clamp(5.2rem, 18.8vw, 15.8rem);
+      line-height: 0.84; letter-spacing: 0.01em; text-transform: uppercase;
+      color: var(--accent); text-align: center; user-select: none;
+      animation: crimsonPulse 6s ease-in-out infinite;
+    }
+    .${p}-hero-grid {
+      display: grid; grid-template-columns: 1fr 340px 1fr; gap: 28px; align-items: end;
+      margin-top: -54px; position: relative; z-index: 2;
+    }
+    .${p}-script-hello {
+      font-family: var(--font-script); font-size: 34px; color: var(--fg); margin-bottom: -6px;
+    }
+    .${p}-hero-name {
+      font-family: var(--font-display); font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+      letter-spacing: 0.02em; text-transform: uppercase; line-height: 0.98;
+    }
+    .${p}-role-pill {
+      display: inline-block; margin: 12px 0 14px; padding: 6px 14px;
+      background: var(--accent); color: var(--on-accent);
+      font-size: 11.5px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .${p}-portrait-card {
+      background: linear-gradient(180deg, rgba(217, 27, 36, 0.22) 0%, rgba(17, 17, 21, 0.96) 100%);
+      border: 1px solid rgba(217, 27, 36, 0.4); border-radius: 22px; overflow: hidden;
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.75);
+    }
+    .${p}-portrait-card img {
+      width: 100%; height: 390px; object-fit: cover; object-position: top center; display: block;
+    }
+    .${p}-stats-stack {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px;
+      padding-top: 20px; border-top: 1px solid var(--border);
+    }
+    .${p}-stat-num {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 2.8vw, 2.4rem); color: var(--fg); line-height: 1;
+    }
+    .${p}-stat-label {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; color: var(--muted);
+      text-transform: uppercase; margin-top: 6px;
+    }
+
+    .${p}-section { padding: 68px 0; border-bottom: 1px solid var(--border); }
+    .${p}-sec-head {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 36px;
+    }
+    .${p}-sec-title {
+      font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      text-transform: uppercase; letter-spacing: 0.02em; line-height: 0.95;
+    }
+    .${p}-sec-title span { color: var(--accent); }
+
+    .${p}-projects-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+    }
+    .${p}-project-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+      padding: 20px; display: flex; flex-direction: column; justify-content: space-between;
+      gap: 18px; cursor: pointer;
+    }
+    .${p}-project-card:hover { border-color: var(--accent); }
+    .${p}-project-Preview {
+      height: 196px; border-radius: 12px; padding: 18px; position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: space-between;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .${p}-tri-grid {
+      display: grid; grid-template-columns: 1.15fr 1fr 0.95fr; gap: 22px;
+    }
+    .${p}-panel {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px;
+    }
+    .${p}-skill-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .${p}-skill-tag {
+      padding: 6px 12px; border-radius: 999px; font-size: 11.5px; font-weight: 600;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); color: var(--fg);
+    }
+    .${p}-process-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+    .${p}-process-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 16px; border-radius: 12px; background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border); font-weight: 700; font-size: 13px; letter-spacing: 0.06em;
+    }
+    .${p}-quote-card {
+      background: linear-gradient(155deg, #e01e27 0%, #990f15 100%);
+      border-radius: 20px; padding: 32px; color: #ffffff;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+
+    .${p}-contact-grid {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 28px; align-items: center;
+    }
+    .${p}-contact-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+    .${p}-contact-list li {
+      display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--fg);
+    }
+    .${p}-btn-crimson {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 13px 26px; border-radius: 999px; border: 0;
+      background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(5, 5, 7, 0.82); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(12px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 480px; background: #141419; border: 1px solid rgba(217, 27, 36, 0.45);
+      border-radius: 20px; padding: 28px;
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-hero-grid { grid-template-columns: 1fr; margin-top: 12px; }
+      .${p}-projects-grid, .${p}-tri-grid, .${p}-contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .${p}-nav-links { display: none; }
+      .${p}-stats-stack { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-container ${p}-topbar">
+      <span>WEB DESIGNER / DIGITAL CREATOR</span>
+      <nav aria-label="Primary">
+        <ul class="${p}-nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#credentials">Education &amp; Skills</a></li>
+          <li><a href="#process">Work Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="${p}-status-pill">
+          <span class="${p}-status-dot" aria-hidden="true"></span>
+          AVAILABLE FOR FREELANCE
+        </span>
+        <button type="button" id="motionToggleBtn" aria-pressed="false" class="${p}-status-pill" style="cursor:pointer;">
+          Motion: ON
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="${p}-hero ${p}-container" aria-label="Rayhan Aditya Introduction">
+      <div class="${p}-hero-backdrop-word" aria-hidden="true">PORTFOLIO</div>
+      <div class="${p}-hero-grid">
+        <div>
+          <div class="${p}-script-hello">Hello, I'm</div>
+          <h1 class="${p}-hero-name">RAYHAN ADITYA</h1>
+          <span class="${p}-role-pill">WEB DESIGNER &amp; UI/UX CREATOR</span>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;margin-bottom:16px;">
+            I'm a creative web designer focused on crafting clean, modern, and user-centered digital products. With a strong foundation in visual storytelling and interface systems, I help brands stand out online.
+          </p>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <button type="button" id="exploreMagneticBtn" class="${p}-btn-crimson">Start a Project →</button>
+            <span style="font-size:11.5px;font-weight:700;letter-spacing:0.12em;color:var(--muted);">• AVAILABLE WORLDWIDE</span>
+          </div>
+        </div>
+
+        <div class="${p}-portrait-card">
+          <svg viewBox="0 0 340 390" width="100%" height="390" role="img" aria-label="Rayhan Aditya Studio Portrait">
+            <defs>
+              <radialGradient id="rayhanHalo" cx="50%" cy="38%" r="55%">
+                <stop offset="0%" stop-color="#d91b24" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#111115" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="340" height="390" fill="#101014"/>
+            <circle cx="170" cy="145" r="135" fill="url(#rayhanHalo)"/>
+            <circle cx="170" cy="122" r="46" fill="#23232b" stroke="#d91b24" stroke-width="2"/>
+            <path d="M 64 390 C 70 250, 112 204, 170 204 C 228 204, 270 250, 276 390 Z" fill="#17171e" stroke="rgba(255,255,255,0.16)" stroke-width="2"/>
+            <path d="M 142 206 L 170 282 L 198 206" fill="none" stroke="#d91b24" stroke-width="3"/>
+          </svg>
+        </div>
+
+        <div>
+          <h2 style="font-size:clamp(1.35rem,2vw,1.75rem);font-weight:700;line-height:1.3;">
+            "Turning ideas into powerful digital experiences."
+          </h2>
+          <div class="${p}-stats-stack">
+            <div>
+              <div class="${p}-stat-num tabular-nums" data-counter-target="3" data-counter-suffix="+">3+</div>
+              <div class="${p}-stat-label">YEARS EXPERIENCE</div>
+            </div>
+            <div>
+              <div class="${p}-stat-num tabular-nums" data-counter-target="40" data-counter-suffix="+">40+</div>
+              <div class="${p}-stat-label">PROJECTS COMPLETED</div>
+            </div>
+            <div>
+              <div class="${p}-stat-num tabular-nums" data-counter-target="20" data-counter-suffix="+">20+</div>
+              <div class="${p}-stat-label">HAPPY CLIENTS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="${p}-section ${p}-container ${p}-reveal" aria-label="Selected Projects">
+      <div class="${p}-sec-head">
+        <h2 class="${p}-sec-title">SELECTED <span>PROJECTS</span></h2>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);" class="tabular-nums">INDEX 01 — 03</span>
+      </div>
+
+      <div class="${p}-projects-grid">
+        <article class="${p}-project-card" data-seamless-trigger="01 VELOCE BIKES — E-Commerce Flagship Case Study">
+          <div class="${p}-project-Preview" style="background:linear-gradient(135deg,#2a090d 0%,#0f0f14 100%);">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">E-COMMERCE WEBSITE</span>
+            <div>
+              <div style="font-family:var(--font-display);font-size:28px;letter-spacing:0.03em;">VELOCE CARBON R1</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:4px;">Interactive 3D bike customizer &amp; checkout</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);" class="tabular-nums">01</div>
+              <h3 style="font-size:18px;font-weight:800;letter-spacing:0.02em;">VELOCE BIKES</h3>
+            </div>
+            <span style="font-size:12px;color:var(--muted);">E-COMMERCE WEBSITE ↗</span>
+          </div>
+        </article>
+
+        <article class="${p}-project-card" data-seamless-trigger="02 WOODCRAFT — Timeless Crafted Furniture Showcase">
+          <div class="${p}-project-Preview" style="background:linear-gradient(135deg,#231a12 0%,#0f0f14 100%);">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#fbbf24;">FURNITURE WEBSITE</span>
+            <div>
+              <div style="font-family:var(--font-display);font-size:26px;letter-spacing:0.03em;">Timeless Crafted Furniture</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:4px;">Bespoke architectural oak &amp; walnut catalog</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);" class="tabular-nums">02</div>
+              <h3 style="font-size:18px;font-weight:800;letter-spacing:0.02em;">WOODCRAFT</h3>
+            </div>
+            <span style="font-size:12px;color:var(--muted);">FURNITURE WEBSITE ↗</span>
+          </div>
+        </article>
+
+        <article class="${p}-project-card" data-seamless-trigger="03 URBANIC — Stay Ahead In Style Editorial Platform">
+          <div class="${p}-project-Preview" style="background:linear-gradient(135deg,#1f1124 0%,#0f0f14 100%);">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#f472b6;">FASHION MAGAZINE</span>
+            <div>
+              <div style="font-family:var(--font-display);font-size:28px;letter-spacing:0.03em;">STAY AHEAD IN STYLE</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:4px;">High-contrast lookbook &amp; runway issue</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);" class="tabular-nums">03</div>
+              <h3 style="font-size:18px;font-weight:800;letter-spacing:0.02em;">URBANIC</h3>
+            </div>
+            <span style="font-size:12px;color:var(--muted);">FASHION MAGAZINE ↗</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="credentials" class="${p}-section ${p}-container ${p}-reveal" aria-label="Education, Skills, and Work Process">
+      <div class="${p}-tri-grid">
+        <article class="${p}-panel">
+          <h2 style="font-family:var(--font-display);font-size:28px;letter-spacing:0.02em;margin-bottom:18px;">
+            EDUCATION &amp; <span style="color:var(--accent);">SKILLS</span>
+          </h2>
+          <div style="display:flex;flex-direction:column;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--border);">
+            <div>
+              <div style="font-weight:700;font-size:14px;">B.Sc. in Visual Communication Design</div>
+              <div style="font-size:12.5px;color:var(--muted);" class="tabular-nums">Binus University • 2018 — 2022</div>
+            </div>
+            <div>
+              <div style="font-weight:700;font-size:14px;">UI/UX Design Certification</div>
+              <div style="font-size:12.5px;color:var(--muted);" class="tabular-nums">Google Career Certificates • 2023</div>
+            </div>
+          </div>
+          <div class="${p}-skill-tags">
+            <span class="${p}-skill-tag">UI/UX Design</span>
+            <span class="${p}-skill-tag">Wireframing</span>
+            <span class="${p}-skill-tag">Prototyping</span>
+            <span class="${p}-skill-tag">Design System</span>
+            <span class="${p}-skill-tag">Responsive Web</span>
+            <span class="${p}-skill-tag">HTML/CSS</span>
+            <span class="${p}-skill-tag">JavaScript</span>
+            <span class="${p}-skill-tag">Figma</span>
+            <span class="${p}-skill-tag">Framer</span>
+            <span class="${p}-skill-tag">Webflow</span>
+            <span class="${p}-skill-tag">Branding</span>
+          </div>
+        </article>
+
+        <article id="process" class="${p}-panel">
+          <h2 style="font-family:var(--font-display);font-size:28px;letter-spacing:0.02em;">
+            WORK <span style="color:var(--accent);">PROCESS</span>
+          </h2>
+          <ul class="${p}-process-list">
+            <li class="${p}-process-item"><span style="color:var(--accent-text);font-family:var(--font-mono);" class="tabular-nums">01</span><span>DISCOVER</span><span style="color:var(--muted);font-size:11px;">Brief &amp; Audit</span></li>
+            <li class="${p}-process-item"><span style="color:var(--accent-text);font-family:var(--font-mono);" class="tabular-nums">02</span><span>IDEATE</span><span style="color:var(--muted);font-size:11px;">Wireframes</span></li>
+            <li class="${p}-process-item"><span style="color:var(--accent-text);font-family:var(--font-mono);" class="tabular-nums">03</span><span>DESIGN</span><span style="color:var(--muted);font-size:11px;">High-Craft UI</span></li>
+            <li class="${p}-process-item"><span style="color:var(--accent-text);font-family:var(--font-mono);" class="tabular-nums">04</span><span>DEVELOP</span><span style="color:var(--muted);font-size:11px;">Clean Code</span></li>
+            <li class="${p}-process-item"><span style="color:var(--accent-text);font-family:var(--font-mono);" class="tabular-nums">05</span><span>DELIVER</span><span style="color:var(--muted);font-size:11px;">QA &amp; Launch</span></li>
+          </ul>
+        </article>
+
+        <article class="${p}-quote-card">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="rgba(255,255,255,0.28)" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          <blockquote style="font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:800;line-height:1.25;margin:18px 0;">
+            "Good design is not just how it looks, but how it works."
+          </blockquote>
+          <div style="font-family:var(--font-script);font-size:28px;">— Rayhan</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="${p}-section ${p}-container ${p}-reveal" aria-label="Contact Rayhan Aditya">
+      <div class="${p}-contact-grid">
+        <div>
+          <h2 class="${p}-sec-title">LET'S WORK <span>TOGETHER</span></h2>
+          <p style="color:var(--muted);font-size:14.5px;line-height:1.65;margin-top:12px;">
+            Have a project in mind? Let's build something great together. Available for full-stack web design, design systems, and interactive brand launches.
+          </p>
+          <ul class="${p}-contact-list">
+            <li>
+              <span style="color:var(--accent-text);font-family:var(--font-mono);">MAIL</span>
+              <span>hello@rayhanaditya.com</span>
+            </li>
+            <li>
+              <span style="color:var(--accent-text);font-family:var(--font-mono);">WEB</span>
+              <span>www.rayhanaditya.com</span>
+            </li>
+            <li class="tabular-nums">
+              <span style="color:var(--accent-text);font-family:var(--font-mono);">CALL</span>
+              <span>+62 812 3456 7890</span>
+            </li>
+            <li>
+              <span style="color:var(--accent-text);font-family:var(--font-mono);">BASE</span>
+              <span>Jakarta, Indonesia</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="${p}-panel" style="background:linear-gradient(145deg,#181216 0%,#0d0d11 100%);border-color:rgba(217,27,36,0.35);">
+          <div style="padding:28px;border-radius:14px;background:#09090c;border:1px solid var(--border);text-align:center;">
+            <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);letter-spacing:0.14em;margin-bottom:8px;">STUDIO WORKSTATION</div>
+            <div style="font-family:var(--font-display);font-size:clamp(1.7rem,2.8vw,2.3rem);line-height:1.05;margin-bottom:16px;">
+              WE DESIGN DIGITAL EXPERIENCES
+            </div>
+            <button type="button" class="${p}-btn-crimson" data-seamless-trigger="Schedule Discovery Call with Rayhan Aditya">
+              Book Consultation Call →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-container" style="padding:28px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span>© Rayhan Aditya — Web Designer &amp; UI/UX Creator</span>
+    <span>Jakarta, Indonesia • Available Worldwide</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+        <span class="${p}-role-pill" style="margin:0;">DIRECT INQUIRY</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid var(--border);color:var(--fg);width:34px;height:34px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;letter-spacing:0.02em;margin-bottom:10px;">Collaborate With Rayhan Aditya</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Send your brief directly to <strong style="color:var(--fg);">hello@rayhanaditya.com</strong> or book a 30-minute discovery session covering UI/UX architecture, interactive prototypes, and production delivery.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-crimson" style="width:100%;">Send Project Brief →</button>
+    </div>
+  </div>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 28. RAZER MAMBA PRO (razer-mamba-pro — Premium Tier)
+  // Matte-Carbon & Acid-Green Esports Gaming Peripheral Storefront
+  // ============================================================================
+  if (slug === 'razer-mamba-pro') {
+    const pinPath = data.pinExt ? 'assets/pin-reference' + data.pinExt : 'assets/pin-reference.jpg';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Razer Mamba Pro — Automated Full-Control Gaming Hardware Store</title>
+  <meta name="description" content="Flagship Razer esports hardware showcase featuring Razer Mamba Pro automated full-control gaming mouse, Razer Kraken 7.1 surround headset, 4-column gear store, and Razer Insider community.">
+  <meta property="og:title" content="Razer Mamba Pro — For Gamers. By Gamers.">
+  <meta property="og:description" content="Explore Razer Mamba Pro, Kraken 7.1 V2, Lycosa Mirror, and Firefly Light Chroma peripherals.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0B0D0B">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0d0b;
+      --surface: #131613;
+      --surface-elevated: #1b201b;
+      --glass: rgba(19, 22, 19, 0.85);
+      --fg: #f4f7f4;
+      --muted: #8b968b;
+      --border: rgba(132, 204, 22, 0.18);
+      --accent: #84cc16;
+      --accent-text: #a3e635;
+      --accent-strong: #65a30d;
+      --on-accent: #070a05;
+      --font-display: 'Chakra Petch', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 16px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: radial-gradient(circle at 72% 16%, rgba(132, 204, 22, 0.14) 0%, #0b0d0b 52%, #070807 100%);
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
+    @keyframes chromaGlow {
+      0%, 100% { filter: drop-shadow(0 0 18px rgba(132, 204, 22, 0.45)); }
+      50% { filter: drop-shadow(0 0 32px rgba(163, 230, 53, 0.78)); }
+    }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 44px); }
+    .${p}-header {
+      position: sticky; top: 0; z-index: 160;
+      background: rgba(11, 13, 11, 0.9); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 0;
+    }
+    .${p}-logo {
+      font-family: var(--font-display); font-weight: 700; font-size: 18px;
+      letter-spacing: 0.36em; color: var(--accent-text); text-decoration: none;
+    }
+    .${p}-menu { display: flex; align-items: center; gap: 26px; list-style: none; }
+    .${p}-menu a {
+      color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .${p}-menu a:hover, .${p}-menu a.is-active { color: var(--accent-text); }
+    .${p}-btn-lime {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 11px 26px; border-radius: 4px; border: 1px solid var(--accent);
+      background: var(--accent); color: var(--on-accent);
+      font-family: var(--font-display); font-weight: 700; font-size: 12.5px;
+      letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;
+    }
+    .${p}-btn-ghost {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 9px 18px; border-radius: 4px; border: 1px solid var(--border);
+      background: rgba(132, 204, 22, 0.06); color: var(--accent-text);
+      font-family: var(--font-display); font-weight: 600; font-size: 12px;
+      letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
+    }
+
+    .${p}-hero {
+      padding: 64px 0 56px; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 36px; align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .${p}-hero h1 {
+      font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4.1rem);
+      font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.02;
+    }
+    .${p}-hero h1 span { color: var(--accent-text); }
+    .${p}-hero p {
+      color: var(--muted); font-size: 15px; line-height: 1.65; max-width: 480px; margin: 18px 0 26px;
+    }
+    .${p}-mouse-stage {
+      background: radial-gradient(circle at 50% 50%, rgba(132, 204, 22, 0.2) 0%, rgba(19, 22, 19, 0.92) 72%);
+      border: 1px solid var(--border); border-radius: 20px; padding: 28px;
+      display: flex; flex-direction: column; align-items: center; gap: 18px;
+    }
+    .${p}-dpi-pills { display: inline-flex; gap: 8px; flex-wrap: wrap; }
+    .${p}-dpi-btn {
+      padding: 6px 12px; border-radius: 4px; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03); color: var(--muted);
+      font-family: var(--font-mono); font-size: 11.5px; cursor: pointer;
+    }
+    .${p}-dpi-btn.is-active { background: var(--accent); color: var(--on-accent); font-weight: 700; }
+
+    .${p}-spotlight {
+      padding: 56px 0; display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 36px; align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .${p}-kraken-box {
+      background: linear-gradient(145deg, #162111 0%, #0f130f 100%);
+      border: 1px solid var(--border); border-radius: 20px; padding: 26px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .${p}-kraken-box img {
+      width: 100%; max-height: 340px; object-fit: cover; object-position: center 28%; border-radius: 12px;
+    }
+
+    .${p}-catalog { padding: 60px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
+    .${p}-catalog-grid {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 28px;
+    }
+    .${p}-gear-card {
+      background: var(--surface); border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 14px; padding: 22px 18px; display: flex; flex-direction: column;
+      justify-content: space-between; gap: 18px; text-align: center; cursor: pointer;
+    }
+    .${p}-gear-card:hover { border-color: var(--accent); }
+    .${p}-gear-art {
+      height: 130px; display: flex; align-items: center; justify-content: center;
+      background: radial-gradient(circle, rgba(132, 204, 22, 0.14) 0%, transparent 70%);
+    }
+    .${p}-gear-price {
+      font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--accent-text); margin-top: 6px;
+    }
+
+    .${p}-insider {
+      padding: 64px 0;
+      background: linear-gradient(180deg, rgba(20, 26, 18, 0.5) 0%, rgba(11, 13, 11, 0.95) 100%);
+    }
+    .${p}-insider-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 32px 0;
+    }
+    .${p}-news-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px;
+      display: flex; flex-direction: column; justify-content: space-between; gap: 14px;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(6, 8, 6, 0.82); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(12px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 480px; background: #131712; border: 1px solid var(--accent);
+      border-radius: 16px; padding: 28px;
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-hero, .${p}-spotlight { grid-template-columns: 1fr; }
+      .${p}-catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .${p}-insider-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .${p}-menu { display: none; }
+      .${p}-catalog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-wrap ${p}-nav">
+      <a href="#top" class="${p}-logo">R A Z E R</a>
+      <nav aria-label="Primary">
+        <ul class="${p}-menu">
+          <li><a href="#top" class="is-active">Home</a></li>
+          <li><a href="#kraken">Hardware</a></li>
+          <li><a href="#store">Software</a></li>
+          <li><a href="#insider">Community</a></li>
+          <li><a href="#store">Store</a></li>
+          <li><a href="#insider">Support</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" class="${p}-btn-ghost">Motion: ON</button>
+        <button type="button" class="${p}-btn-ghost" data-seamless-trigger="Razer Store Cart (1 Item — USD $149)">
+          Cart (<span id="razerCartCount" class="tabular-nums">1</span>)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="${p}-wrap ${p}-hero" aria-label="Razer Mamba Pro Hero">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.16em;margin-bottom:10px;">
+          5G LASER SENSOR • <span id="activeDpiReadout" class="tabular-nums">16,000 DPI</span>
+        </div>
+        <h1>RAZER <span>MAMBA PRO</span></h1>
+        <p>
+          World's first automated full control mice developed in 2016. Special for gaming with Adjustable Click Force Technology and Razer Chroma dual-rail illumination.
+        </p>
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+          <button type="button" id="exploreMagneticBtn" class="${p}-btn-lime">VIEW MORE</button>
+          <span class="tabular-nums" style="font-family:var(--font-mono);font-size:13px;color:var(--muted);">Response: 1ms Ultrapolling</span>
+        </div>
+      </div>
+
+      <div class="${p}-mouse-stage">
+        <svg viewBox="0 0 360 220" width="100%" height="200" aria-hidden="true" style="animation:chromaGlow 4s ease-in-out infinite;">
+          <defs>
+            <linearGradient id="mambaBody" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#262b26"/>
+              <stop offset="55%" stop-color="#141714"/>
+              <stop offset="100%" stop-color="#090b09"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="180" cy="196" rx="110" ry="14" fill="rgba(132,204,22,0.22)"/>
+          <path d="M 115 48 C 115 20, 245 20, 245 48 L 262 142 C 266 178, 228 198, 180 198 C 132 198, 94 178, 98 142 Z" fill="url(#mambaBody)" stroke="#84cc16" stroke-width="2.2"/>
+          <path d="M 120 56 Q 180 78 240 56" fill="none" stroke="rgba(163,230,53,0.55)" stroke-width="1.5"/>
+          <rect x="172" y="32" width="16" height="36" rx="8" fill="#0b0d0b" stroke="#a3e635" stroke-width="2.5"/>
+          <path d="M 106 92 C 102 126, 108 158, 126 180" fill="none" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+          <path d="M 254 92 C 258 126, 252 158, 234 180" fill="none" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="180" cy="138" r="16" fill="none" stroke="#84cc16" stroke-width="2" stroke-dasharray="6 4"/>
+        </svg>
+        <div class="${p}-dpi-pills" role="group" aria-label="DPI Sensitivity Preset">
+          <button type="button" class="${p}-dpi-btn" data-dpi="1,600 DPI">1600 DPI</button>
+          <button type="button" class="${p}-dpi-btn" data-dpi="6,400 DPI">6400 DPI</button>
+          <button type="button" class="${p}-dpi-btn" data-dpi="10,000 DPI">10000 DPI</button>
+          <button type="button" class="${p}-dpi-btn is-active" data-dpi="16,000 DPI">16000 DPI</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="kraken" class="${p}-wrap ${p}-spotlight ${p}-reveal" aria-label="Razer Kraken 7.1 Spotlight">
+      <div class="${p}-kraken-box">
+        <svg viewBox="0 0 360 280" width="100%" height="260" role="img" aria-label="Razer Kraken 7.1 Chroma Gaming Headset">
+          <defs>
+            <radialGradient id="krakenGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#84cc16" stop-opacity="0.38"/>
+              <stop offset="100%" stop-color="#0f130f" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="180" cy="140" r="120" fill="url(#krakenGlow)"/>
+          <path d="M 88 156 A 92 92 0 0 1 272 156" fill="none" stroke="#84cc16" stroke-width="16" stroke-linecap="round"/>
+          <path d="M 98 156 A 82 82 0 0 1 262 156" fill="none" stroke="#1b221a" stroke-width="8"/>
+          <rect x="64" y="136" width="38" height="78" rx="18" fill="#182017" stroke="#a3e635" stroke-width="3"/>
+          <rect x="258" y="136" width="38" height="78" rx="18" fill="#182017" stroke="#a3e635" stroke-width="3"/>
+          <circle cx="83" cy="175" r="9" fill="#84cc16"/>
+          <circle cx="277" cy="175" r="9" fill="#84cc16"/>
+          <path d="M 92 198 Q 132 232 166 218" fill="none" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.14em;margin-bottom:8px;">
+          7.1 VIRTUAL SURROUND SOUND ENGINE
+        </div>
+        <h2 style="font-family:var(--font-display);font-size:clamp(2rem,3.8vw,3.1rem);letter-spacing:0.05em;text-transform:uppercase;">
+          RAZER <span style="color:var(--accent-text);">KRAKEN 7.1</span>
+        </h2>
+        <p style="color:var(--muted);font-size:14.5px;line-height:1.65;margin:16px 0 24px;">
+          Complete with an advanced 7.1 virtual surround sound engine, the Razer Kraken 7.1 Chroma delivers low-latency positional audio and a retractable digital microphone built for tournament stages.
+        </p>
+        <button type="button" class="${p}-btn-lime" data-seamless-trigger="Razer Kraken 7.1 Surround Audio Calibration">VIEW MORE</button>
+      </div>
+    </section>
+
+    <section id="store" class="${p}-wrap ${p}-catalog ${p}-reveal" aria-label="Razer Peripheral Store Lineup">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,2.6vw,2.2rem);letter-spacing:0.06em;">
+          TOURNAMENT <span style="color:var(--accent-text);">HARDWARE LINEUP</span>
+        </h2>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);">CHROMA SYNC ENABLED</span>
+      </div>
+
+      <div class="${p}-catalog-grid">
+        <article class="${p}-gear-card" data-gear-buy="RAZER LYCOSA MIRROR (USD $199)">
+          <div class="${p}-gear-art">
+            <svg width="110" height="64" viewBox="0 0 110 64" fill="none" stroke="#84cc16" stroke-width="2" aria-hidden="true">
+              <rect x="8" y="14" width="94" height="38" rx="5" fill="#101410"/>
+              <line x1="18" y1="25" x2="92" y2="25"/><line x1="18" y1="33" x2="92" y2="33"/><line x1="28" y1="41" x2="82" y2="41"/>
+            </svg>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER LYCOSA MIRROR</h3>
+            <div class="${p}-gear-price tabular-nums">USD $199</div>
+          </div>
+        </article>
+
+        <article class="${p}-gear-card" data-gear-buy="RAZER KRAKEN 7.1 V2 (USD $89)">
+          <div class="${p}-gear-art">
+            <svg width="84" height="74" viewBox="0 0 84 74" fill="none" stroke="#a3e635" stroke-width="2.2" aria-hidden="true">
+              <path d="M 16 44 A 26 26 0 0 1 68 44"/>
+              <rect x="10" y="40" width="12" height="22" rx="6" fill="#151b14"/>
+              <rect x="62" y="40" width="12" height="22" rx="6" fill="#151b14"/>
+            </svg>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER KRAKEN 7.1 V2</h3>
+            <div class="${p}-gear-price tabular-nums">USD $89</div>
+          </div>
+        </article>
+
+        <article class="${p}-gear-card" data-gear-buy="RAZER MAMBA TOURNAMENT (USD $149)">
+          <div class="${p}-gear-art">
+            <svg width="72" height="76" viewBox="0 0 72 76" fill="none" stroke="#84cc16" stroke-width="2.2" aria-hidden="true">
+              <rect x="18" y="10" width="36" height="56" rx="18" fill="#121612"/>
+              <line x1="36" y1="16" x2="36" y2="30"/>
+            </svg>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER MAMBA TOURNAMENT</h3>
+            <div class="${p}-gear-price tabular-nums">USD $149</div>
+          </div>
+        </article>
+
+        <article class="${p}-gear-card" data-gear-buy="RAZER FIREFLY LIGHT (USD $29)">
+          <div class="${p}-gear-art">
+            <svg width="106" height="64" viewBox="0 0 106 64" fill="none" stroke="#a3e635" stroke-width="2" aria-hidden="true">
+              <polygon points="18,16 88,16 98,50 8,50" fill="#121712"/>
+            </svg>
+          </div>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER FIREFLY LIGHT</h3>
+            <div class="${p}-gear-price tabular-nums">USD $29</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="insider" class="${p}-insider ${p}-reveal" aria-label="Razer Insider Community">
+      <div class="${p}-wrap">
+        <div style="text-align:center;">
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.18em;">RAZER INSIDER</div>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.85rem,3.2vw,2.6rem);letter-spacing:0.06em;margin-top:6px;">
+            FROM GAMERS TO GAMERS
+          </h2>
+        </div>
+
+        <div class="${p}-insider-grid">
+          <article class="${p}-news-card">
+            <h3 style="font-family:var(--font-display);font-size:16px;color:var(--accent-text);letter-spacing:0.04em;">
+              BREAKING THE SEAGE WITH RAZER ›
+            </h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.6;">
+              Go behind the scenes with pro Rainbow Six rosters calibrating Mamba Pro lift-off distance for tournament finals.
+            </p>
+          </article>
+
+          <article class="${p}-news-card">
+            <h3 style="font-family:var(--font-display);font-size:16px;color:var(--accent-text);letter-spacing:0.04em;">
+              WELCOME TO TEAM RAZER, NEXTBIT! ›
+            </h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.6;">
+              Cloud-first hardware design meets high-refresh mobile gaming engineering inside the expanding Razer ecosystem.
+            </p>
+          </article>
+
+          <article class="${p}-news-card">
+            <h3 style="font-family:var(--font-display);font-size:16px;color:var(--accent-text);letter-spacing:0.04em;">
+              THE RAZER BLACKWIDOW CHROMA V2 ›
+            </h3>
+            <p style="font-size:13px;color:var(--muted);line-height:1.6;">
+              Discover tactile Green, Orange, and Yellow mechanical switches with magnetic ergonomic wrist rest support.
+            </p>
+          </article>
+        </div>
+
+        <div style="text-align:center;">
+          <button type="button" class="${p}-btn-lime" data-seamless-trigger="Join Razer Insider Global Esports Forum">JOIN COMMUNITY</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="padding:28px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span>R A Z E R — For Gamers. By Gamers.</span>
+    <span class="tabular-nums">Synapse 3 Cloud • Chroma RGB SDK</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">RAZER SYNAPSE STORE</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-ghost" style="padding:4px 10px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Razer Mamba Pro Specification</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Equipped with a true 16,000 DPI 5G laser sensor, Adjustable Click Force mechanism, and wired/wireless dual gaming grade performance.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-lime" style="width:100%;">Add to Razer Setup →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var dpiOut = document.getElementById('activeDpiReadout');
+      document.querySelectorAll('.${p}-dpi-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.${p}-dpi-btn').forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          if (dpiOut) dpiOut.textContent = btn.getAttribute('data-dpi') || '16,000 DPI';
+        });
+      });
+      var cartEl = document.getElementById('razerCartCount');
+      var count = 1;
+      document.querySelectorAll('[data-gear-buy]').forEach(function (card) {
+        card.addEventListener('click', function () {
+          count += 1;
+          if (cartEl) cartEl.textContent = String(count);
+        });
+      });
+    })();
+  </script>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 29. METAVERSE CYBER WEBINAR (metaverse-cyber-webinar — Premium Tier)
+  // High-Key Porcelain & Periwinkle-Indigo 3D Cybernetic Android Webinar
+  // ============================================================================
+  if (slug === 'metaverse-cyber-webinar') {
+    const pinPath = data.pinExt ? 'assets/pin-reference' + data.pinExt : 'assets/pin-reference.png';
+    return `<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>МЕТА VERSE — Вебинар о Кибернетике и Метавселенной (09.06.2023 в 19:00)</title>
+  <meta name="description" content="Интерактивный лендинг вебинара МЕТА VERSE: 3D кибернетический андроид, расписание 09.06.2023 в 19:00, программа из 3 модулей и регистрация участников.">
+  <meta property="og:title" content="МЕТА VERSE — Онлайн-Вебинар 09.06.2023 в 19:00">
+  <meta property="og:description" content="Приглашаем вас на наш онлайн-вебинар, посвященный изучению концепции метавселенной и бионических интерфейсов.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F3F4F8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3f4f8;
+      --surface: #ffffff;
+      --surface-elevated: #ebedf5;
+      --glass: rgba(255, 255, 255, 0.84);
+      --fg: #191b26;
+      --muted: #63687e;
+      --border: rgba(124, 131, 253, 0.22);
+      --accent: #7c83fd;
+      --accent-text: #555cf0;
+      --accent-strong: #6269f5;
+      --on-accent: #ffffff;
+      --font-display: 'Oswald', Impact, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 26px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: linear-gradient(180deg, #f5f6fa 0%, #eaecf4 50%, #f3f4f8 100%);
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent-text); outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
+    @keyframes dialFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-wrap { max-width: 1260px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 44px); }
+    .${p}-header {
+      position: sticky; top: 0; z-index: 150;
+      background: rgba(243, 244, 248, 0.86); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0;
+    }
+    .${p}-brand {
+      font-family: var(--font-display); font-size: 22px; font-weight: 700;
+      letter-spacing: 0.08em; color: var(--fg); text-decoration: none;
+    }
+    .${p}-brand span { color: var(--accent-text); }
+    .${p}-nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .${p}-nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; }
+    .${p}-nav-links a:hover { color: var(--accent-text); }
+    .${p}-btn-periwinkle {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 28px; border-radius: 999px; border: 0;
+      background: linear-gradient(135deg, #8b91ff 0%, #6870f5 100%);
+      color: #ffffff; font-weight: 700; font-size: 12.5px; letter-spacing: 0.1em;
+      text-transform: uppercase; cursor: pointer;
+      box-shadow: 0 12px 28px rgba(124, 131, 253, 0.35);
+    }
+
+    .${p}-hero { padding: 42px 0 64px; position: relative; }
+    .${p}-hero-mega {
+      display: flex; align-items: center; justify-content: space-between;
+      font-family: var(--font-display); font-size: clamp(4.2rem, 13vw, 10.5rem);
+      font-weight: 700; line-height: 0.86; letter-spacing: -0.02em; color: #171924;
+      user-select: none;
+    }
+    .${p}-hero-grid {
+      display: grid; grid-template-columns: 1fr 370px 1fr; gap: 28px; align-items: center;
+      margin-top: -36px; position: relative; z-index: 2;
+    }
+    .${p}-date-card {
+      margin-top: 22px; padding: 18px 20px; border-radius: 20px;
+      background: var(--surface); border: 1.5px solid var(--accent);
+      box-shadow: 12px 12px 30px rgba(163, 171, 204, 0.25), -8px -8px 24px #ffffff;
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+    }
+    .${p}-android-frame {
+      border-radius: 28px; overflow: hidden; background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: 18px 18px 44px rgba(155, 164, 200, 0.35), -10px -10px 30px #ffffff;
+    }
+    .${p}-android-frame img {
+      width: 100%; height: 420px; object-fit: cover; object-position: top center; display: block;
+    }
+    .${p}-dial-wrap {
+      display: flex; flex-direction: column; align-items: center; gap: 20px;
+    }
+    .${p}-neumo-dial {
+      width: 206px; height: 206px; border-radius: 50%;
+      background: linear-gradient(145deg, #ffffff, #e4e7f2);
+      box-shadow: 16px 16px 36px rgba(158, 166, 199, 0.42), -14px -14px 32px #ffffff;
+      border: 1px solid rgba(124, 131, 253, 0.25);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 20px; animation: dialFloat 5s ease-in-out infinite;
+    }
+
+    .${p}-section { padding: 56px 0; }
+    .${p}-sec-title {
+      font-family: var(--font-display); font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+      text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 28px;
+    }
+    .${p}-audience-grid {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: center;
+    }
+    .${p}-neumo-card {
+      background: linear-gradient(145deg, #ffffff 0%, #eef0f8 100%);
+      border: 1px solid var(--border); border-radius: 24px; padding: 28px;
+      box-shadow: 14px 14px 32px rgba(162, 170, 204, 0.28), -10px -10px 26px #ffffff;
+    }
+    .${p}-bionic-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+    }
+    .${p}-bionic-num {
+      font-family: var(--font-display); font-size: 38px; color: var(--accent-text); line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .${p}-form-grid {
+      display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 28px; align-items: center;
+    }
+    .${p}-input {
+      width: 100%; padding: 14px 18px; border-radius: 999px;
+      border: 1px solid rgba(124, 131, 253, 0.35); background: #f8f9fc;
+      color: var(--fg); font-size: 14px; font-family: inherit; margin-bottom: 12px;
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(25, 27, 38, 0.62); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 460px; background: #ffffff; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px; box-shadow: 0 24px 60px rgba(25, 27, 38, 0.25);
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-hero-grid, .${p}-audience-grid, .${p}-bionic-grid, .${p}-form-grid { grid-template-columns: 1fr; }
+      .${p}-hero-mega { font-size: clamp(3.2rem, 15vw, 6rem); margin-bottom: 16px; }
+    }
+    @media (max-width: 640px) {
+      .${p}-nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-wrap ${p}-nav">
+      <a href="#top" class="${p}-brand">МЕТА <span>VERSE</span></a>
+      <nav aria-label="Primary">
+        <ul class="${p}-nav-links">
+          <li><a href="#audience">ДЛЯ КОГО</a></li>
+          <li><a href="#modules">ПРОГРАММА (01—03)</a></li>
+          <li><a href="#register">РЕГИСТРАЦИЯ</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" style="padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:#ffffff;color:var(--accent-text);font-size:12px;font-weight:700;cursor:pointer;">
+          Motion: ON
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="${p}-wrap ${p}-hero" aria-label="МЕТА VERSE Hero">
+      <div class="${p}-hero-mega" aria-hidden="true">
+        <span>МЕТА</span>
+        <span>VERSE</span>
+      </div>
+
+      <div class="${p}-hero-grid">
+        <div>
+          <p style="font-size:14.5px;color:var(--muted);line-height:1.65;">
+            Приглашаем вас на наш онлайн-вебинар, посвященный изучению концепции метавселенной, нейроинтерфейсов и синтетической кибернетики нового поколения.
+          </p>
+          <div class="${p}-date-card">
+            <div>
+              <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">вебинар пройдет:</div>
+              <h1 class="tabular-nums" style="font-family:var(--font-display);font-size:32px;color:var(--fg);margin-top:2px;">09.06.2023</h1>
+            </div>
+            <svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="var(--accent-text)" stroke-width="2" aria-hidden="true">
+              <path d="M24 41s-15-9.4-15-20.5A8.5 8.5 0 0 1 24 15a8.5 8.5 0 0 1 15 5.5C39 31.6 24 41 24 41Z" fill="rgba(124,131,253,0.16)"/>
+              <circle cx="24" cy="24" r="4"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="${p}-android-frame" style="padding:20px;display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 340 390" width="100%" height="380" role="img" aria-label="3D Porcelain Cybernetic Android">
+            <defs>
+              <linearGradient id="porcelainShell" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="65%" stop-color="#e7eaf6"/>
+                <stop offset="100%" stop-color="#c5cbe6"/>
+              </linearGradient>
+            </defs>
+            <circle cx="170" cy="145" r="115" fill="rgba(124,131,253,0.14)" stroke="#7c83fd" stroke-width="1.5" stroke-dasharray="5 5"/>
+            <ellipse cx="170" cy="128" rx="54" ry="68" fill="url(#porcelainShell)" stroke="#7c83fd" stroke-width="2"/>
+            <path d="M 116 124 Q 170 140 224 124" fill="none" stroke="#555cf0" stroke-width="2.5"/>
+            <rect x="148" y="196" width="44" height="46" rx="12" fill="#d9def0" stroke="#7c83fd" stroke-width="1.8"/>
+            <path d="M 74 370 C 84 266, 122 238, 170 238 C 218 238, 256 266, 266 370 Z" fill="url(#porcelainShell)" stroke="#7c83fd" stroke-width="2"/>
+            <circle cx="170" cy="296" r="22" fill="rgba(124,131,253,0.22)" stroke="#555cf0" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <div class="${p}-dial-wrap">
+          <div class="${p}-neumo-dial">
+            <span style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;">встречаемся</span>
+            <strong class="tabular-nums" style="font-family:var(--font-display);font-size:34px;color:var(--accent-text);margin:4px 0;">в 19:00</strong>
+            <span style="font-size:11px;color:var(--muted);font-family:var(--font-mono);">MSK • LIVE STREAM</span>
+          </div>
+          <button type="button" id="exploreMagneticBtn" class="${p}-btn-periwinkle">ЗАПИСАТЬСЯ</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="audience" class="${p}-wrap ${p}-section ${p}-reveal" aria-label="Для кого вебинар">
+      <h2 class="${p}-sec-title">ДЛЯ КОГО:</h2>
+      <div class="${p}-audience-grid">
+        <article class="${p}-neumo-card">
+          <p style="font-size:15.5px;line-height:1.7;color:var(--fg);">
+            Вебинар подходит для всех, кто интересуется наукой, физикой, космологией и философией, а также для тех, кто просто хочет расширить свой кругозор и узнать больше о том, как устроен наш мир и цифровое пространство МЕТА VERSE.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;">
+            <span style="padding:6px 14px;border-radius:999px;background:rgba(124,131,253,0.14);color:var(--accent-text);font-size:12px;font-weight:700;">Нейро-архитектура</span>
+            <span style="padding:6px 14px;border-radius:999px;background:rgba(124,131,253,0.14);color:var(--accent-text);font-size:12px;font-weight:700;">3D Бионика</span>
+            <span style="padding:6px 14px;border-radius:999px;background:rgba(124,131,253,0.14);color:var(--accent-text);font-size:12px;font-weight:700;">Spatial Web</span>
+          </div>
+        </article>
+
+        <div class="${p}-neumo-card" style="text-align:center;">
+          <svg viewBox="0 0 320 140" width="100%" height="130" aria-hidden="true">
+            <defs>
+              <linearGradient id="shipPorcelain" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="100%" stop-color="#cfd5ec"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="160" cy="118" rx="95" ry="10" fill="rgba(124,131,253,0.2)"/>
+            <path d="M 35 82 C 95 28, 225 28, 285 82 C 235 96, 85 96, 35 82 Z" fill="url(#shipPorcelain)" stroke="#7c83fd" stroke-width="2"/>
+            <ellipse cx="160" cy="64" rx="46" ry="16" fill="#7c83fd" fill-opacity="0.25" stroke="#555cf0" stroke-width="1.5"/>
+          </svg>
+          <div style="font-size:12.5px;color:var(--muted);font-weight:600;">Биоморфный орбитальный модуль МЕТА-09</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modules" class="${p}-wrap ${p}-section ${p}-reveal" aria-label="Программа вебинара">
+      <div class="${p}-bionic-grid">
+        <article class="${p}-neumo-card">
+          <div class="${p}-bionic-num tabular-nums">01</div>
+          <h3 style="font-size:17px;font-weight:700;margin-bottom:8px;">Тактильный Синтез</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Разберем основные понятия и принципы работы метавселенной, а также ее структуру и возможности бионических сенсоров.
+          </p>
+        </article>
+
+        <article class="${p}-neumo-card">
+          <div class="${p}-bionic-num tabular-nums">02</div>
+          <h3 style="font-size:17px;font-weight:700;margin-bottom:8px;">Автономное Дыхание Системы</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Рассмотрим примеры существующих и потенциальных метавселенных, их применение в науке, искусстве и цифровой экономике.
+          </p>
+        </article>
+
+        <article class="${p}-neumo-card">
+          <div class="${p}-bionic-num tabular-nums">03</div>
+          <h3 style="font-size:17px;font-weight:700;margin-bottom:8px;">Когнитивное Ядро</h3>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Обсудим возможные последствия существования метавселенной для нашего понимания реальности и сознания ИИ.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="register" class="${p}-wrap ${p}-section ${p}-reveal" aria-label="Форма регистрации">
+      <div class="${p}-form-grid">
+        <div class="${p}-neumo-card" style="text-align:center;">
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);margin-bottom:8px;">CYBERNETIC HOST</div>
+          <h2 style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">АВАТАР СИНТЕЗ-01</h2>
+          <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
+            Мгновенный доступ к закрытой трансляции и 3D-материалам сразу после подтверждения анкеты.
+          </p>
+        </div>
+
+        <form class="${p}-neumo-card" onsubmit="return false;">
+          <h2 style="font-family:var(--font-display);font-size:28px;margin-bottom:6px;">Заполните форму</h2>
+          <p style="font-size:13px;color:var(--muted);margin-bottom:18px;">для записи на онлайн-вебинар 09.06.2023 в 19:00</p>
+          <input type="text" class="${p}-input" placeholder="Введите свое имя" aria-label="Введите свое имя">
+          <input type="email" class="${p}-input" placeholder="Введите свой e-mail" aria-label="Введите свой e-mail">
+          <button type="submit" class="${p}-btn-periwinkle" style="width:100%;" data-seamless-trigger="Подтверждение записи на вебинар МЕТА VERSE (09.06.2023 в 19:00)">
+            ЗАПИСАТЬСЯ
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="padding:28px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span>МЕТА VERSE — Bionic &amp; Spatial Computing Webinar</span>
+    <span class="tabular-nums">09.06.2023 • 19:00 MSK</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);">МЕТА VERSE PASS</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid var(--border);width:32px;height:32px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:24px;margin-bottom:10px;">Регистрация на вебинар 09.06.2023</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Ваше место зарезервировано. Ссылка на подключение в 19:00 и рабочая тетрадь по модулям 01–03 отправлены на ваш e-mail.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-periwinkle" style="width:100%;">ПОЛУЧИТЬ БИЛЕТ →</button>
+    </div>
+  </div>
+  ${renderV2Runtime(p)}
+</body>
+</html>`;
+  }
+
+  // ============================================================================
+  // 30. LOOO AI MAGIC STUDIO (looo-ai-magic — Premium Tier)
+  // Iridescent Cobalt-Violet & Rose Mesh Aura AI Design Platform
+  // ============================================================================
+  if (slug === 'looo-ai-magic') {
+    const pinPath = data.pinExt ? 'assets/pin-reference' + data.pinExt : 'assets/pin-reference.png';
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LOOO — Unleash Creativity with AI Magic</title>
+  <meta name="description" content="Transform ideas into stunning artwork effortlessly with LOOO AI Magic Studio — featuring 50+ theme prompt search, 3D holographic ribbon service cards, and latest design trends.">
+  <meta property="og:title" content="LOOO AI Magic Studio — Let Your Design Do the Talking">
+  <meta property="og:description" content="Search over 50+ AI themes across Web Design, App, and Graphic studio pipelines.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F8F9FC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f9fc;
+      --surface: #ffffff;
+      --surface-elevated: #eef1ff;
+      --glass: rgba(255, 255, 255, 0.78);
+      --fg: #0f1324;
+      --muted: #5a627a;
+      --border: rgba(79, 107, 255, 0.16);
+      --accent: #4f6bff;
+      --accent-text: #3550e8;
+      --accent-strong: #2740d4;
+      --on-accent: #ffffff;
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 26px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background:
+        radial-gradient(circle at 50% 18%, rgba(79, 107, 255, 0.32) 0%, rgba(244, 162, 210, 0.34) 32%, rgba(248, 249, 252, 0.98) 68%),
+        #f8f9fc;
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @keyframes ribbonWave {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(2deg); }
+    }
+    .${p}-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .${p}-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .${p}-wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 42px); }
+    .${p}-header {
+      position: sticky; top: 0; z-index: 150;
+      background: rgba(248, 249, 252, 0.84); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+    .${p}-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 0;
+    }
+    .${p}-logo {
+      font-weight: 800; font-size: 20px; letter-spacing: -0.06em; color: var(--fg); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .${p}-nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .${p}-nav-links a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600; }
+    .${p}-nav-links a:hover { color: var(--fg); }
+    .${p}-btn-dark {
+      padding: 10px 22px; border-radius: 999px; border: 0;
+      background: #0f1324; color: #ffffff; font-size: 13px; font-weight: 700; cursor: pointer;
+    }
+    .${p}-btn-ghost {
+      padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.75); color: var(--fg); font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+
+    .${p}-hero { text-align: center; padding: 64px 0 44px; }
+    .${p}-hero h1 {
+      font-size: clamp(2.5rem, 5.2vw, 4.35rem); font-weight: 800;
+      letter-spacing: -0.035em; line-height: 1.06; max-width: 780px; margin: 0 auto 16px;
+    }
+    .${p}-hero p {
+      color: var(--muted); font-size: 15.5px; line-height: 1.65; max-width: 560px; margin: 0 auto 28px;
+    }
+    .${p}-search-bar {
+      max-width: 580px; margin: 0 auto 18px; padding: 7px 7px 7px 20px;
+      border-radius: 999px; background: #ffffff; border: 1px solid rgba(79, 107, 255, 0.25);
+      box-shadow: 0 18px 44px rgba(79, 107, 255, 0.16);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .${p}-search-bar input {
+      flex: 1; border: 0; background: transparent; color: var(--fg);
+      font-size: 14px; font-family: inherit; outline: none;
+    }
+    .${p}-tags-row {
+      display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;
+    }
+    .${p}-tag-pill {
+      padding: 7px 18px; border-radius: 999px; border: 1px solid rgba(15, 19, 36, 0.12);
+      background: rgba(255, 255, 255, 0.72); color: var(--fg); font-size: 12.5px; font-weight: 600; cursor: pointer;
+    }
+    .${p}-tag-pill.is-active { background: #0f1324; color: #ffffff; border-color: #0f1324; }
+
+    .${p}-partners {
+      margin: 42px auto 0; padding: 18px 28px; border-radius: 20px;
+      background: rgba(255, 255, 255, 0.72); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 20px;
+      color: var(--muted); font-weight: 700; font-size: 15px; letter-spacing: -0.01em;
+    }
+
+    .${p}-section { padding: 58px 0; }
+    .${p}-sec-head { text-align: center; max-width: 640px; margin: 0 auto 36px; }
+    .${p}-sec-head h2 {
+      font-size: clamp(1.85rem, 3.4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 10px;
+    }
+    .${p}-services-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+    }
+    .${p}-service-card {
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.92) 0%, rgba(235, 239, 255, 0.85) 100%);
+      border: 1px solid var(--border); border-radius: 24px; padding: 26px;
+      box-shadow: 0 16px 38px rgba(79, 107, 255, 0.09);
+      display: flex; flex-direction: column; justify-content: space-between; min-height: 290px; cursor: pointer;
+    }
+    .${p}-ribbon-art {
+      height: 150px; display: flex; align-items: center; justify-content: center;
+      animation: ribbonWave 5s ease-in-out infinite;
+    }
+
+    .${p}-trends-grid {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px;
+    }
+    .${p}-poster-card {
+      border-radius: 20px; overflow: hidden; min-height: 280px; padding: 22px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      color: #ffffff; position: relative; border: 1px solid rgba(15, 19, 36, 0.1);
+    }
+
+    .${p}-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(15, 19, 36, 0.58); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .${p}-modal.is-open { opacity: 1; pointer-events: auto; }
+    .${p}-modal-box {
+      width: 100%; max-width: 460px; background: #ffffff; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px;
+    }
+
+    @media (max-width: 1024px) {
+      .${p}-services-grid { grid-template-columns: 1fr; }
+      .${p}-trends-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .${p}-nav-links { display: none; }
+      .${p}-trends-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="${p}-header">
+    <div class="${p}-wrap ${p}-nav">
+      <a href="#top" class="${p}-logo">LOOO</a>
+      <nav aria-label="Primary">
+        <ul class="${p}-nav-links">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#services">Features</a></li>
+          <li><a href="#trends">Packages</a></li>
+          <li><a href="#reference">About</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" class="${p}-btn-ghost">Motion: ON</button>
+        <button type="button" class="${p}-btn-ghost" data-seamless-trigger="Sign In to LOOO AI Studio">Sign in</button>
+        <button type="button" id="exploreMagneticBtn" class="${p}-btn-dark">Free Trial</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="${p}-wrap ${p}-hero" aria-label="LOOO AI Magic Hero">
+      <h1>Unleash Creativity with AI Magic</h1>
+      <p>Transform ideas into stunning artwork effortlessly with the power of artificial intelligence.</p>
+
+      <form class="${p}-search-bar" onsubmit="return false;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="loooSearchInput" placeholder="Search for over 50+ Theme" aria-label="Search for over 50+ Theme">
+        <button type="submit" class="${p}-btn-dark" data-seamless-trigger="Generating AI Artwork from Theme Prompt">Search</button>
+      </form>
+
+      <div class="${p}-tags-row" role="group" aria-label="Theme categories">
+        <button type="button" class="${p}-tag-pill is-active" data-theme-pill="AI Holographic">AI</button>
+        <button type="button" class="${p}-tag-pill" data-theme-pill="Editorial Fashion">Fashion</button>
+        <button type="button" class="${p}-tag-pill" data-theme-pill="Spatial 3D Design">Design</button>
+        <button type="button" class="${p}-tag-pill" data-theme-pill="Obsidian Dark UI">Dark</button>
+      </div>
+
+      <div class="${p}-partners" aria-label="Trusted ecosystem partners">
+        <span>Github</span>
+        <span>Coursera</span>
+        <span>Microsoft</span>
+        <span>Apple</span>
+        <span>Google</span>
+      </div>
+    </section>
+
+    <section id="services" class="${p}-wrap ${p}-section ${p}-reveal" aria-label="Let Your Design Do the Talking">
+      <div class="${p}-sec-head">
+        <h2>Let Your Design Do the Talking</h2>
+        <p style="color:var(--muted);font-size:14.5px;line-height:1.6;">
+          Whether you are looking to build a new website, design a mobile app, or create eye-catching graphics, LOOO AI synthesizes custom 3D and vector assets in seconds.
+        </p>
+      </div>
+
+      <div class="${p}-services-grid">
+        <article class="${p}-service-card" data-seamless-trigger="AI Web Design Generator">
+          <div class="${p}-ribbon-art">
+            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
+              <defs>
+                <linearGradient id="rib1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#4f6bff"/><stop offset="50%" stop-color="#c084fc"/><stop offset="100%" stop-color="#f472b6"/>
+                </linearGradient>
+              </defs>
+              <path d="M 24 95 C 55 18, 115 118, 176 32" fill="none" stroke="url(#rib1)" stroke-width="22" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
+            <h3 style="font-size:18px;font-weight:700;">Web Design</h3>
+            <span style="font-weight:700;color:var(--accent-text);">→</span>
+          </div>
+        </article>
+
+        <article class="${p}-service-card" data-seamless-trigger="AI Mobile App Interface Studio">
+          <div class="${p}-ribbon-art">
+            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
+              <path d="M 36 36 C 110 14, 90 116, 166 86" fill="none" stroke="url(#rib1)" stroke-width="22" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
+            <h3 style="font-size:18px;font-weight:700;">App</h3>
+            <span style="font-weight:700;color:var(--accent-text);">→</span>
+          </div>
+        </article>
+
+        <article class="${p}-service-card" data-seamless-trigger="AI 3D &amp; Graphic Identity Synthesis">
+          <div class="${p}-ribbon-art">
+            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
+              <circle cx="100" cy="65" r="38" fill="none" stroke="url(#rib1)" stroke-width="20"/>
+            </svg>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
+            <h3 style="font-size:18px;font-weight:700;">Graphic</h3>
+            <span style="font-weight:700;color:var(--accent-text);">→</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="trends" class="${p}-wrap ${p}-section ${p}-reveal" aria-label="Explore the Latest Design Trends">
+      <div class="${p}-sec-head">
+        <h2>Explore the Latest Design Trends</h2>
+        <p style="color:var(--muted);font-size:14.5px;line-height:1.6;">
+          Stay ahead of the curve with our curated collection of generative design directions, from neo-classical sculpture to chromatic 3D typography.
+        </p>
+      </div>
+
+      <div class="${p}-trends-grid">
+        <article class="${p}-poster-card" style="background:radial-gradient(circle at 50% 40%,#fb923c 0%,#1e1b4b 70%,#090a14 100%);">
+          <span style="font-family:var(--font-mono);font-size:11px;opacity:0.8;">01 • SECURITY UI</span>
+          <div>
+            <h3 style="font-size:20px;font-weight:800;">protect your data</h3>
+            <p style="font-size:12px;opacity:0.8;margin-top:4px;">Glowing solar orb &amp; zero-trust glass card</p>
+          </div>
+        </article>
+
+        <article class="${p}-poster-card" style="background:linear-gradient(155deg,#facc15 0%,#ca8a04 100%);color:#141204;">
+          <span style="font-family:var(--font-mono);font-size:11px;">02 • CLASSICAL REMIX</span>
+          <div>
+            <h3 style="font-size:20px;font-weight:800;">Gold-Leaf Bust</h3>
+            <p style="font-size:12px;opacity:0.85;margin-top:4px;">Neo-Hellenistic marble &amp; gilded leaf collage</p>
+          </div>
+        </article>
+
+        <article class="${p}-poster-card" style="background:linear-gradient(160deg,#06b6d4 0%,#0f172a 85%);">
+          <span style="font-family:var(--font-mono);font-size:11px;">03 • CYBERPUNK</span>
+          <div>
+            <h3 style="font-size:22px;font-weight:800;letter-spacing:0.06em;">NEXT</h3>
+            <p style="font-size:12px;opacity:0.85;margin-top:4px;">Neon visor &amp; synthetic portraiture</p>
+          </div>
+        </article>
+
+        <article class="${p}-poster-card" style="background:linear-gradient(145deg,#312e81 0%,#ec4899 100%);">
+          <span style="font-family:var(--font-mono);font-size:11px;">04 • 3D TYPE</span>
+          <div>
+            <h3 style="font-size:20px;font-weight:800;letter-spacing:0.04em;">NEUE KAIJU</h3>
+            <p style="font-size:12px;opacity:0.85;margin-top:4px;">Iridescent liquid chrome letterforms</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="reference" class="${p}-wrap ${p}-section ${p}-reveal" aria-label="LOOO Studio Canvas Overview">
+      <div style="background:#ffffff;border:1px solid var(--border);border-radius:26px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);font-weight:700;">50+ CURATED AI THEMES</span>
+          <h2 style="font-size:clamp(1.5rem,2.5vw,2.1rem);font-weight:800;margin:8px 0 12px;">Instant Multi-Modal Brand Kits</h2>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">
+            Export high-resolution 3D ribbons, editorial posters, and responsive web components directly from your text prompt.
+          </p>
+        </div>
+        <div style="border-radius:18px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg,#eef2ff 0%,#fce7f3 100%);padding:20px;">
+          <svg viewBox="0 0 380 200" width="100%" height="180" role="img" aria-label="LOOO AI Holographic Ribbon Synthesis">
+            <path d="M 28 152 C 88 24, 168 176, 238 48 C 284 -10, 322 140, 356 64" fill="none" stroke="url(#rib1)" stroke-width="24" stroke-linecap="round"/>
+            <circle cx="190" cy="100" r="34" fill="rgba(255,255,255,0.65)" stroke="#4f6bff" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="${p}-wrap" style="padding:28px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span>LOOO — AI Magic Creative Studio</span>
+    <span class="tabular-nums">50+ Themes • Web, App &amp; Graphic</span>
+  </footer>
+
+  <div class="${p}-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="${p}-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);font-weight:700;">LOOO AI ENGINE</span>
+        <button type="button" id="closeSeamlessBtn" class="${p}-btn-ghost" style="padding:4px 10px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;font-weight:800;margin-bottom:10px;">Start Your LOOO AI Free Trial</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Unlock unlimited access to 50+ AI themes, 3D iridescent ribbon generators, and commercial poster exports.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="${p}-btn-dark" style="width:100%;">Launch AI Workspace →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var input = document.getElementById('loooSearchInput');
+      document.querySelectorAll('[data-theme-pill]').forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          document.querySelectorAll('[data-theme-pill]').forEach(function (p) { p.classList.remove('is-active'); });
+          pill.classList.add('is-active');
+          if (input) input.value = pill.getAttribute('data-theme-pill') || '';
         });
       });
     })();

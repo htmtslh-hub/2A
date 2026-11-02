@@ -1,0 +1,38 @@
+{
+  "id": "t207",
+  "slug": "rayhan-aditya",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T22:40:00.865Z",
+  "demo": "/demos/rayhan-aditya/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "249617886869",
+  "sha256": "2496178868695d36dfadbe03a0ad501dfdb5e62e54b1d65a6d905afbcab9552b",
+  "demoHtmlSha256": "6fcdc77d10b72b41adf2099f56614f8fbc239f9ccb754bcc7f63d2af031f577b",
+  "demoSha256": "97701d89e806029809a29a02db52e4c0aa03e69c658998732bc0dbbab147ea85",
+  "bytes": 491769,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1333
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rayhan-aditya-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rayhan-aditya-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rayhan-aditya-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\rayhan-aditya-return.jpg"
+  ]
+}

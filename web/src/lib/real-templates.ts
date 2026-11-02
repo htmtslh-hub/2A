@@ -46,6 +46,196 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t213: {
+    slug: 'nexacore-results',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "NexaCore Results",
+        desc: "Giao diện web NexaCore Results với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "NexaCore Results",
+        desc: "Bespoke NexaCore Results web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Features", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "NexaCore Results",
+        desc: "单文件自包含 NexaCore Results 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t212: {
+    slug: 'organic-odyssey',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Organic Odyssey",
+        desc: "Giao diện web Organic Odyssey với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Organic Odyssey",
+        desc: "Bespoke Organic Odyssey web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Organic Odyssey",
+        desc: "单文件自包含 Organic Odyssey 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t211: {
+    slug: 'orbis-hello',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Orbis Hello",
+        desc: "Giao diện web Orbis Hello với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["About", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Orbis Hello",
+        desc: "Bespoke Orbis Hello web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["About", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Orbis Hello",
+        desc: "单文件自包含 Orbis Hello 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t210: {
+    slug: 'looo-ai-magic',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Looo AI Magic Studio",
+        desc: "Looo AI Magic Studio (aurora-mesh-ai-design-studio) — Iridescent cobalt-violet & rose-aura AI creative studio featuring 50+ theme prompt search, 3D holographic ribbon service cards (Web Design, App, Graphic), and curated 4-column poster trend gallery.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Looo AI Magic Studio",
+        desc: "Looo AI Magic Studio (aurora-mesh-ai-design-studio) — Iridescent cobalt-violet & rose-aura AI creative studio featuring 50+ theme prompt search, 3D holographic ribbon service cards (Web Design, App, Graphic), and curated 4-column poster trend gallery.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Looo AI Magic Studio",
+        desc: "Looo AI Magic Studio (aurora-mesh-ai-design-studio) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t209: {
+    slug: 'metaverse-cyber-webinar',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Metaverse Cyber Webinar",
+        desc: "Metaverse Cyber Webinar (porcelain-android-metaverse-webinar) — High-key porcelain & periwinkle-indigo 3D cybernetic android webinar landing page featuring gothic МЕТА VERSE typography, 09.06.2023 mechanical heart badge, 19:00 neumorphic clock dial, and 3-pillar bionic curriculum.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Metaverse Cyber Webinar",
+        desc: "Metaverse Cyber Webinar (porcelain-android-metaverse-webinar) — High-key porcelain & periwinkle-indigo 3D cybernetic android webinar landing page featuring gothic МЕТА VERSE typography, 09.06.2023 mechanical heart badge, 19:00 neumorphic clock dial, and 3-pillar bionic curriculum.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Metaverse Cyber Webinar",
+        desc: "Metaverse Cyber Webinar (porcelain-android-metaverse-webinar) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t208: {
+    slug: 'razer-mamba-pro',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Razer Mamba Pro",
+        desc: "Razer Mamba Pro (acid-venom-esports-hardware-store) — Matte-carbon & acid-green esports peripheral Flagship Store showcasing Razer Mamba Pro automated full-control gaming mouse, Kraken 7.1 surround headset spotlight, 4-column hardware lineup, and Razer Insider hub.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Razer Mamba Pro",
+        desc: "Razer Mamba Pro (acid-venom-esports-hardware-store) — Matte-carbon & acid-green esports peripheral Flagship Store showcasing Razer Mamba Pro automated full-control gaming mouse, Kraken 7.1 surround headset spotlight, 4-column hardware lineup, and Razer Insider hub.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Razer Mamba Pro",
+        desc: "Razer Mamba Pro (acid-venom-esports-hardware-store) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t207: {
+    slug: 'rayhan-aditya',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Rayhan Aditya Portfolio",
+        desc: "Rayhan Aditya Portfolio (crimson-monolith-creative-portfolio) — Editorial pitch-black & bold crimson personal portfolio for Web Designer & UI/UX Creator Rayhan Aditya featuring giant condensed PORTFOLIO typography, Veloce/Woodcraft/Urbanic showcases, and 5-step process matrix.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Rayhan Aditya Portfolio",
+        desc: "Rayhan Aditya Portfolio (crimson-monolith-creative-portfolio) — Editorial pitch-black & bold crimson personal portfolio for Web Designer & UI/UX Creator Rayhan Aditya featuring giant condensed PORTFOLIO typography, Veloce/Woodcraft/Urbanic showcases, and 5-step process matrix.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Rayhan Aditya Portfolio",
+        desc: "Rayhan Aditya Portfolio (crimson-monolith-creative-portfolio) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t206: {
+    slug: 'helios-investments',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Helios Investments",
+        desc: "Helios Investments (obsidian-mauve-ai-wealth-dashboard) — Obsidian & smoky mauve-rose AI investment portfolio dashboard featuring Nadia Rachel overview, helios.ai natural-language assistant, Watchlist (SPOT, AMZN, MSFT, NVDA), 2x2 unit holdings, and interactive spline performance curve.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Helios Investments",
+        desc: "Helios Investments (obsidian-mauve-ai-wealth-dashboard) — Obsidian & smoky mauve-rose AI investment portfolio dashboard featuring Nadia Rachel overview, helios.ai natural-language assistant, Watchlist (SPOT, AMZN, MSFT, NVDA), 2x2 unit holdings, and interactive spline performance curve.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Helios Investments",
+        desc: "Helios Investments (obsidian-mauve-ai-wealth-dashboard) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
   t205: {
     slug: 'nike-hover',
     cat: 'commerce',

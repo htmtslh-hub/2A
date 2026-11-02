@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Rayhan Aditya — Web Designer &amp; UI/UX Creator Portfolio</title>
+  <meta name="description" content="Editorial pitch-black and crimson personal portfolio of Rayhan Aditya, Web Designer and UI/UX Creator in Jakarta, featuring Veloce Bikes, Woodcraft, and Urbanic case studies.">
+  <meta property="og:title" content="Rayhan Aditya — Web Designer &amp; Digital Creator">
+  <meta property="og:description" content="Turning ideas into powerful digital experiences. 3+ Years Experience, 40+ Projects Completed, 20+ Happy Clients.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#08080A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080a;
+      --surface: #111115;
+      --surface-elevated: #18181f;
+      --glass: rgba(17, 17, 21, 0.84);
+      --fg: #f8fafc;
+      --muted: #9ca3af;
+      --border: rgba(255, 255, 255, 0.11);
+      --accent: #d91b24;
+      --accent-text: #ff4d55;
+      --accent-strong: #b3121a;
+      --on-accent: #ffffff;
+      --font-display: 'Anton', Impact, sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 20px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background: var(--bg); color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 34px; height: 34px; border: 1.5px solid var(--accent); margin: -17px 0 0 -17px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent-text); margin: -3px 0 0 -3px; }
+    @keyframes crimsonPulse {
+      0%, 100% { opacity: 0.92; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.015); }
+    }
+    .ray91-reveal { opacity: 0; transform: translate3d(0, 20px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .ray91-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .ray91-container { max-width: 1280px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 44px); }
+    .ray91-header {
+      position: sticky; top: 0; z-index: 150;
+      background: rgba(8, 8, 10, 0.86); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+    .ray91-topbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 16px 0; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .ray91-nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .ray91-nav-links a { color: var(--muted); text-decoration: none; font-size: 12px; transition: color 0.2s var(--ease-out); }
+    .ray91-nav-links a:hover { color: var(--fg); }
+    .ray91-status-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(217, 27, 36, 0.45);
+      background: rgba(217, 27, 36, 0.12); color: var(--fg); font-size: 11px;
+    }
+    .ray91-status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+
+    .ray91-hero {
+      position: relative; padding: 36px 0 64px; overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .ray91-hero-backdrop-word {
+      font-family: var(--font-display);
+      font-size: clamp(5.2rem, 18.8vw, 15.8rem);
+      line-height: 0.84; letter-spacing: 0.01em; text-transform: uppercase;
+      color: var(--accent); text-align: center; user-select: none;
+      animation: crimsonPulse 6s ease-in-out infinite;
+    }
+    .ray91-hero-grid {
+      display: grid; grid-template-columns: 1fr 340px 1fr; gap: 28px; align-items: end;
+      margin-top: -54px; position: relative; z-index: 2;
+    }
+    .ray91-script-hello {
+      font-family: var(--font-script); font-size: 34px; color: var(--fg); margin-bottom: -6px;
+    }
+    .ray91-hero-name {
+      font-family: var(--font-display); font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+      letter-spacing: 0.02em; text-transform: uppercase; line-height: 0.98;
+    }
+    .ray91-role-pill {
+      display: inline-block; margin: 12px 0 14px; padding: 6px 14px;
+      background: var(--accent); color: var(--on-accent);
+      font-size: 11.5px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .ray91-portrait-card {
+      background: linear-gradient(180deg, rgba(217, 27, 36, 0.22) 0%, rgba(17, 17, 21, 0.96) 100%);
+      border: 1px solid rgba(217, 27, 36, 0.4); border-radius: 22px; overflow: hidden;
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.75);
+    }
+    .ray91-portrait-card img {
+      width: 100%; height: 390px; object-fit: cover; object-position: top center; display: block;
+    }
+    .ray91-stats-stack {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px;
+      padding-top: 20px; border-top: 1px solid var(--border);
+    }
+    .ray91-stat-num {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 2.8vw, 2.4rem); color: var(--fg); line-height: 1;
+    }
+    .ray91-stat-label {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; color: var(--muted);
+      text-transform: uppercase; margin-top: 6px;
+    }
+
+    .ray91-section { padding: 68px 0; border-bottom: 1px solid var(--border); }
+    .ray91-sec-head {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 36px;
+    }
+    .ray91-sec-title {
+      font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      text-transform: uppercase; letter-spacing: 0.02em; line-height: 0.95;
+    }
+    .ray91-sec-title span { color: var(--accent); }
+
+    .ray91-projects-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+    }
+    .ray91-project-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+      padding: 20px; display: flex; flex-direction: column; justify-content: space-between;
+      gap: 18px; cursor: pointer;
+    }
+    .ray91-project-card:hover { border-color: var(--accent); }
+    .ray91-project-Preview {
+      height: 196px; border-radius: 12px; padding: 18px; position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: space-between;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .ray91-tri-grid {
+      display: grid; grid-template-columns: 1.15fr 1fr 0.95fr; gap: 22px;
+    }
+    .ray91-panel {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px;
+    }
+    .ray91-skill-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .ray91-skill-tag {
+      padding: 6px 12px; border-radius: 999px; font-size: 11.5px; font-weight: 600;
+      background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); color: var(--fg);
+    }
+    .ray91-process-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+    .ray91-process-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 16px; border-radius: 12px; background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border); font-weight: 700; font-size: 13px; letter-spacing: 0.06em;
+    }
+    .ray91-quote-card {
+      background: linear-gradient(155deg, #e01e27 0%, #990f15 100%);
+      border-radius: 20px; padding: 32px; color: #ffffff;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+
+    .ray91-contact-grid {
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 28px; align-items: center;
+    }
+    .ray91-contact-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+    .ray91-contact-list li {
+      display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--fg);
+    }
+    .ray91-btn-crimson {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 13px 26px; border-radius: 999px; border: 0;
+      background: var(--accent); color: var(--on-accent);
+      font-weight: 700; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
+    }
+
+    .ray91-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(5, 5, 7, 0.82); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(12px);
+    }
+    .ray91-modal.is-open { opacity: 1; pointer-events: auto; }
+    .ray91-modal-box {
+      width: 100%; max-width: 480px; background: #141419; border: 1px solid rgba(217, 27, 36, 0.45);
+      border-radius: 20px; padding: 28px;
+    }
+
+    @media (max-width: 1024px) {
+      .ray91-hero-grid { grid-template-columns: 1fr; margin-top: 12px; }
+      .ray91-projects-grid, .ray91-tri-grid, .ray91-contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .ray91-nav-links { display: none; }
+      .ray91-stats-stack { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="ray91-header">
+    <div class="ray91-container ray91-topbar">
+      <span>WEB DESIGNER / DIGITAL CREATOR</span>
+      <nav aria-label="Primary">
+        <ul class="ray91-nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#credentials">Education &amp; Skills</a></li>
+          <li><a href="#process">Work Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="ray91-status-pill">
+          <span class="ray91-status-dot" aria-hidden="true"></span>
+          AVAILABLE FOR FREELANCE
+        </span>
+        <button type="button" id="motionToggleBtn" aria-pressed="false" class="ray91-status-pill" style="cursor:pointer;">
+          Motion: ON
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="ray91-hero ray91-container" aria-label="Rayhan Aditya Introduction">
+      <div class="ray91-hero-backdrop-word" aria-hidden="true">PORTFOLIO</div>
+      <div class="ray91-hero-grid">
+        <div>
+          <div class="ray91-script-hello">Hello, I'm</div>
+          <h1 class="ray91-hero-name">RAYHAN ADITYA</h1>
+          <span class="ray91-role-pill">WEB DESIGNER &amp; UI/UX CREATOR</span>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;margin-bottom:16px;">
+            I'm a creative web designer focused on crafting clean, modern, and user-centered digital products. With a strong foundation in visual storytelling and interface systems, I help brands stand out online.
+          </p>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <button type="button" id="exploreMagneticBtn" class="ray91-btn-crimson">Start a Project →</button>
+            <span style="font-size:11.5px;font-weight:700;letter-spacing:0.12em;color:var(--muted);">• AVAILABLE WORLDWIDE</span>
+          </div>
+        </div>
+
+        <div class="ray91-portrait-card">
+          <svg viewBox="0 0 340 390" width="100%" height="390" role="img" aria-label="Rayhan Aditya Studio Portrait">
+            <defs>
+              <radialGradient id="rayhanHalo" cx="50%" cy="38%" r="55%">
+                <stop offset="0%" stop-color="#d91b24" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#111115" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="340" height="390" fill="#101014"/>
+            <circle cx="170" cy="145" r="135" fill="url(#rayhanHalo)"/>
+            <circle cx="170" cy="122" r="46" fill="#23232b" stroke="#d91b24" stroke-width="2"/>
+            <path d="M 64 390 C 70 250, 112 204, 170 204 C 228 204, 270 250, 276 390 Z" fill="#17171e" stroke="rgba(255,255,255,0.16)" stroke-width="2"/>
+            <path d="M 142 206 L 170 282 L 198 206" fill="none" stroke="#d91b24" stroke-width="3"/>
+          </svg>
+        </div>
+
+        <div>
+          <h2 style="font-size:clamp(1.35rem,2vw,1.75rem);font-weight:700;line-height:1.3;">
+            "Turning ideas into powerful digital experiences."
+          </h2>
+          <div class="ray91-stats-stack">
+            <div>
+              <div class="ray91-stat-num tabular-nums" data-counter-target="3" data-counter-suffix="+">3+</div>
+              <div class="ray91-stat-label">YEARS EXPERIENCE</div>
+            </div>
+            <div>
+              <div class="ray91-stat-num tabular-nums" data-counter-target="40" data-counter-suffix="+">40+</div>
+              <div class="ray91-stat-label">PROJECTS COMPLETED</div>
+            </div>
+            <div>
+              <div class="ray91-stat-num tabular-nums" data-counter-target="20" data-counter-suffix="+">20+</div>
+              <div class="ray91-stat-label">HAPPY CLIENTS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="ray91-section ray91-container ray91-reveal" aria-label="Selected Projects">
+      <div class="ray91-sec-head">
+        <h2 class="ray91-sec-title">SELECTED <span>PROJECTS</span></h2>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--muted);" class="tabular-nums">INDEX 01 — 03</span>
+      </div>
+
+      <div class="ray91-projects-grid">
+        <article class="ray91-project-card" data-seamless-trigger="01 VELOCE BIKES — E-Commerce Flagship Case Study">
+          <div class="ray91-project-Preview" style="background:linear-gradient(135deg,#2a090d 0%,#0f0f14 100%);">
+            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">E-COMMERCE WEBSITE</span>
+            <div>
+              <div style="font-family:var(--font-display);font-size:28px;letter-spacing:0.03em;">VELOCE CARBON R1</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:4px;">Interactive 3D bike customizer &amp; checkout</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);" class="tabular-nums">01</div>
+              <h3 style="font-size:18px;font-weight:800;letter-spacing:0.02em;">VELOCE BIKES</h3>
+            </div>
+            <span style="font-size:12px;color:var(--muted);">E-COMMERCE WEBSITE ↗</span>
+          </div>
+        </article>
+
+        <article class="ray91-project-card" data-seamless-trigger="02 WOODCRAFT — Timeless Crafted Furniture Showcase">
+          <div class="ray91-project-Preview" style="background:linear-gradient(135deg,#231a12 0%,#0f0f14 100%);">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#fbbf24;">FURNITURE WEBSITE</span>
+            <div>
+              <div style="font-family:var(--font-display);font-size:26px;letter-spacing:0.03em;">Timeless Crafted Furniture</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:4px;">Bespoke architectural oak &amp; walnut catalog</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);" class="tabular-nums">02</div>
+              <h3 style="font-size:18px;font-weight:800;letter-spacing:0.02em;">WOODCRAFT</h3>
+            </div>
+            <span style="font-size:12px;color:var(--muted);">FURNITURE WEBSITE ↗</span>
+          </div>
+        </article>
+
+        <article class="ray91-project-card" data-seamless-trigger="03 URBANIC — Stay Ahead In Style Editorial Platform">
+          <div class="ray91-project-Preview" style="background:linear-gradient(135deg,#1f1124 0%,#0f0f14 100%);">
+            <span style="font-family:var(--font-mono);font-size:11px;color:#f472b6;">FASHION MAGAZINE</span>
+            <div>
+              <div style="font-family:var(--font-display);font-size:28px;letter-spacing:0.03em;">STAY AHEAD IN STYLE</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:4px;">High-contrast lookbook &amp; runway issue</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);" class="tabular-nums">03</div>
+              <h3 style="font-size:18px;font-weight:800;letter-spacing:0.02em;">URBANIC</h3>
+            </div>
+            <span style="font-size:12px;color:var(--muted);">FASHION MAGAZINE ↗</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="credentials" class="ray91-section ray91-container ray91-reveal" aria-label="Education, Skills, and Work Process">
+      <div class="ray91-tri-grid">
+        <article class="ray91-panel">
+          <h2 style="font-family:var(--font-display);font-size:28px;letter-spacing:0.02em;margin-bottom:18px;">
+            EDUCATION &amp; <span style="color:var(--accent);">SKILLS</span>
+          </h2>
+          <div style="display:flex;flex-direction:column;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--border);">
+            <div>
+              <div style="font-weight:700;font-size:14px;">B.Sc. in Visual Communication Design</div>
+              <div style="font-size:12.5px;color:var(--muted);" class="tabular-nums">Binus University • 2018 — 2022</div>
+            </div>
+            <div>
+              <div style="font-weight:700;font-size:14px;">UI/UX Design Certification</div>
+              <div style="font-size:12.5px;color:var(--muted);" class="tabular-nums">Google Career Certificates • 2023</div>
+            </div>
+          </div>
+          <div class="ray91-skill-tags">
+            <span class="ray91-skill-tag">UI/UX Design</span>
+            <span class="ray91-skill-tag">Wireframing</span>
+            <span class="ray91-skill-tag">Prototyping</span>
+            <span class="ray91-skill-tag">Design System</span>
+            <span class="ray91-skill-tag">Responsive Web</span>
+            <span class="ray91-skill-tag">HTML/CSS</span>
+            <span class="ray91-skill-tag">JavaScript</span>
+            <span class="ray91-skill-tag">Figma</span>
+            <span class="ray91-skill-tag">Framer</span>
+            <span class="ray91-skill-tag">Webflow</span>
+            <span class="ray91-skill-tag">Branding</span>
+          </div>
+        </article>
+
+        <article id="process" class="ray91-panel">
+          <h2 style="font-family:var(--font-display);font-size:28px;letter-spacing:0.02em;">
+            WORK <span style="color:var(--accent);">PROCESS</span>
+          </h2>
+          <ul class="ray91-process-list">
+            <li class="ray91-process-item"><span style="color:var(--accent-text);font-family:var(--font-mono);" class="tabular-nums">01</span><span>DISCOVER</span><span style="color:var(--muted);font-size:11px;">Brief &amp; Audit</span></li>
+            <li class="ray91-process-item"><span style="color:var(--accent-text);font-family:var(--font-mono);" class="tabular-nums">02</span><span>IDEATE</span><span style="color:var(--muted);font-size:11px;">Wireframes</span></li>
+            <li class="ray91-process-item"><span style="color:var(--accent-text);font-family:var(--font-mono);" class="tabular-nums">03</span><span>DESIGN</span><span style="color:var(--muted);font-size:11px;">High-Craft UI</span></li>
+            <li class="ray91-process-item"><span style="color:var(--accent-text);font-family:var(--font-mono);" class="tabular-nums">04</span><span>DEVELOP</span><span style="color:var(--muted);font-size:11px;">Clean Code</span></li>
+            <li class="ray91-process-item"><span style="color:var(--accent-text);font-family:var(--font-mono);" class="tabular-nums">05</span><span>DELIVER</span><span style="color:var(--muted);font-size:11px;">QA &amp; Launch</span></li>
+          </ul>
+        </article>
+
+        <article class="ray91-quote-card">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="rgba(255,255,255,0.28)" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          <blockquote style="font-size:clamp(1.4rem,2.2vw,1.85rem);font-weight:800;line-height:1.25;margin:18px 0;">
+            "Good design is not just how it looks, but how it works."
+          </blockquote>
+          <div style="font-family:var(--font-script);font-size:28px;">— Rayhan</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="ray91-section ray91-container ray91-reveal" aria-label="Contact Rayhan Aditya">
+      <div class="ray91-contact-grid">
+        <div>
+          <h2 class="ray91-sec-title">LET'S WORK <span>TOGETHER</span></h2>
+          <p style="color:var(--muted);font-size:14.5px;line-height:1.65;margin-top:12px;">
+            Have a project in mind? Let's build something great together. Available for full-stack web design, design systems, and interactive brand launches.
+          </p>
+          <ul class="ray91-contact-list">
+            <li>
+              <span style="color:var(--accent-text);font-family:var(--font-mono);">MAIL</span>
+              <span>hello@rayhanaditya.com</span>
+            </li>
+            <li>
+              <span style="color:var(--accent-text);font-family:var(--font-mono);">WEB</span>
+              <span>www.rayhanaditya.com</span>
+            </li>
+            <li class="tabular-nums">
+              <span style="color:var(--accent-text);font-family:var(--font-mono);">CALL</span>
+              <span>+62 812 3456 7890</span>
+            </li>
+            <li>
+              <span style="color:var(--accent-text);font-family:var(--font-mono);">BASE</span>
+              <span>Jakarta, Indonesia</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="ray91-panel" style="background:linear-gradient(145deg,#181216 0%,#0d0d11 100%);border-color:rgba(217,27,36,0.35);">
+          <div style="padding:28px;border-radius:14px;background:#09090c;border:1px solid var(--border);text-align:center;">
+            <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);letter-spacing:0.14em;margin-bottom:8px;">STUDIO WORKSTATION</div>
+            <div style="font-family:var(--font-display);font-size:clamp(1.7rem,2.8vw,2.3rem);line-height:1.05;margin-bottom:16px;">
+              WE DESIGN DIGITAL EXPERIENCES
+            </div>
+            <button type="button" class="ray91-btn-crimson" data-seamless-trigger="Schedule Discovery Call with Rayhan Aditya">
+              Book Consultation Call →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ray91-container" style="padding:28px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span>© Rayhan Aditya — Web Designer &amp; UI/UX Creator</span>
+    <span>Jakarta, Indonesia • Available Worldwide</span>
+  </footer>
+
+  <div class="ray91-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="ray91-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+        <span class="ray91-role-pill" style="margin:0;">DIRECT INQUIRY</span>
+        <button type="button" id="closeSeamlessBtn" style="background:transparent;border:1px solid var(--border);color:var(--fg);width:34px;height:34px;border-radius:50%;cursor:pointer;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-family:var(--font-display);font-size:28px;letter-spacing:0.02em;margin-bottom:10px;">Collaborate With Rayhan Aditya</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Send your brief directly to <strong style="color:var(--fg);">hello@rayhanaditya.com</strong> or book a 30-minute discovery session covering UI/UX architecture, interactive prototypes, and production delivery.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="ray91-btn-crimson" style="width:100%;">Send Project Brief →</button>
+    </div>
+  </div>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.ray91-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

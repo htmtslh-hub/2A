@@ -550,7 +550,12 @@ const CURATED_PIN_IDENTITIES = [
   { match: /1062568105861618273|^2e82c299dabf/i, title: 'Terrarium Deck Studio', slug: 'terrarium-deck-studio', tierHint: 'free' },
   { match: /1066719861751680646|^356f2b4c52cc/i, title: 'Foods Gourmet Bowl', slug: 'foods-gourmet-bowl', tierHint: 'premium' },
   { match: /1069323505300032436|^65658236e456/i, title: 'VisionGlass Neo UI', slug: 'visionglass-neo-ui', tierHint: 'premium' },
-  { match: /1080160291868203924|^bedff480851f/i, title: 'O2 Moonish Cosmic', slug: 'o2-moonish-cosmic', tierHint: 'premium' }
+  { match: /1080160291868203924|^bedff480851f/i, title: 'O2 Moonish Cosmic', slug: 'o2-moonish-cosmic', tierHint: 'premium' },
+  { match: /1092052609672285653|^c759a506be56/i, title: 'Helios Investments', slug: 'helios-investments', tierHint: 'free' },
+  { match: /1092685928384364587|^f628ef5f4557/i, title: 'Rayhan Aditya Portfolio', slug: 'rayhan-aditya', tierHint: 'free' },
+  { match: /1092826665857500928|^1b2c93ed0a59/i, title: 'Razer Mamba Pro', slug: 'razer-mamba-pro', tierHint: 'premium' },
+  { match: /1092826665857530673|^c6e51538d538/i, title: 'Metaverse Cyber Webinar', slug: 'metaverse-cyber-webinar', tierHint: 'premium' },
+  { match: /1092826665858010875|^2c0b60dbf2ce/i, title: 'Looo AI Magic Studio', slug: 'looo-ai-magic', tierHint: 'premium' }
 ];
 
 function parseFilenameHint(filename, index, sha256 = '') {

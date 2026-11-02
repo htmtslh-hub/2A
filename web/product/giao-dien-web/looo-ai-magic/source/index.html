@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LOOO — Unleash Creativity with AI Magic</title>
+  <meta name="description" content="Transform ideas into stunning artwork effortlessly with LOOO AI Magic Studio — featuring 50+ theme prompt search, 3D holographic ribbon service cards, and latest design trends.">
+  <meta property="og:title" content="LOOO AI Magic Studio — Let Your Design Do the Talking">
+  <meta property="og:description" content="Search over 50+ AI themes across Web Design, App, and Graphic studio pipelines.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F8F9FC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f9fc;
+      --surface: #ffffff;
+      --surface-elevated: #eef1ff;
+      --glass: rgba(255, 255, 255, 0.78);
+      --fg: #0f1324;
+      --muted: #5a627a;
+      --border: rgba(79, 107, 255, 0.16);
+      --accent: #4f6bff;
+      --accent-text: #3550e8;
+      --accent-strong: #2740d4;
+      --on-accent: #ffffff;
+      --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-lg: 26px;
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent); color: var(--on-accent); }
+    html, body {
+      background:
+        radial-gradient(circle at 50% 18%, rgba(79, 107, 255, 0.32) 0%, rgba(244, 162, 210, 0.34) 32%, rgba(248, 249, 252, 0.98) 68%),
+        #f8f9fc;
+      color: var(--fg); font-family: var(--font-sans);
+      overflow-x: clip; scroll-behavior: smooth; -webkit-font-smoothing: antialiased;
+    }
+    .skip-link {
+      position: fixed; top: -100px; left: 16px; z-index: 10000;
+      padding: 10px 18px; border-radius: 999px; background: var(--accent); color: var(--on-accent);
+      font-weight: 700; text-decoration: none; transition: transform 0.25s var(--ease-out);
+    }
+    .skip-link:focus-visible { transform: translate3d(0, 116px, 0); outline: 2px solid var(--fg); outline-offset: 3px; }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 3px;
+    }
+    button, [role="button"] {
+      transition: transform 0.22s var(--ease-out), opacity 0.22s var(--ease-out), background-color 0.22s var(--ease-out), border-color 0.22s var(--ease-out);
+    }
+    button:active, [role="button"]:active { transform: scale(0.97) translateY(1px); }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    #cursorRing, #cursorDot {
+      position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;
+      border-radius: 50%; transform: translate3d(-100px, -100px, 0);
+    }
+    #cursorRing { width: 32px; height: 32px; border: 1.5px solid var(--accent); margin: -16px 0 0 -16px; }
+    #cursorDot { width: 6px; height: 6px; background: var(--accent); margin: -3px 0 0 -3px; }
+    @keyframes ribbonWave {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(2deg); }
+    }
+    .loo54-reveal { opacity: 0; transform: translate3d(0, 18px, 0); transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out); }
+    .loo54-reveal.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+
+    .loo54-wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 42px); }
+    .loo54-header {
+      position: sticky; top: 0; z-index: 150;
+      background: rgba(248, 249, 252, 0.84); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+    .loo54-nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 0;
+    }
+    .loo54-logo {
+      font-weight: 800; font-size: 20px; letter-spacing: -0.06em; color: var(--fg); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .loo54-nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .loo54-nav-links a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600; }
+    .loo54-nav-links a:hover { color: var(--fg); }
+    .loo54-btn-dark {
+      padding: 10px 22px; border-radius: 999px; border: 0;
+      background: #0f1324; color: #ffffff; font-size: 13px; font-weight: 700; cursor: pointer;
+    }
+    .loo54-btn-ghost {
+      padding: 9px 18px; border-radius: 999px; border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.75); color: var(--fg); font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+
+    .loo54-hero { text-align: center; padding: 64px 0 44px; }
+    .loo54-hero h1 {
+      font-size: clamp(2.5rem, 5.2vw, 4.35rem); font-weight: 800;
+      letter-spacing: -0.035em; line-height: 1.06; max-width: 780px; margin: 0 auto 16px;
+    }
+    .loo54-hero p {
+      color: var(--muted); font-size: 15.5px; line-height: 1.65; max-width: 560px; margin: 0 auto 28px;
+    }
+    .loo54-search-bar {
+      max-width: 580px; margin: 0 auto 18px; padding: 7px 7px 7px 20px;
+      border-radius: 999px; background: #ffffff; border: 1px solid rgba(79, 107, 255, 0.25);
+      box-shadow: 0 18px 44px rgba(79, 107, 255, 0.16);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .loo54-search-bar input {
+      flex: 1; border: 0; background: transparent; color: var(--fg);
+      font-size: 14px; font-family: inherit; outline: none;
+    }
+    .loo54-tags-row {
+      display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;
+    }
+    .loo54-tag-pill {
+      padding: 7px 18px; border-radius: 999px; border: 1px solid rgba(15, 19, 36, 0.12);
+      background: rgba(255, 255, 255, 0.72); color: var(--fg); font-size: 12.5px; font-weight: 600; cursor: pointer;
+    }
+    .loo54-tag-pill.is-active { background: #0f1324; color: #ffffff; border-color: #0f1324; }
+
+    .loo54-partners {
+      margin: 42px auto 0; padding: 18px 28px; border-radius: 20px;
+      background: rgba(255, 255, 255, 0.72); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 20px;
+      color: var(--muted); font-weight: 700; font-size: 15px; letter-spacing: -0.01em;
+    }
+
+    .loo54-section { padding: 58px 0; }
+    .loo54-sec-head { text-align: center; max-width: 640px; margin: 0 auto 36px; }
+    .loo54-sec-head h2 {
+      font-size: clamp(1.85rem, 3.4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 10px;
+    }
+    .loo54-services-grid {
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+    }
+    .loo54-service-card {
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.92) 0%, rgba(235, 239, 255, 0.85) 100%);
+      border: 1px solid var(--border); border-radius: 24px; padding: 26px;
+      box-shadow: 0 16px 38px rgba(79, 107, 255, 0.09);
+      display: flex; flex-direction: column; justify-content: space-between; min-height: 290px; cursor: pointer;
+    }
+    .loo54-ribbon-art {
+      height: 150px; display: flex; align-items: center; justify-content: center;
+      animation: ribbonWave 5s ease-in-out infinite;
+    }
+
+    .loo54-trends-grid {
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px;
+    }
+    .loo54-poster-card {
+      border-radius: 20px; overflow: hidden; min-height: 280px; padding: 22px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      color: #ffffff; position: relative; border: 1px solid rgba(15, 19, 36, 0.1);
+    }
+
+    .loo54-modal {
+      position: fixed; inset: 0; z-index: 5000; display: flex; align-items: center; justify-content: center;
+      background: rgba(15, 19, 36, 0.58); padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity 0.25s var(--ease-out); backdrop-filter: blur(10px);
+    }
+    .loo54-modal.is-open { opacity: 1; pointer-events: auto; }
+    .loo54-modal-box {
+      width: 100%; max-width: 460px; background: #ffffff; border: 1px solid var(--border);
+      border-radius: 24px; padding: 28px;
+    }
+
+    @media (max-width: 1024px) {
+      .loo54-services-grid { grid-template-columns: 1fr; }
+      .loo54-trends-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .loo54-nav-links { display: none; }
+      .loo54-trends-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <header class="loo54-header">
+    <div class="loo54-wrap loo54-nav">
+      <a href="#top" class="loo54-logo">LOOO</a>
+      <nav aria-label="Primary">
+        <ul class="loo54-nav-links">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#services">Features</a></li>
+          <li><a href="#trends">Packages</a></li>
+          <li><a href="#reference">About</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button type="button" id="motionToggleBtn" aria-pressed="false" class="loo54-btn-ghost">Motion: ON</button>
+        <button type="button" class="loo54-btn-ghost" data-seamless-trigger="Sign In to LOOO AI Studio">Sign in</button>
+        <button type="button" id="exploreMagneticBtn" class="loo54-btn-dark">Free Trial</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="loo54-wrap loo54-hero" aria-label="LOOO AI Magic Hero">
+      <h1>Unleash Creativity with AI Magic</h1>
+      <p>Transform ideas into stunning artwork effortlessly with the power of artificial intelligence.</p>
+
+      <form class="loo54-search-bar" onsubmit="return false;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="loooSearchInput" placeholder="Search for over 50+ Theme" aria-label="Search for over 50+ Theme">
+        <button type="submit" class="loo54-btn-dark" data-seamless-trigger="Generating AI Artwork from Theme Prompt">Search</button>
+      </form>
+
+      <div class="loo54-tags-row" role="group" aria-label="Theme categories">
+        <button type="button" class="loo54-tag-pill is-active" data-theme-pill="AI Holographic">AI</button>
+        <button type="button" class="loo54-tag-pill" data-theme-pill="Editorial Fashion">Fashion</button>
+        <button type="button" class="loo54-tag-pill" data-theme-pill="Spatial 3D Design">Design</button>
+        <button type="button" class="loo54-tag-pill" data-theme-pill="Obsidian Dark UI">Dark</button>
+      </div>
+
+      <div class="loo54-partners" aria-label="Trusted ecosystem partners">
+        <span>Github</span>
+        <span>Coursera</span>
+        <span>Microsoft</span>
+        <span>Apple</span>
+        <span>Google</span>
+      </div>
+    </section>
+
+    <section id="services" class="loo54-wrap loo54-section loo54-reveal" aria-label="Let Your Design Do the Talking">
+      <div class="loo54-sec-head">
+        <h2>Let Your Design Do the Talking</h2>
+        <p style="color:var(--muted);font-size:14.5px;line-height:1.6;">
+          Whether you are looking to build a new website, design a mobile app, or create eye-catching graphics, LOOO AI synthesizes custom 3D and vector assets in seconds.
+        </p>
+      </div>
+
+      <div class="loo54-services-grid">
+        <article class="loo54-service-card" data-seamless-trigger="AI Web Design Generator">
+          <div class="loo54-ribbon-art">
+            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
+              <defs>
+                <linearGradient id="rib1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#4f6bff"/><stop offset="50%" stop-color="#c084fc"/><stop offset="100%" stop-color="#f472b6"/>
+                </linearGradient>
+              </defs>
+              <path d="M 24 95 C 55 18, 115 118, 176 32" fill="none" stroke="url(#rib1)" stroke-width="22" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
+            <h3 style="font-size:18px;font-weight:700;">Web Design</h3>
+            <span style="font-weight:700;color:var(--accent-text);">→</span>
+          </div>
+        </article>
+
+        <article class="loo54-service-card" data-seamless-trigger="AI Mobile App Interface Studio">
+          <div class="loo54-ribbon-art">
+            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
+              <path d="M 36 36 C 110 14, 90 116, 166 86" fill="none" stroke="url(#rib1)" stroke-width="22" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
+            <h3 style="font-size:18px;font-weight:700;">App</h3>
+            <span style="font-weight:700;color:var(--accent-text);">→</span>
+          </div>
+        </article>
+
+        <article class="loo54-service-card" data-seamless-trigger="AI 3D &amp; Graphic Identity Synthesis">
+          <div class="loo54-ribbon-art">
+            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
+              <circle cx="100" cy="65" r="38" fill="none" stroke="url(#rib1)" stroke-width="20"/>
+            </svg>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
+            <h3 style="font-size:18px;font-weight:700;">Graphic</h3>
+            <span style="font-weight:700;color:var(--accent-text);">→</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="trends" class="loo54-wrap loo54-section loo54-reveal" aria-label="Explore the Latest Design Trends">
+      <div class="loo54-sec-head">
+        <h2>Explore the Latest Design Trends</h2>
+        <p style="color:var(--muted);font-size:14.5px;line-height:1.6;">
+          Stay ahead of the curve with our curated collection of generative design directions, from neo-classical sculpture to chromatic 3D typography.
+        </p>
+      </div>
+
+      <div class="loo54-trends-grid">
+        <article class="loo54-poster-card" style="background:radial-gradient(circle at 50% 40%,#fb923c 0%,#1e1b4b 70%,#090a14 100%);">
+          <span style="font-family:var(--font-mono);font-size:11px;opacity:0.8;">01 • SECURITY UI</span>
+          <div>
+            <h3 style="font-size:20px;font-weight:800;">protect your data</h3>
+            <p style="font-size:12px;opacity:0.8;margin-top:4px;">Glowing solar orb &amp; zero-trust glass card</p>
+          </div>
+        </article>
+
+        <article class="loo54-poster-card" style="background:linear-gradient(155deg,#facc15 0%,#ca8a04 100%);color:#141204;">
+          <span style="font-family:var(--font-mono);font-size:11px;">02 • CLASSICAL REMIX</span>
+          <div>
+            <h3 style="font-size:20px;font-weight:800;">Gold-Leaf Bust</h3>
+            <p style="font-size:12px;opacity:0.85;margin-top:4px;">Neo-Hellenistic marble &amp; gilded leaf collage</p>
+          </div>
+        </article>
+
+        <article class="loo54-poster-card" style="background:linear-gradient(160deg,#06b6d4 0%,#0f172a 85%);">
+          <span style="font-family:var(--font-mono);font-size:11px;">03 • CYBERPUNK</span>
+          <div>
+            <h3 style="font-size:22px;font-weight:800;letter-spacing:0.06em;">NEXT</h3>
+            <p style="font-size:12px;opacity:0.85;margin-top:4px;">Neon visor &amp; synthetic portraiture</p>
+          </div>
+        </article>
+
+        <article class="loo54-poster-card" style="background:linear-gradient(145deg,#312e81 0%,#ec4899 100%);">
+          <span style="font-family:var(--font-mono);font-size:11px;">04 • 3D TYPE</span>
+          <div>
+            <h3 style="font-size:20px;font-weight:800;letter-spacing:0.04em;">NEUE KAIJU</h3>
+            <p style="font-size:12px;opacity:0.85;margin-top:4px;">Iridescent liquid chrome letterforms</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="reference" class="loo54-wrap loo54-section loo54-reveal" aria-label="LOOO Studio Canvas Overview">
+      <div style="background:#ffffff;border:1px solid var(--border);border-radius:26px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;">
+        <div>
+          <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);font-weight:700;">50+ CURATED AI THEMES</span>
+          <h2 style="font-size:clamp(1.5rem,2.5vw,2.1rem);font-weight:800;margin:8px 0 12px;">Instant Multi-Modal Brand Kits</h2>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">
+            Export high-resolution 3D ribbons, editorial posters, and responsive web components directly from your text prompt.
+          </p>
+        </div>
+        <div style="border-radius:18px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg,#eef2ff 0%,#fce7f3 100%);padding:20px;">
+          <svg viewBox="0 0 380 200" width="100%" height="180" role="img" aria-label="LOOO AI Holographic Ribbon Synthesis">
+            <path d="M 28 152 C 88 24, 168 176, 238 48 C 284 -10, 322 140, 356 64" fill="none" stroke="url(#rib1)" stroke-width="24" stroke-linecap="round"/>
+            <circle cx="190" cy="100" r="34" fill="rgba(255,255,255,0.65)" stroke="#4f6bff" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="loo54-wrap" style="padding:28px 0 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:12.5px;">
+    <span>LOOO — AI Magic Creative Studio</span>
+    <span class="tabular-nums">50+ Themes • Web, App &amp; Graphic</span>
+  </footer>
+
+  <div class="loo54-modal" id="seamlessModal" role="dialog" aria-modal="true" aria-labelledby="seamlessTitle">
+    <div class="loo54-modal-box">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+        <span style="font-family:var(--font-mono);font-size:11.5px;color:var(--accent-text);font-weight:700;">LOOO AI ENGINE</span>
+        <button type="button" id="closeSeamlessBtn" class="loo54-btn-ghost" style="padding:4px 10px;">×</button>
+      </div>
+      <h2 id="seamlessTitle" style="font-size:22px;font-weight:800;margin-bottom:10px;">Start Your LOOO AI Free Trial</h2>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;">
+        Unlock unlimited access to 50+ AI themes, 3D iridescent ribbon generators, and commercial poster exports.
+      </p>
+      <button type="button" id="confirmSeamlessBtn" class="loo54-btn-dark" style="width:100%;">Launch AI Workspace →</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var input = document.getElementById('loooSearchInput');
+      document.querySelectorAll('[data-theme-pill]').forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          document.querySelectorAll('[data-theme-pill]').forEach(function (p) { p.classList.remove('is-active'); });
+          pill.classList.add('is-active');
+          if (input) input.value = pill.getAttribute('data-theme-pill') || '';
+        });
+      });
+    })();
+  </script>
+  
+  <script>
+    (function () {
+      var motionPaused = false;
+      var motionBtn = document.getElementById('motionToggleBtn');
+      if (motionBtn) {
+        motionBtn.addEventListener('click', function () {
+          motionPaused = !motionPaused;
+          document.body.classList.toggle('is-motion-paused', motionPaused);
+          motionBtn.setAttribute('aria-pressed', String(motionPaused));
+          motionBtn.textContent = motionPaused ? 'Motion: PAUSED' : 'Motion: ON';
+        });
+      }
+
+      var ring = document.getElementById('cursorRing');
+      var dot = document.getElementById('cursorDot');
+      var mx = -100, my = -100, rx = -100, ry = -100;
+      window.addEventListener('mousemove', function (e) {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot && !motionPaused) {
+          dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+        }
+      }, { passive: true });
+
+      function tickCursor() {
+        if (!motionPaused && ring) {
+          rx += (mx - rx) * 0.18;
+          ry += (my - ry) * 0.18;
+          ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+        }
+        window.requestAnimationFrame(tickCursor);
+      }
+      window.requestAnimationFrame(tickCursor);
+
+      var reveals = document.querySelectorAll('.loo54-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) entry.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      var counters = document.querySelectorAll('[data-counter-target]');
+      if ('IntersectionObserver' in window) {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting || entry.target.dataset.counted) return;
+            entry.target.dataset.counted = '1';
+            var target = parseFloat(entry.target.getAttribute('data-counter-target') || '0');
+            var suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            var start = performance.now();
+            function step(now) {
+              var prog = Math.min(1, (now - start) / 1100);
+              var ease = 1 - Math.pow(1 - prog, 3);
+              var val = Math.round(target * ease);
+              entry.target.textContent = val + suffix;
+              if (prog < 1) window.requestAnimationFrame(step);
+            }
+            window.requestAnimationFrame(step);
+          });
+        }, { threshold: 0.25 });
+        counters.forEach(function (c) { cio.observe(c); });
+      }
+
+      var modal = document.getElementById('seamlessModal');
+      var modalTitle = document.getElementById('seamlessTitle');
+      var closeBtn = document.getElementById('closeSeamlessBtn');
+      var confirmBtn = document.getElementById('confirmSeamlessBtn');
+      var exploreBtn = document.getElementById('exploreMagneticBtn');
+
+      function openModal(titleText) {
+        if (!modal) return;
+        if (titleText && modalTitle) modalTitle.textContent = titleText;
+        modal.classList.add('is-open');
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+      }
+      if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+          if (modal && modal.classList.contains('is-open')) closeModal();
+          else openModal();
+        });
+      }
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (confirmBtn) confirmBtn.addEventListener('click', closeModal);
+      document.querySelectorAll('[data-seamless-trigger]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openModal(el.getAttribute('data-seamless-trigger'));
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+</body>
+</html>

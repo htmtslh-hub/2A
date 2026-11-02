@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-11-02",
+  "lastRunDate": "2026-11-03",
   "todayCopiedCount": 3,
   "processedSlugs": [
     "_design",
@@ -46,6 +46,7 @@
     "cross-border",
     "cyber-ronin",
     "cybr-brutalism",
+    "data-securit",
     "datacore-booking",
     "design",
     "designer-portfolio",
@@ -86,6 +87,7 @@
     "haul",
     "health-portal",
     "hush-futurist-bags",
+    "image-some",
     "impact-ventures",
     "industrix-engineering",
     "innovation",
@@ -99,6 +101,7 @@
     "kinetiq",
     "kresna-footer",
     "laila",
+    "laptop-computer",
     "lauberhorn-ridge",
     "launch-video",
     "lawyer-justicia",
@@ -124,12 +127,14 @@
     "modern-agency",
     "monoframe",
     "monolith-canvas",
+    "monolith-canvas-216",
     "mostar-city",
     "motora",
     "murmur",
     "music-app",
     "neuralkinetics",
     "neuralyn",
+    "nexacore-results",
     "nexlayer",
     "nexora-alex-portfolio",
     "nexora-automation",
@@ -141,8 +146,10 @@
     "nuvem-canvas",
     "o2-moonish-cosmic",
     "oceanpulse",
+    "orbis-hello",
     "orbis-nft",
     "orbit-academy",
+    "organic-odyssey",
     "ozzies-pretzels",
     "pinehaven",
     "polkacrypto-future",
@@ -153,6 +160,7 @@
     "prisma-creative-studio",
     "prmpt",
     "prosthetics-hero",
+    "pumpit-grid",
     "puro-amor",
     "quiet-place-sanctuary",
     "reelmark",
@@ -210,11 +218,11 @@
     "wellness-companion",
     "which-canvas",
     "yellow-beast",
-    "pumpit-grid",
-    "data-securit",
-    "laptop-computer",
-    "monolith-canvas-216",
-    "image-some"
+    "helios-investments",
+    "rayhan-aditya",
+    "razer-mamba-pro",
+    "metaverse-cyber-webinar",
+    "looo-ai-magic"
   ],
   "processedPromptIds": [
     "aetheris-voyage-hero",
@@ -310,7 +318,10 @@
     "halo-use-case",
     "wanderful-hero",
     "wellness-companion",
-    "nike-hover"
+    "nike-hover",
+    "orbis-hello",
+    "organic-odyssey",
+    "nexacore-results"
   ],
   "history": [
     {
@@ -518,6 +529,24 @@
         "wellness-companion": "premium",
         "nike-hover": "premium"
       }
+    },
+    {
+      "date": "2026-11-03",
+      "built": [
+        "orbis-hello",
+        "organic-odyssey",
+        "nexacore-results"
+      ],
+      "catalogIds": [
+        "t211",
+        "t212",
+        "t213"
+      ],
+      "tiers": {
+        "orbis-hello": "free",
+        "organic-odyssey": "premium",
+        "nexacore-results": "premium"
+      }
     }
   ],
   "todayFreeCount": 1,
@@ -564,6 +593,9 @@
     "c19477fa46ff8da25abdc927ce7dd1af814ad62453a688423479123ffa64a96c",
     "a88ec2d864bdaff152230391d1725468982663d6abec1fe71ee124ed306e4a98",
     "9f1ff2f86e0f36eea841fac041fbb1f942f84e16084e713ef84c3197f1062ff0",
-    "b8a6ba55a8cef2b32bf85526b273637b8a147e2214c1872b99c728cad4492c77"
+    "b8a6ba55a8cef2b32bf85526b273637b8a147e2214c1872b99c728cad4492c77",
+    "5f5b6460ee2e106b8fed2a060b3b3facd125a795993f39d103749b1cec6a86ed",
+    "c46de546ac824599e6e63ea95c34729ece6e09c7322f2b427a2902a6074f12c4",
+    "0b91b2f1e9024bbacae4a110d0fba51c5de2599c999210aeeea8d2e8c0779ac5"
   ]
 }

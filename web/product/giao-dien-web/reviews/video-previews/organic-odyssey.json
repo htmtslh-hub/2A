@@ -1,0 +1,38 @@
+{
+  "id": "t212",
+  "slug": "organic-odyssey",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T22:44:12.952Z",
+  "demo": "/demos/organic-odyssey/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "bff57bf6010b",
+  "sha256": "bff57bf6010b350997bc32886a1f94f59cb266eabb47f1e39b008f754d896951",
+  "demoHtmlSha256": "ba7873d6c17d422873965e303e4b9b36fa86020f1b6edc0d202147111bcf32b6",
+  "demoSha256": "701f8ec0c35ba1caea8958c6567e01ebb3b98c294f748ff3205e10a976885a21",
+  "bytes": 519262,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 885
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\organic-odyssey-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\organic-odyssey-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\organic-odyssey-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\organic-odyssey-return.jpg"
+  ]
+}

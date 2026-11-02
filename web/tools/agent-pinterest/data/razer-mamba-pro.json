@@ -1,0 +1,32 @@
+{
+  "pinId": "local-1b2c93ed0a59",
+  "sourceType": "local-inbox-folder",
+  "originalFilename": "pin_1092826665857500928_Mục_này_có_hình_ảnh_của_world_of_Int.jpg",
+  "archivedImagePath": "E:\\DONG_PHU\\2A\\anh-mau-pinterest\\da-lam\\2026-11-03\\pin_1092826665857500928_Mục_này_có_hình_ảnh_của_world_of_Int.jpg",
+  "title": "Razer Mamba Pro",
+  "slug": "razer-mamba-pro",
+  "assignedTier": "premium",
+  "motionRecipe": {
+    "id": "recipe-ambient-marquee",
+    "name": "Ambient Particle Canvas + Kinetic Marquee + Cutout Glass Tabs",
+    "focus": [
+      "ambient-smoke-particles",
+      "infinite-marquee",
+      "inverted-cutout-tabs"
+    ],
+    "description": "Tập trung vào hệ thống hạt bụi/khói chuyển động nền (Ambient Canvas), chữ chạy vô tận (Marquee) và thẻ bo góc Cutout."
+  },
+  "localImagePath": "E:\\DONG_PHU\\2A\\web\\tools\\agent-pinterest\\downloads\\2026-11-03\\razer-mamba-pro.jpg",
+  "imageBytes": 55870,
+  "imageSha256": "1b2c93ed0a5915844475c24bf40e5b11fc23a398e1311d177956be2f37276704",
+  "criteriaEvaluation": {
+    "accepted": false,
+    "totalScore": 0,
+    "passedCriteriaCount": 0,
+    "width": 1000,
+    "height": 1500,
+    "aspectRatio": 0.67,
+    "reason": "Rejected geometry (1000x1500, AR=0.67) — requires desktop Hero UI widescreen format (AR >= 1.15)"
+  },
+  "fetchedAt": "2026-11-02T22:35:45.915Z"
+}

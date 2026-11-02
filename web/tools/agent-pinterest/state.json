@@ -1,5 +1,5 @@
 {
-  "lastRunDate": "2026-11-02",
+  "lastRunDate": "2026-11-03",
   "todayCopiedCount": 5,
   "todayFreeCount": 2,
   "todayPremiumCount": 3,
@@ -44,7 +44,12 @@
     "local-a449de480476",
     "local-824e5e4fb763",
     "local-216356e18689",
-    "local-d28be5d36ffa"
+    "local-d28be5d36ffa",
+    "local-c759a506be56",
+    "local-f628ef5f4557",
+    "local-1b2c93ed0a59",
+    "local-c6e51538d538",
+    "local-2c0b60dbf2ce"
   ],
   "processedImageHashes": [
     "ecb0eb8a36263a9bd80e535321f1f5161c76d6b70a0bf9ea3d6ab2462886f512",
@@ -86,7 +91,12 @@
     "a449de480476fb9d5962e72725b934f5ea2604a281397b45f1fb5164c5fdfdbd",
     "824e5e4fb763129e9a7228b07d7b27533ecde065692e59d0948ed4ba7abc0a8a",
     "216356e18689b4f25e7b9defdcf1db6170a1963d100ba3235db3dabe5ef101a1",
-    "d28be5d36ffa4da6aa58a78535bf085deaf11c56c2a23bef0e4a9396aaf7e7b5"
+    "d28be5d36ffa4da6aa58a78535bf085deaf11c56c2a23bef0e4a9396aaf7e7b5",
+    "c759a506be56a5b77f5c11754bf49fece2ff65aabf7c565d7ed96ff3150c323e",
+    "f628ef5f455748a02f1ec573b0bdbe18dd7e0732448cb26153b1010daff2a885",
+    "1b2c93ed0a5915844475c24bf40e5b11fc23a398e1311d177956be2f37276704",
+    "c6e51538d53840ead333026dcf7e11a6391d1108133dad706161b1a591ddcbbc",
+    "2c0b60dbf2ce8f54078e93b05a5303284e0530b235a88dc5fee30c182afbd31e"
   ],
   "processedSlugs": [
     "_design",
@@ -172,6 +182,7 @@
     "halden",
     "haul",
     "health-portal",
+    "helios-investments",
     "hush-futurist-bags",
     "image-some",
     "impact-ventures",
@@ -194,6 +205,7 @@
     "leaflit",
     "lingoglass",
     "litera-bookstore",
+    "looo-ai-magic",
     "lumina",
     "luminex",
     "luminex-atelier",
@@ -207,6 +219,7 @@
     "melli",
     "melt-muse",
     "meridian",
+    "metaverse-cyber-webinar",
     "micai-aristide",
     "mindloop-landing",
     "mint-atlas",
@@ -224,6 +237,7 @@
     "nexora-alex-portfolio",
     "nexora-automation",
     "nextsus-gamerlix",
+    "nike-hover",
     "nourish-bowl",
     "nova-glass",
     "novatrend",
@@ -245,6 +259,8 @@
     "pumpit-grid",
     "puro-amor",
     "quiet-place-sanctuary",
+    "rayhan-aditya",
+    "razer-mamba-pro",
     "reelmark",
     "retro-futurist",
     "reviews",
@@ -294,8 +310,10 @@
     "volt-hoodie",
     "vybe",
     "wander-far",
+    "wanderful-hero",
     "watchroom",
     "wellbeing-os",
+    "wellness-companion",
     "which-canvas",
     "yellow-beast"
   ],
@@ -574,6 +592,37 @@
         "laptop-computer": "premium",
         "monolith-canvas-216": "premium",
         "image-some": "premium"
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "built": [
+        "helios-investments",
+        "rayhan-aditya",
+        "razer-mamba-pro",
+        "metaverse-cyber-webinar",
+        "looo-ai-magic"
+      ],
+      "catalogIds": [
+        "t206",
+        "t207",
+        "t208",
+        "t209",
+        "t210"
+      ],
+      "pinIds": [
+        "1092052609672285653",
+        "1092685928384364587",
+        "1092826665857500928",
+        "1092826665857530673",
+        "1092826665858010875"
+      ],
+      "tiers": {
+        "helios-investments": "free",
+        "rayhan-aditya": "free",
+        "razer-mamba-pro": "premium",
+        "metaverse-cyber-webinar": "premium",
+        "looo-ai-magic": "premium"
       }
     }
   ],

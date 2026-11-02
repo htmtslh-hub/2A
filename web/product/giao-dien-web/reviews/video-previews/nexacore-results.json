@@ -1,0 +1,38 @@
+{
+  "id": "t213",
+  "slug": "nexacore-results",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T22:43:04.587Z",
+  "demo": "/demos/nexacore-results/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "78361a8e603a",
+  "sha256": "78361a8e603add21767ace6b4a6e9f16f1825a0c73a82ba5c0b6bc8017146017",
+  "demoHtmlSha256": "64238ef1237dd68abb10262920b81454458fe55e4f91451b6a6b8051a6107be1",
+  "demoSha256": "cb2732b1989e643736014ce6c27f095da46dd8816777133c9e300da3ce6141ff",
+  "bytes": 261355,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 595
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexacore-results-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexacore-results-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexacore-results-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\nexacore-results-return.jpg"
+  ]
+}

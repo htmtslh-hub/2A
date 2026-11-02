@@ -1,0 +1,38 @@
+{
+  "id": "t210",
+  "slug": "looo-ai-magic",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T22:41:36.402Z",
+  "demo": "/demos/looo-ai-magic/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "e412792330d9",
+  "sha256": "e412792330d912d4a21e9718698ce42becb69b15370481fe6fd0de4574bdb549",
+  "demoHtmlSha256": "da33a35b4e5d15ce11f987bdfecbfa280a1e6ed2a29d7a3bb0a9ec693a85d024",
+  "demoSha256": "c0fb9921c228d319acf34ad517b32696455fc62e12a7d59654b654610c636dfb",
+  "bytes": 402116,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 1347
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\looo-ai-magic-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\looo-ai-magic-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\looo-ai-magic-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\looo-ai-magic-return.jpg"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "t206",
+  "slug": "helios-investments",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T22:39:29.098Z",
+  "demo": "/demos/helios-investments/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "2cfbadd9c884",
+  "sha256": "2cfbadd9c8841449c193957998067dbc8ab7e4bae51c67bc5a78edfc1601844b",
+  "demoHtmlSha256": "d144462baf140270d655ef0fc14370228acf30e6ccd6e7d615ac9e73ae6df30a",
+  "demoSha256": "ba4fd855a9ee28a3f47693401cb3d86c3159e30a43b5ff4b3d4cfd8af19db961",
+  "bytes": 339653,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 537
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\helios-investments-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\helios-investments-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\helios-investments-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\helios-investments-return.jpg"
+  ]
+}

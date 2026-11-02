@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-01T08:58:15.792Z",
+  "updatedAt": "2026-11-02T22:43:44.065Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -1613,6 +1613,42 @@
       "sizeBytes": 11493,
       "sha256": "20ae08bb72864a1e75a625e5a5e0f9c1eab62b34f6eb164fcd02059c3fce8898",
       "updatedAt": "2026-11-01T08:16:13.129Z"
+    },
+    "pumpit-grid": {
+      "fileId": "1-43AMrqI-bCD_sPoHidFaY03u2SzLx1D",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1-43AMrqI-bCD_sPoHidFaY03u2SzLx1D",
+      "webViewUrl": "https://drive.google.com/file/d/1-43AMrqI-bCD_sPoHidFaY03u2SzLx1D/view",
+      "sizeBytes": 12824,
+      "sha256": "d3654ad9cd4d27b035ecbeee6ed853d49a496f05e1e44a457dbc640dfd3220eb",
+      "updatedAt": "2026-11-02T00:03:59.319Z"
+    },
+    "nike-hover": {
+      "fileId": "13Me_GGTBChJvb5aPHn5q2Dzn-v5dPflr",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=13Me_GGTBChJvb5aPHn5q2Dzn-v5dPflr",
+      "webViewUrl": "https://drive.google.com/file/d/13Me_GGTBChJvb5aPHn5q2Dzn-v5dPflr/view",
+      "sizeBytes": 14547,
+      "sha256": "1ff3de0d713f2fddd7ef0bfed501b7e7bc725e8a55f7634105e763c5f19752d3",
+      "updatedAt": "2026-11-02T00:13:27.259Z"
+    },
+    "helios-investments": {
+      "fileId": "1avZmDh3TQ0vzpUHc9W5VPRryX3CNftqF",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1avZmDh3TQ0vzpUHc9W5VPRryX3CNftqF",
+      "webViewUrl": "https://drive.google.com/file/d/1avZmDh3TQ0vzpUHc9W5VPRryX3CNftqF/view",
+      "sizeBytes": 14737,
+      "sha256": "6c774f15f1c9e0bfb44aa88e6bee4f60e29a27a1c3d1bdbc60d5e2201654c7d5",
+      "updatedAt": "2026-11-02T22:39:00.459Z"
+    },
+    "organic-odyssey": {
+      "fileId": "1FcEXixenmTSoGQRTR6N1FMXdzTrlprde",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1FcEXixenmTSoGQRTR6N1FMXdzTrlprde",
+      "webViewUrl": "https://drive.google.com/file/d/1FcEXixenmTSoGQRTR6N1FMXdzTrlprde/view",
+      "sizeBytes": 12241,
+      "sha256": "09799794fdab943fb151b32fb3dc35bc45eec800d59c59c1acd024e9e5818a2e",
+      "updatedAt": "2026-11-02T22:43:44.065Z"
     }
   }
 }

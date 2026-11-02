@@ -46,6 +46,79 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t216: {
+    slug: 'place-saver',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Place Saver",
+        desc: "Giao diện web Place Saver với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Place Saver",
+        desc: "Bespoke Place Saver web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Travel", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Place Saver",
+        desc: "单文件自包含 Place Saver 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t215: {
+    slug: 'portal',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Portal",
+        desc: "Giao diện web Portal với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Portal",
+        desc: "Bespoke Portal web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Portal",
+        desc: "单文件自包含 Portal 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
+  t214: {
+    slug: 'network-hero',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Network Hero",
+        desc: "Giao diện web Network Hero với đầy đủ 4 nhóm hiệu ứng (Scroll Parallax/Scrub, 3D Card Tilt & Liquid Wave, Split-Text & Seamless Modal, Particle Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      en: {
+        name: "Network Hero",
+        desc: "Bespoke Network Hero web experience featuring all 4 interactive motion groups (Scroll Scrubbing, 3D Tilt & Liquid Filter, Split-Text, and Ambient Smoke).",
+        tags: ["Hero", '3D Pop-Out & Motion', 'Hallmark UI']
+      },
+      zh: {
+        name: "Network Hero",
+        desc: "单文件自包含 Network Hero 网页模板，配备 3D 悬浮视觉与四组动态交互。",
+        tags: ['交互组件', '3D 破界视觉', '动态视差']
+      }
+    }
+  },
+
   t213: {
     slug: 'nexacore-results',
     cat: 'commerce',

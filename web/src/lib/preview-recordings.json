@@ -2714,5 +2714,47 @@
     "height": 600,
     "fps": 30,
     "audio": false
+  },
+  "network-hero": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "b850bed02872",
+    "sha256": "b850bed02872d5ef068f897875c74bae94122aeaf8d7cae3d522d9d2ea3ee83e",
+    "demoHtmlSha256": "7956d3ad79718036dcabb94a33feb661e1513a014e2a3cd6c8cd41ccd4787274",
+    "demoSha256": "10f80d4e5c798000b36533875ee1ef9f2b308aad6c69c27c615fffe80d0262a4",
+    "bytes": 266127,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "portal": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "1f75f33c3e5a",
+    "sha256": "1f75f33c3e5a6163831c1bf7982fb958adf270cc3b0ce68496c4e60f7c530bea",
+    "demoHtmlSha256": "ac8367dc374e69f34807a4291aafc1287c184e1f414c339fab1489b75e0c8c0e",
+    "demoSha256": "e9ecf6cc83bbd2d0f13d1b3a2bf7ee52be9149469ad7ad9f6add3c1ee3625f6b",
+    "bytes": 435333,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
+  },
+  "place-saver": {
+    "status": "recorded",
+    "productVersion": "1.0.0",
+    "revision": "e758d41217d4",
+    "sha256": "e758d41217d4db6a5347f0dfa962d94c406be9e2a842ed5c800c5004494b7d49",
+    "demoHtmlSha256": "1fe4fae354617ece3edc980d18b88ffa894688f4189b4b544bd2e7e26df4bf33",
+    "demoSha256": "3bfc65cf10d030710121ad6ee7c9959237a8e5681d0be5b783c49829e9ef38b5",
+    "bytes": 1107977,
+    "duration": 14.966667,
+    "width": 960,
+    "height": 600,
+    "fps": 30,
+    "audio": false
   }
 }

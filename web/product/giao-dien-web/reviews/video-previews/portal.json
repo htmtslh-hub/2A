@@ -1,0 +1,48 @@
+{
+  "id": "t215",
+  "slug": "portal",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T23:02:52.663Z",
+  "demo": "/demos/portal/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "1f75f33c3e5a",
+  "sha256": "1f75f33c3e5a6163831c1bf7982fb958adf270cc3b0ce68496c4e60f7c530bea",
+  "demoHtmlSha256": "ac8367dc374e69f34807a4291aafc1287c184e1f414c339fab1489b75e0c8c0e",
+  "demoSha256": "e9ecf6cc83bbd2d0f13d1b3a2bf7ee52be9149469ad7ad9f6add3c1ee3625f6b",
+  "bytes": 435333,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.739,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.992,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 560
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portal-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portal-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portal-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\portal-return.jpg"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "t216",
+  "slug": "place-saver",
+  "browser": "153.0.8010.12",
+  "date": "2026-11-02T23:03:31.879Z",
+  "demo": "/demos/place-saver/index.html",
+  "status": "recorded",
+  "productVersion": "1.0.0",
+  "revision": "e758d41217d4",
+  "sha256": "e758d41217d4db6a5347f0dfa962d94c406be9e2a842ed5c800c5004494b7d49",
+  "demoHtmlSha256": "1fe4fae354617ece3edc980d18b88ffa894688f4189b4b544bd2e7e26df4bf33",
+  "demoSha256": "3bfc65cf10d030710121ad6ee7c9959237a8e5681d0be5b783c49829e9ef38b5",
+  "bytes": 1107977,
+  "duration": 14.966667,
+  "width": 960,
+  "height": 600,
+  "fps": 30,
+  "audio": false,
+  "actions": [
+    {
+      "seconds": 1,
+      "action": "hover hero"
+    },
+    {
+      "seconds": 2.623,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 4.995,
+      "action": "click",
+      "selector": "#exploreMagneticBtn"
+    },
+    {
+      "seconds": 6.7,
+      "action": "scroll",
+      "target": 560
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "frames": [
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\place-saver-hero.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\place-saver-interaction.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\place-saver-scroll.jpg",
+    "web\\product\\giao-dien-web\\reviews\\video-previews\\screenshots\\place-saver-return.jpg"
+  ]
+}

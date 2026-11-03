@@ -6,7 +6,7 @@ This guide covers every editable token, copy block, media asset, and interactive
 
 | File | Literal String | Count | Purpose |
 | :--- | :--- | :---: | :--- |
-| `index.html` | `Razer Mamba Pro` | 6 | Primary brand name & title across header, hero, and footer |
+| `index.html` | `Razer Mamba Pro` | 7 | Primary brand name & title across header, hero, and footer |
 | `index.html` | `--bg:` | 1 | Primary canvas background token in :root |
 | `index.html` | `--accent:` | 1 | Primary interactive accent token in :root |
 | `index.html` | `--font-display:` | 1 | Display heading font family token in :root |

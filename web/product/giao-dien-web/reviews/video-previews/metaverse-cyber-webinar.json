@@ -1,16 +1,16 @@
 {
-  "id": "t209",
+  "id": "t220",
   "slug": "metaverse-cyber-webinar",
   "browser": "153.0.8010.12",
-  "date": "2026-11-02T22:41:04.602Z",
+  "date": "2026-11-03T00:00:11.342Z",
   "demo": "/demos/metaverse-cyber-webinar/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "0620f909e71d",
-  "sha256": "0620f909e71d10efbad729c90affb6c5618048f3b32242b58d29f56ad252d75e",
-  "demoHtmlSha256": "4df204d9efda78854c9f41b60379f7ac86c037f8abf7eac450de3cb8df2e5914",
-  "demoSha256": "e8639b0d65f710f27aa52987eee3e32128b9f6f914d7796bbff8e19f8a571ada",
-  "bytes": 329028,
+  "revision": "75bd50c3d6a5",
+  "sha256": "75bd50c3d6a5cabed2750b3911e9326131245cc1e88762e94b2808f83e4fd3b7",
+  "demoHtmlSha256": "c8302143a5e7c1805fff20f891a89a3d13fabc812ef82374fef691d4c088f4ef",
+  "demoSha256": "58786605154ef63f77cffc790b5ce4b22f00babc9c412ee10257cb70fb5abe9e",
+  "bytes": 400189,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -24,7 +24,7 @@
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 1041
+      "target": 1149
     }
   ],
   "errors": [],

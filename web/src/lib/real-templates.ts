@@ -46,6 +46,123 @@ export interface RealTemplate {
 }
 
 export const REAL_TEMPLATES: Record<string, RealTemplate> = {
+  t221: {
+    slug: 'looo-ai-magic',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Looo AI Magic Studio",
+        desc: "Looo AI Magic Studio (aurora-mesh-ai-design-studio) — Iridescent cobalt-violet & rose-aura AI creative studio featuring 50+ theme prompt search, 3D holographic ribbon service cards (Web Design, App, Graphic), and curated 4-column poster trend gallery.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Looo AI Magic Studio",
+        desc: "Looo AI Magic Studio (aurora-mesh-ai-design-studio) — Iridescent cobalt-violet & rose-aura AI creative studio featuring 50+ theme prompt search, 3D holographic ribbon service cards (Web Design, App, Graphic), and curated 4-column poster trend gallery.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Looo AI Magic Studio",
+        desc: "Looo AI Magic Studio (aurora-mesh-ai-design-studio) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t220: {
+    slug: 'metaverse-cyber-webinar',
+    cat: 'portfolio',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Metaverse Cyber Webinar",
+        desc: "Metaverse Cyber Webinar (porcelain-android-metaverse-webinar) — High-key porcelain & periwinkle-indigo 3D cybernetic android webinar landing page featuring gothic МЕТА VERSE typography, 09.06.2023 mechanical heart badge, 19:00 neumorphic clock dial, and 3-pillar bionic curriculum.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Metaverse Cyber Webinar",
+        desc: "Metaverse Cyber Webinar (porcelain-android-metaverse-webinar) — High-key porcelain & periwinkle-indigo 3D cybernetic android webinar landing page featuring gothic МЕТА VERSE typography, 09.06.2023 mechanical heart badge, 19:00 neumorphic clock dial, and 3-pillar bionic curriculum.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Metaverse Cyber Webinar",
+        desc: "Metaverse Cyber Webinar (porcelain-android-metaverse-webinar) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t219: {
+    slug: 'razer-mamba-pro',
+    cat: 'commerce',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Razer Mamba Pro",
+        desc: "Razer Mamba Pro (acid-venom-esports-hardware-store) — Matte-carbon & acid-green esports peripheral Flagship Store showcasing Razer Mamba Pro automated full-control gaming mouse, Kraken 7.1 surround headset spotlight, 4-column hardware lineup, and Razer Insider hub.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Razer Mamba Pro",
+        desc: "Razer Mamba Pro (acid-venom-esports-hardware-store) — Matte-carbon & acid-green esports peripheral Flagship Store showcasing Razer Mamba Pro automated full-control gaming mouse, Kraken 7.1 surround headset spotlight, 4-column hardware lineup, and Razer Insider hub.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Razer Mamba Pro",
+        desc: "Razer Mamba Pro (acid-venom-esports-hardware-store) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t218: {
+    slug: 'rayhan-aditya',
+    cat: 'portfolio',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Rayhan Aditya Portfolio",
+        desc: "Rayhan Aditya Portfolio (crimson-monolith-creative-portfolio) — Editorial pitch-black & bold crimson personal portfolio for Web Designer & UI/UX Creator Rayhan Aditya featuring giant condensed PORTFOLIO typography, Veloce/Woodcraft/Urbanic showcases, and 5-step process matrix.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Rayhan Aditya Portfolio",
+        desc: "Rayhan Aditya Portfolio (crimson-monolith-creative-portfolio) — Editorial pitch-black & bold crimson personal portfolio for Web Designer & UI/UX Creator Rayhan Aditya featuring giant condensed PORTFOLIO typography, Veloce/Woodcraft/Urbanic showcases, and 5-step process matrix.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Rayhan Aditya Portfolio",
+        desc: "Rayhan Aditya Portfolio (crimson-monolith-creative-portfolio) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
+  t217: {
+    slug: 'helios-investments',
+    cat: 'commerce',
+    access: 'free',
+    version: '1.0.0',
+    video: true,
+    copy: {
+      vi: {
+        name: "Helios Investments",
+        desc: "Helios Investments (obsidian-mauve-ai-wealth-dashboard) — Obsidian & smoky mauve-rose AI investment portfolio dashboard featuring Nadia Rachel overview, helios.ai natural-language assistant, Watchlist (SPOT, AMZN, MSFT, NVDA), 2x2 unit holdings, and interactive spline performance curve.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      en: {
+        name: "Helios Investments",
+        desc: "Helios Investments (obsidian-mauve-ai-wealth-dashboard) — Obsidian & smoky mauve-rose AI investment portfolio dashboard featuring Nadia Rachel overview, helios.ai natural-language assistant, Watchlist (SPOT, AMZN, MSFT, NVDA), 2x2 unit holdings, and interactive spline performance curve.",
+        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
+      },
+      zh: {
+        name: "Helios Investments",
+        desc: "Helios Investments (obsidian-mauve-ai-wealth-dashboard) — 3D 破界悬浮视觉与粘性滚动交互界面。",
+        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
+      }
+    }
+  },
   t216: {
     slug: 'place-saver',
     cat: 'commerce',
@@ -192,123 +309,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     }
   },
 
-  t210: {
-    slug: 'looo-ai-magic',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Looo AI Magic Studio",
-        desc: "Looo AI Magic Studio (aurora-mesh-ai-design-studio) — Iridescent cobalt-violet & rose-aura AI creative studio featuring 50+ theme prompt search, 3D holographic ribbon service cards (Web Design, App, Graphic), and curated 4-column poster trend gallery.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Looo AI Magic Studio",
-        desc: "Looo AI Magic Studio (aurora-mesh-ai-design-studio) — Iridescent cobalt-violet & rose-aura AI creative studio featuring 50+ theme prompt search, 3D holographic ribbon service cards (Web Design, App, Graphic), and curated 4-column poster trend gallery.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Looo AI Magic Studio",
-        desc: "Looo AI Magic Studio (aurora-mesh-ai-design-studio) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t209: {
-    slug: 'metaverse-cyber-webinar',
-    cat: 'portfolio',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Metaverse Cyber Webinar",
-        desc: "Metaverse Cyber Webinar (porcelain-android-metaverse-webinar) — High-key porcelain & periwinkle-indigo 3D cybernetic android webinar landing page featuring gothic МЕТА VERSE typography, 09.06.2023 mechanical heart badge, 19:00 neumorphic clock dial, and 3-pillar bionic curriculum.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Metaverse Cyber Webinar",
-        desc: "Metaverse Cyber Webinar (porcelain-android-metaverse-webinar) — High-key porcelain & periwinkle-indigo 3D cybernetic android webinar landing page featuring gothic МЕТА VERSE typography, 09.06.2023 mechanical heart badge, 19:00 neumorphic clock dial, and 3-pillar bionic curriculum.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Metaverse Cyber Webinar",
-        desc: "Metaverse Cyber Webinar (porcelain-android-metaverse-webinar) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t208: {
-    slug: 'razer-mamba-pro',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Razer Mamba Pro",
-        desc: "Razer Mamba Pro (acid-venom-esports-hardware-store) — Matte-carbon & acid-green esports peripheral Flagship Store showcasing Razer Mamba Pro automated full-control gaming mouse, Kraken 7.1 surround headset spotlight, 4-column hardware lineup, and Razer Insider hub.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Razer Mamba Pro",
-        desc: "Razer Mamba Pro (acid-venom-esports-hardware-store) — Matte-carbon & acid-green esports peripheral Flagship Store showcasing Razer Mamba Pro automated full-control gaming mouse, Kraken 7.1 surround headset spotlight, 4-column hardware lineup, and Razer Insider hub.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Razer Mamba Pro",
-        desc: "Razer Mamba Pro (acid-venom-esports-hardware-store) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t207: {
-    slug: 'rayhan-aditya',
-    cat: 'portfolio',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Rayhan Aditya Portfolio",
-        desc: "Rayhan Aditya Portfolio (crimson-monolith-creative-portfolio) — Editorial pitch-black & bold crimson personal portfolio for Web Designer & UI/UX Creator Rayhan Aditya featuring giant condensed PORTFOLIO typography, Veloce/Woodcraft/Urbanic showcases, and 5-step process matrix.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Rayhan Aditya Portfolio",
-        desc: "Rayhan Aditya Portfolio (crimson-monolith-creative-portfolio) — Editorial pitch-black & bold crimson personal portfolio for Web Designer & UI/UX Creator Rayhan Aditya featuring giant condensed PORTFOLIO typography, Veloce/Woodcraft/Urbanic showcases, and 5-step process matrix.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Rayhan Aditya Portfolio",
-        desc: "Rayhan Aditya Portfolio (crimson-monolith-creative-portfolio) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t206: {
-    slug: 'helios-investments',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Helios Investments",
-        desc: "Helios Investments (obsidian-mauve-ai-wealth-dashboard) — Obsidian & smoky mauve-rose AI investment portfolio dashboard featuring Nadia Rachel overview, helios.ai natural-language assistant, Watchlist (SPOT, AMZN, MSFT, NVDA), 2x2 unit holdings, and interactive spline performance curve.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Helios Investments",
-        desc: "Helios Investments (obsidian-mauve-ai-wealth-dashboard) — Obsidian & smoky mauve-rose AI investment portfolio dashboard featuring Nadia Rachel overview, helios.ai natural-language assistant, Watchlist (SPOT, AMZN, MSFT, NVDA), 2x2 unit holdings, and interactive spline performance curve.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Helios Investments",
-        desc: "Helios Investments (obsidian-mauve-ai-wealth-dashboard) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
   t205: {
     slug: 'nike-hover',
     cat: 'commerce',
@@ -382,123 +382,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     }
   },
 
-  t202: {
-    slug: 'image-some',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Blobs Pet Companion",
-        desc: "Blobs Pet Companion (monochrome-blob-pet-companion) — Playful monochrome & peach-apricot smart pet health, GPS collar tracking, and veterinary calendar ecosystem featuring expressive black-cat blob illustrations and multi-screen iOS mockups.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Blobs Pet Companion",
-        desc: "Blobs Pet Companion (monochrome-blob-pet-companion) — Playful monochrome & peach-apricot smart pet health, GPS collar tracking, and veterinary calendar ecosystem featuring expressive black-cat blob illustrations and multi-screen iOS mockups.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Blobs Pet Companion",
-        desc: "Blobs Pet Companion (monochrome-blob-pet-companion) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t201: {
-    slug: 'monolith-canvas-216',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Bilexer Web3 Identity",
-        desc: "Bilexer Web3 Identity (nordic-wave-web3-identity) — Universal privacy-first Web3 identity layer built on zero-knowledge cryptography and chain-key sync — featuring 3D particle mountain topography and folder-tabbed privacy cards.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Bilexer Web3 Identity",
-        desc: "Bilexer Web3 Identity (nordic-wave-web3-identity) — Universal privacy-first Web3 identity layer built on zero-knowledge cryptography and chain-key sync — featuring 3D particle mountain topography and folder-tabbed privacy cards.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Bilexer Web3 Identity",
-        desc: "Bilexer Web3 Identity (nordic-wave-web3-identity) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t200: {
-    slug: 'laptop-computer',
-    cat: 'portfolio',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "BizNext Agency Hub",
-        desc: "BizNext Agency Hub (executive-macbook-agency-hub) — Modern digital agency & startup growth platform featuring interactive 3D MacBook Pro live analytics screen (+68% Growth), 4 frosted service modules, and 500+ enterprise case metrics.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "BizNext Agency Hub",
-        desc: "BizNext Agency Hub (executive-macbook-agency-hub) — Modern digital agency & startup growth platform featuring interactive 3D MacBook Pro live analytics screen (+68% Growth), 4 frosted service modules, and 500+ enterprise case metrics.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "BizNext Agency Hub",
-        desc: "BizNext Agency Hub (executive-macbook-agency-hub) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t199: {
-    slug: 'data-securit',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Securify Data Shield",
-        desc: "Securify Data Shield (iridescent-liquid-data-security) — Zero-knowledge enterprise data security platform featuring 3D iridescent liquid-glass core, +1.5B GB protected telemetry, human verification portal, and proactive threat detection.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Securify Data Shield",
-        desc: "Securify Data Shield (iridescent-liquid-data-security) — Zero-knowledge enterprise data security platform featuring 3D iridescent liquid-glass core, +1.5B GB protected telemetry, human verification portal, and proactive threat detection.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Securify Data Shield",
-        desc: "Securify Data Shield (iridescent-liquid-data-security) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t198: {
-    slug: 'pumpit-grid',
-    cat: 'portfolio',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Aenetic Cyber Tattoo AI",
-        desc: "Aenetic Cyber Tattoo AI (aenetic-ai-tattoo-robotics) — Futuristic AI tattoo & cybernetic body-art robotics studio featuring vertical AENETIC® capsule rail, inverted L-cutout 3D exoskeleton rig, and interactive 05–06 launch roadmap.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Aenetic Cyber Tattoo AI",
-        desc: "Aenetic Cyber Tattoo AI (aenetic-ai-tattoo-robotics) — Futuristic AI tattoo & cybernetic body-art robotics studio featuring vertical AENETIC® capsule rail, inverted L-cutout 3D exoskeleton rig, and interactive 05–06 launch roadmap.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Aenetic Cyber Tattoo AI",
-        desc: "Aenetic Cyber Tattoo AI (aenetic-ai-tattoo-robotics) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
   t197: {
     slug: 'impact-ventures',
     cat: 'portfolio',
@@ -572,123 +455,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     }
   },
 
-  t194: {
-    slug: 'luminex-atelier-eab',
-    cat: 'portfolio',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "PumpIt Mobile Product Studio",
-        desc: "PumpIt Mobile Product Studio (pastel-aurora-mobile-product-it) — Progressive Unique Mobile Product IT studio — pastel aurora glassmorphism interface featuring 6 industry spheres, 10-step MVP-to-launch honeycomb workflow, and 4 transparent tariff tiers.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "PumpIt Mobile Product Studio",
-        desc: "PumpIt Mobile Product Studio (pastel-aurora-mobile-product-it) — Progressive Unique Mobile Product IT studio — pastel aurora glassmorphism interface featuring 6 industry spheres, 10-step MVP-to-launch honeycomb workflow, and 4 transparent tariff tiers.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "PumpIt Mobile Product Studio",
-        desc: "PumpIt Mobile Product Studio (pastel-aurora-mobile-product-it) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t193: {
-    slug: 'setting-stic',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "PlayNFT Digital Art Market",
-        desc: "PlayNFT Digital Art Market (violet-chrome-nft-marketplace) — Web3 digital art & collectible NFT marketplace featuring liquid-chrome 3D portrait auctions, live ETH bid countdowns, Popular This Week showcase, and Top Sellers leaderboard.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "PlayNFT Digital Art Market",
-        desc: "PlayNFT Digital Art Market (violet-chrome-nft-marketplace) — Web3 digital art & collectible NFT marketplace featuring liquid-chrome 3D portrait auctions, live ETH bid countdowns, Popular This Week showcase, and Top Sellers leaderboard.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "PlayNFT Digital Art Market",
-        desc: "PlayNFT Digital Art Market (violet-chrome-nft-marketplace) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t192: {
-    slug: 'which-canvas',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Gcore Edge AI Inference",
-        desc: "Gcore Edge AI Inference (amber-ray-edge-ai-inference) — Global low-latency AI inference at the edge powered by NVIDIA A100 & H100 clusters (€1.3/h) — interactive neural routing topology and real-time token throughput calculator.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Gcore Edge AI Inference",
-        desc: "Gcore Edge AI Inference (amber-ray-edge-ai-inference) — Global low-latency AI inference at the edge powered by NVIDIA A100 & H100 clusters (€1.3/h) — interactive neural routing topology and real-time token throughput calculator.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Gcore Edge AI Inference",
-        desc: "Gcore Edge AI Inference (amber-ray-edge-ai-inference) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t191: {
-    slug: 'porsche-caym',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Porsche 718 Cayman Studio",
-        desc: "Porsche 718 Cayman Studio (silver-alpine-cayman-configurator) — Interactive 718 Cayman mid-engine coupe & cabriolet configurator featuring diagonal Alpine pass split-screen, 300 hp Boxer telemetry, and live 360° trim switcher.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Porsche 718 Cayman Studio",
-        desc: "Porsche 718 Cayman Studio (silver-alpine-cayman-configurator) — Interactive 718 Cayman mid-engine coupe & cabriolet configurator featuring diagonal Alpine pass split-screen, 300 hp Boxer telemetry, and live 360° trim switcher.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Porsche 718 Cayman Studio",
-        desc: "Porsche 718 Cayman Studio (silver-alpine-cayman-configurator) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t190: {
-    slug: 'agentai-grid',
-    cat: 'portfolio',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "AgentAI Sprint Studio",
-        desc: "AgentAI Sprint Studio (crimson-jellyfish-ai-agency) — On-demand AI sprint agency — from discovery to deployment in 8–10 weeks with bioluminescent neural telemetry, 230+ shipped AI products, and end-to-end LLM strategy.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "AgentAI Sprint Studio",
-        desc: "AgentAI Sprint Studio (crimson-jellyfish-ai-agency) — On-demand AI sprint agency — from discovery to deployment in 8–10 weeks with bioluminescent neural telemetry, 230+ shipped AI products, and end-to-end LLM strategy.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "AgentAI Sprint Studio",
-        desc: "AgentAI Sprint Studio (crimson-jellyfish-ai-agency) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
   t189: {
     slug: 'film-studio',
     cat: 'entertainment',
@@ -729,123 +495,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
         name: 'Film Studio Pro — AI 影视工作站与 MCP 服务器',
         desc: '全流程自动化 AI 影视与视频制作桌面套件，内置 11 大专业模块：分镜剧本与提示词工程、REF_CHAR 跨镜头角色一致性锁脸、Google Flow 与 Veo 3 图生/文生视频、多线程神经网络配音室及 FFmpeg 自动剪辑合成。内置 MCP 协议服务器（STDIO 与 HTTP/SSE :3100 暴露 10 个工具），支持一键接入 Claude Desktop、Cursor、Windsurf 与 Antigravity，并配备与网站套餐时长同步的硬件机器码授权系统。',
         tags: ['AI 影视工作站', 'MCP 服务器 :3100', '机器码授权']
-      }
-    }
-  },
-  t188: {
-    slug: 'o2-moonish-cosmic',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "O2 Moonish Cosmic",
-        desc: "O2 Moonish Cosmic (desert-glass-sphere-streetwear) — O2 Studio Moonish Cosmic Set 23 — Late 2050 desert-glass capsule collection featuring 01 Classic Hoodie encased in a 3D translucent sphere, Nike dune sneakers, and live fabric colorway switcher.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "O2 Moonish Cosmic",
-        desc: "O2 Moonish Cosmic (desert-glass-sphere-streetwear) — O2 Studio Moonish Cosmic Set 23 — Late 2050 desert-glass capsule collection featuring 01 Classic Hoodie encased in a 3D translucent sphere, Nike dune sneakers, and live fabric colorway switcher.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "O2 Moonish Cosmic",
-        desc: "O2 Moonish Cosmic (desert-glass-sphere-streetwear) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t187: {
-    slug: 'visionglass-neo-ui',
-    cat: 'portfolio',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "VisionGlass Neo UI",
-        desc: "VisionGlass Neo UI (spatial-visionos-glass-workbench) — Neo-Apple Vision Pro spatial UI design system featuring pastel aurora 3D glass refraction, interactive rotary depth dial, tactile spatial toggles, and live CSS glass token generator.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "VisionGlass Neo UI",
-        desc: "VisionGlass Neo UI (spatial-visionos-glass-workbench) — Neo-Apple Vision Pro spatial UI design system featuring pastel aurora 3D glass refraction, interactive rotary depth dial, tactile spatial toggles, and live CSS glass token generator.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "VisionGlass Neo UI",
-        desc: "VisionGlass Neo UI (spatial-visionos-glass-workbench) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t186: {
-    slug: 'foods-gourmet-bowl',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Foods Gourmet Bowl",
-        desc: "Foods Gourmet Bowl (saffron-charcoal-food-ordering) — Interactive gourmet bowl & street-food ordering showcase featuring live quantity stepper, real-time Total Order calculator, and instant Burger ($3.25), Cake ($2.25), and Salad ($5.25) switcher.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Foods Gourmet Bowl",
-        desc: "Foods Gourmet Bowl (saffron-charcoal-food-ordering) — Interactive gourmet bowl & street-food ordering showcase featuring live quantity stepper, real-time Total Order calculator, and instant Burger ($3.25), Cake ($2.25), and Salad ($5.25) switcher.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Foods Gourmet Bowl",
-        desc: "Foods Gourmet Bowl (saffron-charcoal-food-ordering) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t185: {
-    slug: 'terrarium-deck-studio',
-    cat: 'portfolio',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Terrarium Deck Studio",
-        desc: "Terrarium Deck Studio (pastel-biodome-deck-bento) — Iridescent pastel glass biodome & architectural terrarium presentation system with 12-slide Bento storyboard, interactive biome light inspector, and botanical telemetry.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Terrarium Deck Studio",
-        desc: "Terrarium Deck Studio (pastel-biodome-deck-bento) — Iridescent pastel glass biodome & architectural terrarium presentation system with 12-slide Bento storyboard, interactive biome light inspector, and botanical telemetry.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Terrarium Deck Studio",
-        desc: "Terrarium Deck Studio (pastel-biodome-deck-bento) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t184: {
-    slug: 'ozzies-pretzels',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Ozzie's Pretzels",
-        desc: "Ozzie's Pretzels (artisan-bakery-crimson-cream) — Denver's favorite hand-rolled Bavarian pretzels delivered fresh to your door — crimson-and-cream bakery showcase with interactive box builder, 4-step baking craft, and gift bundles.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Ozzie's Pretzels",
-        desc: "Ozzie's Pretzels (artisan-bakery-crimson-cream) — Denver's favorite hand-rolled Bavarian pretzels delivered fresh to your door — crimson-and-cream bakery showcase with interactive box builder, 4-step baking craft, and gift bundles.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Ozzie's Pretzels",
-        desc: "Ozzie's Pretzels (artisan-bakery-crimson-cream) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
   },
@@ -922,123 +571,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     }
   },
 
-  t180: {
-    slug: 'glitch-cyberwear',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Glitch Cyberwear",
-        desc: "Glitch Cyberwear (cutout-samurai-techwear) — Monochrome obsidian & pure white inverted cutout frame techwear store featuring cyber-samurai 3D operative callout pins (NeuroVibe MK-I, VoidBlade, Shadow Circuit Jacket, Crimson Phantom).",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Glitch Cyberwear",
-        desc: "Glitch Cyberwear (cutout-samurai-techwear) — Monochrome obsidian & pure white inverted cutout frame techwear store featuring cyber-samurai 3D operative callout pins (NeuroVibe MK-I, VoidBlade, Shadow Circuit Jacket, Crimson Phantom).",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Glitch Cyberwear",
-        desc: "Glitch Cyberwear (cutout-samurai-techwear) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t179: {
-    slug: 'kata-ocado-portfolio',
-    cat: 'portfolio',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Kata Ocado Portfolio",
-        desc: "Kata Ocado Portfolio (editorial-plum-art-direction) — Editorial plum-violet #2A1B3D & warm amber-gold #F59E0B Art Director & Graphic Designer studio for Kathleen Anne \"Kata\" Ocado with interactive Adobe/Figma proficiency matrix.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Kata Ocado Portfolio",
-        desc: "Kata Ocado Portfolio (editorial-plum-art-direction) — Editorial plum-violet #2A1B3D & warm amber-gold #F59E0B Art Director & Graphic Designer studio for Kathleen Anne \"Kata\" Ocado with interactive Adobe/Figma proficiency matrix.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Kata Ocado Portfolio",
-        desc: "Kata Ocado Portfolio (editorial-plum-art-direction) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t178: {
-    slug: 'nexora-alex-portfolio',
-    cat: 'portfolio',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Nexora Alex Portfolio",
-        desc: "Nexora Alex Portfolio (cosmic-violet-creative-folio) — Deep cosmic indigo #080711 & electric violet #8B5CF6 creative designer portfolio for Alex Carter with filterable case-study showcase, 4-pillar service matrix, and client testimonials.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Nexora Alex Portfolio",
-        desc: "Nexora Alex Portfolio (cosmic-violet-creative-folio) — Deep cosmic indigo #080711 & electric violet #8B5CF6 creative designer portfolio for Alex Carter with filterable case-study showcase, 4-pillar service matrix, and client testimonials.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Nexora Alex Portfolio",
-        desc: "Nexora Alex Portfolio (cosmic-violet-creative-folio) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t177: {
-    slug: 'polkacrypto-future',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "PolkaCrypto Future",
-        desc: "PolkaCrypto Future (parachain-chartreuse-crypto) — Obsidian grid & neon chartreuse #B8FF01 Polkadot parachain investing platform featuring tilted 3D dual mobile terminals, 01–03 security cards, and live ETH/DOT staking simulator.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "PolkaCrypto Future",
-        desc: "PolkaCrypto Future (parachain-chartreuse-crypto) — Obsidian grid & neon chartreuse #B8FF01 Polkadot parachain investing platform featuring tilted 3D dual mobile terminals, 01–03 security cards, and live ETH/DOT staking simulator.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "PolkaCrypto Future",
-        desc: "PolkaCrypto Future (parachain-chartreuse-crypto) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t176: {
-    slug: 'dotdna-cyber',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "DotDNA Cyber",
-        desc: "DotDNA Cyber (bioluminescent-cyber-mesh) — Bioluminescent emerald #041A0E & acid-green #65E819 cyber-security architecture — defending the digital on the dot with interactive zero-trust posture scanning and 3D particle wave.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "DotDNA Cyber",
-        desc: "DotDNA Cyber (bioluminescent-cyber-mesh) — Bioluminescent emerald #041A0E & acid-green #65E819 cyber-security architecture — defending the digital on the dot with interactive zero-trust posture scanning and 3D particle wave.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "DotDNA Cyber",
-        desc: "DotDNA Cyber (bioluminescent-cyber-mesh) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
   t175: {
     slug: 'subscription-agency',
     cat: 'portfolio',
@@ -1112,123 +644,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     }
   },
 
-  t172: {
-    slug: 'quiet-place-sanctuary',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Quiet Place Sanctuary",
-        desc: "Quiet Place Sanctuary (serene-pine-island-sanctuary) — Mindful creative sanctuary where calm meets creativity — interactive pine-island lake diorama, ambient soundscape mixer, 4-7-8 breathwork timer, and gentle reflection tools.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Quiet Place Sanctuary",
-        desc: "Quiet Place Sanctuary (serene-pine-island-sanctuary) — Mindful creative sanctuary where calm meets creativity — interactive pine-island lake diorama, ambient soundscape mixer, 4-7-8 breathwork timer, and gentle reflection tools.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Quiet Place Sanctuary",
-        desc: "Quiet Place Sanctuary (serene-pine-island-sanctuary) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t171: {
-    slug: 'hush-futurist-bags',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Hush Futurist Bags",
-        desc: "Hush Futurist Bags (rose-chrome-luxury-bags) — High-fashion editorial 3D bag maison featuring masked oversized typography, rose-pink arched ECO product cards (Sabrina, Brielle, Naomi), and interactive material studio.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Hush Futurist Bags",
-        desc: "Hush Futurist Bags (rose-chrome-luxury-bags) — High-fashion editorial 3D bag maison featuring masked oversized typography, rose-pink arched ECO product cards (Sabrina, Brielle, Naomi), and interactive material studio.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Hush Futurist Bags",
-        desc: "Hush Futurist Bags (rose-chrome-luxury-bags) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t170: {
-    slug: 'aurelia-biocyber',
-    cat: 'portfolio',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Aurelia BioCyber",
-        desc: "Aurelia BioCyber (golden-astrolabe-biocyber) — Obsidian and brushed-gold bio-cybernetic atelier with out-of-bounds 3D botanical visor sculpture, circular golden astrolabe portal, and live neural resonance inspector.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Aurelia BioCyber",
-        desc: "Aurelia BioCyber (golden-astrolabe-biocyber) — Obsidian and brushed-gold bio-cybernetic atelier with out-of-bounds 3D botanical visor sculpture, circular golden astrolabe portal, and live neural resonance inspector.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Aurelia BioCyber",
-        desc: "Aurelia BioCyber (golden-astrolabe-biocyber) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t169: {
-    slug: 'cybr-brutalism',
-    cat: 'portfolio',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "CYBR Brutalism",
-        desc: "CYBR Brutalism (industrial-cyber-brutalist) — Industrial cyber-brutalist design system studio featuring acid-lime #C6FF00 military terminal grids, wireframe 3D cybernetic head telemetry, and live system command filtering.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "CYBR Brutalism",
-        desc: "CYBR Brutalism (industrial-cyber-brutalist) — Industrial cyber-brutalist design system studio featuring acid-lime #C6FF00 military terminal grids, wireframe 3D cybernetic head telemetry, and live system command filtering.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "CYBR Brutalism",
-        desc: "CYBR Brutalism (industrial-cyber-brutalist) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t168: {
-    slug: 'calfin-weather',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Calfin Weather",
-        desc: "Calfin Weather (spatial-weather-glass) — Real-time spatial glass weather forecast dashboard with interactive 6-node Bezier temperature curve, multi-city Jakarta & Danang telemetry cards, and live storm radar.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Calfin Weather",
-        desc: "Calfin Weather (spatial-weather-glass) — Real-time spatial glass weather forecast dashboard with interactive 6-node Bezier temperature curve, multi-city Jakarta & Danang telemetry cards, and live storm radar.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Calfin Weather",
-        desc: "Calfin Weather (spatial-weather-glass) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
   t167: {
     slug: 'email-marketing',
     cat: 'commerce',
@@ -1371,30 +786,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       }
     }
   },
-  t161: {
-    slug: 'aquarium-animals',
-    cat: 'commerce',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Aquarium Animals",
-        desc: "Aquarium Animals (abyssal-popout-triptych) — Deep ocean marine sanctuary showcase featuring tall condensed ANIMALS typography and 3 out-of-bounds 3D pop-out cards (Sea Lions, Bioluminescent Jellyfish cutout, Manta Ray) with straddling yellow arrow buttons.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Aquarium Animals",
-        desc: "Aquarium Animals (abyssal-popout-triptych) — Deep ocean marine sanctuary showcase featuring tall condensed ANIMALS typography and 3 out-of-bounds 3D pop-out cards (Sea Lions, Bioluminescent Jellyfish cutout, Manta Ray) with straddling yellow arrow buttons.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Aquarium Animals",
-        desc: "Aquarium Animals (abyssal-popout-triptych) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
   t160: {
     slug: 'industrix-engineering',
     cat: 'commerce',
@@ -1492,29 +883,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     }
   },
 
-  t151: {
-    slug: 'japan-sunrise-tour',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Japan Sunrise Tours",
-        desc: "Japan Sunrise Tours (fuji-sakura-expedition) — 10-day Osaka, Kyoto & Tokyo expedition with masked JAPAN sunrise header, 3D vermilion pagoda & sakura cutout, 5 vertical glass cards, and vertical itinerary timeline.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Japan Sunrise Tours",
-        desc: "Japan Sunrise Tours (fuji-sakura-expedition) — 10-day Osaka, Kyoto & Tokyo expedition with masked JAPAN sunrise header, 3D vermilion pagoda & sakura cutout, 5 vertical glass cards, and vertical itinerary timeline.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Japan Sunrise Tours",
-        desc: "Japan Sunrise Tours (fuji-sakura-expedition) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
   t150: {
     slug: 'fischer-motorsport',
     cat: 'commerce',
@@ -1534,29 +902,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
       zh: {
         name: "Fischer KFZ-Meisterbetrieb",
         desc: "Fischer KFZ-Meisterbetrieb (diagonal-zigzag-atelier) — 3D 破界悬浮视觉与粘性滚动交互界面。",
-        tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
-      }
-    }
-  },
-  t149: {
-    slug: 'litera-bookstore',
-    cat: 'commerce',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Litera Bookstore & Chat",
-        desc: "Litera Bookstore & Chat (bookstore-chat-concierge) — Warm cream editorial bookstore UI with 9 category icons, 5 hardcover ribbon cards, 3D floating collector book stack cutout, and live interactive Chat concierge sidebar.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      en: {
-        name: "Litera Bookstore & Chat",
-        desc: "Litera Bookstore & Chat (bookstore-chat-concierge) — Warm cream editorial bookstore UI with 9 category icons, 5 hardcover ribbon cards, 3D floating collector book stack cutout, and live interactive Chat concierge sidebar.",
-        tags: ['3D Pop-out Hero', 'Glassmorphism UI', 'Scroll Scrub & Tilt']
-      },
-      zh: {
-        name: "Litera Bookstore & Chat",
-        desc: "Litera Bookstore & Chat (bookstore-chat-concierge) — 3D 破界悬浮视觉与粘性滚动交互界面。",
         tags: ['3D 破界视觉', '毛玻璃卡片', '滚动视差与流体']
       }
     }
@@ -2378,30 +1723,6 @@ export const REAL_TEMPLATES: Record<string, RealTemplate> = {
     }
   },
 
-  t103: {
-    slug: 'amazing-agency',
-    cat: 'portfolio',
-    access: 'free',
-    version: '1.0.0',
-    video: true,
-    copy: {
-      vi: {
-        name: "Amazing Agency",
-        desc: "Giao diện web Amazing Agency lấy cảm hứng từ thiết kế website design với lưới Bento hiện đại, hiệu ứng nghiêng 3D theo chuột, cuộn parallax mượt mà và bảng màu trích xuất tự động (#12141c, #88614b).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
-      },
-      en: {
-        name: "Amazing Agency",
-        desc: "Interactive Amazing Agency web template inspired by website design visual direction — featuring a responsive Bento grid, 3D magnetic hover tilt, scroll-linked parallax, and extracted palette tokens (#12141c, #88614b).",
-        tags: ['UI/UX Design', '3D Hover & Scroll', 'Bento Layout']
-      },
-      zh: {
-        name: "Amazing Agency",
-        desc: "源自 website design 视觉灵感的 Amazing Agency 响应式网页模板，配备 Bento 网格布局、3D 鼠标悬停倾斜、滚动视差与自动提取配色系统。",
-        tags: ['UI/UX 设计', '3D 悬停与视差', 'Bento 布局']
-      }
-    }
-  },
 
   t102: {
     slug: 'vize-footer',

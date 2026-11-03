@@ -1,4 +1,4 @@
-# BRIEF — Looo AI Magic Studio (`looo-ai-magic` / `t210`, v1.0.0)
+# BRIEF — Looo AI Magic Studio (`looo-ai-magic` / `t221`, v1.0.0)
 
 ## Mục tiêu sản phẩm
 Xây dựng mẫu giao diện Landing Page tự chứa (`index.html`) cho thương hiệu **Looo AI Magic Studio**, đạt chuẩn **ForgeScore v2.0 (`FORGEFRAME_GOLD >= 95/100`)** và hồ sơ **WEB-CRAFT-2** (kèm ngoại lệ `INLINE_PRODUCTS` trong `dong-goi.mjs`).

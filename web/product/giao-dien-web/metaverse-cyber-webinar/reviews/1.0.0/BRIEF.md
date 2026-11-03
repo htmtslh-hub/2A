@@ -1,4 +1,4 @@
-# BRIEF — Metaverse Cyber Webinar (`metaverse-cyber-webinar` / `t209`, v1.0.0)
+# BRIEF — Metaverse Cyber Webinar (`metaverse-cyber-webinar` / `t220`, v1.0.0)
 
 ## Mục tiêu sản phẩm
 Xây dựng mẫu giao diện Landing Page tự chứa (`index.html`) cho thương hiệu **Metaverse Cyber Webinar**, đạt chuẩn **ForgeScore v2.0 (`FORGEFRAME_GOLD >= 95/100`)** và hồ sơ **WEB-CRAFT-2** (kèm ngoại lệ `INLINE_PRODUCTS` trong `dong-goi.mjs`).

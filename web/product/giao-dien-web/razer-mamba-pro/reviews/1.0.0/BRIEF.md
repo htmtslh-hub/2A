@@ -1,4 +1,4 @@
-# BRIEF — Razer Mamba Pro (`razer-mamba-pro` / `t208`, v1.0.0)
+# BRIEF — Razer Mamba Pro (`razer-mamba-pro` / `t219`, v1.0.0)
 
 ## Mục tiêu sản phẩm
 Xây dựng mẫu giao diện Landing Page tự chứa (`index.html`) cho thương hiệu **Razer Mamba Pro**, đạt chuẩn **ForgeScore v2.0 (`FORGEFRAME_GOLD >= 95/100`)** và hồ sơ **WEB-CRAFT-2** (kèm ngoại lệ `INLINE_PRODUCTS` trong `dong-goi.mjs`).

@@ -1,4 +1,4 @@
-# Razer Mamba Pro (`razer-mamba-pro` / `t208`)
+# Razer Mamba Pro (`razer-mamba-pro` / `t219`)
 
 - **Version:** `1.0.0`
 - **Standard Profile:** `WEB-CRAFT-2` / **ForgeScore v2.0 (`FORGEFRAME_GOLD`)**

@@ -5190,6 +5190,36 @@ export async function compilePinterestTemplate(slug, options = {}) {
     fs.copyFileSync(cutoutAssetSrc, demoAssetPath);
   }
 
+  const slugAssetDir = path.resolve(__dirname, `pinterest-assets/${slug}`);
+  if (fs.existsSync(slugAssetDir)) {
+    const sourceAssetsTarget = path.resolve(productDir, 'source/assets');
+    fs.mkdirSync(sourceAssetsTarget, { recursive: true });
+    fs.cpSync(slugAssetDir, sourceAssetsTarget, { recursive: true, force: true });
+  }
+
+  // Copy all generated assets in source/assets/ into web/public/demos/${slug}/assets/
+  const sourceAssetsDir = path.resolve(productDir, 'source/assets');
+  const demoAssetsDir = path.resolve(root, `web/public/demos/${slug}/assets`);
+  if (fs.existsSync(sourceAssetsDir)) {
+    fs.mkdirSync(demoAssetsDir, { recursive: true });
+    fs.cpSync(sourceAssetsDir, demoAssetsDir, { recursive: true, force: true });
+  }
+
+  // Strict Image Asset Gate: Never allow a Pinterest template with 0 images or missing local assets
+  const imgSrcMatches = [...html.matchAll(/<img[^>]+src=['"]([^'"]+)['"]/gi)].map(m => m[1]);
+  if (imgSrcMatches.length === 0) {
+    throw new Error(`[Pinterest Strict Gate] Template "${slug}" has 0 <img> tags! Every Pinterest template must use real generated image assets matching the reference design.`);
+  }
+  for (const src of imgSrcMatches) {
+    if (!src.startsWith('http') && !src.startsWith('data:')) {
+      const cleanRel = src.replace(/^\.?\//, '');
+      const fullAssetPath = path.resolve(productDir, 'source', cleanRel);
+      if (!fs.existsSync(fullAssetPath)) {
+        throw new Error(`[Pinterest Strict Gate] Missing local image asset for "${slug}": ${fullAssetPath}`);
+      }
+    }
+  }
+
   await runMultiViewportQaCheck(slug);
 
   execFileSync('node', ['web/product/giao-dien-web/tools/dong-goi.mjs', slug, '--ngoai-le'], {

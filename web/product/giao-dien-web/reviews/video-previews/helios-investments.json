@@ -1,16 +1,16 @@
 {
-  "id": "t206",
+  "id": "t217",
   "slug": "helios-investments",
   "browser": "153.0.8010.12",
-  "date": "2026-11-02T22:39:29.098Z",
+  "date": "2026-11-02T23:54:58.929Z",
   "demo": "/demos/helios-investments/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "2cfbadd9c884",
-  "sha256": "2cfbadd9c8841449c193957998067dbc8ab7e4bae51c67bc5a78edfc1601844b",
-  "demoHtmlSha256": "d144462baf140270d655ef0fc14370228acf30e6ccd6e7d615ac9e73ae6df30a",
-  "demoSha256": "ba4fd855a9ee28a3f47693401cb3d86c3159e30a43b5ff4b3d4cfd8af19db961",
-  "bytes": 339653,
+  "revision": "e8520ca73ce1",
+  "sha256": "e8520ca73ce1027ed31bf8759ca374f1e7bbe834bf70967db4f1164a47098e42",
+  "demoHtmlSha256": "05fc76a983ad6b842a86ba1c5fe59581826f90c8ff8405fa92c44c1c8afa7bb5",
+  "demoSha256": "16dfa7da8248d0bc14dedb0efb14ba8b4086978a3452c9e6a7d330dfb88c1e79",
+  "bytes": 361450,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -24,7 +24,7 @@
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 537
+      "target": 577
     }
   ],
   "errors": [],

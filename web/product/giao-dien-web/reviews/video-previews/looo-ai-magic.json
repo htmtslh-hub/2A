@@ -1,16 +1,16 @@
 {
-  "id": "t210",
+  "id": "t221",
   "slug": "looo-ai-magic",
   "browser": "153.0.8010.12",
-  "date": "2026-11-02T22:41:36.402Z",
+  "date": "2026-11-03T00:00:45.652Z",
   "demo": "/demos/looo-ai-magic/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "e412792330d9",
-  "sha256": "e412792330d912d4a21e9718698ce42becb69b15370481fe6fd0de4574bdb549",
-  "demoHtmlSha256": "da33a35b4e5d15ce11f987bdfecbfa280a1e6ed2a29d7a3bb0a9ec693a85d024",
-  "demoSha256": "c0fb9921c228d319acf34ad517b32696455fc62e12a7d59654b654610c636dfb",
-  "bytes": 402116,
+  "revision": "2f7d11bb0459",
+  "sha256": "2f7d11bb04594c668fc6d2af7ef4e549facefe7a73def3549a8563f4d5ea257d",
+  "demoHtmlSha256": "29f77e67d2719e1f900ffa3d4dd8cba273afc37586bcddb1584c5eb8af28bd35",
+  "demoSha256": "2b70d735099eebd1bb1f1980e6bda6f79aa19200c1cae2f3c0ac7cd4cdd99992",
+  "bytes": 597681,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -24,7 +24,7 @@
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 1347
+      "target": 1003
     }
   ],
   "errors": [],

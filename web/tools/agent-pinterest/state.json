@@ -106,22 +106,18 @@
     "aerox-studio",
     "aethera",
     "aetheris-voyage",
-    "agentai-grid",
     "airmax-plus",
     "ais-folio",
     "alex-carter-ui",
-    "amazing-agency",
     "apartment-flow",
     "apex-squad-light",
     "apex-upheaval",
-    "aquarium-animals",
     "asme",
     "astra-interior",
     "astro-armor",
     "atlas",
     "atrium-mtl",
     "auralis",
-    "aurelia-biocyber",
     "backbest-800",
     "bame-esports",
     "beetbuh",
@@ -129,7 +125,6 @@
     "bishop-tentwenty",
     "bloom-ai",
     "break-code",
-    "calfin-weather",
     "camper",
     "cast-and-render",
     "chain-warden",
@@ -142,8 +137,6 @@
     "crimson-folio",
     "cross-border",
     "cyber-ronin",
-    "cybr-brutalism",
-    "data-securit",
     "datacore-booking",
     "design",
     "designer-portfolio",
@@ -154,7 +147,6 @@
     "digitwist-ai-builder",
     "docs",
     "dot",
-    "dotdna-cyber",
     "dualplay",
     "duolingo-styleguide",
     "eclipsio",
@@ -169,47 +161,38 @@
     "fitclub-food",
     "flash-rocky-mountain",
     "flexible-spark",
-    "foods-gourmet-bowl",
     "forest-pulse",
     "free-sample",
     "freight-axis",
     "fresh-reddy",
     "galaxy-edge",
     "geospace-canvas",
-    "glitch-cyberwear",
     "glow-features",
     "gridwork-co",
     "halden",
     "haul",
     "health-portal",
     "helios-investments",
-    "hush-futurist-bags",
-    "image-some",
     "impact-ventures",
     "industrix-engineering",
     "innovation",
     "interactive-discovery",
     "iris",
     "jack-3d",
-    "japan-sunrise-tour",
     "japan-trails",
-    "kata-ocado-portfolio",
     "keystead",
     "kinetiq",
     "kresna-footer",
     "laila",
-    "laptop-computer",
     "lauberhorn-ridge",
     "launch-video",
     "lawyer-justicia",
     "leaflit",
     "lingoglass",
-    "litera-bookstore",
     "looo-ai-magic",
     "lumina",
     "luminex",
     "luminex-atelier",
-    "luminex-atelier-eab",
     "lumora",
     "maldives-escape",
     "manganresto",
@@ -226,7 +209,6 @@
     "modern-agency",
     "monoframe",
     "monolith-canvas",
-    "monolith-canvas-216",
     "mostar-city",
     "motora",
     "murmur",
@@ -234,7 +216,6 @@
     "neuralkinetics",
     "neuralyn",
     "nexlayer",
-    "nexora-alex-portfolio",
     "nexora-automation",
     "nextsus-gamerlix",
     "nike-hover",
@@ -242,23 +223,17 @@
     "nova-glass",
     "novatrend",
     "nuvem-canvas",
-    "o2-moonish-cosmic",
     "oceanpulse",
     "orbis-nft",
     "orbit-academy",
-    "ozzies-pretzels",
     "pinehaven",
-    "polkacrypto-future",
-    "porsche-caym",
     "portfolio-cosmic",
     "power-ai",
     "price-calculator",
     "prisma-creative-studio",
     "prmpt",
     "prosthetics-hero",
-    "pumpit-grid",
     "puro-amor",
-    "quiet-place-sanctuary",
     "rayhan-aditya",
     "razer-mamba-pro",
     "reelmark",
@@ -271,7 +246,6 @@
     "sellix",
     "semaan",
     "sentinel-ai",
-    "setting-stic",
     "shirtline",
     "shopluxe",
     "skyelite-private-jets",
@@ -288,7 +262,6 @@
     "synapsex",
     "targo",
     "taskly",
-    "terrarium-deck-studio",
     "tidal",
     "tools",
     "toonhub",
@@ -305,7 +278,6 @@
     "vex-ventures",
     "veyra",
     "viktor",
-    "visionglass-neo-ui",
     "vize-footer",
     "volt-hoodie",
     "vybe",
@@ -314,14 +286,12 @@
     "watchroom",
     "wellbeing-os",
     "wellness-companion",
-    "which-canvas",
     "yellow-beast"
   ],
   "history": [
     {
       "date": "2026-10-25",
       "built": [
-        "amazing-agency",
         "ecommerce-omorfia",
         "lawyer-justicia",
         "flexible-spark",
@@ -429,172 +399,6 @@
       }
     },
     {
-      "date": "2026-10-29",
-      "built": [
-        "calfin-weather",
-        "cybr-brutalism",
-        "aurelia-biocyber",
-        "hush-futurist-bags",
-        "quiet-place-sanctuary"
-      ],
-      "catalogIds": [
-        "t168",
-        "t169",
-        "t170",
-        "t171",
-        "t172"
-      ],
-      "pinIds": [
-        "local-832290e8035f",
-        "local-0074202d0629",
-        "local-c83e430cbd15",
-        "local-b2ca43a410d4",
-        "local-f10f338bc06e"
-      ],
-      "tiers": {
-        "calfin-weather": "free",
-        "cybr-brutalism": "free",
-        "aurelia-biocyber": "premium",
-        "hush-futurist-bags": "premium",
-        "quiet-place-sanctuary": "premium"
-      }
-    },
-    {
-      "date": "2026-10-30",
-      "built": [
-        "dotdna-cyber",
-        "polkacrypto-future",
-        "nexora-alex-portfolio",
-        "kata-ocado-portfolio",
-        "glitch-cyberwear"
-      ],
-      "catalogIds": [
-        "t176",
-        "t177",
-        "t178",
-        "t179",
-        "t180"
-      ],
-      "pinIds": [
-        "local-429d836f12e6",
-        "local-8b8453c973fd",
-        "local-4c686f8c153a",
-        "local-b4b8ac6ba0fa",
-        "local-dbdf32161e8a"
-      ],
-      "tiers": {
-        "dotdna-cyber": "free",
-        "polkacrypto-future": "free",
-        "nexora-alex-portfolio": "premium",
-        "kata-ocado-portfolio": "premium",
-        "glitch-cyberwear": "premium"
-      }
-    },
-    {
-      "date": "2026-10-31",
-      "timestamp": "2026-10-31T00:18:03.275Z",
-      "products": [
-        {
-          "slug": "ozzies-pretzels",
-          "catalogId": "t184",
-          "title": "Ozzie's Pretzels",
-          "accessTier": "free"
-        },
-        {
-          "slug": "terrarium-deck-studio",
-          "catalogId": "t185",
-          "title": "Terrarium Deck Studio",
-          "accessTier": "free"
-        },
-        {
-          "slug": "foods-gourmet-bowl",
-          "catalogId": "t186",
-          "title": "Foods Gourmet Bowl",
-          "accessTier": "premium"
-        },
-        {
-          "slug": "visionglass-neo-ui",
-          "catalogId": "t187",
-          "title": "VisionGlass Neo UI",
-          "blueprint": "spatial-visionos-glass-workbench",
-          "accessTier": "premium",
-          "category": "portfolio",
-          "criteriaScore": 98
-        },
-        {
-          "slug": "o2-moonish-cosmic",
-          "catalogId": "t188",
-          "title": "O2 Moonish Cosmic",
-          "blueprint": "desert-glass-sphere-streetwear",
-          "accessTier": "premium",
-          "category": "commerce",
-          "criteriaScore": 98
-        }
-      ]
-    },
-    {
-      "date": "2026-11-01",
-      "built": [
-        "agentai-grid",
-        "porsche-caym",
-        "which-canvas",
-        "setting-stic",
-        "luminex-atelier-eab"
-      ],
-      "catalogIds": [
-        "t190",
-        "t191",
-        "t192",
-        "t193",
-        "t194"
-      ],
-      "pinIds": [
-        "local-0bcea91c3182",
-        "local-32e2aa167701",
-        "local-0c4ef4c3233c",
-        "local-4569663a82b4",
-        "local-eab007a94d23"
-      ],
-      "tiers": {
-        "agentai-grid": "free",
-        "porsche-caym": "free",
-        "which-canvas": "premium",
-        "setting-stic": "premium",
-        "luminex-atelier-eab": "premium"
-      }
-    },
-    {
-      "date": "2026-11-02",
-      "built": [
-        "pumpit-grid",
-        "data-securit",
-        "laptop-computer",
-        "monolith-canvas-216",
-        "image-some"
-      ],
-      "catalogIds": [
-        "t198",
-        "t199",
-        "t200",
-        "t201",
-        "t202"
-      ],
-      "pinIds": [
-        "local-d8ab69c3374f",
-        "local-a449de480476",
-        "local-824e5e4fb763",
-        "local-2166c580f07f",
-        "local-e5f5848794c4"
-      ],
-      "tiers": {
-        "pumpit-grid": "free",
-        "data-securit": "free",
-        "laptop-computer": "premium",
-        "monolith-canvas-216": "premium",
-        "image-some": "premium"
-      }
-    },
-    {
       "date": "2026-11-03",
       "built": [
         "helios-investments",
@@ -604,18 +408,18 @@
         "looo-ai-magic"
       ],
       "catalogIds": [
-        "t206",
-        "t207",
-        "t208",
-        "t209",
-        "t210"
+        "t217",
+        "t218",
+        "t219",
+        "t220",
+        "t221"
       ],
       "pinIds": [
-        "1092052609672285653",
-        "1092685928384364587",
-        "1092826665857500928",
-        "1092826665857530673",
-        "1092826665858010875"
+        "local-1b2c93ed0a59",
+        "local-216356e18689",
+        "local-2c0b60dbf2ce",
+        "local-c6e51538d538",
+        "local-c759a506be56"
       ],
       "tiers": {
         "helios-investments": "free",
@@ -626,5 +430,12 @@
       }
     }
   ],
-  "todayCreatedCount": 5
+  "todayCreatedCount": 5,
+  "todayBuilt": [
+    "helios-investments",
+    "rayhan-aditya",
+    "razer-mamba-pro",
+    "metaverse-cyber-webinar",
+    "looo-ai-magic"
+  ]
 }

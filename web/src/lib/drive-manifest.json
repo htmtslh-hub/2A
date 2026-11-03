@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-02T22:43:44.065Z",
+  "updatedAt": "2026-11-03T00:00:16.354Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -1649,6 +1649,33 @@
       "sizeBytes": 12241,
       "sha256": "09799794fdab943fb151b32fb3dc35bc45eec800d59c59c1acd024e9e5818a2e",
       "updatedAt": "2026-11-02T22:43:44.065Z"
+    },
+    "rayhan-aditya": {
+      "fileId": "1pPEtTrlRG5KC5dXkIgU0jhQvPYmggHTz",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1pPEtTrlRG5KC5dXkIgU0jhQvPYmggHTz",
+      "webViewUrl": "https://drive.google.com/file/d/1pPEtTrlRG5KC5dXkIgU0jhQvPYmggHTz/view",
+      "sizeBytes": 407535,
+      "sha256": "07f9b7ea6f028ad6fa5ae09f9731abadaa2ce1cbd9b6d510d6def6eb6bc40b7d",
+      "updatedAt": "2026-11-02T23:59:07.490Z"
+    },
+    "metaverse-cyber-webinar": {
+      "fileId": "1LxifysmRwQNx1lZbS7NUgLuvqAAkkXSI",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1LxifysmRwQNx1lZbS7NUgLuvqAAkkXSI",
+      "webViewUrl": "https://drive.google.com/file/d/1LxifysmRwQNx1lZbS7NUgLuvqAAkkXSI/view",
+      "sizeBytes": 430460,
+      "sha256": "11e88e7a62ace1905262aa4bf2b0dbd20fb881e7488b698d784c14f0e52ea4b0",
+      "updatedAt": "2026-11-02T23:59:42.143Z"
+    },
+    "looo-ai-magic": {
+      "fileId": "1siDyHChIo6HOkPKIU0nzma9HPK2pMtBp",
+      "tier": "premium",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1siDyHChIo6HOkPKIU0nzma9HPK2pMtBp",
+      "webViewUrl": "https://drive.google.com/file/d/1siDyHChIo6HOkPKIU0nzma9HPK2pMtBp/view",
+      "sizeBytes": 748626,
+      "sha256": "15e46294deee226326746b558b057f13f9548f8f33c3e96ca88085e84eccb8e7",
+      "updatedAt": "2026-11-03T00:00:16.354Z"
     }
   }
 }

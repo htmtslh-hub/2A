@@ -84,12 +84,12 @@
     .ray91-status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 
     .ray91-hero {
-      position: relative; padding: 36px 0 64px; overflow: hidden;
+      position: relative; padding: 18px 0 26px; overflow: hidden;
       border-bottom: 1px solid var(--border);
     }
     .ray91-hero-backdrop-word {
       font-family: var(--font-display);
-      font-size: clamp(5.2rem, 18.8vw, 15.8rem);
+      font-size: clamp(5.2rem, 15.6vw, 13.5rem);
       line-height: 0.84; letter-spacing: 0.01em; text-transform: uppercase;
       color: var(--accent); text-align: center; user-select: none;
       animation: crimsonPulse 6s ease-in-out infinite;
@@ -111,16 +111,17 @@
       font-size: 11.5px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
     }
     .ray91-portrait-card {
-      background: linear-gradient(180deg, rgba(217, 27, 36, 0.22) 0%, rgba(17, 17, 21, 0.96) 100%);
-      border: 1px solid rgba(217, 27, 36, 0.4); border-radius: 22px; overflow: hidden;
-      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.75);
+      background: radial-gradient(circle at 50% 60%, rgba(217, 27, 36, 0.34) 0%, rgba(17, 17, 21, 0) 68%);
+      border: 0; border-radius: 22px; overflow: visible;
+      margin-top: -52px; position: relative; z-index: 3;
     }
     .ray91-portrait-card img {
-      width: 100%; height: 390px; object-fit: cover; object-position: top center; display: block;
+      width: 100%; height: 350px; object-fit: contain; object-position: bottom center; display: block;
+      filter: drop-shadow(0 22px 42px rgba(0, 0, 0, 0.9));
     }
     .ray91-stats-stack {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px;
-      padding-top: 20px; border-top: 1px solid var(--border);
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px;
+      padding-top: 16px; border-top: 1px solid var(--border);
     }
     .ray91-stat-num {
       font-family: var(--font-display); font-size: clamp(1.8rem, 2.8vw, 2.4rem); color: var(--fg); line-height: 1;
@@ -130,9 +131,9 @@
       text-transform: uppercase; margin-top: 6px;
     }
 
-    .ray91-section { padding: 68px 0; border-bottom: 1px solid var(--border); }
+    .ray91-section { padding: 34px 0; border-bottom: 1px solid var(--border); }
     .ray91-sec-head {
-      display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 36px;
+      display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px;
     }
     .ray91-sec-title {
       font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 3.5rem);
@@ -258,19 +259,7 @@
         </div>
 
         <div class="ray91-portrait-card">
-          <svg viewBox="0 0 340 390" width="100%" height="390" role="img" aria-label="Rayhan Aditya Studio Portrait">
-            <defs>
-              <radialGradient id="rayhanHalo" cx="50%" cy="38%" r="55%">
-                <stop offset="0%" stop-color="#d91b24" stop-opacity="0.55"/>
-                <stop offset="100%" stop-color="#111115" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-            <rect width="340" height="390" fill="#101014"/>
-            <circle cx="170" cy="145" r="135" fill="url(#rayhanHalo)"/>
-            <circle cx="170" cy="122" r="46" fill="#23232b" stroke="#d91b24" stroke-width="2"/>
-            <path d="M 64 390 C 70 250, 112 204, 170 204 C 228 204, 270 250, 276 390 Z" fill="#17171e" stroke="rgba(255,255,255,0.16)" stroke-width="2"/>
-            <path d="M 142 206 L 170 282 L 198 206" fill="none" stroke="#d91b24" stroke-width="3"/>
-          </svg>
+          <img src="assets/rayhan-cutout.webp" alt="Rayhan Aditya — Web Designer &amp; UI/UX Creator">
         </div>
 
         <div>
@@ -303,12 +292,8 @@
 
       <div class="ray91-projects-grid">
         <article class="ray91-project-card" data-seamless-trigger="01 VELOCE BIKES — E-Commerce Flagship Case Study">
-          <div class="ray91-project-Preview" style="background:linear-gradient(135deg,#2a090d 0%,#0f0f14 100%);">
-            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">E-COMMERCE WEBSITE</span>
-            <div>
-              <div style="font-family:var(--font-display);font-size:28px;letter-spacing:0.03em;">VELOCE CARBON R1</div>
-              <div style="font-size:12px;color:var(--muted);margin-top:4px;">Interactive 3D bike customizer &amp; checkout</div>
-            </div>
+          <div class="ray91-project-Preview" style="padding:0;background:#0d0d11;">
+            <img src="assets/project-veloce.webp" alt="01 Veloce Bikes — E-Commerce Website" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div>
@@ -320,12 +305,8 @@
         </article>
 
         <article class="ray91-project-card" data-seamless-trigger="02 WOODCRAFT — Timeless Crafted Furniture Showcase">
-          <div class="ray91-project-Preview" style="background:linear-gradient(135deg,#231a12 0%,#0f0f14 100%);">
-            <span style="font-family:var(--font-mono);font-size:11px;color:#fbbf24;">FURNITURE WEBSITE</span>
-            <div>
-              <div style="font-family:var(--font-display);font-size:26px;letter-spacing:0.03em;">Timeless Crafted Furniture</div>
-              <div style="font-size:12px;color:var(--muted);margin-top:4px;">Bespoke architectural oak &amp; walnut catalog</div>
-            </div>
+          <div class="ray91-project-Preview" style="padding:0;background:#0d0d11;">
+            <img src="assets/project-woodcraft.webp" alt="02 Woodcraft — Timeless Crafted Furniture Website" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div>
@@ -337,12 +318,8 @@
         </article>
 
         <article class="ray91-project-card" data-seamless-trigger="03 URBANIC — Stay Ahead In Style Editorial Platform">
-          <div class="ray91-project-Preview" style="background:linear-gradient(135deg,#1f1124 0%,#0f0f14 100%);">
-            <span style="font-family:var(--font-mono);font-size:11px;color:#f472b6;">FASHION MAGAZINE</span>
-            <div>
-              <div style="font-family:var(--font-display);font-size:28px;letter-spacing:0.03em;">STAY AHEAD IN STYLE</div>
-              <div style="font-size:12px;color:var(--muted);margin-top:4px;">High-contrast lookbook &amp; runway issue</div>
-            </div>
+          <div class="ray91-project-Preview" style="padding:0;background:#0d0d11;">
+            <img src="assets/project-urbanic.webp" alt="03 Urbanic — Fashion Magazine Website" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div>
@@ -437,11 +414,8 @@
         </div>
 
         <div class="ray91-panel" style="background:linear-gradient(145deg,#181216 0%,#0d0d11 100%);border-color:rgba(217,27,36,0.35);">
-          <div style="padding:28px;border-radius:14px;background:#09090c;border:1px solid var(--border);text-align:center;">
-            <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);letter-spacing:0.14em;margin-bottom:8px;">STUDIO WORKSTATION</div>
-            <div style="font-family:var(--font-display);font-size:clamp(1.7rem,2.8vw,2.3rem);line-height:1.05;margin-bottom:16px;">
-              WE DESIGN DIGITAL EXPERIENCES
-            </div>
+          <div style="padding:20px;border-radius:14px;background:#09090c;border:1px solid var(--border);text-align:center;">
+            <img src="assets/studio-laptop.webp" alt="Rayhan Studio Workstation — We Design Digital Experiences" style="width:100%;max-height:220px;object-fit:contain;border-radius:10px;display:block;margin:0 auto 14px;">
             <button type="button" class="ray91-btn-crimson" data-seamless-trigger="Schedule Discovery Call with Rayhan Aditya">
               Book Consultation Call →
             </button>

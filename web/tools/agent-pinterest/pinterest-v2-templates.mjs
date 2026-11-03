@@ -9608,7 +9608,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2"/></svg>
             </button>
             <div class="${p}-profile-pill">
-              <span class="${p}-avatar" aria-hidden="true">NR</span>
+              <img src="assets/avatar-nadia.webp" alt="Nadia Rachel" style="width:36px;height:36px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(216,168,200,0.45);">
               <div style="line-height:1.25;">
                 <div style="font-size:13px;font-weight:700;">Nadia Rachel</div>
                 <div style="font-size:11px;color:var(--muted);font-family:var(--font-mono);">rachel_helios@gmail.com</div>
@@ -9651,8 +9651,10 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
                 <span class="${p}-badge-soft">helios.ai Engine</span>
                 <span style="font-size:11.5px;color:var(--accent-text);font-family:var(--font-mono);">99.4% Confidence</span>
               </div>
-              <div class="${p}-dome-orb" aria-hidden="true"></div>
-              <div style="text-align:center;">
+              <div style="display:flex;justify-content:center;margin:4px 0 -10px;">
+                <img src="assets/dome-orb.webp" alt="Helios AI Rose-Gold Geodesic Crystal Dome" style="width:156px;height:126px;object-fit:cover;object-position:top center;border-radius:120px 120px 16px 16px;filter:drop-shadow(0 0 28px rgba(216,168,200,0.5));">
+              </div>
+              <div style="text-align:center;position:relative;z-index:2;">
                 <h2 style="font-size:18px;font-weight:700;letter-spacing:-0.02em;margin-bottom:12px;">Decisions Powered by Data</h2>
                 <button type="button" class="${p}-ai-send" style="padding:10px 22px;font-size:13px;" data-seamless-trigger="Helios AI Alpha Signals &amp; Risk Allocation">
                   Explore AI Insights →
@@ -9854,23 +9856,8 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
               </div>
             </div>
           </div>
-          <div class="${p}-ref-frame" style="padding:20px;">
-            <svg viewBox="0 0 380 220" width="100%" height="200" role="img" aria-label="Helios AI Quantitative Risk Radar">
-              <defs>
-                <radialGradient id="heliosCoreGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#f0d0e6" stop-opacity="0.45"/>
-                  <stop offset="100%" stop-color="#0d0910" stop-opacity="0"/>
-                </radialGradient>
-              </defs>
-              <circle cx="190" cy="110" r="88" fill="url(#heliosCoreGlow)" stroke="rgba(216,168,200,0.24)" stroke-width="1.2"/>
-              <circle cx="190" cy="110" r="58" fill="none" stroke="rgba(216,168,200,0.2)" stroke-dasharray="4 4"/>
-              <polygon points="190,34 258,86 232,168 142,162 124,82" fill="rgba(216,168,200,0.22)" stroke="#e5bed8" stroke-width="2"/>
-              <circle cx="190" cy="34" r="4.5" fill="#34d399"/>
-              <circle cx="258" cy="86" r="4.5" fill="#f0d0e6"/>
-              <circle cx="232" cy="168" r="4.5" fill="#34d399"/>
-              <circle cx="142" cy="162" r="4.5" fill="#f0d0e6"/>
-              <circle cx="124" cy="82" r="4.5" fill="#34d399"/>
-            </svg>
+          <div class="${p}-ref-frame" style="padding:20px;display:flex;align-items:center;justify-content:center;">
+            <img src="assets/dome-orb.webp" alt="Helios AI Quantitative Risk Core" style="width:220px;height:220px;object-fit:contain;filter:drop-shadow(0 0 32px rgba(216,168,200,0.45));">
           </div>
         </section>
       </main>
@@ -10014,12 +10001,12 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     .${p}-status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 
     .${p}-hero {
-      position: relative; padding: 36px 0 64px; overflow: hidden;
+      position: relative; padding: 18px 0 26px; overflow: hidden;
       border-bottom: 1px solid var(--border);
     }
     .${p}-hero-backdrop-word {
       font-family: var(--font-display);
-      font-size: clamp(5.2rem, 18.8vw, 15.8rem);
+      font-size: clamp(5.2rem, 15.6vw, 13.5rem);
       line-height: 0.84; letter-spacing: 0.01em; text-transform: uppercase;
       color: var(--accent); text-align: center; user-select: none;
       animation: crimsonPulse 6s ease-in-out infinite;
@@ -10041,16 +10028,17 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
       font-size: 11.5px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
     }
     .${p}-portrait-card {
-      background: linear-gradient(180deg, rgba(217, 27, 36, 0.22) 0%, rgba(17, 17, 21, 0.96) 100%);
-      border: 1px solid rgba(217, 27, 36, 0.4); border-radius: 22px; overflow: hidden;
-      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.75);
+      background: radial-gradient(circle at 50% 60%, rgba(217, 27, 36, 0.34) 0%, rgba(17, 17, 21, 0) 68%);
+      border: 0; border-radius: 22px; overflow: visible;
+      margin-top: -52px; position: relative; z-index: 3;
     }
     .${p}-portrait-card img {
-      width: 100%; height: 390px; object-fit: cover; object-position: top center; display: block;
+      width: 100%; height: 350px; object-fit: contain; object-position: bottom center; display: block;
+      filter: drop-shadow(0 22px 42px rgba(0, 0, 0, 0.9));
     }
     .${p}-stats-stack {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px;
-      padding-top: 20px; border-top: 1px solid var(--border);
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px;
+      padding-top: 16px; border-top: 1px solid var(--border);
     }
     .${p}-stat-num {
       font-family: var(--font-display); font-size: clamp(1.8rem, 2.8vw, 2.4rem); color: var(--fg); line-height: 1;
@@ -10060,9 +10048,9 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
       text-transform: uppercase; margin-top: 6px;
     }
 
-    .${p}-section { padding: 68px 0; border-bottom: 1px solid var(--border); }
+    .${p}-section { padding: 34px 0; border-bottom: 1px solid var(--border); }
     .${p}-sec-head {
-      display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 36px;
+      display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px;
     }
     .${p}-sec-title {
       font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 3.5rem);
@@ -10188,19 +10176,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
         </div>
 
         <div class="${p}-portrait-card">
-          <svg viewBox="0 0 340 390" width="100%" height="390" role="img" aria-label="Rayhan Aditya Studio Portrait">
-            <defs>
-              <radialGradient id="rayhanHalo" cx="50%" cy="38%" r="55%">
-                <stop offset="0%" stop-color="#d91b24" stop-opacity="0.55"/>
-                <stop offset="100%" stop-color="#111115" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-            <rect width="340" height="390" fill="#101014"/>
-            <circle cx="170" cy="145" r="135" fill="url(#rayhanHalo)"/>
-            <circle cx="170" cy="122" r="46" fill="#23232b" stroke="#d91b24" stroke-width="2"/>
-            <path d="M 64 390 C 70 250, 112 204, 170 204 C 228 204, 270 250, 276 390 Z" fill="#17171e" stroke="rgba(255,255,255,0.16)" stroke-width="2"/>
-            <path d="M 142 206 L 170 282 L 198 206" fill="none" stroke="#d91b24" stroke-width="3"/>
-          </svg>
+          <img src="assets/rayhan-cutout.webp" alt="Rayhan Aditya — Web Designer &amp; UI/UX Creator">
         </div>
 
         <div>
@@ -10233,12 +10209,8 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 
       <div class="${p}-projects-grid">
         <article class="${p}-project-card" data-seamless-trigger="01 VELOCE BIKES — E-Commerce Flagship Case Study">
-          <div class="${p}-project-Preview" style="background:linear-gradient(135deg,#2a090d 0%,#0f0f14 100%);">
-            <span style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);">E-COMMERCE WEBSITE</span>
-            <div>
-              <div style="font-family:var(--font-display);font-size:28px;letter-spacing:0.03em;">VELOCE CARBON R1</div>
-              <div style="font-size:12px;color:var(--muted);margin-top:4px;">Interactive 3D bike customizer &amp; checkout</div>
-            </div>
+          <div class="${p}-project-Preview" style="padding:0;background:#0d0d11;">
+            <img src="assets/project-veloce.webp" alt="01 Veloce Bikes — E-Commerce Website" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div>
@@ -10250,12 +10222,8 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
         </article>
 
         <article class="${p}-project-card" data-seamless-trigger="02 WOODCRAFT — Timeless Crafted Furniture Showcase">
-          <div class="${p}-project-Preview" style="background:linear-gradient(135deg,#231a12 0%,#0f0f14 100%);">
-            <span style="font-family:var(--font-mono);font-size:11px;color:#fbbf24;">FURNITURE WEBSITE</span>
-            <div>
-              <div style="font-family:var(--font-display);font-size:26px;letter-spacing:0.03em;">Timeless Crafted Furniture</div>
-              <div style="font-size:12px;color:var(--muted);margin-top:4px;">Bespoke architectural oak &amp; walnut catalog</div>
-            </div>
+          <div class="${p}-project-Preview" style="padding:0;background:#0d0d11;">
+            <img src="assets/project-woodcraft.webp" alt="02 Woodcraft — Timeless Crafted Furniture Website" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div>
@@ -10267,12 +10235,8 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
         </article>
 
         <article class="${p}-project-card" data-seamless-trigger="03 URBANIC — Stay Ahead In Style Editorial Platform">
-          <div class="${p}-project-Preview" style="background:linear-gradient(135deg,#1f1124 0%,#0f0f14 100%);">
-            <span style="font-family:var(--font-mono);font-size:11px;color:#f472b6;">FASHION MAGAZINE</span>
-            <div>
-              <div style="font-family:var(--font-display);font-size:28px;letter-spacing:0.03em;">STAY AHEAD IN STYLE</div>
-              <div style="font-size:12px;color:var(--muted);margin-top:4px;">High-contrast lookbook &amp; runway issue</div>
-            </div>
+          <div class="${p}-project-Preview" style="padding:0;background:#0d0d11;">
+            <img src="assets/project-urbanic.webp" alt="03 Urbanic — Fashion Magazine Website" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div>
@@ -10367,11 +10331,8 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
         </div>
 
         <div class="${p}-panel" style="background:linear-gradient(145deg,#181216 0%,#0d0d11 100%);border-color:rgba(217,27,36,0.35);">
-          <div style="padding:28px;border-radius:14px;background:#09090c;border:1px solid var(--border);text-align:center;">
-            <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-text);letter-spacing:0.14em;margin-bottom:8px;">STUDIO WORKSTATION</div>
-            <div style="font-family:var(--font-display);font-size:clamp(1.7rem,2.8vw,2.3rem);line-height:1.05;margin-bottom:16px;">
-              WE DESIGN DIGITAL EXPERIENCES
-            </div>
+          <div style="padding:20px;border-radius:14px;background:#09090c;border:1px solid var(--border);text-align:center;">
+            <img src="assets/studio-laptop.webp" alt="Rayhan Studio Workstation — We Design Digital Experiences" style="width:100%;max-height:220px;object-fit:contain;border-radius:10px;display:block;margin:0 auto 14px;">
             <button type="button" class="${p}-btn-crimson" data-seamless-trigger="Schedule Discovery Call with Rayhan Aditya">
               Book Consultation Call →
             </button>
@@ -10643,22 +10604,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
       </div>
 
       <div class="${p}-mouse-stage">
-        <svg viewBox="0 0 360 220" width="100%" height="200" aria-hidden="true" style="animation:chromaGlow 4s ease-in-out infinite;">
-          <defs>
-            <linearGradient id="mambaBody" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#262b26"/>
-              <stop offset="55%" stop-color="#141714"/>
-              <stop offset="100%" stop-color="#090b09"/>
-            </linearGradient>
-          </defs>
-          <ellipse cx="180" cy="196" rx="110" ry="14" fill="rgba(132,204,22,0.22)"/>
-          <path d="M 115 48 C 115 20, 245 20, 245 48 L 262 142 C 266 178, 228 198, 180 198 C 132 198, 94 178, 98 142 Z" fill="url(#mambaBody)" stroke="#84cc16" stroke-width="2.2"/>
-          <path d="M 120 56 Q 180 78 240 56" fill="none" stroke="rgba(163,230,53,0.55)" stroke-width="1.5"/>
-          <rect x="172" y="32" width="16" height="36" rx="8" fill="#0b0d0b" stroke="#a3e635" stroke-width="2.5"/>
-          <path d="M 106 92 C 102 126, 108 158, 126 180" fill="none" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
-          <path d="M 254 92 C 258 126, 252 158, 234 180" fill="none" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="180" cy="138" r="16" fill="none" stroke="#84cc16" stroke-width="2" stroke-dasharray="6 4"/>
-        </svg>
+        <img src="assets/mamba-hero.webp" alt="Razer Mamba Pro Automated Full-Control Gaming Mouse" style="width:100%;max-height:260px;object-fit:contain;display:block;filter:drop-shadow(0 0 28px rgba(132,204,22,0.45));">
         <div class="${p}-dpi-pills" role="group" aria-label="DPI Sensitivity Preset">
           <button type="button" class="${p}-dpi-btn" data-dpi="1,600 DPI">1600 DPI</button>
           <button type="button" class="${p}-dpi-btn" data-dpi="6,400 DPI">6400 DPI</button>
@@ -10670,22 +10616,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 
     <section id="kraken" class="${p}-wrap ${p}-spotlight ${p}-reveal" aria-label="Razer Kraken 7.1 Spotlight">
       <div class="${p}-kraken-box">
-        <svg viewBox="0 0 360 280" width="100%" height="260" role="img" aria-label="Razer Kraken 7.1 Chroma Gaming Headset">
-          <defs>
-            <radialGradient id="krakenGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#84cc16" stop-opacity="0.38"/>
-              <stop offset="100%" stop-color="#0f130f" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <circle cx="180" cy="140" r="120" fill="url(#krakenGlow)"/>
-          <path d="M 88 156 A 92 92 0 0 1 272 156" fill="none" stroke="#84cc16" stroke-width="16" stroke-linecap="round"/>
-          <path d="M 98 156 A 82 82 0 0 1 262 156" fill="none" stroke="#1b221a" stroke-width="8"/>
-          <rect x="64" y="136" width="38" height="78" rx="18" fill="#182017" stroke="#a3e635" stroke-width="3"/>
-          <rect x="258" y="136" width="38" height="78" rx="18" fill="#182017" stroke="#a3e635" stroke-width="3"/>
-          <circle cx="83" cy="175" r="9" fill="#84cc16"/>
-          <circle cx="277" cy="175" r="9" fill="#84cc16"/>
-          <path d="M 92 198 Q 132 232 166 218" fill="none" stroke="#a3e635" stroke-width="3.5" stroke-linecap="round"/>
-        </svg>
+        <img src="assets/kraken-hero.webp" alt="Razer Kraken 7.1 Chroma Gaming Headset" style="width:100%;max-height:290px;object-fit:contain;display:block;filter:drop-shadow(0 0 28px rgba(132,204,22,0.38));">
       </div>
       <div>
         <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);letter-spacing:0.14em;margin-bottom:8px;">
@@ -10712,10 +10643,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
       <div class="${p}-catalog-grid">
         <article class="${p}-gear-card" data-gear-buy="RAZER LYCOSA MIRROR (USD $199)">
           <div class="${p}-gear-art">
-            <svg width="110" height="64" viewBox="0 0 110 64" fill="none" stroke="#84cc16" stroke-width="2" aria-hidden="true">
-              <rect x="8" y="14" width="94" height="38" rx="5" fill="#101410"/>
-              <line x1="18" y1="25" x2="92" y2="25"/><line x1="18" y1="33" x2="92" y2="33"/><line x1="28" y1="41" x2="82" y2="41"/>
-            </svg>
+            <img src="assets/keyboard.webp" alt="Razer Lycosa Mirror Gaming Keyboard" style="width:100%;height:120px;object-fit:contain;display:block;">
           </div>
           <div>
             <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER LYCOSA MIRROR</h3>
@@ -10725,11 +10653,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 
         <article class="${p}-gear-card" data-gear-buy="RAZER KRAKEN 7.1 V2 (USD $89)">
           <div class="${p}-gear-art">
-            <svg width="84" height="74" viewBox="0 0 84 74" fill="none" stroke="#a3e635" stroke-width="2.2" aria-hidden="true">
-              <path d="M 16 44 A 26 26 0 0 1 68 44"/>
-              <rect x="10" y="40" width="12" height="22" rx="6" fill="#151b14"/>
-              <rect x="62" y="40" width="12" height="22" rx="6" fill="#151b14"/>
-            </svg>
+            <img src="assets/kraken-hero.webp" alt="Razer Kraken 7.1 V2 Gaming Headset" style="width:100%;height:120px;object-fit:contain;display:block;">
           </div>
           <div>
             <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER KRAKEN 7.1 V2</h3>
@@ -10739,10 +10663,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 
         <article class="${p}-gear-card" data-gear-buy="RAZER MAMBA TOURNAMENT (USD $149)">
           <div class="${p}-gear-art">
-            <svg width="72" height="76" viewBox="0 0 72 76" fill="none" stroke="#84cc16" stroke-width="2.2" aria-hidden="true">
-              <rect x="18" y="10" width="36" height="56" rx="18" fill="#121612"/>
-              <line x1="36" y1="16" x2="36" y2="30"/>
-            </svg>
+            <img src="assets/mamba-hero.webp" alt="Razer Mamba Tournament Gaming Mouse" style="width:100%;height:120px;object-fit:contain;display:block;">
           </div>
           <div>
             <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER MAMBA TOURNAMENT</h3>
@@ -10752,9 +10673,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 
         <article class="${p}-gear-card" data-gear-buy="RAZER FIREFLY LIGHT (USD $29)">
           <div class="${p}-gear-art">
-            <svg width="106" height="64" viewBox="0 0 106 64" fill="none" stroke="#a3e635" stroke-width="2" aria-hidden="true">
-              <polygon points="18,16 88,16 98,50 8,50" fill="#121712"/>
-            </svg>
+            <img src="assets/firefly-mat.webp" alt="Razer Firefly Light RGB Mouse Mat" style="width:100%;height:120px;object-fit:contain;display:block;">
           </div>
           <div>
             <h3 style="font-family:var(--font-display);font-size:15px;letter-spacing:0.05em;">RAZER FIREFLY LIGHT</h3>
@@ -11079,29 +10998,12 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
               <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;">вебинар пройдет:</div>
               <h1 class="tabular-nums" style="font-family:var(--font-display);font-size:32px;color:var(--fg);margin-top:2px;">09.06.2023</h1>
             </div>
-            <svg width="46" height="46" viewBox="0 0 48 48" fill="none" stroke="var(--accent-text)" stroke-width="2" aria-hidden="true">
-              <path d="M24 41s-15-9.4-15-20.5A8.5 8.5 0 0 1 24 15a8.5 8.5 0 0 1 15 5.5C39 31.6 24 41 24 41Z" fill="rgba(124,131,253,0.16)"/>
-              <circle cx="24" cy="24" r="4"/>
-            </svg>
+            <img src="assets/mech-heart.webp" alt="3D Biomechanical Heart" style="width:68px;height:68px;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(124,131,253,0.35));">
           </div>
         </div>
 
-        <div class="${p}-android-frame" style="padding:20px;display:flex;align-items:center;justify-content:center;">
-          <svg viewBox="0 0 340 390" width="100%" height="380" role="img" aria-label="3D Porcelain Cybernetic Android">
-            <defs>
-              <linearGradient id="porcelainShell" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#ffffff"/>
-                <stop offset="65%" stop-color="#e7eaf6"/>
-                <stop offset="100%" stop-color="#c5cbe6"/>
-              </linearGradient>
-            </defs>
-            <circle cx="170" cy="145" r="115" fill="rgba(124,131,253,0.14)" stroke="#7c83fd" stroke-width="1.5" stroke-dasharray="5 5"/>
-            <ellipse cx="170" cy="128" rx="54" ry="68" fill="url(#porcelainShell)" stroke="#7c83fd" stroke-width="2"/>
-            <path d="M 116 124 Q 170 140 224 124" fill="none" stroke="#555cf0" stroke-width="2.5"/>
-            <rect x="148" y="196" width="44" height="46" rx="12" fill="#d9def0" stroke="#7c83fd" stroke-width="1.8"/>
-            <path d="M 74 370 C 84 266, 122 238, 170 238 C 218 238, 256 266, 266 370 Z" fill="url(#porcelainShell)" stroke="#7c83fd" stroke-width="2"/>
-            <circle cx="170" cy="296" r="22" fill="rgba(124,131,253,0.22)" stroke="#555cf0" stroke-width="2"/>
-          </svg>
+        <div class="${p}-android-frame" style="background:transparent;border:0;box-shadow:none;overflow:visible;margin-top:-48px;display:flex;align-items:center;justify-content:center;">
+          <img src="assets/android-hero.webp" alt="3D Porcelain Cybernetic Android — МЕТА VERSE" style="width:100%;height:430px;object-fit:contain;object-position:bottom center;display:block;filter:drop-shadow(0 20px 38px rgba(110,118,185,0.38));-webkit-mask-image:linear-gradient(180deg,#000 86%,transparent 99%);mask-image:linear-gradient(180deg,#000 86%,transparent 99%);">
         </div>
 
         <div class="${p}-dial-wrap">
@@ -11130,17 +11032,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
         </article>
 
         <div class="${p}-neumo-card" style="text-align:center;">
-          <svg viewBox="0 0 320 140" width="100%" height="130" aria-hidden="true">
-            <defs>
-              <linearGradient id="shipPorcelain" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#ffffff"/>
-                <stop offset="100%" stop-color="#cfd5ec"/>
-              </linearGradient>
-            </defs>
-            <ellipse cx="160" cy="118" rx="95" ry="10" fill="rgba(124,131,253,0.2)"/>
-            <path d="M 35 82 C 95 28, 225 28, 285 82 C 235 96, 85 96, 35 82 Z" fill="url(#shipPorcelain)" stroke="#7c83fd" stroke-width="2"/>
-            <ellipse cx="160" cy="64" rx="46" ry="16" fill="#7c83fd" fill-opacity="0.25" stroke="#555cf0" stroke-width="1.5"/>
-          </svg>
+          <img src="assets/biomorphic-ship.webp" alt="Биоморфный орбитальный модуль МЕТА-09" style="width:100%;max-height:170px;object-fit:contain;display:block;margin:0 auto 10px;">
           <div style="font-size:12.5px;color:var(--muted);font-weight:600;">Биоморфный орбитальный модуль МЕТА-09</div>
         </div>
       </div>
@@ -11177,8 +11069,9 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
     <section id="register" class="${p}-wrap ${p}-section ${p}-reveal" aria-label="Форма регистрации">
       <div class="${p}-form-grid">
         <div class="${p}-neumo-card" style="text-align:center;">
-          <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);margin-bottom:8px;">CYBERNETIC HOST</div>
-          <h2 style="font-family:var(--font-display);font-size:28px;margin-bottom:10px;">АВАТАР СИНТЕЗ-01</h2>
+          <img src="assets/android-front.webp" alt="Аватар Синтез-01" style="width:100%;max-height:220px;object-fit:contain;display:block;margin:0 auto 12px;">
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--accent-text);margin-bottom:6px;">CYBERNETIC HOST</div>
+          <h2 style="font-family:var(--font-display);font-size:26px;margin-bottom:8px;">АВАТАР СИНТЕЗ-01</h2>
           <p style="font-size:13.5px;color:var(--muted);line-height:1.6;">
             Мгновенный доступ к закрытой трансляции и 3D-материалам сразу после подтверждения анкеты.
           </p>
@@ -11320,16 +11213,16 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
       background: rgba(255, 255, 255, 0.75); color: var(--fg); font-size: 13px; font-weight: 600; cursor: pointer;
     }
 
-    .${p}-hero { text-align: center; padding: 64px 0 44px; }
+    .${p}-hero { text-align: center; padding: 26px 0 18px; }
     .${p}-hero h1 {
-      font-size: clamp(2.5rem, 5.2vw, 4.35rem); font-weight: 800;
-      letter-spacing: -0.035em; line-height: 1.06; max-width: 780px; margin: 0 auto 16px;
+      font-size: clamp(2.2rem, 4.4vw, 3.6rem); font-weight: 800;
+      letter-spacing: -0.035em; line-height: 1.06; max-width: 740px; margin: 0 auto 10px;
     }
     .${p}-hero p {
-      color: var(--muted); font-size: 15.5px; line-height: 1.65; max-width: 560px; margin: 0 auto 28px;
+      color: var(--muted); font-size: 14.5px; line-height: 1.55; max-width: 540px; margin: 0 auto 18px;
     }
     .${p}-search-bar {
-      max-width: 580px; margin: 0 auto 18px; padding: 7px 7px 7px 20px;
+      max-width: 560px; margin: 0 auto 14px; padding: 6px 6px 6px 18px;
       border-radius: 999px; background: #ffffff; border: 1px solid rgba(79, 107, 255, 0.25);
       box-shadow: 0 18px 44px rgba(79, 107, 255, 0.16);
       display: flex; align-items: center; gap: 10px;
@@ -11342,34 +11235,34 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
       display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;
     }
     .${p}-tag-pill {
-      padding: 7px 18px; border-radius: 999px; border: 1px solid rgba(15, 19, 36, 0.12);
+      padding: 6px 16px; border-radius: 999px; border: 1px solid rgba(15, 19, 36, 0.12);
       background: rgba(255, 255, 255, 0.72); color: var(--fg); font-size: 12.5px; font-weight: 600; cursor: pointer;
     }
     .${p}-tag-pill.is-active { background: #0f1324; color: #ffffff; border-color: #0f1324; }
 
     .${p}-partners {
-      margin: 42px auto 0; padding: 18px 28px; border-radius: 20px;
+      margin: 18px auto 0; padding: 12px 24px; border-radius: 18px;
       background: rgba(255, 255, 255, 0.72); border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 20px;
-      color: var(--muted); font-weight: 700; font-size: 15px; letter-spacing: -0.01em;
+      color: var(--muted); font-weight: 700; font-size: 14.5px; letter-spacing: -0.01em;
     }
 
-    .${p}-section { padding: 58px 0; }
-    .${p}-sec-head { text-align: center; max-width: 640px; margin: 0 auto 36px; }
+    .${p}-section { padding: 24px 0 36px; }
+    .${p}-sec-head { text-align: center; max-width: 640px; margin: 0 auto 20px; }
     .${p}-sec-head h2 {
-      font-size: clamp(1.85rem, 3.4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 10px;
+      font-size: clamp(1.65rem, 3vw, 2.3rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 6px;
     }
     .${p}-services-grid {
-      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;
     }
     .${p}-service-card {
       background: linear-gradient(160deg, rgba(255, 255, 255, 0.92) 0%, rgba(235, 239, 255, 0.85) 100%);
-      border: 1px solid var(--border); border-radius: 24px; padding: 26px;
+      border: 1px solid var(--border); border-radius: 22px; padding: 20px 22px;
       box-shadow: 0 16px 38px rgba(79, 107, 255, 0.09);
-      display: flex; flex-direction: column; justify-content: space-between; min-height: 290px; cursor: pointer;
+      display: flex; flex-direction: column; justify-content: space-between; min-height: 230px; cursor: pointer;
     }
     .${p}-ribbon-art {
-      height: 150px; display: flex; align-items: center; justify-content: center;
+      height: 136px; display: flex; align-items: center; justify-content: center;
       animation: ribbonWave 5s ease-in-out infinite;
     }
 
@@ -11465,14 +11358,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
       <div class="${p}-services-grid">
         <article class="${p}-service-card" data-seamless-trigger="AI Web Design Generator">
           <div class="${p}-ribbon-art">
-            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
-              <defs>
-                <linearGradient id="rib1" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#4f6bff"/><stop offset="50%" stop-color="#c084fc"/><stop offset="100%" stop-color="#f472b6"/>
-                </linearGradient>
-              </defs>
-              <path d="M 24 95 C 55 18, 115 118, 176 32" fill="none" stroke="url(#rib1)" stroke-width="22" stroke-linecap="round"/>
-            </svg>
+            <img src="assets/ribbon-web.webp" alt="3D Iridescent Ribbon — Web Design" style="width:165px;height:165px;object-fit:contain;display:block;filter:drop-shadow(0 14px 28px rgba(79,107,255,0.22));">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
             <h3 style="font-size:18px;font-weight:700;">Web Design</h3>
@@ -11482,9 +11368,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 
         <article class="${p}-service-card" data-seamless-trigger="AI Mobile App Interface Studio">
           <div class="${p}-ribbon-art">
-            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
-              <path d="M 36 36 C 110 14, 90 116, 166 86" fill="none" stroke="url(#rib1)" stroke-width="22" stroke-linecap="round"/>
-            </svg>
+            <img src="assets/ribbon-app.webp" alt="3D Iridescent Knot — App Design" style="width:165px;height:165px;object-fit:contain;display:block;filter:drop-shadow(0 14px 28px rgba(192,132,252,0.24));">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
             <h3 style="font-size:18px;font-weight:700;">App</h3>
@@ -11494,9 +11378,7 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
 
         <article class="${p}-service-card" data-seamless-trigger="AI 3D &amp; Graphic Identity Synthesis">
           <div class="${p}-ribbon-art">
-            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
-              <circle cx="100" cy="65" r="38" fill="none" stroke="url(#rib1)" stroke-width="20"/>
-            </svg>
+            <img src="assets/ribbon-graphic.webp" alt="3D Iridescent Sculpture — Graphic Design" style="width:165px;height:165px;object-fit:contain;display:block;filter:drop-shadow(0 14px 28px rgba(52,211,153,0.22));">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
             <h3 style="font-size:18px;font-weight:700;">Graphic</h3>
@@ -11523,12 +11405,8 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
           </div>
         </article>
 
-        <article class="${p}-poster-card" style="background:linear-gradient(155deg,#facc15 0%,#ca8a04 100%);color:#141204;">
-          <span style="font-family:var(--font-mono);font-size:11px;">02 • CLASSICAL REMIX</span>
-          <div>
-            <h3 style="font-size:20px;font-weight:800;">Gold-Leaf Bust</h3>
-            <p style="font-size:12px;opacity:0.85;margin-top:4px;">Neo-Hellenistic marble &amp; gilded leaf collage</p>
-          </div>
+        <article class="${p}-poster-card" style="padding:0;background:#141204;position:relative;">
+          <img src="assets/poster-art.webp" alt="02 Classical Remix — Abstract Vision Neo-Brutalist Poster" style="width:100%;height:100%;min-height:280px;object-fit:cover;display:block;">
         </article>
 
         <article class="${p}-poster-card" style="background:linear-gradient(160deg,#06b6d4 0%,#0f172a 85%);">
@@ -11558,11 +11436,8 @@ box-shadow: inset 0 1px 1px #FFFFFF;</pre>
             Export high-resolution 3D ribbons, editorial posters, and responsive web components directly from your text prompt.
           </p>
         </div>
-        <div style="border-radius:18px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg,#eef2ff 0%,#fce7f3 100%);padding:20px;">
-          <svg viewBox="0 0 380 200" width="100%" height="180" role="img" aria-label="LOOO AI Holographic Ribbon Synthesis">
-            <path d="M 28 152 C 88 24, 168 176, 238 48 C 284 -10, 322 140, 356 64" fill="none" stroke="url(#rib1)" stroke-width="24" stroke-linecap="round"/>
-            <circle cx="190" cy="100" r="34" fill="rgba(255,255,255,0.65)" stroke="#4f6bff" stroke-width="2"/>
-          </svg>
+        <div style="border-radius:18px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg,#eef2ff 0%,#fce7f3 100%);padding:12px;display:flex;align-items:center;justify-content:center;">
+          <img src="assets/poster-art.webp" alt="LOOO AI Neo-Brutalist Classical Bust Poster" style="width:100%;max-height:240px;object-fit:cover;border-radius:12px;display:block;">
         </div>
       </div>
     </section>

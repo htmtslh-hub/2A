@@ -1,4 +1,4 @@
-# Looo AI Magic Studio (`looo-ai-magic` / `t210`)
+# Looo AI Magic Studio (`looo-ai-magic` / `t221`)
 
 - **Version:** `1.0.0`
 - **Standard Profile:** `WEB-CRAFT-2` / **ForgeScore v2.0 (`FORGEFRAME_GOLD`)**

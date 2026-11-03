@@ -92,16 +92,16 @@
       background: rgba(255, 255, 255, 0.75); color: var(--fg); font-size: 13px; font-weight: 600; cursor: pointer;
     }
 
-    .loo54-hero { text-align: center; padding: 64px 0 44px; }
+    .loo54-hero { text-align: center; padding: 26px 0 18px; }
     .loo54-hero h1 {
-      font-size: clamp(2.5rem, 5.2vw, 4.35rem); font-weight: 800;
-      letter-spacing: -0.035em; line-height: 1.06; max-width: 780px; margin: 0 auto 16px;
+      font-size: clamp(2.2rem, 4.4vw, 3.6rem); font-weight: 800;
+      letter-spacing: -0.035em; line-height: 1.06; max-width: 740px; margin: 0 auto 10px;
     }
     .loo54-hero p {
-      color: var(--muted); font-size: 15.5px; line-height: 1.65; max-width: 560px; margin: 0 auto 28px;
+      color: var(--muted); font-size: 14.5px; line-height: 1.55; max-width: 540px; margin: 0 auto 18px;
     }
     .loo54-search-bar {
-      max-width: 580px; margin: 0 auto 18px; padding: 7px 7px 7px 20px;
+      max-width: 560px; margin: 0 auto 14px; padding: 6px 6px 6px 18px;
       border-radius: 999px; background: #ffffff; border: 1px solid rgba(79, 107, 255, 0.25);
       box-shadow: 0 18px 44px rgba(79, 107, 255, 0.16);
       display: flex; align-items: center; gap: 10px;
@@ -114,34 +114,34 @@
       display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;
     }
     .loo54-tag-pill {
-      padding: 7px 18px; border-radius: 999px; border: 1px solid rgba(15, 19, 36, 0.12);
+      padding: 6px 16px; border-radius: 999px; border: 1px solid rgba(15, 19, 36, 0.12);
       background: rgba(255, 255, 255, 0.72); color: var(--fg); font-size: 12.5px; font-weight: 600; cursor: pointer;
     }
     .loo54-tag-pill.is-active { background: #0f1324; color: #ffffff; border-color: #0f1324; }
 
     .loo54-partners {
-      margin: 42px auto 0; padding: 18px 28px; border-radius: 20px;
+      margin: 18px auto 0; padding: 12px 24px; border-radius: 18px;
       background: rgba(255, 255, 255, 0.72); border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 20px;
-      color: var(--muted); font-weight: 700; font-size: 15px; letter-spacing: -0.01em;
+      color: var(--muted); font-weight: 700; font-size: 14.5px; letter-spacing: -0.01em;
     }
 
-    .loo54-section { padding: 58px 0; }
-    .loo54-sec-head { text-align: center; max-width: 640px; margin: 0 auto 36px; }
+    .loo54-section { padding: 24px 0 36px; }
+    .loo54-sec-head { text-align: center; max-width: 640px; margin: 0 auto 20px; }
     .loo54-sec-head h2 {
-      font-size: clamp(1.85rem, 3.4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 10px;
+      font-size: clamp(1.65rem, 3vw, 2.3rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 6px;
     }
     .loo54-services-grid {
-      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
+      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;
     }
     .loo54-service-card {
       background: linear-gradient(160deg, rgba(255, 255, 255, 0.92) 0%, rgba(235, 239, 255, 0.85) 100%);
-      border: 1px solid var(--border); border-radius: 24px; padding: 26px;
+      border: 1px solid var(--border); border-radius: 22px; padding: 20px 22px;
       box-shadow: 0 16px 38px rgba(79, 107, 255, 0.09);
-      display: flex; flex-direction: column; justify-content: space-between; min-height: 290px; cursor: pointer;
+      display: flex; flex-direction: column; justify-content: space-between; min-height: 230px; cursor: pointer;
     }
     .loo54-ribbon-art {
-      height: 150px; display: flex; align-items: center; justify-content: center;
+      height: 136px; display: flex; align-items: center; justify-content: center;
       animation: ribbonWave 5s ease-in-out infinite;
     }
 
@@ -237,14 +237,7 @@
       <div class="loo54-services-grid">
         <article class="loo54-service-card" data-seamless-trigger="AI Web Design Generator">
           <div class="loo54-ribbon-art">
-            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
-              <defs>
-                <linearGradient id="rib1" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#4f6bff"/><stop offset="50%" stop-color="#c084fc"/><stop offset="100%" stop-color="#f472b6"/>
-                </linearGradient>
-              </defs>
-              <path d="M 24 95 C 55 18, 115 118, 176 32" fill="none" stroke="url(#rib1)" stroke-width="22" stroke-linecap="round"/>
-            </svg>
+            <img src="assets/ribbon-web.webp" alt="3D Iridescent Ribbon — Web Design" style="width:165px;height:165px;object-fit:contain;display:block;filter:drop-shadow(0 14px 28px rgba(79,107,255,0.22));">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
             <h3 style="font-size:18px;font-weight:700;">Web Design</h3>
@@ -254,9 +247,7 @@
 
         <article class="loo54-service-card" data-seamless-trigger="AI Mobile App Interface Studio">
           <div class="loo54-ribbon-art">
-            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
-              <path d="M 36 36 C 110 14, 90 116, 166 86" fill="none" stroke="url(#rib1)" stroke-width="22" stroke-linecap="round"/>
-            </svg>
+            <img src="assets/ribbon-app.webp" alt="3D Iridescent Knot — App Design" style="width:165px;height:165px;object-fit:contain;display:block;filter:drop-shadow(0 14px 28px rgba(192,132,252,0.24));">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
             <h3 style="font-size:18px;font-weight:700;">App</h3>
@@ -266,9 +257,7 @@
 
         <article class="loo54-service-card" data-seamless-trigger="AI 3D &amp; Graphic Identity Synthesis">
           <div class="loo54-ribbon-art">
-            <svg viewBox="0 0 200 130" width="180" height="120" aria-hidden="true">
-              <circle cx="100" cy="65" r="38" fill="none" stroke="url(#rib1)" stroke-width="20"/>
-            </svg>
+            <img src="assets/ribbon-graphic.webp" alt="3D Iridescent Sculpture — Graphic Design" style="width:165px;height:165px;object-fit:contain;display:block;filter:drop-shadow(0 14px 28px rgba(52,211,153,0.22));">
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);">
             <h3 style="font-size:18px;font-weight:700;">Graphic</h3>
@@ -295,12 +284,8 @@
           </div>
         </article>
 
-        <article class="loo54-poster-card" style="background:linear-gradient(155deg,#facc15 0%,#ca8a04 100%);color:#141204;">
-          <span style="font-family:var(--font-mono);font-size:11px;">02 • CLASSICAL REMIX</span>
-          <div>
-            <h3 style="font-size:20px;font-weight:800;">Gold-Leaf Bust</h3>
-            <p style="font-size:12px;opacity:0.85;margin-top:4px;">Neo-Hellenistic marble &amp; gilded leaf collage</p>
-          </div>
+        <article class="loo54-poster-card" style="padding:0;background:#141204;position:relative;">
+          <img src="assets/poster-art.webp" alt="02 Classical Remix — Abstract Vision Neo-Brutalist Poster" style="width:100%;height:100%;min-height:280px;object-fit:cover;display:block;">
         </article>
 
         <article class="loo54-poster-card" style="background:linear-gradient(160deg,#06b6d4 0%,#0f172a 85%);">
@@ -330,11 +315,8 @@
             Export high-resolution 3D ribbons, editorial posters, and responsive web components directly from your text prompt.
           </p>
         </div>
-        <div style="border-radius:18px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg,#eef2ff 0%,#fce7f3 100%);padding:20px;">
-          <svg viewBox="0 0 380 200" width="100%" height="180" role="img" aria-label="LOOO AI Holographic Ribbon Synthesis">
-            <path d="M 28 152 C 88 24, 168 176, 238 48 C 284 -10, 322 140, 356 64" fill="none" stroke="url(#rib1)" stroke-width="24" stroke-linecap="round"/>
-            <circle cx="190" cy="100" r="34" fill="rgba(255,255,255,0.65)" stroke="#4f6bff" stroke-width="2"/>
-          </svg>
+        <div style="border-radius:18px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(135deg,#eef2ff 0%,#fce7f3 100%);padding:12px;display:flex;align-items:center;justify-content:center;">
+          <img src="assets/poster-art.webp" alt="LOOO AI Neo-Brutalist Classical Bust Poster" style="width:100%;max-height:240px;object-fit:cover;border-radius:12px;display:block;">
         </div>
       </div>
     </section>

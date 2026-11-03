@@ -1,16 +1,16 @@
 {
-  "id": "t208",
+  "id": "t219",
   "slug": "razer-mamba-pro",
   "browser": "153.0.8010.12",
-  "date": "2026-11-02T22:40:32.862Z",
+  "date": "2026-11-02T23:56:03.823Z",
   "demo": "/demos/razer-mamba-pro/index.html",
   "status": "recorded",
   "productVersion": "1.0.0",
-  "revision": "d5088d331f2e",
-  "sha256": "d5088d331f2ef6ece3dd6ac913496159ea5919edeb6eac71c3260de59f83417c",
-  "demoHtmlSha256": "c96bbd105a4768c43626370fcb8130c5b51ed92789354ee97ff9076040625dee",
-  "demoSha256": "8a34879175d14ccb9d0dbf26d351701941496954a3cf24a9c9db4302062cfb72",
-  "bytes": 373420,
+  "revision": "ca7998958c11",
+  "sha256": "ca7998958c11ec50d82631d626c6f98a72012f96a532597bfdf0c4a3a4a703f8",
+  "demoHtmlSha256": "5984e90c7f058a7368986eba636dc8cf1be83f7086c90fe195e82494dc386cb4",
+  "demoSha256": "af6f09532b1c0760a9cb3a6d1967d50034b3e0adbbd8034eb7c9c386a585d66a",
+  "bytes": 379403,
   "duration": 14.966667,
   "width": 960,
   "height": 600,
@@ -24,7 +24,7 @@
     {
       "seconds": 6.7,
       "action": "scroll",
-      "target": 1010
+      "target": 1087
     }
   ],
   "errors": [],

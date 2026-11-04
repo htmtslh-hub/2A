@@ -1,7 +1,7 @@
 {
   "freeFolderId": "1o-Z3XM-VF92wVu07-BQUB2qUeYvrCm_r",
   "premiumFolderId": "1E18mdHhABy0nXqGDtQQ62zvGBbKbzLyr",
-  "updatedAt": "2026-11-04T00:24:36.780Z",
+  "updatedAt": "2026-11-04T13:40:54.951Z",
   "files": {
     "free-sample": {
       "fileId": "1b4a401TcU73Ni5q-aRPguslLnS6o16Ps",
@@ -1820,6 +1820,15 @@
       "sizeBytes": 12314,
       "sha256": "64b28949bb597719f22e19335bc496f8a3190ed5a4fa80b6237e9961aad52768",
       "updatedAt": "2026-11-04T00:23:34.745Z"
+    },
+    "f1-racing-hub": {
+      "fileId": "1tXBKkKJs_3JG55YddqOpwUD8G3fje8--",
+      "tier": "free",
+      "publicUrl": "https://drive.google.com/uc?export=download&id=1tXBKkKJs_3JG55YddqOpwUD8G3fje8--",
+      "webViewUrl": "https://drive.google.com/file/d/1tXBKkKJs_3JG55YddqOpwUD8G3fje8--/view",
+      "sizeBytes": 14488,
+      "sha256": "2094e04b87f710e554db168e51a02bddbd6ff0818e05fad66a0dcd2d7f19e8ad",
+      "updatedAt": "2026-11-04T13:40:54.951Z"
     }
   }
 }
